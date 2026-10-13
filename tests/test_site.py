@@ -43,16 +43,26 @@ def test_site_membership_evidence_citations_and_determinism(tmp_path, shape):
     assert [r['orgnr'] for r in index] == [row.organisation_number]
     text = (out / f'c/{row.organisation_number}.html').read_text(encoding='utf8')
     markup = Markup(text)
+    data_text = (out / f'c/{row.organisation_number}.data.js').read_text(encoding='utf8')
+    payload = json.loads(data_text.removeprefix('window.SIGNALPOST_EVIDENCE = ').rstrip(';\n'))
+    evidence = {}
+    for record in payload['records']:
+        e = dict(zip(payload['source_fields'], payload['sources'][record[0]]))
+        e.update(zip(payload['evidence_fields'], record[1:]))
+        evidence[e['id']] = e
+    facts = {f['id']: f for f in payload['facts']}
     for href in markup.links:
         if href.startswith('#'): assert href[1:] in markup.ids
     for claim in row.claims:
         if claim.availability == 'available':
-            assert 'fact-' + claim.id in markup.ids
-            assert 'source-' + claim.id in markup.ids
+            assert 'fact-' + claim.id[:16] in markup.ids
+            assert 'source-' + claim.id[:16] in markup.ids
             for eid in claim.evidence_ids:
                 e = next(e for e in row.evidence if e.id == eid)
-                assert e.content_sha256 in text and e.retrieved_at in text
-                assert e.claim_span in __import__('html').unescape(text).replace('<mark>', '').replace('</mark>', '')
+                assert evidence[eid]['content_sha256'] == e.content_sha256
+                assert evidence[eid]['retrieved_at'] == e.retrieved_at
+                assert evidence[eid]['claim_span'] == e.claim_span
+                assert eid in facts[claim.id[:16]]['evidence_ids']
     assert CSP in __import__('html').unescape(text)
     for tag, attrs in markup.tags:
         assert not any(k.startswith('on') for k in attrs)
@@ -86,6 +96,8 @@ def test_xss_is_text_and_bad_urls_are_not_links(tmp_path):
         assert all('src' in attrs for tag, attrs in markup.tags if tag == 'script')
     js = (out / 'data/index.js').read_text(encoding='utf8')
     assert '</script>' not in js and '<\\/script>' in js
+    detail = (out / f'c/{row.organisation_number}.data.js').read_text(encoding='utf8')
+    assert '</script>' not in detail and '<\\/script>' in detail
     assert 'innerHTML' not in (out / 'assets/site.js').read_text(encoding='utf8')
 
 
@@ -147,3 +159,10 @@ def test_registry_dates_count_in_activity_filter(tmp_path):
     record=json.loads((out/'data/index.json').read_text(encoding='utf8'))[0]
     assert record['flags']['activity'] and record['activity']>=1
     assert record['sections']['activity']=='available'
+
+
+def test_identical_duplicate_rows_share_a_profile(tmp_path):
+    row, _ = envelope(tmp_path / 'run')
+    result = generate_site(source(tmp_path, [row, row]), tmp_path / 'site')
+    assert result['input_records'] == 2
+    assert result['companies'] == 1 and result['pages'] == 3

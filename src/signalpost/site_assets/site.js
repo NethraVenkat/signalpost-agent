@@ -6,9 +6,33 @@
   const element = (tag, text, cls) => { const e = document.createElement(tag); if(text != null) e.textContent = text; if(cls) e.className = cls; return e; };
   const stateChip = state => element('span', String(state).replace(/_/g,' '), 'chip '+state);
   const format = value => value == null ? 'Unknown' : typeof value === 'number' ? value.toLocaleString('en-US',{maximumFractionDigits:20}) : String(value);
+  const localData=window.SIGNALPOST_EVIDENCE || {sources:[],records:[],facts:[]};
+  const evidence=new Map(localData.records.map(row=>{
+    const e=Object.fromEntries(localData.source_fields.map((key,i)=>[key,localData.sources[row[0]][i]]));
+    localData.evidence_fields.forEach((key,i)=>{e[key]=row[i+1];});return [e.id,e];
+  }));
+  const facts=new Map(localData.facts.map(f=>[f.id,f]));
+  function sourceLink(raw){const a=element('a',raw);try{const url=new URL(raw);if(!/^https?:\/\//i.test(raw)||!['http:','https:'].includes(url.protocol)||url.username||url.password||/[\x00-\x1f]/.test(raw))return element('span',raw);a.href=url.href;a.target='_blank';a.rel='noopener noreferrer nofollow';return a;}catch{return element('span',raw);}}
+  function showEvidence(panel){
+    if(panel.dataset.loaded)return;
+    const fact=facts.get(panel.dataset.source);if(!fact){panel.replaceChildren(element('p','Local source data could not be loaded.'));return;}
+    panel.replaceChildren();
+    for(const id of fact.evidence_ids){const e=evidence.get(id);if(!e)continue;const record=element('div',null,'evidence-record'),dl=element('dl',null,'values');
+      const pair=(label,value)=>{dl.append(element('dt',label));const dd=element('dd');dd.append(value?.nodeType?value:element('span',value??'Not supplied'));dl.append(dd);};
+      pair('Source / class',e.source_class);pair('Source link',sourceLink(e.source_url));pair('Registry identifier',e.source_identifier);pair('Retrieved at (UTC)',e.retrieved_at);
+      const period=e.reporting_period||fact.reporting_period;
+      pair('Effective / reporting date',e.effective_at||(period?JSON.stringify(period):'Unknown'));
+      const hash=element('div'),code=element('code',e.content_sha256.slice(0,16)+'…');code.title=e.content_sha256;const copy=element('button','Copy full hash');copy.type='button';copy.dataset.copy=e.content_sha256;hash.append(code,copy);pair('SHA-256',hash);
+      pair('Extraction method / version',e.extraction_method);pair('Locator',e.locator);if(fact.identity_level)pair('Website identity level',fact.identity_level);
+      const quote=element('blockquote',null,'excerpt');const match=[...fact.values].sort((a,b)=>b.length-a.length).find(v=>v&&e.claim_span.includes(v));
+      if(match){const at=e.claim_span.indexOf(match);quote.append(document.createTextNode(e.claim_span.slice(0,at)),element('mark',match),document.createTextNode(e.claim_span.slice(at+match.length)));}else quote.textContent=e.claim_span;
+      record.append(dl,quote);panel.append(record);
+    }
+    panel.dataset.loaded='true';
+  }
   document.addEventListener('click', async event => {
     const button = event.target.closest('button'); if(!button) return;
-    if(button.dataset.toggle){const target=document.getElementById(button.dataset.toggle);if(target){target.hidden=!target.hidden;button.setAttribute('aria-expanded',String(!target.hidden));}}
+    if(button.dataset.toggle){const target=document.getElementById(button.dataset.toggle);if(target){if(target.dataset.source)showEvidence(target);target.hidden=!target.hidden;button.setAttribute('aria-expanded',String(!target.hidden));}}
     if(button.dataset.copy){
       try { await navigator.clipboard.writeText(button.dataset.copy); button.textContent='Copied'; }
       catch { const input=element('textarea');input.value=button.dataset.copy;input.setAttribute('aria-label','Select and copy this value');button.after(input);input.focus();input.select();try{document.execCommand('copy');}catch{} }

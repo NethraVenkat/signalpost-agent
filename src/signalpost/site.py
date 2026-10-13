@@ -48,7 +48,7 @@ def chip(state):
 
 def anchor(claim):
     # IDs come from validated claims, but prefix/hash conversion also prevents attribute injection.
-    return 'fact-' + claim['id']
+    return 'fact-' + claim['id'][:16]
 
 
 def normalize(raw):
@@ -147,6 +147,7 @@ def evidence_panel(claim, records, shared=False):
 
 
 def fact(claim, records):
+    local_id = claim['id'][:16]
     available = claim['availability'] == 'available'
     label = claim['field'].replace('identity.', '').replace('accounts.', '').replace('_', ' ')
     if claim['family'] in {'roles', 'subunits', 'hiring'} and isinstance(claim['value'], dict):
@@ -164,9 +165,9 @@ def fact(claim, records):
     period = claim.get('reporting_period')
     if period:
         content += '<p>Reporting period / currency / unit: ' + esc(value_text(period)) + '</p>'
-    panel = evidence_panel(claim, records, shared=True) if claim.get('evidence_ids') or available else ''
+    panel = bool(claim.get('evidence_ids') or available)
     if panel:
-        content += f'<button type="button" aria-expanded="false" aria-controls="source-{esc(claim["id"])}" data-toggle="source-{esc(claim["id"])}">Source</button><div id="source-{esc(claim["id"])}" class="evidence" hidden>{panel}</div>'
+        content += f'<button type="button" aria-expanded="false" aria-controls="source-{esc(local_id)}" data-toggle="source-{esc(local_id)}">Source</button><div id="source-{esc(local_id)}" data-source="{esc(local_id)}" class="evidence" hidden></div>'
     if claim['family'] == 'accounts':
         return f'<tr id="{esc(anchor(claim))}"><th scope="row">{esc(label)} {chip(claim["availability"])}</th><td>{content}</td></tr>'
     return f'<article class="fact" id="{esc(anchor(claim))}"><h3>{esc(label)} {chip(claim["availability"])}</h3>{content}</article>'
@@ -182,12 +183,14 @@ def sentence_html(sentence, claim_map, change_ids):
     return '<p>' + esc(sentence['text']) + ' ' + ' '.join(cites) + '</p>'
 
 
-def page(title, body, prefix='', kind='profile'):
+def page(title, body, prefix='', kind='profile', company_data=None):
     return ('<!doctype html>\n<html lang="en"><head><meta charset="utf-8">'
             '<meta name="viewport" content="width=device-width, initial-scale=1">'
             f'<meta http-equiv="Content-Security-Policy" content="{esc(CSP)}">'
             f'<title>{esc(title)}</title><link rel="stylesheet" href="{prefix}assets/site.css">'
-            f'<script src="{prefix}data/index.js" defer></script><script src="{prefix}assets/site.js" defer></script>'
+            f'<script src="{prefix}data/index.js" defer></script>'
+            + (f'<script src="{esc(company_data)}" defer></script>' if company_data else '') +
+            f'<script src="{prefix}assets/site.js" defer></script>'
             f'</head><body data-page="{kind}"><a class="skip" href="#main">Skip to content</a>'
             f'<nav aria-label="Main"><a class="brand" href="{prefix}index.html">Signalpost</a>'
             f'<a href="{prefix}index.html">Search companies</a><a href="{prefix}compare.html">Compare</a></nav>'
@@ -238,7 +241,7 @@ def profile(row, title):
         if key == 'activity':
             if dated_registry: body += '<h3>Recent registry dates</h3>'
             for day, label, c in dated_registry:
-                body += '<p>' + esc(label + ': ' + day) + f' <a href="#fact-{esc(c.id)}">Registry source</a></p>'
+                body += '<p>' + esc(label + ': ' + day) + f' <a href="#fact-{esc(c.id[:16])}">Registry source</a></p>'
             body += '<h3>Website updates ' + chip(state) + '</h3>'
         if key == 'financials': body += '<p>Reported values from Regnskapsregisteret; no figures are calculated.</p>'
         if key == 'online': body += '<p>Website proof types: orgnr = exact registered number; registry_declared = registered site with corroboration; signals = accepted identity signals.</p>'
@@ -260,14 +263,46 @@ def profile(row, title):
         body += f'<div id="change-{esc(c["id"])}">{esc(value_text(c))}</div>'
     observations = row['run'].get('refresh', {}).get('observation_changes', [])
     body += '<button type="button" aria-expanded="false" aria-controls="observations" data-toggle="observations">Check status changes</button><div id="observations" hidden>' + value_html(observations) + '</div></section>'
-    secondary = sorted({eid for c in claims for eid in c.get('evidence_ids', [])[1:]})
-    if secondary:
-        body += '<section id="supporting-sources"><h2>Additional supporting sources</h2>'
-        for eid in secondary:
-            body += '<article class="fact" id="evidence-' + esc(eid) + '">' + evidence_panel({'evidence_ids': [eid], 'value': None, 'availability': 'available'}, records) + '</article>'
-        body += '</section>'
     body += f'<p><a href="../index.html">Back to search</a> · <a href="../compare.html#{esc(org)}">Compare with…</a></p>'
-    return page(str(name) + ' · ' + title, body, '../')
+    return page(str(name) + ' · ' + title, body, '../', company_data=org+'.data.js')
+
+
+def company_payload(row):
+    evidence={e['id']:e for e in row['evidence']}
+    referenced=set()
+    facts=[]
+    def leaves(value):
+        if isinstance(value,dict):
+            for key,item in value.items():
+                if key!='birth_date':yield from leaves(item)
+        elif isinstance(value,list):
+            for item in value:yield from leaves(item)
+        elif value is not None:yield str(value)
+    for claim in row['claims']:
+        if not claim.get('evidence_ids') and claim['availability']!='available':continue
+        # Validate the entire evidence set before writing any file.
+        evidence_panel(claim,evidence)
+        referenced.update(claim['evidence_ids'])
+        v=claim.get('value')
+        facts.append({'id':claim['id'][:16],'evidence_ids':claim['evidence_ids'],
+                      'values':list(leaves(v)), 'reporting_period':claim.get('reporting_period'),
+                      'identity_level':v.get('identity_level') if isinstance(v,dict) else None})
+    if len({c['id'][:16] for c in row['claims']}) != len(row['claims']):
+        raise ValueError('Conflicting local fact anchors')
+    # Records from one response share source metadata. Store it once without losing fields.
+    source_fields=['source_url','source_class','retrieved_at','content_sha256',
+                   'extraction_method','source_identifier','reporting_period']
+    evidence_fields=['id','claim_span','locator','effective_at']
+    sources=[]; source_lookup={}; records=[]
+    for eid in sorted(referenced):
+        e=evidence[eid]
+        shared=[e.get(k) for k in source_fields]
+        key=json.dumps(shared,sort_keys=True,ensure_ascii=False)
+        if key not in source_lookup:
+            source_lookup[key]=len(sources);sources.append(shared)
+        records.append([source_lookup[key]]+[e.get(k) for k in evidence_fields])
+    return {'source_fields':source_fields,'sources':sources,'evidence_fields':evidence_fields,
+            'records':records,'facts':facts}
 
 
 def index_record(row):
@@ -339,25 +374,34 @@ def generate_site(input_path, out, title='Signalpost'):
     input_path, out = Path(input_path), Path(out)
     if input_path.resolve().is_relative_to(out.resolve()):
         raise ValueError('Site directory must not contain its source envelopes')
-    rows = [normalize(json.loads(line)) for line in input_path.read_text(encoding='utf-8-sig').splitlines() if line.strip()]
+    input_rows = [normalize(json.loads(line)) for line in input_path.read_text(encoding='utf-8-sig').splitlines() if line.strip()]
+    unique={}
+    for row in input_rows:
+        org=row['organisation_number']
+        if org in unique and unique[org]!=row:raise ValueError('Conflicting duplicate company envelopes')
+        unique[org]=row
+    rows=list(unique.values())
     if any(not re.fullmatch(r'\d{9}', r['organisation_number']) for r in rows):
         raise ValueError('Site filenames require nine digit identifiers')
-    if len({r['organisation_number'] for r in rows}) != len(rows):
-        raise ValueError('Site requires unique company envelopes')
     records = [index_record(r) for r in rows]
     payload = json.dumps(records, ensure_ascii=False, sort_keys=True, separators=(',', ':'), allow_nan=False)
     js_payload = payload.replace('</', '<\\/').replace('\u2028', '\\u2028').replace('\u2029', '\\u2029')
     files = {'index.html': index_page(records, title), 'compare.html': compare_page(title),
              'data/index.json': payload + '\n', 'data/index.js': 'window.SIGNALPOST_INDEX = ' + js_payload + ';\n'}
-    for row in rows: files['c/' + row['organisation_number'] + '.html'] = profile(row, title)
+    for row in rows:
+        org=row['organisation_number']
+        files['c/' + org + '.html'] = profile(row, title)
+        data=json.dumps(company_payload(row),ensure_ascii=False,sort_keys=True,separators=(',',':'),allow_nan=False)
+        data=data.replace('</','<\\/').replace('\u2028','\\u2028').replace('\u2029','\\u2029')
+        files['c/'+org+'.data.js']='window.SIGNALPOST_EVIDENCE = '+data+';\n'
     for filename in ('site.css', 'site.js'): files['assets/' + filename] = (ASSETS / filename).read_text(encoding='utf8')
     # Render everything before writes: template errors cannot leave half a new site.
-    if any(len(content.encode('utf8')) >= 250_000 for path, content in files.items() if path.startswith('c/')):
+    if any(len(content.encode('utf8')) >= 250_000 for path, content in files.items() if path.startswith('c/') and path.endswith('.html')):
         raise ValueError('Profile page exceeds 250 KB gate')
     for filename, content in files.items():
         target = out / filename
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(content, encoding='utf8', newline='\n')
     sizes = {filename: len(content.encode('utf8')) for filename, content in files.items()}
-    return {'companies': len(rows), 'pages': len(rows) + 2, 'total_bytes': sum(sizes.values()),
-            'largest_profile_bytes': max((size for path, size in sizes.items() if path.startswith('c/')), default=0)}
+    return {'companies': len(rows), 'input_records':len(input_rows), 'pages': len(rows) + 2, 'total_bytes': sum(sizes.values()),
+            'largest_profile_bytes': max((size for path, size in sizes.items() if path.startswith('c/') and path.endswith('.html')), default=0)}
