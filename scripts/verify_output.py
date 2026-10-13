@@ -20,7 +20,8 @@ def verify_synthesis(row):
     if raw is None:return 0,0
     synthesis=Synthesis.model_validate(raw)
     envelope=SimpleNamespace(claims=[Claim.model_validate(c) for c in data['claims']],
-        evidence=[Evidence.model_validate(e) for e in data['evidence']],changes=[Change.model_validate(c) for c in data['changes']])
+        evidence=[Evidence.model_validate(e) for e in data['evidence']],changes=[Change.model_validate(c) for c in data['changes']],
+        run=SimpleNamespace(refresh=row['run']['refresh'] if 'run' in row else data['refresh']))
     sentences=[s for key in SECTIONS for s in getattr(synthesis.sections,key)]
     assert all(sentence_error(s,envelope) is None for s in sentences),'Unverified synthesis sentence'
     assert synthesis.summary==' '.join(s.text for s in sentences),'Summary differs from checked sentences'

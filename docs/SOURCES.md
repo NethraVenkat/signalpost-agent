@@ -25,6 +25,19 @@ Robots are checked per scheme/authority, including redirected hosts. Robots 404/
 
 Website facts have company-owned provenance. Publication of short factual spans does not assert an open-data licence for website content. Social-profile URLs are extracted from accepted sites but social platforms are never requested.
 
+## Static English industry titles (SSB KLASS)
+
+Official SSB KLASS classification 6 was downloaded during development on **2026-10-13**. Runtime synthesis reads bundled files only; it never calls KLASS. The English version responses are saved, without replacing titles or truncating classification items, in `src/signalpost/synthesis/data/`:
+
+| Standard | KLASS version | Underlying NACE | English source URL | Saved file |
+|---|---|---|---|---|
+| SN2025 | 3218; valid from 2025-01-01; last modified 2026-06-17T08:02:16.000+0000 | Rev. 2.1 | https://data.ssb.no/api/klass/v1/versions/3218?language=en | `ssb-sn2025-en-2026-10-13.json` |
+| SN2007 | 30; valid from 2009-01-01 | Rev. 2 | https://data.ssb.no/api/klass/v1/versions/30?language=en | `ssb-sn2007-en-2026-10-13.json` |
+
+`nace-klass-2026-10-13.json` records source URLs, download date and version metadata, all 651 SN2025 and 613 SN2007 four-digit English class titles, and all 738/820 five-digit Norwegian subclasses with their official `parentCode`. Each subclass displays its four-digit parent's English title. Norwegian registered labels were downloaded on the same date from `https://data.ssb.no/api/klass/v1/versions/3218?language=nb` and `https://data.ssb.no/api/klass/v1/versions/30?language=nb` and retained in the normalized table to resolve version collisions. The English originals remain the title authority; tests compare the derived table against them.
+
+For example, SN2025 `46.640` maps to `46.64`, **Wholesale of other machinery and equipment**, while the same code in SN2007 denotes textile machinery. An exact normalized Norwegian label chooses between conflicting versions; if the version cannot be established, synthesis retains only the Norwegian description. Unknown codes never receive a guessed English title. `00.000` / `Uoppgitt` is omitted as an activity and shown as an explicit unknown. No English titles were sourced from model memory. `scripts/download_nace.py` reproduces the development-only download and table build; runtime versions are pinned until a deliberate code/data update.
+
 ## NAV job ads and credentials
 
 [Official feed documentation](https://navikt.github.io/pam-stilling-feed/) and [reuse terms](https://arbeidsplassen.nav.no/vilkar-api). HTTPS `pam-stilling-feed.nav.no:443` only, paths `/api/publicToken`, `/api/v1/feed`, `/api/v1/feed/{UUID}`, `/api/v1/feedentry/{UUID}`. Redirects and arbitrary query/path values are refused. The same public-IP pinned transport is used. Public ad URLs on arbeidsplassen.nav.no are derived, never fetched.

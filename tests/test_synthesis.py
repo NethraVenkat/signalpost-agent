@@ -139,6 +139,6 @@ def test_output_verifier_rejects_unchecked_synthesis(tmp_path):
     row,_=envelope(tmp_path)
     raw=row.model_dump(mode='json')
     assert verify_synthesis(raw)[0]==1
-    raw['run']['synthesis']['sections']['scale'][0]['text']='Employees as registered: 99999999.'
+    raw['run']['synthesis']['sections']['what_it_does'][0]['text']='Employees as registered: 99999999.'
     with pytest.raises(AssertionError,match='Unverified synthesis'):
         verify_synthesis(raw)

@@ -6,7 +6,7 @@ from .catalog import catalog
 from .template import projected
 from .validate import SECTIONS,sentence_error
 
-PROMPT_VERSION='placeholders-1'
+PROMPT_VERSION='placeholders-2'
 SYSTEM=('Return JSON {"sentences":[{"section":"scale","text":"...","claim_ids":["id"]}]}. '
         'Use only these English frames with {{claim:id}} values: Registered activity: «{{claim:id}}». '
         'Registered purpose: «{{claim:id}}». NACE: {{claim:id}}. Website self-description: «{{claim:id}}». '
@@ -95,5 +95,10 @@ def render(raw,base,envelope,specs):
         original=getattr(result.sections,section)
         chosen=[sentence for (sec,_),sentence in replacements.items() if sec==section]
         retained=[sentence for sentence in original if not (len(sentence.claim_ids)==1 and (section,sentence.claim_ids[0]) in replacements and sentence.value_kind=='reported')]
-        setattr(result.sections,section,chosen+retained)
+        # Preserve the template headline as the first sentence.
+        if section=='what_it_does' and original and len(original[0].claim_ids)>1:
+            opening=original[0]
+            retained=[s for s in retained if s!=opening]
+            setattr(result.sections,section,[opening]+chosen+retained)
+        else:setattr(result.sections,section,chosen+retained)
     return result

@@ -4,6 +4,8 @@ from datetime import date
 from decimal import Decimal,InvalidOperation
 from .catalog import catalog,leaves
 from ..models.synthesis import Sentence,Unknown
+from .readability import headline,nace_sentence,dual_role,normalised_description,money
+from .nace import unspecified
 
 SECTIONS=('what_it_does','scale','leadership','changes')
 LEVELS={'VERIFIED','HIGH','REGISTRY_DECLARED'}
@@ -33,6 +35,7 @@ def tokens(text):
     without_dates=DATE.sub(' ',text)
     urls={m.group().rstrip('.,;') for m in URL.finditer(text)}
     without_urls=URL.sub(' ',without_dates)
+    without_urls=re.sub(r'\bFY(\d{4})\b',r'\1',without_urls)
     nums={number(m.group()) for m in NUMBER.finditer(without_urls)}
     return dates-{None},nums-{None},urls
 
@@ -62,6 +65,49 @@ def sentence_error(sentence,envelope):
     evidence={e.id for e in envelope.evidence}
     if any(not c.evidence_ids or set(c.evidence_ids)-evidence for c in claims):return 'missing_evidence'
     if any(not permitted(c,envelope) for c in claims):return 'identity_below_threshold'
+    # These new frames are checked in full, bound to every claim they use.
+    # Table titles authorize only the matching NACE frame or headline.
+    plain=sentence.text.removeprefix('Previously supported. ')
+    opening=headline(claims)
+    if opening and sentence.text==opening[0]:
+        if set(sentence.claim_ids)!=set(opening[1]):return 'misbound_headline'
+        if sentence.value_kind!='reported' or sentence.count is not None or sentence.record_type is not None:return 'unmarked_derived_count'
+        return None
+    outside_quotes=re.sub(r'«.*?»',' ',plain,flags=re.S)
+    if ' is a ' in outside_quotes or outside_quotes.startswith('Registered name: ') or ' registered employees' in outside_quotes or ' in revenue in FY' in outside_quotes:
+        return 'unverified_headline'
+    if plain.startswith('NACE '):
+        if len(claims)!=1 or not claims[0].field.startswith('identity.nace') or unspecified(claims[0].value) or sentence.text!=nace_sentence(claims[0]):return 'unverified_nace_title'
+        if sentence.value_kind!='reported' or sentence.count is not None or sentence.record_type is not None:return 'unmarked_derived_count'
+        return None
+    if ' is both CEO and chair.' in plain:
+        if any(not c.field.startswith('roles.role.') or c.value.get('inactive') is True for c in claims):return 'misbound_role'
+        merged=dual_role(claims)
+        if not merged or sentence.text!=merged[0] or set(sentence.claim_ids)!=set(merged[1]):return 'misbound_role'
+        if sentence.value_kind!='reported' or sentence.count is not None or sentence.record_type is not None:return 'unmarked_derived_count'
+        return None
+    if plain.startswith('Registered activity and purpose: '):
+        fields={c.field:c for c in claims}
+        if set(fields)!={'identity.registered_activity','identity.statutory_purpose'} or len(claims)!=2:return 'misbound_activity'
+        activity=fields['identity.registered_activity'];purpose=fields['identity.statutory_purpose']
+        value=normalised_description(activity.value)
+        prefix='Previously supported. ' if activity.carried_forward or purpose.carried_forward else ''
+        if value!=normalised_description(purpose.value) or sentence.text!=prefix+'Registered activity and purpose: «'+value[:300]+'».':return 'non_verbatim_quote'
+        if sentence.value_kind!='reported' or sentence.count is not None or sentence.record_type is not None:return 'unmarked_derived_count'
+        return None
+    if plain in {'First observation; no earlier run to compare.','No changes since the previous run.'}:
+        refresh=getattr(getattr(envelope,'run',None),'refresh',{})
+        baseline=refresh.get('mode')=='baseline'
+        if (plain.startswith('First observation') and not baseline) or (plain.startswith('No changes') and (baseline or envelope.changes)):return 'unverified_refresh_notice'
+    # Money can cite only the exact account amount, not a year or another
+    # numeric value in the same citation. Reject abbreviated/rounded amounts.
+    if re.search(r'\b(?:million|billion|thousand)\b',plain,re.I):return 'unverified_number'
+    for match in re.finditer(r'\b(NOK|EUR|USD|SEK|DKK|GBP)\s+([-+]?\d[\d, .\u00a0]*\d|[-+]?\d)',plain):
+        rendered=match.group(2).strip().rstrip('.')
+        if not any(c.field.startswith('accounts.') and isinstance(c.value,(int,float)) and
+                   (getattr(c,'reporting_period',None) or {}).get('currency')==match.group(1) and
+                   number(rendered)==number(str(c.value)) and
+                   re.sub(r'\D','',rendered)==re.sub(r'\D','',money(c.value)) for c in claims):return 'unverified_number'
     derived=None
     if sentence.value_kind=='derived':
         def matches(claim):

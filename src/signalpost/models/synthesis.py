@@ -17,6 +17,7 @@ class Unknown(Model):
     state: Availability
     reason: str
     field: str | None = None
+    text: str | None = None
 
 
 class Sections(Model):

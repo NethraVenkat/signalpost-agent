@@ -1,9 +1,9 @@
-import json
-from datetime import datetime,date
 from decimal import Decimal
 from ..models.synthesis import Synthesis,Generator,Sentence,Unknown
 from .catalog import input_hash,change_claims,leaves
 from .validate import validate_synthesis,permitted
+from .readability import money,headline,nace_sentence,dual_role,normalised_description,unknown_text
+from .nace import unspecified
 
 
 def text(value):
@@ -23,7 +23,9 @@ def projected(claim):
     if field.startswith('roles.role.'):return text(value.get('name'))
     if field.startswith('accounts.') and getattr(claim,'reporting_period',None):
         period=claim.reporting_period
-        return ' '.join(x for x in [period.get('currency'),text(value)] if x)+' (fiscal year '+str(period.get('fiscal_year'))+')' if period.get('fiscal_year') else text(value)
+        amount=money(value) if period.get('currency') else text(value)
+        return ' '.join(x for x in [period.get('currency'),amount] if x)+' (fiscal year '+str(period.get('fiscal_year'))+')' if period.get('fiscal_year') else amount
+    if field.startswith('accounts.') and isinstance(value,(int,float)) and not isinstance(value,bool):return money(value)
     if field.startswith('subunits.unit.'):
         address=value.get('address') or {}
         return ', '.join(text(x) for x in [value.get('name'),address.get('kommune') or address.get('poststed')] if x)
@@ -35,9 +37,12 @@ def projected(claim):
 
 
 def generate(envelope):
-    result=Synthesis(generator=Generator(input_sha256=input_hash(envelope)),change_claims=change_claims(envelope))
+    result=Synthesis(generator=Generator(version='2',input_sha256=input_hash(envelope)),change_claims=change_claims(envelope))
     claims=sorted((c for c in envelope.claims if c.availability=='available' and permitted(c,envelope)),key=lambda c:c.field)
     by_field={c.field:c for c in claims}
+    opening=headline(claims)
+    opening_ids=set(opening[1]) if opening else set()
+    if opening:result.sections.what_it_does.append(Sentence(text=opening[0],claim_ids=opening[1]))
     def add(section,label,claim,quote=False):
         value=projected(claim)
         if not value or value=='None':return
@@ -46,11 +51,20 @@ def generate(envelope):
             value='«'+(next((x for x in leaves(claim.value) if x),value) if isinstance(claim.value,list) else value)[:300]+'»'
         prefix='Previously supported. ' if claim.carried_forward else ''
         getattr(result.sections,section).append(Sentence(text=prefix+label+': '+value+'.',claim_ids=[claim.id]))
-    for field,label in [('identity.registered_activity','Registered activity'),('identity.statutory_purpose','Registered purpose')]:
-        if field in by_field:add('what_it_does',label,by_field[field],True)
+    activity=by_field.get('identity.registered_activity');purpose=by_field.get('identity.statutory_purpose')
+    if activity and purpose and normalised_description(activity.value)==normalised_description(purpose.value):
+        prefix='Previously supported. ' if activity.carried_forward or purpose.carried_forward else ''
+        result.sections.what_it_does.append(Sentence(text=prefix+'Registered activity and purpose: «'+normalised_description(activity.value)[:300]+'».',claim_ids=[activity.id,purpose.id]))
+    else:
+        for field,label in [('identity.registered_activity','Registered activity'),('identity.statutory_purpose','Registered purpose')]:
+            if field in by_field:add('what_it_does',label,by_field[field],True)
     descriptions=set()
     for claim in claims:
-        if claim.field.startswith('identity.nace'):add('what_it_does','NACE',claim)
+        if claim.field.startswith('identity.nace'):
+            if unspecified(claim.value):
+                if not any(u.field=='industry' for u in result.sections.unknowns):
+                    result.sections.unknowns.append(Unknown(family='identity',field='industry',state='not_available',reason='Industry code not specified.'))
+            else:result.sections.what_it_does.append(Sentence(text=nace_sentence(claim),claim_ids=[claim.id]))
         if claim.field.startswith('website_description.'):
             description=projected(claim)
             if description not in descriptions and len(descriptions)<2:
@@ -58,7 +72,11 @@ def generate(envelope):
                 descriptions.add(description)
     for field,label in [('identity.employees','Employees as registered'),('accounts.revenue','Reported revenue'),
                         ('accounts.net_result','Annual result'),('identity.municipality','Registered municipality')]:
-        if field in by_field:add('scale',label,by_field[field])
+        if field in by_field and by_field[field].id not in opening_ids:add('scale',label,by_field[field])
+    active_roles=[c for c in claims if c.field.startswith('roles.role.') and c.value.get('inactive') is not True and c.value.get('name')]
+    combined=dual_role(active_roles)
+    combined_ids=set(combined[1]) if combined else set()
+    if combined:result.sections.leadership.append(Sentence(text=combined[0],claim_ids=combined[1]))
     examples={'subunits':0,'social':0,'ads':0}
     for claim in claims:
         if claim.field.startswith('subunits.unit.') and examples['subunits']<3:
@@ -71,15 +89,18 @@ def generate(envelope):
         if claim.field.startswith('roles.role.') and claim.value.get('inactive') is not True:
             role=(claim.value.get('role_type') or {}).get('kode')
             label={'DAGL':'CEO','LEDE':'Chair','REVI':'Auditor'}.get(role)
-            if label and claim.value.get('name'):add('leadership',label,claim)
+            if label and claim.value.get('name') and claim.id not in combined_ids:add('leadership',label,claim)
     def count(section,label,records,kind):
         records={c.id:c for c in records}
         if records:getattr(result.sections,section).append(Sentence(text=label+': '+str(len(records))+'.',claim_ids=sorted(records),value_kind='derived',count=len(records),record_type=kind))
     if envelope.run.sections.get('subunits')=='available':
-        count('scale','Registered workplaces',[c for c in claims if c.field.startswith('subunits.unit.')],'workplaces')
+        units=[c for c in claims if c.field.startswith('subunits.unit.')]
+        duplicate=len(units)==1 and units[0].value.get('name')==getattr(by_field.get('identity.legal_name'),'value',None) and (units[0].value.get('address') or {}).get('kommune')==getattr(by_field.get('identity.municipality'),'value',None)
+        if not duplicate:count('scale','Registered workplaces',units,'workplaces')
     if envelope.run.sections.get('roles')=='available':
-        count('leadership','Registered board members',[c for c in claims if c.family=='roles' and isinstance(c.value,dict) and
-            (c.value.get('group_type') or {}).get('kode')=='STYR' and (c.value.get('role_type') or {}).get('kode') in {'LEDE','NEST','MEDL'} and c.value.get('inactive') is not True],'board_members')
+        board=[c for c in claims if c.family=='roles' and isinstance(c.value,dict) and
+            (c.value.get('group_type') or {}).get('kode')=='STYR' and (c.value.get('role_type') or {}).get('kode') in {'LEDE','NEST','MEDL'} and c.value.get('inactive') is not True]
+        if len({c.id for c in board})>1:count('leadership','Registered board members',board,'board_members')
     count('scale','Verified active ads found',[c for c in claims if c.family=='hiring' and c.field.startswith('hiring.job.') and not c.carried_forward],'active_ads')
     for event in envelope.changes:
         sides=[c for c in result.change_claims if c.field in {event.field+'.old',event.field+'.new'}]
@@ -88,22 +109,19 @@ def generate(envelope):
             for side in ('old','new'):
                 claim=next((c for c in sides if c.field.endswith('.'+side)),None)
                 if claim:parts.append(('Previous' if side=='old' else 'Current')+': '+projected(claim))
-            result.sections.changes.append(Sentence(text='Change. '+'; '.join(parts)+'.',claim_ids=[c.id for c in sides]))
-    try:asof=datetime.fromisoformat(envelope.started_at.replace('Z','+00:00')).date()
-    except ValueError:asof=date.today()
-    registered=by_field.get('identity.registration_date')
-    if registered:
-        try:recent=0<=(asof-date.fromisoformat(str(registered.value)[:10])).days<=731
-        except ValueError:recent=False
-        if recent:add('changes','Registration date',registered)
+            result.sections.changes.append(Sentence(text='Change: '+'; '.join(parts)+'.',claim_ids=[c.id for c in sides]))
     for field,label in [('identity.bankrupt','Bankruptcy'),('identity.under_liquidation','Liquidation'),('identity.deleted','Deletion')]:
         claim=by_field.get(field)
-        if claim and claim.value is True:add('changes',label,claim)
+        if claim and claim.value is True:add('scale',label,claim)
     if envelope.run.refresh.get('mode')=='baseline':
         if claims:
             result.sections.changes.append(Sentence(text='First observation; no earlier run to compare.',claim_ids=[claims[0].id]))
         else:
             result.sections.unknowns.append(Unknown(family='refresh',state='not_available',reason='First observation; no earlier run to compare.'))
+    elif not envelope.changes and claims:
+        result.sections.changes.append(Sentence(text='No changes since the previous run.',claim_ids=[claims[0].id]))
+    elif not envelope.changes:
+        result.sections.unknowns.append(Unknown(family='refresh',state='not_available',reason='No changes since the previous run.'))
     for family,state in sorted(envelope.run.sections.items()):
         if state!='available':
             codes=sorted({e.code for e in envelope.errors if e.section==family and e.code!='website_candidates'})
@@ -118,6 +136,8 @@ def generate(envelope):
     if len(periods)==1:
         result.sections.unknowns.append(Unknown(family='accounts',field='financial_direction',state='not_available',reason="Only the latest year's accounts are available."))
     for key in ('what_it_does','scale','leadership'):
+        if key=='scale' and any(c.id in opening_ids and c.field in {'identity.municipality','identity.employees','accounts.revenue'} for c in claims):continue
         if not getattr(result.sections,key):
             result.sections.unknowns.append(Unknown(family=key,state='not_available',reason='No supported claims are available for this section.'))
+    for unknown in result.sections.unknowns:unknown.text=unknown_text(unknown,envelope)
     return validate_synthesis(result,envelope)
