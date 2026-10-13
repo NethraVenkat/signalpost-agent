@@ -81,3 +81,7 @@ Separate live measurements from 13 October 2026:
 NAV's 18 failed companies had no usable distinctive name; name-filtered negatives do not cover unknown trading names. Detail requests were0.006667/company, within the default300 cap. Exact saved-status/body NAV replay preserved every live claim ID and produced zero company/observation events on rerun. Website recall is a development goal; identity correctness and evidence checks remain publication gates.
 
 These measurements are smoke/recall observations, not an official competition score or performance guarantee. Bodies, company-level envelopes and internal audit material are not included in the published reports.
+
+## Profile site UX gate
+
+Offline site tests cover all envelope shapes, membership, escaped untrusted content, safe links, evidence completeness, citation anchors, deterministic bytes and isolated template errors. The saved 300-company generation produces 302 pages; profiles must stay below 250 KB. Inspect index, BRANDO, a borettslag and compare at 1280 and 375 px, including file:// initialization, pagination, diacritics search, source toggles and overflow. Use installed browsers only; no browser dependency is required. Light/dark state chips include words, inputs have labels, toggles expose aria-expanded, and keyboard focus is visible. Browser QA supplements the offline suite; it is not a complete accessibility certification.

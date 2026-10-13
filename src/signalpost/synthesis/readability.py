@@ -41,7 +41,7 @@ def headline(claims, municipality_display=None):
         text += (', with ' if municipality or industry else ' has ') + str(employees.value) + ' registered employees'
         used.append(employees)
     if revenue and period.get('currency') == 'NOK' and period.get('fiscal_year'):
-        text += (' and ' if employees or municipality or industry else ' has ')
+        text += (' and ' if employees else ', with ' if municipality or industry else ' has ')
         text += 'NOK ' + money(revenue.value) + ' in revenue in FY' + str(period['fiscal_year'])
         used.append(revenue)
     if len(used) == 1:

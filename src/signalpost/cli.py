@@ -10,12 +10,17 @@ from .runner import run
 def main():
     parser = argparse.ArgumentParser(prog="signalpost")
     sub = parser.add_subparsers(dest="command", required=True)
+    site = sub.add_parser('site', help='Build offline searchable company profiles')
+    site.add_argument('--input', type=Path, required=True)
+    site.add_argument('--out', type=Path, required=True)
+    site.add_argument('--title', default='Signalpost')
     command = sub.add_parser("run", help="Write a terminal result for every supplied company")
     for flag in ("organisations", "output", "report"):
         command.add_argument("--" + flag, type=Path, required=True)
     for flag in ("bulk", "previous"):
         command.add_argument("--" + flag, type=Path)
     command.add_argument("--state-dir", type=Path, default=Path("state"))
+    command.add_argument('--site-dir', type=Path)
     command.add_argument("--envelope-shape", choices=("union", "contract", "reference"), default="union")
     command.add_argument("--emit-duplicates", action="store_true")
     command.add_argument("--websites", action="store_true")
@@ -36,8 +41,12 @@ def main():
                                ("official-batch-size", int, 1100), ("max-output-mb", float, 64)):
         command.add_argument("--" + flag, type=kind, default=default)
     args = vars(parser.parse_args())
-    args.pop("command")
+    action = args.pop("command")
     try:
+        if action == 'site':
+            from .site import generate_site
+            print(json.dumps(generate_site(args['input'], args['out'], args['title'])))
+            return 0
         config = Config(**args)
         resolved = [config.output.resolve(), config.report.resolve()]
         protected = [p.resolve() for p in (config.organisations, config.bulk, config.previous) if p]

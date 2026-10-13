@@ -8,6 +8,7 @@ class Config(BaseModel):
     report: Path
     bulk: Path | None = None
     previous: Path | None = None
+    site_dir: Path | None = None
     state_dir: Path = Path("state")
     envelope_shape: str = "union"
     emit_duplicates: bool = False

@@ -238,6 +238,16 @@ async def run(config, client=None,synthesis_provider=None):
     report["output_limited_companies"] = output_limited
     if minimum_exceeded:
         report["warnings"].append("max-output-mb is smaller than mandatory terminal membership; minimal output written and limit flagged")
+    if config.site_dir is not None:
+        try:
+            from .site import generate_site
+            if any(p.resolve().is_relative_to(config.site_dir.resolve()) for p in
+                   (config.output, config.report, config.organisations, config.bulk, config.previous) if p):
+                raise ValueError('Site directory overlaps a run input or output')
+            report['site'] = {'state': 'available', **generate_site(config.output, config.site_dir)}
+        except Exception as exc:
+            report['site'] = {'state': 'failed', 'error': type(exc).__name__, 'message': str(exc)}
+            report['warnings'].append('site generation failed: ' + type(exc).__name__)
     try:
         config.report.parent.mkdir(parents=True, exist_ok=True)
         config.report.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

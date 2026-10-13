@@ -63,6 +63,18 @@ def test_headline_has_every_clause_cited_and_exact_amount(tmp_path):
     assert result.checks.dropped_sentences == 0
 
 
+def test_revenue_is_first_optional_headline_clause_without_employees(tmp_path):
+    row, _ = envelope(tmp_path)
+    row.claims = [c for c in row.claims if c.field != 'identity.employees']
+    available(row, 'accounts.revenue', 3720407, reporting_period={'currency': 'NOK', 'fiscal_year': '2025'})
+    result = generate(row)
+    opening = result.sections.what_it_does[0]
+    assert '), with NOK 3,720,407 in revenue' in opening.text
+    assert sentence_error(opening, row) is None
+    assert sentence_error(opening.model_copy(update={'text': opening.text.replace('), with NOK', ') and NOK')}), row)
+    assert result.checks.dropped_sentences == 0
+
+
 @pytest.mark.parametrize('value,expected', [(424327000, '424,327,000'), (424327000.0, '424,327,000'), (-1200, '-1,200'), (1234.56, '1,234.56'), (0, '0')])
 def test_exact_money(value, expected, tmp_path):
     assert money(value) == expected

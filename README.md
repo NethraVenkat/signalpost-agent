@@ -64,6 +64,16 @@ Company changes require successfully checked sections in both runs. Failed/block
 
 Exit zero means output was written, including explicit failures. Check report states and verify output; it does not by itself establish source success.
 
+## Profile site
+
+```sh
+uv run signalpost site --input out/envelopes.jsonl --out site/ --title "Signalpost"
+```
+
+Open `site/index.html` directly or serve the directory with a static server. Search names or organisation numbers, filter coverage and municipality/industry, and compare two or three companies. Profiles include cited summaries, section states, financials, people, locations, hiring, public activity and changes. Source buttons show exact excerpts, hashes, retrieval dates and extraction provenance; additional supporting sources are linked on the same page. Previously supported facts are marked explicitly.
+
+Add `--site-dir site/` to `signalpost run` to generate profiles after envelopes are written. Site errors are recorded under `site` in the run report and preserve run output and exit behavior. Generation accepts contract/reference/union shapes, requires unique nine-digit identifiers, and uses no network or extra dependency. Static CSS/JavaScript and a safely escaped local index script work under `file://`; untrusted text is escaped and only HTTP(S) fact links are clickable. Identical envelopes produce identical files. Use a new empty output directory for a different company population; generation does not delete older files.
+
 ## Evaluation
 
 ```sh
@@ -86,4 +96,4 @@ Code and docs: [MIT](LICENSE). Registry data: NLOD 2.0 attribution; NAV and webs
 
 ## Limitations
 
-Website recall measured 20/300 (6.667%) with zero known errors in the reviewed publication population. NAV name discovery can miss unknown trading names; unusable names and caps remain explicitly incomplete. Live sources can change, historical carried-forward support is not fresh verification, and external evaluator/resource acceptance is not established. There is no profile UI or live model adapter. [Limitations](docs/LIMITATIONS.md).
+Website recall measured 20/300 (6.667%) with zero known errors in the reviewed publication population. NAV name discovery can miss unknown trading names; unusable names and caps remain explicitly incomplete. Live sources can change, historical carried-forward support is not fresh verification, and external evaluator/resource acceptance is not established. There is no live model adapter. [Limitations](docs/LIMITATIONS.md).
