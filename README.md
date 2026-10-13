@@ -34,7 +34,7 @@ Useful defaults and controls:
 
 | Scope | Flags / defaults |
 |---|---|
-| Batch | `--workers 64`, `--host-concurrency 10`, `--max-requests 8000`, `--time-budget-seconds 1800`, `--deadline-fraction 0.85`, `--request-timeout 10` |
+| Batch | `--workers 64`, `--host-concurrency 10`, `--max-requests` defaults to 20 × unique input identifiers, `--time-budget-seconds 2400`, `--deadline-fraction 0.85` (34-minute source watchdog), `--request-timeout 10` |
 | Output | `--state-dir state`, `--envelope-shape union`, `--max-output-mb 64`, optional `--expected-count` |
 | Websites | `--website-request-cap 6`, `--website-total-request-cap 9`; 8-second source bounds, 1-second domain politeness |
 | NAV | `--nav-max-pages 512`, `--nav-max-details` defaults to max(300, half the batch rounded up), `--nav-time-cap-seconds` defaults to min(600, 35% of run time), `--nav-lookback-days 185`, `--nav-concurrency 8`, `--nav-request-timeout 30`; independent connection pool |

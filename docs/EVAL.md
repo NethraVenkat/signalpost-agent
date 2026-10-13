@@ -7,7 +7,15 @@ uv sync --frozen
 uv run pytest
 ```
 
-The suite currently has 117 tests covering checksum/input membership, isolation/deadlines/budgets, missing versus reported zero, all envelope shapes, stored provenance, refresh/carry-forward, website proof/robots/SSRF/politeness, NAV exact matches/caps/ETags, output verification, synthesis citations/values/counts and fake-provider placeholders/cache/caps/fallback. Fixtures are small and local; no credentials or internet are required for these tests.
+The offline suite covers input membership and multiplicity, isolation/deadlines/budgets, missing versus reported zero, all envelope shapes, stored provenance, refresh/carry-forward, website proof/robots/SSRF/politeness, NAV exact matches/caps/ETags, output verification, synthesis citations/values/counts and provider fallback. Fixtures are small and local; no credentials or internet are required for these tests.
+
+## Release resource defaults
+
+The default time budget is 2,400 seconds; `--deadline-fraction 0.85` stops source work at 2,040 seconds. `--max-requests` derives 20 HTTP requests per unique normalized input identifier; duplicates share requests. Set either flag explicitly to override it. Workers default to 64, registry host concurrency to 10 and request timeout to 10 seconds. Website fetching defaults to 6 requests plus bounded supporting work within a total cap of 9 per company, 8 candidate DNS checks, 8-second requests, one-second domain politeness and two requests in flight per domain. Override the website caps with `--website-request-cap` and `--website-total-request-cap`; `--no-dns-precheck` disables candidate prechecks.
+
+NAV starts before website work on a separate connection pool. Defaults: 512 header pages, 185-day lookback, 8 detail workers, 30-second request timeout, max(300, ceil(unique companies / 2)) detail attempts including retries, and a total time cap of min(600 seconds, 35% of the run budget). Override with `--nav-max-pages`, `--nav-lookback-days`, `--nav-concurrency`, `--nav-request-timeout`, `--nav-max-details` and `--nav-time-cap-seconds`. A partial index always remains failed rather than checked-negative. Reports include `feed_complete`, pages, feed seconds and seconds per page.
+
+The measured 1,000-company run used 488.679 seconds wall time and 5,975 HTTP requests. Against the release defaults of 2,400 seconds and 20,000 requests, this leaves 79.64% time and 70.13% request headroom (76.05% before the source watchdog). This is a measurement, not a guarantee about an unknown official budget. Output defaults to 64 MiB (`--max-output-mb`); the union run reduced one large company to explicit output-limit failures. Contract output avoids the redundant reference profile. Source failure, exhausted budgets and optional site failures preserve complete envelopes and exit zero; inspect the report and verifier for success.
 
 ## Live 20-company registry smoke
 

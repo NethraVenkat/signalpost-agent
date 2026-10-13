@@ -14,8 +14,8 @@ class Config(BaseModel):
     emit_duplicates: bool = True
     expected_count: int | None = None
     run_id: str = ""
-    max_requests: int = Field(default=8000, ge=0)
-    time_budget_seconds: float = Field(default=1800, gt=0)
+    max_requests: int | None = Field(default=None, ge=0)
+    time_budget_seconds: float = Field(default=2400, gt=0)
     deadline_fraction: float = Field(default=0.85, gt=0, le=1)
     max_cost_usd: float = Field(default=0, ge=0)
     host_concurrency: int = Field(default=10, ge=1)

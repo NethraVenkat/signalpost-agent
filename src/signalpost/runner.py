@@ -242,6 +242,11 @@ async def run(config, client=None,synthesis_provider=None):
     result = [envelopes[org] for org in order]
     size, output_limited, minimum_exceeded = write(config.output, result, config.envelope_shape, blobs, config.max_output_mb)
     report = build(result, inputs, budget, config, warnings, time.monotonic() - budget.start)
+    report['limits']['max_requests']=budget.cap
+    report['request_budget_basis']='20 per unique normalized input' if config.max_requests is None else 'explicit override'
+    report['measured_request_projection']={'baseline':'1000-company retained-features run',
+        'baseline_mean_http':5.975,'projected_http':round(5.975*len(inputs.unique)),
+        'note':'Projection from a measured sample; source pagination/retries and feed changes can differ.'}
     report.update(dns_metrics)
     report['dns_amortized_per_company'] = dns_metrics.get('dns_lookups', 0) / len(result) if result else 0
     report['max_dns_requests_per_company'] = max((n for org,n in dns_metrics.get('dns_by_company', {}).items() if org in envelopes), default=0)

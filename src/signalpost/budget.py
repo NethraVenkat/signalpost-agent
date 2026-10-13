@@ -12,7 +12,11 @@ class Budget:
     def __init__(self, config):
         self.start = time.monotonic()
         self.deadline = self.start + config.time_budget_seconds * config.deadline_fraction
-        self.cap = config.max_requests
+        if config.max_requests is None:
+            from .io.input_adapter import read
+            try:self.cap = 20 * len(read(config.organisations).unique)
+            except (OSError,ValueError):self.cap = 0
+        else:self.cap = config.max_requests
         self.events = []
         self.by_host = Counter()
 
