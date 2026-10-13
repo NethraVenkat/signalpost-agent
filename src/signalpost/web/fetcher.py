@@ -18,7 +18,7 @@ class DomainGate:
 
 
 class WebsiteHttp:
-    def __init__(self, client, config, budget, blobs, resolver=None):
+    def __init__(self, client, config, budget, blobs, resolver=None, dns_metrics=None):
         self.client, self.config, self.budget, self.blobs = client, config, budget, blobs
         self.resolver = resolver
         self.counts = {}
@@ -26,6 +26,44 @@ class WebsiteHttp:
         self.robots = {}
         self.robot_locks = {}
         self.attempts = {}
+        self.dns_cache = {}
+        self.dns_locks = {}
+        self.dns_counts = {}
+        self.dns_lookups = 0
+        self.activity_extra = set()
+        self.accepted_pages = {}
+        self.dns_metrics = dns_metrics
+
+    async def resolve(self, host, port, org):
+        if self.dns_metrics is not None:
+            self.dns_metrics['dns_lookups'] = self.dns_metrics.get('dns_lookups', 0) + 1
+            by_org = self.dns_metrics.setdefault('dns_by_company', {})
+            by_org[org] = by_org.get(org, 0) + 1
+        return await (self.resolver or policy.resolve_public)(host, port)
+
+    async def precheck(self, candidate, org):
+        if candidate.origin == 'registry_website' or not self.config.dns_precheck:
+            return
+        host = urlsplit(candidate.url).hostname
+        if self.dns_counts.get(org, 0) >= 8:
+            raise SourceFailure('dns_unavailable')
+        self.dns_counts[org] = self.dns_counts.get(org, 0) + 1
+        lock = self.dns_locks.setdefault(host, asyncio.Lock())
+        async with lock:
+            if host not in self.dns_cache:
+                self.budget.check()
+                self.dns_lookups += 1
+                try:
+                    ips = await asyncio.wait_for(self.resolve(host, 443, org), timeout=min(3, max(.001, self.budget.deadline-time.monotonic())))
+                    self.dns_cache[host] = policy.check_ips(ips)
+                except (TimeoutError, OSError):
+                    self.dns_cache[host] = 'dns_unavailable'
+                except SourceFailure as exc:
+                    self.dns_cache[host] = exc.code if exc.code in {'no_such_domain', 'ssrf'} else 'dns_unavailable'
+            result = self.dns_cache[host]
+            if isinstance(result, str):
+                raise SourceFailure(result)
+            policy.check_ips(result)
 
     async def raw(self, url, org, domains, xml=False, obey_robots=False):
         url = policy.validate_url(url, domains)
@@ -33,18 +71,17 @@ class WebsiteHttp:
             parts = urlsplit(url)
             if obey_robots:
                 await self.ensure_robots(url, org, domains)
-            policy.check_ips(await (self.resolver or policy.resolve_public)(parts.hostname, parts.port or (443 if parts.scheme == "https" else 80)))
+            policy.check_ips(await self.resolve(parts.hostname, parts.port or (443 if parts.scheme == "https" else 80), org))
             root = policy.domain(url)
             gate = self.gates.setdefault(root, DomainGate(asyncio.Semaphore(2), asyncio.Lock()))
             async with gate.semaphore:
                 async with gate.start_lock:
-                    delay = gate.next_start - time.monotonic()
-                    if delay > 0:
+                    while (delay := gate.next_start - time.monotonic()) > 0:
                         await asyncio.sleep(delay)
                     self.budget.check()
                     gate.next_start = time.monotonic() + self.config.website_politeness_seconds
                 registry_requests = sum(e['organisation_number']==org and e.get('section')!='website' for e in self.budget.events)
-                company_cap = min(self.config.website_request_cap,max(0,self.config.website_total_request_cap-registry_requests))
+                company_cap = min(self.config.website_request_cap + int(org in self.activity_extra),max(0,self.config.website_total_request_cap-registry_requests))
                 if self.counts.get(org, 0) >= company_cap:
                     raise SourceFailure("website_budget_exhausted")
                 event = self.budget.reserve(url, parts.hostname, org)
@@ -56,7 +93,7 @@ class WebsiteHttp:
                 try:
                     remaining = self.budget.deadline - time.monotonic()
                     async with asyncio.timeout(min(8, max(.001, remaining))):
-                        async with self.client.stream("GET", url, headers={"User-Agent": self.config.website_user_agent, "Accept": "text/html,application/xhtml+xml,text/plain"}, timeout=min(8, max(.001, remaining)), follow_redirects=False) as stream:
+                        async with self.client.stream("GET", url, headers={"User-Agent": self.config.website_user_agent, "Accept": "application/xml,text/xml,application/rss+xml,application/atom+xml" if xml else "text/html,application/xhtml+xml,text/plain"}, timeout=min(8, max(.001, remaining)), follow_redirects=False) as stream:
                             chunks = []
                             size = 0
                             event["status"] = stream.status_code
@@ -96,6 +133,9 @@ class WebsiteHttp:
                     event["error"] = "deadline"
                     raise
                 finally:
+                    # Completion-based spacing is conservative and avoids starts
+                    # being less than one second apart due to transport overhead.
+                    gate.next_start = max(gate.next_start, time.monotonic() + self.config.website_politeness_seconds)
                     if chunks and "content_sha256" not in event:
                         event["content_sha256"] = self.blobs.put(b"".join(chunks)[:2 * 1024 * 1024])
                         event["truncated"] = True
@@ -132,6 +172,7 @@ class WebsiteHttp:
 
     async def candidate(self, candidate, org, proven=()):
         """Try hostname variants with verified TLS, then permitted plaintext."""
+        await self.precheck(candidate, org)
         p = urlsplit(candidate.url)
         host = p.hostname
         other = host[4:] if host.startswith('www.') else 'www.' + host

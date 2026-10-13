@@ -88,6 +88,8 @@ def dual_role(claims):
 
 
 def unknown_text(unknown, envelope):
+    if unknown.family == 'activity' and unknown.state == 'not_available':
+        return 'No dated website updates found within the checked scope.'
     if unknown.family == 'refresh':
         return unknown.reason
     if unknown.field == 'employees':

@@ -17,3 +17,7 @@ Known inactive/deleted/expired jobs are not carried forward. A missing ad from c
 Accounts comparison includes the value, fiscal year/period, currency, account type and original source unit. Empirical whole-NOK annotation alone changes neither company-change meaning nor legacy claim identity.
 
 Fixed-source reruns must produce identical claim IDs, zero company changes and zero observation changes. Live APIs and websites can legitimately change between requests; reproducibility of the extraction does not imply immutable internet content.
+
+Dated website items use stable URL fields. New or removed items from successful activity checks are minor changes. Failed/blocked checks emit observations and can retain prior support, clearly marked as historical. First enablement of activity has no previous checked section and is an observation. Newly introduced founding/VAT fields absent from older extractors are coverage observations, not inferred historical company events. Registry presentation dates are included only within 24 calendar months of the observation date; their ageing does not create source-claim changes.
+
+Fresh website proof does not establish that every historical supporting page was checked. Missing contact/social/description claims whose company-owned source URLs were not successfully fetched are carried forward with original evidence and a page-coverage observation. A checked page can still establish removal. Description comparison excludes website proof IDs/levels, which describe verification rather than a changed self-description.

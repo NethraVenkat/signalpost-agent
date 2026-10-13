@@ -18,6 +18,9 @@ def extract(org, data, source):
     if str(data.get("organisasjonsnummer")) != org:
         raise SourceFailure("wrong_company", "Registry identity differs from requested orgnr")
     section = Section()
+    for field, key in [('founding_date', 'stiftelsesdato'), ('vat_registration_date', 'registreringsdatoMerverdiavgiftsregisteret')]:
+        if data.get(key):
+            add(section, source, org, 'identity', 'identity.' + field, data[key], '/' + key, effective=data[key])
     for field, path in FIELDS.items():
         value = get(data, path)
         if field == "employees" and data.get("harRegistrertAntallAnsatte") is False:

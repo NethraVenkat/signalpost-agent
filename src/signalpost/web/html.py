@@ -32,8 +32,10 @@ class Page(HTMLParser):
         self._script = None
         self._scripts = []
         self._line_offsets = [0]
-        for line in self.raw.splitlines(keepends=True):
-            self._line_offsets.append(self._line_offsets[-1] + len(line))
+        # HTMLParser increments line numbers only on LF. Unicode separators
+        # inside script strings are not parser newlines.
+        for line in self.raw.split('\n')[:-1]:
+            self._line_offsets.append(self._line_offsets[-1] + len(line) + 1)
         self.segments = []
         self.paragraphs = []
         self._paragraph = None
@@ -139,7 +141,9 @@ class Page(HTMLParser):
             match = pattern.search(data)
             if match:
                 index = offset + match.start()
-                return self.raw[max(0, index - 40):max(0, index - 40) + 150]
+                span = self.raw[max(0, index - 40):max(0, index - 40) + 150]
+                if pattern.search(html.unescape(span)):
+                    return span
         match = pattern.search(self.raw)
         if match:
             return self.raw[max(0, match.start() - 40):max(0, match.start() - 40) + 150]

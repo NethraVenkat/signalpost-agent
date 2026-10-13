@@ -32,3 +32,11 @@ Template mode is the default. An injected provider can order approved placeholde
 The final writer preserves input order, validates every envelope and the whole output, and publishes atomically. Deduplication is the default; `--emit-duplicates` preserves input-row multiplicity. Exit zero means output was written; it does not mean every source succeeded.
 
 See [identity rules](IDENTITY_RESOLUTION.md), [schema](DATA_SCHEMA.md), [refresh semantics](REFRESH.md) and [evaluation](EVAL.md).
+
+## Bounded recall and public activity
+
+Guessed email/slug domains receive a cached three-second DNS pre-check, with at most eight candidate lookups per company. NXDOMAIN spends no HTTP request; resolver failures leave the company check incomplete. Website candidates retain registry-site, email-domain, then slug order and stop after exact organisation-number proof. Connection-time public-IP checks remain mandatory.
+
+NAV headers are ranked by distinctive-token overlap, with rare tokens weighted more heavily across the current feed. Legal suffixes and Norwegian/ASCII spelling variants affect discovery only. Details are fetched in rank order, including retries, within a configurable cap defaulting to max(300, half the company count rounded up). Unchecked affected candidates remain failed; only exact company/listed-subunit employer numbers authorize publication.
+
+With `--public-activity`, an accepted current website can supply dated news links from a same-domain head-linked RSS/Atom feed, a robots-declared sitemap, or `/sitemap.xml`. Discovery follows at most one sitemap-index level and permits at most one request beyond the website cap while preserving the overall company request ceiling. Author, category/tag and bare news-listing paths are excluded. Recent evidence-backed registry dates use no new requests. Site presentation and synthesis retain explicit source states and cite the original evidence. The weaker registry-declared website path is default-off after group-identity ambiguities in the audit.

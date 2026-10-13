@@ -73,6 +73,10 @@ def load(path: Path, wanted: set[str], blobs, budget):
 
 def extract(org, row, source):
     section = Section()
+    for name, col in [('founding_date', 'stiftelsesdato'), ('vat_registration_date', 'registreringsdatoMerverdiavgiftsregisteret')]:
+        value, actual = column(row, col)
+        if value:
+            add(section, source, org, 'identity', 'identity.' + name, value, f'row:{org}/column:{actual}', effective=value)
     simple = {"legal_name": "navn", "registration_date": "registreringsdatoEnhetsregisteret", "employees": "antallAnsatte",
               "registered_website": "hjemmeside", "bankrupt": "konkurs", "under_liquidation": "underAvvikling",
               "deleted": "slettedato", "latest_submitted_accounts": "sisteInnsendteAarsregnskap", "municipality": "forretningsadresse.kommune",

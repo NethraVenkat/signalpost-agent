@@ -136,3 +136,14 @@ def test_render_before_write_and_incomplete_evidence(tmp_path):
     with pytest.raises(ValueError, match='Incomplete evidence'):
         generate_site(source(tmp_path, [row]), out)
     assert not out.exists()
+
+
+def test_registry_dates_count_in_activity_filter(tmp_path):
+    row,_=envelope(tmp_path / 'run')
+    row.run.completed_at='2026-10-13T00:00:00Z'
+    available(row,'identity.founding_date','2026-01-01')
+    row.run.synthesis=None;row.profile.synthesis=None
+    out=tmp_path / 'site';generate_site(source(tmp_path,[row]),out)
+    record=json.loads((out/'data/index.json').read_text(encoding='utf8'))[0]
+    assert record['flags']['activity'] and record['activity']>=1
+    assert record['sections']['activity']=='available'

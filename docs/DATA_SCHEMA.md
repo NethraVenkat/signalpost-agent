@@ -49,6 +49,10 @@ NOK accounts with absent source unit carry empirical whole-NOK metadata, source_
 
 ## Section scope and reports
 
+Optional `activity` claims have `dated_item.<URL hash>` fields containing title, title_source (`feed title` or `title from URL`), URL, date, date_source, website identity level and identity_claim_id. Their versioned company-owned evidence includes a short verbatim feed/sitemap span. Section states distinguish successful checked absence, source/robot failures and absence of an accepted website. Recent registry dates are derived presentation events citing existing identity claims, rather than duplicate activity claims. Founding/VAT dates are claimed only when the actual registry record reports them.
+
+DNS totals and candidate/pre-check counts are separate from HTTP budgets. NAV reports include ranking state, candidate headers, detail cap/attempts, cap hits, matches published and companies with ads. Activity changes are minor; a newly extracted official date absent from an older extractor is an observation of new field coverage.
+
 Website states distinguish publication, ambiguity, registered-site policy blocks, unresolved source/budget failures and checked negatives. Guessed NXDOMAIN is a normal rejection. Failed optional follow-ups preserve already established proof.
 
 Hiring completeness is scoped per company to known name candidates. Page/time failure affects everyone; detail cap/error affects associated companies, or everyone for nameless headers. Unusable names stay failed. Known-subunit coverage must also be checked before absence. `run.refresh.hiring` records completeness, reason and known closed previous UUIDs.

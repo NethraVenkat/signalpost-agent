@@ -109,7 +109,8 @@ def score(page, org, context, origin, leaders):
         proof_token=None
         if token and page.name_span(token):
             declared.append('distinctive_legal_name'); proof_token=token
-        if address:
+        # Postcode/city alone can be shared by a different group company.
+        if any(s and len(str(s)) > 4 and legal_name(s) in text for s in streets):
             token = next((str(s) for s in streets if s and page.name_span(str(s))),None)
             token = token or (str(context.get('postcode')) if context.get('postcode') and page.name_span(str(context['postcode'])) else None)
             if token:

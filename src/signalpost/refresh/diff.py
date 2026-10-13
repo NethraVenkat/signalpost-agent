@@ -12,6 +12,8 @@ def meaning(claim):
         # Proof strength/location and www/HTTPS variants describe observation,
         # rather than a move to another company website domain.
         return domain(claim.value['final_url'])
+    if claim.field.startswith('website_description.'):
+        return canonical({k:v for k,v in claim.value.items() if k not in {'identity_level','identity_claim_id'}})
     if claim.family=='accounts' and claim.reporting_period:
         period=claim.reporting_period
         return {'value':canonical(claim.value),'period':{k:period.get(k) for k in ('fiscal_year','period_start','period_end','currency','account_type')},
@@ -60,10 +62,26 @@ def apply(envelope, previous, blobs):
         if retained:
             envelope.claims = [c for c in envelope.claims if c.family != family] + retained
     new_claims = {c.field: c for c in envelope.claims}
+    for scoped_family in ('website','activity'):
+        checked_urls = envelope.run.refresh.get(scoped_family, {}).get('checked_urls')
+        if checked_urls is None or envelope.run.sections.get(scoped_family) not in {'available','not_available'}:continue
+        for field, claim in old_claims.items():
+            if claim.family != scoped_family or claim.availability != 'available' or field in new_claims or field == 'official_website': continue
+            source_urls = {old_evidence[eid].source_url for eid in claim.evidence_ids if old_evidence[eid].source_class == 'company_owned'}
+            if source_urls and not source_urls <= set(checked_urls):
+                carried = claim.model_copy(update={'carried_forward': True})
+                envelope.claims.append(carried);new_claims[field]=carried
+                envelope.run.refresh['observation_changes'].append({'section':scoped_family,'field':field,
+                    'previous_state':'available','current_state':'unchecked_page','reason':'supporting_'+scoped_family+'_page_not_checked'})
     for field in sorted(set(old_claims) | set(new_claims)):
         before, after = old_claims.get(field), new_claims.get(field)
         family = (after or before).family
         if family not in envelope.run.sections or family in failed:
+            continue
+        if before is None and field in {'identity.founding_date', 'identity.vat_registration_date'}:
+            envelope.run.refresh['observation_changes'].append({'section': family, 'field': field,
+                'previous_state': 'unchecked_field', 'current_state': after.availability,
+                'reason': 'dated_field_not_checked_in_previous_extractor'})
             continue
         if family == "roles":
             if before and after:
@@ -87,7 +105,7 @@ def apply(envelope, previous, blobs):
             organisation_number=envelope.organisation_number, type="closed_job" if family=='hiring' and meaning(before) is not None and meaning(after) is None else "added" if meaning(before) is None else "removed" if meaning(after) is None else "changed",
             field=field, old_value=before.value if before else None, new_value=after.value if after else None,
             old_evidence_ids=old_ids, new_evidence_ids=new_ids,
-            materiality="minor" if field == "identity.registered_website" else "material",
+            materiality="minor" if field == "identity.registered_website" or family=='activity' else "material",
             first_observed_at=(before or after).first_observed_at, last_observed_at=utc_now(),
             source_url=newest.source_url if newest else None, retrieved_at=newest.retrieved_at if newest else None,
             effective_at=newest.effective_at if newest else None, source_class=newest.source_class if newest else None,

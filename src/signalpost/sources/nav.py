@@ -5,6 +5,8 @@ import os
 import re
 import time
 import unicodedata
+import math
+from collections import Counter, defaultdict
 from dataclasses import dataclass, field
 from datetime import datetime, timedelta, timezone
 from email.utils import format_datetime, parsedate_to_datetime
@@ -27,14 +29,22 @@ GENERIC_NAMES={'as','asa','enk','ans','da','sa','ba','nuf','ltd','limited','inc'
 LEGAL_SUFFIXES={'as','asa','enk','ans','da','sa','ba','nuf','ltd','limited','inc','llc'}
 
 
+def discovery_text(value):
+    text=str(value or '').casefold().replace('æ','ae').replace('ø','o').replace('å','a')
+    # Alternate ASCII spellings converge for discovery only, never identity.
+    text=text.replace('oe','o').replace('aa','a')
+    text=unicodedata.normalize('NFKD',text)
+    return ''.join(c for c in text if not unicodedata.combining(c))
+
+
 def name_tokens(value):
-    text=unicodedata.normalize('NFKD',str(value or '').casefold())
+    text=discovery_text(value)
     text=''.join(c for c in text if not unicodedata.combining(c))
     return {word for word in re.findall(r'[^\W\d_]+',text) if len(word)>=4 and word not in GENERIC_NAMES}
 
 
 def normal_name(value):
-    text=unicodedata.normalize('NFKD',str(value or '').casefold())
+    text=discovery_text(value)
     text=''.join(c for c in text if not unicodedata.combining(c))
     words=re.findall(r'[^\W_]+',text)
     while words and words[-1] in LEGAL_SUFFIXES: words.pop()
@@ -45,6 +55,15 @@ def name_matches(header,candidate):
     header=normal_name(header); candidate=normal_name(candidate)
     return bool(name_tokens(candidate) and candidate and
                 (header==candidate or (' '+candidate+' ') in (' '+header+' ')))
+
+
+def candidate_score(header, candidate, frequency):
+    common=name_tokens(header) & name_tokens(candidate)
+    return sum(1 / max(1, frequency.get(token, 1)) for token in sorted(common))
+
+
+def time_cap(config):
+    return config.nav_time_cap_seconds if config.nav_time_cap_seconds is not None else min(600, .35 * config.time_budget_seconds)
 
 
 def company_names(envelopes,previous=None):
@@ -146,7 +165,7 @@ class NavHttp:
         supplied['User-Agent']=self.config.website_user_agent
         async with self.semaphore:
             for attempt in range(2):
-                if '/feedentry/' in url and self.index.metrics.get('detail_requests',0)>=self.config.nav_max_details:
+                if '/feedentry/' in url and self.index.metrics.get('detail_requests',0)>=self.index.metrics.get('detail_request_cap', self.config.nav_max_details if self.config.nav_max_details is not None else 300):
                     raise SourceFailure('nav_detail_cap')
                 event=self.budget.reserve(url,'pam-stilling-feed.nav.no','__nav_prefetch__')
                 if '/feedentry/' in url:
@@ -218,9 +237,11 @@ class NavHttp:
 
 async def prefetch(client,config,budget,blobs,index,names_ready=None,previous=None):
     began=time.monotonic(); http=NavHttp(client,config,budget,blobs,index)
+    paging_began=None
+    index.metrics.update({'feed_complete':False,'time_cap_seconds':time_cap(config)})
     errors=[]
     try:
-        async with asyncio.timeout(config.nav_time_cap_seconds):
+        async with asyncio.timeout(time_cap(config)):
             token=token_from(os.environ.get('NAV_API_TOKEN'))
             from_environment=bool(token)
             token=token or await http.public_token()
@@ -230,6 +251,7 @@ async def prefetch(client,config,budget,blobs,index,names_ready=None,previous=No
             cutoff=cutoff.replace(hour=0,minute=0,second=0,microsecond=0)
             url=BASE+'/api/v1/feed'; headers={'If-Modified-Since':format_datetime(cutoff,usegmt=True)}
             latest={}; seen=set(); page_complete=False
+            paging_began=time.monotonic()
             while url:
                 if index.metrics['pages']>=config.nav_max_pages:
                     errors.append('nav_page_cap'); break
@@ -260,6 +282,8 @@ async def prefetch(client,config,budget,blobs,index,names_ready=None,previous=No
                 if not next_url and data.get('next_id'): raise SourceFailure('nav_missing_next_url')
                 if not next_url: page_complete=True; break
                 url=next_url; headers={}
+            index.metrics['feed_runtime_ms']=round((time.monotonic()-paging_began)*1000)
+            index.metrics['feed_complete']=page_complete and config.nav_lookback_days>=185
             if page_complete:
                 index.closed.update(uuid for uuid,record in latest.items() if record[1].get('_feed_entry',{}).get('status')!='ACTIVE')
             active=[(uuid,record) for uuid,record in latest.items() if record[1].get('_feed_entry',{}).get('status')=='ACTIVE']
@@ -267,7 +291,16 @@ async def prefetch(client,config,budget,blobs,index,names_ready=None,previous=No
             names=await names_ready() if names_ready else {}
             all_orgs=set(names)
             with_names=sum(bool(header_name(record[1])) for _,record in active)
+            frequency=Counter(token for _,record in active for token in name_tokens(header_name(record[1])))
+            detail_cap=config.nav_max_details if config.nav_max_details is not None else max(300, math.ceil(.5*len(names)))
+            index.metrics['detail_request_cap']=detail_cap
             candidates=[]
+            scores={}
+            known_tokens={org:[name_tokens(candidate) for candidate in known] for org,known in names.items()}
+            token_orgs=defaultdict(set)
+            for org,sets in known_tokens.items():
+                for tokens in sets:
+                    for distinctive_token in tokens:token_orgs[distinctive_token].add(org)
             old_jobs={}
             for org,row in (previous or {}).items():
                 for claim in row.get('claims',row.get('profile',{}).get('claims',[])):
@@ -275,17 +308,24 @@ async def prefetch(client,config,budget,blobs,index,names_ready=None,previous=No
                         old_jobs.setdefault(claim['value'].get('uuid'),set()).add(org)
             for uuid,record in active:
                 name=header_name(record[1])
-                affected={org for org,known in names.items() if any(name_matches(name,candidate) for candidate in known)} if name else all_orgs
+                header_tokens=name_tokens(name)
+                possible=set().union(*(token_orgs[token] for token in header_tokens)) if header_tokens else set()
+                ranked={org:max((sum(1/max(1,frequency[token]) for token in sorted(header_tokens & candidate)) for candidate in known_tokens[org]),default=0) for org in possible}
+                affected={org for org,score in ranked.items() if score>0} if name and config.nav_rank_candidates else {org for org,known in names.items() if any(name_matches(name,candidate) for candidate in known)} if name else all_orgs
+                scores[uuid]=max(ranked.values(),default=0)
                 if not names_ready or not name or affected: candidates.append((uuid,record,affected))
                 elif uuid in old_jobs:
                     index.incomplete_orgs.update(old_jobs[uuid])
                     errors.append('nav_existing_ad_name_unmatched')
+            if config.nav_rank_candidates:
+                candidates.sort(key=lambda entry: (-scores[entry[0]], entry[0]))
             index.metrics.update({'headers_with_employer_name':with_names,
                 'headers_without_employer_name':len(active)-with_names,
                 'name_prefilter':bool(names_ready and with_names),
                 'coverage_scope':'batch_legal_brand_subunit_name_candidates' if names_ready and with_names else 'all_active_headers',
                 'candidate_headers':len(candidates),'skipped_name_nonmatches':len(active)-len(candidates),
-                'detail_request_cap':config.nav_max_details})
+                'detail_request_cap':detail_cap, 'ranking_enabled':config.nav_rank_candidates,
+                'cap_hits':0})
             if names_ready and with_names:
                 index.incomplete_orgs.update(org for org,tokens in names.items() if not tokens)
             async def detail(uuid,record,affected):
@@ -317,6 +357,8 @@ async def prefetch(client,config,budget,blobs,index,names_ready=None,previous=No
                     index.ads.setdefault(org,[]).append(Ad(value,sha,url,retrieved,page_sha,page_url,locator,page_retrieved))
                 except asyncio.CancelledError: raise
                 except Exception as exc:
+                    if isinstance(exc,SourceFailure) and exc.code=='nav_detail_cap':
+                        index.metrics['cap_hits']+=1
                     errors.append(exc.code if isinstance(exc,SourceFailure) else type(exc).__name__)
                     index.incomplete_orgs.update(affected)
             # Bounded workers: never create tens of thousands of pending tasks.
@@ -327,7 +369,8 @@ async def prefetch(client,config,budget,blobs,index,names_ready=None,previous=No
                     try: uuid,record,affected=queue.get_nowait()
                     except asyncio.QueueEmpty: return
                     await detail(uuid,record,affected)
-            await asyncio.gather(*(worker() for _ in range(config.nav_concurrency)))
+            # A single ranked detail worker preserves request order, including retries.
+            await asyncio.gather(*(worker() for _ in range(1 if config.nav_rank_candidates else config.nav_concurrency)))
             index.complete=page_complete and not errors and not index.incomplete_orgs and config.nav_lookback_days>=185
             index.coverage_ready=page_complete and config.nav_lookback_days>=185
             index.metrics['feed_complete']=page_complete and config.nav_lookback_days>=185
@@ -339,7 +382,12 @@ async def prefetch(client,config,budget,blobs,index,names_ready=None,previous=No
         index.reason=exc.code if isinstance(exc,SourceFailure) else type(exc).__name__
         index.blocked=index.reason=='token_unavailable'
     finally:
+        if paging_began is not None and 'feed_runtime_ms' not in index.metrics:
+            index.metrics['feed_runtime_ms']=round((time.monotonic()-paging_began)*1000)
+        index.metrics['average_seconds_per_page']=index.metrics.get('feed_runtime_ms',0)/1000/index.metrics['pages'] if index.metrics['pages'] else None
         index.metrics['runtime_ms']=round((time.monotonic()-began)*1000)
+        index.metrics['runtime_seconds']=index.metrics['runtime_ms']/1000
+        index.metrics['feed_seconds']=index.metrics.get('feed_runtime_ms',0)/1000
         index.metrics.update({'complete':index.complete,'blocked':index.blocked,'reason':index.reason,
                               'lookback_days':config.nav_lookback_days,'indexed_ads':sum(map(len,index.ads.values()))})
         index.metrics['incomplete_companies']=sorted(index.incomplete_orgs)

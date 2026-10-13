@@ -53,3 +53,21 @@ def test_disabled_website_is_not_a_company_removal(tmp_path,monkeypatch):
     _,_,_,first=execute_web(tmp_path/'web',monkeypatch)
     report,rows=execute(config(tmp_path/'registry',[ORG],previous=first.output))
     assert not any(c['field']=='official_website' for c in rows[0]['changes'])
+
+
+def test_unchecked_website_page_preserves_contact_without_company_removal(tmp_path,monkeypatch):
+    from tests.test_websites import execute_web,html
+    from signalpost.models.envelope import Envelope
+    from signalpost.models.shapes import serialize
+    from signalpost.refresh.diff import apply
+    from signalpost.sources.blobstore import BlobStore
+    _,raw,_,cfg=execute_web(tmp_path,monkeypatch,html(extra='<a href="mailto:office@example.no">Email</a>'))
+    old=Envelope.model_validate(raw)
+    row=old.model_copy(deep=True)
+    contact=next(c for c in row.claims if c.field.startswith('contact.email.'))
+    row.claims=[c for c in row.claims if c.id!=contact.id]
+    row.run.refresh['website']={'checked_urls':['https://example.no/other-page']}
+    apply(row,serialize(old,'union'),BlobStore(cfg.state_dir))
+    assert not any(e.field==contact.field for e in row.changes)
+    assert next(c for c in row.claims if c.id==contact.id).carried_forward
+    assert any(e.get('reason')=='supporting_website_page_not_checked' for e in row.run.refresh['observation_changes'])

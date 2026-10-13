@@ -40,6 +40,13 @@ def generate(envelope):
     result=Synthesis(generator=Generator(version='3',input_sha256=input_hash(envelope)),change_claims=change_claims(envelope))
     claims=sorted((c for c in envelope.claims if c.availability=='available' and permitted(c,envelope)),key=lambda c:c.field)
     by_field={c.field:c for c in claims}
+    activity_items = sorted((c for c in claims if c.family == 'activity' and c.field.startswith('dated_item.') and not c.carried_forward), key=lambda c: (c.value['date'], c.value['url']), reverse=True)
+    if activity_items:
+        item = activity_items[0]
+        result.sections.changes.append(Sentence(text='Latest dated update on its website: «' + item.value['title'] + '» (' + item.value['date'] + ').', claim_ids=[item.id]))
+    from ..registry_activity import recent
+    for day, label, claim in recent(envelope):
+        result.sections.changes.append(Sentence(text=label + ': ' + day + '.', claim_ids=[claim.id]))
     opening=headline(claims)
     opening_ids=set(opening[1]) if opening else set()
     if opening:result.sections.what_it_does.append(Sentence(text=opening[0],claim_ids=opening[1]))

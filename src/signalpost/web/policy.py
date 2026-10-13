@@ -1,6 +1,7 @@
 import asyncio
 import ipaddress
 import socket
+from contextvars import ContextVar
 from urllib.parse import urlsplit, urlunsplit
 import httpx
 import tldextract
@@ -8,6 +9,7 @@ from httpcore._backends.auto import AutoBackend
 from ..budget import SourceFailure
 
 extract = tldextract.TLDExtract(suffix_list_urls=(), cache_dir=None, include_psl_private_domains=True)
+DNS_ORG = ContextVar('signalpost_dns_org', default='__shared__')
 SOCIAL = {"facebook.com", "instagram.com", "linkedin.com", "x.com", "twitter.com", "youtube.com", "tiktok.com"}
 DIRECTORIES = {"proff.no", "proff.com", "proff.dk", "proff.se", "gulesider.no", "1881.no", "purehelp.no", "finn.no", "fb.me", "fb.com", "youtu.be", "lnkd.in", "t.co", "threads.net"}
 FREE_MAIL = {"gmail.com", "googlemail.com", "hotmail.com", "hotmail.no", "outlook.com", "live.com", "live.no", "yahoo.com", "yahoo.no", "online.no", "icloud.com", "me.com", "protonmail.com", "proton.me", "aol.com", "msn.com", "mail.com"}
@@ -71,14 +73,19 @@ async def resolve_public(host, port=443):
 
 class PublicNetworkBackend:
     """Validate at connection time and pin TCP to the vetted IP; TLS keeps SNI."""
-    def __init__(self):
+    def __init__(self, dns_metrics=None):
         self.backend = AutoBackend()
+        self.dns_metrics = dns_metrics
 
     async def connect_tcp(self, host, port, timeout=None, local_address=None, socket_options=None):
         if isinstance(host, bytes):
             host = host.decode("ascii")
         if port not in (80, 443):
             raise SourceFailure("ssrf", "Non-web port refused")
+        if self.dns_metrics is not None:
+            self.dns_metrics['dns_lookups'] = self.dns_metrics.get('dns_lookups', 0) + 1
+            by_org = self.dns_metrics.setdefault('dns_by_company', {})
+            org = DNS_ORG.get();by_org[org] = by_org.get(org, 0) + 1
         ips = await resolve_public(host, port)
         ips.sort(key=lambda ip: ipaddress.ip_address(ip).version)
         last = None
@@ -96,9 +103,9 @@ class PublicNetworkBackend:
         await self.backend.sleep(seconds)
 
 
-def safe_transport(max_connections):
+def safe_transport(max_connections, dns_metrics=None):
     transport = httpx.AsyncHTTPTransport(limits=httpx.Limits(max_connections=max_connections, max_keepalive_connections=max_connections))
     # The locked httpx/httpcore versions expose this connection backend. DNS is
     # checked again here, so preflight checks cannot be bypassed by rebinding.
-    transport._pool._network_backend = PublicNetworkBackend()
+    transport._pool._network_backend = PublicNetworkBackend(dns_metrics)
     return transport

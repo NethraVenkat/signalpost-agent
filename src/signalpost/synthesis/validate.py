@@ -47,6 +47,9 @@ def claim_strings(claim):
 
 
 def permitted(claim,envelope):
+    if getattr(claim,'family',None)=='activity':
+        parent=next((c for c in envelope.claims if c.id==claim.value.get('identity_claim_id')),None)
+        return bool(parent and parent.availability=='available' and parent.field=='official_website' and permitted(parent,envelope))
     if getattr(claim,'family',None)=='website':
         if claim.field=='official_website':return isinstance(claim.value,dict) and claim.value.get('identity_level') in LEVELS
         if claim.field.startswith('website_description.'):
@@ -68,6 +71,19 @@ def sentence_error(sentence,envelope):
     # These new frames are checked in full, bound to every claim they use.
     # Table titles authorize only the matching NACE frame or headline.
     plain=sentence.text.removeprefix('Previously supported. ')
+    if plain.startswith('Latest dated update on its website: '):
+        if len(claims)!=1 or getattr(claims[0],'family',None)!='activity' or claims[0].carried_forward:return 'misbound_dated_activity'
+        value=claims[0].value
+        expected='Latest dated update on its website: «'+value['title']+'» ('+value['date']+').'
+        if sentence.text!=expected:return 'unverified_dated_activity'
+        if sentence.value_kind!='reported' or sentence.count is not None or sentence.record_type is not None:return 'unmarked_derived_count'
+        return None
+    from ..registry_activity import recent, LABELS
+    if any(plain.startswith(label+': ') for label in LABELS.values()):
+        events=recent(envelope)
+        if len(claims)!=1 or not any(c.id==claims[0].id and sentence.text==label+': '+day+'.' for day,label,c in events):return 'unverified_registry_activity'
+        if sentence.value_kind!='reported' or sentence.count is not None or sentence.record_type is not None:return 'unmarked_derived_count'
+        return None
     opening=headline(claims)
     opening_matches=opening and sentence.text==opening[0]
     municipality=next((c for c in claims if c.field=='identity.municipality'),None)

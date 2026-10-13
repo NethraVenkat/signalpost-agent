@@ -116,15 +116,17 @@ async def fetch(org, envelope, bulk, http):
                         break
             proof, response, page = best
             attempts.append({"domain": candidate.domain, "level": proof.level, "points": proof.points, "signals": proof.signals, "origin": candidate.origin, "reason": proof.reason})
-            if proof.level in {"VERIFIED", "HIGH",'REGISTRY_DECLARED'}:
+            if proof.level in {"VERIFIED", "HIGH"} or (proof.level=='REGISTRY_DECLARED' and http.config.registry_declared):
                 final_domain = domain(response.url)
                 successes.append((candidate, proof, response, page, pages))
                 if proof.level == "VERIFIED":
                     proved.add(final_domain)
-            elif proof.level == "MEDIUM":
+                    if http.config.website_stop_after_verified:
+                        break
+            elif proof.level in {"MEDIUM", 'REGISTRY_DECLARED'}:
                 ambiguous = True
         except SourceFailure as exc:
-            if exc.code in {'website_timeout','website_connect_error','website_http_5xx','dns_timeout','dns_error'}:
+            if exc.code in {'website_timeout','website_connect_error','website_http_5xx','dns_timeout','dns_error','dns_unavailable'}:
                 source_unavailable = True
                 fetchable_failures.add(candidate.domain)
                 if candidate.origin == 'registry_website': registry_failed=True
@@ -202,5 +204,7 @@ async def fetch(org, envelope, bulk, http):
     if brand and len(brand) <= 100 and "\ufffd" not in brand and legal_name(brand) != legal_name(context.get("name")) and legal_name(brand) not in {"home", "hjem", "welcome", "velkommen", "kontakt", "contact"}:
         publish(section, response, org, "public_brand", brand, "meta:brand", page.span_for(brand)[:150])
     section.state = "available"
+    http.accepted_pages[org] = [(r, p) for r, p in pages if domain(r.url) == domain(response.url)]
+    envelope.run.refresh['website'] = {'checked_urls': sorted({r.url for r, _ in http.accepted_pages[org]})}
     section.errors.append(Error(section='website',code='website_candidates',message=json.dumps(attempts+http.attempts.get(org,[]),ensure_ascii=False)))
     return section

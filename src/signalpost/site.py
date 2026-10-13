@@ -62,6 +62,17 @@ def normalize(raw):
     return raw
 
 
+def registry_events(row):
+    from types import SimpleNamespace
+    from .registry_activity import recent
+    from .models.claim import Claim
+    from .models.evidence import Evidence
+    obj = SimpleNamespace(run=SimpleNamespace(completed_at=row['run']['completed_at']),
+                          claims=[Claim.model_validate(c) for c in row['claims']],
+                          evidence=[Evidence.model_validate(e) for e in row['evidence']])
+    return recent(obj)
+
+
 def value_text(value):
     if value is None:
         return 'Unknown'
@@ -221,7 +232,14 @@ def profile(row, title):
         items = buckets[key]
         if key == 'activity': items.sort(key=lambda c: str((c['value'] or {}).get('date', '')) if isinstance(c['value'], dict) else '', reverse=True)
         state = row['run']['sections'].get(family, 'not_applicable')
-        body += f'<section id="{key}"><h2>{label} {chip(state)}</h2>'
+        dated_registry = registry_events(row) if key == 'activity' else []
+        public_state = 'available' if dated_registry and state in {'not_applicable','not_available'} else state
+        body += f'<section id="{key}"><h2>{label} {chip(public_state)}</h2>'
+        if key == 'activity':
+            if dated_registry: body += '<h3>Recent registry dates</h3>'
+            for day, label, c in dated_registry:
+                body += '<p>' + esc(label + ': ' + day) + f' <a href="#fact-{esc(c.id)}">Registry source</a></p>'
+            body += '<h3>Website updates ' + chip(state) + '</h3>'
         if key == 'financials': body += '<p>Reported values from Regnskapsregisteret; no figures are calculated.</p>'
         if key == 'online': body += '<p>Website proof types: orgnr = exact registered number; registry_declared = registered site with corroboration; signals = accepted identity signals.</p>'
         if not items or state != 'available': body += '<p>' + esc(UNKNOWN.get(state, 'No facts published in this section.')) + '</p>'
@@ -273,7 +291,7 @@ def index_record(row):
               'website': website.get('final_url') if isinstance(website, dict) else None,
               'social': sum(c['family'] == 'website' and 'social' in c['field'] for c in available),
               'jobs': sum(c['family'] == 'hiring' and not c.get('carried_forward') for c in available),
-              'activity': sum(c['family'] == 'activity' for c in available), 'sections': row['run']['sections'],
+              'activity': sum(c['family'] == 'activity' for c in available) + len(registry_events(row)), 'sections': dict(row['run']['sections']),
               'claim_count': len(available), 'last_checked': row['run']['completed_at'], 'anchors': {}}
     mapping = {'name': 'identity.legal_name', 'municipality': 'identity.municipality', 'employees': 'identity.employees',
                'revenue': 'accounts.revenue', 'annual_result': 'accounts.net_result', 'website': 'official_website'}
@@ -283,6 +301,8 @@ def index_record(row):
     for key, c in [('ceo', ceo), ('chair', chair), ('auditor', auditor)]:
         if c: result['anchors'][key] = anchor(c)
     result['flags'] = {key: bool(result[key]) for key in ('website', 'jobs', 'social', 'activity')}
+    if result['activity'] and result['sections'].get('activity','not_applicable') in {'not_available','not_applicable'}:
+        result['sections']['activity']='available'
     return result
 
 

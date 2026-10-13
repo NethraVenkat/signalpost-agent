@@ -82,6 +82,25 @@ NAV's 18 failed companies had no usable distinctive name; name-filtered negative
 
 These measurements are smoke/recall observations, not an official competition score or performance guarantee. Bodies, company-level envelopes and internal audit material are not included in the published reports.
 
-## Profile site UX gate
+## Live recall and bounded activity
+
+The two 300-company checks used seeds 20261014/20261015, `--websites --hiring --public-activity --time-budget-seconds 2400`, and no model calls. The first refreshed against the latest saved snapshot; the second was a fresh baseline. The weaker registry-declared path is default-off after group-company ambiguities. Final reviewed populations: 24 website rows, one NAV match and 33 dated website items; zero doubtful rows remained and all available-claim stored hashes/spans verified.
+
+| Metric | Saved sample | Fresh sample |
+|---|---:|---:|
+| Verified websites | 20 / 300 (6.67%) | 19 / 300 (6.33%) |
+| Companies with social profiles | 12 | 13 |
+| Companies with fresh exact-number ads | 1 | 0 |
+| Companies with public activity, including registry dates | 33 | 31 |
+| Website dated items / registry date events | 19 / 68 | 14 / 52 |
+| HTTP / DNS resolver invocations | 2,202 / 2,042 | 2,190 / 1,995 |
+| Total reported runtime | 348.843 s | 336.406 s |
+| NAV feed pages / feed seconds | 378 / 194.703 s | 378 / 190.484 s |
+| NAV feed complete | yes | yes |
+| False company changes on saved-sample refresh | 0 | baseline |
+
+The saved-sample refresh had four coverage observations and zero company events. All runs had zero unhandled exceptions and no deadline hits. A complete header feed does not imply complete candidate details: ranked caps leave affected companies failed, never checked-negative. DNS counts include preflight and pinned connection resolutions, not just guessed-domain checks. Registry dates and website updates are reported separately so discovery coverage is not overstated.
+
+## Profile site verification
 
 Offline site tests cover all envelope shapes, membership, escaped untrusted content, safe links, evidence completeness, citation anchors, deterministic bytes and isolated template errors. The saved 300-company generation produces 302 pages; profiles must stay below 250 KB. Inspect index, BRANDO, a borettslag and compare at 1280 and 375 px, including file:// initialization, pagination, diacritics search, source toggles and overflow. Use installed browsers only; no browser dependency is required. Light/dark state chips include words, inputs have labels, toggles expose aria-expanded, and keyboard focus is visible. Browser QA supplements the offline suite; it is not a complete accessibility certification.

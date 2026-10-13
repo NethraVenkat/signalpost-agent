@@ -23,7 +23,7 @@ Every DNS answer and redirect must pass public-unicast and company-domain rules.
 
 Robots are checked per scheme/authority, including redirected hosts. Robots 404/410 permits access; disallow/errors refuse it. At least one second between starts and at most two concurrent requests per registrable domain. Defaults: six website requests/company including robots/redirects, nine overall company slots for website eligibility, eight-second DNS/response bounds, two-MiB body cap. The user agent identifies this repository.
 
-Website facts have company-owned provenance. Publication of short factual spans does not assert an open-data licence for website content. Social-profile URLs are extracted from accepted sites but social platforms are never requested.
+Website facts have company-owned provenance. Publication of short factual spans does not assert an open-data licence for website content. Social-profile URLs are extracted from accepted sites but social platforms are never requested. The weaker REGISTRY_DECLARED path is default-off: a generalisation audit found group branding with shared address data that did not identify the exact legal company. Its address corroboration was tightened to require the actual street rather than postcode/city alone; remaining ambiguity justified disabling it. `--registry-declared` exists only for explicit historical/research reproduction. Default publication retains HIGH own-company branding with corroboration or exact organisation-number proof.
 
 ## Static English industry titles (SSB KLASS)
 
@@ -44,9 +44,19 @@ For example, SN2025 `46.640` has the exact English title **Wholesale of other ma
 
 `NAV_API_TOKEN` is optional and read from the process environment. Otherwise retrieve the public credential at run start. Environment credentials can fall back once on rejected access. Credential bodies and Authorization headers are never stored or logged; credential-echo responses are refused. `.env.example` contains only a variable name; no .env loader runs.
 
-A 185-day window accounts for the documented maximum ad lifetime. Resolve repeated UUIDs by latest modification before checking active entries. ETag 304 responses require exact locally stored bodies. Header employer names are discovery only; detail identifiers, status and dates authorize publication. Default detail cap: 300 HTTP attempts including retries.
+A 185-day window accounts for the documented maximum ad lifetime. Resolve repeated UUIDs by latest modification before checking active entries. ETag 304 responses require exact locally stored bodies. Header employer names are discovery only; detail identifiers, status and dates authorize publication. The default detail cap is max(300, half the batch size rounded up), including retries. Distinctive-token overlap ranks candidates by inverse header-token frequency, stripping suffixes/stop words and converging Norwegian/ASCII spelling variants. Names never authorize a claim; unmatched identifiers remain unpublished and cap-hit candidate scopes remain incomplete.
+
+NAV prefetch starts before company crawling and owns a separate pinned connection pool, so website traffic cannot evict its keep-alive connection. Its default time cap is `min(600 seconds, 35% of --time-budget-seconds)`; `--nav-time-cap-seconds` overrides it while the global watchdog still applies. Reports distinguish feed elapsed time/pages/seconds per page from total prefetch time and record `feed_complete` as soon as paging ends. Partial feed indexes never establish company absence or job closure.
+
+The 185-day window remains conservative. The saved official documentation permits six-month ad lifetimes and recommends `If-Modified-Since` for paging. Active headers do not contain publication/expiry dates, and the prior complete header read fetched details for only two name candidates. Those two publication dates cannot prove an exhaustive shorter horizon for all 9,537 active headers. No shortest safe window can therefore be established from that archive; recent-update or last-page scans would risk losing unchanged active ads.
 
 Terms require updates and removal of inactive/deleted ads. Known inactive/expired jobs are removed even on partial refresh. Unconfirmed historical support is explicitly stale. Emit factual title, dates, location/categories and identifiers; exclude descriptions and contact-person data.
+
+## DNS and dated website updates
+
+Email- and name-derived domains use a per-run cached DNS pre-check with a three-second bound and eight candidate checks/company. NXDOMAIN/no addresses produce `no_such_domain` without HTTP; timeout/SERVFAIL produce `dns_unavailable`, preserving incomplete source states. Public-IP preflight and connection-time pinning still apply. Reports count DNS resolver invocations separately, including guessed-domain checks, website preflight and pinned transport resolutions.
+
+Dated activity is opt-in with `--public-activity`. Only current VERIFIED/HIGH/REGISTRY_DECLARED websites qualify. Use a feed linked in the already fetched homepage head, a same-domain robots Sitemap line, or `/sitemap.xml`; do not fetch pages linked by the feed or sitemap. One sitemap index level may be followed within the cap. The six-request website cap permits at most one additional activity request, but the overall company ceiling and global budget remain unchanged. XML is limited to two MiB; DTD/entity declarations are refused. Keep at most ten dated news/press/blog paths, with dates from 2000 through two days after retrieval. Cross-domain, undated, transformed or overly long evidence combinations are abstentions. Sitemap titles are explicitly derived from URL slugs. Feeds/sitemaps retain company-owned provenance and their content terms; no licence is inferred.
 
 ## Financial unit calibration
 

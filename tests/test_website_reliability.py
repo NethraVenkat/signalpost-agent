@@ -21,6 +21,19 @@ def test_registry_declared_is_not_available_to_guesses():
     assert score(Page(html('',title='Distinctive Services').encode(),'https://example.no/'),OUR,context,'registry_website',[]).level!='REGISTRY_DECLARED'
 
 
+def test_postcode_city_cannot_prove_a_different_group_company():
+    body=html('5353 Straume',title='Sartor Holding')
+    context={'name':'Sartor Utvikling AS','street':['Different road 11'],'postcode':'5353','city':'STRAUME'}
+    assert score(Page(body.encode(),'https://group.no/'),OUR,context,'registry_website',[]).level!='REGISTRY_DECLARED'
+
+
+def test_unicode_line_separator_does_not_mislocalize_orgnr():
+    body='<script>const text="line\u2028separator";</script>' + html('Org.nr 923609016')
+    page=Page(body.encode(),'https://example.no/')
+    span=page.proof_span(OUR)
+    assert span in page.raw and OUR in span
+
+
 def test_followup_priority_and_no_captcha_form_false_block():
     page=Page(html('',extra='<a href="/privacy">Privacy</a><a href="/about">About</a><a href="/contact">Contact</a>').encode(),'https://example.no/')
     assert followup_links(page)==['https://example.no/contact','https://example.no/about','https://example.no/privacy']

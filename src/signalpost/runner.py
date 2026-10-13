@@ -2,6 +2,7 @@ import asyncio
 import json
 import time
 import uuid
+from contextlib import AsyncExitStack
 from collections import Counter
 import httpx
 from .budget import Budget, SourceFailure
@@ -93,7 +94,7 @@ def finalize(envelope, old, blobs, budget, began):
     envelope.operations.requests = len(events)
     for family, module in envelope.modules.items():
         hints = {"identity": "/api/enheter/", "roles": "/roller", "subunits": "/underenheter?", "accounts": "/regnskapsregisteret/"}
-        matching = [] if family=='hiring' else [e for e in events if e.get("section") == "website"] if family == "website" else [e for e in events if hints[family] in e["url"] and (family != "identity" or not e["url"].endswith("/roller"))]
+        matching = [] if family in {'hiring','activity'} else [e for e in events if e.get("section") == "website"] if family == "website" else [e for e in events if hints[family] in e["url"] and (family != "identity" or not e["url"].endswith("/roller"))]
         module.retry_count = max(0, len(matching) - len({e["url"] for e in matching}))
     envelope.profile = CompactProfile(organisation_number=envelope.organisation_number,
                                       values={c.field: c.value for c in envelope.claims},
@@ -113,7 +114,7 @@ async def run(config, client=None,synthesis_provider=None):
         # warning, never falsely claim the supplied batch was processed.
         inputs = Inputs([], [], [], 0)
         warnings.append(f"input unreadable: {type(exc).__name__}")
-    families = FAMILIES + (("website",) if config.websites else ()) + (('hiring',) if config.hiring else ())
+    families = FAMILIES + (("website",) if config.websites else ()) + (('hiring',) if config.hiring else ()) + (('activity',) if config.public_activity else ())
     envelopes = {org: placeholder(org, config.run_id, started, families) for org in inputs.unique}
     for org in inputs.invalid:
         for family in families:
@@ -143,6 +144,8 @@ async def run(config, client=None,synthesis_provider=None):
         await registry_ready.wait()
         return nav.company_names(envelopes.values(),prior)
     async def company(org, http, website_http, nav_task):
+        from .web.policy import DNS_ORG
+        DNS_ORG.set(org)
         envelope = envelopes[org]
         begin = time.monotonic()
         if not valid(org):
@@ -170,6 +173,9 @@ async def run(config, client=None,synthesis_provider=None):
                         await isolate(envelope, family, lambda source=source: source.fetch(org, http))
                 if config.websites:
                     await isolate(envelope, "website", lambda: collector.fetch(org, envelope, bulk.get(org), website_http))
+                if config.public_activity:
+                    from .web.activity import fetch as fetch_activity
+                    await isolate(envelope, 'activity', lambda: fetch_activity(org, envelope, website_http, website_http.accepted_pages.get(org, [])))
             # Waiting for the shared feed must not occupy registry worker slots.
             mark_registry(org)
             if config.hiring and nav_task:
@@ -190,20 +196,27 @@ async def run(config, client=None,synthesis_provider=None):
         finally:
             mark_registry(org)
             envelope.operations.runtime_ms = round((time.monotonic() - begin) * 1000)
-    async def execute(active_client):
+    async def execute(active_client, nav_client=None):
         http = Http(active_client, config, budget, blobs)
-        website_http = WebsiteHttp(active_client, config, budget, blobs)
-        nav_task=asyncio.create_task(nav.prefetch(active_client,config,budget,blobs,nav_index,nav_names,prior)) if config.hiring and valid_orgs else None
+        website_http = WebsiteHttp(active_client, config, budget, blobs, dns_metrics=dns_metrics)
+        nav_task=asyncio.create_task(nav.prefetch(nav_client or active_client,config,budget,blobs,nav_index,nav_names,prior)) if config.hiring and valid_orgs else None
+        # Start the credential/feed request before scheduling company crawls.
+        if nav_task: await asyncio.sleep(0)
         tasks = [asyncio.create_task(company(org, http, website_http,nav_task)) for org in inputs.unique if valid(org)]
         try:
             return await finish_before_deadline(tasks, budget)
         finally:
+            dns_metrics.update({'dns_precheck_lookups': website_http.dns_lookups, 'dns_candidates_by_company': website_http.dns_counts,
+                                'dns_scope': 'prechecks, website preflight and pinned-transport connection resolutions'})
             if nav_task and not nav_task.done(): nav_task.cancel()
             if nav_task: await asyncio.gather(nav_task,return_exceptions=True)
+    dns_metrics = {'dns_lookups': 0}
     if client is None:
-        transport = safe_transport(config.workers * 2) if config.websites or config.hiring else httpx.AsyncHTTPTransport(limits=httpx.Limits(max_connections=config.workers * 2))
-        async with httpx.AsyncClient(transport=transport, trust_env=False, headers={"Accept": "application/json", "User-Agent": "SignalpostAgent/1.0"}) as shared:
-            await execute(shared)
+        transport = safe_transport(config.workers * 2, dns_metrics) if config.websites or config.hiring else httpx.AsyncHTTPTransport(limits=httpx.Limits(max_connections=config.workers * 2))
+        async with AsyncExitStack() as stack:
+            shared=await stack.enter_async_context(httpx.AsyncClient(transport=transport, trust_env=False, headers={"Accept": "application/json", "User-Agent": "SignalpostAgent/1.0"}))
+            dedicated=await stack.enter_async_context(httpx.AsyncClient(transport=safe_transport(config.nav_concurrency,dns_metrics),trust_env=False)) if config.hiring else None
+            await execute(shared,dedicated)
     else:
         await execute(client)
     for org, envelope in envelopes.items():
@@ -217,6 +230,9 @@ async def run(config, client=None,synthesis_provider=None):
     result = [envelopes[org] for org in order]
     size, output_limited, minimum_exceeded = write(config.output, result, config.envelope_shape, blobs, config.max_output_mb)
     report = build(result, inputs, budget, config, warnings, time.monotonic() - budget.start)
+    report.update(dns_metrics)
+    report['dns_amortized_per_company'] = dns_metrics.get('dns_lookups', 0) / len(result) if result else 0
+    report['max_dns_requests_per_company'] = max((n for org,n in dns_metrics.get('dns_by_company', {}).items() if org in envelopes), default=0)
     report["bulk_snapshot_sha256"] = bulk_sha
     report['llm']=synthesis_service.metrics
     total=synthesis_service.metrics['estimated_usd']
@@ -232,6 +248,8 @@ async def run(config, client=None,synthesis_provider=None):
         report['nav_detail_requests']=details
         report['nav_detail_requests_per_company']=details/len(valid_orgs) if valid_orgs else 0
         report['nav_detail_requests_by_company']={org:nav_index.metrics.get('detail_requests_by_company',{}).get(org,0) for org in valid_orgs}
+        report['hiring_prefetch']['matches_published']=sum(c.family=='hiring' and c.availability=='available' and not c.carried_forward for e in result for c in e.claims)
+        report['hiring_prefetch']['companies_with_ads']=sum(any(c.family=='hiring' and c.availability=='available' and not c.carried_forward for c in e.claims) for e in result)
     report["output_bytes"] = size
     report["output_bytes_per_company"] = size / len(result) if result else 0
     report["output_limit_exceeded"] = size > config.max_output_mb * 1024 * 1024
