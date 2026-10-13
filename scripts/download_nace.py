@@ -17,6 +17,7 @@ def build_table(english, norwegian, year, version_id, download_date):
         'valid_from': english['validFrom'], 'last_modified': english['lastModified'],
         'derived_from': english.get('derivedFrom'),
         'classes': {item['code']: item['name'] for item in english['classificationItems'] if item['level'] == '4'},
+        'titles': {item['code']: item['name'] for item in english['classificationItems'] if item['level'] in ('4', '5')},
         'subclasses': {item['code']: {'parent': item['parentCode'], 'registered_title': names.get(item['code'], '')}
                        for item in english['classificationItems'] if item['level'] == '5'},
     }

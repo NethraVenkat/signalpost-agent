@@ -10,7 +10,7 @@ def unspecified(value):
         str(value.get('beskrivelse', '')).strip().casefold() == 'uoppgitt')
 
 
-def english_title(value):
+def english_title(value, version_id=None):
     if not isinstance(value, dict) or unspecified(value):
         return None
     code = str(value.get('kode', ''))
@@ -18,9 +18,10 @@ def english_title(value):
     candidates = []
     matched = []
     for version in TABLE['versions']:
+        if version_id is not None and version['version_id'] != version_id:
+            continue
         subclass = version['subclasses'].get(code)
-        parent = subclass['parent'] if subclass else code
-        title = version['classes'].get(parent) if subclass or code in version['classes'] else None
+        title = version['titles'].get(code)
         if title:
             candidates.append(title)
             if subclass and description == ' '.join(subclass['registered_title'].split()).casefold():

@@ -2,7 +2,7 @@ from decimal import Decimal
 from ..models.synthesis import Synthesis,Generator,Sentence,Unknown
 from .catalog import input_hash,change_claims,leaves
 from .validate import validate_synthesis,permitted
-from .readability import money,headline,nace_sentence,dual_role,normalised_description,unknown_text
+from .readability import money,headline,nace_sentence,dual_role,normalised_description,unknown_text,workplaces_sentence
 from .nace import unspecified
 
 
@@ -37,7 +37,7 @@ def projected(claim):
 
 
 def generate(envelope):
-    result=Synthesis(generator=Generator(version='2',input_sha256=input_hash(envelope)),change_claims=change_claims(envelope))
+    result=Synthesis(generator=Generator(version='3',input_sha256=input_hash(envelope)),change_claims=change_claims(envelope))
     claims=sorted((c for c in envelope.claims if c.availability=='available' and permitted(c,envelope)),key=lambda c:c.field)
     by_field={c.field:c for c in claims}
     opening=headline(claims)
@@ -79,8 +79,6 @@ def generate(envelope):
     if combined:result.sections.leadership.append(Sentence(text=combined[0],claim_ids=combined[1]))
     examples={'subunits':0,'social':0,'ads':0}
     for claim in claims:
-        if claim.field.startswith('subunits.unit.') and examples['subunits']<3:
-            add('scale','Registered workplace',claim);examples['subunits']+=1
         if claim.field=='official_website':add('scale','Official website',claim)
         if claim.field.startswith('social_profile.') and examples['social']<2:
             add('scale','Social profile',claim);examples['social']+=1
@@ -93,15 +91,21 @@ def generate(envelope):
     def count(section,label,records,kind):
         records={c.id:c for c in records}
         if records:getattr(result.sections,section).append(Sentence(text=label+': '+str(len(records))+'.',claim_ids=sorted(records),value_kind='derived',count=len(records),record_type=kind))
-    if envelope.run.sections.get('subunits')=='available':
-        units=[c for c in claims if c.field.startswith('subunits.unit.')]
-        duplicate=len(units)==1 and units[0].value.get('name')==getattr(by_field.get('identity.legal_name'),'value',None) and (units[0].value.get('address') or {}).get('kommune')==getattr(by_field.get('identity.municipality'),'value',None)
-        if not duplicate:count('scale','Registered workplaces',units,'workplaces')
+    units=[c for c in claims if c.field.startswith('subunits.unit.')]
+    if len(units)==1:
+        same_name=normalised_description(units[0].value.get('name'))==normalised_description(getattr(by_field.get('identity.legal_name'),'value',None))
+        address=units[0].value.get('address') or {}
+        same_city=str(address.get('kommune') or address.get('poststed') or '').casefold()==str(getattr(by_field.get('identity.municipality'),'value',None)).casefold()
+        if not (same_name and same_city):add('scale','Registered workplace',units[0])
+    elif len(units)>1:
+        result.sections.scale.append(Sentence(text=workplaces_sentence(units),claim_ids=sorted(c.id for c in units),value_kind='derived',count=len(units),record_type='workplaces'))
     if envelope.run.sections.get('roles')=='available':
         board=[c for c in claims if c.family=='roles' and isinstance(c.value,dict) and
             (c.value.get('group_type') or {}).get('kode')=='STYR' and (c.value.get('role_type') or {}).get('kode') in {'LEDE','NEST','MEDL'} and c.value.get('inactive') is not True]
         if len({c.id for c in board})>1:count('leadership','Registered board members',board,'board_members')
-    count('scale','Verified active ads found',[c for c in claims if c.family=='hiring' and c.field.startswith('hiring.job.') and not c.carried_forward],'active_ads')
+    ads=[c for c in claims if c.family=='hiring' and c.field.startswith('hiring.job.') and not c.carried_forward]
+    listed={cid for s in result.sections.scale if s.text.startswith('Verified active ad: ') for cid in s.claim_ids}
+    if any(c.id not in listed for c in ads):count('scale','Verified active ads found',ads,'active_ads')
     for event in envelope.changes:
         sides=[c for c in result.change_claims if c.field in {event.field+'.old',event.field+'.new'}]
         if sides:

@@ -1,7 +1,7 @@
 """Deterministic presentation helpers shared by generation and validation."""
 from decimal import Decimal
 from .catalog import leaves
-from .nace import english_title
+from .nace import english_title, unspecified
 
 
 def money(value):
@@ -16,7 +16,7 @@ def normalised_description(value):
     return ' '.join(' '.join(leaves(value)).split())
 
 
-def headline(claims):
+def headline(claims, municipality_display=None):
     fields = {c.field: c for c in claims}
     name = fields.get('identity.legal_name')
     if name is None:
@@ -24,24 +24,24 @@ def headline(claims):
     used = [name]
     municipality = fields.get('identity.municipality')
     industry = next((c for c in sorted(claims, key=lambda c: c.field)
-                     if c.field.startswith('identity.nace') and english_title(c.value)), None)
+                     if c.field.startswith('identity.nace') and not unspecified(c.value) and
+                     (english_title(c.value) or c.value.get('beskrivelse'))), None)
     text = str(name.value)
-    if municipality or industry:
-        text += ' is a '
-        if municipality:
-            text += str(municipality.value) + '-based '
-            used.append(municipality)
-        text += english_title(industry.value).lower() if industry else 'company'
-        if industry:
-            used.append(industry)
+    if municipality:
+        text += ' is based in ' + (municipality_display if municipality_display is not None else str(municipality.value).title())
+        used.append(municipality)
+    if industry:
+        text += ' and registered under ' if municipality else ' is registered under '
+        text += (english_title(industry.value) or industry.value['beskrivelse']) + ' (NACE ' + str(industry.value['kode']) + ')'
+        used.append(industry)
     employees = fields.get('identity.employees')
     revenue = fields.get('accounts.revenue')
     period = getattr(revenue, 'reporting_period', None) or {}
     if employees:
-        text += (' with ' if municipality or industry else ' has ') + str(employees.value) + ' registered employees'
+        text += (', with ' if municipality or industry else ' has ') + str(employees.value) + ' registered employees'
         used.append(employees)
     if revenue and period.get('currency') == 'NOK' and period.get('fiscal_year'):
-        text += (' and ' if employees else ' with ' if municipality or industry else ' has ')
+        text += (' and ' if employees or municipality or industry else ' has ')
         text += 'NOK ' + money(revenue.value) + ' in revenue in FY' + str(period['fiscal_year'])
         used.append(revenue)
     if len(used) == 1:
@@ -49,6 +49,22 @@ def headline(claims):
     if any(getattr(c,'carried_forward',False) for c in used):
         text = 'Previously supported. ' + text
     return text + '.', [c.id for c in used]
+
+
+def workplace_label(claim):
+    value = claim.value
+    address = value.get('address') or {}
+    name = str(value.get('name') or '')
+    city = address.get('kommune') or address.get('poststed')
+    return name + ' (' + str(city) + ')' if name and city else name or str(city or '')
+
+
+def workplaces_sentence(claims):
+    records = sorted({c.id: c for c in claims}.values(), key=lambda c: c.field)
+    labels = [workplace_label(c) for c in records[:3]]
+    examples = labels[0] if len(labels) == 1 else ' and '.join(labels) if len(labels) == 2 else ', '.join(labels[:-1]) + ' and ' + labels[-1]
+    prefix = 'Previously supported. ' if any(getattr(c, 'carried_forward', False) for c in records) else ''
+    return prefix + str(len(records)) + ' registered workplaces, including ' + examples + '.'
 
 
 def nace_sentence(claim):

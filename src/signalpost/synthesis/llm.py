@@ -6,7 +6,7 @@ from .catalog import catalog
 from .template import projected
 from .validate import SECTIONS,sentence_error
 
-PROMPT_VERSION='placeholders-2'
+PROMPT_VERSION='placeholders-3'
 SYSTEM=('Return JSON {"sentences":[{"section":"scale","text":"...","claim_ids":["id"]}]}. '
         'Use only these English frames with {{claim:id}} values: Registered activity: «{{claim:id}}». '
         'Registered purpose: «{{claim:id}}». NACE: {{claim:id}}. Website self-description: «{{claim:id}}». '

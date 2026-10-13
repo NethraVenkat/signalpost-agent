@@ -4,7 +4,7 @@ from datetime import date
 from decimal import Decimal,InvalidOperation
 from .catalog import catalog,leaves
 from ..models.synthesis import Sentence,Unknown
-from .readability import headline,nace_sentence,dual_role,normalised_description,money
+from .readability import headline,nace_sentence,dual_role,normalised_description,money,workplaces_sentence
 from .nace import unspecified
 
 SECTIONS=('what_it_does','scale','leadership','changes')
@@ -69,12 +69,19 @@ def sentence_error(sentence,envelope):
     # Table titles authorize only the matching NACE frame or headline.
     plain=sentence.text.removeprefix('Previously supported. ')
     opening=headline(claims)
-    if opening and sentence.text==opening[0]:
+    opening_matches=opening and sentence.text==opening[0]
+    municipality=next((c for c in claims if c.field=='identity.municipality'),None)
+    if opening and municipality and not opening_matches and ' is based in ' in opening[0]:
+        start=opening[0].index(' is based in ')+len(' is based in ')
+        end=start+len(str(municipality.value).title())
+        city=sentence.text[start:end]
+        opening_matches=city.casefold()==str(municipality.value).casefold() and sentence.text==headline(claims,municipality_display=city)[0]
+    if opening_matches:
         if set(sentence.claim_ids)!=set(opening[1]):return 'misbound_headline'
         if sentence.value_kind!='reported' or sentence.count is not None or sentence.record_type is not None:return 'unmarked_derived_count'
         return None
     outside_quotes=re.sub(r'«.*?»',' ',plain,flags=re.S)
-    if ' is a ' in outside_quotes or outside_quotes.startswith('Registered name: ') or ' registered employees' in outside_quotes or ' in revenue in FY' in outside_quotes:
+    if ' is a ' in outside_quotes or ' is based in ' in outside_quotes or 'registered under ' in outside_quotes or outside_quotes.startswith('Registered name: ') or ' registered employees' in outside_quotes or ' in revenue in FY' in outside_quotes:
         return 'unverified_headline'
     if plain.startswith('NACE '):
         if len(claims)!=1 or not claims[0].field.startswith('identity.nace') or unspecified(claims[0].value) or sentence.text!=nace_sentence(claims[0]):return 'unverified_nace_title'
@@ -119,6 +126,10 @@ def sentence_error(sentence,envelope):
             return False
         records={c.id for c in claims if matches(c)}
         if sentence.count is None or sentence.count<=0 or sentence.count!=len(records):return 'unverified_derived_count'
+        if sentence.record_type=='workplaces':
+            all_units={c.id for c in envelope.claims if c.availability=='available' and matches(c)}
+            if len(claims)!=len(records) or records!=all_units or sentence.text!=workplaces_sentence(claims):return 'unverified_derived_count'
+            return None
         labels={'workplaces':'Registered workplaces','board_members':'Registered board members','active_ads':'Verified active ads found'}
         if sentence.text!=labels[sentence.record_type]+': '+str(sentence.count)+'.':return 'unverified_derived_count'
         derived=number(str(sentence.count))
