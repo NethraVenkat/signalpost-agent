@@ -35,3 +35,7 @@ class Config(BaseModel):
     nav_concurrency: int = Field(default=8,ge=1,le=16)
     nav_request_timeout: float = Field(default=30,gt=0)
     nav_body_cap_mb: float = Field(default=2,gt=0)
+    synthesis: str = 'template'
+    llm_max_calls: int = Field(default=100,ge=0)
+    llm_max_cost_usd: float = Field(default=.50,ge=0)
+    llm_timeout_seconds: float = Field(default=15,gt=0,le=15)

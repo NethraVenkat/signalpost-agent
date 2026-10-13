@@ -8,7 +8,7 @@ def test_no_embedded_bodies_and_verbatim_spans(tmp_path):
     assert report["output_bytes"] == cfg.output.stat().st_size
     assert report["output_bytes_per_company"] < 60000
     assert "snapshot_body_base64" not in cfg.output.read_text()
-    assert set(rows[0]["profile"]) == {"organisation_number", "values", "evidence_ids"}
+    assert set(rows[0]["profile"]) == {"organisation_number", "values", "evidence_ids", "synthesis"}
     for evidence in rows[0]["evidence"]:
         assert len(evidence["claim_span"]) <= 300
         assert evidence["claim_span"] in (cfg.state_dir / "blobs" / evidence["content_sha256"]).read_text(encoding="utf8")

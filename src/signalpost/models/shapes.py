@@ -36,7 +36,7 @@ def serialize(envelope: Envelope, shape: str):
                                   legal_identity=envelope.run.legal_identity, claims=envelope.claims,
                                   evidence=envelope.evidence, changes=envelope.changes, errors=envelope.errors,
                                   refresh=envelope.run.refresh, sections=envelope.run.sections,
-                                  operations=envelope.operations).model_dump(mode="json")
+                                  operations=envelope.operations,synthesis=envelope.run.synthesis).model_dump(mode="json")
         data = {k: v for k, v in data.items() if k in REFERENCE_KEYS}
     validate(data, shape)
     return data

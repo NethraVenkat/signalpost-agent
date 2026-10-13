@@ -75,7 +75,8 @@ def extract(org, row, source):
     section = Section()
     simple = {"legal_name": "navn", "registration_date": "registreringsdatoEnhetsregisteret", "employees": "antallAnsatte",
               "registered_website": "hjemmeside", "bankrupt": "konkurs", "under_liquidation": "underAvvikling",
-              "deleted": "slettedato", "latest_submitted_accounts": "sisteInnsendteAarsregnskap", "municipality": "forretningsadresse.kommune"}
+              "deleted": "slettedato", "latest_submitted_accounts": "sisteInnsendteAarsregnskap", "municipality": "forretningsadresse.kommune",
+              "registered_activity": "aktivitet", "statutory_purpose": "vedtektsfestetFormaal"}
     for name, col in simple.items():
         value, actual = column(row, col)
         if value is not None and name == "employees":

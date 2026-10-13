@@ -1,5 +1,7 @@
 # Refresh and previous snapshots
 
+Synthesis is derived output and does not create company changes. A baseline includes the first-observation sentence; refreshed runs compare with their supplied prior snapshot. Identical claims, events, source states and baseline/refresh context produce identical templates. To test synthesis idempotency, supply the same prior snapshot to both runs. Retrieval timestamps do not affect summary text. Recent-registration inclusion is evaluated against the observation date and can age out across days.
+
 Supply `--previous prior.jsonl` in any supported envelope shape. Without it, each company is a baseline with empty changes. Previous rows are validated independently; malformed rows become warnings. Invalid current organisation numbers cannot inherit company facts.
 
 Claim IDs are deterministic hashes of organisation, field, normalized source value, availability and original reporting metadata. Evidence IDs retain source URL/hash/locator/extractor identity and exclude retrieval time. Case, whitespace and collection ordering are normalized. Address abbreviations are not rewritten.

@@ -169,6 +169,8 @@ async def fetch(org, envelope, bulk, http):
         registry_refs = [e for e in envelope.evidence if e.source_class == "official_registry"]
         section.evidence.extend(registry_refs)
         section.claims[-1].evidence_ids.extend(e.id for e in registry_refs)
+    from .descriptions import extract as descriptions
+    descriptions(section,org,section.claims[-1],[(r,p) for r,p in pages if domain(r.url)==domain(response.url)])
     social_seen, contact_seen = set(), set()
     for source_response, source_page in pages:
         if domain(source_response.url) != domain(response.url):

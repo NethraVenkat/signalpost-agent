@@ -22,6 +22,9 @@ def main():
     command.add_argument("--website-request-cap", type=int, default=6)
     command.add_argument('--website-total-request-cap',type=int,default=9)
     command.add_argument('--hiring',action='store_true')
+    command.add_argument('--synthesis',choices=('auto','template','llm'),default='template')
+    command.add_argument('--llm-max-calls',type=int,default=100)
+    command.add_argument('--llm-max-cost-usd',type=float,default=.50)
     for flag,kind,default in [('nav-max-pages',int,512),('nav-max-details',int,300),('nav-time-cap-seconds',float,300),('nav-lookback-days',int,185),('nav-concurrency',int,8),('nav-request-timeout',float,30),('nav-body-cap-mb',float,2)]:
         command.add_argument('--'+flag,type=kind,default=default)
     command.add_argument("--website-user-agent", default="SignalpostAgent/1.0 (+https://github.com/NethraVenkat/signalpost-agent)")

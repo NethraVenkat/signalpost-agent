@@ -5,6 +5,29 @@ import json
 from pathlib import Path
 from signalpost.models.shapes import validate
 from signalpost.io.input_adapter import read
+from signalpost.models.claim import Claim
+from signalpost.models.evidence import Evidence
+from signalpost.models.envelope import Change
+from signalpost.models.synthesis import Synthesis
+from signalpost.synthesis.validate import sentence_error,SECTIONS
+from signalpost.synthesis.catalog import change_claims
+from types import SimpleNamespace
+
+
+def verify_synthesis(row):
+    data=row if 'claims' in row else row['profile']
+    raw=row['run'].get('synthesis') if 'run' in row else row['profile'].get('synthesis')
+    if raw is None:return 0,0
+    synthesis=Synthesis.model_validate(raw)
+    envelope=SimpleNamespace(claims=[Claim.model_validate(c) for c in data['claims']],
+        evidence=[Evidence.model_validate(e) for e in data['evidence']],changes=[Change.model_validate(c) for c in data['changes']])
+    sentences=[s for key in SECTIONS for s in getattr(synthesis.sections,key)]
+    assert all(sentence_error(s,envelope) is None for s in sentences),'Unverified synthesis sentence'
+    assert synthesis.summary==' '.join(s.text for s in sentences),'Summary differs from checked sentences'
+    assert synthesis.checks.sentences==synthesis.checks.cited==len(sentences) and synthesis.checks.values_verified
+    assert synthesis.change_claims==change_claims(envelope),'Change citations differ from source events'
+    if 'run' in row and 'profile' in row:assert row['profile'].get('synthesis')==raw,'Synthesis mirror differs'
+    return 1,len(sentences)
 
 
 def load(path):
@@ -26,7 +49,10 @@ def verify(first, state_dir, count, organisations=None, report=None, require_cle
     if organisations is not None:
         assert [r['organisation_number'] for r in rows] == read(organisations).unique, 'Membership/order differs from input'
     seen, published = set(), 0
+    synthesis_companies=synthesis_sentences=0
     for row in rows:
+        companies,sentences=verify_synthesis(row)
+        synthesis_companies+=companies;synthesis_sentences+=sentences
         data = row if "claims" in row else row["profile"]
         evidence = {e["id"]: e for e in data["evidence"]}
         for claim in data["claims"]:
@@ -45,6 +71,7 @@ def verify(first, state_dir, count, organisations=None, report=None, require_cle
                 body = (state_dir / 'blobs' / sha).read_bytes().decode('utf8', errors='replace')
                 assert len(e['claim_span']) <= 300 and e['claim_span'] in body, 'Non-verbatim evidence span'
     result = {"lines": len(rows), "schema_valid": True, "published_claims": published, "source_blobs_verified": len(seen)}
+    result.update(synthesis_companies=synthesis_companies,synthesis_sentences=synthesis_sentences,synthesis_unverified_values=0)
     if report is not None:
         metrics = json.loads(report.read_text(encoding='utf8'))
         assert metrics['emitted_envelopes'] == len(rows)
@@ -58,6 +85,7 @@ def verify(first, state_dir, count, organisations=None, report=None, require_cle
                 assert all(state in {'available', 'not_available', 'not_applicable'} for state in sections.values()), 'Incomplete smoke-test section'
     if second is not None:
         rerun = load(second)
+        for row in rerun:verify_synthesis(row)
         assert len(rerun) == len(rows)
         assert [r["organisation_number"] for r in rerun] == [r["organisation_number"] for r in rows]
         assert ids(rerun) == ids(rows), "Claim IDs differ"

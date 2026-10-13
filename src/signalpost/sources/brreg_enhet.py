@@ -10,6 +10,7 @@ FIELDS = {
     "registered_website": ("hjemmeside",), "bankrupt": ("konkurs",),
     "under_liquidation": ("underAvvikling",), "deleted": ("slettedato",),
     "latest_submitted_accounts": ("sisteInnsendteAarsregnskap",),
+    "registered_activity": ("aktivitet",), "statutory_purpose": ("vedtektsfestetFormaal",),
 }
 
 

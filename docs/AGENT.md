@@ -1,6 +1,6 @@
 # The agent loop
 
-Signalpost is a tool-using company-research agent. Source planning, identity verification and publication decisions currently use deterministic rules. No language model runs in this release. Optional evidence-constrained synthesis is planned.
+Signalpost is a tool-using company-research agent. Source planning, identity verification, publication and template summaries use deterministic rules. Optional synthesis providers are constrained to approved claim placeholders; only a fake provider is tested in this release.
 
 ```mermaid
 flowchart TD
@@ -11,7 +11,9 @@ flowchart TD
     Optional --> Verify[Verify company identity and stored evidence]
     Verify --> Publish[Publish supported claims or abstain with explicit states]
     Publish --> Diff[Compare with the previous run]
-    Diff --> Output[Validate and write envelopes plus a run report]
+    Diff --> Synthesis[Build cited summary or explicit unknowns]
+    Synthesis --> Check[Validate sentence values and record counts]
+    Check --> Output[Validate and write envelopes plus a run report]
 ```
 
 For each company:
@@ -22,6 +24,10 @@ For each company:
 4. Verify exact company/parent identifiers. Website corroboration can qualify only under the documented identity rules. Link claims to exact stored source bodies, locators and short verbatim spans.
 5. Publish verified values, or an explicit availability state and null. Each source section and company is isolated. A global deadline preserves completed claims and marks incomplete work failed.
 6. Compare supported values with the supplied previous envelopes. Separate company changes from observation failures, retaining non-expired prior supported facts when appropriate.
+7. Build a template summary of activity, scale, leadership, changes and unknowns. Quote registered activity/purpose and accepted-site self-descriptions. Read website description tags and already-fetched about paragraphs without additional requests.
+8. Check citations, evidence, identity thresholds, verbatim quotes and value tokens. Derived counts must equal distinct cited records of the declared type. Drop rejected sentences and explain empty sections. Synthesis never adds source claims, changes company events or turns a source envelope into a failure.
+
+Template mode is the default. An injected provider can order approved placeholder frames; raw values or misbound citations trigger template fallback. Calls are bounded, cached and metered. No live provider adapter or API calls are enabled. A baseline summary includes the first-observation notice; reproducibility compares identical source claims, changes and prior-snapshot context.
 
 The final writer preserves input order, validates every envelope and the whole output, and publishes atomically. Deduplication is the default; `--emit-duplicates` preserves input-row multiplicity. Exit zero means output was written; it does not mean every source succeeded.
 

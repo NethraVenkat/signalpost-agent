@@ -7,7 +7,7 @@ uv sync --frozen
 uv run pytest
 ```
 
-The suite currently has 98 tests covering checksum/input membership, isolation/deadlines/budgets, missing versus reported zero, all envelope shapes, stored provenance, refresh/carry-forward, website proof/robots/SSRF/politeness, NAV exact matches/caps/ETags and independent output verification. Fixtures are small and local; no credentials or internet are required for these tests.
+The suite currently has 117 tests covering checksum/input membership, isolation/deadlines/budgets, missing versus reported zero, all envelope shapes, stored provenance, refresh/carry-forward, website proof/robots/SSRF/politeness, NAV exact matches/caps/ETags, output verification, synthesis citations/values/counts and fake-provider placeholders/cache/caps/fallback. Fixtures are small and local; no credentials or internet are required for these tests.
 
 ## Live 20-company registry smoke
 
@@ -22,7 +22,7 @@ GitHub Actions has two Ubuntu jobs: tests and live-20. Both run frozen installat
 
 ## Output verification and refresh
 
-The verifier checks schemas, exact input membership/order, available-claim evidence links, actual stored-body SHA-256 and verbatim spans. It requires the corresponding blobs, including archives for carried-forward claims. No network request is made by verification.
+The verifier checks schemas, exact input membership/order, available-claim evidence links, actual stored-body SHA-256 and verbatim spans. When synthesis is present, it checks sentence citations/values, counters, concatenated text, change citations and the union mirror without dropping or rewriting rejected output. It requires the corresponding blobs, including archives for carried-forward claims. No network request is made by verification.
 
 ```sh
 uv run signalpost run --organisations batch.jsonl --bulk registry.csv --output out/first.jsonl --report out/first-report.json
@@ -44,6 +44,28 @@ uv run python scripts/extract_bulk.py --bulk downloads/registry.csv --batch out/
 Obtain the bulk snapshot from the [official registry CSV endpoint](https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv). The extractor accepts plain/gzip CSV and reports requested rows absent from the snapshot; the runner keeps those companies and uses live fallback. Snapshots, outputs and blobs are ignored locally and not distributed here.
 
 ## Latest measurements
+
+### Evidence-checked synthesis, saved 300-company sources
+
+Measured on 13 October 2026: exact saved registry/NAV HTTP statuses and bodies were replayed; accepted website claims/states and same-host archived pages were restored. No network or DNS requests and no model calls were made. This checks summary construction without claiming fresh website verification.
+
+| Check | Result |
+|---|---:|
+| Ordered valid envelopes with synthesis |300|
+| Unhandled exceptions / synthesis-caused envelope failures |0 / 0|
+| What-it-does / scale / leadership coverage |99.667% / 100% / 99.667%|
+| At least one unknown entry |100%|
+| Incomplete-source companies with every required unknown listed |299 / 299|
+| Retained sentences / cited / unverified / dropped |3256 / 3256 / 0 / 0|
+| Registered activity / statutory purpose coverage |299 / 300; 292 / 300|
+| Website self-description claims / companies |34 / 16|
+| Template rerun with the same prior snapshot |Byte-identical; 0 company changes|
+| Union output before / after synthesis |56.599 / 64.287 decimal KB/company|
+| Saved-source preparation, synthesis, rerun and hash verification |201.687s|
+
+The size comparison removes only synthesis from the same enriched union envelopes; source claims/evidence are otherwise identical. Union output mirrors synthesis in run and profile. The public verifier confirmed 7,105 available claims, 1,168 matching source blobs, all 3,256 summary sentences, identical rerun claim IDs and zero company/observation events. Fifteen mixed rendered examples are kept locally for review, outside the published tree. No one-employee company is supported in the sample; the small-firm example is labelled by its reported records instead. Template provider cost is $0. Live model execution was deliberately excluded; fake-provider tests verify valid frames, raw-number/missing-citation rejection, untrusted quoted instructions, timeout, caps and cache hits.
+
+For reproducible summary checks with local inputs, run the same command twice with `--synthesis template` and the **same** `--previous` file, then compare run.synthesis. The offline unit suite exercises this without downloaded archives. Baseline first-observation wording is separately tested. Live source bytes can change and legitimately alter summaries.
 
 The [100-company replay summary](../reports/smoke-100.md) and [summary JSON](../reports/smoke-100-report.json) measure current code on exact saved official source bodies, verify original supported IDs and zero rerun events. This is an offline reproducibility check.
 

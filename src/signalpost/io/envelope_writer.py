@@ -37,6 +37,9 @@ def constrain(envelopes, shape, max_output_mb):
         for module in e.modules.values():
             module.state = "budget_exhausted"
         e.profile = CompactProfile(organisation_number=e.organisation_number, values={c.field: None for c in e.claims}, evidence_ids=[])
+        from ..synthesis.template import generate
+        e.run.synthesis=generate(e)
+        e.profile.synthesis=e.run.synthesis
         new_line = encode(e)
         new_size = len(new_line.encode("utf8"))
         total += (new_size - sizes[key]) * copies[key]
@@ -50,6 +53,10 @@ def write(path: Path, envelopes, shape, blobs, max_output_mb=64):
     temporary = path.with_name(path.name + ".tmp")
     bodies = {}
     for envelope in envelopes:
+        if envelope.run.synthesis is not None:
+            from ..synthesis.validate import validate_synthesis
+            envelope.run.synthesis=validate_synthesis(envelope.run.synthesis,envelope)
+            envelope.profile.synthesis=envelope.run.synthesis
         for evidence in envelope.evidence:
             target = blobs.directory / evidence.content_sha256
             if target.exists():

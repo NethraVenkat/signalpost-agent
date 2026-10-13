@@ -48,6 +48,8 @@ For explicit NOK currency and absent source unit, annotate whole NOK without mul
 
 ## Models, dependencies and cost
 
-No language model or paid API is called. Third-party provider cost is currently $0 per run, per 100 companies and per configured 1,100-company batch; this excludes compute/storage/network costs. Optional evidence-constrained LLM synthesis is planned and unimplemented.
+No language model or paid API is called. Template synthesis costs $0 per run, per 100 companies and per configured 1,100-company batch; this excludes compute/storage/network costs. A provider-agnostic interface is tested with a fake provider only. No live adapter or model host is enabled. Reserved provider/model/key environment names contain no values in `.env.example`; setting a key alone does not enable a call.
+
+An injected provider receives claim identifiers/labels and at most two bounded untrusted description quotes. It can only order approved English frames with placeholders; exact values are substituted locally and validated. One call/company, 15 seconds, 2,000 input tokens, 500 output tokens, global call/cost caps and cache prevent unbounded work. Both the dedicated model cap and global cost cap apply. Synthetic offline price entries must be replaced with verified rates before enabling an adapter. Invalid output/errors/caps use template fallback. The cache contains accepted placeholder JSON or sanitized fallback reasons, never credentials.
 
 Runtime: httpx (BSD-3-Clause), Pydantic (MIT), tldextract (BSD-3-Clause); development: pytest (MIT), respx (BSD-3-Clause); build: Hatchling (MIT). Locked transitive dependencies retain their licences. The public company-universe download is an input-sampling resource, not claim evidence or part of the published dataset.

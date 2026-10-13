@@ -3,6 +3,7 @@ from pydantic import Field, model_validator
 from .evidence import Model, Evidence
 from .claim import Claim
 from .states import Availability, TerminalState
+from .synthesis import Synthesis
 
 
 class Error(Model):
@@ -31,6 +32,7 @@ class Run(Model):
     legal_identity: dict = Field(default_factory=dict)
     refresh: dict = Field(default_factory=dict)
     sections: dict[str, Availability] = Field(default_factory=dict)
+    synthesis: Synthesis | None = None
 
 
 class Change(Model):
@@ -63,12 +65,14 @@ class Profile(Model):
     refresh: dict = Field(default_factory=dict)
     sections: dict[str, Availability] = Field(default_factory=dict)
     operations: Operations = Field(default_factory=Operations)
+    synthesis: Synthesis | None = None
 
 
 class CompactProfile(Model):
     organisation_number: str
     values: dict
     evidence_ids: list[str]
+    synthesis: Synthesis | None = None
 
 
 class Envelope(Model):

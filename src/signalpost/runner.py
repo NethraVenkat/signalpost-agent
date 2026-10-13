@@ -23,6 +23,7 @@ from .web.fetcher import WebsiteHttp
 from .web import collector
 from .web.policy import safe_transport
 from .sources import nav
+from .synthesis.service import Service as SynthesisService
 
 FAMILIES = ("identity", "roles", "subunits", "accounts")
 
@@ -99,7 +100,7 @@ def finalize(envelope, old, blobs, budget, began):
                                       evidence_ids=[e.id for e in envelope.evidence])
 
 
-async def run(config, client=None):
+async def run(config, client=None,synthesis_provider=None):
     budget = Budget(config)
     if not config.run_id:
         config.run_id = uuid.uuid4().hex
@@ -208,11 +209,22 @@ async def run(config, client=None):
     for org, envelope in envelopes.items():
         # Invalid numbers must never inherit previously published information.
         finalize(envelope, prior.get(org) if valid(org) else None, blobs, budget, budget.start)
+    synthesis_service=SynthesisService(config,budget,synthesis_provider)
+    for envelope in envelopes.values():
+        envelope.run.synthesis=await synthesis_service.summarize(envelope)
+        envelope.profile.synthesis=envelope.run.synthesis
     order = inputs.rows if config.emit_duplicates else inputs.unique
     result = [envelopes[org] for org in order]
     size, output_limited, minimum_exceeded = write(config.output, result, config.envelope_shape, blobs, config.max_output_mb)
     report = build(result, inputs, budget, config, warnings, time.monotonic() - budget.start)
     report["bulk_snapshot_sha256"] = bulk_sha
+    report['llm']=synthesis_service.metrics
+    total=synthesis_service.metrics['estimated_usd']
+    report.update({'total_cost_usd':total,'cost_per_100_companies_usd':total*100/len(envelopes) if envelopes else 0,
+        'cost_per_official_batch_usd':total*config.official_batch_size/len(envelopes) if envelopes else 0})
+    report['synthesis']={'companies':len(envelopes),'sentences':sum(e.run.synthesis.checks.sentences for e in envelopes.values()),
+        'cited':sum(e.run.synthesis.checks.cited for e in envelopes.values()),
+        'dropped_sentences':sum(e.run.synthesis.checks.dropped_sentences for e in envelopes.values())}
     report["input_readable"] = not any(w.startswith("input unreadable") for w in warnings)
     if config.hiring:
         report['hiring_prefetch']=nav_index.metrics

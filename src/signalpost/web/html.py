@@ -35,6 +35,8 @@ class Page(HTMLParser):
         for line in self.raw.splitlines(keepends=True):
             self._line_offsets.append(self._line_offsets[-1] + len(line))
         self.segments = []
+        self.paragraphs = []
+        self._paragraph = None
         self.feed(self.raw)
         for text in self._scripts:
             try:
@@ -56,8 +58,17 @@ class Page(HTMLParser):
             self._anchor = Link(urljoin(self.url, attrs.get("href", "")), "", self.get_starttag_text()[:300], any(x[1] for x in self.stack) and not any(x[0] == "article" or x[2] for x in self.stack))
         if tag == "script" and attrs.get("type", "").lower() == "application/ld+json":
             self._script = ""
+        if tag == 'p' and not any(x[2] for x in self.stack):
+            line,col=self.getpos()
+            self._paragraph={'start':self._line_offsets[line-1]+col,'parts':[]}
 
     def handle_endtag(self, tag):
+        if tag == 'p' and self._paragraph:
+            line,col=self.getpos();end=self._line_offsets[line-1]+col+4
+            text=''.join(self._paragraph['parts']).strip()
+            if text:
+                self.paragraphs.append((text,self.raw[self._paragraph['start']:end][:300]))
+            self._paragraph=None
         if tag == "a" and self._anchor:
             self.links.append(self._anchor)
             self._anchor = None
@@ -75,6 +86,8 @@ class Page(HTMLParser):
         if any(x[0] == "title" for x in self.stack) and any(x[0] == "head" for x in self.stack):
             self.title += data
         if not any(x[0] in {"script", "style", "noscript", "template", "head"} or x[2] for x in self.stack):
+            if self._paragraph:
+                self._paragraph['parts'].append(data)
             self.visible_parts.append(data)
             if not any(x[0] in {"article", "pre", "code"} for x in self.stack):
                 self.owner_parts.append(data)
