@@ -11,7 +11,7 @@ class Config(BaseModel):
     site_dir: Path | None = None
     state_dir: Path = Path("state")
     envelope_shape: str = "union"
-    emit_duplicates: bool = False
+    emit_duplicates: bool = True
     expected_count: int | None = None
     run_id: str = ""
     max_requests: int = Field(default=8000, ge=0)

@@ -17,6 +17,7 @@ def build(envelopes, inputs, budget, config, warnings, runtime):
     starts = [e.get("attempt_started", 0) for e in budget.events]
     active_seconds = max(completed, default=0) - min(starts, default=0)
     return {"run_id": config.run_id, "input_rows": len(inputs.rows), "unique_inputs": len(inputs.unique),
+            'emit_duplicates':config.emit_duplicates,
             "emitted_envelopes": len(envelopes), "duplicates": inputs.duplicates, "invalid_inputs": inputs.invalid,
             "counts_by_state": dict(Counter(e.state for e in envelopes)),
             "counts_by_availability": dict(Counter(s for e in envelopes for s in e.run.sections.values())),

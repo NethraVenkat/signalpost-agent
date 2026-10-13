@@ -56,6 +56,9 @@ def load(path: Path, wanted: set[str], blobs, budget):
 
         reader = csv.DictReader(lines(), delimiter=delimiter)
         _ = reader.fieldnames
+        required={str(name).casefold() for name in reader.fieldnames or []}
+        if not {'organisasjonsnummer','navn'} <= required:
+            raise SourceFailure('malformed_bulk_columns','Bulk requires organisation-number and legal-name columns')
         header = "".join(captured)
         captured.clear()
         for row in reader:

@@ -3,6 +3,7 @@ import json
 import time
 import uuid
 from contextlib import AsyncExitStack
+from types import SimpleNamespace
 from collections import Counter
 import httpx
 from .budget import Budget, SourceFailure
@@ -119,14 +120,24 @@ async def run(config, client=None,synthesis_provider=None):
     for org in inputs.invalid:
         for family in families:
             update(envelopes[org], family, missing(family, "invalid_orgnr"))
-    if config.expected_count is not None and config.expected_count != len(inputs.unique):
-        warnings.append(f"expected-count={config.expected_count} differs from unique inputs={len(inputs.unique)}")
+    expected_membership = len(inputs.rows) if config.emit_duplicates else len(inputs.unique)
+    if config.expected_count is not None and config.expected_count != expected_membership:
+        warnings.append(f"expected-count={config.expected_count} differs from emitted input membership={expected_membership}")
     prior, previous_warnings = previous(config.previous)
     warnings.extend(previous_warnings)
-    blobs = BlobStore(config.state_dir)
+    storage_error = None
+    try:
+        blobs = BlobStore(config.state_dir)
+    except OSError as exc:
+        storage_error = type(exc).__name__
+        blobs = SimpleNamespace(directory=config.state_dir / 'blobs')
+        warnings.append('state storage unavailable: ' + storage_error + '; source checks skipped')
+        for org,envelope in envelopes.items():
+            if valid(org):
+                for family in families:update(envelope,family,missing(family,'state_unavailable',storage_error))
     bulk, bulk_sha = {}, None
     valid_orgs = {org for org in inputs.unique if valid(org)}
-    if config.bulk is not None and valid_orgs:
+    if config.bulk is not None and valid_orgs and storage_error is None:
         try:
             # Cooperative checks during synchronous streamed preparation include
             # bulk work in the deadline and bound memory to selected rows.
@@ -197,6 +208,7 @@ async def run(config, client=None,synthesis_provider=None):
             mark_registry(org)
             envelope.operations.runtime_ms = round((time.monotonic() - begin) * 1000)
     async def execute(active_client, nav_client=None):
+        if storage_error is not None:return
         http = Http(active_client, config, budget, blobs)
         website_http = WebsiteHttp(active_client, config, budget, blobs, dns_metrics=dns_metrics)
         nav_task=asyncio.create_task(nav.prefetch(nav_client or active_client,config,budget,blobs,nav_index,nav_names,prior)) if config.hiring and valid_orgs else None
@@ -221,7 +233,7 @@ async def run(config, client=None,synthesis_provider=None):
         await execute(client)
     for org, envelope in envelopes.items():
         # Invalid numbers must never inherit previously published information.
-        finalize(envelope, prior.get(org) if valid(org) else None, blobs, budget, budget.start)
+        finalize(envelope, prior.get(org) if valid(org) and storage_error is None else None, blobs, budget, budget.start)
     synthesis_service=SynthesisService(config,budget,synthesis_provider)
     for envelope in envelopes.values():
         envelope.run.synthesis=await synthesis_service.summarize(envelope)

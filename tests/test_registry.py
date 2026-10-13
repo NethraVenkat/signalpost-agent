@@ -93,7 +93,7 @@ def test_input_formats(tmp_path, text):
 def test_empty_duplicates_invalid_and_warning(tmp_path):
     report, rows = execute(config(tmp_path / "empty", []))
     assert not rows and report["requests"] == 0
-    report, rows = execute(config(tmp_path / "other", ["923609016", "923 609 016", "bad", "bad"], expected_count=100))
+    report, rows = execute(config(tmp_path / "other", ["923609016", "923 609 016", "bad", "bad"], expected_count=100, emit_duplicates=False))
     assert [x["organisation_number"] for x in rows] == ["923609016", "bad"]
     assert report["duplicates"] == 2 and report["warnings"]
     assert any(e["code"] == "invalid_orgnr" for e in rows[1]["errors"])

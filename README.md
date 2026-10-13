@@ -28,7 +28,7 @@ uv sync --frozen
 uv run signalpost run --organisations batch.jsonl --bulk registry.csv --output out/envelopes.jsonl --report out/report.json --websites --hiring --synthesis template --envelope-shape union --max-requests 8000 --time-budget-seconds 900 --nav-max-details 300
 ```
 
-Input accepts JSONL organisation_number rows, a JSON list or organisation_numbers object, or plain lines. Numbers remain strings; whitespace/BOM are normalized and mod-11 validated. Duplicates are deduplicated unless `--emit-duplicates` is set. Invalid identifiers retain failed envelopes without requests. Omit `--bulk` for live identity lookup; omit `--websites` or `--hiring` to disable those tools. Add `--previous prior.jsonl` for refresh.
+Input accepts JSONL organisation_number rows (extra keys ignored), numeric identifiers, a JSON list or organisation_numbers object, or plain lines, including BOM/CRLF and trailing blanks. Numbers remain strings; whitespace/BOM are normalized and mod-11 validated. The default preserves one envelope per input record in original order, including duplicates and invalid records; duplicates share research. `--deduplicate` explicitly emits unique identifiers only. Invalid identifiers retain failed envelopes without requests. Omit `--bulk` for live identity lookup; omit `--websites` or `--hiring` to disable those tools. Add `--previous prior.jsonl` for refresh.
 
 Useful defaults and controls:
 
@@ -62,7 +62,7 @@ Every envelope includes `run.synthesis` in contract/union output, mirrored at `p
 
 Company changes require successfully checked sections in both runs. Failed/blocked/ambiguous transitions are observations. Supported prior facts can be carried forward with original evidence; known inactive/expired ads are removed. [Schema](docs/DATA_SCHEMA.md), [refresh](docs/REFRESH.md).
 
-Exit zero means output was written, including explicit failures. Check report states and verify output; it does not by itself establish source success.
+Exit zero means output was written for all parsed input records, including explicit failures. Source, budget and site errors preserve that exit behavior. `--deduplicate` deliberately changes multiplicity. Unreadable input has unknown membership and an explicit warning. Check report states and verify output; exit zero does not by itself establish source success.
 
 ## Profile site
 

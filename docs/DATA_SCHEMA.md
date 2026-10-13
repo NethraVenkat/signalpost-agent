@@ -1,6 +1,6 @@
 # Data schema
 
-JSONL output contains one validated envelope per unique normalized input, in input order. Pydantic v2 rejects unknown keys. `--emit-duplicates` optionally repeats envelopes for duplicate input rows.
+JSONL output contains one validated envelope per parsed input record, in input order. Duplicate records share research but retain output positions. `--deduplicate` explicitly emits unique normalized identifiers only; `--emit-duplicates` remains accepted for compatibility. Pydantic v2 rejects unknown envelope keys; extra input-object keys are ignored.
 
 ## Envelope shapes
 

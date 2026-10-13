@@ -47,9 +47,17 @@ def ids(rows):
 def verify(first, state_dir, count, organisations=None, report=None, require_clean=False, second=None):
     rows = load(first)
     assert len(rows) == count, f"Expected {count}, got {len(rows)}"
-    assert len({r["organisation_number"] for r in rows}) == count
+    repeated={}
+    for row in rows:
+        org=row['organisation_number']
+        if org in repeated:assert row==repeated[org], 'Duplicate input rows have inconsistent envelopes'
+        repeated[org]=row
     if organisations is not None:
-        assert [r['organisation_number'] for r in rows] == read(organisations).unique, 'Membership/order differs from input'
+        inputs=read(organisations)
+        expected=inputs.rows
+        if report is not None and json.loads(report.read_text(encoding='utf8')).get('emit_duplicates') is False:
+            expected=inputs.unique
+        assert [r['organisation_number'] for r in rows] == expected, 'Membership/order differs from input'
     seen, published = set(), 0
     synthesis_companies=synthesis_sentences=0
     for row in rows:
