@@ -1,0 +1,80 @@
+# Signalpost
+
+An agentic AI system for Norwegian company research that gathers official and company-owned evidence, verifies identity, and publishes supported claims or explicit abstentions.
+
+The current agent uses deterministic source planning and verification. It calls registry, website and job-feed tools; no language model runs today. Optional evidence-constrained LLM synthesis is planned and is not implemented.
+
+## How it works
+
+```mermaid
+flowchart LR
+    Input[Company numbers] --> Plan[Plan bounded source calls]
+    Plan --> Tools[Registry, roles, branches, accounts, websites, NAV]
+    Tools --> Verify[Identity firewall + evidence checks]
+    Verify --> Publish[Publish or abstain]
+    Publish --> Diff[Diff previous run]
+    Diff --> Output[Validated envelopes + report]
+```
+
+The agent reserves an envelope for every unique input before requests, isolates company/section failures, and preserves input order. It prefers the bulk registry snapshot, uses live fallback, and optionally adds website identity proof and exact-company job advertisements. [Agent loop](docs/AGENT.md).
+
+## Install and run
+
+Python 3.12+ and [uv](https://docs.astral.sh/uv/) are required.
+
+```sh
+uv sync --frozen
+uv run signalpost run --organisations batch.jsonl --bulk registry.csv --output out/envelopes.jsonl --report out/report.json --websites --hiring --envelope-shape union --max-requests 8000 --time-budget-seconds 900 --nav-max-details 300
+```
+
+Input accepts JSONL organisation_number rows, a JSON list or organisation_numbers object, or plain lines. Numbers remain strings; whitespace/BOM are normalized and mod-11 validated. Duplicates are deduplicated unless `--emit-duplicates` is set. Invalid identifiers retain failed envelopes without requests. Omit `--bulk` for live identity lookup; omit `--websites` or `--hiring` to disable those tools. Add `--previous prior.jsonl` for refresh.
+
+Useful defaults and controls:
+
+| Scope | Flags / defaults |
+|---|---|
+| Batch | `--workers 64`, `--host-concurrency 10`, `--max-requests 8000`, `--time-budget-seconds 1800`, `--deadline-fraction 0.85`, `--request-timeout 10` |
+| Output | `--state-dir state`, `--envelope-shape union`, `--max-output-mb 64`, optional `--expected-count` |
+| Websites | `--website-request-cap 6`, `--website-total-request-cap 9`; 8-second source bounds, 1-second domain politeness |
+| NAV | `--nav-max-pages 512`, `--nav-max-details 300`, `--nav-time-cap-seconds 300`, `--nav-lookback-days 185`, `--nav-concurrency 8`, `--nav-request-timeout 30` |
+| Cost | `--max-cost-usd 0`, `--official-batch-size 1100` |
+
+NAV detail retries count toward the cap. Header names discover candidates; detail employer numbers alone authorize claims. Optional NAV_API_TOKEN is read from the shell environment, otherwise a public credential is retrieved. No .env loader runs. `.env.example` lists the variable without a credential. Set `--website-user-agent` to identify your deployment contact; the default links this repository.
+
+## Evidence and safety
+
+- The identity firewall checks exact company/parent identifiers. Guessed websites require exact organisation-number proof; registered domains have stricter documented corroboration rules. Same-name companies and group navigation do not alone establish ownership.
+- Every published fact links a source URL/identifier, UTC retrieval time, stored-body SHA-256, locator, extractor version and a verbatim span of at most 300 characters. Unknown/failure placeholders never invent evidence.
+- Availability is explicit: available, not_available, blocked, not_applicable, ambiguous or failed. Missing values are null; numeric zero is retained only when reported.
+- Financial claims are reported exact-company values with fiscal period/currency/unit. Whole-NOK metadata has a documented four-ratio calibration; no financial multiplier or derived metric is published.
+- URL allowlists, DNS pinning, robots, redirect checks and per-source/global budgets constrain requests. Source bodies stay local; tokens are never stored in blobs or logs.
+
+[Identity resolution](docs/IDENTITY_RESOLUTION.md) explains publication rules. [Source policy and licences](docs/SOURCES.md) describes access constraints.
+
+## Outputs and refresh
+
+`out/envelopes.jsonl` contains validated company envelopes. Shapes are contract, reference or their union (default). The compact union profile restates values/evidence IDs; raw source bodies remain under `state/blobs/<sha256>`. `out/report.json` records membership, source states, request logs, runtime percentiles, shared/detail request attribution, output size, changes and cost.
+
+Company changes require successfully checked sections in both runs. Failed/blocked/ambiguous transitions are observations. Supported prior facts can be carried forward with original evidence; known inactive/expired ads are removed. [Schema](docs/DATA_SCHEMA.md), [refresh](docs/REFRESH.md).
+
+Exit zero means output was written, including explicit failures. Check report states and verify output; it does not by itself establish source success.
+
+## Evaluation
+
+```sh
+uv run pytest
+uv run signalpost run --organisations tests/fixtures/ci20.jsonl --bulk tests/fixtures/ci20.csv --output out/smoke.jsonl --report out/smoke-report.json --expected-count 20 --time-budget-seconds 180
+uv run python scripts/verify_output.py --first out/smoke.jsonl --organisations tests/fixtures/ci20.jsonl --count 20 --state-dir state --report out/smoke-report.json --require-clean
+```
+
+GitHub Actions runs Ubuntu tests and the live 20-company registry smoke job. [Evaluation guide](docs/EVAL.md) and [100-company summary](reports/smoke-100.md) describe reproducible checks and measured results.
+
+## Models, APIs, licences and cost
+
+Official Bronnoysund registry/accounts APIs, bounded company-site requests and the official NAV feed supply facts. No paid search API, browser renderer or model API is used. Provider cost is currently **$0 per batch**, per 100 companies and per configured 1,100-company batch, excluding compute/storage/network. Optional LLM synthesis is planned, evidence-constrained and unimplemented.
+
+Code and docs: [MIT](LICENSE). Registry data: NLOD 2.0 attribution; NAV and website content retain their own terms. Runtime dependencies are httpx, Pydantic and tldextract, locked in uv.lock; tests use pytest/respx. [Full source and dependency policy](docs/SOURCES.md).
+
+## Limitations
+
+Website recall measured 20/300 (6.667%) with zero known errors in the reviewed publication population. NAV name discovery can miss unknown trading names; unusable names and caps remain explicitly incomplete. Live sources can change, historical carried-forward support is not fresh verification, and external evaluator/resource acceptance is not established. There is no synthesis UI or model integration yet. [Limitations](docs/LIMITATIONS.md).

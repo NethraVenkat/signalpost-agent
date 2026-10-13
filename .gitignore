@@ -1,0 +1,42 @@
+# Local working material and AI tooling
+AGENTS.md
+CLAUDE.md
+GEMINI.md
+.claude/
+.codex/
+.cursor/
+.aider*
+.continue/
+copilot-instructions*
+*.prompt.md
+dev-notes/
+# Data, evidence bodies and generated output
+state/
+out/
+downloads/
+blobs/
+*.jsonl
+*.csv
+*.gz
+*.pdf
+!tests/fixtures/**/*.jsonl
+!tests/fixtures/**/*.csv
+!tests/fixtures/**/*.gz
+!tests/fixtures/**/*.pdf
+# Environments, secrets and caches
+.venv/
+.env
+.env.*
+!.env.example
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.uv-cache/
+.cache/
+cache/
+caches/
+*.egg-info/
+build/
+dist/

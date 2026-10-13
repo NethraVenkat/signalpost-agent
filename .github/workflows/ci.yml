@@ -1,0 +1,24 @@
+name: Verify Signalpost
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: '3.12'
+      - run: uv sync --frozen
+      - run: uv run pytest -q
+  live-20:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: '3.12'
+      - run: uv sync --frozen
+      - run: uv run signalpost run --organisations tests/fixtures/ci20.jsonl --bulk tests/fixtures/ci20.csv --output out/ci20.jsonl --report out/ci20-report.json --expected-count 20 --time-budget-seconds 180
+      - run: uv run python scripts/verify_output.py --first out/ci20.jsonl --organisations tests/fixtures/ci20.jsonl --count 20 --state-dir state --report out/ci20-report.json --require-clean

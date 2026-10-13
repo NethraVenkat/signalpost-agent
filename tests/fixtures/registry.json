@@ -1,0 +1,10 @@
+{
+  "organisasjonsnummer": "923609016",
+  "navn": "Example AS",
+  "organisasjonsform": {"kode": "AS", "beskrivelse": "Aksjeselskap"},
+  "registreringsdatoEnhetsregisteret": "2020-01-01",
+  "forretningsadresse": {"adresse": ["Example gate 1"], "postnummer": "0001", "kommune": "OSLO"},
+  "naeringskode1": {"kode": "62.010", "beskrivelse": "Programming"},
+  "konkurs": false,
+  "underAvvikling": false
+}

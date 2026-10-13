@@ -1,0 +1,31 @@
+{
+  "measurement": "saved_official_source_replay",
+  "measured_at": "2026-10-13T13:21:48.070186Z",
+  "companies": 100,
+  "envelopes": 100,
+  "schema_valid": true,
+  "membership_order_valid": true,
+  "handled_exceptions": 0,
+  "unhandled_exceptions": 0,
+  "deadline_hits": 0,
+  "counts_by_availability": {
+    "available": 373,
+    "not_available": 27
+  },
+  "runtime_ms": 32265,
+  "company_runtime": {
+    "p50_ms": 15,
+    "p95_ms": 16,
+    "max_ms": 63
+  },
+  "simulated_http_requests": 300,
+  "actual_outbound_requests": 0,
+  "output_bytes": 5028593,
+  "output_bytes_per_company": 50285.93,
+  "provider_cost_usd": 0,
+  "original_claim_ids_preserved": true,
+  "rerun_company_changes": 0,
+  "rerun_observation_changes": 0,
+  "available_claims_verified": 2139,
+  "source_blobs_verified": 375
+}

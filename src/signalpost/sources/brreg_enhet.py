@@ -1,0 +1,39 @@
+from ..budget import SourceFailure
+from .extract import Section, Source, add, finish, get, decode, response_source
+
+BASE = "https://data.brreg.no/enhetsregisteret/api/enheter/"
+FIELDS = {
+    "legal_name": ("navn",), "organisation_form": ("organisasjonsform",),
+    "registration_date": ("registreringsdatoEnhetsregisteret",),
+    "registered_address": ("forretningsadresse",), "postal_address": ("postadresse",),
+    "municipality": ("forretningsadresse", "kommune"), "employees": ("antallAnsatte",),
+    "registered_website": ("hjemmeside",), "bankrupt": ("konkurs",),
+    "under_liquidation": ("underAvvikling",), "deleted": ("slettedato",),
+    "latest_submitted_accounts": ("sisteInnsendteAarsregnskap",),
+}
+
+
+def extract(org, data, source):
+    if str(data.get("organisasjonsnummer")) != org:
+        raise SourceFailure("wrong_company", "Registry identity differs from requested orgnr")
+    section = Section()
+    for field, path in FIELDS.items():
+        value = get(data, path)
+        if field == "employees" and data.get("harRegistrertAntallAnsatte") is False:
+            value = None
+        if field == "deleted" and value is not None:
+            deleted_date, value = value, True
+        else:
+            deleted_date = None
+        # Publish no fabricated false value when slettedato is missing.
+        add(section, source, org, "identity", "identity." + field, value, "/" + "/".join(path), effective=value if field == "registration_date" else deleted_date)
+    for i in range(1, 4):
+        field = f"naeringskode{i}"
+        add(section, source, org, "identity", f"identity.nace{i}", data.get(field), "/" + field)
+    return finish(section)
+
+
+async def fetch(org, http):
+    response = await http.get(BASE + org, org)
+    data, error = decode(response, "identity")
+    return error or extract(org, data, response_source(response))
