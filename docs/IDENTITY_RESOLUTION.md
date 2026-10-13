@@ -25,6 +25,6 @@ Contacts and social-profile links are extracted only from accepted company sites
 
 ## Job advertisements
 
-NAV header employer names are discovery only. Normalize complete legal, known brand and subunit names, strip legal suffixes, and require a distinctive token of at least four letters. The normalized name must equal or appear as a whole phrase in the header business name. Nameless headers fall back to unfiltered detail discovery within the same cap.
+NAV header employer names are discovery only. Normalize legal, known brand and subunit names, strip legal suffixes, and require a distinctive token of at least four letters. Distinctive-token overlap ranks candidate details by inverse header-token frequency; Norwegian and ASCII spelling variants converge. Names never authorize publication. The optional unranked reproduction mode uses full-phrase matching. Nameless headers fall back to unfiltered detail discovery within the same cap.
 
 Publication requires detail `employer.orgnr` to equal the company organisation number or a verified subunit number. Record `matched_via` explicitly. A same-name employer with a different identifier is rejected. Only active, non-expired ads with valid dates and matching UUIDs qualify. Unknown trading names and names without distinctive tokens can leave coverage incomplete.

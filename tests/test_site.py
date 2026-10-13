@@ -62,6 +62,7 @@ def test_site_membership_evidence_citations_and_determinism(tmp_path, shape):
                 assert evidence[eid]['content_sha256'] == e.content_sha256
                 assert evidence[eid]['retrieved_at'] == e.retrieved_at
                 assert evidence[eid]['claim_span'] == e.claim_span
+                assert evidence[eid] == {key: getattr(e, key) for key in payload['source_fields'] + payload['evidence_fields']}
                 assert eid in facts[claim.id[:16]]['evidence_ids']
     assert CSP in __import__('html').unescape(text)
     for tag, attrs in markup.tags:
@@ -159,6 +160,8 @@ def test_registry_dates_count_in_activity_filter(tmp_path):
     record=json.loads((out/'data/index.json').read_text(encoding='utf8'))[0]
     assert record['flags']['activity'] and record['activity']>=1
     assert record['sections']['activity']=='available'
+    markup = Markup((out / f'c/{row.organisation_number}.html').read_text(encoding='utf8'))
+    assert all(href[1:] in markup.ids for href in markup.links if href.startswith('#'))
 
 
 def test_identical_duplicate_rows_share_a_profile(tmp_path):

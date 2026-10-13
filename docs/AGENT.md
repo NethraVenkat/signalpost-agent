@@ -4,7 +4,7 @@ Signalpost is a tool-using company-research agent. Source planning, identity ver
 
 ```mermaid
 flowchart TD
-    Input[Organisation numbers] --> Reserve[Reserve one envelope per unique input]
+    Input[Organisation numbers] --> Reserve[Reserve every input record; share unique research]
     Reserve --> Plan[Plan sources within budgets]
     Plan --> Tools[Registry, roles, subunits, accounts]
     Tools --> Optional[Optional website candidates and shared NAV feed]

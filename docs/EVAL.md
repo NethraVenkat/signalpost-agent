@@ -61,34 +61,21 @@ Measured on 13 October 2026: exact saved registry/NAV HTTP statuses and bodies w
 |---|---:|
 | Ordered valid envelopes with synthesis |300|
 | Unhandled exceptions / synthesis-caused envelope failures |0 / 0|
-| What-it-does / scale / leadership coverage |99.667% / 100% / 99.667%|
+| What-it-does / scale / leadership coverage |100% / 100% / 99.667%|
 | At least one unknown entry |100%|
 | Incomplete-source companies with every required unknown listed |299 / 299|
-| Retained sentences / cited / unverified / dropped |3256 / 3256 / 0 / 0|
+| Retained sentences / cited / unverified / dropped |2356 / 2356 / 0 / 0|
 | Registered activity / statutory purpose coverage |299 / 300; 292 / 300|
 | Website self-description claims / companies |34 / 16|
 | Template rerun with the same prior snapshot |Byte-identical; 0 company changes|
-| Union output before / after synthesis |56.599 / 64.287 decimal KB/company|
-| Saved-source preparation, synthesis, rerun and hash verification |201.687s|
+| Union output before / after synthesis |56.598 / 64.312 decimal KB/company|
+| Saved-source preparation, synthesis, rerun and hash verification |163.594s|
 
-The size comparison removes only synthesis from the same enriched union envelopes; source claims/evidence are otherwise identical. Union output mirrors synthesis in run and profile. The public verifier confirmed 7,105 available claims, 1,168 matching source blobs, all 3,256 summary sentences, identical rerun claim IDs and zero company/observation events. Fifteen mixed rendered examples are kept locally for review, outside the published tree. No one-employee company is supported in the sample; the small-firm example is labelled by its reported records instead. Template provider cost is $0. Live model execution was deliberately excluded; fake-provider tests verify valid frames, raw-number/missing-citation rejection, untrusted quoted instructions, timeout, caps and cache hits.
+The size comparison removes only synthesis from the same enriched union envelopes; source claims/evidence are otherwise identical. Union output mirrors synthesis in run and profile. The public verifier confirmed 7,105 available claims, 1,168 matching source blobs, all 2,356 summary sentences, identical rerun claim IDs and zero company/observation events. Fifteen mixed rendered examples are kept locally for review, outside the published tree. No one-employee company is supported in the sample; the small-firm example is labelled by its reported records instead. Template provider cost is $0. Live model execution was deliberately excluded; fake-provider tests verify valid frames, raw-number/missing-citation rejection, untrusted quoted instructions, timeout, caps and cache hits.
 
 For reproducible summary checks with local inputs, run the same command twice with `--synthesis template` and the **same** `--previous` file, then compare run.synthesis. The offline unit suite exercises this without downloaded archives. Baseline first-observation wording is separately tested. Live source bytes can change and legitimately alter summaries.
 
-The [100-company replay summary](../reports/smoke-100.md) and [summary JSON](../reports/smoke-100-report.json) measure current code on exact saved official source bodies, verify original supported IDs and zero rerun events. This is an offline reproducibility check.
-
-Separate live measurements from 13 October 2026:
-
-| Workload | Result |
-|---|---|
-|100 companies, registry + websites |100 valid envelopes,435 requests,25.766s; companyp50/p95 9.797/19.688s;48.029decimalKB/company;0 unhandled exceptions|
-|300 companies, registry + websites |20 official websites (6.667%):14 exact visible orgnr,1 JSON-LD,5 signal proof; all20 reviewed,0 remaining doubtful;1517 requests,101.047s; companyp50/p95 39.734/76.188s;49.240KB/company; website request max6/company|
-|300-company live refresh |0 company events,5 observation events;0 false company changes|
-|300 companies, registry + NAV |377 feed pages,375764 updates,9537 active headers;2 name candidates,2 detail requests,2 indexed ads,1 verified subunit ad; hiring available1/not_available281/failed18;1281 total requests,234.672s;51.374KB/company|
-
-NAV's 18 failed companies had no usable distinctive name; name-filtered negatives do not cover unknown trading names. Detail requests were0.006667/company, within the default300 cap. Exact saved-status/body NAV replay preserved every live claim ID and produced zero company/observation events on rerun. Website recall is a development goal; identity correctness and evidence checks remain publication gates.
-
-These measurements are smoke/recall observations, not an official competition score or performance guarantee. Bodies, company-level envelopes and internal audit material are not included in the published reports.
+The [live 100-company smoke summary](../reports/smoke-100.md) and [machine report](../reports/smoke-100-report.json) describe the fresh release check. Raw envelopes and source bodies are not published.
 
 ## Live recall and bounded activity
 
@@ -112,3 +99,11 @@ The saved-sample refresh had four coverage observations and zero company events.
 ## Profile site verification
 
 Offline site tests cover all envelope shapes, membership, escaped untrusted content, safe links, evidence completeness, citation anchors, deterministic bytes and isolated template errors. The saved 300-company generation produces 302 pages; profiles must stay below 250 KB. Inspect index, BRANDO, a borettslag and compare at 1280 and 375 px, including file:// initialization, pagination, diacritics search, source toggles and overflow. Use installed browsers only; no browser dependency is required. Light/dark state chips include words, inputs have labels, toggles expose aria-expanded, and keyboard focus is visible. Browser QA supplements the offline suite; it is not a complete accessibility certification.
+
+## Scale and external compatibility
+
+The 1,000-company run took 488.679 seconds wall / 483.469 seconds reported, 5,975 HTTP requests and 6,770 DNS resolver invocations. The rerun took 479.360 seconds wall, with zero company changes and 34 observations. Both read 378 NAV pages completely: 191.297 and 234.141 feed seconds, with total NAV times 419.922 and 460.422 seconds. Detail caps remain separate from header completeness. The offline regenerated site is 53.515 MB, largest profile 73.440 KB, with exact evidence metadata stored once per response in per-company data scripts. The 64 MiB union envelope ceiling reduced one large company to explicit output-limit failures in both runs; contract output avoids the redundant profile.
+
+Compatibility tests cover ten input encodings across union, contract and reference output, including extra keys, numeric identifiers, BOM/CRLF, duplicates and invalid records. Output order and repeated envelopes are independently verified. Eleven offline fault drills cover network, token, partial feed, storage, previous-input and budget failures. A read-only external starter-kit proxy scorer did not parse the canonical evidence list: it expects a legacy dictionary and raises AttributeError. No official score is claimed and final evaluator shape acceptance remains an open review risk.
+
+The final contract release check preserved 1,000 ordered valid envelopes without any output-limit reduction under the unchanged 64 MiB ceiling. It used 5,980 HTTP requests, 6,800 DNS invocations and 494.094 reported seconds (company p50/p95 478.421/478.453 seconds). Header feed: 378 pages, 239.968 feed seconds / 478.406 total NAV seconds, feed_complete true, 0.635 seconds/page. All 25,038 supported claims, 3,866 stored bodies and 8,092 cited sentences passed independent verification; zero exceptions or deadline hits. Coverage: 59 websites, 33 social-profile companies, two fresh exact-company ad companies and 118 public-activity companies. Output is 56.213 MB; site is 53.649 MB / 77.686 KB largest profile. Time/request headroom against 2,400 seconds/20,000 requests is 79.41%/70.10%. Four accounts and 301 hiring sections remain incomplete; the 500-detail cap is not an exhaustive national ad search.

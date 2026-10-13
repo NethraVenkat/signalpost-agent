@@ -1,8 +1,6 @@
 # Signalpost
 
-An agentic AI system for Norwegian company research that gathers official and company-owned evidence, verifies identity, and publishes supported claims or explicit abstentions.
-
-The agent uses deterministic source planning and verification, then builds an evidence-checked company summary. Template mode works without keys and is the default. An optional provider interface supports placeholder-only model output; it is tested with a fake provider and has no live API adapter in this release.
+Signalpost researches Norwegian companies from official registries and bounded company-owned sources, verifies identity, and publishes evidence-linked facts, cited summaries and searchable offline profiles. Missing or incomplete information remains explicit. Deterministic template synthesis works without API keys and costs $0 in provider fees; no live model adapter is shipped.
 
 ## How it works
 
@@ -14,10 +12,10 @@ flowchart LR
     Verify --> Publish[Publish or abstain]
     Publish --> Diff[Diff previous run]
     Diff --> Summary[Generate and validate cited synthesis]
-    Summary --> Output[Validated envelopes + report]
+    Summary --> Output[Validated envelopes + report + offline site]
 ```
 
-The agent reserves an envelope for every unique input before requests, isolates company/section failures, and preserves input order. It prefers the bulk registry snapshot, uses live fallback, and optionally adds website identity proof and exact-company job advertisements. [Agent loop](docs/AGENT.md).
+The agent reserves output membership before requests, isolates company/section failures, and preserves every input record in order, including duplicates. It prefers the bulk registry snapshot, uses live fallback, and optionally adds website identity proof, exact-company job advertisements and dated public activity. [Agent loop](docs/AGENT.md).
 
 ## Install and run
 
@@ -25,7 +23,7 @@ Python 3.12+ and [uv](https://docs.astral.sh/uv/) are required.
 
 ```sh
 uv sync --frozen
-uv run signalpost run --organisations batch.jsonl --bulk registry.csv --output out/envelopes.jsonl --report out/report.json --websites --hiring --synthesis template --envelope-shape union --max-requests 8000 --time-budget-seconds 900 --nav-max-details 300
+uv run signalpost run --organisations batch.jsonl --bulk registry.csv --output out/envelopes.jsonl --report out/report.json --websites --hiring --public-activity --synthesis template --envelope-shape contract --site-dir site --time-budget-seconds 2400
 ```
 
 Input accepts JSONL organisation_number rows (extra keys ignored), numeric identifiers, a JSON list or organisation_numbers object, or plain lines, including BOM/CRLF and trailing blanks. Numbers remain strings; whitespace/BOM are normalized and mod-11 validated. The default preserves one envelope per input record in original order, including duplicates and invalid records; duplicates share research. `--deduplicate` explicitly emits unique identifiers only. Invalid identifiers retain failed envelopes without requests. Omit `--bulk` for live identity lookup; omit `--websites` or `--hiring` to disable those tools. Add `--previous prior.jsonl` for refresh.
@@ -36,10 +34,12 @@ Useful defaults and controls:
 |---|---|
 | Batch | `--workers 64`, `--host-concurrency 10`, `--max-requests` defaults to 20 × unique input identifiers, `--time-budget-seconds 2400`, `--deadline-fraction 0.85` (34-minute source watchdog), `--request-timeout 10` |
 | Output | `--state-dir state`, `--envelope-shape union`, `--max-output-mb 64`, optional `--expected-count` |
-| Websites | `--website-request-cap 6`, `--website-total-request-cap 9`; 8-second source bounds, 1-second domain politeness |
+| Websites | `--website-request-cap 6`, `--website-total-request-cap 9`; 8 candidate DNS checks with 3-second prechecks, 8-second HTTP bounds, 1-second domain politeness, 2 in flight/domain |
 | NAV | `--nav-max-pages 512`, `--nav-max-details` defaults to max(300, half the batch rounded up), `--nav-time-cap-seconds` defaults to min(600, 35% of run time), `--nav-lookback-days 185`, `--nav-concurrency 8`, `--nav-request-timeout 30`; independent connection pool |
 | Cost | `--max-cost-usd 0`, `--official-batch-size 1100` |
 | Synthesis | `--synthesis template` (default), `auto` or `llm`; `--llm-max-calls 100`, `--llm-max-cost-usd 0.50`; one call/company, 15-second timeout |
+
+Each numeric flag overrides its default subject to safety bounds. Candidate prechecks can be disabled with `--no-dns-precheck`; the weak `--registry-declared` identity path is default-off. The measured 1,000-company run leaves 79.41% of the default time budget and 70.10% of the derived HTTP budget unused. [Resource defaults](docs/EVAL.md#release-resource-defaults) explain measurement scope. Contract output is recommended to avoid duplicating the reference profile; all three shapes are validated, while the external evaluator's final accepted shape remains unknown.
 
 NAV detail retries count toward the cap. Header names discover candidates; detail employer numbers alone authorize claims. Optional NAV_API_TOKEN is read from the shell environment, otherwise a public credential is retrieved. No .env loader runs. `.env.example` lists the variable without a credential. Set `--website-user-agent` to identify your deployment contact; the default links this repository.
 
@@ -70,9 +70,27 @@ Exit zero means output was written for all parsed input records, including expli
 uv run signalpost site --input out/envelopes.jsonl --out site/ --title "Signalpost"
 ```
 
-Open `site/index.html` directly or serve the directory with a static server. Search names or organisation numbers, filter coverage and municipality/industry, and compare two or three companies. Profiles include cited summaries, section states, financials, people, locations, hiring, public activity and changes. Source buttons show exact excerpts, hashes, retrieval dates and extraction provenance; additional supporting sources are linked on the same page. Previously supported facts are marked explicitly.
+Open `site/index.html` directly or serve the directory with a static server. Search names or organisation numbers, filter coverage and municipality/industry, and compare two or three companies. Profiles include cited summaries, section states, financials, people, locations, hiring, public activity and changes. Source buttons show exact excerpts, hashes, retrieval dates and extraction provenance; all supporting records load from local per-company data files. Previously supported facts are marked explicitly.
 
-Add `--site-dir site/` to `signalpost run` to generate profiles after envelopes are written. Site errors are recorded under `site` in the run report and preserve run output and exit behavior. Generation accepts contract/reference/union shapes, requires unique nine-digit identifiers, and uses no network or extra dependency. Static CSS/JavaScript and a safely escaped local index script work under `file://`; untrusted text is escaped and only HTTP(S) fact links are clickable. Identical envelopes produce identical files. Use a new empty output directory for a different company population; generation does not delete older files.
+Add `--site-dir site/` to `signalpost run` to generate profiles after envelopes are written. Site errors are recorded under `site` in the run report and preserve run output and exit behavior. Generation accepts contract/reference/union shapes, requires nine-digit identifiers and merges identical duplicate envelopes into one profile, and uses no network or extra dependency. Static CSS/JavaScript, a safely escaped local index script and `c/<orgnr>.data.js` evidence tables work under `file://`; untrusted text is escaped and only HTTP(S) fact links are clickable. Identical envelopes produce identical files. Use a new empty output directory for a different company population; generation does not delete older files.
+
+## Measured results
+
+All live checks below used a 2,400-second budget and template synthesis. Coverage describes these samples, not a universal recall estimate.
+
+| Metric | 300, seed 20261014 | 300, seed 20261015 | 1,000, seed 20261016 (contract release) |
+|---|---:|---:|---:|
+| Verified websites | 20 | 19 | 59 |
+| Social-profile companies | 12 | 13 | 33 |
+| Fresh exact-number ad companies | 1 | 0 | 2 |
+| Public-activity companies | 33 | 31 | 118 |
+| HTTP requests | 2,202 | 2,190 | 5,980 |
+| Reported runtime | 348.843 s | 336.406 s | 494.094 s |
+| NAV pages / feed seconds | 378 / 194.703 | 378 / 190.484 | 378 / 239.968 |
+| NAV feed complete | yes | yes | yes |
+| Unhandled exceptions / deadline hits | 0 / 0 | 0 / 0 | 0 / 0 |
+
+The earlier union run took 488.679 s wall; its rerun had zero company changes and 34 coverage observations. The release contract run preserved all 1,000 companies without output-limit reductions: 56.213 MB envelopes and a 53.649 MB site with a 77.686 KB largest profile. The original 64 MiB union output cap reduced one large company to explicit failures; no source absence is inferred from that reduction. Header completeness is separate from detail/source coverage: the contract run retained 301 incomplete hiring sections and four incomplete accounts sections. Source failures remain visible. [Live 100-company smoke summary](reports/smoke-100.md) and [evaluation details](docs/EVAL.md) provide validation and source-state limits.
 
 ## Evaluation
 
@@ -96,4 +114,4 @@ Code and docs: [MIT](LICENSE). Registry data: NLOD 2.0 attribution; NAV and webs
 
 ## Limitations
 
-Website recall measured 20/300 (6.667%) with zero known errors in the reviewed publication population. NAV name discovery can miss unknown trading names; unusable names and caps remain explicitly incomplete. Live sources can change, historical carried-forward support is not fresh verification, and external evaluator/resource acceptance is not established. There is no live model adapter. [Limitations](docs/LIMITATIONS.md).
+Website recall measured 20/300 (6.667%) and 19/300 (6.333%) in the two audited samples with zero known errors in the reviewed publication population. NAV name discovery can miss unknown trading names; unusable names and caps remain explicitly incomplete. Live sources can change, historical carried-forward support is not fresh verification, and external evaluator/resource acceptance is not established. There is no live model adapter. [Limitations](docs/LIMITATIONS.md).
