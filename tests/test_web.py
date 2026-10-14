@@ -73,3 +73,63 @@ def test_candidates_add_company_scope():
     assert "brave_domains" in report
     assert "total_new" in report
     assert any(c.origin == "search_brave" for c in candidates)
+
+
+def test_activity_xml_fallbacks_and_malformed():
+    from datetime import datetime, timezone
+    from signalpost.web.activity import parse
+
+    now = datetime(2026, 10, 14, tzinfo=timezone.utc)
+    base_url = "https://example.no/news"
+
+    # 1. Valid RSS with pubDate
+    rss_xml = b"""<?xml version="1.0" encoding="UTF-8"?>
+    <rss version="2.0">
+      <channel>
+        <title>Example News</title>
+        <item>
+          <title>Annual Product Launch</title>
+          <link>https://example.no/news/product-launch</link>
+          <pubDate>Wed, 14 Oct 2026 12:00:00 GMT</pubDate>
+          <description>We launched our new product today.</description>
+        </item>
+      </channel>
+    </rss>"""
+    items, children = parse(rss_xml, base_url, now)
+    assert len(items) == 1
+    assert items[0][0]["title"] == "Annual Product Launch"
+    assert items[0][0]["date"] == "2026-10-14"
+    assert items[0][0]["date_source"] == "pubDate"
+    assert children == []
+
+    # 2. Sitemap index with child sitemaps
+    sitemap_index_xml = b"""<?xml version="1.0" encoding="UTF-8"?>
+    <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+      <sitemap>
+        <loc>https://example.no/news-sitemap.xml</loc>
+        <lastmod>2026-10-14</lastmod>
+      </sitemap>
+    </sitemapindex>"""
+    items, children = parse(sitemap_index_xml, base_url, now)
+    assert items == []
+    assert children == ["https://example.no/news-sitemap.xml"]
+
+    # 3. Empty feed/sitemap
+    empty_xml = b"""<?xml version="1.0" encoding="UTF-8"?>
+    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    </urlset>"""
+    items, children = parse(empty_xml, base_url, now)
+    assert items == []
+    assert children == []
+
+    # 4. Malformed XML handling
+    with pytest.raises(Exception):
+        parse(b"<not valid xml at all", base_url, now)
+
+    # 5. DTD entity injection refusal
+    dtd_xml = b"""<?xml version="1.0"?>
+    <!DOCTYPE foo [<!ENTITY xxe SYSTEM "file:///etc/passwd">]>
+    <rss version="2.0"><channel><item></item></channel></rss>"""
+    with pytest.raises(ValueError, match="XML declarations refused"):
+        parse(dtd_xml, base_url, now)
+

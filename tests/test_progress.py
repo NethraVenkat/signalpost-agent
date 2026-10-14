@@ -72,3 +72,24 @@ async def test_progress_writer_lifecycle(tmp_path):
     data = json.loads((tmp_path / "progress.json").read_text(encoding="utf-8"))
     assert data["status"] in ("completed", "failed")
     assert data["run_id"] == "run-life"
+
+
+def test_progress_writer_extra_path_and_zero_rows(tmp_path):
+    site_dir = tmp_path / "site"
+    writer = ProgressWriter(
+        state_dir=tmp_path / "state",
+        run_id="run-zero",
+        total_companies=0,
+        input_rows=0,
+        duplicate_inputs=0,
+        request_limit=None,
+        extra_path=site_dir / "progress.json",
+    )
+    snap = writer._snapshot(budget_events_count=0)
+    assert snap.companies.total == 0
+    assert snap.companies.terminal == 0
+    # Verify both files are written atomically
+    writer._write_atomic(snap.model_dump_json(indent=2))
+    assert (tmp_path / "state" / "progress.json").exists()
+    assert (site_dir / "progress.json").exists()
+    assert json.loads((site_dir / "progress.json").read_text(encoding="utf-8"))["run_id"] == "run-zero"

@@ -955,7 +955,10 @@
     if (document.hidden) return; // Pause while hidden
 
     try {
-      const resp = await fetch('state/progress.json', { cache: 'no-store' });
+      let resp = await fetch('progress.json', { cache: 'no-store' });
+      if (!resp.ok) {
+        resp = await fetch('state/progress.json', { cache: 'no-store' });
+      }
       if (!resp.ok) {
         showStaticSnapshot();
         return;
@@ -1023,8 +1026,21 @@
       statusPanel.hidden = true;
       statusToggle.setAttribute('aria-expanded', 'false');
       stopPolling();
+      statusToggle.focus();
     });
   }
+
+  // Escape key closes status panel
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && statusPanel && !statusPanel.hidden) {
+      statusPanel.hidden = true;
+      if (statusToggle) {
+        statusToggle.setAttribute('aria-expanded', 'false');
+        statusToggle.focus();
+      }
+      stopPolling();
+    }
+  });
 
   // Initialize dot with static data
   if (statusDot && records.length) {
