@@ -1,5 +1,9 @@
 # Evaluation and smoke checks
 
+The optional `--profiles-output` file now parses with the untouched supplied proxy scorer. A saved100-company parse check independently verified union, contract and reference envelopes and produced foundation14.96/15, raw proxy18.96/100, awardable0 and qualificationfalse. Only measured batch facts were supplied; external/refresh/research/UX aggregate inputs were deliberately unqualified, and optional resume/sentiment inputs were omitted. These are parsing/measurement results, not an official score. Website/roles/location terminal-key points do not measure actual fact coverage. The measured company p95 of332.890 seconds fails the proxy's separate10-second threshold; no scoring threshold was changed.
+
+Saved1000 union output is67,198,940bytes versus56,212,586contract bytes (1.195443×), with no company reductions under the configurable256MiB output safety valve. Envelope evidence stays a list; the separate raw profiles file has the reference dictionary records and exact verified claim/provenance index. All seven common reference-runner flag names are accepted verbatim.
+
 Install pinned dependencies and run the offline suite:
 
 ```sh
