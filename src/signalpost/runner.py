@@ -189,6 +189,7 @@ async def _run(config, client=None,synthesis_provider=None):
         duplicate_inputs=len(inputs.rows) - len(inputs.unique),
         request_limit=budget.cap if hasattr(budget, 'cap') else None,
         stages=stage_names,
+        extra_path=(config.site_dir / "progress.json") if config.site_dir else None,
     )
     progress.start(budget)
     progress.log_event(f"Pipeline started with {len(inputs.rows)} input rows, {len(inputs.unique)} unique companies")

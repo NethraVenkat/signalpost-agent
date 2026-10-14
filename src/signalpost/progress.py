@@ -44,8 +44,10 @@ class ProgressWriter:
         duplicate_inputs: int,
         request_limit: int | None,
         stages: list[str] | None = None,
+        extra_path: Path | None = None,
     ):
         self.path = state_dir / "progress.json"
+        self.extra_path = extra_path
         self._task: asyncio.Task | None = None
         self._lock = asyncio.Lock()
 
@@ -120,26 +122,23 @@ class ProgressWriter:
             duplicate_inputs=self._duplicate_inputs,
         )
 
-    def _write_atomic(self, data: str) -> None:
-        """Write JSON to progress.json atomically using rename."""
-        self.path.parent.mkdir(parents=True, exist_ok=True)
+    def _write_file_atomic(self, target_path: Path, data: str) -> None:
+        target_path.parent.mkdir(parents=True, exist_ok=True)
         fd, tmp = tempfile.mkstemp(
-            dir=str(self.path.parent), suffix=".tmp", prefix=".progress-"
+            dir=str(target_path.parent), suffix=".tmp", prefix=".progress-"
         )
         try:
             os.write(fd, data.encode("utf-8"))
             os.close(fd)
             fd = -1
-            # On Windows, target must not exist for rename
             try:
-                os.replace(tmp, str(self.path))
+                os.replace(tmp, str(target_path))
             except OSError:
-                # Fallback: remove then rename
                 try:
-                    os.unlink(str(self.path))
+                    os.unlink(str(target_path))
                 except OSError:
                     pass
-                os.rename(tmp, str(self.path))
+                os.rename(tmp, str(target_path))
         except Exception:
             if fd >= 0:
                 os.close(fd)
@@ -147,6 +146,12 @@ class ProgressWriter:
                 os.unlink(tmp)
             except OSError:
                 pass
+
+    def _write_atomic(self, data: str) -> None:
+        """Write JSON to progress.json atomically using rename."""
+        self._write_file_atomic(self.path, data)
+        if self.extra_path:
+            self._write_file_atomic(self.extra_path, data)
 
     async def _periodic(self, budget) -> None:
         """Background task: write progress every 2 seconds."""
