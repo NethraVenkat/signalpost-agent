@@ -23,7 +23,7 @@ Python 3.12+ and [uv](https://docs.astral.sh/uv/) are required.
 
 ```sh
 uv sync --frozen
-uv run signalpost run --organisations batch.jsonl --bulk registry.csv --output out/envelopes.jsonl --report out/report.json --websites --hiring --public-activity --synthesis template --envelope-shape contract --site-dir site --time-budget-seconds 2400
+uv run signalpost run --organisations batch.jsonl --bulk registry.csv --output envelopes.jsonl --profiles-output profiles.jsonl --report report.json --site-dir site --websites --hiring --public-activity
 ```
 
 Input accepts JSONL organisation_number rows (extra keys ignored), numeric identifiers, a JSON list or organisation_numbers object, or plain lines, including BOM/CRLF and trailing blanks. Numbers remain strings; whitespace/BOM are normalized and mod-11 validated. The default preserves one envelope per input record in original order, including duplicates and invalid records; duplicates share research. `--deduplicate` explicitly emits unique identifiers only. Invalid identifiers retain failed envelopes without requests. Omit `--bulk` for live identity lookup; omit `--websites` or `--hiring` to disable those tools. Add `--previous prior.jsonl` for refresh.
@@ -33,13 +33,13 @@ Useful defaults and controls:
 | Scope | Flags / defaults |
 |---|---|
 | Batch | `--workers 64`, `--host-concurrency 10`, `--max-requests` defaults to 20 × unique input identifiers, `--time-budget-seconds 2400`, `--deadline-fraction 0.85` (34-minute source watchdog), `--request-timeout 10` |
-| Output | `--state-dir state`, `--envelope-shape union`, `--max-output-mb 64`, optional `--expected-count` |
+| Output | `--state-dir state`, `--envelope-shape union`, `--max-output-mb 256`, optional `--expected-count` |
 | Websites | `--website-request-cap 6`, `--website-total-request-cap 9`; 8 candidate DNS checks with 3-second prechecks, 8-second HTTP bounds, 1-second domain politeness, 2 in flight/domain |
 | NAV | `--nav-max-pages 512`, `--nav-max-details` defaults to max(300, half the batch rounded up), `--nav-time-cap-seconds` defaults to min(600, 35% of run time), `--nav-lookback-days 185`, `--nav-concurrency 8`, `--nav-request-timeout 30`; independent connection pool |
 | Cost | `--max-cost-usd 0`, `--official-batch-size 1100` |
 | Synthesis | `--synthesis template` (default), `auto` or `llm`; `--llm-max-calls 100`, `--llm-max-cost-usd 0.50`; one call/company, 15-second timeout |
 
-Each numeric flag overrides its default subject to safety bounds. Candidate prechecks can be disabled with `--no-dns-precheck`; the weak `--registry-declared` identity path is default-off. The measured 1,000-company run leaves 79.41% of the default time budget and 70.10% of the derived HTTP budget unused. [Resource defaults](docs/EVAL.md#release-resource-defaults) explain measurement scope. Contract output is recommended to avoid duplicating the reference profile; all three shapes are validated, while the external evaluator's final accepted shape remains unknown.
+Each numeric flag overrides its default subject to safety bounds. Candidate prechecks can be disabled with `--no-dns-precheck`; the weak `--registry-declared` identity path is default-off. The measured 1,000-company run leaves 79.41% of the default time budget and 70.10% of the derived HTTP budget unused. [Resource defaults](docs/EVAL.md#release-resource-defaults) explain measurement scope. Union remains the default envelope shape; all three shapes are validated. `--profiles-output` writes a separate scorer-compatible raw-profile file from the exact same verified facts. No envelope evidence structure is changed.
 
 NAV detail retries count toward the cap. Header names discover candidates; detail employer numbers alone authorize claims. Optional NAV_API_TOKEN is read from the shell environment, otherwise a public credential is retrieved. No .env loader runs. `.env.example` lists the variable without a credential. Set `--website-user-agent` to identify your deployment contact; the default links this repository.
 
@@ -115,3 +115,7 @@ Code and docs: [MIT](LICENSE). Registry data: NLOD 2.0 attribution; NAV and webs
 ## Limitations
 
 Website recall measured 20/300 (6.667%) and 19/300 (6.333%) in the two audited samples with zero known errors in the reviewed publication population. NAV name discovery can miss unknown trading names; unusable names and caps remain explicitly incomplete. Live sources can change, historical carried-forward support is not fresh verification, and external evaluator/resource acceptance is not established. There is no live model adapter. [Limitations](docs/LIMITATIONS.md).
+
+Raw profiles: `--profiles-output profiles.jsonl` preserves input-record order and duplicates, including invalid/failed rows with explicit states and null missing values. Module records use the reference field/status/source_type/source_class/source_url/retrieved_at/value/as_of/note/content_sha256/source_row_key/effective_at layout. `verified_claims` and `source_records` retain exact claim values and their provenance; no additional source facts are retrieved or inferred. Profiles are a separate output, not a replacement envelope shape. The kit scorer is invoked with `--profiles profiles.jsonl`.
+
+Runner compatibility: `--organisations`, `--bulk`, `--output`, `--profiles-output`, `--report`, `--run-id` and `--expected-count` accept the kit runner's exact flag names. Existing invocations without `--profiles-output` keep writing envelopes and a report; add the flag for the two-file evaluator form above. `--envelope-shape contract` and `reference` remain optional overrides; union is default. The default time budget is 2,400 seconds, NAV gets 600 seconds, and the configurable output safety valve is now 256 MiB.

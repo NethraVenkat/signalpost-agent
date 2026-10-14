@@ -9,6 +9,7 @@ class Config(BaseModel):
     bulk: Path | None = None
     previous: Path | None = None
     site_dir: Path | None = None
+    profiles_output: Path | None = None
     state_dir: Path = Path("state")
     envelope_shape: str = "union"
     emit_duplicates: bool = True
@@ -22,7 +23,7 @@ class Config(BaseModel):
     workers: int = Field(default=64, ge=1)
     request_timeout: float = Field(default=10, gt=0)
     official_batch_size: int = Field(default=1100, ge=1)
-    max_output_mb: float = Field(default=64, gt=0)
+    max_output_mb: float = Field(default=256, gt=0)
     websites: bool = False
     dns_precheck: bool = True
     registry_declared: bool = False

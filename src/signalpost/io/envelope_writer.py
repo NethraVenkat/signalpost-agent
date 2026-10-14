@@ -48,7 +48,7 @@ def constrain(envelopes, shape, max_output_mb):
     return lines, limited, total > ceiling
 
 
-def write(path: Path, envelopes, shape, blobs, max_output_mb=64):
+def write(path: Path, envelopes, shape, blobs, max_output_mb=256):
     path.parent.mkdir(parents=True, exist_ok=True)
     temporary = path.with_name(path.name + ".tmp")
     bodies = {}

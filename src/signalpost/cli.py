@@ -21,6 +21,7 @@ def main():
         command.add_argument("--" + flag, type=Path)
     command.add_argument("--state-dir", type=Path, default=Path("state"))
     command.add_argument('--site-dir', type=Path)
+    command.add_argument('--profiles-output', type=Path, help='Write kit-compatible raw profiles from the same verified claims')
     command.add_argument("--envelope-shape", choices=("union", "contract", "reference"), default="union")
     command.add_argument("--emit-duplicates", action="store_true", default=True)
     command.add_argument('--deduplicate', dest='emit_duplicates', action='store_false')
@@ -44,7 +45,7 @@ def main():
     for flag, kind, default in (("max-requests", int, None), ("time-budget-seconds", float, 2400),
                                ("deadline-fraction", float, .85), ("max-cost-usd", float, 0),
                                ("host-concurrency", int, 10), ("workers", int, 64), ("request-timeout", float, 10),
-                               ("official-batch-size", int, 1100), ("max-output-mb", float, 64)):
+                               ("official-batch-size", int, 1100), ("max-output-mb", float, 256)):
         command.add_argument("--" + flag, type=kind, default=default)
     args = vars(parser.parse_args())
     action = args.pop("command")
@@ -54,9 +55,11 @@ def main():
             print(json.dumps(generate_site(args['input'], args['out'], args['title'])))
             return 0
         config = Config(**args)
-        resolved = [config.output.resolve(), config.report.resolve()]
+        resolved = [p.resolve() for p in (config.output, config.report, config.profiles_output) if p]
+        temporary = [p.with_name(p.name+'.tmp').resolve() for p in (config.output,config.profiles_output) if p]
         protected = [p.resolve() for p in (config.organisations, config.bulk, config.previous) if p]
-        if resolved[0] == resolved[1] or any(p in protected for p in resolved):
+        targets=resolved+temporary
+        if len(targets) != len(set(targets)) or any(p in protected for p in targets):
             raise ValueError("Output/report must not overwrite each other or input sources")
         report = asyncio.run(run(config))
         print(json.dumps({k: report[k] for k in ("emitted_envelopes", "invalid_inputs", "requests", "runtime_ms", "changes",'observation_changes', "deadline_hits", "warnings")}, ensure_ascii=False))

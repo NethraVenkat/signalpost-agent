@@ -271,13 +271,20 @@ async def run(config, client=None,synthesis_provider=None):
     report["output_bytes_per_company"] = size / len(result) if result else 0
     report["output_limit_exceeded"] = size > config.max_output_mb * 1024 * 1024
     report["output_limited_companies"] = output_limited
+    if config.profiles_output is not None:
+        from .profiles import write as write_profiles
+        try:
+            report['profiles_output']=write_profiles(config.profiles_output,result)
+        except OSError as exc:
+            report['profiles_output']={'state':'failed','error':type(exc).__name__}
+            report['warnings'].append('profiles output failed: '+type(exc).__name__)
     if minimum_exceeded:
         report["warnings"].append("max-output-mb is smaller than mandatory terminal membership; minimal output written and limit flagged")
     if config.site_dir is not None:
         try:
             from .site import generate_site
             if any(p.resolve().is_relative_to(config.site_dir.resolve()) for p in
-                   (config.output, config.report, config.organisations, config.bulk, config.previous) if p):
+                   (config.output, config.report, config.profiles_output, config.organisations, config.bulk, config.previous) if p):
                 raise ValueError('Site directory overlaps a run input or output')
             report['site'] = {'state': 'available', **generate_site(config.output, config.site_dir)}
         except Exception as exc:
