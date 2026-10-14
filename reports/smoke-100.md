@@ -1,28 +1,37 @@
-# 100-company live smoke summary
+# Cold 100-company release check
 
-Measured 2026-10-13T19:02:10.468494Z; fresh seed 20261017. Implementation commit `9c8a523d3cfa90cb5f6e76b48ab2796ee822c5ba`. All source features and the offline site were enabled. Provider cost was $0; no model calls were made. Raw company envelopes, source bodies and per-request logs are excluded from publication.
+Seed 20261017, implementation `de2f6fa29f8ea80f1cc654460dc0672ca0f155c7`, measured 2026-10-14T06:36:29.619139Z. A fresh empty state directory was used; the declared shipped NAV discovery index was supplied. No runtime responses were copied. Search was not configured; provider cost $0. No model calls. Historical full-feed 304 measurements are warm-cache results and do not describe this method.
 
 ```sh
-uv run signalpost run --organisations state/downloads/release100.jsonl --bulk state/downloads/release100.csv --output out/release100.jsonl --report dev-notes/release100-report.json --websites --hiring --public-activity --synthesis template --envelope-shape contract --site-dir dev-notes/site-release100 --expected-count 100 --time-budget-seconds 2400
+uv run signalpost run --organisations batch.jsonl --bulk registry.csv --output envelopes.jsonl --profiles-output profiles.jsonl --report report.json --site-dir site --websites --hiring --public-activity
 ```
 
-The input and bulk excerpt were prepared with the hash-checked universe sampler and official bulk extractor described in [EVAL](../docs/EVAL.md#sampling-and-bulk-preparation). Paths in the command name local generated artifacts.
+Default budget 2,400 seconds; NAV cap min(900 seconds, 40% of budget). Omit bulk for live identity fallback. Both output files preserve input-record order; the offline site opens under file://. Raw company/source artifacts remain private.
 
-| Check | Result |
+| Check | Measured |
 |---|---:|
-| Input records / ordered validated envelopes | 100 / 100 |
-| Handled / unhandled exceptions | 0 / 0 |
-| Deadline hits | 0 |
-| HTTP requests / amortized per company | 1134 / 11.340 |
-| DNS resolver invocations | 586 |
-| Reported runtime | 343.234 s |
-| Company p50 / p95 | 332.859 / 332.890 s |
-| NAV pages / feed seconds / total seconds (warm cache) | 378 / 193.203 / 332.875 |
-| NAV feed complete | true |
-| Output size | 5562306 bytes |
-| Provider cost | $0 |
+| Ordered valid envelopes | 100 |
+| Supported claims / verified source bodies / cited sentences | 6861 / 381 / 799 |
+| Unverified values / dropped sentences | 0 / 0 |
+| Handled / unhandled exceptions / deadline hits | 0 / 0 / 0 |
+| Runtime | 47.703 seconds |
+| HTTP / DNS resolutions | 467 / 608 |
+| Time / request headroom | 98.01% / 76.65% |
+| Envelope bytes / raw profile bytes | 13886929 / 9439042 |
+| Output reductions | 0 |
+| Site bytes / largest HTML / largest data file | 10613333 / 94088 / 177375 |
+| NAV index bytes / age days | 403768 / 0.089729 |
+| Cold forward feed pages / seconds / decoded MB | 2 / 2.265 / 0.285160 |
+| Feed seconds per page | 1.132500 |
+| Feed complete / header processing complete | True / True |
+| Candidates / live details / published ads / ad companies | 0 / 0 / 0 / 0 |
+| Hiring failed | 0.0% |
+| NAV total / cap | 12.359 / 900 seconds |
+| Whole-run loop lag p95 | 25.000 ms |
 
-| Information type | Companies with supported information / 100 |
+Index `nav-20261014T042640.758720Z-v1`, built 2026-10-14T04:26:40.758720Z: 9,015 active discovery entries, 5,769 employers, 6,791 disk-seeded and 2,224 fetched entries, zero failed build details. Every published ad requires current live exact employer proof. MB denotes decoded decimal response bodies, not compressed wire bytes. Unknown forward-item trading names remain a nomination risk; fallback-name diagnostics are not a claim of national exhaustiveness.
+
+| Coverage | Companies |
 |---|---:|
 | legal identity | 100 |
 | accounts | 99 |
@@ -31,25 +40,23 @@ The input and bulk excerpt were prepared with the hash-checked universe sampler 
 | official website | 6 |
 | social profiles | 3 |
 | fresh job ads | 0 |
-| website activity | 4 |
+| website activity | 3 |
 | registry activity | 11 |
-| public activity | 15 |
+| public activity | 14 |
 | website self description | 4 |
-| synthesis | 100 |
 
-| Source section | Available | Checked unavailable | Failed | Blocked | Not applicable | Ambiguous |
+| Section | Available | Not available | Failed | Blocked | Ambiguous | Not applicable |
 |---|---:|---:|---:|---:|---:|---:|
 | identity | 100 | 0 | 0 | 0 | 0 | 0 |
 | roles | 100 | 0 | 0 | 0 | 0 | 0 |
 | subunits | 70 | 30 | 0 | 0 | 0 | 0 |
 | accounts | 99 | 0 | 1 | 0 | 0 | 0 |
-| website | 6 | 82 | 6 | 1 | 0 | 5 |
-| hiring | 0 | 89 | 11 | 0 | 0 | 0 |
-| activity | 4 | 2 | 6 | 1 | 82 | 5 |
+| website | 6 | 80 | 8 | 1 | 5 | 0 |
+| hiring | 0 | 100 | 0 | 0 | 0 | 0 |
+| activity | 3 | 2 | 9 | 1 | 5 | 80 |
 
-The independent verifier passed ordered membership, schema, stored-body hashes, verbatim evidence spans and cited summary checks. Incomplete sources remain explicitly failed or blocked; a complete NAV header index does not establish complete detail coverage. These measurements are sample observations, not an official score or a guarantee about unknown evaluator budgets. The saved legacy proxy scorer expects a different evidence dictionary and does not parse the canonical list; official shape acceptance remains open.
+Union, contract and reference envelope files independently verify with identical values and provenance. The raw profiles match their envelopes exactly and parse in the unmodified kit scorer, run read-only from scratch outside the repository: foundation 14.96/15, daily terminal batch 4/4, raw 18.96/100, awardable 0, qualification false. Other side reports remain deliberately unqualified, not fabricated; latency p95 25,203 ms still exceeds its 10,000 ms threshold. These are proxy measurements, never an official score.
 
-[Machine report](smoke-100-report.json) contains aggregate states, coverage and measured NAV/runtime/request metrics.
+Incomplete sources remain explicit failures/abstentions. Partial NAV discovery never establishes checked absence. Earlier warm benchmarks, the failed cold W2 baseline and missed diagnostic targets remain documented. Measurements share the workstation; they do not promise isolated hardware performance or final evaluator acceptance.
 
-
-Cache qualification: the historical NAV timings above used an existing state directory and are warm-cache results. They do not establish cold official-run performance. Fresh-state Wednesday gates supersede them for cold qualification.
+[Machine report](smoke-100-report.json).

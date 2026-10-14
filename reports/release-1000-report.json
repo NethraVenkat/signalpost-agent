@@ -1,0 +1,292 @@
+{
+  "seed": 20261018,
+  "companies": 1000,
+  "cache_mode": "fresh empty state; declared shipped NAV index, no copied runtime responses",
+  "commit": "de2f6fa29f8ea80f1cc654460dc0672ca0f155c7",
+  "measured_at": "2026-10-14T06:33:03.155607Z",
+  "validation": {
+    "lines": 1000,
+    "schema_valid": true,
+    "published_claims": 69007,
+    "source_blobs_verified": 3846,
+    "synthesis_companies": 1000,
+    "synthesis_sentences": 8020,
+    "synthesis_unverified_values": 0
+  },
+  "coverage_companies": {
+    "legal_identity": 1000,
+    "accounts": 998,
+    "roles": 997,
+    "subunits": 767,
+    "official_website": 47,
+    "social_profiles": 29,
+    "fresh_job_ads": 6,
+    "website_activity": 4,
+    "registry_activity": 114,
+    "public_activity": 118,
+    "website_self_description": 38
+  },
+  "counts_by_section": {
+    "identity": {
+      "available": 1000
+    },
+    "roles": {
+      "available": 997,
+      "not_available": 3
+    },
+    "subunits": {
+      "available": 767,
+      "not_available": 233
+    },
+    "accounts": {
+      "available": 998,
+      "failed": 2
+    },
+    "website": {
+      "failed": 113,
+      "ambiguous": 76,
+      "not_available": 759,
+      "available": 47,
+      "blocked": 5
+    },
+    "hiring": {
+      "not_available": 994,
+      "available": 6
+    },
+    "activity": {
+      "failed": 127,
+      "ambiguous": 76,
+      "not_applicable": 759,
+      "blocked": 5,
+      "not_available": 29,
+      "available": 4
+    }
+  },
+  "nav": {
+    "pages": 2,
+    "items": 571,
+    "bytes": 322989,
+    "details": 9,
+    "requests": 12,
+    "runtime_ms": 141312,
+    "source_mode": "declared_index",
+    "index_version": "nav-20261014T042640.758720Z-v1",
+    "index_built_at": "2026-10-14T04:26:40.758720Z",
+    "index_age_days": 0.08587537354166666,
+    "index_compressed_bytes": 403768,
+    "index_ads": 9015,
+    "seeded_from_disk": 6791,
+    "fresh_fetched_ads": 2224,
+    "time_cap_seconds": 900,
+    "feed_complete": true,
+    "detail_request_cap": 9,
+    "coverage_scope": "declared_orgnr_index_plus_completed_forward_feed_and_live_candidate_details",
+    "feed_runtime_ms": 2547,
+    "first_detail_seconds": 134.59399999999732,
+    "first_detail_page_number": 2,
+    "details_started_before_feed_complete": false,
+    "detail_requests": 9,
+    "runtime_seconds": 141.31199999999808,
+    "feed_seconds": 2.547,
+    "average_seconds_per_page": 1.2735,
+    "complete": true,
+    "blocked": false,
+    "reason": "complete",
+    "header_processing_complete": true,
+    "candidate_headers": 9,
+    "distinct_candidate_ads": 9,
+    "indexed_ads": 9,
+    "detail_concurrency": 4,
+    "name_unusable_companies": 0,
+    "fallback_name_unusable_companies": 46,
+    "forward_name_fallback_scope": "known legal/brand/subunit names; unknown trading names remain a discovery risk",
+    "companies_with_unchecked_candidates": 0,
+    "cap_hits": 0,
+    "lookback_days": 185,
+    "matches_published": 9,
+    "companies_with_ads": 6,
+    "feed_decoded_body_MB": 0.279161,
+    "hiring_failed_percent": 0.0
+  },
+  "time_headroom_percent": 88.796875,
+  "request_headroom_percent": 74.63,
+  "input_rows": 1000,
+  "unique_inputs": 1000,
+  "emitted_envelopes": 1000,
+  "counts_by_state": {
+    "complete": 924,
+    "submission_error": 76
+  },
+  "counts_by_availability": {
+    "available": 3819,
+    "failed": 242,
+    "not_available": 2018,
+    "ambiguous": 152,
+    "not_applicable": 759,
+    "blocked": 10
+  },
+  "requests": 5074,
+  "dns_lookups": 6809,
+  "runtime_ms": 268875,
+  "company_runtime": {
+    "p50_ms": 141375,
+    "p95_ms": 141500,
+    "max_ms": 162046
+  },
+  "total_cost_usd": 0.0,
+  "handled_exceptions": 0,
+  "unhandled_exceptions": 0,
+  "deadline_hits": 0,
+  "warnings": [],
+  "output_bytes": 140000335,
+  "output_limited_companies": [],
+  "output_limit_exceeded": false,
+  "limits": {
+    "max_requests": 20000,
+    "max_cost_usd": 0.0,
+    "time_budget_seconds": 2400.0,
+    "deadline_fraction": 0.85,
+    "request_timeout": 10.0,
+    "host_concurrency": 10
+  },
+  "site": {
+    "state": "available",
+    "companies": 1000,
+    "input_records": 1000,
+    "pages": 1002,
+    "total_bytes": 106754783,
+    "largest_profile_data_bytes": 122134,
+    "largest_profile_bytes": 69326
+  },
+  "synthesis": {
+    "companies": 1000,
+    "sentences": 8020,
+    "cited": 8020,
+    "dropped_sentences": 0
+  },
+  "search": {
+    "status": "not configured",
+    "queries": 0,
+    "estimated_usd": 0.0,
+    "provider": null,
+    "companies_queried": 0,
+    "unit_price_usd": 0.005,
+    "price_note": "verify before use; retries count as billable queries; no free credit assumed",
+    "errors": 0,
+    "cap_skips": 0,
+    "result_domains": 0
+  },
+  "profiles_output": {
+    "state": "available",
+    "rows": 1000,
+    "bytes": 95473075
+  },
+  "event_loop": {
+    "heartbeat_interval_ms": 100,
+    "samples": 2402,
+    "scope": "whole run after input entry; includes source processing and output generation",
+    "lag_p95_ms": 88.00000000337604,
+    "lag_max_ms": 1540.0000000008731,
+    "lag_mean_ms": 23.51665279050884,
+    "gc_collections": 8116,
+    "gc_total_ms": 7701.000000015483,
+    "gc_max_ms": 828.9999999979045,
+    "gc_slow_collections": [
+      {
+        "generation": 2,
+        "duration_ms": 93.99999999732245,
+        "main_thread": true
+      },
+      {
+        "generation": 2,
+        "duration_ms": 110.00000000058208,
+        "main_thread": false
+      },
+      {
+        "generation": 2,
+        "duration_ms": 156.00000000267755,
+        "main_thread": false
+      },
+      {
+        "generation": 2,
+        "duration_ms": 156.9999999992433,
+        "main_thread": false
+      },
+      {
+        "generation": 2,
+        "duration_ms": 171.99999999866122,
+        "main_thread": false
+      },
+      {
+        "generation": 2,
+        "duration_ms": 171.99999999866122,
+        "main_thread": true
+      },
+      {
+        "generation": 2,
+        "duration_ms": 828.9999999979045,
+        "main_thread": true
+      },
+      {
+        "generation": 2,
+        "duration_ms": 421.9999999986612,
+        "main_thread": true
+      },
+      {
+        "generation": 2,
+        "duration_ms": 406.9999999992433,
+        "main_thread": true
+      },
+      {
+        "generation": 2,
+        "duration_ms": 343.99999999732245,
+        "main_thread": true
+      },
+      {
+        "generation": 2,
+        "duration_ms": 328.0000000013388,
+        "main_thread": true
+      },
+      {
+        "generation": 2,
+        "duration_ms": 406.9999999992433,
+        "main_thread": true
+      },
+      {
+        "generation": 2,
+        "duration_ms": 406.00000000267755,
+        "main_thread": false
+      },
+      {
+        "generation": 2,
+        "duration_ms": 311.99999999807915,
+        "main_thread": false
+      },
+      {
+        "generation": 2,
+        "duration_ms": 343.99999999732245,
+        "main_thread": false
+      },
+      {
+        "generation": 2,
+        "duration_ms": 625.0,
+        "main_thread": false
+      }
+    ]
+  },
+  "profile_envelope_values_evidence_identical": true,
+  "scope": "Cold empty runtime state with explicitly declared shipped NAV index; all source features and offline site; optional search not configured, no model calls.",
+  "command": "uv run signalpost run --organisations batch.jsonl --bulk registry.csv --output envelopes.jsonl --profiles-output profiles.jsonl --report report.json --site-dir site --websites --hiring --public-activity",
+  "proxy_note": "Separate raw profiles parse; proxy is not official evaluation.",
+  "size_comparison": {
+    "union_bytes": 140000335,
+    "contract_bytes": 123854273,
+    "ratio": 1.1303633827796962,
+    "union_bytes_per_company": 140000.335,
+    "reductions": 0
+  },
+  "nav_audit": {
+    "published_ads": 9,
+    "doubtful": 0
+  }
+}
