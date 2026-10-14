@@ -69,3 +69,95 @@ def generate(context):
     for slug in legal_name_slugs(name):
         add(slug, "legal_name_slug")
     return output[:4]
+
+
+def extract_sitemap_domains(target, legal_name_str="", brand_name="", timeout=5):
+    raw = None
+    if isinstance(target, bytes):
+        raw = target.decode('utf-8', errors='replace')
+    elif isinstance(target, str):
+        if target.strip().startswith('<'):
+            raw = target
+        else:
+            target_url = target if target.startswith(('http://', 'https://')) else f"https://{target}"
+            if not target_url.endswith('.xml'):
+                target_url = target_url.rstrip('/') + '/sitemap.xml'
+            try:
+                import httpx
+                resp = httpx.get(target_url, timeout=timeout, follow_redirects=True)
+                if resp.status_code == 200:
+                    raw = resp.text
+            except Exception:
+                return []
+    if not raw:
+        return []
+    if re.search(r'<!\s*(?:DOCTYPE|ENTITY)', raw, re.I):
+        return []
+    try:
+        import xml.etree.ElementTree as ET
+        root = ET.fromstring(raw)
+    except Exception:
+        return []
+    tokens = []
+    if legal_name_str:
+        ln = legal_name(legal_name_str)
+        tokens.extend([t.lower() for t in ln.split() if t not in GENERIC and len(t) >= 4])
+    if brand_name:
+        tokens.append(brand_name.lower())
+    
+    urls = []
+    for elem in root.iter():
+        tag = elem.tag.rsplit('}', 1)[-1]
+        if tag == 'loc' and elem.text:
+            urls.append(elem.text.strip())
+            
+    discovered = []
+    seen = set()
+    for u in urls:
+        norm = normalize_url(u)
+        d = domain(norm) if norm else ''
+        if not d or d in seen or d in SOCIAL | DIRECTORIES | FREE_MAIL:
+            continue
+        d_clean = re.sub(r'[^a-z0-9]', '', d.lower().split('.')[0])
+        if not tokens or any(tok in d_clean for tok in tokens):
+            seen.add(d)
+            discovered.append(d)
+            if len(discovered) >= 3:
+                break
+    return discovered
+
+
+class Candidates:
+    @staticmethod
+    def add_company_scope(context, existing_candidates=None, timeout=5):
+        from .search import brave_search_mock
+        base = list(existing_candidates if existing_candidates is not None else generate(context))
+        seen = {c.domain for c in base}
+        sitemap_domains = []
+        brave_domains = []
+        legal_nm = context.get('name') or ''
+        brand_nm = context.get('brand') or ''
+        orgnr = context.get('orgnr') or ''
+
+        for c in list(base):
+            if c.origin in ('registry_website', 'subunit_registry_website'):
+                for d in extract_sitemap_domains(c.domain, legal_name_str=legal_nm, brand_name=brand_nm, timeout=timeout):
+                    if d not in seen:
+                        seen.add(d)
+                        sitemap_domains.append(d)
+                        base.append(Candidate(f"https://{d}", d, 'sitemap_discovery'))
+
+        for item in brave_search_mock(legal_nm, brand=brand_nm, orgnr=orgnr, limit=5):
+            d = item.get('domain')
+            if d and d not in seen:
+                seen.add(d)
+                brave_domains.append(d)
+                base.append(Candidate(item.get('url', f"https://{d}"), d, 'search_brave'))
+
+        report = {
+            'sitemap_domains': len(sitemap_domains),
+            'brave_domains': len(brave_domains),
+            'total_new': len(sitemap_domains) + len(brave_domains)
+        }
+        return base, report
+
