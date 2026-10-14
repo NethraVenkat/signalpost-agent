@@ -73,7 +73,14 @@ async def fetch(org, envelope, bulk, http):
     registry_failed = False
     fetchable_failures = set()
     checked = set()
-    for candidate in candidates:
+    async def nominations():
+        for candidate in candidates:yield candidate
+        search=getattr(http,'search',None)
+        if not successes and search:
+            existing={c.domain for c in candidates}
+            for candidate in await search.nominate(org,context,http):
+                if candidate.domain not in existing:yield candidate
+    async for candidate in nominations():
         pages = []
         best = None
         try:

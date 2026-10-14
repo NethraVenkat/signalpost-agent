@@ -116,7 +116,11 @@ GitHub Actions runs Ubuntu tests and the live 20-company registry smoke job. [Ev
 
 ## Models, APIs, licences and cost
 
-Official Bronnoysund registry/accounts APIs, bounded company-site requests and the official NAV feed supply facts. No paid search API, browser renderer or model API is used. Template provider cost is **$0 per batch**, per 100 companies and per configured 1,100-company batch, excluding compute/storage/network.
+Official Bronnoysund registry/accounts APIs, bounded company-site requests and the official NAV feed supply facts. No source-site browser renderer or model API is used. Without optional search, provider cost is **$0 per batch**, per 100 companies and per configured 1,100-company batch, excluding compute/storage/network.
+
+Optional website search is off without `BRAVE_SEARCH_API_KEY`, the same variable used by the starter kit's Brave connector. `SIGNALPOST_SEARCH_PROVIDER=brave` selects the shipped implementation; the provider interface also supports injected test adapters. Only companies lacking a proven site after registry/email/subunit/slug candidates are eligible. One logical query per company, up to five filtered result domains; results stay in memory and never become evidence. Existing fetch, robots, SSRF, politeness and exact-orgnr proof rules apply. Social, directory and known marketplace domains are excluded.
+
+Controls: `--search-max-queries` defaults to the input-company count, `--search-max-cost-usd 5`, `--search-unit-price-usd 0.005`. The meter conservatively counts retries as billable queries; at most one retry, bounded timeout/backoff and all calls count against the existing global and per-company request budgets. No search is purchased unless request room remains for robots and a proof page. Price is **verify before use**: Brave publishes [$5 per 1,000 Web Search requests](https://brave.com/search/api/), so estimated cost is `$0.005 × queries`, with no assumed free credit. Verify official instructions and provider pricing before submission. No development key was supplied; only mocked search tests were run.
 
 ### AI usage
 

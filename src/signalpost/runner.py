@@ -247,6 +247,10 @@ async def _run(config, client=None,synthesis_provider=None):
         if storage_error is not None:return
         http = Http(active_client, config, budget, blobs)
         website_http = WebsiteHttp(active_client, config, budget, blobs, dns_metrics=dns_metrics)
+        from .web.search import Search
+        website_http.search=Search(active_client,config,budget)
+        search_metrics.update(website_http.search.metrics)
+        website_http.search.metrics=search_metrics
         nav_task=asyncio.create_task(nav.prefetch(nav_client or active_client,config,budget,blobs,nav_index,nav_names,prior)) if config.hiring and valid_orgs else None
         # Start the credential/feed request before scheduling company crawls.
         if nav_task:
@@ -266,6 +270,7 @@ async def _run(config, client=None,synthesis_provider=None):
             if nav_task and not nav_task.done(): nav_task.cancel()
             if nav_task: await asyncio.gather(nav_task,return_exceptions=True)
     dns_metrics = {'dns_lookups': 0}
+    search_metrics={'status':'not configured','queries':0,'estimated_usd':0.}
     if client is None:
         transport = safe_transport(config.workers * 2, dns_metrics) if config.websites or config.hiring else httpx.AsyncHTTPTransport(limits=httpx.Limits(max_connections=config.workers * 2))
         async with AsyncExitStack() as stack:
@@ -295,7 +300,8 @@ async def _run(config, client=None,synthesis_provider=None):
     report['max_dns_requests_per_company'] = max((n for org,n in dns_metrics.get('dns_by_company', {}).items() if org in envelopes), default=0)
     report["bulk_snapshot_sha256"] = bulk_sha
     report['llm']=synthesis_service.metrics
-    total=synthesis_service.metrics['estimated_usd']
+    report['search']=search_metrics
+    total=synthesis_service.metrics['estimated_usd']+search_metrics['estimated_usd']
     report.update({'total_cost_usd':total,'cost_per_100_companies_usd':total*100/len(envelopes) if envelopes else 0,
         'cost_per_official_batch_usd':total*config.official_batch_size/len(envelopes) if envelopes else 0})
     report['synthesis']={'companies':len(envelopes),'sentences':sum(e.run.synthesis.checks.sentences for e in envelopes.values()),
