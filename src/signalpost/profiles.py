@@ -26,7 +26,7 @@ def project(envelope):
     if isinstance(form,dict): registry['legal_form']=form.get('kode')
     roles=[]
     for c in claims:
-        if c.family!='roles' or not isinstance(c.value,dict):continue
+        if not c.field.startswith('roles.role.') or not isinstance(c.value,dict):continue
         v=c.value;role=v.get('role_type') or {};group=v.get('group_type') or {}
         roles.append({'name':v.get('name'),'organisation_number':v.get('entity_organisation_number'),
                       'role_code':role.get('kode'),'role':role.get('beskrivelse'),
@@ -34,7 +34,7 @@ def project(envelope):
                       'last_changed':v.get('last_changed'),'inactive':v.get('inactive')})
     locations=[]
     for c in claims:
-        if c.family!='subunits' or not isinstance(c.value,dict):continue
+        if not c.field.startswith('subunits.unit.') or not isinstance(c.value,dict):continue
         v=c.value;raw=v.get('raw') or v
         locations.append({'organisation_number':v.get('organisation_number'),'name':v.get('name'),
                           'address':raw.get('beliggenhetsadresse') or raw.get('postadresse') or v.get('address'),

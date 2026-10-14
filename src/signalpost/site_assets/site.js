@@ -38,6 +38,22 @@
       catch { const input=element('textarea');input.value=button.dataset.copy;input.setAttribute('aria-label','Select and copy this value');button.after(input);input.focus();input.select();try{document.execCommand('copy');}catch{} }
     }
   });
+  // Additional official metadata shares the offline evidence payload. Build with
+  // text nodes only, so source strings never become executable markup.
+  for(const fact of localData.registry_details||[]){
+    const root=document.querySelector('[data-registry-details="'+fact.group+'"]');if(!root)continue;
+    const article=element('article',null,'fact');article.id='fact-'+fact.id;
+    article.append(element('h3',fact.field),stateChip(fact.availability));
+    article.append(element('pre',fact.value==null?'Unknown':JSON.stringify(fact.value,null,2)));
+    const button=element('button','Source');button.type='button';button.dataset.toggle='source-'+fact.id;
+    button.setAttribute('aria-expanded','false');button.setAttribute('aria-controls','source-'+fact.id);
+    const panel=element('div',null,'evidence');panel.id='source-'+fact.id;panel.dataset.source=fact.id;panel.hidden=true;
+    article.append(button,panel);root.append(article);
+  }
+  function revealFact(){const target=document.getElementById(location.hash.slice(1));if(!target)return;
+    for(let parent=target.parentElement;parent;parent=parent.parentElement)if(parent.tagName==='DETAILS')parent.open=true;
+  }
+  window.addEventListener('hashchange',revealFact);revealFact();
   if(document.body.dataset.page === 'index') {
     let pageNumber=0; const pageSize=30;
     const controls=['search','municipality','division','sort','filter-website','filter-jobs','filter-social','filter-activity','filter-incomplete'];

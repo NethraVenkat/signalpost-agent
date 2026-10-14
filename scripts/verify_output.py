@@ -2,6 +2,7 @@
 import argparse
 import hashlib
 import json
+from functools import lru_cache
 from pathlib import Path
 from signalpost.models.shapes import validate
 from signalpost.io.input_adapter import read
@@ -59,6 +60,9 @@ def verify(first, state_dir, count, organisations=None, report=None, require_cle
             expected=inputs.unique
         assert [r['organisation_number'] for r in rows] == expected, 'Membership/order differs from input'
     seen, published = set(), 0
+    @lru_cache(maxsize=8)
+    def stored_body(sha):
+        return (state_dir/'blobs'/sha).read_bytes().decode('utf8',errors='replace')
     synthesis_companies=synthesis_sentences=0
     for row in rows:
         companies,sentences=verify_synthesis(row)
@@ -78,7 +82,7 @@ def verify(first, state_dir, count, organisations=None, report=None, require_cle
                 if sha not in seen:
                     assert hashlib.sha256((state_dir / "blobs" / sha).read_bytes()).hexdigest() == sha
                     seen.add(sha)
-                body = (state_dir / 'blobs' / sha).read_bytes().decode('utf8', errors='replace')
+                body = stored_body(sha)
                 assert len(e['claim_span']) <= 300 and e['claim_span'] in body, 'Non-verbatim evidence span'
     result = {"lines": len(rows), "schema_valid": True, "published_claims": published, "source_blobs_verified": len(seen)}
     result.update(synthesis_companies=synthesis_companies,synthesis_sentences=synthesis_sentences,synthesis_unverified_values=0)

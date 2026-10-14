@@ -233,6 +233,8 @@ def profile(row, title):
         buckets[key].append(c)
     for key, label, family in GROUPS:
         items = buckets[key]
+        details=[c for c in items if c['field'].startswith(('roles.detail.','subunits.detail.'))]
+        items=[c for c in items if not c['field'].startswith(('roles.detail.','subunits.detail.'))]
         if key == 'activity': items.sort(key=lambda c: str((c['value'] or {}).get('date', '')) if isinstance(c['value'], dict) else '', reverse=True)
         state = row['run']['sections'].get(family, 'not_applicable')
         dated_registry = registry_events(row) if key == 'activity' else []
@@ -254,6 +256,8 @@ def profile(row, title):
             body += fact(c, records)
         if key == 'locations' and len(items) > 10: body += '</div>'
         if key == 'financials' and items: body += '</tbody></table>'
+        if details:
+            body += '<details><summary>Additional official attributes ('+str(len(details))+')</summary><div data-registry-details="'+esc(key)+'"></div></details>'
         body += '</section>'
     body += '<section id="changes"><h2>Changes timeline</h2>'
     changes = sorted(row['changes'], key=lambda c: c['last_observed_at'], reverse=True)
@@ -301,8 +305,11 @@ def company_payload(row):
         if key not in source_lookup:
             source_lookup[key]=len(sources);sources.append(shared)
         records.append([source_lookup[key]]+[e.get(k) for k in evidence_fields])
+    details=[{'id':c['id'][:16],'field':c['field'],'value':c['value'],'availability':c['availability'],
+              'group':'people' if c['family']=='roles' else 'locations'} for c in row['claims']
+             if c['field'].startswith(('roles.detail.','subunits.detail.'))]
     return {'source_fields':source_fields,'sources':sources,'evidence_fields':evidence_fields,
-            'records':records,'facts':facts}
+            'records':records,'facts':facts,'registry_details':details}
 
 
 def index_record(row):
@@ -404,4 +411,5 @@ def generate_site(input_path, out, title='Signalpost'):
         target.write_text(content, encoding='utf8', newline='\n')
     sizes = {filename: len(content.encode('utf8')) for filename, content in files.items()}
     return {'companies': len(rows), 'input_records':len(input_rows), 'pages': len(rows) + 2, 'total_bytes': sum(sizes.values()),
+            'largest_profile_data_bytes':max((size for path,size in sizes.items() if path.endswith('.data.js')),default=0),
             'largest_profile_bytes': max((size for path, size in sizes.items() if path.startswith('c/') and path.endswith('.html')), default=0)}

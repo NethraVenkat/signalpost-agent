@@ -1,6 +1,6 @@
 from ..workers import offload
-import asyncio
 from ..budget import SourceFailure
+import asyncio
 from .brreg_enhet import BASE
 from .extract import Section, add, finish, decode, response_source
 from ..models.evidence import digest, canonical
@@ -38,6 +38,16 @@ def extract(org,response):
             seen[key] = slot + 1
             add(section, response_source(response), org, "roles", f"roles.role.{key}.{slot}", entry,
                 f"/rollegrupper/{group_index}/roller/{role_index}", effective=entry["from_date"] or entry["last_changed"])
+            for name,path in {'responsibility_share':('ansvarsandel',),'order':('rekkefolge',),
+                              'elected_by':('valgtAv',),'entity_deleted':('enhet','erSlettet'),
+                              'entity_approval_status':('enhet','godkjenningsstatus'),
+                              'entity_form':('enhet','organisasjonsform')}.items():
+                value=item
+                for part in path:value=value.get(part) if isinstance(value,dict) else None
+                if isinstance(value,dict):value={k:v for k,v in value.items() if k!='_links'}
+                if value is not None:
+                    add(section,response_source(response),org,'roles',f'roles.detail.{key}.{slot}.{name}',value,
+                        f'/rollegrupper/{group_index}/roller/{role_index}/'+ '/'.join(path))
     if not section.claims:
         add(section, response_source(response), org, "roles", "roles.roles", None, "/rollegrupper")
     return finish(section)

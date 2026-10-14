@@ -6,6 +6,7 @@ from pathlib import Path
 from .extract import Section, Source, add, finish
 from ..models.evidence import utc_now
 from ..budget import SourceFailure
+from .registry_fields import EXTRA,GROUPS,boolean
 
 ALIASES = {"organisasjonsnummer": "Organisasjonsnummer", "navn": "Navn", "antallAnsatte": "Antall ansatte",
            "konkurs": "Konkurs", "underAvvikling": "Under avvikling", "hjemmeside": "Hjemmeside",
@@ -110,4 +111,14 @@ def extract(org, row, source):
         prefix = f"naeringskode{i}"
         value = {k: column(row, prefix + "." + k)[0] for k in ("kode", "beskrivelse") if column(row, prefix + "." + k)[0] is not None}
         add(section, source, org, "identity", f"identity.nace{i}", value or None, f"row:{org}/columns:{prefix}.*")
+    for field,(key,kind) in EXTRA.items():
+        value,actual=column(row,key)
+        if value is None:continue
+        if kind=='bool':value=boolean(value)
+        add(section,source,org,'identity','identity.'+field,value,f'row:{org}/column:{actual}',
+            effective=value if field.endswith('_date') else None)
+    for field,(prefix,keys) in GROUPS.items():
+        value={k:column(row,prefix+'.'+k)[0] for k in keys if column(row,prefix+'.'+k)[0] is not None}
+        if not value:continue
+        add(section,source,org,'identity','identity.'+field,value or None,f'row:{org}/columns:{prefix}.*')
     return finish(section)

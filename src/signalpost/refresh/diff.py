@@ -4,6 +4,14 @@ from ..models.envelope import Change
 
 CHECKED={'available','not_available','not_applicable'}
 
+def newly_supported_field(field):
+    from ..sources.registry_fields import EXTRA,GROUPS
+    from ..sources.regnskap import PATHS
+    legacy={'revenue','operating_result','result_before_tax','net_result','equity','total_assets','total_liabilities'}
+    return (field.startswith(('roles.detail.','subunits.detail.')) or
+            field in {'identity.'+k for k in (*EXTRA,*GROUPS,'founding_date','vat_registration_date')} or
+            field in {'accounts.'+k for k in PATHS.keys()-legacy})
+
 
 def meaning(claim):
     if claim is None or claim.availability!='available': return None
@@ -86,7 +94,7 @@ def apply(envelope, previous, blobs):
                 envelope.run.refresh['observation_changes'].append({'section':'hiring','field':field,
                     'previous_state':'available','current_state':'closure_not_verified','reason':'live_detail_did_not_prove_inactive_or_expired'})
                 continue
-        if before is None and field in {'identity.founding_date', 'identity.vat_registration_date'}:
+        if before is None and newly_supported_field(field):
             envelope.run.refresh['observation_changes'].append({'section': family, 'field': field,
                 'previous_state': 'unchecked_field', 'current_state': after.availability,
                 'reason': 'dated_field_not_checked_in_previous_extractor'})
@@ -122,8 +130,8 @@ def apply(envelope, previous, blobs):
             old_content_sha256=oldest.content_sha256 if oldest else None, new_content_sha256=newest.content_sha256 if newest else None,
             status=after.availability if after else "not_available"))
     if "roles" not in failed:
-        before_roles = [c for c in old_claims.values() if c.family == "roles" and c.availability == "available"]
-        after_roles = [c for c in new_claims.values() if c.family == "roles" and c.availability == "available"]
+        before_roles = [c for c in old_claims.values() if c.field.startswith('roles.role.') and c.availability == "available"]
+        after_roles = [c for c in new_claims.values() if c.field.startswith('roles.role.') and c.availability == "available"]
         before_values = [c.value for c in before_roles]
         after_values = [c.value for c in after_roles]
         if canonical(before_values) != canonical(after_values):

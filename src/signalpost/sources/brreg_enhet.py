@@ -1,7 +1,8 @@
 from ..workers import offload
-import asyncio
 from ..budget import SourceFailure
+import asyncio
 from .extract import Section, Source, add, finish, get, decode, response_source
+from .registry_fields import EXTRA,GROUPS,boolean
 
 BASE = "https://data.brreg.no/enhetsregisteret/api/enheter/"
 FIELDS = {
@@ -36,6 +37,18 @@ def extract(org, data, source):
     for i in range(1, 4):
         field = f"naeringskode{i}"
         add(section, source, org, "identity", f"identity.nace{i}", data.get(field), "/" + field)
+    for field,(key,kind) in EXTRA.items():
+        actual=next((k for k in data if k.casefold()==key.casefold()),key)
+        value=data.get(actual)
+        if value is None:continue
+        if kind=='bool':value=boolean(value)
+        add(section,source,org,'identity','identity.'+field,value,'/'+actual,
+            effective=value if field.endswith('_date') else None)
+    for field,(key,keys) in GROUPS.items():
+        value=data.get(key)
+        if isinstance(value,dict):value={k:value[k] for k in keys if k in value}
+        if value in (None,{}):continue
+        add(section,source,org,'identity','identity.'+field,value,'/'+key)
     return finish(section)
 
 

@@ -1,6 +1,6 @@
 from ..workers import offload
-import asyncio
 from ..budget import SourceFailure
+import asyncio
 from ..models.envelope import Error
 from .extract import Section, add, finish, decode, response_source, get
 from . import financial_units
@@ -14,6 +14,26 @@ PATHS = {
     "equity": ("egenkapitalGjeld", "egenkapital", "sumEgenkapital"),
     "total_assets": ("eiendeler", "sumEiendeler"),
     "total_liabilities": ("egenkapitalGjeld", "gjeldOversikt", "sumGjeld"),
+    'paid_in_equity':('egenkapitalGjeld','egenkapital','innskuttEgenkapital','sumInnskuttEgenkaptial'),
+    'retained_equity':('egenkapitalGjeld','egenkapital','opptjentEgenkapital','sumOpptjentEgenkapital'),
+    'current_liabilities':('egenkapitalGjeld','gjeldOversikt','kortsiktigGjeld','sumKortsiktigGjeld'),
+    'long_term_liabilities':('egenkapitalGjeld','gjeldOversikt','langsiktigGjeld','sumLangsiktigGjeld'),
+    'equity_and_liabilities':('egenkapitalGjeld','sumEgenkapitalGjeld'),
+    'non_current_assets':('eiendeler','anleggsmidler','sumAnleggsmidler'),
+    'current_assets':('eiendeler','omloepsmidler','sumOmloepsmidler'),
+    'cash_and_bank':('eiendeler','sumBankinnskuddOgKontanter'),
+    'receivables':('eiendeler','sumFordringer'),'investments':('eiendeler','sumInvesteringer'),
+    'inventories':('eiendeler','sumVarer'),'goodwill':('eiendeler','goodwill'),
+    'sales_income':('resultatregnskapResultat','driftsresultat','driftsinntekter','salgsinntekter'),
+    'salary_expenses':('resultatregnskapResultat','driftsresultat','driftskostnad','loennskostnad'),
+    'operating_expenses':('resultatregnskapResultat','driftsresultat','driftskostnad','sumDriftskostnad'),
+    'financial_income':('resultatregnskapResultat','finansresultat','finansinntekt','sumFinansinntekter'),
+    'financial_expenses':('resultatregnskapResultat','finansresultat','finanskostnad','sumFinanskostnad'),
+    'other_interest_expense':('resultatregnskapResultat','finansresultat','finanskostnad','annenRentekostnad'),
+    'group_interest_expense':('resultatregnskapResultat','finansresultat','finanskostnad','rentekostnadSammeKonsern'),
+    'financial_result':('resultatregnskapResultat','finansresultat','nettoFinans'),
+    'tax_expense':('resultatregnskapResultat','ordinaertResultatSkattekostnad'),
+    'total_comprehensive_result':('resultatregnskapResultat','totalresultat'),
 }
 
 
@@ -56,6 +76,8 @@ def extract(org,response,blobs):
         section.evidence.extend(calibration)
     for name, path in PATHS.items():
         value = get(record, path)
+        if value is None and name not in {'revenue','operating_result','result_before_tax','net_result','equity','total_assets','total_liabilities'}:
+            continue
         if value is not None and (isinstance(value, bool) or not isinstance(value, (int, float))):
             raise SourceFailure("malformed_financial_value", name)
         add(section, response_source(response), org, "accounts", "accounts." + name, value,
