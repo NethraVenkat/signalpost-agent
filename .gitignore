@@ -41,3 +41,16 @@ caches/
 *.egg-info/
 build/
 dist/
+# Editor and OS caches
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+scratch/
+.antigravity/
+
