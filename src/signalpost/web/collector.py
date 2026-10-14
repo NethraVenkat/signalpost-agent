@@ -154,7 +154,21 @@ async def fetch(org, envelope, bulk, http):
             best = (proof, response, page)
             if proof.level == "BLOCKED":
                 raise SourceFailure("block_page")
-            if proof.level not in {"VERIFIED", "REJECT"}:
+            if proof.level in {"VERIFIED", "HIGH"} and len(pages) == 1 and http.counts.get(org, 0) + 1 <= http.config.website_request_cap:
+                links = followup_links(page)
+                for target in links[:1]:
+                    target = normalize_url(target)
+                    if target and domain(target) == domain(response.url):
+                        try:
+                            extra = await http.get(target, org, candidate.domain, proved)
+                            if extra.status == 200:
+                                extra_page = await offload(Page, extra.body, extra.url)
+                                extra_proof = await offload(candidate_proof, extra_page, org, context, candidate, leaders)
+                                if extra_proof.level != 'BLOCKED' and not (extra_proof.level == 'REJECT' and extra_proof.reason == 'foreign_orgnr'):
+                                    pages.append((extra, extra_page))
+                        except SourceFailure:
+                            pass
+            elif proof.level not in {"VERIFIED", "REJECT"}:
                 seen = {response.url}
                 links = followup_links(page)
                 for target in links[:2]:
