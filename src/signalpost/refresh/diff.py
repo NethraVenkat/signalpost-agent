@@ -127,6 +127,7 @@ def apply(envelope, previous, blobs):
             first_observed_at=(before or after).first_observed_at, last_observed_at=utc_now(),
             source_url=newest.source_url if newest else None, retrieved_at=newest.retrieved_at if newest else None,
             effective_at=newest.effective_at if newest else None, source_class=newest.source_class if newest else None,
+            old_locator=oldest.locator if oldest else None, new_locator=newest.locator if newest else None,
             old_content_sha256=oldest.content_sha256 if oldest else None, new_content_sha256=newest.content_sha256 if newest else None,
             status=after.availability if after else "not_available"))
     if "roles" not in failed:
@@ -145,6 +146,7 @@ def apply(envelope, previous, blobs):
                                            first_observed_at=(before_roles or after_roles)[0].first_observed_at, last_observed_at=utc_now(),
                                            source_url=newest.source_url if newest else None, retrieved_at=newest.retrieved_at if newest else None,
                                            effective_at=newest.effective_at if newest else None, source_class=newest.source_class if newest else None,
+                                           old_locator=oldest.locator if oldest else None, new_locator=newest.locator if newest else None,
                                            old_content_sha256=oldest.content_sha256 if oldest else None, new_content_sha256=newest.content_sha256 if newest else None,
                                            status="available" if after_roles else "not_available"))
     # Preserve prior source metadata even when the current source changes;
