@@ -73,3 +73,8 @@ def main():
     except Exception as exc:
         print(f"signalpost could not produce output: {type(exc).__name__}: {exc}", file=sys.stderr)
         return 1
+
+
+if __name__ == "__main__":
+    sys.exit(main())
+

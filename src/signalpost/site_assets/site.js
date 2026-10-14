@@ -54,10 +54,30 @@
     for(let parent=target.parentElement;parent;parent=parent.parentElement)if(parent.tagName==='DETAILS')parent.open=true;
   }
   window.addEventListener('hashchange',revealFact);revealFact();
+  const themeToggle = document.getElementById('theme-toggle');
+  if (themeToggle) {
+    const savedTheme = localStorage.getItem('signalpost_theme');
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const currentTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+    document.documentElement.dataset.theme = currentTheme;
+    themeToggle.textContent = currentTheme === 'dark' ? '☀️ Light' : '🌙 Dark';
+    themeToggle.addEventListener('click', () => {
+      const nextTheme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+      document.documentElement.dataset.theme = nextTheme;
+      localStorage.setItem('signalpost_theme', nextTheme);
+      themeToggle.textContent = nextTheme === 'dark' ? '☀️ Light' : '🌙 Dark';
+    });
+  }
   if(document.body.dataset.page === 'index') {
     let pageNumber=0; const pageSize=30;
     for(const r of records){
-      r._search = fold(r.name+' '+r.orgnr+' '+(r.municipality||''));
+      r._search = fold(r.name+' '+r.orgnr+' '+(r.municipality||'')+' '+(r.website||''));
+      r.score = (r.claim_count||0)*10 + (r.website?20:0) + (r.jobs?20:0) + (r.social?10:0) + (r.activity?10:0);
+    }
+    const sortEl = document.getElementById('sort');
+    const savedSort = sessionStorage.getItem('signalpost_sort');
+    if (savedSort && sortEl && Array.from(sortEl.options).some(o => o.value === savedSort)) {
+      sortEl.value = savedSort;
     }
     const controls=['search','municipality','division','sort','filter-website','filter-jobs','filter-social','filter-activity','filter-incomplete'];
     function draw(){
@@ -70,7 +90,7 @@
         return !document.getElementById('filter-incomplete').checked || Object.values(r.sections).some(s => s==='failed'||s==='blocked');
       });
       const sort=document.getElementById('sort').value;
-      selected.sort((a,b) => sort==='name' ? a.name.localeCompare(b.name,'nb')||a.orgnr.localeCompare(b.orgnr) : (b[sort] ?? -Infinity)-(a[sort] ?? -Infinity)||a.orgnr.localeCompare(b.orgnr));
+      selected.sort((a,b) => sort==='name' ? a.name.localeCompare(b.name,'nb')||a.orgnr.localeCompare(b.orgnr) : sort==='score' ? (b.score ?? -Infinity)-(a.score ?? -Infinity)||a.orgnr.localeCompare(b.orgnr) : (b[sort] ?? -Infinity)-(a[sort] ?? -Infinity)||a.orgnr.localeCompare(b.orgnr));
       const pages=Math.max(1,Math.ceil(selected.length/pageSize));pageNumber=Math.min(pageNumber,pages-1);
       const results=document.getElementById('results');results.replaceChildren();
       for(const r of selected.slice(pageNumber*pageSize,(pageNumber+1)*pageSize)){
@@ -83,7 +103,15 @@
       document.getElementById('result-count').textContent=selected.length+' companies match';document.getElementById('page-label').textContent='Page '+(pageNumber+1)+' of '+pages;
       document.getElementById('previous').disabled=pageNumber===0;document.getElementById('next').disabled=pageNumber===pages-1;
     }
-    for(const id of controls) document.getElementById(id).addEventListener(id==='search'?'input':'change',()=>{pageNumber=0;draw();});
+    for(const id of controls) {
+      const el = document.getElementById(id);
+      if(el) {
+        el.addEventListener(id==='search'?'input':'change',()=>{
+          if(id==='sort') sessionStorage.setItem('signalpost_sort', el.value);
+          pageNumber=0;draw();
+        });
+      }
+    }
     document.getElementById('previous').addEventListener('click',()=>{pageNumber--;draw();});document.getElementById('next').addEventListener('click',()=>{pageNumber++;draw();});draw();
   }
   if(document.body.dataset.page === 'compare'){

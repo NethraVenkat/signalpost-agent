@@ -6,12 +6,67 @@ from urllib.parse import urlsplit, urlunsplit
 from ..budget import SourceFailure
 from ..models.envelope import Error
 from ..models.evidence import digest
+import xml.etree.ElementTree as ET
 from ..sources.extract import Section, Source, add, missing, response_source
-from .candidates import generate, context_from_bulk, legal_name
+from .candidates import generate, context_from_bulk, legal_name, Candidate, GENERIC
 from .html import Page
-from .policy import domain, normalize_url
+from .policy import domain, normalize_url, SOCIAL, DIRECTORIES, FREE_MAIL
 from .proof import score, phone
 from .social import discover, profile_url
+
+
+def extract_sitemap_domains(xml_body, legal_nm, brand_nm):
+    raw = xml_body.decode('utf-8', errors='replace')
+    if re.search(r'<!\s*(?:DOCTYPE|ENTITY)', raw, re.I): return []
+    try: root = ET.fromstring(raw)
+    except Exception: return []
+    tokens = [t.lower() for t in legal_name(legal_nm).split() if t not in GENERIC and len(t) >= 4]
+    if brand_nm: tokens.append(brand_nm.lower())
+    urls = []
+    for elem in root.iter():
+        tag = elem.tag.rsplit('}', 1)[-1]
+        if tag == 'loc' and elem.text:
+            urls.append(elem.text.strip())
+    discovered = []
+    seen = set()
+    for u in urls:
+        norm = normalize_url(u)
+        d = domain(norm) if norm else ''
+        if not d or d in seen or d in SOCIAL | DIRECTORIES | FREE_MAIL: continue
+        d_clean = re.sub(r'[^a-z0-9]', '', d.lower().split('.')[0])
+        if any(tok in d_clean for tok in tokens):
+            seen.add(d)
+            discovered.append((norm, d))
+            if len(discovered) >= 5: break
+    return discovered
+
+
+def extract_rss_domains(xml_body, legal_nm, brand_nm):
+    raw = xml_body.decode('utf-8', errors='replace')
+    if re.search(r'<!\s*(?:DOCTYPE|ENTITY)', raw, re.I): return []
+    try: root = ET.fromstring(raw)
+    except Exception: return []
+    tokens = [t.lower() for t in legal_name(legal_nm).split() if t not in GENERIC and len(t) >= 3]
+    if brand_nm: tokens.append(brand_nm.lower())
+    discovered = []
+    seen = set()
+    for item in root.iter():
+        tag = item.tag.rsplit('}', 1)[-1]
+        if tag in ('item', 'entry'):
+            link = next((e.text for e in item if e.tag.rsplit('}', 1)[-1] == 'link' and e.text), None)
+            if not link:
+                link = next((e.get('href') for e in item if e.tag.rsplit('}', 1)[-1] == 'link' and e.get('href')), None)
+            title = next((e.text for e in item if e.tag.rsplit('}', 1)[-1] == 'title' and e.text), '') or ''
+            desc = next((e.text for e in item if e.tag.rsplit('}', 1)[-1] in ('description', 'summary') and e.text), '') or ''
+            text = f'{title} {desc}'.lower()
+            if any(tok in text for tok in tokens) and link:
+                norm = normalize_url(link)
+                d = domain(norm) if norm else ''
+                if d and d not in seen and d not in SOCIAL | DIRECTORIES | FREE_MAIL:
+                    seen.add(d)
+                    discovered.append((norm, d))
+                    if len(discovered) >= 5: break
+    return discovered
 
 
 def registry_context(envelope, bulk, blobs):
@@ -142,6 +197,34 @@ async def fetch(org, envelope, bulk, http):
                         break
             elif proof.level in {"MEDIUM", 'REGISTRY_DECLARED'}:
                 ambiguous = True
+            if not successes and http.counts.get(org, 0) + 2 <= http.config.website_request_cap:
+                legal_nm = context.get('name')
+                brand_nm = context.get('brand')
+                metrics = getattr(http, 'discovery_metrics', None)
+                if metrics is None:
+                    http.discovery_metrics = {'sitemaps_found': 0, 'sitemap_candidates': 0, 'rss_feeds_found': 0, 'rss_candidates': 0}
+                    metrics = http.discovery_metrics
+                try:
+                    sm_resp = await http.get(f'https://{candidate.domain}/sitemap.xml', org, candidate.domain, xml=True)
+                    if sm_resp.status == 200:
+                        metrics['sitemaps_found'] += 1
+                        for u, d in extract_sitemap_domains(sm_resp.body, legal_nm, brand_nm):
+                            if d not in checked and d not in {c.domain for c in candidates}:
+                                metrics['sitemap_candidates'] += 1
+                                candidates.append(Candidate(u, d, 'sitemap'))
+                except SourceFailure: pass
+                for feed_path in ('/feed.xml', '/rss.xml', '/feed/', '/blog/feed.xml'):
+                    if successes or http.counts.get(org, 0) >= http.config.website_request_cap: break
+                    try:
+                        rss_resp = await http.get(f'https://{candidate.domain}{feed_path}', org, candidate.domain, xml=True)
+                        if rss_resp.status == 200:
+                            metrics['rss_feeds_found'] += 1
+                            for u, d in extract_rss_domains(rss_resp.body, legal_nm, brand_nm):
+                                if d not in checked and d not in {c.domain for c in candidates}:
+                                    metrics['rss_candidates'] += 1
+                                    candidates.append(Candidate(u, d, 'rss'))
+                            break
+                    except SourceFailure: pass
         except SourceFailure as exc:
             if exc.code in {'website_timeout','website_connect_error','website_http_5xx','dns_timeout','dns_error','dns_unavailable'}:
                 source_unavailable = True

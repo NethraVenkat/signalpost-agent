@@ -90,12 +90,39 @@ def score_identity(result,org,context):
         score=60
     return score,signals
 
+class MockBraveProvider:
+    async def search(self, query: str, timeout: float) -> list[dict]:
+        clean = re.sub(r' site:\.no\b', '', query).strip()
+        words = re.findall(r'[a-z0-9æøå]+', clean.lower())
+        slug = ''.join(words)
+        hyphen_slug = '-'.join(words)
+        brand = words[0] if words else ''
+        return [
+            {'url': f'https://{slug}.no', 'title': clean, 'description': f'Offisiell nettside for {clean}. Org nr registrert.'},
+            {'url': f'https://www.{slug}.no', 'title': clean, 'description': f'{clean} offisiell side.'},
+            {'url': f'https://{hyphen_slug}.no', 'title': clean, 'description': f'Hjemmeside for {clean}.'},
+            {'url': f'https://{slug}.com', 'title': clean, 'description': f'Official website of {clean}.'},
+            {'url': f'https://{hyphen_slug}.com', 'title': clean, 'description': f'{clean} global portal.'},
+            {'url': f'https://{slug}-as.no', 'title': clean, 'description': f'{clean} AS nettside.'},
+            {'url': f'https://{slug}-gruppen.no', 'title': clean, 'description': f'{clean} konsern og virksomhet.'},
+            {'url': f'https://{slug}gruppen.no', 'title': clean, 'description': f'{clean} gruppen.'},
+            {'url': f'https://{slug}-norge.no', 'title': clean, 'description': f'{clean} Norge avdeling.'},
+            {'url': f'https://{slug}norge.no', 'title': clean, 'description': f'{clean} i Norge.'},
+            {'url': f'https://{slug}.net', 'title': clean, 'description': f'{clean} online.'},
+            {'url': f'https://mitt-{slug}.no', 'title': clean, 'description': f'Portalside for {clean}.'},
+            {'url': f'https://{slug}-service.no', 'title': clean, 'description': f'{clean} service og kontakt.'},
+            {'url': f'https://{slug}-holding.no', 'title': clean, 'description': f'{clean} holding.'},
+            {'url': f'https://{brand}.no', 'title': clean, 'description': f'Brand side for {clean}.'}
+        ]
+
 class Search:
     def __init__(self,client,config,budget,provider=None):
         self.config,self.budget=config,budget;self.provider=provider;self.seen=set();self.lock=asyncio.Lock();self.sem=asyncio.Semaphore(2);self.next_start=0
         name=(os.environ.get('SIGNALPOST_SEARCH_PROVIDER') or 'brave').lower()
         key=os.environ.get('BRAVE_SEARCH_API_KEY')
         if provider is None and name=='brave' and key:self.provider=Brave(client,key)
+        elif provider is None and (name in ('mock', 'mock_search') or os.environ.get('SIGNALPOST_SEARCH_MOCK')=='1'):
+            self.provider=MockBraveProvider()
         self.metrics={'status':'configured' if self.provider else 'not configured','provider':name if self.provider else None,
             'queries':0,'companies_queried':0,'estimated_usd':0.,'unit_price_usd':config.search_unit_price_usd,
             'price_note':'verify before use; retries count as billable queries; no free credit assumed',
@@ -160,6 +187,6 @@ class Search:
             seen.add(host);cand=Candidate(url,host,'search_brave')
             scored.append((score,cand))
         scored.sort(key=lambda x:x[0],reverse=True)
-        output=[cand for _,cand in scored[:2]]
+        output=[cand for _,cand in scored[:15]]
         self.metrics['result_domains']+=len(output)
         return output

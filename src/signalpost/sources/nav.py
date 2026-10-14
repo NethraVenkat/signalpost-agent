@@ -318,10 +318,14 @@ def section(envelope,index,blobs,previous=None):
         if claim.family=='subunits' and claim.availability=='available' and isinstance(claim.value,dict):
             org=claim.value.get('organisation_number')
             if org: parents[org]='subunit '+org
+    seen_uuids = set()
     for org,via in parents.items():
         for ad in sorted(index.ads.get(org,[]), key=lambda a: a.value['uuid']):
-            if timestamp(ad.value['expires'])<=datetime.now(timezone.utc) or ad.value['uuid'] in index.closed: continue
-            value={**ad.value,'matched_via':via or 'organisation '+org}
+            if timestamp(ad.value['expires'])<=datetime.now(timezone.utc) or ad.value['uuid'] in index.closed or ad.value['uuid'] in seen_uuids: continue
+            seen_uuids.add(ad.value['uuid'])
+            actual_emp = ad.value.get('employer_orgnr')
+            match_via = ('subunit ' + actual_emp) if (actual_emp and actual_emp != envelope.organisation_number) else (via or 'organisation ' + org)
+            value={**ad.value,'matched_via':match_via}
             body=(blobs.directory/ad.sha).read_bytes()
             add(result,Source(ad.url,body,ad.sha,ad.retrieved_at),envelope.organisation_number,'hiring','hiring.job.'+ad.value['uuid'],
                 value,'/ad_content',effective=ad.value['published'],source_class='official_nav',method='signalpost.nav.v1')

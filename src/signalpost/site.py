@@ -193,7 +193,8 @@ def page(title, body, prefix='', kind='profile', company_data=None):
             f'<script src="{prefix}assets/site.js" defer></script>'
             f'</head><body data-page="{kind}"><a class="skip" href="#main">Skip to content</a>'
             f'<nav aria-label="Main"><a class="brand" href="{prefix}index.html">Signalpost</a>'
-            f'<a href="{prefix}index.html">Search companies</a><a href="{prefix}compare.html">Compare</a></nav>'
+            f'<a href="{prefix}index.html">Search companies</a><a href="{prefix}compare.html">Compare</a>'
+            f'<button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">Theme</button></nav>'
             f'<main id="main">{body}</main><footer>Evidence first. Unknown values remain unknown.</footer></body></html>\n')
 
 
@@ -355,11 +356,11 @@ def index_page(records, title):
         summary += f' · {sum(r["flags"][key] for r in records) / n * 100 if n else 0:.1f}% with {key}'
     summary += ' · Run date: ' + max((r['last_checked'] for r in records), default='Unknown')
     body = f'<header><p class="eyebrow">Company research, with receipts</p><h1>{esc(title)}</h1><p>{esc(summary)}</p></header>'
-    body += '<section class="filters" aria-label="Company filters"><label>Search name or organisation number<input id="search" type="search" autocomplete="off"></label>'
+    body += '<section class="filters" aria-label="Company filters"><label>Search name, orgnr, or website<input id="search" type="search" autocomplete="off" placeholder="Search by name, orgnr, website..."></label>'
     for key, label in [('municipality', 'Municipality'), ('division', 'NACE division')]:
         values = sorted({str(r['municipality']) for r in records if r['municipality']}) if key == 'municipality' else sorted({r['nace'][:2] for r in records if r['nace']})
         body += f'<label>{label}<select id="{key}"><option value="">All</option>' + ''.join(f'<option value="{esc(v)}">{esc(v)}</option>' for v in values) + '</select></label>'
-    body += '<label>Sort<select id="sort"><option value="claim_count">Most data found</option><option value="name">Name</option><option value="revenue">Revenue</option><option value="employees">Employees</option></select></label>'
+    body += '<label>Sort<select id="sort"><option value="claim_count">By claims</option><option value="name">A–Z</option><option value="score">By score</option><option value="revenue">Revenue</option><option value="employees">Employees</option></select></label>'
     for key, label in [('website', 'Verified website'), ('jobs', 'Job ads'), ('social', 'Social profiles'), ('activity', 'Public activity'), ('incomplete', 'Failed or blocked sections')]:
         body += f'<label class="check"><input id="filter-{key}" type="checkbox">{label}</label>'
     body += '</section><p id="result-count" role="status" aria-live="polite"></p><div id="results" class="results">'
