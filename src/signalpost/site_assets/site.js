@@ -782,4 +782,252 @@
     window.addEventListener('hashchange', fromHash);
     fromHash();
   }
+
+  // ==========================================
+  // UPDATE STATUS PANEL
+  // ==========================================
+  const statusToggle = document.getElementById('status-toggle');
+  const statusPanel = document.getElementById('status-panel');
+  const statusClose = document.getElementById('status-close');
+  const statusDot = document.getElementById('status-dot');
+  const statusBadge = document.getElementById('status-badge');
+  const statusProgress = document.getElementById('status-progress');
+  const statusProgressText = document.getElementById('status-progress-text');
+  const statusCounters = document.getElementById('status-counters');
+  const statusStages = document.getElementById('status-stages');
+  const statusTiming = document.getElementById('status-timing');
+  const statusEvents = document.getElementById('status-events');
+  const statusSnapshotNote = document.getElementById('status-snapshot-note');
+
+  let statusPollTimer = null;
+  let statusTerminal = false;
+  let statusLastRunId = null;
+
+  function formatElapsed(seconds) {
+    const m = Math.floor(seconds / 60);
+    const s = Math.floor(seconds % 60);
+    return m > 0 ? m + 'm ' + s + 's' : s + 's';
+  }
+
+  function renderStatusData(data) {
+    if (!data) return;
+
+    // Detect replaced run: different run_id means a new run replaced the old one
+    if (statusLastRunId && data.run_id && data.run_id !== statusLastRunId) {
+      statusTerminal = false; // Reset for new run
+    }
+    statusLastRunId = data.run_id || null;
+
+    const status = data.status || 'unknown';
+    const isTerminal = status === 'completed' || status === 'failed' || status === 'interrupted';
+
+    // Status dot
+    if (statusDot) {
+      statusDot.className = 'status-dot ' + (isTerminal ? status : 'running');
+    }
+
+    // Badge
+    if (statusBadge) {
+      statusBadge.textContent = status.replace(/_/g, ' ');
+      statusBadge.className = 'chip ' + (status === 'completed' ? 'available' : status === 'failed' ? 'failed' : 'not_applicable');
+    }
+
+    // Progress bar: real completion percentage from company counts
+    const co = data.companies || {};
+    const total = co.total || 0;
+    const terminal = (co.successful || 0) + (co.failed || 0);
+    const pct = total > 0 ? Math.round((terminal / total) * 100) : 0;
+    if (statusProgress) statusProgress.value = pct;
+    if (statusProgressText) {
+      statusProgressText.textContent = total > 0
+        ? terminal + ' of ' + total + ' companies completed (' + pct + '%)'
+        : 'Waiting for pipeline data...';
+    }
+
+    // Company counters
+    if (statusCounters) {
+      statusCounters.replaceChildren();
+      const counters = [
+        { label: 'Queued', value: co.queued || 0 },
+        { label: 'In flight', value: co.in_flight || 0 },
+        { label: 'Successful', value: co.successful || 0 },
+        { label: 'Failed', value: co.failed || 0 }
+      ];
+      for (const c of counters) {
+        const div = element('div', null, 'status-counter');
+        div.append(element('span', String(c.value), 'status-counter-value'));
+        div.append(element('span', c.label, 'status-counter-label'));
+        statusCounters.append(div);
+      }
+    }
+
+    // Pipeline stages
+    if (statusStages) {
+      statusStages.replaceChildren();
+      for (const stage of (data.stages || [])) {
+        const row = element('div', null, 'status-stage');
+        const icons = { completed: '✅', running: '⏳', queued: '⬜', failed: '❌' };
+        row.append(element('span', icons[stage.state] || '⬜', 'status-stage-icon'));
+        row.append(element('span', stage.name));
+        row.append(stateChip(stage.state));
+        statusStages.append(row);
+      }
+    }
+
+    // Timing and resources
+    if (statusTiming) {
+      statusTiming.replaceChildren();
+      const pairs = [
+        ['Elapsed time', formatElapsed(data.elapsed_seconds || 0)],
+        ['Last update', data.heartbeat ? data.heartbeat.replace('T', ' ').replace(/\.\d+Z?$/, ' UTC') : 'Unknown'],
+        ['Requests', (data.requests?.measured || 0) + (data.requests?.limit != null ? ' / ' + data.requests.limit : '')],
+        ['Estimated cost', '$' + (data.requests?.estimated_cost_usd || 0).toFixed(4)]
+      ];
+      if (data.input_rows) pairs.push(['Input rows', String(data.input_rows) + (data.duplicate_inputs ? ' (' + data.duplicate_inputs + ' duplicates)' : '')]);
+      for (const [label, value] of pairs) {
+        statusTiming.append(element('dt', label));
+        statusTiming.append(element('dd', value));
+      }
+    }
+
+    // Recent events (last 6)
+    if (statusEvents) {
+      statusEvents.replaceChildren();
+      const events = (data.activity_log || []).slice(-6).reverse();
+      if (events.length === 0) {
+        statusEvents.append(element('p', 'No events recorded yet.', 'muted'));
+      } else {
+        for (const ev of events) {
+          const row = element('div', null, 'status-event');
+          row.append(element('span', formatElapsed(ev.timestamp || 0), 'status-event-time'));
+          row.append(element('span', ev.message || '', 'status-event-msg'));
+          statusEvents.append(row);
+        }
+      }
+    }
+
+    if (isTerminal) {
+      statusTerminal = true;
+    }
+  }
+
+  function showStaticSnapshot() {
+    // In static/offline mode, show recorded run info from the index data
+    if (!records.length) return;
+    const lastChecked = records.reduce((latest, r) => r.last_checked > latest ? r.last_checked : latest, '');
+    const totalCompanies = records.length;
+    const websiteCount = records.filter(r => r.flags?.website).length;
+    const hiringCount = records.filter(r => r.flags?.jobs).length;
+
+    renderStatusData({
+      schema_version: 1,
+      status: 'completed',
+      start_time: lastChecked,
+      heartbeat: lastChecked,
+      elapsed_seconds: 0,
+      companies: {
+        total: totalCompanies,
+        queued: 0,
+        in_flight: 0,
+        successful: totalCompanies,
+        failed: 0
+      },
+      stages: [
+        { name: 'Registry & Subunits', state: 'completed' },
+        { name: 'Website Verification', state: websiteCount > 0 ? 'completed' : 'completed' },
+        { name: 'Output & Site Publishing', state: 'completed' }
+      ],
+      requests: { measured: 0, limit: null, estimated_cost_usd: 0 },
+      activity_log: [],
+      input_rows: totalCompanies,
+      duplicate_inputs: 0
+    });
+
+    if (statusSnapshotNote) {
+      statusSnapshotNote.textContent = 'Snapshot from completed run at ' + (lastChecked ? lastChecked.replace('T', ' ').replace(/\.\d+Z?$/, ' UTC') : 'unknown time') + '. No live updates available.';
+      statusSnapshotNote.hidden = false;
+    }
+    statusTerminal = true;
+  }
+
+  async function pollProgress() {
+    if (statusTerminal) return;
+    if (document.hidden) return; // Pause while hidden
+
+    try {
+      const resp = await fetch('state/progress.json', { cache: 'no-store' });
+      if (!resp.ok) {
+        showStaticSnapshot();
+        return;
+      }
+      const data = await resp.json();
+      if (!data || typeof data !== 'object' || !data.schema_version) {
+        showStaticSnapshot();
+        return;
+      }
+      renderStatusData(data);
+    } catch {
+      showStaticSnapshot();
+    }
+  }
+
+  function startPolling() {
+    if (statusTerminal || statusPollTimer) return;
+    // Only poll for same-origin HTTP(S) served pages
+    if (location.protocol === 'file:') {
+      showStaticSnapshot();
+      return;
+    }
+    pollProgress();
+    statusPollTimer = setInterval(() => {
+      if (statusTerminal) {
+        clearInterval(statusPollTimer);
+        statusPollTimer = null;
+        return;
+      }
+      pollProgress();
+    }, 3000); // 3 second poll interval
+  }
+
+  function stopPolling() {
+    if (statusPollTimer) {
+      clearInterval(statusPollTimer);
+      statusPollTimer = null;
+    }
+  }
+
+  // Pause polling while tab is hidden
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      stopPolling();
+    } else if (statusPanel && !statusPanel.hidden && !statusTerminal) {
+      startPolling();
+    }
+  });
+
+  if (statusToggle && statusPanel) {
+    statusToggle.addEventListener('click', () => {
+      const opening = statusPanel.hidden;
+      statusPanel.hidden = !opening;
+      statusToggle.setAttribute('aria-expanded', String(opening));
+      if (opening) {
+        startPolling();
+      } else {
+        stopPolling();
+      }
+    });
+  }
+
+  if (statusClose && statusPanel && statusToggle) {
+    statusClose.addEventListener('click', () => {
+      statusPanel.hidden = true;
+      statusToggle.setAttribute('aria-expanded', 'false');
+      stopPolling();
+    });
+  }
+
+  // Initialize dot with static data
+  if (statusDot && records.length) {
+    statusDot.className = 'status-dot completed';
+  }
 })();

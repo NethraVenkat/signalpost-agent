@@ -1,4 +1,5 @@
 from .workers import offload
+from .progress import ProgressWriter
 import asyncio
 import json
 import time
@@ -172,6 +173,25 @@ async def _run(config, client=None,synthesis_provider=None):
     expected_membership = len(inputs.rows) if config.emit_duplicates else len(inputs.unique)
     if config.expected_count is not None and config.expected_count != expected_membership:
         warnings.append(f"expected-count={config.expected_count} differs from emitted input membership={expected_membership}")
+    valid_orgs = {org for org in inputs.unique if valid(org)}
+    # Initialize progress writer for optional status panel.
+    stage_names = ["Registry & Subunits"]
+    if config.websites:
+        stage_names.append("Website Verification")
+    if config.hiring:
+        stage_names.append("NAV Hiring Matching")
+    stage_names.extend(["Cited Synthesis", "Output & Site Publishing"])
+    progress = ProgressWriter(
+        state_dir=config.state_dir,
+        run_id=config.run_id,
+        total_companies=len(valid_orgs) if valid_orgs else len(inputs.unique),
+        input_rows=len(inputs.rows),
+        duplicate_inputs=len(inputs.rows) - len(inputs.unique),
+        request_limit=budget.cap if hasattr(budget, 'cap') else None,
+        stages=stage_names,
+    )
+    progress.start(budget)
+    progress.log_event(f"Pipeline started with {len(inputs.rows)} input rows, {len(inputs.unique)} unique companies")
     prior, previous_warnings = previous(config.previous)
     warnings.extend(previous_warnings)
     storage_error = None
@@ -248,9 +268,11 @@ async def _run(config, client=None,synthesis_provider=None):
         DNS_ORG.set(org)
         envelope = envelopes[org]
         begin = time.monotonic()
+        progress.company_started(org)
         if not valid(org):
             for family in families:
                 update(envelope, family, missing(family, "invalid_orgnr"))
+            progress.company_completed(org, success=False)
             return
         try:
             async with semaphore:
@@ -318,6 +340,8 @@ async def _run(config, client=None,synthesis_provider=None):
             await push_subunit_scope(org, envelope)
             mark_registry(org)
             envelope.operations.runtime_ms = round((time.monotonic() - begin) * 1000)
+            is_success = not all(s == 'failed' for s in envelope.run.sections.values())
+            progress.company_completed(org, success=is_success)
     async def execute(active_client, nav_client=None):
         if storage_error is not None:return
         http = Http(active_client, config, budget, blobs)
@@ -336,6 +360,7 @@ async def _run(config, client=None,synthesis_provider=None):
             finally:
                 if not started_task.done():started_task.cancel()
                 await asyncio.gather(started_task,return_exceptions=True)
+        progress.stage_update("Registry & Subunits", "running")
         tasks = [asyncio.create_task(company(org, http, website_http,nav_task)) for org in inputs.unique if valid(org)]
         try:
             return await finish_before_deadline(tasks, budget)
@@ -361,13 +386,25 @@ async def _run(config, client=None,synthesis_provider=None):
             await execute(shared,dedicated)
     else:
         await execute(client)
+    progress.stage_update("Registry & Subunits", "completed")
+    progress.log_event("Registry and subunit processing complete")
+    if config.websites:
+        progress.stage_update("Website Verification", "completed")
+        progress.log_event("Website verification complete")
+    if config.hiring:
+        progress.stage_update("NAV Hiring Matching", "completed")
+        progress.log_event("NAV hiring matching complete")
     for org, envelope in envelopes.items():
         # Invalid numbers must never inherit previously published information.
         await offload(finalize,envelope,prior.get(org) if valid(org) and storage_error is None else None,blobs,budget,budget.start)
+    progress.stage_update("Cited Synthesis", "running")
     synthesis_service=SynthesisService(config,budget,synthesis_provider)
     for envelope in envelopes.values():
         envelope.run.synthesis=await synthesis_service.summarize(envelope)
         envelope.profile.synthesis=envelope.run.synthesis
+    progress.stage_update("Cited Synthesis", "completed")
+    progress.log_event("Cited synthesis complete")
+    progress.stage_update("Output & Site Publishing", "running")
     order = inputs.rows if config.emit_duplicates else inputs.unique
     result = [envelopes[org] for org in order]
     size, output_limited, minimum_exceeded = await offload(write,config.output,result,config.envelope_shape,blobs,config.max_output_mb)
@@ -434,4 +471,8 @@ async def _run(config, client=None,synthesis_provider=None):
         config.report.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     except OSError as exc:
         report["warnings"].append(f"report write failed: {type(exc).__name__}")
+    progress.stage_update("Output & Site Publishing", "completed")
+    progress.log_event("Pipeline complete")
+    progress.set_cost(total)
+    await progress.stop(budget)
     return report
