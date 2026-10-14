@@ -62,7 +62,7 @@ class Candidates:
         name=header_name(item)
         if not name:affected=set(self.scopes)
         else:
-            affected=await offload(lambda:{org for org,known in self.names.items() if any(name_matches(name,n) for n in known)})
+            affected=await nav_offload(lambda:{org for org,known in self.names.items() if any(name_matches(name,n) for n in known)})
         self.candidate(uuid,affected,'forward_feed')
     async def page(self,items):
         for item in items:
@@ -88,7 +88,15 @@ class Candidates:
 
 async def prefetch(client,config,budget,blobs,index,data,age,path,names_ready,previous):
     began=time.monotonic();http=NavHttp(client,config,budget,blobs,index);state=Candidates(data,index,config,previous)
-    tasks=[];feed_done=False;feed_began=None
+    tasks=[];feed_done=False;header_done=False;feed_began=None
+    page_queue=asyncio.Queue()
+    async def headers():
+        while True:
+            page=await page_queue.get()
+            try:
+                if page is None:return
+                await state.page(page)
+            finally:page_queue.task_done()
     token=None;from_environment=False;token_lock=asyncio.Lock()
     async def authenticated_get(url,**kwargs):
         nonlocal token,from_environment
@@ -180,7 +188,8 @@ async def prefetch(client,config,budget,blobs,index,data,age,path,names_ready,pr
             if not token:index.blocked=True;index.reason='token_unavailable';return index
             initial=getattr(names_ready,'initial_names',{}) if names_ready else {}
             state.set_scopes({org:{org} for org in initial},initial)
-            tasks=[asyncio.create_task(prepare())]+[asyncio.create_task(worker()) for _ in range(config.nav_concurrency)]
+            header_task=asyncio.create_task(headers())
+            tasks=[header_task,asyncio.create_task(prepare())]+[asyncio.create_task(worker()) for _ in range(config.nav_concurrency)]
             url=data['cursor'];seen=set();feed_began=time.monotonic()
             while url:
                 url=allowed(url)
@@ -190,11 +199,15 @@ async def prefetch(client,config,budget,blobs,index,data,age,path,names_ready,pr
                 page=await nav_offload(json.loads,body)
                 if not isinstance(page,dict) or not isinstance(page.get('items'),list):raise SourceFailure('nav_malformed_page')
                 index.metrics['pages']+=1;index.metrics['items']+=len(page['items'])
-                await state.page(page['items'])
+                page_queue.put_nowait(page['items'])
                 url=page.get('next_url')
                 if not url and page.get('next_id'):raise SourceFailure('nav_missing_next_url')
             feed_done=True;index.metrics['feed_runtime_ms']=round((time.monotonic()-feed_began)*1000)
-            index.metrics['feed_complete']=True;state.done=True;state.wake()
+            index.metrics['feed_complete']=True
+            page_queue.put_nowait(None)
+            await header_task
+            header_done=True
+            state.done=True;state.wake()
             await asyncio.gather(*tasks)
             if not index.blocked:index.reason='complete'
     except asyncio.CancelledError:index.reason='deadline';raise
@@ -220,7 +233,7 @@ async def prefetch(client,config,budget,blobs,index,data,age,path,names_ready,pr
         # The declared baseline is orgnr-keyed. Name usability is diagnostic for
         # forward nomination, not an extra cache-mode qualification condition.
         index.incomplete_orgs=incomplete
-        index.coverage_ready=feed_done and state.ready
+        index.coverage_ready=feed_done and header_done and state.ready
         index.complete=index.coverage_ready and not incomplete and not index.blocked
         if not index.blocked and not feed_done:
             index.metrics['failure_cause']=index.reason;index.reason='forward_feed_incomplete'
@@ -231,6 +244,7 @@ async def prefetch(client,config,budget,blobs,index,data,age,path,names_ready,pr
         index.metrics.update({'runtime_ms':round(total*1000),'runtime_seconds':total,'feed_runtime_ms':feed_ms,
             'feed_seconds':feed_ms/1000,'average_seconds_per_page':feed_ms/1000/index.metrics['pages'] if index.metrics['pages'] else None,
             'feed_complete':feed_done,'complete':index.complete,'blocked':index.blocked,'reason':index.reason,
+            'header_processing_complete':header_done,
             'candidate_headers':len(state.discovered),'distinct_candidate_ads':len(state.discovered),
             'indexed_ads':sum(map(len,index.ads.values())),'detail_concurrency':config.nav_concurrency,
             'incomplete_companies':sorted(incomplete),'name_unusable_companies':0,

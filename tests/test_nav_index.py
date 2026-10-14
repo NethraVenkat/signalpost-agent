@@ -13,6 +13,32 @@ from tests.test_nav import ORG,OTHER,SUB,TOKEN,UUID
 from tests.test_nav_streaming import header,ad,SECOND
 
 
+def test_cached_pager_never_waits_for_header_scoring(tmp_path,monkeypatch):
+    from signalpost.sources.nav_cached import Candidates
+    path,_=artifact(tmp_path,[]);cfg=config(tmp_path,[ORG],hiring=True,nav_index_path=path)
+    sent=asyncio.Event();original=Candidates.page
+    async def delayed(self,items):
+        if items:await asyncio.wait_for(sent.wait(),1)
+        return await original(self,items)
+    monkeypatch.setattr(Candidates,'page',delayed)
+    async def names():return {ORG:{'Rareone AS'}}
+    names.initial_names={ORG:{'Rareone AS'}}
+    count=0
+    def response(request):
+        nonlocal count
+        if request.url.path=='/api/publicToken':return httpx.Response(200,text=TOKEN)
+        if '/feedentry/' in request.url.path:return httpx.Response(200,json=ad(SECOND,ORG))
+        count+=1
+        if count==1:return httpx.Response(200,json={'items':[header(SECOND,'Rareone AS')],'next_url':BASE+'/api/v1/feed/'+SECOND})
+        sent.set();return httpx.Response(200,json={'items':[],'next_url':None})
+    async def gate():
+        index=Index()
+        async with httpx.AsyncClient(transport=httpx.MockTransport(response)) as client:
+            await prefetch(client,cfg,Budget(cfg),BlobStore(cfg.state_dir),index,names)
+        return index
+    index=asyncio.run(gate());assert index.complete and index.metrics['header_processing_complete']
+
+
 def artifact(tmp_path,ads=None,**overrides):
     ads=ads if ads is not None else [{'uuid':UUID,'employer_orgnr':ORG,'status':'ACTIVE',
         'published':'2026-10-01T00:00:00Z','expires':'2099-01-01T00:00:00Z',

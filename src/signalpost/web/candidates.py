@@ -12,6 +12,7 @@ class Candidate:
     url: str
     domain: str
     origin: str
+    subunit_orgnr: str | None = None
 
 
 def legal_name(value):
@@ -32,16 +33,20 @@ def context_from_bulk(row):
 def generate(context):
     output = []
     seen = set()
-    def add(value, origin):
+    def add(value, origin, subunit_orgnr=None):
         url = normalize_url(value)
         root = domain(url) if url else ""
         if root and root not in seen and root not in SOCIAL | DIRECTORIES | FREE_MAIL:
-            output.append(Candidate(url, root, origin))
+            output.append(Candidate(url, root, origin,subunit_orgnr))
             seen.add(root)
     add(context.get("website"), "registry_website")
     email = str(context.get("email") or "")
     if "@" in email:
         add(email.rsplit("@", 1)[1], "registry_email")
+    for unit in context.get('subunits',[]):
+        add(unit.get('website'),'subunit_registry_website',unit['orgnr'])
+        email=str(unit.get('email') or '')
+        if '@' in email:add(email.rsplit('@',1)[1],'subunit_registry_email',unit['orgnr'])
     name = legal_name(context.get("name"))
     tokens = [t for t in name.split() if t != "og"]
     if tokens and not all(t in GENERIC for t in tokens):

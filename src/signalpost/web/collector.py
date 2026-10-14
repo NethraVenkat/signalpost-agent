@@ -49,6 +49,14 @@ def followup_links(page):
 
 async def fetch(org, envelope, bulk, http):
     context, registry_source, registry_locator = await offload(registry_context,envelope,bulk,http.blobs)
+    units={c.value['organisation_number']:{} for c in envelope.claims
+           if c.field.startswith('subunits.unit.') and c.availability=='available' and isinstance(c.value,dict)}
+    for c in envelope.claims:
+        if c.availability!='available' or not c.field.startswith('subunits.detail.'):continue
+        _,_,unit,field=c.field.split('.',3)
+        if unit in units and field in {'registered_website','registered_email'}:
+            units[unit]['website' if field=='registered_website' else 'email']=c.value
+    context['subunits']=[{'orgnr':unit,**data} for unit,data in units.items()]
     section = Section(state="not_available")
     if registry_source and (social := profile_url(normalize_url(context.get("website")) or "")):
         add(section, registry_source, org, "website", "registry_social." + digest(social)[:20],
@@ -79,7 +87,7 @@ async def fetch(org, envelope, bulk, http):
                 continue
             page = await offload(Page,response.body,response.url)
             checked.add(candidate.domain)
-            proof = await offload(score,page,org,context,candidate.origin,leaders)
+            proof = await offload(candidate_proof,page,org,context,candidate,leaders)
             pages.append((response, page))
             best = (proof, response, page)
             if proof.level == "BLOCKED":
@@ -103,7 +111,7 @@ async def fetch(org, envelope, bulk, http):
                     if extra.status != 200:
                         continue
                     extra_page = await offload(Page,extra.body,extra.url)
-                    extra_proof = await offload(score,extra_page,org,context,candidate.origin,leaders)
+                    extra_proof = await offload(candidate_proof,extra_page,org,context,candidate,leaders)
                     if extra_proof.level == 'BLOCKED':
                         attempts.append({'domain':candidate.domain,'origin':candidate.origin,'reason':'block_page','page':target})
                         continue
@@ -160,18 +168,33 @@ async def fetch(org, envelope, bulk, http):
     return await offload(publish_result,org,envelope,http,section,choices,attempts,context)
 
 
+def candidate_proof(page,org,context,candidate,leaders):
+    proof=score(page,org,context,candidate.origin,leaders)
+    if candidate.subunit_orgnr and proof.level not in {'VERIFIED','BLOCKED'}:
+        unit=score(page,candidate.subunit_orgnr,context,candidate.origin,leaders)
+        if unit.level=='VERIFIED':return unit
+    return proof
+
+
 def publish_result(org,envelope,http,section,choices,attempts,context):
     candidate, proof, response, page, pages = choices[0]
     p = urlsplit(response.url)
     root_url = urlunsplit((p.scheme, p.netloc, "", "", ""))
-    span = page.proof_span(org) if proof.level == "VERIFIED" else page.name_span(proof.token)
+    matched=proof.token if proof.level=='VERIFIED' else org
+    span = page.proof_span(matched) if proof.level == "VERIFIED" else page.name_span(proof.token)
     if not span:
         return missing("website", "no_localized_proof", state="ambiguous")
     value = {"final_url": root_url, "identity_level": proof.level, "proof_type": proof.proof_type,
              "proof_page_url": response.url, "signals": proof.signals, "points": proof.points,
              "candidate_origin": candidate.origin, "relationship_note": "group_site" if proof.other_orgnrs else None,
              "other_orgnrs": proof.other_orgnrs}
-    publish(section, response, org, "official_website", value, "identity-proof:" + org, span)
+    if candidate.subunit_orgnr and matched==candidate.subunit_orgnr:
+        value['matched_via_subunit']=matched
+    publish(section, response, org, "official_website", value, "identity-proof:" + matched, span)
+    if value.get('matched_via_subunit'):
+        refs={ref for c in envelope.claims if c.field=='subunits.unit.'+matched for ref in c.evidence_ids}
+        section.evidence.extend(e for e in envelope.evidence if e.id in refs)
+        section.claims[-1].evidence_ids.extend(sorted(refs))
     # HIGH combines page signals with authoritative registry/roles facts.
     if proof.level in {"HIGH",'REGISTRY_DECLARED'}:
         registry_refs = [e for e in envelope.evidence if e.source_class == "official_registry"]
