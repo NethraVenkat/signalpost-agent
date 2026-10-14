@@ -1,4 +1,6 @@
 """Concurrent feed producer and bounded, ranked NAV detail consumers."""
+from ..workers import offload,nav_offload
+
 import asyncio
 import heapq
 import json
@@ -33,6 +35,7 @@ class Stream:
         self.lock=threading.RLock();self.loop=asyncio.get_running_loop()
         self.http,self.index,self.config,self.previous,self.began=http,index,config,previous or {},began
         self.unfiltered=unfiltered;self.names=None;self.token_orgs=defaultdict(set)
+        self.scores={}
         self.latest={};self.active={};self.frequency=Counter();self.discovered=set()
         self.pending={};self.heap=[];self.checked={};self.failed={};self.capped=set();self.inflight=0;self.serial=0
         self.changed=asyncio.Event();self.waiters=[];self.done=False;self.page_complete=False;self.names_complete=False;self.errors=[]
@@ -42,6 +45,8 @@ class Stream:
 
     @locked
     def classify(self,record):
+        uuid=(record[1].get('_feed_entry') or {}).get('uuid') or record[1].get('id')
+        if uuid in self.scores:return self.scores[uuid]
         name=header_name(record[1])
         if self.unfiltered or not name:return 0,set(self.names or {})
         if not self.config.nav_rank_candidates:
@@ -52,6 +57,16 @@ class Stream:
         score=max((sum(1/max(1,self.frequency[t]) for t in sorted(tokens & name_tokens(c)))
                    for org in affected for c in self.names[org]),default=0)
         return score,affected
+
+    @locked
+    def prepare_scores(self,uuids):
+        self.scores={}
+        if self.names is None:return
+        from .nav_scoring import POOL,score_many
+        headers=[(uuid,header_name(self.latest[uuid][1])) for uuid in sorted(uuids) if uuid in self.active]
+        if headers:
+            self.scores=POOL.submit(score_many,headers,self.names,dict(self.token_orgs),self.frequency,
+                len(self.active),self.unfiltered,self.config.nav_rank_candidates).result()
 
     @locked
     def drop_ad(self,uuid):
@@ -83,6 +98,7 @@ class Stream:
         for org,known in names.items():
             for name in known:
                 for token in name_tokens(name)-COMMON_BUSINESS:self.token_orgs[token].add(org)
+        self.prepare_scores(self.active)
         for uuid in sorted(self.active):self.offer(uuid)
         self.refresh_pending()
         self.wake()
@@ -126,6 +142,7 @@ class Stream:
                 if uuid in self.discovered:self.drop_ad(uuid)
         # A threshold increase or token-frequency fall may make an earlier header eligible.
         if recheck or rarity_limit(len(self.active))!=old_limit:changed.update(self.active)
+        self.prepare_scores(set(changed)|set(self.pending))
         for uuid in sorted(changed):self.offer(uuid)
         if self.names is not None:self.refresh_pending()
 
@@ -138,16 +155,19 @@ class Stream:
                 self.index.metrics['details_started_before_feed_complete']=not self.page_complete
             url=allowed(item['url'])
             _,body,sha,retrieved=await self.http.get(url,self.token,companies=affected)
-            self.index.metrics['details']+=1;entry=await asyncio.to_thread(json.loads,body)
+            self.index.metrics['details']+=1;entry=await nav_offload(json.loads,body)
             if str(entry.get('uuid'))!=uuid:raise SourceFailure('nav_wrong_ad')
             if entry.get('status') not in {'ACTIVE','INACTIVE','DELETED'}:raise SourceFailure('nav_unknown_status')
-            if entry['status']!='ACTIVE':await asyncio.to_thread(self.record_closed,uuid);return True
+            if entry['status']!='ACTIVE':
+                await offload(self.record_closed,uuid,(sha,url,retrieved,'/status',entry['status']));return True
             ad=entry.get('ad_content')
             if not isinstance(ad,dict) or str(ad.get('uuid'))!=uuid:raise SourceFailure('nav_malformed_ad')
             expires=timestamp(ad.get('expires'));published=timestamp(ad.get('published'))
             if expires is None or published is None:raise SourceFailure('nav_invalid_dates')
             now=datetime.now(timezone.utc)
-            if expires<=now or published>now:await asyncio.to_thread(self.record_closed,uuid);return True
+            if expires<=now:
+                await offload(self.record_closed,uuid,(sha,url,retrieved,'/ad_content/expires',ad['expires']));return True
+            if published>now:raise SourceFailure('nav_invalid_dates')
             org=str((ad.get('employer') or {}).get('orgnr') or '').strip()
             if not valid(org):return True
             value={'uuid':uuid,'employer_orgnr':org,'title':ad.get('title') or None,
@@ -158,7 +178,7 @@ class Stream:
                                    'occupation_categories':'available' if value['occupation_categories'] else 'not_available'}
             if not value['title']:raise SourceFailure('nav_missing_title')
             # A newer feed version can arrive during this request. Never label an older proof fresh.
-            await asyncio.to_thread(self.record_ad,uuid,record,org,Ad(value,sha,url,retrieved,page_sha,page_url,locator,page_retrieved))
+            await offload(self.record_ad,uuid,record,org,Ad(value,sha,url,retrieved,page_sha,page_url,locator,page_retrieved))
             return True
         except asyncio.CancelledError:raise
         except Exception as exc:
@@ -167,7 +187,8 @@ class Stream:
             return False
 
     @locked
-    def record_closed(self,uuid):self.index.closed.add(uuid)
+    def record_closed(self,uuid,proof):
+        self.index.closed.add(uuid);self.index.live_closed.add(uuid);self.index.closure_proofs[uuid]=proof
 
     @locked
     def record_ad(self,uuid,record,org,ad):
@@ -195,15 +216,16 @@ class Stream:
         event=asyncio.Event();self.waiters.append(event)
         while True:
             event.clear()
-            job,done=await asyncio.to_thread(self.take)
+            job,done=await offload(self.take)
             if job:
                 uuid,record,affected=job;good=await self.detail(uuid,record,affected)
-                await asyncio.to_thread(self.checked_detail,uuid,record,good)
+                await offload(self.checked_detail,uuid,record,good)
             elif done:return
             else:await event.wait()
 
     @locked
     def settle(self):
+        self.prepare_scores(self.active)
         index=self.index;incomplete=set();active_candidates=[]
         if self.names is not None:
             if self.active and not self.unfiltered:
@@ -252,9 +274,9 @@ async def prefetch(client,config,budget,blobs,index,names_ready=None,previous=No
             state.token=token or await http.public_token()
             if not state.token:index.blocked=True;index.reason='token_unavailable';return index
             if names_ready is not None and hasattr(names_ready,'initial_names'):
-                await asyncio.to_thread(state.ready,names_ready.initial_names)
+                await offload(state.ready,names_ready.initial_names)
             async def prepare():
-                await asyncio.to_thread(state.ready,await names_ready() if names_ready else {})
+                await offload(state.ready,await names_ready() if names_ready else {})
                 state.names_complete=True
                 state.wake()
             tasks=[asyncio.create_task(prepare())]+[asyncio.create_task(state.worker()) for _ in range(config.nav_concurrency)]
@@ -272,7 +294,7 @@ async def prefetch(client,config,budget,blobs,index,names_ready=None,previous=No
                     state.token=await http.public_token();from_environment=False
                     if not state.token:raise
                     _,body,sha,retrieved=await http.get(url,state.token,headers)
-                data=await asyncio.to_thread(json.loads,body)
+                data=await nav_offload(json.loads,body)
                 if not isinstance(data,dict) or not isinstance(data.get('items'),list):raise SourceFailure('nav_malformed_page')
                 index.metrics['pages']+=1;index.metrics['items']+=len(data['items'])
                 # Header scoring has its own serial worker; the pager never
@@ -290,7 +312,7 @@ async def prefetch(client,config,budget,blobs,index,names_ready=None,previous=No
             index.metrics['header_processing_complete']=True
             state.done=True;state.wake()
             await asyncio.gather(*tasks)
-            await asyncio.to_thread(state.settle)
+            await offload(state.settle)
             index.reason='complete' if index.complete else ','.join(sorted(set(state.errors))) or 'nav_name_unusable'
     except asyncio.CancelledError:index.reason='deadline';raise
     except TimeoutError:index.reason='nav_time_cap'
@@ -300,11 +322,11 @@ async def prefetch(client,config,budget,blobs,index,names_ready=None,previous=No
     finally:
         for job in page_jobs:
             if not job.done():job.cancel()
-        await asyncio.to_thread(page_pool.shutdown,wait=True,cancel_futures=True)
+        await offload(page_pool.shutdown,wait=True,cancel_futures=True)
         for task in tasks:
             if not task.done():task.cancel()
         if tasks:await asyncio.gather(*tasks,return_exceptions=True)
-        await asyncio.to_thread(state.settle)
+        await offload(state.settle)
         if paging_began is not None and 'feed_runtime_ms' not in index.metrics:index.metrics['feed_runtime_ms']=round((time.monotonic()-paging_began)*1000)
         index.metrics.update({'feed_complete':state.page_complete and config.nav_lookback_days>=185,
             'average_seconds_per_page':index.metrics.get('feed_runtime_ms',0)/1000/index.metrics['pages'] if index.metrics['pages'] else None,

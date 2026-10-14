@@ -1,3 +1,4 @@
+from ..workers import offload
 from ..models.synthesis import Synthesis,Generator,Unknown
 from ..models.evidence import digest
 from .template import generate
@@ -14,7 +15,7 @@ class Service:
         self.metrics={'calls':0,'cache_hits':0,'input_tokens':0,'output_tokens':0,'estimated_usd':0,'fallbacks':0}
 
     async def summarize(self,envelope):
-        try:base=await asyncio.to_thread(generate,envelope)
+        try:base=await offload(generate,envelope)
         except Exception:
             result=Synthesis(generator=Generator(input_sha256=digest([envelope.organisation_number,'template_error'])))
             result.checks.fallback_used=True

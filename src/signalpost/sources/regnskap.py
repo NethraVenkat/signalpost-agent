@@ -1,3 +1,4 @@
+from ..workers import offload
 import asyncio
 from ..budget import SourceFailure
 from ..models.envelope import Error
@@ -18,7 +19,7 @@ PATHS = {
 
 async def fetch(org, http):
     response = await http.get(URL + org, org)
-    return await asyncio.to_thread(extract,org,response,http.blobs)
+    return await offload(extract,org,response,http.blobs)
 
 
 def extract(org,response,blobs):

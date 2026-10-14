@@ -12,6 +12,13 @@ from tests.test_nav import ORG,OTHER,TOKEN,UUID
 SECOND='00000000-0000-4000-8000-000000000002'
 
 
+def warm_scorer():
+    # These short synthetic deadlines test streaming/coverage ordering, not
+    # Windows process startup. Live cold gates include startup in their timing.
+    from signalpost.sources.nav_scoring import POOL,score_many
+    POOL.submit(score_many,[],{},{},{},0,False,True).result(timeout=15)
+
+
 def header(uuid,name):
     return {'id':uuid,'url':'/api/v1/feedentry/'+uuid,'date_modified':'2026-10-01T00:00:00Z',
             '_feed_entry':{'uuid':uuid,'status':'ACTIVE','businessName':name}}
@@ -38,6 +45,7 @@ def test_nav_requests_do_not_enter_website_politeness_gate(tmp_path,monkeypatch)
 
 
 def test_details_start_before_next_feed_page_is_released(tmp_path):
+    warm_scorer()
     cfg=config(tmp_path,[ORG],hiring=True);index=Index();started=asyncio.Event()
     async def names():
         # Registry subunits may finish later; legal-name discovery must not wait.
@@ -63,6 +71,7 @@ def test_details_start_before_next_feed_page_is_released(tmp_path):
 
 
 def test_completed_scope_survives_detail_timeout_after_complete_feed(tmp_path):
+    warm_scorer()
     cfg=config(tmp_path,[ORG,OTHER],hiring=True,nav_time_cap_seconds=.15);index=Index()
     async def names():return {ORG:{'Rareone AS'},OTHER:{'Raretwo AS'}}
     async def response(request):
@@ -80,3 +89,23 @@ def test_completed_scope_survives_detail_timeout_after_complete_feed(tmp_path):
     assert index.metrics['feed_complete'] and index.reason=='nav_time_cap'
     assert index.company_complete(ORG) and not index.company_complete(OTHER)
     assert index.metrics['companies_with_unchecked_candidates']==1
+
+
+def test_retry_wait_is_not_counted_as_inter_request_idle(tmp_path):
+    cfg=config(tmp_path,[ORG]);index=Index();calls=[];budget=Budget(cfg)
+    async def respond(request):
+        calls.append(request.url.path)
+        await request.extensions['trace']('http11.send_request_headers.complete',{})
+        if len(calls)==2:
+            await asyncio.sleep(.5)
+            raise httpx.ReadTimeout('simulated timeout')
+        return httpx.Response(200,json={})
+    async def gate():
+        async with httpx.AsyncClient(transport=httpx.MockTransport(respond)) as client:
+            http=NavHttp(client,cfg,budget,BlobStore(cfg.state_dir),index)
+            await http.get(BASE+'/api/v1/feed',TOKEN)
+            await http.get(BASE+'/api/v1/feed/'+UUID,TOKEN)
+    asyncio.run(gate())
+    assert budget.events[1]['error']=='ReadTimeout' and budget.events[1]['runtime_ms']>=400
+    assert budget.events[2]['gap_preceded_by']=='request_error_complete'
+    assert budget.events[2]['inter_request_gap_ms']<300

@@ -150,10 +150,11 @@ def test_token_unavailable_and_zero_page_cap(tmp_path,monkeypatch):
     assert row['run']['sections']['hiring']=='failed'
 
 
-def test_closed_job_only_from_complete_index(tmp_path):
+def test_feed_status_alone_never_creates_job_closure(tmp_path):
     _,_,first,_=execute(tmp_path/'first')
     report,row,_,_=execute(tmp_path/'closed',status='INACTIVE',previous=first.output)
-    assert len([c for c in row['changes'] if c['type']=='closed_job'])==1
+    assert not any(c['type']=='closed_job' for c in row['changes'])
+    assert report['observation_changes']>=1
     report,row,_,_=execute(tmp_path/'partial',partial=True,status='INACTIVE',nav_max_pages=1,previous=first.output)
     assert not any(c['type']=='closed_job' for c in row['changes'])
     assert report['observation_changes']>=1

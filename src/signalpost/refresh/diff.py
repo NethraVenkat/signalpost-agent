@@ -56,6 +56,8 @@ def apply(envelope, previous, blobs):
                     expires=timestamp(claim.value.get('expires'))
                     if expires is None or expires<=datetime.now(timezone.utc) or claim.value.get('uuid') in envelope.run.refresh.get('hiring',{}).get('known_closed_jobs',[]):
                         continue
+                    if envelope.run.refresh.get('hiring',{}).get('closure_requires_live_detail'):
+                        continue  # Current-run live proof is mandatory for every ad.
                 carried = claim.model_copy(update={"carried_forward": True})
                 available.setdefault(carried.field,carried)
         retained = list(available.values())
@@ -78,6 +80,12 @@ def apply(envelope, previous, blobs):
         family = (after or before).family
         if family not in envelope.run.sections or family in failed:
             continue
+        if family=='hiring' and before and before.availability=='available' and meaning(after) is None:
+            hiring=envelope.run.refresh.get('hiring',{})
+            if hiring.get('closure_requires_live_detail') and before.value.get('uuid') not in hiring.get('known_closed_jobs',[]):
+                envelope.run.refresh['observation_changes'].append({'section':'hiring','field':field,
+                    'previous_state':'available','current_state':'closure_not_verified','reason':'live_detail_did_not_prove_inactive_or_expired'})
+                continue
         if before is None and field in {'identity.founding_date', 'identity.vat_registration_date'}:
             envelope.run.refresh['observation_changes'].append({'section': family, 'field': field,
                 'previous_state': 'unchecked_field', 'current_state': after.availability,
@@ -99,6 +107,8 @@ def apply(envelope, previous, blobs):
             continue
         old_ids = before.evidence_ids if before else []
         new_ids = after.evidence_ids if after else []
+        if family=='hiring' and before and meaning(after) is None:
+            new_ids=envelope.run.refresh.get('hiring',{}).get('closure_evidence',{}).get(before.value.get('uuid'),new_ids)
         newest = new_evidence.get(new_ids[0]) if new_ids else None
         oldest = old_evidence.get(old_ids[0]) if old_ids else None
         envelope.changes.append(Change(

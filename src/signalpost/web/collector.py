@@ -1,3 +1,4 @@
+from ..workers import offload
 import json
 import asyncio
 import re
@@ -47,7 +48,7 @@ def followup_links(page):
 
 
 async def fetch(org, envelope, bulk, http):
-    context, registry_source, registry_locator = await asyncio.to_thread(registry_context,envelope,bulk,http.blobs)
+    context, registry_source, registry_locator = await offload(registry_context,envelope,bulk,http.blobs)
     section = Section(state="not_available")
     if registry_source and (social := profile_url(normalize_url(context.get("website")) or "")):
         add(section, registry_source, org, "website", "registry_social." + digest(social)[:20],
@@ -76,9 +77,9 @@ async def fetch(org, envelope, bulk, http):
                     source_unavailable = True
                 attempts.append({"domain": candidate.domain, "level": "LOW", "reason": f"http_{response.status}"})
                 continue
-            page = await asyncio.to_thread(Page,response.body,response.url)
+            page = await offload(Page,response.body,response.url)
             checked.add(candidate.domain)
-            proof = await asyncio.to_thread(score,page,org,context,candidate.origin,leaders)
+            proof = await offload(score,page,org,context,candidate.origin,leaders)
             pages.append((response, page))
             best = (proof, response, page)
             if proof.level == "BLOCKED":
@@ -101,8 +102,8 @@ async def fetch(org, envelope, bulk, http):
                         continue
                     if extra.status != 200:
                         continue
-                    extra_page = await asyncio.to_thread(Page,extra.body,extra.url)
-                    extra_proof = await asyncio.to_thread(score,extra_page,org,context,candidate.origin,leaders)
+                    extra_page = await offload(Page,extra.body,extra.url)
+                    extra_proof = await offload(score,extra_page,org,context,candidate.origin,leaders)
                     if extra_proof.level == 'BLOCKED':
                         attempts.append({'domain':candidate.domain,'origin':candidate.origin,'reason':'block_page','page':target})
                         continue
@@ -156,7 +157,7 @@ async def fetch(org, envelope, bulk, http):
             section.errors.append(Error(section="website", code=budget_hit, message="Website work ended at configured budget"))
         section.errors.append(Error(section="website", code="website_candidates", message=json.dumps(attempts+http.attempts.get(org,[]), ensure_ascii=False)))
         return section
-    return await asyncio.to_thread(publish_result,org,envelope,http,section,choices,attempts,context)
+    return await offload(publish_result,org,envelope,http,section,choices,attempts,context)
 
 
 def publish_result(org,envelope,http,section,choices,attempts,context):

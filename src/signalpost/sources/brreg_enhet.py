@@ -1,3 +1,4 @@
+from ..workers import offload
 import asyncio
 from ..budget import SourceFailure
 from .extract import Section, Source, add, finish, get, decode, response_source
@@ -40,7 +41,7 @@ def extract(org, data, source):
 
 async def fetch(org, http):
     response = await http.get(BASE + org, org)
-    return await asyncio.to_thread(extract_response,org,response)
+    return await offload(extract_response,org,response)
 
 
 def extract_response(org,response):

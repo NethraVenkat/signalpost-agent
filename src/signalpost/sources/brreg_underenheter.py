@@ -1,3 +1,4 @@
+from ..workers import offload
 import asyncio
 from urllib.parse import urlencode
 from ..budget import SourceFailure
@@ -11,7 +12,7 @@ async def fetch(org, http, progress=None):
     while page < total:
         url = "https://data.brreg.no/enhetsregisteret/api/underenheter?" + urlencode({"overordnetEnhet": org, "size": 1000, "page": page})
         response = await http.get(url, org)
-        result=await asyncio.to_thread(extract_page,org,response,section,page)
+        result=await offload(extract_page,org,response,section,page)
         if isinstance(result,Section):return result
         if progress:progress(section)
         total=result;page+=1

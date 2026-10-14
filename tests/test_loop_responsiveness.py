@@ -7,7 +7,7 @@ from signalpost.sources.excerpt import excerpt,document_bounds
 from signalpost.budget import Budget
 from tests.test_registry import config
 from tests.test_nav import ORG,TOKEN,UUID
-from tests.test_nav_streaming import header,ad
+from tests.test_nav_streaming import header,ad,SECOND
 
 
 def test_cached_pointer_map_preserves_exact_excerpts():
@@ -56,3 +56,44 @@ def test_registry_extraction_runs_outside_event_loop(tmp_path,monkeypatch):
             release.set();report=await task
             assert report['emitted_envelopes']==1 and 'event_loop' in report
     asyncio.run(gate())
+
+
+def test_cpu_process_preserves_native_header_scores(tmp_path):
+    from collections import Counter,defaultdict
+    from signalpost.sources.nav_scoring import POOL,score_many
+    from signalpost.sources.nav import name_tokens
+    cfg=config(tmp_path,[ORG]);names={ORG:{'rareone ventures','rareone'},'other':{'common ventures'}}
+    frequency=Counter({'rareone':1,'ventures':60,'common':2})
+    rows=[(UUID,'Rareone Ventures AS'),(SECOND,'Common Ventures AS'),('none',None)]
+    token_orgs=defaultdict(set)
+    for org,known in names.items():
+        for name in known:
+            for token in name_tokens(name):token_orgs[token].add(org)
+    async def gate():
+        state=Stream(None,Index(),cfg,None,0,False);state.names=names
+        state.token_orgs=token_orgs;state.frequency=frequency;state.active={str(i):None for i in range(1000)}
+        expected={uuid:state.classify((None,{'id':uuid,'_feed_entry':{'businessName':name}})) for uuid,name in rows}
+        actual=await asyncio.get_running_loop().run_in_executor(None,lambda:POOL.submit(score_many,rows,names,dict(token_orgs),frequency,1000,False,True).result())
+        assert actual==expected
+    asyncio.run(gate())
+
+
+def test_website_wait_does_not_hold_next_company_registry_slot(tmp_path,monkeypatch):
+    from signalpost.runner import run
+    from signalpost.sources.extract import Section
+    from tests.test_nav import OTHER
+    from tests.test_registry import handler
+    ready=asyncio.Event();base=handler()
+    async def website(org,*args):
+        if org==ORG:await asyncio.wait_for(ready.wait(),2)
+        return Section(state='not_available')
+    def response(request):
+        if request.url.path.endswith(OTHER+'/roller'):ready.set()
+        return base(request)
+    monkeypatch.setattr('signalpost.runner.collector.fetch',website)
+    cfg=config(tmp_path,[ORG,OTHER],workers=1,websites=True)
+    async def gate():
+        async with httpx.AsyncClient(transport=httpx.MockTransport(response)) as client:return await run(cfg,client)
+    report=asyncio.run(gate())
+    assert report['handled_exceptions']==report['unhandled_exceptions']==0
+    assert report['emitted_envelopes']==2

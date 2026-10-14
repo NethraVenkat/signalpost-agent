@@ -1,3 +1,4 @@
+from ..workers import offload
 import asyncio
 from ..budget import SourceFailure
 from .brreg_enhet import BASE
@@ -7,7 +8,7 @@ from ..models.evidence import digest, canonical
 
 async def fetch(org, http):
     response = await http.get(BASE + org + "/roller", org)
-    return await asyncio.to_thread(extract,org,response)
+    return await offload(extract,org,response)
 
 
 def extract(org,response):

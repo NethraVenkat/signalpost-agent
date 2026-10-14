@@ -1,3 +1,4 @@
+from ..workers import offload
 import asyncio
 import time
 from dataclasses import dataclass
@@ -102,12 +103,12 @@ class WebsiteHttp:
                                 if size > 2 * 1024 * 1024:
                                     event["error"] = "body_cap"
                                     partial = (b"".join(chunks) + chunk)[:2 * 1024 * 1024]
-                                    event["content_sha256"] = await asyncio.to_thread(self.blobs.put,partial)
+                                    event["content_sha256"] = await offload(self.blobs.put,partial)
                                     event["truncated"] = True
                                     raise SourceFailure("body_cap")
                                 chunks.append(chunk)
                             body = b"".join(chunks)
-                            sha = await asyncio.to_thread(self.blobs.put,body)
+                            sha = await offload(self.blobs.put,body)
                             event["content_sha256"] = sha
                             response = Response(body, stream.status_code, url, utc_now(), sha)
                             content_type = stream.headers.get("content-type", "").split(";", 1)[0].strip().lower()
@@ -137,7 +138,7 @@ class WebsiteHttp:
                     # being less than one second apart due to transport overhead.
                     gate.next_start = max(gate.next_start, time.monotonic() + self.config.website_politeness_seconds)
                     if chunks and "content_sha256" not in event:
-                        event["content_sha256"] = await asyncio.to_thread(self.blobs.put,b"".join(chunks)[:2 * 1024 * 1024])
+                        event["content_sha256"] = await offload(self.blobs.put,b"".join(chunks)[:2 * 1024 * 1024])
                         event["truncated"] = True
                     event["runtime_ms"] = round((time.monotonic() - began) * 1000)
 
@@ -152,7 +153,7 @@ class WebsiteHttp:
                 if response.status in (404, 410):
                     parser.parse([])
                 elif response.status == 200:
-                    parser.parse(response.body.decode("utf8", errors="replace").splitlines())
+                    await offload(parser.parse,response.body.decode("utf8",errors="replace").splitlines())
                 else:
                     if response.status >= 500:
                         raise SourceFailure('website_http_5xx')
@@ -160,7 +161,7 @@ class WebsiteHttp:
                 self.robots[origin] = parser
                 final = urlsplit(response.url)
                 self.robots[urlunsplit((final.scheme, final.netloc, "", "", ""))] = parser
-            if not self.robots[origin].can_fetch(self.config.website_user_agent, url):
+            if not await offload(self.robots[origin].can_fetch,self.config.website_user_agent,url):
                 raise SourceFailure("robots")
 
     async def get(self, url, org, candidate_domain, proven=(), xml=False):

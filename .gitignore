@@ -18,6 +18,7 @@ blobs/
 *.jsonl
 *.csv
 *.gz
+!src/signalpost/data/nav_index.json.gz
 *.pdf
 !tests/fixtures/**/*.jsonl
 !tests/fixtures/**/*.csv

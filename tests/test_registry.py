@@ -66,6 +66,7 @@ def config(tmp, orgs, **kwargs):
     tmp.mkdir(parents=True, exist_ok=True)
     path = tmp / "batch.txt"
     path.write_text("\n".join(orgs), encoding="utf-8")
+    kwargs.setdefault('nav_index_path',tmp/'missing-nav-index.json.gz')
     return Config(organisations=path, output=tmp / "envelopes.jsonl", report=tmp / "report.json", state_dir=tmp / "state", **kwargs)
 
 

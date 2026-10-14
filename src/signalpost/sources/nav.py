@@ -1,4 +1,6 @@
 """Shared NAV feed ingestion; exact identifiers only, no per-company search."""
+from ..workers import nav_offload
+
 import asyncio
 import json
 import os
@@ -141,12 +143,15 @@ class Ad:
     page_url: str
     page_locator: str
     page_retrieved_at: str
+    discovery: dict | None = None
 
 
 @dataclass
 class Index:
     ads: dict = field(default_factory=dict)
     closed: set = field(default_factory=set)
+    live_closed: set = field(default_factory=set)
+    closure_proofs: dict = field(default_factory=dict)
     complete: bool = False
     blocked: bool = False
     reason: str = 'not_started'
@@ -190,14 +195,17 @@ class NavHttp:
                     for org in companies: by_company[org]=by_company.get(org,0)+1
                 event['section']='hiring_prefetch'
                 self.index.metrics['requests']+=1
+                if hasattr(self.index,'started'):self.index.started.set()
                 began=time.monotonic()
                 is_feed='/api/v1/feed' in url and '/feedentry/' not in url
                 async def trace(name,info):
                     if name.endswith('send_request_headers.complete'):
                         sent=time.monotonic()-self.budget.start
                         event['request_sent_seconds']=sent
-                        if is_feed and hasattr(self,'last_feed_response_complete'):
+                        if is_feed and getattr(self,'last_feed_response_complete',None) is not None:
                             event['inter_request_gap_ms']=max(0,(sent-self.last_feed_response_complete)*1000)
+                            event['gap_preceded_by']=getattr(self,'last_feed_finish_kind','response_complete')
+                            self.last_feed_response_complete=None
                 try:
                     remaining=self.budget.deadline-time.monotonic()
                     async with asyncio.timeout(min(self.config.nav_request_timeout,max(.001,remaining))):
@@ -216,9 +224,12 @@ class NavHttp:
                                 if size>self.config.nav_body_cap_mb*1024*1024: raise SourceFailure('nav_body_cap')
                                 chunks.append(chunk)
                             body=b''.join(chunks)
+                            event['decoded_body_bytes']=len(body)
                             completed=time.monotonic()-self.budget.start
                             event['response_complete_seconds']=completed
-                            if is_feed:self.last_feed_response_complete=completed
+                            if is_feed:
+                                self.last_feed_response_complete=completed
+                                self.last_feed_finish_kind='response_complete'
                             event['response_read_ms']=round((time.monotonic()-began)*1000)
                             self.index.metrics['bytes']+=len(body)
                             if response.status_code in {301,302,303,307,308}: raise SourceFailure('nav_redirect_refused')
@@ -228,26 +239,30 @@ class NavHttp:
                             if token and token.encode() in body: raise SourceFailure('credential_echo_refused')
                             if response.status_code==304:
                                 if not cached or not (self.blobs.directory/cached['sha']).exists(): raise SourceFailure('nav_cache_missing')
-                                body=await asyncio.to_thread((self.blobs.directory/cached['sha']).read_bytes)
+                                body=await nav_offload((self.blobs.directory/cached['sha']).read_bytes)
                                 sha=cached['sha']; event['content_sha256']=sha
                                 return 200,body,sha,utc_now()
                             stored=time.monotonic()
-                            sha=await asyncio.to_thread(self.blobs.put,body) if persist else await asyncio.to_thread(lambda:hashlib.sha256(body).hexdigest())
+                            sha=await nav_offload(self.blobs.put,body) if persist else await nav_offload(lambda:hashlib.sha256(body).hexdigest())
                             if persist:event['content_sha256']=sha
+                            else:event['response_sha256']=sha
                             event['blob_store_ms']=round((time.monotonic()-stored)*1000)
                             if response.status_code in {401,403}: raise SourceFailure('token_unavailable')
                             if response.status_code==429 or response.status_code>=500:
+                                if self.polite_backoff:
+                                    self.throttle_count+=1
+                                    retry_seconds=event.get('retry_after_seconds')
+                                    retry_seconds=retry_seconds if isinstance(retry_seconds,(int,float)) and math.isfinite(retry_seconds) else 0
+                                    pause=max(retry_seconds,min(60,2**min(self.throttle_count,6)))
+                                    self.pause_until=max(self.pause_until,time.monotonic()+pause)
+                                    event['retry_backoff_seconds']=pause
                                 if attempt==0:
                                     retry=response.headers.get('Retry-After','0')
                                     try: delay=float(retry)
                                     except ValueError:
                                         try: delay=parsedate_to_datetime(retry).timestamp()-time.time()
                                         except (ValueError,TypeError,OverflowError): delay=.2
-                                    if self.polite_backoff:
-                                        self.throttle_count+=1
-                                        delay=max(delay,min(60,2**min(self.throttle_count,6)))
-                                        self.pause_until=max(self.pause_until,time.monotonic()+delay)
-                                        event['retry_backoff_seconds']=delay
+                                    if self.polite_backoff:delay=max(delay,event['retry_backoff_seconds'])
                                     if time.monotonic()+max(.2,delay)>=self.budget.deadline: raise SourceFailure('deadline')
                                     await asyncio.sleep(max(.2,delay)); continue
                                 raise SourceFailure('nav_http_'+str(response.status_code))
@@ -261,7 +276,11 @@ class NavHttp:
                 except SourceFailure as exc:
                     event['error']=exc.code
                     raise
-                finally: event['runtime_ms']=round((time.monotonic()-began)*1000)
+                finally:
+                    event['runtime_ms']=round((time.monotonic()-began)*1000)
+                    if is_feed and event.get('error') and 'response_complete_seconds' not in event and 'request_sent_seconds' in event:
+                        self.last_feed_response_complete=time.monotonic()-self.budget.start
+                        self.last_feed_finish_kind='request_error_complete'
         raise SourceFailure('nav_network_error')
 
     async def public_token(self):
@@ -278,6 +297,14 @@ class NavHttp:
 
 
 async def prefetch(client,config,budget,blobs,index,names_ready=None,previous=None):
+    from .nav_index import load,DEFAULT_PATH
+    path=config.nav_index_path or DEFAULT_PATH
+    try:data,age=await nav_offload(load,path,config.nav_index_max_age_days)
+    except SourceFailure as exc:
+        index.metrics.update({'source_mode':'full_feed_fallback','index_fallback_reason':exc.code})
+    else:
+        from .nav_cached import prefetch as cached_prefetch
+        return await cached_prefetch(client,config,budget,blobs,index,data,age,path,names_ready,previous)
     from .nav_stream import prefetch as streaming_prefetch
     return await streaming_prefetch(client,config,budget,blobs,index,names_ready,previous)
 
@@ -299,16 +326,34 @@ def section(envelope,index,blobs,previous=None):
             add(result,Source(ad.url,body,ad.sha,ad.retrieved_at),envelope.organisation_number,'hiring','hiring.job.'+ad.value['uuid'],
                 value,'/ad_content',effective=ad.value['published'],source_class='official_nav',method='signalpost.nav.v1')
             # The detail is mandatory; the feed page also anchors the item.
-            page_source=Source(ad.page_url,(blobs.directory/ad.page_sha).read_bytes(),ad.page_sha,ad.page_retrieved_at)
-            temporary=Section()
-            add(temporary,page_source,envelope.organisation_number,'hiring','hiring.page',ad.value['uuid'],ad.page_locator,source_class='official_nav',method='signalpost.nav.v1')
-            result.evidence.extend(temporary.evidence); result.claims[-1].evidence_ids.extend(e.id for e in temporary.evidence)
-    if complete and result.claims: result.state='available'
+            if ad.page_sha:
+                page_source=Source(ad.page_url,(blobs.directory/ad.page_sha).read_bytes(),ad.page_sha,ad.page_retrieved_at)
+                temporary=Section()
+                add(temporary,page_source,envelope.organisation_number,'hiring','hiring.page',ad.value['uuid'],ad.page_locator,source_class='official_nav',method='signalpost.nav.v1')
+                result.evidence.extend(temporary.evidence); result.claims[-1].evidence_ids.extend(e.id for e in temporary.evidence)
+            elif ad.discovery:
+                result.evidence[-1].source_identifier=json.dumps(ad.discovery,sort_keys=True,separators=(',',':'))
+    if result.claims and not index.blocked and (complete or index.metrics.get('source_mode')=='declared_index'): result.state='available'
     if not complete: result.errors.append(Error(section='hiring',code=index.reason if index.reason!='complete' else 'nav_name_unusable',message='NAV candidate coverage is incomplete; absence and closure are not established'))
     if complete and not result.claims and envelope.run.sections.get('subunits') not in {'available','not_available','not_applicable'}:
         result.state='failed'; result.errors.append(Error(section='hiring',code='subunit_index_incomplete',message='Legal-entity match checked; branch coverage is unknown'))
     old=previous.get('claims',previous.get('profile',{}).get('claims',[])) if previous else []
     old_jobs=[c['value']['uuid'] for c in old if c.get('family')=='hiring' and c.get('availability')=='available' and isinstance(c.get('value'),dict)]
+    cached=index.metrics.get('source_mode')=='declared_index'
+    closure_evidence={}
+    for uuid in old_jobs:
+        if uuid not in index.closure_proofs:continue
+        proof=index.closure_proofs[uuid];sha,url,retrieved,locator,value=proof[:5]
+        temporary=Section();body=(blobs.directory/sha).read_bytes()
+        add(temporary,Source(url,body,sha,retrieved),envelope.organisation_number,'hiring','hiring.closed.'+uuid,None,
+            locator,availability='not_available',span=Source(url,body,sha,retrieved).excerpt(value,locator),
+            source_class='official_nav',method='signalpost.nav.live_closure.v1')
+        result.evidence.extend(temporary.evidence);closure_evidence[uuid]=[e.id for e in temporary.evidence]
+        if len(proof)>5:
+            temporary.evidence[0].source_identifier=json.dumps(proof[5],sort_keys=True,separators=(',',':'))
     envelope.run.refresh['hiring']={'index_complete':complete,'reason':index.reason,
-        'known_closed_jobs':[uuid for uuid in old_jobs if uuid in index.closed]}
+        'closure_requires_live_detail':True,'closure_evidence':closure_evidence,
+        'known_closed_jobs':[uuid for uuid in old_jobs if uuid in closure_evidence]}
+    if cached:
+        envelope.run.refresh['hiring'].update({k:index.metrics[k] for k in ('index_version','index_built_at')})
     return result

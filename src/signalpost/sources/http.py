@@ -1,3 +1,4 @@
+from ..workers import offload
 import asyncio
 import email.utils
 import random
@@ -45,7 +46,7 @@ class Http:
                     timeout = min(self.config.request_timeout, max(0.001, self.budget.deadline - time.monotonic()))
                     response = await self.client.get(url, timeout=timeout, follow_redirects=False)
                     event["status"] = response.status_code
-                    sha = await asyncio.to_thread(self.blobs.put,response.content)
+                    sha = await offload(self.blobs.put,response.content)
                     event["content_sha256"] = sha
                     result = Response(response.content, response.status_code, url, utc_now(), sha)
                     if response.is_redirect:

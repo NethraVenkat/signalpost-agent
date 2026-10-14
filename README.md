@@ -36,6 +36,18 @@ Useful defaults and controls:
 | Output | `--state-dir state`, `--envelope-shape union`, `--max-output-mb 256`, optional `--expected-count` |
 | Websites | `--website-request-cap 6`, `--website-total-request-cap 9`; 8 candidate DNS checks with 3-second prechecks, 8-second HTTP bounds, 1-second domain politeness, 2 in flight/domain |
 | NAV | `--nav-max-pages 512`, `--nav-max-details` defaults to min(candidate ads, max(300, 2 × unique companies)), `--nav-time-cap-seconds` defaults to min(900, 40% of run time), `--nav-lookback-days 185`, `--nav-concurrency 4`, `--nav-request-timeout 30`; independent connection pool |
+
+Hiring uses a declared compact index of the official NAV feed (`src/signalpost/data/nav_index.json.gz`), built from saved official feed/detail bodies and permitted fresh official requests. The current baseline was read at 2026-10-14T04:26:40.758720Z: 9,015 active ads, 5,769 employer numbers, zero failed details, 403,768 compressed bytes. It contains identifiers/status/dates only: no ad text or contact persons. Of the exported ads, 6,791 were seeded from disk and 2,224 fetched freshly during the build. The index nominates candidates; every published ad is fetched live and checked against the exact company or its listed subunit. Runtime follows the stored feed cursor and removes inactive entries. Missing, invalid, incomplete or older-than-21-day indexes trigger the full-feed fallback, explicitly reported. Configure `--nav-index-path` and `--nav-index-max-age-days` when needed.
+
+Development-only rebuild (not part of evaluator startup; resumes checkpoints and seeds existing local official bodies):
+
+```sh
+uv run python scripts/build_nav_index.py --state-dir state/nav-index-build --output src/signalpost/data/nav_index.json.gz --report out/nav-index-build-report.json
+```
+
+Use a new builder state path with `--no-seed-from-disk` for an independent full rebuild. Builds use at most four detail requests concurrently, shared backoff on 429/5xx, Retry-After handling and checkpoints every 200 ads. The cache is discovery metadata, never a substitute for live evidence. See [source policy](docs/SOURCES.md).
+
+Active Windows batches request temporary idle-sleep prevention and restore the previous thread state afterward; the display is not kept on and persistent power settings are unchanged. Use `--allow-system-sleep` to opt out. Reports record whether the request succeeded. This cannot override explicit user sleep or every system power policy. Other platforms make no OS power request.
 | Cost | `--max-cost-usd 0`, `--official-batch-size 1100` |
 | Synthesis | `--synthesis template` (default), `auto` or `llm`; `--llm-max-calls 100`, `--llm-max-cost-usd 0.50`; one call/company, 15-second timeout |
 
