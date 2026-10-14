@@ -7,6 +7,30 @@
   const stateChip = state => element('span', String(state).replace(/_/g,' '), 'chip '+state);
   const format = value => value == null ? 'Unknown' : typeof value === 'number' ? value.toLocaleString('en-US',{maximumFractionDigits:20}) : String(value);
 
+  const sanitizeCsvCell = value => {
+    if (value == null) return '';
+    if (typeof value === 'boolean') return value ? 'Yes' : 'No';
+    if (typeof value === 'number') return String(value);
+    let s = typeof value === 'object' ? JSON.stringify(value) : String(value);
+    if (s && ['=', '+', '-', '@', '\t', '\r'].includes(s[0])) s = "'" + s;
+    if (/[,"\n\r]/.test(s)) s = '"' + s.replace(/"/g, '""') + '"';
+    return s;
+  };
+
+  const formatCsvOrgnr = orgnr => '="' + String(orgnr).trim() + '"';
+
+  function downloadFile(filename, content, mimeType) {
+    const blob = new Blob([content], { type: mimeType });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  }
+
   // Evidence panel support
   const localData = window.SIGNALPOST_EVIDENCE || {sources:[],records:[],facts:[]};
   const evidence = new Map(localData.records.map(row => {
@@ -170,6 +194,7 @@
     let pageNumber = 0;
     const pageSize = 30;
     let searchSequence = 0;
+    let currentSelectedRecords = records;
 
     // View tab elements
     const tabDash = document.getElementById('tab-dashboard');
@@ -540,6 +565,7 @@
       if(prevBtn) prevBtn.disabled = pageNumber === 0;
       if(nextBtn) nextBtn.disabled = pageNumber === pages - 1;
 
+      currentSelectedRecords = selected;
       updateQueryParams();
     }
 
@@ -636,7 +662,131 @@
     if(prevBtn) prevBtn.addEventListener('click', () => { pageNumber--; draw(); });
     if(nextBtn) nextBtn.addEventListener('click', () => { pageNumber++; draw(); });
 
+    function exportRecordsCsv(dataToExport, filename) {
+      const headers = [
+        "Organisation number", "Name", "Municipality", "Industry code", "Industry title",
+        "Employees", "Size band", "Revenue (NOK)", "Annual result (NOK)", "Fiscal year",
+        "Verified website", "Website provenance", "Job postings", "Social profiles",
+        "Public activity", "Claim count", "Last checked"
+      ];
+      const lines = [headers.join(',')];
+      for (const r of dataToExport) {
+        const row = [
+          formatCsvOrgnr(r.orgnr),
+          sanitizeCsvCell(r.name),
+          sanitizeCsvCell(r.municipality),
+          sanitizeCsvCell(r.nace),
+          sanitizeCsvCell(r.industry_en || r.industry_no),
+          sanitizeCsvCell(r.employees),
+          sanitizeCsvCell(r.size_band),
+          sanitizeCsvCell(r.revenue),
+          sanitizeCsvCell(r.annual_result),
+          sanitizeCsvCell(r.fiscal_year),
+          sanitizeCsvCell(r.website),
+          sanitizeCsvCell(r.website_origin),
+          sanitizeCsvCell(r.jobs),
+          sanitizeCsvCell(r.social),
+          sanitizeCsvCell(r.activity),
+          sanitizeCsvCell(r.claim_count),
+          sanitizeCsvCell(r.last_checked)
+        ];
+        lines.push(row.join(','));
+      }
+      downloadFile(filename, lines.join('\r\n') + '\r\n', 'text/csv;charset=utf-8');
+    }
+
+    function exportRecordsJson(dataToExport, filename) {
+      downloadFile(filename, JSON.stringify(dataToExport, null, 2), 'application/json;charset=utf-8');
+    }
+
+    const expDashCsv = document.getElementById('export-dashboard-csv');
+    const expDashJson = document.getElementById('export-dashboard-json');
+    const expDirCsv = document.getElementById('export-directory-csv');
+    const expDirJson = document.getElementById('export-directory-json');
+
+    if (expDashCsv) expDashCsv.addEventListener('click', () => exportRecordsCsv(currentSelectedRecords, 'signalpost-cohort.csv'));
+    if (expDashJson) expDashJson.addEventListener('click', () => exportRecordsJson(currentSelectedRecords, 'signalpost-cohort.json'));
+    if (expDirCsv) expDirCsv.addEventListener('click', () => exportRecordsCsv(currentSelectedRecords, 'signalpost-directory.csv'));
+    if (expDirJson) expDirJson.addEventListener('click', () => exportRecordsJson(currentSelectedRecords, 'signalpost-directory.json'));
+
     draw();
+  }
+
+  // ==========================================
+  // PAGE: PROFILE (Evidence Explorer & Safe Exports)
+  // ==========================================
+  if(document.body.dataset.page === 'profile') {
+    const exportJsonBtn = document.getElementById('export-profile-json');
+    const exportCsvBtn = document.getElementById('export-profile-csv');
+
+    if (exportJsonBtn) {
+      exportJsonBtn.addEventListener('click', () => {
+        const orgnr = localData.orgnr || 'company';
+        const items = (localData.facts || []).map(f => ({
+          id: f.id,
+          field: f.field,
+          family: f.family,
+          availability: f.availability,
+          value: f.value,
+          reporting_period: f.reporting_period,
+          evidence: (f.evidence_ids || []).map(eid => {
+            const e = evidence.get(eid);
+            return e ? {
+              id: e.id,
+              source_class: e.source_class,
+              source_url: e.source_url,
+              source_identifier: e.source_identifier,
+              locator: e.locator,
+              claim_span: e.claim_span,
+              content_sha256: e.content_sha256,
+              retrieved_at: e.retrieved_at,
+              effective_at: e.effective_at,
+              extraction_method: e.extraction_method
+            } : null;
+          }).filter(Boolean)
+        }));
+        const exportObj = {
+          organisation_number: orgnr,
+          company_name: localData.name || orgnr,
+          exported_at: new Date().toISOString(),
+          claims_count: items.length,
+          claims: items
+        };
+        downloadFile(orgnr + '-provenance.json', JSON.stringify(exportObj, null, 2), 'application/json;charset=utf-8');
+      });
+    }
+
+    if (exportCsvBtn) {
+      exportCsvBtn.addEventListener('click', () => {
+        const orgnr = localData.orgnr || 'company';
+        const headers = [
+          "Organisation number", "Field", "Family", "Availability",
+          "Value", "Reporting period", "Evidence count", "Primary source class",
+          "Primary source URL", "Primary locator", "Primary SHA-256", "Primary excerpt"
+        ];
+        const lines = [headers.join(',')];
+        for (const f of (localData.facts || [])) {
+          const primaryId = (f.evidence_ids || [])[0];
+          const primary = primaryId ? evidence.get(primaryId) : null;
+          const rowCells = [
+            formatCsvOrgnr(orgnr),
+            sanitizeCsvCell(f.field),
+            sanitizeCsvCell(f.family),
+            sanitizeCsvCell(f.availability),
+            sanitizeCsvCell(typeof f.value === 'object' ? JSON.stringify(f.value) : f.value),
+            sanitizeCsvCell(f.reporting_period ? JSON.stringify(f.reporting_period) : ''),
+            sanitizeCsvCell((f.evidence_ids || []).length),
+            sanitizeCsvCell(primary ? primary.source_class : ''),
+            sanitizeCsvCell(primary ? primary.source_url : ''),
+            sanitizeCsvCell(primary ? primary.locator : ''),
+            sanitizeCsvCell(primary ? primary.content_sha256 : ''),
+            sanitizeCsvCell(primary ? primary.claim_span : '')
+          ];
+          lines.push(rowCells.join(','));
+        }
+        downloadFile(orgnr + '-summary.csv', lines.join('\r\n') + '\r\n', 'text/csv;charset=utf-8');
+      });
+    }
   }
 
   // ==========================================

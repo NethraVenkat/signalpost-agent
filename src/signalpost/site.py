@@ -26,6 +26,136 @@ def esc(value):
     return html.escape(str(value), quote=True)
 
 
+def sanitize_csv_cell(value):
+    if value is None:
+        return ""
+    if isinstance(value, bool):
+        return "Yes" if value else "No"
+    if isinstance(value, (int, float)):
+        return str(value)
+    if isinstance(value, (dict, list)):
+        s = json.dumps(value, ensure_ascii=False, sort_keys=True)
+    else:
+        s = str(value)
+    if s and s[0] in ('=', '+', '-', '@', '\t', '\r'):
+        s = "'" + s
+    if any(c in s for c in (',', '"', '\n', '\r')):
+        s = '"' + s.replace('"', '""') + '"'
+    return s
+
+
+def format_csv_orgnr(orgnr):
+    digits = str(orgnr).strip()
+    return f'="{digits}"'
+
+
+def export_directory_csv(records):
+    headers = [
+        "Organisation number", "Name", "Municipality", "Industry code", "Industry title",
+        "Employees", "Size band", "Revenue (NOK)", "Annual result (NOK)", "Fiscal year",
+        "Verified website", "Website provenance", "Job postings", "Social profiles",
+        "Public activity", "Claim count", "Last checked"
+    ]
+    lines = [",".join(headers)]
+    for r in records:
+        row = [
+            format_csv_orgnr(r.get("orgnr", "")),
+            sanitize_csv_cell(r.get("name")),
+            sanitize_csv_cell(r.get("municipality")),
+            sanitize_csv_cell(r.get("nace")),
+            sanitize_csv_cell(r.get("industry_en") or r.get("industry_no")),
+            sanitize_csv_cell(r.get("employees")),
+            sanitize_csv_cell(r.get("size_band")),
+            sanitize_csv_cell(r.get("revenue")),
+            sanitize_csv_cell(r.get("annual_result")),
+            sanitize_csv_cell(r.get("fiscal_year")),
+            sanitize_csv_cell(r.get("website")),
+            sanitize_csv_cell(r.get("website_origin")),
+            sanitize_csv_cell(r.get("jobs")),
+            sanitize_csv_cell(r.get("social")),
+            sanitize_csv_cell(r.get("activity")),
+            sanitize_csv_cell(r.get("claim_count")),
+            sanitize_csv_cell(r.get("last_checked")),
+        ]
+        lines.append(",".join(row))
+    return "\r\n".join(lines) + "\r\n"
+
+
+def export_directory_json(records):
+    return json.dumps(records, indent=2, ensure_ascii=False)
+
+
+def export_profile_claims_json(row):
+    claims = row.get("claims", [])
+    evidence_map = {e["id"]: e for e in row.get("evidence", [])}
+    items = []
+    for c in claims:
+        item = {
+            "id": c.get("id"),
+            "field": c.get("field"),
+            "family": c.get("family"),
+            "availability": c.get("availability"),
+            "value": c.get("value"),
+            "reporting_period": c.get("reporting_period"),
+            "carried_forward": c.get("carried_forward", False),
+            "evidence": []
+        }
+        for eid in c.get("evidence_ids", []):
+            if eid in evidence_map:
+                e = evidence_map[eid]
+                item["evidence"].append({
+                    "id": e.get("id"),
+                    "source_class": e.get("source_class"),
+                    "source_url": e.get("source_url"),
+                    "source_identifier": e.get("source_identifier"),
+                    "locator": e.get("locator"),
+                    "claim_span": e.get("claim_span"),
+                    "content_sha256": e.get("content_sha256"),
+                    "retrieved_at": e.get("retrieved_at"),
+                    "effective_at": e.get("effective_at"),
+                    "extraction_method": e.get("extraction_method"),
+                })
+        items.append(item)
+    payload = {
+        "organisation_number": row.get("organisation_number"),
+        "claims_count": len(items),
+        "exported_at": datetime.now().isoformat() + "Z",
+        "claims": items
+    }
+    return json.dumps(payload, indent=2, ensure_ascii=False)
+
+
+def export_profile_summary_csv(row):
+    headers = [
+        "Organisation number", "Field", "Family", "Availability",
+        "Value", "Reporting period", "Evidence count", "Primary source class",
+        "Primary source URL", "Primary locator", "Primary SHA-256", "Primary excerpt"
+    ]
+    org = row.get("organisation_number", "")
+    evidence_map = {e["id"]: e for e in row.get("evidence", [])}
+    lines = [",".join(headers)]
+    for c in row.get("claims", []):
+        eids = c.get("evidence_ids", [])
+        primary = evidence_map.get(eids[0]) if eids else None
+        val_str = value_text(c.get("value"))
+        row_cells = [
+            format_csv_orgnr(org),
+            sanitize_csv_cell(c.get("field")),
+            sanitize_csv_cell(c.get("family")),
+            sanitize_csv_cell(c.get("availability")),
+            sanitize_csv_cell(val_str),
+            sanitize_csv_cell(value_text(c.get("reporting_period")) if c.get("reporting_period") else ""),
+            sanitize_csv_cell(len(eids)),
+            sanitize_csv_cell(primary.get("source_class") if primary else ""),
+            sanitize_csv_cell(primary.get("source_url") if primary else ""),
+            sanitize_csv_cell(primary.get("locator") if primary else ""),
+            sanitize_csv_cell(primary.get("content_sha256") if primary else ""),
+            sanitize_csv_cell(primary.get("claim_span") if primary else ""),
+        ]
+        lines.append(",".join(row_cells))
+    return "\r\n".join(lines) + "\r\n"
+
+
 def safe_url(value):
     try:
         value = str(value)
@@ -406,6 +536,36 @@ def profile(row, title):
         body += f'<div id="change-{esc(c["id"])}">{esc(value_text(c))}</div>'
     observations = row['run'].get('refresh', {}).get('observation_changes', [])
     body += '<button type="button" aria-expanded="false" aria-controls="observations" data-toggle="observations">Check status changes</button><div id="observations" hidden>' + value_html(observations) + '</div></section>'
+
+    # Evidence Explorer Section
+    body += '<section id="evidence-explorer" class="evidence-explorer">'
+    body += '<div class="evidence-explorer-header">'
+    body += '<h2>Evidence Explorer</h2>'
+    body += '<div class="export-actions">'
+    body += '<button type="button" id="export-profile-json" class="btn-export">Export Provenance (JSON)</button> '
+    body += '<button type="button" id="export-profile-csv" class="btn-export">Export Summary (CSV)</button>'
+    body += '</div></div>'
+    body += '<p class="muted">Audit trail of verified company facts with complete supporting provenance, exact source locators, cryptographic SHA-256 receipts, and verbatim source excerpts.</p>'
+    body += '<div class="table-responsive"><table class="evidence-explorer-table" aria-label="Evidence Explorer audit trail">'
+    body += '<thead><tr><th scope="col">Fact / Claim</th><th scope="col">Status</th><th scope="col">Value</th><th scope="col">Source Class</th><th scope="col">Locator</th><th scope="col">SHA-256</th><th scope="col">Verbatim Excerpt</th></tr></thead><tbody>'
+    for c in claims:
+        f = c.get('field', '')
+        lbl = f.replace('identity.', '').replace('accounts.', '').replace('_', ' ')
+        v = c.get('value')
+        v_str = value_text(v)
+        if len(v_str) > 80: v_str = v_str[:77] + '…'
+        avail = c.get('availability', 'unknown')
+        eids = c.get('evidence_ids', [])
+        e = records.get(eids[0]) if eids else None
+        s_class = e.get('source_class', '—') if e else '—'
+        loc = e.get('locator', '—') if e else '—'
+        sha = e.get('content_sha256', '') if e else ''
+        sha_disp = f'<code title="{esc(sha)}">{esc(sha[:12])}…</code>' if sha else '—'
+        span = e.get('claim_span', '—') if e else '—'
+        if len(span) > 100: span = span[:97] + '…'
+        body += f'<tr><th scope="row">{esc(lbl)}</th><td>{chip(avail)}</td><td>{esc(v_str)}</td><td>{esc(s_class)}</td><td><code>{esc(loc)}</code></td><td>{sha_disp}</td><td><blockquote class="table-excerpt">{esc(span)}</blockquote></td></tr>'
+    body += '</tbody></table></div></section>'
+
     body += f'<p><a href="../index.html">Back to search</a> · <a href="../compare.html#{esc(org)}">Compare with…</a></p>'
     return page(str(name) + ' · ' + title, body, '../', company_data=org+'.data.js')
 
@@ -428,7 +588,8 @@ def company_payload(row):
         referenced.update(claim['evidence_ids'])
         v=claim.get('value')
         facts.append({'id':claim['id'][:16],'evidence_ids':claim['evidence_ids'],
-                      'values':list(leaves(v)), 'reporting_period':claim.get('reporting_period'),
+                      'field':claim.get('field'),'family':claim.get('family'),'availability':claim.get('availability'),
+                      'values':list(leaves(v)), 'value':v, 'reporting_period':claim.get('reporting_period'),
                       'identity_level':v.get('identity_level') if isinstance(v,dict) else None})
     if len({c['id'][:16] for c in row['claims']}) != len(row['claims']):
         raise ValueError('Conflicting local fact anchors')
@@ -447,7 +608,9 @@ def company_payload(row):
     details=[{'id':c['id'][:16],'field':c['field'],'value':c['value'],'availability':c['availability'],
               'group':'people' if c['family']=='roles' else 'locations'} for c in row['claims']
              if c['field'].startswith(('roles.detail.','subunits.detail.'))]
-    return {'source_fields':source_fields,'sources':sources,'evidence_fields':evidence_fields,
+    name = next((c['value'] for c in row['claims'] if c['field'] == 'identity.legal_name' and c['availability'] == 'available'), row['organisation_number'])
+    return {'orgnr': row['organisation_number'], 'name': name,
+            'source_fields':source_fields,'sources':sources,'evidence_fields':evidence_fields,
             'records':records,'facts':facts,'registry_details':details}
 
 
@@ -543,6 +706,7 @@ def index_page(records, title):
     body += '<section id="view-dashboard" class="dashboard-view" role="tabpanel" aria-labelledby="tab-dashboard">'
     body += '<div class="scope-banner" id="dashboard-scope-banner">'
     body += f'<div class="scope-text-wrap"><span class="scope-tag">Cohort Scope</span> <span id="scope-text">Full evaluated cohort: {n} companies in Norwegian corporate dataset</span></div>'
+    body += '<div class="export-bar" aria-label="Export cohort data"><span class="export-label">Export Cohort:</span> <button type="button" id="export-dashboard-csv" class="btn-export">Export CSV</button> <button type="button" id="export-dashboard-json" class="btn-export">Export JSON</button></div>'
     body += '<div id="filter-scope-warning" class="filter-warning" hidden>⚠️ Filters active: metrics reflect <strong id="filter-scope-count">0</strong> matching companies. <button type="button" class="btn-link" id="reset-dashboard-filters">Clear filters to view full dataset</button></div>'
     body += '</div>'
 
@@ -587,6 +751,7 @@ def index_page(records, title):
     # 2. Company Directory View
     body += '<section id="view-directory" class="directory-view" role="tabpanel" aria-labelledby="tab-directory" hidden>'
     body += '<div id="directory"></div>'
+    body += '<div class="export-bar" aria-label="Export directory data"><span class="export-label">Export Directory:</span> <button type="button" id="export-directory-csv" class="btn-export">Export CSV</button> <button type="button" id="export-directory-json" class="btn-export">Export JSON</button></div>'
     body += '<div class="search-box">'
     body += '<label for="search" class="visually-hidden">Search name, organisation number, or website</label>'
     body += '<div class="search-input-wrapper">'

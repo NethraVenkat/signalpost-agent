@@ -1355,3 +1355,85 @@ html[data-theme="light"] .not_available, html[data-theme="light"] .not_applicabl
   color: #475569;
   border-color: #cbd5e1;
 }
+
+/* Export & Evidence Explorer Styles */
+.export-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 12px 0 16px;
+  flex-wrap: wrap;
+}
+.export-label {
+  font-weight: 650;
+  font-size: 13.5px;
+  color: var(--muted);
+}
+.btn-export {
+  background: var(--card);
+  border: 1px solid var(--border-strong);
+  color: var(--ink);
+  font-size: 13px;
+  padding: 6px 12px;
+  min-height: 36px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+.btn-export:hover {
+  background: var(--soft);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.evidence-explorer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+.evidence-explorer-header h2 {
+  margin: 0;
+}
+.export-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 16px;
+  -webkit-overflow-scrolling: touch;
+}
+.evidence-explorer-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+  text-align: left;
+}
+.evidence-explorer-table th,
+.evidence-explorer-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+.evidence-explorer-table th {
+  font-weight: 650;
+  background: var(--soft);
+  color: var(--ink);
+}
+.evidence-explorer-table tbody tr:hover {
+  background: var(--soft);
+}
+.table-excerpt {
+  margin: 0;
+  font-size: 12.5px;
+  font-style: italic;
+  color: var(--muted);
+  max-width: 320px;
+  overflow-wrap: anywhere;
+}
+
