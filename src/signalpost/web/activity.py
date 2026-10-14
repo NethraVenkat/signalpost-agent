@@ -111,7 +111,13 @@ async def fetch(org, envelope, http, pages):
     for origin, parser in sorted(http.robots.items()):
         if domain(origin) == root:
             maps.extend(url for url in parser.site_maps() or [] if domain(url) == root)
-    urls = sorted(set(feeds))[:1] or sorted(set(maps))[:1] or [homepage.rstrip('/') + '/sitemap.xml']
+    fallback_maps = [
+        homepage.rstrip('/') + '/sitemap.xml',
+        homepage.rstrip('/') + '/sitemap_index.xml',
+        homepage.rstrip('/') + '/news-sitemap.xml',
+        homepage.rstrip('/') + '/feed/'
+    ]
+    urls = sorted(set(feeds))[:1] or sorted(set(maps))[:1] or fallback_maps[:1]
     section = Section(state='not_available')
     checked=set()
     maximum = http.config.website_request_cap + 1
