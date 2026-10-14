@@ -6,6 +6,7 @@ import re
 import time
 import unicodedata
 import math
+import hashlib
 from collections import Counter, defaultdict
 from dataclasses import dataclass, field
 from datetime import datetime, timedelta, timezone
@@ -162,11 +163,12 @@ class NavHttp:
         self.client,self.config,self.budget,self.blobs,self.index=client,config,budget,blobs,index
         self.semaphore=asyncio.Semaphore(config.nav_concurrency)
         self.feed_semaphore=asyncio.Semaphore(1)
+        self.polite_backoff=False;self.pause_until=0;self.throttle_count=0
         self.cache_path=config.state_dir/'nav-cache.json'
         try: self.cache=json.loads(self.cache_path.read_text(encoding='utf8'))
         except (OSError,ValueError): self.cache={}
 
-    async def get(self,raw,token=None,headers=None,secret=False,companies=()):
+    async def get(self,raw,token=None,headers=None,secret=False,companies=(),persist=True):
         url=allowed(raw)
         supplied=dict(headers or {})
         key=url+'|'+supplied.get('If-Modified-Since','')
@@ -177,6 +179,8 @@ class NavHttp:
         supplied['User-Agent']=self.config.website_user_agent
         async with (self.semaphore if '/feedentry/' in url else self.feed_semaphore):
             for attempt in range(2):
+                if self.polite_backoff and self.pause_until>time.monotonic():
+                    await asyncio.sleep(self.pause_until-time.monotonic())
                 if '/feedentry/' in url and self.index.metrics.get('detail_requests',0)>=self.index.metrics.get('detail_request_cap', self.config.nav_max_details if self.config.nav_max_details is not None else 300):
                     raise SourceFailure('nav_detail_cap')
                 event=self.budget.reserve(url,'pam-stilling-feed.nav.no','__nav_prefetch__')
@@ -187,17 +191,34 @@ class NavHttp:
                 event['section']='hiring_prefetch'
                 self.index.metrics['requests']+=1
                 began=time.monotonic()
+                is_feed='/api/v1/feed' in url and '/feedentry/' not in url
+                async def trace(name,info):
+                    if name.endswith('send_request_headers.complete'):
+                        sent=time.monotonic()-self.budget.start
+                        event['request_sent_seconds']=sent
+                        if is_feed and hasattr(self,'last_feed_response_complete'):
+                            event['inter_request_gap_ms']=max(0,(sent-self.last_feed_response_complete)*1000)
                 try:
                     remaining=self.budget.deadline-time.monotonic()
                     async with asyncio.timeout(min(self.config.nav_request_timeout,max(.001,remaining))):
-                        async with self.client.stream('GET',url,headers=supplied,follow_redirects=False,timeout=min(self.config.nav_request_timeout,max(.001,remaining))) as response:
+                        async with self.client.stream('GET',url,headers=supplied,follow_redirects=False,timeout=min(self.config.nav_request_timeout,max(.001,remaining)),extensions={'trace':trace}) as response:
                             event['status']=response.status_code
+                            event['response_headers_ms']=round((time.monotonic()-began)*1000)
+                            if response.headers.get('Retry-After'):
+                                try:retry_seconds=float(response.headers['Retry-After'])
+                                except ValueError:
+                                    try:retry_seconds=parsedate_to_datetime(response.headers['Retry-After']).timestamp()-time.time()
+                                    except (ValueError,TypeError,OverflowError):retry_seconds=None
+                                event['retry_after_seconds']=retry_seconds
                             chunks=[]; size=0
                             async for chunk in response.aiter_bytes():
                                 size+=len(chunk)
                                 if size>self.config.nav_body_cap_mb*1024*1024: raise SourceFailure('nav_body_cap')
                                 chunks.append(chunk)
                             body=b''.join(chunks)
+                            completed=time.monotonic()-self.budget.start
+                            event['response_complete_seconds']=completed
+                            if is_feed:self.last_feed_response_complete=completed
                             event['response_read_ms']=round((time.monotonic()-began)*1000)
                             self.index.metrics['bytes']+=len(body)
                             if response.status_code in {301,302,303,307,308}: raise SourceFailure('nav_redirect_refused')
@@ -207,11 +228,12 @@ class NavHttp:
                             if token and token.encode() in body: raise SourceFailure('credential_echo_refused')
                             if response.status_code==304:
                                 if not cached or not (self.blobs.directory/cached['sha']).exists(): raise SourceFailure('nav_cache_missing')
-                                body=(self.blobs.directory/cached['sha']).read_bytes()
+                                body=await asyncio.to_thread((self.blobs.directory/cached['sha']).read_bytes)
                                 sha=cached['sha']; event['content_sha256']=sha
                                 return 200,body,sha,utc_now()
                             stored=time.monotonic()
-                            sha=self.blobs.put(body); event['content_sha256']=sha
+                            sha=await asyncio.to_thread(self.blobs.put,body) if persist else await asyncio.to_thread(lambda:hashlib.sha256(body).hexdigest())
+                            if persist:event['content_sha256']=sha
                             event['blob_store_ms']=round((time.monotonic()-stored)*1000)
                             if response.status_code in {401,403}: raise SourceFailure('token_unavailable')
                             if response.status_code==429 or response.status_code>=500:
@@ -221,11 +243,16 @@ class NavHttp:
                                     except ValueError:
                                         try: delay=parsedate_to_datetime(retry).timestamp()-time.time()
                                         except (ValueError,TypeError,OverflowError): delay=.2
+                                    if self.polite_backoff:
+                                        self.throttle_count+=1
+                                        delay=max(delay,min(60,2**min(self.throttle_count,6)))
+                                        self.pause_until=max(self.pause_until,time.monotonic()+delay)
+                                        event['retry_backoff_seconds']=delay
                                     if time.monotonic()+max(.2,delay)>=self.budget.deadline: raise SourceFailure('deadline')
                                     await asyncio.sleep(max(.2,delay)); continue
                                 raise SourceFailure('nav_http_'+str(response.status_code))
                             if response.status_code!=200: raise SourceFailure('nav_http_'+str(response.status_code))
-                            if response.headers.get('etag'):
+                            if persist and response.headers.get('etag'):
                                 self.cache[key]={'etag':response.headers['etag'],'sha':sha}
                             return 200,body,sha,utc_now()
                 except (TimeoutError,httpx.HTTPError) as exc:

@@ -102,12 +102,12 @@ class WebsiteHttp:
                                 if size > 2 * 1024 * 1024:
                                     event["error"] = "body_cap"
                                     partial = (b"".join(chunks) + chunk)[:2 * 1024 * 1024]
-                                    event["content_sha256"] = self.blobs.put(partial)
+                                    event["content_sha256"] = await asyncio.to_thread(self.blobs.put,partial)
                                     event["truncated"] = True
                                     raise SourceFailure("body_cap")
                                 chunks.append(chunk)
                             body = b"".join(chunks)
-                            sha = self.blobs.put(body)
+                            sha = await asyncio.to_thread(self.blobs.put,body)
                             event["content_sha256"] = sha
                             response = Response(body, stream.status_code, url, utc_now(), sha)
                             content_type = stream.headers.get("content-type", "").split(";", 1)[0].strip().lower()
@@ -137,7 +137,7 @@ class WebsiteHttp:
                     # being less than one second apart due to transport overhead.
                     gate.next_start = max(gate.next_start, time.monotonic() + self.config.website_politeness_seconds)
                     if chunks and "content_sha256" not in event:
-                        event["content_sha256"] = self.blobs.put(b"".join(chunks)[:2 * 1024 * 1024])
+                        event["content_sha256"] = await asyncio.to_thread(self.blobs.put,b"".join(chunks)[:2 * 1024 * 1024])
                         event["truncated"] = True
                     event["runtime_ms"] = round((time.monotonic() - began) * 1000)
 

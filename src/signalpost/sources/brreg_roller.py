@@ -1,3 +1,4 @@
+import asyncio
 from ..budget import SourceFailure
 from .brreg_enhet import BASE
 from .extract import Section, add, finish, decode, response_source
@@ -6,6 +7,10 @@ from ..models.evidence import digest, canonical
 
 async def fetch(org, http):
     response = await http.get(BASE + org + "/roller", org)
+    return await asyncio.to_thread(extract,org,response)
+
+
+def extract(org,response):
     data, error = decode(response, "roles")
     if error:
         return error

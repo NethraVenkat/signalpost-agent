@@ -312,7 +312,7 @@ def index_record(row):
     industry = next((c for c in available if c['field'].startswith('identity.nace')), None)
     iv = industry['value'] if industry else {}
     website = get('official_website')
-    roles = [c for c in available if c['family'] == 'roles']
+    roles = [c for c in available if c['field'].startswith('roles.role.') and isinstance(c['value'],dict)]
     def role(code):
         return next((c for c in roles if (c['value'].get('role_type') or {}).get('kode') == code and not c['value'].get('inactive')), None)
     ceo, chair, auditor = role('DAGL'), role('LEDE'), role('REVI')
@@ -322,7 +322,7 @@ def index_record(row):
               'annual_result': get('accounts.net_result'), 'fiscal_year': next(((c.get('reporting_period') or {}).get('fiscal_year') for c in available if c['family'] == 'accounts' and (c.get('reporting_period') or {}).get('fiscal_year')), None),
               'ceo': ceo['value'].get('name') if ceo else None, 'chair': chair['value'].get('name') if chair else None,
               'auditor': auditor['value'].get('name') if auditor else None,
-              'workplaces': sum(c['family'] == 'subunits' for c in available) if row['run']['sections'].get('subunits') == 'available' else None,
+              'workplaces': sum(c['field'].startswith('subunits.unit.') for c in available) if row['run']['sections'].get('subunits') == 'available' else None,
               'website': website.get('final_url') if isinstance(website, dict) else None,
               'social': sum(c['family'] == 'website' and 'social' in c['field'] for c in available),
               'jobs': sum(c['family'] == 'hiring' and not c.get('carried_forward') for c in available),

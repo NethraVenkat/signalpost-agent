@@ -2,10 +2,41 @@
 import json
 
 
-def pointer_bounds(text, pointer):
+def document_bounds(text):
+    bounds={}
+    decoder=json.JSONDecoder()
+    def skip(pos):
+        while pos<len(text) and text[pos].isspace():pos+=1
+        return pos
+    def walk(pos,path):
+        pos=skip(pos);start=pos
+        if text[pos]=='{':
+            pos=skip(pos+1)
+            while text[pos]!='}':
+                key,end=decoder.raw_decode(text,pos);pos=walk(skip(end)+1,path+(str(key),));pos=skip(pos)
+                if text[pos]!=',':break
+                pos=skip(pos+1)
+            pos+=1
+        elif text[pos]=='[':
+            pos=skip(pos+1);n=0
+            while text[pos]!=']':
+                pos=skip(walk(pos,path+(str(n),)));n+=1
+                if text[pos]!=',':break
+                pos=skip(pos+1)
+            pos+=1
+        else:_,pos=decoder.raw_decode(text,pos)
+        bounds[path]=(start,pos)
+        return pos
+    try:walk(0,())
+    except (ValueError,IndexError,TypeError):return {}
+    return bounds
+
+
+def pointer_bounds(text, pointer, bounds=None):
     if not pointer.startswith("/") or "*" in pointer:
         return None
     wanted = tuple(p.replace("~1", "/").replace("~0", "~") for p in pointer.split("/")[1:])
+    if bounds is not None:return bounds.get(wanted)
     decoder = json.JSONDecoder()
     result = None
     def skip(pos):
@@ -51,9 +82,9 @@ def pointer_bounds(text, pointer):
     return result
 
 
-def excerpt(body: bytes, value=None, locator="", limit=300):
-    text = body.decode("utf-8", errors="replace")
-    bounds = pointer_bounds(text, locator) if text.lstrip().startswith(("{", "[")) else None
+def excerpt(body: bytes, value=None, locator="", limit=300,document=None):
+    text = document[0] if document else body.decode("utf-8", errors="replace")
+    bounds = pointer_bounds(text, locator,document[1] if document else None) if text.lstrip().startswith(("{", "[")) else None
     if bounds:
         start, end = bounds
         if end - start > limit:

@@ -1,3 +1,4 @@
+import asyncio
 from ..budget import SourceFailure
 from ..models.envelope import Error
 from .extract import Section, add, finish, decode, response_source, get
@@ -17,6 +18,10 @@ PATHS = {
 
 async def fetch(org, http):
     response = await http.get(URL + org, org)
+    return await asyncio.to_thread(extract,org,response,http.blobs)
+
+
+def extract(org,response,blobs):
     data, error = decode(response, "accounts")
     if error:
         return error
@@ -46,7 +51,7 @@ async def fetch(org, http):
     calibration=[]
     if confirmed:
         reporting.update({'unit':'NOK','source_unit':None,'unit_basis':'four_exact_parent_2025_ratios_within_0.995_1.005'})
-        calibration=financial_units.evidence(http.blobs)
+        calibration=financial_units.evidence(blobs)
         section.evidence.extend(calibration)
     for name, path in PATHS.items():
         value = get(record, path)

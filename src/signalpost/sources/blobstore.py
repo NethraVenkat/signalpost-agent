@@ -1,5 +1,6 @@
 import base64
 import hashlib
+import threading
 from pathlib import Path
 
 
@@ -7,8 +8,12 @@ class BlobStore:
     def __init__(self, state_dir: Path):
         self.directory = state_dir / "blobs"
         self.directory.mkdir(parents=True, exist_ok=True)
+        self._lock=threading.RLock()
 
     def put(self, body: bytes):
+        with self._lock:return self._put(body)
+
+    def _put(self,body):
         sha = hashlib.sha256(body).hexdigest()
         target = self.directory / sha
         if target.exists():

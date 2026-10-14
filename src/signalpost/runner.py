@@ -103,6 +103,18 @@ def finalize(envelope, old, blobs, budget, began):
 
 
 async def run(config, client=None,synthesis_provider=None):
+    from .monitor import LoopMonitor
+    monitor=LoopMonitor();monitor.start()
+    try:report=await _run(config,client,synthesis_provider)
+    finally:lag=await monitor.stop()
+    report['event_loop']=lag
+    try:
+        await asyncio.to_thread(config.report.write_text,json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+    except OSError:pass  # Original report error handling remains authoritative.
+    return report
+
+
+async def _run(config, client=None,synthesis_provider=None):
     budget = Budget(config)
     if not config.run_id:
         config.run_id = uuid.uuid4().hex
@@ -141,7 +153,7 @@ async def run(config, client=None,synthesis_provider=None):
         try:
             # Cooperative checks during synchronous streamed preparation include
             # bulk work in the deadline and bound memory to selected rows.
-            bulk, bulk_sha = bulk_registry.load(config.bulk, valid_orgs, blobs, budget)
+            bulk, bulk_sha = await asyncio.to_thread(bulk_registry.load,config.bulk,valid_orgs,blobs,budget)
         except Exception as exc:
             warnings.append(f"bulk unavailable: {getattr(exc, 'code', type(exc).__name__)}; live fallback")
     semaphore = asyncio.Semaphore(config.workers)
@@ -153,7 +165,7 @@ async def run(config, client=None,synthesis_provider=None):
         if valid_orgs <= registry_done: registry_ready.set()
     async def nav_names():
         await registry_ready.wait()
-        return nav.company_names(envelopes.values(),prior)
+        return await asyncio.to_thread(nav.company_names,list(envelopes.values()),prior)
     # Seed discovery before the first page; verified subunit names augment this
     # index when registry work completes. These names never authorize publication.
     nav_names.initial_names = {
@@ -174,7 +186,7 @@ async def run(config, client=None,synthesis_provider=None):
                 budget.check()
                 async def identity():
                     if org in bulk:
-                        return bulk_registry.extract(org, *bulk[org])
+                        return await asyncio.to_thread(bulk_registry.extract,org,*bulk[org])
                     return await brreg_enhet.fetch(org, http)
                 await isolate(envelope, "identity", identity)
                 if envelope.run.sections["identity"] != "available":
@@ -240,14 +252,14 @@ async def run(config, client=None,synthesis_provider=None):
         await execute(client)
     for org, envelope in envelopes.items():
         # Invalid numbers must never inherit previously published information.
-        finalize(envelope, prior.get(org) if valid(org) and storage_error is None else None, blobs, budget, budget.start)
+        await asyncio.to_thread(finalize,envelope,prior.get(org) if valid(org) and storage_error is None else None,blobs,budget,budget.start)
     synthesis_service=SynthesisService(config,budget,synthesis_provider)
     for envelope in envelopes.values():
         envelope.run.synthesis=await synthesis_service.summarize(envelope)
         envelope.profile.synthesis=envelope.run.synthesis
     order = inputs.rows if config.emit_duplicates else inputs.unique
     result = [envelopes[org] for org in order]
-    size, output_limited, minimum_exceeded = write(config.output, result, config.envelope_shape, blobs, config.max_output_mb)
+    size, output_limited, minimum_exceeded = await asyncio.to_thread(write,config.output,result,config.envelope_shape,blobs,config.max_output_mb)
     report = build(result, inputs, budget, config, warnings, time.monotonic() - budget.start)
     report['limits']['max_requests']=budget.cap
     report['request_budget_basis']='20 per unique normalized input' if config.max_requests is None else 'explicit override'
@@ -281,7 +293,7 @@ async def run(config, client=None,synthesis_provider=None):
     if config.profiles_output is not None:
         from .profiles import write as write_profiles
         try:
-            report['profiles_output']=write_profiles(config.profiles_output,result)
+            report['profiles_output']=await asyncio.to_thread(write_profiles,config.profiles_output,result)
         except OSError as exc:
             report['profiles_output']={'state':'failed','error':type(exc).__name__}
             report['warnings'].append('profiles output failed: '+type(exc).__name__)
@@ -293,7 +305,7 @@ async def run(config, client=None,synthesis_provider=None):
             if any(p.resolve().is_relative_to(config.site_dir.resolve()) for p in
                    (config.output, config.report, config.profiles_output, config.organisations, config.bulk, config.previous) if p):
                 raise ValueError('Site directory overlaps a run input or output')
-            report['site'] = {'state': 'available', **generate_site(config.output, config.site_dir)}
+            report['site'] = {'state': 'available', **await asyncio.to_thread(generate_site,config.output,config.site_dir)}
         except Exception as exc:
             report['site'] = {'state': 'failed', 'error': type(exc).__name__, 'message': str(exc)}
             report['warnings'].append('site generation failed: ' + type(exc).__name__)

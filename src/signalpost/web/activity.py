@@ -1,5 +1,6 @@
 """Bounded dated news discovery on an already accepted company domain."""
 import html
+import asyncio
 import re
 import xml.etree.ElementTree as ET
 from datetime import datetime, timezone, timedelta
@@ -123,7 +124,7 @@ async def fetch(org, envelope, http, pages):
             if response.status in {404, 410}: break
             if response.status in {401, 403, 429}: raise SourceFailure('http_blocked')
             if response.status != 200: raise SourceFailure('activity_fetch_error')
-            items, children = parse(response.body, response.url, datetime.now(timezone.utc))
+            items, children = await asyncio.to_thread(parse,response.body,response.url,datetime.now(timezone.utc))
             if children:
                 urls = children[:1] if level == 0 else []
                 if level == 1: raise SourceFailure('activity_sitemap_depth')

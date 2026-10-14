@@ -4,7 +4,7 @@ from dataclasses import dataclass, field
 from ..models.claim import Claim
 from ..models.evidence import Evidence, canonical, digest, utc_now
 from ..models.envelope import Error
-from .excerpt import excerpt
+from .excerpt import excerpt,document_bounds
 
 
 @dataclass
@@ -23,6 +23,13 @@ class Source:
     sha: str
     retrieved_at: str
     identifier: str | None = None
+    _document: object = field(default=None,init=False,repr=False)
+
+    def excerpt(self,value,locator):
+        if self._document is None:
+            text=self.body.decode('utf8',errors='replace')
+            self._document=(text,document_bounds(text) if text.lstrip().startswith(('{','[')) else {})
+        return excerpt(self.body,value,locator,document=self._document)
 
 
 def add(section, source, org, family, field_name, value, locator, reporting=None, availability=None, effective=None, span=None, source_class="official_registry", method="signalpost.registry.v1",id_reporting=None):
@@ -31,7 +38,7 @@ def add(section, source, org, family, field_name, value, locator, reporting=None
     state = availability or ("available" if value is not None else "not_available")
     evid = Evidence(id=digest([source.url, source.sha, locator, method]), source_url=source.url,
                     source_class=source_class, retrieved_at=source.retrieved_at, content_sha256=source.sha,
-                    claim_span=span if span is not None else excerpt(source.body, value, locator), locator=locator, source_identifier=source.identifier,
+                    claim_span=span if span is not None else source.excerpt(value,locator), locator=locator, source_identifier=source.identifier,
                     extraction_method=method,
                     effective_at=effective, reporting_period=reporting)
     value = value if state == "available" else None
@@ -61,7 +68,9 @@ def get(data, path):
 
 
 def response_source(response):
-    return Source(response.url, response.body, response.sha, response.retrieved_at)
+    if not hasattr(response,'_evidence_source'):
+        response._evidence_source=Source(response.url,response.body,response.sha,response.retrieved_at)
+    return response._evidence_source
 
 
 def decode(response, family):

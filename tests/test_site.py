@@ -169,3 +169,11 @@ def test_identical_duplicate_rows_share_a_profile(tmp_path):
     result = generate_site(source(tmp_path, [row, row]), tmp_path / 'site')
     assert result['input_records'] == 2
     assert result['companies'] == 1 and result['pages'] == 3
+
+
+def test_scalar_role_metadata_is_not_a_role_record(tmp_path):
+    row,_=envelope(tmp_path/'run')
+    available(row,'roles.detail.example.0.order',1)
+    row.run.synthesis=None;row.profile.synthesis=None
+    result=generate_site(source(tmp_path,[row]),tmp_path/'site')
+    assert result['companies']==1
