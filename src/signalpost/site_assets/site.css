@@ -982,10 +982,236 @@ footer {
 
 /* Theme toggle */
 .theme-toggle {
-  margin-left: auto;
   min-height: 38px;
   padding: 6px 14px;
   font-size: 13.5px;
+}
+
+/* Update Status Panel */
+.status-toggle {
+  min-height: 38px;
+  padding: 6px 14px;
+  font-size: 13.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--muted);
+}
+.status-dot.running {
+  background: #f59e0b;
+  animation: pulse-dot 1.5s ease-in-out infinite;
+}
+.status-dot.completed {
+  background: #10b981;
+}
+.status-dot.failed {
+  background: #ef4444;
+}
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.status-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(420px, 90vw);
+  background: var(--card);
+  border-left: 1px solid var(--line);
+  box-shadow: -4px 0 24px rgb(0 0 0 / 0.12);
+  z-index: 1000;
+  overflow-y: auto;
+  transition: transform 0.25s ease;
+}
+.status-panel[hidden] {
+  display: block !important;
+  transform: translateX(100%);
+  pointer-events: none;
+  visibility: hidden;
+}
+.status-panel:not([hidden]) {
+  transform: translateX(0);
+  visibility: visible;
+}
+.status-panel-inner {
+  padding: 24px 20px;
+}
+.status-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 14px;
+  margin-bottom: 20px;
+}
+.status-panel-header h2 {
+  margin: 0;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.status-close {
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  min-height: 38px;
+  min-width: 38px;
+  padding: 0;
+  cursor: pointer;
+  color: var(--muted);
+  border-radius: 6px;
+}
+.status-close:hover {
+  background: var(--soft);
+  color: var(--ink);
+}
+
+.status-progress-section {
+  margin-bottom: 20px;
+}
+.status-progress-bar-wrap progress {
+  width: 100%;
+  height: 10px;
+  border-radius: 6px;
+  overflow: hidden;
+  appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  background: var(--line);
+}
+.status-progress-bar-wrap progress::-webkit-progress-bar {
+  background: var(--line);
+  border-radius: 6px;
+}
+.status-progress-bar-wrap progress::-webkit-progress-value {
+  background: var(--accent);
+  border-radius: 6px;
+  transition: width 0.3s ease;
+}
+.status-progress-bar-wrap progress::-moz-progress-bar {
+  background: var(--accent);
+  border-radius: 6px;
+}
+.status-progress-text {
+  font-size: 13px;
+  font-weight: 650;
+  color: var(--muted);
+  margin: 8px 0 0;
+}
+
+.status-section {
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+.status-section h3 {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+
+.status-counters {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+.status-counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.status-counter-value {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--ink);
+}
+.status-counter-label {
+  font-size: 11px;
+  font-weight: 650;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.status-stages {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.status-stage {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-size: 13.5px;
+  font-weight: 600;
+}
+.status-stage-icon {
+  width: 18px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.status-timing {
+  font-size: 13.5px;
+}
+.status-timing dt {
+  font-size: 12.5px;
+}
+
+.status-events {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.status-event {
+  display: flex;
+  gap: 10px;
+  padding: 6px 8px;
+  font-size: 12.5px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  align-items: flex-start;
+}
+.status-event-time {
+  font-family: monospace;
+  font-weight: 700;
+  color: var(--accent);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.status-event-msg {
+  color: var(--ink);
+  word-break: break-word;
+}
+
+.status-snapshot-note {
+  font-size: 12px;
+  padding: 10px;
+  margin: 10px 0 0;
+  background: var(--bg);
+  border: 1px dashed var(--line);
+  border-radius: 6px;
 }
 
 /* Mobile & Tablet responsiveness */

@@ -218,3 +218,30 @@ def test_dashboard_filters_comparison_and_timeline(tmp_path):
     assert 'id="clear-compare"' in compare_html
     assert 'id="company-options"' in compare_html
 
+
+def test_update_status_panel_markup_and_accessibility(tmp_path):
+    row, _ = envelope(tmp_path / 'run')
+    out = tmp_path / 'site'
+    generate_site(source(tmp_path, [row]), out)
+
+    index_html = (out / 'index.html').read_text(encoding='utf8')
+    assert 'id="status-toggle"' in index_html
+    assert 'id="status-panel"' in index_html
+    assert 'id="status-dot"' in index_html
+    assert 'id="status-badge"' in index_html
+    assert 'id="status-progress"' in index_html
+    assert 'id="status-counters"' in index_html
+    assert 'id="status-stages"' in index_html
+    assert 'id="status-timing"' in index_html
+    assert 'id="status-events"' in index_html
+    assert 'role="dialog"' in index_html
+    assert 'aria-modal="true"' in index_html
+    assert 'aria-controls="status-panel"' in index_html
+
+    # Check CSP and XSS safety
+    markup = Markup(index_html)
+    for tag, attrs in markup.tags:
+        assert not any(k.startswith('on') for k in attrs)
+    assert CSP in __import__('html').unescape(index_html)
+
+
