@@ -294,7 +294,12 @@ def fact(claim, records):
         content = '<p class="stale">Previously supported; not freshly checked.</p>' + content
     period = claim.get('reporting_period')
     if period:
-        content += '<p>Reporting period / currency / unit: ' + esc(value_text(period)) + '</p>'
+        parts = []
+        if period.get('fiscal_year'): parts.append(f"Fiscal year: {period['fiscal_year']}")
+        if period.get('period_start') and period.get('period_end'): parts.append(f"Accounting period: {period['period_start']} to {period['period_end']}")
+        parts.append(f"Currency: {period.get('currency', 'NOK')}")
+        if period.get('unit'): parts.append(f"Unit: {period['unit']}")
+        content += '<p class="financial-meta muted">' + esc(' · '.join(parts)) + '</p>'
     panel = bool(claim.get('evidence_ids') or available)
     if panel:
         content += f'<button type="button" aria-expanded="false" aria-controls="source-{esc(local_id)}" data-toggle="source-{esc(local_id)}">Source</button><div id="source-{esc(local_id)}" data-source="{esc(local_id)}" class="evidence" hidden></div>'
@@ -371,7 +376,7 @@ def profile(row, title):
     support = synthesis.get('change_claims') or []
     change_ids = {c['id'] for c in support}
     name = by_field.get('identity.legal_name', org)
-    body = f'<header><p class="eyebrow">Company profile</p><h1>{esc(name)}</h1><p>Organisation number: <code>{esc(org)}</code> <button type="button" data-copy="{esc(org)}">Copy organisation number</button></p>'
+    body = f'<header><p class="eyebrow">Company profile</p><h1>{esc(name)}</h1><p>Organisation number: <code>{esc(org)}</code> <button type="button" data-copy="{esc(org)}">Copy organisation number</button> <button type="button" class="btn-watchlist" data-watchlist="{esc(org)}">⭐ Watchlist</button></p>'
     for field in ('identity.organisation_form', 'identity.legal_form', 'identity.municipality'):
         if field in by_field:
             v = by_field[field]
@@ -409,7 +414,13 @@ def profile(row, title):
             for day, label, c in dated_registry:
                 body += '<p>' + esc(label + ': ' + day) + f' <a href="#fact-{esc(c.id[:16])}">Registry source</a></p>'
             body += '<h3>Website updates ' + chip(state) + '</h3>'
-        if key == 'financials': body += '<p>Reported values from Regnskapsregisteret; no figures are calculated.</p>'
+        if key == 'financials':
+            body += '<p>Reported values from Regnskapsregisteret; no figures or growth ratios are calculated.</p>'
+            years = sorted({(c.get('reporting_period') or {}).get('fiscal_year') for c in items if (c.get('reporting_period') or {}).get('fiscal_year')}, reverse=True)
+            if len(years) > 1:
+                body += f'<div class="financial-trend-banner"><p><strong>Multi-year filing trend:</strong> Accounts filed across {len(years)} fiscal years ({", ".join(str(y) for y in years)}). Reporting currency: NOK. No derived growth ratios are calculated.</p></div>'
+            elif len(years) == 1:
+                body += f'<div class="financial-trend-banner"><p><strong>Reporting period:</strong> Fiscal year {years[0]} filed in Regnskapsregisteret (NOK). Single-year reported values.</p></div>'
         if key == 'online': body += '<p>Website proof types: orgnr = exact registered number; registry_declared = registered site with corroboration; signals = accepted identity signals.</p>'
         if not items or state != 'available': body += '<p>' + esc(UNKNOWN.get(state, 'No facts published in this section.')) + '</p>'
         if key == 'financials' and items:
@@ -694,9 +705,20 @@ def index_record(row):
     web_origin = website.get('candidate_origin') if isinstance(website, dict) else None
     web_proof = website.get('proof_type') if isinstance(website, dict) else None
 
-    job_claims = [c['value'] for c in available if c['family'] == 'hiring' and isinstance(c['value'], dict)]
-    job_titles = [j.get('title') for j in job_claims if j.get('title')]
-    job_dates = [str(j.get('published'))[:10] for j in job_claims if j.get('published')]
+    job_postings = []
+    for c in available:
+        if c['family'] == 'hiring' and isinstance(c.get('value'), dict):
+            j = c['value']
+            job_postings.append({
+                'title': j.get('title') or 'Job advertisement',
+                'published': str(j.get('published'))[:10] if j.get('published') else None,
+                'expires': str(j.get('expires'))[:10] if j.get('expires') else None,
+                'matched_via': j.get('matched_via'),
+                'anchor': anchor(c),
+                'uuid': j.get('uuid')
+            })
+    job_titles = [j['title'] for j in job_postings if j.get('title')]
+    job_dates = [j['published'] for j in job_postings if j.get('published')]
 
     reg_events = registry_events(row)
     latest_event = reg_events[0] if reg_events else None
@@ -717,6 +739,7 @@ def index_record(row):
               'jobs': sum(c['family'] == 'hiring' and not c.get('carried_forward') for c in available),
               'job_titles': job_titles[:3],
               'job_dates': job_dates,
+              'job_postings': job_postings,
               'activity': sum(c['family'] == 'activity' for c in available) + len(reg_events),
               'latest_activity_date': latest_event[0] if latest_event else None,
               'latest_activity_label': latest_event[1] if latest_event else None,
@@ -749,6 +772,7 @@ def index_page(records, title):
     body += '<div class="view-switcher" role="tablist" aria-label="View selection">'
     body += '<button type="button" id="tab-dashboard" class="tab-btn active" role="tab" aria-selected="true" aria-controls="view-dashboard">📊 Dashboard</button>'
     body += '<button type="button" id="tab-directory" class="tab-btn" role="tab" aria-selected="false" aria-controls="view-directory">🏢 Company Directory</button>'
+    body += '<button type="button" id="tab-hiring" class="tab-btn" role="tab" aria-selected="false" aria-controls="view-hiring">💼 Hiring Explorer</button>'
     body += '</div>'
 
     # 1. Dashboard View
@@ -801,6 +825,7 @@ def index_page(records, title):
     body += '<section id="view-directory" class="directory-view" role="tabpanel" aria-labelledby="tab-directory" hidden>'
     body += '<div id="directory"></div>'
     body += '<div class="export-bar" aria-label="Export directory data"><span class="export-label">Export Directory:</span> <button type="button" id="export-directory-csv" class="btn-export">Export CSV</button> <button type="button" id="export-directory-json" class="btn-export">Export JSON</button></div>'
+    body += '<div class="saved-views-bar" aria-label="Saved views and watchlist"><span class="saved-views-label">Saved Views:</span><div id="saved-views-list" class="saved-views-list"></div><button type="button" id="save-current-view" class="btn-sm">💾 Save view</button><button type="button" id="clear-watchlist" class="btn-sm">Clear watchlist</button><span class="storage-notice muted">Stored locally in your browser.</span></div>'
     body += '<div class="search-box">'
     body += '<label for="search" class="visually-hidden">Search name, organisation number, or website</label>'
     body += '<div class="search-input-wrapper">'
@@ -829,6 +854,7 @@ def index_page(records, title):
 
     for key, label in [('website', 'Verified website'), ('jobs', 'Job ads'), ('social', 'Social profiles'), ('activity', 'Public activity'), ('incomplete', 'Failed or blocked sections')]:
         body += f'<label class="check"><input id="filter-{key}" type="checkbox">{label}</label>'
+    body += '<label class="check"><input id="filter-watchlist" type="checkbox">⭐ Watchlist (<span id="watchlist-count">0</span>)</label>'
     body += '</section>'
 
     body += '<div id="active-filters-bar" class="active-filters-bar" hidden>'
@@ -849,6 +875,26 @@ def index_page(records, title):
     for r in records:
         body += f'<article class="company"><h2><a href="c/{esc(r["orgnr"])}.html">{esc(r["name"])}</a></h2><p>{esc(r["orgnr"])} · {esc(r["municipality"] or "Unknown municipality")}</p></article>'
     body += '</div><div class="pagination"><button id="previous" type="button">Previous</button><span id="page-label"></span><button id="next" type="button">Next</button></div>'
+    body += '</section>'
+
+    # 3. Hiring Explorer View
+    body += '<section id="view-hiring" class="hiring-view" role="tabpanel" aria-labelledby="tab-hiring" hidden>'
+    body += '<div class="hiring-header">'
+    body += '<h2>Hiring Explorer</h2>'
+    body += '<p class="muted">Active job postings recalled from Arbeidsplassen (NAV) public stream with verified company matching.</p>'
+    body += '<div class="hiring-scope-box"><p><strong>Recalled job postings:</strong> Evaluated from NAV public stream. Unlisted companies have no active job postings recalled within this scope, which does not imply zero employment.</p></div>'
+    body += '</div>'
+    body += '<div class="hiring-filters-grid">'
+    body += '<label>Job title keyword<input type="search" id="hiring-search-title" placeholder="Search job title (e.g. Utvikler, Konsulent)..." autocomplete="off"></label>'
+    body += '<label>Company<input type="search" id="hiring-search-company" placeholder="Search company name or orgnr..." autocomplete="off"></label>'
+    body += '<label>Published within<select id="hiring-filter-date"><option value="all">All publication dates</option><option value="7">Last 7 days</option><option value="30">Last 30 days</option><option value="90">Last 90 days</option></select></label>'
+    body += '</div>'
+    body += '<p id="hiring-count" class="result-count" role="status" aria-live="polite"></p>'
+    body += '<div id="hiring-results" class="hiring-results"></div>'
+    body += '<div id="hiring-empty" class="empty-state" hidden>'
+    body += '<h3>No job postings match active filters</h3>'
+    body += '<p>Zero results indicates no active job ads match your criteria in the evaluated cohort. This does not indicate zero employment.</p>'
+    body += '</div>'
     body += '</section>'
     return page(title, body, kind='index')
 
