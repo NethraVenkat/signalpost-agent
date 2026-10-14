@@ -31,6 +31,65 @@
     setTimeout(() => URL.revokeObjectURL(url), 1000);
   }
 
+  // Watchlist & Saved Views Storage
+  const WATCHLIST_KEY = 'signalpost_watchlist_v1';
+  const SAVED_VIEWS_KEY = 'signalpost_saved_views_v1';
+
+  function getWatchlist() {
+    try {
+      const data = localStorage.getItem(WATCHLIST_KEY);
+      return new Set(data ? JSON.parse(data) : []);
+    } catch {
+      return new Set();
+    }
+  }
+
+  function saveWatchlist(set) {
+    try {
+      localStorage.setItem(WATCHLIST_KEY, JSON.stringify([...set]));
+    } catch {}
+  }
+
+  function toggleWatchlist(orgnr) {
+    const list = getWatchlist();
+    if (list.has(orgnr)) list.delete(orgnr);
+    else list.add(orgnr);
+    saveWatchlist(list);
+    updateWatchlistUI();
+    return list.has(orgnr);
+  }
+
+  function updateWatchlistUI() {
+    const list = getWatchlist();
+    const countEl = document.getElementById('watchlist-count');
+    if (countEl) countEl.textContent = String(list.size);
+    document.querySelectorAll('[data-watchlist]').forEach(btn => {
+      const org = btn.dataset.watchlist;
+      const active = list.has(org);
+      btn.classList.toggle('active', active);
+      if (btn.classList.contains('btn-watchlist')) {
+        btn.textContent = active ? '★ In Watchlist' : '⭐ Add to Watchlist';
+      }
+      if (btn.classList.contains('btn-watchlist-card')) {
+        btn.textContent = active ? '★' : '☆';
+        btn.setAttribute('aria-label', (active ? 'Remove ' : 'Add ') + 'watchlist');
+      }
+    });
+  }
+
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-watchlist]');
+    if (btn) {
+      const org = btn.dataset.watchlist;
+      if (org) {
+        toggleWatchlist(org);
+        if (typeof window._triggerDraw === 'function') {
+          window._triggerDraw();
+        }
+      }
+    }
+  });
+
   // Evidence panel support
   const localData = window.SIGNALPOST_EVIDENCE || {sources:[],records:[],facts:[]};
   const evidence = new Map(localData.records.map(row => {
@@ -199,18 +258,30 @@
     // View tab elements
     const tabDash = document.getElementById('tab-dashboard');
     const tabDir = document.getElementById('tab-directory');
+    const tabHiring = document.getElementById('tab-hiring');
     const viewDash = document.getElementById('view-dashboard');
     const viewDir = document.getElementById('view-directory');
+    const viewHiring = document.getElementById('view-hiring');
 
     function switchView(viewName) {
       const isDash = viewName === 'dashboard';
+      const isDir = viewName === 'directory';
+      const isHiring = viewName === 'hiring';
       if(tabDash && tabDir && viewDash && viewDir) {
         tabDash.classList.toggle('active', isDash);
         tabDash.setAttribute('aria-selected', String(isDash));
-        tabDir.classList.toggle('active', !isDash);
-        tabDir.setAttribute('aria-selected', String(!isDash));
+        tabDir.classList.toggle('active', isDir);
+        tabDir.setAttribute('aria-selected', String(isDir));
+        if (tabHiring) {
+          tabHiring.classList.toggle('active', isHiring);
+          tabHiring.setAttribute('aria-selected', String(isHiring));
+        }
         viewDash.hidden = !isDash;
-        viewDir.hidden = isDash;
+        viewDir.hidden = !isDir;
+        if (viewHiring) viewHiring.hidden = !isHiring;
+      }
+      if (isHiring && typeof renderHiringExplorer === 'function') {
+        renderHiringExplorer();
       }
     }
 
@@ -222,6 +293,12 @@
       tabDir.addEventListener('click', () => {
         switchView('directory');
         updateQueryParams({ view: 'directory' });
+      });
+    }
+    if(tabHiring) {
+      tabHiring.addEventListener('click', () => {
+        switchView('hiring');
+        updateQueryParams({ view: 'hiring' });
       });
     }
 
@@ -237,6 +314,7 @@
     const filterSocial = document.getElementById('filter-social');
     const filterAct = document.getElementById('filter-activity');
     const filterInc = document.getElementById('filter-incomplete');
+    const filterWatchlist = document.getElementById('filter-watchlist');
     const activeFiltersBar = document.getElementById('active-filters-bar');
     const activeFiltersContainer = document.getElementById('active-filter-chips');
     const clearFiltersBtn = document.getElementById('clear-filters');
@@ -305,6 +383,7 @@
       if(filterSocial) filterSocial.checked = false;
       if(filterAct) filterAct.checked = false;
       if(filterInc) filterInc.checked = false;
+      if(filterWatchlist) filterWatchlist.checked = false;
       pageNumber = 0;
       updateQueryParams();
       draw();
@@ -463,6 +542,7 @@
       if(filters.social) chips.push({ label: 'Social Profiles', clear: () => { filterSocial.checked = false; } });
       if(filters.act) chips.push({ label: 'Public Activity', clear: () => { filterAct.checked = false; } });
       if(filters.inc) chips.push({ label: 'Incomplete Sections', clear: () => { filterInc.checked = false; } });
+      if(filters.wlOnly) chips.push({ label: 'Watchlist (' + getWatchlist().size + ')', clear: () => { filterWatchlist.checked = false; } });
 
       activeFiltersBar.hidden = chips.length === 0;
       for(const chip of chips) {
@@ -487,8 +567,10 @@
       const social = filterSocial?.checked || false;
       const act = filterAct?.checked || false;
       const inc = filterInc?.checked || false;
+      const wlOnly = filterWatchlist?.checked || false;
+      const wlSet = getWatchlist();
 
-      const isFiltered = Boolean(query || town || division || size || web || jobs || social || act || inc);
+      const isFiltered = Boolean(query || town || division || size || web || jobs || social || act || inc || wlOnly);
 
       const selected = records.filter(r => {
         if(query && !r._search.includes(query)) return false;
@@ -506,6 +588,7 @@
         if(social && !r.flags.social) return false;
         if(act && !r.flags.activity) return false;
         if(inc && !Object.values(r.sections).some(s => s === 'failed' || s === 'blocked')) return false;
+        if(wlOnly && !wlSet.has(r.orgnr)) return false;
         return true;
       });
 
@@ -525,7 +608,7 @@
       renderDashboard(selected, isFiltered);
 
       // Render Active Filter Chips
-      renderActiveFilterChips({ query, town, division, size, web, jobs, social, act, inc });
+      renderActiveFilterChips({ query, town, division, size, web, jobs, social, act, inc, wlOnly });
 
       // Render Directory Results
       const results = document.getElementById('results');
@@ -541,6 +624,12 @@
             const a = element('a', r.name);
             a.href = 'c/' + r.orgnr + '.html';
             heading.append(a);
+            const isSaved = wlSet.has(r.orgnr);
+            const starBtn = element('button', isSaved ? '★' : '☆', 'btn-watchlist-card' + (isSaved ? ' active' : ''));
+            starBtn.type = 'button';
+            starBtn.dataset.watchlist = r.orgnr;
+            starBtn.setAttribute('aria-label', (isSaved ? 'Remove from' : 'Add to') + ' watchlist');
+            heading.append(' ', starBtn);
             card.append(heading);
             card.append(element('p', r.orgnr + ' · ' + (r.municipality || 'Unknown municipality')));
             card.append(element('p', r.industry_en || r.industry_no || 'Industry unknown'));
@@ -564,6 +653,8 @@
       if(pageLbl) pageLbl.textContent = 'Page ' + (pageNumber + 1) + ' of ' + pages;
       if(prevBtn) prevBtn.disabled = pageNumber === 0;
       if(nextBtn) nextBtn.disabled = pageNumber === pages - 1;
+
+      updateWatchlistUI();
 
       currentSelectedRecords = selected;
       updateQueryParams();
@@ -646,7 +737,7 @@
     }
 
     // Attach listeners to select & check controls
-    const controls = ['municipality', 'division', 'size-band', 'sort', 'filter-website', 'filter-jobs', 'filter-social', 'filter-activity', 'filter-incomplete'];
+    const controls = ['municipality', 'division', 'size-band', 'sort', 'filter-website', 'filter-jobs', 'filter-social', 'filter-activity', 'filter-incomplete', 'filter-watchlist'];
     for(const id of controls) {
       const el = document.getElementById(id);
       if(el) {
@@ -708,6 +799,182 @@
     if (expDashJson) expDashJson.addEventListener('click', () => exportRecordsJson(currentSelectedRecords, 'signalpost-cohort.json'));
     if (expDirCsv) expDirCsv.addEventListener('click', () => exportRecordsCsv(currentSelectedRecords, 'signalpost-directory.csv'));
     if (expDirJson) expDirJson.addEventListener('click', () => exportRecordsJson(currentSelectedRecords, 'signalpost-directory.json'));
+
+    // Saved Views
+    function getSavedViews() {
+      try {
+        const data = localStorage.getItem(SAVED_VIEWS_KEY);
+        return data ? JSON.parse(data) : [];
+      } catch {
+        return [];
+      }
+    }
+
+    function saveSavedViews(views) {
+      try {
+        localStorage.setItem(SAVED_VIEWS_KEY, JSON.stringify(views));
+      } catch {}
+    }
+
+    function renderSavedViews() {
+      const container = document.getElementById('saved-views-list');
+      if (!container) return;
+      container.replaceChildren();
+      const views = getSavedViews();
+      if (!views.length) {
+        container.append(element('span', 'No saved views yet', 'muted'));
+        return;
+      }
+      for (let idx = 0; idx < views.length; idx++) {
+        const v = views[idx];
+        const pill = element('div', null, 'saved-view-pill');
+        const loadBtn = element('button', v.name, 'saved-view-load');
+        loadBtn.type = 'button';
+        loadBtn.title = 'Apply saved view: ' + v.name;
+        loadBtn.addEventListener('click', () => {
+          const params = new URLSearchParams(v.query || '');
+          if (searchInput) searchInput.value = params.get('q') || '';
+          if (muniSelect) muniSelect.value = params.get('municipality') || '';
+          if (divSelect) divSelect.value = params.get('division') || '';
+          if (sizeSelect) sizeSelect.value = params.get('size') || '';
+          if (sortSelect) sortSelect.value = params.get('sort') || 'claim_count';
+          if (filterWeb) filterWeb.checked = params.get('web') === '1';
+          if (filterJobs) filterJobs.checked = params.get('jobs') === '1';
+          if (filterSocial) filterSocial.checked = params.get('social') === '1';
+          if (filterAct) filterAct.checked = params.get('activity') === '1';
+          if (filterInc) filterInc.checked = params.get('incomplete') === '1';
+          if (filterWatchlist) filterWatchlist.checked = params.get('wl') === '1';
+          pageNumber = 0;
+          updateQueryParams();
+          draw();
+        });
+        const delBtn = element('button', '✕', 'saved-view-delete');
+        delBtn.type = 'button';
+        delBtn.setAttribute('aria-label', 'Delete saved view ' + v.name);
+        delBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const updated = getSavedViews().filter((_, i) => i !== idx);
+          saveSavedViews(updated);
+          renderSavedViews();
+        });
+        pill.append(loadBtn, delBtn);
+        container.append(pill);
+      }
+    }
+
+    const saveViewBtn = document.getElementById('save-current-view');
+    if (saveViewBtn) {
+      saveViewBtn.addEventListener('click', () => {
+        const views = getSavedViews();
+        const defaultName = 'View ' + (views.length + 1);
+        const name = (typeof window.prompt === 'function' ? window.prompt('Name for this view:', defaultName) : defaultName) || defaultName;
+        const params = new URLSearchParams(window.location.search);
+        if (filterWatchlist?.checked) params.set('wl', '1'); else params.delete('wl');
+        views.push({ name, query: params.toString() });
+        saveSavedViews(views);
+        renderSavedViews();
+      });
+    }
+
+    const clearWlBtn = document.getElementById('clear-watchlist');
+    if (clearWlBtn) {
+      clearWlBtn.addEventListener('click', () => {
+        saveWatchlist(new Set());
+        updateWatchlistUI();
+        draw();
+      });
+    }
+
+    // Hiring Explorer
+    function renderHiringExplorer() {
+      const titleInput = document.getElementById('hiring-search-title');
+      const compInput = document.getElementById('hiring-search-company');
+      const dateSelect = document.getElementById('hiring-filter-date');
+      const container = document.getElementById('hiring-results');
+      const countEl = document.getElementById('hiring-count');
+      const emptyEl = document.getElementById('hiring-empty');
+      if (!container) return;
+
+      const titleQuery = fold(titleInput?.value.trim());
+      const compQuery = fold(compInput?.value.trim());
+      const dateCutoffDays = dateSelect?.value || 'all';
+
+      const matchedJobs = [];
+      for (const r of records) {
+        if (compQuery && !fold(r.name + ' ' + r.orgnr).includes(compQuery)) continue;
+        if (r.job_postings && r.job_postings.length) {
+          for (const j of r.job_postings) {
+            if (titleQuery && !fold(j.title).includes(titleQuery)) continue;
+            if (dateCutoffDays !== 'all' && j.published) {
+              const pubDate = new Date(j.published);
+              const now = new Date();
+              const diffDays = (now - pubDate) / (1000 * 60 * 60 * 24);
+              if (!isNaN(diffDays) && diffDays > parseInt(dateCutoffDays, 10)) continue;
+            }
+            matchedJobs.push({
+              companyName: r.name,
+              orgnr: r.orgnr,
+              municipality: r.municipality,
+              title: j.title,
+              published: j.published,
+              expires: j.expires,
+              matched_via: j.matched_via,
+              anchor: j.anchor
+            });
+          }
+        }
+      }
+
+      matchedJobs.sort((a, b) => (b.published || '').localeCompare(a.published || ''));
+
+      container.replaceChildren();
+      if (emptyEl) emptyEl.hidden = matchedJobs.length > 0;
+      if (countEl) {
+        countEl.textContent = matchedJobs.length === 1 
+          ? '1 active job posting recalled' 
+          : matchedJobs.length.toLocaleString('en-US') + ' active job postings recalled';
+      }
+
+      for (const job of matchedJobs) {
+        const card = element('article', null, 'hiring-card');
+        const header = element('div', null, 'hiring-card-header');
+        header.append(element('h3', job.title, 'hiring-card-title'));
+        if (job.published) {
+          header.append(element('time', 'Published: ' + job.published, 'hiring-card-date'));
+        }
+        card.append(header);
+
+        const meta = element('div', null, 'hiring-card-meta');
+        const compLink = element('a', job.companyName, 'hiring-card-company');
+        compLink.href = 'c/' + job.orgnr + '.html' + (job.anchor ? '#' + job.anchor : '');
+        meta.append(compLink);
+        meta.append(element('span', ' · ' + job.orgnr + (job.municipality ? ' · ' + job.municipality : '')));
+        card.append(meta);
+
+        const footer = element('div', null, 'hiring-card-footer');
+        if (job.matched_via) {
+          footer.append(element('span', 'Matched via: ' + job.matched_via, 'chip match-source'));
+        }
+        const viewProof = element('a', 'View proof & receipt', 'btn-sm');
+        viewProof.href = 'c/' + job.orgnr + '.html' + (job.anchor ? '#' + job.anchor : '');
+        footer.append(viewProof);
+        card.append(footer);
+
+        container.append(card);
+      }
+    }
+
+    const hTitle = document.getElementById('hiring-search-title');
+    const hComp = document.getElementById('hiring-search-company');
+    const hDate = document.getElementById('hiring-filter-date');
+    if (hTitle) hTitle.addEventListener('input', () => renderHiringExplorer());
+    if (hComp) hComp.addEventListener('input', () => renderHiringExplorer());
+    if (hDate) hDate.addEventListener('change', () => renderHiringExplorer());
+
+    window._triggerDraw = draw;
+    renderSavedViews();
+    renderHiringExplorer();
+    updateWatchlistUI();
 
     draw();
   }
@@ -787,6 +1054,7 @@
         downloadFile(orgnr + '-summary.csv', lines.join('\r\n') + '\r\n', 'text/csv;charset=utf-8');
       });
     }
+    updateWatchlistUI();
   }
 
   // ==========================================

@@ -414,4 +414,37 @@ def test_verified_changes_and_freshness_presentation(tmp_path):
     assert 'http_timeout' in profile_html
 
 
+def test_hiring_explorer_watchlist_and_financial_trend(tmp_path):
+    row, _ = envelope(tmp_path / 'run')
+    available(row, 'hiring.job.one', {
+        'title': 'Senior Cloud Engineer',
+        'published': '2026-10-01T08:00:00Z',
+        'expires': '2026-11-01T08:00:00Z',
+        'matched_via': 'exact_orgnr',
+        'uuid': 'nav-uuid-1234'
+    })
+    available(row, 'accounts.revenue', 18000000, reporting_period={'fiscal_year': 2024, 'period_start': '2024-01-01', 'period_end': '2024-12-31'})
+    available(row, 'accounts.operating_profit', 3000000, reporting_period={'fiscal_year': 2023, 'period_start': '2023-01-01', 'period_end': '2023-12-31'})
+    out = tmp_path / 'site'
+    generate_site(source(tmp_path, [row]), out)
+
+    index_html = (out / 'index.html').read_text(encoding='utf8')
+    assert 'id="tab-hiring"' in index_html
+    assert 'id="view-hiring"' in index_html
+    assert 'id="filter-watchlist"' in index_html
+    assert 'class="saved-views-bar"' in index_html
+
+    index_data = json.loads((out / 'data/index.json').read_text(encoding='utf8'))
+    assert len(index_data) == 1
+    postings = index_data[0].get('job_postings', [])
+    assert len(postings) >= 1
+    assert any(j['title'] == 'Senior Cloud Engineer' for j in postings)
+
+    profile_html = (out / f'c/{row.organisation_number}.html').read_text(encoding='utf8')
+    assert 'btn-watchlist' in profile_html
+    assert 'class="financial-trend-banner"' in profile_html
+    assert 'Multi-year filing trend' in profile_html
+
+
+
 
