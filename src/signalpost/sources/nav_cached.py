@@ -11,8 +11,9 @@ from .nav import BASE,Ad,NavHttp,allowed,header_name,name_matches,name_tokens,ti
 
 
 class Candidates:
-    def __init__(self,data,index,config,previous):
+    def __init__(self,data,index,config,previous,pre_loaded_subunit_map=None):
         self.data,self.index,self.config=data,index,config
+        self.pre_loaded_subunit_map=pre_loaded_subunit_map or {}
         self.members={a['uuid']:a for a in data['ads']}
         self.ads_by_employer=defaultdict(list)
         for a in data['ads']:
@@ -28,7 +29,7 @@ class Candidates:
         if not affected:return
         self.affected[uuid].update(affected)
         self.discovered.add(uuid);v=self.version(uuid)
-        self.index.metrics['detail_request_cap']=(self.config.nav_max_details if self.config.nav_max_details is not None else min(len(self.discovered),max(300,2*len(self.scopes))))
+        self.index.metrics['detail_request_cap']=(self.config.nav_max_details if self.config.nav_max_details is not None else (0 if not self.discovered else min(len(self.discovered)+10,max(300,2*len(self.scopes)))))
         if self.checked.get(uuid)==v or uuid in self.failed:return
         if self.pending.get(uuid,(None,None,None))[0]==v:return
         self.pending[uuid]=(v,set(affected),origin)
@@ -47,7 +48,23 @@ class Candidates:
                     except (ValueError,TypeError,AttributeError):continue
                     self.candidate(uuid,{parent},'previous_live_ad')
         self.wake()
-    def add_company_scope(self,parent,subunits,names=None):
+    def add_company_scope(self,parent,subunits,names=None,pre_loaded_subunit_map=None):
+        pre_map = pre_loaded_subunit_map or self.pre_loaded_subunit_map
+        if pre_map:
+            parents = getattr(pre_map, 'parents', {})
+            parent_subunits = getattr(pre_map, 'parent_subunits', {})
+            if parent in parent_subunits:
+                subunits = set(subunits) | parent_subunits[parent]
+            for emp, p in parents.items():
+                if p == parent:
+                    subunits = set(subunits)
+                    subunits.add(emp)
+                    if emp in pre_map:
+                        vals = pre_map[emp]
+                        if isinstance(vals, (list, tuple)):
+                            extra_names = [v for v in vals if v]
+                            if extra_names:
+                                names = (set(names) if names else set()) | set(extra_names)
         self.scopes.setdefault(parent,{parent}).update(subunits)
         if names:
             self.names.setdefault(parent,set()).update(names)
@@ -87,7 +104,16 @@ class Candidates:
         employer=entry.get('employer') or item.get('employer') or {}
         employer_org=str(employer.get('orgnr') or '') if isinstance(employer,dict) else ''
         if valid(employer_org):
-            self.candidate(uuid,self.owners.get(employer_org,set()),'forward_feed')
+            # FIRST: lookup in pre_loaded_subunit_map (O(1), instant)
+            parents = self.owners.get(employer_org)
+            if not parents and self.pre_loaded_subunit_map and employer_org in self.pre_loaded_subunit_map:
+                p = getattr(self.pre_loaded_subunit_map, 'parents', {}).get(employer_org)
+                if p:
+                    self.owners[employer_org].add(p)
+                    self.scopes.setdefault(p, {p}).add(employer_org)
+                    parents = {p}
+            # SECOND: fall back to live registry if no match
+            self.candidate(uuid,parents or self.owners.get(employer_org,set()),'forward_feed')
             return
         self.new_unknown=True
         name=header_name(item)
@@ -118,7 +144,9 @@ class Candidates:
 
 
 async def prefetch(client,config,budget,blobs,index,data,age,path,names_ready,previous):
-    began=time.monotonic();http=NavHttp(client,config,budget,blobs,index);state=Candidates(data,index,config,previous)
+    began=time.monotonic();http=NavHttp(client,config,budget,blobs,index)
+    pre_loaded=getattr(names_ready,'pre_loaded_subunit_map',None)
+    state=Candidates(data,index,config,previous,pre_loaded_subunit_map=pre_loaded)
     tasks=[];feed_done=False;header_done=False;feed_began=None
     page_queue=asyncio.Queue()
     async def headers():
@@ -215,7 +243,7 @@ async def prefetch(client,config,budget,blobs,index,data,age,path,names_ready,pr
                 try:
                     if item is None:break
                     org,subunits,names=item
-                    state.add_company_scope(org,subunits,names)
+                    state.add_company_scope(org,subunits,names,pre_loaded_subunit_map=pre_loaded)
                 finally:queue.task_done()
             if callable(names_ready):
                 final_names=await names_ready()
@@ -234,7 +262,16 @@ async def prefetch(client,config,budget,blobs,index,data,age,path,names_ready,pr
             token=token or await http.public_token()
             if not token:index.blocked=True;index.reason='token_unavailable';return index
             initial=getattr(names_ready,'initial_names',{}) if names_ready else {}
-            state.set_scopes({org:{org} for org in initial},initial)
+            scopes={org:{org} for org in initial}
+            if pre_loaded:
+                for parent, subs in getattr(pre_loaded, 'parent_subunits', {}).items():
+                    if parent in scopes:
+                        scopes[parent].update(subs)
+            state.set_scopes(scopes,initial)
+            if pre_loaded:
+                for parent, subs in getattr(pre_loaded, 'parent_subunits', {}).items():
+                    if parent in scopes:
+                        state.add_company_scope(parent, subs, pre_loaded_subunit_map=pre_loaded)
             header_task=asyncio.create_task(headers())
             tasks=[header_task,asyncio.create_task(prepare())]+[asyncio.create_task(worker()) for _ in range(config.nav_concurrency)]
             url=data['cursor'];seen=set();feed_began=time.monotonic()

@@ -193,6 +193,8 @@ async def _run(config, client=None,synthesis_provider=None):
             bulk, bulk_sha = await offload(bulk_registry.load,config.bulk,valid_orgs,blobs,budget)
         except Exception as exc:
             warnings.append(f"bulk unavailable: {getattr(exc, 'code', type(exc).__name__)}; live fallback")
+    from .sources.subunits import build_subunit_map
+    pre_loaded_subunit_map = await offload(build_subunit_map, inputs, bulk, prior)
     semaphore = asyncio.Semaphore(config.workers)
     website_semaphore = asyncio.Semaphore(config.workers)
     nav_index=nav.Index()
@@ -204,6 +206,10 @@ async def _run(config, client=None,synthesis_provider=None):
     registry_families_done = set()
     scopes_pushed = set()
     scopes_dict = {org: {org} for org in valid_orgs}
+    if pre_loaded_subunit_map:
+        for p, subs in pre_loaded_subunit_map.parent_subunits.items():
+            if p in scopes_dict:
+                scopes_dict[p].update(subs)
     subunit_queue = asyncio.Queue(maxsize=100) if config.hiring else None
     queue_closed = asyncio.Event()
 
@@ -231,6 +237,7 @@ async def _run(config, client=None,synthesis_provider=None):
         org: {nav.normal_name(bulk_registry.column(bulk[org][0], 'navn')[0])}
         if org in bulk else set() for org in valid_orgs
     }
+    nav_names.pre_loaded_subunit_map = pre_loaded_subunit_map
     nav_names.subunit_queue = subunit_queue
     async def nav_scopes():
         await registry_ready.wait()
@@ -266,16 +273,15 @@ async def _run(config, client=None,synthesis_provider=None):
                         timing_markers['registry_complete_seconds'] = time.monotonic() - budget.start
                     await push_subunit_scope(org, envelope)
                     return
-                for family, source in (("roles", brreg_roller), ("subunits", brreg_underenheter), ("accounts", regnskap)):
-                    if family == "subunits":
-                        await isolate(envelope, family, lambda: source.fetch(org, http, progress=lambda partial: update(envelope, "subunits", partial)))
-                        subunits_done.add(org)
-                        if valid_orgs <= subunits_done and 'subunits_complete_seconds' not in timing_markers:
-                            timing_markers['subunits_complete_seconds'] = time.monotonic() - budget.start
-                        await push_subunit_scope(org, envelope)
-                        mark_registry(org)
-                    else:
-                        await isolate(envelope, family, lambda source=source: source.fetch(org, http))
+                await isolate(envelope, "subunits", lambda: brreg_underenheter.fetch(org, http, progress=lambda partial: update(envelope, "subunits", partial)))
+                subunits_done.add(org)
+                if valid_orgs <= subunits_done and 'subunits_complete_seconds' not in timing_markers:
+                    timing_markers['subunits_complete_seconds'] = time.monotonic() - budget.start
+                await push_subunit_scope(org, envelope)
+                mark_registry(org)
+            async with semaphore:
+                for family, source in (("roles", brreg_roller), ("accounts", regnskap)):
+                    await isolate(envelope, family, lambda source=source: source.fetch(org, http))
                 registry_families_done.add(org)
                 if valid_orgs <= registry_families_done and 'registry_complete_seconds' not in timing_markers:
                     timing_markers['registry_complete_seconds'] = time.monotonic() - budget.start
