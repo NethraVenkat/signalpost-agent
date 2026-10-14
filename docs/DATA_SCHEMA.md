@@ -51,7 +51,16 @@ NOK accounts with absent source unit carry empirical whole-NOK metadata, source_
 
 Optional `activity` claims have `dated_item.<URL hash>` fields containing title, title_source (`feed title` or `title from URL`), URL, date, date_source, website identity level and identity_claim_id. Their versioned company-owned evidence includes a short verbatim feed/sitemap span. Section states distinguish successful checked absence, source/robot failures and absence of an accepted website. Recent registry dates are derived presentation events citing existing identity claims, rather than duplicate activity claims. Founding/VAT dates are claimed only when the actual registry record reports them.
 
-DNS totals and candidate/pre-check counts are separate from HTTP budgets. NAV reports include ranking state, candidate headers, detail cap/attempts, cap hits, matches published and companies with ads. Activity changes are minor; a newly extracted official date absent from an older extractor is an observation of new field coverage.
+DNS totals and candidate/pre-check counts are separate from HTTP budgets. NAV reports include ranking state, candidate headers, detail cap/attempts, cap hits, matches published, companies with ads, and subunit attribution (`matched_via = 'subunit <orgnr>'`). Activity changes are minor; a newly extracted official date absent from an older extractor is an observation of new field coverage.
+
+### Activity timeline markers
+- **Sitemap updates**: `dated_item.*` records extracted from `/sitemap.xml` with `date_source: "lastmod"` and verified verbatim span.
+- **Feed updates**: `dated_item.*` records extracted from RSS/Atom feeds with `date_source: "pubDate" | "published" | "updated"` and exact headline quote.
+- **Registry timeline events**: Authoritative lifecycle dates mapped from Enhetsregisteret:
+  - `identity.founding_date` (`stiftelsesdato`): Historical founding date.
+  - `identity.registration_date` (`registreringsdatoEnhetsregisteret`): Primary official registration date.
+  - `identity.vat_registration_date` (`registreringsdatoMerverdiavgiftsregisteret`): VAT registration date.
+  - `identity.deleted` (`slettedato`): Formal deregistration / liquidation date.
 
 Website states distinguish publication, ambiguity, registered-site policy blocks, unresolved source/budget failures and checked negatives. Guessed NXDOMAIN is a normal rejection. Failed optional follow-ups preserve already established proof.
 

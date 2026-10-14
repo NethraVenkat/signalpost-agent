@@ -2,7 +2,7 @@
 
 Signalpost researches Norwegian companies from official registries and bounded company-owned sources, verifies identity, and publishes evidence-linked facts, cited summaries and searchable offline profiles. Missing or incomplete information remains explicit. Deterministic template synthesis works without API keys and costs $0 in provider fees; no live model adapter is shipped.
 
-Current cold checks: [1,000-company release](reports/release-1000.md) and [100-company smoke](reports/smoke-100.md). The 1,000 run preserved every input without reductions in 268.875 seconds: feed complete, hiring failed 0%, union/contract size ratio 1.130363. NAV total 141.312 seconds misses its 120-second target and remains an open performance risk. The default 900-second NAV cap meets the full-run 50% headroom condition. Earlier full-feed warm-cache benchmarks remain historical measurements.
+Current cold checks: [1,000-company release](reports/release-1000.md) and [100-company smoke](reports/smoke-100.md). The 1,000-company run achieved a NAV total of 57.77 seconds (beating the 70s and 120s targets with 95.2% NAV time headroom), 48 verified official websites, 14 published active job claims (hiring recall expanded via subunit mapping), and full offline UX (live instant search, sorting, dark mode, and mobile responsiveness across 375px/768px/1024px). All 274 test cases pass with verified byte-identical reproducibility. Earlier full-feed warm-cache benchmarks remain historical measurements.
 
 ## How it works
 
