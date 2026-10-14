@@ -364,3 +364,54 @@ def test_evidence_explorer_markup_and_export_controls(tmp_path):
     assert CSP in __import__('html').unescape(index_html)
 
 
+def test_verified_changes_and_freshness_presentation(tmp_path):
+    row, _ = envelope(tmp_path / 'run')
+    from signalpost.models.envelope import Change
+    row.changes = [
+        Change(
+            organisation_number=row.organisation_number,
+            type="changed",
+            field="identity.legal_name",
+            old_value="Old Corp AS",
+            new_value="New Corp AS",
+            old_evidence_ids=[],
+            new_evidence_ids=[],
+            materiality="material",
+            first_observed_at="2025-01-01T00:00:00Z",
+            last_observed_at="2026-10-14T10:00:00Z",
+            old_locator="row:old/col:navn",
+            new_locator="row:new/col:navn",
+            old_content_sha256="1111222233334444555566667777888899990000aaaabbbbccccddddeeeeffff",
+            new_content_sha256="aaaabbbbccccddddeeeeffff1111222233334444555566667777888899990000",
+            status="available"
+        )
+    ]
+    row.run.refresh["observation_changes"] = [
+        {
+            "section": "roles",
+            "previous_state": "failed",
+            "current_state": "not_available",
+            "reason": "http_timeout"
+        }
+    ]
+    out = tmp_path / 'site'
+    generate_site(source(tmp_path, [row]), out)
+
+    profile_html = (out / f'c/{row.organisation_number}.html').read_text(encoding='utf8')
+    assert 'class="freshness-banner"' in profile_html
+    assert 'Last verified:' in profile_html
+    assert 'Verified business changes' in profile_html
+    assert 'Old Corp AS' in profile_html
+    assert 'New Corp AS' in profile_html
+    assert 'row:old/col:navn' in profile_html
+    assert 'row:new/col:navn' in profile_html
+    assert '111122223333' in profile_html
+    assert 'aaaabbbbcccc' in profile_html
+
+    # Check separation of source availability / observation changes
+    assert 'Source availability &amp; observation changes' in profile_html
+    assert 'roles' in profile_html
+    assert 'http_timeout' in profile_html
+
+
+

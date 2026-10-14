@@ -529,13 +529,62 @@ def profile(row, title):
         body += '<p class="timeline-empty">No dated business events verified for this entity.</p>'
     body += '</section>'
 
-    body += '<section id="changes"><h2>Changes timeline</h2>'
-    for event in changes: body += '<article class="fact"><p>' + esc(value_text(event)) + '</p></article>'
-    if not changes: body += '<p>' + ('First observation' if row['run'].get('refresh', {}).get('mode') == 'baseline' else 'No changes since the previous run') + '</p>'
+    body += '<section id="changes" class="changes-section"><h2>Verified changes &amp; freshness</h2>'
+    body += f'<div class="freshness-banner"><p><strong>Last verified:</strong> <time class="verified-time">{esc(display_time(row["run"]["completed_at"]))}</time> <span class="chip available">{esc(row["run"].get("refresh", {}).get("mode", "baseline"))}</span></p></div>'
+
+    # Business changes subsection
+    body += '<h3>Verified business changes</h3>'
+    if changes:
+        body += '<div class="changes-list">'
+        for event in changes:
+            field_name = event.get('field', 'Attribute').replace('identity.', '').replace('accounts.', '').replace('_', ' ')
+            ch_type = event.get('type', 'changed')
+            mat = event.get('materiality', 'material')
+            old_ids = event.get('old_evidence_ids', [])
+            new_ids = event.get('new_evidence_ids', [])
+            old_ev = records.get(old_ids[0]) if old_ids else None
+            new_ev = records.get(new_ids[0]) if new_ids else None
+            old_loc = event.get('old_locator') or (old_ev.get('locator') if old_ev else '—')
+            new_loc = event.get('new_locator') or (new_ev.get('locator') if new_ev else '—')
+            old_sha = event.get('old_content_sha256') or (old_ev.get('content_sha256') if old_ev else '')
+            new_sha = event.get('new_content_sha256') or (new_ev.get('content_sha256') if new_ev else '')
+            old_val_html = value_html(event.get('old_value')) if event.get('old_value') is not None else '<span class="muted">None (added)</span>'
+            new_val_html = value_html(event.get('new_value')) if event.get('new_value') is not None else '<span class="muted">None (removed)</span>'
+            old_sha_disp = f'<code title="{esc(old_sha)}">{esc(old_sha[:12])}…</code>' if old_sha else '—'
+            new_sha_disp = f'<code title="{esc(new_sha)}">{esc(new_sha[:12])}…</code>' if new_sha else '—'
+
+            body += f'<article class="change-card"><div class="change-card-header"><h4>Change in: {esc(field_name)}</h4><div><span class="chip available">{esc(ch_type)}</span> <span class="chip not_applicable">{esc(mat)}</span></div></div>'
+            body += f'<p class="change-time muted">Observed: <time>{esc(display_time(event.get("last_observed_at")))}</time></p>'
+            body += '<div class="change-comparison-grid">'
+            body += f'<div class="change-col change-col-prev"><h5>Previous value</h5><div class="change-val">{old_val_html}</div><dl class="values values-compact"><dt>Locator</dt><dd><code>{esc(old_loc)}</code></dd><dt>SHA-256</dt><dd>{old_sha_disp}</dd></dl></div>'
+            body += f'<div class="change-col change-col-curr"><h5>Current value</h5><div class="change-val">{new_val_html}</div><dl class="values values-compact"><dt>Locator</dt><dd><code>{esc(new_loc)}</code></dd><dt>SHA-256</dt><dd>{new_sha_disp}</dd></dl></div>'
+            body += '</div></article>'
+        body += '</div>'
+    else:
+        mode_note = 'First observation (baseline run).' if row['run'].get('refresh', {}).get('mode') == 'baseline' else 'No business changes detected since the previous verification run.'
+        body += f'<p class="muted">{esc(mode_note)}</p>'
+
     for c in support:
         body += f'<div id="change-{esc(c["id"])}">{esc(value_text(c))}</div>'
+
+    # Source availability & observation changes subsection
     observations = row['run'].get('refresh', {}).get('observation_changes', [])
-    body += '<button type="button" aria-expanded="false" aria-controls="observations" data-toggle="observations">Check status changes</button><div id="observations" hidden>' + value_html(observations) + '</div></section>'
+    body += '<div class="observation-changes-section"><h3>Source availability &amp; observation changes</h3>'
+    body += '<p class="muted">Operational shifts in source availability (e.g. rate limits, timeouts, schema updates) tracked separately from business modifications.</p>'
+    if observations:
+        body += '<div class="table-responsive"><table class="observation-table"><thead><tr><th scope="col">Section / Source</th><th scope="col">Previous State</th><th scope="col">Current State</th><th scope="col">Reason / Detail</th></tr></thead><tbody>'
+        for ob in observations:
+            sec = ob.get('section', 'general')
+            prev_st = ob.get('previous_state', '—')
+            curr_st = ob.get('current_state', '—')
+            rsn = ob.get('reason', '—')
+            fld = ob.get('field')
+            sec_lbl = f'{sec}.{fld}' if fld else sec
+            body += f'<tr><td><strong>{esc(sec_lbl)}</strong></td><td>{chip(prev_st)}</td><td>{chip(curr_st)}</td><td>{esc(rsn)}</td></tr>'
+        body += '</tbody></table></div>'
+    else:
+        body += '<p class="muted">No source observation or availability transitions occurred during this verification run.</p>'
+    body += '</div></section>'
 
     # Evidence Explorer Section
     body += '<section id="evidence-explorer" class="evidence-explorer">'

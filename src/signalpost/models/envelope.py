@@ -50,6 +50,8 @@ class Change(Model):
     retrieved_at: str | None = None
     effective_at: str | None = None
     source_class: str | None = None
+    old_locator: str | None = None
+    new_locator: str | None = None
     old_content_sha256: str | None = None
     new_content_sha256: str | None = None
     status: Availability
