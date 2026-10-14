@@ -11,8 +11,14 @@ class Fake:
     async def search(self,query,timeout):
         self.calls.append(query)
         if self.fail:raise RuntimeError('provider unavailable')
-        return ['https://facebook.com/example','https://www.linkedin.com/company/example',
-                'https://proff.no/example','https://example.no/path','https://example.no/other','http://another.no/']
+        return [
+            {'url':'https://facebook.com/example','title':'Facebook','description':''},
+            {'url':'https://www.linkedin.com/company/example','title':'LinkedIn','description':''},
+            {'url':'https://proff.no/example','title':'Proff','description':''},
+            {'url':'https://example.no/path','title':'Example AS','description':'Official website'},
+            {'url':'https://example.no/other','title':'Example AS','description':'About page'},
+            {'url':'http://another.no/','title':'Example AS - Oslo Division','description':'Official site'}
+        ]
 
 def http():return SimpleNamespace(counts={},dns_counts={})
 
@@ -30,10 +36,21 @@ def test_nomination_only_filters_one_query_and_cost(tmp_path):
         return rows
     rows=asyncio.run(gate())
     assert [c.domain for c in rows]==['example.no','another.no']
-    assert provider.calls==['"example" Oslo']
+    assert provider.calls==['example site:.no']
     assert s.metrics['queries']==1 and s.metrics['estimated_usd']==.005
     assert len(budget.events)==1 and budget.events[0]['section']=='search'
     assert not any('content_sha256' in e for e in budget.events)
+    from signalpost.web.search import score_identity
+    ctx = {'name': 'Acme Solutions AS', 'brand': 'Acme'}
+    org = '912345678'
+    s1, sig1 = score_identity({'url': 'https://acme.no/about', 'title': 'Acme Solutions', 'description': 'Official site'}, org, ctx)
+    assert s1 >= 60 and 'legal_name_match' in sig1 and 'brand_match' in sig1
+    s2, sig2 = score_identity({'url': 'https://acme-group.no', 'title': 'Portal', 'description': 'Org nr 912 345 678'}, org, ctx)
+    assert s2 >= 60 and 'orgnr_in_snippet' in sig2
+    s3, sig3 = score_identity({'url': 'https://proff.no/selskap/acme', 'title': 'Acme', 'description': 'Directory'}, org, ctx)
+    assert s3 < 60 and 'generic_domain_penalty' in sig3
+    s4, _ = score_identity({'url': 'https://dagensnyheter.no/news', 'title': 'Dagens Nyheter', 'description': 'Acme Solutions AS mentioned'}, org, ctx)
+    assert s4 < 60
 
 def test_caps_and_provider_error_preserve_no_search_behavior(tmp_path):
     for options in [{'search_max_queries':0},{'search_max_cost_usd':0}]:
@@ -69,3 +86,6 @@ def test_one_retry_is_budgeted_and_costed(tmp_path):
     cfg=config(tmp_path,[ORG],search_max_queries=2);s=Search(None,cfg,Budget(cfg),Retry())
     assert asyncio.run(s.nominate(ORG,{'name':'Example AS'},http()))
     assert s.metrics['queries']==2 and s.metrics['estimated_usd']==.01
+
+
+
