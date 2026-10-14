@@ -6,56 +6,144 @@
   const element = (tag, text, cls) => { const e = document.createElement(tag); if(text != null) e.textContent = text; if(cls) e.className = cls; return e; };
   const stateChip = state => element('span', String(state).replace(/_/g,' '), 'chip '+state);
   const format = value => value == null ? 'Unknown' : typeof value === 'number' ? value.toLocaleString('en-US',{maximumFractionDigits:20}) : String(value);
-  const localData=window.SIGNALPOST_EVIDENCE || {sources:[],records:[],facts:[]};
-  const evidence=new Map(localData.records.map(row=>{
-    const e=Object.fromEntries(localData.source_fields.map((key,i)=>[key,localData.sources[row[0]][i]]));
-    localData.evidence_fields.forEach((key,i)=>{e[key]=row[i+1];});return [e.id,e];
+
+  // Evidence panel support
+  const localData = window.SIGNALPOST_EVIDENCE || {sources:[],records:[],facts:[]};
+  const evidence = new Map(localData.records.map(row => {
+    const e = Object.fromEntries(localData.source_fields.map((key,i) => [key, localData.sources[row[0]][i]]));
+    localData.evidence_fields.forEach((key,i) => { e[key] = row[i+1]; });
+    return [e.id, e];
   }));
-  const facts=new Map(localData.facts.map(f=>[f.id,f]));
-  function sourceLink(raw){const a=element('a',raw);try{const url=new URL(raw);if(!/^https?:\/\//i.test(raw)||!['http:','https:'].includes(url.protocol)||url.username||url.password||/[\x00-\x1f]/.test(raw))return element('span',raw);a.href=url.href;a.target='_blank';a.rel='noopener noreferrer nofollow';return a;}catch{return element('span',raw);}}
-  function showEvidence(panel){
-    if(panel.dataset.loaded)return;
-    const fact=facts.get(panel.dataset.source);if(!fact){panel.replaceChildren(element('p','Local source data could not be loaded.'));return;}
-    panel.replaceChildren();
-    for(const id of fact.evidence_ids){const e=evidence.get(id);if(!e)continue;const record=element('div',null,'evidence-record'),dl=element('dl',null,'values');
-      const pair=(label,value)=>{dl.append(element('dt',label));const dd=element('dd');dd.append(value?.nodeType?value:element('span',value??'Not supplied'));dl.append(dd);};
-      pair('Source / class',e.source_class);pair('Source link',sourceLink(e.source_url));pair('Registry identifier',e.source_identifier);pair('Retrieved at (UTC)',e.retrieved_at);
-      const period=e.reporting_period||fact.reporting_period;
-      pair('Effective / reporting date',e.effective_at||(period?JSON.stringify(period):'Unknown'));
-      const hash=element('div'),code=element('code',e.content_sha256.slice(0,16)+'…');code.title=e.content_sha256;const copy=element('button','Copy full hash');copy.type='button';copy.dataset.copy=e.content_sha256;hash.append(code,copy);pair('SHA-256',hash);
-      pair('Extraction method / version',e.extraction_method);pair('Locator',e.locator);if(fact.identity_level)pair('Website identity level',fact.identity_level);
-      const quote=element('blockquote',null,'excerpt');const match=[...fact.values].sort((a,b)=>b.length-a.length).find(v=>v&&e.claim_span.includes(v));
-      if(match){const at=e.claim_span.indexOf(match);quote.append(document.createTextNode(e.claim_span.slice(0,at)),element('mark',match),document.createTextNode(e.claim_span.slice(at+match.length)));}else quote.textContent=e.claim_span;
-      record.append(dl,quote);panel.append(record);
+  const facts = new Map(localData.facts.map(f => [f.id, f]));
+
+  function sourceLink(raw) {
+    const a = element('a', raw);
+    try {
+      const url = new URL(raw);
+      if(!/^https?:\/\//i.test(raw) || !['http:','https:'].includes(url.protocol) || url.username || url.password || /[\x00-\x1f]/.test(raw)) {
+        return element('span', raw);
+      }
+      a.href = url.href;
+      a.target = '_blank';
+      a.rel = 'noopener noreferrer nofollow';
+      return a;
+    } catch {
+      return element('span', raw);
     }
-    panel.dataset.loaded='true';
   }
+
+  function showEvidence(panel) {
+    if(panel.dataset.loaded) return;
+    const fact = facts.get(panel.dataset.source);
+    if(!fact) {
+      panel.replaceChildren(element('p', 'Local source data could not be loaded.'));
+      return;
+    }
+    panel.replaceChildren();
+    for(const id of fact.evidence_ids) {
+      const e = evidence.get(id);
+      if(!e) continue;
+      const record = element('div', null, 'evidence-record');
+      const dl = element('dl', null, 'values');
+      const pair = (label, value) => {
+        dl.append(element('dt', label));
+        const dd = element('dd');
+        dd.append(value?.nodeType ? value : element('span', value ?? 'Not supplied'));
+        dl.append(dd);
+      };
+      pair('Source / class', e.source_class);
+      pair('Source link', sourceLink(e.source_url));
+      pair('Registry identifier', e.source_identifier);
+      pair('Retrieved at (UTC)', e.retrieved_at);
+      const period = e.reporting_period || fact.reporting_period;
+      pair('Effective / reporting date', e.effective_at || (period ? JSON.stringify(period) : 'Unknown'));
+      const hash = element('div');
+      const code = element('code', e.content_sha256.slice(0, 16) + '…');
+      code.title = e.content_sha256;
+      const copy = element('button', 'Copy full hash');
+      copy.type = 'button';
+      copy.dataset.copy = e.content_sha256;
+      hash.append(code, copy);
+      pair('SHA-256', hash);
+      pair('Extraction method / version', e.extraction_method);
+      pair('Locator', e.locator);
+      if(fact.identity_level) pair('Website identity level', fact.identity_level);
+      const quote = element('blockquote', null, 'excerpt');
+      const match = [...fact.values].sort((a,b) => b.length - a.length).find(v => v && e.claim_span.includes(v));
+      if(match) {
+        const at = e.claim_span.indexOf(match);
+        quote.append(document.createTextNode(e.claim_span.slice(0, at)), element('mark', match), document.createTextNode(e.claim_span.slice(at + match.length)));
+      } else {
+        quote.textContent = e.claim_span;
+      }
+      record.append(dl, quote);
+      panel.append(record);
+    }
+    panel.dataset.loaded = 'true';
+  }
+
   document.addEventListener('click', async event => {
-    const button = event.target.closest('button'); if(!button) return;
-    if(button.dataset.toggle){const target=document.getElementById(button.dataset.toggle);if(target){if(target.dataset.source)showEvidence(target);target.hidden=!target.hidden;button.setAttribute('aria-expanded',String(!target.hidden));}}
-    if(button.dataset.copy){
-      try { await navigator.clipboard.writeText(button.dataset.copy); button.textContent='Copied'; }
-      catch { const input=element('textarea');input.value=button.dataset.copy;input.setAttribute('aria-label','Select and copy this value');button.after(input);input.focus();input.select();try{document.execCommand('copy');}catch{} }
+    const button = event.target.closest('button');
+    if(!button) return;
+    if(button.dataset.toggle) {
+      const target = document.getElementById(button.dataset.toggle);
+      if(target) {
+        if(target.dataset.source) showEvidence(target);
+        target.hidden = !target.hidden;
+        button.setAttribute('aria-expanded', String(!target.hidden));
+      }
+    }
+    if(button.dataset.copy) {
+      try {
+        await navigator.clipboard.writeText(button.dataset.copy);
+        button.textContent = 'Copied';
+      } catch {
+        const input = element('textarea');
+        input.value = button.dataset.copy;
+        input.setAttribute('aria-label', 'Select and copy this value');
+        button.after(input);
+        input.focus();
+        input.select();
+        try { document.execCommand('copy'); } catch {}
+      }
     }
   });
-  // Additional official metadata shares the offline evidence payload. Build with
-  // text nodes only, so source strings never become executable markup.
-  for(const fact of localData.registry_details||[]){
-    const root=document.querySelector('[data-registry-details="'+fact.group+'"]');if(!root)continue;
-    const article=element('article',null,'fact');article.id='fact-'+fact.id;
-    article.append(element('h3',fact.field),stateChip(fact.availability));
-    article.append(element('pre',fact.value==null?'Unknown':JSON.stringify(fact.value,null,2)));
-    const button=element('button','Source');button.type='button';button.dataset.toggle='source-'+fact.id;
-    button.setAttribute('aria-expanded','false');button.setAttribute('aria-controls','source-'+fact.id);
-    const panel=element('div',null,'evidence');panel.id='source-'+fact.id;panel.dataset.source=fact.id;panel.hidden=true;
-    article.append(button,panel);root.append(article);
+
+  // Additional official metadata
+  for(const fact of localData.registry_details || []) {
+    const root = document.querySelector('[data-registry-details="'+fact.group+'"]');
+    if(!root) continue;
+    const article = element('article', null, 'fact');
+    article.id = 'fact-' + fact.id;
+    article.append(element('h3', fact.field), stateChip(fact.availability));
+    article.append(element('pre', fact.value == null ? 'Unknown' : JSON.stringify(fact.value, null, 2)));
+    const button = element('button', 'Source');
+    button.type = 'button';
+    button.dataset.toggle = 'source-' + fact.id;
+    button.setAttribute('aria-expanded', 'false');
+    button.setAttribute('aria-controls', 'source-' + fact.id);
+    const panel = element('div', null, 'evidence');
+    panel.id = 'source-' + fact.id;
+    panel.dataset.source = fact.id;
+    panel.hidden = true;
+    article.append(button, panel);
+    root.append(article);
   }
-  function revealFact(){const target=document.getElementById(location.hash.slice(1));if(!target)return;
-    for(let parent=target.parentElement;parent;parent=parent.parentElement)if(parent.tagName==='DETAILS')parent.open=true;
+
+  function revealFact() {
+    const target = document.getElementById(location.hash.slice(1));
+    if(!target) return;
+    for(let parent = target.parentElement; parent; parent = parent.parentElement) {
+      if(parent.tagName === 'DETAILS') parent.open = true;
+    }
+    if(target.scrollIntoView) target.scrollIntoView();
   }
-  window.addEventListener('hashchange',revealFact);revealFact();
+  window.addEventListener('hashchange', revealFact);
+  revealFact();
+
+  // Theme toggle
   const themeToggle = document.getElementById('theme-toggle');
-  if (themeToggle) {
+  if(themeToggle) {
     const savedTheme = localStorage.getItem('signalpost_theme');
     const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     const currentTheme = savedTheme || (prefersDark ? 'dark' : 'light');
@@ -68,63 +156,630 @@
       themeToggle.textContent = nextTheme === 'dark' ? '☀️ Light' : '🌙 Dark';
     });
   }
+
+  // Pre-process indexed records
+  for(const r of records) {
+    r._search = fold(r.name + ' ' + r.orgnr + ' ' + (r.municipality || '') + ' ' + (r.website || ''));
+    r.score = (r.claim_count || 0) * 10 + (r.website ? 20 : 0) + (r.jobs ? 20 : 0) + (r.social ? 10 : 0) + (r.activity ? 10 : 0);
+  }
+
+  // ==========================================
+  // PAGE: INDEX (Dashboard & Directory)
+  // ==========================================
   if(document.body.dataset.page === 'index') {
-    let pageNumber=0; const pageSize=30;
-    for(const r of records){
-      r._search = fold(r.name+' '+r.orgnr+' '+(r.municipality||'')+' '+(r.website||''));
-      r.score = (r.claim_count||0)*10 + (r.website?20:0) + (r.jobs?20:0) + (r.social?10:0) + (r.activity?10:0);
-    }
-    const sortEl = document.getElementById('sort');
-    const savedSort = sessionStorage.getItem('signalpost_sort');
-    if (savedSort && sortEl && Array.from(sortEl.options).some(o => o.value === savedSort)) {
-      sortEl.value = savedSort;
-    }
-    const controls=['search','municipality','division','sort','filter-website','filter-jobs','filter-social','filter-activity','filter-incomplete'];
-    function draw(){
-      const query=fold(document.getElementById('search').value);
-      const selected=records.filter(r => {
-        if(!r._search.includes(query)) return false;
-        const town=document.getElementById('municipality').value, division=document.getElementById('division').value;
-        if(town && r.municipality!==town || division && !(r.nace||'').startsWith(division)) return false;
-        for(const key of ['website','jobs','social','activity']) if(document.getElementById('filter-'+key).checked && !r.flags[key]) return false;
-        return !document.getElementById('filter-incomplete').checked || Object.values(r.sections).some(s => s==='failed'||s==='blocked');
-      });
-      const sort=document.getElementById('sort').value;
-      selected.sort((a,b) => sort==='name' ? a.name.localeCompare(b.name,'nb')||a.orgnr.localeCompare(b.orgnr) : sort==='score' ? (b.score ?? -Infinity)-(a.score ?? -Infinity)||a.orgnr.localeCompare(b.orgnr) : (b[sort] ?? -Infinity)-(a[sort] ?? -Infinity)||a.orgnr.localeCompare(b.orgnr));
-      const pages=Math.max(1,Math.ceil(selected.length/pageSize));pageNumber=Math.min(pageNumber,pages-1);
-      const results=document.getElementById('results');results.replaceChildren();
-      for(const r of selected.slice(pageNumber*pageSize,(pageNumber+1)*pageSize)){
-        const card=element('article',null,'company'), heading=element('h2'), a=element('a',r.name);a.href='c/'+r.orgnr+'.html';heading.append(a);card.append(heading);
-        card.append(element('p',r.orgnr+' · '+(r.municipality||'Unknown municipality')));
-        card.append(element('p',r.industry_en||r.industry_no||'Industry unknown'));
-        const badges=element('div',null,'badges');for(const [label,family] of [['identity','identity'],['accounts','accounts'],['people','roles'],['web','website'],['hiring','hiring'],['activity','activity']]){const state=r.sections[family]||'not_applicable';badges.append(element('span',label+': '+state.replace(/_/g,' '),'chip '+state));}card.append(badges);
-        card.append(element('p','Revenue: '+format(r.revenue)+' · Employees: '+format(r.employees)));results.append(card);
+    let pageNumber = 0;
+    const pageSize = 30;
+    let searchSequence = 0;
+
+    // View tab elements
+    const tabDash = document.getElementById('tab-dashboard');
+    const tabDir = document.getElementById('tab-directory');
+    const viewDash = document.getElementById('view-dashboard');
+    const viewDir = document.getElementById('view-directory');
+
+    function switchView(viewName) {
+      const isDash = viewName === 'dashboard';
+      if(tabDash && tabDir && viewDash && viewDir) {
+        tabDash.classList.toggle('active', isDash);
+        tabDash.setAttribute('aria-selected', String(isDash));
+        tabDir.classList.toggle('active', !isDash);
+        tabDir.setAttribute('aria-selected', String(!isDash));
+        viewDash.hidden = !isDash;
+        viewDir.hidden = isDash;
       }
-      document.getElementById('result-count').textContent=selected.length+' companies match';document.getElementById('page-label').textContent='Page '+(pageNumber+1)+' of '+pages;
-      document.getElementById('previous').disabled=pageNumber===0;document.getElementById('next').disabled=pageNumber===pages-1;
     }
+
+    if(tabDash && tabDir) {
+      tabDash.addEventListener('click', () => {
+        switchView('dashboard');
+        updateQueryParams({ view: 'dashboard' });
+      });
+      tabDir.addEventListener('click', () => {
+        switchView('directory');
+        updateQueryParams({ view: 'directory' });
+      });
+    }
+
+    // Filter controls
+    const searchInput = document.getElementById('search');
+    const autocompleteBox = document.getElementById('search-autocomplete');
+    const muniSelect = document.getElementById('municipality');
+    const divSelect = document.getElementById('division');
+    const sizeSelect = document.getElementById('size-band');
+    const sortSelect = document.getElementById('sort');
+    const filterWeb = document.getElementById('filter-website');
+    const filterJobs = document.getElementById('filter-jobs');
+    const filterSocial = document.getElementById('filter-social');
+    const filterAct = document.getElementById('filter-activity');
+    const filterInc = document.getElementById('filter-incomplete');
+    const activeFiltersBar = document.getElementById('active-filters-bar');
+    const activeFiltersContainer = document.getElementById('active-filter-chips');
+    const clearFiltersBtn = document.getElementById('clear-filters');
+    const resetEmptyBtn = document.getElementById('reset-empty-filters');
+    const resetDashBtn = document.getElementById('reset-dashboard-filters');
+    const emptyResultsBox = document.getElementById('empty-results');
+
+    // Dashboard widgets
+    const scopeCountEl = document.getElementById('filter-scope-count');
+    const scopeWarningEl = document.getElementById('filter-scope-warning');
+    const dashTotalComp = document.getElementById('dash-total-companies');
+    const dashTotalWeb = document.getElementById('dash-total-websites');
+    const dashWebPct = document.getElementById('dash-websites-pct');
+    const dashTotalJobs = document.getElementById('dash-total-jobs');
+    const dashHiringComp = document.getElementById('dash-hiring-companies');
+    const dashTotalAct = document.getElementById('dash-total-activity');
+    const dashActPct = document.getElementById('dash-activity-pct');
+    const provBox = document.getElementById('provenance-breakdown');
+    const hiringBox = document.getElementById('hiring-timeline');
+    const actBox = document.getElementById('recent-activity-list');
+
+    // Read URL params
+    const initialParams = new URLSearchParams(window.location.search);
+    if(initialParams.get('q') && searchInput) searchInput.value = initialParams.get('q');
+    if(initialParams.get('municipality') && muniSelect) muniSelect.value = initialParams.get('municipality');
+    if(initialParams.get('division') && divSelect) divSelect.value = initialParams.get('division');
+    if(initialParams.get('size') && sizeSelect) sizeSelect.value = initialParams.get('size');
+    if(initialParams.get('sort') && sortSelect) sortSelect.value = initialParams.get('sort');
+    if(initialParams.get('web') === '1' && filterWeb) filterWeb.checked = true;
+    if(initialParams.get('jobs') === '1' && filterJobs) filterJobs.checked = true;
+    if(initialParams.get('social') === '1' && filterSocial) filterSocial.checked = true;
+    if(initialParams.get('activity') === '1' && filterAct) filterAct.checked = true;
+    if(initialParams.get('incomplete') === '1' && filterInc) filterInc.checked = true;
+
+    // View initialization
+    const reqView = initialParams.get('view') || (window.location.hash === '#directory' ? 'directory' : 'dashboard');
+    switchView(reqView);
+
+    function updateQueryParams(overrides = {}) {
+      const params = new URLSearchParams(window.location.search);
+      if(searchInput?.value.trim()) params.set('q', searchInput.value.trim()); else params.delete('q');
+      if(muniSelect?.value) params.set('municipality', muniSelect.value); else params.delete('municipality');
+      if(divSelect?.value) params.set('division', divSelect.value); else params.delete('division');
+      if(sizeSelect?.value) params.set('size', sizeSelect.value); else params.delete('size');
+      if(sortSelect?.value && sortSelect.value !== 'claim_count') params.set('sort', sortSelect.value); else params.delete('sort');
+      if(filterWeb?.checked) params.set('web', '1'); else params.delete('web');
+      if(filterJobs?.checked) params.set('jobs', '1'); else params.delete('jobs');
+      if(filterSocial?.checked) params.set('social', '1'); else params.delete('social');
+      if(filterAct?.checked) params.set('activity', '1'); else params.delete('activity');
+      if(filterInc?.checked) params.set('incomplete', '1'); else params.delete('incomplete');
+      for(const [k, v] of Object.entries(overrides)) {
+        if(v == null) params.delete(k); else params.set(k, v);
+      }
+      const newQuery = params.toString();
+      const newUrl = window.location.pathname + (newQuery ? '?' + newQuery : '') + window.location.hash;
+      window.history.replaceState(null, '', newUrl);
+    }
+
+    function clearAllFilters() {
+      if(searchInput) searchInput.value = '';
+      if(muniSelect) muniSelect.value = '';
+      if(divSelect) divSelect.value = '';
+      if(sizeSelect) sizeSelect.value = '';
+      if(filterWeb) filterWeb.checked = false;
+      if(filterJobs) filterJobs.checked = false;
+      if(filterSocial) filterSocial.checked = false;
+      if(filterAct) filterAct.checked = false;
+      if(filterInc) filterInc.checked = false;
+      pageNumber = 0;
+      updateQueryParams();
+      draw();
+    }
+
+    if(clearFiltersBtn) clearFiltersBtn.addEventListener('click', clearAllFilters);
+    if(resetEmptyBtn) resetEmptyBtn.addEventListener('click', clearAllFilters);
+    if(resetDashBtn) resetDashBtn.addEventListener('click', clearAllFilters);
+
+    function renderDashboard(selected, isFiltered) {
+      const total = selected.length;
+      const fullCount = records.length;
+      if(scopeWarningEl && scopeCountEl) {
+        scopeWarningEl.hidden = !isFiltered;
+        scopeCountEl.textContent = total.toLocaleString('en-US');
+      }
+
+      // Summary KPI card values
+      if(dashTotalComp) dashTotalComp.textContent = total.toLocaleString('en-US');
+      const webCount = selected.filter(r => r.flags.website).length;
+      if(dashTotalWeb) dashTotalWeb.textContent = webCount.toLocaleString('en-US');
+      if(dashWebPct) dashWebPct.textContent = (total ? (webCount / total * 100).toFixed(1) : '0.0') + '%';
+
+      const jobCount = selected.reduce((acc, r) => acc + (r.jobs || 0), 0);
+      const hiringCompCount = selected.filter(r => r.flags.jobs).length;
+      if(dashTotalJobs) dashTotalJobs.textContent = jobCount.toLocaleString('en-US');
+      if(dashHiringComp) dashHiringComp.textContent = hiringCompCount + (hiringCompCount === 1 ? ' company' : ' companies');
+
+      const actCount = selected.filter(r => r.flags.activity).length;
+      if(dashTotalAct) dashTotalAct.textContent = actCount.toLocaleString('en-US');
+      if(dashActPct) dashActPct.textContent = (total ? (actCount / total * 100).toFixed(1) : '0.0') + '%';
+
+      // Provenance categories breakdown
+      if(provBox) {
+        provBox.replaceChildren();
+        const provCounts = { registry_website: 0, legal_name_slug: 0, search_brave: 0, registry_email: 0, other: 0 };
+        for(const r of selected) {
+          if(r.website) {
+            const org = r.website_origin;
+            if(org in provCounts) provCounts[org]++;
+            else if(org) provCounts.other++;
+            else provCounts.registry_website++;
+          }
+        }
+        const provLabels = {
+          registry_website: 'Official Registry Declared (Enhetsregisteret)',
+          legal_name_slug: 'Derived Domain from Legal Name',
+          search_brave: 'Corroborated External Search (Brave API/Mock)',
+          registry_email: 'Registry Contact Email Domain',
+          other: 'Other Corroborated Source'
+        };
+        const activeProv = Object.entries(provCounts).filter(([_, count]) => count > 0);
+        if(!activeProv.length) {
+          provBox.append(element('p', 'No verified websites in current filter scope.', 'muted'));
+        } else {
+          for(const [key, count] of activeProv) {
+            const row = element('div', null, 'provenance-row');
+            const labels = element('div', null, 'provenance-labels');
+            labels.append(element('span', provLabels[key] || key));
+            const pct = webCount ? ((count / webCount) * 100).toFixed(1) : '0.0';
+            labels.append(element('span', count + ' (' + pct + '%)', 'provenance-meta'));
+            const barBg = element('div', null, 'provenance-bar-bg');
+            const barFill = element('div', null, 'provenance-bar-fill');
+            barFill.style.width = pct + '%';
+            barBg.append(barFill);
+            row.append(labels, barBg);
+            provBox.append(row);
+          }
+        }
+      }
+
+      // Hiring timeline chart
+      if(hiringBox) {
+        hiringBox.replaceChildren();
+        const monthCounts = {};
+        for(const r of selected) {
+          if(r.job_dates && r.job_dates.length) {
+            for(const d of r.job_dates) {
+              const month = String(d).slice(0, 7);
+              monthCounts[month] = (monthCounts[month] || 0) + 1;
+            }
+          }
+        }
+        const months = Object.keys(monthCounts).sort();
+        if(!months.length) {
+          hiringBox.append(element('p', 'No active job postings recalled in current scope.', 'muted'));
+        } else {
+          const maxVal = Math.max(...Object.values(monthCounts), 1);
+          for(const m of months) {
+            const count = monthCounts[m];
+            const row = element('div', null, 'timeline-chart-row');
+            row.append(element('span', m, 'timeline-bar-label'));
+            const barBg = element('div', null, 'timeline-bar-bg');
+            const barFill = element('div', null, 'timeline-bar-fill');
+            barFill.style.width = ((count / maxVal) * 100).toFixed(1) + '%';
+            barBg.append(barFill);
+            row.append(barBg, element('span', count + (count === 1 ? ' job' : ' jobs'), 'timeline-bar-val'));
+            hiringBox.append(row);
+          }
+        }
+      }
+
+      // Recent verified activity list
+      if(actBox) {
+        actBox.replaceChildren();
+        const recentEvents = [];
+        for(const r of selected) {
+          if(r.recent_events && r.recent_events.length) {
+            for(const ev of r.recent_events) {
+              recentEvents.push({ orgnr: r.orgnr, name: r.name, date: ev.date, label: ev.label, anchor: ev.anchor });
+            }
+          }
+        }
+        recentEvents.sort((a,b) => (b.date || '').localeCompare(a.date || ''));
+        const slice = recentEvents.slice(0, 8);
+        if(!slice.length) {
+          actBox.append(element('p', 'No recent verified registry filings within 2-year window for current selection.', 'muted'));
+        } else {
+          for(const ev of slice) {
+            const row = element('div', null, 'activity-row');
+            const main = element('div', null, 'activity-row-main');
+            main.append(element('time', ev.date, 'activity-row-date'));
+            const a = element('a', ev.name, 'activity-row-company');
+            a.href = 'c/' + ev.orgnr + '.html' + (ev.anchor ? '#' + ev.anchor : '');
+            main.append(a);
+            main.append(element('span', ev.label, 'activity-row-label'));
+            row.append(main);
+            const viewLink = element('a', 'View receipts');
+            viewLink.href = 'c/' + ev.orgnr + '.html' + (ev.anchor ? '#' + ev.anchor : '');
+            row.append(viewLink);
+            actBox.append(row);
+          }
+        }
+      }
+    }
+
+    function renderActiveFilterChips(filters) {
+      if(!activeFiltersContainer || !activeFiltersBar) return;
+      activeFiltersContainer.replaceChildren();
+      const chips = [];
+      if(filters.query) {
+        chips.push({ label: 'Search: "' + filters.query + '"', clear: () => { searchInput.value = ''; } });
+      }
+      if(filters.town) {
+        chips.push({ label: 'Municipality: ' + filters.town, clear: () => { muniSelect.value = ''; } });
+      }
+      if(filters.division) {
+        chips.push({ label: 'Division: ' + filters.division, clear: () => { divSelect.value = ''; } });
+      }
+      if(filters.size) {
+        const sizeLabels = { micro: 'Micro (1–9)', small: 'Small (10–49)', medium: 'Medium (50–249)', large: 'Large (250+)', zero: 'Zero (0)', unknown: 'Unknown Size' };
+        chips.push({ label: 'Size: ' + (sizeLabels[filters.size] || filters.size), clear: () => { sizeSelect.value = ''; } });
+      }
+      if(filters.web) chips.push({ label: 'Verified Website', clear: () => { filterWeb.checked = false; } });
+      if(filters.jobs) chips.push({ label: 'Job Ads', clear: () => { filterJobs.checked = false; } });
+      if(filters.social) chips.push({ label: 'Social Profiles', clear: () => { filterSocial.checked = false; } });
+      if(filters.act) chips.push({ label: 'Public Activity', clear: () => { filterAct.checked = false; } });
+      if(filters.inc) chips.push({ label: 'Incomplete Sections', clear: () => { filterInc.checked = false; } });
+
+      activeFiltersBar.hidden = chips.length === 0;
+      for(const chip of chips) {
+        const item = element('span', chip.label, 'filter-chip');
+        const btn = element('button', '✕', 'filter-chip-remove');
+        btn.type = 'button';
+        btn.setAttribute('aria-label', 'Remove ' + chip.label + ' filter');
+        btn.addEventListener('click', () => { chip.clear(); draw(); });
+        item.append(btn);
+        activeFiltersContainer.append(item);
+      }
+    }
+
+    function draw() {
+      const currentSeq = ++searchSequence;
+      const query = fold(searchInput?.value.trim());
+      const town = muniSelect?.value || '';
+      const division = divSelect?.value || '';
+      const size = sizeSelect?.value || '';
+      const web = filterWeb?.checked || false;
+      const jobs = filterJobs?.checked || false;
+      const social = filterSocial?.checked || false;
+      const act = filterAct?.checked || false;
+      const inc = filterInc?.checked || false;
+
+      const isFiltered = Boolean(query || town || division || size || web || jobs || social || act || inc);
+
+      const selected = records.filter(r => {
+        if(query && !r._search.includes(query)) return false;
+        if(town) {
+          if(town === 'Unknown') { if(r.municipality) return false; }
+          else if(r.municipality !== town) return false;
+        }
+        if(division) {
+          if(division === 'Unknown') { if(r.nace) return false; }
+          else if(!(r.nace || '').startsWith(division)) return false;
+        }
+        if(size && r.size_band !== size) return false;
+        if(web && !r.flags.website) return false;
+        if(jobs && !r.flags.jobs) return false;
+        if(social && !r.flags.social) return false;
+        if(act && !r.flags.activity) return false;
+        if(inc && !Object.values(r.sections).some(s => s === 'failed' || s === 'blocked')) return false;
+        return true;
+      });
+
+      if(currentSeq !== searchSequence) return;
+
+      const sort = sortSelect?.value || 'claim_count';
+      selected.sort((a,b) => {
+        if(sort === 'name') return a.name.localeCompare(b.name, 'nb') || a.orgnr.localeCompare(b.orgnr);
+        if(sort === 'score') return (b.score ?? -Infinity) - (a.score ?? -Infinity) || a.orgnr.localeCompare(b.orgnr);
+        return (b[sort] ?? -Infinity) - (a[sort] ?? -Infinity) || a.orgnr.localeCompare(b.orgnr);
+      });
+
+      const pages = Math.max(1, Math.ceil(selected.length / pageSize));
+      pageNumber = Math.min(pageNumber, pages - 1);
+
+      // Render Dashboard
+      renderDashboard(selected, isFiltered);
+
+      // Render Active Filter Chips
+      renderActiveFilterChips({ query, town, division, size, web, jobs, social, act, inc });
+
+      // Render Directory Results
+      const results = document.getElementById('results');
+      if(results) {
+        results.replaceChildren();
+        if(emptyResultsBox) emptyResultsBox.hidden = selected.length > 0;
+        if(selected.length === 0) {
+          document.getElementById('result-count').textContent = '0 companies match active filters';
+        } else {
+          for(const r of selected.slice(pageNumber * pageSize, (pageNumber + 1) * pageSize)) {
+            const card = element('article', null, 'company');
+            const heading = element('h2');
+            const a = element('a', r.name);
+            a.href = 'c/' + r.orgnr + '.html';
+            heading.append(a);
+            card.append(heading);
+            card.append(element('p', r.orgnr + ' · ' + (r.municipality || 'Unknown municipality')));
+            card.append(element('p', r.industry_en || r.industry_no || 'Industry unknown'));
+            const badges = element('div', null, 'badges');
+            for(const [label, family] of [['identity','identity'],['accounts','accounts'],['people','roles'],['web','website'],['hiring','hiring'],['activity','activity']]) {
+              const state = r.sections[family] || 'not_applicable';
+              badges.append(element('span', label + ': ' + state.replace(/_/g,' '), 'chip ' + state));
+            }
+            card.append(badges);
+            card.append(element('p', 'Revenue: ' + format(r.revenue) + ' · Employees: ' + format(r.employees)));
+            results.append(card);
+          }
+          const pct = ((selected.length / records.length) * 100).toFixed(1);
+          document.getElementById('result-count').textContent = 'Showing ' + selected.length.toLocaleString('en-US') + ' companies (' + pct + '% of dataset)';
+        }
+      }
+
+      const prevBtn = document.getElementById('previous');
+      const nextBtn = document.getElementById('next');
+      const pageLbl = document.getElementById('page-label');
+      if(pageLbl) pageLbl.textContent = 'Page ' + (pageNumber + 1) + ' of ' + pages;
+      if(prevBtn) prevBtn.disabled = pageNumber === 0;
+      if(nextBtn) nextBtn.disabled = pageNumber === pages - 1;
+
+      updateQueryParams();
+    }
+
+    // Search autocomplete logic
+    let highlightedIndex = -1;
+    function renderAutocomplete() {
+      if(!autocompleteBox || !searchInput) return;
+      const q = fold(searchInput.value.trim());
+      if(q.length < 2) {
+        autocompleteBox.hidden = true;
+        autocompleteBox.replaceChildren();
+        highlightedIndex = -1;
+        return;
+      }
+      const matches = records.filter(r => r._search.includes(q)).slice(0, 6);
+      if(!matches.length) {
+        autocompleteBox.hidden = true;
+        autocompleteBox.replaceChildren();
+        highlightedIndex = -1;
+        return;
+      }
+      autocompleteBox.replaceChildren();
+      highlightedIndex = -1;
+      matches.forEach((r, idx) => {
+        const item = element('div', null, 'autocomplete-item');
+        item.setAttribute('role', 'option');
+        item.dataset.index = String(idx);
+        item.dataset.orgnr = r.orgnr;
+        item.append(element('span', r.name, 'autocomplete-name'));
+        item.append(element('span', r.orgnr + ' · ' + (r.municipality || 'Unknown location') + (r.website ? ' · ' + r.website : ''), 'autocomplete-meta'));
+        item.addEventListener('mousedown', e => {
+          e.preventDefault();
+          window.location.href = 'c/' + r.orgnr + '.html';
+        });
+        autocompleteBox.append(item);
+      });
+      autocompleteBox.hidden = false;
+    }
+
+    if(searchInput) {
+      let debounceTimer = null;
+      searchInput.addEventListener('input', () => {
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(() => {
+          pageNumber = 0;
+          renderAutocomplete();
+          draw();
+        }, 150);
+      });
+      searchInput.addEventListener('keydown', e => {
+        if(autocompleteBox && !autocompleteBox.hidden) {
+          const items = autocompleteBox.querySelectorAll('.autocomplete-item');
+          if(e.key === 'ArrowDown') {
+            e.preventDefault();
+            highlightedIndex = Math.min(highlightedIndex + 1, items.length - 1);
+            items.forEach((it, i) => it.classList.toggle('is-highlighted', i === highlightedIndex));
+          } else if(e.key === 'ArrowUp') {
+            e.preventDefault();
+            highlightedIndex = Math.max(highlightedIndex - 1, -1);
+            items.forEach((it, i) => it.classList.toggle('is-highlighted', i === highlightedIndex));
+          } else if(e.key === 'Enter') {
+            if(highlightedIndex >= 0 && items[highlightedIndex]) {
+              e.preventDefault();
+              const orgnr = items[highlightedIndex].dataset.orgnr;
+              if(orgnr) window.location.href = 'c/' + orgnr + '.html';
+            } else {
+              autocompleteBox.hidden = true;
+            }
+          } else if(e.key === 'Escape') {
+            autocompleteBox.hidden = true;
+            highlightedIndex = -1;
+          }
+        }
+      });
+      searchInput.addEventListener('blur', () => {
+        setTimeout(() => { if(autocompleteBox) autocompleteBox.hidden = true; }, 200);
+      });
+    }
+
+    // Attach listeners to select & check controls
+    const controls = ['municipality', 'division', 'size-band', 'sort', 'filter-website', 'filter-jobs', 'filter-social', 'filter-activity', 'filter-incomplete'];
     for(const id of controls) {
       const el = document.getElementById(id);
       if(el) {
-        el.addEventListener(id==='search'?'input':'change',()=>{
-          if(id==='sort') sessionStorage.setItem('signalpost_sort', el.value);
-          pageNumber=0;draw();
+        el.addEventListener('change', () => {
+          pageNumber = 0;
+          draw();
         });
       }
     }
-    document.getElementById('previous').addEventListener('click',()=>{pageNumber--;draw();});document.getElementById('next').addEventListener('click',()=>{pageNumber++;draw();});draw();
+
+    const prevBtn = document.getElementById('previous');
+    const nextBtn = document.getElementById('next');
+    if(prevBtn) prevBtn.addEventListener('click', () => { pageNumber--; draw(); });
+    if(nextBtn) nextBtn.addEventListener('click', () => { pageNumber++; draw(); });
+
+    draw();
   }
-  if(document.body.dataset.page === 'compare'){
-    const options=document.getElementById('company-options');for(const r of records){const option=element('option');option.value=r.orgnr;option.label=r.name;options.append(option);}
-    const inputs=[0,1,2].map(i=>document.getElementById('company-'+i));
-    const fields=[['name','Name','identity'],['orgnr','Organisation number','identity'],['municipality','Municipality','identity'],['industry','Industry','identity'],['employees','Employees','identity'],['revenue','Revenue','accounts'],['annual_result','Annual result','accounts'],['fiscal_year','Fiscal year','accounts'],['ceo','CEO','roles'],['chair','Chair','roles'],['auditor','Auditor','roles'],['workplaces','Workplaces count','subunits'],['website','Website','website'],['social','Social count','website'],['jobs','Active ads','hiring'],['activity','Activity items','activity'],['last_checked','Last checked','identity']];
-    function draw(){
-      const selected=[];for(const input of inputs){const r=byId.get(input.value.trim())||records.find(r=>fold(r.name)===fold(input.value.trim()));if(r&&!selected.includes(r))selected.push(r);}
-      const root=document.getElementById('comparison');root.replaceChildren();document.getElementById('compare-status').textContent=selected.length<2?'Select at least two companies.':selected.length+' companies selected';
-      for(const r of selected){const card=element('article',null,'compare-card');card.append(element('h2',r.name));for(const [key,label,family] of fields){const cell=element('div',null,'compare-cell');cell.append(element('strong',label));const state=r.sections[family]||'not_applicable';let value=key==='industry'?(r.industry_en||r.industry_no):r[key];if(['social','jobs','activity'].includes(key)&&state!=='available')value=null;const available=value!=null;cell.append(stateChip(available?'available':state==='available'?'not_available':state));const a=element('a',format(value));const fallback={industry:'what-it-does',fiscal_year:'financials',workplaces:'locations',social:'online',jobs:'hiring',activity:'activity',ceo:'people',chair:'people',auditor:'people'};a.href='c/'+r.orgnr+'.html#'+(r.anchors[key]||fallback[key]||'main');cell.append(a);card.append(cell);}root.append(card);}
-      const hash=selected.map(r=>r.orgnr).join(',');if(location.hash.slice(1)!==hash)history.replaceState(null,'','#'+hash);
+
+  // ==========================================
+  // PAGE: COMPARE (Side-by-side Comparison)
+  // ==========================================
+  if(document.body.dataset.page === 'compare') {
+    const options = document.getElementById('company-options');
+    if(options) {
+      for(const r of records) {
+        const option = element('option');
+        option.value = r.orgnr;
+        option.label = r.name + ' (' + r.orgnr + ')';
+        options.append(option);
+      }
     }
-    function fromHash(){const ids=location.hash.slice(1).split(',').slice(0,3);inputs.forEach((input,i)=>input.value=byId.has(ids[i])?ids[i]:'');draw();}
-    for(const input of inputs)input.addEventListener('input',draw);window.addEventListener('hashchange',fromHash);fromHash();
+
+    const inputs = [0, 1, 2].map(i => document.getElementById('company-' + i));
+    const clearBtn = document.getElementById('clear-compare');
+
+    const fields = [
+      ['name', 'Legal Name', 'identity'],
+      ['orgnr', 'Organisation Number', 'identity'],
+      ['municipality', 'Municipality', 'identity'],
+      ['founding_date', 'Founding Date', 'identity'],
+      ['industry', 'Industry (NACE)', 'identity'],
+      ['employees', 'Employee Count', 'identity'],
+      ['size_band', 'Size Category', 'identity'],
+      ['workplaces', 'Workplaces Count', 'subunits'],
+      ['website', 'Verified Website', 'website'],
+      ['website_origin', 'Website Provenance', 'website'],
+      ['website_proof', 'Proof Type', 'website'],
+      ['revenue', 'Revenue (NOK)', 'accounts'],
+      ['annual_result', 'Annual Result (NOK)', 'accounts'],
+      ['fiscal_year', 'Reporting Period', 'accounts'],
+      ['ceo', 'CEO / Daglig Leder', 'roles'],
+      ['chair', 'Board Chair / Styreleder', 'roles'],
+      ['auditor', 'Auditor / Revisor', 'roles'],
+      ['jobs', 'Active Job Postings', 'hiring'],
+      ['activity', 'Public Activity Items', 'activity'],
+      ['last_checked', 'Last Verification Run', 'identity']
+    ];
+
+    function draw() {
+      const selected = [];
+      for(const input of inputs) {
+        if(!input) continue;
+        const val = input.value.trim();
+        const r = byId.get(val) || records.find(r => fold(r.name) === fold(val) || r.orgnr === val);
+        if(r && !selected.includes(r)) selected.push(r);
+      }
+
+      const root = document.getElementById('comparison');
+      const status = document.getElementById('compare-status');
+      if(status) {
+        status.textContent = selected.length === 0 ? 'Select up to 3 companies above to compare.' :
+                             selected.length === 1 ? '1 company selected. Select another to compare.' :
+                             selected.length + ' companies compared side-by-side.';
+      }
+      if(!root) return;
+      root.replaceChildren();
+
+      selected.forEach((r, idx) => {
+        const card = element('article', null, 'compare-card');
+        const header = element('div', null, 'compare-card-header');
+        const h2 = element('h2');
+        const aName = element('a', r.name);
+        aName.href = 'c/' + r.orgnr + '.html';
+        h2.append(aName);
+        const removeBtn = element('button', '✕ Remove', 'compare-remove-btn');
+        removeBtn.type = 'button';
+        removeBtn.setAttribute('aria-label', 'Remove ' + r.name + ' from comparison');
+        removeBtn.addEventListener('click', () => {
+          inputs[idx].value = '';
+          draw();
+        });
+        header.append(h2, removeBtn);
+        card.append(header);
+
+        for(const [key, label, family] of fields) {
+          const cell = element('div', null, 'compare-cell');
+          cell.append(element('strong', label));
+          const state = r.sections[family] || 'not_applicable';
+
+          let val = key === 'industry' ? (r.industry_en || r.industry_no) : r[key];
+          if(key === 'size_band') {
+            const sizeMap = { micro: 'Micro (1–9)', small: 'Small (10–49)', medium: 'Medium (50–249)', large: 'Large (250+)', zero: 'Zero (0)', unknown: 'Unknown' };
+            val = sizeMap[val] || val;
+          }
+          if(['social', 'jobs', 'activity'].includes(key) && state !== 'available') {
+            val = null;
+          }
+
+          const hasVal = val != null && val !== '';
+          const chipState = hasVal ? 'available' : (state === 'available' ? 'not_available' : state);
+          cell.append(stateChip(chipState));
+
+          const aVal = element('a', format(val), 'compare-val');
+          const fallback = {
+            industry: 'what-it-does',
+            fiscal_year: 'financials',
+            workplaces: 'locations',
+            social: 'online',
+            jobs: 'hiring',
+            activity: 'activity',
+            ceo: 'people',
+            chair: 'people',
+            auditor: 'people',
+            website: 'online',
+            website_origin: 'online',
+            website_proof: 'online'
+          };
+          aVal.href = 'c/' + r.orgnr + '.html#' + (r.anchors[key] || fallback[key] || 'main');
+          cell.append(aVal);
+          card.append(cell);
+        }
+        root.append(card);
+      });
+
+      const hash = selected.map(r => r.orgnr).join(',');
+      if(location.hash.slice(1) !== hash) {
+        history.replaceState(null, '', hash ? '#' + hash : window.location.pathname);
+      }
+    }
+
+    if(clearBtn) {
+      clearBtn.addEventListener('click', () => {
+        inputs.forEach(i => { if(i) i.value = ''; });
+        draw();
+      });
+    }
+
+    function fromHash() {
+      const ids = location.hash.slice(1).split(',').filter(Boolean).slice(0, 3);
+      inputs.forEach((input, i) => {
+        if(input) input.value = byId.has(ids[i]) ? ids[i] : '';
+      });
+      draw();
+    }
+
+    for(const input of inputs) {
+      if(input) input.addEventListener('input', draw);
+    }
+    window.addEventListener('hashchange', fromHash);
+    fromHash();
   }
 })();

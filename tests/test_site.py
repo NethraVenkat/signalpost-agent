@@ -177,3 +177,44 @@ def test_scalar_role_metadata_is_not_a_role_record(tmp_path):
     row.run.synthesis=None;row.profile.synthesis=None
     result=generate_site(source(tmp_path,[row]),tmp_path/'site')
     assert result['companies']==1
+
+
+def test_dashboard_filters_comparison_and_timeline(tmp_path):
+    row, _ = envelope(tmp_path / 'run')
+    available(row, 'identity.employees', 5)
+    available(row, 'identity.founding_date', '2020-05-15')
+    row.run.synthesis = None
+    row.profile.synthesis = None
+    out = tmp_path / 'site'
+    generate_site(source(tmp_path, [row]), out)
+
+    index_html = (out / 'index.html').read_text(encoding='utf8')
+    assert 'id="tab-dashboard"' in index_html
+    assert 'id="tab-directory"' in index_html
+    assert 'id="view-dashboard"' in index_html
+    assert 'id="view-directory"' in index_html
+    assert 'id="dashboard-scope-banner"' in index_html
+    assert 'id="provenance-breakdown"' in index_html
+    assert 'id="hiring-timeline"' in index_html
+    assert 'id="recent-activity-list"' in index_html
+    assert 'id="size-band"' in index_html
+    assert 'id="active-filters-bar"' in index_html
+    assert 'id="search-autocomplete"' in index_html
+
+    index_json = json.loads((out / 'data/index.json').read_text(encoding='utf8'))[0]
+    assert index_json['size_band'] == 'micro'
+    assert index_json['founding_date'] == '2020-05-15'
+
+    profile_html = (out / f'c/{row.organisation_number}.html').read_text(encoding='utf8')
+    assert 'id="timeline"' in profile_html
+    assert 'class="timeline-item"' in profile_html
+    profile_markup = Markup(profile_html)
+    for href in profile_markup.links:
+        if href.startswith('#'):
+            assert href[1:] in profile_markup.ids
+
+    compare_html = (out / 'compare.html').read_text(encoding='utf8')
+    assert 'id="comparison"' in compare_html
+    assert 'id="clear-compare"' in compare_html
+    assert 'id="company-options"' in compare_html
+
