@@ -3,8 +3,8 @@ from tests.test_registry import config
 
 
 def test_nav_time_cap_follows_budget_and_can_be_overridden(tmp_path):
-    assert time_cap(config(tmp_path / 'small', [], time_budget_seconds=900)) == 315
-    assert time_cap(config(tmp_path / 'default', [])) == 600
+    assert time_cap(config(tmp_path / 'small', [], time_budget_seconds=900)) == 360
+    assert time_cap(config(tmp_path / 'default', [])) == 900
     assert time_cap(config(tmp_path / 'override', [], nav_time_cap_seconds=240)) == 240
 
 
@@ -27,7 +27,8 @@ def test_live_runner_has_two_pools_and_nav_starts_first(tmp_path, monkeypatch):
     monkeypatch.setattr('signalpost.runner.safe_transport',transport)
     cfg=config(tmp_path,['923609016'],hiring=True)
     report=asyncio.run(run(cfg))
-    assert len(pools)==2 and pools[1]==cfg.nav_concurrency
+    # One dedicated feed connection alongside the bounded detail workers.
+    assert len(pools)==2 and pools[1]==cfg.nav_concurrency+1
     assert calls[0][1]=='pam-stilling-feed.nav.no'
     assert all(pool==1 for pool,host,_ in calls if host=='pam-stilling-feed.nav.no')
     assert all(pool==0 for pool,host,_ in calls if host=='data.brreg.no')

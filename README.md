@@ -35,7 +35,7 @@ Useful defaults and controls:
 | Batch | `--workers 64`, `--host-concurrency 10`, `--max-requests` defaults to 20 × unique input identifiers, `--time-budget-seconds 2400`, `--deadline-fraction 0.85` (34-minute source watchdog), `--request-timeout 10` |
 | Output | `--state-dir state`, `--envelope-shape union`, `--max-output-mb 256`, optional `--expected-count` |
 | Websites | `--website-request-cap 6`, `--website-total-request-cap 9`; 8 candidate DNS checks with 3-second prechecks, 8-second HTTP bounds, 1-second domain politeness, 2 in flight/domain |
-| NAV | `--nav-max-pages 512`, `--nav-max-details` defaults to max(300, half the batch rounded up), `--nav-time-cap-seconds` defaults to min(600, 35% of run time), `--nav-lookback-days 185`, `--nav-concurrency 8`, `--nav-request-timeout 30`; independent connection pool |
+| NAV | `--nav-max-pages 512`, `--nav-max-details` defaults to min(candidate ads, max(300, 2 × unique companies)), `--nav-time-cap-seconds` defaults to min(900, 40% of run time), `--nav-lookback-days 185`, `--nav-concurrency 4`, `--nav-request-timeout 30`; independent connection pool |
 | Cost | `--max-cost-usd 0`, `--official-batch-size 1100` |
 | Synthesis | `--synthesis template` (default), `auto` or `llm`; `--llm-max-calls 100`, `--llm-max-cost-usd 0.50`; one call/company, 15-second timeout |
 
@@ -86,7 +86,7 @@ All live checks below used a 2,400-second budget and template synthesis. Coverag
 | Public-activity companies | 33 | 31 | 118 |
 | HTTP requests | 2,202 | 2,190 | 5,980 |
 | Reported runtime | 348.843 s | 336.406 s | 494.094 s |
-| NAV pages / feed seconds | 378 / 194.703 | 378 / 190.484 | 378 / 239.968 |
+| NAV pages / feed seconds (warm cache) | 378 / 194.703 | 378 / 190.484 | 378 / 239.968 |
 | NAV feed complete | yes | yes | yes |
 | Unhandled exceptions / deadline hits | 0 / 0 | 0 / 0 | 0 / 0 |
 
@@ -118,4 +118,4 @@ Website recall measured 20/300 (6.667%) and 19/300 (6.333%) in the two audited s
 
 Raw profiles: `--profiles-output profiles.jsonl` preserves input-record order and duplicates, including invalid/failed rows with explicit states and null missing values. Module records use the reference field/status/source_type/source_class/source_url/retrieved_at/value/as_of/note/content_sha256/source_row_key/effective_at layout. `verified_claims` and `source_records` retain exact claim values and their provenance; no additional source facts are retrieved or inferred. Profiles are a separate output, not a replacement envelope shape. The kit scorer is invoked with `--profiles profiles.jsonl`.
 
-Runner compatibility: `--organisations`, `--bulk`, `--output`, `--profiles-output`, `--report`, `--run-id` and `--expected-count` accept the kit runner's exact flag names. Existing invocations without `--profiles-output` keep writing envelopes and a report; add the flag for the two-file evaluator form above. `--envelope-shape contract` and `reference` remain optional overrides; union is default. The default time budget is 2,400 seconds, NAV gets 600 seconds, and the configurable output safety valve is now 256 MiB.
+Runner compatibility: `--organisations`, `--bulk`, `--output`, `--profiles-output`, `--report`, `--run-id` and `--expected-count` accept the kit runner's exact flag names. Existing invocations without `--profiles-output` keep writing envelopes and a report; add the flag for the two-file evaluator form above. `--envelope-shape contract` and `reference` remain optional overrides; union is default. The default time budget is 2,400 seconds, NAV gets 900 seconds (provisional pending the cold 1,000-company headroom gate), and the configurable output safety valve is now 256 MiB.

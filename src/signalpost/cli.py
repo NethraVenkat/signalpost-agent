@@ -37,7 +37,7 @@ def main():
     command.add_argument('--synthesis',choices=('auto','template','llm'),default='template')
     command.add_argument('--llm-max-calls',type=int,default=100)
     command.add_argument('--llm-max-cost-usd',type=float,default=.50)
-    for flag,kind,default in [('nav-max-pages',int,512),('nav-max-details',int,None),('nav-time-cap-seconds',float,None),('nav-lookback-days',int,185),('nav-concurrency',int,8),('nav-request-timeout',float,30),('nav-body-cap-mb',float,2)]:
+    for flag,kind,default in [('nav-max-pages',int,512),('nav-max-details',int,None),('nav-time-cap-seconds',float,None),('nav-lookback-days',int,185),('nav-concurrency',int,4),('nav-request-timeout',float,30),('nav-body-cap-mb',float,2)]:
         command.add_argument('--'+flag,type=kind,default=default)
     command.add_argument("--website-user-agent", default="SignalpostAgent/1.0 (+https://github.com/NethraVenkat/signalpost-agent)")
     command.add_argument("--expected-count", type=int)

@@ -154,6 +154,12 @@ async def run(config, client=None,synthesis_provider=None):
     async def nav_names():
         await registry_ready.wait()
         return nav.company_names(envelopes.values(),prior)
+    # Seed discovery before the first page; verified subunit names augment this
+    # index when registry work completes. These names never authorize publication.
+    nav_names.initial_names = {
+        org: {nav.normal_name(bulk_registry.column(bulk[org][0], 'navn')[0])}
+        if org in bulk else set() for org in valid_orgs
+    }
     async def company(org, http, website_http, nav_task):
         from .web.policy import DNS_ORG
         DNS_ORG.set(org)
@@ -180,6 +186,7 @@ async def run(config, client=None,synthesis_provider=None):
                 for family, source in (("roles", brreg_roller), ("subunits", brreg_underenheter), ("accounts", regnskap)):
                     if family == "subunits":
                         await isolate(envelope, family, lambda: source.fetch(org, http, progress=lambda partial: update(envelope, "subunits", partial)))
+                        mark_registry(org)
                     else:
                         await isolate(envelope, family, lambda source=source: source.fetch(org, http))
                 if config.websites:
@@ -227,7 +234,7 @@ async def run(config, client=None,synthesis_provider=None):
         transport = safe_transport(config.workers * 2, dns_metrics) if config.websites or config.hiring else httpx.AsyncHTTPTransport(limits=httpx.Limits(max_connections=config.workers * 2))
         async with AsyncExitStack() as stack:
             shared=await stack.enter_async_context(httpx.AsyncClient(transport=transport, trust_env=False, headers={"Accept": "application/json", "User-Agent": "SignalpostAgent/1.0"}))
-            dedicated=await stack.enter_async_context(httpx.AsyncClient(transport=safe_transport(config.nav_concurrency,dns_metrics),trust_env=False)) if config.hiring else None
+            dedicated=await stack.enter_async_context(httpx.AsyncClient(transport=safe_transport(config.nav_concurrency+1,dns_metrics),trust_env=False)) if config.hiring else None
             await execute(shared,dedicated)
     else:
         await execute(client)

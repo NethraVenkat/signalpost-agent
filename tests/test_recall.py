@@ -72,7 +72,7 @@ def test_ranked_cap_order_and_incomplete_companies(tmp_path):
     ids=['00000000-0000-4000-8000-00000000000'+str(i) for i in range(1,4)]
     names=['Common AS','Rare Common AS','Common AS']
     calls=[];index=Index()
-    async def company_names(): return {ORG:{'Rare Ventures AS'},OTHER:{'Common Ventures AS'}}
+    async def company_names(): return {ORG:{'Rare AS'},OTHER:{'Common AS'}}
     def response(request):
         if request.url.path=='/api/publicToken': return httpx.Response(200,text=TOKEN)
         if '/feedentry/' in request.url.path:

@@ -17,7 +17,7 @@ The input and bulk excerpt were prepared with the hash-checked universe sampler 
 | DNS resolver invocations | 586 |
 | Reported runtime | 343.234 s |
 | Company p50 / p95 | 332.859 / 332.890 s |
-| NAV pages / feed seconds / total seconds | 378 / 193.203 / 332.875 |
+| NAV pages / feed seconds / total seconds (warm cache) | 378 / 193.203 / 332.875 |
 | NAV feed complete | true |
 | Output size | 5562306 bytes |
 | Provider cost | $0 |
@@ -50,3 +50,6 @@ The input and bulk excerpt were prepared with the hash-checked universe sampler 
 The independent verifier passed ordered membership, schema, stored-body hashes, verbatim evidence spans and cited summary checks. Incomplete sources remain explicitly failed or blocked; a complete NAV header index does not establish complete detail coverage. These measurements are sample observations, not an official score or a guarantee about unknown evaluator budgets. The saved legacy proxy scorer expects a different evidence dictionary and does not parse the canonical list; official shape acceptance remains open.
 
 [Machine report](smoke-100-report.json) contains aggregate states, coverage and measured NAV/runtime/request metrics.
+
+
+Cache qualification: the historical NAV timings above used an existing state directory and are warm-cache results. They do not establish cold official-run performance. Fresh-state Wednesday gates supersede them for cold qualification.

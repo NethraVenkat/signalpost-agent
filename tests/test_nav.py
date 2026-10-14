@@ -167,3 +167,41 @@ def test_known_expired_not_carried_and_url_policy(tmp_path):
         try:allowed(url)
         except SourceFailure:pass
         else:raise AssertionError('URL was not refused')
+
+
+def test_rare_candidate_policy_rejects_common_words_and_frequent_tokens():
+    from signalpost.sources.nav import distinctive_tokens,rarity_limit
+    assert rarity_limit(9741)==48
+    assert distinctive_tokens('Nord Bygg Service Invest AS',{'nord':198,'bygg':35},9741)==set()
+    assert distinctive_tokens('Rarebrand Bygg AS',{'rarebrand':2,'bygg':35},9741)=={'rarebrand'}
+
+
+def test_default_candidate_cap_and_bounded_parallel_details(tmp_path):
+    from uuid import UUID as UUIDType
+    from signalpost.sources.nav import Index,prefetch
+    from signalpost.sources.blobstore import BlobStore
+    from signalpost.budget import Budget
+    labels=['rareone','raretwo','rarethree','rarefour','rarefive','raresix']
+    ids=[str(UUIDType(int=i+1)) for i in range(len(labels))]
+    cfg=config(tmp_path,[ORG],hiring=True)
+    index=Index();active=peak=0
+    async def names():return {ORG:set(labels)}
+    async def response(request):
+        nonlocal active,peak
+        if request.url.path=='/api/publicToken':return httpx.Response(200,text=TOKEN)
+        if '/feedentry/' in request.url.path:
+            active+=1;peak=max(peak,active);await asyncio.sleep(.01);active-=1
+            uuid=request.url.path.split('/')[-1]
+            return httpx.Response(200,json={'uuid':uuid,'status':'ACTIVE','ad_content':{
+                'uuid':uuid,'title':'Job','published':'2026-01-01T00:00:00Z',
+                'expires':'2099-01-01T00:00:00Z','employer':{'orgnr':ORG}}})
+        return httpx.Response(200,json={'items':[{'id':uuid,'url':'/api/v1/feedentry/'+uuid,
+            'date_modified':'2026-01-01T00:00:00Z','_feed_entry':{'uuid':uuid,'status':'ACTIVE','businessName':label}}
+            for uuid,label in zip(ids,labels)],'next_url':None,'next_id':None})
+    async def run_gate():
+        async with httpx.AsyncClient(transport=httpx.MockTransport(response)) as client:
+            await prefetch(client,cfg,Budget(cfg),BlobStore(cfg.state_dir),index,names)
+    asyncio.run(run_gate())
+    assert index.metrics['detail_request_cap']==index.metrics['distinct_candidate_ads']==6
+    assert index.metrics['detail_requests']==6 and index.complete
+    assert 1<peak<=4
