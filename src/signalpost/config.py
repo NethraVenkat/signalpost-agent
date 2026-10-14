@@ -39,7 +39,7 @@ class Config(BaseModel):
     nav_max_details: int | None = Field(default=None,ge=0)
     nav_time_cap_seconds: float | None = Field(default=None,gt=0)
     nav_lookback_days: int = Field(default=185,ge=1)
-    nav_concurrency: int = Field(default=4,ge=1,le=4)
+    nav_concurrency: int = Field(default=4,ge=1,le=8)
     nav_request_timeout: float = Field(default=30,gt=0)
     nav_body_cap_mb: float = Field(default=2,gt=0)
     nav_index_path: Path | None = None

@@ -13,7 +13,11 @@ from .nav import BASE,Ad,NavHttp,allowed,header_name,name_matches,name_tokens,ti
 class Candidates:
     def __init__(self,data,index,config,previous):
         self.data,self.index,self.config=data,index,config
-        self.members={a['uuid']:a for a in data['ads']};self.headers={};self.names={};self.scopes={};self.owners=defaultdict(set)
+        self.members={a['uuid']:a for a in data['ads']}
+        self.ads_by_employer=defaultdict(list)
+        for a in data['ads']:
+            self.ads_by_employer[a['employer_orgnr']].append(a['uuid'])
+        self.headers={};self.names={};self.scopes={};self.owners=defaultdict(set)
         self.pending={};self.heap=[];self.discovered=set();self.checked={};self.failed=set();self.inflight=set();self.affected=defaultdict(set)
         self.events=[];self.done=False;self.ready=False;self.previous=previous or {};self.new_unknown=False
     def wake(self):
@@ -42,6 +46,33 @@ class Candidates:
                     try:uuid=str(UUID(uuid))
                     except (ValueError,TypeError,AttributeError):continue
                     self.candidate(uuid,{parent},'previous_live_ad')
+        self.wake()
+    def add_company_scope(self,parent,subunits,names=None):
+        self.scopes.setdefault(parent,{parent}).update(subunits)
+        if names:
+            self.names.setdefault(parent,set()).update(names)
+        for unit in subunits:
+            self.owners[unit].add(parent)
+            for uuid in self.ads_by_employer.get(unit,()):
+                self.candidate(uuid,{parent},'declared_cache')
+        if parent in self.previous:
+            row=self.previous[parent]
+            for c in row.get('claims',row.get('profile',{}).get('claims',[])):
+                if c.get('family')=='hiring' and c.get('availability')=='available' and isinstance(c.get('value'),dict):
+                    uuid=c['value'].get('uuid')
+                    try:uuid=str(UUID(uuid))
+                    except (ValueError,TypeError,AttributeError):continue
+                    self.candidate(uuid,{parent},'previous_live_ad')
+        for uuid,(at,item) in list(self.headers.items()):
+            entry=item.get('_feed_entry') or {}
+            employer=entry.get('employer') or item.get('employer') or {}
+            employer_org=str(employer.get('orgnr') or '') if isinstance(employer,dict) else ''
+            if employer_org in subunits:
+                self.candidate(uuid,{parent},'forward_feed')
+            elif names and not employer_org:
+                h_name=header_name(item)
+                if h_name and any(name_matches(h_name,n) for n in names):
+                    self.candidate(uuid,{parent},'forward_feed')
         self.wake()
     async def inspect(self,uuid):
         at,item=self.headers[uuid];entry=item['_feed_entry'];status=entry['status']
@@ -126,6 +157,7 @@ async def prefetch(client,config,budget,blobs,index,data,age,path,names_ready,pr
                                   'details_started_before_feed_complete':not feed_done})
         try:
             _,body,sha,retrieved=await authenticated_get(url,companies=affected)
+            index.metrics['last_detail_seconds']=time.monotonic()-began
             entry=await nav_offload(json.loads,body);index.metrics['details']+=1
             if entry.get('uuid')!=uuid:raise SourceFailure('nav_wrong_ad')
             if entry.get('status') not in {'ACTIVE','INACTIVE','DELETED'}:raise SourceFailure('nav_unknown_status')
@@ -176,11 +208,26 @@ async def prefetch(client,config,budget,blobs,index,data,age,path,names_ready,pr
             elif state.done and state.ready:return
             else:await event.wait()
     async def prepare():
-        names=await names_ready() if names_ready else {}
-        scopes=await names_ready.scopes_ready() if names_ready and hasattr(names_ready,'scopes_ready') else {org:{org} for org in names}
-        state.set_scopes(scopes,names)
-        for uuid in list(state.headers):await state.inspect(uuid)
-        state.ready=True;state.wake()
+        if hasattr(names_ready,'subunit_queue') and names_ready.subunit_queue is not None:
+            queue=names_ready.subunit_queue
+            while True:
+                item=await queue.get()
+                try:
+                    if item is None:break
+                    org,subunits,names=item
+                    state.add_company_scope(org,subunits,names)
+                finally:queue.task_done()
+            if callable(names_ready):
+                final_names=await names_ready()
+                for org,n_set in (final_names or {}).items():state.names.setdefault(org,set()).update(n_set)
+            for uuid in list(state.headers):await state.inspect(uuid)
+            state.ready=True;state.wake()
+        else:
+            names=await names_ready() if names_ready else {}
+            scopes=await names_ready.scopes_ready() if names_ready and hasattr(names_ready,'scopes_ready') else {org:{org} for org in names}
+            state.set_scopes(scopes,names)
+            for uuid in list(state.headers):await state.inspect(uuid)
+            state.ready=True;state.wake()
     try:
         async with asyncio.timeout(time_cap(config)):
             token=token_from(os.environ.get('NAV_API_TOKEN'));from_environment=bool(token)
@@ -243,6 +290,7 @@ async def prefetch(client,config,budget,blobs,index,data,age,path,names_ready,pr
         feed_ms=index.metrics.get('feed_runtime_ms',round((time.monotonic()-feed_began)*1000) if feed_began else 0)
         index.metrics.update({'runtime_ms':round(total*1000),'runtime_seconds':total,'feed_runtime_ms':feed_ms,
             'feed_seconds':feed_ms/1000,'average_seconds_per_page':feed_ms/1000/index.metrics['pages'] if index.metrics['pages'] else None,
+            'last_detail_seconds':index.metrics.get('last_detail_seconds'),
             'feed_complete':feed_done,'complete':index.complete,'blocked':index.blocked,'reason':index.reason,
             'header_processing_complete':header_done,
             'candidate_headers':len(state.discovered),'distinct_candidate_ads':len(state.discovered),

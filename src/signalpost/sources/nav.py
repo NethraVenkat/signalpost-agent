@@ -319,7 +319,7 @@ def section(envelope,index,blobs,previous=None):
             org=claim.value.get('organisation_number')
             if org: parents[org]='subunit '+org
     for org,via in parents.items():
-        for ad in index.ads.get(org,[]):
+        for ad in sorted(index.ads.get(org,[]), key=lambda a: a.value['uuid']):
             if timestamp(ad.value['expires'])<=datetime.now(timezone.utc) or ad.value['uuid'] in index.closed: continue
             value={**ad.value,'matched_via':via or 'organisation '+org}
             body=(blobs.directory/ad.sha).read_bytes()

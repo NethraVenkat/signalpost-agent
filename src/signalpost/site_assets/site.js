@@ -56,11 +56,14 @@
   window.addEventListener('hashchange',revealFact);revealFact();
   if(document.body.dataset.page === 'index') {
     let pageNumber=0; const pageSize=30;
+    for(const r of records){
+      r._search = fold(r.name+' '+r.orgnr+' '+(r.municipality||''));
+    }
     const controls=['search','municipality','division','sort','filter-website','filter-jobs','filter-social','filter-activity','filter-incomplete'];
     function draw(){
       const query=fold(document.getElementById('search').value);
       const selected=records.filter(r => {
-        if(!fold(r.name+' '+r.orgnr+' '+(r.municipality||'')).includes(query)) return false;
+        if(!r._search.includes(query)) return false;
         const town=document.getElementById('municipality').value, division=document.getElementById('division').value;
         if(town && r.municipality!==town || division && !(r.nace||'').startsWith(division)) return false;
         for(const key of ['website','jobs','social','activity']) if(document.getElementById('filter-'+key).checked && !r.flags[key]) return false;

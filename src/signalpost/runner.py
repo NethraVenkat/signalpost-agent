@@ -102,6 +102,39 @@ def finalize(envelope, old, blobs, budget, began):
                                       values={c.field: c.value for c in envelope.claims},
                                       evidence_ids=[e.id for e in envelope.evidence])
 
+def extract_company_scope(envelope, bulk_row=None, prior_row=None):
+    org = envelope.organisation_number
+    subunits = {org}
+    names = set()
+    for c in envelope.claims:
+        if c.availability == 'available':
+            if c.field == 'identity.legal_name' and c.value:
+                names.add(nav.normal_name(c.value))
+            elif c.family == 'subunits' and isinstance(c.value, dict):
+                unit = c.value.get('organisation_number')
+                if valid(str(unit)):
+                    subunits.add(str(unit))
+                if c.value.get('name'):
+                    names.add(nav.normal_name(c.value.get('name')))
+            elif c.family == 'website' and 'brand' in c.field:
+                val = c.value.get('name') if isinstance(c.value, dict) else c.value
+                if val:
+                    names.add(nav.normal_name(val))
+    if bulk_row:
+        try:
+            val = bulk_registry.column(bulk_row[0], 'navn')[0]
+            if val:
+                names.add(nav.normal_name(val))
+        except Exception:
+            pass
+    if prior_row:
+        for claim in prior_row.get('claims', prior_row.get('profile', {}).get('claims', [])):
+            if claim.get('availability') == 'available' and claim.get('family') == 'website' and 'brand' in claim.get('field', ''):
+                val = claim.get('value')
+                if val:
+                    names.add(nav.normal_name(val.get('name') if isinstance(val, dict) else val))
+    return org, subunits, names
+
 
 async def run(config, client=None,synthesis_provider=None):
     from .monitor import LoopMonitor
@@ -166,6 +199,26 @@ async def _run(config, client=None,synthesis_provider=None):
     nav_index.started=asyncio.Event()
     registry_done=set()
     registry_ready=asyncio.Event()
+    timing_markers = {}
+    subunits_done = set()
+    registry_families_done = set()
+    scopes_pushed = set()
+    scopes_dict = {org: {org} for org in valid_orgs}
+    subunit_queue = asyncio.Queue(maxsize=100) if config.hiring else None
+    queue_closed = asyncio.Event()
+
+    async def push_subunit_scope(org, envelope):
+        if org in scopes_pushed:
+            return
+        scopes_pushed.add(org)
+        if subunit_queue is not None:
+            item = await offload(extract_company_scope, envelope, bulk.get(org), prior.get(org))
+            scopes_dict[org] = item[1]
+            await subunit_queue.put(item)
+            if len(scopes_pushed) >= len(valid_orgs) and not queue_closed.is_set():
+                queue_closed.set()
+                await subunit_queue.put(None)
+
     def mark_registry(org):
         registry_done.add(org)
         if valid_orgs <= registry_done: registry_ready.set()
@@ -178,15 +231,10 @@ async def _run(config, client=None,synthesis_provider=None):
         org: {nav.normal_name(bulk_registry.column(bulk[org][0], 'navn')[0])}
         if org in bulk else set() for org in valid_orgs
     }
+    nav_names.subunit_queue = subunit_queue
     async def nav_scopes():
         await registry_ready.wait()
-        scopes={org:{org} for org in valid_orgs}
-        for org in valid_orgs:
-            for c in envelopes[org].claims:
-                if c.availability=='available' and c.field.startswith('subunits.unit.') and isinstance(c.value,dict):
-                    unit=c.value.get('organisation_number')
-                    if valid(str(unit)):scopes[org].add(str(unit))
-        return scopes
+        return scopes_dict
     nav_names.scopes_ready=nav_scopes
     async def company(org, http, website_http, nav_task):
         from .web.policy import DNS_ORG
@@ -210,13 +258,27 @@ async def _run(config, client=None,synthesis_provider=None):
                         state = envelope.run.sections["identity"]
                         inherited = next((e.code for e in envelope.errors if e.section == "identity" and e.code in {"budget_exhausted", "deadline"}), "identity_unverified")
                         update(envelope, family, missing(family, inherited, state=state))
+                    subunits_done.add(org)
+                    if valid_orgs <= subunits_done and 'subunits_complete_seconds' not in timing_markers:
+                        timing_markers['subunits_complete_seconds'] = time.monotonic() - budget.start
+                    registry_families_done.add(org)
+                    if valid_orgs <= registry_families_done and 'registry_complete_seconds' not in timing_markers:
+                        timing_markers['registry_complete_seconds'] = time.monotonic() - budget.start
+                    await push_subunit_scope(org, envelope)
                     return
                 for family, source in (("roles", brreg_roller), ("subunits", brreg_underenheter), ("accounts", regnskap)):
                     if family == "subunits":
                         await isolate(envelope, family, lambda: source.fetch(org, http, progress=lambda partial: update(envelope, "subunits", partial)))
+                        subunits_done.add(org)
+                        if valid_orgs <= subunits_done and 'subunits_complete_seconds' not in timing_markers:
+                            timing_markers['subunits_complete_seconds'] = time.monotonic() - budget.start
+                        await push_subunit_scope(org, envelope)
                         mark_registry(org)
                     else:
                         await isolate(envelope, family, lambda source=source: source.fetch(org, http))
+                registry_families_done.add(org)
+                if valid_orgs <= registry_families_done and 'registry_complete_seconds' not in timing_markers:
+                    timing_markers['registry_complete_seconds'] = time.monotonic() - budget.start
             async with website_semaphore:
                 if config.websites:
                     await isolate(envelope, "website", lambda: collector.fetch(org, envelope, bulk.get(org), website_http))
@@ -241,6 +303,13 @@ async def _run(config, client=None,synthesis_provider=None):
                 if any(e.section == family and e.code == "not_started" for e in envelope.errors):
                     update(envelope, family, missing(family, "company_exception", type(exc).__name__))
         finally:
+            subunits_done.add(org)
+            if valid_orgs <= subunits_done and 'subunits_complete_seconds' not in timing_markers:
+                timing_markers['subunits_complete_seconds'] = time.monotonic() - budget.start
+            registry_families_done.add(org)
+            if valid_orgs <= registry_families_done and 'registry_complete_seconds' not in timing_markers:
+                timing_markers['registry_complete_seconds'] = time.monotonic() - budget.start
+            await push_subunit_scope(org, envelope)
             mark_registry(org)
             envelope.operations.runtime_ms = round((time.monotonic() - begin) * 1000)
     async def execute(active_client, nav_client=None):
@@ -267,6 +336,13 @@ async def _run(config, client=None,synthesis_provider=None):
         finally:
             dns_metrics.update({'dns_precheck_lookups': website_http.dns_lookups, 'dns_candidates_by_company': website_http.dns_counts,
                                 'dns_scope': 'prechecks, website preflight and pinned-transport connection resolutions'})
+            if subunit_queue is not None:
+                for org in valid_orgs:
+                    if org not in scopes_pushed:
+                        await push_subunit_scope(org, envelopes[org])
+                if not queue_closed.is_set():
+                    queue_closed.set()
+                    await subunit_queue.put(None)
             if nav_task and not nav_task.done(): nav_task.cancel()
             if nav_task: await asyncio.gather(nav_task,return_exceptions=True)
     dns_metrics = {'dns_lookups': 0}
@@ -316,6 +392,14 @@ async def _run(config, client=None,synthesis_provider=None):
         report['nav_detail_requests_by_company']={org:nav_index.metrics.get('detail_requests_by_company',{}).get(org,0) for org in valid_orgs}
         report['hiring_prefetch']['matches_published']=sum(c.family=='hiring' and c.availability=='available' and not c.carried_forward for e in result for c in e.claims)
         report['hiring_prefetch']['companies_with_ads']=sum(any(c.family=='hiring' and c.availability=='available' and not c.carried_forward for c in e.claims) for e in result)
+    if 'first_detail_seconds' in nav_index.metrics:
+        timing_markers['first_detail_seconds'] = nav_index.metrics.get('first_detail_seconds')
+    if 'last_detail_seconds' in nav_index.metrics:
+        timing_markers['last_detail_seconds'] = nav_index.metrics.get('last_detail_seconds')
+    if 'runtime_seconds' in nav_index.metrics:
+        timing_markers['nav_runtime_seconds'] = nav_index.metrics.get('runtime_seconds')
+    if timing_markers:
+        report['timing_markers'] = timing_markers
     report["output_bytes"] = size
     report["output_bytes_per_company"] = size / len(result) if result else 0
     report["output_limit_exceeded"] = size > config.max_output_mb * 1024 * 1024
