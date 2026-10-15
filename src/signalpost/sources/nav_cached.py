@@ -201,17 +201,7 @@ async def prefetch(client,config,budget,blobs,index,data,age,path,names_ready,pr
                 index.closure_proofs[uuid]=(sha,url,retrieved,'/ad_content/expires',ad['expires'],provenance);return True
             if published>now:raise SourceFailure('nav_invalid_dates')
             org=str((ad.get('employer') or {}).get('orgnr') or '').strip()
-            if not valid(org):
-                emp_name = (ad.get('employer') or {}).get('name') or entry.get('businessName') or ''
-                if emp_name:
-                    matched_parent = next((parent for parent, n_set in state.names.items()
-                                          if any(name_matches(emp_name, n) for n in n_set)), None)
-                    if matched_parent:
-                        org = matched_parent
-                    else:
-                        return True
-                else:
-                    return True
+            if not valid(org):return True
             if not ad.get('title'):raise SourceFailure('nav_missing_title')
             value={'uuid':uuid,'employer_orgnr':org,'title':ad['title'],
                 'location':[{'municipality':x.get('municipal'),'city':x.get('city')} for x in ad.get('workLocations',[])] or None,

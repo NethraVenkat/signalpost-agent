@@ -417,10 +417,12 @@ def profile(row, title):
         if key == 'financials':
             body += '<p>Reported values from Regnskapsregisteret; no figures or growth ratios are calculated.</p>'
             years = sorted({(c.get('reporting_period') or {}).get('fiscal_year') for c in items if (c.get('reporting_period') or {}).get('fiscal_year')}, reverse=True)
+            currencies = sorted({(c.get('reporting_period') or {}).get('currency') for c in items if (c.get('reporting_period') or {}).get('currency')})
+            curr_str = ", ".join(currencies) if currencies else "NOK"
             if len(years) > 1:
-                body += f'<div class="financial-trend-banner"><p><strong>Multi-year filing trend:</strong> Accounts filed across {len(years)} fiscal years ({", ".join(str(y) for y in years)}). Reporting currency: NOK. No derived growth ratios are calculated.</p></div>'
+                body += f'<div class="financial-trend-banner"><p><strong>Multi-year filing trend:</strong> Accounts filed across {len(years)} fiscal years ({", ".join(str(y) for y in years)}). Reporting currency: {esc(curr_str)}. No derived growth ratios are calculated.</p></div>'
             elif len(years) == 1:
-                body += f'<div class="financial-trend-banner"><p><strong>Reporting period:</strong> Fiscal year {years[0]} filed in Regnskapsregisteret (NOK). Single-year reported values.</p></div>'
+                body += f'<div class="financial-trend-banner"><p><strong>Reporting period:</strong> Fiscal year {years[0]} filed in Regnskapsregisteret ({esc(curr_str)}). Single-year reported values.</p></div>'
         if key == 'online': body += '<p>Website proof types: orgnr = exact registered number; registry_declared = registered site with corroboration; signals = accepted identity signals.</p>'
         if not items or state != 'available': body += '<p>' + esc(UNKNOWN.get(state, 'No facts published in this section.')) + '</p>'
         if key == 'financials' and items:

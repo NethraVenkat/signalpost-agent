@@ -1,0 +1,122 @@
+{
+  "dataset": {
+    "source_file": "w5-opt1000-rev4-envelopes.jsonl",
+    "total_companies": 1000,
+    "total_published_claims": 69019,
+    "sample_seed": 20261015,
+    "stratified_sample_size": 110
+  },
+  "structural_and_provenance": {
+    "total_claims": 78033,
+    "available_claims": 69019,
+    "by_family": {
+      "identity": 28876,
+      "subunits": 6331,
+      "roles": 11323,
+      "accounts": 22085,
+      "website": 348,
+      "hiring": 16,
+      "activity": 40
+    },
+    "hash_checks": 118564,
+    "hash_failures": 0,
+    "missing_blobs": 0,
+    "verbatim_span_checks": 118564,
+    "verbatim_span_failures": 0,
+    "locator_missing": 0,
+    "unsupported_available_claims": 0,
+    "wrong_orgnr_attribution": 0,
+    "financial_fabricated_zeroes": 0,
+    "financial_currency_not_nok": 71,
+    "financial_missing_reporting_period": 0,
+    "financial_non_numeric_values": 0
+  },
+  "census_families": {
+    "website": {
+      "total_published_claims": 348,
+      "reviewed": 47,
+      "correct": 47,
+      "incorrect": 0,
+      "unverifiable": 0,
+      "wrong_company": 0,
+      "precision": 1.0,
+      "verification_rate": 1.0
+    },
+    "social": {
+      "total_published_claims": 65,
+      "reviewed": 65,
+      "correct": 65,
+      "incorrect": 0,
+      "unverifiable": 0,
+      "wrong_company": 0,
+      "precision": 1.0,
+      "verification_rate": 1.0
+    },
+    "hiring": {
+      "total_published_claims": 16,
+      "reviewed": 16,
+      "correct": 9,
+      "incorrect": 7,
+      "unverifiable": 0,
+      "wrong_company": 0,
+      "precision": 0.5625,
+      "verification_rate": 1.0
+    },
+    "activity": {
+      "total_published_claims": 40,
+      "reviewed": 40,
+      "correct": 40,
+      "incorrect": 0,
+      "unverifiable": 0,
+      "wrong_company": 0,
+      "precision": 1.0,
+      "verification_rate": 1.0
+    }
+  },
+  "sampled_families": {
+    "identity": {
+      "total_published_claims": 28876,
+      "reviewed": 3311,
+      "correct": 3311,
+      "incorrect": 0,
+      "unverifiable": 0,
+      "wrong_company": 0,
+      "unsupported": 0,
+      "precision": 1.0,
+      "verification_rate": 1.0
+    },
+    "accounts": {
+      "total_published_claims": 22085,
+      "reviewed": 2540,
+      "correct": 2540,
+      "incorrect": 0,
+      "unverifiable": 0,
+      "wrong_company": 0,
+      "unsupported": 0,
+      "precision": 1.0,
+      "verification_rate": 1.0
+    },
+    "roles": {
+      "total_published_claims": 11323,
+      "reviewed": 1362,
+      "correct": 1362,
+      "incorrect": 0,
+      "unverifiable": 0,
+      "wrong_company": 0,
+      "unsupported": 0,
+      "precision": 1.0,
+      "verification_rate": 1.0
+    },
+    "subunits": {
+      "total_published_claims": 6331,
+      "reviewed": 913,
+      "correct": 913,
+      "incorrect": 0,
+      "unverifiable": 0,
+      "wrong_company": 0,
+      "unsupported": 0,
+      "precision": 1.0,
+      "verification_rate": 1.0
+    }
+  }
+}
