@@ -289,7 +289,8 @@ def audit_accounts_claim(org: str, claim: dict, ev: dict, body: str) -> tuple[st
 
 def audit_roles_claim(org: str, claim: dict, ev: dict, body: str) -> tuple[str, str, any]:
     """Category B: Compares role/person assignment to Brønnøysund roller payload."""
-    val = claim.get("value") or {}
+    fld = claim.get("field", "")
+    val = claim.get("value")
     loc = ev.get("locator", "")
 
     try:
@@ -304,28 +305,39 @@ def audit_roles_claim(org: str, claim: dict, ev: dict, body: str) -> tuple[str, 
         return "INCORRECT", f"Roles response orgnr {explicit_org} != subject org {org}", explicit_org
 
     found, item = resolve_json_pointer(data, loc)
-    if not found or not isinstance(item, dict):
+    if not found:
         return "INCORRECT", f"Role locator {loc} not found in roller body", None
 
+    item_clean = {k: v for k, v in item.items() if k != '_links'} if isinstance(item, dict) else item
+    if fld.startswith("roles.detail."):
+        if val == item_clean:
+            return "CORRECT", f"Role detail matches source field ({fld})", item_clean
+        return "INCORRECT", f"Role detail mismatch: claimed {val} != source {item_clean}", item_clean
+
+    if not isinstance(item, dict):
+        return "INCORRECT", f"Role locator {loc} expected dict, got {type(item).__name__}", None
+
+    val_dict = val if isinstance(val, dict) else {}
     person = item.get("person") or {}
     enhet = item.get("enhet") or {}
     role_type = item.get("type") or {}
 
     expected_name = ""
     if isinstance(person.get("navn"), dict):
-        parts = [person["navn"].get(k) for k in ("fornavn", "mellomnavn", "etternavn") if person["navn"].get(k)]
+        parts = [str(person["navn"].get(k)) for k in ("fornavn", "mellomnavn", "etternavn") if person["navn"].get(k)]
         expected_name = " ".join(parts)
     elif person.get("navn"):
-        expected_name = str(person["navn"])
+        expected_name = " ".join(person["navn"]) if isinstance(person["navn"], list) else str(person["navn"])
     elif enhet.get("navn"):
-        expected_name = str(enhet["navn"])
+        expected_name = " ".join(enhet["navn"]) if isinstance(enhet["navn"], list) else str(enhet["navn"])
 
-    claim_name = val.get("name") or ""
+    raw_claim_name = val_dict.get("name")
+    claim_name = " ".join(raw_claim_name) if isinstance(raw_claim_name, list) else str(raw_claim_name or "")
     if expected_name and claim_name:
         if expected_name.strip().casefold() != claim_name.strip().casefold():
             return "INCORRECT", f"Role person name mismatch: claimed '{claim_name}' != source '{expected_name}'", expected_name
 
-    claim_type_code = (val.get("role_type") or {}).get("kode") if isinstance(val.get("role_type"), dict) else val.get("role_type")
+    claim_type_code = (val_dict.get("role_type") or {}).get("kode") if isinstance(val_dict.get("role_type"), dict) else val_dict.get("role_type")
     exp_type_code = role_type.get("kode") if isinstance(role_type, dict) else role_type
     if exp_type_code and claim_type_code:
         if exp_type_code != claim_type_code:
@@ -336,7 +348,8 @@ def audit_roles_claim(org: str, claim: dict, ev: dict, body: str) -> tuple[str, 
 
 def audit_subunits_claim(org: str, claim: dict, ev: dict, body: str) -> tuple[str, str, any]:
     """Category B: Compares subunit claim against Brønnøysund underenheter payload."""
-    val = claim.get("value") or {}
+    fld = claim.get("field", "")
+    val = claim.get("value")
     loc = ev.get("locator", "")
 
     try:
@@ -345,20 +358,30 @@ def audit_subunits_claim(org: str, claim: dict, ev: dict, body: str) -> tuple[st
         return "UNVERIFIABLE", f"Malformed subunits JSON: {exc}", None
 
     found, item = resolve_json_pointer(data, loc)
-    if not found or not isinstance(item, dict):
+    if not found:
         return "INCORRECT", f"Subunit locator {loc} not found in underenheter body", None
 
+    item_clean = {k: v for k, v in item.items() if k != '_links'} if isinstance(item, dict) else item
+    if fld.startswith("subunits.detail."):
+        if val == item_clean:
+            return "CORRECT", f"Subunit detail matches source field ({fld})", item_clean
+        return "INCORRECT", f"Subunit detail mismatch: claimed {val} != source {item_clean}", item_clean
+
+    if not isinstance(item, dict):
+        return "INCORRECT", f"Subunit locator {loc} expected dict, got {type(item).__name__}", None
+
+    val_dict = val if isinstance(val, dict) else {}
     parent_org = str(item.get("overordnetEnhet") or "").strip()
     if parent_org and parent_org != org:
         return "INCORRECT", f"Subunit parent orgnr {parent_org} != subject org {org}", parent_org
 
     unit_org = str(item.get("organisasjonsnummer") or "").strip()
-    claimed_unit_org = str(val.get("organisation_number") or "").strip()
+    claimed_unit_org = str(val_dict.get("organisation_number") or "").strip()
     if unit_org and claimed_unit_org and unit_org != claimed_unit_org:
         return "INCORRECT", f"Subunit orgnr mismatch: claimed {claimed_unit_org} != source {unit_org}", unit_org
 
     unit_name = str(item.get("navn") or "").strip()
-    claimed_name = str(val.get("name") or "").strip()
+    claimed_name = str(val_dict.get("name") or "").strip()
     if unit_name and claimed_name and unit_name.casefold() != claimed_name.casefold():
         return "INCORRECT", f"Subunit name mismatch: claimed '{claimed_name}' != source '{unit_name}'", unit_name
 
