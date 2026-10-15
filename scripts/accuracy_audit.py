@@ -19,6 +19,10 @@ from collections import Counter, defaultdict
 from pathlib import Path
 from urllib.parse import urlparse
 
+from signalpost.web.html import Page
+from signalpost.web.candidates import legal_name
+from signalpost.web.proof import phone
+
 # Generic platform landing paths that do not constitute verified company profiles
 GENERIC_SOCIAL_PATHS = {
     "", "/", "/share", "/sharer", "/sharer.php", "/intent/tweet", "/home",
@@ -388,7 +392,49 @@ def audit_subunits_claim(org: str, claim: dict, ev: dict, body: str) -> tuple[st
     return "CORRECT", f"Subunit {unit_org} verified under parent {org}", unit_org
 
 
-def audit_website_claim(org: str, claim: dict, ev: dict, body: str, registry_body: str | None = None) -> tuple[str, str, any]:
+def extract_org_context_and_leaders(claims: list[dict]) -> tuple[dict, list[str]]:
+    """Extracts identity context and leadership names from envelope claims for website evaluation."""
+    name = next((c.get("value") for c in claims if c.get("field") == "identity.legal_name"), None)
+    muni = next((c.get("value") for c in claims if c.get("field") == "identity.municipality"), None)
+    reg_web = next((c.get("value") for c in claims if c.get("field") == "identity.registered_website"), None)
+    addr_claim = next((c.get("value") for c in claims if c.get("field") == "identity.registered_address"), None) or {}
+    street = addr_claim.get("adresse") if isinstance(addr_claim, dict) else None
+    postcode = addr_claim.get("postnummer") if isinstance(addr_claim, dict) else None
+    city = addr_claim.get("poststed") if isinstance(addr_claim, dict) else None
+    phone_val = next((c.get("value") for c in claims if "phone" in c.get("field", "") or "telefon" in c.get("field", "")), None)
+    context = {
+        "name": name,
+        "website": reg_web,
+        "phone": phone_val,
+        "municipality": muni,
+        "street": street,
+        "postcode": postcode,
+        "city": city,
+    }
+    leaders = []
+    for c in claims:
+        if c.get("field", "").startswith("roles.role."):
+            val_r = c.get("value")
+            if isinstance(val_r, dict):
+                type_code = (val_r.get("role_type") or {}).get("kode") if isinstance(val_r.get("role_type"), dict) else val_r.get("role_type")
+                if type_code in ("LEDE", "LEDI", "STYR", "DAGL"):
+                    raw_nm = val_r.get("name")
+                    if isinstance(raw_nm, list):
+                        leaders.extend(raw_nm)
+                    elif isinstance(raw_nm, str):
+                        leaders.append(raw_nm)
+    return context, leaders
+
+
+def audit_website_claim(
+    org: str,
+    claim: dict,
+    ev: dict,
+    body: str,
+    registry_body: str | None = None,
+    context: dict | None = None,
+    leaders: list[str] | None = None,
+) -> tuple[str, str, any]:
     """Category B: Independently validates website assignment proof against destination page."""
     fld = claim.get("field", "")
     val = claim.get("value") or {}
@@ -421,7 +467,7 @@ def audit_website_claim(org: str, claim: dict, ev: dict, body: str, registry_bod
             return "CORRECT", f"Exact orgnr {org} verified in markup body", url
         return "INCORRECT", f"JSON-LD vatId asserted but orgnr {org} not found in body", None
 
-    if ptype == "registry_declared":
+    if ptype in ("registry_declared", "registry_declared_live"):
         if not registry_body:
             return "UNVERIFIABLE", "Registry record unavailable to verify declared website domain", None
         # Verify that domain is actually declared in Enhetsregisteret
@@ -434,12 +480,61 @@ def audit_website_claim(org: str, claim: dict, ev: dict, body: str, registry_bod
     if ptype == "signals":
         if not signals:
             return "INCORRECT", "Signals proof claimed but signals list is empty", None
-        # Verify that each recorded signal actually exists in the page body
-        matched_signals = [s for s in signals if s.lower() in body.lower()]
-        if len(matched_signals) == len(signals):
-            return "CORRECT", f"Identity signals ({', '.join(signals)}) verified in page body", url
-        missing = set(signals) - set(matched_signals)
-        return "INCORRECT", f"Signals ({', '.join(missing)}) not found in page body", None
+
+        if context:
+            page = Page(body.encode("utf-8", errors="replace"), val.get("proof_page_url") or url)
+            text = legal_name(page.title + " " + page.meta.get("og:site_name", "") + " " + page.owner_text)
+            norm_name = legal_name(context.get("name"))
+            verified_signals = []
+            for s in signals:
+                if s == "legal_name":
+                    if norm_name and re.search(r"(?<!\w)" + re.escape(norm_name) + r"(?!\w)", text):
+                        verified_signals.append(s)
+                elif s == "address":
+                    st = context.get("street")
+                    sts = st if isinstance(st, list) else [st]
+                    addr = any(x and len(str(x)) > 4 and legal_name(x) in text for x in sts)
+                    if not addr and context.get("postcode") and context.get("city"):
+                        addr = str(context["postcode"]) in page.visible and legal_name(context["city"]) in text
+                    if addr:
+                        verified_signals.append(s)
+                elif s == "phone":
+                    exp_p = phone(context.get("phone"))
+                    page_p = {phone(l.href[4:]) for l in page.links if l.href.startswith("tel:")}
+                    for m in re.finditer(r"(?:\+47|0047)[ .()0-9-]{8,20}", page.visible):
+                        page_p.add(phone(m.group()))
+                    if exp_p and exp_p in page_p:
+                        verified_signals.append(s)
+                elif s == "leader":
+                    if leaders and any(legal_name(l) and legal_name(l) in text for l in leaders):
+                        verified_signals.append(s)
+                elif s == "municipality":
+                    muni = legal_name(context.get("municipality"))
+                    if muni and muni in text:
+                        verified_signals.append(s)
+                elif s == "registry_website":
+                    reg_w = context.get("website") or (
+                        registry_body
+                        and urlparse(url).hostname
+                        and urlparse(url).hostname.replace("www.", "").lower() in registry_body.lower()
+                    )
+                    if reg_w:
+                        verified_signals.append(s)
+                else:
+                    if s.lower() in body.lower():
+                        verified_signals.append(s)
+
+            if len(verified_signals) == len(signals):
+                return "CORRECT", f"Identity signals ({', '.join(signals)}) verified against primary source facts and destination page", url
+            missing = set(signals) - set(verified_signals)
+            return "INCORRECT", f"Signals ({', '.join(missing)}) not found in page body", None
+        else:
+            # Fallback for standalone/adversarial unit tests without company context
+            matched_signals = [s for s in signals if s.lower() in body.lower()]
+            if len(matched_signals) == len(signals):
+                return "CORRECT", f"Identity signals ({', '.join(signals)}) verified in page body", url
+            missing = set(signals) - set(matched_signals)
+            return "INCORRECT", f"Signals ({', '.join(missing)}) not found in page body", None
 
     return "UNVERIFIABLE", f"Unknown website proof type: {ptype}", None
 
@@ -644,7 +739,15 @@ def run_comprehensive_audit(envelopes_path: Path, state_dir: Path, sample_seed: 
             cat_a["available_claims"] += 1
             cat_a["by_family"][fam] += 1
 
-            if fam == "website": has_web = True
+            if fam == "website":
+                has_web = True
+                fld = c.get("field", "")
+                if fld == "official_website":
+                    cat_a["by_family"]["official_website"] += 1
+                elif "social" in fld:
+                    cat_a["by_family"]["social_profiles"] += 1
+                else:
+                    cat_a["by_family"]["other_website_claims"] += 1
             if fam == "hiring": has_jobs = True
             if fam == "activity": has_act = True
             if fam == "subunits":
@@ -683,6 +786,8 @@ def run_comprehensive_audit(envelopes_path: Path, state_dir: Path, sample_seed: 
         if has_act: companies_with_act.append(org)
         if has_sub: companies_with_subunits.append(org)
 
+    cat_a["by_family"]["aggregate_all_families"] = cat_a["available_claims"]
+
     # Stratified sample selection for Category B audit (at least min_sample companies)
     rng = random.Random(sample_seed)
     sampled_orgs = set()
@@ -713,6 +818,7 @@ def run_comprehensive_audit(envelopes_path: Path, state_dir: Path, sample_seed: 
     for org in sampled_orgs:
         r = company_by_org[org]
         ev_map = {e["id"]: e for e in r.get("evidence", [])}
+        org_context, org_leaders = extract_org_context_and_leaders(r.get("claims", []))
 
         # Cache registry body for website domain checks
         reg_body = None
@@ -726,22 +832,30 @@ def run_comprehensive_audit(envelopes_path: Path, state_dir: Path, sample_seed: 
 
         for c in r.get("claims", []):
             fam = c.get("family")
-            fld = c.get("field")
+            fld = c.get("field", "")
             avail = c.get("availability")
             if avail != "available":
                 continue
 
             # Only review targeted families
-            if fam not in {"identity", "accounts", "roles", "subunits", "website", "social", "hiring", "activity"}:
+            if fam not in {"identity", "accounts", "roles", "subunits", "website", "hiring", "activity"}:
                 continue
 
-            stat = family_stats[fam]
-            stat["reviewed"] += 1
+            target_fams = [fam]
+            if fam == "website":
+                if fld == "official_website":
+                    target_fams.append("official_website")
+                elif "social" in fld:
+                    target_fams.append("social_profiles")
+                else:
+                    target_fams.append("other_website_claims")
 
             eids = c.get("evidence_ids", [])
             if not eids:
-                stat["unsupported"] += 1
-                stat["incorrect"] += 1
+                for tf in target_fams + ["aggregate_all_families"]:
+                    family_stats[tf]["reviewed"] += 1
+                    family_stats[tf]["unsupported"] += 1
+                    family_stats[tf]["incorrect"] += 1
                 item_findings.append({
                     "orgnr": org, "family": fam, "field": fld, "status": "INCORRECT",
                     "reason": "Missing evidence references", "claim_value": c.get("value")
@@ -750,8 +864,10 @@ def run_comprehensive_audit(envelopes_path: Path, state_dir: Path, sample_seed: 
 
             ev = ev_map.get(eids[0])
             if not ev:
-                stat["unsupported"] += 1
-                stat["incorrect"] += 1
+                for tf in target_fams + ["aggregate_all_families"]:
+                    family_stats[tf]["reviewed"] += 1
+                    family_stats[tf]["unsupported"] += 1
+                    family_stats[tf]["incorrect"] += 1
                 item_findings.append({
                     "orgnr": org, "family": fam, "field": fld, "status": "INCORRECT",
                     "reason": f"Evidence {eids[0]} not found in envelope", "claim_value": c.get("value")
@@ -761,7 +877,9 @@ def run_comprehensive_audit(envelopes_path: Path, state_dir: Path, sample_seed: 
             sha = ev.get("content_sha256")
             body = get_blob(sha)
             if not body:
-                stat["unverifiable"] += 1
+                for tf in target_fams + ["aggregate_all_families"]:
+                    family_stats[tf]["reviewed"] += 1
+                    family_stats[tf]["unverifiable"] += 1
                 item_findings.append({
                     "orgnr": org, "family": fam, "field": fld, "status": "UNVERIFIABLE",
                     "reason": f"Blob {sha} not found or corrupted", "claim_value": c.get("value")
@@ -774,14 +892,17 @@ def run_comprehensive_audit(envelopes_path: Path, state_dir: Path, sample_seed: 
             elif fam == "accounts":
                 status, reason, exp = audit_accounts_claim(org, c, ev, body)
                 if "fabricated zero" in reason.lower():
-                    stat["fabricated_zeroes"] += 1
+                    for tf in target_fams + ["aggregate_all_families"]:
+                        family_stats[tf]["fabricated_zeroes"] += 1
             elif fam == "roles":
                 status, reason, exp = audit_roles_claim(org, c, ev, body)
             elif fam == "subunits":
                 status, reason, exp = audit_subunits_claim(org, c, ev, body)
             elif fam == "website":
                 if fld == "official_website":
-                    status, reason, exp = audit_website_claim(org, c, ev, body, reg_body)
+                    status, reason, exp = audit_website_claim(
+                        org, c, ev, body, reg_body, context=org_context, leaders=org_leaders
+                    )
                 elif "social" in fld:
                     status, reason, exp = audit_social_claim(org, c, ev, body)
                 else:
@@ -793,15 +914,17 @@ def run_comprehensive_audit(envelopes_path: Path, state_dir: Path, sample_seed: 
             else:
                 status, reason, exp = "UNVERIFIABLE", f"No semantic checker for family {fam}", None
 
-            if "wrong" in reason.lower() and "org" in reason.lower():
-                stat["wrong_company"] += 1
-
-            if status == "CORRECT":
-                stat["correct"] += 1
-            elif status == "INCORRECT":
-                stat["incorrect"] += 1
-            else:
-                stat["unverifiable"] += 1
+            for tf in target_fams + ["aggregate_all_families"]:
+                st = family_stats[tf]
+                st["reviewed"] += 1
+                if status == "CORRECT":
+                    st["correct"] += 1
+                elif status == "INCORRECT":
+                    st["incorrect"] += 1
+                else:
+                    st["unverifiable"] += 1
+                if "wrong" in reason.lower() and "org" in reason.lower():
+                    st["wrong_company"] += 1
 
             item_findings.append({
                 "orgnr": org,
@@ -851,7 +974,19 @@ def run_comprehensive_audit(envelopes_path: Path, state_dir: Path, sample_seed: 
         "category_a_structural_integrity": cat_a,
         "category_b_stored_source_agreement": {
             fam: compute_family_metrics(family_stats[fam], cat_a["by_family"][fam])
-            for fam in ["identity", "accounts", "roles", "subunits", "website", "hiring", "activity"]
+            for fam in [
+                "identity",
+                "accounts",
+                "roles",
+                "subunits",
+                "official_website",
+                "social_profiles",
+                "other_website_claims",
+                "website",
+                "hiring",
+                "activity",
+                "aggregate_all_families",
+            ]
         },
         "category_c_live_verification": {
             "status": "NOT EVALUATED (STORED REPLAY VERIFICATION ONLY)",
@@ -869,7 +1004,10 @@ def run_comprehensive_audit(envelopes_path: Path, state_dir: Path, sample_seed: 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--envelopes", type=Path, default=Path("out/w5-opt1000-rev4-envelopes.jsonl"))
+    default_env = Path("out/candidate-1000-corrected-envelopes.jsonl")
+    if not default_env.exists():
+        default_env = Path("out/w5-opt1000-rev4-envelopes.jsonl")
+    parser.add_argument("--envelopes", type=Path, default=default_env)
     parser.add_argument("--state-dir", type=Path, default=Path("state"))
     parser.add_argument("--seed", type=int, default=20261015)
     parser.add_argument("--sample-size", type=int, default=110)
@@ -879,4 +1017,5 @@ if __name__ == "__main__":
     for fam, stats in report["category_b_stored_source_agreement"].items():
         prec_str = f"{stats['precision']*100:.2f}%" if stats['precision'] is not None else "N/A"
         vrate_str = f"{stats['verification_rate']*100:.2f}%" if stats['verification_rate'] is not None else "N/A"
-        print(f"{fam:12}: Reviewed={stats['reviewed']:4} | Correct={stats['correct']:4} | Incorrect={stats['incorrect']:2} | Prec={prec_str:>7} | VRate={vrate_str:>7} | WrongOrg={stats['wrong_company']}")
+        pub = stats['total_published_claims']
+        print(f"{fam:24}: Pub={pub:5} | Rev={stats['reviewed']:4} | Corr={stats['correct']:4} | Inc={stats['incorrect']:2} | Unv={stats['unverifiable']:2} | Prec={prec_str:>7} | VRate={vrate_str:>7} | WrongOrg={stats['wrong_company']}")

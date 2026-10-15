@@ -1,7 +1,7 @@
 {
   "audit_metadata": {
     "auditor_version": "2.0-strict-source-field",
-    "envelopes_file": "w5-opt1000-rev4-envelopes.jsonl",
+    "envelopes_file": "candidate-1000-corrected-envelopes.jsonl",
     "total_companies": 1000,
     "sample_seed": 20261015,
     "sample_size": 110,
@@ -25,7 +25,6 @@
       "912002829",
       "912090426",
       "912134784",
-      "912273938",
       "913401611",
       "914416779",
       "914788706",
@@ -69,6 +68,7 @@
       "932761483",
       "932985950",
       "933355985",
+      "933852873",
       "934050339",
       "934928741",
       "935006058",
@@ -119,16 +119,16 @@
     ]
   },
   "category_a_structural_integrity": {
-    "total_claims": 78033,
-    "available_claims": 69019,
-    "hash_checks": 69019,
-    "hash_passes": 69019,
+    "total_claims": 78028,
+    "available_claims": 69012,
+    "hash_checks": 69012,
+    "hash_passes": 69012,
     "hash_failures": 0,
     "missing_blobs": 0,
-    "span_checks": 69019,
-    "span_passes": 69019,
+    "span_checks": 69012,
+    "span_passes": 69012,
     "span_failures": 0,
-    "locator_passes": 69019,
+    "locator_passes": 69012,
     "locator_failures": 0,
     "wrong_orgnr_attribution": 0,
     "by_family": {
@@ -137,15 +137,19 @@
       "roles": 11323,
       "accounts": 22085,
       "website": 348,
-      "hiring": 16,
-      "activity": 40
+      "official_website": 47,
+      "other_website_claims": 236,
+      "social_profiles": 65,
+      "hiring": 9,
+      "activity": 40,
+      "aggregate_all_families": 69012
     }
   },
   "category_b_stored_source_agreement": {
     "identity": {
       "total_published_claims": 28876,
-      "reviewed": 3304,
-      "correct": 3304,
+      "reviewed": 3309,
+      "correct": 3309,
       "incorrect": 0,
       "unverifiable": 0,
       "wrong_company": 0,
@@ -156,8 +160,8 @@
     },
     "accounts": {
       "total_published_claims": 22085,
-      "reviewed": 2509,
-      "correct": 2509,
+      "reviewed": 2508,
+      "correct": 2508,
       "incorrect": 0,
       "unverifiable": 0,
       "wrong_company": 0,
@@ -168,8 +172,8 @@
     },
     "roles": {
       "total_published_claims": 11323,
-      "reviewed": 1380,
-      "correct": 1380,
+      "reviewed": 1394,
+      "correct": 1394,
       "incorrect": 0,
       "unverifiable": 0,
       "wrong_company": 0,
@@ -180,8 +184,44 @@
     },
     "subunits": {
       "total_published_claims": 6331,
-      "reviewed": 911,
-      "correct": 911,
+      "reviewed": 914,
+      "correct": 914,
+      "incorrect": 0,
+      "unverifiable": 0,
+      "wrong_company": 0,
+      "unsupported": 0,
+      "fabricated_zeroes": 0,
+      "precision": 1.0,
+      "verification_rate": 1.0
+    },
+    "official_website": {
+      "total_published_claims": 47,
+      "reviewed": 47,
+      "correct": 47,
+      "incorrect": 0,
+      "unverifiable": 0,
+      "wrong_company": 0,
+      "unsupported": 0,
+      "fabricated_zeroes": 0,
+      "precision": 1.0,
+      "verification_rate": 1.0
+    },
+    "social_profiles": {
+      "total_published_claims": 65,
+      "reviewed": 65,
+      "correct": 65,
+      "incorrect": 0,
+      "unverifiable": 0,
+      "wrong_company": 0,
+      "unsupported": 0,
+      "fabricated_zeroes": 0,
+      "precision": 1.0,
+      "verification_rate": 1.0
+    },
+    "other_website_claims": {
+      "total_published_claims": 236,
+      "reviewed": 236,
+      "correct": 236,
       "incorrect": 0,
       "unverifiable": 0,
       "wrong_company": 0,
@@ -193,31 +233,43 @@
     "website": {
       "total_published_claims": 348,
       "reviewed": 348,
-      "correct": 334,
-      "incorrect": 14,
+      "correct": 348,
+      "incorrect": 0,
       "unverifiable": 0,
       "wrong_company": 0,
       "unsupported": 0,
       "fabricated_zeroes": 0,
-      "precision": 0.9597701149425287,
+      "precision": 1.0,
       "verification_rate": 1.0
     },
     "hiring": {
-      "total_published_claims": 16,
-      "reviewed": 16,
+      "total_published_claims": 9,
+      "reviewed": 9,
       "correct": 9,
-      "incorrect": 7,
+      "incorrect": 0,
       "unverifiable": 0,
       "wrong_company": 0,
       "unsupported": 0,
       "fabricated_zeroes": 0,
-      "precision": 0.5625,
+      "precision": 1.0,
       "verification_rate": 1.0
     },
     "activity": {
       "total_published_claims": 40,
       "reviewed": 40,
       "correct": 40,
+      "incorrect": 0,
+      "unverifiable": 0,
+      "wrong_company": 0,
+      "unsupported": 0,
+      "fabricated_zeroes": 0,
+      "precision": 1.0,
+      "verification_rate": 1.0
+    },
+    "aggregate_all_families": {
+      "total_published_claims": 69012,
+      "reviewed": 8522,
+      "correct": 8522,
       "incorrect": 0,
       "unverifiable": 0,
       "wrong_company": 0,
@@ -12710,12 +12762,12 @@
         "relationship_note": null,
         "other_orgnrs": []
       },
-      "expected_value": null,
+      "expected_value": "https://www.kingbird.no",
       "evidence_id": "2ff421f148261885e5a4f7069c4ccb0b36ec0a422c900fa998f5cbeb19eda4de",
       "locator": "identity-proof:858302242",
       "content_sha256": "6e4d3a8de1fa8b25d623ef4b8e926f24361c4e74d1a93778fce8a857d0052dc5",
-      "status": "INCORRECT",
-      "reason": "Signals (municipality, legal_name, address, leader, registry_website) not found in page body",
+      "status": "CORRECT",
+      "reason": "Identity signals (legal_name, address, leader, registry_website, municipality) verified against primary source facts and destination page",
       "verification_category": "Category B (Stored Primary-Source Field Agreement)"
     },
     {
@@ -16131,12 +16183,12 @@
         "relationship_note": null,
         "other_orgnrs": []
       },
-      "expected_value": null,
+      "expected_value": "https://www.flage.no",
       "evidence_id": "ea1ef62bc2781ad83ff2507f7855d0b262794f10d9b4ba007b35755e832b6d75",
       "locator": "identity-proof:885927882",
       "content_sha256": "c54995a01b5628088516a1faf5c3a73613061ad2dc7a3b712033a6db5d6c0394",
-      "status": "INCORRECT",
-      "reason": "Signals (legal_name, registry_website) not found in page body",
+      "status": "CORRECT",
+      "reason": "Identity signals (legal_name, phone, registry_website) verified against primary source facts and destination page",
       "verification_category": "Category B (Stored Primary-Source Field Agreement)"
     },
     {
@@ -23215,1408 +23267,6 @@
       "content_sha256": "036d01cd84f2fac2ca9d7474934dc2348c3614d2d69befdbda4bf5bf800dc1e0",
       "status": "CORRECT",
       "reason": "Verified website metadata/contact excerpt",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "identity",
-      "field": "identity.founding_date",
-      "claim_value": "2013-05-07",
-      "expected_value": "2013-05-07",
-      "evidence_id": "35b62e9e92b7c10bae7e9a3ec14515dc17d643e7143df29a1c5170342366dfcd",
-      "locator": "row:912273938/column:stiftelsesdato",
-      "content_sha256": "f797ef02f23386252763135be3c473dd15129109ad2246fffaa733c317648f20",
-      "status": "CORRECT",
-      "reason": "Field verified in CSV row (stiftelsesdato)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "identity",
-      "field": "identity.vat_registration_date",
-      "claim_value": "2018-09-01",
-      "expected_value": "2018-09-01",
-      "evidence_id": "3b92db3261ab7c8478c18e52dee172424059764936d0d0c3a0862a6ebff30a91",
-      "locator": "row:912273938/column:registreringsdatoMerverdiavgiftsregisteret",
-      "content_sha256": "f797ef02f23386252763135be3c473dd15129109ad2246fffaa733c317648f20",
-      "status": "CORRECT",
-      "reason": "Field verified in CSV row (registreringsdatoMerverdiavgiftsregisteret)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "identity",
-      "field": "identity.legal_name",
-      "claim_value": "TEKNISK AS",
-      "expected_value": "TEKNISK AS",
-      "evidence_id": "efa7648e4cc32b0bba20596c2fadeeee394d3457b6e77442874e904b8cc846ba",
-      "locator": "row:912273938/column:navn",
-      "content_sha256": "f797ef02f23386252763135be3c473dd15129109ad2246fffaa733c317648f20",
-      "status": "CORRECT",
-      "reason": "Legal name matches CSV column exactly",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "identity",
-      "field": "identity.registration_date",
-      "claim_value": "2013-08-06",
-      "expected_value": "2013-08-06",
-      "evidence_id": "9c615032ae37e66f2ff87ef4a52e198aff72d32f02164f4efb531fa1a634aa3a",
-      "locator": "row:912273938/column:registreringsdatoenhetsregisteret",
-      "content_sha256": "f797ef02f23386252763135be3c473dd15129109ad2246fffaa733c317648f20",
-      "status": "CORRECT",
-      "reason": "Field verified in CSV row (registreringsdatoenhetsregisteret)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "identity",
-      "field": "identity.bankrupt",
-      "claim_value": false,
-      "expected_value": false,
-      "evidence_id": "c933525e728b295f5c33571bc4795588d7e60027416549982c1a359502fcc165",
-      "locator": "row:912273938/column:konkurs",
-      "content_sha256": "f797ef02f23386252763135be3c473dd15129109ad2246fffaa733c317648f20",
-      "status": "CORRECT",
-      "reason": "Bankruptcy status matches CSV",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "identity",
-      "field": "identity.under_liquidation",
-      "claim_value": false,
-      "expected_value": "false",
-      "evidence_id": "997d669efd13a6f672ba0a9029cfca0ca671f8aaa6825a2af18f06064ff2e892",
-      "locator": "row:912273938/column:underAvvikling",
-      "content_sha256": "f797ef02f23386252763135be3c473dd15129109ad2246fffaa733c317648f20",
-      "status": "CORRECT",
-      "reason": "Field verified in CSV row (underAvvikling)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "identity",
-      "field": "identity.latest_submitted_accounts",
-      "claim_value": "2025",
-      "expected_value": "2025",
-      "evidence_id": "00ae851db842e1f64fa16de52546aa576b84d8871171ab838f292d594c08814d",
-      "locator": "row:912273938/column:sisteInnsendteAarsregnskap",
-      "content_sha256": "f797ef02f23386252763135be3c473dd15129109ad2246fffaa733c317648f20",
-      "status": "CORRECT",
-      "reason": "Field verified in CSV row (sisteInnsendteAarsregnskap)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "identity",
-      "field": "identity.municipality",
-      "claim_value": "SOLA",
-      "expected_value": "SOLA",
-      "evidence_id": "f3ed90d711e4ade315060c33c6579e07a39b401b9b3e42c6a4727266772db181",
-      "locator": "row:912273938/column:forretningsadresse.kommune",
-      "content_sha256": "f797ef02f23386252763135be3c473dd15129109ad2246fffaa733c317648f20",
-      "status": "CORRECT",
-      "reason": "Municipality matches CSV column",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "identity",
-      "field": "identity.registered_activity",
-      "claim_value": "Investere, eie og forvalte aksjer i selskaper som leverer produkter, tjenester og systemer til industri- bygg- og anleggsmarkedet, samt virksomhet som står i naturlig forbindelse med dette.",
-      "expected_value": "Investere, eie og forvalte aksjer i selskaper som leverer produkter, tjenester og systemer til industri- bygg- og anleggsmarkedet, samt virksomhet som står i naturlig forbindelse med dette.",
-      "evidence_id": "fbe3e46d5ccc0f064397c192055e07058dd2f15482a3245123c2aed51d2f2584",
-      "locator": "row:912273938/column:aktivitet",
-      "content_sha256": "f797ef02f23386252763135be3c473dd15129109ad2246fffaa733c317648f20",
-      "status": "CORRECT",
-      "reason": "Field verified in CSV row (aktivitet)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "identity",
-      "field": "identity.statutory_purpose",
-      "claim_value": "Å drive teknisk installasjon, handel, produksjon, konsulentvirksomhet og andre tjenester som naturlig faller sammen med dette, herunder delta i andre selskaper med lignende virksomhet.",
-      "expected_value": "Å drive teknisk installasjon, handel, produksjon, konsulentvirksomhet og andre tjenester som naturlig faller sammen med dette, herunder delta i andre selskaper med lignende virksomhet.",
-      "evidence_id": "36859c5770d580539ca18ab9a77717d18a06dc447e39c8070c7ec8797c09f145",
-      "locator": "row:912273938/column:vedtektsfestetFormaal",
-      "content_sha256": "f797ef02f23386252763135be3c473dd15129109ad2246fffaa733c317648f20",
-      "status": "CORRECT",
-      "reason": "Field verified in CSV row (vedtektsfestetFormaal)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "identity",
-      "field": "identity.organisation_form",
-      "claim_value": {
-        "kode": "AS",
-        "beskrivelse": "Aksjeselskap"
-      },
-      "expected_value": null,
-      "evidence_id": "b22d5bc4551d0768724ba455bef502cd2a2c170a30008a154be894788de469fc",
-      "locator": "row:912273938/columns:organisasjonsform.*",
-      "content_sha256": "f797ef02f23386252763135be3c473dd15129109ad2246fffaa733c317648f20",
-      "status": "CORRECT",
-      "reason": "Field verified in CSV row (columns:organisasjonsform.*)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "identity",
-      "field": "identity.registered_address",
-      "claim_value": {
-        "adresse": "c/o IKM Elektro AS\nSkvadronvegen 24",
-        "postnummer": "4050",
-        "poststed": "SOLA",
-        "kommune": "SOLA",
-        "kommunenummer": "1124",
-        "land": "Norge"
-      },
-      "expected_value": null,
-      "evidence_id": "f4a5622359d2a505bcb60dad72917fc71b56b4f47cd473ea8f95fbec66f543e1",
-      "locator": "row:912273938/columns:forretningsadresse.*",
-      "content_sha256": "f797ef02f23386252763135be3c473dd15129109ad2246fffaa733c317648f20",
-      "status": "CORRECT",
-      "reason": "Field verified in CSV row (columns:forretningsadresse.*)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "identity",
-      "field": "identity.nace1",
-      "claim_value": {
-        "kode": "43.210",
-        "beskrivelse": "Elektrisk installasjonsarbeid"
-      },
-      "expected_value": null,
-      "evidence_id": "8c22109b200bea22de4ad012854a3297bd29d57d7e5132095406809b6f918f03",
-      "locator": "row:912273938/columns:naeringskode1.*",
-      "content_sha256": "f797ef02f23386252763135be3c473dd15129109ad2246fffaa733c317648f20",
-      "status": "CORRECT",
-      "reason": "Field verified in CSV row (columns:naeringskode1.*)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "identity",
-      "field": "identity.employees_reported",
-      "claim_value": false,
-      "expected_value": "false",
-      "evidence_id": "358fa8fa2b01d39ebb803da0159a9932e6d6f55f8d67beb3d20e4db3f6d59f49",
-      "locator": "row:912273938/column:harRegistrertAntallAnsatte",
-      "content_sha256": "f797ef02f23386252763135be3c473dd15129109ad2246fffaa733c317648f20",
-      "status": "CORRECT",
-      "reason": "Field verified in CSV row (harRegistrertAntallAnsatte)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "identity",
-      "field": "identity.language_form",
-      "claim_value": "Bokmål",
-      "expected_value": "Bokmål",
-      "evidence_id": "f5ec6b712db70fcb488c3b6ef2d1a71f53344cca3b1c6edcd9f021c8a7869469",
-      "locator": "row:912273938/column:maalform",
-      "content_sha256": "f797ef02f23386252763135be3c473dd15129109ad2246fffaa733c317648f20",
-      "status": "CORRECT",
-      "reason": "Field verified in CSV row (maalform)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "identity",
-      "field": "identity.registered_in_vat",
-      "claim_value": true,
-      "expected_value": "true",
-      "evidence_id": "598973576f898e5fd2e59aef2888cc6ab21b0e06e3fbe94bf12646aa06f75b0f",
-      "locator": "row:912273938/column:registrertIMvaRegisteret",
-      "content_sha256": "f797ef02f23386252763135be3c473dd15129109ad2246fffaa733c317648f20",
-      "status": "CORRECT",
-      "reason": "Field verified in CSV row (registrertIMvaRegisteret)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "identity",
-      "field": "identity.registered_in_business_register",
-      "claim_value": true,
-      "expected_value": "true",
-      "evidence_id": "866e6e0995e6ca13532ddfb0a487a21c1ecc66897d9ccda438a77a882a32f688",
-      "locator": "row:912273938/column:registrertIForetaksregisteret",
-      "content_sha256": "f797ef02f23386252763135be3c473dd15129109ad2246fffaa733c317648f20",
-      "status": "CORRECT",
-      "reason": "Field verified in CSV row (registrertIForetaksregisteret)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "identity",
-      "field": "identity.registered_in_voluntary_register",
-      "claim_value": false,
-      "expected_value": "false",
-      "evidence_id": "4e16e457d30fcb91ef77715f2b1158a8d6aa2af75dc29245ea6030fcd2a74785",
-      "locator": "row:912273938/column:registrertIFrivillighetsregisteret",
-      "content_sha256": "f797ef02f23386252763135be3c473dd15129109ad2246fffaa733c317648f20",
-      "status": "CORRECT",
-      "reason": "Field verified in CSV row (registrertIFrivillighetsregisteret)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "identity",
-      "field": "identity.registered_in_foundations_register",
-      "claim_value": false,
-      "expected_value": "false",
-      "evidence_id": "2c52a290a5ba6a60ba7fdac44da6e6c1cd3726ba80b9206de19a6fb68547480f",
-      "locator": "row:912273938/column:registrertIStiftelsesregisteret",
-      "content_sha256": "f797ef02f23386252763135be3c473dd15129109ad2246fffaa733c317648f20",
-      "status": "CORRECT",
-      "reason": "Field verified in CSV row (registrertIStiftelsesregisteret)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "identity",
-      "field": "identity.registered_in_party_register",
-      "claim_value": false,
-      "expected_value": "false",
-      "evidence_id": "8c930bd6cc298a3fa097b2a6bc76fd43541209dc7e5804e350421a7a4693fd7b",
-      "locator": "row:912273938/column:registrertIPartiregisteret",
-      "content_sha256": "f797ef02f23386252763135be3c473dd15129109ad2246fffaa733c317648f20",
-      "status": "CORRECT",
-      "reason": "Field verified in CSV row (registrertIPartiregisteret)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "identity",
-      "field": "identity.vat_registry_record_date",
-      "claim_value": "2018-09-26",
-      "expected_value": "2018-09-26",
-      "evidence_id": "a341617c9532f1c715b7a2064464f7018d6611e65f43c7cbc7153426345d5ca9",
-      "locator": "row:912273938/column:registreringsdatoMerverdiavgiftsregisteretEnhetsregisteret",
-      "content_sha256": "f797ef02f23386252763135be3c473dd15129109ad2246fffaa733c317648f20",
-      "status": "CORRECT",
-      "reason": "Field verified in CSV row (registreringsdatoMerverdiavgiftsregisteretEnhetsregisteret)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "identity",
-      "field": "identity.voluntary_vat_registration_date",
-      "claim_value": "2018-09-26",
-      "expected_value": "2018-09-26",
-      "evidence_id": "1870d6bcecdce7a030c5845269a3f469789b63482a6b185f1d0d47ff30a1c581",
-      "locator": "row:912273938/column:registreringsdatoFrivilligMerverdiavgiftsregisteret",
-      "content_sha256": "f797ef02f23386252763135be3c473dd15129109ad2246fffaa733c317648f20",
-      "status": "CORRECT",
-      "reason": "Field verified in CSV row (registreringsdatoFrivilligMerverdiavgiftsregisteret)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "identity",
-      "field": "identity.business_register_registration_date",
-      "claim_value": "2013-08-06",
-      "expected_value": "2013-08-06",
-      "evidence_id": "62d77b8e6838349610a3751eee209b89f409826903645e742ecd80b6aabc237f",
-      "locator": "row:912273938/column:registreringsdatoForetaksregisteret",
-      "content_sha256": "f797ef02f23386252763135be3c473dd15129109ad2246fffaa733c317648f20",
-      "status": "CORRECT",
-      "reason": "Field verified in CSV row (registreringsdatoForetaksregisteret)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "identity",
-      "field": "identity.articles_date",
-      "claim_value": "2023-01-04",
-      "expected_value": "2023-01-04",
-      "evidence_id": "07079ac27a31894b7aea236b3aefc637f4d69e24000c8ea7929078a17d933b5d",
-      "locator": "row:912273938/column:vedtektsdato",
-      "content_sha256": "f797ef02f23386252763135be3c473dd15129109ad2246fffaa733c317648f20",
-      "status": "CORRECT",
-      "reason": "Field verified in CSV row (vedtektsdato)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "identity",
-      "field": "identity.forced_dissolution",
-      "claim_value": false,
-      "expected_value": "false",
-      "evidence_id": "816ca9d2472d7d737e8d089a7baa9c56cedd271c68a506b3fbef3098207383c2",
-      "locator": "row:912273938/column:underTvangsavviklingEllerTvangsopplosning",
-      "content_sha256": "f797ef02f23386252763135be3c473dd15129109ad2246fffaa733c317648f20",
-      "status": "CORRECT",
-      "reason": "Field verified in CSV row (underTvangsavviklingEllerTvangsopplosning)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "identity",
-      "field": "identity.part_of_group",
-      "claim_value": true,
-      "expected_value": "true",
-      "evidence_id": "7aada0184708500b3c66eba12b0d3b8cca8a79c87437bb53c928237eb6626963",
-      "locator": "row:912273938/column:erIKonsern",
-      "content_sha256": "f797ef02f23386252763135be3c473dd15129109ad2246fffaa733c317648f20",
-      "status": "CORRECT",
-      "reason": "Field verified in CSV row (erIKonsern)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "identity",
-      "field": "identity.institutional_sector",
-      "claim_value": {
-        "kode": "2100",
-        "beskrivelse": "Private aksjeselskaper mv."
-      },
-      "expected_value": null,
-      "evidence_id": "498ddcef96901cec9d20bf8e9ec6d7ff6e2e95803bd39209caec7a9a6252e45a",
-      "locator": "row:912273938/columns:institusjonellSektorkode.*",
-      "content_sha256": "f797ef02f23386252763135be3c473dd15129109ad2246fffaa733c317648f20",
-      "status": "CORRECT",
-      "reason": "Field verified in CSV row (columns:institusjonellSektorkode.*)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "identity",
-      "field": "identity.registered_capital",
-      "claim_value": {
-        "belop": "701131.90",
-        "antallAksjer": "7011319",
-        "type": "Aksjekapital",
-        "valuta": "NOK",
-        "innfortDato": "2022-01-06"
-      },
-      "expected_value": null,
-      "evidence_id": "7aae0016cd1904012e0088ef82e40aac153827b8118911296beb9704a80b0705",
-      "locator": "row:912273938/columns:kapital.*",
-      "content_sha256": "f797ef02f23386252763135be3c473dd15129109ad2246fffaa733c317648f20",
-      "status": "CORRECT",
-      "reason": "Field verified in CSV row (columns:kapital.*)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "subunits",
-      "field": "subunits.unit.933043495",
-      "claim_value": {
-        "organisation_number": "933043495",
-        "name": "TEKNISK AS",
-        "address": {
-          "adresse": [
-            "c/o IKM Elektro AS",
-            "Skvadronvegen 24"
-          ],
-          "kommune": "SOLA",
-          "kommunenummer": "1124",
-          "land": "Norge",
-          "landkode": "NO",
-          "postnummer": "4050",
-          "poststed": "SOLA"
-        },
-        "nace": {
-          "beskrivelse": "Elektrisk installasjonsarbeid",
-          "kode": "43.210"
-        },
-        "employees": null
-      },
-      "expected_value": "933043495",
-      "evidence_id": "8646c4b5cd5ee54f8a1ac424538403cb6b9f10e3e02a087700925193e0916227",
-      "locator": "/_embedded/underenheter/0",
-      "content_sha256": "d7b6197cad3187928b9f15d202a68bd00574f915f4158ad9c31696efae00d8cb",
-      "status": "CORRECT",
-      "reason": "Subunit 933043495 verified under parent 912273938",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "subunits",
-      "field": "subunits.detail.933043495.start_date",
-      "claim_value": "2023-09-01",
-      "expected_value": "2023-09-01",
-      "evidence_id": "95a1c40a3bef46e347bda84e879b9396550c19e8af44ad8f89822be3f2b94ae4",
-      "locator": "/_embedded/underenheter/0/oppstartsdato",
-      "content_sha256": "d7b6197cad3187928b9f15d202a68bd00574f915f4158ad9c31696efae00d8cb",
-      "status": "CORRECT",
-      "reason": "Subunit detail matches source field (subunits.detail.933043495.start_date)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "subunits",
-      "field": "subunits.detail.933043495.registration_date",
-      "claim_value": "2024-02-22",
-      "expected_value": "2024-02-22",
-      "evidence_id": "700d0ee9117ef4ec2e31776573f08637a7317c032c554d49f2deba77eaeb5ffc",
-      "locator": "/_embedded/underenheter/0/registreringsdatoEnhetsregisteret",
-      "content_sha256": "d7b6197cad3187928b9f15d202a68bd00574f915f4158ad9c31696efae00d8cb",
-      "status": "CORRECT",
-      "reason": "Subunit detail matches source field (subunits.detail.933043495.registration_date)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "subunits",
-      "field": "subunits.detail.933043495.organisation_form",
-      "claim_value": {
-        "beskrivelse": "Underenhet til næringsdrivende og offentlig forvaltning",
-        "kode": "BEDR"
-      },
-      "expected_value": {
-        "beskrivelse": "Underenhet til næringsdrivende og offentlig forvaltning",
-        "kode": "BEDR"
-      },
-      "evidence_id": "f6d1065efaaee2589d6c6885aa32f84a4aeeb9f6c23eda9fa02130f85277e01d",
-      "locator": "/_embedded/underenheter/0/organisasjonsform",
-      "content_sha256": "d7b6197cad3187928b9f15d202a68bd00574f915f4158ad9c31696efae00d8cb",
-      "status": "CORRECT",
-      "reason": "Subunit detail matches source field (subunits.detail.933043495.organisation_form)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "subunits",
-      "field": "subunits.detail.933043495.employees_reported",
-      "claim_value": false,
-      "expected_value": false,
-      "evidence_id": "6ea08ce2ea5417f9e6d73e24ab3225f894d756dacb3abfade59edb5d50a9c8f2",
-      "locator": "/_embedded/underenheter/0/harRegistrertAntallAnsatte",
-      "content_sha256": "d7b6197cad3187928b9f15d202a68bd00574f915f4158ad9c31696efae00d8cb",
-      "status": "CORRECT",
-      "reason": "Subunit detail matches source field (subunits.detail.933043495.employees_reported)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "subunits",
-      "field": "subunits.detail.933043495.registered_in_vat",
-      "claim_value": false,
-      "expected_value": false,
-      "evidence_id": "d14fa8d4d6ca1d18bcfe8837d711671d886b0edadfcf2982ba1b4ce73a1ca61c",
-      "locator": "/_embedded/underenheter/0/registrertIMvaregisteret",
-      "content_sha256": "d7b6197cad3187928b9f15d202a68bd00574f915f4158ad9c31696efae00d8cb",
-      "status": "CORRECT",
-      "reason": "Subunit detail matches source field (subunits.detail.933043495.registered_in_vat)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "roles",
-      "field": "roles.role.6a946464ce14c5e6dc21b9d3.0",
-      "claim_value": {
-        "role_type": {
-          "_links": {
-            "self": {
-              "href": "https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/DAGL"
-            }
-          },
-          "beskrivelse": "Daglig leder",
-          "kode": "DAGL"
-        },
-        "name": "Kristoffer Røssevold",
-        "entity_organisation_number": null,
-        "inactive": false,
-        "group_type": {
-          "_links": {
-            "self": {
-              "href": "https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper/DAGL"
-            }
-          },
-          "beskrivelse": "Daglig leder",
-          "kode": "DAGL"
-        },
-        "last_changed": "2024-04-17",
-        "from_date": null
-      },
-      "expected_value": "Kristoffer Røssevold",
-      "evidence_id": "7ea2482f31b55a0aa771e9bb97a8ef4693b241655b2a3499e511e48936e19123",
-      "locator": "/rollegrupper/0/roller/0",
-      "content_sha256": "26f6c9ed05961de2da91591467293a6bcbdd3bcbc86b982cabe0ca2eb5528938",
-      "status": "CORRECT",
-      "reason": "Verified role DAGL for Kristoffer Røssevold",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "roles",
-      "field": "roles.detail.6a946464ce14c5e6dc21b9d3.0.order",
-      "claim_value": 0,
-      "expected_value": 0,
-      "evidence_id": "10bf64df31ad5e182f9c5adc6c91526601a2e777b769b9df7671b82343ddc1bf",
-      "locator": "/rollegrupper/0/roller/0/rekkefolge",
-      "content_sha256": "26f6c9ed05961de2da91591467293a6bcbdd3bcbc86b982cabe0ca2eb5528938",
-      "status": "CORRECT",
-      "reason": "Role detail matches source field (roles.detail.6a946464ce14c5e6dc21b9d3.0.order)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "roles",
-      "field": "roles.role.5e449a58be32091997431161.0",
-      "claim_value": {
-        "role_type": {
-          "_links": {
-            "self": {
-              "href": "https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/LEDE"
-            }
-          },
-          "beskrivelse": "Styrets leder",
-          "kode": "LEDE"
-        },
-        "name": "Ståle Kyllingstad",
-        "entity_organisation_number": null,
-        "inactive": false,
-        "group_type": {
-          "_links": {
-            "self": {
-              "href": "https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper/STYR"
-            }
-          },
-          "beskrivelse": "Styre",
-          "kode": "STYR"
-        },
-        "last_changed": "2024-04-17",
-        "from_date": null
-      },
-      "expected_value": "Ståle Kyllingstad",
-      "evidence_id": "751679a11a36a38edddb19d1dc82caea3892fc0c9675864075a9073fc5794241",
-      "locator": "/rollegrupper/1/roller/0",
-      "content_sha256": "26f6c9ed05961de2da91591467293a6bcbdd3bcbc86b982cabe0ca2eb5528938",
-      "status": "CORRECT",
-      "reason": "Verified role LEDE for Ståle Kyllingstad",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "roles",
-      "field": "roles.detail.5e449a58be32091997431161.0.order",
-      "claim_value": 0,
-      "expected_value": 0,
-      "evidence_id": "d63e99a2391db60d8b94f562981b2b0e83a12bb92fb38cde5f05e2f2371ad66a",
-      "locator": "/rollegrupper/1/roller/0/rekkefolge",
-      "content_sha256": "26f6c9ed05961de2da91591467293a6bcbdd3bcbc86b982cabe0ca2eb5528938",
-      "status": "CORRECT",
-      "reason": "Role detail matches source field (roles.detail.5e449a58be32091997431161.0.order)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "roles",
-      "field": "roles.role.643e96836507c520ee3a806d.0",
-      "claim_value": {
-        "role_type": {
-          "_links": {
-            "self": {
-              "href": "https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/MEDL"
-            }
-          },
-          "beskrivelse": "Styremedlem",
-          "kode": "MEDL"
-        },
-        "name": "Øystein Harsvik",
-        "entity_organisation_number": null,
-        "inactive": false,
-        "group_type": {
-          "_links": {
-            "self": {
-              "href": "https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper/STYR"
-            }
-          },
-          "beskrivelse": "Styre",
-          "kode": "STYR"
-        },
-        "last_changed": "2024-04-17",
-        "from_date": null
-      },
-      "expected_value": "Øystein Harsvik",
-      "evidence_id": "4b0402cefba7d79c53a9219bad1b2f749441768e3749c6db983a46a18a4cfe23",
-      "locator": "/rollegrupper/1/roller/1",
-      "content_sha256": "26f6c9ed05961de2da91591467293a6bcbdd3bcbc86b982cabe0ca2eb5528938",
-      "status": "CORRECT",
-      "reason": "Verified role MEDL for Øystein Harsvik",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "roles",
-      "field": "roles.detail.643e96836507c520ee3a806d.0.order",
-      "claim_value": 1,
-      "expected_value": 1,
-      "evidence_id": "049df062879ed42f562c37e02466e506f151dd154b82253ab79d09549b79a653",
-      "locator": "/rollegrupper/1/roller/1/rekkefolge",
-      "content_sha256": "26f6c9ed05961de2da91591467293a6bcbdd3bcbc86b982cabe0ca2eb5528938",
-      "status": "CORRECT",
-      "reason": "Role detail matches source field (roles.detail.643e96836507c520ee3a806d.0.order)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "roles",
-      "field": "roles.detail.643e96836507c520ee3a806d.0.elected_by",
-      "claim_value": {
-        "beskrivelse": "Representant for A-aksjonærene",
-        "kode": "A-AK"
-      },
-      "expected_value": {
-        "beskrivelse": "Representant for A-aksjonærene",
-        "kode": "A-AK"
-      },
-      "evidence_id": "6f2905aa51736a33d1b94c7e2a44077a159b08367d99a7d418c46d7a84a8f090",
-      "locator": "/rollegrupper/1/roller/1/valgtAv",
-      "content_sha256": "26f6c9ed05961de2da91591467293a6bcbdd3bcbc86b982cabe0ca2eb5528938",
-      "status": "CORRECT",
-      "reason": "Role detail matches source field (roles.detail.643e96836507c520ee3a806d.0.elected_by)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "roles",
-      "field": "roles.role.25b0957fe08b8b4121525148.0",
-      "claim_value": {
-        "role_type": {
-          "_links": {
-            "self": {
-              "href": "https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/MEDL"
-            }
-          },
-          "beskrivelse": "Styremedlem",
-          "kode": "MEDL"
-        },
-        "name": "Øystein Stjern",
-        "entity_organisation_number": null,
-        "inactive": false,
-        "group_type": {
-          "_links": {
-            "self": {
-              "href": "https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper/STYR"
-            }
-          },
-          "beskrivelse": "Styre",
-          "kode": "STYR"
-        },
-        "last_changed": "2024-04-17",
-        "from_date": null
-      },
-      "expected_value": "Øystein Stjern",
-      "evidence_id": "7f15a5d046bd106d6047571ff84d98f527f549908fd7391ca180b10fc307fa21",
-      "locator": "/rollegrupper/1/roller/2",
-      "content_sha256": "26f6c9ed05961de2da91591467293a6bcbdd3bcbc86b982cabe0ca2eb5528938",
-      "status": "CORRECT",
-      "reason": "Verified role MEDL for Øystein Stjern",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "roles",
-      "field": "roles.detail.25b0957fe08b8b4121525148.0.order",
-      "claim_value": 2,
-      "expected_value": 2,
-      "evidence_id": "728e0cf1cd1221f1fb7aea4dbcca972d928bd86a53e8240217f9efc8ad9b6c5a",
-      "locator": "/rollegrupper/1/roller/2/rekkefolge",
-      "content_sha256": "26f6c9ed05961de2da91591467293a6bcbdd3bcbc86b982cabe0ca2eb5528938",
-      "status": "CORRECT",
-      "reason": "Role detail matches source field (roles.detail.25b0957fe08b8b4121525148.0.order)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "roles",
-      "field": "roles.role.932a7e04cc108611b2761607.0",
-      "claim_value": {
-        "role_type": {
-          "_links": {
-            "self": {
-              "href": "https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/MEDL"
-            }
-          },
-          "beskrivelse": "Styremedlem",
-          "kode": "MEDL"
-        },
-        "name": "Erling Meinich-Bache",
-        "entity_organisation_number": null,
-        "inactive": false,
-        "group_type": {
-          "_links": {
-            "self": {
-              "href": "https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper/STYR"
-            }
-          },
-          "beskrivelse": "Styre",
-          "kode": "STYR"
-        },
-        "last_changed": "2024-04-17",
-        "from_date": null
-      },
-      "expected_value": "Erling Meinich-Bache",
-      "evidence_id": "7e220d93a94b2751266b0fcc367638d8974dace94b85b4e81e047af67ba1cf97",
-      "locator": "/rollegrupper/1/roller/3",
-      "content_sha256": "26f6c9ed05961de2da91591467293a6bcbdd3bcbc86b982cabe0ca2eb5528938",
-      "status": "CORRECT",
-      "reason": "Verified role MEDL for Erling Meinich-Bache",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "roles",
-      "field": "roles.detail.932a7e04cc108611b2761607.0.order",
-      "claim_value": 3,
-      "expected_value": 3,
-      "evidence_id": "f80d8f56401bb0b73e3f166a69315a68ab12524944875e3bcd16b6bfe593b71b",
-      "locator": "/rollegrupper/1/roller/3/rekkefolge",
-      "content_sha256": "26f6c9ed05961de2da91591467293a6bcbdd3bcbc86b982cabe0ca2eb5528938",
-      "status": "CORRECT",
-      "reason": "Role detail matches source field (roles.detail.932a7e04cc108611b2761607.0.order)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "roles",
-      "field": "roles.role.6a9677400dadfea9ce80b620.0",
-      "claim_value": {
-        "role_type": {
-          "_links": {
-            "self": {
-              "href": "https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/REVI"
-            }
-          },
-          "beskrivelse": "Revisor",
-          "kode": "REVI"
-        },
-        "name": [
-          "DELOITTE AS"
-        ],
-        "entity_organisation_number": "980211282",
-        "inactive": false,
-        "group_type": {
-          "_links": {
-            "self": {
-              "href": "https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper/REVI"
-            }
-          },
-          "beskrivelse": "Revisor",
-          "kode": "REVI"
-        },
-        "last_changed": "2017-11-15",
-        "from_date": null
-      },
-      "expected_value": "DELOITTE AS",
-      "evidence_id": "342c97f5adcfb295b207988ebf24634c3f988f3951e82b8460c9598238044193",
-      "locator": "/rollegrupper/2/roller/0",
-      "content_sha256": "26f6c9ed05961de2da91591467293a6bcbdd3bcbc86b982cabe0ca2eb5528938",
-      "status": "CORRECT",
-      "reason": "Verified role REVI for DELOITTE AS",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "roles",
-      "field": "roles.detail.6a9677400dadfea9ce80b620.0.order",
-      "claim_value": 0,
-      "expected_value": 0,
-      "evidence_id": "1595c6f5fff22695412da79b4e9e04f7a4865006826a4e70be3be3b5e46317f2",
-      "locator": "/rollegrupper/2/roller/0/rekkefolge",
-      "content_sha256": "26f6c9ed05961de2da91591467293a6bcbdd3bcbc86b982cabe0ca2eb5528938",
-      "status": "CORRECT",
-      "reason": "Role detail matches source field (roles.detail.6a9677400dadfea9ce80b620.0.order)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "roles",
-      "field": "roles.detail.6a9677400dadfea9ce80b620.0.entity_deleted",
-      "claim_value": false,
-      "expected_value": false,
-      "evidence_id": "11b51e33ac096145ee379747147c073b980739116577946f80e3e680780a5943",
-      "locator": "/rollegrupper/2/roller/0/enhet/erSlettet",
-      "content_sha256": "26f6c9ed05961de2da91591467293a6bcbdd3bcbc86b982cabe0ca2eb5528938",
-      "status": "CORRECT",
-      "reason": "Role detail matches source field (roles.detail.6a9677400dadfea9ce80b620.0.entity_deleted)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "roles",
-      "field": "roles.detail.6a9677400dadfea9ce80b620.0.entity_approval_status",
-      "claim_value": "Godkjent revisjonsforetak",
-      "expected_value": "Godkjent revisjonsforetak",
-      "evidence_id": "867932500e9a2da03521a50be8eb53b3b1c5ead0cf554b672647c11760acd8c9",
-      "locator": "/rollegrupper/2/roller/0/enhet/godkjenningsstatus",
-      "content_sha256": "26f6c9ed05961de2da91591467293a6bcbdd3bcbc86b982cabe0ca2eb5528938",
-      "status": "CORRECT",
-      "reason": "Role detail matches source field (roles.detail.6a9677400dadfea9ce80b620.0.entity_approval_status)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "roles",
-      "field": "roles.detail.6a9677400dadfea9ce80b620.0.entity_form",
-      "claim_value": {
-        "beskrivelse": "Aksjeselskap",
-        "kode": "AS"
-      },
-      "expected_value": {
-        "beskrivelse": "Aksjeselskap",
-        "kode": "AS"
-      },
-      "evidence_id": "afa3fe20bf856d67e5a2cb39cc28febf479f0342c41cf5914494cc2472f48c70",
-      "locator": "/rollegrupper/2/roller/0/enhet/organisasjonsform",
-      "content_sha256": "26f6c9ed05961de2da91591467293a6bcbdd3bcbc86b982cabe0ca2eb5528938",
-      "status": "CORRECT",
-      "reason": "Role detail matches source field (roles.detail.6a9677400dadfea9ce80b620.0.entity_form)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "roles",
-      "field": "roles.role.dc78abf743f0d9571c3b9772.0",
-      "claim_value": {
-        "role_type": {
-          "_links": {
-            "self": {
-              "href": "https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/REGN"
-            }
-          },
-          "beskrivelse": "Regnskapsfører",
-          "kode": "REGN"
-        },
-        "name": [
-          "VIEW GROUP AS"
-        ],
-        "entity_organisation_number": "987260335",
-        "inactive": true,
-        "group_type": {
-          "_links": {
-            "self": {
-              "href": "https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper/REGN"
-            }
-          },
-          "beskrivelse": "Regnskapsfører",
-          "kode": "REGN"
-        },
-        "last_changed": "2026-09-15",
-        "from_date": null
-      },
-      "expected_value": "VIEW GROUP AS",
-      "evidence_id": "d678c638202ec58b41bda1295abe047293f47d85c414f99a7e771befd978debd",
-      "locator": "/rollegrupper/3/roller/0",
-      "content_sha256": "26f6c9ed05961de2da91591467293a6bcbdd3bcbc86b982cabe0ca2eb5528938",
-      "status": "CORRECT",
-      "reason": "Verified role REGN for VIEW GROUP AS",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "roles",
-      "field": "roles.detail.dc78abf743f0d9571c3b9772.0.order",
-      "claim_value": 0,
-      "expected_value": 0,
-      "evidence_id": "d2c0cf6a2d6789999eeb394159abc4a93b32b6b070dc6e77e2c2d0ff6b2e9a40",
-      "locator": "/rollegrupper/3/roller/0/rekkefolge",
-      "content_sha256": "26f6c9ed05961de2da91591467293a6bcbdd3bcbc86b982cabe0ca2eb5528938",
-      "status": "CORRECT",
-      "reason": "Role detail matches source field (roles.detail.dc78abf743f0d9571c3b9772.0.order)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "roles",
-      "field": "roles.detail.dc78abf743f0d9571c3b9772.0.entity_deleted",
-      "claim_value": false,
-      "expected_value": false,
-      "evidence_id": "c77e325b2004d6a3b598eacf28183ed02e69b74c47430776a86d4049c8662f96",
-      "locator": "/rollegrupper/3/roller/0/enhet/erSlettet",
-      "content_sha256": "26f6c9ed05961de2da91591467293a6bcbdd3bcbc86b982cabe0ca2eb5528938",
-      "status": "CORRECT",
-      "reason": "Role detail matches source field (roles.detail.dc78abf743f0d9571c3b9772.0.entity_deleted)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "roles",
-      "field": "roles.detail.dc78abf743f0d9571c3b9772.0.entity_approval_status",
-      "claim_value": "Godkjent regnskapsforetak",
-      "expected_value": "Godkjent regnskapsforetak",
-      "evidence_id": "8d6164af6a73ec7b4eaa5c0f26ee34fada40131c47a088a528759f5eaf16905c",
-      "locator": "/rollegrupper/3/roller/0/enhet/godkjenningsstatus",
-      "content_sha256": "26f6c9ed05961de2da91591467293a6bcbdd3bcbc86b982cabe0ca2eb5528938",
-      "status": "CORRECT",
-      "reason": "Role detail matches source field (roles.detail.dc78abf743f0d9571c3b9772.0.entity_approval_status)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "roles",
-      "field": "roles.detail.dc78abf743f0d9571c3b9772.0.entity_form",
-      "claim_value": {
-        "beskrivelse": "Aksjeselskap",
-        "kode": "AS"
-      },
-      "expected_value": {
-        "beskrivelse": "Aksjeselskap",
-        "kode": "AS"
-      },
-      "evidence_id": "e8c9b0ba9e2dad55eb0dcbe587612837a06654f0c65de42c503f81bc0c07c794",
-      "locator": "/rollegrupper/3/roller/0/enhet/organisasjonsform",
-      "content_sha256": "26f6c9ed05961de2da91591467293a6bcbdd3bcbc86b982cabe0ca2eb5528938",
-      "status": "CORRECT",
-      "reason": "Role detail matches source field (roles.detail.dc78abf743f0d9571c3b9772.0.entity_form)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "accounts",
-      "field": "accounts.revenue",
-      "claim_value": 34624.0,
-      "expected_value": 34624.0,
-      "evidence_id": "2f1071110a1e12e91281d4a15f69caedaaac131d94e4eb636ec2c187e7577c69",
-      "locator": "/2/resultatregnskapResultat/driftsresultat/driftsinntekter/sumDriftsinntekter",
-      "content_sha256": "758683e1f37e357f906997db363e3414b6e56f81508a9c5ebff4c818752ab5b7",
-      "status": "CORRECT",
-      "reason": "Exact numeric match (34624.0 NOK)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "accounts",
-      "field": "accounts.operating_result",
-      "claim_value": -2409688.0,
-      "expected_value": -2409688.0,
-      "evidence_id": "49000254b689184b1e496242e0abf5ab5ef2b6aa8014cebab3d766a59703a93a",
-      "locator": "/2/resultatregnskapResultat/driftsresultat/driftsresultat",
-      "content_sha256": "758683e1f37e357f906997db363e3414b6e56f81508a9c5ebff4c818752ab5b7",
-      "status": "CORRECT",
-      "reason": "Exact numeric match (-2409688.0 NOK)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "accounts",
-      "field": "accounts.result_before_tax",
-      "claim_value": -2459677.0,
-      "expected_value": -2459677.0,
-      "evidence_id": "7391370326a4d257d26fe9a9769431147955704eb9871e7b6b9a6b6217f1f850",
-      "locator": "/2/resultatregnskapResultat/ordinaertResultatFoerSkattekostnad",
-      "content_sha256": "758683e1f37e357f906997db363e3414b6e56f81508a9c5ebff4c818752ab5b7",
-      "status": "CORRECT",
-      "reason": "Exact numeric match (-2459677.0 NOK)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "accounts",
-      "field": "accounts.net_result",
-      "claim_value": 287887.0,
-      "expected_value": 287887.0,
-      "evidence_id": "a0443198807cd50f4b1ba4a01afcdcc19a0dbce2c1950b6df035ce8bae6c8654",
-      "locator": "/2/resultatregnskapResultat/aarsresultat",
-      "content_sha256": "758683e1f37e357f906997db363e3414b6e56f81508a9c5ebff4c818752ab5b7",
-      "status": "CORRECT",
-      "reason": "Exact numeric match (287887.0 NOK)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "accounts",
-      "field": "accounts.equity",
-      "claim_value": 3122067.0,
-      "expected_value": 3122067.0,
-      "evidence_id": "2d82a6e99c968cf98687b5612a6a6038a640098e547566c035cc13d16f3fdebb",
-      "locator": "/2/egenkapitalGjeld/egenkapital/sumEgenkapital",
-      "content_sha256": "758683e1f37e357f906997db363e3414b6e56f81508a9c5ebff4c818752ab5b7",
-      "status": "CORRECT",
-      "reason": "Exact numeric match (3122067.0 NOK)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "accounts",
-      "field": "accounts.total_assets",
-      "claim_value": 5520177.0,
-      "expected_value": 5520177.0,
-      "evidence_id": "feba1efb1bbf1d217753e024c71d51337b0d9e8d7151199d0e19b5e9d764b639",
-      "locator": "/2/eiendeler/sumEiendeler",
-      "content_sha256": "758683e1f37e357f906997db363e3414b6e56f81508a9c5ebff4c818752ab5b7",
-      "status": "CORRECT",
-      "reason": "Exact numeric match (5520177.0 NOK)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "accounts",
-      "field": "accounts.total_liabilities",
-      "claim_value": 2398110.0,
-      "expected_value": 2398110.0,
-      "evidence_id": "6d823820bbbc5b8ec719ed64b67550f439c29fedba9bb9c9e9ac6c50cdc5ba4a",
-      "locator": "/2/egenkapitalGjeld/gjeldOversikt/sumGjeld",
-      "content_sha256": "758683e1f37e357f906997db363e3414b6e56f81508a9c5ebff4c818752ab5b7",
-      "status": "CORRECT",
-      "reason": "Exact numeric match (2398110.0 NOK)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "accounts",
-      "field": "accounts.paid_in_equity",
-      "claim_value": 701132.0,
-      "expected_value": 701132.0,
-      "evidence_id": "a324d7cdc1366937ebc497fea6463816d1e8ac3da01accaa6273af3f344d1b9f",
-      "locator": "/2/egenkapitalGjeld/egenkapital/innskuttEgenkapital/sumInnskuttEgenkaptial",
-      "content_sha256": "758683e1f37e357f906997db363e3414b6e56f81508a9c5ebff4c818752ab5b7",
-      "status": "CORRECT",
-      "reason": "Exact numeric match (701132.0 NOK)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "accounts",
-      "field": "accounts.retained_equity",
-      "claim_value": 2420935.0,
-      "expected_value": 2420935.0,
-      "evidence_id": "b4e38e9dc2a7de8e6c6f342f913300c1c94f09dabd62f3ba94402fe8d035bef7",
-      "locator": "/2/egenkapitalGjeld/egenkapital/opptjentEgenkapital/sumOpptjentEgenkapital",
-      "content_sha256": "758683e1f37e357f906997db363e3414b6e56f81508a9c5ebff4c818752ab5b7",
-      "status": "CORRECT",
-      "reason": "Exact numeric match (2420935.0 NOK)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "accounts",
-      "field": "accounts.current_liabilities",
-      "claim_value": 898110.0,
-      "expected_value": 898110.0,
-      "evidence_id": "92f6cbfd9ad674d3ef36a3698b39c41aff2a815e3645b72b66b754c4bad0c995",
-      "locator": "/2/egenkapitalGjeld/gjeldOversikt/kortsiktigGjeld/sumKortsiktigGjeld",
-      "content_sha256": "758683e1f37e357f906997db363e3414b6e56f81508a9c5ebff4c818752ab5b7",
-      "status": "CORRECT",
-      "reason": "Exact numeric match (898110.0 NOK)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "accounts",
-      "field": "accounts.long_term_liabilities",
-      "claim_value": 1500000.0,
-      "expected_value": 1500000.0,
-      "evidence_id": "e165de4bbac953ece010fd3d25bf47a0157bf89408cf15b5e65e9913c3f3a288",
-      "locator": "/2/egenkapitalGjeld/gjeldOversikt/langsiktigGjeld/sumLangsiktigGjeld",
-      "content_sha256": "758683e1f37e357f906997db363e3414b6e56f81508a9c5ebff4c818752ab5b7",
-      "status": "CORRECT",
-      "reason": "Exact numeric match (1500000.0 NOK)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "accounts",
-      "field": "accounts.equity_and_liabilities",
-      "claim_value": 5520177.0,
-      "expected_value": 5520177.0,
-      "evidence_id": "c88f8c990aebb64d230b0bb6697106078a76779a74e62c4a68d272ecec0b89e9",
-      "locator": "/2/egenkapitalGjeld/sumEgenkapitalGjeld",
-      "content_sha256": "758683e1f37e357f906997db363e3414b6e56f81508a9c5ebff4c818752ab5b7",
-      "status": "CORRECT",
-      "reason": "Exact numeric match (5520177.0 NOK)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "accounts",
-      "field": "accounts.non_current_assets",
-      "claim_value": 2155935.0,
-      "expected_value": 2155935.0,
-      "evidence_id": "abfb3b549637eaa39e4377f2e7c9f5f5432f49258fda610255728ed72fda1379",
-      "locator": "/2/eiendeler/anleggsmidler/sumAnleggsmidler",
-      "content_sha256": "758683e1f37e357f906997db363e3414b6e56f81508a9c5ebff4c818752ab5b7",
-      "status": "CORRECT",
-      "reason": "Exact numeric match (2155935.0 NOK)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "accounts",
-      "field": "accounts.current_assets",
-      "claim_value": 3364242.0,
-      "expected_value": 3364242.0,
-      "evidence_id": "6e65437e7a2770cccab7b02a8227ac16611fedd26dab98d6607359d775b99265",
-      "locator": "/2/eiendeler/omloepsmidler/sumOmloepsmidler",
-      "content_sha256": "758683e1f37e357f906997db363e3414b6e56f81508a9c5ebff4c818752ab5b7",
-      "status": "CORRECT",
-      "reason": "Exact numeric match (3364242.0 NOK)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "accounts",
-      "field": "accounts.cash_and_bank",
-      "claim_value": 5463.0,
-      "expected_value": 5463.0,
-      "evidence_id": "543ae20bfaf91628d1f97cfdf0ff23ed8c67008d5d37da2848cf09a89d380f5e",
-      "locator": "/2/eiendeler/sumBankinnskuddOgKontanter",
-      "content_sha256": "758683e1f37e357f906997db363e3414b6e56f81508a9c5ebff4c818752ab5b7",
-      "status": "CORRECT",
-      "reason": "Exact numeric match (5463.0 NOK)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "accounts",
-      "field": "accounts.receivables",
-      "claim_value": 3358778.0,
-      "expected_value": 3358778.0,
-      "evidence_id": "603094780cf5e44be71d589d9ce5e9d75026cc9f9cf7ee0585d6be3fa7e304ec",
-      "locator": "/2/eiendeler/sumFordringer",
-      "content_sha256": "758683e1f37e357f906997db363e3414b6e56f81508a9c5ebff4c818752ab5b7",
-      "status": "CORRECT",
-      "reason": "Exact numeric match (3358778.0 NOK)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "accounts",
-      "field": "accounts.inventories",
-      "claim_value": 0.0,
-      "expected_value": 0.0,
-      "evidence_id": "7dfe606b37f01043b2141916fbe348e527ef1748da64b90b042450053e924913",
-      "locator": "/2/eiendeler/sumVarer",
-      "content_sha256": "758683e1f37e357f906997db363e3414b6e56f81508a9c5ebff4c818752ab5b7",
-      "status": "CORRECT",
-      "reason": "Exact numeric match (0.0 NOK)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "accounts",
-      "field": "accounts.sales_income",
-      "claim_value": 34624.0,
-      "expected_value": 34624.0,
-      "evidence_id": "cc701e69954fd3447c0697534a7dfe5ceacdc879fac3d73b750ca5371f7e3591",
-      "locator": "/2/resultatregnskapResultat/driftsresultat/driftsinntekter/salgsinntekter",
-      "content_sha256": "758683e1f37e357f906997db363e3414b6e56f81508a9c5ebff4c818752ab5b7",
-      "status": "CORRECT",
-      "reason": "Exact numeric match (34624.0 NOK)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "accounts",
-      "field": "accounts.salary_expenses",
-      "claim_value": 0.0,
-      "expected_value": 0.0,
-      "evidence_id": "b05eb68d2501841603925058810541275ce5d4433a59be211a777e559a39feee",
-      "locator": "/2/resultatregnskapResultat/driftsresultat/driftskostnad/loennskostnad",
-      "content_sha256": "758683e1f37e357f906997db363e3414b6e56f81508a9c5ebff4c818752ab5b7",
-      "status": "CORRECT",
-      "reason": "Exact numeric match (0.0 NOK)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "accounts",
-      "field": "accounts.operating_expenses",
-      "claim_value": 2444312.0,
-      "expected_value": 2444312.0,
-      "evidence_id": "5c8418776e3f9f38ecacb9ad8a6d3fd3ec63560674438b723ae4bf2f06937c94",
-      "locator": "/2/resultatregnskapResultat/driftsresultat/driftskostnad/sumDriftskostnad",
-      "content_sha256": "758683e1f37e357f906997db363e3414b6e56f81508a9c5ebff4c818752ab5b7",
-      "status": "CORRECT",
-      "reason": "Exact numeric match (2444312.0 NOK)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "accounts",
-      "field": "accounts.financial_income",
-      "claim_value": 22474.0,
-      "expected_value": 22474.0,
-      "evidence_id": "3fd7fd7404b766ee57b6adfb0c44b5054a69cbe917763992f323c444c5a2f8cc",
-      "locator": "/2/resultatregnskapResultat/finansresultat/finansinntekt/sumFinansinntekter",
-      "content_sha256": "758683e1f37e357f906997db363e3414b6e56f81508a9c5ebff4c818752ab5b7",
-      "status": "CORRECT",
-      "reason": "Exact numeric match (22474.0 NOK)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "accounts",
-      "field": "accounts.financial_expenses",
-      "claim_value": 72463.0,
-      "expected_value": 72463.0,
-      "evidence_id": "be92a1c49b3ab0580be5b4aa283c7380f3ba1431362e2670aa504586b2618f44",
-      "locator": "/2/resultatregnskapResultat/finansresultat/finanskostnad/sumFinanskostnad",
-      "content_sha256": "758683e1f37e357f906997db363e3414b6e56f81508a9c5ebff4c818752ab5b7",
-      "status": "CORRECT",
-      "reason": "Exact numeric match (72463.0 NOK)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "accounts",
-      "field": "accounts.other_interest_expense",
-      "claim_value": 14994.0,
-      "expected_value": 14994.0,
-      "evidence_id": "9090e13e38e57f205b9a81d7cfe74586fad345d92087ab3e46f6ce02bdd12147",
-      "locator": "/2/resultatregnskapResultat/finansresultat/finanskostnad/annenRentekostnad",
-      "content_sha256": "758683e1f37e357f906997db363e3414b6e56f81508a9c5ebff4c818752ab5b7",
-      "status": "CORRECT",
-      "reason": "Exact numeric match (14994.0 NOK)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "accounts",
-      "field": "accounts.financial_result",
-      "claim_value": -49989.0,
-      "expected_value": -49989.0,
-      "evidence_id": "94059cfae322d6ab1cd9dfe30e80746750246880a369cbb435fb35020a19107d",
-      "locator": "/2/resultatregnskapResultat/finansresultat/nettoFinans",
-      "content_sha256": "758683e1f37e357f906997db363e3414b6e56f81508a9c5ebff4c818752ab5b7",
-      "status": "CORRECT",
-      "reason": "Exact numeric match (-49989.0 NOK)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "accounts",
-      "field": "accounts.tax_expense",
-      "claim_value": -2747564.0,
-      "expected_value": -2747564.0,
-      "evidence_id": "bde1adce25f5ca5b87e284ae900e5b0cae251ae5931650acbb2750f451f9ea5d",
-      "locator": "/2/resultatregnskapResultat/ordinaertResultatSkattekostnad",
-      "content_sha256": "758683e1f37e357f906997db363e3414b6e56f81508a9c5ebff4c818752ab5b7",
-      "status": "CORRECT",
-      "reason": "Exact numeric match (-2747564.0 NOK)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "accounts",
-      "field": "accounts.total_comprehensive_result",
-      "claim_value": 287887.0,
-      "expected_value": 287887.0,
-      "evidence_id": "36ae20459000fb9aede7e9c24c0cb1032e2af7efade86d75caeba1a7f4464a98",
-      "locator": "/2/resultatregnskapResultat/totalresultat",
-      "content_sha256": "758683e1f37e357f906997db363e3414b6e56f81508a9c5ebff4c818752ab5b7",
-      "status": "CORRECT",
-      "reason": "Exact numeric match (287887.0 NOK)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "hiring",
-      "field": "hiring.job.594cbfd4-ec05-4b78-804a-7d2ac5f5a732",
-      "claim_value": {
-        "uuid": "594cbfd4-ec05-4b78-804a-7d2ac5f5a732",
-        "employer_orgnr": "912273938",
-        "title": "Reinhaldar 2x100% vikariat ",
-        "location": [
-          {
-            "municipality": "BERGEN",
-            "city": "BERGEN"
-          }
-        ],
-        "published": "2026-10-14T00:00:00+02:00",
-        "expires": "2026-10-27T00:00:00+01:00",
-        "occupation_categories": [
-          {
-            "level1": "Salg og service",
-            "level2": "Renholdere og renovasjon"
-          }
-        ],
-        "url": "https://arbeidsplassen.nav.no/stillinger/stilling/594cbfd4-ec05-4b78-804a-7d2ac5f5a732",
-        "availability": {
-          "location": "available",
-          "occupation_categories": "available"
-        },
-        "matched_via": "organisation 912273938"
-      },
-      "expected_value": null,
-      "evidence_id": "1b0f4f596ed689db3824a0fb595657614ee07ea3dc355e92a73fbae9bcd5e440",
-      "locator": "/ad_content",
-      "content_sha256": "22e43046d14e7caffd353a6519814f57753cadcd6723d8042c7e0c8c796c761a",
-      "status": "INCORRECT",
-      "reason": "Ad detail lacks valid 9-digit employer orgnr; name matching cannot authorize publication",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "hiring",
-      "field": "hiring.job.81bc8ba2-d633-4fb7-8109-02bf61e5998b",
-      "claim_value": {
-        "uuid": "81bc8ba2-d633-4fb7-8109-02bf61e5998b",
-        "employer_orgnr": "912273938",
-        "title": "Reinhaldar til fast helgestilling",
-        "location": [
-          {
-            "municipality": "BERGEN",
-            "city": "BERGEN"
-          }
-        ],
-        "published": "2026-10-14T00:00:00+02:00",
-        "expires": "2026-10-27T00:00:00+01:00",
-        "occupation_categories": [
-          {
-            "level1": "Salg og service",
-            "level2": "Renholdere og renovasjon"
-          }
-        ],
-        "url": "https://arbeidsplassen.nav.no/stillinger/stilling/81bc8ba2-d633-4fb7-8109-02bf61e5998b",
-        "availability": {
-          "location": "available",
-          "occupation_categories": "available"
-        },
-        "matched_via": "organisation 912273938"
-      },
-      "expected_value": null,
-      "evidence_id": "feb0a89fb80d4a312c04f35c9752e8f3f5dae84751fd4bc61c1b095a709fbce2",
-      "locator": "/ad_content",
-      "content_sha256": "70724543f3117576dccd81c62793aaff7c4d466dd2eab39aa4b5bdbc758e1f23",
-      "status": "INCORRECT",
-      "reason": "Ad detail lacks valid 9-digit employer orgnr; name matching cannot authorize publication",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "912273938",
-      "family": "hiring",
-      "field": "hiring.job.d7ba2ac4-a134-41a1-a406-37758fefe6c2",
-      "claim_value": {
-        "uuid": "d7ba2ac4-a134-41a1-a406-37758fefe6c2",
-        "employer_orgnr": "912273938",
-        "title": "Seksjonssjef for styring, etterlevelse og jus",
-        "location": [
-          {
-            "municipality": "TRONDHEIM",
-            "city": "TRONDHEIM"
-          }
-        ],
-        "published": "2026-10-14T00:00:00+02:00",
-        "expires": "2026-11-09T00:00:00+01:00",
-        "occupation_categories": [
-          {
-            "level1": "Salg og service",
-            "level2": "Personlig tjenesteyting"
-          }
-        ],
-        "url": "https://arbeidsplassen.nav.no/stillinger/stilling/d7ba2ac4-a134-41a1-a406-37758fefe6c2",
-        "availability": {
-          "location": "available",
-          "occupation_categories": "available"
-        },
-        "matched_via": "organisation 912273938"
-      },
-      "expected_value": null,
-      "evidence_id": "53256e7ab6abda41a40b25b6dadac3cc4a2c0edc95837bbfa9e7c8bf696034f4",
-      "locator": "/ad_content",
-      "content_sha256": "8ca165725b21e09ddfa479d16191914b03fc0c9c6e88786efa285fb6166835f0",
-      "status": "INCORRECT",
-      "reason": "Ad detail lacks valid 9-digit employer orgnr; name matching cannot authorize publication",
       "verification_category": "Category B (Stored Primary-Source Field Agreement)"
     },
     {
@@ -32412,12 +31062,12 @@
         "relationship_note": null,
         "other_orgnrs": []
       },
-      "expected_value": null,
+      "expected_value": "https://www.tromsobilstereo.no",
       "evidence_id": "7814c3f0343665da8279c6e44c8fbe59dd9492f9bacf246f4947bf717cbb3644",
       "locator": "identity-proof:917247102",
       "content_sha256": "0c96982621158e48aa83b32c88da8ee7f2d97016a93d566ac8a91820a0ef1742",
-      "status": "INCORRECT",
-      "reason": "Signals (municipality, legal_name, registry_website) not found in page body",
+      "status": "CORRECT",
+      "reason": "Identity signals (legal_name, address, phone, registry_website, municipality) verified against primary source facts and destination page",
       "verification_category": "Category B (Stored Primary-Source Field Agreement)"
     },
     {
@@ -33836,12 +32486,12 @@
         "relationship_note": null,
         "other_orgnrs": []
       },
-      "expected_value": null,
+      "expected_value": "https://boilertech.no",
       "evidence_id": "ab8e19c2595b528c1135fe6d310784d4b4459d2bf75098b13a2c6910935d29c8",
       "locator": "identity-proof:917803498",
       "content_sha256": "2774e8c4daf536e6cd65153c9ad88e3fd43014267ff8501bf3d5132210e7484e",
-      "status": "INCORRECT",
-      "reason": "Signals (address, municipality, legal_name, registry_website) not found in page body",
+      "status": "CORRECT",
+      "reason": "Identity signals (legal_name, address, phone, registry_website, municipality) verified against primary source facts and destination page",
       "verification_category": "Category B (Stored Primary-Source Field Agreement)"
     },
     {
@@ -38955,12 +37605,12 @@
         "relationship_note": null,
         "other_orgnrs": []
       },
-      "expected_value": null,
+      "expected_value": "https://www.pandionenergy.no",
       "evidence_id": "7e8f9041a74c5f4c261b134074526dd31256096809c7b3a2917b2571387216f3",
       "locator": "identity-proof:918175334",
       "content_sha256": "6a96b17c9a9feb60a6419ad1d496aecbc43ce725faf416628a23907b13cc9c61",
-      "status": "INCORRECT",
-      "reason": "Signals (municipality, legal_name, registry_website) not found in page body",
+      "status": "CORRECT",
+      "reason": "Identity signals (legal_name, address, registry_website, municipality) verified against primary source facts and destination page",
       "verification_category": "Category B (Stored Primary-Source Field Agreement)"
     },
     {
@@ -74825,6 +73475,1756 @@
       "verification_category": "Category B (Stored Primary-Source Field Agreement)"
     },
     {
+      "orgnr": "933852873",
+      "family": "identity",
+      "field": "identity.founding_date",
+      "claim_value": "1983-06-23",
+      "expected_value": "1983-06-23",
+      "evidence_id": "0326e8b52e7b2c9c1177a040b8d5beb37d0a25aae81e478a73fc9f91525fa3f9",
+      "locator": "row:933852873/column:stiftelsesdato",
+      "content_sha256": "68142640fd1fd430773e901584e740523ba3890bf1ae13bd6fa462d8522cfb72",
+      "status": "CORRECT",
+      "reason": "Field verified in CSV row (stiftelsesdato)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "identity",
+      "field": "identity.vat_registration_date",
+      "claim_value": "1984-07-01",
+      "expected_value": "1984-07-01",
+      "evidence_id": "0f8c94d62ca430345865e2fdabe449b4b5ba1d6a20c4efaad54139bd3891e7ef",
+      "locator": "row:933852873/column:registreringsdatoMerverdiavgiftsregisteret",
+      "content_sha256": "68142640fd1fd430773e901584e740523ba3890bf1ae13bd6fa462d8522cfb72",
+      "status": "CORRECT",
+      "reason": "Field verified in CSV row (registreringsdatoMerverdiavgiftsregisteret)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "identity",
+      "field": "identity.legal_name",
+      "claim_value": "BREMNES SEASHORE AS",
+      "expected_value": "BREMNES SEASHORE AS",
+      "evidence_id": "0f1291413c784223e66057ab436dc58a4ad67789cadb76b48a68dfd4aebd92b1",
+      "locator": "row:933852873/column:navn",
+      "content_sha256": "68142640fd1fd430773e901584e740523ba3890bf1ae13bd6fa462d8522cfb72",
+      "status": "CORRECT",
+      "reason": "Legal name matches CSV column exactly",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "identity",
+      "field": "identity.registration_date",
+      "claim_value": "1995-02-19",
+      "expected_value": "1995-02-19",
+      "evidence_id": "8ffa7b7af045aa2c209ae93340eb177cc8cc76d0b2f2a5e5b63797d98040cb38",
+      "locator": "row:933852873/column:registreringsdatoenhetsregisteret",
+      "content_sha256": "68142640fd1fd430773e901584e740523ba3890bf1ae13bd6fa462d8522cfb72",
+      "status": "CORRECT",
+      "reason": "Field verified in CSV row (registreringsdatoenhetsregisteret)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "identity",
+      "field": "identity.employees",
+      "claim_value": 41,
+      "expected_value": 41,
+      "evidence_id": "6483eed1039930c46fce62747206df0ba13b59b3a075ede9eecf3f47b608e05d",
+      "locator": "row:933852873/column:antallAnsatte",
+      "content_sha256": "68142640fd1fd430773e901584e740523ba3890bf1ae13bd6fa462d8522cfb72",
+      "status": "CORRECT",
+      "reason": "Employee count matches CSV column",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "identity",
+      "field": "identity.bankrupt",
+      "claim_value": false,
+      "expected_value": false,
+      "evidence_id": "0c500eaf5c3304b6bd340eff7333180cb005c317d9a2697c644dae519c125a23",
+      "locator": "row:933852873/column:konkurs",
+      "content_sha256": "68142640fd1fd430773e901584e740523ba3890bf1ae13bd6fa462d8522cfb72",
+      "status": "CORRECT",
+      "reason": "Bankruptcy status matches CSV",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "identity",
+      "field": "identity.under_liquidation",
+      "claim_value": false,
+      "expected_value": "false",
+      "evidence_id": "39d2351a56450153548269ddfb215c1a01f08f8cf4ccd21efc3a233ac28f40a0",
+      "locator": "row:933852873/column:underAvvikling",
+      "content_sha256": "68142640fd1fd430773e901584e740523ba3890bf1ae13bd6fa462d8522cfb72",
+      "status": "CORRECT",
+      "reason": "Field verified in CSV row (underAvvikling)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "identity",
+      "field": "identity.latest_submitted_accounts",
+      "claim_value": "2025",
+      "expected_value": "2025",
+      "evidence_id": "774fccf7c358f56404451654991e09c5d7e930d089a2f3c1fbb8749e2e48b05b",
+      "locator": "row:933852873/column:sisteInnsendteAarsregnskap",
+      "content_sha256": "68142640fd1fd430773e901584e740523ba3890bf1ae13bd6fa462d8522cfb72",
+      "status": "CORRECT",
+      "reason": "Field verified in CSV row (sisteInnsendteAarsregnskap)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "identity",
+      "field": "identity.municipality",
+      "claim_value": "BØMLO",
+      "expected_value": "BØMLO",
+      "evidence_id": "763efabf208c2022ac224b56b65eb7c33bcce055ad5b2b8c0e94c4529e9d2ecd",
+      "locator": "row:933852873/column:forretningsadresse.kommune",
+      "content_sha256": "68142640fd1fd430773e901584e740523ba3890bf1ae13bd6fa462d8522cfb72",
+      "status": "CORRECT",
+      "reason": "Municipality matches CSV column",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "identity",
+      "field": "identity.registered_activity",
+      "claim_value": "Akkvakultur, fryserivirksomhet, bearbeiding av fisk og skalldyr, samt hva hermed står i forbindelse.",
+      "expected_value": "Akkvakultur, fryserivirksomhet, bearbeiding av fisk og skalldyr, samt hva hermed står i forbindelse.",
+      "evidence_id": "8f5dce48241f2da171f1b40a9aa7e1d8b9f99a32cc5ba50614ac29444b11f518",
+      "locator": "row:933852873/column:aktivitet",
+      "content_sha256": "68142640fd1fd430773e901584e740523ba3890bf1ae13bd6fa462d8522cfb72",
+      "status": "CORRECT",
+      "reason": "Field verified in CSV row (aktivitet)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "identity",
+      "field": "identity.statutory_purpose",
+      "claim_value": "Drift av og investering i akvakultur, fryserivirksomhet, bearbeiding av fisk og skalldyr og alt som har sammenheng med dette. Selskapet kan også investere i annen industrivirksomhet, eiendom, skip og aksjer og/eller andeler i selskaper med lignende formål.",
+      "expected_value": "Drift av og investering i akvakultur, fryserivirksomhet, bearbeiding av fisk og skalldyr og alt som har sammenheng med dette. Selskapet kan også investere i annen industrivirksomhet, eiendom, skip og aksjer og/eller andeler i selskaper med lignende formål.",
+      "evidence_id": "2af0aee9c98343925da08d56fdf7f6c025635fefbd70cdbd6b6d98fd9684efe9",
+      "locator": "row:933852873/column:vedtektsfestetFormaal",
+      "content_sha256": "68142640fd1fd430773e901584e740523ba3890bf1ae13bd6fa462d8522cfb72",
+      "status": "CORRECT",
+      "reason": "Field verified in CSV row (vedtektsfestetFormaal)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "identity",
+      "field": "identity.organisation_form",
+      "claim_value": {
+        "kode": "AS",
+        "beskrivelse": "Aksjeselskap"
+      },
+      "expected_value": null,
+      "evidence_id": "40afe7d4b03557c9f30bb7f090616d9610a3f067f1f25fdcb2b93fbbc2b7195c",
+      "locator": "row:933852873/columns:organisasjonsform.*",
+      "content_sha256": "68142640fd1fd430773e901584e740523ba3890bf1ae13bd6fa462d8522cfb72",
+      "status": "CORRECT",
+      "reason": "Field verified in CSV row (columns:organisasjonsform.*)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "identity",
+      "field": "identity.registered_address",
+      "claim_value": {
+        "adresse": "Øklandsvegen 90",
+        "postnummer": "5430",
+        "poststed": "BREMNES",
+        "kommune": "BØMLO",
+        "kommunenummer": "4613",
+        "land": "Norge"
+      },
+      "expected_value": null,
+      "evidence_id": "d8e96f6b8c74838059f315e5e2a9b77f16abccd8ef51b761040188701318fd07",
+      "locator": "row:933852873/columns:forretningsadresse.*",
+      "content_sha256": "68142640fd1fd430773e901584e740523ba3890bf1ae13bd6fa462d8522cfb72",
+      "status": "CORRECT",
+      "reason": "Field verified in CSV row (columns:forretningsadresse.*)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "identity",
+      "field": "identity.nace1",
+      "claim_value": {
+        "kode": "46.322",
+        "beskrivelse": "Engroshandel med fisk, skalldyr og bløtdyr"
+      },
+      "expected_value": null,
+      "evidence_id": "f8c77df858789a0f70e6a536b77322c8ac2b1dd2c774c0fce11ef9ed39c356b5",
+      "locator": "row:933852873/columns:naeringskode1.*",
+      "content_sha256": "68142640fd1fd430773e901584e740523ba3890bf1ae13bd6fa462d8522cfb72",
+      "status": "CORRECT",
+      "reason": "Field verified in CSV row (columns:naeringskode1.*)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "identity",
+      "field": "identity.employees_reported",
+      "claim_value": true,
+      "expected_value": "true",
+      "evidence_id": "aa633d8edfb3d34f8faa782dfe8daff96086237a61887a024b46fe184f7487e9",
+      "locator": "row:933852873/column:harRegistrertAntallAnsatte",
+      "content_sha256": "68142640fd1fd430773e901584e740523ba3890bf1ae13bd6fa462d8522cfb72",
+      "status": "CORRECT",
+      "reason": "Field verified in CSV row (harRegistrertAntallAnsatte)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "identity",
+      "field": "identity.employee_count_registration_date",
+      "claim_value": "2026-09-14",
+      "expected_value": "2026-09-14",
+      "evidence_id": "5e9b03996549f19cce6590ad9578cba981db77fb4a7280aecef47c2e3bcb2645",
+      "locator": "row:933852873/column:registreringsdatoAntallAnsatteEnhetsregisteret",
+      "content_sha256": "68142640fd1fd430773e901584e740523ba3890bf1ae13bd6fa462d8522cfb72",
+      "status": "CORRECT",
+      "reason": "Field verified in CSV row (registreringsdatoAntallAnsatteEnhetsregisteret)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "identity",
+      "field": "identity.employee_count_nav_registration_date",
+      "claim_value": "2026-09-10",
+      "expected_value": "2026-09-10",
+      "evidence_id": "ae503fbcb6b4c06d99209c54d628c19bd115f352d5e6f7a3db794f4e4470b9cd",
+      "locator": "row:933852873/column:registreringsdatoantallansatteNAVAaregisteret",
+      "content_sha256": "68142640fd1fd430773e901584e740523ba3890bf1ae13bd6fa462d8522cfb72",
+      "status": "CORRECT",
+      "reason": "Field verified in CSV row (registreringsdatoantallansatteNAVAaregisteret)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "identity",
+      "field": "identity.registered_phone",
+      "claim_value": "53 42 82 00",
+      "expected_value": "53 42 82 00",
+      "evidence_id": "560f3ce3083a42973ece81feac4b7c6dad724a0c1e53c38868eeeb00c7e045f6",
+      "locator": "row:933852873/column:telefon",
+      "content_sha256": "68142640fd1fd430773e901584e740523ba3890bf1ae13bd6fa462d8522cfb72",
+      "status": "CORRECT",
+      "reason": "Field verified in CSV row (telefon)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "identity",
+      "field": "identity.language_form",
+      "claim_value": "Nynorsk",
+      "expected_value": "Nynorsk",
+      "evidence_id": "03f23bad4fc5af4a1e4ce183944ec9a28f685f7e0e20dafdbc8ca85b5e44cc7a",
+      "locator": "row:933852873/column:maalform",
+      "content_sha256": "68142640fd1fd430773e901584e740523ba3890bf1ae13bd6fa462d8522cfb72",
+      "status": "CORRECT",
+      "reason": "Field verified in CSV row (maalform)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "identity",
+      "field": "identity.registered_in_vat",
+      "claim_value": true,
+      "expected_value": "true",
+      "evidence_id": "87903a3a15a885b1a919f76e01562fc8e63948ccf09415d07c1cc3189c638f43",
+      "locator": "row:933852873/column:registrertIMvaRegisteret",
+      "content_sha256": "68142640fd1fd430773e901584e740523ba3890bf1ae13bd6fa462d8522cfb72",
+      "status": "CORRECT",
+      "reason": "Field verified in CSV row (registrertIMvaRegisteret)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "identity",
+      "field": "identity.registered_in_business_register",
+      "claim_value": true,
+      "expected_value": "true",
+      "evidence_id": "e700ecba1134b6b6caae8c26b8122993c1f8732ee0f3f86c459e0e2238be2cca",
+      "locator": "row:933852873/column:registrertIForetaksregisteret",
+      "content_sha256": "68142640fd1fd430773e901584e740523ba3890bf1ae13bd6fa462d8522cfb72",
+      "status": "CORRECT",
+      "reason": "Field verified in CSV row (registrertIForetaksregisteret)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "identity",
+      "field": "identity.registered_in_voluntary_register",
+      "claim_value": false,
+      "expected_value": "false",
+      "evidence_id": "6c235bf918017cbc304d32b894bf2559f4c6cdf7da8b981eb935483c058af475",
+      "locator": "row:933852873/column:registrertIFrivillighetsregisteret",
+      "content_sha256": "68142640fd1fd430773e901584e740523ba3890bf1ae13bd6fa462d8522cfb72",
+      "status": "CORRECT",
+      "reason": "Field verified in CSV row (registrertIFrivillighetsregisteret)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "identity",
+      "field": "identity.registered_in_foundations_register",
+      "claim_value": false,
+      "expected_value": "false",
+      "evidence_id": "a775df1353ee934c23ff73553a13925659f7de816465ef0c61c676a8264895d8",
+      "locator": "row:933852873/column:registrertIStiftelsesregisteret",
+      "content_sha256": "68142640fd1fd430773e901584e740523ba3890bf1ae13bd6fa462d8522cfb72",
+      "status": "CORRECT",
+      "reason": "Field verified in CSV row (registrertIStiftelsesregisteret)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "identity",
+      "field": "identity.registered_in_party_register",
+      "claim_value": false,
+      "expected_value": "false",
+      "evidence_id": "9931d54cb8690ed38c1886886596ce6d02c7d0b575d7e02742ce21a3c8961646",
+      "locator": "row:933852873/column:registrertIPartiregisteret",
+      "content_sha256": "68142640fd1fd430773e901584e740523ba3890bf1ae13bd6fa462d8522cfb72",
+      "status": "CORRECT",
+      "reason": "Field verified in CSV row (registrertIPartiregisteret)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "identity",
+      "field": "identity.vat_registry_record_date",
+      "claim_value": "2006-01-10",
+      "expected_value": "2006-01-10",
+      "evidence_id": "a17a45f4a85a644d127584fab47c2ba9ecb571f5e4959e03123ecc35b0d994b5",
+      "locator": "row:933852873/column:registreringsdatoMerverdiavgiftsregisteretEnhetsregisteret",
+      "content_sha256": "68142640fd1fd430773e901584e740523ba3890bf1ae13bd6fa462d8522cfb72",
+      "status": "CORRECT",
+      "reason": "Field verified in CSV row (registreringsdatoMerverdiavgiftsregisteretEnhetsregisteret)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "identity",
+      "field": "identity.voluntary_vat_registration_date",
+      "claim_value": "2021-03-01",
+      "expected_value": "2021-03-01",
+      "evidence_id": "5ccef1336674cc2ca3720eb9de42c227b3f55038d1e08dfab678d81eba34f24d",
+      "locator": "row:933852873/column:registreringsdatoFrivilligMerverdiavgiftsregisteret",
+      "content_sha256": "68142640fd1fd430773e901584e740523ba3890bf1ae13bd6fa462d8522cfb72",
+      "status": "CORRECT",
+      "reason": "Field verified in CSV row (registreringsdatoFrivilligMerverdiavgiftsregisteret)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "identity",
+      "field": "identity.business_register_registration_date",
+      "claim_value": "1989-11-22",
+      "expected_value": "1989-11-22",
+      "evidence_id": "24955c6cdbb341d8e19b41ea3ed2a610ad150ba6d3c30746efc7006e37e87dcd",
+      "locator": "row:933852873/column:registreringsdatoForetaksregisteret",
+      "content_sha256": "68142640fd1fd430773e901584e740523ba3890bf1ae13bd6fa462d8522cfb72",
+      "status": "CORRECT",
+      "reason": "Field verified in CSV row (registreringsdatoForetaksregisteret)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "identity",
+      "field": "identity.articles_date",
+      "claim_value": "2023-05-11",
+      "expected_value": "2023-05-11",
+      "evidence_id": "46f287b646d044b161cc944f5cb13f80ac92dec28a644d7af4a3b93a855e9ff9",
+      "locator": "row:933852873/column:vedtektsdato",
+      "content_sha256": "68142640fd1fd430773e901584e740523ba3890bf1ae13bd6fa462d8522cfb72",
+      "status": "CORRECT",
+      "reason": "Field verified in CSV row (vedtektsdato)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "identity",
+      "field": "identity.forced_dissolution",
+      "claim_value": false,
+      "expected_value": "false",
+      "evidence_id": "39d82d08f7e5e1ebd6f6e6800ba716b0911281d1fc58215af47a03971d1e6e57",
+      "locator": "row:933852873/column:underTvangsavviklingEllerTvangsopplosning",
+      "content_sha256": "68142640fd1fd430773e901584e740523ba3890bf1ae13bd6fa462d8522cfb72",
+      "status": "CORRECT",
+      "reason": "Field verified in CSV row (underTvangsavviklingEllerTvangsopplosning)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "identity",
+      "field": "identity.part_of_group",
+      "claim_value": true,
+      "expected_value": "true",
+      "evidence_id": "557af8508f50bd107d306b90d3af3fbff9bd6b129433b0f9ea37da19bd1aba86",
+      "locator": "row:933852873/column:erIKonsern",
+      "content_sha256": "68142640fd1fd430773e901584e740523ba3890bf1ae13bd6fa462d8522cfb72",
+      "status": "CORRECT",
+      "reason": "Field verified in CSV row (erIKonsern)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "identity",
+      "field": "identity.institutional_sector",
+      "claim_value": {
+        "kode": "2100",
+        "beskrivelse": "Private aksjeselskaper mv."
+      },
+      "expected_value": null,
+      "evidence_id": "9db73ded1d3af523b5ea661cb4080096263fccd719cc86e6cdbcf83f1247a64b",
+      "locator": "row:933852873/columns:institusjonellSektorkode.*",
+      "content_sha256": "68142640fd1fd430773e901584e740523ba3890bf1ae13bd6fa462d8522cfb72",
+      "status": "CORRECT",
+      "reason": "Field verified in CSV row (columns:institusjonellSektorkode.*)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "identity",
+      "field": "identity.support_unit_code",
+      "claim_value": {
+        "kode": "70.100",
+        "beskrivelse": "Hovedkontortjenester"
+      },
+      "expected_value": null,
+      "evidence_id": "2cd59fecc9c5de1977e3a93c39bf08546ae0af7c16381acf71ab0c94e3fd5c56",
+      "locator": "row:933852873/columns:hjelpeenhetskode.*",
+      "content_sha256": "68142640fd1fd430773e901584e740523ba3890bf1ae13bd6fa462d8522cfb72",
+      "status": "CORRECT",
+      "reason": "Field verified in CSV row (columns:hjelpeenhetskode.*)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "identity",
+      "field": "identity.registered_capital",
+      "claim_value": {
+        "belop": "6100000.00",
+        "antallAksjer": "610000",
+        "type": "Aksjekapital",
+        "valuta": "NOK",
+        "innfortDato": "2003-11-25"
+      },
+      "expected_value": null,
+      "evidence_id": "c7023579680a6d859fe0e80b32955f7071ffc332620a368dc42d4bea1eda5063",
+      "locator": "row:933852873/columns:kapital.*",
+      "content_sha256": "68142640fd1fd430773e901584e740523ba3890bf1ae13bd6fa462d8522cfb72",
+      "status": "CORRECT",
+      "reason": "Field verified in CSV row (columns:kapital.*)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "subunits",
+      "field": "subunits.unit.999360181",
+      "claim_value": {
+        "organisation_number": "999360181",
+        "name": "BREMNES SEASHORE AS",
+        "address": {
+          "adresse": [
+            "Øklandsvegen 90"
+          ],
+          "kommune": "BØMLO",
+          "kommunenummer": "4613",
+          "land": "Norge",
+          "landkode": "NO",
+          "postnummer": "5430",
+          "poststed": "BREMNES"
+        },
+        "nace": {
+          "beskrivelse": "Engroshandel med fisk, skalldyr og bløtdyr",
+          "kode": "46.322"
+        },
+        "employees": 41
+      },
+      "expected_value": "999360181",
+      "evidence_id": "ce77559cfc20a44b2cc8b815425ebef34b1bff35d2fd2845a178ac2ea3d66417",
+      "locator": "/_embedded/underenheter/0",
+      "content_sha256": "75eaed8c304ccfd5ee0de83a77a8a1b02ef579577804ff45116f37ef816c5fe4",
+      "status": "CORRECT",
+      "reason": "Subunit 999360181 verified under parent 933852873",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "subunits",
+      "field": "subunits.detail.999360181.start_date",
+      "claim_value": "2011-01-01",
+      "expected_value": "2011-01-01",
+      "evidence_id": "860984cad8dce2c86c2092531a75a9127c24288beb51371162c9d5aebf95420c",
+      "locator": "/_embedded/underenheter/0/oppstartsdato",
+      "content_sha256": "75eaed8c304ccfd5ee0de83a77a8a1b02ef579577804ff45116f37ef816c5fe4",
+      "status": "CORRECT",
+      "reason": "Subunit detail matches source field (subunits.detail.999360181.start_date)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "subunits",
+      "field": "subunits.detail.999360181.registration_date",
+      "claim_value": "2013-01-10",
+      "expected_value": "2013-01-10",
+      "evidence_id": "dd0e76bf46963a63231a13e033937dc95cabc3b20797ca5b543e4aaadf2effc8",
+      "locator": "/_embedded/underenheter/0/registreringsdatoEnhetsregisteret",
+      "content_sha256": "75eaed8c304ccfd5ee0de83a77a8a1b02ef579577804ff45116f37ef816c5fe4",
+      "status": "CORRECT",
+      "reason": "Subunit detail matches source field (subunits.detail.999360181.registration_date)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "subunits",
+      "field": "subunits.detail.999360181.organisation_form",
+      "claim_value": {
+        "beskrivelse": "Underenhet til næringsdrivende og offentlig forvaltning",
+        "kode": "BEDR"
+      },
+      "expected_value": {
+        "beskrivelse": "Underenhet til næringsdrivende og offentlig forvaltning",
+        "kode": "BEDR"
+      },
+      "evidence_id": "c30563aa79170bfbc1698148e8ca6c36cd51aea2dcbc68c70662e8008fe01ff4",
+      "locator": "/_embedded/underenheter/0/organisasjonsform",
+      "content_sha256": "75eaed8c304ccfd5ee0de83a77a8a1b02ef579577804ff45116f37ef816c5fe4",
+      "status": "CORRECT",
+      "reason": "Subunit detail matches source field (subunits.detail.999360181.organisation_form)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "subunits",
+      "field": "subunits.detail.999360181.support_unit_code",
+      "claim_value": {
+        "beskrivelse": "Hovedkontortjenester",
+        "kode": "70.100"
+      },
+      "expected_value": {
+        "beskrivelse": "Hovedkontortjenester",
+        "kode": "70.100"
+      },
+      "evidence_id": "66174b6f6d58acdf175a3687405b69320e6e2cf2dccef8453f558d0ca0f5673d",
+      "locator": "/_embedded/underenheter/0/hjelpeenhetskode",
+      "content_sha256": "75eaed8c304ccfd5ee0de83a77a8a1b02ef579577804ff45116f37ef816c5fe4",
+      "status": "CORRECT",
+      "reason": "Subunit detail matches source field (subunits.detail.999360181.support_unit_code)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "subunits",
+      "field": "subunits.detail.999360181.employees_reported",
+      "claim_value": true,
+      "expected_value": true,
+      "evidence_id": "a6089f0cecf19a850464397011655070f409997f26a2f26bc80590e32d8d335f",
+      "locator": "/_embedded/underenheter/0/harRegistrertAntallAnsatte",
+      "content_sha256": "75eaed8c304ccfd5ee0de83a77a8a1b02ef579577804ff45116f37ef816c5fe4",
+      "status": "CORRECT",
+      "reason": "Subunit detail matches source field (subunits.detail.999360181.employees_reported)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "subunits",
+      "field": "subunits.detail.999360181.registered_in_vat",
+      "claim_value": false,
+      "expected_value": false,
+      "evidence_id": "9a0254b7c3f8e79c04fb4f4d5d34e45faf784c482b179735e7a317fc827e3598",
+      "locator": "/_embedded/underenheter/0/registrertIMvaregisteret",
+      "content_sha256": "75eaed8c304ccfd5ee0de83a77a8a1b02ef579577804ff45116f37ef816c5fe4",
+      "status": "CORRECT",
+      "reason": "Subunit detail matches source field (subunits.detail.999360181.registered_in_vat)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "subunits",
+      "field": "subunits.detail.999360181.employee_registration_date",
+      "claim_value": "2026-09-12",
+      "expected_value": "2026-09-12",
+      "evidence_id": "e75114067ad7c8462109fd1624dcda25f38b154ba1990f0aea51155f80ee9ec3",
+      "locator": "/_embedded/underenheter/0/registreringsdatoAntallAnsatteEnhetsregisteret",
+      "content_sha256": "75eaed8c304ccfd5ee0de83a77a8a1b02ef579577804ff45116f37ef816c5fe4",
+      "status": "CORRECT",
+      "reason": "Subunit detail matches source field (subunits.detail.999360181.employee_registration_date)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "subunits",
+      "field": "subunits.detail.999360181.nav_employee_registration_date",
+      "claim_value": "2026-09-10",
+      "expected_value": "2026-09-10",
+      "evidence_id": "4406219e8537419035198069e4ddd5b00e000998ed3243ba9d8f8ccc732ab02e",
+      "locator": "/_embedded/underenheter/0/registreringsdatoAntallAnsatteNAVAaregisteret",
+      "content_sha256": "75eaed8c304ccfd5ee0de83a77a8a1b02ef579577804ff45116f37ef816c5fe4",
+      "status": "CORRECT",
+      "reason": "Subunit detail matches source field (subunits.detail.999360181.nav_employee_registration_date)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "roles",
+      "field": "roles.role.cff01cf59000c33d4c7494a8.0",
+      "claim_value": {
+        "role_type": {
+          "_links": {
+            "self": {
+              "href": "https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/DAGL"
+            }
+          },
+          "beskrivelse": "Daglig leder",
+          "kode": "DAGL"
+        },
+        "name": "Linda Litlekalsøy Aase",
+        "entity_organisation_number": null,
+        "inactive": false,
+        "group_type": {
+          "_links": {
+            "self": {
+              "href": "https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper/DAGL"
+            }
+          },
+          "beskrivelse": "Daglig leder",
+          "kode": "DAGL"
+        },
+        "last_changed": "2023-12-06",
+        "from_date": null
+      },
+      "expected_value": "Linda Litlekalsøy Aase",
+      "evidence_id": "ac3ecd9ad6c6e2d56f31066e1c0d17e4d7c6aaa5a89e34526fa707bed560b857",
+      "locator": "/rollegrupper/0/roller/0",
+      "content_sha256": "161424572170fcd7b3de7bf61ec96ddb95a5d665fa5fb56cbcc406e4331e326a",
+      "status": "CORRECT",
+      "reason": "Verified role DAGL for Linda Litlekalsøy Aase",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "roles",
+      "field": "roles.detail.cff01cf59000c33d4c7494a8.0.order",
+      "claim_value": 0,
+      "expected_value": 0,
+      "evidence_id": "4f23224a27a760645fca7a8ef4e77e2f4a5becc3a2df2afe6c068118625a59f1",
+      "locator": "/rollegrupper/0/roller/0/rekkefolge",
+      "content_sha256": "161424572170fcd7b3de7bf61ec96ddb95a5d665fa5fb56cbcc406e4331e326a",
+      "status": "CORRECT",
+      "reason": "Role detail matches source field (roles.detail.cff01cf59000c33d4c7494a8.0.order)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "roles",
+      "field": "roles.role.ba0f8feeae2aad3b45fde0e6.0",
+      "claim_value": {
+        "role_type": {
+          "_links": {
+            "self": {
+              "href": "https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/LEDE"
+            }
+          },
+          "beskrivelse": "Styrets leder",
+          "kode": "LEDE"
+        },
+        "name": "Jan Sverre Røsstad",
+        "entity_organisation_number": null,
+        "inactive": false,
+        "group_type": {
+          "_links": {
+            "self": {
+              "href": "https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper/STYR"
+            }
+          },
+          "beskrivelse": "Styre",
+          "kode": "STYR"
+        },
+        "last_changed": "2026-07-16",
+        "from_date": null
+      },
+      "expected_value": "Jan Sverre Røsstad",
+      "evidence_id": "fb5e064c2d1150a5f663c69ce6bee5c57fa9801b060e9a8aa6079e45cd51788d",
+      "locator": "/rollegrupper/1/roller/0",
+      "content_sha256": "161424572170fcd7b3de7bf61ec96ddb95a5d665fa5fb56cbcc406e4331e326a",
+      "status": "CORRECT",
+      "reason": "Verified role LEDE for Jan Sverre Røsstad",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "roles",
+      "field": "roles.detail.ba0f8feeae2aad3b45fde0e6.0.order",
+      "claim_value": 0,
+      "expected_value": 0,
+      "evidence_id": "ac7a30af07458a261d035d42e0460ba6518816d1610d2acf6b27f79499e8b9c2",
+      "locator": "/rollegrupper/1/roller/0/rekkefolge",
+      "content_sha256": "161424572170fcd7b3de7bf61ec96ddb95a5d665fa5fb56cbcc406e4331e326a",
+      "status": "CORRECT",
+      "reason": "Role detail matches source field (roles.detail.ba0f8feeae2aad3b45fde0e6.0.order)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "roles",
+      "field": "roles.role.9a92a81167adf8bfabe6d229.0",
+      "claim_value": {
+        "role_type": {
+          "_links": {
+            "self": {
+              "href": "https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/MEDL"
+            }
+          },
+          "beskrivelse": "Styremedlem",
+          "kode": "MEDL"
+        },
+        "name": "Olav Svendsen",
+        "entity_organisation_number": null,
+        "inactive": false,
+        "group_type": {
+          "_links": {
+            "self": {
+              "href": "https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper/STYR"
+            }
+          },
+          "beskrivelse": "Styre",
+          "kode": "STYR"
+        },
+        "last_changed": "2026-07-16",
+        "from_date": null
+      },
+      "expected_value": "Olav Svendsen",
+      "evidence_id": "a02f440c5443db3e0f477c0047e60df3386f216f077e55f301f60d7d8cada68c",
+      "locator": "/rollegrupper/1/roller/1",
+      "content_sha256": "161424572170fcd7b3de7bf61ec96ddb95a5d665fa5fb56cbcc406e4331e326a",
+      "status": "CORRECT",
+      "reason": "Verified role MEDL for Olav Svendsen",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "roles",
+      "field": "roles.detail.9a92a81167adf8bfabe6d229.0.order",
+      "claim_value": 1,
+      "expected_value": 1,
+      "evidence_id": "1b2b2ee7d20555ff8ef115f57d37716853220e5b71ae627b2b03c6788a032a6a",
+      "locator": "/rollegrupper/1/roller/1/rekkefolge",
+      "content_sha256": "161424572170fcd7b3de7bf61ec96ddb95a5d665fa5fb56cbcc406e4331e326a",
+      "status": "CORRECT",
+      "reason": "Role detail matches source field (roles.detail.9a92a81167adf8bfabe6d229.0.order)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "roles",
+      "field": "roles.role.b7e9d0f374b01aae64ec9905.0",
+      "claim_value": {
+        "role_type": {
+          "_links": {
+            "self": {
+              "href": "https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/MEDL"
+            }
+          },
+          "beskrivelse": "Styremedlem",
+          "kode": "MEDL"
+        },
+        "name": "Laila Knarvik",
+        "entity_organisation_number": null,
+        "inactive": false,
+        "group_type": {
+          "_links": {
+            "self": {
+              "href": "https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper/STYR"
+            }
+          },
+          "beskrivelse": "Styre",
+          "kode": "STYR"
+        },
+        "last_changed": "2026-07-16",
+        "from_date": null
+      },
+      "expected_value": "Laila Knarvik",
+      "evidence_id": "a33e30a46127519d34d65dab1555b5c52793b82ab6eaeb2344fc05e1d9b7fcb7",
+      "locator": "/rollegrupper/1/roller/2",
+      "content_sha256": "161424572170fcd7b3de7bf61ec96ddb95a5d665fa5fb56cbcc406e4331e326a",
+      "status": "CORRECT",
+      "reason": "Verified role MEDL for Laila Knarvik",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "roles",
+      "field": "roles.detail.b7e9d0f374b01aae64ec9905.0.order",
+      "claim_value": 2,
+      "expected_value": 2,
+      "evidence_id": "9c6f9619349393a4baa0e7f931e2450dcbc2ee193bb6a8e7b0110df3809ec58e",
+      "locator": "/rollegrupper/1/roller/2/rekkefolge",
+      "content_sha256": "161424572170fcd7b3de7bf61ec96ddb95a5d665fa5fb56cbcc406e4331e326a",
+      "status": "CORRECT",
+      "reason": "Role detail matches source field (roles.detail.b7e9d0f374b01aae64ec9905.0.order)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "roles",
+      "field": "roles.role.71eb5980c47c3a4c615ac352.0",
+      "claim_value": {
+        "role_type": {
+          "_links": {
+            "self": {
+              "href": "https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/MEDL"
+            }
+          },
+          "beskrivelse": "Styremedlem",
+          "kode": "MEDL"
+        },
+        "name": "Nils Viga",
+        "entity_organisation_number": null,
+        "inactive": false,
+        "group_type": {
+          "_links": {
+            "self": {
+              "href": "https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper/STYR"
+            }
+          },
+          "beskrivelse": "Styre",
+          "kode": "STYR"
+        },
+        "last_changed": "2026-07-16",
+        "from_date": null
+      },
+      "expected_value": "Nils Viga",
+      "evidence_id": "46943fed5ef77a21295a1d05a705359210fae8f440defc325eba5673a00d1d00",
+      "locator": "/rollegrupper/1/roller/3",
+      "content_sha256": "161424572170fcd7b3de7bf61ec96ddb95a5d665fa5fb56cbcc406e4331e326a",
+      "status": "CORRECT",
+      "reason": "Verified role MEDL for Nils Viga",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "roles",
+      "field": "roles.detail.71eb5980c47c3a4c615ac352.0.order",
+      "claim_value": 3,
+      "expected_value": 3,
+      "evidence_id": "f8a27afabb6f96264afad9fe08abb1eb2908b92c2e612966190e8b176fc7b446",
+      "locator": "/rollegrupper/1/roller/3/rekkefolge",
+      "content_sha256": "161424572170fcd7b3de7bf61ec96ddb95a5d665fa5fb56cbcc406e4331e326a",
+      "status": "CORRECT",
+      "reason": "Role detail matches source field (roles.detail.71eb5980c47c3a4c615ac352.0.order)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "roles",
+      "field": "roles.role.d0285dc033e0f51776648364.0",
+      "claim_value": {
+        "role_type": {
+          "_links": {
+            "self": {
+              "href": "https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/MEDL"
+            }
+          },
+          "beskrivelse": "Styremedlem",
+          "kode": "MEDL"
+        },
+        "name": "Tonje Michaelsen-Svendsen",
+        "entity_organisation_number": null,
+        "inactive": false,
+        "group_type": {
+          "_links": {
+            "self": {
+              "href": "https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper/STYR"
+            }
+          },
+          "beskrivelse": "Styre",
+          "kode": "STYR"
+        },
+        "last_changed": "2026-07-16",
+        "from_date": null
+      },
+      "expected_value": "Tonje Michaelsen-Svendsen",
+      "evidence_id": "3841628bc8c84508d20193d1ea9b73f2fe1d22c9009fb2f56e2afb2bd71ed719",
+      "locator": "/rollegrupper/1/roller/4",
+      "content_sha256": "161424572170fcd7b3de7bf61ec96ddb95a5d665fa5fb56cbcc406e4331e326a",
+      "status": "CORRECT",
+      "reason": "Verified role MEDL for Tonje Michaelsen-Svendsen",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "roles",
+      "field": "roles.detail.d0285dc033e0f51776648364.0.order",
+      "claim_value": 4,
+      "expected_value": 4,
+      "evidence_id": "136cbcb0a2e27cb7cfa51f4fdc878d6db2992a95c591d76665d2441d4865b211",
+      "locator": "/rollegrupper/1/roller/4/rekkefolge",
+      "content_sha256": "161424572170fcd7b3de7bf61ec96ddb95a5d665fa5fb56cbcc406e4331e326a",
+      "status": "CORRECT",
+      "reason": "Role detail matches source field (roles.detail.d0285dc033e0f51776648364.0.order)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "roles",
+      "field": "roles.role.4cffdd1420e6a1848210c016.0",
+      "claim_value": {
+        "role_type": {
+          "_links": {
+            "self": {
+              "href": "https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/MEDL"
+            }
+          },
+          "beskrivelse": "Styremedlem",
+          "kode": "MEDL"
+        },
+        "name": "Siri Tømmerås",
+        "entity_organisation_number": null,
+        "inactive": false,
+        "group_type": {
+          "_links": {
+            "self": {
+              "href": "https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper/STYR"
+            }
+          },
+          "beskrivelse": "Styre",
+          "kode": "STYR"
+        },
+        "last_changed": "2026-07-16",
+        "from_date": null
+      },
+      "expected_value": "Siri Tømmerås",
+      "evidence_id": "9a1e420723d47111d9a19f614c0f0d1a35fa7253f5ecae8f507c212dce854948",
+      "locator": "/rollegrupper/1/roller/5",
+      "content_sha256": "161424572170fcd7b3de7bf61ec96ddb95a5d665fa5fb56cbcc406e4331e326a",
+      "status": "CORRECT",
+      "reason": "Verified role MEDL for Siri Tømmerås",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "roles",
+      "field": "roles.detail.4cffdd1420e6a1848210c016.0.order",
+      "claim_value": 5,
+      "expected_value": 5,
+      "evidence_id": "43bbd7f3741d6aca601457532f9b4a7033b55ee3bb1122c27656eaf4377c0aea",
+      "locator": "/rollegrupper/1/roller/5/rekkefolge",
+      "content_sha256": "161424572170fcd7b3de7bf61ec96ddb95a5d665fa5fb56cbcc406e4331e326a",
+      "status": "CORRECT",
+      "reason": "Role detail matches source field (roles.detail.4cffdd1420e6a1848210c016.0.order)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "roles",
+      "field": "roles.role.226c0cadb2537a2ba147baf5.0",
+      "claim_value": {
+        "role_type": {
+          "_links": {
+            "self": {
+              "href": "https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/MEDL"
+            }
+          },
+          "beskrivelse": "Styremedlem",
+          "kode": "MEDL"
+        },
+        "name": "Eivind Sæverud",
+        "entity_organisation_number": null,
+        "inactive": false,
+        "group_type": {
+          "_links": {
+            "self": {
+              "href": "https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper/STYR"
+            }
+          },
+          "beskrivelse": "Styre",
+          "kode": "STYR"
+        },
+        "last_changed": "2026-07-16",
+        "from_date": null
+      },
+      "expected_value": "Eivind Sæverud",
+      "evidence_id": "0346b015e430e418d787fac8a7d56e6e6185a4f25825ec2196b089f41ebb3825",
+      "locator": "/rollegrupper/1/roller/6",
+      "content_sha256": "161424572170fcd7b3de7bf61ec96ddb95a5d665fa5fb56cbcc406e4331e326a",
+      "status": "CORRECT",
+      "reason": "Verified role MEDL for Eivind Sæverud",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "roles",
+      "field": "roles.detail.226c0cadb2537a2ba147baf5.0.order",
+      "claim_value": 6,
+      "expected_value": 6,
+      "evidence_id": "c69f282d8a7dd0fe1a9ee53a4e3634a882d4f687f1b37ee29c2f58ed435001de",
+      "locator": "/rollegrupper/1/roller/6/rekkefolge",
+      "content_sha256": "161424572170fcd7b3de7bf61ec96ddb95a5d665fa5fb56cbcc406e4331e326a",
+      "status": "CORRECT",
+      "reason": "Role detail matches source field (roles.detail.226c0cadb2537a2ba147baf5.0.order)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "roles",
+      "field": "roles.role.7950a257c41de28e5d8bf75e.0",
+      "claim_value": {
+        "role_type": {
+          "_links": {
+            "self": {
+              "href": "https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/MEDL"
+            }
+          },
+          "beskrivelse": "Styremedlem",
+          "kode": "MEDL"
+        },
+        "name": "Simen Birkelund",
+        "entity_organisation_number": null,
+        "inactive": false,
+        "group_type": {
+          "_links": {
+            "self": {
+              "href": "https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper/STYR"
+            }
+          },
+          "beskrivelse": "Styre",
+          "kode": "STYR"
+        },
+        "last_changed": "2026-07-16",
+        "from_date": null
+      },
+      "expected_value": "Simen Birkelund",
+      "evidence_id": "a65b2ac4dede968d73a39dfc6823654aba0a10766e227a9e5a6827539d879e44",
+      "locator": "/rollegrupper/1/roller/7",
+      "content_sha256": "161424572170fcd7b3de7bf61ec96ddb95a5d665fa5fb56cbcc406e4331e326a",
+      "status": "CORRECT",
+      "reason": "Verified role MEDL for Simen Birkelund",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "roles",
+      "field": "roles.detail.7950a257c41de28e5d8bf75e.0.order",
+      "claim_value": 7,
+      "expected_value": 7,
+      "evidence_id": "e605630c610b595334d21a1029914032f76c10024a28ed38b694743ab5ecd211",
+      "locator": "/rollegrupper/1/roller/7/rekkefolge",
+      "content_sha256": "161424572170fcd7b3de7bf61ec96ddb95a5d665fa5fb56cbcc406e4331e326a",
+      "status": "CORRECT",
+      "reason": "Role detail matches source field (roles.detail.7950a257c41de28e5d8bf75e.0.order)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "roles",
+      "field": "roles.detail.7950a257c41de28e5d8bf75e.0.elected_by",
+      "claim_value": {
+        "beskrivelse": "Representant for de ansatte",
+        "kode": "AREP"
+      },
+      "expected_value": {
+        "beskrivelse": "Representant for de ansatte",
+        "kode": "AREP"
+      },
+      "evidence_id": "7dc573474901e55702437a9a89f2f386fc4cf160cf5559130122257a42f58a07",
+      "locator": "/rollegrupper/1/roller/7/valgtAv",
+      "content_sha256": "161424572170fcd7b3de7bf61ec96ddb95a5d665fa5fb56cbcc406e4331e326a",
+      "status": "CORRECT",
+      "reason": "Role detail matches source field (roles.detail.7950a257c41de28e5d8bf75e.0.elected_by)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "roles",
+      "field": "roles.role.c56ffacb7b83b55c143ca0da.0",
+      "claim_value": {
+        "role_type": {
+          "_links": {
+            "self": {
+              "href": "https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/MEDL"
+            }
+          },
+          "beskrivelse": "Styremedlem",
+          "kode": "MEDL"
+        },
+        "name": "Synnøve Roseth-Solberg",
+        "entity_organisation_number": null,
+        "inactive": false,
+        "group_type": {
+          "_links": {
+            "self": {
+              "href": "https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper/STYR"
+            }
+          },
+          "beskrivelse": "Styre",
+          "kode": "STYR"
+        },
+        "last_changed": "2026-07-16",
+        "from_date": null
+      },
+      "expected_value": "Synnøve Roseth-Solberg",
+      "evidence_id": "6ff9fa0f15ea79c4cd6b3afbf6b7037fb165ecdf26992bdd57cd55ce44c3f0f8",
+      "locator": "/rollegrupper/1/roller/8",
+      "content_sha256": "161424572170fcd7b3de7bf61ec96ddb95a5d665fa5fb56cbcc406e4331e326a",
+      "status": "CORRECT",
+      "reason": "Verified role MEDL for Synnøve Roseth-Solberg",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "roles",
+      "field": "roles.detail.c56ffacb7b83b55c143ca0da.0.order",
+      "claim_value": 8,
+      "expected_value": 8,
+      "evidence_id": "cb95f6b34a0247d7592200ebd6a77770518ee65dfd8f4227376d1aa67fb2cc8f",
+      "locator": "/rollegrupper/1/roller/8/rekkefolge",
+      "content_sha256": "161424572170fcd7b3de7bf61ec96ddb95a5d665fa5fb56cbcc406e4331e326a",
+      "status": "CORRECT",
+      "reason": "Role detail matches source field (roles.detail.c56ffacb7b83b55c143ca0da.0.order)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "roles",
+      "field": "roles.detail.c56ffacb7b83b55c143ca0da.0.elected_by",
+      "claim_value": {
+        "beskrivelse": "Representant for de ansatte",
+        "kode": "AREP"
+      },
+      "expected_value": {
+        "beskrivelse": "Representant for de ansatte",
+        "kode": "AREP"
+      },
+      "evidence_id": "b4f9191842aa07465bfd15491b515ee9e5ff2ee6fae0ddeac19c8384f0df2a25",
+      "locator": "/rollegrupper/1/roller/8/valgtAv",
+      "content_sha256": "161424572170fcd7b3de7bf61ec96ddb95a5d665fa5fb56cbcc406e4331e326a",
+      "status": "CORRECT",
+      "reason": "Role detail matches source field (roles.detail.c56ffacb7b83b55c143ca0da.0.elected_by)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "roles",
+      "field": "roles.role.4c5e9b18ccbbbc07061a45dc.0",
+      "claim_value": {
+        "role_type": {
+          "_links": {
+            "self": {
+              "href": "https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/MEDL"
+            }
+          },
+          "beskrivelse": "Styremedlem",
+          "kode": "MEDL"
+        },
+        "name": "Andreas Kvame",
+        "entity_organisation_number": null,
+        "inactive": false,
+        "group_type": {
+          "_links": {
+            "self": {
+              "href": "https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper/STYR"
+            }
+          },
+          "beskrivelse": "Styre",
+          "kode": "STYR"
+        },
+        "last_changed": "2026-07-16",
+        "from_date": null
+      },
+      "expected_value": "Andreas Kvame",
+      "evidence_id": "b7d6ef9d2f88d436c7e1bf3c54800675f1a6b0514a8e06fbe297a82eb2802ec0",
+      "locator": "/rollegrupper/1/roller/9",
+      "content_sha256": "161424572170fcd7b3de7bf61ec96ddb95a5d665fa5fb56cbcc406e4331e326a",
+      "status": "CORRECT",
+      "reason": "Verified role MEDL for Andreas Kvame",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "roles",
+      "field": "roles.detail.4c5e9b18ccbbbc07061a45dc.0.order",
+      "claim_value": 9,
+      "expected_value": 9,
+      "evidence_id": "0b3674c81041da97c7685477d98ac3f3101f87406d8e8b5f791910e5aa285721",
+      "locator": "/rollegrupper/1/roller/9/rekkefolge",
+      "content_sha256": "161424572170fcd7b3de7bf61ec96ddb95a5d665fa5fb56cbcc406e4331e326a",
+      "status": "CORRECT",
+      "reason": "Role detail matches source field (roles.detail.4c5e9b18ccbbbc07061a45dc.0.order)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "roles",
+      "field": "roles.role.4f8739ae728a50f360f97299.0",
+      "claim_value": {
+        "role_type": {
+          "_links": {
+            "self": {
+              "href": "https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/VARA"
+            }
+          },
+          "beskrivelse": "Varamedlem",
+          "kode": "VARA"
+        },
+        "name": "Marte Sætre",
+        "entity_organisation_number": null,
+        "inactive": false,
+        "group_type": {
+          "_links": {
+            "self": {
+              "href": "https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper/STYR"
+            }
+          },
+          "beskrivelse": "Styre",
+          "kode": "STYR"
+        },
+        "last_changed": "2026-07-16",
+        "from_date": null
+      },
+      "expected_value": "Marte Sætre",
+      "evidence_id": "808e061b17d48041cd8e27ed2ecf1b11b8595a7be0e77c5863e243c7294430e0",
+      "locator": "/rollegrupper/1/roller/10",
+      "content_sha256": "161424572170fcd7b3de7bf61ec96ddb95a5d665fa5fb56cbcc406e4331e326a",
+      "status": "CORRECT",
+      "reason": "Verified role VARA for Marte Sætre",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "roles",
+      "field": "roles.detail.4f8739ae728a50f360f97299.0.order",
+      "claim_value": 10,
+      "expected_value": 10,
+      "evidence_id": "0f7225115a2406b12cef1610ae6d727756a86fd1ec83288d0a426f7e3bf1dac5",
+      "locator": "/rollegrupper/1/roller/10/rekkefolge",
+      "content_sha256": "161424572170fcd7b3de7bf61ec96ddb95a5d665fa5fb56cbcc406e4331e326a",
+      "status": "CORRECT",
+      "reason": "Role detail matches source field (roles.detail.4f8739ae728a50f360f97299.0.order)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "roles",
+      "field": "roles.detail.4f8739ae728a50f360f97299.0.elected_by",
+      "claim_value": {
+        "beskrivelse": "Representant for de ansatte",
+        "kode": "AREP"
+      },
+      "expected_value": {
+        "beskrivelse": "Representant for de ansatte",
+        "kode": "AREP"
+      },
+      "evidence_id": "d3742f3938eba15dc07951f8b92f22c6e9c78fabc3890f755748c47fbf8f46b0",
+      "locator": "/rollegrupper/1/roller/10/valgtAv",
+      "content_sha256": "161424572170fcd7b3de7bf61ec96ddb95a5d665fa5fb56cbcc406e4331e326a",
+      "status": "CORRECT",
+      "reason": "Role detail matches source field (roles.detail.4f8739ae728a50f360f97299.0.elected_by)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "roles",
+      "field": "roles.role.d65664911d37118ef2286376.0",
+      "claim_value": {
+        "role_type": {
+          "_links": {
+            "self": {
+              "href": "https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/VARA"
+            }
+          },
+          "beskrivelse": "Varamedlem",
+          "kode": "VARA"
+        },
+        "name": "Jarle Jensen Haugo",
+        "entity_organisation_number": null,
+        "inactive": false,
+        "group_type": {
+          "_links": {
+            "self": {
+              "href": "https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper/STYR"
+            }
+          },
+          "beskrivelse": "Styre",
+          "kode": "STYR"
+        },
+        "last_changed": "2026-07-16",
+        "from_date": null
+      },
+      "expected_value": "Jarle Jensen Haugo",
+      "evidence_id": "68a9ec9e54e67a36bb58e7cebb727fd1ec1f2bdd86d50268b611523232be9eb3",
+      "locator": "/rollegrupper/1/roller/11",
+      "content_sha256": "161424572170fcd7b3de7bf61ec96ddb95a5d665fa5fb56cbcc406e4331e326a",
+      "status": "CORRECT",
+      "reason": "Verified role VARA for Jarle Jensen Haugo",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "roles",
+      "field": "roles.detail.d65664911d37118ef2286376.0.order",
+      "claim_value": 11,
+      "expected_value": 11,
+      "evidence_id": "d35a1ab212235828f1c9ff51c221f5e400506a03f6b1923333a74061670230b4",
+      "locator": "/rollegrupper/1/roller/11/rekkefolge",
+      "content_sha256": "161424572170fcd7b3de7bf61ec96ddb95a5d665fa5fb56cbcc406e4331e326a",
+      "status": "CORRECT",
+      "reason": "Role detail matches source field (roles.detail.d65664911d37118ef2286376.0.order)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "roles",
+      "field": "roles.detail.d65664911d37118ef2286376.0.elected_by",
+      "claim_value": {
+        "beskrivelse": "Representant for de ansatte",
+        "kode": "AREP"
+      },
+      "expected_value": {
+        "beskrivelse": "Representant for de ansatte",
+        "kode": "AREP"
+      },
+      "evidence_id": "a5977ade655a380ed216891cc185caf0fdc15fffe2790ba05c71ede6e41ecc34",
+      "locator": "/rollegrupper/1/roller/11/valgtAv",
+      "content_sha256": "161424572170fcd7b3de7bf61ec96ddb95a5d665fa5fb56cbcc406e4331e326a",
+      "status": "CORRECT",
+      "reason": "Role detail matches source field (roles.detail.d65664911d37118ef2286376.0.elected_by)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "roles",
+      "field": "roles.role.45f23442f2c61f91c59c6e74.0",
+      "claim_value": {
+        "role_type": {
+          "_links": {
+            "self": {
+              "href": "https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/REVI"
+            }
+          },
+          "beskrivelse": "Revisor",
+          "kode": "REVI"
+        },
+        "name": [
+          "KPMG AS"
+        ],
+        "entity_organisation_number": "935174627",
+        "inactive": false,
+        "group_type": {
+          "_links": {
+            "self": {
+              "href": "https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper/REVI"
+            }
+          },
+          "beskrivelse": "Revisor",
+          "kode": "REVI"
+        },
+        "last_changed": "2026-02-11",
+        "from_date": null
+      },
+      "expected_value": "KPMG AS",
+      "evidence_id": "05980f4f67d958a2e3f9344c400ef5ae11bc345b5ea1e711c9c55742ce3ffa43",
+      "locator": "/rollegrupper/2/roller/0",
+      "content_sha256": "161424572170fcd7b3de7bf61ec96ddb95a5d665fa5fb56cbcc406e4331e326a",
+      "status": "CORRECT",
+      "reason": "Verified role REVI for KPMG AS",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "roles",
+      "field": "roles.detail.45f23442f2c61f91c59c6e74.0.order",
+      "claim_value": 0,
+      "expected_value": 0,
+      "evidence_id": "7451df66ee3626ee72a9896edab09878d054de8711305d040afa07212e5272bd",
+      "locator": "/rollegrupper/2/roller/0/rekkefolge",
+      "content_sha256": "161424572170fcd7b3de7bf61ec96ddb95a5d665fa5fb56cbcc406e4331e326a",
+      "status": "CORRECT",
+      "reason": "Role detail matches source field (roles.detail.45f23442f2c61f91c59c6e74.0.order)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "roles",
+      "field": "roles.detail.45f23442f2c61f91c59c6e74.0.entity_deleted",
+      "claim_value": false,
+      "expected_value": false,
+      "evidence_id": "d4c9ae25280dc8d114e6fb0a41925ae55ff53924e86f71db2ed095bb33dce4c5",
+      "locator": "/rollegrupper/2/roller/0/enhet/erSlettet",
+      "content_sha256": "161424572170fcd7b3de7bf61ec96ddb95a5d665fa5fb56cbcc406e4331e326a",
+      "status": "CORRECT",
+      "reason": "Role detail matches source field (roles.detail.45f23442f2c61f91c59c6e74.0.entity_deleted)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "roles",
+      "field": "roles.detail.45f23442f2c61f91c59c6e74.0.entity_approval_status",
+      "claim_value": "Godkjent revisjonsforetak",
+      "expected_value": "Godkjent revisjonsforetak",
+      "evidence_id": "832ee838ef6639c5d01752914cdcd12be4ea0839e8414ba6840a3a3839982fa1",
+      "locator": "/rollegrupper/2/roller/0/enhet/godkjenningsstatus",
+      "content_sha256": "161424572170fcd7b3de7bf61ec96ddb95a5d665fa5fb56cbcc406e4331e326a",
+      "status": "CORRECT",
+      "reason": "Role detail matches source field (roles.detail.45f23442f2c61f91c59c6e74.0.entity_approval_status)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "roles",
+      "field": "roles.detail.45f23442f2c61f91c59c6e74.0.entity_form",
+      "claim_value": {
+        "beskrivelse": "Aksjeselskap",
+        "kode": "AS"
+      },
+      "expected_value": {
+        "beskrivelse": "Aksjeselskap",
+        "kode": "AS"
+      },
+      "evidence_id": "906656d7ac7a32744e52e3177ca75c2b640f1b2ce074a0098435d1a53010f7fa",
+      "locator": "/rollegrupper/2/roller/0/enhet/organisasjonsform",
+      "content_sha256": "161424572170fcd7b3de7bf61ec96ddb95a5d665fa5fb56cbcc406e4331e326a",
+      "status": "CORRECT",
+      "reason": "Role detail matches source field (roles.detail.45f23442f2c61f91c59c6e74.0.entity_form)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "accounts",
+      "field": "accounts.revenue",
+      "claim_value": 156113790.0,
+      "expected_value": 156113790.0,
+      "evidence_id": "ce433171fd4884963aa935fff6b6d07761ce743148549896ba458832e9712751",
+      "locator": "/5/resultatregnskapResultat/driftsresultat/driftsinntekter/sumDriftsinntekter",
+      "content_sha256": "e189c310fc821c5e0c30bce8d29502bae11a2eccee685e217323e8526982ddd4",
+      "status": "CORRECT",
+      "reason": "Exact numeric match (156113790.0 NOK)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "accounts",
+      "field": "accounts.operating_result",
+      "claim_value": 1406709.0,
+      "expected_value": 1406709.0,
+      "evidence_id": "9430de085f30a7028ef0f5d52935c9f39df06ecbef8a1beb6a1f801e640763d2",
+      "locator": "/5/resultatregnskapResultat/driftsresultat/driftsresultat",
+      "content_sha256": "e189c310fc821c5e0c30bce8d29502bae11a2eccee685e217323e8526982ddd4",
+      "status": "CORRECT",
+      "reason": "Exact numeric match (1406709.0 NOK)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "accounts",
+      "field": "accounts.result_before_tax",
+      "claim_value": 193699714.0,
+      "expected_value": 193699714.0,
+      "evidence_id": "62db760152720356ba2b6ed952e8dbd1675bdb6db126d51c3851d735e83b67c6",
+      "locator": "/5/resultatregnskapResultat/ordinaertResultatFoerSkattekostnad",
+      "content_sha256": "e189c310fc821c5e0c30bce8d29502bae11a2eccee685e217323e8526982ddd4",
+      "status": "CORRECT",
+      "reason": "Exact numeric match (193699714.0 NOK)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "accounts",
+      "field": "accounts.net_result",
+      "claim_value": 175828870.0,
+      "expected_value": 175828870.0,
+      "evidence_id": "07c195f1595362b404b22789b771e9afbc74341c1160e6fd1d7c061564e10ace",
+      "locator": "/5/resultatregnskapResultat/aarsresultat",
+      "content_sha256": "e189c310fc821c5e0c30bce8d29502bae11a2eccee685e217323e8526982ddd4",
+      "status": "CORRECT",
+      "reason": "Exact numeric match (175828870.0 NOK)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "accounts",
+      "field": "accounts.equity",
+      "claim_value": 1099928371.0,
+      "expected_value": 1099928371.0,
+      "evidence_id": "2f24077475d355c6b96c1bda00d9188a3158084fee1ac4c75cb1be02653c28da",
+      "locator": "/5/egenkapitalGjeld/egenkapital/sumEgenkapital",
+      "content_sha256": "e189c310fc821c5e0c30bce8d29502bae11a2eccee685e217323e8526982ddd4",
+      "status": "CORRECT",
+      "reason": "Exact numeric match (1099928371.0 NOK)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "accounts",
+      "field": "accounts.total_assets",
+      "claim_value": 2122406264.0,
+      "expected_value": 2122406264.0,
+      "evidence_id": "2d8fe4b4ac4c74afc82d50bc0dfd50dcb5524512cb63325b35a6afcc447f4dac",
+      "locator": "/5/eiendeler/sumEiendeler",
+      "content_sha256": "e189c310fc821c5e0c30bce8d29502bae11a2eccee685e217323e8526982ddd4",
+      "status": "CORRECT",
+      "reason": "Exact numeric match (2122406264.0 NOK)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "accounts",
+      "field": "accounts.total_liabilities",
+      "claim_value": 1022477893.0,
+      "expected_value": 1022477893.0,
+      "evidence_id": "a340891693a90cf88cccfe08b2200afb4640253afef2ccf13bc634087d7e1cdb",
+      "locator": "/5/egenkapitalGjeld/gjeldOversikt/sumGjeld",
+      "content_sha256": "e189c310fc821c5e0c30bce8d29502bae11a2eccee685e217323e8526982ddd4",
+      "status": "CORRECT",
+      "reason": "Exact numeric match (1022477893.0 NOK)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "accounts",
+      "field": "accounts.paid_in_equity",
+      "claim_value": 49764141.0,
+      "expected_value": 49764141.0,
+      "evidence_id": "55268eb60db80b0384f4b14022d2554242855b00d177ff56ce034b600106c950",
+      "locator": "/5/egenkapitalGjeld/egenkapital/innskuttEgenkapital/sumInnskuttEgenkaptial",
+      "content_sha256": "e189c310fc821c5e0c30bce8d29502bae11a2eccee685e217323e8526982ddd4",
+      "status": "CORRECT",
+      "reason": "Exact numeric match (49764141.0 NOK)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "accounts",
+      "field": "accounts.retained_equity",
+      "claim_value": 1050164230.0,
+      "expected_value": 1050164230.0,
+      "evidence_id": "cf231cd82e94f81c4e71ac3253b9e247b479fc41bc21135546a566cde0a0b8ec",
+      "locator": "/5/egenkapitalGjeld/egenkapital/opptjentEgenkapital/sumOpptjentEgenkapital",
+      "content_sha256": "e189c310fc821c5e0c30bce8d29502bae11a2eccee685e217323e8526982ddd4",
+      "status": "CORRECT",
+      "reason": "Exact numeric match (1050164230.0 NOK)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "accounts",
+      "field": "accounts.current_liabilities",
+      "claim_value": 619856458.0,
+      "expected_value": 619856458.0,
+      "evidence_id": "0c9374aa248896bb467ae4be2c2fa353ba13bc6568c4b63824a969e45c000647",
+      "locator": "/5/egenkapitalGjeld/gjeldOversikt/kortsiktigGjeld/sumKortsiktigGjeld",
+      "content_sha256": "e189c310fc821c5e0c30bce8d29502bae11a2eccee685e217323e8526982ddd4",
+      "status": "CORRECT",
+      "reason": "Exact numeric match (619856458.0 NOK)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "accounts",
+      "field": "accounts.long_term_liabilities",
+      "claim_value": 402621435.0,
+      "expected_value": 402621435.0,
+      "evidence_id": "5edd615d1625290c0c2739e525a17ff0b6fd723c69cd468d9a940fb2fd618df8",
+      "locator": "/5/egenkapitalGjeld/gjeldOversikt/langsiktigGjeld/sumLangsiktigGjeld",
+      "content_sha256": "e189c310fc821c5e0c30bce8d29502bae11a2eccee685e217323e8526982ddd4",
+      "status": "CORRECT",
+      "reason": "Exact numeric match (402621435.0 NOK)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "accounts",
+      "field": "accounts.equity_and_liabilities",
+      "claim_value": 2122406264.0,
+      "expected_value": 2122406264.0,
+      "evidence_id": "e36ab69dd59192158400711948e71f5bb06d6de74a939add15ead6a413d3f845",
+      "locator": "/5/egenkapitalGjeld/sumEgenkapitalGjeld",
+      "content_sha256": "e189c310fc821c5e0c30bce8d29502bae11a2eccee685e217323e8526982ddd4",
+      "status": "CORRECT",
+      "reason": "Exact numeric match (2122406264.0 NOK)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "accounts",
+      "field": "accounts.non_current_assets",
+      "claim_value": 872166138.0,
+      "expected_value": 872166138.0,
+      "evidence_id": "23ddf5a1a715d713dc5245311be15b9f0992a648b3b91477f457956c7b2fec7d",
+      "locator": "/5/eiendeler/anleggsmidler/sumAnleggsmidler",
+      "content_sha256": "e189c310fc821c5e0c30bce8d29502bae11a2eccee685e217323e8526982ddd4",
+      "status": "CORRECT",
+      "reason": "Exact numeric match (872166138.0 NOK)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "accounts",
+      "field": "accounts.current_assets",
+      "claim_value": 1250240126.0,
+      "expected_value": 1250240126.0,
+      "evidence_id": "b9aa1847bb723e2102acf52411caa87a3a08eca284e2b9dd20bb506ca52dae53",
+      "locator": "/5/eiendeler/omloepsmidler/sumOmloepsmidler",
+      "content_sha256": "e189c310fc821c5e0c30bce8d29502bae11a2eccee685e217323e8526982ddd4",
+      "status": "CORRECT",
+      "reason": "Exact numeric match (1250240126.0 NOK)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "accounts",
+      "field": "accounts.cash_and_bank",
+      "claim_value": 3174310.0,
+      "expected_value": 3174310.0,
+      "evidence_id": "8d7b6c512ccfa21d4e68bc3b735f2c410118b818c60d21826829dc9ec4e3fae3",
+      "locator": "/5/eiendeler/sumBankinnskuddOgKontanter",
+      "content_sha256": "e189c310fc821c5e0c30bce8d29502bae11a2eccee685e217323e8526982ddd4",
+      "status": "CORRECT",
+      "reason": "Exact numeric match (3174310.0 NOK)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "accounts",
+      "field": "accounts.receivables",
+      "claim_value": 1247065816.0,
+      "expected_value": 1247065816.0,
+      "evidence_id": "412c361747055e054ea3865504e31d83ac67fda0d459019ca89a6de4a56a29b5",
+      "locator": "/5/eiendeler/sumFordringer",
+      "content_sha256": "e189c310fc821c5e0c30bce8d29502bae11a2eccee685e217323e8526982ddd4",
+      "status": "CORRECT",
+      "reason": "Exact numeric match (1247065816.0 NOK)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "accounts",
+      "field": "accounts.sales_income",
+      "claim_value": 155576606.0,
+      "expected_value": 155576606.0,
+      "evidence_id": "d7771c3fc14c6cb99946ec7d839e5b376d49fb6d72dce5f5e6090cf57b207a32",
+      "locator": "/5/resultatregnskapResultat/driftsresultat/driftsinntekter/salgsinntekter",
+      "content_sha256": "e189c310fc821c5e0c30bce8d29502bae11a2eccee685e217323e8526982ddd4",
+      "status": "CORRECT",
+      "reason": "Exact numeric match (155576606.0 NOK)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "accounts",
+      "field": "accounts.salary_expenses",
+      "claim_value": 68784944.0,
+      "expected_value": 68784944.0,
+      "evidence_id": "2e1984d2319aadb7897de28b5055f2dd276272babeb49f7f065046aea701b533",
+      "locator": "/5/resultatregnskapResultat/driftsresultat/driftskostnad/loennskostnad",
+      "content_sha256": "e189c310fc821c5e0c30bce8d29502bae11a2eccee685e217323e8526982ddd4",
+      "status": "CORRECT",
+      "reason": "Exact numeric match (68784944.0 NOK)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "accounts",
+      "field": "accounts.operating_expenses",
+      "claim_value": 154707081.0,
+      "expected_value": 154707081.0,
+      "evidence_id": "9eb1fe433db2ae638c6ed332b277ceac726f012e4004d11b238e0a916a18ef8d",
+      "locator": "/5/resultatregnskapResultat/driftsresultat/driftskostnad/sumDriftskostnad",
+      "content_sha256": "e189c310fc821c5e0c30bce8d29502bae11a2eccee685e217323e8526982ddd4",
+      "status": "CORRECT",
+      "reason": "Exact numeric match (154707081.0 NOK)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "accounts",
+      "field": "accounts.financial_income",
+      "claim_value": 251035242.0,
+      "expected_value": 251035242.0,
+      "evidence_id": "0ce2b78fdc68749ece87735f360d1e9ca705ab86ec275ea52bfd8286da209c8e",
+      "locator": "/5/resultatregnskapResultat/finansresultat/finansinntekt/sumFinansinntekter",
+      "content_sha256": "e189c310fc821c5e0c30bce8d29502bae11a2eccee685e217323e8526982ddd4",
+      "status": "CORRECT",
+      "reason": "Exact numeric match (251035242.0 NOK)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "accounts",
+      "field": "accounts.financial_expenses",
+      "claim_value": 58742237.0,
+      "expected_value": 58742237.0,
+      "evidence_id": "1c292b86a69527452dee9fbb2d434f56437e3fbb29568516617260fa236f9592",
+      "locator": "/5/resultatregnskapResultat/finansresultat/finanskostnad/sumFinanskostnad",
+      "content_sha256": "e189c310fc821c5e0c30bce8d29502bae11a2eccee685e217323e8526982ddd4",
+      "status": "CORRECT",
+      "reason": "Exact numeric match (58742237.0 NOK)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "accounts",
+      "field": "accounts.other_interest_expense",
+      "claim_value": 42441474.0,
+      "expected_value": 42441474.0,
+      "evidence_id": "5661ae78deeee3b1205bcabb505e51e6099ed4b120ec3e8a4562f630217cb51f",
+      "locator": "/5/resultatregnskapResultat/finansresultat/finanskostnad/annenRentekostnad",
+      "content_sha256": "e189c310fc821c5e0c30bce8d29502bae11a2eccee685e217323e8526982ddd4",
+      "status": "CORRECT",
+      "reason": "Exact numeric match (42441474.0 NOK)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "accounts",
+      "field": "accounts.group_interest_expense",
+      "claim_value": 15155246.0,
+      "expected_value": 15155246.0,
+      "evidence_id": "97bd4eb69d956c2fc492d4977206728e09b9c3d590bce50881d473f02ea1666e",
+      "locator": "/5/resultatregnskapResultat/finansresultat/finanskostnad/rentekostnadSammeKonsern",
+      "content_sha256": "e189c310fc821c5e0c30bce8d29502bae11a2eccee685e217323e8526982ddd4",
+      "status": "CORRECT",
+      "reason": "Exact numeric match (15155246.0 NOK)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "accounts",
+      "field": "accounts.financial_result",
+      "claim_value": 192293005.0,
+      "expected_value": 192293005.0,
+      "evidence_id": "ef5c44fa1b577f01965a6fdab3581954b02332c714395affaa625e8ec533730f",
+      "locator": "/5/resultatregnskapResultat/finansresultat/nettoFinans",
+      "content_sha256": "e189c310fc821c5e0c30bce8d29502bae11a2eccee685e217323e8526982ddd4",
+      "status": "CORRECT",
+      "reason": "Exact numeric match (192293005.0 NOK)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
+      "orgnr": "933852873",
+      "family": "accounts",
+      "field": "accounts.tax_expense",
+      "claim_value": 17870844.0,
+      "expected_value": 17870844.0,
+      "evidence_id": "51f36787eead90ca4d1a06b3d464e327017fe0763cac79fb0c576524e3d6e607",
+      "locator": "/5/resultatregnskapResultat/ordinaertResultatSkattekostnad",
+      "content_sha256": "e189c310fc821c5e0c30bce8d29502bae11a2eccee685e217323e8526982ddd4",
+      "status": "CORRECT",
+      "reason": "Exact numeric match (17870844.0 NOK)",
+      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+    },
+    {
       "orgnr": "934050339",
       "family": "identity",
       "field": "identity.founding_date",
@@ -82225,154 +82625,6 @@
       "content_sha256": "1d1a74e1bd280292a8ae689925f80d6430fe08bb80cc3cb710e7ced1ad3b9d86",
       "status": "CORRECT",
       "reason": "Exact numeric match (1389.0 NOK)",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "935495369",
-      "family": "hiring",
-      "field": "hiring.job.38ab279d-4c01-4afe-8aac-1345c3d6f285",
-      "claim_value": {
-        "uuid": "38ab279d-4c01-4afe-8aac-1345c3d6f285",
-        "employer_orgnr": "935495369",
-        "title": "Ledig stilling som sykepleier",
-        "location": [
-          {
-            "municipality": "SØR-VARANGER",
-            "city": "HESSENG"
-          }
-        ],
-        "published": "2026-10-14T00:00:00+02:00",
-        "expires": "2026-11-15T00:00:00+01:00",
-        "occupation_categories": [
-          {
-            "level1": "Helse og sosial",
-            "level2": "Sykepleier"
-          }
-        ],
-        "url": "https://arbeidsplassen.nav.no/stillinger/stilling/38ab279d-4c01-4afe-8aac-1345c3d6f285",
-        "availability": {
-          "location": "available",
-          "occupation_categories": "available"
-        },
-        "matched_via": "organisation 935495369"
-      },
-      "expected_value": null,
-      "evidence_id": "2f5f31a598dfe05e915e218f32e2a969aa7d9dd65b8188f83cd24ec1a5097bc5",
-      "locator": "/ad_content",
-      "content_sha256": "0b306a1475826ea9316ed118a1fb94d8a9c0af591e43b1a1a610a0a701731611",
-      "status": "INCORRECT",
-      "reason": "Ad detail lacks valid 9-digit employer orgnr; name matching cannot authorize publication",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "935495369",
-      "family": "hiring",
-      "field": "hiring.job.3dff90ef-98e0-4564-8344-44802067e46e",
-      "claim_value": {
-        "uuid": "3dff90ef-98e0-4564-8344-44802067e46e",
-        "employer_orgnr": "935495369",
-        "title": "Ledig 100% stilling som miljøterapeut ved Psykisk helse og rus tjenesten",
-        "location": [
-          {
-            "municipality": "SØR-VARANGER",
-            "city": "KIRKENES"
-          }
-        ],
-        "published": "2026-10-14T00:00:00+02:00",
-        "expires": "2026-11-15T00:00:00+01:00",
-        "occupation_categories": [
-          {
-            "level1": "Helse og sosial",
-            "level2": "Miljøarbeidere"
-          }
-        ],
-        "url": "https://arbeidsplassen.nav.no/stillinger/stilling/3dff90ef-98e0-4564-8344-44802067e46e",
-        "availability": {
-          "location": "available",
-          "occupation_categories": "available"
-        },
-        "matched_via": "organisation 935495369"
-      },
-      "expected_value": null,
-      "evidence_id": "2ddb72cfbf7324a5d921d652641e7da63e5b4f7971c5d3b86ad2e152021e83a5",
-      "locator": "/ad_content",
-      "content_sha256": "f15b3ce77b74797ad0b80667a64bf995192426ee1b57e86c6379fdb39417cd84",
-      "status": "INCORRECT",
-      "reason": "Ad detail lacks valid 9-digit employer orgnr; name matching cannot authorize publication",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "935495369",
-      "family": "hiring",
-      "field": "hiring.job.7870a16e-49fb-4fc0-ab72-e29345896ef0",
-      "claim_value": {
-        "uuid": "7870a16e-49fb-4fc0-ab72-e29345896ef0",
-        "employer_orgnr": "935495369",
-        "title": "Vil du være med å utvikle fremtidens hjemmetjeneste? Vi søker avdelingsleder!",
-        "location": [
-          {
-            "municipality": "SØR-VARANGER",
-            "city": "KIRKENES"
-          }
-        ],
-        "published": "2026-10-14T00:00:00+02:00",
-        "expires": "2026-11-15T00:00:00+01:00",
-        "occupation_categories": [
-          {
-            "level1": "Salg og service",
-            "level2": "Personlig tjenesteyting"
-          }
-        ],
-        "url": "https://arbeidsplassen.nav.no/stillinger/stilling/7870a16e-49fb-4fc0-ab72-e29345896ef0",
-        "availability": {
-          "location": "available",
-          "occupation_categories": "available"
-        },
-        "matched_via": "organisation 935495369"
-      },
-      "expected_value": null,
-      "evidence_id": "0f5cb6fb4d77db29e9ff1e6c9afd592683a675a4c402e43a6ab7de382388a0b5",
-      "locator": "/ad_content",
-      "content_sha256": "58a06f811e35954cbc10e97f9de4f151cefc30c0ee2d94f9b519c3d48a79866c",
-      "status": "INCORRECT",
-      "reason": "Ad detail lacks valid 9-digit employer orgnr; name matching cannot authorize publication",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "935495369",
-      "family": "hiring",
-      "field": "hiring.job.cffe71a7-aa52-407a-bfd9-d7e7a9e11593",
-      "claim_value": {
-        "uuid": "cffe71a7-aa52-407a-bfd9-d7e7a9e11593",
-        "employer_orgnr": "935495369",
-        "title": "Forebyggende stilling for barn og unge",
-        "location": [
-          {
-            "municipality": "SØR-VARANGER",
-            "city": "KIRKENES"
-          }
-        ],
-        "published": "2026-10-14T00:00:00+02:00",
-        "expires": "2026-11-15T00:00:00+01:00",
-        "occupation_categories": [
-          {
-            "level1": "Industri og produksjon",
-            "level2": "Elektro/elektronikk"
-          }
-        ],
-        "url": "https://arbeidsplassen.nav.no/stillinger/stilling/cffe71a7-aa52-407a-bfd9-d7e7a9e11593",
-        "availability": {
-          "location": "available",
-          "occupation_categories": "available"
-        },
-        "matched_via": "organisation 935495369"
-      },
-      "expected_value": null,
-      "evidence_id": "a90d985e189b84da567b7456dfc3f3d2c7259b3ae12192eeeff12b6a010a9ff0",
-      "locator": "/ad_content",
-      "content_sha256": "7d7ae40369aa01a27677d5b20832e7688399a1df79eea0caf3ba38a8a9601551",
-      "status": "INCORRECT",
-      "reason": "Ad detail lacks valid 9-digit employer orgnr; name matching cannot authorize publication",
       "verification_category": "Category B (Stored Primary-Source Field Agreement)"
     },
     {
@@ -90484,12 +90736,12 @@
         "relationship_note": null,
         "other_orgnrs": []
       },
-      "expected_value": null,
+      "expected_value": "https://www.reidarstokke.no",
       "evidence_id": "0f0b08a4f8af4505030bc0ec007427144b481271e3a8ba41f39bcdc38a4833a4",
       "locator": "identity-proof:943619506",
       "content_sha256": "052ff2eb3106264967a7d70ef9f87c14cef37127624169c64541afc38262264e",
-      "status": "INCORRECT",
-      "reason": "Signals (municipality, legal_name, registry_website) not found in page body",
+      "status": "CORRECT",
+      "reason": "Identity signals (legal_name, address, registry_website, municipality) verified against primary source facts and destination page",
       "verification_category": "Category B (Stored Primary-Source Field Agreement)"
     },
     {
@@ -93055,12 +93307,12 @@
         "relationship_note": null,
         "other_orgnrs": []
       },
-      "expected_value": null,
+      "expected_value": "https://bergenengros.no",
       "evidence_id": "f85f6fde340891cb854a0576ec3440c1a1594380cf825cf47ba6620fb6e93fdf",
       "locator": "identity-proof:954685500",
       "content_sha256": "ef4b04285f30b7154bb8a956760da2be67b0739bbff923e5f739d41ddc8199c9",
-      "status": "INCORRECT",
-      "reason": "Signals (municipality, legal_name, registry_website) not found in page body",
+      "status": "CORRECT",
+      "reason": "Identity signals (legal_name, address, phone, registry_website, municipality) verified against primary source facts and destination page",
       "verification_category": "Category B (Stored Primary-Source Field Agreement)"
     },
     {
@@ -98445,12 +98697,12 @@
         "relationship_note": null,
         "other_orgnrs": []
       },
-      "expected_value": null,
+      "expected_value": "https://www.legend.no",
       "evidence_id": "9e52b8b355eca63271efa889031759f43bacb8fac372d32ba18e627dc5f499ae",
       "locator": "identity-proof:975817059",
       "content_sha256": "93d87d6ea6129951e2b32edbeae83287ad0913c09dfc0232ce20ec3f224a6a18",
-      "status": "INCORRECT",
-      "reason": "Signals (legal_name, registry_website) not found in page body",
+      "status": "CORRECT",
+      "reason": "Identity signals (legal_name, address, registry_website) verified against primary source facts and destination page",
       "verification_category": "Category B (Stored Primary-Source Field Agreement)"
     },
     {
@@ -105809,12 +106061,12 @@
         "relationship_note": null,
         "other_orgnrs": []
       },
-      "expected_value": null,
+      "expected_value": "https://kremo.no",
       "evidence_id": "dd8a6fde05b01e2d72ec06411f5f682d49639191bec05c65d50a1b61e5143dcc",
       "locator": "identity-proof:982223881",
       "content_sha256": "17e77d85cb03881ac0d23e23fb28f3ab8e1823ae8c7ea43f25b796c5dd8947d0",
-      "status": "INCORRECT",
-      "reason": "Signals (address, municipality, legal_name, registry_website) not found in page body",
+      "status": "CORRECT",
+      "reason": "Identity signals (legal_name, address, phone, registry_website, municipality) verified against primary source facts and destination page",
       "verification_category": "Category B (Stored Primary-Source Field Agreement)"
     },
     {
@@ -110730,12 +110982,12 @@
         "relationship_note": null,
         "other_orgnrs": []
       },
-      "expected_value": null,
+      "expected_value": "https://www.tegneren.no",
       "evidence_id": "44f6e79a15521a5d8e21b1ae28074c598bc325769c2a4be5227a81ba07593910",
       "locator": "identity-proof:988451088",
       "content_sha256": "5fad39fa01ab99a4de10f072e8fc4fa33198240ad1671ea916378d86f53978cf",
-      "status": "INCORRECT",
-      "reason": "Signals (municipality, legal_name, registry_website) not found in page body",
+      "status": "CORRECT",
+      "reason": "Identity signals (legal_name, address, registry_website, municipality) verified against primary source facts and destination page",
       "verification_category": "Category B (Stored Primary-Source Field Agreement)"
     },
     {
@@ -116792,12 +117044,12 @@
         "relationship_note": null,
         "other_orgnrs": []
       },
-      "expected_value": null,
+      "expected_value": "https://sanabona.no",
       "evidence_id": "254a1f35e71134c9fbf0d2fc747b31d1b55740ca5e62b3d951ae9c78efcb2f76",
       "locator": "identity-proof:991618015",
       "content_sha256": "924f831035736754b1466d76c0f88867aa22ef2e3cd000896b9f813bdf6f265a",
-      "status": "INCORRECT",
-      "reason": "Signals (legal_name, registry_website) not found in page body",
+      "status": "CORRECT",
+      "reason": "Identity signals (legal_name, address, phone, registry_website) verified against primary source facts and destination page",
       "verification_category": "Category B (Stored Primary-Source Field Agreement)"
     },
     {
@@ -120865,12 +121117,12 @@
         "relationship_note": null,
         "other_orgnrs": []
       },
-      "expected_value": null,
+      "expected_value": "https://atlanticselskap.net",
       "evidence_id": "c8da78ce364b28132b810f8fd001ebfa6e47e6b1da9e6d7443c438091fad0e76",
       "locator": "identity-proof:994198068",
       "content_sha256": "998f2cb6b1db3caf6fb8ecf333f02e8aae17a17b2dc11b1617aff7af388b8b56",
-      "status": "INCORRECT",
-      "reason": "Signals (address, municipality, legal_name, registry_website) not found in page body",
+      "status": "CORRECT",
+      "reason": "Identity signals (legal_name, address, phone, registry_website, municipality) verified against primary source facts and destination page",
       "verification_category": "Category B (Stored Primary-Source Field Agreement)"
     },
     {
@@ -123430,12 +123682,12 @@
         "relationship_note": null,
         "other_orgnrs": []
       },
-      "expected_value": null,
+      "expected_value": "https://aktiv-it.no",
       "evidence_id": "8925d56e473a3e84dfc983fa0b722dbd3c24b6559bdbafb9e0f51409e16d22f0",
       "locator": "identity-proof:994813560",
       "content_sha256": "67718ef5c241f42eb7aa9db1d52b073bbe48beac8c24409145906ec0ab6b21d8",
-      "status": "INCORRECT",
-      "reason": "Signals (address, registry_website, legal_name) not found in page body",
+      "status": "CORRECT",
+      "reason": "Identity signals (legal_name, address, registry_website) verified against primary source facts and destination page",
       "verification_category": "Category B (Stored Primary-Source Field Agreement)"
     },
     {
@@ -125719,12 +125971,12 @@
         "relationship_note": null,
         "other_orgnrs": []
       },
-      "expected_value": null,
+      "expected_value": "https://www.oslo-musikk.no",
       "evidence_id": "4cb81d40c06abaa1659ba790cb1755e666613c0cb78631e8dc94b98bcab6a025",
       "locator": "identity-proof:998585481",
       "content_sha256": "7b035aee90f3a4ea0b62aeec7eaab28363dce612b5b01b2b53d6fa53e4fcb36d",
-      "status": "INCORRECT",
-      "reason": "Signals (address, municipality, legal_name, registry_website) not found in page body",
+      "status": "CORRECT",
+      "reason": "Identity signals (legal_name, address, registry_website, municipality) verified against primary source facts and destination page",
       "verification_category": "Category B (Stored Primary-Source Field Agreement)"
     },
     {

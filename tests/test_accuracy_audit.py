@@ -433,3 +433,85 @@ def test_hiring_invalid_subunit_mapping_detected():
     status, reason, _ = audit_hiring_claim(ORG, claim, ev, detail_body)
     assert status == "INCORRECT"
     assert "!= claimed subunit" in reason
+
+
+# -----------------------------------------------------------------------------
+# 8. Regression Tests: Semantic Website Signals & Breakout Reporting
+# -----------------------------------------------------------------------------
+
+def test_website_signals_semantic_corroboration_success():
+    """Proves auditor correctly verifies Norwegian primary-source facts on page."""
+    html_body = """
+    <html>
+      <head><title>KINGBIRD AS - Consulting</title></head>
+      <body>
+        <h1>Velkommen til KINGBIRD AS</h1>
+        <p>Adresse: Ruseløkkveien 34, 0251 OSLO</p>
+        <p>Styreleder: Hege Lise Sørbye</p>
+        <footer>© 2026 KINGBIRD AS</footer>
+      </body>
+    </html>
+    """
+    claim = {
+        "field": "official_website",
+        "value": {
+            "final_url": "https://www.kingbird.no",
+            "proof_type": "signals",
+            "signals": ["legal_name", "address", "leader", "registry_website", "municipality"]
+        }
+    }
+    ev = {"locator": "identity-proof:KINGBIRD AS"}
+    context = {
+        "name": "KINGBIRD AS",
+        "street": "Ruseløkkveien 34",
+        "postcode": "0251",
+        "city": "OSLO",
+        "municipality": "OSLO",
+        "website": "www.kingbird.no",
+        "phone": None
+    }
+    leaders = ["Hege Lise Sørbye"]
+    status, reason, url = audit_website_claim(
+        "858302242", claim, ev, html_body,
+        registry_body=None, context=context, leaders=leaders
+    )
+    assert status == "CORRECT"
+    assert "Identity signals" in reason
+    assert url == "https://www.kingbird.no"
+
+
+def test_website_signals_missing_semantic_fact_detected():
+    """Proves auditor rejects signals if any claimed Norwegian fact is missing from page."""
+    html_body = """
+    <html>
+      <head><title>KINGBIRD AS</title></head>
+      <body>
+        <p>No address or leadership mentioned here.</p>
+      </body>
+    </html>
+    """
+    claim = {
+        "field": "official_website",
+        "value": {
+            "final_url": "https://www.kingbird.no",
+            "proof_type": "signals",
+            "signals": ["legal_name", "address", "leader"]
+        }
+    }
+    ev = {"locator": "identity-proof:KINGBIRD AS"}
+    context = {
+        "name": "KINGBIRD AS",
+        "street": "Ruseløkkveien 34",
+        "postcode": "0251",
+        "city": "OSLO",
+        "municipality": "OSLO",
+        "website": "www.kingbird.no"
+    }
+    leaders = ["Hege Lise Sørbye"]
+    status, reason, url = audit_website_claim(
+        "858302242", claim, ev, html_body,
+        registry_body=None, context=context, leaders=leaders
+    )
+    assert status == "INCORRECT"
+    assert "Signals" in reason
+    assert "address" in reason or "leader" in reason
