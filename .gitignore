@@ -24,6 +24,8 @@ blobs/
 !tests/fixtures/**/*.csv
 !tests/fixtures/**/*.gz
 !tests/fixtures/**/*.pdf
+!tests/fixtures/integration_bundle/blobs/
+!tests/fixtures/integration_bundle/blobs/*
 # Environments, secrets and caches
 .venv/
 .env

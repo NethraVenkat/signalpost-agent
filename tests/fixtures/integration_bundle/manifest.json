@@ -1,0 +1,78 @@
+{
+  "version": "1.0",
+  "description": "Self-contained declared integration fixture bundle for tests/fixtures/integration_declared_batch.csv",
+  "fixtures": [
+    {
+      "url": "https://data.brreg.no/enhetsregisteret/api/enheter/999592236/roller",
+      "method": "GET",
+      "status_code": 200,
+      "headers": {
+        "content-type": "application/json; charset=utf-8"
+      },
+      "content_sha256": "5489947f1718cf2a6f6d72c35dca132469c89dd7a31f523b839baa9b5cb909aa",
+      "blob_file": "5489947f1718cf2a6f6d72c35dca132469c89dd7a31f523b839baa9b5cb909aa",
+      "metadata_complete": true,
+      "repeatable": true
+    },
+    {
+      "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=999592236&size=1000&page=0",
+      "method": "GET",
+      "status_code": 200,
+      "headers": {
+        "content-type": "application/json; charset=utf-8"
+      },
+      "content_sha256": "ffbbd4e7e7a09322f5977456c1d09bc470e50b0a8106f2bf6909fa84ea6fcf50",
+      "blob_file": "ffbbd4e7e7a09322f5977456c1d09bc470e50b0a8106f2bf6909fa84ea6fcf50",
+      "metadata_complete": true,
+      "repeatable": true
+    },
+    {
+      "url": "https://data.brreg.no/regnskapsregisteret/regnskap/999592236",
+      "method": "GET",
+      "status_code": 200,
+      "headers": {
+        "content-type": "application/json; charset=utf-8"
+      },
+      "content_sha256": "e6b40a935f6e2feaf6f4ee4eac2425d7c48072da588facf09fcab694f85d58ee",
+      "blob_file": "e6b40a935f6e2feaf6f4ee4eac2425d7c48072da588facf09fcab694f85d58ee",
+      "metadata_complete": true,
+      "repeatable": true
+    },
+    {
+      "url": "https://data.brreg.no/enhetsregisteret/api/enheter/823884362/roller",
+      "method": "GET",
+      "status_code": 200,
+      "headers": {
+        "content-type": "application/json; charset=utf-8"
+      },
+      "content_sha256": "7c0db1b381e9d3b9c936018ba9227940b4a463b5d29536419797ed6c2979291b",
+      "blob_file": "7c0db1b381e9d3b9c936018ba9227940b4a463b5d29536419797ed6c2979291b",
+      "metadata_complete": true,
+      "repeatable": true
+    },
+    {
+      "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=823884362&size=1000&page=0",
+      "method": "GET",
+      "status_code": 200,
+      "headers": {
+        "content-type": "application/json; charset=utf-8"
+      },
+      "content_sha256": "38d01dc433ad765e549b0a20bfef64087af3bb473be83efb7103b6d831e30077",
+      "blob_file": "38d01dc433ad765e549b0a20bfef64087af3bb473be83efb7103b6d831e30077",
+      "metadata_complete": true,
+      "repeatable": true
+    },
+    {
+      "url": "https://data.brreg.no/regnskapsregisteret/regnskap/823884362",
+      "method": "GET",
+      "status_code": 200,
+      "headers": {
+        "content-type": "application/json; charset=utf-8"
+      },
+      "content_sha256": "5532fdca11301e14e6d88c1fa93d12cb7fdcfabbc387114c2d2dbec52f2a6ca9",
+      "blob_file": "5532fdca11301e14e6d88c1fa93d12cb7fdcfabbc387114c2d2dbec52f2a6ca9",
+      "metadata_complete": true,
+      "repeatable": true
+    }
+  ]
+}
