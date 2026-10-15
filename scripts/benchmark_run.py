@@ -12,11 +12,29 @@ from pathlib import Path
 import psutil
 
 
+def sample_tree(process,observed):
+    members=[]
+    try:tree=[process]+process.children(recursive=True)
+    except (psutil.NoSuchProcess,psutil.AccessDenied):tree=[process]
+    for member in tree:
+        try:
+            identity=(member.pid,member.create_time())
+            rss=member.memory_info().rss
+            record={'pid':member.pid,'created_at':identity[1],'role':'launched_root' if member.pid==process.pid else 'pipeline_descendant',
+                    'rss_bytes':rss,'cpu_seconds':sum(member.cpu_times()[:2])}
+            members.append(record)
+            prior=observed.setdefault(identity,{**record,'peak_rss_bytes':0})
+            prior['peak_rss_bytes']=max(prior['peak_rss_bytes'],rss)
+        except (psutil.NoSuchProcess,psutil.AccessDenied):pass
+    return members
+
+
 def main():
     parser=argparse.ArgumentParser()
     parser.add_argument('--input',type=Path,required=True);parser.add_argument('--bulk',type=Path)
     parser.add_argument('--output-dir',type=Path,required=True);parser.add_argument('--count',type=int,required=True)
     parser.add_argument('--input-sha256');parser.add_argument('--time-budget',type=int,default=2400)
+    parser.add_argument('--max-requests',type=int,default=2000)
     args=parser.parse_args();sha=hashlib.sha256(args.input.read_bytes()).hexdigest()
     if args.input_sha256 and sha!=args.input_sha256:raise ValueError('Input hash mismatch')
     if args.output_dir.exists():raise ValueError('Use a new output directory and state')
@@ -33,6 +51,7 @@ def main():
         '--output',str(out/'envelopes.jsonl'),'--profiles-output',str(out/'profiles.jsonl'),
         '--report',str(out/'report.json'),'--site-dir',str(out/'site'),'--state-dir',str(out/'state'),
         '--websites','--hiring','--public-activity','--max-cost-usd','0','--search-max-queries','0',
+        '--max-requests',str(args.max_requests),
         '--time-budget-seconds',str(args.time_budget),'--expected-count',str(args.count)]
     if args.bulk:cmd+=['--bulk',str(args.bulk)]
     env=os.environ.copy()
@@ -44,7 +63,7 @@ def main():
         'platform':platform.platform(),'processor':platform.processor(),'logical_cpus':os.cpu_count(),
         'ram_bytes':psutil.virtual_memory().total,'unknown_process_inspections':unknown,
         'conditions':'Fresh empty runtime state; shipped declared NAV index; paid search disabled; no evaluation test/browser job detected. Unrelated processes preserved.'}
-    samples=[];psutil.cpu_percent();began=time.perf_counter()
+    samples=[];observed={};psutil.cpu_percent();began=time.perf_counter()
     with (out/'process.log').open('wb') as log:
         process=psutil.Popen(cmd,stdout=log,stderr=subprocess.STDOUT,env=env)
         while True:
@@ -55,12 +74,18 @@ def main():
                     process_threads=process.num_threads())
                 io=process.io_counters();sample.update(process_read_bytes=io.read_bytes,process_write_bytes=io.write_bytes)
             except (psutil.NoSuchProcess,psutil.AccessDenied):pass
+            members=sample_tree(process,observed)
+            sample['process_tree']=members
+            sample['process_tree_rss_bytes']=sum(m['rss_bytes'] for m in members)
             disk=psutil.disk_io_counters()
             if disk:sample.update(disk_read_bytes=disk.read_bytes,disk_write_bytes=disk.write_bytes,disk_read_ms=disk.read_time,disk_write_ms=disk.write_time)
             samples.append(sample)
             try:code=process.wait(timeout=1);break
             except psutil.TimeoutExpired:pass
-    metadata.update(wall_seconds=time.perf_counter()-began,exit_code=code,observation_end=datetime.now(timezone.utc).isoformat(),samples=samples)
+    metadata.update(wall_seconds=time.perf_counter()-began,exit_code=code,observation_end=datetime.now(timezone.utc).isoformat(),samples=samples,
+                    memory={'sampling_interval_seconds':1,'observed_peak_tree_rss_bytes':max((s['process_tree_rss_bytes'] for s in samples),default=0),
+                            'observed_processes':list(observed.values()),
+                            'scope':'Launched root plus recursive descendants, including actual Python pipeline behind Windows launchers; summed RSS may double count shared pages; brief peaks/exited children between samples may be missed. Not system available RAM.'})
     (out/'measurement.json').write_text(json.dumps(metadata,ensure_ascii=True,indent=2),encoding='utf8')
     print(json.dumps({k:v for k,v in metadata.items() if k not in ['samples','command']}))
     raise SystemExit(code)
