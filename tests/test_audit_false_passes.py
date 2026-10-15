@@ -312,3 +312,190 @@ def test_accounts_locator_pointing_to_wrong_field_rejected():
     ev = {"locator": "/0/resultatregnskapResultat/driftsresultat/driftskostnad/sumDriftskostnad"}
     status, reason, _ = audit_accounts_claim(ORG, claim, ev, body)
     assert status == "INCORRECT", f"Auditor falsely accepted revenue claim with expense locator: {reason}"
+
+
+# -----------------------------------------------------------------------------
+# 13. Description: First 5 words match but remaining claim contains fabricated facts
+# -----------------------------------------------------------------------------
+def test_description_partial_word_match_rejected():
+    """
+    Proves that a description claim whose first five words appear in the source
+    but which contains invented statements (e.g. lunar mining fleet) is strictly rejected.
+    """
+    body = "<html><body>Norwegian software company builds tools for developer automation.</body></html>"
+    claim = {
+        "field": "website_description.about_paragraph.1234",
+        "value": "Norwegian software company builds tools. It also owns a lunar mining fleet."
+    }
+    ev = {"locator": "visible:p:first"}
+    from scripts.accuracy_audit import audit_website_metadata_claim
+    status, reason, _ = audit_website_metadata_claim(ORG, claim, ev, body)
+    assert status == "INCORRECT", f"Auditor falsely passed description with invented lunar fleet: {reason}"
+    assert "not found" in reason.lower()
+
+
+# -----------------------------------------------------------------------------
+# 14. Description: Summary description without sentence-level citations
+# -----------------------------------------------------------------------------
+def test_summary_description_without_sentence_citations_unverifiable():
+    body = "<html><body>Norwegian software company builds tools.</body></html>"
+    claim = {
+        "field": "website_description.summary",
+        "value": {
+            "kind": "summary",
+            "text": "Norwegian software company builds tools."
+        }
+    }
+    ev = {"locator": "/"}
+    from scripts.accuracy_audit import audit_website_metadata_claim
+    status, reason, _ = audit_website_metadata_claim(ORG, claim, ev, body)
+    assert status == "UNVERIFIABLE", f"Auditor should mark summary without sentence citations UNVERIFIABLE: {reason}"
+
+
+# -----------------------------------------------------------------------------
+# 15. Website ownership: Directory/aggregator domain (proff.no) rejected
+# -----------------------------------------------------------------------------
+def test_website_directory_page_rejected():
+    body = "<html><body><h1>AUTONEXT AS</h1><p>Org.nr: 999 592 236</p></body></html>"
+    claim = {
+        "field": "official_website",
+        "value": {
+            "final_url": "https://proff.no/selskap/autonext-as/mosj%C3%B8en/biler-og-kj%C3%B8ret%C3%B8y/IF5Z7IO016D",
+            "proof_type": "orgnr_on_page"
+        }
+    }
+    ev = {"locator": "/"}
+    status, reason, _ = audit_website_claim(ORG, claim, ev, body)
+    assert status == "INCORRECT", f"Auditor falsely accepted directory page on proff.no: {reason}"
+    assert "directory" in reason.lower() or "aggregator" in reason.lower()
+
+
+# -----------------------------------------------------------------------------
+# 16. Website ownership: Orgnr only present in script markup rejected
+# -----------------------------------------------------------------------------
+def test_website_script_only_orgnr_rejected():
+    body = """<html>
+      <head>
+        <script type="text/javascript">
+          var trackingConfig = { accountId: "999592236", event: "pageview" };
+        </script>
+      </head>
+      <body>
+        <h1>Welcome to Acme Portal</h1>
+      </body>
+    </html>"""
+    claim = {
+        "field": "official_website",
+        "value": {
+            "final_url": "https://example.no",
+            "proof_type": "orgnr_on_page"
+        }
+    }
+    ev = {"locator": "/"}
+    status, reason, _ = audit_website_claim(ORG, claim, ev, body)
+    assert status == "INCORRECT", f"Auditor falsely accepted orgnr only in script tags: {reason}"
+    assert "script" in reason.lower() or "invisible" in reason.lower()
+
+
+# -----------------------------------------------------------------------------
+# 17. Website ownership: Orgnr only in customer/partner references rejected
+# -----------------------------------------------------------------------------
+def test_website_partner_customer_mention_rejected():
+    body = """<html>
+      <head><title>Software Agency AS</title></head>
+      <body>
+        <h1>Our Web Development Agency</h1>
+        <h2>Våre fornøyde kunder</h2>
+        <p>Vi har levert systemer til AUTONEXT AS (org.nr 999592236) siden 2020.</p>
+        <footer>
+          <p>© 2026 Agency AS - Org.nr 910000004</p>
+        </footer>
+      </body>
+    </html>"""
+    claim = {
+        "field": "official_website",
+        "value": {
+            "final_url": "https://agency.example.no",
+            "proof_type": "orgnr_on_page"
+        }
+    }
+    ev = {"locator": "/"}
+    status, reason, _ = audit_website_claim(ORG, claim, ev, body)
+    assert status == "INCORRECT", f"Auditor falsely accepted partner/customer reference: {reason}"
+    assert "foreign" in reason.lower() or "partner" in reason.lower() or "customer" in reason.lower()
+
+
+# -----------------------------------------------------------------------------
+# 18. Website ownership: Multi-entity group list / directory table rejected
+# -----------------------------------------------------------------------------
+def test_website_multi_entity_group_list_rejected():
+    body = """<html>
+      <body>
+        <h1>Group Subsidiary Directory</h1>
+        <table>
+          <tr><td>Subsidiary A</td><td>999592236</td></tr>
+          <tr><td>Subsidiary B</td><td>910000004</td></tr>
+          <tr><td>Subsidiary C</td><td>910000012</td></tr>
+          <tr><td>Subsidiary D</td><td>910000020</td></tr>
+        </table>
+      </body>
+    </html>"""
+    claim = {
+        "field": "official_website",
+        "value": {
+            "final_url": "https://conglomerate-holding.no/subsidiaries",
+            "proof_type": "orgnr_on_page"
+        }
+    }
+    ev = {"locator": "/"}
+    status, reason, _ = audit_website_claim(ORG, claim, ev, body)
+    assert status == "INCORRECT", f"Auditor falsely accepted multi-entity list: {reason}"
+    assert "multi-entity" in reason.lower() or "directory" in reason.lower()
+
+
+# -----------------------------------------------------------------------------
+# 19. Website ownership: Verified footer context accepted
+# -----------------------------------------------------------------------------
+def test_website_verified_footer_accepted():
+    body = """<html>
+      <head><title>AUTONEXT AS - Bilforhandler</title></head>
+      <body>
+        <h1>Velkommen til Autonext</h1>
+        <footer>
+          <p>© 2026 AUTONEXT AS. Organisasjonsnummer 999 592 236 MVA. Lensegata 18, 8656 Mosjøen.</p>
+        </footer>
+      </body>
+    </html>"""
+    claim = {
+        "field": "official_website",
+        "value": {
+            "final_url": "https://autonext.no",
+            "proof_type": "orgnr_on_page"
+        }
+    }
+    ev = {"locator": "visible:p:first"}
+    status, reason, val = audit_website_claim(ORG, claim, ev, body)
+    assert status == "CORRECT", f"Auditor rejected genuine footer ownership proof: {reason}"
+    assert val == "https://autonext.no"
+
+
+# -----------------------------------------------------------------------------
+# 20. Website ownership: Registry declaration verified against Brønnøysund record
+# -----------------------------------------------------------------------------
+def test_website_registry_declaration_accepted():
+    csv_body = "organisasjonsnummer,navn,hjemmeside\n999592236,AUTONEXT AS,autonext.no\n"
+    claim = {
+        "field": "official_website",
+        "value": {
+            "final_url": "https://autonext.no",
+            "proof_type": "registry_declared"
+        }
+    }
+    ev = {"locator": "row:999592236/column:hjemmeside"}
+    context = {"website": "autonext.no"}
+    status, reason, val = audit_website_claim(
+        ORG, claim, ev, "<html><body>Hello</body></html>", registry_body=csv_body, context=context
+    )
+    assert status == "CORRECT", f"Auditor rejected valid registry declaration: {reason}"
+    assert val == "https://autonext.no"
+
