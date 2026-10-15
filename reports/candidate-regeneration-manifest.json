@@ -1,0 +1,15 @@
+{
+  "input_path": "out\\candidate-1000-corrected-envelopes.jsonl",
+  "output_envelopes": "out\\candidate-1000-corrected-envelopes.jsonl",
+  "output_envelopes_sha256": "8debf57fadf8a5ca923d0744e5bcd12c51befefda1d649a50f24894fb28ab9d2",
+  "output_profiles": "out\\candidate-1000-corrected-profiles.jsonl",
+  "output_profiles_sha256": "504452a13399b298ff6274c7637b1111fc5b73c9e3bbd49e91c84df1c15505c2",
+  "total_envelopes": 1000,
+  "brand_changes_count": 0,
+  "brand_changes": [],
+  "desc_changes_count": 0,
+  "desc_changes": [],
+  "total_claims_before": 78014,
+  "total_claims_after": 78014,
+  "blob_integrity_failures": 0
+}
