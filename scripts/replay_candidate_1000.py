@@ -1,9 +1,12 @@
-"""Saved-source replay producing the corrected 1,000-company cohort.
+"""HISTORICAL DATA MIGRATION UTILITY (NOT PRODUCTION RUNNER PIPELINE).
 
-Enforces the corrected NAV employer orgnr invariant:
-- Ads lacking valid 9-digit employer.orgnr are discarded.
-- Preserves all verified claims across identity, accounts, roles, subunits, website, activity, and verified hiring.
-- Regenerates and validates synthesis sentences and compact profiles.
+This script is an offline post-processing migration utility that filtered historical
+cohort outputs (out/w5-opt1000-rev4-envelopes.jsonl) by removing invalid claims
+(such as NAV ads lacking valid 9-digit employer orgnrs) and re-synthesizing summaries.
+
+It is retained strictly for historical data lineage and reproducibility of the candidate-1000 migration.
+For production offline pipeline execution using recorded transports against primary sources,
+use `scripts/production_replay.py` which executes `signalpost.runner.run(config, client=...)`.
 """
 import json
 import re
