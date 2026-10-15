@@ -1,0 +1,2004 @@
+{
+  "source_commit": "cc21602",
+  "status": "NOT READY",
+  "environment": {
+    "python": "3.12.15",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+    "cpu_count": 16,
+    "organiser_files": {
+      "README.md": "df71c0318b95fb6bd8a675ccbd2726bb363f6788bbb943828ee2a990df13a6c0",
+      "OUTPUT_CONTRACT.md": "59a93f8c0b29f7a8ed4df5bd700be2c85e83748e6d5da7b89db479169e6eaf6b",
+      "docs/external-connectors.md": "76481becdd1180b517f80cc3e4fa8b786d30d7e8837142108f85c07d3882b485",
+      "docs/competition-control-loop.md": "22c8972827f7a3391514257e7493b9cd60031acbf5f2734d2566a86bdd66621c",
+      "docs/norway-sources.md": "ec262be258a08d811dc67b16c6c6fe78dc6d0f6a5779b6d7bfdd5d41de67c6fd",
+      "scripts/score_competition_v3.py": "2e53f5f576a45c39decb25825d6edef79464a024f889357859ce793a75783f5a"
+    }
+  },
+  "sample": {
+    "archive_sha256": "1c89710e5b01f8617e86d09fbdff4a52f2f8dbbba297e74f7164b5984f5a0384",
+    "content_sha256": "b82d6a3e7231d1759a958c282bc4366b80ec2fab8095053d8ed7fa9cd01bc838",
+    "rows": 411160,
+    "sample_count": 100,
+    "seed": 20261015,
+    "sample_sha256": "54de285dd71e69515c532febc37cfec16a467d7bc0880c96931fc6c83ecc807a"
+  },
+  "fresh_clone": {
+    "tests": 375,
+    "seconds": 68.15,
+    "strict_replay": "PASS"
+  },
+  "fixed_replay": {
+    "lines": 5,
+    "schema_valid": true,
+    "published_claims": 40,
+    "source_blobs_verified": 9,
+    "synthesis_companies": 5,
+    "synthesis_sentences": 22,
+    "synthesis_unverified_values": 0,
+    "rerun_lines": 5,
+    "identical_claim_ids": true,
+    "changes": 0,
+    "observation_changes": 0
+  },
+  "coverage": {
+    "covered_lines": 5345,
+    "num_statements": 5858,
+    "percent_covered": 91.24274496415158,
+    "percent_covered_display": "91",
+    "missing_lines": 513,
+    "excluded_lines": 4,
+    "percent_statements_covered": 91.24274496415158,
+    "percent_statements_covered_display": "91"
+  },
+  "coverage_run": {
+    "passed": 372,
+    "failed": 3,
+    "seconds": 1366.71,
+    "unchanged_timing_rerun": "3 passed in 4.88s"
+  },
+  "independent_live": {
+    "scope": "Five exact registry identity pairs, separate requests after batch; no website or hiring precision inference",
+    "requests": 5,
+    "results": [
+      {
+        "organisation_number": "812573942",
+        "url": "https://data.brreg.no/enhetsregisteret/api/enheter/812573942",
+        "observed_at": "2026-10-15T10:55:31.479432+00:00",
+        "status": 200,
+        "sha256": "c8dcbd03abaf838af14b18e67049eab4f7267b7b90dac8e07f9e08da5d18d523",
+        "identity_match": false
+      },
+      {
+        "organisation_number": "818851022",
+        "url": "https://data.brreg.no/enhetsregisteret/api/enheter/818851022",
+        "observed_at": "2026-10-15T10:55:31.838794+00:00",
+        "status": 200,
+        "sha256": "d39b299061f0be7808bdee359af7158ab9e81243395d2a7e64043c8abb3b20e4",
+        "identity_match": true
+      },
+      {
+        "organisation_number": "819333262",
+        "url": "https://data.brreg.no/enhetsregisteret/api/enheter/819333262",
+        "observed_at": "2026-10-15T10:55:32.292952+00:00",
+        "status": 200,
+        "sha256": "371daac54d0e3dc6f9a38e133516faa33e9da3a23ca7b8b58904df58d587ddf0",
+        "identity_match": true
+      },
+      {
+        "organisation_number": "820317092",
+        "url": "https://data.brreg.no/enhetsregisteret/api/enheter/820317092",
+        "observed_at": "2026-10-15T10:55:32.999733+00:00",
+        "status": 200,
+        "sha256": "2ddc010c7d666f952f166b620d6640ce4f7b326c33b42720967d8440d56d6f6d",
+        "identity_match": true
+      },
+      {
+        "organisation_number": "823675542",
+        "url": "https://data.brreg.no/enhetsregisteret/api/enheter/823675542",
+        "observed_at": "2026-10-15T10:55:33.416284+00:00",
+        "status": 200,
+        "sha256": "b80c3efb63b2b02312b721188a40d8592d07080d618188d03c027cdb240dc469",
+        "identity_match": true
+      }
+    ]
+  },
+  "freshness_finding": {
+    "organisation_number": "812573942",
+    "snapshot_name": "R\u00c3\u02dcRLEGGER 1 MOLDE AS",
+    "current_name": "R\u00d8RLEGGER 1 MOLDE AS",
+    "current_orgnr": "812573942",
+    "status": 200
+  },
+  "historical_stored": {
+    "audit_metadata": {
+      "auditor_version": "2.1-strict-source-field",
+      "envelopes_file": "candidate-1000-corrected-envelopes.jsonl",
+      "total_companies": 1000,
+      "sample_seed": 20261015,
+      "sample_size": 110,
+      "sampled_organisations": [
+        "813133482",
+        "819595712",
+        "820031172",
+        "820918312",
+        "824948232",
+        "825140352",
+        "831405252",
+        "833676342",
+        "853097012",
+        "858302242",
+        "881238292",
+        "885350712",
+        "885927882",
+        "888092692",
+        "892112762",
+        "911670283",
+        "912002829",
+        "912090426",
+        "912134784",
+        "913401611",
+        "914416779",
+        "914788706",
+        "915306977",
+        "915525555",
+        "916842481",
+        "917247102",
+        "917803498",
+        "918025456",
+        "918089462",
+        "918175334",
+        "918674454",
+        "919510706",
+        "919920041",
+        "920339824",
+        "920673031",
+        "921407025",
+        "921474164",
+        "921510195",
+        "921594674",
+        "922096716",
+        "922160406",
+        "922171467",
+        "922325065",
+        "922623570",
+        "923083146",
+        "923191593",
+        "923479651",
+        "923637958",
+        "925893188",
+        "926382594",
+        "927432064",
+        "928807908",
+        "929413938",
+        "929612418",
+        "929714997",
+        "931015737",
+        "932543796",
+        "932617064",
+        "932671727",
+        "932761483",
+        "932985950",
+        "933355985",
+        "933852873",
+        "934050339",
+        "934928741",
+        "935006058",
+        "935234166",
+        "935436567",
+        "935461898",
+        "935495369",
+        "936244491",
+        "936494285",
+        "936587690",
+        "936645704",
+        "936802044",
+        "940514193",
+        "943619506",
+        "947418173",
+        "954685500",
+        "963201141",
+        "966985186",
+        "967216402",
+        "975817059",
+        "979703384",
+        "979769830",
+        "981646967",
+        "981975359",
+        "982175836",
+        "982223881",
+        "986201343",
+        "987634308",
+        "988238600",
+        "988451088",
+        "989058452",
+        "989933434",
+        "990099618",
+        "990247080",
+        "991618015",
+        "994109464",
+        "994116592",
+        "994198068",
+        "994431315",
+        "994813560",
+        "997670752",
+        "998585481",
+        "998710502",
+        "999268439",
+        "999312128",
+        "999528139",
+        "999592236"
+      ]
+    },
+    "category_a_structural_integrity": {
+      "total_claims": 78006,
+      "available_claims": 68990,
+      "hash_checks": 118265,
+      "hash_passes": 118265,
+      "hash_failures": 0,
+      "missing_blobs": 0,
+      "span_checks": 118265,
+      "span_passes": 118265,
+      "span_failures": 0,
+      "locator_passes": 118265,
+      "locator_failures": 0,
+      "wrong_orgnr_attribution": 0,
+      "missing_attribution": 0,
+      "by_family": {
+        "accounts": 22085,
+        "identity": 28876,
+        "roles": 11323,
+        "subunits": 6331,
+        "website": 326,
+        "other_website_claims": 215,
+        "official_website": 47,
+        "social_profiles": 64,
+        "hiring": 9,
+        "activity": 40,
+        "aggregate_all_families": 68990
+      }
+    },
+    "category_b_stored_source_agreement": {
+      "identity": {
+        "total_published_claims": 28876,
+        "publication_denominator": 28876,
+        "reviewed": 3309,
+        "correct": 3309,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wrong_company": 0,
+        "missing_attribution": 0,
+        "unsupported": 0,
+        "fabricated_zeroes": 0,
+        "precision": 1.0,
+        "precision_denominator": 3309,
+        "verification_rate": 1.0,
+        "verification_rate_denominator": 3309
+      },
+      "accounts": {
+        "total_published_claims": 22085,
+        "publication_denominator": 22085,
+        "reviewed": 2508,
+        "correct": 2508,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wrong_company": 0,
+        "missing_attribution": 0,
+        "unsupported": 0,
+        "fabricated_zeroes": 0,
+        "precision": 1.0,
+        "precision_denominator": 2508,
+        "verification_rate": 1.0,
+        "verification_rate_denominator": 2508
+      },
+      "roles": {
+        "total_published_claims": 11323,
+        "publication_denominator": 11323,
+        "reviewed": 1394,
+        "correct": 1394,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wrong_company": 0,
+        "missing_attribution": 0,
+        "unsupported": 0,
+        "fabricated_zeroes": 0,
+        "precision": 1.0,
+        "precision_denominator": 1394,
+        "verification_rate": 1.0,
+        "verification_rate_denominator": 1394
+      },
+      "subunits": {
+        "total_published_claims": 6331,
+        "publication_denominator": 6331,
+        "reviewed": 914,
+        "correct": 914,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wrong_company": 0,
+        "missing_attribution": 0,
+        "unsupported": 0,
+        "fabricated_zeroes": 0,
+        "precision": 1.0,
+        "precision_denominator": 914,
+        "verification_rate": 1.0,
+        "verification_rate_denominator": 914
+      },
+      "official_website": {
+        "total_published_claims": 47,
+        "publication_denominator": 47,
+        "reviewed": 47,
+        "correct": 47,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wrong_company": 0,
+        "missing_attribution": 0,
+        "unsupported": 0,
+        "fabricated_zeroes": 0,
+        "precision": 1.0,
+        "precision_denominator": 47,
+        "verification_rate": 1.0,
+        "verification_rate_denominator": 47
+      },
+      "social_profiles": {
+        "total_published_claims": 64,
+        "publication_denominator": 64,
+        "reviewed": 64,
+        "correct": 64,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wrong_company": 0,
+        "missing_attribution": 0,
+        "unsupported": 0,
+        "fabricated_zeroes": 0,
+        "precision": 1.0,
+        "precision_denominator": 64,
+        "verification_rate": 1.0,
+        "verification_rate_denominator": 64
+      },
+      "other_website_claims": {
+        "total_published_claims": 215,
+        "publication_denominator": 215,
+        "reviewed": 215,
+        "correct": 215,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wrong_company": 0,
+        "missing_attribution": 0,
+        "unsupported": 0,
+        "fabricated_zeroes": 0,
+        "precision": 1.0,
+        "precision_denominator": 215,
+        "verification_rate": 1.0,
+        "verification_rate_denominator": 215
+      },
+      "website": {
+        "total_published_claims": 326,
+        "publication_denominator": 326,
+        "reviewed": 326,
+        "correct": 326,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wrong_company": 0,
+        "missing_attribution": 0,
+        "unsupported": 0,
+        "fabricated_zeroes": 0,
+        "precision": 1.0,
+        "precision_denominator": 326,
+        "verification_rate": 1.0,
+        "verification_rate_denominator": 326
+      },
+      "hiring": {
+        "total_published_claims": 9,
+        "publication_denominator": 9,
+        "reviewed": 9,
+        "correct": 9,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wrong_company": 0,
+        "missing_attribution": 0,
+        "unsupported": 0,
+        "fabricated_zeroes": 0,
+        "precision": 1.0,
+        "precision_denominator": 9,
+        "verification_rate": 1.0,
+        "verification_rate_denominator": 9
+      },
+      "activity": {
+        "total_published_claims": 40,
+        "publication_denominator": 40,
+        "reviewed": 40,
+        "correct": 40,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wrong_company": 0,
+        "missing_attribution": 0,
+        "unsupported": 0,
+        "fabricated_zeroes": 0,
+        "precision": 1.0,
+        "precision_denominator": 40,
+        "verification_rate": 1.0,
+        "verification_rate_denominator": 40
+      },
+      "aggregate_all_families": {
+        "total_published_claims": 68990,
+        "publication_denominator": 68990,
+        "reviewed": 8500,
+        "correct": 8500,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wrong_company": 0,
+        "missing_attribution": 0,
+        "unsupported": 0,
+        "fabricated_zeroes": 0,
+        "precision": 1.0,
+        "precision_denominator": 8500,
+        "verification_rate": 1.0,
+        "verification_rate_denominator": 8500
+      }
+    },
+    "category_c_live_verification": {
+      "status": "NOT EVALUATED (STORED REPLAY VERIFICATION ONLY)",
+      "limitations": "Category B proves exact agreement with stored Br\u00f8nn\u00f8ysund, NAV, and web blobs. Independent current-live web verification was not re-executed during this static offline audit."
+    },
+    "failures": []
+  },
+  "new_stored": {
+    "audit_metadata": {
+      "auditor_version": "2.1-strict-source-field",
+      "envelopes_file": "envelopes.jsonl",
+      "total_companies": 100,
+      "sample_seed": 20261015,
+      "sample_size": 100,
+      "sampled_organisations": [
+        "812573942",
+        "818851022",
+        "819333262",
+        "820317092",
+        "823675542",
+        "826465492",
+        "829411822",
+        "830562052",
+        "830815082",
+        "832846252",
+        "833715232",
+        "834159732",
+        "836262662",
+        "887655332",
+        "888419632",
+        "889917792",
+        "895957542",
+        "898313352",
+        "913429265",
+        "914719593",
+        "916025971",
+        "916052383",
+        "916131720",
+        "918305092",
+        "918834451",
+        "919076909",
+        "919370084",
+        "919734787",
+        "919944749",
+        "920226183",
+        "920514839",
+        "920659152",
+        "920957145",
+        "922155062",
+        "922210721",
+        "922433186",
+        "922635269",
+        "922866988",
+        "923104445",
+        "924606347",
+        "924689390",
+        "924742127",
+        "925882208",
+        "926173367",
+        "926377752",
+        "928484378",
+        "928541584",
+        "929720008",
+        "930077445",
+        "930308110",
+        "930377368",
+        "930561134",
+        "931319728",
+        "931776509",
+        "931909193",
+        "932588722",
+        "932611384",
+        "932688557",
+        "932873222",
+        "933227219",
+        "933721574",
+        "933822346",
+        "934034872",
+        "934052323",
+        "934353420",
+        "934998030",
+        "935052491",
+        "935691877",
+        "936117406",
+        "936517889",
+        "936711324",
+        "947850156",
+        "952231294",
+        "954307506",
+        "964624046",
+        "971386665",
+        "971390786",
+        "980521273",
+        "980536106",
+        "980978516",
+        "982182727",
+        "983900518",
+        "984562861",
+        "987075155",
+        "988044946",
+        "988102121",
+        "988115614",
+        "988664510",
+        "988809896",
+        "989215876",
+        "989708031",
+        "989812076",
+        "989965980",
+        "990946493",
+        "992062460",
+        "992447486",
+        "992843497",
+        "993030783",
+        "993399728",
+        "997924819"
+      ]
+    },
+    "category_a_structural_integrity": {
+      "total_claims": 7879,
+      "available_claims": 6977,
+      "hash_checks": 11543,
+      "hash_passes": 11543,
+      "hash_failures": 0,
+      "missing_blobs": 0,
+      "span_checks": 11543,
+      "span_passes": 11543,
+      "span_failures": 0,
+      "locator_passes": 11543,
+      "locator_failures": 0,
+      "wrong_orgnr_attribution": 0,
+      "missing_attribution": 0,
+      "by_family": {
+        "identity": 2888,
+        "subunits": 636,
+        "roles": 1192,
+        "accounts": 2192,
+        "website": 65,
+        "official_website": 7,
+        "other_website_claims": 51,
+        "social_profiles": 7,
+        "activity": 4,
+        "aggregate_all_families": 6977
+      }
+    },
+    "category_b_stored_source_agreement": {
+      "identity": {
+        "total_published_claims": 2888,
+        "publication_denominator": 2888,
+        "reviewed": 2888,
+        "correct": 2888,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wrong_company": 0,
+        "missing_attribution": 0,
+        "unsupported": 0,
+        "fabricated_zeroes": 0,
+        "precision": 1.0,
+        "precision_denominator": 2888,
+        "verification_rate": 1.0,
+        "verification_rate_denominator": 2888
+      },
+      "accounts": {
+        "total_published_claims": 2192,
+        "publication_denominator": 2192,
+        "reviewed": 2192,
+        "correct": 2192,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wrong_company": 0,
+        "missing_attribution": 0,
+        "unsupported": 0,
+        "fabricated_zeroes": 0,
+        "precision": 1.0,
+        "precision_denominator": 2192,
+        "verification_rate": 1.0,
+        "verification_rate_denominator": 2192
+      },
+      "roles": {
+        "total_published_claims": 1192,
+        "publication_denominator": 1192,
+        "reviewed": 1192,
+        "correct": 1192,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wrong_company": 0,
+        "missing_attribution": 0,
+        "unsupported": 0,
+        "fabricated_zeroes": 0,
+        "precision": 1.0,
+        "precision_denominator": 1192,
+        "verification_rate": 1.0,
+        "verification_rate_denominator": 1192
+      },
+      "subunits": {
+        "total_published_claims": 636,
+        "publication_denominator": 636,
+        "reviewed": 636,
+        "correct": 636,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wrong_company": 0,
+        "missing_attribution": 0,
+        "unsupported": 0,
+        "fabricated_zeroes": 0,
+        "precision": 1.0,
+        "precision_denominator": 636,
+        "verification_rate": 1.0,
+        "verification_rate_denominator": 636
+      },
+      "official_website": {
+        "total_published_claims": 7,
+        "publication_denominator": 7,
+        "reviewed": 7,
+        "correct": 7,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wrong_company": 0,
+        "missing_attribution": 0,
+        "unsupported": 0,
+        "fabricated_zeroes": 0,
+        "precision": 1.0,
+        "precision_denominator": 7,
+        "verification_rate": 1.0,
+        "verification_rate_denominator": 7
+      },
+      "social_profiles": {
+        "total_published_claims": 7,
+        "publication_denominator": 7,
+        "reviewed": 7,
+        "correct": 7,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wrong_company": 0,
+        "missing_attribution": 0,
+        "unsupported": 0,
+        "fabricated_zeroes": 0,
+        "precision": 1.0,
+        "precision_denominator": 7,
+        "verification_rate": 1.0,
+        "verification_rate_denominator": 7
+      },
+      "other_website_claims": {
+        "total_published_claims": 51,
+        "publication_denominator": 51,
+        "reviewed": 51,
+        "correct": 50,
+        "incorrect": 1,
+        "unverifiable": 0,
+        "wrong_company": 0,
+        "missing_attribution": 0,
+        "unsupported": 0,
+        "fabricated_zeroes": 0,
+        "precision": 0.9803921568627451,
+        "precision_denominator": 51,
+        "verification_rate": 1.0,
+        "verification_rate_denominator": 51
+      },
+      "website": {
+        "total_published_claims": 65,
+        "publication_denominator": 65,
+        "reviewed": 65,
+        "correct": 64,
+        "incorrect": 1,
+        "unverifiable": 0,
+        "wrong_company": 0,
+        "missing_attribution": 0,
+        "unsupported": 0,
+        "fabricated_zeroes": 0,
+        "precision": 0.9846153846153847,
+        "precision_denominator": 65,
+        "verification_rate": 1.0,
+        "verification_rate_denominator": 65
+      },
+      "hiring": {
+        "total_published_claims": 0,
+        "publication_denominator": 0,
+        "reviewed": 0,
+        "correct": 0,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wrong_company": 0,
+        "missing_attribution": 0,
+        "unsupported": 0,
+        "fabricated_zeroes": 0,
+        "precision": null,
+        "precision_denominator": 0,
+        "verification_rate": null,
+        "verification_rate_denominator": 0
+      },
+      "activity": {
+        "total_published_claims": 4,
+        "publication_denominator": 4,
+        "reviewed": 4,
+        "correct": 4,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wrong_company": 0,
+        "missing_attribution": 0,
+        "unsupported": 0,
+        "fabricated_zeroes": 0,
+        "precision": 1.0,
+        "precision_denominator": 4,
+        "verification_rate": 1.0,
+        "verification_rate_denominator": 4
+      },
+      "aggregate_all_families": {
+        "total_published_claims": 6977,
+        "publication_denominator": 6977,
+        "reviewed": 6977,
+        "correct": 6976,
+        "incorrect": 1,
+        "unverifiable": 0,
+        "wrong_company": 0,
+        "missing_attribution": 0,
+        "unsupported": 0,
+        "fabricated_zeroes": 0,
+        "precision": 0.9998566719220295,
+        "precision_denominator": 6977,
+        "verification_rate": 1.0,
+        "verification_rate_denominator": 6977
+      }
+    },
+    "category_c_live_verification": {
+      "status": "NOT EVALUATED (STORED REPLAY VERIFICATION ONLY)",
+      "limitations": "Category B proves exact agreement with stored Br\u00f8nn\u00f8ysund, NAV, and web blobs. Independent current-live web verification was not re-executed during this static offline audit."
+    },
+    "failures": [
+      {
+        "orgnr": "964624046",
+        "family": "website",
+        "field": "website_description.about_paragraph.682bbcaeef404520",
+        "claim_value": {
+          "text": "P\u00e5 Stell er et norsk varemerke som tilbyr produkter som virkelig virker uten at det g\u00e5r p\u00e5 bekostning av deg som bruker det eller milj\u00f8et. Du finner P\u00e5 Stells produkter over hele Norge, i barnebutikker, mote, apotek, interi\u00f8r og jernvare. Finn din n\u00e6rmeste forhandler her.",
+          "kind": "about_paragraph",
+          "self_description": true,
+          "identity_level": "VERIFIED",
+          "identity_claim_id": "9ddb50f7e322d34aabef43144c72d01b784307df2f4451024d4f2070c687f0c8"
+        },
+        "expected_value": null,
+        "evidence_id": "4c1d0bce1b67b6162deb4b6ac2e1997ff55672c977d34e02be62d1806995d497",
+        "locator": "visible:p:first",
+        "content_sha256": "7bef154551fb044a42008392449c126fb18c9c95eb696e879fada0bc96ad4e44",
+        "status": "INCORRECT",
+        "reason": "Website description not found in page body",
+        "verification_category": "Category B (Stored Primary-Source Field Agreement)"
+      }
+    ]
+  },
+  "first_live": {
+    "run_id": "44e6d60ed85d473e8b6726bdd7427965",
+    "input_rows": 100,
+    "unique_inputs": 100,
+    "emit_duplicates": true,
+    "emitted_envelopes": 100,
+    "duplicates": 0,
+    "invalid_inputs": [],
+    "counts_by_state": {
+      "complete": 92,
+      "submission_error": 8
+    },
+    "counts_by_availability": {
+      "available": 382,
+      "not_available": 196,
+      "not_applicable": 67,
+      "failed": 37,
+      "ambiguous": 16,
+      "blocked": 2
+    },
+    "requests": 574,
+    "shared_requests": 6,
+    "amortized_requests_per_company": 5.74,
+    "request_rate_per_second": 9.019484600880032,
+    "http_429_count": 0,
+    "max_requests_per_company": 9,
+    "runtime_ms": 86109,
+    "company_runtime": {
+      "p50_ms": 20125,
+      "p95_ms": 28406,
+      "max_ms": 63515
+    },
+    "total_cost_usd": 0.0,
+    "cost_per_100_companies_usd": 0.0,
+    "cost_per_official_batch_usd": 0.0,
+    "official_batch_size": 1100,
+    "deadline_hits": 0,
+    "handled_exceptions": 0,
+    "unhandled_exceptions": 0,
+    "changes": 0,
+    "observation_changes": 0,
+    "warnings": [],
+    "limits": {
+      "max_requests": 2000,
+      "max_cost_usd": 0.0,
+      "time_budget_seconds": 600.0,
+      "deadline_fraction": 0.85,
+      "request_timeout": 10.0,
+      "host_concurrency": 10
+    },
+    "schema_validated": true,
+    "membership_validated": true,
+    "request_budget_basis": "20 per unique normalized input",
+    "measured_request_projection": {
+      "baseline": "1000-company retained-features run",
+      "baseline_mean_http": 5.975,
+      "projected_http": 598,
+      "note": "Projection from a measured sample; source pagination/retries and feed changes can differ."
+    },
+    "dns_lookups": 761,
+    "dns_precheck_lookups": 333,
+    "dns_scope": "prechecks, website preflight and pinned-transport connection resolutions",
+    "dns_amortized_per_company": 7.61,
+    "max_dns_requests_per_company": 16,
+    "bulk_snapshot_sha256": "a2d13b6b88ed7cf66a581bb99342c09cd7d55638e15ea6601d2fc6f680715e29",
+    "llm": {
+      "calls": 0,
+      "cache_hits": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "estimated_usd": 0,
+      "fallbacks": 0
+    },
+    "search": {
+      "status": "not configured",
+      "queries": 0,
+      "estimated_usd": 0.0,
+      "provider": null,
+      "companies_queried": 0,
+      "unit_price_usd": 0.005,
+      "price_note": "verify before use; retries count as billable queries; no free credit assumed",
+      "errors": 0,
+      "cap_skips": 0,
+      "result_domains": 0
+    },
+    "synthesis": {
+      "companies": 100,
+      "sentences": 820,
+      "cited": 820,
+      "dropped_sentences": 0
+    },
+    "input_readable": true,
+    "hiring_prefetch": {
+      "pages": 5,
+      "items": 3646,
+      "bytes": 1801628,
+      "details": 0,
+      "requests": 6,
+      "runtime_ms": 20234,
+      "source_mode": "declared_index",
+      "index_version": "nav-20261014T042640.758720Z-v1",
+      "index_built_at": "2026-10-14T04:26:40.758720Z",
+      "index_age_days": 1.2671402515162036,
+      "index_compressed_bytes": 403768,
+      "index_ads": 9015,
+      "seeded_from_disk": 6791,
+      "fresh_fetched_ads": 2224,
+      "time_cap_seconds": 240.0,
+      "feed_complete": true,
+      "detail_request_cap": 0,
+      "coverage_scope": "declared_orgnr_index_plus_completed_forward_feed_and_live_candidate_details",
+      "feed_runtime_ms": 5954,
+      "runtime_seconds": 20.234000000004016,
+      "feed_seconds": 5.954,
+      "average_seconds_per_page": 1.1907999999999999,
+      "last_detail_seconds": null,
+      "complete": true,
+      "blocked": false,
+      "reason": "complete",
+      "header_processing_complete": true,
+      "candidate_headers": 0,
+      "distinct_candidate_ads": 0,
+      "indexed_ads": 0,
+      "detail_concurrency": 4,
+      "incomplete_companies": [],
+      "name_unusable_companies": 0,
+      "fallback_name_unusable_companies": 4,
+      "forward_name_fallback_scope": "known legal/brand/subunit names; unknown trading names remain a discovery risk",
+      "companies_with_unchecked_candidates": 0,
+      "cap_hits": 0,
+      "lookback_days": 185,
+      "matches_published": 0,
+      "companies_with_ads": 0
+    },
+    "nav_detail_requests": 0,
+    "nav_detail_requests_per_company": 0.0,
+    "timing_markers": {
+      "subunits_complete_seconds": 5.609000000004016,
+      "registry_complete_seconds": 13.781000000002678,
+      "last_detail_seconds": null,
+      "nav_runtime_seconds": 20.234000000004016
+    },
+    "output_bytes": 14073024,
+    "output_bytes_per_company": 140730.24,
+    "output_limit_exceeded": false,
+    "output_limited_companies": [],
+    "profiles_output": {
+      "state": "available",
+      "rows": 100,
+      "bytes": 9595131
+    },
+    "site": {
+      "state": "available",
+      "companies": 100,
+      "input_records": 100,
+      "pages": 102,
+      "total_bytes": 15902495,
+      "largest_profile_data_bytes": 118205,
+      "largest_profile_bytes": 125571
+    },
+    "event_loop": {
+      "heartbeat_interval_ms": 100,
+      "samples": 825,
+      "scope": "whole run after input entry; includes source processing and output generation",
+      "lag_p95_ms": 25.00000000145519,
+      "lag_max_ms": 103.99999999935972,
+      "lag_mean_ms": 8.83757575867507,
+      "gc_collections": 854,
+      "gc_total_ms": 373.0000000068685,
+      "gc_max_ms": 78.00000000133878,
+      "gc_slow_collections": [
+        {
+          "generation": 2,
+          "duration_ms": 78.00000000133878,
+          "main_thread": false
+        }
+      ]
+    },
+    "system_awake_request": {
+      "state": "requested",
+      "display_request": false,
+      "scope": "active batch only; idle sleep request; no persistent setting changes",
+      "restored": true
+    },
+    "wall": {
+      "exit_code": 0,
+      "cache": "empty runtime state; shipped declared NAV index",
+      "paid_search_disabled": true,
+      "seed": 20261015,
+      "wall_seconds": 90.6528699,
+      "source_commit": "cc21602"
+    },
+    "family_coverage": {
+      "identity": {
+        "claims": 2888,
+        "companies": 100
+      },
+      "accounts": {
+        "claims": 2192,
+        "companies": 99
+      },
+      "roles": {
+        "claims": 1192,
+        "companies": 100
+      },
+      "subunits": {
+        "claims": 636,
+        "companies": 75
+      },
+      "website": {
+        "claims": 65,
+        "companies": 7
+      },
+      "hiring": {
+        "claims": 0,
+        "companies": 0
+      },
+      "activity": {
+        "claims": 4,
+        "companies": 1
+      }
+    },
+    "social_companies": 5,
+    "retry_measurement": {
+      "registry_nav_repeated_dispatches": {
+        "data.brreg.no": 2,
+        "pam-stilling-feed.nav.no": 0
+      },
+      "scope": "Repeated exact URL/company dispatches within registry/NAV single logical fetch paths; website candidate fallbacks are not assigned as source retries; HTTP totals include every dispatch",
+      "website_fallback_retry_count": "UNVERIFIED (separate metric not emitted)"
+    }
+  },
+  "artifact_hashes": {
+    "fixed-verification.json": "74b03cad9696710a43bba71fc721e0791ce00d5eeb4bbf646c7b453f97bbe58f",
+    "fresh-tests.log": "ae9674f1aea722a071b65cec9946ae83ed59e9020876021338147aaadf49a587",
+    "fresh-replay.log": "8f3eac21b1202ebbd25400268ad158e99ae15e596f2a94d6c4552f08ec166b12",
+    "live100\\report.json": "fcf127725d3e9fcea2671a548c22883b4c096ee537bcb6ab14d4cc73499e89f1",
+    "live100\\envelopes.jsonl": "e797daa5961714a7dd012e9792be2d91d75574bedbcba76e3b8598e01cd79f62",
+    "final-coverage.json": "6a52958c861faf7b4c39c2cea8938e954320deed4411b992ebd6c1cb073e2aba"
+  },
+  "second_live": {
+    "run_id": "2ce7aacf302443319e6eb6084cabbe9a",
+    "input_rows": 100,
+    "unique_inputs": 100,
+    "emit_duplicates": true,
+    "emitted_envelopes": 100,
+    "duplicates": 0,
+    "invalid_inputs": [],
+    "counts_by_state": {
+      "complete": 100
+    },
+    "counts_by_availability": {
+      "available": 375,
+      "failed": 213,
+      "not_available": 68,
+      "not_applicable": 42,
+      "blocked": 2
+    },
+    "requests": 610,
+    "shared_requests": 7,
+    "amortized_requests_per_company": 6.1,
+    "request_rate_per_second": 1.4282570113370738,
+    "http_429_count": 0,
+    "max_requests_per_company": 9,
+    "runtime_ms": 461937,
+    "company_runtime": {
+      "p50_ms": 277437,
+      "p95_ms": 419156,
+      "max_ms": 428359
+    },
+    "total_cost_usd": 0.0,
+    "cost_per_100_companies_usd": 0.0,
+    "cost_per_official_batch_usd": 0.0,
+    "official_batch_size": 1100,
+    "deadline_hits": 0,
+    "handled_exceptions": 0,
+    "unhandled_exceptions": 0,
+    "changes": 0,
+    "observation_changes": 0,
+    "warnings": [],
+    "limits": {
+      "max_requests": 2000,
+      "max_cost_usd": 0.0,
+      "time_budget_seconds": 600.0,
+      "deadline_fraction": 0.85,
+      "request_timeout": 10.0,
+      "host_concurrency": 10
+    },
+    "schema_validated": true,
+    "membership_validated": true,
+    "request_budget_basis": "20 per unique normalized input",
+    "measured_request_projection": {
+      "baseline": "1000-company retained-features run",
+      "baseline_mean_http": 5.975,
+      "projected_http": 598,
+      "note": "Projection from a measured sample; source pagination/retries and feed changes can differ."
+    },
+    "dns_lookups": 829,
+    "dns_precheck_lookups": 349,
+    "dns_scope": "prechecks, website preflight and pinned-transport connection resolutions",
+    "dns_amortized_per_company": 8.29,
+    "max_dns_requests_per_company": 16,
+    "bulk_snapshot_sha256": null,
+    "llm": {
+      "calls": 0,
+      "cache_hits": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "estimated_usd": 0,
+      "fallbacks": 0
+    },
+    "search": {
+      "status": "not configured",
+      "queries": 0,
+      "estimated_usd": 0.0,
+      "provider": null,
+      "companies_queried": 0,
+      "unit_price_usd": 0.005,
+      "price_note": "verify before use; retries count as billable queries; no free credit assumed",
+      "errors": 0,
+      "cap_skips": 0,
+      "result_domains": 0
+    },
+    "synthesis": {
+      "companies": 100,
+      "sentences": 796,
+      "cited": 796,
+      "dropped_sentences": 0
+    },
+    "input_readable": true,
+    "hiring_prefetch": {
+      "pages": 6,
+      "items": 3739,
+      "bytes": 1847523,
+      "details": 0,
+      "requests": 7,
+      "runtime_ms": 242719,
+      "source_mode": "declared_index",
+      "index_version": "nav-20261014T042640.758720Z-v1",
+      "index_built_at": "2026-10-14T04:26:40.758720Z",
+      "index_age_days": 1.2880438558449074,
+      "index_compressed_bytes": 403768,
+      "index_ads": 9015,
+      "seeded_from_disk": 6791,
+      "fresh_fetched_ads": 2224,
+      "time_cap_seconds": 240.0,
+      "feed_complete": true,
+      "detail_request_cap": 0,
+      "coverage_scope": "declared_orgnr_index_plus_completed_forward_feed_and_live_candidate_details",
+      "feed_runtime_ms": 43484,
+      "failure_cause": "nav_time_cap",
+      "runtime_seconds": 242.71899999999732,
+      "feed_seconds": 43.484,
+      "average_seconds_per_page": 7.247333333333334,
+      "last_detail_seconds": null,
+      "complete": false,
+      "blocked": false,
+      "reason": "detail_unverified",
+      "header_processing_complete": false,
+      "candidate_headers": 0,
+      "distinct_candidate_ads": 0,
+      "indexed_ads": 0,
+      "detail_concurrency": 4,
+      "incomplete_companies": [],
+      "name_unusable_companies": 0,
+      "fallback_name_unusable_companies": 4,
+      "forward_name_fallback_scope": "known legal/brand/subunit names; unknown trading names remain a discovery risk",
+      "companies_with_unchecked_candidates": 0,
+      "cap_hits": 0,
+      "lookback_days": 185,
+      "matches_published": 0,
+      "companies_with_ads": 0
+    },
+    "nav_detail_requests": 0,
+    "nav_detail_requests_per_company": 0.0,
+    "timing_markers": {
+      "subunits_complete_seconds": 157.81200000000536,
+      "registry_complete_seconds": 411.14100000000326,
+      "last_detail_seconds": null,
+      "nav_runtime_seconds": 242.71899999999732
+    },
+    "output_bytes": 13703353,
+    "output_bytes_per_company": 137033.53,
+    "output_limit_exceeded": false,
+    "output_limited_companies": [],
+    "profiles_output": {
+      "state": "available",
+      "rows": 100,
+      "bytes": 9276006
+    },
+    "site": {
+      "state": "available",
+      "companies": 100,
+      "input_records": 100,
+      "pages": 102,
+      "total_bytes": 15911203,
+      "largest_profile_data_bytes": 118818,
+      "largest_profile_bytes": 126823
+    },
+    "event_loop": {
+      "heartbeat_interval_ms": 100,
+      "samples": 726,
+      "scope": "whole run after input entry; includes source processing and output generation",
+      "lag_p95_ms": 2900.000000001455,
+      "lag_max_ms": 10931.000000004133,
+      "lag_mean_ms": 571.6694214889051,
+      "gc_collections": 830,
+      "gc_total_ms": 13847.000000016124,
+      "gc_max_ms": 2155.9999999954016,
+      "gc_slow_collections": [
+        {
+          "generation": 1,
+          "duration_ms": 141.00000000325963,
+          "main_thread": false
+        },
+        {
+          "generation": 0,
+          "duration_ms": 94.0000000045984,
+          "main_thread": false
+        },
+        {
+          "generation": 1,
+          "duration_ms": 141.00000000325963,
+          "main_thread": false
+        },
+        {
+          "generation": 0,
+          "duration_ms": 156.00000000267755,
+          "main_thread": false
+        },
+        {
+          "generation": 0,
+          "duration_ms": 139.99999999941792,
+          "main_thread": false
+        },
+        {
+          "generation": 1,
+          "duration_ms": 703.0000000013388,
+          "main_thread": true
+        },
+        {
+          "generation": 0,
+          "duration_ms": 125.0,
+          "main_thread": true
+        },
+        {
+          "generation": 1,
+          "duration_ms": 125.0,
+          "main_thread": true
+        },
+        {
+          "generation": 2,
+          "duration_ms": 2109.0000000040163,
+          "main_thread": true
+        },
+        {
+          "generation": 1,
+          "duration_ms": 125.0,
+          "main_thread": true
+        },
+        {
+          "generation": 1,
+          "duration_ms": 421.9999999986612,
+          "main_thread": true
+        },
+        {
+          "generation": 0,
+          "duration_ms": 156.00000000267755,
+          "main_thread": false
+        },
+        {
+          "generation": 0,
+          "duration_ms": 110.00000000058208,
+          "main_thread": false
+        },
+        {
+          "generation": 0,
+          "duration_ms": 421.9999999986612,
+          "main_thread": true
+        },
+        {
+          "generation": 0,
+          "duration_ms": 171.00000000209548,
+          "main_thread": true
+        },
+        {
+          "generation": 1,
+          "duration_ms": 391.00000000325963,
+          "main_thread": true
+        },
+        {
+          "generation": 0,
+          "duration_ms": 125.0,
+          "main_thread": false
+        },
+        {
+          "generation": 0,
+          "duration_ms": 171.99999999866122,
+          "main_thread": true
+        },
+        {
+          "generation": 1,
+          "duration_ms": 125.0,
+          "main_thread": false
+        },
+        {
+          "generation": 0,
+          "duration_ms": 156.00000000267755,
+          "main_thread": false
+        },
+        {
+          "generation": 0,
+          "duration_ms": 250.0,
+          "main_thread": false
+        },
+        {
+          "generation": 0,
+          "duration_ms": 93.99999999732245,
+          "main_thread": true
+        },
+        {
+          "generation": 1,
+          "duration_ms": 1046.9999999986612,
+          "main_thread": false
+        },
+        {
+          "generation": 0,
+          "duration_ms": 125.0,
+          "main_thread": true
+        },
+        {
+          "generation": 0,
+          "duration_ms": 125.0,
+          "main_thread": true
+        },
+        {
+          "generation": 0,
+          "duration_ms": 141.00000000325963,
+          "main_thread": true
+        },
+        {
+          "generation": 0,
+          "duration_ms": 139.99999999941792,
+          "main_thread": true
+        },
+        {
+          "generation": 0,
+          "duration_ms": 125.0,
+          "main_thread": false
+        },
+        {
+          "generation": 0,
+          "duration_ms": 155.9999999954016,
+          "main_thread": true
+        },
+        {
+          "generation": 0,
+          "duration_ms": 139.99999999941792,
+          "main_thread": false
+        },
+        {
+          "generation": 0,
+          "duration_ms": 2155.9999999954016,
+          "main_thread": false
+        },
+        {
+          "generation": 1,
+          "duration_ms": 750.0,
+          "main_thread": false
+        },
+        {
+          "generation": 0,
+          "duration_ms": 858.9999999967404,
+          "main_thread": true
+        },
+        {
+          "generation": 0,
+          "duration_ms": 78.00000000133878,
+          "main_thread": true
+        },
+        {
+          "generation": 2,
+          "duration_ms": 110.00000000058208,
+          "main_thread": false
+        },
+        {
+          "generation": 2,
+          "duration_ms": 93.0000000007567,
+          "main_thread": false
+        },
+        {
+          "generation": 0,
+          "duration_ms": 156.00000000267755,
+          "main_thread": false
+        }
+      ]
+    },
+    "system_awake_request": {
+      "state": "requested",
+      "display_request": false,
+      "scope": "active batch only; idle sleep request; no persistent setting changes",
+      "restored": true
+    },
+    "wall": {
+      "exit_code": 0,
+      "cache": "empty runtime state; shipped declared NAV index; live registry identity, no bulk",
+      "paid_search_disabled": true,
+      "seed": 20261015,
+      "wall_seconds": 500.21580509999995,
+      "source_commit": "cc21602"
+    },
+    "verification": {
+      "lines": 100,
+      "schema_valid": true,
+      "published_claims": 6913,
+      "source_blobs_verified": 377,
+      "synthesis_companies": 100,
+      "synthesis_sentences": 796,
+      "synthesis_unverified_values": 0
+    },
+    "stored_source_agreement": {
+      "identity": {
+        "total_published_claims": 2888,
+        "publication_denominator": 2888,
+        "reviewed": 2888,
+        "correct": 2888,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wrong_company": 0,
+        "missing_attribution": 0,
+        "unsupported": 0,
+        "fabricated_zeroes": 0,
+        "precision": 1.0,
+        "precision_denominator": 2888,
+        "verification_rate": 1.0,
+        "verification_rate_denominator": 2888
+      },
+      "accounts": {
+        "total_published_claims": 2192,
+        "publication_denominator": 2192,
+        "reviewed": 2192,
+        "correct": 2192,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wrong_company": 0,
+        "missing_attribution": 0,
+        "unsupported": 0,
+        "fabricated_zeroes": 0,
+        "precision": 1.0,
+        "precision_denominator": 2192,
+        "verification_rate": 1.0,
+        "verification_rate_denominator": 2192
+      },
+      "roles": {
+        "total_published_claims": 1192,
+        "publication_denominator": 1192,
+        "reviewed": 1192,
+        "correct": 1192,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wrong_company": 0,
+        "missing_attribution": 0,
+        "unsupported": 0,
+        "fabricated_zeroes": 0,
+        "precision": 1.0,
+        "precision_denominator": 1192,
+        "verification_rate": 1.0,
+        "verification_rate_denominator": 1192
+      },
+      "subunits": {
+        "total_published_claims": 636,
+        "publication_denominator": 636,
+        "reviewed": 636,
+        "correct": 636,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wrong_company": 0,
+        "missing_attribution": 0,
+        "unsupported": 0,
+        "fabricated_zeroes": 0,
+        "precision": 1.0,
+        "precision_denominator": 636,
+        "verification_rate": 1.0,
+        "verification_rate_denominator": 636
+      },
+      "official_website": {
+        "total_published_claims": 1,
+        "publication_denominator": 1,
+        "reviewed": 1,
+        "correct": 1,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wrong_company": 0,
+        "missing_attribution": 0,
+        "unsupported": 0,
+        "fabricated_zeroes": 0,
+        "precision": 1.0,
+        "precision_denominator": 1,
+        "verification_rate": 1.0,
+        "verification_rate_denominator": 1
+      },
+      "social_profiles": {
+        "total_published_claims": 0,
+        "publication_denominator": 0,
+        "reviewed": 0,
+        "correct": 0,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wrong_company": 0,
+        "missing_attribution": 0,
+        "unsupported": 0,
+        "fabricated_zeroes": 0,
+        "precision": null,
+        "precision_denominator": 0,
+        "verification_rate": null,
+        "verification_rate_denominator": 0
+      },
+      "other_website_claims": {
+        "total_published_claims": 4,
+        "publication_denominator": 4,
+        "reviewed": 4,
+        "correct": 4,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wrong_company": 0,
+        "missing_attribution": 0,
+        "unsupported": 0,
+        "fabricated_zeroes": 0,
+        "precision": 1.0,
+        "precision_denominator": 4,
+        "verification_rate": 1.0,
+        "verification_rate_denominator": 4
+      },
+      "website": {
+        "total_published_claims": 5,
+        "publication_denominator": 5,
+        "reviewed": 5,
+        "correct": 5,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wrong_company": 0,
+        "missing_attribution": 0,
+        "unsupported": 0,
+        "fabricated_zeroes": 0,
+        "precision": 1.0,
+        "precision_denominator": 5,
+        "verification_rate": 1.0,
+        "verification_rate_denominator": 5
+      },
+      "hiring": {
+        "total_published_claims": 0,
+        "publication_denominator": 0,
+        "reviewed": 0,
+        "correct": 0,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wrong_company": 0,
+        "missing_attribution": 0,
+        "unsupported": 0,
+        "fabricated_zeroes": 0,
+        "precision": null,
+        "precision_denominator": 0,
+        "verification_rate": null,
+        "verification_rate_denominator": 0
+      },
+      "activity": {
+        "total_published_claims": 0,
+        "publication_denominator": 0,
+        "reviewed": 0,
+        "correct": 0,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wrong_company": 0,
+        "missing_attribution": 0,
+        "unsupported": 0,
+        "fabricated_zeroes": 0,
+        "precision": null,
+        "precision_denominator": 0,
+        "verification_rate": null,
+        "verification_rate_denominator": 0
+      },
+      "aggregate_all_families": {
+        "total_published_claims": 6913,
+        "publication_denominator": 6913,
+        "reviewed": 6913,
+        "correct": 6913,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wrong_company": 0,
+        "missing_attribution": 0,
+        "unsupported": 0,
+        "fabricated_zeroes": 0,
+        "precision": 1.0,
+        "precision_denominator": 6913,
+        "verification_rate": 1.0,
+        "verification_rate_denominator": 6913
+      }
+    },
+    "structural_integrity": {
+      "total_claims": 7822,
+      "available_claims": 6913,
+      "hash_checks": 11213,
+      "hash_passes": 11213,
+      "hash_failures": 0,
+      "missing_blobs": 0,
+      "span_checks": 11213,
+      "span_passes": 11213,
+      "span_failures": 0,
+      "locator_passes": 11213,
+      "locator_failures": 0,
+      "wrong_orgnr_attribution": 0,
+      "missing_attribution": 0,
+      "by_family": {
+        "identity": 2888,
+        "subunits": 636,
+        "roles": 1192,
+        "accounts": 2192,
+        "website": 5,
+        "official_website": 1,
+        "other_website_claims": 4,
+        "aggregate_all_families": 6913
+      }
+    },
+    "family_coverage": {
+      "identity": {
+        "claims": 2888,
+        "companies": 100
+      },
+      "accounts": {
+        "claims": 2192,
+        "companies": 99
+      },
+      "roles": {
+        "claims": 1192,
+        "companies": 100
+      },
+      "subunits": {
+        "claims": 636,
+        "companies": 75
+      },
+      "website": {
+        "claims": 5,
+        "companies": 1
+      },
+      "hiring": {
+        "claims": 0,
+        "companies": 0
+      },
+      "activity": {
+        "claims": 0,
+        "companies": 0
+      }
+    },
+    "retry_measurement": {
+      "registry_nav_repeated_dispatches": {
+        "data.brreg.no": 21,
+        "pam-stilling-feed.nav.no": 0
+      },
+      "scope": "Repeated exact URL/company dispatches within registry/NAV single logical fetch paths; website candidate fallbacks are not assigned as source retries; HTTP totals include every dispatch",
+      "website_fallback_retry_count": "UNVERIFIED (separate metric not emitted)"
+    }
+  },
+  "coverage_retry": "Stopped after logging two further failures and reaching57%; prior full fresh-clone pass and completed failed coverage run retained; no thresholds changed.",
+  "thousand_live": {
+    "status": "NOT RUN",
+    "reason": "Neither100-company smoke met clean-source completeness gate"
+  },
+  "browser": {
+    "status": "NOT RUN",
+    "reason": "No available browser or app surfaces"
+  },
+  "same_source_comparison": {
+    "baseline": {
+      "source_commit": "0d28df1",
+      "input_records": 5,
+      "unique_available_claims": 29,
+      "official_websites": [
+        [
+          "923609016",
+          {
+            "final_url": "https://zephyrsynthetic.no",
+            "identity_level": "VERIFIED",
+            "proof_type": "orgnr_on_page",
+            "proof_page_url": "https://zephyrsynthetic.no/",
+            "signals": [],
+            "points": 0,
+            "candidate_origin": "registry_website",
+            "relationship_note": "group_site",
+            "other_orgnrs": [
+              "988258229",
+              "999592236"
+            ]
+          }
+        ],
+        [
+          "988258229",
+          {
+            "final_url": "https://quartzsynthetic.no",
+            "identity_level": "VERIFIED",
+            "proof_type": "orgnr_on_page",
+            "proof_page_url": "https://quartzsynthetic.no/",
+            "signals": [],
+            "points": 0,
+            "candidate_origin": "registry_website",
+            "relationship_note": "group_site",
+            "other_orgnrs": [
+              "999592236"
+            ]
+          }
+        ]
+      ],
+      "sibling_contacts": [
+        [
+          "923609016",
+          "contact.email.f9cb578fc17598ee4bd6",
+          "sibling@zephyrsynthetic.no"
+        ]
+      ],
+      "published_jobs": 2,
+      "activity": 1,
+      "runtime_ms": 20234,
+      "requests": 29,
+      "counts_by_state": {
+        "complete": 4,
+        "submission_error": 1
+      }
+    },
+    "candidate": {
+      "source_commit": "cc21602",
+      "input_records": 5,
+      "unique_available_claims": 26,
+      "official_websites": [
+        [
+          "923609016",
+          {
+            "final_url": "https://zephyrsynthetic.no",
+            "identity_level": "VERIFIED",
+            "proof_type": "orgnr_on_page",
+            "proof_page_url": "https://zephyrsynthetic.no/",
+            "signals": [],
+            "points": 0,
+            "candidate_origin": "registry_website",
+            "relationship_note": "group_site",
+            "other_orgnrs": [
+              "988258229",
+              "999592236"
+            ]
+          }
+        ]
+      ],
+      "sibling_contacts": [],
+      "published_jobs": 2,
+      "activity": 1,
+      "runtime_ms": 6297,
+      "requests": 29,
+      "counts_by_state": {
+        "complete": 4,
+        "submission_error": 1
+      }
+    },
+    "scope": "Synthetic recorded-source functional comparison using external candidate harness, unchanged source checkouts, fixed2026-10-15T10:00:00Z, same31fixtures; runtime/request differences affected by observed stalls/timeouts, not a performance benchmark."
+  },
+  "historical_reports": [
+    {
+      "path": "reports\\release-1000-report.json",
+      "sha256": "d2bad0dfe57dff013034f604c8d45fcf2d7302484ac396accb057e4c1b9d1bcc",
+      "metadata": {
+        "seed": 20261018,
+        "companies": 1000,
+        "cache_mode": "fresh empty state; declared shipped NAV index, no copied runtime responses",
+        "commit": "de2f6fa29f8ea80f1cc654460dc0672ca0f155c7",
+        "measured_at": "2026-10-14T06:33:03.155607Z",
+        "coverage_companies": {
+          "legal_identity": 1000,
+          "accounts": 998,
+          "roles": 997,
+          "subunits": 767,
+          "official_website": 47,
+          "social_profiles": 29,
+          "fresh_job_ads": 6,
+          "website_activity": 4,
+          "registry_activity": 114,
+          "public_activity": 118,
+          "website_self_description": 38
+        },
+        "nav": {
+          "pages": 2,
+          "items": 571,
+          "bytes": 322989,
+          "details": 9,
+          "requests": 12,
+          "runtime_ms": 141312,
+          "source_mode": "declared_index",
+          "index_version": "nav-20261014T042640.758720Z-v1",
+          "index_built_at": "2026-10-14T04:26:40.758720Z",
+          "index_age_days": 0.08587537354166666,
+          "index_compressed_bytes": 403768,
+          "index_ads": 9015,
+          "seeded_from_disk": 6791,
+          "fresh_fetched_ads": 2224,
+          "time_cap_seconds": 900,
+          "feed_complete": true,
+          "detail_request_cap": 9,
+          "coverage_scope": "declared_orgnr_index_plus_completed_forward_feed_and_live_candidate_details",
+          "feed_runtime_ms": 2547,
+          "first_detail_seconds": 134.59399999999732,
+          "first_detail_page_number": 2,
+          "details_started_before_feed_complete": false,
+          "detail_requests": 9,
+          "runtime_seconds": 141.31199999999808,
+          "feed_seconds": 2.547,
+          "average_seconds_per_page": 1.2735,
+          "complete": true,
+          "blocked": false,
+          "reason": "complete",
+          "header_processing_complete": true,
+          "candidate_headers": 9,
+          "distinct_candidate_ads": 9,
+          "indexed_ads": 9,
+          "detail_concurrency": 4,
+          "name_unusable_companies": 0,
+          "fallback_name_unusable_companies": 46,
+          "forward_name_fallback_scope": "known legal/brand/subunit names; unknown trading names remain a discovery risk",
+          "companies_with_unchecked_candidates": 0,
+          "cap_hits": 0,
+          "lookback_days": 185,
+          "matches_published": 9,
+          "companies_with_ads": 6,
+          "feed_decoded_body_MB": 0.279161,
+          "hiring_failed_percent": 0.0
+        },
+        "requests": 5074,
+        "dns_lookups": 6809,
+        "runtime_ms": 268875,
+        "total_cost_usd": 0.0,
+        "scope": "Cold empty runtime state with explicitly declared shipped NAV index; all source features and offline site; optional search not configured, no model calls.",
+        "command": "uv run signalpost run --organisations batch.jsonl --bulk registry.csv --output envelopes.jsonl --profiles-output profiles.jsonl --report report.json --site-dir site --websites --hiring --public-activity"
+      }
+    },
+    {
+      "path": "dev-notes\\w5-cold1000-metrics.json",
+      "sha256": "39465e506a4d922f6efac8d30345fd02b2d82b027f2ca0bfd2cb951767ec573e",
+      "metadata": {
+        "seed": 20261018,
+        "companies": 1000,
+        "cache_mode": "fresh empty state; declared shipped NAV index, no copied runtime responses",
+        "commit": "de2f6fa29f8ea80f1cc654460dc0672ca0f155c7",
+        "measured_at": "2026-10-14T06:33:03.155607Z",
+        "coverage_companies": {
+          "legal_identity": 1000,
+          "accounts": 998,
+          "roles": 997,
+          "subunits": 767,
+          "official_website": 47,
+          "social_profiles": 29,
+          "fresh_job_ads": 6,
+          "website_activity": 4,
+          "registry_activity": 114,
+          "public_activity": 118,
+          "website_self_description": 38
+        },
+        "nav": {
+          "pages": 2,
+          "items": 571,
+          "bytes": 322989,
+          "details": 9,
+          "requests": 12,
+          "runtime_ms": 141312,
+          "source_mode": "declared_index",
+          "index_version": "nav-20261014T042640.758720Z-v1",
+          "index_built_at": "2026-10-14T04:26:40.758720Z",
+          "index_age_days": 0.08587537354166666,
+          "index_compressed_bytes": 403768,
+          "index_ads": 9015,
+          "seeded_from_disk": 6791,
+          "fresh_fetched_ads": 2224,
+          "time_cap_seconds": 900,
+          "feed_complete": true,
+          "detail_request_cap": 9,
+          "coverage_scope": "declared_orgnr_index_plus_completed_forward_feed_and_live_candidate_details",
+          "feed_runtime_ms": 2547,
+          "first_detail_seconds": 134.59399999999732,
+          "first_detail_page_number": 2,
+          "details_started_before_feed_complete": false,
+          "detail_requests": 9,
+          "runtime_seconds": 141.31199999999808,
+          "feed_seconds": 2.547,
+          "average_seconds_per_page": 1.2735,
+          "complete": true,
+          "blocked": false,
+          "reason": "complete",
+          "header_processing_complete": true,
+          "candidate_headers": 9,
+          "distinct_candidate_ads": 9,
+          "indexed_ads": 9,
+          "detail_concurrency": 4,
+          "name_unusable_companies": 0,
+          "fallback_name_unusable_companies": 46,
+          "forward_name_fallback_scope": "known legal/brand/subunit names; unknown trading names remain a discovery risk",
+          "companies_with_unchecked_candidates": 0,
+          "cap_hits": 0,
+          "lookback_days": 185,
+          "matches_published": 9,
+          "companies_with_ads": 6,
+          "feed_decoded_body_MB": 0.279161,
+          "hiring_failed_percent": 0.0
+        },
+        "requests": 5074,
+        "dns_lookups": 6809,
+        "runtime_ms": 268875,
+        "total_cost_usd": 0.0
+      }
+    },
+    {
+      "path": "dev-notes\\w5-cold1000-report.json",
+      "sha256": "32e818d78e13c1d1deb215f40eec1a254f6470ff7cb76ec8ad7a8e3903775492",
+      "metadata": {
+        "requests": 5074,
+        "runtime_ms": 268875,
+        "total_cost_usd": 0.0,
+        "dns_lookups": 6809
+      }
+    },
+    {
+      "path": "dev-notes\\w5-opt1000-rev4-metrics.json",
+      "sha256": "9b82286991f87d49e1595ddf6a69739e74894e2742a093ed600d02274639dd6f",
+      "metadata": {
+        "seed": 20261024,
+        "companies": 1000,
+        "cache_mode": "fresh empty state; declared shipped NAV index, no copied runtime responses",
+        "commit": "0d28df1732ab8ce6e0d7e94d336df80f536cf91a",
+        "measured_at": "2026-10-14T14:25:37.827601Z",
+        "coverage_companies": {
+          "legal_identity": 1000,
+          "accounts": 998,
+          "roles": 997,
+          "subunits": 767,
+          "official_website": 47,
+          "social_profiles": 31,
+          "fresh_job_ads": 8,
+          "website_activity": 4,
+          "registry_activity": 114,
+          "public_activity": 118,
+          "website_self_description": 37
+        },
+        "nav": {
+          "pages": 3,
+          "items": 1734,
+          "bytes": 1043326,
+          "details": 24,
+          "requests": 28,
+          "runtime_ms": 584047,
+          "source_mode": "declared_index",
+          "index_version": "nav-20261014T042640.758720Z-v1",
+          "index_built_at": "2026-10-14T04:26:40.758720Z",
+          "index_age_days": 0.4022890355787037,
+          "index_compressed_bytes": 403768,
+          "index_ads": 9015,
+          "seeded_from_disk": 6791,
+          "fresh_fetched_ads": 2224,
+          "time_cap_seconds": 900,
+          "feed_complete": true,
+          "detail_request_cap": 28,
+          "coverage_scope": "declared_orgnr_index_plus_completed_forward_feed_and_live_candidate_details",
+          "first_detail_seconds": 12.343999999997322,
+          "first_detail_page_number": 0,
+          "details_started_before_feed_complete": true,
+          "detail_requests": 24,
+          "last_detail_seconds": 375.89100000000326,
+          "feed_runtime_ms": 8828,
+          "runtime_seconds": 584.0469999999914,
+          "feed_seconds": 8.828,
+          "average_seconds_per_page": 2.9426666666666663,
+          "complete": true,
+          "blocked": false,
+          "reason": "complete",
+          "header_processing_complete": true,
+          "candidate_headers": 18,
+          "distinct_candidate_ads": 18,
+          "indexed_ads": 27,
+          "detail_concurrency": 4,
+          "name_unusable_companies": 0,
+          "fallback_name_unusable_companies": 47,
+          "forward_name_fallback_scope": "known legal/brand/subunit names; unknown trading names remain a discovery risk",
+          "companies_with_unchecked_candidates": 0,
+          "cap_hits": 0,
+          "lookback_days": 185,
+          "matches_published": 16,
+          "companies_with_ads": 8,
+          "feed_decoded_body_MB": 0.850442,
+          "hiring_failed_percent": 0.0
+        },
+        "requests": 7319,
+        "dns_lookups": 12205,
+        "runtime_ms": 1328094,
+        "total_cost_usd": 3.015
+      }
+    },
+    {
+      "path": "dev-notes\\w5-opt1000-rev4-report.json",
+      "sha256": "a4b822604038b419f162c7d6f21e4d501aa9f8587a4a108e50ecd7a4c9e07054",
+      "metadata": {
+        "requests": 7319,
+        "runtime_ms": 1328094,
+        "total_cost_usd": 3.015,
+        "dns_lookups": 12205
+      }
+    }
+  ],
+  "artifact_scan": {
+    "credential_scan": "zero regex matches; source/scripts/docs/tests extension scope",
+    "tracked_env_files": [
+      ".env.example"
+    ],
+    "untracked_generated_outputs": "ignored under out/ and state/",
+    "note": "No claim of exhaustive secret detection"
+  }
+}
