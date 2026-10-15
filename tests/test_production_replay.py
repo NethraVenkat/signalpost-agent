@@ -273,6 +273,7 @@ def test_redirects_and_location_header_preserved(tmp_path):
             headers={"location": "https://example.no/new-page"},
             content=b"",
             metadata_complete=True,
+            repeatable=True,
         ),
         RecordedFixture(
             url="https://example.no/new-page",
@@ -281,6 +282,7 @@ def test_redirects_and_location_header_preserved(tmp_path):
             headers={"content-type": "text/html"},
             content=b"<html><body>New Page</body></html>",
             metadata_complete=True,
+            repeatable=True,
         )
     ]
     transport = RecordedResponseTransport(blobs_dir, fixtures)
@@ -327,3 +329,254 @@ def test_production_replay_exits_nonzero_on_missing_fixture(tmp_path):
         ))
 
     assert "missing fixture" in str(exc_info.value).lower()
+
+
+def test_replay_single_fixture_body_mismatch_fails_closed(tmp_path):
+    """Proves single fixture with request_body requirement fails closed on mismatched request body."""
+    blobs_dir = tmp_path / "blobs"
+    blobs_dir.mkdir(parents=True)
+
+    fixtures = [
+        RecordedFixture(
+            url="https://example.no/api/query",
+            method="POST",
+            request_body=b'{"org": "999592236"}',
+            status_code=200,
+            content=b'{"result": "success"}',
+            metadata_complete=True,
+        )
+    ]
+    transport = RecordedResponseTransport(blobs_dir, fixtures)
+
+    async def check():
+        async with httpx.AsyncClient(transport=transport) as client:
+            # 1. Mismatched body fails closed (never falls back)
+            r_bad = await client.post("https://example.no/api/query", content=b'{"org": "888888888"}')
+            assert r_bad.status_code in (400, 404)
+            assert len(transport.mismatched_fixtures) > 0
+
+            # 2. Matching body succeeds
+            r_ok = await client.post("https://example.no/api/query", content=b'{"org": "999592236"}')
+            assert r_ok.status_code == 200
+
+    asyncio.run(check())
+
+
+def test_replay_multiple_fixture_body_mismatch_fails_closed(tmp_path):
+    """Proves multiple body-specific fixtures reject unrecorded request body without fallback."""
+    blobs_dir = tmp_path / "blobs"
+    blobs_dir.mkdir(parents=True)
+
+    fixtures = [
+        RecordedFixture(
+            url="https://example.no/api/search",
+            method="POST",
+            request_body=b'{"query": "alpha"}',
+            status_code=200,
+            content=b'{"results": ["alpha"]}',
+            metadata_complete=True,
+        ),
+        RecordedFixture(
+            url="https://example.no/api/search",
+            method="POST",
+            request_body=b'{"query": "beta"}',
+            status_code=200,
+            content=b'{"results": ["beta"]}',
+            metadata_complete=True,
+        )
+    ]
+    transport = RecordedResponseTransport(blobs_dir, fixtures)
+
+    async def check():
+        async with httpx.AsyncClient(transport=transport) as client:
+            r_gamma = await client.post("https://example.no/api/search", content=b'{"query": "gamma"}')
+            assert r_gamma.status_code in (400, 404)
+            assert len(transport.mismatched_fixtures) > 0
+
+    asyncio.run(check())
+
+
+def test_replay_empty_body_distinction(tmp_path):
+    """Proves explicit empty body (b'') is distinguished from unspecified body (None)."""
+    blobs_dir = tmp_path / "blobs"
+    blobs_dir.mkdir(parents=True)
+
+    fixtures = [
+        # Explicit empty body
+        RecordedFixture(
+            url="https://example.no/api/empty-only",
+            method="POST",
+            request_body=b"",
+            status_code=200,
+            content=b"ok",
+            metadata_complete=True,
+            repeatable=True,
+        ),
+        # Unspecified body (matches any)
+        RecordedFixture(
+            url="https://example.no/api/any-body",
+            method="POST",
+            request_body=None,
+            status_code=200,
+            content=b"any_ok",
+            metadata_complete=True,
+            repeatable=True,
+        )
+    ]
+    transport = RecordedResponseTransport(blobs_dir, fixtures)
+
+    async def check():
+        async with httpx.AsyncClient(transport=transport) as client:
+            # 1. Empty body to empty-only succeeds
+            r1 = await client.post("https://example.no/api/empty-only", content=b"")
+            assert r1.status_code == 200
+
+            # 2. Non-empty body to empty-only fails closed
+            r2 = await client.post("https://example.no/api/empty-only", content=b"payload")
+            assert r2.status_code in (400, 404)
+
+            # 3. Any body to any-body succeeds
+            r3 = await client.post("https://example.no/api/any-body", content=b"payload")
+            assert r3.status_code == 200
+
+    asyncio.run(check())
+
+
+def test_replay_sequence_429_followed_by_200(tmp_path):
+    """Proves sequential interactions: 429 rate limit followed by 200 success."""
+    blobs_dir = tmp_path / "blobs"
+    blobs_dir.mkdir(parents=True)
+
+    fixtures = [
+        RecordedFixture(
+            url="https://example.no/api/stream",
+            method="GET",
+            status_code=429,
+            headers={"retry-after": "1"},
+            content=b"rate limited",
+            metadata_complete=True,
+        ),
+        RecordedFixture(
+            url="https://example.no/api/stream",
+            method="GET",
+            status_code=200,
+            content=b"stream data",
+            metadata_complete=True,
+        )
+    ]
+    transport = RecordedResponseTransport(blobs_dir, fixtures)
+
+    async def check():
+        async with httpx.AsyncClient(transport=transport) as client:
+            r1 = await client.get("https://example.no/api/stream")
+            assert r1.status_code == 429
+
+            r2 = await client.get("https://example.no/api/stream")
+            assert r2.status_code == 200
+            assert r2.content == b"stream data"
+
+    asyncio.run(check())
+
+
+def test_replay_exhausted_sequence_fails_closed(tmp_path):
+    """Proves exhausting a response sequence fails closed with exhausted_sequence error."""
+    blobs_dir = tmp_path / "blobs"
+    blobs_dir.mkdir(parents=True)
+
+    fixtures = [
+        RecordedFixture(
+            url="https://example.no/api/once",
+            method="GET",
+            status_code=200,
+            content=b"single use",
+            metadata_complete=True,
+            repeatable=False,
+        )
+    ]
+    transport = RecordedResponseTransport(blobs_dir, fixtures)
+
+    async def check():
+        async with httpx.AsyncClient(transport=transport) as client:
+            r1 = await client.get("https://example.no/api/once")
+            assert r1.status_code == 200
+
+            # Second call must NOT silently repeat; must fail closed
+            r2 = await client.get("https://example.no/api/once")
+            assert r2.status_code == 404
+            assert len(transport.exhausted_fixtures) > 0
+
+    asyncio.run(check())
+
+
+def test_replay_repeatable_fixture_reusable(tmp_path):
+    """Proves explicit repeatable=True fixtures can be reused without exhaustion."""
+    blobs_dir = tmp_path / "blobs"
+    blobs_dir.mkdir(parents=True)
+
+    fixtures = [
+        RecordedFixture(
+            url="https://example.no/robots.txt",
+            method="GET",
+            status_code=200,
+            content=b"User-agent: *\nAllow: /",
+            metadata_complete=True,
+            repeatable=True,
+        )
+    ]
+    transport = RecordedResponseTransport(blobs_dir, fixtures)
+
+    async def check():
+        async with httpx.AsyncClient(transport=transport) as client:
+            for _ in range(5):
+                r = await client.get("https://example.no/robots.txt")
+                assert r.status_code == 200
+            assert len(transport.exhausted_fixtures) == 0
+
+    asyncio.run(check())
+
+
+def test_replay_concurrent_requests_no_duplicate_consumption(tmp_path):
+    """Proves concurrent requests to sequential fixtures consume items safely without race conditions."""
+    blobs_dir = tmp_path / "blobs"
+    blobs_dir.mkdir(parents=True)
+
+    fixtures = [
+        RecordedFixture(url="https://example.no/seq", method="GET", status_code=200, content=f"item_{i}".encode(), metadata_complete=True)
+        for i in range(10)
+    ]
+    transport = RecordedResponseTransport(blobs_dir, fixtures)
+
+    async def check():
+        async with httpx.AsyncClient(transport=transport) as client:
+            tasks = [client.get("https://example.no/seq") for _ in range(10)]
+            responses = await asyncio.gather(*tasks)
+            assert all(r.status_code == 200 for r in responses)
+            contents = {r.content.decode() for r in responses}
+            assert len(contents) == 10  # Each consumed exactly once!
+
+    asyncio.run(check())
+
+
+def test_replay_strict_mode_fails_on_incomplete_metadata(tmp_path):
+    """Proves strict mode exits nonzero when required fixtures have incomplete metadata."""
+    blobs_dir = tmp_path / "blobs"
+    blobs_dir.mkdir(parents=True)
+
+    fixtures = [
+        RecordedFixture(
+            url="https://example.no/api/incomplete",
+            method="GET",
+            content=b"data",
+            metadata_complete=False,  # Historical extraction without full HTTP status/headers
+        )
+    ]
+    transport = RecordedResponseTransport(blobs_dir, fixtures, strict=True)
+
+    async def check():
+        async with httpx.AsyncClient(transport=transport) as client:
+            r = await client.get("https://example.no/api/incomplete")
+            # In strict mode, accessing incomplete record must trigger failure
+            assert transport.incomplete_records
+            assert transport.has_failures()
+
+    asyncio.run(check())
