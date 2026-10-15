@@ -199,6 +199,14 @@ def score(page, org, context, origin, leaders):
     all_ids = visible | meta | json_ids
     others = sorted(all_ids - {org})
     if org in all_ids:
+        # A listed partner/customer is not the operator of the page. Exact
+        # identifiers in directory text need an independent entity card or
+        # structured owner identifier before they can establish ownership.
+        if len(others) < 2 and org not in json_ids and re.search(
+            r'\b(?:our\s+partners|our\s+clients|our\s+customers|directory|våre\s+partnere|våre\s+kunder)\b',
+            page.visible, re.I,
+        ) and not is_dedicated_entity_card(page.raw, org, context.get('name', '')):
+            return Proof("REJECT", other_orgnrs=others, reason="partner_directory_mention")
         if len(others) >= 2 and org not in json_ids:
             # Multi-entity group site check: requires registry-origin domain and dedicated entity card
             is_valid_group = False

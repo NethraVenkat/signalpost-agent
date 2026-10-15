@@ -21,6 +21,9 @@ import json
 import logging
 from pathlib import Path
 import sys
+from contextlib import ExitStack
+from datetime import datetime, timezone
+from unittest.mock import patch
 from urllib.parse import urlparse
 import httpx
 
@@ -351,6 +354,7 @@ async def run_production_replay(
     public_activity: bool = False,
     workers: int = 4,
     mode: str = "strict",
+    observation_time: str | None = None,
 ) -> dict:
     """Executes the actual Signalpost production runner using the offline recorded transport."""
     blobs_dir = fixtures_dir or (state_dir / "blobs")
@@ -381,11 +385,39 @@ async def run_production_replay(
         workers=workers,
         time_budget_seconds=120,
         website_politeness_seconds=1,
+        nav_index_path=state_dir / "no-live-discovery-index.json.gz",
     )
 
     transport = RecordedResponseTransport(blobs_dir=blobs_dir, fixture_map=fixtures, strict=is_strict)
-    async with httpx.AsyncClient(transport=transport, trust_env=False) as client:
-        report = await runner_run(config, client=client)
+    # HTTP replay must not depend on live DNS or wall-clock ad expiry. Only
+    # explicitly declared fixture hosts receive a synthetic public address.
+    hosts = {urlparse(url).hostname for _, url in transport.fixtures}
+    async def fixture_dns(host, port=443):
+        from signalpost.budget import SourceFailure
+        if host not in hosts:
+            raise SourceFailure("no_such_domain")
+        return ["93.184.216.34"]
+
+    with ExitStack() as stack:
+        stack.enter_context(patch("signalpost.web.policy.resolve_public", fixture_dns))
+        if observation_time:
+            at = datetime.fromisoformat(observation_time.replace("Z", "+00:00"))
+            if at.tzinfo is None:
+                raise ValueError("observation_time requires a timezone")
+            at = at.astimezone(timezone.utc)
+            class ReplayDateTime(datetime):
+                @classmethod
+                def now(cls, tz=None):
+                    return at.astimezone(tz) if tz else at.replace(tzinfo=None)
+            # Patch imported clock references only inside this offline command.
+            for module in list(sys.modules.values()):
+                if getattr(module, "__name__", "").startswith("signalpost."):
+                    if getattr(module, "utc_now", None):
+                        stack.enter_context(patch.object(module, "utc_now", lambda: at.isoformat().replace("+00:00", "Z")))
+                    if getattr(module, "datetime", None) is datetime:
+                        stack.enter_context(patch.object(module, "datetime", ReplayDateTime))
+        async with httpx.AsyncClient(transport=transport, trust_env=False) as client:
+            report = await runner_run(config, client=client)
 
     if transport.has_failures():
         reasons = []
@@ -431,6 +463,7 @@ def main():
     parser.add_argument("--hiring", action="store_true", default=False)
     parser.add_argument("--public-activity", action="store_true", default=False)
     parser.add_argument("--workers", type=int, default=4)
+    parser.add_argument("--observation-time", help="Fixed timezone-aware observation time for offline replay")
     args = parser.parse_args()
 
     try:
@@ -448,6 +481,7 @@ def main():
             public_activity=args.public_activity,
             workers=args.workers,
             mode=args.mode,
+            observation_time=args.observation_time,
         ))
     except ReplayFixtureError as exc:
         print(f"ERROR: {exc}", file=sys.stderr)

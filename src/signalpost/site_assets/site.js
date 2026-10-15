@@ -230,7 +230,8 @@
   // Theme toggle
   const themeToggle = document.getElementById('theme-toggle');
   if(themeToggle) {
-    const savedTheme = localStorage.getItem('signalpost_theme');
+    let savedTheme = null;
+    try { savedTheme = localStorage.getItem('signalpost_theme'); } catch {}
     const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     const currentTheme = savedTheme || (prefersDark ? 'dark' : 'light');
     document.documentElement.dataset.theme = currentTheme;
@@ -238,7 +239,7 @@
     themeToggle.addEventListener('click', () => {
       const nextTheme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
       document.documentElement.dataset.theme = nextTheme;
-      localStorage.setItem('signalpost_theme', nextTheme);
+      try { localStorage.setItem('signalpost_theme', nextTheme); } catch {}
       themeToggle.textContent = nextTheme === 'dark' ? '☀️ Light' : '🌙 Dark';
     });
   }
