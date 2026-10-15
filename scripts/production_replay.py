@@ -40,25 +40,16 @@ class RecordedResponseTransport(httpx.AsyncBaseTransport):
     Offline HTTP transport that resolves requests strictly against saved blobs
     and declared fixture mappings. Never performs outbound live network I/O.
     """
-    def __init__(self, blobs_dir: Path, fixture_map: dict[str, str], default_robots: str = "User-agent: *\nAllow: /\n"):
+    def __init__(self, blobs_dir: Path, fixture_map: dict[str, str]):
         self.blobs_dir = blobs_dir
         self.fixture_map = fixture_map
-        self.default_robots = default_robots.encode("utf-8")
         self.request_log = []
+        self.unexpected_requests = []
 
     async def handle_async_request(self, request: httpx.Request) -> httpx.Response:
         url_str = str(request.url)
         norm_url = normalize_url(url_str)
         self.request_log.append((request.method, url_str))
-
-        # 1. Standard permissive robots.txt for offline testing
-        if request.url.path == "/robots.txt":
-            return httpx.Response(
-                200,
-                content=self.default_robots,
-                headers={"content-type": "text/plain; charset=utf-8"},
-                request=request
-            )
 
         # 2. Check fixture mapping
         sha = self.fixture_map.get(url_str) or self.fixture_map.get(norm_url)
@@ -95,7 +86,8 @@ class RecordedResponseTransport(httpx.AsyncBaseTransport):
             if "/regnskapsregisteret" in url_str:
                 return httpx.Response(200, content=b"[]", headers={"content-type": "application/json"}, request=request)
 
-        # 4. Return offline not found
+        # 4. Fail closed on unexpected requests (no fabricated responses)
+        self.unexpected_requests.append(url_str)
         return httpx.Response(
             404,
             content=f"Offline recorded fixture not found for URL: {url_str}".encode("utf-8"),

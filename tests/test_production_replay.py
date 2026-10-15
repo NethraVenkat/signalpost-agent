@@ -18,15 +18,21 @@ def test_recorded_response_transport_serves_blobs(tmp_path):
     blob_sha = "abcd1234abcd1234abcd1234abcd1234abcd1234abcd1234abcd1234abcd1234"
     (blobs_dir / blob_sha).write_text(json.dumps({"organisasjonsnummer": "999592236", "navn": "TEST AS"}), encoding="utf-8")
 
-    fixture_map = {"https://data.brreg.no/enhetsregisteret/api/enheter/999592236": blob_sha}
+    robots_sha = "bbbb1234abcd1234abcd1234abcd1234abcd1234abcd1234abcd1234abcd1234"
+    (blobs_dir / robots_sha).write_text("User-agent: *\nDisallow: /admin\n", encoding="utf-8")
+
+    fixture_map = {
+        "https://data.brreg.no/enhetsregisteret/api/enheter/999592236": blob_sha,
+        "https://example.no/robots.txt": robots_sha,
+    }
     transport = RecordedResponseTransport(blobs_dir, fixture_map)
 
     async def check():
         async with httpx.AsyncClient(transport=transport) as client:
-            # 1. Robots.txt
+            # 1. Recorded Robots.txt served faithfully
             r_robots = await client.get("https://example.no/robots.txt")
             assert r_robots.status_code == 200
-            assert "User-agent: *" in r_robots.text
+            assert "Disallow: /admin" in r_robots.text
 
             # 2. Known fixture
             r_fixture = await client.get("https://data.brreg.no/enhetsregisteret/api/enheter/999592236")
@@ -34,9 +40,10 @@ def test_recorded_response_transport_serves_blobs(tmp_path):
             data = r_fixture.json()
             assert data["navn"] == "TEST AS"
 
-            # 3. Unknown URL
+            # 3. Unknown URL / unrecorded robots.txt fails closed
             r_unknown = await client.get("https://evil.test/unrecorded")
             assert r_unknown.status_code == 404
+            assert "https://evil.test/unrecorded" in transport.unexpected_requests
 
     asyncio.run(check())
 

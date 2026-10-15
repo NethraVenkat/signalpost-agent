@@ -133,3 +133,124 @@ def test_activity_xml_fallbacks_and_malformed():
     with pytest.raises(ValueError, match="XML declarations refused"):
         parse(dtd_xml, base_url, now)
 
+
+def test_public_brand_extraction_filters_orgnr_and_legal_matches():
+    from signalpost.web.collector import publish_result
+    from signalpost.web.html import Page
+    from signalpost.sources.extract import Section
+    from types import SimpleNamespace
+
+    def make_choice(url, html_bytes, page_obj):
+        resp = SimpleNamespace(url=url, body=html_bytes, sha="0"*64, retrieved_at="2026-10-15T00:00:00Z")
+        cand = SimpleNamespace(origin="nom", subunit_orgnr=None)
+        proof = SimpleNamespace(level="HIGH", token="Velkommen", proof_type="signals", signals=[], points=100, other_orgnrs=[])
+        return (cand, proof, resp, page_obj, [(resp, page_obj)])
+
+    # Case 1: Org nr suffix and legal name match (A&A REGNSKAP AS)
+    html1 = b"""<!DOCTYPE html><html><head>
+    <title>A&amp;A REGNSKAP AS - Org. nr. : 936494285</title>
+    <meta property="og:site_name" content="A&amp;A REGNSKAP AS - Org. nr.  : 936494285">
+    </head><body><p>Velkommen til oss</p></body></html>"""
+    page1 = Page(html1, "https://aandaregnskap.no/")
+    section1 = Section("website")
+    envelope1 = SimpleNamespace(claims=[], evidence=[], run=SimpleNamespace(refresh={}))
+    http_mock = SimpleNamespace(accepted_pages={}, attempts={})
+    publish_result(
+        "936494285", envelope1, http_mock, section1,
+        choices=[make_choice("https://aandaregnskap.no/", html1, page1)],
+        attempts=[], context={"name": "A&A REGNSKAP AS"},
+    )
+    # Brand matching legal name must be withheld
+    brand_claims1 = [c for c in section1.claims if c.field == "public_brand"]
+    assert len(brand_claims1) == 0
+
+    # Case 2: Storefront tagline title structure (Sealine Products AS)
+    html2 = b"""<!DOCTYPE html><html><head>
+    <title>Nettbutikk For Fiskeutstyr og B&aring;tutstyr - Sealine Products</title>
+    <meta property="og:sitename" content="Sealine Products AS - Nettbutikk">
+    </head><body><p>Velkommen til butikken</p></body></html>"""
+    page2 = Page(html2, "https://sealine-products.no/")
+    section2 = Section("website")
+    envelope2 = SimpleNamespace(claims=[], evidence=[], run=SimpleNamespace(refresh={}))
+    publish_result(
+        "881238292", envelope2, http_mock, section2,
+        choices=[make_choice("https://sealine-products.no/", html2, page2)],
+        attempts=[], context={"name": "SEALINE PRODUCTS AS"},
+    )
+    brand_claims2 = [c for c in section2.claims if c.field == "public_brand"]
+    assert len(brand_claims2) == 0
+
+    # Case 3: Genuine distinct public brand (Fastcharge by Hafslund for FASTCHARGE AS)
+    html3 = b"""<!DOCTYPE html><html><head>
+    <title>Fastcharge by Hafslund | Ladel\xc3\xb8sninger for bedrifter</title>
+    <meta property="og:site_name" content="Fastcharge by Hafslund">
+    </head><body><p>Velkommen til Fastcharge by Hafslund.</p></body></html>"""
+    page3 = Page(html3, "https://fastcharge.no/")
+    section3 = Section("website")
+    envelope3 = SimpleNamespace(claims=[], evidence=[], run=SimpleNamespace(refresh={}))
+    publish_result(
+        "928807908", envelope3, http_mock, section3,
+        choices=[make_choice("https://fastcharge.no/", html3, page3)],
+        attempts=[], context={"name": "FASTCHARGE AS"},
+    )
+    brand_claims3 = [c for c in section3.claims if c.field == "public_brand"]
+    assert len(brand_claims3) == 1
+    assert brand_claims3[0].value == "Fastcharge by Hafslund"
+
+
+def test_descriptions_filters_legal_pages_forms_and_address_blocks():
+    import hashlib
+    from signalpost.web.descriptions import extract
+    from signalpost.web.html import Page
+    from signalpost.sources.extract import Section
+    from types import SimpleNamespace
+
+    proof_claim = SimpleNamespace(
+        id="proof_123",
+        field="official_website",
+        value={"identity_level": "VERIFIED"},
+        availability="available",
+        confidence=1.0,
+        evidence_ids=["ev1"],
+    )
+
+    # 1. Terms & Conditions page must be skipped entirely
+    html_terms = b"""<html><head>
+    <meta name="description" content="Formelle vilk\xc3\xa5r for bruk av nettsiden Galleri M.">
+    </head><body><p>Disse vilk\xc3\xa5rene gjelder kj\xc3\xb8p.</p></body></html>"""
+    page_terms = Page(html_terms, "https://gallerim.no/om-galleri-m/vilkar-og-betingelser/")
+    resp_terms = SimpleNamespace(url="https://gallerim.no/om-galleri-m/vilkar-og-betingelser/", body=html_terms, sha=hashlib.sha256(html_terms).hexdigest(), retrieved_at="2026-10-15T00:00:00Z")
+
+    sec1 = Section("website")
+    extract(sec1, "912134784", proof_claim, [(resp_terms, page_terms)])
+    assert len(sec1.claims) == 0
+
+    # 2. Short contact form title must be skipped
+    html_form = b"""<html><head>
+    <meta name="description" content="Kontakt Oss Sp\xc3\xb8rreskjema">
+    <meta property="og:description" content="Kontakt Oss Sp\xc3\xb8rreskjema">
+    </head><body><h1>Kontakt oss</h1></body></html>"""
+    page_form = Page(html_form, "https://aktivit.no/kontakt-oss/")
+    resp_form = SimpleNamespace(url="https://aktivit.no/kontakt-oss/", body=html_form, sha=hashlib.sha256(html_form).hexdigest(), retrieved_at="2026-10-15T00:00:00Z")
+
+    sec2 = Section("website")
+    extract(sec2, "994813560", proof_claim, [(resp_form, page_form)])
+    assert len(sec2.claims) == 0
+
+    # 3. Address paragraph skipped in favor of real about prose
+    html_about = b"""<html><head>
+    <meta name="description" content="BoilerTECH er en ledende spesialist p\xc3\xa5 industrielle kjeler i Norge.">
+    </head><body>
+    <p>Lasta 50<br />4405 Flekkefjord</p>
+    <p>+47 383 752 00</p>
+    <p>BoilerTECH AS er et selskap med solid kompetanse og ti\xc3\xa5r av erfaring innen industrielle dampkjeler.</p>
+    </body></html>"""
+    page_about = Page(html_about, "https://boilertech.no/om-oss")
+    resp_about = SimpleNamespace(url="https://boilertech.no/om-oss", body=html_about, sha=hashlib.sha256(html_about).hexdigest(), retrieved_at="2026-10-15T00:00:00Z")
+
+    sec3 = Section("website")
+    extract(sec3, "917803498", proof_claim, [(resp_about, page_about)])
+    about_claims = [c for c in sec3.claims if "about_paragraph" in c.field]
+    assert len(about_claims) == 1
+    assert "BoilerTECH AS er et selskap" in about_claims[0].value["text"]
+    assert "Lasta 50" not in about_claims[0].value["text"]
