@@ -23,7 +23,7 @@ from urllib.parse import urlparse
 
 from signalpost.web.html import Page, json_values
 from signalpost.web.candidates import legal_name
-from signalpost.web.proof import phone, orgnrs, is_dedicated_entity_card
+from signalpost.web.proof import phone, orgnrs, is_dedicated_entity_card, extract_entity_cards, find_containing_card
 
 # Known directory and aggregator domains that cannot serve as company official websites
 DIRECTORY_DOMAINS = {
@@ -763,7 +763,9 @@ def audit_website_claim(
     return "UNVERIFIABLE", f"Unknown website proof type: {ptype}", None
 
 
-def audit_website_metadata_claim(org: str, claim: dict, ev: dict, body: str) -> tuple[str, str, any]:
+def audit_website_metadata_claim(
+    org: str, claim: dict, ev: dict, body: str, website_claim: dict = None, context: dict = None
+) -> tuple[str, str, any]:
     """Category B: Validates contact/metadata claim value against verified company page body."""
     if not body:
         return "UNVERIFIABLE", "Stored page body unavailable", None
@@ -778,19 +780,71 @@ def audit_website_metadata_claim(org: str, claim: dict, ev: dict, body: str) -> 
     norm_val = html.unescape(html.unescape(val_str)).lower()
     norm_body = html.unescape(html.unescape(body)).lower()
 
+    web_val = website_claim.get("value", {}) if isinstance(website_claim, dict) else {}
+    is_group = (web_val.get("relationship_note") == "group_site") or bool(web_val.get("other_orgnrs"))
+    other_orgnrs = set(web_val.get("other_orgnrs", []))
+
     if fld.startswith("contact.email"):
-        if norm_val in norm_body or val_str.lower() in body.lower():
-            return "CORRECT", f"Contact email '{val_str}' verified in page body", val_str
-        return "INCORRECT", f"Contact email '{val_str}' not found in page body", None
+        if norm_val not in norm_body and val_str.lower() not in body.lower():
+            return "INCORRECT", f"Contact '{val_str}' not found in page body", None
+
+        if is_group:
+            cards = extract_entity_cards(body)
+            m = re.search(re.escape(val_str), body, re.IGNORECASE)
+            if not m:
+                return "INCORRECT", f"Contact '{val_str}' not found in page body", None
+            pos = m.start()
+            c = find_containing_card(cards, pos)
+            if c:
+                if c.is_sibling(org, other_orgnrs):
+                    return "INCORRECT", f"Contact '{val_str}' belongs to sibling entity in dedicated card, not subject {org}", None
+                if c.matches_org(org, context):
+                    return "CORRECT", f"Contact '{val_str}' verified in entity card for {org}", val_str
+                return "INCORRECT", f"Contact '{val_str}' belongs to sibling entity in dedicated card, not subject {org}", None
+            else:
+                return "INCORRECT", f"Contact '{val_str}' on group site lacks entity-specific attribution linking to subject {org}", None
+
+        return "CORRECT", f"Contact email '{val_str}' verified in page body", val_str
 
     if fld.startswith("contact.phone"):
         norm_phone = phone(val_str)
-        page_phones = {phone(m.group()) for m in re.finditer(r"(?:\+47|0047|\b)[ .()0-9-]{8,20}\b", body)}
+        phone_matches = []
+        for m in re.finditer(r"(?:\+47|0047|\b)[ .()0-9-]{8,20}\b", body):
+            p = phone(m.group())
+            if p:
+                phone_matches.append((p, m.start()))
+        for m in re.finditer(r'href=[\'"]tel:([^\'"]+)[\'"]', body, re.I):
+            p = phone(m.group(1))
+            if p:
+                phone_matches.append((p, m.start()))
+        page_phones = {p for p, _ in phone_matches}
+
+        matched_pos = None
         if norm_phone and norm_phone in page_phones:
-            return "CORRECT", f"Contact phone '{val_str}' verified in page body", val_str
-        if norm_val in norm_body or val_str in body:
-            return "CORRECT", f"Contact phone '{val_str}' verified verbatim in page body", val_str
-        return "INCORRECT", f"Contact phone '{val_str}' not found in page body", None
+            matched_pos = next((pos for p, pos in phone_matches if p == norm_phone), None)
+        elif norm_val in norm_body or val_str in body:
+            matched_pos = body.find(val_str) if val_str in body else None
+        else:
+            return "INCORRECT", f"Contact phone '{val_str}' not found in page body", None
+
+        if is_group:
+            cards = extract_entity_cards(body)
+            if matched_pos is not None:
+                c = find_containing_card(cards, matched_pos)
+                if c:
+                    if c.is_sibling(org, other_orgnrs):
+                        return "INCORRECT", f"Contact phone '{val_str}' belongs to sibling entity in dedicated card, not subject {org}", None
+                    if c.matches_org(org, context):
+                        return "CORRECT", f"Contact phone '{val_str}' verified in entity card for {org}", val_str
+                    return "INCORRECT", f"Contact phone '{val_str}' belongs to sibling entity in dedicated card, not subject {org}", None
+                else:
+                    return "INCORRECT", f"Contact phone '{val_str}' on group site lacks entity-specific attribution linking to subject {org}", None
+
+        return "CORRECT", f"Contact phone '{val_str}' verified in page body", val_str
+
+    if fld.startswith("company_scale.") or "customer_count" in fld:
+        if is_group:
+            return "INCORRECT", f"Group-wide metrics cannot be published as subsidiary statistics: {val_str}", None
 
     if fld == "public_brand":
         if norm_val in norm_body or val_str.lower() in body.lower():
@@ -818,7 +872,9 @@ def audit_website_metadata_claim(org: str, claim: dict, ev: dict, body: str) -> 
     return "UNVERIFIABLE", f"No semantic validator for website metadata field {fld}", None
 
 
-def audit_social_claim(org: str, claim: dict, ev: dict, body: str) -> tuple[str, str, any]:
+def audit_social_claim(
+    org: str, claim: dict, ev: dict, body: str, website_claim: dict = None, context: dict = None
+) -> tuple[str, str, any]:
     """Category B: Validates that company social URL exists in verified company page."""
     val = claim.get("value")
     s_url = val.get("url") if isinstance(val, dict) else str(val)
@@ -834,6 +890,22 @@ def audit_social_claim(org: str, claim: dict, ev: dict, body: str) -> tuple[str,
 
     claimed_host = parsed.netloc.lower().replace("www.", "")
     claimed_path = path_part.lower()
+
+    web_val = website_claim.get("value", {}) if isinstance(website_claim, dict) else {}
+    is_group = (web_val.get("relationship_note") == "group_site") or bool(web_val.get("other_orgnrs"))
+    other_orgnrs = set(web_val.get("other_orgnrs", []))
+
+    if is_group:
+        legal_nm = (context or {}).get("name", "").lower()
+        if any(term in claimed_path for term in ("group", "holding", "gruppe")) and not any(term in legal_nm for term in ("group", "holding", "gruppe")):
+            return "INCORRECT", f"Social URL '{s_url}' belongs to parent/group entity, not subsidiary {org}", s_url
+        cards = extract_entity_cards(body)
+        m = re.search(re.escape(s_url), body, re.IGNORECASE)
+        if m:
+            pos = m.start()
+            c = find_containing_card(cards, pos)
+            if c and c.is_sibling(org, other_orgnrs):
+                return "INCORRECT", f"Social URL '{s_url}' belongs to sibling entity in dedicated card, not subject {org}", s_url
 
     hrefs = re.findall(r'href=[\'"]([^\'"]+)[\'"]', body, re.IGNORECASE)
     plain_urls = re.findall(r'https?://[^\s<>"\']+', body)
@@ -1138,6 +1210,7 @@ def run_comprehensive_audit(envelopes_path: Path, state_dir: Path, sample_seed: 
         r = company_by_org[org]
         ev_map = {e["id"]: e for e in r.get("evidence", [])}
         org_context, org_leaders = extract_org_context_and_leaders(r.get("claims", []))
+        org_website_claim = next((c for c in r.get("claims", []) if c.get("field") == "official_website"), None)
 
         reg_body = None
         for c in r.get("claims", []):
@@ -1220,9 +1293,13 @@ def run_comprehensive_audit(envelopes_path: Path, state_dir: Path, sample_seed: 
                         org, c, ev, body, reg_body, context=org_context, leaders=org_leaders
                     )
                 elif "social" in fld:
-                    status, reason, exp = audit_social_claim(org, c, ev, body)
+                    status, reason, exp = audit_social_claim(
+                        org, c, ev, body, website_claim=org_website_claim, context=org_context
+                    )
                 else:
-                    status, reason, exp = audit_website_metadata_claim(org, c, ev, body)
+                    status, reason, exp = audit_website_metadata_claim(
+                        org, c, ev, body, website_claim=org_website_claim, context=org_context
+                    )
             elif fam == "hiring":
                 status, reason, exp = audit_hiring_claim(org, c, ev, body, subunit_parent_map)
             elif fam == "activity":
