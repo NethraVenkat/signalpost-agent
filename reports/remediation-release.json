@@ -1,0 +1,5211 @@
+{
+  "date": "2026-10-15",
+  "verdict": "READY FOR REVISION",
+  "scope": "Operational local verification; no organiser acceptance threshold, official score, recall estimate or live factual accuracy claim.",
+  "fixed_source_commit": "a11d4ec68445c332ad10f22b063eca061a646a0a",
+  "submitted_baseline_preserved": "0d28df1",
+  "starting_commit": "d4abfc2",
+  "measured_live_commit": "45ebf1eba05d1937af96eb746d660f3d471e6b2e",
+  "final_delta": "Final spacing-only footer comparison correction tested against actual saved page/context and suite/replay/fresh clone; no post-correction live crawl. Live coverage counts are NOT adjusted.",
+  "tests": {
+    "passed": 391,
+    "full_seconds": 53.32,
+    "coverage_run_passed": 391,
+    "coverage_seconds": 58.19,
+    "statement_coverage": {
+      "covered_lines": 5416,
+      "num_statements": 5914,
+      "percent_covered": 91.57930334798783,
+      "percent_covered_display": "92",
+      "missing_lines": 498,
+      "excluded_lines": 4,
+      "percent_statements_covered": 91.57930334798783,
+      "percent_statements_covered_display": "92"
+    },
+    "branch_coverage": "not enabled",
+    "lint_type_checks": "No configured lint/type checker in pyproject.toml",
+    "timing_assertions_changed": false,
+    "logs": [
+      "out/remediation/closed-tests.log",
+      "out/remediation/closed-coverage-tests.log"
+    ],
+    "warnings": "Earlier 390-test runs had a pytest cache permission warning. Final runs disable optional cache provider and pass without that warning; old logs retained.",
+    "secret_scan": "0 pattern matches; no values printed"
+  },
+  "encoding": {
+    "812573942": "Original gzip registry, prepared CSV, claim and JSON contain correct UTF-8 RØRLEGGER 1 MOLDE AS. Diagnostic cp1252 reads caused false mojibake finding. Original source retained; subset reproducibly regenerated without changing business name.",
+    "964624046": "Recorded UTF-8 paragraph matches full parsed claim. Inline link split raw HTML substring; auditor fixed to independently parse whole paragraph/meta text.",
+    "confirmed_shared_bug": "Legacy declared HTML was decoded consistently by Page but not writer/verifier; shared bounded decoder fixes evidence text agreement without changing source bytes/hashes or repairing literal source mojibake.",
+    "trace": "out/remediation/encoding-trace.json"
+  },
+  "prior_failure_classification": {
+    "scope": "Every prior failed/blocked/ambiguous section; classification from recorded states/errors, not live source rechecking",
+    "counts": {
+      "live100 / External outage/DNS/robots restriction": 11,
+      "live100 / Expected absence or legitimate abstention": 33,
+      "live100 / Configured budget or deadline exhaustion": 11,
+      "live100-official / External outage/DNS/robots restriction": 56,
+      "live100-official / Configured budget or deadline exhaustion": 103,
+      "live100-official / Expected absence or legitimate abstention": 56
+    },
+    "items": [
+      {
+        "run": "live100",
+        "organisation_number": "934353420",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100",
+        "organisation_number": "934353420",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100",
+        "organisation_number": "818851022",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100",
+        "organisation_number": "818851022",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100",
+        "organisation_number": "829411822",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_budget_exhausted"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100",
+        "organisation_number": "829411822",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100",
+        "organisation_number": "936117406",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_budget_exhausted"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100",
+        "organisation_number": "936117406",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100",
+        "organisation_number": "931776509",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_budget_exhausted",
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100",
+        "organisation_number": "931776509",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100",
+        "organisation_number": "964624046",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "website_budget_exhausted"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100",
+        "organisation_number": "984562861",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_budget_exhausted"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100",
+        "organisation_number": "984562861",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100",
+        "organisation_number": "988102121",
+        "family": "website",
+        "section_state": "ambiguous",
+        "codes": [],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100",
+        "organisation_number": "988102121",
+        "family": "activity",
+        "section_state": "ambiguous",
+        "codes": [
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100",
+        "organisation_number": "988115614",
+        "family": "website",
+        "section_state": "ambiguous",
+        "codes": [],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100",
+        "organisation_number": "988115614",
+        "family": "activity",
+        "section_state": "ambiguous",
+        "codes": [
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100",
+        "organisation_number": "989708031",
+        "family": "website",
+        "section_state": "ambiguous",
+        "codes": [],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100",
+        "organisation_number": "989708031",
+        "family": "activity",
+        "section_state": "ambiguous",
+        "codes": [
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100",
+        "organisation_number": "922210721",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_budget_exhausted"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100",
+        "organisation_number": "922210721",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100",
+        "organisation_number": "889917792",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_budget_exhausted"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100",
+        "organisation_number": "889917792",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100",
+        "organisation_number": "928484378",
+        "family": "website",
+        "section_state": "ambiguous",
+        "codes": [],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100",
+        "organisation_number": "928484378",
+        "family": "activity",
+        "section_state": "ambiguous",
+        "codes": [
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100",
+        "organisation_number": "922433186",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_budget_exhausted"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100",
+        "organisation_number": "922433186",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100",
+        "organisation_number": "982182727",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_budget_exhausted"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100",
+        "organisation_number": "982182727",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100",
+        "organisation_number": "989812076",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "website_budget_exhausted"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100",
+        "organisation_number": "918305092",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "http_blocked",
+          "website_budget_exhausted"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100",
+        "organisation_number": "918305092",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100",
+        "organisation_number": "987075155",
+        "family": "website",
+        "section_state": "ambiguous",
+        "codes": [
+          "website_budget_exhausted"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100",
+        "organisation_number": "987075155",
+        "family": "activity",
+        "section_state": "ambiguous",
+        "codes": [
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100",
+        "organisation_number": "980536106",
+        "family": "accounts",
+        "section_state": "failed",
+        "codes": [
+          "source_error"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100",
+        "organisation_number": "934998030",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100",
+        "organisation_number": "934998030",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100",
+        "organisation_number": "954307506",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_budget_exhausted"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100",
+        "organisation_number": "954307506",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100",
+        "organisation_number": "924742127",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100",
+        "organisation_number": "924742127",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100",
+        "organisation_number": "913429265",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100",
+        "organisation_number": "913429265",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100",
+        "organisation_number": "931319728",
+        "family": "website",
+        "section_state": "ambiguous",
+        "codes": [],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100",
+        "organisation_number": "931319728",
+        "family": "activity",
+        "section_state": "ambiguous",
+        "codes": [
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100",
+        "organisation_number": "980978516",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_budget_exhausted"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100",
+        "organisation_number": "980978516",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100",
+        "organisation_number": "819333262",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100",
+        "organisation_number": "819333262",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100",
+        "organisation_number": "833715232",
+        "family": "website",
+        "section_state": "ambiguous",
+        "codes": [],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100",
+        "organisation_number": "833715232",
+        "family": "activity",
+        "section_state": "ambiguous",
+        "codes": [
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100",
+        "organisation_number": "971386665",
+        "family": "website",
+        "section_state": "ambiguous",
+        "codes": [],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100",
+        "organisation_number": "971386665",
+        "family": "activity",
+        "section_state": "ambiguous",
+        "codes": [
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100",
+        "organisation_number": "916131720",
+        "family": "website",
+        "section_state": "blocked",
+        "codes": [
+          "block_page"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100",
+        "organisation_number": "916131720",
+        "family": "activity",
+        "section_state": "blocked",
+        "codes": [
+          "website_check_incomplete"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "920957145",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "920957145",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "920957145",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "920226183",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "932611384",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "932611384",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "932611384",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "934353420",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "934353420",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "934353420",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "818851022",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "818851022",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "818851022",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "834159732",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "829411822",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "829411822",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "829411822",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "980521273",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "919944749",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "919944749",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "919944749",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "936117406",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_budget_exhausted",
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "936117406",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "936117406",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "931776509",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_budget_exhausted",
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "931776509",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "931776509",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "930561134",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "964624046",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_budget_exhausted",
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "964624046",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "964624046",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "988044946",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "988044946",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "988044946",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "989965980",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "989965980",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "989965980",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "984562861",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_budget_exhausted",
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "984562861",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "984562861",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "988102121",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "988102121",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "988102121",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "988115614",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "988115614",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "988115614",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "930377368",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "922155062",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "935052491",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "989708031",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "989708031",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "989708031",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "888419632",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "922210721",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_budget_exhausted",
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "922210721",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "922210721",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "947850156",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "947850156",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "947850156",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "919076909",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "919076909",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "919076909",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "889917792",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_budget_exhausted",
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "889917792",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "889917792",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "988664510",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "924689390",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "924689390",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "924689390",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "895957542",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "895957542",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "895957542",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "928484378",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "928484378",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "928484378",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "989215876",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "922433186",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_budget_exhausted"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "922433186",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "922433186",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "924606347",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "982182727",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_budget_exhausted"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "982182727",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "982182727",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "930308110",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "robots",
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "930308110",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "930308110",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "918834451",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "826465492",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "836262662",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "989812076",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "989812076",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "989812076",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "812573942",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "936711324",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "936711324",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "936711324",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "932588722",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "931909193",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "918305092",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "918305092",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "918305092",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "820317092",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "820317092",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "820317092",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "987075155",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "987075155",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "987075155",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "980536106",
+        "family": "accounts",
+        "section_state": "failed",
+        "codes": [
+          "network_error"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "980536106",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "988809896",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "robots",
+          "website_budget_exhausted"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "988809896",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "988809896",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "932873222",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "932873222",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "932873222",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "934998030",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "934998030",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "934998030",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "887655332",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "914719593",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "993030783",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "898313352",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "898313352",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "898313352",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "919734787",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "936517889",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "832846252",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "932688557",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "952231294",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "997924819",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "920514839",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "920514839",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "920514839",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "934034872",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "823675542",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "823675542",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "823675542",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "933822346",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "954307506",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "954307506",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "954307506",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "919370084",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "919370084",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "919370084",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "971390786",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "971390786",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "971390786",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "924742127",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_budget_exhausted",
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "924742127",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "924742127",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "992062460",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "923104445",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "929720008",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "916052383",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "992447486",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "992447486",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "992447486",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "916025971",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "913429265",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_budget_exhausted",
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "913429265",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "913429265",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "926377752",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_budget_exhausted",
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "926377752",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "926377752",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "830562052",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "830815082",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "830815082",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "830815082",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "930077445",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "935691877",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_budget_exhausted",
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "935691877",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "935691877",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "928541584",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "928541584",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "928541584",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "922635269",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "922635269",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "922635269",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "931319728",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "931319728",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "931319728",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "980978516",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_budget_exhausted"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "980978516",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "980978516",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "990946493",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "990946493",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "990946493",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "933227219",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "933721574",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "993399728",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "819333262",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "819333262",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "819333262",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "925882208",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "920659152",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "833715232",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "833715232",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "833715232",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "992843497",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "992843497",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "992843497",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "971386665",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "971386665",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "971386665",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "926173367",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "926173367",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "926173367",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "916131720",
+        "family": "website",
+        "section_state": "blocked",
+        "codes": [
+          "block_page"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "916131720",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "916131720",
+        "family": "activity",
+        "section_state": "blocked",
+        "codes": [
+          "website_check_incomplete"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "922866988",
+        "family": "website",
+        "section_state": "failed",
+        "codes": [
+          "website_source_unavailable"
+        ],
+        "category": "External outage/DNS/robots restriction",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "922866988",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "922866988",
+        "family": "activity",
+        "section_state": "failed",
+        "codes": [
+          "inherits_incomplete_website_no_false_absence",
+          "website_check_incomplete"
+        ],
+        "category": "Expected absence or legitimate abstention",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "934052323",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      },
+      {
+        "run": "live100-official",
+        "organisation_number": "983900518",
+        "family": "hiring",
+        "section_state": "failed",
+        "codes": [
+          "detail_unverified"
+        ],
+        "category": "Configured budget or deadline exhaustion",
+        "finding": "Partial verified claims remain possible; failed/blocked is not verified absence."
+      }
+    ]
+  },
+  "benchmarks": {
+    "live100-final": {
+      "source_commit": "45ebf1eba05d1937af96eb746d660f3d471e6b2e",
+      "input_sha256": "54de285dd71e69515c532febc37cfec16a467d7bc0880c96931fc6c83ecc807a",
+      "bulk_sha256": "a2d13b6b88ed7cf66a581bb99342c09cd7d55638e15ea6601d2fc6f680715e29",
+      "command": [
+        "C:\\Users\\Manish\\Downloads\\Signalpost\\state\\evaluation-uv-cache\\builds-v0\\.tmpbHOXdt\\Scripts\\python.exe",
+        "-m",
+        "signalpost.cli",
+        "run",
+        "--organisations",
+        "out\\final-evaluation\\live100-input.jsonl",
+        "--output",
+        "out\\remediation\\live100-final\\envelopes.jsonl",
+        "--profiles-output",
+        "out\\remediation\\live100-final\\profiles.jsonl",
+        "--report",
+        "out\\remediation\\live100-final\\report.json",
+        "--site-dir",
+        "out\\remediation\\live100-final\\site",
+        "--state-dir",
+        "out\\remediation\\live100-final\\state",
+        "--websites",
+        "--hiring",
+        "--public-activity",
+        "--max-cost-usd",
+        "0",
+        "--search-max-queries",
+        "0",
+        "--time-budget-seconds",
+        "600",
+        "--expected-count",
+        "100",
+        "--bulk",
+        "out\\remediation\\registry100.csv"
+      ],
+      "observation_start": "2026-10-15T13:26:46.141071+00:00",
+      "python": "3.12.15 (main, Oct  9 2026, 15:21:55) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26300-SP0",
+      "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+      "logical_cpus": 16,
+      "ram_bytes": 16774152192,
+      "unknown_process_inspections": 0,
+      "conditions": "Fresh empty runtime state; shipped declared NAV index; paid search disabled; no evaluation test/browser job detected. Unrelated processes preserved.",
+      "wall_seconds": 58.603544499994314,
+      "exit_code": 0,
+      "observation_end": "2026-10-15T13:27:45.040299+00:00",
+      "load_summary": {
+        "samples": 55,
+        "system_cpu_mean_percent": 17.69090909090909,
+        "system_cpu_max_percent": 35.3,
+        "available_ram_min_bytes": 1700638720,
+        "process_rss_scope": "External Windows launcher only; pipeline peak RSS NOT MEASURED"
+      },
+      "runtime_ms": 56609,
+      "requests": 577,
+      "dns_lookups": 764,
+      "limits": {
+        "max_requests": 2000,
+        "max_cost_usd": 0.0,
+        "time_budget_seconds": 600.0,
+        "deadline_fraction": 0.85,
+        "request_timeout": 10.0,
+        "host_concurrency": 10
+      },
+      "counts_by_state": {
+        "complete": 93,
+        "submission_error": 7
+      },
+      "counts_by_availability": {
+        "available": 382,
+        "failed": 37,
+        "not_available": 197,
+        "not_applicable": 68,
+        "ambiguous": 14,
+        "blocked": 2
+      },
+      "hiring_prefetch": {
+        "pages": 6,
+        "items": 4336,
+        "bytes": 2147622,
+        "details": 0,
+        "requests": 7,
+        "runtime_ms": 15938,
+        "source_mode": "declared_index",
+        "index_version": "nav-20261014T042640.758720Z-v1",
+        "index_built_at": "2026-10-14T04:26:40.758720Z",
+        "index_age_days": 1.375075157361111,
+        "index_compressed_bytes": 403768,
+        "index_ads": 9015,
+        "seeded_from_disk": 6791,
+        "fresh_fetched_ads": 2224,
+        "time_cap_seconds": 240.0,
+        "feed_complete": true,
+        "detail_request_cap": 0,
+        "coverage_scope": "declared_orgnr_index_plus_completed_forward_feed_and_live_candidate_details",
+        "feed_runtime_ms": 7921,
+        "runtime_seconds": 15.93800000000192,
+        "feed_seconds": 7.921,
+        "average_seconds_per_page": 1.3201666666666667,
+        "last_detail_seconds": null,
+        "complete": true,
+        "blocked": false,
+        "reason": "complete",
+        "header_processing_complete": true,
+        "candidate_headers": 0,
+        "distinct_candidate_ads": 0,
+        "indexed_ads": 0,
+        "detail_concurrency": 4,
+        "incomplete_companies": [],
+        "name_unusable_companies": 0,
+        "fallback_name_unusable_companies": 4,
+        "forward_name_fallback_scope": "known legal/brand/subunit names; unknown trading names remain a discovery risk",
+        "companies_with_unchecked_candidates": 0,
+        "cap_hits": 0,
+        "lookback_days": 185,
+        "matches_published": 0,
+        "companies_with_ads": 0
+      },
+      "event_loop": {
+        "process_cpu_seconds": 16.171875,
+        "observed_wall_seconds": 57.88999999999942,
+        "workers": {
+          "json.loads": {
+            "calls": 6,
+            "queue_seconds": 0.0,
+            "wall_seconds": 0.03199999999196734,
+            "cpu_seconds": 0.0,
+            "max_queue_seconds": 0,
+            "max_wall_seconds": 0.01599999999598367
+          },
+          "signalpost.io.envelope_writer.write": {
+            "calls": 1,
+            "queue_seconds": 0.0,
+            "wall_seconds": 13.31199999999808,
+            "cpu_seconds": 1.140625,
+            "max_queue_seconds": 0,
+            "max_wall_seconds": 13.31199999999808
+          },
+          "signalpost.io.report.build": {
+            "calls": 1,
+            "queue_seconds": 0.0,
+            "wall_seconds": 0.0,
+            "cpu_seconds": 0.0,
+            "max_queue_seconds": 0,
+            "max_wall_seconds": 0
+          },
+          "signalpost.profiles.write": {
+            "calls": 1,
+            "queue_seconds": 0.0,
+            "wall_seconds": 0.10900000000401633,
+            "cpu_seconds": 0.0625,
+            "max_queue_seconds": 0,
+            "max_wall_seconds": 0.10900000000401633
+          },
+          "signalpost.runner.extract_company_scope": {
+            "calls": 100,
+            "queue_seconds": 0.0,
+            "wall_seconds": 0.0,
+            "cpu_seconds": 0.0,
+            "max_queue_seconds": 0,
+            "max_wall_seconds": 0
+          },
+          "signalpost.runner.finalize": {
+            "calls": 100,
+            "queue_seconds": 0.01600000000325963,
+            "wall_seconds": 0.0,
+            "cpu_seconds": 0.0,
+            "max_queue_seconds": 0.01600000000325963,
+            "max_wall_seconds": 0
+          },
+          "signalpost.runner.write_report": {
+            "calls": 1,
+            "queue_seconds": 0.0,
+            "wall_seconds": 0.01600000000325963,
+            "cpu_seconds": 0.0,
+            "max_queue_seconds": 0,
+            "max_wall_seconds": 0.01600000000325963
+          },
+          "signalpost.site.generate_site": {
+            "calls": 1,
+            "queue_seconds": 0.0,
+            "wall_seconds": 1.1409999999959837,
+            "cpu_seconds": 1.109375,
+            "max_queue_seconds": 0,
+            "max_wall_seconds": 1.1409999999959837
+          },
+          "signalpost.sources.blobstore.BlobStore.put": {
+            "calls": 527,
+            "queue_seconds": 0.18799999998736894,
+            "wall_seconds": 3.289999999986321,
+            "cpu_seconds": 0.390625,
+            "max_queue_seconds": 0.01600000000325963,
+            "max_wall_seconds": 0.25
+          },
+          "signalpost.sources.brreg_roller.extract": {
+            "calls": 100,
+            "queue_seconds": 0.15800000001036096,
+            "wall_seconds": 0.09100000000034925,
+            "cpu_seconds": 0.03125,
+            "max_queue_seconds": 0.01600000000325963,
+            "max_wall_seconds": 0.01600000000325963
+          },
+          "signalpost.sources.brreg_underenheter.extract_page": {
+            "calls": 100,
+            "queue_seconds": 0.0319999999992433,
+            "wall_seconds": 0.046999999998661224,
+            "cpu_seconds": 0.03125,
+            "max_queue_seconds": 0.01600000000325963,
+            "max_wall_seconds": 0.01600000000325963
+          },
+          "signalpost.sources.bulk_registry.extract": {
+            "calls": 100,
+            "queue_seconds": 2.330999999969208,
+            "wall_seconds": 0.10900000000401633,
+            "cpu_seconds": 0.09375,
+            "max_queue_seconds": 0.07800000000133878,
+            "max_wall_seconds": 0.01600000000325963
+          },
+          "signalpost.sources.bulk_registry.load": {
+            "calls": 1,
+            "queue_seconds": 0.0,
+            "wall_seconds": 0.06300000000192085,
+            "cpu_seconds": 0.046875,
+            "max_queue_seconds": 0,
+            "max_wall_seconds": 0.06300000000192085
+          },
+          "signalpost.sources.nav.NavHttp.get.<locals>.<lambda>": {
+            "calls": 6,
+            "queue_seconds": 0.01600000000325963,
+            "wall_seconds": 0.01599999999598367,
+            "cpu_seconds": 0.0,
+            "max_queue_seconds": 0.01600000000325963,
+            "max_wall_seconds": 0.01599999999598367
+          },
+          "signalpost.sources.nav.NavHttp.save": {
+            "calls": 1,
+            "queue_seconds": 0.0,
+            "wall_seconds": 0.0,
+            "cpu_seconds": 0.0,
+            "max_queue_seconds": 0,
+            "max_wall_seconds": 0
+          },
+          "signalpost.sources.nav.company_names": {
+            "calls": 1,
+            "queue_seconds": 0.0,
+            "wall_seconds": 0.0,
+            "cpu_seconds": 0.0,
+            "max_queue_seconds": 0,
+            "max_wall_seconds": 0
+          },
+          "signalpost.sources.nav_cached.Candidates.inspect.<locals>.<lambda>": {
+            "calls": 4051,
+            "queue_seconds": 2.337999999988824,
+            "wall_seconds": 6.6899999999732245,
+            "cpu_seconds": 3.703125,
+            "max_queue_seconds": 0.031000000002677552,
+            "max_wall_seconds": 0.01600000000325963
+          },
+          "signalpost.sources.nav_index.load": {
+            "calls": 1,
+            "queue_seconds": 0.0,
+            "wall_seconds": 0.07800000000133878,
+            "cpu_seconds": 0.0625,
+            "max_queue_seconds": 0,
+            "max_wall_seconds": 0.07800000000133878
+          },
+          "signalpost.sources.regnskap.extract": {
+            "calls": 100,
+            "queue_seconds": 0.0949999999938882,
+            "wall_seconds": 0.6200000000098953,
+            "cpu_seconds": 0.171875,
+            "max_queue_seconds": 0.01600000000325963,
+            "max_wall_seconds": 0.030999999995401595
+          },
+          "signalpost.sources.subunits.build_subunit_map": {
+            "calls": 1,
+            "queue_seconds": 0.0,
+            "wall_seconds": 0.0,
+            "cpu_seconds": 0.0,
+            "max_queue_seconds": 0,
+            "max_wall_seconds": 0
+          },
+          "signalpost.synthesis.template.generate": {
+            "calls": 100,
+            "queue_seconds": 0.01600000000325963,
+            "wall_seconds": 0.20299999999406282,
+            "cpu_seconds": 0.078125,
+            "max_queue_seconds": 0.01600000000325963,
+            "max_wall_seconds": 0.06300000000192085
+          },
+          "signalpost.web.activity.parse": {
+            "calls": 5,
+            "queue_seconds": 0.014999999999417923,
+            "wall_seconds": 0.01599999999598367,
+            "cpu_seconds": 0.0,
+            "max_queue_seconds": 0.014999999999417923,
+            "max_wall_seconds": 0.01599999999598367
+          },
+          "signalpost.web.collector.candidate_proof": {
+            "calls": 67,
+            "queue_seconds": 0.0639999999984866,
+            "wall_seconds": 0.12600000001839362,
+            "cpu_seconds": 0.140625,
+            "max_queue_seconds": 0.01600000000325963,
+            "max_wall_seconds": 0.01600000000325963
+          },
+          "signalpost.web.collector.publish_result": {
+            "calls": 7,
+            "queue_seconds": 0.030999999995401595,
+            "wall_seconds": 0.06300000000919681,
+            "cpu_seconds": 0.03125,
+            "max_queue_seconds": 0.01599999999598367,
+            "max_wall_seconds": 0.031000000002677552
+          },
+          "signalpost.web.collector.registry_context": {
+            "calls": 100,
+            "queue_seconds": 0.09500000000844011,
+            "wall_seconds": 0.01600000000325963,
+            "cpu_seconds": 0.0,
+            "max_queue_seconds": 0.01600000000325963,
+            "max_wall_seconds": 0.01600000000325963
+          },
+          "signalpost.web.html.Page": {
+            "calls": 67,
+            "queue_seconds": 0.1259999999892898,
+            "wall_seconds": 0.3889999999955762,
+            "cpu_seconds": 0.359375,
+            "max_queue_seconds": 0.030999999995401595,
+            "max_wall_seconds": 0.031000000002677552
+          },
+          "urllib.robotparser.RobotFileParser.can_fetch": {
+            "calls": 153,
+            "queue_seconds": 0.2180000000007567,
+            "wall_seconds": 0.0,
+            "cpu_seconds": 0.0,
+            "max_queue_seconds": 0.01600000000325963,
+            "max_wall_seconds": 0
+          },
+          "urllib.robotparser.RobotFileParser.parse": {
+            "calls": 48,
+            "queue_seconds": 0.0319999999992433,
+            "wall_seconds": 0.01600000000325963,
+            "cpu_seconds": 0.0,
+            "max_queue_seconds": 0.01600000000325963,
+            "max_wall_seconds": 0.01600000000325963
+          }
+        },
+        "heartbeat_interval_ms": 100,
+        "samples": 551,
+        "scope": "whole run after input entry; includes source processing and output generation",
+        "lag_p95_ms": 25.00000000145519,
+        "lag_max_ms": 41.00000000471482,
+        "lag_mean_ms": 7.085299456529886,
+        "gc_collections": 848,
+        "gc_total_ms": 235.00000000785803,
+        "gc_max_ms": 63.00000000192085,
+        "gc_slow_collections": [
+          {
+            "generation": 2,
+            "duration_ms": 63.00000000192085,
+            "cpu_ms": 62.5,
+            "main_thread": false
+          }
+        ]
+      },
+      "output_bytes": 14068656,
+      "output_limit_exceeded": false,
+      "deadline_hits": 0,
+      "handled_exceptions": 0,
+      "unhandled_exceptions": 0,
+      "total_cost_usd": 0.0,
+      "schema_validated": true,
+      "membership_validated": true,
+      "site": {
+        "state": "available",
+        "companies": 100,
+        "input_records": 100,
+        "pages": 102,
+        "total_bytes": 15903003,
+        "largest_profile_data_bytes": 118204,
+        "largest_profile_bytes": 125571
+      },
+      "search": {
+        "status": "not configured",
+        "queries": 0,
+        "estimated_usd": 0.0,
+        "provider": null,
+        "companies_queried": 0,
+        "unit_price_usd": 0.005,
+        "price_note": "verify before use; retries count as billable queries; no free credit assumed",
+        "errors": 0,
+        "cap_skips": 0,
+        "result_domains": 0
+      },
+      "evidence_verification": {
+        "lines": 100,
+        "schema_valid": true,
+        "published_claims": 6977,
+        "source_blobs_verified": 390,
+        "synthesis_companies": 100,
+        "synthesis_sentences": 820,
+        "synthesis_unverified_values": 0
+      },
+      "stored_source_audit": {
+        "audit_metadata": {
+          "auditor_version": "2.2-parsed-description-explicit-decoding",
+          "envelopes_file": "envelopes.jsonl",
+          "total_companies": 100,
+          "sample_seed": 20261015,
+          "sample_size": 100,
+          "sampled_organisations": [
+            "812573942",
+            "818851022",
+            "819333262",
+            "820317092",
+            "823675542",
+            "826465492",
+            "829411822",
+            "830562052",
+            "830815082",
+            "832846252",
+            "833715232",
+            "834159732",
+            "836262662",
+            "887655332",
+            "888419632",
+            "889917792",
+            "895957542",
+            "898313352",
+            "913429265",
+            "914719593",
+            "916025971",
+            "916052383",
+            "916131720",
+            "918305092",
+            "918834451",
+            "919076909",
+            "919370084",
+            "919734787",
+            "919944749",
+            "920226183",
+            "920514839",
+            "920659152",
+            "920957145",
+            "922155062",
+            "922210721",
+            "922433186",
+            "922635269",
+            "922866988",
+            "923104445",
+            "924606347",
+            "924689390",
+            "924742127",
+            "925882208",
+            "926173367",
+            "926377752",
+            "928484378",
+            "928541584",
+            "929720008",
+            "930077445",
+            "930308110",
+            "930377368",
+            "930561134",
+            "931319728",
+            "931776509",
+            "931909193",
+            "932588722",
+            "932611384",
+            "932688557",
+            "932873222",
+            "933227219",
+            "933721574",
+            "933822346",
+            "934034872",
+            "934052323",
+            "934353420",
+            "934998030",
+            "935052491",
+            "935691877",
+            "936117406",
+            "936517889",
+            "936711324",
+            "947850156",
+            "952231294",
+            "954307506",
+            "964624046",
+            "971386665",
+            "971390786",
+            "980521273",
+            "980536106",
+            "980978516",
+            "982182727",
+            "983900518",
+            "984562861",
+            "987075155",
+            "988044946",
+            "988102121",
+            "988115614",
+            "988664510",
+            "988809896",
+            "989215876",
+            "989708031",
+            "989812076",
+            "989965980",
+            "990946493",
+            "992062460",
+            "992447486",
+            "992843497",
+            "993030783",
+            "993399728",
+            "997924819"
+          ]
+        },
+        "category_a_structural_integrity": {
+          "total_claims": 7879,
+          "available_claims": 6977,
+          "hash_checks": 11543,
+          "hash_passes": 11543,
+          "hash_failures": 0,
+          "missing_blobs": 0,
+          "span_checks": 11543,
+          "span_passes": 11543,
+          "span_failures": 0,
+          "locator_passes": 11543,
+          "locator_failures": 0,
+          "wrong_orgnr_attribution": 0,
+          "missing_attribution": 0,
+          "by_family": {
+            "identity": 2888,
+            "subunits": 636,
+            "roles": 1192,
+            "accounts": 2192,
+            "website": 65,
+            "official_website": 7,
+            "other_website_claims": 51,
+            "social_profiles": 7,
+            "activity": 4,
+            "aggregate_all_families": 6977
+          }
+        },
+        "category_b_stored_source_agreement": {
+          "identity": {
+            "total_published_claims": 2888,
+            "publication_denominator": 2888,
+            "reviewed": 2888,
+            "correct": 2888,
+            "incorrect": 0,
+            "unverifiable": 0,
+            "wrong_company": 0,
+            "missing_attribution": 0,
+            "unsupported": 0,
+            "fabricated_zeroes": 0,
+            "precision": 1.0,
+            "precision_denominator": 2888,
+            "verification_rate": 1.0,
+            "verification_rate_denominator": 2888
+          },
+          "accounts": {
+            "total_published_claims": 2192,
+            "publication_denominator": 2192,
+            "reviewed": 2192,
+            "correct": 2192,
+            "incorrect": 0,
+            "unverifiable": 0,
+            "wrong_company": 0,
+            "missing_attribution": 0,
+            "unsupported": 0,
+            "fabricated_zeroes": 0,
+            "precision": 1.0,
+            "precision_denominator": 2192,
+            "verification_rate": 1.0,
+            "verification_rate_denominator": 2192
+          },
+          "roles": {
+            "total_published_claims": 1192,
+            "publication_denominator": 1192,
+            "reviewed": 1192,
+            "correct": 1192,
+            "incorrect": 0,
+            "unverifiable": 0,
+            "wrong_company": 0,
+            "missing_attribution": 0,
+            "unsupported": 0,
+            "fabricated_zeroes": 0,
+            "precision": 1.0,
+            "precision_denominator": 1192,
+            "verification_rate": 1.0,
+            "verification_rate_denominator": 1192
+          },
+          "subunits": {
+            "total_published_claims": 636,
+            "publication_denominator": 636,
+            "reviewed": 636,
+            "correct": 636,
+            "incorrect": 0,
+            "unverifiable": 0,
+            "wrong_company": 0,
+            "missing_attribution": 0,
+            "unsupported": 0,
+            "fabricated_zeroes": 0,
+            "precision": 1.0,
+            "precision_denominator": 636,
+            "verification_rate": 1.0,
+            "verification_rate_denominator": 636
+          },
+          "official_website": {
+            "total_published_claims": 7,
+            "publication_denominator": 7,
+            "reviewed": 7,
+            "correct": 7,
+            "incorrect": 0,
+            "unverifiable": 0,
+            "wrong_company": 0,
+            "missing_attribution": 0,
+            "unsupported": 0,
+            "fabricated_zeroes": 0,
+            "precision": 1.0,
+            "precision_denominator": 7,
+            "verification_rate": 1.0,
+            "verification_rate_denominator": 7
+          },
+          "social_profiles": {
+            "total_published_claims": 7,
+            "publication_denominator": 7,
+            "reviewed": 7,
+            "correct": 7,
+            "incorrect": 0,
+            "unverifiable": 0,
+            "wrong_company": 0,
+            "missing_attribution": 0,
+            "unsupported": 0,
+            "fabricated_zeroes": 0,
+            "precision": 1.0,
+            "precision_denominator": 7,
+            "verification_rate": 1.0,
+            "verification_rate_denominator": 7
+          },
+          "other_website_claims": {
+            "total_published_claims": 51,
+            "publication_denominator": 51,
+            "reviewed": 51,
+            "correct": 51,
+            "incorrect": 0,
+            "unverifiable": 0,
+            "wrong_company": 0,
+            "missing_attribution": 0,
+            "unsupported": 0,
+            "fabricated_zeroes": 0,
+            "precision": 1.0,
+            "precision_denominator": 51,
+            "verification_rate": 1.0,
+            "verification_rate_denominator": 51
+          },
+          "website": {
+            "total_published_claims": 65,
+            "publication_denominator": 65,
+            "reviewed": 65,
+            "correct": 65,
+            "incorrect": 0,
+            "unverifiable": 0,
+            "wrong_company": 0,
+            "missing_attribution": 0,
+            "unsupported": 0,
+            "fabricated_zeroes": 0,
+            "precision": 1.0,
+            "precision_denominator": 65,
+            "verification_rate": 1.0,
+            "verification_rate_denominator": 65
+          },
+          "hiring": {
+            "total_published_claims": 0,
+            "publication_denominator": 0,
+            "reviewed": 0,
+            "correct": 0,
+            "incorrect": 0,
+            "unverifiable": 0,
+            "wrong_company": 0,
+            "missing_attribution": 0,
+            "unsupported": 0,
+            "fabricated_zeroes": 0,
+            "precision": null,
+            "precision_denominator": 0,
+            "verification_rate": null,
+            "verification_rate_denominator": 0
+          },
+          "activity": {
+            "total_published_claims": 4,
+            "publication_denominator": 4,
+            "reviewed": 4,
+            "correct": 4,
+            "incorrect": 0,
+            "unverifiable": 0,
+            "wrong_company": 0,
+            "missing_attribution": 0,
+            "unsupported": 0,
+            "fabricated_zeroes": 0,
+            "precision": 1.0,
+            "precision_denominator": 4,
+            "verification_rate": 1.0,
+            "verification_rate_denominator": 4
+          },
+          "aggregate_all_families": {
+            "total_published_claims": 6977,
+            "publication_denominator": 6977,
+            "reviewed": 6977,
+            "correct": 6977,
+            "incorrect": 0,
+            "unverifiable": 0,
+            "wrong_company": 0,
+            "missing_attribution": 0,
+            "unsupported": 0,
+            "fabricated_zeroes": 0,
+            "precision": 1.0,
+            "precision_denominator": 6977,
+            "verification_rate": 1.0,
+            "verification_rate_denominator": 6977
+          }
+        },
+        "category_c_live_verification": {
+          "status": "NOT EVALUATED (STORED REPLAY VERIFICATION ONLY)",
+          "limitations": "Category B proves exact agreement with stored Brønnøysund, NAV, and web blobs. Independent current-live web verification was not re-executed during this static offline audit."
+        }
+      },
+      "raw_artifacts": {
+        "out\\remediation\\live100-final\\measurement.json": "3014c9183c6ba51cce66159db9d7e364d7c15ff2bad877ba51ea9d165103cd26",
+        "out\\remediation\\live100-final\\report.json": "3f0d2582f5f90362e5e1af708a9462bb965828078384658f8ddfb959aec7ca50",
+        "out\\remediation\\live100-final\\envelopes.jsonl": "eb4b9c8a824b28eda9affc92a041e3f00349a8bb0f7e59c908a0e92fe0d0681b",
+        "out\\remediation\\live100-final-audit.json": "e57be4d144c40492ad7901e4a6c356d1510960f86e1049368535463d785cf969"
+      }
+    },
+    "live1000-final": {
+      "source_commit": "45ebf1eba05d1937af96eb746d660f3d471e6b2e",
+      "input_sha256": "ae47e66f7a2cc14a85e0bc207c99d9029a32d826ae064eb9530389f23dd5f5a2",
+      "bulk_sha256": "3f2de0601515a14db74936ee0958ad680535c45f57c8cbbd9c310c2fd96d8c83",
+      "command": [
+        "C:\\Users\\Manish\\Downloads\\Signalpost\\state\\evaluation-uv-cache\\builds-v0\\.tmpuu0xme\\Scripts\\python.exe",
+        "-m",
+        "signalpost.cli",
+        "run",
+        "--organisations",
+        "state\\downloads\\wednesday1000.jsonl",
+        "--output",
+        "out\\remediation\\live1000-final\\envelopes.jsonl",
+        "--profiles-output",
+        "out\\remediation\\live1000-final\\profiles.jsonl",
+        "--report",
+        "out\\remediation\\live1000-final\\report.json",
+        "--site-dir",
+        "out\\remediation\\live1000-final\\site",
+        "--state-dir",
+        "out\\remediation\\live1000-final\\state",
+        "--websites",
+        "--hiring",
+        "--public-activity",
+        "--max-cost-usd",
+        "0",
+        "--search-max-queries",
+        "0",
+        "--time-budget-seconds",
+        "2400",
+        "--expected-count",
+        "1000",
+        "--bulk",
+        "out\\remediation\\registry1000.csv"
+      ],
+      "observation_start": "2026-10-15T13:28:55.363887+00:00",
+      "python": "3.12.15 (main, Oct  9 2026, 15:21:55) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26300-SP0",
+      "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+      "logical_cpus": 16,
+      "ram_bytes": 16774152192,
+      "unknown_process_inspections": 0,
+      "conditions": "Fresh empty runtime state; shipped declared NAV index; paid search disabled; no evaluation test/browser job detected. Unrelated processes preserved.",
+      "wall_seconds": 283.14091900000494,
+      "exit_code": 0,
+      "observation_end": "2026-10-15T13:33:38.792609+00:00",
+      "load_summary": {
+        "samples": 265,
+        "system_cpu_mean_percent": 19.836981132075472,
+        "system_cpu_max_percent": 57.2,
+        "available_ram_min_bytes": 2003755008,
+        "process_rss_scope": "External Windows launcher only; pipeline peak RSS NOT MEASURED"
+      },
+      "runtime_ms": 267593,
+      "requests": 5572,
+      "dns_lookups": 7290,
+      "limits": {
+        "max_requests": 20000,
+        "max_cost_usd": 0.0,
+        "time_budget_seconds": 2400.0,
+        "deadline_fraction": 0.85,
+        "request_timeout": 10.0,
+        "host_concurrency": 10
+      },
+      "counts_by_state": {
+        "complete": 924,
+        "submission_error": 76
+      },
+      "counts_by_availability": {
+        "available": 3817,
+        "failed": 299,
+        "not_available": 1989,
+        "ambiguous": 152,
+        "not_applicable": 733,
+        "blocked": 10
+      },
+      "hiring_prefetch": {
+        "pages": 6,
+        "items": 4345,
+        "bytes": 2425402,
+        "details": 35,
+        "requests": 42,
+        "runtime_ms": 132125,
+        "source_mode": "declared_index",
+        "index_version": "nav-20261014T042640.758720Z-v1",
+        "index_built_at": "2026-10-14T04:26:40.758720Z",
+        "index_age_days": 1.3765782634606483,
+        "index_compressed_bytes": 403768,
+        "index_ads": 9015,
+        "seeded_from_disk": 6791,
+        "fresh_fetched_ads": 2224,
+        "time_cap_seconds": 900,
+        "feed_complete": true,
+        "detail_request_cap": 35,
+        "coverage_scope": "declared_orgnr_index_plus_completed_forward_feed_and_live_candidate_details",
+        "first_detail_seconds": 1.8910000000032596,
+        "first_detail_page_number": 0,
+        "details_started_before_feed_complete": true,
+        "detail_requests": 35,
+        "detail_requests_by_company": {
+          "931015737": 6,
+          "919510706": 1,
+          "994116592": 1,
+          "999268439": 1,
+          "918025456": 1,
+          "912090426": 1,
+          "935495369": 14,
+          "912273938": 10
+        },
+        "last_detail_seconds": 103.48500000000058,
+        "feed_runtime_ms": 8578,
+        "failure_cause": "complete",
+        "runtime_seconds": 132.125,
+        "feed_seconds": 8.578,
+        "average_seconds_per_page": 1.4296666666666666,
+        "complete": false,
+        "blocked": false,
+        "reason": "detail_unverified",
+        "header_processing_complete": true,
+        "candidate_headers": 25,
+        "distinct_candidate_ads": 25,
+        "indexed_ads": 29,
+        "detail_concurrency": 4,
+        "incomplete_companies": [
+          "820918312",
+          "912273938",
+          "935495369"
+        ],
+        "name_unusable_companies": 0,
+        "fallback_name_unusable_companies": 47,
+        "forward_name_fallback_scope": "known legal/brand/subunit names; unknown trading names remain a discovery risk",
+        "companies_with_unchecked_candidates": 3,
+        "cap_hits": 5,
+        "lookback_days": 185,
+        "matches_published": 9,
+        "companies_with_ads": 6
+      },
+      "event_loop": {
+        "process_cpu_seconds": 175.515625,
+        "observed_wall_seconds": 282.2809999999954,
+        "workers": {
+          "json.loads": {
+            "calls": 41,
+            "queue_seconds": 0.2679999999963911,
+            "wall_seconds": 0.01599999999598367,
+            "cpu_seconds": 0.0,
+            "max_queue_seconds": 0.0319999999992433,
+            "max_wall_seconds": 0.01599999999598367
+          },
+          "signalpost.io.envelope_writer.write": {
+            "calls": 1,
+            "queue_seconds": 0.0,
+            "wall_seconds": 93.10900000000402,
+            "cpu_seconds": 10.671875,
+            "max_queue_seconds": 0,
+            "max_wall_seconds": 93.10900000000402
+          },
+          "signalpost.io.report.build": {
+            "calls": 1,
+            "queue_seconds": 0.0,
+            "wall_seconds": 0.01599999999598367,
+            "cpu_seconds": 0.015625,
+            "max_queue_seconds": 0,
+            "max_wall_seconds": 0.01599999999598367
+          },
+          "signalpost.profiles.write": {
+            "calls": 1,
+            "queue_seconds": 0.0,
+            "wall_seconds": 1.1719999999986612,
+            "cpu_seconds": 0.90625,
+            "max_queue_seconds": 0,
+            "max_wall_seconds": 1.1719999999986612
+          },
+          "signalpost.runner.extract_company_scope": {
+            "calls": 1000,
+            "queue_seconds": 7.232000000003609,
+            "wall_seconds": 0.04799999999522697,
+            "cpu_seconds": 0.015625,
+            "max_queue_seconds": 0.0940000000045984,
+            "max_wall_seconds": 0.01600000000325963
+          },
+          "signalpost.runner.finalize": {
+            "calls": 1000,
+            "queue_seconds": 0.03199999999196734,
+            "wall_seconds": 0.48400000000401633,
+            "cpu_seconds": 0.078125,
+            "max_queue_seconds": 0.01599999999598367,
+            "max_wall_seconds": 0.01600000000325963
+          },
+          "signalpost.runner.write_report": {
+            "calls": 1,
+            "queue_seconds": 0.0,
+            "wall_seconds": 0.046999999998661224,
+            "cpu_seconds": 0.046875,
+            "max_queue_seconds": 0,
+            "max_wall_seconds": 0.046999999998661224
+          },
+          "signalpost.site.generate_site": {
+            "calls": 1,
+            "queue_seconds": 0.0,
+            "wall_seconds": 13.296999999998661,
+            "cpu_seconds": 12.8125,
+            "max_queue_seconds": 0,
+            "max_wall_seconds": 13.296999999998661
+          },
+          "signalpost.sources.blobstore.BlobStore.put": {
+            "calls": 5087,
+            "queue_seconds": 24.41700000007404,
+            "wall_seconds": 46.55800000002637,
+            "cpu_seconds": 3.296875,
+            "max_queue_seconds": 0.3280000000013388,
+            "max_wall_seconds": 0.4220000000059372
+          },
+          "signalpost.sources.brreg_enhet.extract_response": {
+            "calls": 2,
+            "queue_seconds": 0.014999999999417923,
+            "wall_seconds": 0.0,
+            "cpu_seconds": 0.0,
+            "max_queue_seconds": 0.014999999999417923,
+            "max_wall_seconds": 0
+          },
+          "signalpost.sources.brreg_roller.extract": {
+            "calls": 1000,
+            "queue_seconds": 5.370999999955529,
+            "wall_seconds": 1.1489999999685097,
+            "cpu_seconds": 0.390625,
+            "max_queue_seconds": 0.23500000000058208,
+            "max_wall_seconds": 0.01600000000325963
+          },
+          "signalpost.sources.brreg_underenheter.extract_page": {
+            "calls": 1000,
+            "queue_seconds": 7.344000000004598,
+            "wall_seconds": 0.5160000000396394,
+            "cpu_seconds": 0.109375,
+            "max_queue_seconds": 0.046999999998661224,
+            "max_wall_seconds": 0.01600000000325963
+          },
+          "signalpost.sources.bulk_registry.extract": {
+            "calls": 998,
+            "queue_seconds": 5.826999999946565,
+            "wall_seconds": 2.128000000004249,
+            "cpu_seconds": 1.546875,
+            "max_queue_seconds": 0.0940000000045984,
+            "max_wall_seconds": 0.125
+          },
+          "signalpost.sources.bulk_registry.load": {
+            "calls": 1,
+            "queue_seconds": 0.0,
+            "wall_seconds": 0.5,
+            "cpu_seconds": 0.5,
+            "max_queue_seconds": 0,
+            "max_wall_seconds": 0.5
+          },
+          "signalpost.sources.nav.NavHttp.get.<locals>.<lambda>": {
+            "calls": 6,
+            "queue_seconds": 0.0,
+            "wall_seconds": 0.029999999998835847,
+            "cpu_seconds": 0.0,
+            "max_queue_seconds": 0,
+            "max_wall_seconds": 0.014999999999417923
+          },
+          "signalpost.sources.nav.NavHttp.save": {
+            "calls": 1,
+            "queue_seconds": 0.0,
+            "wall_seconds": 0.0,
+            "cpu_seconds": 0.0,
+            "max_queue_seconds": 0,
+            "max_wall_seconds": 0
+          },
+          "signalpost.sources.nav.company_names": {
+            "calls": 1,
+            "queue_seconds": 0.0,
+            "wall_seconds": 0.030999999995401595,
+            "cpu_seconds": 0.03125,
+            "max_queue_seconds": 0,
+            "max_wall_seconds": 0.030999999995401595
+          },
+          "signalpost.sources.nav_cached.Candidates.inspect.<locals>.<lambda>": {
+            "calls": 3877,
+            "queue_seconds": 11.597999999896274,
+            "wall_seconds": 70.12499999962893,
+            "cpu_seconds": 59.703125,
+            "max_queue_seconds": 0.046999999998661224,
+            "max_wall_seconds": 0.06199999999807915
+          },
+          "signalpost.sources.nav_index.load": {
+            "calls": 1,
+            "queue_seconds": 0.0,
+            "wall_seconds": 0.07899999999790452,
+            "cpu_seconds": 0.09375,
+            "max_queue_seconds": 0,
+            "max_wall_seconds": 0.07899999999790452
+          },
+          "signalpost.sources.regnskap.extract": {
+            "calls": 1000,
+            "queue_seconds": 3.536999999996624,
+            "wall_seconds": 9.521000000015192,
+            "cpu_seconds": 1.875,
+            "max_queue_seconds": 0.06300000000192085,
+            "max_wall_seconds": 0.2649999999994179
+          },
+          "signalpost.sources.subunits.build_subunit_map": {
+            "calls": 1,
+            "queue_seconds": 0.0,
+            "wall_seconds": 0.0,
+            "cpu_seconds": 0.0,
+            "max_queue_seconds": 0,
+            "max_wall_seconds": 0
+          },
+          "signalpost.synthesis.template.generate": {
+            "calls": 1000,
+            "queue_seconds": 0.01600000000325963,
+            "wall_seconds": 1.1880000000019209,
+            "cpu_seconds": 0.65625,
+            "max_queue_seconds": 0.01600000000325963,
+            "max_wall_seconds": 0.01600000000325963
+          },
+          "signalpost.web.activity.parse": {
+            "calls": 38,
+            "queue_seconds": 0.20499999998719431,
+            "wall_seconds": 0.1559999999954016,
+            "cpu_seconds": 0.140625,
+            "max_queue_seconds": 0.06300000000192085,
+            "max_wall_seconds": 0.10899999999674037
+          },
+          "signalpost.web.collector.candidate_proof": {
+            "calls": 589,
+            "queue_seconds": 2.769999999960419,
+            "wall_seconds": 1.066999999973632,
+            "cpu_seconds": 0.984375,
+            "max_queue_seconds": 0.2190000000045984,
+            "max_wall_seconds": 0.046999999998661224
+          },
+          "signalpost.web.collector.publish_result": {
+            "calls": 47,
+            "queue_seconds": 0.29799999999522697,
+            "wall_seconds": 0.6079999999928987,
+            "cpu_seconds": 0.46875,
+            "max_queue_seconds": 0.13999999999941792,
+            "max_wall_seconds": 0.15600000000267755
+          },
+          "signalpost.web.collector.registry_context": {
+            "calls": 1000,
+            "queue_seconds": 4.0139999999519205,
+            "wall_seconds": 0.14000000000669388,
+            "cpu_seconds": 0.03125,
+            "max_queue_seconds": 0.2180000000007567,
+            "max_wall_seconds": 0.046999999998661224
+          },
+          "signalpost.web.html.Page": {
+            "calls": 589,
+            "queue_seconds": 2.0899999999383,
+            "wall_seconds": 5.832000000002154,
+            "cpu_seconds": 4.78125,
+            "max_queue_seconds": 0.07799999999406282,
+            "max_wall_seconds": 0.20300000000133878
+          },
+          "urllib.robotparser.RobotFileParser.can_fetch": {
+            "calls": 1383,
+            "queue_seconds": 6.34599999996135,
+            "wall_seconds": 0.07900000000518048,
+            "cpu_seconds": 0.0,
+            "max_queue_seconds": 0.2649999999994179,
+            "max_wall_seconds": 0.01600000000325963
+          },
+          "urllib.robotparser.RobotFileParser.parse": {
+            "calls": 403,
+            "queue_seconds": 1.9679999999716529,
+            "wall_seconds": 0.046999999998661224,
+            "cpu_seconds": 0.03125,
+            "max_queue_seconds": 0.18800000000192085,
+            "max_wall_seconds": 0.01600000000325963
+          }
+        },
+        "heartbeat_interval_ms": 100,
+        "samples": 2301,
+        "scope": "whole run after input entry; includes source processing and output generation",
+        "lag_p95_ms": 72.00000000011642,
+        "lag_max_ms": 572.0000000073924,
+        "lag_mean_ms": 23.232507606678535,
+        "gc_collections": 8198,
+        "gc_total_ms": 5262.0000000388245,
+        "gc_max_ms": 391.00000000325963,
+        "gc_slow_collections": [
+          {
+            "generation": 2,
+            "duration_ms": 78.00000000133878,
+            "cpu_ms": 78.125,
+            "main_thread": false
+          },
+          {
+            "generation": 2,
+            "duration_ms": 78.00000000133878,
+            "cpu_ms": 62.5,
+            "main_thread": false
+          },
+          {
+            "generation": 2,
+            "duration_ms": 110.00000000058208,
+            "cpu_ms": 93.75,
+            "main_thread": false
+          },
+          {
+            "generation": 2,
+            "duration_ms": 125.0,
+            "cpu_ms": 140.625,
+            "main_thread": false
+          },
+          {
+            "generation": 2,
+            "duration_ms": 171.99999999866122,
+            "cpu_ms": 156.25,
+            "main_thread": false
+          },
+          {
+            "generation": 2,
+            "duration_ms": 218.0000000007567,
+            "cpu_ms": 203.125,
+            "main_thread": true
+          },
+          {
+            "generation": 2,
+            "duration_ms": 235.00000000058208,
+            "cpu_ms": 234.375,
+            "main_thread": true
+          },
+          {
+            "generation": 2,
+            "duration_ms": 281.9999999992433,
+            "cpu_ms": 250.0,
+            "main_thread": true
+          },
+          {
+            "generation": 2,
+            "duration_ms": 311.99999999807915,
+            "cpu_ms": 312.5,
+            "main_thread": true
+          },
+          {
+            "generation": 2,
+            "duration_ms": 344.0000000045984,
+            "cpu_ms": 343.75,
+            "main_thread": true
+          },
+          {
+            "generation": 2,
+            "duration_ms": 360.0000000005821,
+            "cpu_ms": 328.125,
+            "main_thread": true
+          },
+          {
+            "generation": 2,
+            "duration_ms": 375.0,
+            "cpu_ms": 359.375,
+            "main_thread": false
+          },
+          {
+            "generation": 2,
+            "duration_ms": 343.99999999732245,
+            "cpu_ms": 328.125,
+            "main_thread": false
+          },
+          {
+            "generation": 2,
+            "duration_ms": 391.00000000325963,
+            "cpu_ms": 390.625,
+            "main_thread": false
+          }
+        ]
+      },
+      "output_bytes": 139896225,
+      "output_limit_exceeded": false,
+      "deadline_hits": 0,
+      "handled_exceptions": 0,
+      "unhandled_exceptions": 0,
+      "total_cost_usd": 0.0,
+      "schema_validated": true,
+      "membership_validated": true,
+      "site": {
+        "state": "available",
+        "companies": 1000,
+        "input_records": 1000,
+        "pages": 1002,
+        "total_bytes": 156917351,
+        "largest_profile_data_bytes": 133843,
+        "largest_profile_bytes": 133317
+      },
+      "search": {
+        "status": "not configured",
+        "queries": 0,
+        "estimated_usd": 0.0,
+        "provider": null,
+        "companies_queried": 0,
+        "unit_price_usd": 0.005,
+        "price_note": "verify before use; retries count as billable queries; no free credit assumed",
+        "errors": 0,
+        "cap_skips": 0,
+        "result_domains": 0
+      },
+      "evidence_verification": {
+        "lines": 1000,
+        "schema_valid": true,
+        "published_claims": 68987,
+        "source_blobs_verified": 3849,
+        "synthesis_companies": 1000,
+        "synthesis_sentences": 8021,
+        "synthesis_unverified_values": 0
+      },
+      "stored_source_audit": {
+        "audit_metadata": {
+          "auditor_version": "2.2-parsed-description-explicit-decoding",
+          "envelopes_file": "envelopes.jsonl",
+          "total_companies": 1000,
+          "sample_seed": 20261015,
+          "sample_size": 110,
+          "sampled_organisations": [
+            "813133482",
+            "819595712",
+            "820031172",
+            "820918312",
+            "824948232",
+            "825140352",
+            "830103902",
+            "831405252",
+            "833676342",
+            "858302242",
+            "881238292",
+            "885350712",
+            "885927882",
+            "888092692",
+            "892112762",
+            "911670283",
+            "912002829",
+            "912090426",
+            "912134784",
+            "913401611",
+            "914416779",
+            "914788706",
+            "915306977",
+            "915525555",
+            "916842481",
+            "917247102",
+            "917803498",
+            "918025456",
+            "918089462",
+            "918175334",
+            "918674454",
+            "919510706",
+            "919920041",
+            "920339824",
+            "920673031",
+            "921407025",
+            "921474164",
+            "921510195",
+            "921594674",
+            "922096716",
+            "922160406",
+            "922171467",
+            "922325065",
+            "922623570",
+            "923083146",
+            "923191593",
+            "923479651",
+            "923637958",
+            "925893188",
+            "926382594",
+            "927432064",
+            "928807908",
+            "929413938",
+            "929612418",
+            "929714997",
+            "931015737",
+            "932543796",
+            "932617064",
+            "932671727",
+            "932985950",
+            "933355985",
+            "933852873",
+            "934050339",
+            "934928741",
+            "935006058",
+            "935234166",
+            "935436567",
+            "935461898",
+            "935495369",
+            "936244491",
+            "936494285",
+            "936587690",
+            "936645704",
+            "936802044",
+            "940514193",
+            "943619506",
+            "947418173",
+            "954685500",
+            "963201141",
+            "966985186",
+            "967216402",
+            "971506857",
+            "975817059",
+            "979769830",
+            "981646967",
+            "981975359",
+            "982175836",
+            "982223881",
+            "982842794",
+            "982914981",
+            "986201343",
+            "988238600",
+            "988451088",
+            "989058452",
+            "989933434",
+            "990099618",
+            "990247080",
+            "991618015",
+            "993150703",
+            "994116592",
+            "994198068",
+            "994431315",
+            "994813560",
+            "997670752",
+            "998585481",
+            "998710502",
+            "999268439",
+            "999312128",
+            "999528139",
+            "999592236"
+          ]
+        },
+        "category_a_structural_integrity": {
+          "total_claims": 78005,
+          "available_claims": 68987,
+          "hash_checks": 117917,
+          "hash_passes": 117917,
+          "hash_failures": 0,
+          "missing_blobs": 0,
+          "span_checks": 117917,
+          "span_passes": 117917,
+          "span_failures": 0,
+          "locator_passes": 117917,
+          "locator_failures": 0,
+          "wrong_orgnr_attribution": 0,
+          "missing_attribution": 0,
+          "by_family": {
+            "identity": 28876,
+            "subunits": 6325,
+            "roles": 11323,
+            "accounts": 22085,
+            "website": 329,
+            "official_website": 46,
+            "other_website_claims": 223,
+            "social_profiles": 60,
+            "activity": 40,
+            "hiring": 9,
+            "aggregate_all_families": 68987
+          }
+        },
+        "category_b_stored_source_agreement": {
+          "identity": {
+            "total_published_claims": 28876,
+            "publication_denominator": 28876,
+            "reviewed": 3314,
+            "correct": 3314,
+            "incorrect": 0,
+            "unverifiable": 0,
+            "wrong_company": 0,
+            "missing_attribution": 0,
+            "unsupported": 0,
+            "fabricated_zeroes": 0,
+            "precision": 1.0,
+            "precision_denominator": 3314,
+            "verification_rate": 1.0,
+            "verification_rate_denominator": 3314
+          },
+          "accounts": {
+            "total_published_claims": 22085,
+            "publication_denominator": 22085,
+            "reviewed": 2495,
+            "correct": 2495,
+            "incorrect": 0,
+            "unverifiable": 0,
+            "wrong_company": 0,
+            "missing_attribution": 0,
+            "unsupported": 0,
+            "fabricated_zeroes": 0,
+            "precision": 1.0,
+            "precision_denominator": 2495,
+            "verification_rate": 1.0,
+            "verification_rate_denominator": 2495
+          },
+          "roles": {
+            "total_published_claims": 11323,
+            "publication_denominator": 11323,
+            "reviewed": 1383,
+            "correct": 1383,
+            "incorrect": 0,
+            "unverifiable": 0,
+            "wrong_company": 0,
+            "missing_attribution": 0,
+            "unsupported": 0,
+            "fabricated_zeroes": 0,
+            "precision": 1.0,
+            "precision_denominator": 1383,
+            "verification_rate": 1.0,
+            "verification_rate_denominator": 1383
+          },
+          "subunits": {
+            "total_published_claims": 6325,
+            "publication_denominator": 6325,
+            "reviewed": 913,
+            "correct": 913,
+            "incorrect": 0,
+            "unverifiable": 0,
+            "wrong_company": 0,
+            "missing_attribution": 0,
+            "unsupported": 0,
+            "fabricated_zeroes": 0,
+            "precision": 1.0,
+            "precision_denominator": 913,
+            "verification_rate": 1.0,
+            "verification_rate_denominator": 913
+          },
+          "official_website": {
+            "total_published_claims": 46,
+            "publication_denominator": 46,
+            "reviewed": 46,
+            "correct": 46,
+            "incorrect": 0,
+            "unverifiable": 0,
+            "wrong_company": 0,
+            "missing_attribution": 0,
+            "unsupported": 0,
+            "fabricated_zeroes": 0,
+            "precision": 1.0,
+            "precision_denominator": 46,
+            "verification_rate": 1.0,
+            "verification_rate_denominator": 46
+          },
+          "social_profiles": {
+            "total_published_claims": 60,
+            "publication_denominator": 60,
+            "reviewed": 60,
+            "correct": 60,
+            "incorrect": 0,
+            "unverifiable": 0,
+            "wrong_company": 0,
+            "missing_attribution": 0,
+            "unsupported": 0,
+            "fabricated_zeroes": 0,
+            "precision": 1.0,
+            "precision_denominator": 60,
+            "verification_rate": 1.0,
+            "verification_rate_denominator": 60
+          },
+          "other_website_claims": {
+            "total_published_claims": 223,
+            "publication_denominator": 223,
+            "reviewed": 223,
+            "correct": 223,
+            "incorrect": 0,
+            "unverifiable": 0,
+            "wrong_company": 0,
+            "missing_attribution": 0,
+            "unsupported": 0,
+            "fabricated_zeroes": 0,
+            "precision": 1.0,
+            "precision_denominator": 223,
+            "verification_rate": 1.0,
+            "verification_rate_denominator": 223
+          },
+          "website": {
+            "total_published_claims": 329,
+            "publication_denominator": 329,
+            "reviewed": 329,
+            "correct": 329,
+            "incorrect": 0,
+            "unverifiable": 0,
+            "wrong_company": 0,
+            "missing_attribution": 0,
+            "unsupported": 0,
+            "fabricated_zeroes": 0,
+            "precision": 1.0,
+            "precision_denominator": 329,
+            "verification_rate": 1.0,
+            "verification_rate_denominator": 329
+          },
+          "hiring": {
+            "total_published_claims": 9,
+            "publication_denominator": 9,
+            "reviewed": 9,
+            "correct": 9,
+            "incorrect": 0,
+            "unverifiable": 0,
+            "wrong_company": 0,
+            "missing_attribution": 0,
+            "unsupported": 0,
+            "fabricated_zeroes": 0,
+            "precision": 1.0,
+            "precision_denominator": 9,
+            "verification_rate": 1.0,
+            "verification_rate_denominator": 9
+          },
+          "activity": {
+            "total_published_claims": 40,
+            "publication_denominator": 40,
+            "reviewed": 40,
+            "correct": 40,
+            "incorrect": 0,
+            "unverifiable": 0,
+            "wrong_company": 0,
+            "missing_attribution": 0,
+            "unsupported": 0,
+            "fabricated_zeroes": 0,
+            "precision": 1.0,
+            "precision_denominator": 40,
+            "verification_rate": 1.0,
+            "verification_rate_denominator": 40
+          },
+          "aggregate_all_families": {
+            "total_published_claims": 68987,
+            "publication_denominator": 68987,
+            "reviewed": 8483,
+            "correct": 8483,
+            "incorrect": 0,
+            "unverifiable": 0,
+            "wrong_company": 0,
+            "missing_attribution": 0,
+            "unsupported": 0,
+            "fabricated_zeroes": 0,
+            "precision": 1.0,
+            "precision_denominator": 8483,
+            "verification_rate": 1.0,
+            "verification_rate_denominator": 8483
+          }
+        },
+        "category_c_live_verification": {
+          "status": "NOT EVALUATED (STORED REPLAY VERIFICATION ONLY)",
+          "limitations": "Category B proves exact agreement with stored Brønnøysund, NAV, and web blobs. Independent current-live web verification was not re-executed during this static offline audit."
+        }
+      },
+      "raw_artifacts": {
+        "out\\remediation\\live1000-final\\measurement.json": "5f778a96957854808eb0f2290d4aec256ecd5157c16e331e5c024c9f22d82aca",
+        "out\\remediation\\live1000-final\\report.json": "f13e9a66de6b5f94e6607ccc5dc7af2e0f4ac61318dc1c7bfed3eecbd832b1df",
+        "out\\remediation\\live1000-final\\envelopes.jsonl": "c6738e1976baa077fac505f1a474f85d92d6bcef8c04da19659971e8686cc6c5",
+        "out\\remediation\\live1000-final-audit.json": "f2427ba81d9c8659c8030b484a183ac721a7e9174a7fc5de29f0f695ff5958a9"
+      }
+    }
+  },
+  "earlier_diagnostic_runs": {
+    "live100": {
+      "source_commit": "ec3702fd3e2c94a8a7506e7c0553029143cfa08c",
+      "wall_seconds": 64.96784260000277,
+      "input_sha256": "54de285dd71e69515c532febc37cfec16a467d7bc0880c96931fc6c83ecc807a",
+      "bulk_sha256": "a2d13b6b88ed7cf66a581bb99342c09cd7d55638e15ea6601d2fc6f680715e29",
+      "command": [
+        "C:\\Users\\Manish\\Downloads\\Signalpost\\state\\evaluation-uv-cache\\builds-v0\\.tmpWkhGnG\\Scripts\\python.exe",
+        "-m",
+        "signalpost.cli",
+        "run",
+        "--organisations",
+        "out\\final-evaluation\\live100-input.jsonl",
+        "--output",
+        "out\\remediation\\live100\\envelopes.jsonl",
+        "--profiles-output",
+        "out\\remediation\\live100\\profiles.jsonl",
+        "--report",
+        "out\\remediation\\live100\\report.json",
+        "--site-dir",
+        "out\\remediation\\live100\\site",
+        "--state-dir",
+        "out\\remediation\\live100\\state",
+        "--websites",
+        "--hiring",
+        "--public-activity",
+        "--max-cost-usd",
+        "0",
+        "--search-max-queries",
+        "0",
+        "--time-budget-seconds",
+        "600",
+        "--expected-count",
+        "100",
+        "--bulk",
+        "out\\remediation\\registry100.csv"
+      ],
+      "observation_start": "2026-10-15T12:59:51.125016+00:00",
+      "observation_end": "2026-10-15T13:00:56.607722+00:00"
+    },
+    "live1000": {
+      "source_commit": "ec3702fd3e2c94a8a7506e7c0553029143cfa08c",
+      "wall_seconds": 368.5974907999989,
+      "input_sha256": "ae47e66f7a2cc14a85e0bc207c99d9029a32d826ae064eb9530389f23dd5f5a2",
+      "bulk_sha256": "3f2de0601515a14db74936ee0958ad680535c45f57c8cbbd9c310c2fd96d8c83",
+      "command": [
+        "C:\\Users\\Manish\\Downloads\\Signalpost\\state\\evaluation-uv-cache\\builds-v0\\.tmpxTP05E\\Scripts\\python.exe",
+        "-m",
+        "signalpost.cli",
+        "run",
+        "--organisations",
+        "state\\downloads\\wednesday1000.jsonl",
+        "--output",
+        "out\\remediation\\live1000\\envelopes.jsonl",
+        "--profiles-output",
+        "out\\remediation\\live1000\\profiles.jsonl",
+        "--report",
+        "out\\remediation\\live1000\\report.json",
+        "--site-dir",
+        "out\\remediation\\live1000\\site",
+        "--state-dir",
+        "out\\remediation\\live1000\\state",
+        "--websites",
+        "--hiring",
+        "--public-activity",
+        "--max-cost-usd",
+        "0",
+        "--search-max-queries",
+        "0",
+        "--time-budget-seconds",
+        "2400",
+        "--expected-count",
+        "1000",
+        "--bulk",
+        "out\\remediation\\registry1000.csv"
+      ],
+      "observation_start": "2026-10-15T13:04:24.838109+00:00",
+      "observation_end": "2026-10-15T13:10:33.871046+00:00"
+    }
+  },
+  "coverage_comparison": {
+    "prior100": {
+      "published_claims_by_family": {
+        "identity": 2888,
+        "subunits": 636,
+        "roles": 1192,
+        "accounts": 2192,
+        "website": 65,
+        "activity": 4
+      },
+      "companies_by_family": {
+        "roles": 100,
+        "subunits": 75,
+        "identity": 100,
+        "accounts": 99,
+        "website": 7,
+        "activity": 1
+      },
+      "official_websites": {
+        "964624046": "https://paastell.no",
+        "988044946": "https://www.nomeland.no",
+        "989812076": "https://frolandvvs.no",
+        "898313352": "https://forsikringsfondet.no",
+        "971390786": "https://www.ofo-narvik.no",
+        "830815082": "https://lashesbyweistad.no",
+        "983900518": "https://tjome-el.no"
+      },
+      "social_companies": 5,
+      "hiring_companies": 0,
+      "web_activity_companies": 1,
+      "registry_activity_companies": 13,
+      "combined_activity_companies": 14,
+      "section_states": {
+        "available": 382,
+        "not_available": 196,
+        "not_applicable": 67,
+        "failed": 37,
+        "ambiguous": 16,
+        "blocked": 2
+      }
+    },
+    "current100": {
+      "published_claims_by_family": {
+        "identity": 2888,
+        "subunits": 636,
+        "roles": 1192,
+        "accounts": 2192,
+        "website": 65,
+        "activity": 4
+      },
+      "companies_by_family": {
+        "roles": 100,
+        "subunits": 75,
+        "identity": 100,
+        "accounts": 99,
+        "website": 7,
+        "activity": 1
+      },
+      "official_websites": {
+        "964624046": "https://paastell.no",
+        "988044946": "https://www.nomeland.no",
+        "989812076": "https://frolandvvs.no",
+        "898313352": "https://forsikringsfondet.no",
+        "971390786": "https://www.ofo-narvik.no",
+        "830815082": "https://lashesbyweistad.no",
+        "983900518": "https://tjome-el.no"
+      },
+      "social_companies": 5,
+      "hiring_companies": 0,
+      "web_activity_companies": 1,
+      "registry_activity_companies": 13,
+      "combined_activity_companies": 14,
+      "section_states": {
+        "available": 382,
+        "failed": 37,
+        "not_available": 197,
+        "not_applicable": 68,
+        "ambiguous": 14,
+        "blocked": 2
+      }
+    },
+    "prior1000": {
+      "published_claims_by_family": {
+        "identity": 28876,
+        "roles": 11323,
+        "subunits": 6332,
+        "accounts": 22085,
+        "website": 342,
+        "activity": 40,
+        "hiring": 9
+      },
+      "companies_by_family": {
+        "roles": 997,
+        "subunits": 767,
+        "identity": 1000,
+        "accounts": 998,
+        "website": 47,
+        "activity": 4,
+        "hiring": 6
+      },
+      "official_websites": {
+        "858302242": "https://www.kingbird.no",
+        "943619506": "https://www.reidarstokke.no",
+        "971506857": "https://maskinbutikk.no",
+        "998710502": "https://www.cloudinsurance.io",
+        "998585481": "https://www.oslo-musikk.no",
+        "982842794": "https://www.selmek.no",
+        "931015737": "https://flexibemanning.no",
+        "830103902": "https://naturella.no",
+        "918175334": "https://www.pandionenergy.no",
+        "982223881": "https://kremo.no",
+        "885927882": "https://www.flage.no",
+        "989933434": "https://fluiddynamics.no",
+        "881238292": "https://sealine-products.no",
+        "921594674": "https://summeria.no",
+        "929714997": "https://www.grav24.no",
+        "994813560": "https://aktiv-it.no",
+        "888092692": "https://utsikten.barnehage.no",
+        "981646967": "https://klinikktrondheim.no",
+        "991618015": "https://sanabona.no",
+        "824948232": "https://www.onwork.no",
+        "932543796": "https://www.forsterk.no",
+        "917803498": "https://boilertech.no",
+        "925893188": "https://www.brilliance.no",
+        "917247102": "https://www.tromsobilstereo.no",
+        "963201141": "https://ndcconferences.com",
+        "813133482": "https://telerosa.no",
+        "936587690": "https://gunstigintelligens.no",
+        "954685500": "https://bergenengros.no",
+        "918089462": "https://oslosnekker.no",
+        "932761483": "https://www.tubingtec.no",
+        "932985950": "https://designbyarnevik.no",
+        "923479651": "https://elektropuls.no",
+        "928807908": "https://fastcharge.no",
+        "820918312": "https://www.synfaring.no",
+        "975817059": "https://www.legend.no",
+        "993150703": "https://bervi-transport.no",
+        "982175836": "https://buld.no",
+        "921407025": "https://www.simployer.com",
+        "989058452": "https://www.sveinlundisolering.no",
+        "994198068": "https://atlanticselskap.net",
+        "912134784": "https://www.gallerim.no",
+        "819595712": "https://www.rorleggerhuset.no",
+        "923191593": "https://tromsholding.no",
+        "988451088": "https://www.tegneren.no",
+        "926382594": "https://nordtex.no",
+        "936494285": "https://www.aandaregnskap.no",
+        "934928741": "https://www.kaderkader.com"
+      },
+      "social_companies": 29,
+      "hiring_companies": 6,
+      "web_activity_companies": 4,
+      "registry_activity_companies": 114,
+      "combined_activity_companies": 118,
+      "section_states": {
+        "available": 3819,
+        "failed": 242,
+        "not_available": 2018,
+        "ambiguous": 152,
+        "not_applicable": 759,
+        "blocked": 10
+      }
+    },
+    "current1000": {
+      "published_claims_by_family": {
+        "identity": 28876,
+        "subunits": 6325,
+        "roles": 11323,
+        "accounts": 22085,
+        "website": 329,
+        "activity": 40,
+        "hiring": 9
+      },
+      "companies_by_family": {
+        "roles": 997,
+        "subunits": 766,
+        "identity": 1000,
+        "accounts": 998,
+        "website": 46,
+        "activity": 4,
+        "hiring": 6
+      },
+      "official_websites": {
+        "858302242": "https://www.kingbird.no",
+        "943619506": "https://www.reidarstokke.no",
+        "971506857": "https://maskinbutikk.no",
+        "998710502": "https://www.cloudinsurance.io",
+        "998585481": "https://www.oslo-musikk.no",
+        "982842794": "https://www.selmek.no",
+        "931015737": "https://flexibemanning.no",
+        "830103902": "https://naturella.no",
+        "918175334": "https://www.pandionenergy.no",
+        "982223881": "https://kremo.no",
+        "885927882": "https://www.flage.no",
+        "989933434": "https://fluiddynamics.no",
+        "881238292": "https://sealine-products.no",
+        "921594674": "https://summeria.no",
+        "929714997": "https://www.grav24.no",
+        "994813560": "https://aktiv-it.no",
+        "888092692": "https://utsikten.barnehage.no",
+        "981646967": "https://klinikktrondheim.no",
+        "991618015": "https://sanabona.no",
+        "824948232": "https://www.onwork.no",
+        "932543796": "https://www.forsterk.no",
+        "917803498": "https://boilertech.no",
+        "925893188": "https://www.brilliance.no",
+        "917247102": "https://www.tromsobilstereo.no",
+        "963201141": "https://ndcconferences.com",
+        "813133482": "https://telerosa.no",
+        "936587690": "https://gunstigintelligens.no",
+        "954685500": "https://bergenengros.no",
+        "918089462": "https://oslosnekker.no",
+        "932985950": "https://designbyarnevik.no",
+        "923479651": "https://elektropuls.no",
+        "928807908": "https://fastcharge.no",
+        "820918312": "https://www.synfaring.no",
+        "975817059": "https://www.legend.no",
+        "993150703": "https://bervi-transport.no",
+        "982175836": "https://buld.no",
+        "921407025": "https://www.simployer.com",
+        "989058452": "https://www.sveinlundisolering.no",
+        "994198068": "https://atlanticselskap.net",
+        "912134784": "https://www.gallerim.no",
+        "819595712": "https://www.rorleggerhuset.no",
+        "923191593": "https://tromsholding.no",
+        "988451088": "https://www.tegneren.no",
+        "926382594": "https://nordtex.no",
+        "936494285": "https://www.aandaregnskap.no",
+        "934928741": "https://www.kaderkader.com"
+      },
+      "social_companies": 29,
+      "hiring_companies": 6,
+      "web_activity_companies": 4,
+      "registry_activity_companies": 114,
+      "combined_activity_companies": 118,
+      "section_states": {
+        "available": 3817,
+        "failed": 299,
+        "not_available": 1989,
+        "ambiguous": 152,
+        "not_applicable": 733,
+        "blocked": 10
+      }
+    },
+    "website_changes1000": {
+      "lost": [
+        {
+          "organisation_number": "932761483",
+          "previous_url": "https://www.tubingtec.no",
+          "current_record": null
+        }
+      ],
+      "gained": []
+    }
+  },
+  "ownership_actual_context": {
+    "sha256": "075cace4fba076890a5046d8dc7e77010236ffe15da89317a4f0cb44afef13d1",
+    "context": {
+      "name": "TUBING TEC AS"
+    },
+    "proof": {
+      "level": "VERIFIED",
+      "proof_type": "orgnr_on_page",
+      "signals": [],
+      "points": 0,
+      "other_orgnrs": [],
+      "reason": "",
+      "token": "932761483"
+    },
+    "network_requests": 0
+  },
+  "browser": {
+    "scope": "Installed Chrome headless; isolated ephemeral contexts; localhost only; historical100 site regenerated with current source; synthetic progress states",
+    "checks": [
+      {
+        "check": "dashboard_total",
+        "status": "PASS"
+      },
+      {
+        "check": "pagination",
+        "status": "PASS"
+      },
+      {
+        "check": "search_autocomplete_correct_unicode",
+        "status": "PASS"
+      },
+      {
+        "check": "website_filter_and_scope",
+        "status": "PASS"
+      },
+      {
+        "check": "csv_json_downloads_and_currency_column",
+        "status": "PASS"
+      },
+      {
+        "check": "watchlist",
+        "status": "PASS"
+      },
+      {
+        "check": "saved_views",
+        "status": "PASS"
+      },
+      {
+        "check": "tablet_directory_overflow",
+        "status": "PASS"
+      },
+      {
+        "check": "mobile_directory_overflow",
+        "status": "PASS"
+      },
+      {
+        "check": "comparison_and_autocomplete",
+        "status": "PASS"
+      },
+      {
+        "check": "profile_evidence_links",
+        "status": "PASS"
+      },
+      {
+        "check": "correct_description_text",
+        "status": "PASS"
+      },
+      {
+        "check": "themes_and_keyboard_focus",
+        "status": "PASS"
+      },
+      {
+        "check": "mobile_profile_overflow",
+        "status": "PASS"
+      },
+      {
+        "check": "progress_running",
+        "status": "PASS"
+      },
+      {
+        "check": "progress_partial",
+        "status": "PASS"
+      },
+      {
+        "check": "progress_failed",
+        "status": "PASS"
+      },
+      {
+        "check": "progress_completed",
+        "status": "PASS"
+      },
+      {
+        "check": "progress_stale",
+        "status": "PASS"
+      },
+      {
+        "check": "progress_static",
+        "status": "PASS"
+      },
+      {
+        "check": "progress_disconnected",
+        "status": "PASS"
+      },
+      {
+        "check": "denied_storage_keeps_ui_operational",
+        "status": "PASS"
+      },
+      {
+        "check": "synthetic_group_subject_contact_scope",
+        "status": "PASS"
+      }
+    ],
+    "page_errors": [],
+    "console_errors": [
+      {
+        "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "location": {
+          "url": "http://127.0.0.1:55109/browser-site/progress.json",
+          "line": 0,
+          "column": 0,
+          "lineNumber": 0,
+          "columnNumber": 0
+        }
+      },
+      {
+        "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "location": {
+          "url": "http://127.0.0.1:55109/browser-site/state/progress.json",
+          "line": 0,
+          "column": 0,
+          "lineNumber": 0,
+          "columnNumber": 0
+        }
+      },
+      {
+        "message": "Failed to load resource: net::ERR_FAILED",
+        "location": {
+          "url": "http://127.0.0.1:55109/browser-site/progress.json",
+          "line": 0,
+          "column": 0,
+          "lineNumber": 0,
+          "columnNumber": 0
+        }
+      }
+    ],
+    "screenshots": [
+      "denied-storage.png",
+      "desktop-dashboard.png",
+      "mobile-directory.png",
+      "mobile-profile.png",
+      "progress-failed.png",
+      "progress-running.png",
+      "progress-stale.png",
+      "synthetic-group-profile.png",
+      "tablet-directory.png"
+    ],
+    "unexpected_console_errors": [],
+    "asset_scope": "UI tested at ec3702f; UI assets unchanged through a11d4ec; backend ownership delta separately tested"
+  },
+  "replay": {
+    "lines": 5,
+    "schema_valid": true,
+    "published_claims": 40,
+    "source_blobs_verified": 9,
+    "synthesis_companies": 5,
+    "synthesis_sentences": 22,
+    "synthesis_unverified_values": 0,
+    "rerun_lines": 5,
+    "identical_claim_ids": true,
+    "changes": 0,
+    "observation_changes": 0,
+    "full_semantic_equality_with_both_replays_and_fresh_clone": true,
+    "semantic_keys": [
+      "claims",
+      "evidence",
+      "changes",
+      "modules",
+      "run.synthesis",
+      "run.sections"
+    ],
+    "strict_unexpected_fixture_interactions": 0
+  },
+  "fresh_clone": {
+    "path": "state/remediation-closed",
+    "source_commit": "a11d4ec68445c332ad10f22b063eca061a646a0a",
+    "install": "uv sync --frozen --offline; new clone-local venv",
+    "pipeline": "strict production replay, tracked external_integration fixture manifest/blobs only",
+    "import_log": "out/remediation/closed-fresh-import.log",
+    "execution_log": "out/remediation/closed-fresh-replay.log"
+  },
+  "limitations": [
+    "Stored-source agreement is not live factual accuracy or recall.",
+    "Public source failures and incomplete NAV candidate scopes remain explicit.",
+    "Final live benchmarks precede final ownership spacing correction; no extrapolated corrected coverage.",
+    "Historical run conditions and feed dates differ; timings are observational, not controlled causal speedups.",
+    "Historical severe stalls cannot be uniquely attributed retrospectively.",
+    "Pipeline peak RSS was not measured; external process RSS is launcher-only.",
+    "No organiser acceptance rule or official score was supplied."
+  ],
+  "artifact_root": "out/remediation",
+  "publication": "No push, deployment or email; unknown preexisting processes preserved."
+}
