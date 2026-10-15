@@ -1,4 +1,5 @@
 from ..workers import offload
+import html
 import json
 import asyncio
 import re
@@ -333,9 +334,41 @@ def publish_result(org,envelope,http,section,choices,attempts,context):
             if (kind, contact.casefold()) not in contact_seen:
                 publish(section, source_response, org, "contact." + kind + "." + digest(contact.casefold())[:20], contact, "contact:" + contact, source_span)
                 contact_seen.add((kind, contact.casefold()))
-    brand = page.meta.get("og:site_name") or re.split(r"\s+[|–-]\s+", page.title)[0].strip()
-    if brand and len(brand) <= 100 and "\ufffd" not in brand and legal_name(brand) != legal_name(context.get("name")) and legal_name(brand) not in {"home", "hjem", "welcome", "velkommen", "kontakt", "contact"}:
-        publish(section, response, org, "public_brand", brand, "meta:brand", page.span_for(brand)[:150])
+    candidate_brand = page.meta.get("og:site_name") or page.meta.get("og:sitename")
+    if candidate_brand:
+        candidate_brand = html.unescape(candidate_brand).strip()
+    else:
+        parts = [html.unescape(p).strip() for p in re.split(r"\s+[|–-]\s+", page.title) if p.strip()]
+        if parts:
+            generic_store_words = {"nettbutikk", "fiskeutstyr", "båtutstyr", "butikk", "webshop", "forside", "hjem", "velkommen", "home", "shop", "online"}
+            p0_lower = parts[0].lower()
+            if any(w in p0_lower for w in generic_store_words) and len(parts) > 1:
+                candidate_brand = parts[-1]
+            else:
+                candidate_brand = parts[0]
+
+    if candidate_brand:
+        cleaned_brand = re.sub(r"\s*[-–|:]?\s*(?:org(?:anisasjons)?\.?\s*nr\.?|organisasjonsnummer)\s*[:.]?\s*\d{9}\b.*$", "", candidate_brand, flags=re.I).strip(" .,-")
+        cleaned_brand = re.sub(r"\s*[-–|:]\s*(?:nettbutikk|butikk|webshop|forside|hjem|velkommen|home|shop|store)\b.*$", "", cleaned_brand, flags=re.I).strip(" .,-")
+        norm_b = legal_name(cleaned_brand)
+        generic_brands = {
+            "home", "hjem", "welcome", "velkommen", "kontakt", "contact",
+            "kontakt oss", "contact us", "privacy policy", "personvern",
+            "vilkar", "vilkar og betingelser", "terms", "terms of service",
+            "forside", "hjemmeside"
+        }
+        is_generic_tagline = (
+            re.search(r"\b(?:din|ditt)\s+\w+", cleaned_brand, re.I) is not None
+            or re.search(r"\b(?:kontakt|contact)\b", cleaned_brand, re.I) is not None
+            or re.search(r"\b(?:vilk[aå]r|betingelser|privacy|personvern)\b", cleaned_brand, re.I) is not None
+            or (re.search(r"\bi\s+[A-ZÆØÅa-zæøå]{3,}\b", cleaned_brand) is not None and len(cleaned_brand.split()) > 3)
+        )
+        if (cleaned_brand and len(cleaned_brand) <= 100 and "\ufffd" not in cleaned_brand
+                and norm_b not in generic_brands
+                and not is_generic_tagline
+                and norm_b != legal_name(context.get("name"))):
+            span = (page.span_for(cleaned_brand) or "")[:150]
+            publish(section, response, org, "public_brand", cleaned_brand, "meta:brand", span)
     section.state = "available"
     http.accepted_pages[org] = [(r, p) for r, p in pages if domain(r.url) == domain(response.url)]
     envelope.run.refresh['website'] = {'checked_urls': sorted({r.url for r, _ in http.accepted_pages[org]})}
