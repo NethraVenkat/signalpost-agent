@@ -32,8 +32,11 @@ from html.parser import HTMLParser
 
 def has_copyright_owner(page, org, name):
     """Independent own-brand/footer proof, not a nearby customer mention."""
-    expected = legal_name(name)
-    if not expected or not re.search(r'(?<!\w)' + re.escape(expected) + r'(?!\w)', legal_name(page.title)):
+    # Compare the complete legal/brand spelling, allowing word spacing only.
+    # This is a proof comparison, never a rewrite of a published legal name.
+    compact=lambda text:re.sub(r'\s+', '', legal_name(text))
+    expected = compact(name)
+    if not expected or compact(page.title)!=expected:
         return False
     class Footer(HTMLParser):
         def __init__(self):
@@ -47,9 +50,11 @@ def has_copyright_owner(page, org, name):
         def handle_data(self,data):
             if self.active and not self.hidden:self.parts.append(data)
     parsed=Footer();parsed.feed(page.raw)
-    return any(orgnrs(text)=={org} and ('©' in text or 'copyright' in text.lower())
-               and re.search(r'(?<!\w)'+re.escape(expected)+r'(?!\w)',legal_name(text))
-               for text in parsed.footers)
+    for text in parsed.footers:
+        if orgnrs(text)!={org}:continue
+        owners=re.finditer(r'(?:©|copyright)\s*(?:\d{4}\s*)?(.+?)(?=\s*(?:organisasjonsnummer|org\.?\s*nr|vat|©|copyright)|$)',text,re.I)
+        if any(compact(owner.group(1).strip(' .,:;'))==expected for owner in owners):return True
+    return False
 
 
 class EntityCard:

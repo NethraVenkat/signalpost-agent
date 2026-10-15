@@ -18,3 +18,12 @@ def test_script_only_copyright_does_not_override_partner_rejection():
     from signalpost.web.proof import has_copyright_owner
     page=Page(b'<head><title>Example AS</title></head><footer><script>"copyright Example AS 923609016"</script></footer>','https://example.no/')
     assert not has_copyright_owner(page,'923609016','Example AS')
+
+
+def test_registered_name_spacing_does_not_change_published_identity():
+    from signalpost.web.proof import has_copyright_owner
+    page=Page('<head><title>TubingTec AS</title></head><footer>© 2024 TubingTec AS Organisasjonsnummer: 932 761 483</footer>'.encode('utf8'),'https://example.no/')
+    context={'name':'TUBING TEC AS'}
+    assert has_copyright_owner(page,'932761483',context['name'])
+    assert not has_copyright_owner(page,'932761483','Tubing AS')
+    assert context['name']=='TUBING TEC AS'
