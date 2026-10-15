@@ -12,7 +12,7 @@ from ..sources.extract import Section, Source, add, missing, response_source
 from .candidates import generate, context_from_bulk, legal_name, Candidate, GENERIC
 from .html import Page
 from .policy import domain, normalize_url, SOCIAL, DIRECTORIES, FREE_MAIL
-from .proof import score, phone
+from .proof import score, phone, extract_entity_cards, find_containing_card
 from .social import discover, profile_url
 
 
@@ -317,6 +317,78 @@ async def fetch(org, envelope, bulk, http):
     return await offload(publish_result,org,envelope,http,section,choices,attempts,context)
 
 
+def extract_contacts_and_social(section, org, web_claim, pages, context=None, envelope=None):
+    """
+    Extracts contacts and verified social profiles from website pages.
+    Enforces corporate entity card attribution and filters sibling/group accounts on multi-entity group sites.
+    """
+    context = context or {}
+    web_val = web_claim.value if hasattr(web_claim, "value") and isinstance(web_claim.value, dict) else (web_claim if isinstance(web_claim, dict) else {})
+    other_orgnrs = web_val.get("other_orgnrs") or []
+    is_group = bool(other_orgnrs) or web_val.get("relationship_note") == "group_site"
+
+    subunits = set()
+    if envelope and hasattr(envelope, "claims"):
+        for c in envelope.claims:
+            if c.field.startswith("subunits.unit.") and isinstance(c.value, dict) and c.value.get("orgnr"):
+                subunits.add(c.value.get("orgnr"))
+    if context.get("subunits"):
+        subunits.update(context["subunits"])
+
+    proof_url = web_val.get("final_url") or web_val.get("proof_page_url") or ""
+    target_domain = domain(proof_url) if proof_url else (domain(pages[0][0].url) if pages else "")
+
+    social_seen, contact_seen = set(), set()
+    for source_response, source_page in pages:
+        if domain(source_response.url) != target_domain:
+            continue
+        cards = extract_entity_cards(source_page.raw) if is_group else []
+        for url, source_span in discover(source_page).items():
+            if url not in social_seen:
+                if is_group:
+                    p_path = urlsplit(url).path.rstrip("/").lower()
+                    legal_nm = (context.get("name") or "").lower()
+                    if any(term in p_path for term in ("group", "holding", "gruppe")) and not any(term in legal_nm for term in ("group", "holding", "gruppe")):
+                        continue
+                    pos = source_page.raw.find(url)
+                    if pos >= 0:
+                        c = find_containing_card(cards, pos)
+                        if c and c.is_sibling(org, other_orgnrs, subunits):
+                            continue
+                publish(section, source_response, org, "social_profile." + digest(url)[:20], {"url": url, "platform": domain(url)}, "company-link:" + url, source_span)
+                social_seen.add(url)
+        contacts = []
+        for link in source_page.links:
+            if link.href.startswith("tel:") and (number := phone(link.href[4:])):
+                contacts.append(("phone", number, link.span))
+            if link.href.startswith("mailto:"):
+                address = link.href[7:].split("?", 1)[0].strip()
+                if address.rsplit("@", 1)[-1].lower() == target_domain:
+                    contacts.append(("email", address, link.span))
+        for match in re.finditer(r"[A-Za-z0-9.!#$%&'*+/=?^_`{|}~-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}", source_page.visible):
+            address = match.group()
+            if address.rsplit("@", 1)[-1].lower() == target_domain:
+                contacts.append(("email", address, source_page.span_for(address)[:150]))
+        for match in re.finditer(r"(?:telefon|tlf|phone)\s*:?\s*((?:\+47|0047)?[ .()0-9-]{8,20})", source_page.visible, re.I):
+            if number := phone(match.group(1)):
+                contacts.append(("phone", number, source_page.span_for(match.group(1))[:150]))
+        for kind, contact, source_span in contacts:
+            if (kind, contact.casefold()) not in contact_seen:
+                if is_group:
+                    pos = source_page.raw.find(contact)
+                    if pos >= 0:
+                        c = find_containing_card(cards, pos)
+                        if c:
+                            if c.is_sibling(org, other_orgnrs, subunits) or not c.matches_org(org, context, subunits):
+                                continue
+                        else:
+                            continue
+                    else:
+                        continue
+                publish(section, source_response, org, "contact." + kind + "." + digest(contact.casefold())[:20], contact, "contact:" + contact, source_span)
+                contact_seen.add((kind, contact.casefold()))
+
+
 def candidate_proof(page,org,context,candidate,leaders):
     proof=score(page,org,context,candidate.origin,leaders)
     if candidate.subunit_orgnr and proof.level not in {'VERIFIED','BLOCKED'}:
@@ -350,34 +422,9 @@ def publish_result(org,envelope,http,section,choices,attempts,context):
         section.evidence.extend(registry_refs)
         section.claims[-1].evidence_ids.extend(e.id for e in registry_refs)
     from .descriptions import extract as descriptions
-    descriptions(section,org,section.claims[-1],[(r,p) for r,p in pages if domain(r.url)==domain(response.url)])
-    social_seen, contact_seen = set(), set()
-    for source_response, source_page in pages:
-        if domain(source_response.url) != domain(response.url):
-            continue
-        for url, source_span in discover(source_page).items():
-            if url not in social_seen:
-                publish(section, source_response, org, "social_profile." + digest(url)[:20], {"url": url, "platform": domain(url)}, "company-link:" + url, source_span)
-                social_seen.add(url)
-        contacts = []
-        for link in source_page.links:
-            if link.href.startswith("tel:") and (number := phone(link.href[4:])):
-                contacts.append(("phone", number, link.span))
-            if link.href.startswith("mailto:"):
-                address = link.href[7:].split("?", 1)[0].strip()
-                if address.rsplit("@", 1)[-1].lower() == domain(response.url):
-                    contacts.append(("email", address, link.span))
-        for match in re.finditer(r"[A-Za-z0-9.!#$%&'*+/=?^_`{|}~-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}", source_page.visible):
-            address = match.group()
-            if address.rsplit("@", 1)[-1].lower() == domain(response.url):
-                contacts.append(("email", address, source_page.span_for(address)[:150]))
-        for match in re.finditer(r"(?:telefon|tlf|phone)\s*:?\s*((?:\+47|0047)?[ .()0-9-]{8,20})", source_page.visible, re.I):
-            if number := phone(match.group(1)):
-                contacts.append(("phone", number, source_page.span_for(match.group(1))[:150]))
-        for kind, contact, source_span in contacts:
-            if (kind, contact.casefold()) not in contact_seen:
-                publish(section, source_response, org, "contact." + kind + "." + digest(contact.casefold())[:20], contact, "contact:" + contact, source_span)
-                contact_seen.add((kind, contact.casefold()))
+    accepted_domain_pages = [(r, p) for r, p in pages if domain(r.url) == domain(response.url)]
+    descriptions(section, org, section.claims[-1], accepted_domain_pages)
+    extract_contacts_and_social(section, org, section.claims[-1], accepted_domain_pages, context=context, envelope=envelope)
     brand = extract_public_brand(page, context.get("name"))
     if brand:
         span = (page.span_for(brand) or "")[:150]

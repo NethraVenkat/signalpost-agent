@@ -254,3 +254,49 @@ def test_descriptions_filters_legal_pages_forms_and_address_blocks():
     assert len(about_claims) == 1
     assert "BoilerTECH AS er et selskap" in about_claims[0].value["text"]
     assert "Lasta 50" not in about_claims[0].value["text"]
+
+
+def test_text_decoding_utf8_punctuation():
+    """Proves Page faithfully decodes UTF-8 punctuation including en-dash, smart quotes."""
+    from signalpost.web.html import Page
+    # \xe2\x80\x93 is EN DASH (–), \xe2\x80\x9c and \xe2\x80\x9d are smart quotes
+    html_bytes = b'<!doctype html><html><head><meta charset="utf-8"><meta name="description" content="Simployer One does routine HR \xe2\x80\x93 trusted by 12,000+ companies."></head><body><p>\xe2\x80\x9cQuoted\xe2\x80\x9d text</p></body></html>'
+    page = Page(html_bytes, "https://example.no")
+    assert "–" in page.meta["description"]
+    assert "“Quoted”" in page.visible
+    assert "\ufffd" not in page.meta["description"]
+    assert "\ufffd" not in page.visible
+
+
+def test_text_decoding_norwegian_characters():
+    """Proves Norwegian characters æ, ø, å are decoded properly."""
+    from signalpost.web.html import Page
+    # UTF-8 encoded Norwegian
+    html_bytes = "<html><head><title>Båt og bil – frisør og lær</title></head><body>Blåbærsyltetøy</body></html>".encode("utf-8")
+    page = Page(html_bytes, "https://example.no")
+    assert page.title == "Båt og bil – frisør og lær"
+    assert "Blåbærsyltetøy" in page.visible
+
+
+def test_text_decoding_declared_legacy_encodings():
+    """Proves declared ISO-8859-1 / Windows-1252 encoding is honored rather than producing \ufffd."""
+    from signalpost.web.html import Page
+    # In Windows-1252 / ISO-8859-1:
+    # 'æ' is 0xe6, 'ø' is 0xf8, 'å' is 0xe5
+    text_content = "<html><head><meta charset=\"windows-1252\"><title>L\xe6re og forst\xe5</title></head><body>Milj\xf8 og v\xe5r</body></html>"
+    raw_bytes = text_content.encode("latin1")
+    page = Page(raw_bytes, "https://example.no")
+    assert "\ufffd" not in page.title
+    assert "Lære og forstå" in page.title
+    assert "Miljø og vår" in page.visible
+
+
+def test_text_decoding_literal_source_mojibake_preserved():
+    """Proves literal source mojibake is preserved in raw bytes and content hash without silent rewrite."""
+    import hashlib
+    from signalpost.web.html import Page
+    # Webmaster literally pasted mojibake into HTML
+    raw_bytes = b'<html><head><title>Simployer \xc3\xa2\xe2\x82\xac\xe2\x80\x9c Service</title></head><body>Literal mojibake</body></html>'
+    page = Page(raw_bytes, "https://example.no")
+    assert page.body == raw_bytes
+    assert hashlib.sha256(page.body).hexdigest() == hashlib.sha256(raw_bytes).hexdigest()
