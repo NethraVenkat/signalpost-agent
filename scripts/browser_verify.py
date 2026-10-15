@@ -146,6 +146,24 @@ def main():
                 assert 'sibling@zephyrsynthetic.no' not in body
             check('synthetic_group_subject_contact_scope',group)
             page.screenshot(path=str(out/'synthetic-group-profile.png'),full_page=True)
+            page.goto(origin+'/integration-site/index.html');page.locator('#tab-directory').click()
+            def hiring_filter():
+                page.locator('#filter-jobs').check()
+                expect(page.locator('#result-count')).to_contain_text('1 companies')
+                page.locator('#filter-jobs').uncheck()
+            check('synthetic_exact_employer_hiring_filter',hiring_filter)
+            page.goto(base+'index.html');page.locator('#tab-directory').click()
+            def csv_edge_cases():
+                cases=['\x00=1+1','\x0b+cmd','\x1f-2+3','\x7f@SUM(A1)','\x85=1','\u200b=1','\ufeff=1','\u00a0=1',' \n\t=1','æøå “quoted”','a,"b"','line1\nline2',None]
+                page.evaluate('(cases)=>{cases.forEach((value,i)=>window.SIGNALPOST_INDEX[i].name=value)}',cases)
+                with page.expect_download() as info:page.locator('#export-directory-csv').click()
+                path=out/'csv-edge-cases.csv';info.value.save_as(path)
+                rows=list(csv.DictReader(io.StringIO(path.read_text(encoding='utf8'))))
+                by_org={r['Organisation number']:r['Name'] for r in rows}
+                ids=page.evaluate('window.SIGNALPOST_INDEX.map(r=>r.orgnr)')
+                for i,value in enumerate(cases):
+                    assert by_org[ids[i]]==("'"+value if i<9 else value or '')
+            check('csv_control_unicode_quotes_newlines_missing',csv_edge_cases)
             browser.close()
     finally:server.shutdown();server.server_close()
     unexpected=[e for e in console if not e['location'].get('url','').endswith('progress.json')]
