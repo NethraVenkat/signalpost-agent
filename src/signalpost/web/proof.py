@@ -27,6 +27,36 @@ def phone(value):
     return "+47" + number if len(number) == 8 else None
 
 
+def is_dedicated_entity_card(raw_html: str, org: str, name: str = "") -> bool:
+    """Checks whether org appears inside a dedicated corporate entity card/block rather than an arbitrary directory table."""
+    pat = re.compile(r"\b" + org[0:3] + r"[\s.]?" + org[3:6] + r"[\s.]?" + org[6:9] + r"\b")
+    for m in pat.finditer(raw_html):
+        start = max(0, m.start() - 350)
+        end = min(len(raw_html), m.end() + 250)
+        window = raw_html[start:end]
+
+        has_id_label = bool(re.search(r"(?:organisation\s+number|organisasjonsnummer|org\.?\s*nr|faktura|invoice|mva|vat)", window, re.I))
+        if not has_id_label:
+            continue
+
+        is_partner = bool(re.search(r"\b(?:kunder|våre\s+kunder|partnere|våre\s+partnere|partners|clients|referanser|portfolio|directory|leverandører)\b", window, re.I))
+        if is_partner:
+            continue
+
+        has_card_or_heading = bool(re.search(r'<(?:h[1-6]|div|section|article|p)[^>]*class=[\'"][^\'"]*(?:card|entity|unit|company|box|contact|invoice)[^\'"]*[\'"]', window, re.I))
+        has_heading = bool(re.search(r"<h[1-6][^>]*>[^<]+</h[1-6]>", window, re.I))
+
+        name_match = False
+        if name:
+            tokens = [t.lower() for t in re.findall(r"[a-zA-ZæøåÆØÅ]{3,}", name) if t.lower() not in {"as", "asa", "holding", "group", "norge", "nordic", "the"}]
+            if any(t in window.lower() for t in tokens):
+                name_match = True
+
+        if (has_card_or_heading or has_heading) and (name_match or not name):
+            return True
+    return False
+
+
 @dataclass
 class Proof:
     level: str
@@ -62,6 +92,14 @@ def score(page, org, context, origin, leaders):
     all_ids = visible | meta | json_ids
     others = sorted(all_ids - {org})
     if org in all_ids:
+        if len(others) >= 2 and org not in json_ids:
+            # Multi-entity group site check: requires registry-origin domain and dedicated entity card
+            is_valid_group = False
+            if origin == "registry_website":
+                if is_dedicated_entity_card(page.raw, org, context.get("name", "")):
+                    is_valid_group = True
+            if not is_valid_group:
+                return Proof("REJECT", other_orgnrs=others, reason="unverified_multi_entity_site")
         return Proof("VERIFIED", "jsonld_vatid" if org in json_ids else "orgnr_on_page", other_orgnrs=others, token=org)
     if others:
         return Proof("REJECT", other_orgnrs=others, reason="foreign_orgnr")

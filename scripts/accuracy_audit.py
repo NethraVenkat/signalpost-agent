@@ -23,7 +23,7 @@ from urllib.parse import urlparse
 
 from signalpost.web.html import Page, json_values
 from signalpost.web.candidates import legal_name
-from signalpost.web.proof import phone, orgnrs
+from signalpost.web.proof import phone, orgnrs, is_dedicated_entity_card
 
 # Known directory and aggregator domains that cannot serve as company official websites
 DIRECTORY_DOMAINS = {
@@ -633,7 +633,21 @@ def audit_website_claim(
 
     # 5. Check for multi-entity group lists or directory tables
     if len(all_structural_orgnrs) >= 3 and (org not in brand_orgnrs and org not in json_ids):
-        return "INCORRECT", f"Multi-entity list or directory table containing multiple organisation numbers ({len(all_structural_orgnrs)} found)", None
+        # A group page listing the company is valid only if labeled group_site
+        # and corroborated by registry declaration and dedicated entity card.
+        is_legitimate_group = False
+        if val.get("relationship_note") == "group_site":
+            domain = (urlparse(url).hostname or "").replace("www.", "").lower()
+            reg_domain = ""
+            if context and context.get("website"):
+                reg_domain = (urlparse(context["website"] if "://" in str(context["website"]) else "https://" + str(context["website"])).hostname or "").replace("www.", "").lower()
+            domain_corroborated = (origin == "registry_website") or (reg_domain and domain == reg_domain)
+            if domain_corroborated:
+                legal_nm = (context or {}).get("name", "")
+                if is_dedicated_entity_card(page.raw, org, legal_nm):
+                    is_legitimate_group = True
+        if not is_legitimate_group:
+            return "INCORRECT", f"Multi-entity list or directory table containing multiple organisation numbers ({len(all_structural_orgnrs)} found)", None
 
     if ptype in ("orgnr_on_page", "orgnr"):
         if org in all_structural_orgnrs:
