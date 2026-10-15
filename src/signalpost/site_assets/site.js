@@ -776,7 +776,7 @@
           sanitizeCsvCell(r.size_band),
           sanitizeCsvCell(r.revenue),
           sanitizeCsvCell(r.annual_result),
-          sanitizeCsvCell(r.currency || (r.revenue != null || r.annual_result != null ? 'NOK' : '')),
+          sanitizeCsvCell(r.currency || ''),
           sanitizeCsvCell(r.unit || ''),
           sanitizeCsvCell(r.fiscal_year),
           sanitizeCsvCell(r.website),
@@ -1151,7 +1151,7 @@
             val = sizeMap[val] || val;
           }
           if((key === 'revenue' || key === 'annual_result') && val != null) {
-            val = format(val) + ' ' + (r.currency || 'NOK');
+            val = format(val) + ' ' + (r.currency || 'Unknown currency');
           }
           if(['social', 'jobs', 'activity'].includes(key) && state !== 'available') {
             val = null;
@@ -1230,6 +1230,7 @@
   let statusPollTimer = null;
   let statusTerminal = false;
   let statusLastRunId = null;
+  let statusLastData = null;
 
   function formatElapsed(seconds) {
     const m = Math.floor(seconds / 60);
@@ -1246,12 +1247,15 @@
     }
     statusLastRunId = data.run_id || null;
 
-    const status = data.status || 'unknown';
+    statusLastData = data;
+    let status = data.status || 'unknown';
+    if (status === 'running' && data.heartbeat && Date.now() - Date.parse(data.heartbeat) > 15000) status = 'stale';
     const isTerminal = status === 'completed' || status === 'failed' || status === 'interrupted';
+    if (statusSnapshotNote && status !== 'stale') statusSnapshotNote.hidden = true;
 
     // Status dot
     if (statusDot) {
-      statusDot.className = 'status-dot ' + (isTerminal ? status : 'running');
+      statusDot.className = 'status-dot ' + (status === 'stale' ? 'stale' : isTerminal ? status : 'running');
     }
 
     // Badge
@@ -1388,18 +1392,28 @@
         resp = await fetch('state/progress.json', { cache: 'no-store' });
       }
       if (!resp.ok) {
-        showStaticSnapshot();
+        showUnavailableProgress();
         return;
       }
       const data = await resp.json();
       if (!data || typeof data !== 'object' || !data.schema_version) {
-        showStaticSnapshot();
+        showUnavailableProgress();
         return;
       }
       renderStatusData(data);
     } catch {
-      showStaticSnapshot();
+      showUnavailableProgress();
     }
+  }
+
+  function showUnavailableProgress() {
+      if (statusLastData && !statusTerminal) {
+        renderStatusData({...statusLastData, status: 'stale'});
+        if (statusSnapshotNote) {
+          statusSnapshotNote.textContent = 'Live progress unavailable. Showing the last received update.';
+          statusSnapshotNote.hidden = false;
+        }
+      } else showStaticSnapshot();
   }
 
   function startPolling() {

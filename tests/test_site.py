@@ -14,6 +14,12 @@ from tests.test_synthesis_readability import available
 from tests.test_registry import config, execute
 
 
+def test_unknown_reporting_currency_is_not_exported_as_nok():
+    import csv,io
+    row=next(csv.DictReader(io.StringIO(export_directory_csv([{'orgnr':'923609016','revenue':123}]))))
+    assert row['Revenue']=='123' and row['Currency']==''
+
+
 class Markup(HTMLParser):
     def __init__(self, text):
         super().__init__(convert_charrefs=True)
