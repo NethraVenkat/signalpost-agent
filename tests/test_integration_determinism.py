@@ -14,7 +14,8 @@ from scripts.production_replay import run_production_replay
 
 def test_production_replay_determinism_across_runs(tmp_path):
     input_csv = Path("tests/fixtures/integration_declared_batch.csv")
-    fixtures_env = Path("out/candidate-1000-corrected-envelopes.jsonl")
+    manifest_path = Path("tests/fixtures/integration_bundle/manifest.json")
+    fixtures_dir = Path("tests/fixtures/integration_bundle/blobs")
 
     # Isolated paths for Run 1
     dir1 = tmp_path / "run1"
@@ -33,8 +34,10 @@ def test_production_replay_determinism_across_runs(tmp_path):
             input_path=input_csv,
             output_envelopes=out1,
             output_report=rep1,
-            state_dir=Path("state"),
-            fixture_envelopes=fixtures_env,
+            state_dir=dir1 / "state",
+            manifest_path=manifest_path,
+            fixtures_dir=fixtures_dir,
+            bulk=input_csv,
             websites=False,
             hiring=False,
             workers=1,
@@ -43,8 +46,10 @@ def test_production_replay_determinism_across_runs(tmp_path):
             input_path=input_csv,
             output_envelopes=out2,
             output_report=rep2,
-            state_dir=Path("state"),
-            fixture_envelopes=fixtures_env,
+            state_dir=dir2 / "state",
+            manifest_path=manifest_path,
+            fixtures_dir=fixtures_dir,
+            bulk=input_csv,
             websites=False,
             hiring=False,
             workers=1,
@@ -59,8 +64,8 @@ def test_production_replay_determinism_across_runs(tmp_path):
     lines1 = [json.loads(l) for l in out1.read_text(encoding="utf-8-sig").splitlines() if l.strip()]
     lines2 = [json.loads(l) for l in out2.read_text(encoding="utf-8-sig").splitlines() if l.strip()]
 
-    # Multiplicity & order check: 5 input rows -> 5 envelopes
-    assert len(lines1) == len(lines2) == 5
+    # Multiplicity & order check: 4 input rows (excluding header) -> 4 envelopes
+    assert len(lines1) == len(lines2) == 4
     for env1, env2 in zip(lines1, lines2):
         assert env1["organisation_number"] == env2["organisation_number"]
 
