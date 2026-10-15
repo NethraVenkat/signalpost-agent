@@ -74,7 +74,7 @@ def export_directory_csv(records):
             sanitize_csv_cell(r.get("size_band")),
             sanitize_csv_cell(r.get("revenue")),
             sanitize_csv_cell(r.get("annual_result")),
-            sanitize_csv_cell(r.get("currency") or ("NOK" if r.get("revenue") is not None or r.get("annual_result") is not None else "")),
+            sanitize_csv_cell(r.get("currency") or ""),
             sanitize_csv_cell(r.get("unit") or ""),
             sanitize_csv_cell(r.get("fiscal_year")),
             sanitize_csv_cell(r.get("website")),
@@ -305,7 +305,7 @@ def fact(claim, records):
         parts = []
         if period.get('fiscal_year'): parts.append(f"Fiscal year: {period['fiscal_year']}")
         if period.get('period_start') and period.get('period_end'): parts.append(f"Accounting period: {period['period_start']} to {period['period_end']}")
-        parts.append(f"Currency: {period.get('currency', 'NOK')}")
+        parts.append(f"Currency: {period.get('currency') or 'Unknown'}")
         if period.get('unit'): parts.append(f"Unit: {period['unit']}")
         content += '<p class="financial-meta muted">' + esc(' · '.join(parts)) + '</p>'
     panel = bool(claim.get('evidence_ids') or available)
@@ -477,7 +477,7 @@ def profile(row, title):
                 rev = by_field.get('accounts.revenue')
                 res = by_field.get('accounts.net_result')
                 details_parts = []
-                curr = period.get('currency') or 'NOK'
+                curr = period.get('currency') or 'Unknown currency'
                 if rev is not None: details_parts.append(f'Revenue: {value_text(rev)} {esc(curr)}')
                 if res is not None: details_parts.append(f'Net result: {value_text(res)} {esc(curr)}')
                 detail_str = f'Fiscal year {f_year} filed in Regnskapsregisteret' + (f' ({", ".join(details_parts)})' if details_parts else '')
