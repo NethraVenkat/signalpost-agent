@@ -37,3 +37,23 @@ def test_duplicate_rows_do_not_repeat_research(tmp_path):
     report,rows=execute(config(tmp_path,[ORG,ORG,ORG]))
     assert len(rows)==3 and report['requests']==4
     assert rows[0]==rows[1]==rows[2]
+
+
+def test_csv_input_excludes_header_and_parses_orgnr():
+    """
+    Proves that reading CSV input files:
+    1. Does NOT count the CSV header line as an input company.
+    2. Correctly parses exactly 4 data rows from integration_declared_batch.csv.
+    3. Identifies 3 unique companies and 1 invalid checksum row.
+    """
+    from pathlib import Path
+    batch_csv = Path("tests/fixtures/integration_declared_batch.csv")
+    inputs = read(batch_csv)
+
+    # 4 data rows: AUTONEXT AS, PEAK SERVICES AS, AUTONEXT AS (dup), INVALID CHECKSUM
+    assert len(inputs.rows) == 4, f"Expected 4 data rows, got {len(inputs.rows)}: {inputs.rows}"
+    assert inputs.rows == ["999592236", "823884362", "999592236", "123456789"]
+    assert len(inputs.unique) == 3
+    assert inputs.unique == ["999592236", "823884362", "123456789"]
+    assert inputs.invalid == ["123456789"]
+    assert inputs.duplicates == 1
