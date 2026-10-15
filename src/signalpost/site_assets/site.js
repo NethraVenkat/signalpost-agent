@@ -13,9 +13,9 @@
     if (typeof value === 'number') return String(value);
     let s = typeof value === 'object' ? JSON.stringify(value) : String(value);
     if (/^-?\d+(?:\.\d+)?$/.test(s.trim())) return s.trim();
-    const stripped = s.replace(/^[\s\r\t]+/, '');
+    const stripped = s.replace(/^[\s\x00-\x1f\x7f-\x9f\u200b-\u200d\u2060\ufeff]+/, '');
     if (stripped && ['=', '+', '-', '@'].includes(stripped[0])) s = "'" + s;
-    else if (s && ['\t', '\r'].includes(s[0])) s = "'" + s;
+    else if (s && (s.charCodeAt(0) < 32 || (s.charCodeAt(0) >= 127 && s.charCodeAt(0) <= 159))) s = "'" + s;
     if (/[,"\n\r]/.test(s)) s = '"' + s.replace(/"/g, '""') + '"';
     return s;
   };

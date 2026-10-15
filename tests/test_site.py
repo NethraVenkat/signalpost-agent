@@ -20,6 +20,27 @@ def test_unknown_reporting_currency_is_not_exported_as_nok():
     assert row['Revenue']=='123' and row['Currency']==''
 
 
+def test_csv_control_prefixes_cannot_hide_formulas():
+    import csv,io
+    for prefix in ['\x00','\x0b','\x1f','\x7f','\x85','\u200b','\ufeff','\u00a0',' \n\t']:
+        for trigger in ['=SUM(1,2)','+cmd','-2+3','@SUM(A1)']:
+            raw=prefix+trigger
+            decoded=next(csv.reader(io.StringIO(sanitize_csv_cell(raw))))[0]
+            assert decoded=="'"+raw
+    for text in ['æøå “quoted”','line1\nline2','a,"b"',None,'-12.34']:
+        cell=sanitize_csv_cell(text)
+        assert cell=='' if text is None else next(csv.reader(io.StringIO(cell)))[0]==text
+
+
+def test_carried_fact_shows_last_successful_check():
+    from signalpost.site import fact
+    claim={'id':'a'*64,'field':'identity.legal_name','family':'identity','value':'Example AS',
+           'availability':'available','carried_forward':True,'last_observed_at':'2026-10-01T12:00:00Z','evidence_ids':[]}
+    markup=fact(claim,{})
+    assert 'Previously supported; not freshly checked' in markup
+    assert 'Last successfully checked:' in markup and '2026-10-01' in markup
+
+
 class Markup(HTMLParser):
     def __init__(self, text):
         super().__init__(convert_charrefs=True)

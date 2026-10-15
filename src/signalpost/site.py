@@ -41,10 +41,10 @@ def sanitize_csv_cell(value):
     if re.match(r'^-?\d+(?:\.\d+)?$', s.strip()):
         return s.strip()
     # Sanitize formula injection triggers (including leading whitespace/control characters)
-    stripped = s.lstrip(' \t\r\n')
+    stripped = re.sub(r'^[\s\x00-\x1f\x7f-\x9f\u200b-\u200d\u2060\ufeff]+', '', s)
     if stripped and stripped[0] in ('=', '+', '-', '@'):
         s = "'" + s
-    elif s and s[0] in ('\t', '\r'):
+    elif s and (ord(s[0]) < 32 or 127 <= ord(s[0]) <= 159):
         s = "'" + s
     if any(c in s for c in (',', '"', '\n', '\r')):
         s = '"' + s.replace('"', '""') + '"'
@@ -299,7 +299,7 @@ def fact(claim, records):
     if title:
         content = '<p>English industry title: ' + esc(title) + '</p>' + content
     if claim.get('carried_forward'):
-        content = '<p class="stale">Previously supported; not freshly checked.</p>' + content
+        content = '<p class="stale">Previously supported; not freshly checked. Last successfully checked: ' + esc(display_time(claim.get('last_observed_at'))) + '.</p>' + content
     period = claim.get('reporting_period')
     if period:
         parts = []
