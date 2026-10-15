@@ -1,5 +1,6 @@
 """Small exact source excerpts; never synthesize a quote."""
 import json
+from .text import decode_body
 
 
 def document_bounds(text):
@@ -83,7 +84,7 @@ def pointer_bounds(text, pointer, bounds=None):
 
 
 def excerpt(body: bytes, value=None, locator="", limit=300,document=None):
-    text = document[0] if document else body.decode("utf-8", errors="replace")
+    text = document[0] if document else decode_body(body)
     bounds = pointer_bounds(text, locator,document[1] if document else None) if text.lstrip().startswith(("{", "[")) else None
     if bounds:
         start, end = bounds

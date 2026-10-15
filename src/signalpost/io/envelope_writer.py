@@ -8,6 +8,7 @@ from collections import Counter
 from ..models.envelope import Error, CompactProfile
 from ..models.claim import Claim
 from ..models.evidence import digest
+from ..sources.text import decode_body
 
 
 def constrain(envelopes, shape, max_output_mb):
@@ -61,7 +62,7 @@ def write(path: Path, envelopes, shape, blobs, max_output_mb=256):
             target = blobs.directory / evidence.content_sha256
             if target.exists():
                 if evidence.content_sha256 not in bodies:
-                    bodies[evidence.content_sha256] = target.read_bytes().decode("utf8", errors="replace")
+                    bodies[evidence.content_sha256] = decode_body(target.read_bytes())
                 if evidence.claim_span not in bodies[evidence.content_sha256]:
                     raise ValueError("Evidence excerpt is not verbatim source text")
     lines, limited, minimum_exceeded = constrain(envelopes, shape, max_output_mb)

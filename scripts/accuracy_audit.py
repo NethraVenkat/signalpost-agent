@@ -19,6 +19,8 @@ import re
 import xml.etree.ElementTree as ET
 from collections import Counter, defaultdict
 from pathlib import Path
+from html.parser import HTMLParser
+from signalpost.sources.text import decode_body
 from urllib.parse import urlparse
 
 from signalpost.web.html import Page, json_values
@@ -763,6 +765,35 @@ def audit_website_claim(
     return "UNVERIFIABLE", f"Unknown website proof type: {ptype}", None
 
 
+class DescriptionParser(HTMLParser):
+    """Independent full paragraph/meta extraction; no proof-label trust."""
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.paragraph = None
+        self.texts = []
+        self.hidden = 0
+
+    def handle_starttag(self, tag, attrs):
+        attrs = dict(attrs)
+        if tag in {'script', 'style', 'template'}:
+            self.hidden += 1
+        if tag == 'p' and not self.hidden:
+            self.paragraph = []
+        if tag == 'meta' and attrs.get('name', attrs.get('property')) in {'description', 'og:description'}:
+            self.texts.append(attrs.get('content', ''))
+
+    def handle_endtag(self, tag):
+        if tag == 'p' and self.paragraph is not None:
+            self.texts.append(''.join(self.paragraph))
+            self.paragraph = None
+        if tag in {'script', 'style', 'template'}:
+            self.hidden = max(0, self.hidden - 1)
+
+    def handle_data(self, data):
+        if self.paragraph is not None and not self.hidden:
+            self.paragraph.append(data)
+
+
 def audit_website_metadata_claim(
     org: str, claim: dict, ev: dict, body: str, website_claim: dict = None, context: dict = None
 ) -> tuple[str, str, any]:
@@ -864,6 +895,14 @@ def audit_website_metadata_claim(
 
         norm_val_compact = re.sub(r"\s+", " ", norm_val).strip()
         norm_body_compact = re.sub(r"\s+", " ", norm_body).strip()
+
+        parsed = DescriptionParser()
+        parsed.feed(body)
+        # Only markup/entity decoding and the production 300-character cap.
+        # Matching a few words does not establish sentence support.
+        if any(re.sub(r'\s+', ' ', text.strip()[:300]).lower() == norm_val_compact
+               for text in parsed.texts):
+            return "CORRECT", "Complete description verified in parsed source text", val_str
 
         if norm_val in norm_body or val_str.lower() in body.lower() or norm_val_compact in norm_body_compact:
             return "CORRECT", "Website description verified in page body", val_str
@@ -1052,7 +1091,7 @@ def audit_hiring_claim(org: str, claim: dict, ev: dict, body: str, subunit_map: 
     return "INCORRECT", f"Employer orgnr {employer_orgnr} != parent org {org} without verified subunit mapping", employer_orgnr
 
 
-def run_comprehensive_audit(envelopes_path: Path, state_dir: Path, sample_seed: int = 20261015, min_sample: int = 110):
+def run_comprehensive_audit(envelopes_path: Path, state_dir: Path, sample_seed: int = 20261015, min_sample: int = 110, output_path: Path | None = None):
     blobs_dir = state_dir / "blobs"
     if not blobs_dir.exists():
         raise FileNotFoundError(f"State blobs directory not found: {blobs_dir}")
@@ -1078,7 +1117,7 @@ def run_comprehensive_audit(envelopes_path: Path, state_dir: Path, sample_seed: 
             b = p.read_bytes()
             if hashlib.sha256(b).hexdigest() != sha:
                 return False
-            blob_cache[sha] = b.decode("utf-8", errors="replace")
+            blob_cache[sha] = decode_body(b)
         return blob_cache[sha]
 
     cat_a = {
@@ -1362,7 +1401,7 @@ def run_comprehensive_audit(envelopes_path: Path, state_dir: Path, sample_seed: 
 
     report = {
         "audit_metadata": {
-            "auditor_version": "2.1-strict-source-field",
+            "auditor_version": "2.2-parsed-description-explicit-decoding",
             "envelopes_file": envelopes_path.name,
             "total_companies": total_companies,
             "sample_seed": sample_seed,
@@ -1393,7 +1432,7 @@ def run_comprehensive_audit(envelopes_path: Path, state_dir: Path, sample_seed: 
         "item_findings": item_findings
     }
 
-    out_file = Path("reports/accuracy-audit-report.json")
+    out_file = output_path or Path("reports/accuracy-audit-report.json")
     out_file.parent.mkdir(parents=True, exist_ok=True)
     out_file.write_text(json.dumps(report, indent=2, ensure_ascii=False, default=str), encoding="utf-8")
     print(f"Wrote strict accuracy audit report to {out_file}")
@@ -1409,8 +1448,9 @@ if __name__ == "__main__":
     parser.add_argument("--state-dir", type=Path, default=Path("state"))
     parser.add_argument("--seed", type=int, default=20261015)
     parser.add_argument("--sample-size", type=int, default=110)
+    parser.add_argument("--output", type=Path)
     args = parser.parse_args()
-    report = run_comprehensive_audit(args.envelopes, args.state_dir, args.seed, args.sample_size)
+    report = run_comprehensive_audit(args.envelopes, args.state_dir, args.seed, args.sample_size, args.output)
     print("\n=== CATEGORY B AUDIT SUMMARY ===")
     for fam, stats in report["category_b_stored_source_agreement"].items():
         prec_str = f"{stats['precision']*100:.2f}%" if stats['precision'] is not None else "N/A"
