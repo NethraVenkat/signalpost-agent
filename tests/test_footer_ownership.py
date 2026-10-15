@@ -27,3 +27,17 @@ def test_registered_name_spacing_does_not_change_published_identity():
     assert has_copyright_owner(page,'932761483',context['name'])
     assert not has_copyright_owner(page,'932761483','Tubing AS')
     assert context['name']=='TUBING TEC AS'
+
+
+def test_independent_footer_runs_dependent_production_extraction(tmp_path,monkeypatch):
+    from tests.test_websites import execute_web,html
+    body=html('© Example AS. Organisasjonsnummer: 923609016 <a href="https://linkedin.com/company/example">LinkedIn</a>',
+              '<h2>Our customers</h2><p>Example AS provides specialized services for customers across Norway.</p>'
+              '<a href="mailto:office@example.no">Office</a><a href="https://linkedin.com/company/example">LinkedIn</a>')
+    body=body.replace('</head>','<meta name="description" content="Example AS provides specialized services for customers across Norway."></head>')
+    _,row,_,_=execute_web(tmp_path,monkeypatch,body)
+    facts={c['field']:c['value'] for c in row['claims'] if c['availability']=='available'}
+    assert facts['official_website']['identity_level']=='VERIFIED'
+    assert any(k.startswith('website_description.') for k in facts)
+    assert 'office@example.no' in facts.values()
+    assert any(k.startswith('social_profile.') for k in facts)
