@@ -1,0 +1,1680 @@
+{
+  "date": "2026-10-15",
+  "verdict": "READY FOR REVISION",
+  "candidate_source_commit": "2b0f633a92ffcfc164f80954457888d33375a35c",
+  "starting_commit": "aeddf4d",
+  "submitted_baseline_preserved": "0d28df1",
+  "branch": "main",
+  "confirmed_fixes": [
+    "NAV same-version pending detail duplication consumes cap slots; failed version tracking now permits newer version recheck",
+    "CSV formulas hidden behind control/Unicode prefixes; Python and browser exports protected",
+    "Carried facts now show last successfully checked time in UI"
+  ],
+  "ownership_verification": {
+    "scope": "Actual archived registry context and destination bytes through production collector + dependent extraction; transport and new followups not verified",
+    "organisation_number": "932761483",
+    "registry_name": "TUBING TEC AS",
+    "source_sha256": "075cace4fba076890a5046d8dc7e77010236ffe15da89317a4f0cb44afef13d1",
+    "source_url": "https://www.tubingtec.no/",
+    "state": "available",
+    "claims": [
+      {
+        "field": "official_website",
+        "value": {
+          "final_url": "https://www.tubingtec.no",
+          "identity_level": "VERIFIED",
+          "proof_type": "orgnr_on_page",
+          "proof_page_url": "https://www.tubingtec.no/",
+          "signals": [],
+          "points": 0,
+          "candidate_origin": "legal_name_slug",
+          "relationship_note": null,
+          "other_orgnrs": []
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "fca9245a6002b1759f934883dd9be669bbc83770888000b1deb6a26b792e7405"
+        ],
+        "id": "cb92b426ba11d7448c8eb833fbc5a52c0d0d2805bc8731edca39120788cea002",
+        "family": "website",
+        "reporting_period": null,
+        "carried_forward": false,
+        "first_observed_at": "2026-10-15T13:31:49.158418Z",
+        "last_observed_at": "2026-10-15T13:31:49.158418Z",
+        "reasons": {}
+      },
+      {
+        "field": "website_description.meta_description.d09240d6a281d201",
+        "value": {
+          "text": "- Din leverandør innen gass, instrumentrør og teknisk montasje. Levering av gassdistribusjon innenfor helseforetak, industri, næringsmiddel, samt forskning og utvikling. Service på gassystemer. Medisinske gasser - Spesialgasser - Instrumentrørlegging - Offshore - Maskiningeniør - Industrirørlegger -",
+          "kind": "meta_description",
+          "self_description": true,
+          "identity_level": "VERIFIED",
+          "identity_claim_id": "cb92b426ba11d7448c8eb833fbc5a52c0d0d2805bc8731edca39120788cea002"
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "11cd109ba4bef438b32dcf51737eb05938b0a9f3808bf88af0dfc1ffb23b88d9",
+          "fca9245a6002b1759f934883dd9be669bbc83770888000b1deb6a26b792e7405"
+        ],
+        "id": "da756abab9b2a4b8873b699b83f34f31d0152ee3bdb127e9730e46404f656715",
+        "family": "website",
+        "reporting_period": null,
+        "carried_forward": false,
+        "first_observed_at": "2026-10-15T13:31:49.158418Z",
+        "last_observed_at": "2026-10-15T13:31:49.158418Z",
+        "reasons": {}
+      },
+      {
+        "field": "contact.email.d15dddd375859650b514",
+        "value": "info@tubingtec.no",
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "4f731cb25148d5602dab35ff82902ff810ce687da1ad5cd3ce6d6d3ea806e0a6"
+        ],
+        "id": "b470cac479419bb3189523140aeff9ccb2bbe68bb03f6572f35cb7549099de35",
+        "family": "website",
+        "reporting_period": null,
+        "carried_forward": false,
+        "first_observed_at": "2026-10-15T13:31:49.158418Z",
+        "last_observed_at": "2026-10-15T13:31:49.158418Z",
+        "reasons": {}
+      },
+      {
+        "field": "contact.phone.aa5605947cfe143da73a",
+        "value": "+4741215787",
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "c6dab17aa888a2c942aeca79c3fa4670008c7c60a0c6eb914f4f28fc2a6cff29"
+        ],
+        "id": "02632ba0f49c359c74b6df214466f44caaef89fd6fe92816f2d694780728bd37",
+        "family": "website",
+        "reporting_period": null,
+        "carried_forward": false,
+        "first_observed_at": "2026-10-15T13:31:49.158418Z",
+        "last_observed_at": "2026-10-15T13:31:49.158418Z",
+        "reasons": {}
+      },
+      {
+        "field": "public_brand",
+        "value": "TubingTec AS",
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "58957d83eb0700294e6601267cd143e068acff30b30efb890739542325d8e19a"
+        ],
+        "id": "b71928e65b3a573d9a3c81d7ad1e2acc4f66fd10f034351440f075585ec85bc6",
+        "family": "website",
+        "reporting_period": null,
+        "carried_forward": false,
+        "first_observed_at": "2026-10-15T13:31:49.158418Z",
+        "last_observed_at": "2026-10-15T13:31:49.158418Z",
+        "reasons": {}
+      }
+    ],
+    "evidence": [
+      {
+        "id": "fca9245a6002b1759f934883dd9be669bbc83770888000b1deb6a26b792e7405",
+        "source_url": "https://www.tubingtec.no/",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-10-15T13:31:49.158418Z",
+        "content_sha256": "075cace4fba076890a5046d8dc7e77010236ffe15da89317a4f0cb44afef13d1",
+        "claim_span": "ass=\"text-sm mt-1\">Organisasjonsnummer: 932 761 483</p></div><div class=\"flex flex-col justify-between h-full m-auto lg:m-0 lg:w-[244px] lg:items-end\"",
+        "locator": "identity-proof:932761483",
+        "extraction_method": "signalpost.website.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "11cd109ba4bef438b32dcf51737eb05938b0a9f3808bf88af0dfc1ffb23b88d9",
+        "source_url": "https://www.tubingtec.no/",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-10-15T13:31:49.158418Z",
+        "content_sha256": "075cace4fba076890a5046d8dc7e77010236ffe15da89317a4f0cb44afef13d1",
+        "claim_span": "<meta name=\"description\" content=\"- Din leverandør innen gass, instrumentrør og teknisk montasje. Levering av gassdistribusjon innenfor helseforetak, industri, næringsmiddel, samt forskning og utvikling. Service på gassystemer. Medisinske gasser - Spesialgasser - Instrumentrørlegging - Offshore - Ma",
+        "locator": "meta:description@content",
+        "extraction_method": "signalpost.website_description.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "4f731cb25148d5602dab35ff82902ff810ce687da1ad5cd3ce6d6d3ea806e0a6",
+        "source_url": "https://www.tubingtec.no/",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-10-15T13:31:49.158418Z",
+        "content_sha256": "075cace4fba076890a5046d8dc7e77010236ffe15da89317a4f0cb44afef13d1",
+        "claim_span": "5 787</p><p class=\"text-sm mt-1\">Epost: info@tubingtec.no</p><p class=\"text-sm mt-1\">Adresse: Melhus, Norway, 7224</p></div><div class=\"flex-col hidde",
+        "locator": "contact:info@tubingtec.no",
+        "extraction_method": "signalpost.website.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "c6dab17aa888a2c942aeca79c3fa4670008c7c60a0c6eb914f4f28fc2a6cff29",
+        "source_url": "https://www.tubingtec.no/",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-10-15T13:31:49.158418Z",
+        "content_sha256": "075cace4fba076890a5046d8dc7e77010236ffe15da89317a4f0cb44afef13d1",
+        "claim_span": "b-2\">Kontakt</p><p class=\"text-sm\">Tlf: 412 15 787</p><p class=\"text-sm mt-1\">Epost: info@tubingtec.no</p><p class=\"text-sm mt-1\">Adresse: Melhus, Nor",
+        "locator": "contact:+4741215787",
+        "extraction_method": "signalpost.website.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "58957d83eb0700294e6601267cd143e068acff30b30efb890739542325d8e19a",
+        "source_url": "https://www.tubingtec.no/",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-10-15T13:31:49.158418Z",
+        "content_sha256": "075cace4fba076890a5046d8dc7e77010236ffe15da89317a4f0cb44afef13d1",
+        "claim_span": "d625cbdf77.js\" async=\"\"></script><title>TubingTec AS</title><meta name=\"description\" content=\"- Din leverandør innen gass, instrumentrør og teknisk mo",
+        "locator": "meta:brand",
+        "extraction_method": "signalpost.website.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ],
+    "published_fields": [
+      "official_website",
+      "website_description.meta_description.d09240d6a281d201",
+      "contact.email.d15dddd375859650b514",
+      "contact.phone.aa5605947cfe143da73a",
+      "public_brand"
+    ],
+    "unrecorded_followups": [
+      "https://www.tubingtec.no/kontakt"
+    ],
+    "network_requests": 0
+  },
+  "website_discovery_review": {
+    "scope": "Offline review of unchanged1000 registry subset; nomination counts are not verified coverage",
+    "counts": {
+      "candidates_legal_name_slug": 3361,
+      "registry_website_declarations": 111,
+      "candidates_registry_website": 111,
+      "registry_email_declarations": 236,
+      "candidates_registry_email": 112
+    },
+    "unparseable_registry_website_declarations": [],
+    "finding": "No independently proven further safe discovery recovery established beyond TubingTec ownership fix; candidate origin never authorizes publication. Existing subunit relationship, email, bounded followups and XML paths retained. Cross-domain redirects/robots/insufficient proof are not bypassed."
+  },
+  "nav": {
+    "previous_1000_attempts": 35,
+    "previous_1000_distinct_detail_urls": 20,
+    "previous_incomplete_scopes": [
+      "820918312",
+      "912273938",
+      "935495369"
+    ],
+    "controlled_inflight_scope_test_attempts": 1,
+    "controlled_same_fixture_comparison": {
+      "before_source": "a11d4ec",
+      "before": {
+        "implementation": "C:\\Users\\Manish\\Downloads\\Signalpost\\state\\remediation-closed\\src\\signalpost\\sources\\nav_cached.py",
+        "detail_attempts": 2,
+        "complete": true,
+        "ad_values": [
+          {
+            "uuid": "00000000-0000-4000-8000-000000000001",
+            "employer_orgnr": "923609016",
+            "title": "Reported vacancy",
+            "location": null,
+            "published": "2026-10-01T00:00:00Z",
+            "expires": "2099-01-01T00:00:00Z",
+            "occupation_categories": null,
+            "url": "https://arbeidsplassen.nav.no/stillinger/stilling/00000000-0000-4000-8000-000000000001",
+            "availability": {
+              "location": "not_available",
+              "occupation_categories": "not_available"
+            }
+          }
+        ],
+        "metrics": {
+          "pages": 1,
+          "items": 0,
+          "bytes": 614,
+          "details": 2,
+          "requests": 4,
+          "runtime_ms": 31,
+          "source_mode": "declared_index",
+          "index_version": "test-v1",
+          "index_built_at": "2026-10-15T15:05:43.752745Z",
+          "index_age_days": 2.7777777777777776e-07,
+          "index_compressed_bytes": 330,
+          "index_ads": 1,
+          "seeded_from_disk": 1,
+          "fresh_fetched_ads": 0,
+          "time_cap_seconds": 900,
+          "feed_complete": true,
+          "detail_request_cap": 2,
+          "coverage_scope": "declared_orgnr_index_plus_completed_forward_feed_and_live_candidate_details",
+          "first_detail_seconds": 0.014999999999417923,
+          "first_detail_page_number": 0,
+          "details_started_before_feed_complete": true,
+          "detail_requests": 2,
+          "detail_requests_by_company": {
+            "923609016": 2
+          },
+          "feed_runtime_ms": 0,
+          "last_detail_seconds": 0.030999999995401595,
+          "runtime_seconds": 0.030999999995401595,
+          "feed_seconds": 0.0,
+          "average_seconds_per_page": 0.0,
+          "complete": true,
+          "blocked": false,
+          "reason": "complete",
+          "header_processing_complete": true,
+          "candidate_headers": 1,
+          "distinct_candidate_ads": 1,
+          "indexed_ads": 1,
+          "detail_concurrency": 4,
+          "incomplete_companies": [],
+          "name_unusable_companies": 0,
+          "fallback_name_unusable_companies": 0,
+          "forward_name_fallback_scope": "known legal/brand/subunit names; unknown trading names remain a discovery risk",
+          "companies_with_unchecked_candidates": 0,
+          "cap_hits": 0,
+          "lookback_days": 185
+        }
+      },
+      "after": {
+        "implementation": "C:\\Users\\Manish\\Downloads\\Signalpost\\src\\signalpost\\sources\\nav_cached.py",
+        "detail_attempts": 1,
+        "complete": true,
+        "ad_values": [
+          {
+            "uuid": "00000000-0000-4000-8000-000000000001",
+            "employer_orgnr": "923609016",
+            "title": "Reported vacancy",
+            "location": null,
+            "published": "2026-10-01T00:00:00Z",
+            "expires": "2099-01-01T00:00:00Z",
+            "occupation_categories": null,
+            "url": "https://arbeidsplassen.nav.no/stillinger/stilling/00000000-0000-4000-8000-000000000001",
+            "availability": {
+              "location": "not_available",
+              "occupation_categories": "not_available"
+            }
+          }
+        ],
+        "metrics": {
+          "pages": 1,
+          "items": 0,
+          "bytes": 360,
+          "details": 1,
+          "requests": 3,
+          "runtime_ms": 0,
+          "source_mode": "declared_index",
+          "index_version": "test-v1",
+          "index_built_at": "2026-10-15T15:05:45.400126Z",
+          "index_age_days": 2.958912037037037e-07,
+          "index_compressed_bytes": 329,
+          "index_ads": 1,
+          "seeded_from_disk": 1,
+          "fresh_fetched_ads": 0,
+          "time_cap_seconds": 900,
+          "feed_complete": true,
+          "detail_request_cap": 2,
+          "coverage_scope": "declared_orgnr_index_plus_completed_forward_feed_and_live_candidate_details",
+          "first_detail_seconds": 0.0,
+          "first_detail_page_number": 0,
+          "details_started_before_feed_complete": true,
+          "detail_requests": 1,
+          "detail_requests_by_company": {
+            "923609016": 1
+          },
+          "feed_runtime_ms": 0,
+          "last_detail_seconds": 0.0,
+          "redundant_detail_jobs_skipped": 1,
+          "runtime_seconds": 0.0,
+          "feed_seconds": 0.0,
+          "average_seconds_per_page": 0.0,
+          "complete": true,
+          "blocked": false,
+          "reason": "complete",
+          "header_processing_complete": true,
+          "candidate_headers": 1,
+          "distinct_candidate_ads": 1,
+          "indexed_ads": 1,
+          "detail_concurrency": 4,
+          "incomplete_companies": [],
+          "name_unusable_companies": 0,
+          "fallback_name_unusable_companies": 0,
+          "forward_name_fallback_scope": "known legal/brand/subunit names; unknown trading names remain a discovery risk",
+          "companies_with_unchecked_candidates": 0,
+          "cap_hits": 0,
+          "lookback_days": 185
+        }
+      },
+      "identical_published_ad_values": true,
+      "detail_attempt_absolute_change": -1,
+      "detail_attempt_percent_change": -50
+    },
+    "test_file": "tests/test_nav_candidate_coalescing.py",
+    "cap_increased": false,
+    "live_1000_after_fix": "NOT RUN; no new aggregate completeness/count claim. Archived forward-feed bodies were not retained, so exact historical full-feed replay is unavailable; controlled production scheduling and existing strict fixtures used instead.",
+    "cached_detail_freshness": "Current-run conditional HTTP304 revalidation retained; no unvalidated cached detail publication. New feed versions still require checks.",
+    "fairness": "No new allocation policy: removing repeated same-version work recovers shared cap slots; no proof of restored completeness for all three historical scopes."
+  },
+  "refresh": {
+    "targeted_suite": "31 passed in14.75s; tests/test_revision_refresh.py + test_refresh_observations.py + test_site.py",
+    "controlled_runner_transitions": [
+      "unchanged facts",
+      "legal name/address change",
+      "new financial period/value",
+      "website/contact change",
+      "429",
+      "503",
+      "DNS/connect failure",
+      "timeout",
+      "partial roles failure/recovery",
+      "duplicate rows",
+      "cancelled run/restart"
+    ],
+    "nav_transitions": {
+      "scope": "Controlled synthetic HTTP transitions through actual runner; no live network",
+      "passed": [
+        "active exact employer",
+        "changed title with old/new evidence",
+        "304 current-check reuse",
+        "inactive closure",
+        "deleted closure",
+        "detail503 no false closure",
+        "partial feed no false absence",
+        "duplicate ordering/multiplicity"
+      ],
+      "source_business_dates_distinct_from_retrieval": true,
+      "snapshot_root": "out\\revision\\nav-transitions"
+    },
+    "no_false_business_events_on_failures": true,
+    "retained_facts_keep_evidence_and_last_successful_check": true
+  },
+  "tests": {
+    "full": {
+      "passed": 401,
+      "failed": 0,
+      "seconds": 106.6
+    },
+    "first_coverage": {
+      "passed": 400,
+      "failed": 1,
+      "seconds": 263.01,
+      "test": "tests/test_registry.py::test_deadline_partial_progress",
+      "elapsed_seconds": 21.859,
+      "assertion_seconds": 3,
+      "diagnostics": {
+        "runtime_ms": 20141,
+        "deadline_hits": 20,
+        "unhandled_exceptions": 0,
+        "event_loop": {
+          "process_cpu_seconds": 1.0,
+          "observed_wall_seconds": 21.360000000000582,
+          "workers": {
+            "signalpost.io.envelope_writer.write": {
+              "calls": 1,
+              "queue_seconds": 0.0,
+              "wall_seconds": 18.20300000000134,
+              "cpu_seconds": 0.3125,
+              "max_queue_seconds": 0,
+              "max_wall_seconds": 18.20300000000134
+            },
+            "signalpost.io.report.build": {
+              "calls": 1,
+              "queue_seconds": 0.0,
+              "wall_seconds": 0.0,
+              "cpu_seconds": 0.0,
+              "max_queue_seconds": 0,
+              "max_wall_seconds": 0
+            },
+            "signalpost.runner.finalize": {
+              "calls": 20,
+              "queue_seconds": 0.0,
+              "wall_seconds": 0.030999999995401595,
+              "cpu_seconds": 0.0,
+              "max_queue_seconds": 0,
+              "max_wall_seconds": 0.01599999999598367
+            },
+            "signalpost.runner.write_report": {
+              "calls": 1,
+              "queue_seconds": 0.0,
+              "wall_seconds": 0.6100000000005821,
+              "cpu_seconds": 0.0,
+              "max_queue_seconds": 0,
+              "max_wall_seconds": 0.6100000000005821
+            },
+            "signalpost.sources.blobstore.BlobStore.put": {
+              "calls": 40,
+              "queue_seconds": 0.03200000000651926,
+              "wall_seconds": 0.4049999999915599,
+              "cpu_seconds": 0.09375,
+              "max_queue_seconds": 0.01600000000325963,
+              "max_wall_seconds": 0.01600000000325963
+            },
+            "signalpost.sources.brreg_enhet.extract_response": {
+              "calls": 20,
+              "queue_seconds": 0.01600000000325963,
+              "wall_seconds": 0.10899999999674037,
+              "cpu_seconds": 0.109375,
+              "max_queue_seconds": 0.01600000000325963,
+              "max_wall_seconds": 0.01600000000325963
+            },
+            "signalpost.sources.brreg_underenheter.extract_page": {
+              "calls": 20,
+              "queue_seconds": 0.0,
+              "wall_seconds": 0.014999999999417923,
+              "cpu_seconds": 0.0,
+              "max_queue_seconds": 0,
+              "max_wall_seconds": 0.014999999999417923
+            },
+            "signalpost.sources.subunits.build_subunit_map": {
+              "calls": 1,
+              "queue_seconds": 0.01599999999598367,
+              "wall_seconds": 0.0,
+              "cpu_seconds": 0.0,
+              "max_queue_seconds": 0.01599999999598367,
+              "max_wall_seconds": 0
+            },
+            "signalpost.synthesis.template.generate": {
+              "calls": 20,
+              "queue_seconds": 0.0,
+              "wall_seconds": 0.07800000000133878,
+              "cpu_seconds": 0.015625,
+              "max_queue_seconds": 0,
+              "max_wall_seconds": 0.01600000000325963
+            }
+          },
+          "heartbeat_interval_ms": 100,
+          "samples": 99,
+          "scope": "whole run after input entry; includes source processing and output generation",
+          "lag_p95_ms": 400.0000000014552,
+          "lag_max_ms": 2806.0000000041327,
+          "lag_mean_ms": 113.09090909197388,
+          "gc_collections": 13,
+          "gc_total_ms": 0.0,
+          "gc_max_ms": 0.0,
+          "gc_slow_collections": []
+        }
+      }
+    },
+    "isolated_coverage_rerun": {
+      "passed": 1,
+      "failed": 0,
+      "total_pytest_seconds": 67.01,
+      "original_three_second_assertion_passed": true
+    },
+    "final_coverage_repeat": {
+      "passed": 401,
+      "failed": 0,
+      "seconds": 169.18,
+      "statements": {
+        "covered_lines": 5428,
+        "num_statements": 5920,
+        "percent_covered": 91.6891891891892,
+        "percent_covered_display": "92",
+        "missing_lines": 492,
+        "excluded_lines": 4,
+        "percent_statements_covered": 91.6891891891892,
+        "percent_statements_covered_display": "92"
+      }
+    },
+    "assertions_weakened": false,
+    "lint_type_checks": "No configured lint/type checks in pyproject.toml",
+    "logs_retained": true,
+    "development_harness_failures": "Initial fixture/setup/expected-field failures retained in out/revision logs; corrected targeted tests pass. No established production/timing assertion weakened."
+  },
+  "replay_and_cold_install": {
+    "source_commit": "2b0f633a92ffcfc164f80954457888d33375a35c",
+    "complete_semantics_equal": true,
+    "compared": "Every other key and value, including complete profiles, errors, evidence, timestamps, modules, synthesis, states, observations and changes",
+    "volatile_excluded": [
+      "/run_id",
+      "/run/run_id",
+      "/operations/runtime_ms"
+    ],
+    "strict_fixture_count": 31,
+    "unexpected_fixture_interactions": 0,
+    "fresh_clone": "state/revision-cold",
+    "cold_package_cache": "state/revision-cold-cache",
+    "empty_cache_before_install": true,
+    "install_command": "uv sync --frozen",
+    "downloaded_and_prepared_packages": 25,
+    "python_runtime": "Preinstalled Python3.12.15 reused; new package cache/network; not a clean OS/Python installation",
+    "search": {
+      "status": "not configured",
+      "queries": 0,
+      "estimated_usd": 0.0,
+      "provider": null,
+      "companies_queried": 0,
+      "unit_price_usd": 0.005,
+      "price_note": "verify before use; retries count as billable queries; no free credit assumed",
+      "errors": 0,
+      "cap_skips": 0,
+      "result_domains": 0
+    },
+    "total_cost_usd": 0.0,
+    "entire_envelope_equal_after_exact_volatile_exclusions": true
+  },
+  "replay_integrity": {
+    "lines": 5,
+    "schema_valid": true,
+    "published_claims": 40,
+    "source_blobs_verified": 9,
+    "synthesis_companies": 5,
+    "synthesis_sentences": 22,
+    "synthesis_unverified_values": 0,
+    "rerun_lines": 5,
+    "identical_claim_ids": true,
+    "changes": 0,
+    "observation_changes": 0
+  },
+  "browser": {
+    "scope": "Installed Chrome headless; isolated ephemeral contexts; localhost only; historical100 site regenerated with current source; synthetic progress states",
+    "checks": [
+      {
+        "check": "dashboard_total",
+        "status": "PASS"
+      },
+      {
+        "check": "pagination",
+        "status": "PASS"
+      },
+      {
+        "check": "search_autocomplete_correct_unicode",
+        "status": "PASS"
+      },
+      {
+        "check": "website_filter_and_scope",
+        "status": "PASS"
+      },
+      {
+        "check": "csv_json_downloads_and_currency_column",
+        "status": "PASS"
+      },
+      {
+        "check": "watchlist",
+        "status": "PASS"
+      },
+      {
+        "check": "saved_views",
+        "status": "PASS"
+      },
+      {
+        "check": "tablet_directory_overflow",
+        "status": "PASS"
+      },
+      {
+        "check": "mobile_directory_overflow",
+        "status": "PASS"
+      },
+      {
+        "check": "comparison_and_autocomplete",
+        "status": "PASS"
+      },
+      {
+        "check": "profile_evidence_links",
+        "status": "PASS"
+      },
+      {
+        "check": "correct_description_text",
+        "status": "PASS"
+      },
+      {
+        "check": "themes_and_keyboard_focus",
+        "status": "PASS"
+      },
+      {
+        "check": "mobile_profile_overflow",
+        "status": "PASS"
+      },
+      {
+        "check": "progress_running",
+        "status": "PASS"
+      },
+      {
+        "check": "progress_partial",
+        "status": "PASS"
+      },
+      {
+        "check": "progress_failed",
+        "status": "PASS"
+      },
+      {
+        "check": "progress_completed",
+        "status": "PASS"
+      },
+      {
+        "check": "progress_stale",
+        "status": "PASS"
+      },
+      {
+        "check": "progress_static",
+        "status": "PASS"
+      },
+      {
+        "check": "progress_disconnected",
+        "status": "PASS"
+      },
+      {
+        "check": "denied_storage_keeps_ui_operational",
+        "status": "PASS"
+      },
+      {
+        "check": "synthetic_group_subject_contact_scope",
+        "status": "PASS"
+      },
+      {
+        "check": "synthetic_exact_employer_hiring_filter",
+        "status": "PASS"
+      },
+      {
+        "check": "csv_control_unicode_quotes_newlines_missing",
+        "status": "PASS"
+      }
+    ],
+    "page_errors": [],
+    "console_errors": [
+      {
+        "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "location": {
+          "url": "http://127.0.0.1:57941/browser-site/progress.json",
+          "line": 0,
+          "column": 0,
+          "lineNumber": 0,
+          "columnNumber": 0
+        }
+      },
+      {
+        "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "location": {
+          "url": "http://127.0.0.1:57941/browser-site/state/progress.json",
+          "line": 0,
+          "column": 0,
+          "lineNumber": 0,
+          "columnNumber": 0
+        }
+      },
+      {
+        "message": "Failed to load resource: net::ERR_FAILED",
+        "location": {
+          "url": "http://127.0.0.1:57941/browser-site/progress.json",
+          "line": 0,
+          "column": 0,
+          "lineNumber": 0,
+          "columnNumber": 0
+        }
+      }
+    ],
+    "screenshots": [
+      "denied-storage.png",
+      "desktop-dashboard.png",
+      "mobile-directory.png",
+      "mobile-profile.png",
+      "progress-failed.png",
+      "progress-running.png",
+      "progress-stale.png",
+      "synthetic-group-profile.png",
+      "tablet-directory.png"
+    ],
+    "unexpected_console_errors": []
+  },
+  "previous_live100": {
+    "source_commit": "45ebf1eba05d1937af96eb746d660f3d471e6b2e",
+    "wall_seconds": 58.603544499994314,
+    "runtime_ms": 56609,
+    "requests": 577,
+    "dns_lookups": 764,
+    "hiring_prefetch": {
+      "pages": 6,
+      "items": 4336,
+      "bytes": 2147622,
+      "details": 0,
+      "requests": 7,
+      "runtime_ms": 15938,
+      "source_mode": "declared_index",
+      "index_version": "nav-20261014T042640.758720Z-v1",
+      "index_built_at": "2026-10-14T04:26:40.758720Z",
+      "index_age_days": 1.375075157361111,
+      "index_compressed_bytes": 403768,
+      "index_ads": 9015,
+      "seeded_from_disk": 6791,
+      "fresh_fetched_ads": 2224,
+      "time_cap_seconds": 240.0,
+      "feed_complete": true,
+      "detail_request_cap": 0,
+      "coverage_scope": "declared_orgnr_index_plus_completed_forward_feed_and_live_candidate_details",
+      "feed_runtime_ms": 7921,
+      "runtime_seconds": 15.93800000000192,
+      "feed_seconds": 7.921,
+      "average_seconds_per_page": 1.3201666666666667,
+      "last_detail_seconds": null,
+      "complete": true,
+      "blocked": false,
+      "reason": "complete",
+      "header_processing_complete": true,
+      "candidate_headers": 0,
+      "distinct_candidate_ads": 0,
+      "indexed_ads": 0,
+      "detail_concurrency": 4,
+      "incomplete_companies": [],
+      "name_unusable_companies": 0,
+      "fallback_name_unusable_companies": 4,
+      "forward_name_fallback_scope": "known legal/brand/subunit names; unknown trading names remain a discovery risk",
+      "companies_with_unchecked_candidates": 0,
+      "cap_hits": 0,
+      "lookback_days": 185,
+      "matches_published": 0,
+      "companies_with_ads": 0
+    },
+    "event_loop": {
+      "process_cpu_seconds": 16.171875,
+      "observed_wall_seconds": 57.88999999999942,
+      "heartbeat_interval_ms": 100,
+      "samples": 551,
+      "scope": "whole run after input entry; includes source processing and output generation",
+      "lag_p95_ms": 25.00000000145519,
+      "lag_max_ms": 41.00000000471482,
+      "lag_mean_ms": 7.085299456529886,
+      "gc_collections": 848,
+      "gc_total_ms": 235.00000000785803,
+      "gc_max_ms": 63.00000000192085,
+      "gc_slow_collections": [
+        {
+          "generation": 2,
+          "duration_ms": 63.00000000192085,
+          "cpu_ms": 62.5,
+          "main_thread": false
+        }
+      ]
+    },
+    "coverage": {
+      "published_claims_by_family": {
+        "identity": 2888,
+        "subunits": 636,
+        "roles": 1192,
+        "accounts": 2192,
+        "website": 65,
+        "activity": 4
+      },
+      "companies_by_family": {
+        "identity": 100,
+        "roles": 100,
+        "accounts": 99,
+        "subunits": 75,
+        "website": 7,
+        "activity": 1
+      },
+      "official_websites": 7,
+      "social_companies": 5,
+      "hiring_companies": 0,
+      "web_activity_companies": 1,
+      "registry_activity_companies": 13,
+      "combined_activity_companies": 14,
+      "section_states": {
+        "available": 382,
+        "failed": 37,
+        "not_available": 197,
+        "not_applicable": 68,
+        "ambiguous": 14,
+        "blocked": 2
+      }
+    },
+    "pipeline_peak_rss": "NOT MEASURED; old sampler launcher only"
+  },
+  "final_live100": {
+    "measurement": {
+      "source_commit": "2b0f633a92ffcfc164f80954457888d33375a35c",
+      "input_sha256": "54de285dd71e69515c532febc37cfec16a467d7bc0880c96931fc6c83ecc807a",
+      "bulk_sha256": "a2d13b6b88ed7cf66a581bb99342c09cd7d55638e15ea6601d2fc6f680715e29",
+      "command": [
+        "C:\\Users\\Manish\\Downloads\\Signalpost\\state\\evaluation-uv-cache\\builds-v0\\.tmptjqUsJ\\Scripts\\python.exe",
+        "-m",
+        "signalpost.cli",
+        "run",
+        "--organisations",
+        "out\\final-evaluation\\live100-input.jsonl",
+        "--output",
+        "out\\revision\\live100\\envelopes.jsonl",
+        "--profiles-output",
+        "out\\revision\\live100\\profiles.jsonl",
+        "--report",
+        "out\\revision\\live100\\report.json",
+        "--site-dir",
+        "out\\revision\\live100\\site",
+        "--state-dir",
+        "out\\revision\\live100\\state",
+        "--websites",
+        "--hiring",
+        "--public-activity",
+        "--max-cost-usd",
+        "0",
+        "--search-max-queries",
+        "0",
+        "--max-requests",
+        "2000",
+        "--time-budget-seconds",
+        "600",
+        "--expected-count",
+        "100",
+        "--bulk",
+        "out\\remediation\\registry100.csv"
+      ],
+      "observation_start": "2026-10-15T15:00:09.480280+00:00",
+      "python": "3.12.15 (main, Oct  9 2026, 15:21:55) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26300-SP0",
+      "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+      "logical_cpus": 16,
+      "ram_bytes": 16774152192,
+      "unknown_process_inspections": 0,
+      "conditions": "Fresh empty runtime state; shipped declared NAV index; paid search disabled; no evaluation test/browser job detected. Unrelated processes preserved.",
+      "wall_seconds": 69.55959740000253,
+      "exit_code": 0,
+      "observation_end": "2026-10-15T15:01:19.195393+00:00",
+      "memory": {
+        "sampling_interval_seconds": 1,
+        "observed_peak_tree_rss_bytes": 171028480,
+        "observed_processes": [
+          {
+            "pid": 309092,
+            "created_at": 1792076409.637914,
+            "role": "launched_root",
+            "rss_bytes": 4435968,
+            "cpu_seconds": 0.03125,
+            "peak_rss_bytes": 4435968
+          },
+          {
+            "pid": 304404,
+            "created_at": 1792076409.6659565,
+            "role": "pipeline_descendant",
+            "rss_bytes": 17686528,
+            "cpu_seconds": 0.15625,
+            "peak_rss_bytes": 166621184
+          }
+        ],
+        "scope": "Launched root plus recursive descendants, including actual Python pipeline behind Windows launchers; summed RSS may double count shared pages; brief peaks/exited children between samples may be missed. Not system available RAM."
+      },
+      "load_summary": {
+        "sample_count": 49,
+        "system_cpu_mean_percent": 41.86326530612245,
+        "system_cpu_max_percent": 65.6,
+        "available_ram_min_bytes": 845615104
+      }
+    },
+    "runtime_ms": 65156,
+    "requests": 572,
+    "dns_lookups": 755,
+    "retries": 17,
+    "retry_definition": "Additional HTTP attempts to identical URL for identical accounting subject; includes repeat checks, not necessarily transport retries",
+    "transport_retry_failures": {
+      "ConnectError": 27,
+      "TimeoutError": 15
+    },
+    "request_accounting": "HTTP attempts include retries/robots/NAV token; DNS separately reported. HTTP+reportedDNS=1327; connection attempts/TLS/organiser interpretation not independently settled. No20k development-run compliance claim.",
+    "limits": {
+      "max_requests": 2000,
+      "max_cost_usd": 0.0,
+      "time_budget_seconds": 600.0,
+      "deadline_fraction": 0.85,
+      "request_timeout": 10.0,
+      "host_concurrency": 10
+    },
+    "counts_by_state": {
+      "complete": 93,
+      "submission_error": 7
+    },
+    "counts_by_availability": {
+      "available": 382,
+      "failed": 41,
+      "not_available": 195,
+      "not_applicable": 66,
+      "ambiguous": 14,
+      "blocked": 2
+    },
+    "hiring_prefetch": {
+      "pages": 6,
+      "items": 4441,
+      "bytes": 2201810,
+      "details": 0,
+      "requests": 7,
+      "runtime_ms": 28015,
+      "source_mode": "declared_index",
+      "index_version": "nav-20261014T042640.758720Z-v1",
+      "index_built_at": "2026-10-14T04:26:40.758720Z",
+      "index_age_days": 1.439939918460648,
+      "index_compressed_bytes": 403768,
+      "index_ads": 9015,
+      "seeded_from_disk": 6791,
+      "fresh_fetched_ads": 2224,
+      "time_cap_seconds": 240.0,
+      "feed_complete": true,
+      "detail_request_cap": 0,
+      "coverage_scope": "declared_orgnr_index_plus_completed_forward_feed_and_live_candidate_details",
+      "feed_runtime_ms": 8390,
+      "runtime_seconds": 28.014999999999418,
+      "feed_seconds": 8.39,
+      "average_seconds_per_page": 1.3983333333333334,
+      "last_detail_seconds": null,
+      "complete": true,
+      "blocked": false,
+      "reason": "complete",
+      "header_processing_complete": true,
+      "candidate_headers": 0,
+      "distinct_candidate_ads": 0,
+      "indexed_ads": 0,
+      "detail_concurrency": 4,
+      "incomplete_companies": [],
+      "name_unusable_companies": 0,
+      "fallback_name_unusable_companies": 4,
+      "forward_name_fallback_scope": "known legal/brand/subunit names; unknown trading names remain a discovery risk",
+      "companies_with_unchecked_candidates": 0,
+      "cap_hits": 0,
+      "lookback_days": 185,
+      "matches_published": 0,
+      "companies_with_ads": 0
+    },
+    "event_loop": {
+      "process_cpu_seconds": 29.984375,
+      "observed_wall_seconds": 67.81200000000536,
+      "workers": {
+        "json.loads": {
+          "calls": 6,
+          "queue_seconds": 0.01599999999598367,
+          "wall_seconds": 0.0,
+          "cpu_seconds": 0.03125,
+          "max_queue_seconds": 0.01599999999598367,
+          "max_wall_seconds": 0
+        },
+        "signalpost.io.envelope_writer.write": {
+          "calls": 1,
+          "queue_seconds": 0.0,
+          "wall_seconds": 21.07800000000134,
+          "cpu_seconds": 2.140625,
+          "max_queue_seconds": 0,
+          "max_wall_seconds": 21.07800000000134
+        },
+        "signalpost.io.report.build": {
+          "calls": 1,
+          "queue_seconds": 0.0,
+          "wall_seconds": 0.0,
+          "cpu_seconds": 0.0,
+          "max_queue_seconds": 0,
+          "max_wall_seconds": 0
+        },
+        "signalpost.profiles.write": {
+          "calls": 1,
+          "queue_seconds": 0.0,
+          "wall_seconds": 0.3279999999940628,
+          "cpu_seconds": 0.15625,
+          "max_queue_seconds": 0,
+          "max_wall_seconds": 0.3279999999940628
+        },
+        "signalpost.runner.extract_company_scope": {
+          "calls": 100,
+          "queue_seconds": 0.031000000002677552,
+          "wall_seconds": 0.0,
+          "cpu_seconds": 0.0,
+          "max_queue_seconds": 0.01600000000325963,
+          "max_wall_seconds": 0
+        },
+        "signalpost.runner.finalize": {
+          "calls": 100,
+          "queue_seconds": 0.0,
+          "wall_seconds": 0.014999999999417923,
+          "cpu_seconds": 0.0,
+          "max_queue_seconds": 0,
+          "max_wall_seconds": 0.014999999999417923
+        },
+        "signalpost.runner.write_report": {
+          "calls": 1,
+          "queue_seconds": 0.0,
+          "wall_seconds": 0.014999999999417923,
+          "cpu_seconds": 0.0,
+          "max_queue_seconds": 0,
+          "max_wall_seconds": 0.014999999999417923
+        },
+        "signalpost.site.generate_site": {
+          "calls": 1,
+          "queue_seconds": 0.0,
+          "wall_seconds": 2.25,
+          "cpu_seconds": 2.0,
+          "max_queue_seconds": 0,
+          "max_wall_seconds": 2.25
+        },
+        "signalpost.sources.blobstore.BlobStore.put": {
+          "calls": 523,
+          "queue_seconds": 0.6119999999937136,
+          "wall_seconds": 5.149000000026717,
+          "cpu_seconds": 0.71875,
+          "max_queue_seconds": 0.1569999999992433,
+          "max_wall_seconds": 0.3440000000045984
+        },
+        "signalpost.sources.brreg_roller.extract": {
+          "calls": 100,
+          "queue_seconds": 0.17199999999866122,
+          "wall_seconds": 0.15399999999499414,
+          "cpu_seconds": 0.1875,
+          "max_queue_seconds": 0.01600000000325963,
+          "max_wall_seconds": 0.01600000000325963
+        },
+        "signalpost.sources.brreg_underenheter.extract_page": {
+          "calls": 100,
+          "queue_seconds": 0.13900000000285218,
+          "wall_seconds": 0.06300000000192085,
+          "cpu_seconds": 0.015625,
+          "max_queue_seconds": 0.01600000000325963,
+          "max_wall_seconds": 0.01600000000325963
+        },
+        "signalpost.sources.bulk_registry.extract": {
+          "calls": 100,
+          "queue_seconds": 4.646000000022468,
+          "wall_seconds": 0.3439999999900465,
+          "cpu_seconds": 0.1875,
+          "max_queue_seconds": 0.17100000000209548,
+          "max_wall_seconds": 0.01600000000325963
+        },
+        "signalpost.sources.bulk_registry.load": {
+          "calls": 1,
+          "queue_seconds": 0.0,
+          "wall_seconds": 0.11000000000058208,
+          "cpu_seconds": 0.09375,
+          "max_queue_seconds": 0,
+          "max_wall_seconds": 0.11000000000058208
+        },
+        "signalpost.sources.nav.NavHttp.get.<locals>.<lambda>": {
+          "calls": 6,
+          "queue_seconds": 0.0,
+          "wall_seconds": 0.0,
+          "cpu_seconds": 0.0,
+          "max_queue_seconds": 0,
+          "max_wall_seconds": 0
+        },
+        "signalpost.sources.nav.NavHttp.save": {
+          "calls": 1,
+          "queue_seconds": 0.0,
+          "wall_seconds": 0.01599999999598367,
+          "cpu_seconds": 0.0,
+          "max_queue_seconds": 0,
+          "max_wall_seconds": 0.01599999999598367
+        },
+        "signalpost.sources.nav.company_names": {
+          "calls": 1,
+          "queue_seconds": 0.0,
+          "wall_seconds": 0.0,
+          "cpu_seconds": 0.015625,
+          "max_queue_seconds": 0,
+          "max_wall_seconds": 0
+        },
+        "signalpost.sources.nav_cached.Candidates.inspect.<locals>.<lambda>": {
+          "calls": 3348,
+          "queue_seconds": 1.2499999999781721,
+          "wall_seconds": 13.110000000007858,
+          "cpu_seconds": 8.671875,
+          "max_queue_seconds": 0.0319999999992433,
+          "max_wall_seconds": 0.04700000000593718
+        },
+        "signalpost.sources.nav_index.load": {
+          "calls": 1,
+          "queue_seconds": 0.0,
+          "wall_seconds": 0.125,
+          "cpu_seconds": 0.109375,
+          "max_queue_seconds": 0,
+          "max_wall_seconds": 0.125
+        },
+        "signalpost.sources.regnskap.extract": {
+          "calls": 100,
+          "queue_seconds": 0.20300000002316665,
+          "wall_seconds": 0.8280000000013388,
+          "cpu_seconds": 0.34375,
+          "max_queue_seconds": 0.01600000000325963,
+          "max_wall_seconds": 0.0319999999992433
+        },
+        "signalpost.sources.subunits.build_subunit_map": {
+          "calls": 1,
+          "queue_seconds": 0.0,
+          "wall_seconds": 0.0,
+          "cpu_seconds": 0.0,
+          "max_queue_seconds": 0,
+          "max_wall_seconds": 0
+        },
+        "signalpost.synthesis.template.generate": {
+          "calls": 100,
+          "queue_seconds": 0.04800000000250293,
+          "wall_seconds": 0.3279999999940628,
+          "cpu_seconds": 0.25,
+          "max_queue_seconds": 0.01600000000325963,
+          "max_wall_seconds": 0.09399999999732245
+        },
+        "signalpost.web.activity.parse": {
+          "calls": 5,
+          "queue_seconds": 0.0,
+          "wall_seconds": 0.031000000002677552,
+          "cpu_seconds": 0.0,
+          "max_queue_seconds": 0,
+          "max_wall_seconds": 0.01600000000325963
+        },
+        "signalpost.web.collector.candidate_proof": {
+          "calls": 65,
+          "queue_seconds": 0.18699999999807915,
+          "wall_seconds": 0.283000000003085,
+          "cpu_seconds": 0.203125,
+          "max_queue_seconds": 0.0319999999992433,
+          "max_wall_seconds": 0.0319999999992433
+        },
+        "signalpost.web.collector.publish_result": {
+          "calls": 7,
+          "queue_seconds": 0.0,
+          "wall_seconds": 0.14000000001396984,
+          "cpu_seconds": 0.09375,
+          "max_queue_seconds": 0,
+          "max_wall_seconds": 0.04700000000593718
+        },
+        "signalpost.web.collector.registry_context": {
+          "calls": 100,
+          "queue_seconds": 0.15499999999883585,
+          "wall_seconds": 0.01600000000325963,
+          "cpu_seconds": 0.0,
+          "max_queue_seconds": 0.01600000000325963,
+          "max_wall_seconds": 0.01600000000325963
+        },
+        "signalpost.web.html.Page": {
+          "calls": 65,
+          "queue_seconds": 0.17399999999179272,
+          "wall_seconds": 1.2820000000210712,
+          "cpu_seconds": 0.890625,
+          "max_queue_seconds": 0.0319999999992433,
+          "max_wall_seconds": 0.28100000000267755
+        },
+        "urllib.robotparser.RobotFileParser.can_fetch": {
+          "calls": 149,
+          "queue_seconds": 0.3470000000015716,
+          "wall_seconds": 0.031000000002677552,
+          "cpu_seconds": 0.0,
+          "max_queue_seconds": 0.01600000000325963,
+          "max_wall_seconds": 0.01600000000325963
+        },
+        "urllib.robotparser.RobotFileParser.parse": {
+          "calls": 45,
+          "queue_seconds": 0.10799999999289867,
+          "wall_seconds": 0.0,
+          "cpu_seconds": 0.0,
+          "max_queue_seconds": 0.01600000000325963,
+          "max_wall_seconds": 0
+        }
+      },
+      "heartbeat_interval_ms": 100,
+      "samples": 583,
+      "scope": "whole run after input entry; includes source processing and output generation",
+      "lag_p95_ms": 71.00000000355067,
+      "lag_max_ms": 1244.0000000060536,
+      "lag_mean_ms": 18.334476844831745,
+      "gc_collections": 853,
+      "gc_total_ms": 453.99999999062857,
+      "gc_max_ms": 93.99999999732245,
+      "gc_slow_collections": [
+        {
+          "generation": 2,
+          "duration_ms": 93.99999999732245,
+          "cpu_ms": 78.125,
+          "main_thread": false
+        },
+        {
+          "generation": 2,
+          "duration_ms": 61.99999999807915,
+          "cpu_ms": 62.5,
+          "main_thread": false
+        }
+      ]
+    },
+    "timing_markers": {
+      "subunits_complete_seconds": 4.1560000000026776,
+      "registry_complete_seconds": 10.906000000002678,
+      "last_detail_seconds": null,
+      "nav_runtime_seconds": 28.014999999999418
+    },
+    "cost_usd": 0.0,
+    "search": {
+      "status": "not configured",
+      "queries": 0,
+      "estimated_usd": 0.0,
+      "provider": null,
+      "companies_queried": 0,
+      "unit_price_usd": 0.005,
+      "price_note": "verify before use; retries count as billable queries; no free credit assumed",
+      "errors": 0,
+      "cap_skips": 0,
+      "result_domains": 0
+    },
+    "coverage": {
+      "published_claims_by_family": {
+        "identity": 2888,
+        "subunits": 636,
+        "roles": 1192,
+        "accounts": 2192,
+        "website": 65,
+        "activity": 4
+      },
+      "companies_by_family": {
+        "identity": 100,
+        "roles": 100,
+        "accounts": 99,
+        "subunits": 75,
+        "website": 7,
+        "activity": 1
+      },
+      "official_websites": 7,
+      "social_companies": 5,
+      "hiring_companies": 0,
+      "web_activity_companies": 1,
+      "registry_activity_companies": 13,
+      "combined_activity_companies": 14,
+      "section_states": {
+        "available": 382,
+        "failed": 41,
+        "not_available": 195,
+        "not_applicable": 66,
+        "ambiguous": 14,
+        "blocked": 2
+      }
+    },
+    "integrity": {
+      "lines": 100,
+      "schema_valid": true,
+      "published_claims": 6977,
+      "source_blobs_verified": 390,
+      "synthesis_companies": 100,
+      "synthesis_sentences": 820,
+      "synthesis_unverified_values": 0
+    },
+    "stored_source_agreement": {
+      "identity": {
+        "total_published_claims": 2888,
+        "publication_denominator": 2888,
+        "reviewed": 2888,
+        "correct": 2888,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wrong_company": 0,
+        "missing_attribution": 0,
+        "unsupported": 0,
+        "fabricated_zeroes": 0,
+        "precision": 1.0,
+        "precision_denominator": 2888,
+        "verification_rate": 1.0,
+        "verification_rate_denominator": 2888
+      },
+      "accounts": {
+        "total_published_claims": 2192,
+        "publication_denominator": 2192,
+        "reviewed": 2192,
+        "correct": 2192,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wrong_company": 0,
+        "missing_attribution": 0,
+        "unsupported": 0,
+        "fabricated_zeroes": 0,
+        "precision": 1.0,
+        "precision_denominator": 2192,
+        "verification_rate": 1.0,
+        "verification_rate_denominator": 2192
+      },
+      "roles": {
+        "total_published_claims": 1192,
+        "publication_denominator": 1192,
+        "reviewed": 1192,
+        "correct": 1192,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wrong_company": 0,
+        "missing_attribution": 0,
+        "unsupported": 0,
+        "fabricated_zeroes": 0,
+        "precision": 1.0,
+        "precision_denominator": 1192,
+        "verification_rate": 1.0,
+        "verification_rate_denominator": 1192
+      },
+      "subunits": {
+        "total_published_claims": 636,
+        "publication_denominator": 636,
+        "reviewed": 636,
+        "correct": 636,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wrong_company": 0,
+        "missing_attribution": 0,
+        "unsupported": 0,
+        "fabricated_zeroes": 0,
+        "precision": 1.0,
+        "precision_denominator": 636,
+        "verification_rate": 1.0,
+        "verification_rate_denominator": 636
+      },
+      "official_website": {
+        "total_published_claims": 7,
+        "publication_denominator": 7,
+        "reviewed": 7,
+        "correct": 7,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wrong_company": 0,
+        "missing_attribution": 0,
+        "unsupported": 0,
+        "fabricated_zeroes": 0,
+        "precision": 1.0,
+        "precision_denominator": 7,
+        "verification_rate": 1.0,
+        "verification_rate_denominator": 7
+      },
+      "social_profiles": {
+        "total_published_claims": 7,
+        "publication_denominator": 7,
+        "reviewed": 7,
+        "correct": 7,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wrong_company": 0,
+        "missing_attribution": 0,
+        "unsupported": 0,
+        "fabricated_zeroes": 0,
+        "precision": 1.0,
+        "precision_denominator": 7,
+        "verification_rate": 1.0,
+        "verification_rate_denominator": 7
+      },
+      "other_website_claims": {
+        "total_published_claims": 51,
+        "publication_denominator": 51,
+        "reviewed": 51,
+        "correct": 51,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wrong_company": 0,
+        "missing_attribution": 0,
+        "unsupported": 0,
+        "fabricated_zeroes": 0,
+        "precision": 1.0,
+        "precision_denominator": 51,
+        "verification_rate": 1.0,
+        "verification_rate_denominator": 51
+      },
+      "website": {
+        "total_published_claims": 65,
+        "publication_denominator": 65,
+        "reviewed": 65,
+        "correct": 65,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wrong_company": 0,
+        "missing_attribution": 0,
+        "unsupported": 0,
+        "fabricated_zeroes": 0,
+        "precision": 1.0,
+        "precision_denominator": 65,
+        "verification_rate": 1.0,
+        "verification_rate_denominator": 65
+      },
+      "hiring": {
+        "total_published_claims": 0,
+        "publication_denominator": 0,
+        "reviewed": 0,
+        "correct": 0,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wrong_company": 0,
+        "missing_attribution": 0,
+        "unsupported": 0,
+        "fabricated_zeroes": 0,
+        "precision": null,
+        "precision_denominator": 0,
+        "verification_rate": null,
+        "verification_rate_denominator": 0
+      },
+      "activity": {
+        "total_published_claims": 4,
+        "publication_denominator": 4,
+        "reviewed": 4,
+        "correct": 4,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wrong_company": 0,
+        "missing_attribution": 0,
+        "unsupported": 0,
+        "fabricated_zeroes": 0,
+        "precision": 1.0,
+        "precision_denominator": 4,
+        "verification_rate": 1.0,
+        "verification_rate_denominator": 4
+      },
+      "aggregate_all_families": {
+        "total_published_claims": 6977,
+        "publication_denominator": 6977,
+        "reviewed": 6977,
+        "correct": 6977,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wrong_company": 0,
+        "missing_attribution": 0,
+        "unsupported": 0,
+        "fabricated_zeroes": 0,
+        "precision": 1.0,
+        "precision_denominator": 6977,
+        "verification_rate": 1.0,
+        "verification_rate_denominator": 6977
+      }
+    },
+    "audit_scope": {
+      "auditor_version": "2.2-parsed-description-explicit-decoding",
+      "envelopes_file": "envelopes.jsonl",
+      "total_companies": 100,
+      "sample_seed": 20261015,
+      "sample_size": 100,
+      "sampled_organisations": [
+        "812573942",
+        "818851022",
+        "819333262",
+        "820317092",
+        "823675542",
+        "826465492",
+        "829411822",
+        "830562052",
+        "830815082",
+        "832846252",
+        "833715232",
+        "834159732",
+        "836262662",
+        "887655332",
+        "888419632",
+        "889917792",
+        "895957542",
+        "898313352",
+        "913429265",
+        "914719593",
+        "916025971",
+        "916052383",
+        "916131720",
+        "918305092",
+        "918834451",
+        "919076909",
+        "919370084",
+        "919734787",
+        "919944749",
+        "920226183",
+        "920514839",
+        "920659152",
+        "920957145",
+        "922155062",
+        "922210721",
+        "922433186",
+        "922635269",
+        "922866988",
+        "923104445",
+        "924606347",
+        "924689390",
+        "924742127",
+        "925882208",
+        "926173367",
+        "926377752",
+        "928484378",
+        "928541584",
+        "929720008",
+        "930077445",
+        "930308110",
+        "930377368",
+        "930561134",
+        "931319728",
+        "931776509",
+        "931909193",
+        "932588722",
+        "932611384",
+        "932688557",
+        "932873222",
+        "933227219",
+        "933721574",
+        "933822346",
+        "934034872",
+        "934052323",
+        "934353420",
+        "934998030",
+        "935052491",
+        "935691877",
+        "936117406",
+        "936517889",
+        "936711324",
+        "947850156",
+        "952231294",
+        "954307506",
+        "964624046",
+        "971386665",
+        "971390786",
+        "980521273",
+        "980536106",
+        "980978516",
+        "982182727",
+        "983900518",
+        "984562861",
+        "987075155",
+        "988044946",
+        "988102121",
+        "988115614",
+        "988664510",
+        "988809896",
+        "989215876",
+        "989708031",
+        "989812076",
+        "989965980",
+        "990946493",
+        "992062460",
+        "992447486",
+        "992843497",
+        "993030783",
+        "993399728",
+        "997924819"
+      ]
+    },
+    "additional_attempts_following_failure_or_transient_status": 10,
+    "retry_classification_note": "10 repeat-URL attempts follow a recorded error/429/5xx;17 repeats total. Request log does not have an explicit retry ordinal, so repeat checks are not all labeled transport retries."
+  },
+  "comparison": {
+    "kind": "Same cohort/bulk later live observations, not a controlled speedup",
+    "wall_absolute_seconds": 10.956052900008217,
+    "wall_observed_percent": 18.695205202151687,
+    "http_absolute": -5,
+    "dns_absolute": -9,
+    "coverage_percentage_point_change": 0.10988584120136125
+  },
+  "profiles1000_package": {
+    "scope": "Historical source output at45ebf1e; current candidate presentation only. NOT a fresh final-source1000 live run. Local review evidence, not an official score.",
+    "source_commit": "45ebf1eba05d1937af96eb746d660f3d471e6b2e",
+    "presentation_commit": "2b0f633a92ffcfc164f80954457888d33375a35c",
+    "profile_count": 1000,
+    "verification": {
+      "lines": 1000,
+      "schema_valid": true,
+      "published_claims": 68987,
+      "source_blobs_verified": 3849,
+      "synthesis_companies": 1000,
+      "synthesis_sentences": 8021,
+      "synthesis_unverified_values": 0
+    },
+    "generation": {
+      "companies": 1000,
+      "input_records": 1000,
+      "pages": 1002,
+      "total_bytes": 156917439,
+      "largest_profile_data_bytes": 133843,
+      "largest_profile_bytes": 133317
+    },
+    "max_profile_html_bytes": 133317,
+    "max_profile_data_js_bytes": 133843,
+    "max_raw_profile_jsonl_line_bytes": 173384,
+    "site_total_bytes": 156917439,
+    "site_html_pages": 1002,
+    "source_blobs": 4083,
+    "retention": "Keep this ZIP and its external SHA256 manifest together. Keep original out/remediation/live1000-final and out/revision until revision review ends. Extract to a new directory; site/index.html opens offline. Do not mistake archived source times for fresh checks. This local package is not uploaded or emailed.",
+    "zip": {
+      "path": "out\\revision\\revision-profiles1000.zip",
+      "bytes": 67891545,
+      "sha256": "02cbfa8daca34132c58ca78590ed7d8d4bd5b3294165fcd1d1d83634e550ea3a",
+      "every_archived_file_hash_verified": true
+    }
+  },
+  "primary_documents": [
+    {
+      "url": "https://builderr.ai/docs/signalpost-evaluation-harness.md",
+      "local_path": "out\\revision\\evaluation-contract.md",
+      "sha256": "e9f994e2fa34750411487e9fab82dbffd55dc1bb16efe9021906b92896229d45"
+    },
+    {
+      "url": "https://builderr.ai/starter-briefs/signalpost.md",
+      "local_path": "out\\revision\\brief.md",
+      "sha256": "924ff60e1dab437c63806846aa19eaa29d84d8e87132983c4e5d9f7336214c32"
+    },
+    {
+      "url": "https://builderr.ai/starter-briefs/signalpost-sources.md",
+      "local_path": "out\\revision\\sources.md",
+      "sha256": "f080470ab29d5c6da243d812e35d0ae0aa3d35f5871d62dfef90422df1b8f630"
+    }
+  ],
+  "limits_authority": "Retrieved primary documents specify supplied per-run budgets, not the numeric45min/2000/$10 in supplied listing. Conservative task100 uses600s/2000HTTP/$0. DNS definition unresolved.",
+  "limitations": [
+    "No independent recall/reference set or official score. Stored-source agreement is not overall accuracy.",
+    "No additional safe website discovery mechanism established; conservative/external/budget omissions persist.",
+    "No final-source1000 live run; archived1000 evidence/profile package retains old source times/counts.",
+    "Historical NAV three-scope completeness after dedup not proven by a live run or exact full-feed replay.",
+    "One coverage timing failure before passing isolated and full repeat; writer waiting/descheduling and finite loop jitter remain measured; no unique historical OS/filesystem cause proven.",
+    "Observed memory samples may miss short peaks and treeRSS may double-count shared pages;1000 live memory remains unmeasured.",
+    "Cold package install reused preinstalled Python; not a fresh OS.",
+    "Current organiser batch/resource definition takes precedence over older supplied listing."
+  ],
+  "no_push_deploy_email": true,
+  "evidence_root": "out\\revision",
+  "artifact_sha256": {
+    "out\\revision\\profiles1000-manifest.json": "c1b442ebe32e8ec3424e94f62337e4f604f12fa87b026b02bc2bc48178cf6920",
+    "out\\revision\\package-summary.json": "c15861d9c3f01a083760575f0b1db6b449d3082f3e412988450cf9368bfabbcd",
+    "out\\revision\\live100\\measurement.json": "62312783d826714ee3339a06a18b77d64e4e0b6335c3d02c67c14bde88bc9ce2",
+    "out\\revision\\live100\\report.json": "c4764a0e0711af4a90e5fd682925f5e75a5b92bfbb2c3b544106276341a83959",
+    "out\\revision\\live100\\envelopes.jsonl": "d46c8d09e032903a13e202116f73d4e106a0dc72155a03ac2145721cccbad046",
+    "out\\revision\\live100-audit.json": "7d1615af787cfead7226b77a69e18960ae2cea070dfe864bb65e46bb6f0bcef5",
+    "out\\revision\\full-tests.log": "6a742660cdf6bab86db5768abc317d0cba59398dbbdc53c2b2bb5a995ae2b458",
+    "out\\revision\\coverage-tests.log": "74a00a453c971c83c145c74cb11d322354497ca06815452c7b6047ac77038d2d",
+    "out\\revision\\coverage-repeat-tests.log": "0acfe4d0681a88f3ef7e698d6f5b3a0963f3f0f6002b0540184a193212169d06",
+    "out\\revision\\coverage-repeat.json": "9ff7eb6bcea1468b8a3b52fd9015a56c8934adf54f6f082cdb9ed367fe2ccfdb",
+    "out\\revision\\browser-results\\results.json": "146e4b1c52b2cae36ffce28a2f5007659730b0017b21c16b9938aad314c2d595",
+    "out\\revision\\replay-semantic.json": "bf53b7f3667da3b827a8d8460f4cbb82ace588aa6aa1bedc8e788a9c2ee85393",
+    "out\\revision\\nav_transition_check.py": "2df5e22cab36863529036d5468e2addf7deea420470f8a5b6ef07190952df974",
+    "out\\revision\\nav_dedup_controlled.py": "5c684da41329d9e371cb471a957c11d44d8c9dcc0ae09e1ddef234949f43c51e",
+    "out\\revision\\package_and_verify.py": "34120118eb68719789f0cde2dd187313d24671280875b09b3387c5e7f6d2b460",
+    "out/revision/memory-probe.json": "0d6d5d96c0e0cc3b029dfef062dab0fb15efb8ae0365ad60bbeefd97e4b78497",
+    "out/revision/evidence-manifest.json": "7b03d70609bb60dd52b5b8fd3d84f3a731bbc6efb55418c7d08611483fbf5213"
+  },
+  "evidence_manifest": "out/revision/evidence-manifest.json"
+}
