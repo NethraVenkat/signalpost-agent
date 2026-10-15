@@ -37,7 +37,14 @@ def sanitize_csv_cell(value):
         s = json.dumps(value, ensure_ascii=False, sort_keys=True)
     else:
         s = str(value)
-    if s and s[0] in ('=', '+', '-', '@', '\t', '\r'):
+    # Preserve legitimate numeric literals including negative numbers (e.g. -50000, -12.34)
+    if re.match(r'^-?\d+(?:\.\d+)?$', s.strip()):
+        return s.strip()
+    # Sanitize formula injection triggers (including leading whitespace/control characters)
+    stripped = s.lstrip(' \t\r\n')
+    if stripped and stripped[0] in ('=', '+', '-', '@'):
+        s = "'" + s
+    elif s and s[0] in ('\t', '\r'):
         s = "'" + s
     if any(c in s for c in (',', '"', '\n', '\r')):
         s = '"' + s.replace('"', '""') + '"'
@@ -45,14 +52,13 @@ def sanitize_csv_cell(value):
 
 
 def format_csv_orgnr(orgnr):
-    digits = str(orgnr).strip()
-    return f'="{digits}"'
+    return str(orgnr).strip()
 
 
 def export_directory_csv(records):
     headers = [
         "Organisation number", "Name", "Municipality", "Industry code", "Industry title",
-        "Employees", "Size band", "Revenue (NOK)", "Annual result (NOK)", "Fiscal year",
+        "Employees", "Size band", "Revenue", "Annual result", "Currency", "Financial unit", "Fiscal year",
         "Verified website", "Website provenance", "Job postings", "Social profiles",
         "Public activity", "Claim count", "Last checked"
     ]
@@ -68,6 +74,8 @@ def export_directory_csv(records):
             sanitize_csv_cell(r.get("size_band")),
             sanitize_csv_cell(r.get("revenue")),
             sanitize_csv_cell(r.get("annual_result")),
+            sanitize_csv_cell(r.get("currency") or ("NOK" if r.get("revenue") is not None or r.get("annual_result") is not None else "")),
+            sanitize_csv_cell(r.get("unit") or ""),
             sanitize_csv_cell(r.get("fiscal_year")),
             sanitize_csv_cell(r.get("website")),
             sanitize_csv_cell(r.get("website_origin")),
@@ -469,8 +477,9 @@ def profile(row, title):
                 rev = by_field.get('accounts.revenue')
                 res = by_field.get('accounts.net_result')
                 details_parts = []
-                if rev is not None: details_parts.append(f'Revenue: {value_text(rev)} NOK')
-                if res is not None: details_parts.append(f'Net result: {value_text(res)} NOK')
+                curr = period.get('currency') or 'NOK'
+                if rev is not None: details_parts.append(f'Revenue: {value_text(rev)} {esc(curr)}')
+                if res is not None: details_parts.append(f'Net result: {value_text(res)} {esc(curr)}')
                 detail_str = f'Fiscal year {f_year} filed in Regnskapsregisteret' + (f' ({", ".join(details_parts)})' if details_parts else '')
                 timeline_events.append({
                     'date': str(p_end)[:10],
@@ -730,6 +739,8 @@ def index_record(row):
               'industry_no': iv.get('beskrivelse'), 'employees': emp, 'size_band': size_band,
               'revenue': get('accounts.revenue'),
               'annual_result': get('accounts.net_result'), 'fiscal_year': next(((c.get('reporting_period') or {}).get('fiscal_year') for c in available if c['family'] == 'accounts' and (c.get('reporting_period') or {}).get('fiscal_year')), None),
+              'currency': next(((c.get('reporting_period') or {}).get('currency') for c in available if c['family'] == 'accounts' and (c.get('reporting_period') or {}).get('currency')), None) if (get('accounts.revenue') is not None or get('accounts.net_result') is not None) else None,
+              'unit': next(((c.get('reporting_period') or {}).get('unit') for c in available if c['family'] == 'accounts' and (c.get('reporting_period') or {}).get('unit')), None) if (get('accounts.revenue') is not None or get('accounts.net_result') is not None) else None,
               'founding_date': str(founding_date) if founding_date else None,
               'ceo': ceo['value'].get('name') if ceo else None, 'chair': chair['value'].get('name') if chair else None,
               'auditor': auditor['value'].get('name') if auditor else None,
