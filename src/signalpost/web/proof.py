@@ -30,6 +30,28 @@ def phone(value):
 from html.parser import HTMLParser
 
 
+def has_copyright_owner(page, org, name):
+    """Independent own-brand/footer proof, not a nearby customer mention."""
+    expected = legal_name(name)
+    if not expected or not re.search(r'(?<!\w)' + re.escape(expected) + r'(?!\w)', legal_name(page.title)):
+        return False
+    class Footer(HTMLParser):
+        def __init__(self):
+            super().__init__(convert_charrefs=True);self.active=False;self.parts=[];self.footers=[];self.hidden=0
+        def handle_starttag(self,tag,attrs):
+            if tag in {'script','style','template'}:self.hidden+=1
+            if tag=='footer':self.active=True;self.parts=[]
+        def handle_endtag(self,tag):
+            if tag=='footer' and self.active:self.footers.append(' '.join(self.parts));self.active=False
+            if tag in {'script','style','template'}:self.hidden=max(0,self.hidden-1)
+        def handle_data(self,data):
+            if self.active and not self.hidden:self.parts.append(data)
+    parsed=Footer();parsed.feed(page.raw)
+    return any(orgnrs(text)=={org} and ('©' in text or 'copyright' in text.lower())
+               and re.search(r'(?<!\w)'+re.escape(expected)+r'(?!\w)',legal_name(text))
+               for text in parsed.footers)
+
+
 class EntityCard:
     """Represents a discrete corporate entity or department container on a web page."""
     def __init__(self, start: int, end: int, raw: str, text: str, tag: str, attrs: dict):
@@ -205,7 +227,7 @@ def score(page, org, context, origin, leaders):
         if len(others) < 2 and org not in json_ids and re.search(
             r'\b(?:our\s+partners|our\s+clients|our\s+customers|directory|våre\s+partnere|våre\s+kunder)\b',
             page.visible, re.I,
-        ) and not is_dedicated_entity_card(page.raw, org, context.get('name', '')):
+        ) and not is_dedicated_entity_card(page.raw, org, context.get('name', '')) and not has_copyright_owner(page, org, context.get('name', '')):
             return Proof("REJECT", other_orgnrs=others, reason="partner_directory_mention")
         if len(others) >= 2 and org not in json_ids:
             # Multi-entity group site check: requires registry-origin domain and dedicated entity card
