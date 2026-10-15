@@ -5,6 +5,7 @@ from ..models.claim import Claim
 from ..models.evidence import Evidence, canonical, digest, utc_now
 from ..models.envelope import Error
 from .excerpt import excerpt,document_bounds
+from .text import decode_body
 
 
 @dataclass
@@ -27,7 +28,7 @@ class Source:
 
     def excerpt(self,value,locator):
         if self._document is None:
-            text=self.body.decode('utf8',errors='replace')
+            text=decode_body(self.body)
             self._document=(text,document_bounds(text) if text.lstrip().startswith(('{','[')) else {})
         return excerpt(self.body,value,locator,document=self._document)
 

@@ -16,27 +16,8 @@ class Link:
 
 def decode_html(body: bytes) -> str:
     """Decodes HTML body bytes, honoring declared charset (<meta charset> / Content-Type) with UTF-8 priority."""
-    head = body[:2048]
-    declared = None
-    m = re.search(rb'<meta\s+[^>]*\bcharset\s*=\s*["\']?([a-zA-Z0-9_-]+)', head, re.I)
-    if m:
-        declared = m.group(1).decode("ascii", errors="ignore").strip().lower()
-    else:
-        m = re.search(rb'<meta\s+[^>]*\bcontent\s*=\s*["\'][^"\']*charset\s*=\s*([a-zA-Z0-9_-]+)', head, re.I)
-        if m:
-            declared = m.group(1).decode("ascii", errors="ignore").strip().lower()
-
-    if declared in ("utf-8", "utf8", None):
-        return body.decode("utf-8", errors="replace")
-
-    # If legacy encoding is explicitly declared, try decoding with it first
-    try:
-        return body.decode(declared)
-    except (LookupError, UnicodeDecodeError):
-        pass
-
-    # Fallback to UTF-8 with replace
-    return body.decode("utf-8", errors="replace")
+    from ..sources.text import decode_body
+    return decode_body(body)
 
 
 class Page(HTMLParser):

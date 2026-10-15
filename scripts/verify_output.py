@@ -13,6 +13,7 @@ from signalpost.models.synthesis import Synthesis
 from signalpost.synthesis.validate import sentence_error,SECTIONS
 from signalpost.synthesis.catalog import change_claims
 from types import SimpleNamespace
+from signalpost.sources.text import decode_body
 
 
 def verify_synthesis(row):
@@ -62,7 +63,7 @@ def verify(first, state_dir, count, organisations=None, report=None, require_cle
     seen, published = set(), 0
     @lru_cache(maxsize=8)
     def stored_body(sha):
-        return (state_dir/'blobs'/sha).read_bytes().decode('utf8',errors='replace')
+        return decode_body((state_dir/'blobs'/sha).read_bytes())
     synthesis_companies=synthesis_sentences=0
     for row in rows:
         companies,sentences=verify_synthesis(row)
