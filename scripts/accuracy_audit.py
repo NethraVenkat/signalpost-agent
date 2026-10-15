@@ -9,6 +9,7 @@ Audits three separate categories:
 Never conflates Category A structural integrity with Category B or C factual truth.
 """
 import argparse
+from decimal import Decimal, InvalidOperation
 import hashlib
 import io
 import json
@@ -28,6 +29,40 @@ GENERIC_SOCIAL_PATHS = {
     "", "/", "/share", "/sharer", "/sharer.php", "/intent/tweet", "/home",
     "/pages", "/share.php", "/login", "/signup", "/feed", "/rss"
 }
+
+IDENTITY_CSV_FIELD_COLUMNS = {
+    "identity.legal_name": ["navn"],
+    "identity.registered_website": ["hjemmeside"],
+    "identity.municipality": ["forretningsadresse.kommune", "kommune", "postadresse.kommune"],
+    "identity.employees": ["antallAnsatte"],
+    "identity.bankrupt": ["konkurs"],
+    "identity.organisation_type": ["organisasjonsform.kode", "organisasjonsform"],
+    "identity.registration_date": ["registreringsdatoEnhetsregisteret"],
+    "identity.nace": ["naeringskode1.kode", "naeringskode1"],
+    "identity.institution_sector_code": ["institusjonellSektorkode.kode", "institusjonellSektorkode"],
+    "identity.mva_registered": ["registrertIMvaregisteret"],
+}
+
+IDENTITY_JSON_FIELD_POINTER_ENDS = {
+    "identity.legal_name": ["/navn"],
+    "identity.registered_website": ["/hjemmeside"],
+    "identity.municipality": ["/kommune"],
+    "identity.employees": ["/antallAnsatte"],
+    "identity.bankrupt": ["/konkurs"],
+    "identity.organisation_type": ["/kode", "/organisasjonsform"],
+    "identity.registration_date": ["/registreringsdatoEnhetsregisteret"],
+    "identity.nace": ["/kode", "/naeringskode1"],
+    "identity.institution_sector_code": ["/kode", "/institusjonellSektorkode"],
+    "identity.mva_registered": ["/registrertIMvaregisteret"],
+}
+
+ACCOUNTS_FIELD_LOCATOR_RULES = {
+    "accounts.revenue": ["driftsinntekter", "sumDriftsinntekter", "salgsinntekt", "inntekter"],
+    "accounts.operating_profit": ["driftsresultat", "sumDriftsresultat"],
+    "accounts.annual_result": ["aarsresultat", "ordinaertResultatFoerSkattekostnad", "totalresultat"],
+    "accounts.net_result": ["aarsresultat", "aarsresultatEtterSkattekostnad", "totalresultat"],
+}
+
 
 def resolve_json_pointer(doc, pointer: str):
     """
@@ -73,7 +108,8 @@ def parse_csv_blob(body: str) -> list[dict]:
 
 def audit_claim_structural(claim: dict, evidence_map: dict, blob_getter) -> tuple[str, str, dict | None]:
     """
-    Category A: Verifies cryptographic hash, locator, and non-empty verbatim excerpt.
+    Category A: Verifies cryptographic hash, locator, and non-empty verbatim excerpt
+    for EVERY evidence reference in claim.evidence_ids.
     Returns (status, reason, primary_evidence).
     """
     avail = claim.get("availability")
@@ -82,38 +118,42 @@ def audit_claim_structural(claim: dict, evidence_map: dict, blob_getter) -> tupl
 
     eids = claim.get("evidence_ids", [])
     if not eids:
-        return "FAIL", "Missing evidence references for available claim", None
+        return "FAIL", "[ERR_NO_EVIDENCE] Missing evidence references for available claim", None
 
-    primary_eid = eids[0]
-    ev = evidence_map.get(primary_eid)
-    if not ev:
-        return "FAIL", f"Referenced evidence ID {primary_eid} not found in envelope", None
+    first_ev = None
+    for idx, eid in enumerate(eids):
+        ev = evidence_map.get(eid)
+        if not ev:
+            return "FAIL", f"[ERR_MISSING_EVIDENCE_ID] Referenced evidence ID {eid} not found in envelope", None
 
-    loc = ev.get("locator")
-    if not loc:
-        return "FAIL", "Evidence locator missing", ev
+        if first_ev is None:
+            first_ev = ev
 
-    sha = ev.get("content_sha256")
-    if not sha:
-        return "FAIL", "Evidence content_sha256 missing", ev
+        loc = ev.get("locator")
+        if not loc:
+            return "FAIL", f"[ERR_MISSING_LOCATOR] Evidence locator missing for {eid}", ev
 
-    span = ev.get("claim_span", "")
-    if not span or not span.strip():
-        return "FAIL", "Empty or whitespace evidence span", ev
-    if len(span) > 300:
-        return "FAIL", f"Evidence span exceeds 300 character limit ({len(span)} chars)", ev
+        sha = ev.get("content_sha256")
+        if not sha:
+            return "FAIL", f"[ERR_MISSING_HASH] Evidence content_sha256 missing for {eid}", ev
 
-    blob_res = blob_getter(sha)
-    if blob_res is None:
-        return "FAIL", f"Evidence blob {sha} missing from state storage", ev
-    if blob_res is False:
-        return "FAIL", f"Evidence blob {sha} failed SHA-256 integrity verification", ev
+        span = ev.get("claim_span", "")
+        if not span or not span.strip():
+            return "FAIL", f"[ERR_EMPTY_SPAN] Empty or whitespace evidence span for {eid}", ev
+        if len(span) > 300:
+            return "FAIL", f"[ERR_SPAN_TOO_LONG] Evidence span exceeds 300 character limit ({len(span)} chars) for {eid}", ev
 
-    body_str = blob_res
-    if span not in body_str:
-        return "FAIL", f"Evidence span not found verbatim in content blob {sha}", ev
+        blob_res = blob_getter(sha)
+        if blob_res is None:
+            return "FAIL", f"[ERR_MISSING_BLOB] Evidence blob {sha} missing from state storage for {eid}", ev
+        if blob_res is False:
+            return "FAIL", f"[ERR_CORRUPTED_BLOB] Evidence blob {sha} failed SHA-256 integrity verification for {eid}", ev
 
-    return "PASS", "Valid cryptographic hash, locator, and verbatim span", ev
+        body_str = blob_res
+        if span not in body_str:
+            return "FAIL", f"[ERR_SPAN_NOT_VERBATIM] Evidence span not found verbatim in content blob {sha} for {eid}", ev
+
+    return "PASS", f"Valid cryptographic hash, locator, and verbatim span across {len(eids)} evidence references", first_ev
 
 
 def audit_identity_claim(org: str, claim: dict, ev: dict, body: str) -> tuple[str, str, any]:
@@ -131,18 +171,33 @@ def audit_identity_claim(org: str, claim: dict, ev: dict, body: str) -> tuple[st
 
         # Verify subject organisation
         body_org = str(data.get("organisasjonsnummer") or "").strip()
-        if body_org and body_org != org:
+        if not body_org:
+            return "UNVERIFIABLE", "Missing organisation number in source JSON", None
+        if body_org != org:
             return "INCORRECT", f"Source body orgnr {body_org} != subject org {org}", body_org
+
+        # Verify locator targets expected path for field
+        for key, allowed_ends in IDENTITY_JSON_FIELD_POINTER_ENDS.items():
+            if fld == key or fld.startswith(key + "."):
+                if not any(loc.endswith(end) or end in loc for end in allowed_ends):
+                    return "INCORRECT", f"Locator {loc} does not target expected path for {fld}", None
 
         found, expected = resolve_json_pointer(data, loc)
         if not found:
             return "INCORRECT", f"Locator {loc} not found in source JSON", None
 
-        # Normalize comparison
+        # Typed comparisons
         if fld == "identity.legal_name":
             if str(val or "").strip() == str(expected or "").strip():
                 return "CORRECT", "Legal name matches source field exactly", expected
             return "INCORRECT", f"Legal name mismatch: claimed '{val}' != source '{expected}'", expected
+
+        if fld == "identity.registered_website":
+            exp_w = str(expected or "").strip().lower()
+            claim_w = str(val or "").strip().lower()
+            if claim_w == exp_w and exp_w != "":
+                return "CORRECT", "Registered website matches source field exactly", expected
+            return "INCORRECT", f"Claim registered website '{val}' != source '{expected}'", expected
 
         if fld == "identity.employees":
             if val == expected or (expected is None and val is None):
@@ -163,7 +218,7 @@ def audit_identity_claim(org: str, claim: dict, ev: dict, body: str) -> tuple[st
         if fld.startswith("identity.nace"):
             code = val.get("kode") if isinstance(val, dict) else val
             exp_code = expected.get("kode") if isinstance(expected, dict) else expected
-            if code == exp_code:
+            if str(code or "").strip() == str(exp_code or "").strip():
                 return "CORRECT", "NACE code matches source field", exp_code
             return "INCORRECT", f"Claim NACE {code} != source {exp_code}", exp_code
 
@@ -179,21 +234,51 @@ def audit_identity_claim(org: str, claim: dict, ev: dict, body: str) -> tuple[st
 
     matched_row = next((r for r in rows if str(r.get("organisasjonsnummer") or r.get("Organisasjonsnummer") or "").strip() == org), None)
     if not matched_row:
-        # Check first row
-        matched_row = rows[0]
+        return "UNVERIFIABLE", f"Subject organisation {org} not found in CSV snapshot", None
 
     # Verify subject org in row
     row_org = str(matched_row.get("organisasjonsnummer") or matched_row.get("Organisasjonsnummer") or "").strip()
-    if row_org and row_org != org:
+    if not row_org:
+        return "UNVERIFIABLE", "CSV row lacks organisation number", None
+    if row_org != org:
         return "INCORRECT", f"CSV row orgnr {row_org} != subject org {org}", row_org
 
+    if "/columns:" in loc:
+        prefix = loc.split("/columns:")[-1].rstrip(".*")
+        expected_dict = {}
+        for k, v in matched_row.items():
+            if k and k.lower().startswith(prefix.lower() + ".") and v not in (None, ""):
+                expected_dict[k.split(".", 1)[-1]] = v
+        if isinstance(val, dict) and val and all(expected_dict.get(k) == v for k, v in val.items()):
+            return "CORRECT", f"Composite fields match CSV columns for {prefix}", expected_dict
+        if val == expected_dict:
+            return "CORRECT", f"Composite fields match CSV columns for {prefix}", expected_dict
+        return "INCORRECT", f"Composite mismatch for {fld}: claimed {val} != CSV {expected_dict}", expected_dict
+
     col_name = loc.split("/column:")[-1] if "/column:" in loc else loc.split("/")[-1]
-    expected = matched_row.get(col_name)
+    actual_col = next((k for k in matched_row.keys() if k and k.lower() == col_name.lower()), None)
+    if not actual_col:
+        return "INCORRECT", f"Column '{col_name}' not found in CSV row", None
+
+    # Verify locator column belongs to claimed field
+    for key, cols in IDENTITY_CSV_FIELD_COLUMNS.items():
+        if fld == key or fld.startswith(key + "."):
+            if not any(col.lower() == col_name.lower() for col in cols):
+                return "INCORRECT", f"Column '{col_name}' does not match expected columns {cols} for {fld}", col_name
+
+    expected = matched_row.get(actual_col)
 
     if fld == "identity.legal_name":
         if str(val or "").strip().casefold() == str(expected or "").strip().casefold():
             return "CORRECT", "Legal name matches CSV column exactly", expected
         return "INCORRECT", f"Claim legal name '{val}' != CSV '{expected}'", expected
+
+    if fld == "identity.registered_website":
+        exp_web = str(expected or "").strip().lower()
+        claim_web = str(val or "").strip().lower()
+        if claim_web == exp_web and exp_web != "":
+            return "CORRECT", f"Registered website '{claim_web}' matches CSV", expected
+        return "INCORRECT", f"Claim registered website '{val}' != CSV '{expected}'", expected
 
     if fld == "identity.municipality":
         if str(val or "").strip().casefold() == str(expected or "").strip().casefold():
@@ -210,13 +295,15 @@ def audit_identity_claim(org: str, claim: dict, ev: dict, body: str) -> tuple[st
         except ValueError:
             return "UNVERIFIABLE", f"Non-numeric employee value in CSV: {expected}", expected
 
-    if fld == "identity.bankrupt":
+    if isinstance(val, bool) or fld == "identity.bankrupt" or (expected and str(expected).lower() in ("true", "false", "ja", "nei")):
         exp_bool = str(expected).strip().lower() in ("ja", "true", "1", "yes")
         if bool(val) == exp_bool:
-            return "CORRECT", "Bankruptcy status matches CSV", exp_bool
-        return "INCORRECT", f"Claim bankrupt {val} != CSV {exp_bool}", exp_bool
+            return "CORRECT", f"Boolean field {fld} matches CSV", exp_bool
+        return "INCORRECT", f"Claim {fld} {val} != CSV {exp_bool}", exp_bool
 
-    return "CORRECT", f"Field verified in CSV row ({col_name})", expected
+    if str(val or "").strip() == str(expected or "").strip():
+        return "CORRECT", f"Field verified in CSV row ({actual_col})", expected
+    return "INCORRECT", f"Field {fld} value mismatch: claim '{val}' != CSV '{expected}'", expected
 
 
 def audit_accounts_claim(org: str, claim: dict, ev: dict, body: str) -> tuple[str, str, any]:
@@ -234,11 +321,18 @@ def audit_accounts_claim(org: str, claim: dict, ev: dict, body: str) -> tuple[st
     if not isinstance(data, list):
         return "UNVERIFIABLE", "Expected list of annual accounts in Regnskapsregisteret response", None
 
+    # Check locator path compatibility against field
+    if fld in ACCOUNTS_FIELD_LOCATOR_RULES:
+        allowed_parts = ACCOUNTS_FIELD_LOCATOR_RULES[fld]
+        if not any(part.lower() in loc.lower() for part in allowed_parts):
+            return "INCORRECT", f"Locator '{loc}' does not target expected path for financial field {fld}", None
+    if fld == "accounts.revenue" and ("driftskostnad" in loc or "kostnad" in loc.lower()):
+        return "INCORRECT", f"Revenue claim locator '{loc}' points to expenses rather than revenue", None
+
     found, raw_val = resolve_json_pointer(data, loc)
     if not found:
         return "INCORRECT", f"Financial locator {loc} does not exist in accounts body", None
 
-    # Determine which record was targeted from the locator index /<idx>/...
     tokens = loc.strip("/").split("/")
     rec_idx = int(tokens[0]) if tokens and tokens[0].isdigit() else 0
     if rec_idx >= len(data):
@@ -257,12 +351,22 @@ def audit_accounts_claim(org: str, claim: dict, ev: dict, body: str) -> tuple[st
     if acc_type and acc_type != "SELSKAP":
         return "INCORRECT", f"Consolidated account type {acc_type} published; only exact entity SELSKAP permitted", acc_type
 
-    # Verify reporting period and fiscal year
+    # Verify reporting period and boundaries
     period = record.get("regnskapsperiode") or {}
     exp_year = str(period.get("tilDato") or "")[:4]
     claim_year = str(rep.get("fiscal_year") or "")
     if exp_year and claim_year and exp_year != claim_year:
         return "INCORRECT", f"Fiscal year mismatch: claimed {claim_year} != filing {exp_year}", exp_year
+
+    exp_start = str(period.get("fraDato") or "")
+    claim_start = str(rep.get("start_date") or "")
+    if exp_start and claim_start and exp_start != claim_start:
+        return "INCORRECT", f"Reporting period start_date mismatch: claimed {claim_start} != filing {exp_start}", exp_start
+
+    exp_end = str(period.get("tilDato") or "")
+    claim_end = str(rep.get("end_date") or "")
+    if exp_end and claim_end and exp_end != claim_end:
+        return "INCORRECT", f"Reporting period end_date mismatch: claimed {claim_end} != filing {exp_end}", exp_end
 
     # Verify currency
     exp_curr = record.get("valuta") or "NOK"
@@ -270,24 +374,30 @@ def audit_accounts_claim(org: str, claim: dict, ev: dict, body: str) -> tuple[st
     if claim_curr and claim_curr != exp_curr:
         return "INCORRECT", f"Currency mismatch: claimed {claim_curr} != filing {exp_curr}", exp_curr
 
+    # Verify units
+    claim_unit = rep.get("unit")
+    if claim_unit and str(claim_unit).lower() not in ("whole", "nok", "1", "units", "standard"):
+        return "INCORRECT", f"Unit mismatch: claimed unit '{claim_unit}' but Regnskapsregisteret filings are in whole units", "whole"
+
     # Check for fabricated zero
     if raw_val is None:
-        if val == 0 or val == 0.0:
+        if val == 0 or val == 0.0 or val == "0":
             return "INCORRECT", f"Fabricated zero: field {fld} is null/absent in filing but published as 0", 0
         if val is None:
             return "CORRECT", "Correctly published missing field as null", None
         return "INCORRECT", f"Field is null in filing but published as {val}", raw_val
 
-    # Exact numeric and sign comparison
+    # Exact Decimal numeric and sign comparison
     try:
-        num_claim = float(val)
-        num_expected = float(raw_val)
-        if (num_claim < 0) != (num_expected < 0) and num_claim != 0 and num_expected != 0:
-            return "INCORRECT", f"Numeric sign mismatch: claimed {num_claim} vs filing {num_expected}", num_expected
-        if abs(num_claim - num_expected) > 0.01:
-            return "INCORRECT", f"Numeric value mismatch: claimed {num_claim} != filing {num_expected}", num_expected
-        return "CORRECT", f"Exact numeric match ({num_claim} {exp_curr})", num_expected
-    except (ValueError, TypeError):
+        dec_claim = Decimal(str(val))
+        dec_expected = Decimal(str(raw_val))
+        num_ret = float(dec_expected) if "." in str(dec_expected) else int(dec_expected)
+        if (dec_claim < 0) != (dec_expected < 0) and dec_claim != 0 and dec_expected != 0:
+            return "INCORRECT", f"Numeric sign mismatch: claimed {dec_claim} vs filing {dec_expected}", num_ret
+        if dec_claim != dec_expected:
+            return "INCORRECT", f"Numeric value mismatch: claimed {dec_claim} != filing {dec_expected}", num_ret
+        return "CORRECT", f"Exact numeric match ({dec_claim} {exp_curr})", num_ret
+    except (InvalidOperation, ValueError, TypeError):
         return "INCORRECT", f"Non-numeric comparison failure: claimed={val}, filing={raw_val}", raw_val
 
 
@@ -318,10 +428,13 @@ def audit_roles_claim(org: str, claim: dict, ev: dict, body: str) -> tuple[str, 
             return "CORRECT", f"Role detail matches source field ({fld})", item_clean
         return "INCORRECT", f"Role detail mismatch: claimed {val} != source {item_clean}", item_clean
 
+    if not val or not isinstance(val, dict):
+        return "INCORRECT", "Role claim value is empty or invalid", None
+
     if not isinstance(item, dict):
         return "INCORRECT", f"Role locator {loc} expected dict, got {type(item).__name__}", None
 
-    val_dict = val if isinstance(val, dict) else {}
+    val_dict = val
     person = item.get("person") or {}
     enhet = item.get("enhet") or {}
     role_type = item.get("type") or {}
@@ -337,12 +450,19 @@ def audit_roles_claim(org: str, claim: dict, ev: dict, body: str) -> tuple[str, 
 
     raw_claim_name = val_dict.get("name")
     claim_name = " ".join(raw_claim_name) if isinstance(raw_claim_name, list) else str(raw_claim_name or "")
+    claim_type_code = (val_dict.get("role_type") or {}).get("kode") if isinstance(val_dict.get("role_type"), dict) else val_dict.get("role_type")
+    exp_type_code = role_type.get("kode") if isinstance(role_type, dict) else role_type
+
+    # Require non-empty claim value containing expected name and role code
+    if not claim_name.strip() and expected_name.strip():
+        return "INCORRECT", f"Role claim value missing person/entity name (source has '{expected_name}')", None
+    if not claim_type_code and exp_type_code:
+        return "INCORRECT", f"Role claim value missing role type code (source has '{exp_type_code}')", None
+
     if expected_name and claim_name:
         if expected_name.strip().casefold() != claim_name.strip().casefold():
             return "INCORRECT", f"Role person name mismatch: claimed '{claim_name}' != source '{expected_name}'", expected_name
 
-    claim_type_code = (val_dict.get("role_type") or {}).get("kode") if isinstance(val_dict.get("role_type"), dict) else val_dict.get("role_type")
-    exp_type_code = role_type.get("kode") if isinstance(role_type, dict) else role_type
     if exp_type_code and claim_type_code:
         if exp_type_code != claim_type_code:
             return "INCORRECT", f"Role type code mismatch: claimed '{claim_type_code}' != source '{exp_type_code}'", exp_type_code
@@ -371,22 +491,27 @@ def audit_subunits_claim(org: str, claim: dict, ev: dict, body: str) -> tuple[st
             return "CORRECT", f"Subunit detail matches source field ({fld})", item_clean
         return "INCORRECT", f"Subunit detail mismatch: claimed {val} != source {item_clean}", item_clean
 
+    if not val or not isinstance(val, dict):
+        return "INCORRECT", "Subunit claim value is empty or invalid", None
+
     if not isinstance(item, dict):
         return "INCORRECT", f"Subunit locator {loc} expected dict, got {type(item).__name__}", None
 
-    val_dict = val if isinstance(val, dict) else {}
+    val_dict = val
     parent_org = str(item.get("overordnetEnhet") or "").strip()
-    if parent_org and parent_org != org:
+    if not parent_org:
+        return "INCORRECT", "Source subunit record lacks overordnetEnhet", None
+    if parent_org != org:
         return "INCORRECT", f"Subunit parent orgnr {parent_org} != subject org {org}", parent_org
 
     unit_org = str(item.get("organisasjonsnummer") or "").strip()
     claimed_unit_org = str(val_dict.get("organisation_number") or "").strip()
-    if unit_org and claimed_unit_org and unit_org != claimed_unit_org:
-        return "INCORRECT", f"Subunit orgnr mismatch: claimed {claimed_unit_org} != source {unit_org}", unit_org
+    if not claimed_unit_org or unit_org != claimed_unit_org:
+        return "INCORRECT", f"Subunit orgnr mismatch: claimed '{claimed_unit_org}' != source '{unit_org}'", unit_org
 
     unit_name = str(item.get("navn") or "").strip()
     claimed_name = str(val_dict.get("name") or "").strip()
-    if unit_name and claimed_name and unit_name.casefold() != claimed_name.casefold():
+    if not claimed_name or unit_name.casefold() != claimed_name.casefold():
         return "INCORRECT", f"Subunit name mismatch: claimed '{claimed_name}' != source '{unit_name}'", unit_name
 
     return "CORRECT", f"Subunit {unit_org} verified under parent {org}", unit_org
@@ -445,14 +570,13 @@ def audit_website_claim(
     url = val.get("final_url") or val.get("url")
     origin = val.get("candidate_origin")
     signals = val.get("signals") or []
+    identity_level = val.get("identity_level")
+    claimed_points = val.get("points")
 
     if not body:
         return "UNVERIFIABLE", "Stored destination website body unavailable", None
 
-    # Check for foreign conflicting owner: 9-digit orgnr of an unrelated company
     orgnr_pat = re.compile(r'\b' + org[0:3] + r'[\s.]?' + org[3:6] + r'[\s.]?' + org[6:9] + r'\b')
-    other_orgnrs = re.findall(r'\b(?:\d{3}[\s.]?\d{3}[\s.]?\d{3}|\d{9})\b', body)
-    normalized_other = {re.sub(r'[\s.]', '', x) for x in other_orgnrs if re.sub(r'[\s.]', '', x) != org}
 
     if ptype in ("orgnr_on_page", "orgnr"):
         if orgnr_pat.search(body):
@@ -461,7 +585,6 @@ def audit_website_claim(
 
     if ptype == "jsonld_vatid":
         if orgnr_pat.search(body):
-            # Check for script tag
             if 'application/ld+json' in body:
                 return "CORRECT", f"Exact orgnr {org} verified in JSON-LD schema markup", url
             return "CORRECT", f"Exact orgnr {org} verified in markup body", url
@@ -470,7 +593,6 @@ def audit_website_claim(
     if ptype in ("registry_declared", "registry_declared_live"):
         if not registry_body:
             return "UNVERIFIABLE", "Registry record unavailable to verify declared website domain", None
-        # Verify that domain is actually declared in Enhetsregisteret
         domain = urlparse(url).hostname or ""
         domain_clean = domain.replace("www.", "").lower()
         if domain_clean in registry_body.lower():
@@ -481,15 +603,26 @@ def audit_website_claim(
         if not signals:
             return "INCORRECT", "Signals proof claimed but signals list is empty", None
 
+        # Check documented acceptance threshold
+        if identity_level and identity_level in ("LOW", "MEDIUM"):
+            return "INCORRECT", f"Signals identity level '{identity_level}' is below documented acceptance threshold (HIGH/REGISTRY_DECLARED)", None
+        if claimed_points is not None and claimed_points < 5:
+            return "INCORRECT", f"Signals points {claimed_points} is below documented acceptance threshold (points >= 5)", None
+
+        cand_domain = (urlparse(url).hostname or "").replace("www.", "").lower()
+
         if context:
             page = Page(body.encode("utf-8", errors="replace"), val.get("proof_page_url") or url)
             text = legal_name(page.title + " " + page.meta.get("og:site_name", "") + " " + page.owner_text)
             norm_name = legal_name(context.get("name"))
             verified_signals = []
+            pts = 0
+
             for s in signals:
                 if s == "legal_name":
                     if norm_name and re.search(r"(?<!\w)" + re.escape(norm_name) + r"(?!\w)", text):
                         verified_signals.append(s)
+                        pts += 2
                 elif s == "address":
                     st = context.get("street")
                     sts = st if isinstance(st, list) else [st]
@@ -498,6 +631,7 @@ def audit_website_claim(
                         addr = str(context["postcode"]) in page.visible and legal_name(context["city"]) in text
                     if addr:
                         verified_signals.append(s)
+                        pts += 2
                 elif s == "phone":
                     exp_p = phone(context.get("phone"))
                     page_p = {phone(l.href[4:]) for l in page.links if l.href.startswith("tel:")}
@@ -505,31 +639,45 @@ def audit_website_claim(
                         page_p.add(phone(m.group()))
                     if exp_p and exp_p in page_p:
                         verified_signals.append(s)
+                        pts += 2
                 elif s == "leader":
                     if leaders and any(legal_name(l) and legal_name(l) in text for l in leaders):
                         verified_signals.append(s)
+                        pts += 2
                 elif s == "municipality":
                     muni = legal_name(context.get("municipality"))
                     if muni and muni in text:
                         verified_signals.append(s)
+                        pts += 1
                 elif s == "registry_website":
-                    reg_w = context.get("website") or (
-                        registry_body
-                        and urlparse(url).hostname
-                        and urlparse(url).hostname.replace("www.", "").lower() in registry_body.lower()
-                    )
-                    if reg_w:
+                    reg_w = context.get("website") or ""
+                    reg_domain = (urlparse(reg_w if "://" in str(reg_w) else "https://" + str(reg_w)).hostname or "").replace("www.", "").lower() if reg_w else ""
+                    if cand_domain and reg_domain and cand_domain == reg_domain:
                         verified_signals.append(s)
+                        pts += 2
+                    elif registry_body and cand_domain and cand_domain in registry_body.lower():
+                        verified_signals.append(s)
+                        pts += 2
                 else:
                     if s.lower() in body.lower():
                         verified_signals.append(s)
 
-            if len(verified_signals) == len(signals):
-                return "CORRECT", f"Identity signals ({', '.join(signals)}) verified against primary source facts and destination page", url
-            missing = set(signals) - set(verified_signals)
-            return "INCORRECT", f"Signals ({', '.join(missing)}) not found in page body", None
+            if len(verified_signals) != len(signals):
+                missing = set(signals) - set(verified_signals)
+                return "INCORRECT", f"Signals ({', '.join(missing)}) not found in page body or mismatch registered domain", None
+
+            effective_pts = claimed_points if claimed_points is not None else pts
+            if effective_pts < 5:
+                return "INCORRECT", f"Signals proof below acceptance threshold: points={effective_pts} (< 5)", None
+            if "legal_name" not in verified_signals:
+                return "INCORRECT", "Signals proof missing required legal_name signal", None
+            if not (set(verified_signals) & {"address", "phone", "leader", "registry_website"}):
+                return "INCORRECT", "Signals proof missing required anchor signal (address/phone/leader/registry_website)", None
+            if len(verified_signals) < 2:
+                return "INCORRECT", "Signals proof requires at least 2 distinct verified signals", None
+
+            return "CORRECT", f"Identity signals ({', '.join(signals)}) verified against primary source facts and destination page", url
         else:
-            # Fallback for standalone/adversarial unit tests without company context
             matched_signals = [s for s in signals if s.lower() in body.lower()]
             if len(matched_signals) == len(signals):
                 return "CORRECT", f"Identity signals ({', '.join(signals)}) verified in page body", url
@@ -537,6 +685,48 @@ def audit_website_claim(
             return "INCORRECT", f"Signals ({', '.join(missing)}) not found in page body", None
 
     return "UNVERIFIABLE", f"Unknown website proof type: {ptype}", None
+
+
+def audit_website_metadata_claim(org: str, claim: dict, ev: dict, body: str) -> tuple[str, str, any]:
+    """Category B: Validates contact/metadata claim value against verified company page body."""
+    if not body:
+        return "UNVERIFIABLE", "Stored page body unavailable", None
+
+    fld = claim.get("field", "")
+    val = claim.get("value")
+    if val is None or val == "":
+        return "INCORRECT", f"Empty metadata claim value for {fld}", None
+
+    val_str = str(val).strip()
+
+    if fld.startswith("contact.email"):
+        if val_str.lower() in body.lower():
+            return "CORRECT", f"Contact email '{val_str}' verified in page body", val_str
+        return "INCORRECT", f"Contact email '{val_str}' not found in page body", None
+
+    if fld.startswith("contact.phone"):
+        norm_phone = phone(val_str)
+        page_phones = {phone(m.group()) for m in re.finditer(r"(?:\+47|0047|\b)[ .()0-9-]{8,20}\b", body)}
+        if norm_phone and norm_phone in page_phones:
+            return "CORRECT", f"Contact phone '{val_str}' verified in page body", val_str
+        if val_str in body:
+            return "CORRECT", f"Contact phone '{val_str}' verified verbatim in page body", val_str
+        return "INCORRECT", f"Contact phone '{val_str}' not found in page body", None
+
+    if fld == "public_brand":
+        if val_str.lower() in body.lower():
+            return "CORRECT", f"Public brand '{val_str}' verified in page body", val_str
+        return "INCORRECT", f"Public brand '{val_str}' not found in page body", None
+
+    if fld.startswith("website_description"):
+        if val_str.lower() in body.lower():
+            return "CORRECT", "Website description verified in page body", val_str
+        words = [w for w in re.split(r'\W+', val_str) if len(w) > 4]
+        if words and all(w.lower() in body.lower() for w in words[:5]):
+            return "CORRECT", "Website description excerpt verified in page body", val_str
+        return "INCORRECT", "Website description not found in page body", None
+
+    return "UNVERIFIABLE", f"No semantic validator for website metadata field {fld}", None
 
 
 def audit_social_claim(org: str, claim: dict, ev: dict, body: str) -> tuple[str, str, any]:
@@ -553,8 +743,24 @@ def audit_social_claim(org: str, claim: dict, ev: dict, body: str) -> tuple[str,
     if path_part in GENERIC_SOCIAL_PATHS:
         return "INCORRECT", f"Generic platform landing link, not company-owned profile: {s_url}", s_url
 
-    # Check that URL or normalized path actually occurs in the HTML body
-    if s_url in body or (path_part and path_part in body):
+    claimed_host = parsed.netloc.lower().replace("www.", "")
+    claimed_path = path_part.lower()
+
+    hrefs = re.findall(r'href=[\'"]([^\'"]+)[\'"]', body, re.IGNORECASE)
+    plain_urls = re.findall(r'https?://[^\s<>"\']+', body)
+    all_links = set(hrefs + plain_urls)
+
+    for link in all_links:
+        try:
+            cand = urlparse(link)
+            cand_host = cand.netloc.lower().replace("www.", "")
+            cand_path = cand.path.rstrip("/").lower()
+            if cand_host and cand_host == claimed_host and cand_path == claimed_path:
+                return "CORRECT", f"Verified company-owned social link ({platform}) in page body", s_url
+        except Exception:
+            continue
+
+    if s_url in body:
         return "CORRECT", f"Verified company-owned social link ({platform}) in page body", s_url
 
     return "INCORRECT", f"Social profile URL {s_url} not found in verified company page body", None
@@ -565,62 +771,70 @@ def audit_activity_claim(org: str, claim: dict, ev: dict, body: str) -> tuple[st
     val = claim.get("value") or {}
     act_url = val.get("url") if isinstance(val, dict) else str(val)
     date_str = val.get("date") if isinstance(val, dict) else None
+    date_kind = val.get("date_kind") if isinstance(val, dict) else None
 
     if not body:
         return "UNVERIFIABLE", "Activity XML feed body unavailable", None
 
     try:
-        # Strip potential XML declarations or encoding issues
         clean_xml = re.sub(r'<\?xml[^>]*\?>', '', body).strip()
         root = ET.fromstring(clean_xml)
     except Exception as exc:
         return "UNVERIFIABLE", f"XML parse failure: {exc}", None
 
-    # Handle Sitemap, RSS, and Atom
-    found_item = False
-    date_matches = False
+    def norm_url(u: str) -> str:
+        if not u:
+            return ""
+        u = u.strip().rstrip("/")
+        parsed = urlparse(u)
+        scheme = parsed.scheme.lower()
+        netloc = parsed.netloc.lower().replace("www.", "")
+        path = parsed.path.rstrip("/")
+        return f"{scheme}://{netloc}{path}"
+
+    target_norm = norm_url(act_url)
 
     # 1. Sitemap: <urlset><url><loc>...</loc><lastmod>...</lastmod></url></urlset>
     for url_node in root.findall('.//{*}url'):
         loc_node = url_node.find('{*}loc')
-        if loc_node is not None and loc_node.text and act_url in loc_node.text:
-            found_item = True
-            lastmod = url_node.find('{*}lastmod')
-            if lastmod is not None and lastmod.text and date_str and date_str in lastmod.text:
-                date_matches = True
-                return "CORRECT", f"URL and lastmod date {date_str} co-occur in sitemap <url> entry", date_str
-            elif lastmod is None:
-                return "INCORRECT", f"Activity item {act_url} lacks required <lastmod> date in sitemap", None
+        if loc_node is not None and loc_node.text:
+            if norm_url(loc_node.text) == target_norm:
+                if date_kind in ("published", "publication"):
+                    return "INCORRECT", f"Sitemap <lastmod> date cannot be claimed as publication date for {act_url}", None
+                lastmod = url_node.find('{*}lastmod')
+                if lastmod is not None and lastmod.text and date_str:
+                    clean_lastmod = lastmod.text.strip()
+                    if date_str == clean_lastmod or clean_lastmod.startswith(date_str) or date_str.startswith(clean_lastmod[:10]):
+                        return "CORRECT", f"URL and lastmod date {date_str} co-occur in sitemap <url> entry", date_str
+                    return "INCORRECT", f"Activity date {date_str} does not match XML entry date '{clean_lastmod}' for {act_url}", clean_lastmod
+                elif lastmod is None:
+                    return "INCORRECT", f"Activity item {act_url} lacks required <lastmod> date in sitemap", None
 
     # 2. RSS: <channel><item><link>...</link><pubDate>...</pubDate></item></channel>
     for item_node in root.findall('.//item'):
         link_node = item_node.find('link')
-        if link_node is not None and link_node.text and act_url in link_node.text:
-            found_item = True
-            pub_date = item_node.find('pubDate')
-            if pub_date is not None and pub_date.text:
-                if date_str and (date_str in pub_date.text or str(pub_date.text)[:10] == date_str):
-                    date_matches = True
-                    return "CORRECT", f"URL and pubDate {date_str} co-occur in RSS <item>", date_str
-                return "INCORRECT", f"RSS pubDate '{pub_date.text}' does not match claimed date '{date_str}'", pub_date.text
+        if link_node is not None and link_node.text:
+            if norm_url(link_node.text) == target_norm:
+                pub_date = item_node.find('pubDate')
+                if pub_date is not None and pub_date.text:
+                    if date_str and (date_str in pub_date.text or str(pub_date.text)[:10] == date_str):
+                        return "CORRECT", f"URL and pubDate {date_str} co-occur in RSS <item>", date_str
+                    return "INCORRECT", f"RSS pubDate '{pub_date.text}' does not match claimed date '{date_str}'", pub_date.text
+                return "INCORRECT", f"RSS item {act_url} lacks pubDate", None
 
     # 3. Atom: <feed><entry><link href="..."/><updated>...</updated></entry></feed>
     for entry_node in root.findall('.//{*}entry'):
         link_node = entry_node.find('{*}link')
-        href = link_node.get('href') if link_node is not None else None
-        if href and act_url in href:
-            found_item = True
+        href = link_node.get('href') if link_node is not None else (link_node.text if link_node is not None else None)
+        if href and norm_url(href) == target_norm:
             updated = entry_node.find('{*}updated') or entry_node.find('{*}published')
-            if updated is not None and updated.text and date_str and date_str in updated.text:
-                date_matches = True
-                return "CORRECT", f"URL and date {date_str} co-occur in Atom <entry>", date_str
+            if updated is not None and updated.text and date_str:
+                clean_upd = updated.text.strip()
+                if date_str in clean_upd or clean_upd.startswith(date_str) or date_str.startswith(clean_upd[:10]):
+                    return "CORRECT", f"URL and date {date_str} co-occur in Atom <entry>", date_str
+                return "INCORRECT", f"Atom date '{clean_upd}' does not match claimed date '{date_str}'", clean_upd
 
-    if not found_item:
-        return "INCORRECT", f"Activity URL {act_url} not found in any XML entry", None
-    if not date_matches:
-        return "INCORRECT", f"Activity date {date_str} does not match XML entry date for {act_url}", None
-
-    return "CORRECT", "Activity item and date verified", date_str
+    return "INCORRECT", f"Activity URL {act_url} not found in any XML entry", None
 
 
 def audit_hiring_claim(org: str, claim: dict, ev: dict, body: str, subunit_map: dict | None = None) -> tuple[str, str, any]:
@@ -644,6 +858,23 @@ def audit_hiring_claim(org: str, claim: dict, ev: dict, body: str, subunit_map: 
     if not employer_orgnr or not re.match(r'^\d{9}$', employer_orgnr):
         return "INCORRECT", "Ad detail lacks valid 9-digit employer orgnr; name matching cannot authorize publication", None
 
+    # Check ad UUID
+    body_uuid = data.get("uuid") or ad.get("uuid")
+    if uuid and body_uuid and str(uuid).lower() != str(body_uuid).lower():
+        return "INCORRECT", f"Ad UUID mismatch: claimed {uuid} != payload {body_uuid}", body_uuid
+
+    # Check title if provided
+    claim_title = val.get("title")
+    body_title = ad.get("title")
+    if claim_title and body_title and str(claim_title).strip() != str(body_title).strip():
+        return "INCORRECT", f"Ad title mismatch: claimed '{claim_title}' != payload '{body_title}'", body_title
+
+    # Check status if provided
+    claim_status = val.get("status")
+    body_status = data.get("status") or ad.get("status")
+    if claim_status and body_status and str(claim_status).upper() != str(body_status).upper():
+        return "INCORRECT", f"Ad status mismatch: claimed '{claim_status}' != payload '{body_status}'", body_status
+
     # Exact parent employer
     if employer_orgnr == org:
         return "CORRECT", f"Employer orgnr {employer_orgnr} matches parent company exactly", employer_orgnr
@@ -654,8 +885,7 @@ def audit_hiring_claim(org: str, claim: dict, ev: dict, body: str, subunit_map: 
         if employer_orgnr == sub_org:
             if subunit_map and org in subunit_map and sub_org in subunit_map[org]:
                 return "CORRECT", f"Employer orgnr {employer_orgnr} matches verified subunit {sub_org} of parent {org}", employer_orgnr
-            # Even without subunit_map, matched_via matches detail payload
-            return "CORRECT", f"Employer orgnr {employer_orgnr} matches subunit target {sub_org}", employer_orgnr
+            return "INCORRECT", f"Employer orgnr {employer_orgnr} claims subunit of {org}, but subunit is not verified under parent", employer_orgnr
         return "INCORRECT", f"Employer orgnr {employer_orgnr} != claimed subunit {sub_org}", employer_orgnr
 
     return "INCORRECT", f"Employer orgnr {employer_orgnr} != parent org {org} without verified subunit mapping", employer_orgnr
@@ -666,7 +896,6 @@ def run_comprehensive_audit(envelopes_path: Path, state_dir: Path, sample_seed: 
     if not blobs_dir.exists():
         raise FileNotFoundError(f"State blobs directory not found: {blobs_dir}")
 
-    # Load envelopes
     rows = []
     with open(envelopes_path, encoding="utf-8-sig") as f:
         for line in f:
@@ -691,7 +920,6 @@ def run_comprehensive_audit(envelopes_path: Path, state_dir: Path, sample_seed: 
             blob_cache[sha] = b.decode("utf-8", errors="replace")
         return blob_cache[sha]
 
-    # Category A: Structural checks on ALL claims
     cat_a = {
         "total_claims": 0,
         "available_claims": 0,
@@ -705,6 +933,7 @@ def run_comprehensive_audit(envelopes_path: Path, state_dir: Path, sample_seed: 
         "locator_passes": 0,
         "locator_failures": 0,
         "wrong_orgnr_attribution": 0,
+        "missing_attribution": 0,
         "by_family": Counter()
     }
 
@@ -715,7 +944,6 @@ def run_comprehensive_audit(envelopes_path: Path, state_dir: Path, sample_seed: 
     companies_with_loss = []
     companies_with_subunits = []
     companies_with_non_nok = []
-    companies_with_incomplete = []
     subunit_parent_map = defaultdict(set)
 
     for r in rows:
@@ -748,6 +976,7 @@ def run_comprehensive_audit(envelopes_path: Path, state_dir: Path, sample_seed: 
                     cat_a["by_family"]["social_profiles"] += 1
                 else:
                     cat_a["by_family"]["other_website_claims"] += 1
+
             if fam == "hiring": has_jobs = True
             if fam == "activity": has_act = True
             if fam == "subunits":
@@ -765,20 +994,23 @@ def run_comprehensive_audit(envelopes_path: Path, state_dir: Path, sample_seed: 
                     companies_with_non_nok.append(org)
 
             status, reason, primary_ev = audit_claim_structural(c, ev_map, get_blob)
+            num_eids = len(c.get("evidence_ids", []))
             if status == "PASS":
-                cat_a["hash_checks"] += 1
-                cat_a["hash_passes"] += 1
-                cat_a["span_checks"] += 1
-                cat_a["span_passes"] += 1
-                cat_a["locator_passes"] += 1
+                cat_a["hash_checks"] += num_eids
+                cat_a["hash_passes"] += num_eids
+                cat_a["span_checks"] += num_eids
+                cat_a["span_passes"] += num_eids
+                cat_a["locator_passes"] += num_eids
             else:
-                if "hash" in reason.lower():
+                if "ERR_MISSING_HASH" in reason or "ERR_CORRUPTED_BLOB" in reason:
+                    cat_a["hash_checks"] += 1
                     cat_a["hash_failures"] += 1
-                elif "missing" in reason.lower() and "blob" in reason.lower():
+                elif "ERR_MISSING_BLOB" in reason:
                     cat_a["missing_blobs"] += 1
-                elif "span" in reason.lower():
+                elif "SPAN" in reason:
+                    cat_a["span_checks"] += 1
                     cat_a["span_failures"] += 1
-                elif "locator" in reason.lower():
+                elif "LOCATOR" in reason:
                     cat_a["locator_failures"] += 1
 
         if has_web: companies_with_web.append(org)
@@ -788,7 +1020,6 @@ def run_comprehensive_audit(envelopes_path: Path, state_dir: Path, sample_seed: 
 
     cat_a["by_family"]["aggregate_all_families"] = cat_a["available_claims"]
 
-    # Stratified sample selection for Category B audit (at least min_sample companies)
     rng = random.Random(sample_seed)
     sampled_orgs = set()
     sampled_orgs.update(companies_with_web)
@@ -808,11 +1039,10 @@ def run_comprehensive_audit(envelopes_path: Path, state_dir: Path, sample_seed: 
     sampled_orgs = sorted(sampled_orgs)
     print(f"Auditing stratified sample of {len(sampled_orgs)} distinct companies (seed={sample_seed})")
 
-    # Category B Field-Level Semantic Review
     item_findings = []
     family_stats = defaultdict(lambda: {
         "reviewed": 0, "correct": 0, "incorrect": 0, "unverifiable": 0,
-        "wrong_company": 0, "unsupported": 0, "fabricated_zeroes": 0
+        "wrong_company": 0, "missing_attribution": 0, "unsupported": 0, "fabricated_zeroes": 0
     })
 
     for org in sampled_orgs:
@@ -820,7 +1050,6 @@ def run_comprehensive_audit(envelopes_path: Path, state_dir: Path, sample_seed: 
         ev_map = {e["id"]: e for e in r.get("evidence", [])}
         org_context, org_leaders = extract_org_context_and_leaders(r.get("claims", []))
 
-        # Cache registry body for website domain checks
         reg_body = None
         for c in r.get("claims", []):
             if c.get("family") == "identity" and c.get("evidence_ids"):
@@ -837,7 +1066,6 @@ def run_comprehensive_audit(envelopes_path: Path, state_dir: Path, sample_seed: 
             if avail != "available":
                 continue
 
-            # Only review targeted families
             if fam not in {"identity", "accounts", "roles", "subunits", "website", "hiring", "activity"}:
                 continue
 
@@ -886,7 +1114,6 @@ def run_comprehensive_audit(envelopes_path: Path, state_dir: Path, sample_seed: 
                 })
                 continue
 
-            # Family-specific field evaluation
             if fam == "identity":
                 status, reason, exp = audit_identity_claim(org, c, ev, body)
             elif fam == "accounts":
@@ -906,7 +1133,7 @@ def run_comprehensive_audit(envelopes_path: Path, state_dir: Path, sample_seed: 
                 elif "social" in fld:
                     status, reason, exp = audit_social_claim(org, c, ev, body)
                 else:
-                    status, reason, exp = "CORRECT", "Verified website metadata/contact excerpt", c.get("value")
+                    status, reason, exp = audit_website_metadata_claim(org, c, ev, body)
             elif fam == "hiring":
                 status, reason, exp = audit_hiring_claim(org, c, ev, body, subunit_parent_map)
             elif fam == "activity":
@@ -925,6 +1152,8 @@ def run_comprehensive_audit(envelopes_path: Path, state_dir: Path, sample_seed: 
                     st["unverifiable"] += 1
                 if "wrong" in reason.lower() and "org" in reason.lower():
                     st["wrong_company"] += 1
+                elif "lacks" in reason.lower() and "org" in reason.lower():
+                    st["missing_attribution"] += 1
 
             item_findings.append({
                 "orgnr": org,
@@ -940,7 +1169,6 @@ def run_comprehensive_audit(envelopes_path: Path, state_dir: Path, sample_seed: 
                 "verification_category": "Category B (Stored Primary-Source Field Agreement)"
             })
 
-    # Compile final metrics
     def compute_family_metrics(stat, total_published):
         rev = stat["reviewed"]
         corr = stat["correct"]
@@ -951,20 +1179,24 @@ def run_comprehensive_audit(envelopes_path: Path, state_dir: Path, sample_seed: 
         vrate = verifiable / rev if rev > 0 else None
         return {
             "total_published_claims": total_published,
+            "publication_denominator": total_published,
             "reviewed": rev,
             "correct": corr,
             "incorrect": inc,
             "unverifiable": unv,
             "wrong_company": stat["wrong_company"],
+            "missing_attribution": stat["missing_attribution"],
             "unsupported": stat["unsupported"],
             "fabricated_zeroes": stat["fabricated_zeroes"],
             "precision": precision,
+            "precision_denominator": verifiable,
             "verification_rate": vrate,
+            "verification_rate_denominator": rev,
         }
 
     report = {
         "audit_metadata": {
-            "auditor_version": "2.0-strict-source-field",
+            "auditor_version": "2.1-strict-source-field",
             "envelopes_file": envelopes_path.name,
             "total_companies": total_companies,
             "sample_seed": sample_seed,
@@ -997,7 +1229,7 @@ def run_comprehensive_audit(envelopes_path: Path, state_dir: Path, sample_seed: 
 
     out_file = Path("reports/accuracy-audit-report.json")
     out_file.parent.mkdir(parents=True, exist_ok=True)
-    out_file.write_text(json.dumps(report, indent=2, ensure_ascii=False), encoding="utf-8")
+    out_file.write_text(json.dumps(report, indent=2, ensure_ascii=False, default=str), encoding="utf-8")
     print(f"Wrote strict accuracy audit report to {out_file}")
     return report
 
