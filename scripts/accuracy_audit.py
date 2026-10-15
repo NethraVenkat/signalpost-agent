@@ -21,9 +21,16 @@ from collections import Counter, defaultdict
 from pathlib import Path
 from urllib.parse import urlparse
 
-from signalpost.web.html import Page
+from signalpost.web.html import Page, json_values
 from signalpost.web.candidates import legal_name
-from signalpost.web.proof import phone
+from signalpost.web.proof import phone, orgnrs
+
+# Known directory and aggregator domains that cannot serve as company official websites
+DIRECTORY_DOMAINS = {
+    "proff.no", "180.no", "gulesider.no", "purehelp.no", "allabolag.se",
+    "enhetsregisteret.no", "brreg.no", "facebook.com", "linkedin.com",
+    "instagram.com", "twitter.com", "x.com", "wikipedia.org", "youtube.com"
+}
 
 # Generic platform landing paths that do not constitute verified company profiles
 GENERIC_SOCIAL_PATHS = {
@@ -572,31 +579,93 @@ def audit_website_claim(
     origin = val.get("candidate_origin")
     signals = val.get("signals") or []
     identity_level = val.get("identity_level")
-    claimed_points = val.get("points")
 
     if not body:
         return "UNVERIFIABLE", "Stored destination website body unavailable", None
 
+    # 1. Reject known directory and social aggregator domains
+    if url:
+        cand_host = urlparse(url).netloc.lower().replace("www.", "")
+        if cand_host in DIRECTORY_DOMAINS or any(cand_host.endswith("." + d) or cand_host == d for d in DIRECTORY_DOMAINS):
+            return "INCORRECT", f"Directory/aggregator domain '{cand_host}' cannot serve as company official website", None
+
+    page = Page(body.encode("utf-8", errors="replace"), val.get("proof_page_url") or url or "")
     orgnr_pat = re.compile(r'\b' + org[0:3] + r'[\s.]?' + org[3:6] + r'[\s.]?' + org[6:9] + r'\b')
 
+    # Extract all organization numbers from page
+    visible_orgnrs = orgnrs(page.visible)
+    owner_orgnrs = orgnrs(page.owner_text)
+    brand_orgnrs = orgnrs(" ".join(page.brand_parts))
+    meta_orgnrs = orgnrs(" ".join(page.meta.values()))
+
+    json_ids = set()
+    for block in page.jsonld:
+        for key in ("vatID", "taxID", "identifier"):
+            for v in json_values(block, key, exclude_person=True):
+                if isinstance(v, str):
+                    normalized = re.sub(r"^\s*NO\s*|\s*MVA\s*$", " ", v, flags=re.I).strip()
+                    json_ids |= orgnrs(normalized)
+                elif isinstance(v, dict):
+                    json_ids |= orgnrs(v.get("value", ""))
+
+    all_structural_orgnrs = visible_orgnrs | owner_orgnrs | meta_orgnrs | json_ids
+
+    # 2. Check for script-only occurrence
+    if orgnr_pat.search(body) and org not in all_structural_orgnrs:
+        return "INCORRECT", f"Orgnr {org} found only in script tags or invisible markup, not in company-identifying page context", None
+
+    # 3. If another distinct company owns the footer/header brand context
+    if brand_orgnrs and org not in brand_orgnrs and org not in json_ids:
+        return "INCORRECT", f"Site footer/header brand ownership identifies foreign organisation {sorted(brand_orgnrs)}, not claimed {org}", None
+
+    # 4. Check for customer/partner/client references
+    if org in visible_orgnrs and org not in brand_orgnrs and org not in json_ids:
+        visible_text = page.visible
+        is_partner_mention = False
+        for m in orgnr_pat.finditer(visible_text):
+            start = max(0, m.start() - 250)
+            context_window = visible_text[start:m.end() + 50].lower()
+            if re.search(r"\b(?:kunder|våre\s+kunder|kundene|partnere|våre\s+partnere|partners|our\s+partners|referanser|kundereferanser|clients|our\s+clients|leverandører|portfolio)\b", context_window):
+                is_partner_mention = True
+                break
+        if is_partner_mention:
+            return "INCORRECT", f"Orgnr {org} appears only as partner/customer reference, not ownership proof", None
+
+    # 5. Check for multi-entity group lists or directory tables
+    if len(all_structural_orgnrs) >= 3 and (org not in brand_orgnrs and org not in json_ids):
+        return "INCORRECT", f"Multi-entity list or directory table containing multiple organisation numbers ({len(all_structural_orgnrs)} found)", None
+
     if ptype in ("orgnr_on_page", "orgnr"):
+        if org in all_structural_orgnrs:
+            return "CORRECT", f"Exact orgnr {org} verified in company ownership context", url
         if orgnr_pat.search(body):
-            return "CORRECT", f"Exact orgnr {org} verified verbatim on destination page", url
+            return "INCORRECT", f"Proof type '{ptype}' asserted but orgnr {org} not found in structural ownership context", None
         return "INCORRECT", f"Proof type '{ptype}' asserted but orgnr {org} not found on page", None
 
     if ptype == "jsonld_vatid":
-        if orgnr_pat.search(body):
-            if 'application/ld+json' in body:
-                return "CORRECT", f"Exact orgnr {org} verified in JSON-LD schema markup", url
-            return "CORRECT", f"Exact orgnr {org} verified in markup body", url
+        if org in json_ids:
+            return "CORRECT", f"Exact orgnr {org} verified in JSON-LD schema markup", url
+        if org in all_structural_orgnrs:
+            return "INCORRECT", f"JSON-LD vatId asserted but orgnr {org} only found in general page text, not JSON-LD schema", None
         return "INCORRECT", f"JSON-LD vatId asserted but orgnr {org} not found in body", None
 
     if ptype in ("registry_declared", "registry_declared_live"):
-        if not registry_body:
+        if not registry_body and not (context and context.get("website")):
             return "UNVERIFIABLE", "Registry record unavailable to verify declared website domain", None
         domain = urlparse(url).hostname or ""
         domain_clean = domain.replace("www.", "").lower()
-        if domain_clean in registry_body.lower():
+        reg_domain = ""
+        if context and context.get("website"):
+            reg_domain = (urlparse(context["website"] if "://" in str(context["website"]) else "https://" + str(context["website"])).hostname or "").replace("www.", "").lower()
+        if (domain_clean and reg_domain and domain_clean == reg_domain) or (registry_body and domain_clean and domain_clean in registry_body.lower()):
+            if ptype == "registry_declared_live":
+                # Verify live corroborated signals
+                branded = legal_name(page.title + " " + page.meta.get("og:site_name", "") + " " + " ".join(page.brand_parts))
+                name = legal_name(context.get("name") if context else "")
+                tokens = [t for t in name.split() if len(t) >= 4 and t.isalpha()] if name else []
+                token_match = any(re.search(r"(?<!\w)" + re.escape(t) + r"(?!\w)", branded) for t in tokens)
+                if not token_match and not (org in all_structural_orgnrs):
+                    return "INCORRECT", "Registry declared live proof missing live name corroboration on page", None
             return "CORRECT", f"Domain {domain} verified in official Enhetsregisteret declaration", url
         return "INCORRECT", f"Registry-declared website asserted, but domain {domain} not found in registry body", None
 
@@ -607,83 +676,75 @@ def audit_website_claim(
         # Check documented acceptance threshold
         if identity_level and identity_level in ("LOW", "MEDIUM"):
             return "INCORRECT", f"Signals identity level '{identity_level}' is below documented acceptance threshold (HIGH/REGISTRY_DECLARED)", None
-        if claimed_points is not None and claimed_points < 5:
-            return "INCORRECT", f"Signals points {claimed_points} is below documented acceptance threshold (points >= 5)", None
 
+        valid_signal_types = {"legal_name", "address", "phone", "leader", "municipality", "registry_website", "distinctive_legal_name"}
+        unsupported_types = [s for s in signals if s not in valid_signal_types]
+        if unsupported_types:
+            return "INCORRECT", f"Signals ({', '.join(unsupported_types)}) not found in page body or unsupported signal types", None
+
+        ctx = context or {}
         cand_domain = (urlparse(url).hostname or "").replace("www.", "").lower()
+        text = legal_name(page.title + " " + page.meta.get("og:site_name", "") + " " + page.owner_text)
+        norm_name = legal_name(ctx.get("name"))
+        verified_signals = []
+        pts = 0
 
-        if context:
-            page = Page(body.encode("utf-8", errors="replace"), val.get("proof_page_url") or url)
-            text = legal_name(page.title + " " + page.meta.get("og:site_name", "") + " " + page.owner_text)
-            norm_name = legal_name(context.get("name"))
-            verified_signals = []
-            pts = 0
+        for s in signals:
+            if s == "legal_name":
+                if norm_name and re.search(r"(?<!\w)" + re.escape(norm_name) + r"(?!\w)", text):
+                    verified_signals.append(s)
+                    pts += 2
+            elif s == "address":
+                st = ctx.get("street")
+                sts = st if isinstance(st, list) else [st]
+                addr = any(x and len(str(x)) > 4 and legal_name(x) in text for x in sts)
+                if not addr and ctx.get("postcode") and ctx.get("city"):
+                    addr = str(ctx["postcode"]) in page.visible and legal_name(ctx["city"]) in text
+                if addr:
+                    verified_signals.append(s)
+                    pts += 2
+            elif s == "phone":
+                exp_p = phone(ctx.get("phone"))
+                page_p = {phone(l.href[4:]) for l in page.links if l.href.startswith("tel:")}
+                for m in re.finditer(r"(?:\+47|0047)[ .()0-9-]{8,20}", page.visible):
+                    page_p.add(phone(m.group()))
+                if exp_p and exp_p in page_p:
+                    verified_signals.append(s)
+                    pts += 2
+            elif s == "leader":
+                if leaders and any(legal_name(l) and legal_name(l) in text for l in leaders):
+                    verified_signals.append(s)
+                    pts += 2
+            elif s == "municipality":
+                muni = legal_name(ctx.get("municipality"))
+                if muni and muni in text:
+                    verified_signals.append(s)
+                    pts += 1
+            elif s == "registry_website":
+                reg_w = ctx.get("website") or ""
+                reg_domain = (urlparse(reg_w if "://" in str(reg_w) else "https://" + str(reg_w)).hostname or "").replace("www.", "").lower() if reg_w else ""
+                if cand_domain and reg_domain and cand_domain == reg_domain:
+                    verified_signals.append(s)
+                    pts += 2
+                elif registry_body and cand_domain and cand_domain in registry_body.lower():
+                    verified_signals.append(s)
+                    pts += 2
 
-            for s in signals:
-                if s == "legal_name":
-                    if norm_name and re.search(r"(?<!\w)" + re.escape(norm_name) + r"(?!\w)", text):
-                        verified_signals.append(s)
-                        pts += 2
-                elif s == "address":
-                    st = context.get("street")
-                    sts = st if isinstance(st, list) else [st]
-                    addr = any(x and len(str(x)) > 4 and legal_name(x) in text for x in sts)
-                    if not addr and context.get("postcode") and context.get("city"):
-                        addr = str(context["postcode"]) in page.visible and legal_name(context["city"]) in text
-                    if addr:
-                        verified_signals.append(s)
-                        pts += 2
-                elif s == "phone":
-                    exp_p = phone(context.get("phone"))
-                    page_p = {phone(l.href[4:]) for l in page.links if l.href.startswith("tel:")}
-                    for m in re.finditer(r"(?:\+47|0047)[ .()0-9-]{8,20}", page.visible):
-                        page_p.add(phone(m.group()))
-                    if exp_p and exp_p in page_p:
-                        verified_signals.append(s)
-                        pts += 2
-                elif s == "leader":
-                    if leaders and any(legal_name(l) and legal_name(l) in text for l in leaders):
-                        verified_signals.append(s)
-                        pts += 2
-                elif s == "municipality":
-                    muni = legal_name(context.get("municipality"))
-                    if muni and muni in text:
-                        verified_signals.append(s)
-                        pts += 1
-                elif s == "registry_website":
-                    reg_w = context.get("website") or ""
-                    reg_domain = (urlparse(reg_w if "://" in str(reg_w) else "https://" + str(reg_w)).hostname or "").replace("www.", "").lower() if reg_w else ""
-                    if cand_domain and reg_domain and cand_domain == reg_domain:
-                        verified_signals.append(s)
-                        pts += 2
-                    elif registry_body and cand_domain and cand_domain in registry_body.lower():
-                        verified_signals.append(s)
-                        pts += 2
-                else:
-                    if s.lower() in body.lower():
-                        verified_signals.append(s)
+        if len(verified_signals) != len(signals):
+            missing = set(signals) - set(verified_signals)
+            return "INCORRECT", f"Signals ({', '.join(missing)}) not verified against primary source facts", None
 
-            if len(verified_signals) != len(signals):
-                missing = set(signals) - set(verified_signals)
-                return "INCORRECT", f"Signals ({', '.join(missing)}) not found in page body or mismatch registered domain", None
+        # Recomputed points from verified primary source facts - strictly require pts >= 5
+        if pts < 5:
+            return "INCORRECT", f"Signals proof below acceptance threshold: recomputed points={pts} (< 5)", None
+        if "legal_name" not in verified_signals:
+            return "INCORRECT", "Signals proof missing required legal_name signal", None
+        if not (set(verified_signals) & {"address", "phone", "leader", "registry_website"}):
+            return "INCORRECT", "Signals proof missing required anchor signal (address/phone/leader/registry_website)", None
+        if len(verified_signals) < 2:
+            return "INCORRECT", "Signals proof requires at least 2 distinct verified signals", None
 
-            effective_pts = claimed_points if claimed_points is not None else pts
-            if effective_pts < 5:
-                return "INCORRECT", f"Signals proof below acceptance threshold: points={effective_pts} (< 5)", None
-            if "legal_name" not in verified_signals:
-                return "INCORRECT", "Signals proof missing required legal_name signal", None
-            if not (set(verified_signals) & {"address", "phone", "leader", "registry_website"}):
-                return "INCORRECT", "Signals proof missing required anchor signal (address/phone/leader/registry_website)", None
-            if len(verified_signals) < 2:
-                return "INCORRECT", "Signals proof requires at least 2 distinct verified signals", None
-
-            return "CORRECT", f"Identity signals ({', '.join(signals)}) verified against primary source facts and destination page", url
-        else:
-            matched_signals = [s for s in signals if s.lower() in body.lower()]
-            if len(matched_signals) == len(signals):
-                return "CORRECT", f"Identity signals ({', '.join(signals)}) verified in page body", url
-            missing = set(signals) - set(matched_signals)
-            return "INCORRECT", f"Signals ({', '.join(missing)}) not found in page body", None
+        return "CORRECT", f"Identity signals ({', '.join(signals)}) verified against primary source facts and destination page (recomputed points={pts})", url
 
     return "UNVERIFIABLE", f"Unknown website proof type: {ptype}", None
 
@@ -723,11 +784,21 @@ def audit_website_metadata_claim(org: str, claim: dict, ev: dict, body: str) -> 
         return "INCORRECT", f"Public brand '{val_str}' not found in page body", None
 
     if fld.startswith("website_description"):
-        if norm_val in norm_body or val_str.lower() in body.lower():
+        is_summary = (
+            (isinstance(val, dict) and (val.get("kind") == "summary" or val.get("summary_kind") == "summary"))
+            or fld.endswith(".summary")
+        )
+        if is_summary:
+            citations = val.get("citations") if isinstance(val, dict) else None
+            sentence_cites = val.get("sentences") if isinstance(val, dict) else None
+            if not citations and not sentence_cites:
+                return "UNVERIFIABLE", "Summary description lacks sentence-level citations", None
+
+        norm_val_compact = re.sub(r"\s+", " ", norm_val).strip()
+        norm_body_compact = re.sub(r"\s+", " ", norm_body).strip()
+
+        if norm_val in norm_body or val_str.lower() in body.lower() or norm_val_compact in norm_body_compact:
             return "CORRECT", "Website description verified in page body", val_str
-        words = [w for w in re.split(r'\W+', norm_val) if len(w) > 4]
-        if words and all(w in norm_body for w in words[:5]):
-            return "CORRECT", "Website description excerpt verified in page body", val_str
         return "INCORRECT", "Website description not found in page body", None
 
     return "UNVERIFIABLE", f"No semantic validator for website metadata field {fld}", None
