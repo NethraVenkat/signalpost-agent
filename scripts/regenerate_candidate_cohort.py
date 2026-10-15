@@ -30,7 +30,7 @@ from signalpost.sources.blobstore import BlobStore
 from signalpost.io.envelope_writer import write
 from signalpost.models.shapes import validate as validate_shape
 from signalpost.web.html import Page
-from signalpost.web.collector import extract_public_brand, publish
+from signalpost.web.collector import extract_public_brand, extract_contacts_and_social, publish
 from signalpost.web.descriptions import extract as extract_descriptions
 from signalpost.sources.extract import Section
 
@@ -55,6 +55,7 @@ def regenerate_cohort(
     updated_envelopes = []
     brand_changes = []
     desc_changes = []
+    contact_changes = []
     total_claims_before = 0
     total_claims_after = 0
     blob_integrity_failures = 0
@@ -104,7 +105,12 @@ def regenerate_cohort(
         # Separate website claims to keep vs re-extract
         retained_claims = [
             c for c in env.claims
-            if c.field == "official_website" or not (c.field == "public_brand" or c.field.startswith("website_description"))
+            if c.field == "official_website" or not (
+                c.field == "public_brand"
+                or c.field.startswith("website_description")
+                or c.field.startswith("contact.")
+                or c.field.startswith("social_profile.")
+            )
         ]
 
         # 1. Re-extract descriptions using production descriptions extractor
@@ -128,6 +134,13 @@ def regenerate_cohort(
             span = (root_page.span_for(brand) or "")[:150]
             publish(brand_sec, root_resp, org, "public_brand", brand, "meta:brand", span)
 
+        # 3. Re-extract contacts and social channels using shared production function
+        contact_social_sec = Section("website")
+        extract_contacts_and_social(
+            contact_social_sec, org, web_claim, pages,
+            context={"name": legal_nm}, envelope=env
+        )
+
         # Track changes
         old_brand = next((c for c in env.claims if c.field == "public_brand"), None)
         new_brand = next((c for c in brand_sec.claims if c.field == "public_brand"), None)
@@ -147,14 +160,25 @@ def regenerate_cohort(
                 "new_fields": list(new_descs.keys()),
             })
 
-        new_claims = retained_claims + brand_sec.claims + desc_sec.claims
+        old_contacts = {c.field: c.value for c in env.claims if c.field.startswith("contact.") or c.field.startswith("social_profile.")}
+        new_contacts = {c.field: c.value for c in contact_social_sec.claims if c.field.startswith("contact.") or c.field.startswith("social_profile.")}
+        if old_contacts != new_contacts:
+            contact_changes.append({
+                "orgnr": org,
+                "old_fields": list(old_contacts.keys()),
+                "old_values": [str(v) for v in old_contacts.values()],
+                "new_fields": list(new_contacts.keys()),
+                "new_values": [str(v) for v in new_contacts.values()],
+            })
+
+        new_claims = retained_claims + brand_sec.claims + desc_sec.claims + contact_social_sec.claims
         # Deterministic claim ordering
         new_claims.sort(key=lambda c: (c.family, c.field, c.id))
         env.claims = new_claims
         total_claims_after += len(new_claims)
 
         # Update evidence references
-        new_ev_by_id = {e.id: e for e in brand_sec.evidence + desc_sec.evidence}
+        new_ev_by_id = {e.id: e for e in brand_sec.evidence + desc_sec.evidence + contact_social_sec.evidence}
         referenced_eids = {eid for c in env.claims for eid in c.evidence_ids}
         updated_evidence = [e for e in env.evidence if e.id in referenced_eids]
         for eid in referenced_eids:
@@ -181,7 +205,7 @@ def regenerate_cohort(
         )
         updated_envelopes.append(env)
 
-    print(f"Regeneration complete: {len(updated_envelopes)} envelopes. Brand changes: {len(brand_changes)}, Desc changes: {len(desc_changes)}")
+    print(f"Regeneration complete: {len(updated_envelopes)} envelopes. Brand changes: {len(brand_changes)}, Desc changes: {len(desc_changes)}, Contact changes: {len(contact_changes)}")
 
     # Write out updated envelopes
     output_envelopes.parent.mkdir(parents=True, exist_ok=True)
@@ -222,6 +246,8 @@ def regenerate_cohort(
         "brand_changes": brand_changes,
         "desc_changes_count": len(desc_changes),
         "desc_changes": desc_changes,
+        "contact_changes_count": len(contact_changes),
+        "contact_changes": contact_changes,
         "total_claims_before": total_claims_before,
         "total_claims_after": total_claims_after,
         "blob_integrity_failures": blob_integrity_failures,

@@ -119,16 +119,16 @@
     ]
   },
   "category_a_structural_integrity": {
-    "total_claims": 78014,
-    "available_claims": 68998,
-    "hash_checks": 118273,
-    "hash_passes": 118273,
+    "total_claims": 78006,
+    "available_claims": 68990,
+    "hash_checks": 118265,
+    "hash_passes": 118265,
     "hash_failures": 0,
     "missing_blobs": 0,
-    "span_checks": 118273,
-    "span_passes": 118273,
+    "span_checks": 118265,
+    "span_passes": 118265,
     "span_failures": 0,
-    "locator_passes": 118273,
+    "locator_passes": 118265,
     "locator_failures": 0,
     "wrong_orgnr_attribution": 0,
     "missing_attribution": 0,
@@ -137,13 +137,13 @@
       "identity": 28876,
       "roles": 11323,
       "subunits": 6331,
-      "website": 334,
-      "other_website_claims": 222,
+      "website": 326,
+      "other_website_claims": 215,
       "official_website": 47,
-      "social_profiles": 65,
+      "social_profiles": 64,
       "hiring": 9,
       "activity": 40,
-      "aggregate_all_families": 68998
+      "aggregate_all_families": 68990
     }
   },
   "category_b_stored_source_agreement": {
@@ -228,10 +228,10 @@
       "verification_rate_denominator": 47
     },
     "social_profiles": {
-      "total_published_claims": 65,
-      "publication_denominator": 65,
-      "reviewed": 65,
-      "correct": 65,
+      "total_published_claims": 64,
+      "publication_denominator": 64,
+      "reviewed": 64,
+      "correct": 64,
       "incorrect": 0,
       "unverifiable": 0,
       "wrong_company": 0,
@@ -239,15 +239,15 @@
       "unsupported": 0,
       "fabricated_zeroes": 0,
       "precision": 1.0,
-      "precision_denominator": 65,
+      "precision_denominator": 64,
       "verification_rate": 1.0,
-      "verification_rate_denominator": 65
+      "verification_rate_denominator": 64
     },
     "other_website_claims": {
-      "total_published_claims": 222,
-      "publication_denominator": 222,
-      "reviewed": 222,
-      "correct": 222,
+      "total_published_claims": 215,
+      "publication_denominator": 215,
+      "reviewed": 215,
+      "correct": 215,
       "incorrect": 0,
       "unverifiable": 0,
       "wrong_company": 0,
@@ -255,15 +255,15 @@
       "unsupported": 0,
       "fabricated_zeroes": 0,
       "precision": 1.0,
-      "precision_denominator": 222,
+      "precision_denominator": 215,
       "verification_rate": 1.0,
-      "verification_rate_denominator": 222
+      "verification_rate_denominator": 215
     },
     "website": {
-      "total_published_claims": 334,
-      "publication_denominator": 334,
-      "reviewed": 334,
-      "correct": 334,
+      "total_published_claims": 326,
+      "publication_denominator": 326,
+      "reviewed": 326,
+      "correct": 326,
       "incorrect": 0,
       "unverifiable": 0,
       "wrong_company": 0,
@@ -271,9 +271,9 @@
       "unsupported": 0,
       "fabricated_zeroes": 0,
       "precision": 1.0,
-      "precision_denominator": 334,
+      "precision_denominator": 326,
       "verification_rate": 1.0,
-      "verification_rate_denominator": 334
+      "verification_rate_denominator": 326
     },
     "hiring": {
       "total_published_claims": 9,
@@ -308,10 +308,10 @@
       "verification_rate_denominator": 40
     },
     "aggregate_all_families": {
-      "total_published_claims": 68998,
-      "publication_denominator": 68998,
-      "reviewed": 8508,
-      "correct": 8508,
+      "total_published_claims": 68990,
+      "publication_denominator": 68990,
+      "reviewed": 8500,
+      "correct": 8500,
       "incorrect": 0,
       "unverifiable": 0,
       "wrong_company": 0,
@@ -319,9 +319,9 @@
       "unsupported": 0,
       "fabricated_zeroes": 0,
       "precision": 1.0,
-      "precision_denominator": 8508,
+      "precision_denominator": 8500,
       "verification_rate": 1.0,
-      "verification_rate_denominator": 8508
+      "verification_rate_denominator": 8500
     }
   },
   "category_c_live_verification": {
@@ -2825,9 +2825,9 @@
       "field": "contact.email.de8645dfc8195c4ef6de",
       "claim_value": "post@rorleggerhuset.no",
       "expected_value": "post@rorleggerhuset.no",
-      "evidence_id": "ef7aeea860e5de43af3638f22228b2c643cdd9512991fae7834f3f9e8fae818d",
+      "evidence_id": "ccffc0fc4e8dcf14ea1fd88f459581e9218d751f4f0d657fdec66947f6a299a9",
       "locator": "contact:post@rorleggerhuset.no",
-      "content_sha256": "8158ec67ba5940085e27a330cb2f43f54f87f2958fd496b706af28c4aeb8cb29",
+      "content_sha256": "a97464e5a03dbe2480a825fac2124358b991567e03fc590c336fe17ecb1094f1",
       "status": "CORRECT",
       "reason": "Contact email 'post@rorleggerhuset.no' verified in page body",
       "verification_category": "Category B (Stored Primary-Source Field Agreement)"
@@ -2838,9 +2838,9 @@
       "field": "contact.phone.55d5981f5f61085a75f5",
       "claim_value": "+4740084040",
       "expected_value": "+4740084040",
-      "evidence_id": "53157770aac68db42bb369824bd8e8d8fe468f138f9014445387da72b94d583f",
+      "evidence_id": "9306abd72e5be14ceb89d8eb82a9c244c0b86c6b99146e5e96e1de09812f47cc",
       "locator": "contact:+4740084040",
-      "content_sha256": "8158ec67ba5940085e27a330cb2f43f54f87f2958fd496b706af28c4aeb8cb29",
+      "content_sha256": "a97464e5a03dbe2480a825fac2124358b991567e03fc590c336fe17ecb1094f1",
       "status": "CORRECT",
       "reason": "Contact phone '+4740084040' verified in page body",
       "verification_category": "Category B (Stored Primary-Source Field Agreement)"
@@ -2877,9 +2877,9 @@
         "platform": "facebook.com"
       },
       "expected_value": "https://www.facebook.com/Rorleggerhuset",
-      "evidence_id": "d3ccf71d62bca3ed0c5167de611e18ba7c97e9eb25c1249555c82fda5d229d1f",
+      "evidence_id": "84f8dc2646c7d0dfaf102cfdb8e6c86cf2fbe9bf2886a4dc007e41ccaf431ae8",
       "locator": "company-link:https://www.facebook.com/Rorleggerhuset",
-      "content_sha256": "8158ec67ba5940085e27a330cb2f43f54f87f2958fd496b706af28c4aeb8cb29",
+      "content_sha256": "a97464e5a03dbe2480a825fac2124358b991567e03fc590c336fe17ecb1094f1",
       "status": "CORRECT",
       "reason": "Verified company-owned social link (facebook.com) in page body",
       "verification_category": "Category B (Stored Primary-Source Field Agreement)"
@@ -2893,9 +2893,9 @@
         "platform": "instagram.com"
       },
       "expected_value": "https://www.instagram.com/rorleggerhuset",
-      "evidence_id": "65765f83ef85cef2940c51a0a59288afc3dbee0bc2686789357c16583e14dded",
+      "evidence_id": "71e68fb3ac556528a77ba976d2c25e322a384dc3cbc768af9c916a6e02033d26",
       "locator": "company-link:https://www.instagram.com/rorleggerhuset",
-      "content_sha256": "8158ec67ba5940085e27a330cb2f43f54f87f2958fd496b706af28c4aeb8cb29",
+      "content_sha256": "a97464e5a03dbe2480a825fac2124358b991567e03fc590c336fe17ecb1094f1",
       "status": "CORRECT",
       "reason": "Verified company-owned social link (instagram.com) in page body",
       "verification_category": "Category B (Stored Primary-Source Field Agreement)"
@@ -5294,32 +5294,6 @@
     {
       "orgnr": "820918312",
       "family": "website",
-      "field": "contact.email.97073aaeb60638dd76b6",
-      "claim_value": "post@synfaring.no",
-      "expected_value": "post@synfaring.no",
-      "evidence_id": "575a9c1d992c5c1969a64fa6877731d469ddd94f2bc8a569f992d8ab62d4ab58",
-      "locator": "contact:post@synfaring.no",
-      "content_sha256": "1b44945eedee8a0b35244daa2b8676be81e4d1f69a139426dc8858f62560094e",
-      "status": "CORRECT",
-      "reason": "Contact email 'post@synfaring.no' verified in page body",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "820918312",
-      "family": "website",
-      "field": "contact.phone.796e2f5be142bbd75722",
-      "claim_value": "+4791001444",
-      "expected_value": "+4791001444",
-      "evidence_id": "07e00d5cae267560223378fe7f8d0eb06174f6bfba0d1b9b27822d57eb48eb22",
-      "locator": "contact:+4791001444",
-      "content_sha256": "1b44945eedee8a0b35244daa2b8676be81e4d1f69a139426dc8858f62560094e",
-      "status": "CORRECT",
-      "reason": "Contact phone '+4791001444' verified in page body",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "820918312",
-      "family": "website",
       "field": "official_website",
       "claim_value": {
         "final_url": "https://www.synfaring.no",
@@ -6732,9 +6706,9 @@
       "field": "contact.email.b4587675348927421288",
       "claim_value": "info@onwork.no",
       "expected_value": "info@onwork.no",
-      "evidence_id": "6ae2483f918864a7a9320512c80466be21b8621f301eed8a82eeaf11f0e90526",
+      "evidence_id": "948ea59705cbd7426c1e9adba8105cca6e53f211060c2fb8b92ad76d19815550",
       "locator": "contact:info@onwork.no",
-      "content_sha256": "33bdada5faae87ef2dbace0c962d2a2ebc5ddad1e988f78aedcef9acf4bf270a",
+      "content_sha256": "bf100ca831e60144fed194cb2522d00f0456dcc432fffcf98e92648f6d47179c",
       "status": "CORRECT",
       "reason": "Contact email 'info@onwork.no' verified in page body",
       "verification_category": "Category B (Stored Primary-Source Field Agreement)"
@@ -6745,9 +6719,9 @@
       "field": "contact.phone.d680c01b7811a84211e4",
       "claim_value": "+4772909772",
       "expected_value": "+4772909772",
-      "evidence_id": "921352d7079192c0213a84b3312e6f4093f55bddab8fa65d9bbb47938dba4416",
+      "evidence_id": "dd29c09cf53a1070404a4b78e5d41a5ee2d6caa83ada608477ab475f2c6d5289",
       "locator": "contact:+4772909772",
-      "content_sha256": "33bdada5faae87ef2dbace0c962d2a2ebc5ddad1e988f78aedcef9acf4bf270a",
+      "content_sha256": "bf100ca831e60144fed194cb2522d00f0456dcc432fffcf98e92648f6d47179c",
       "status": "CORRECT",
       "reason": "Contact phone '+4772909772' verified in page body",
       "verification_category": "Category B (Stored Primary-Source Field Agreement)"
@@ -16348,9 +16322,9 @@
       "field": "contact.email.3b674366ad7250d9a03a",
       "claim_value": "flage@flage.no",
       "expected_value": "flage@flage.no",
-      "evidence_id": "4a653685f7e912696de112d056962ec50be5782b2820ce9bc93f5537aa1e5876",
+      "evidence_id": "ccbdea746dc73db2f94c304134f446707349a486c4ba4e1fdf4e6f5d58a1983c",
       "locator": "contact:flage@flage.no",
-      "content_sha256": "c54995a01b5628088516a1faf5c3a73613061ad2dc7a3b712033a6db5d6c0394",
+      "content_sha256": "89bba86e767c42c8ef3cc5ffb0c769cb1d789abdb98aaa41a0b8bdbc2a812e64",
       "status": "CORRECT",
       "reason": "Contact email 'flage@flage.no' verified in page body",
       "verification_category": "Category B (Stored Primary-Source Field Agreement)"
@@ -16361,9 +16335,9 @@
       "field": "contact.phone.83dcd43ee106483d4815",
       "claim_value": "+4722552002",
       "expected_value": "+4722552002",
-      "evidence_id": "7cac46cda2fe186720058cebefeb4a6299f502df16efd30976ace907af95527a",
+      "evidence_id": "786f3d7c85628952410f0df3edc150d5e3235f5520930aad752f2bbb24d48e05",
       "locator": "contact:+4722552002",
-      "content_sha256": "c54995a01b5628088516a1faf5c3a73613061ad2dc7a3b712033a6db5d6c0394",
+      "content_sha256": "89bba86e767c42c8ef3cc5ffb0c769cb1d789abdb98aaa41a0b8bdbc2a812e64",
       "status": "CORRECT",
       "reason": "Contact phone '+4722552002' verified in page body",
       "verification_category": "Category B (Stored Primary-Source Field Agreement)"
@@ -32985,9 +32959,9 @@
       "field": "contact.email.5f8f81136b6c5af5f1cc",
       "claim_value": "post@boilertech.no",
       "expected_value": "post@boilertech.no",
-      "evidence_id": "93b228ea88aec62639813aef8ed8263600d5bfbf00fba9dd4d1502b367cb76b9",
+      "evidence_id": "96a745e7b26f3579701b72d07cc31436c2166b057ca4de537c97d1ca10443bb0",
       "locator": "contact:post@boilertech.no",
-      "content_sha256": "2774e8c4daf536e6cd65153c9ad88e3fd43014267ff8501bf3d5132210e7484e",
+      "content_sha256": "81a704d7b09f96947120200d4d6f44ff44b6fee6bd868e87d97592033000371e",
       "status": "CORRECT",
       "reason": "Contact email 'post@boilertech.no' verified in page body",
       "verification_category": "Category B (Stored Primary-Source Field Agreement)"
@@ -33115,9 +33089,9 @@
       "field": "contact.phone.87feb24e16ed5d60202d",
       "claim_value": "+4738375200",
       "expected_value": "+4738375200",
-      "evidence_id": "3ae1e096a6c336230510f21d5e82efdd2ee84a43884a2f4d0e60d27005431513",
+      "evidence_id": "fc002efafb60a2758002486cba3d1b94cf064251ce392f30f4381a3439411dcc",
       "locator": "contact:+4738375200",
-      "content_sha256": "2774e8c4daf536e6cd65153c9ad88e3fd43014267ff8501bf3d5132210e7484e",
+      "content_sha256": "81a704d7b09f96947120200d4d6f44ff44b6fee6bd868e87d97592033000371e",
       "status": "CORRECT",
       "reason": "Contact phone '+4738375200' verified in page body",
       "verification_category": "Category B (Stored Primary-Source Field Agreement)"
@@ -33238,9 +33212,9 @@
         "platform": "linkedin.com"
       },
       "expected_value": "https://www.linkedin.com/company/boilertech-no",
-      "evidence_id": "e12052eb840f9e0fe4a74287528c28c1face7d724e70db59c2f8a0b69c61937d",
+      "evidence_id": "51ae2b62296f9444eefa4e320daf5c3a4c3af4ecd04e36ae8c7231e28a30d6a7",
       "locator": "company-link:https://www.linkedin.com/company/boilertech-no",
-      "content_sha256": "2774e8c4daf536e6cd65153c9ad88e3fd43014267ff8501bf3d5132210e7484e",
+      "content_sha256": "81a704d7b09f96947120200d4d6f44ff44b6fee6bd868e87d97592033000371e",
       "status": "CORRECT",
       "reason": "Verified company-owned social link (linkedin.com) in page body",
       "verification_category": "Category B (Stored Primary-Source Field Agreement)"
@@ -33254,9 +33228,9 @@
         "platform": "facebook.com"
       },
       "expected_value": "https://www.facebook.com/boilertech.no",
-      "evidence_id": "91fcb376fa29d3c699187c30d7bd505d9fa83e3783007e266b6361163f51593d",
+      "evidence_id": "7f0c0c90a06ca032a3fd5ae2563fa5c6f1ffb2a035b6cf9c4c1551498076a578",
       "locator": "company-link:https://www.facebook.com/boilertech.no",
-      "content_sha256": "2774e8c4daf536e6cd65153c9ad88e3fd43014267ff8501bf3d5132210e7484e",
+      "content_sha256": "81a704d7b09f96947120200d4d6f44ff44b6fee6bd868e87d97592033000371e",
       "status": "CORRECT",
       "reason": "Verified company-owned social link (facebook.com) in page body",
       "verification_category": "Category B (Stored Primary-Source Field Agreement)"
@@ -44826,71 +44800,6 @@
     {
       "orgnr": "921407025",
       "family": "website",
-      "field": "contact.email.1b7ef177f19b946d3a84",
-      "claim_value": "invoiceSE@simployer.com",
-      "expected_value": "invoiceSE@simployer.com",
-      "evidence_id": "c66aae59acda1ef76557922edcae871be07c9b941bbb41b26ca94064084fcba0",
-      "locator": "contact:invoiceSE@simployer.com",
-      "content_sha256": "f597e2e1057c42cd472f1c35db2077521ab548acbcde491b49467cd2408aa6f9",
-      "status": "CORRECT",
-      "reason": "Contact email 'invoiceSE@simployer.com' verified in page body",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "921407025",
-      "family": "website",
-      "field": "contact.email.2a67da16217780f07872",
-      "claim_value": "invoiceNO@simployer.com",
-      "expected_value": "invoiceNO@simployer.com",
-      "evidence_id": "9ffd7ecc2baef141de5e0646241f56e1e39f6f9080dae1454153cf460f97fc1d",
-      "locator": "contact:invoiceNO@simployer.com",
-      "content_sha256": "f597e2e1057c42cd472f1c35db2077521ab548acbcde491b49467cd2408aa6f9",
-      "status": "CORRECT",
-      "reason": "Contact email 'invoiceNO@simployer.com' verified in page body",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "921407025",
-      "family": "website",
-      "field": "contact.email.5c96fb3bcf1c5e2cd0fc",
-      "claim_value": "invoicePL@simployer.com",
-      "expected_value": "invoicePL@simployer.com",
-      "evidence_id": "3d0de81c90c13a15ee860deb8503f0ecf2e5ebb7c5e48dd5d26af6258cb631b0",
-      "locator": "contact:invoicePL@simployer.com",
-      "content_sha256": "f597e2e1057c42cd472f1c35db2077521ab548acbcde491b49467cd2408aa6f9",
-      "status": "CORRECT",
-      "reason": "Contact email 'invoicePL@simployer.com' verified in page body",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "921407025",
-      "family": "website",
-      "field": "contact.email.5dc0e668e3cf51851934",
-      "claim_value": "invoicegroup@simployer.com",
-      "expected_value": "invoicegroup@simployer.com",
-      "evidence_id": "d9cd908fbf9e0ed7e700b2da73c6e5a297d21b246bba651cccf32a58cd3ee6e2",
-      "locator": "contact:invoicegroup@simployer.com",
-      "content_sha256": "f597e2e1057c42cd472f1c35db2077521ab548acbcde491b49467cd2408aa6f9",
-      "status": "CORRECT",
-      "reason": "Contact email 'invoicegroup@simployer.com' verified in page body",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "921407025",
-      "family": "website",
-      "field": "contact.email.aee2889a3a3770b19326",
-      "claim_value": "invoiceDK@simployer.com",
-      "expected_value": "invoiceDK@simployer.com",
-      "evidence_id": "d8866cc096e941e6385a474b5f1b6a63d8ab1d56ab0f967de43cf60eaf9c615f",
-      "locator": "contact:invoiceDK@simployer.com",
-      "content_sha256": "f597e2e1057c42cd472f1c35db2077521ab548acbcde491b49467cd2408aa6f9",
-      "status": "CORRECT",
-      "reason": "Contact email 'invoiceDK@simployer.com' verified in page body",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "921407025",
-      "family": "website",
       "field": "contact.email.b2d8429333b322a4cec8",
       "claim_value": "invoicesolutions@simployer.com",
       "expected_value": "invoicesolutions@simployer.com",
@@ -44898,7 +44807,7 @@
       "locator": "contact:invoicesolutions@simployer.com",
       "content_sha256": "f597e2e1057c42cd472f1c35db2077521ab548acbcde491b49467cd2408aa6f9",
       "status": "CORRECT",
-      "reason": "Contact email 'invoicesolutions@simployer.com' verified in page body",
+      "reason": "Contact 'invoicesolutions@simployer.com' verified in entity card for 921407025",
       "verification_category": "Category B (Stored Primary-Source Field Agreement)"
     },
     {
@@ -44949,27 +44858,11 @@
         "platform": "instagram.com"
       },
       "expected_value": "https://www.instagram.com/lifeatsimployer",
-      "evidence_id": "477a6d1ecbfcbacdfd51e392271effb5a693eec3974a3460a037e679c8d45f4d",
+      "evidence_id": "f239d53da04fd4fe3ea626e14bc6a858256a8af0fee7f28c83938ea07221e974",
       "locator": "company-link:https://www.instagram.com/lifeatsimployer",
-      "content_sha256": "b634bb1eb0b46863730f46f6db19aae83e1ea10c98df765f2d415a96aca78bdd",
+      "content_sha256": "f597e2e1057c42cd472f1c35db2077521ab548acbcde491b49467cd2408aa6f9",
       "status": "CORRECT",
       "reason": "Verified company-owned social link (instagram.com) in page body",
-      "verification_category": "Category B (Stored Primary-Source Field Agreement)"
-    },
-    {
-      "orgnr": "921407025",
-      "family": "website",
-      "field": "social_profile.93bd1ca6fcf0e4eb53e9",
-      "claim_value": {
-        "url": "https://www.linkedin.com/company/simployergroup",
-        "platform": "linkedin.com"
-      },
-      "expected_value": "https://www.linkedin.com/company/simployergroup",
-      "evidence_id": "6ec5d6dd5b17aa0ed4d4dfdf972c6801e3c9efc6cfb812f7e5d89c72709168e0",
-      "locator": "company-link:https://www.linkedin.com/company/simployergroup",
-      "content_sha256": "b634bb1eb0b46863730f46f6db19aae83e1ea10c98df765f2d415a96aca78bdd",
-      "status": "CORRECT",
-      "reason": "Verified company-owned social link (linkedin.com) in page body",
       "verification_category": "Category B (Stored Primary-Source Field Agreement)"
     },
     {
@@ -44981,9 +44874,9 @@
         "platform": "linkedin.com"
       },
       "expected_value": "https://www.linkedin.com/company/simployer",
-      "evidence_id": "cdba647e64697aea56ee0c99519c57cf48b9abb3817fe2fcec8d7b6211828a00",
+      "evidence_id": "666b55bbc8209b1b1ceb70915c02d4eca2570bbf6672640507d7a538137a9775",
       "locator": "company-link:https://www.linkedin.com/company/simployer",
-      "content_sha256": "b634bb1eb0b46863730f46f6db19aae83e1ea10c98df765f2d415a96aca78bdd",
+      "content_sha256": "f597e2e1057c42cd472f1c35db2077521ab548acbcde491b49467cd2408aa6f9",
       "status": "CORRECT",
       "reason": "Verified company-owned social link (linkedin.com) in page body",
       "verification_category": "Category B (Stored Primary-Source Field Agreement)"
@@ -112929,9 +112822,9 @@
       "field": "contact.email.ee42d01a5cd0fcbfda65",
       "claim_value": "post@tegneren.no",
       "expected_value": "post@tegneren.no",
-      "evidence_id": "cd62bf1bfc189d99ca75aaa0c3387b01a2dca81e49f27d719e1c819e4967441e",
+      "evidence_id": "dd8409fc561e6ae68bf2a95c81528998889fd4262a9f81e431faa72691c7f7cb",
       "locator": "contact:post@tegneren.no",
-      "content_sha256": "5fad39fa01ab99a4de10f072e8fc4fa33198240ad1671ea916378d86f53978cf",
+      "content_sha256": "53ac4c367283fe1727744e0ec4c7968e40840caba4c1c82b45711501ac164032",
       "status": "CORRECT",
       "reason": "Contact email 'post@tegneren.no' verified in page body",
       "verification_category": "Category B (Stored Primary-Source Field Agreement)"
@@ -112973,9 +112866,9 @@
         "platform": "linkedin.com"
       },
       "expected_value": "https://www.linkedin.com/company/tegneren-as",
-      "evidence_id": "1c65658cf2f501d7202d04aae370ddc1fbb4c5e09fa84f50bb40cc94e603a530",
+      "evidence_id": "5c93751c297988fd9428756d6b2e0e2aa0d18f214398139716c3156a78ea34a8",
       "locator": "company-link:https://www.linkedin.com/company/tegneren-as",
-      "content_sha256": "5fad39fa01ab99a4de10f072e8fc4fa33198240ad1671ea916378d86f53978cf",
+      "content_sha256": "53ac4c367283fe1727744e0ec4c7968e40840caba4c1c82b45711501ac164032",
       "status": "CORRECT",
       "reason": "Verified company-owned social link (linkedin.com) in page body",
       "verification_category": "Category B (Stored Primary-Source Field Agreement)"
@@ -112989,9 +112882,9 @@
         "platform": "facebook.com"
       },
       "expected_value": "https://www.facebook.com/tegneren.no",
-      "evidence_id": "82fc33bb6b60eaadb7667ae85853fe90f632178543e1a96aa044b25fbd278e5a",
+      "evidence_id": "71347a8d5b2adfd48b193aed245e06ae90f7845eb3513082e0441a45556e8cea",
       "locator": "company-link:https://www.facebook.com/tegneren.no",
-      "content_sha256": "5fad39fa01ab99a4de10f072e8fc4fa33198240ad1671ea916378d86f53978cf",
+      "content_sha256": "53ac4c367283fe1727744e0ec4c7968e40840caba4c1c82b45711501ac164032",
       "status": "CORRECT",
       "reason": "Verified company-owned social link (facebook.com) in page body",
       "verification_category": "Category B (Stored Primary-Source Field Agreement)"
@@ -113005,9 +112898,9 @@
         "platform": "instagram.com"
       },
       "expected_value": "https://www.instagram.com/tegneren.no",
-      "evidence_id": "8643514edfb5a2a0080224f357e1a30bb57c785084967f737e94f6ab4ab8974c",
+      "evidence_id": "666daa8ecd17f34e252c90e6aae6fa12d7d21d64e0feefec608679fe470b5ab8",
       "locator": "company-link:https://www.instagram.com/tegneren.no",
-      "content_sha256": "5fad39fa01ab99a4de10f072e8fc4fa33198240ad1671ea916378d86f53978cf",
+      "content_sha256": "53ac4c367283fe1727744e0ec4c7968e40840caba4c1c82b45711501ac164032",
       "status": "CORRECT",
       "reason": "Verified company-owned social link (instagram.com) in page body",
       "verification_category": "Category B (Stored Primary-Source Field Agreement)"

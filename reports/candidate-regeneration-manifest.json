@@ -1,15 +1,76 @@
 {
   "input_path": "out\\candidate-1000-corrected-envelopes.jsonl",
   "output_envelopes": "out\\candidate-1000-corrected-envelopes.jsonl",
-  "output_envelopes_sha256": "8debf57fadf8a5ca923d0744e5bcd12c51befefda1d649a50f24894fb28ab9d2",
+  "output_envelopes_sha256": "5f807e393a785e80ea73e2d96c798f34f1d88eec647a4f20ee90dc6350585f01",
   "output_profiles": "out\\candidate-1000-corrected-profiles.jsonl",
-  "output_profiles_sha256": "504452a13399b298ff6274c7637b1111fc5b73c9e3bbd49e91c84df1c15505c2",
+  "output_profiles_sha256": "5e1f577c4ee4c02ff1cf8d027c544b673fbdebdec6258e142876395d2ce045ee",
   "total_envelopes": 1000,
   "brand_changes_count": 0,
   "brand_changes": [],
   "desc_changes_count": 0,
   "desc_changes": [],
+  "contact_changes_count": 2,
+  "contact_changes": [
+    {
+      "orgnr": "820918312",
+      "old_fields": [
+        "contact.email.97073aaeb60638dd76b6",
+        "contact.phone.796e2f5be142bbd75722",
+        "social_profile.52b0b06bdf300da484cd",
+        "social_profile.92f5bea8d1b02533dae7"
+      ],
+      "old_values": [
+        "post@synfaring.no",
+        "+4791001444",
+        "{'url': 'http://facebook.com/synfaring', 'platform': 'facebook.com'}",
+        "{'url': 'https://www.linkedin.com/company/14016463', 'platform': 'linkedin.com'}"
+      ],
+      "new_fields": [
+        "social_profile.52b0b06bdf300da484cd",
+        "social_profile.92f5bea8d1b02533dae7"
+      ],
+      "new_values": [
+        "{'url': 'http://facebook.com/synfaring', 'platform': 'facebook.com'}",
+        "{'url': 'https://www.linkedin.com/company/14016463', 'platform': 'linkedin.com'}"
+      ]
+    },
+    {
+      "orgnr": "921407025",
+      "old_fields": [
+        "contact.email.1b7ef177f19b946d3a84",
+        "contact.email.2a67da16217780f07872",
+        "contact.email.5c96fb3bcf1c5e2cd0fc",
+        "contact.email.5dc0e668e3cf51851934",
+        "contact.email.aee2889a3a3770b19326",
+        "contact.email.b2d8429333b322a4cec8",
+        "social_profile.6729b3cb02687989c630",
+        "social_profile.93bd1ca6fcf0e4eb53e9",
+        "social_profile.d7b6333e506601941292"
+      ],
+      "old_values": [
+        "invoiceSE@simployer.com",
+        "invoiceNO@simployer.com",
+        "invoicePL@simployer.com",
+        "invoicegroup@simployer.com",
+        "invoiceDK@simployer.com",
+        "invoicesolutions@simployer.com",
+        "{'url': 'https://www.instagram.com/lifeatsimployer', 'platform': 'instagram.com'}",
+        "{'url': 'https://www.linkedin.com/company/simployergroup', 'platform': 'linkedin.com'}",
+        "{'url': 'https://www.linkedin.com/company/simployer', 'platform': 'linkedin.com'}"
+      ],
+      "new_fields": [
+        "social_profile.6729b3cb02687989c630",
+        "social_profile.d7b6333e506601941292",
+        "contact.email.b2d8429333b322a4cec8"
+      ],
+      "new_values": [
+        "{'url': 'https://www.instagram.com/lifeatsimployer', 'platform': 'instagram.com'}",
+        "{'url': 'https://www.linkedin.com/company/simployer', 'platform': 'linkedin.com'}",
+        "invoicesolutions@simployer.com"
+      ]
+    }
+  ],
   "total_claims_before": 78014,
-  "total_claims_after": 78014,
+  "total_claims_after": 78006,
   "blob_integrity_failures": 0
 }
