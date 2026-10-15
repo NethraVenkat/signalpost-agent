@@ -1,0 +1,377 @@
+{
+  "description": "SYNTHETIC: no real company facts; fixed observation 2026-10-15T10:00:00Z",
+  "fixtures": [
+    {
+      "url": "https://data.brreg.no/enhetsregisteret/api/enheter/923609016",
+      "method": "GET",
+      "status_code": 200,
+      "headers": {
+        "content-type": "application/json"
+      },
+      "content_sha256": "4884bd52244519bf2aa53df931c3cac62b9c80e5f84c2ff02041597adb196506",
+      "blob_file": "4884bd52244519bf2aa53df931c3cac62b9c80e5f84c2ff02041597adb196506",
+      "metadata_complete": true,
+      "repeatable": true
+    },
+    {
+      "url": "https://data.brreg.no/enhetsregisteret/api/enheter/923609016/roller",
+      "method": "GET",
+      "status_code": 200,
+      "headers": {
+        "content-type": "application/json"
+      },
+      "content_sha256": "96e58dbdc3c4dfa246e54a59aff504a3a496950823961f5b29e5ba156b29b25d",
+      "blob_file": "96e58dbdc3c4dfa246e54a59aff504a3a496950823961f5b29e5ba156b29b25d",
+      "metadata_complete": true,
+      "repeatable": true
+    },
+    {
+      "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=923609016&size=1000&page=0",
+      "method": "GET",
+      "status_code": 200,
+      "headers": {
+        "content-type": "application/json"
+      },
+      "content_sha256": "3c5c4f6387f6744ddb99022777fe30703869c65b0a30d386b65958f2965f63ab",
+      "blob_file": "3c5c4f6387f6744ddb99022777fe30703869c65b0a30d386b65958f2965f63ab",
+      "metadata_complete": true,
+      "repeatable": true
+    },
+    {
+      "url": "https://data.brreg.no/regnskapsregisteret/regnskap/923609016",
+      "method": "GET",
+      "status_code": 200,
+      "headers": {
+        "content-type": "application/json"
+      },
+      "content_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "blob_file": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "metadata_complete": true,
+      "repeatable": true
+    },
+    {
+      "url": "https://zephyrsynthetic.no/robots.txt",
+      "method": "GET",
+      "status_code": 200,
+      "headers": {
+        "content-type": "text/plain"
+      },
+      "content_sha256": "44f3f8eafdf064cf69acb05f23ee4dfc9ab5b3d67d81c64246bc29f7e438789a",
+      "blob_file": "44f3f8eafdf064cf69acb05f23ee4dfc9ab5b3d67d81c64246bc29f7e438789a",
+      "metadata_complete": true,
+      "repeatable": true
+    },
+    {
+      "url": "https://zephyrsynthetic.no/",
+      "method": "GET",
+      "status_code": 200,
+      "headers": {
+        "content-type": "text/html"
+      },
+      "content_sha256": "05ec85ee2fac227b734dbe17d3d59e44e007240f849690f9aed737536b7b872a",
+      "blob_file": "05ec85ee2fac227b734dbe17d3d59e44e007240f849690f9aed737536b7b872a",
+      "metadata_complete": true,
+      "repeatable": true
+    },
+    {
+      "url": "https://zephyrsynthetic.no/sitemap.xml",
+      "method": "GET",
+      "status_code": 404,
+      "headers": {
+        "content-type": "application/xml"
+      },
+      "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "blob_file": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "metadata_complete": true,
+      "repeatable": true
+    },
+    {
+      "url": "https://data.brreg.no/enhetsregisteret/api/enheter/988258229",
+      "method": "GET",
+      "status_code": 200,
+      "headers": {
+        "content-type": "application/json"
+      },
+      "content_sha256": "dfe2e82effe9b1ab0a14b3ba6937cc3dba64c6ab18fb179f5e024ce308bffea9",
+      "blob_file": "dfe2e82effe9b1ab0a14b3ba6937cc3dba64c6ab18fb179f5e024ce308bffea9",
+      "metadata_complete": true,
+      "repeatable": true
+    },
+    {
+      "url": "https://data.brreg.no/enhetsregisteret/api/enheter/988258229/roller",
+      "method": "GET",
+      "status_code": 200,
+      "headers": {
+        "content-type": "application/json"
+      },
+      "content_sha256": "11557cb0414d51b5d1798c814bc056208f19d875b67491c5813cf925d81603d1",
+      "blob_file": "11557cb0414d51b5d1798c814bc056208f19d875b67491c5813cf925d81603d1",
+      "metadata_complete": true,
+      "repeatable": true
+    },
+    {
+      "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988258229&size=1000&page=0",
+      "method": "GET",
+      "status_code": 200,
+      "headers": {
+        "content-type": "application/json"
+      },
+      "content_sha256": "edc78c28c50106b7ec504caa7de38bc7b149cdd1d2be3de4bcfd158f12fbea65",
+      "blob_file": "edc78c28c50106b7ec504caa7de38bc7b149cdd1d2be3de4bcfd158f12fbea65",
+      "metadata_complete": true,
+      "repeatable": true
+    },
+    {
+      "url": "https://data.brreg.no/regnskapsregisteret/regnskap/988258229",
+      "method": "GET",
+      "status_code": 200,
+      "headers": {
+        "content-type": "application/json"
+      },
+      "content_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "blob_file": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "metadata_complete": true,
+      "repeatable": true
+    },
+    {
+      "url": "https://quartzsynthetic.no/robots.txt",
+      "method": "GET",
+      "status_code": 200,
+      "headers": {
+        "content-type": "text/plain"
+      },
+      "content_sha256": "44f3f8eafdf064cf69acb05f23ee4dfc9ab5b3d67d81c64246bc29f7e438789a",
+      "blob_file": "44f3f8eafdf064cf69acb05f23ee4dfc9ab5b3d67d81c64246bc29f7e438789a",
+      "metadata_complete": true,
+      "repeatable": true
+    },
+    {
+      "url": "https://quartzsynthetic.no/",
+      "method": "GET",
+      "status_code": 200,
+      "headers": {
+        "content-type": "text/html"
+      },
+      "content_sha256": "66120075a4c8bfadf4680037b105d0cd56c57df689df70ec5ec4f8ec1f736b53",
+      "blob_file": "66120075a4c8bfadf4680037b105d0cd56c57df689df70ec5ec4f8ec1f736b53",
+      "metadata_complete": true,
+      "repeatable": true
+    },
+    {
+      "url": "https://quartzsynthetic.no/sitemap.xml",
+      "method": "GET",
+      "status_code": 404,
+      "headers": {
+        "content-type": "application/xml"
+      },
+      "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "blob_file": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "metadata_complete": true,
+      "repeatable": true
+    },
+    {
+      "url": "https://quartzsynthetic.no/feed.xml",
+      "method": "GET",
+      "status_code": 404,
+      "headers": {
+        "content-type": "application/xml"
+      },
+      "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "blob_file": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "metadata_complete": true,
+      "repeatable": true
+    },
+    {
+      "url": "https://quartzsynthetic.no/rss.xml",
+      "method": "GET",
+      "status_code": 404,
+      "headers": {
+        "content-type": "application/xml"
+      },
+      "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "blob_file": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "metadata_complete": true,
+      "repeatable": true
+    },
+    {
+      "url": "https://data.brreg.no/enhetsregisteret/api/enheter/999592236",
+      "method": "GET",
+      "status_code": 200,
+      "headers": {
+        "content-type": "application/json"
+      },
+      "content_sha256": "671aa20f3d58e02a8cc41bfd545a1df17bc0c7da81af05e5657bb317c516b1d9",
+      "blob_file": "671aa20f3d58e02a8cc41bfd545a1df17bc0c7da81af05e5657bb317c516b1d9",
+      "metadata_complete": true,
+      "repeatable": true
+    },
+    {
+      "url": "https://data.brreg.no/enhetsregisteret/api/enheter/999592236/roller",
+      "method": "GET",
+      "status_code": 200,
+      "headers": {
+        "content-type": "application/json"
+      },
+      "content_sha256": "ea5f80e157491791d30d9300075a95b7e13de7e0e80f6895eb54e146d0f9ce68",
+      "blob_file": "ea5f80e157491791d30d9300075a95b7e13de7e0e80f6895eb54e146d0f9ce68",
+      "metadata_complete": true,
+      "repeatable": true
+    },
+    {
+      "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=999592236&size=1000&page=0",
+      "method": "GET",
+      "status_code": 200,
+      "headers": {
+        "content-type": "application/json"
+      },
+      "content_sha256": "edc78c28c50106b7ec504caa7de38bc7b149cdd1d2be3de4bcfd158f12fbea65",
+      "blob_file": "edc78c28c50106b7ec504caa7de38bc7b149cdd1d2be3de4bcfd158f12fbea65",
+      "metadata_complete": true,
+      "repeatable": true
+    },
+    {
+      "url": "https://data.brreg.no/regnskapsregisteret/regnskap/999592236",
+      "method": "GET",
+      "status_code": 503,
+      "headers": {
+        "content-type": "application/json"
+      },
+      "content_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "blob_file": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "metadata_complete": true,
+      "repeatable": true
+    },
+    {
+      "url": "https://ambersynthetic.no/robots.txt",
+      "method": "GET",
+      "status_code": 200,
+      "headers": {
+        "content-type": "text/plain"
+      },
+      "content_sha256": "44f3f8eafdf064cf69acb05f23ee4dfc9ab5b3d67d81c64246bc29f7e438789a",
+      "blob_file": "44f3f8eafdf064cf69acb05f23ee4dfc9ab5b3d67d81c64246bc29f7e438789a",
+      "metadata_complete": true,
+      "repeatable": true
+    },
+    {
+      "url": "https://ambersynthetic.no/",
+      "method": "GET",
+      "status_code": 503,
+      "headers": {
+        "content-type": "text/html"
+      },
+      "content_sha256": "a3feb81f9af3d3c00836bf3f7da585d692a2628d259c907ae72f85f9d532ab4c",
+      "blob_file": "a3feb81f9af3d3c00836bf3f7da585d692a2628d259c907ae72f85f9d532ab4c",
+      "metadata_complete": true,
+      "repeatable": true
+    },
+    {
+      "url": "https://ambersynthetic.no/sitemap.xml",
+      "method": "GET",
+      "status_code": 404,
+      "headers": {
+        "content-type": "application/xml"
+      },
+      "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "blob_file": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "metadata_complete": true,
+      "repeatable": true
+    },
+    {
+      "url": "https://ambersynthetic.no/feed.xml",
+      "method": "GET",
+      "status_code": 404,
+      "headers": {
+        "content-type": "application/xml"
+      },
+      "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "blob_file": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "metadata_complete": true,
+      "repeatable": true
+    },
+    {
+      "url": "https://ambersynthetic.no/rss.xml",
+      "method": "GET",
+      "status_code": 404,
+      "headers": {
+        "content-type": "application/xml"
+      },
+      "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "blob_file": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "metadata_complete": true,
+      "repeatable": true
+    },
+    {
+      "url": "https://zephyrsynthetic.no/feed.xml",
+      "method": "GET",
+      "status_code": 200,
+      "headers": {
+        "content-type": "application/rss+xml"
+      },
+      "content_sha256": "e9f900f85b8ce6e782baeef976f6897d01b895a3fd60679cf17ab7b3ea03e3a1",
+      "blob_file": "e9f900f85b8ce6e782baeef976f6897d01b895a3fd60679cf17ab7b3ea03e3a1",
+      "metadata_complete": true,
+      "repeatable": true
+    },
+    {
+      "url": "https://pam-stilling-feed.nav.no/api/publicToken",
+      "method": "GET",
+      "status_code": 200,
+      "headers": {
+        "content-type": "text/plain"
+      },
+      "content_sha256": "05990b06cd67e32facaec0e4a444c415f2d96c6a95cca6c4c4a2abdb9f50e4e8",
+      "blob_file": "05990b06cd67e32facaec0e4a444c415f2d96c6a95cca6c4c4a2abdb9f50e4e8",
+      "metadata_complete": true,
+      "repeatable": true
+    },
+    {
+      "url": "https://pam-stilling-feed.nav.no/api/v1/feedentry/00000000-0000-4000-8000-000000000001",
+      "method": "GET",
+      "status_code": 200,
+      "headers": {
+        "content-type": "application/json"
+      },
+      "content_sha256": "bd547777e29869aedf04eb19b863a2f2c283f84971f86d3a7ec2a67fbf9e0444",
+      "blob_file": "bd547777e29869aedf04eb19b863a2f2c283f84971f86d3a7ec2a67fbf9e0444",
+      "metadata_complete": true,
+      "repeatable": true
+    },
+    {
+      "url": "https://pam-stilling-feed.nav.no/api/v1/feedentry/00000000-0000-4000-8000-000000000002",
+      "method": "GET",
+      "status_code": 200,
+      "headers": {
+        "content-type": "application/json"
+      },
+      "content_sha256": "a7ad63c7e850126b2d1ea6a921f82d44930efd5219d5c20d98862d9189ef815f",
+      "blob_file": "a7ad63c7e850126b2d1ea6a921f82d44930efd5219d5c20d98862d9189ef815f",
+      "metadata_complete": true,
+      "repeatable": true
+    },
+    {
+      "url": "https://pam-stilling-feed.nav.no/api/v1/feedentry/00000000-0000-4000-8000-000000000003",
+      "method": "GET",
+      "status_code": 200,
+      "headers": {
+        "content-type": "application/json"
+      },
+      "content_sha256": "75fc835baada9d50d216ac8c639bd726e8a4990b6b61bb4e44a082c7ae71a03d",
+      "blob_file": "75fc835baada9d50d216ac8c639bd726e8a4990b6b61bb4e44a082c7ae71a03d",
+      "metadata_complete": true,
+      "repeatable": true
+    },
+    {
+      "url": "https://pam-stilling-feed.nav.no/api/v1/feed",
+      "method": "GET",
+      "status_code": 200,
+      "headers": {
+        "content-type": "application/json"
+      },
+      "content_sha256": "9c5f102ca9edcbf23361c76cd799bfde26e79e30b341d7e2610e517429f7577e",
+      "blob_file": "9c5f102ca9edcbf23361c76cd799bfde26e79e30b341d7e2610e517429f7577e",
+      "metadata_complete": true,
+      "repeatable": true
+    }
+  ]
+}

@@ -333,7 +333,7 @@ def extract_contacts_and_social(section, org, web_claim, pages, context=None, en
             if c.field.startswith("subunits.unit.") and isinstance(c.value, dict) and c.value.get("orgnr"):
                 subunits.add(c.value.get("orgnr"))
     if context.get("subunits"):
-        subunits.update(context["subunits"])
+        subunits.update(unit['orgnr'] for unit in context["subunits"] if unit.get('orgnr'))
 
     proof_url = web_val.get("final_url") or web_val.get("proof_page_url") or ""
     target_domain = domain(proof_url) if proof_url else (domain(pages[0][0].url) if pages else "")
@@ -423,8 +423,9 @@ def publish_result(org,envelope,http,section,choices,attempts,context):
         section.claims[-1].evidence_ids.extend(e.id for e in registry_refs)
     from .descriptions import extract as descriptions
     accepted_domain_pages = [(r, p) for r, p in pages if domain(r.url) == domain(response.url)]
-    descriptions(section, org, section.claims[-1], accepted_domain_pages)
-    extract_contacts_and_social(section, org, section.claims[-1], accepted_domain_pages, context=context, envelope=envelope)
+    identity_claim = section.claims[-1]
+    descriptions(section, org, identity_claim, accepted_domain_pages)
+    extract_contacts_and_social(section, org, identity_claim, accepted_domain_pages, context=context, envelope=envelope)
     brand = extract_public_brand(page, context.get("name"))
     if brand:
         span = (page.span_for(brand) or "")[:150]
