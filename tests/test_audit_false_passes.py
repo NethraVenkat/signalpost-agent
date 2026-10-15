@@ -499,3 +499,127 @@ def test_website_registry_declaration_accepted():
     assert status == "CORRECT", f"Auditor rejected valid registry declaration: {reason}"
     assert val == "https://autonext.no"
 
+
+# -----------------------------------------------------------------------------
+# 21. Multi-entity group site: Legitimate multi-entity contact page accepted
+# -----------------------------------------------------------------------------
+def test_website_legitimate_multi_entity_group_contact_page_accepted():
+    from signalpost.web.proof import score
+    from signalpost.web.html import Page
+
+    simployer_org = "921407025"
+    body = """<html>
+      <head><title>Contact Us - Simployer</title></head>
+      <body>
+        <main>
+          <h2>Incoming invoices to Simployer</h2>
+          <div class="card-content">
+            <div class="card-body">
+              <h3>Simployer Group AS</h3>
+              <span>Organisation number: 937 475 918<br>Invoice e-mail: invoicegroup@simployer.com</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-body">
+              <h3>Simployer Solutions</h3>
+              <span>Organisation number: 921 407 025<br>Invoice e-mail: invoicesolutions@simployer.com<br>Invoice address: Kalnesveien 5, 1712 Grålum</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-body">
+              <h3>Simployer AS</h3>
+              <span>Organisation number: 986 419 454<br>Invoice e-mail: invoiceNO@simployer.com</span>
+            </div>
+          </div>
+        </main>
+      </body>
+    </html>"""
+
+    # 1. Test production score()
+    page = Page(body.encode("utf-8"), "https://www.simployer.com/contact-us")
+    context = {"name": "SIMPLOYER SOLUTIONS AS", "website": "www.simployer.com"}
+    proof = score(page, simployer_org, context, "registry_website", [])
+    assert proof.level == "VERIFIED"
+    assert proof.other_orgnrs == ["937475918", "986419454"]
+
+    # 2. Test accuracy auditor
+    claim = {
+        "field": "official_website",
+        "value": {
+            "final_url": "https://www.simployer.com",
+            "proof_type": "orgnr_on_page",
+            "candidate_origin": "registry_website",
+            "relationship_note": "group_site",
+            "other_orgnrs": ["937475918", "986419454"]
+        }
+    }
+    ev = {"locator": "identity-proof:921407025"}
+    status, reason, val = audit_website_claim(
+        simployer_org, claim, ev, body, context=context
+    )
+    assert status == "CORRECT", f"Auditor rejected legitimate group contact page: {reason}"
+    assert val == "https://www.simployer.com"
+
+
+# -----------------------------------------------------------------------------
+# 22. Multi-entity group site: Incorrectly attributed group site rejected
+# -----------------------------------------------------------------------------
+def test_website_incorrectly_attributed_group_site_rejected():
+    from signalpost.web.proof import score
+    from signalpost.web.html import Page
+
+    body = """<html>
+      <head><title>Holding Group - Directory</title></head>
+      <body>
+        <header><h1>Holding Group Enterprise Directory</h1></header>
+        <main>
+          <p>Holding Group operates diversified businesses across technology, consulting, logistics and retail across the Nordic region. We provide corporate governance and support functions.</p>
+          <p>Holding Group Enterprise Directory provides information on group entities and administrative corporate listings across all divisions.</p>
+          <h1>Group Structure</h1>
+          <p>The following entities are part of the conglomerate:</p>
+          <table>
+            <tr><td>Subsidiary A</td><td>999592236</td></tr>
+            <tr><td>Subsidiary B</td><td>937475918</td></tr>
+            <tr><td>Subsidiary C</td><td>986419454</td></tr>
+          </table>
+        </main>
+        <footer><p>© Holding Group 2026. All rights reserved.</p></footer>
+      </body>
+    </html>"""
+
+    # 1. Production score() on guessed slug candidate must reject multi-entity directory table
+    page = Page(body.encode("utf-8"), "https://www.conglomerate-holding.no/structure")
+    context = {"name": "AUTONEXT AS", "website": "autonext.no"}
+    proof = score(page, ORG, context, "legal_name_slug", [])
+    assert proof.level == "REJECT", f"Production verifier accepted unverified multi-entity page: {proof.level}"
+    assert proof.reason == "unverified_multi_entity_site"
+
+    # 2. Auditor must reject claim missing relationship_note
+    claim_no_note = {
+        "field": "official_website",
+        "value": {
+            "final_url": "https://www.conglomerate-holding.no",
+            "proof_type": "orgnr_on_page",
+            "candidate_origin": "registry_website",
+            "other_orgnrs": ["937475918", "986419454"]
+        }
+    }
+    ev = {"locator": "/"}
+    status, reason, _ = audit_website_claim(ORG, claim_no_note, ev, body, context=context)
+    assert status == "INCORRECT", f"Auditor accepted group site missing relationship_note: {reason}"
+
+    # 3. Auditor must reject claim on uncorroborated domain
+    claim_uncorroborated = {
+        "field": "official_website",
+        "value": {
+            "final_url": "https://www.conglomerate-holding.no",
+            "proof_type": "orgnr_on_page",
+            "candidate_origin": "legal_name_slug",
+            "relationship_note": "group_site",
+            "other_orgnrs": ["937475918", "986419454"]
+        }
+    }
+    status, reason, _ = audit_website_claim(ORG, claim_uncorroborated, ev, body, context=context)
+    assert status == "INCORRECT", f"Auditor accepted uncorroborated domain as group site: {reason}"
+
+
