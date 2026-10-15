@@ -19,7 +19,7 @@ class Candidates:
         for a in data['ads']:
             self.ads_by_employer[a['employer_orgnr']].append(a['uuid'])
         self.headers={};self.names={};self.scopes={};self.owners=defaultdict(set)
-        self.pending={};self.heap=[];self.discovered=set();self.checked={};self.failed=set();self.inflight=set();self.affected=defaultdict(set)
+        self.pending={};self.heap=[];self.discovered=set();self.checked={};self.failed={};self.inflight=set();self.affected=defaultdict(set)
         self.events=[];self.done=False;self.ready=False;self.previous=previous or {};self.new_unknown=False
     def wake(self):
         for event in self.events:event.set()
@@ -30,8 +30,10 @@ class Candidates:
         self.affected[uuid].update(affected)
         self.discovered.add(uuid);v=self.version(uuid)
         self.index.metrics['detail_request_cap']=(self.config.nav_max_details if self.config.nav_max_details is not None else (0 if not self.discovered else min(len(self.discovered)+10,max(300,2*len(self.scopes)))))
-        if self.checked.get(uuid)==v or uuid in self.failed:return
-        if self.pending.get(uuid,(None,None,None))[0]==v:return
+        if self.checked.get(uuid)==v or self.failed.get(uuid)==v:return
+        if self.pending.get(uuid,(None,None,None))[0]==v:
+            self.pending[uuid][1].update(affected)
+            return
         self.pending[uuid]=(v,set(affected),origin)
         heapq.heappush(self.heap,(0 if origin=='declared_cache' else 1,uuid,v));self.wake()
     def set_scopes(self,scopes,names):
@@ -139,6 +141,13 @@ class Candidates:
         while self.heap:
             _,uuid,v=heapq.heappop(self.heap);record=self.pending.get(uuid)
             if record is None or record[0]!=v or uuid in self.inflight:continue
+            # Scope/header discovery can enqueue a version while its detail is
+            # in flight. Completion has already verified that exact version;
+            # do not spend another HTTP attempt (or a scarce cap slot) on it.
+            if self.checked.get(uuid)==v or self.failed.get(uuid)==v:
+                self.pending.pop(uuid)
+                self.index.metrics['redundant_detail_jobs_skipped']=self.index.metrics.get('redundant_detail_jobs_skipped',0)+1
+                continue
             self.pending.pop(uuid);self.inflight.add(uuid);return uuid,record
         return None
 
@@ -225,7 +234,7 @@ async def prefetch(client,config,budget,blobs,index,data,age,path,names_ready,pr
         except asyncio.CancelledError:raise
         except Exception as exc:
             code=exc.code if isinstance(exc,SourceFailure) else type(exc).__name__
-            state.failed.add(uuid);index.metrics.setdefault('detail_failures',{}).setdefault(code,0)
+            state.failed[uuid]=version;index.metrics.setdefault('detail_failures',{}).setdefault(code,0)
             index.metrics['detail_failures'][code]+=1;return False
     async def worker():
         event=asyncio.Event();state.events.append(event)
