@@ -12,12 +12,15 @@
     if (typeof value === 'boolean') return value ? 'Yes' : 'No';
     if (typeof value === 'number') return String(value);
     let s = typeof value === 'object' ? JSON.stringify(value) : String(value);
-    if (s && ['=', '+', '-', '@', '\t', '\r'].includes(s[0])) s = "'" + s;
+    if (/^-?\d+(?:\.\d+)?$/.test(s.trim())) return s.trim();
+    const stripped = s.replace(/^[\s\r\t]+/, '');
+    if (stripped && ['=', '+', '-', '@'].includes(stripped[0])) s = "'" + s;
+    else if (s && ['\t', '\r'].includes(s[0])) s = "'" + s;
     if (/[,"\n\r]/.test(s)) s = '"' + s.replace(/"/g, '""') + '"';
     return s;
   };
 
-  const formatCsvOrgnr = orgnr => '="' + String(orgnr).trim() + '"';
+  const formatCsvOrgnr = orgnr => String(orgnr ?? '').trim();
 
   function downloadFile(filename, content, mimeType) {
     const blob = new Blob([content], { type: mimeType });
@@ -756,7 +759,7 @@
     function exportRecordsCsv(dataToExport, filename) {
       const headers = [
         "Organisation number", "Name", "Municipality", "Industry code", "Industry title",
-        "Employees", "Size band", "Revenue (NOK)", "Annual result (NOK)", "Fiscal year",
+        "Employees", "Size band", "Revenue", "Annual result", "Currency", "Financial unit", "Fiscal year",
         "Verified website", "Website provenance", "Job postings", "Social profiles",
         "Public activity", "Claim count", "Last checked"
       ];
@@ -772,6 +775,8 @@
           sanitizeCsvCell(r.size_band),
           sanitizeCsvCell(r.revenue),
           sanitizeCsvCell(r.annual_result),
+          sanitizeCsvCell(r.currency || (r.revenue != null || r.annual_result != null ? 'NOK' : '')),
+          sanitizeCsvCell(r.unit || ''),
           sanitizeCsvCell(r.fiscal_year),
           sanitizeCsvCell(r.website),
           sanitizeCsvCell(r.website_origin),
@@ -1086,8 +1091,9 @@
       ['website', 'Verified Website', 'website'],
       ['website_origin', 'Website Provenance', 'website'],
       ['website_proof', 'Proof Type', 'website'],
-      ['revenue', 'Revenue (NOK)', 'accounts'],
-      ['annual_result', 'Annual Result (NOK)', 'accounts'],
+      ['revenue', 'Revenue', 'accounts'],
+      ['annual_result', 'Annual Result', 'accounts'],
+      ['currency', 'Reporting Currency', 'accounts'],
       ['fiscal_year', 'Reporting Period', 'accounts'],
       ['ceo', 'CEO / Daglig Leder', 'roles'],
       ['chair', 'Board Chair / Styreleder', 'roles'],
@@ -1142,6 +1148,9 @@
           if(key === 'size_band') {
             const sizeMap = { micro: 'Micro (1–9)', small: 'Small (10–49)', medium: 'Medium (50–249)', large: 'Large (250+)', zero: 'Zero (0)', unknown: 'Unknown' };
             val = sizeMap[val] || val;
+          }
+          if((key === 'revenue' || key === 'annual_result') && val != null) {
+            val = format(val) + ' ' + (r.currency || 'NOK');
           }
           if(['social', 'jobs', 'activity'].includes(key) && state !== 'available') {
             val = null;

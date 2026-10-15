@@ -206,3 +206,14 @@ def test_default_candidate_cap_and_bounded_parallel_details(tmp_path):
     assert index.metrics['detail_request_cap']==index.metrics['distinct_candidate_ads']==6
     assert index.metrics['detail_requests']==6 and index.complete
     assert 1<peak<=4
+
+
+def test_nav_name_matching_without_employer_orgnr_does_not_publish(tmp_path):
+    from tests.test_registry import entity
+    legal = entity(ORG)['navn']
+    # Employer orgnr is None in detail payload, even though header name matches legal entity
+    report, row, _, calls = execute(tmp_path, header_name=legal, employer=None)
+    assert report['nav_detail_requests'] == 1
+    assert row['run']['sections']['hiring'] == 'not_available'
+    assert not any(c['family'] == 'hiring' and c['availability'] == 'available' for c in row['claims'])
+

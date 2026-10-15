@@ -254,25 +254,29 @@ def test_formula_sanitization_and_orgnr_formatting():
     assert sanitize_csv_cell("=1+1") == "'=1+1"
     assert sanitize_csv_cell("+cmd|' /C calc'!A0") == "'+cmd|' /C calc'!A0"
     assert sanitize_csv_cell("-MIN(A1:A5)") == "'-MIN(A1:A5)"
+    assert sanitize_csv_cell("-2+3") == "'-2+3"
     assert sanitize_csv_cell("@SUM(B1:B2)") == "'@SUM(B1:B2)"
     assert sanitize_csv_cell("\ttab_attack") == "'\ttab_attack"
+    assert sanitize_csv_cell(" =1+1") == "' =1+1"
     assert sanitize_csv_cell("\rcarriage_return") == '"\'\rcarriage_return"'
 
     # Commas, quotes, and newlines are safely quoted and escaped per RFC 4180
     assert sanitize_csv_cell('Hello, "World"') == '"Hello, ""World"""'
     assert sanitize_csv_cell("Line 1\nLine 2") == '"Line 1\nLine 2"'
 
-    # Legitimate numbers and None remain clean
+    # Legitimate numbers (including negative amounts and string negative numbers) remain clean
     assert sanitize_csv_cell(12345) == "12345"
     assert sanitize_csv_cell(-450000) == "-450000"
+    assert sanitize_csv_cell("-450000") == "-450000"
+    assert sanitize_csv_cell("-12.34") == "-12.34"
     assert sanitize_csv_cell(0) == "0"
     assert sanitize_csv_cell(None) == ""
     assert sanitize_csv_cell(True) == "Yes"
     assert sanitize_csv_cell(False) == "No"
 
-    # Organisation numbers formatted explicitly as string constants to preserve leading zero
-    assert format_csv_orgnr("012345678") == '="012345678"'
-    assert format_csv_orgnr(987654321) == '="987654321"'
+    # Organisation numbers formatted as plain literal digit strings (no ="..." formula bypass)
+    assert format_csv_orgnr("012345678") == "012345678"
+    assert format_csv_orgnr(987654321) == "987654321"
 
 
 def test_directory_exports_csv_and_json():
@@ -287,6 +291,8 @@ def test_directory_exports_csv_and_json():
             "size_band": "small",
             "revenue": 25000000,
             "annual_result": 3200000,
+            "currency": "NOK",
+            "unit": "NOK",
             "fiscal_year": 2024,
             "website": "https://example.no",
             "website_origin": "registry_website",
@@ -302,8 +308,9 @@ def test_directory_exports_csv_and_json():
     lines = csv_data.strip().split("\r\n")
     assert len(lines) == 2
     assert "Organisation number,Name,Municipality" in lines[0]
-    assert '="012345678",Nordic Solutions AS,Oslo' in lines[1]
-    assert "25000000,3200000,2024" in lines[1]
+    assert "Revenue,Annual result,Currency,Financial unit,Fiscal year" in lines[0]
+    assert "012345678,Nordic Solutions AS,Oslo" in lines[1]
+    assert "25000000,3200000,NOK,NOK,2024" in lines[1]
 
     json_data = export_directory_json(records)
     parsed = json.loads(json_data)
@@ -335,7 +342,7 @@ def test_profile_claims_provenance_exports(tmp_path):
     csv_lines = csv_exp.strip().split("\r\n")
     assert len(csv_lines) == len(row.claims) + 1
     assert "Organisation number,Field,Family,Availability,Value" in csv_lines[0]
-    assert f'="{row.organisation_number}"' in csv_lines[1]
+    assert f'{row.organisation_number}' in csv_lines[1]
 
 
 def test_evidence_explorer_markup_and_export_controls(tmp_path):
