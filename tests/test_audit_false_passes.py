@@ -623,3 +623,156 @@ def test_website_incorrectly_attributed_group_site_rejected():
     assert status == "INCORRECT", f"Auditor accepted uncorroborated domain as group site: {reason}"
 
 
+# -----------------------------------------------------------------------------
+# 23. Group-site claim attribution: Two company cards with different invoice emails
+# -----------------------------------------------------------------------------
+def test_group_site_two_company_cards_different_invoice_emails():
+    """
+    On a multi-entity group site, contacts located inside a sibling entity card
+    must NOT be attributed to the subject company.
+    """
+    from scripts.accuracy_audit import audit_website_metadata_claim
+
+    body = """<html>
+      <body>
+        <div class="card entity-card">
+          <h3>Simployer Solutions</h3>
+          <p>Organisation number: 921 407 025</p>
+          <p>Invoice e-mail: invoicesolutions@simployer.com</p>
+        </div>
+        <div class="card entity-card">
+          <h3>Simployer AS</h3>
+          <p>Organisation number: 986 419 454</p>
+          <p>Invoice e-mail: invoiceNO@simployer.com</p>
+        </div>
+      </body>
+    </html>"""
+
+    subject_org = "921407025"
+
+    # 1. Subject entity contact: invoicesolutions@simployer.com -> CORRECT
+    claim_correct = {
+        "field": "contact.email.1",
+        "value": "invoicesolutions@simployer.com"
+    }
+    status, reason, _ = audit_website_metadata_claim(
+        subject_org, claim_correct, {"locator": "contact:invoicesolutions@simployer.com"}, body,
+        website_claim={"value": {"relationship_note": "group_site", "other_orgnrs": ["986419454"]}}
+    )
+    assert status == "CORRECT", f"Auditor rejected legitimate entity contact: {reason}"
+
+    # 2. Sibling entity contact: invoiceNO@simployer.com -> INCORRECT for subject 921407025
+    claim_sibling = {
+        "field": "contact.email.2",
+        "value": "invoiceNO@simployer.com"
+    }
+    status, reason, _ = audit_website_metadata_claim(
+        subject_org, claim_sibling, {"locator": "contact:invoiceNO@simployer.com"}, body,
+        website_claim={"value": {"relationship_note": "group_site", "other_orgnrs": ["986419454"]}}
+    )
+    assert status == "INCORRECT", f"Auditor accepted sibling entity contact: {reason}"
+    assert "sibling" in reason.lower() or "other entity" in reason.lower() or "card" in reason.lower()
+
+
+# -----------------------------------------------------------------------------
+# 24. Group-site claim attribution: One shared group contact requires explicit scope
+# -----------------------------------------------------------------------------
+def test_group_site_shared_group_contact_unlabelled_rejected_as_entity_contact():
+    """
+    On a group site, a shared group contact (e.g. info@simployer.com in footer)
+    without entity-specific link must NOT be published as an entity-specific contact.
+    """
+    from scripts.accuracy_audit import audit_website_metadata_claim
+
+    body = """<html>
+      <body>
+        <div class="card entity-card">
+          <h3>Simployer Solutions</h3>
+          <p>Organisation number: 921 407 025</p>
+        </div>
+        <footer>
+          <p>Group Head Office: info@simployer.com</p>
+        </footer>
+      </body>
+    </html>"""
+
+    subject_org = "921407025"
+    claim = {
+        "field": "contact.email.group",
+        "value": "info@simployer.com"
+    }
+    status, reason, _ = audit_website_metadata_claim(
+        subject_org, claim, {"locator": "contact:info@simployer.com"}, body,
+        website_claim={"value": {"relationship_note": "group_site", "other_orgnrs": ["986419454"]}}
+    )
+    assert status == "INCORRECT", f"Auditor accepted unlabelled shared contact as entity contact: {reason}"
+
+
+# -----------------------------------------------------------------------------
+# 25. Group-site claim attribution: Sibling-company social account rejected
+# -----------------------------------------------------------------------------
+def test_group_site_sibling_company_social_account_rejected():
+    """
+    A social account belonging to a sibling or parent entity must NOT be published
+    as the subsidiary subject's social profile.
+    """
+    from scripts.accuracy_audit import audit_social_claim
+
+    body = """<html>
+      <body>
+        <div class="card entity-card">
+          <h3>Simployer Solutions</h3>
+          <p>Organisation number: 921 407 025</p>
+        </div>
+        <div class="card entity-card">
+          <h3>Simployer Group AS</h3>
+          <p>Organisation number: 937 475 918</p>
+          <a href="https://www.linkedin.com/company/simployergroup">Group LinkedIn</a>
+        </div>
+      </body>
+    </html>"""
+
+    subject_org = "921407025"
+    claim = {
+        "field": "social_profile.simployergroup",
+        "value": {
+            "url": "https://www.linkedin.com/company/simployergroup",
+            "platform": "linkedin.com"
+        }
+    }
+    status, reason, _ = audit_social_claim(
+        subject_org, claim, {"locator": "company-link:https://www.linkedin.com/company/simployergroup"}, body,
+        website_claim={"value": {"relationship_note": "group_site", "other_orgnrs": ["937475918"]}}
+    )
+    assert status == "INCORRECT", f"Auditor accepted sibling social account: {reason}"
+
+
+# -----------------------------------------------------------------------------
+# 26. Group-site claim attribution: Group customer count must not become subsidiary metric
+# -----------------------------------------------------------------------------
+def test_group_site_customer_count_not_subsidiary_statistics():
+    """
+    Group-wide metrics (e.g. '12,000+ companies in the Nordics') must NOT be published
+    as the subsidiary's own employee count or scale claim.
+    """
+    from scripts.accuracy_audit import audit_website_metadata_claim
+
+    body = """<html>
+      <body>
+        <p>Simployer One is trusted by 12,000+ companies across the Nordics.</p>
+      </body>
+    </html>"""
+
+    subject_org = "921407025"
+    # An extractor claiming 12000 as subsidiary scale/customer count must be rejected
+    claim = {
+        "field": "company_scale.customer_count",
+        "value": 12000
+    }
+    status, reason, _ = audit_website_metadata_claim(
+        subject_org, claim, {"locator": "text"}, body,
+        website_claim={"value": {"relationship_note": "group_site", "other_orgnrs": ["937475918"]}}
+    )
+    assert status in ("INCORRECT", "UNVERIFIABLE")
+
+
