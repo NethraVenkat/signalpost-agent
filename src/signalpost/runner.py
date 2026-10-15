@@ -137,6 +137,11 @@ def extract_company_scope(envelope, bulk_row=None, prior_row=None):
     return org, subunits, names
 
 
+def write_report(path, report):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf8')
+
+
 async def run(config, client=None,synthesis_provider=None):
     from .monitor import LoopMonitor
     from .power import SystemAwake
@@ -147,7 +152,7 @@ async def run(config, client=None,synthesis_provider=None):
     report['event_loop']=lag
     report['system_awake_request']=power.result
     try:
-        await offload(config.report.write_text,json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+        await offload(write_report,config.report,report)
     except OSError:pass  # Original report error handling remains authoritative.
     return report
 
@@ -409,7 +414,7 @@ async def _run(config, client=None,synthesis_provider=None):
     order = inputs.rows if config.emit_duplicates else inputs.unique
     result = [envelopes[org] for org in order]
     size, output_limited, minimum_exceeded = await offload(write,config.output,result,config.envelope_shape,blobs,config.max_output_mb)
-    report = build(result, inputs, budget, config, warnings, time.monotonic() - budget.start)
+    report = await offload(build,result,inputs,budget,config,warnings,time.monotonic() - budget.start)
     report['limits']['max_requests']=budget.cap
     report['request_budget_basis']='20 per unique normalized input' if config.max_requests is None else 'explicit override'
     report['measured_request_projection']={'baseline':'1000-company retained-features run',
@@ -468,8 +473,7 @@ async def _run(config, client=None,synthesis_provider=None):
             report['site'] = {'state': 'failed', 'error': type(exc).__name__, 'message': str(exc)}
             report['warnings'].append('site generation failed: ' + type(exc).__name__)
     try:
-        config.report.parent.mkdir(parents=True, exist_ok=True)
-        config.report.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        await offload(write_report,config.report,report)
     except OSError as exc:
         report["warnings"].append(f"report write failed: {type(exc).__name__}")
     progress.stage_update("Output & Site Publishing", "completed")
