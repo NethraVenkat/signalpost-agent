@@ -2,7 +2,7 @@
 
 Signalpost researches Norwegian companies from official registries and bounded company-owned sources, verifies identity, and publishes evidence-linked facts, cited summaries and searchable offline profiles. Missing or incomplete information remains explicit. Deterministic template synthesis works without API keys and costs $0 in provider fees; no live model adapter is shipped.
 
-Latest verification: [final feature evaluation](reports/final-feature-evaluation.md). The fresh-clone suite passed 375 tests and strict synthetic external-source replay completed. Live source completeness, text encoding findings and browser verification remain release gates. The [1,000-company release](reports/release-1000.md) and [100-company smoke](reports/smoke-100.md) are historical measurements with their own source/configuration conditions; the previously quoted 57.77-second NAV result is not newly verified.
+Latest verification: [remediation release](reports/remediation-release.md) — 391 tests pass, 91.58% statement coverage, strict replay/fresh-clone integration and 23 actual Chrome checks pass. Recorded live100/live1,000 wall times are 58.60s/283.14s at the explicitly named measured commit; the final ownership correction is locally verified. The report corrects earlier false encoding findings and distinguishes source incompleteness from software failure. The [final feature evaluation](reports/final-feature-evaluation.md), [1,000-company release](reports/release-1000.md) and [100-company smoke](reports/smoke-100.md) remain historical evidence with their own conditions; 57.77s is not a current NAV measurement.
 
 ## How it works
 
