@@ -11,6 +11,7 @@ Never conflates Category A structural integrity with Category B or C factual tru
 import argparse
 from decimal import Decimal, InvalidOperation
 import hashlib
+import html
 import io
 import json
 import random
@@ -697,10 +698,13 @@ def audit_website_metadata_claim(org: str, claim: dict, ev: dict, body: str) -> 
     if val is None or val == "":
         return "INCORRECT", f"Empty metadata claim value for {fld}", None
 
-    val_str = str(val).strip()
+    val_text = val.get("text", val) if isinstance(val, dict) else val
+    val_str = str(val_text).strip()
+    norm_val = html.unescape(html.unescape(val_str)).lower()
+    norm_body = html.unescape(html.unescape(body)).lower()
 
     if fld.startswith("contact.email"):
-        if val_str.lower() in body.lower():
+        if norm_val in norm_body or val_str.lower() in body.lower():
             return "CORRECT", f"Contact email '{val_str}' verified in page body", val_str
         return "INCORRECT", f"Contact email '{val_str}' not found in page body", None
 
@@ -709,20 +713,20 @@ def audit_website_metadata_claim(org: str, claim: dict, ev: dict, body: str) -> 
         page_phones = {phone(m.group()) for m in re.finditer(r"(?:\+47|0047|\b)[ .()0-9-]{8,20}\b", body)}
         if norm_phone and norm_phone in page_phones:
             return "CORRECT", f"Contact phone '{val_str}' verified in page body", val_str
-        if val_str in body:
+        if norm_val in norm_body or val_str in body:
             return "CORRECT", f"Contact phone '{val_str}' verified verbatim in page body", val_str
         return "INCORRECT", f"Contact phone '{val_str}' not found in page body", None
 
     if fld == "public_brand":
-        if val_str.lower() in body.lower():
+        if norm_val in norm_body or val_str.lower() in body.lower():
             return "CORRECT", f"Public brand '{val_str}' verified in page body", val_str
         return "INCORRECT", f"Public brand '{val_str}' not found in page body", None
 
     if fld.startswith("website_description"):
-        if val_str.lower() in body.lower():
+        if norm_val in norm_body or val_str.lower() in body.lower():
             return "CORRECT", "Website description verified in page body", val_str
-        words = [w for w in re.split(r'\W+', val_str) if len(w) > 4]
-        if words and all(w.lower() in body.lower() for w in words[:5]):
+        words = [w for w in re.split(r'\W+', norm_val) if len(w) > 4]
+        if words and all(w in norm_body for w in words[:5]):
             return "CORRECT", "Website description excerpt verified in page body", val_str
         return "INCORRECT", "Website description not found in page body", None
 
