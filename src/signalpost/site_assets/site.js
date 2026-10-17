@@ -607,6 +607,9 @@
       const isFiltered = Boolean(query || town || division || size || web || jobs || social || act || inc || wlOnly);
 
       const selected = records.filter(r => {
+        const area = document.getElementById('area-filter')?.value || '';
+        if(area === 'all' && r.areas_found !== 5) return false;
+        if(area && area !== 'all' && !r.areas?.[area]) return false;
         if(query && !r._search.includes(query)) return false;
         if(town) {
           if(town === 'Unknown') { if(r.municipality) return false; }
@@ -628,7 +631,7 @@
 
       if(currentSeq !== searchSequence) return;
 
-      const sort = sortSelect?.value || 'claim_count';
+      const sort = sortSelect?.value || 'areas_found';
       selected.sort((a,b) => {
         if(sort === 'name') return a.name.localeCompare(b.name, 'nb') || a.orgnr.localeCompare(b.orgnr);
         if(sort === 'score') return (b.score ?? -Infinity) - (a.score ?? -Infinity) || a.orgnr.localeCompare(b.orgnr);
@@ -771,6 +774,7 @@
     }
 
     // Attach listeners to select & check controls
+    document.getElementById('area-filter')?.addEventListener('change', () => {pageNumber = 0;draw();});
     const controls = ['municipality', 'division', 'size-band', 'sort', 'filter-website', 'filter-jobs', 'filter-social', 'filter-activity', 'filter-incomplete', 'filter-watchlist'];
     for(const id of controls) {
       const el = document.getElementById(id);
@@ -1133,6 +1137,11 @@
     const clearBtn = document.getElementById('clear-compare');
 
     const fields = [
+      ['area_brief', 'Company brief', 'identity'],
+      ['area_financials', 'Latest financials', 'accounts'],
+      ['area_leadership', 'Who runs it?', 'roles'],
+      ['area_workforce', 'Working here', 'subunits'],
+      ['area_activity', 'Recent activity', 'activity'],
       ['name', 'Legal Name', 'identity'],
       ['orgnr', 'Organisation Number', 'identity'],
       ['municipality', 'Municipality', 'identity'],
@@ -1198,6 +1207,7 @@
           const state = r.sections[family] || 'not_applicable';
 
           let val = key === 'industry' ? (r.industry_en || r.industry_no) : r[key];
+          if(key.startsWith('area_')) val = r.areas?.[key.slice(5)] ? 'Evidence available' : null;
           if(key === 'size_band') {
             const sizeMap = { micro: 'Micro (1–9)', small: 'Small (10–49)', medium: 'Medium (50–249)', large: 'Large (250+)', zero: 'Zero (0)', unknown: 'Unknown' };
             val = sizeMap[val] || val;
@@ -1236,9 +1246,9 @@
       });
 
       const hash = selected.map(r => r.orgnr).join(',');
-      if(location.hash.slice(1) !== hash) {
-        history.replaceState(null, '', hash ? '#' + hash : window.location.pathname);
-      }
+      const parameters = new URLSearchParams(location.search);
+      if(hash) parameters.set('companies', hash); else parameters.delete('companies');
+      history.replaceState(null, '', location.pathname + (parameters.size ? '?' + parameters : ''));
     }
 
     if(clearBtn) {
@@ -1249,7 +1259,7 @@
     }
 
     function fromHash() {
-      const ids = location.hash.slice(1).split(',').filter(Boolean).slice(0, 3);
+      const ids = (new URLSearchParams(location.search).get('companies') || location.hash.slice(1)).split(',').filter(Boolean).slice(0, 3);
       inputs.forEach((input, i) => {
         if(input) input.value = byId.has(ids[i]) ? ids[i] : '';
       });
