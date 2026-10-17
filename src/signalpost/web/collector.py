@@ -161,10 +161,7 @@ def proof_page_targets(page, base_url, limit=FOLLOWUP_PAGES):
         target = normalize_url(target)
         if target and target not in targets:
             targets.append(target)
-    def priority(target):
-        path=urlsplit(target).path
-        return next((i for i,p in enumerate((r'kontakt|contact',r'om[-_/]?oss|about|^/om/?$',r'personvern|privacy|vilk|terms|impressum')) if re.search(p,path,re.I)),3)
-    return sorted(targets,key=priority)[:limit]
+    return targets[:limit]
 
 
 async def fetch(org, envelope, bulk, http):
