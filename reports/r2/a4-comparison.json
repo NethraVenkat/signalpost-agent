@@ -1,0 +1,79 @@
+{
+  "out/r1-release-gate-120": {
+    "count": 1000,
+    "identity_ids": 28726,
+    "coverage": {
+      "website": 3,
+      "hiring": 6,
+      "activity": 1
+    },
+    "states": {
+      "website": {
+        "failed": 866,
+        "not_available": 126,
+        "ambiguous": 4,
+        "blocked": 1,
+        "available": 3
+      },
+      "hiring": {
+        "failed": 829,
+        "not_available": 165,
+        "available": 6
+      },
+      "activity": {
+        "failed": 868,
+        "not_applicable": 126,
+        "ambiguous": 4,
+        "blocked": 1,
+        "available": 1
+      }
+    },
+    "finalisation": {
+      "crawl_seconds": 40.47,
+      "outputs_seconds": 6.15,
+      "estimate_seconds": 30.0,
+      "site_estimate_seconds": 50.0,
+      "site_reserved": true,
+      "site_seconds": 9.42
+    },
+    "wall": 57.4906015000015
+  },
+  "out/r2-a4-120": {
+    "count": 1000,
+    "identity_ids": 28726,
+    "coverage": {
+      "website": 34,
+      "hiring": 6,
+      "activity": 3
+    },
+    "states": {
+      "website": {
+        "failed": 552,
+        "not_available": 373,
+        "ambiguous": 39,
+        "blocked": 2,
+        "available": 34
+      },
+      "hiring": {
+        "failed": 994,
+        "available": 6
+      },
+      "activity": {
+        "failed": 573,
+        "not_applicable": 373,
+        "ambiguous": 39,
+        "blocked": 3,
+        "available": 3,
+        "not_available": 9
+      }
+    },
+    "finalisation": {
+      "crawl_seconds": 102.84,
+      "outputs_seconds": 11.7,
+      "estimate_seconds": 10.0,
+      "site_estimate_seconds": 50.0,
+      "site_reserved": false
+    },
+    "wall": 116.6151733000006
+  }
+}

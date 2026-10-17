@@ -14,4 +14,10 @@
 
 2026-10-18T00:03:43+05:30 — 1ac8703 A2 committed. A3: 58 auditor/adversarial tests pass. Escaped JSON-LD URLs now retain verbatim local spans; social auditor parses sameAs; deletion=true requires an actual valid source date; own-invoice reference instructions no longer trigger generic partner heuristic, while customer negatives remain rejected.
 
-NEXT: Commit A3, then calibrate A4 research/output reserve with explicit short-budget site skipping and measured runs.
+2026-10-18T00:04:59+05:30 — 92e9975 A3 committed; 58 audit tests passed. A4 provisional measured reserve uses 10 ms/company plus 5 s, with optional site skipped when not reserved; 13 cancellation/output checks pass. Active 120 s benchmark out/r2-a4-120. The 30 s >=80% research and nationwide wall constraints remain unresolved; no RC tag.
+
+2026-10-18T00:06:37+05:30 — Heartbeat: still running the sole A4 1,000-company 120 s benchmark; research reached 101 s (previous R1 run stopped much earlier). Required terminal outputs are being awaited. No duplicate run started.
+
+2026-10-18T00:07:06+05:30 — A4 120 s measurement: exit 0; 1,000 envelopes, 28,726 identity IDs; wall 116.62 s; research 102.84 s; mandatory output 11.70 s; optional site skipped explicitly. Website availability 3->34, hiring 6->6, activity 1->3 versus saved R1 120 s run. Source/network variation limits causality. 30 s >=80% research target not met by measured mandatory-output reserve; nationwide wall still failing.
+
+NEXT: Commit A4 as an independently measured change, then run Phase A full suite, 100-company smoke and 24-company comparison before any RC tag.
