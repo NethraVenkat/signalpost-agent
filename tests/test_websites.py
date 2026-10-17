@@ -262,3 +262,9 @@ def test_real_domain_politeness(tmp_path):
             await http.get('https://example.no/',OUR,'example.no')
     asyncio.run(execute())
     assert starts[1]-starts[0] >= .99
+
+
+def test_website_request_budget_defaults():
+    from signalpost.config import Config
+    cfg = Config(organisations=".", output="o", report="r")
+    assert cfg.website_request_cap == 8 and cfg.website_total_request_cap == 13

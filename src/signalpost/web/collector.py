@@ -256,7 +256,7 @@ async def fetch(org, envelope, bulk, http):
                         break
             elif proof.level in {"MEDIUM", 'REGISTRY_DECLARED'}:
                 ambiguous = True
-            if not successes and http.counts.get(org, 0) + 2 <= http.config.website_request_cap:
+            if not successes and http.counts.get(org, 0) + 2 <= http.discovery_cap(org):
                 legal_nm = context.get('name')
                 brand_nm = context.get('brand')
                 metrics = getattr(http, 'discovery_metrics', None)
@@ -273,7 +273,7 @@ async def fetch(org, envelope, bulk, http):
                                 candidates.append(Candidate(u, d, 'sitemap'))
                 except SourceFailure: pass
                 for feed_path in ('/feed.xml', '/rss.xml', '/feed/', '/blog/feed.xml'):
-                    if successes or http.counts.get(org, 0) >= http.config.website_request_cap: break
+                    if successes or http.counts.get(org, 0) >= http.discovery_cap(org): break
                     try:
                         rss_resp = await http.get(f'https://{candidate.domain}{feed_path}', org, candidate.domain, xml=True)
                         if rss_resp.status == 200:
