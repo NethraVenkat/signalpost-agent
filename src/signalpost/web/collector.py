@@ -233,7 +233,7 @@ async def fetch(org, envelope, bulk, http):
                                     pages.append((extra, extra_page))
                         except SourceFailure:
                             pass
-            elif proof.level not in {"VERIFIED", "REJECT"}:
+            elif proof.level not in {"VERIFIED", "REJECT"} or (proof.reason == 'foreign_orgnr' and candidate.origin in {'registry_website', 'subunit_registry_website'}):
                 seen = {response.url}
                 for target in proof_page_targets(page, response.url):
                     if not target or target in seen or domain(target) != domain(response.url):
@@ -257,11 +257,15 @@ async def fetch(org, envelope, bulk, http):
                     pages.append((extra, extra_page))
                     if extra_proof.level == "REJECT" and extra_proof.reason == "foreign_orgnr":
                         best = (extra_proof, extra, extra_page)
-                        break
+                        continue
                     ranks = {"REJECT": -1, "BLOCKED": -1, "LOW": 0, "MEDIUM": 1,'REGISTRY_DECLARED':2, "HIGH": 3, "VERIFIED": 4}
-                    if ranks[extra_proof.level] > ranks[best[0].level]:
+                    if ranks[extra_proof.level] > ranks[best[0].level] and (extra_proof.level == 'VERIFIED' or best[0].reason != 'foreign_orgnr'):
                         best = (extra_proof, extra, extra_page)
                     if extra_proof.level == "VERIFIED":
+                        # A foreign footer is not evidence for this entity's
+                        # contacts or profiles. Retain only its exact proof page.
+                        if any(candidate_proof(p, org, context, candidate, leaders).reason == 'foreign_orgnr' for _, p in pages):
+                            pages = [(extra, extra_page)]
                         break
             proof, response, page = best
             attempts.append({"domain": candidate.domain, "level": proof.level, "points": proof.points, "signals": proof.signals, "origin": candidate.origin, "reason": proof.reason})
