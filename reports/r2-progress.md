@@ -200,4 +200,6 @@
 
 2026-10-18T03:28:31+05:30 — c8306a0 long-anchor robustness and d50d21c strict auditor safeguards committed. Refresh revalidation now nominates only prior VERIFIED sites when the registry website is unchanged and any branch remains registered; it fetches the old proof page live within unchanged robots/DNS/request bounds, retains candidate origin and requires fresh exact proof. 13 refresh regressions and 8 focused adversarial checks pass, including foreign-owner and changed-registry negatives.
 
-NEXT: Commit refresh exact-site revalidation, preserve prompt bytes in Git, then run the full corrected suite and final frozen release matrix.
+2026-10-18T03:28:48+05:30 — 16196f8 commits live exact-site refresh revalidation. Prompt file was locally verbatim but Git had normalized line endings; a file-specific -text attribute and explicit renormalization now make the staged blob exactly match original SHA256 3d7bae9e9eae7b612d1c0e8448ce58ce41ddd1dc5269c92cade8caca4f38670d. No global Git settings changed.
+
+NEXT: Commit exact-byte prompt preservation, then run the full corrected test suite before final source freeze.
