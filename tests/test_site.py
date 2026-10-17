@@ -173,6 +173,23 @@ def test_reject_path_traversal_and_source_overlap(tmp_path):
     with pytest.raises(ValueError, match='nine digit'): generate_site(inp, tmp_path / 'site')
 
 
+def test_large_company_page_stays_under_gate_with_every_claim_reachable(tmp_path):
+    from signalpost.models.claim import Claim
+    row, _ = envelope(tmp_path / 'run')
+    template = row.claims[0]
+    for n in range(400):
+        row.claims.append(Claim(**{**template.model_dump(), 'id': ('%016x' % (n + 1)) + '0' * 48, 'field': f'subunits.detail.{n}'}))
+    out = tmp_path / 'site'
+    metrics = generate_site(source(tmp_path, [row]), out)
+    html = (out / f'c/{row.organisation_number}.html').read_text(encoding='utf8')
+    assert metrics['largest_profile_bytes'] < 250_000
+    assert 'id="explorer-show-all"' in html
+    data = (out / f'c/{row.organisation_number}.data.js').read_text(encoding='utf8')
+    payload = json.loads(data[len('window.SIGNALPOST_EVIDENCE = '):-2])
+    shown = html.count('<th scope="row">')
+    assert shown + len(payload['explorer_rows']) >= len(row.claims)
+
+
 def test_render_before_write_and_incomplete_evidence(tmp_path):
     row, _ = envelope(tmp_path / 'run')
     row.evidence[0].claim_span = ''

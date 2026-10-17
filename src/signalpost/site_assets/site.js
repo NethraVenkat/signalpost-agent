@@ -989,6 +989,28 @@
   // PAGE: PROFILE (Evidence Explorer & Safe Exports)
   // ==========================================
   if(document.body.dataset.page === 'profile') {
+    const showAllBtn = document.getElementById('explorer-show-all');
+    if (showAllBtn) {
+      showAllBtn.addEventListener('click', () => {
+        const body = document.querySelector('.evidence-explorer-table tbody');
+        const fragment = document.createDocumentFragment();
+        for (const [label, availability, value, sourceClass, locator, sha, span] of (localData.explorer_rows || [])) {
+          const tr = element('tr');
+          const th = element('th', label); th.scope = 'row';
+          const state = element('td'); state.append(stateChip(availability));
+          const loc = element('td'); loc.append(element('code', locator));
+          const hash = element('td');
+          if (sha) { const code = element('code', sha.slice(0, 12) + '…'); code.title = sha; hash.append(code); } else { hash.textContent = '—'; }
+          const excerpt = element('td'); excerpt.append(element('blockquote', span, 'table-excerpt'));
+          tr.append(th, state, element('td', value), element('td', sourceClass), loc, hash, excerpt);
+          fragment.append(tr);
+        }
+        body.append(fragment);
+        const note = document.getElementById('explorer-more-note');
+        if (note) note.textContent = 'Showing all claims.';
+        showAllBtn.remove();
+      });
+    }
     const exportJsonBtn = document.getElementById('export-profile-json');
     const exportCsvBtn = document.getElementById('export-profile-csv');
 
