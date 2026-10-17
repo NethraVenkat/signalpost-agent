@@ -18,7 +18,7 @@ class Config(BaseModel):
     run_id: str = ""
     max_requests: int | None = Field(default=None, ge=0)
     time_budget_seconds: float = Field(default=2400, gt=0)
-    deadline_fraction: float = Field(default=0.9, gt=0, le=1)
+    deadline_fraction: float = Field(default=0.85, gt=0, le=1)
     max_cost_usd: float = Field(default=0, ge=0)
     host_concurrency: int = Field(default=10, ge=1)
     workers: int = Field(default=64, ge=1)
@@ -31,8 +31,8 @@ class Config(BaseModel):
     website_stop_after_verified: bool = True
     nav_rank_candidates: bool = True
     public_activity: bool = False
-    website_request_cap: int = Field(default=8, ge=0, le=8)
-    website_total_request_cap: int = Field(default=13, ge=0)
+    website_request_cap: int = Field(default=6, ge=0, le=8)
+    website_total_request_cap: int = Field(default=9, ge=0)
     website_politeness_seconds: float = Field(default=1, ge=1)
     website_user_agent: str = "SignalpostAgent/1.0 (+https://github.com/NethraVenkat/signalpost-agent)"
     hiring: bool = False
