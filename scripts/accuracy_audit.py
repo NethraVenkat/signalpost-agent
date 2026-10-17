@@ -198,6 +198,8 @@ def audit_identity_claim(org: str, claim: dict, ev: dict, body: str) -> tuple[st
 
         # Typed comparisons
         if fld == 'identity.deleted':
+            if loc != '/slettedato':
+                return 'INCORRECT', 'Deletion requires the actual slettedato field', None
             from datetime import date
             try:
                 date.fromisoformat(expected)
@@ -578,6 +580,7 @@ def audit_website_claim(
     registry_body: str | None = None,
     context: dict | None = None,
     leaders: list[str] | None = None,
+    subunit_map: dict | None = None,
 ) -> tuple[str, str, any]:
     """Category B: Independently validates website assignment proof against destination page."""
     fld = claim.get("field", "")
@@ -590,6 +593,13 @@ def audit_website_claim(
     origin = val.get("candidate_origin")
     signals = val.get("signals") or []
     identity_level = val.get("identity_level")
+    branch = val.get('matched_via_subunit')
+    if branch:
+        if not subunit_map or branch not in subunit_map.get(org, set()):
+            return 'INCORRECT', 'Website subunit relationship lacks validated registry evidence', None
+        if ptype not in {'orgnr_on_page', 'orgnr', 'jsonld_vatid'}:
+            return 'INCORRECT', 'Subunit website requires exact-number proof', None
+        org = branch
 
     if not body:
         return "UNVERIFIABLE", "Stored destination website body unavailable", None
@@ -946,6 +956,31 @@ def audit_social_claim(
 
     claimed_host = parsed.netloc.lower().replace("www.", "")
     claimed_path = path_part.lower()
+    span = ev.get('claim_span')
+    if span is not None:
+        # A URL elsewhere in the document cannot validate an unrelated quote.
+        # Decode original JSON string tokens without rewriting the stored span.
+        text = html.unescape(span)
+        span_links = re.findall(r'https?://[^\s<>"\']+', text)
+        span_links += re.findall(r'href=[\'"]([^\'"]+)[\'"]', text, re.I)
+        for match in re.finditer(r'"(?:\\.|[^"\\])*"', text):
+            try:
+                token = json.loads(match.group())
+            except (ValueError, TypeError):
+                continue
+            if isinstance(token, str):
+                span_links.append(token)
+        localized = False
+        for candidate in span_links:
+            try:
+                target = urlparse(candidate)
+                if target.netloc.lower().replace('www.', '') == claimed_host and target.path.rstrip('/').lower() == claimed_path:
+                    localized = True
+                    break
+            except ValueError:
+                continue
+        if not localized:
+            return 'INCORRECT', 'Social evidence span does not localize the claimed profile URL', None
 
     web_val = website_claim.get("value", {}) if isinstance(website_claim, dict) else {}
     is_group = (web_val.get("relationship_note") == "group_site") or bool(web_val.get("other_orgnrs"))
@@ -967,9 +1002,10 @@ def audit_social_claim(
     plain_urls = re.findall(r'https?://[^\s<>"\']+', body)
     all_links = set(hrefs + plain_urls)
     page = Page(body.encode('utf8'), ev.get('source_url') or 'https://invalid.example/')
-    for block in page.jsonld:
-        for values in json_values(block, 'sameAs', exclude_person=True):
-            all_links.update(v for v in (values if isinstance(values, list) else [values]) if isinstance(v, str))
+    if not is_group:
+        for block in page.jsonld:
+            for values in json_values(block, 'sameAs', exclude_person=True):
+                all_links.update(v for v in (values if isinstance(values, list) else [values]) if isinstance(v, str))
 
     for link in all_links:
         try:
@@ -1229,9 +1265,6 @@ def run_comprehensive_audit(envelopes_path: Path, state_dir: Path, sample_seed: 
             if fam == "activity": has_act = True
             if fam == "subunits":
                 has_sub = True
-                sub_val = c.get("value")
-                if isinstance(sub_val, dict) and sub_val.get("organisation_number"):
-                    subunit_parent_map[org].add(sub_val["organisation_number"])
 
             if fam == "accounts":
                 val = c.get("value")
@@ -1244,6 +1277,10 @@ def run_comprehensive_audit(envelopes_path: Path, state_dir: Path, sample_seed: 
             status, reason, primary_ev = audit_claim_structural(c, ev_map, get_blob)
             num_eids = len(c.get("evidence_ids", []))
             if status == "PASS":
+                if fam == 'subunits' and c.get('field', '').startswith('subunits.unit.') and primary_ev:
+                    source_body = get_blob(primary_ev['content_sha256'])
+                    if isinstance(source_body, str) and audit_subunits_claim(org, c, primary_ev, source_body)[0] == 'CORRECT':
+                        subunit_parent_map[org].add(c['value']['organisation_number'])
                 cat_a["hash_checks"] += num_eids
                 cat_a["hash_passes"] += num_eids
                 cat_a["span_checks"] += num_eids
@@ -1377,7 +1414,8 @@ def run_comprehensive_audit(envelopes_path: Path, state_dir: Path, sample_seed: 
             elif fam == "website":
                 if fld == "official_website":
                     status, reason, exp = audit_website_claim(
-                        org, c, ev, body, reg_body, context=org_context, leaders=org_leaders
+                        org, c, ev, body, reg_body, context=org_context, leaders=org_leaders,
+                        subunit_map=subunit_parent_map
                     )
                 elif "social" in fld:
                     status, reason, exp = audit_social_claim(
