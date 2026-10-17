@@ -227,6 +227,21 @@ async def _run(config, client=None,synthesis_provider=None):
             bulk, bulk_sha = await offload(bulk_registry.load,config.bulk,valid_orgs,blobs,budget)
         except Exception as exc:
             warnings.append(f"bulk unavailable: {getattr(exc, 'code', type(exc).__name__)}; live fallback")
+    if bulk and not config.verify_bulk:
+        # Identity comes straight from the CSV row, before any network work and
+        # outside the deadline, so a deadline can never remove it. Only companies
+        # missing from the CSV depend on the live registry.
+        def csv_identities():
+            found = {}
+            for org in valid_orgs:
+                if org in bulk:
+                    try:
+                        found[org] = bulk_registry.extract(org, *bulk[org])
+                    except Exception:
+                        pass  # The company task retries and records the failure.
+            return found
+        for org, section in (await offload(csv_identities)).items():
+            update(envelopes[org], "identity", section)
     from .sources.subunits import build_subunit_map
     pre_loaded_subunit_map = await offload(build_subunit_map, inputs, bulk, prior)
     semaphore = asyncio.Semaphore(config.workers)
@@ -336,7 +351,8 @@ async def _run(config, client=None,synthesis_provider=None):
                     if org in bulk and not config.verify_bulk:
                         return await offload(bulk_registry.extract,org,*bulk[org])
                     return await brreg_enhet.fetch(org, http)
-                await isolate(envelope, "identity", identity)
+                if envelope.run.sections["identity"] != "available":
+                    await isolate(envelope, "identity", identity)
                 if envelope.run.sections["identity"] != "available":
                     for family in families[1:]:
                         state = envelope.run.sections["identity"]
