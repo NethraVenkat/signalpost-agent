@@ -32,9 +32,15 @@ def meaning(claim):
 def apply(envelope, previous, blobs):
     envelope.run.refresh = {**envelope.run.refresh,"mode": "baseline" if previous is None else "refresh", "previous_run_id": None,'observation_changes':[]}
     if previous is None:
+        envelope.run.refresh['observed_claim_ids'] = sorted(c.id for c in envelope.claims if c.availability == 'available')
         return
     old = previous.get("profile", previous) if "claims" not in previous else previous
     old_claims = {x["field"]: Claim.model_validate(x) for x in old.get("claims", [])}
+    previous_refresh = previous.get('run', {}).get('refresh', old.get('refresh', {}))
+    known_ids = set(previous_refresh.get('observed_claim_ids', []))
+    known_ids.update(c.id for c in old_claims.values() if c.availability == 'available')
+    envelope.run.refresh['observed_claim_ids'] = sorted(known_ids | {
+        c.id for c in envelope.claims if c.availability == 'available'})
     old_evidence = {x["id"]: Evidence.model_validate(x) for x in old.get("evidence", [])}
     for item in old_evidence.values():
         if item.snapshot_body_base64:
@@ -109,6 +115,12 @@ def apply(envelope, previous, blobs):
             if meaning(before) == meaning(after):
                 continue
         if meaning(before)==meaning(after): continue
+        if after and after.availability == 'available' and after.id in known_ids and meaning(before) is None:
+            envelope.run.refresh['observation_changes'].append({
+                'section': family, 'field': field, 'claim_id': after.id,
+                'previous_state': before.availability if before else 'not_observed',
+                'current_state': 'available', 'reason': 'previously_observed_claim_recovered'})
+            continue
         if before is None and after and after.availability != "available":
             continue
         if after is None and before and before.availability != "available":
