@@ -66,7 +66,7 @@ class Page(HTMLParser):
             raw_tag = self.get_starttag_text()
             span = raw_tag[:300]
             if len(raw_tag) > 300:
-                attributes = re.finditer(r'([^\s/>=]+)\s*=\s*(?:"([^"]*)"|\'([^\']*)\'|([^\s>]+))', raw_tag)
+                attributes = re.finditer(r"""(?<=[\s"'])([^\s/>="']+)\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>"']+))""", raw_tag)
                 for target in attributes:
                     value = next((v for v in target.groups()[1:] if v is not None), '')
                     if target.group(1).lower() == 'href' and html.unescape(value) == attrs.get('href'):

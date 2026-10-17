@@ -290,4 +290,6 @@
 
 2026-10-18T03:52:02+05:30 — Second frozen matrix at 87d5877: all seven capacity checks PASS, all 28,726 identity IDs; refresh has 0 lost IDs, 0 duplicates, 0 material changes, 257 availability observations. Touch probe found legacy component classes overriding 40px sizing; isolated CSS floor fixes all observed targets and passes ten 1440/375 viewport checks. Applying only that CSS change, then regating the exact final source.
 
-NEXT: Commit the verified touch-target CSS, run full suite, then run out/r2_gate.py once with fresh state and inspect all release gates before branch push.
+2026-10-18T03:54:56+05:30 — 7d37e1e touch-target correction passed 494 tests in 78.47 s. Adversarial malformed-tag probe then showed unbounded attribute scanning (4,000-character unmatched attribute: 0.119 s vs bounded 0.000102 s); scanner now starts only at attribute boundaries. A 50,000-character isolated subprocess regression and 49 focused checks pass. No ownership matching or canonical values changed.
+
+NEXT: Commit bounded attribute scanning; run the complete 495-test candidate suite, then start the single out/r2_gate.py matrix at that exact SHA.
