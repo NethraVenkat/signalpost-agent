@@ -1,6 +1,6 @@
 # 100-company smoke test — Signalpost v1.0.0
 
-Run on 17 October 2026 (IST) from a **clean clone of the remote** (`https://github.com/NethraVenkat/signalpost-agent.git`), checked out at the code commit **`c7118e3cbfc36e01d0d6532eeab9eec595cf0731`** (GitHub Actions green on that commit: tests and live-20), with a fresh `.venv` created by the README install step only (`uv sync --frozen`, empty package cache). The commit that adds this report changes only files under `reports/`; the tag `v1.0.0` points at that documentation commit, so a report cannot contain its own SHA. Full machine-readable report: [smoke-100-v1.0.0.json](smoke-100-v1.0.0.json).
+Run on 17 October 2026 (IST) from a **clean clone of the remote** (`https://github.com/NethraVenkat/signalpost-agent.git`), checked out at commit **`b68157a6e380fef3460efa1666d8e79935a069cf`** (GitHub Actions green on that commit: tests and live-20), with a fresh `.venv` created by the README install step only (`uv sync --frozen`, empty package cache). The commit that adds this report changes only files under `reports/`, and the tag `v1.0.0` points at it, so a report cannot contain its own SHA; the run above used the code of `b68157a` unchanged. Full machine-readable report: [smoke-100-v1.0.0.json](smoke-100-v1.0.0.json).
 
 ## Command (the README's one command, with its file names)
 
@@ -19,7 +19,7 @@ uv run signalpost run --organisations batch.jsonl --bulk registry.csv --output e
 |---|---|
 | Exit code | 0 |
 | Envelopes / profiles | 100 / 100, input order exact |
-| Wall time (whole command) | 59.6 s (pipeline `runtime_ms` 53,672) |
+| Wall time (whole command) | 59.5 s (pipeline `runtime_ms` 53,375) |
 | HTTP requests | 505 (limit 2,000) |
 | Envelope states | 100 complete |
 | Deadline hits / unhandled exceptions | 0 / 0 |
@@ -33,4 +33,4 @@ Section states (100 companies): identity 100 available · roles 100 available ·
 
 Verified websites: 3 of 100; activity: 3 companies; hiring: 0. These are counts for this sample, not a recall estimate. `complete` describes processing; the failed website sections are visible in the section states and error codes.
 
-The same command produced the same 505 requests and 6,850 claims in clean clones at `f4958e2`, `59f72d8` and `c7118e3`. The last two commits changed only configuration defaults that the CLI overrides, and tests.
+The same command produced the same 505 requests and 6,850 claims in earlier clean clones at the commits now named `a398828`, `6082086` and `f7e52fc` (see the commit-ID table in [v1.0.0-gate-checks.md](v1.0.0-gate-checks.md#commit-ids-after-the-history-rewrite)). The last two changed only configuration defaults that the CLI overrides, and tests. The history was later rewritten to remove commit-message trailers (trees identical), which is why this run is at `b68157a`.
