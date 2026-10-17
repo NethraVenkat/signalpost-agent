@@ -164,7 +164,29 @@ def proof_page_targets(page, base_url, limit=FOLLOWUP_PAGES):
     return targets[:limit]
 
 
-async def fetch(org, envelope, bulk, http):
+def previous_nomination(previous, context, units):
+    if not previous:
+        return None, None
+    row = previous if 'claims' in previous else previous.get('profile', {})
+    claims = row.get('claims', [])
+    old_registry = next((c['value'] for c in claims if c['field'] == 'identity.registered_website' and c['availability'] == 'available'), None)
+    if normalize_url(old_registry) != normalize_url(context.get('website')):
+        return None, None  # A new registry declaration takes precedence.
+    claim = next((c for c in claims if c['field'] == 'official_website' and c['availability'] == 'available'), None)
+    value = claim.get('value', {}) if claim else {}
+    if value.get('identity_level') != 'VERIFIED' or not value.get('candidate_origin'):
+        return None, None
+    branch = value.get('matched_via_subunit')
+    if branch and branch not in units:
+        return None, None  # Historical scope cannot authorize a branch today.
+    url = normalize_url(value.get('final_url'))
+    proof_url = normalize_url(value.get('proof_page_url'))
+    if not url:
+        return None, None
+    return Candidate(url, domain(url), value['candidate_origin'], branch), proof_url
+
+
+async def fetch(org, envelope, bulk, http, previous=None):
     context, registry_source, registry_locator = await offload(registry_context,envelope,bulk,http.blobs)
     units={c.value['organisation_number']:{} for c in envelope.claims
            if c.field.startswith('subunits.unit.') and c.availability=='available' and isinstance(c.value,dict)}
@@ -179,6 +201,9 @@ async def fetch(org, envelope, bulk, http):
         add(section, registry_source, org, "website", "registry_social." + digest(social)[:20],
             {"url": social, "platform": domain(social), "verification": "registry_asserted"}, registry_locator)
     candidates = generate(context)
+    refresh_candidate, refresh_proof = previous_nomination(previous, context, units)
+    if refresh_candidate:
+        candidates = [refresh_candidate] + [c for c in candidates if c.url != refresh_candidate.url]
     leaders = [c.value.get("name") for c in envelope.claims if c.family == "roles" and isinstance(c.value, dict) and (c.value.get("role_type") or {}).get("kode") in {"DAGL", "LEDE"} and c.value.get("name")]
     proved = set()
     successes = []
@@ -216,6 +241,20 @@ async def fetch(org, envelope, bulk, http):
             best = (proof, response, page)
             if proof.level == "BLOCKED":
                 raise SourceFailure("block_page")
+            if (candidate is refresh_candidate and refresh_proof and refresh_proof != response.url
+                    and domain(refresh_proof) == candidate.domain and proof.level != 'REJECT'):
+                try:
+                    checked_response = await http.get(refresh_proof, org, candidate.domain, proved)
+                    if checked_response.status == 200:
+                        checked_page = await offload(Page, checked_response.body, checked_response.url)
+                        checked_proof = await offload(candidate_proof, checked_page, org, context, candidate, leaders)
+                        if checked_proof.level == 'VERIFIED':
+                            pages.append((checked_response, checked_page))
+                            best = (checked_proof, checked_response, checked_page)
+                            proof, response, page = best
+                except SourceFailure as exc:
+                    attempts.append({'domain': candidate.domain, 'origin': candidate.origin,
+                                     'reason': exc.code, 'page': refresh_proof})
             if proof.level in {"VERIFIED", "HIGH"} and len(pages) == 1 and http.counts.get(org, 0) + 1 <= http.config.website_request_cap:
                 links = followup_links(page)
                 for target in links[:1]:
@@ -266,6 +305,8 @@ async def fetch(org, envelope, bulk, http):
                         break
             proof, response, page = best
             attempts.append({"domain": candidate.domain, "level": proof.level, "points": proof.points, "signals": proof.signals, "origin": candidate.origin, "reason": proof.reason})
+            if candidate is refresh_candidate and proof.level != 'VERIFIED':
+                continue  # Previous metadata nominates; only fresh exact proof publishes.
             if proof.level in {"VERIFIED", "HIGH"} or (proof.level=='REGISTRY_DECLARED' and http.config.registry_declared):
                 final_domain = domain(response.url)
                 successes.append((candidate, proof, response, page, pages))
