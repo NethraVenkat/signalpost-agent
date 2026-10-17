@@ -194,4 +194,6 @@
 
 2026-10-18T03:20:25+05:30 — First matrix finished: all 7 capacity gates PASS; cold comparison loses 10 IDs; refresh loses 8 IDs and needs material-event review, so release gate is NOT passed. Stricter audit reproduced a real long-anchor span truncation (929249526), now fixed by quoting around href in long tags; URLs/matching/claim values unchanged. 57 website/LinkedIn/span checks pass. Branch website audit false positive requires independently validated parent/subunit scope.
 
-NEXT: Commit long-anchor localization separately; finish auditor field/span/branch safeguards, run full tests, then freeze a corrected candidate and rerun mandatory gates.
+2026-10-18T03:24:10+05:30 — Long-anchor follow-up now handles quoted/unquoted href attributes and ignores href-like text inside other attributes; 58 website/LinkedIn/span tests pass. Strict auditor safeguards pass 61 tests, including exact deletion field, localized social span and independently validated branch ownership.
+
+NEXT: Commit long-anchor attribute handling separately, then commit auditor safeguards; improve refresh by revalidating prior exact-proven URLs before speculative rediscovery, without changing canonical values or proof rules.

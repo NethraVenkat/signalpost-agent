@@ -66,10 +66,13 @@ class Page(HTMLParser):
             raw_tag = self.get_starttag_text()
             span = raw_tag[:300]
             if len(raw_tag) > 300:
-                target = re.search(r'\bhref\s*=\s*(["\'])(.*?)\1', raw_tag, re.I | re.S)
-                if target:
-                    start = max(0, target.start() - 20)
-                    span = raw_tag[start:start + 300]
+                attributes = re.finditer(r'([^\s/>=]+)\s*=\s*(?:"([^"]*)"|\'([^\']*)\'|([^\s>]+))', raw_tag)
+                for target in attributes:
+                    value = next((v for v in target.groups()[1:] if v is not None), '')
+                    if target.group(1).lower() == 'href' and html.unescape(value) == attrs.get('href'):
+                        start = max(0, target.start() - 20)
+                        span = raw_tag[start:start + 300]
+                        break
             self._anchor = Link(urljoin(self.url, attrs.get("href", "")), "", span, any(x[1] for x in self.stack) and not any(x[0] == "article" or x[2] for x in self.stack))
         if tag == "script" and attrs.get("type", "").lower() == "application/ld+json":
             self._script = ""
