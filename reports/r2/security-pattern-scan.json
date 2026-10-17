@@ -1,0 +1,11 @@
+{
+  "tracked_files_scanned": 242,
+  "tracked_hits": [],
+  "history_diff_pattern_counts": {
+    "private_key": 0,
+    "github_token": 0,
+    "openai_key": 0,
+    "aws_key": 0
+  },
+  "scope": "Heuristic provider/private-key patterns across tracked files and all reachable commit diffs; no matched values printed. Does not establish exhaustive credential absence."
+}

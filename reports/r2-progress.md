@@ -86,4 +86,6 @@
 
 2026-10-18T02:50:18+05:30 — 5b4d949 drops A4. Refresh follow-up distinguishes newly checked supporting pages on the SAME accepted website from material changes. A changed-domain regression initially failed, was fixed by requiring unchanged website identity, and all 11 refresh tests now pass; genuine changed-site/contact additions stay material.
 
-NEXT: Commit refresh page-coverage classification, update candidate version/docs, then full-suite/Phase C quick gate and freeze for Phase E.
+2026-10-18T02:51:31+05:30 — 6942865 refresh follow-up committed. Candidate version now 1.1.0; uv.lock changes only the local project version, no dependency pins. README documents evaluator flags, honest report checks, bulk preparation timing and pending release status. Optional discovery and Ask omitted; Patentstyret research retained only. No main/v1.0.0 mutation.
+
+NEXT: Commit version/docs, then run the final full suite plus Phase C 100/24 quick gate before frozen Phase E runs.
