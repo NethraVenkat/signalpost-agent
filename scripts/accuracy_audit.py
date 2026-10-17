@@ -197,6 +197,15 @@ def audit_identity_claim(org: str, claim: dict, ev: dict, body: str) -> tuple[st
             return "INCORRECT", f"Locator {loc} not found in source JSON", None
 
         # Typed comparisons
+        if fld == 'identity.deleted':
+            from datetime import date
+            try:
+                date.fromisoformat(expected)
+            except (ValueError, TypeError):
+                return "INCORRECT", "Deletion requires a valid source deletion date", expected
+            if val is True:
+                return "CORRECT", "Deleted flag derived from source deletion date", expected
+            return "INCORRECT", "Deletion date does not support claimed flag", expected
         if fld == "identity.legal_name":
             if str(val or "").strip() == str(expected or "").strip():
                 return "CORRECT", "Legal name matches source field exactly", expected
@@ -627,6 +636,14 @@ def audit_website_claim(
         for m in orgnr_pat.finditer(visible_text):
             start = max(0, m.start() - 250)
             context_window = visible_text[start:m.end() + 50].lower()
+            name = legal_name((context or {}).get('name', ''))
+            invoice_context = bool(name and name in legal_name(context_window) and
+                                   'fakturaadresse' in context_window and
+                                   re.search(r'\behf\b', context_window))
+            if invoice_context:
+                # Invoice attachment/reference instructions are not customer
+                # references. Keep every other partner/customer rejection.
+                context_window = re.sub(r'\breferanser\b', '', context_window)
             if re.search(r"\b(?:kunder|våre\s+kunder|kundene|partnere|våre\s+partnere|partners|our\s+partners|referanser|kundereferanser|clients|our\s+clients|leverandører|portfolio)\b", context_window):
                 is_partner_mention = True
                 break
@@ -949,6 +966,10 @@ def audit_social_claim(
     hrefs = re.findall(r'href=[\'"]([^\'"]+)[\'"]', body, re.IGNORECASE)
     plain_urls = re.findall(r'https?://[^\s<>"\']+', body)
     all_links = set(hrefs + plain_urls)
+    page = Page(body.encode('utf8'), ev.get('source_url') or 'https://invalid.example/')
+    for block in page.jsonld:
+        for values in json_values(block, 'sameAs', exclude_person=True):
+            all_links.update(v for v in (values if isinstance(values, list) else [values]) if isinstance(v, str))
 
     for link in all_links:
         try:
