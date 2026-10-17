@@ -160,6 +160,7 @@ def parse_html(body, source_url, now):
     """Accept only a dated, single-link article with a bounded verbatim span."""
     raw = body.decode('utf8', errors='replace')
     items = []
+    seen = set()
     for n, match in enumerate(re.finditer(r'<article\b[^>]*>.*?</article\s*>', raw, re.I | re.S)):
         block = match.group()
         dates = re.findall(r'<time\b[^>]*\bdatetime\s*=\s*[\'"]([^\'"]+)[\'"]', block, re.I)
@@ -181,6 +182,9 @@ def parse_html(body, source_url, now):
         start, end = min(a for a, _ in ranges), max(b for _, b in ranges)
         if start < 0 or end-start > 300:
             continue
+        if url in seen:
+            continue
+        seen.add(url)
         items.append(({'title': title, 'title_source': 'article link', 'url': url,
                        'date': date, 'date_source': 'datetime', 'identity_level': None},
                       f'/article/{n}', block[start:end]))
