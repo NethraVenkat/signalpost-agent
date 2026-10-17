@@ -230,7 +230,12 @@ async def _run(config, client=None,synthesis_provider=None):
         except Exception as exc:
             warnings.append(f"bulk unavailable: {getattr(exc, 'code', type(exc).__name__)}; live fallback")
     bulk_seconds = time.monotonic() - bulk_started
-    budget.deadline += bulk_seconds
+    # Never grant a second full research budget after slow input preparation.
+    # CSV identities survive regardless. A bounded two-second lookup window
+    # covers missing rows (including deleted entities), while preparation still
+    # counts toward the overall wall-time budget and is reported separately.
+    if config.bulk is not None and valid_orgs and storage_error is None:
+        budget.deadline = max(budget.deadline, time.monotonic() + min(2.0, config.time_budget_seconds))
     if bulk and not config.verify_bulk:
         # Identity comes straight from the CSV row, before any network work and
         # outside the deadline, so a deadline can never remove it. Only companies

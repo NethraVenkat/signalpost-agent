@@ -50,4 +50,10 @@
 
 2026-10-18T02:40:28+05:30 — 04fbfbc B4 committed. B6 browser check PASS: ten 1440/375 screenshots, no horizontal overflow across large/small/missing profiles, directory and compare; keyboard search works, two-company query selection survives load. Equinor 127,629 bytes; claims retained separately. Optional Ask omitted to prioritize release gate.
 
-NEXT: Commit B6 responsive controls, then run Phase B full suite and fresh 100/24 quick gate before rc-b.
+2026-10-18T02:41:10+05:30 — 0646721 B6 committed with ten screenshots. Phase B full suite running; no duplicate performance job. Capacity follow-up planned: preparation must not receive a second whole crawl budget; charge it to total wall time while preserving completed CSV facts and a bounded missing-row lookup opportunity.
+
+2026-10-18T02:42:11+05:30 — Phase B full suite 483 passed in 71.39 s. Security heuristic scan: 242 tracked files plus reachable history diffs, no matching private-key/AWS/GitHub/OpenAI patterns (not an exhaustive secret certification). Single nationwide 30 s follow-up active after targeted regressions; bulk preparation now charged to total wall time with bounded missing-row lookup grace.
+
+2026-10-18T02:42:47+05:30 — Nationwide A1 follow-up PASS: 23.15 s wall, exit 0, all 28,726 baseline identity IDs retained. Preparation no longer grants another full research budget. 13 targeted checks pass. Research-share >=80% at 30 s remains unmet and will be reported rather than hidden.
+
+NEXT: Commit bounded preparation accounting; run Phase B fresh 100/24 quick gate, then prioritize cited summary topics for Phase C.
