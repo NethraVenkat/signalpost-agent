@@ -11,11 +11,14 @@ class SourceFailure(Exception):
 # Seconds of terminal work per company after the crawl stops: output write and
 # verification, finalisation, synthesis, profiles and report. Calibrated on the
 # 1,000-company capacity runs (reports/step1a-finalisation.md).
-FINALISE_SECONDS_PER_COMPANY = 0.01
+FINALISE_SECONDS_PER_COMPANY = 0.03
 # Static site generation, which is optional and skipped when it cannot fit.
 SITE_SECONDS_PER_COMPANY = 0.05
-OUTPUT_MARGIN_SECONDS = 5.0
-MIN_WORK_FRACTION = 0.80
+MIN_RESERVE_FRACTION = 0.10
+# Keep at least this share of the budget for crawling before dropping the site reserve.
+MIN_WORK_FRACTION = 0.25
+# Never reserve more than this share without the site; small budgets must still crawl.
+MAX_RESERVE_FRACTION = 0.6
 
 
 def finalisation_estimates(companies, site):
@@ -33,16 +36,17 @@ class Budget:
         except (OSError, ValueError):
             pass
         self.finalise_estimate, self.site_estimate = finalisation_estimates(companies, config.site_dir is not None)
-        # Measured 1,000-company short-run mandatory output work takes ~9 s.
-        # Reserve that per-company cost plus a fixed margin, never a percentage
-        # of a long budget. Optional rendering yields before mandatory output.
+        # Crawl until budget - max(finalisation + site, 10%). If that leaves too
+        # little time to crawl, drop the optional site reserve first, then cap
+        # the reserve so a small budget still crawls (finalisation shrinks with
+        # the evidence actually gathered).
         total = self.total_seconds
-        full = self.finalise_estimate + self.site_estimate + OUTPUT_MARGIN_SECONDS
+        full = max(self.finalise_estimate + self.site_estimate, MIN_RESERVE_FRACTION * total)
         self.site_reserved = total - full >= MIN_WORK_FRACTION * total
-        reserve = full if self.site_reserved else self.finalise_estimate + OUTPUT_MARGIN_SECONDS
-        # A sub-five-second diagnostic still gets a bounded opportunity to
-        # perform a live lookup rather than expiring before the first request.
-        reserve = min(reserve, max(self.finalise_estimate, total - 1.0))
+        if self.site_reserved:
+            reserve = full
+        else:
+            reserve = min(max(self.finalise_estimate, MIN_RESERVE_FRACTION * total), MAX_RESERVE_FRACTION * total)
         crawl_seconds = max(0.0, min(total - reserve, total * config.deadline_fraction))
         self.deadline = self.start + crawl_seconds
         self.cap = config.max_requests if config.max_requests is not None else 20 * companies

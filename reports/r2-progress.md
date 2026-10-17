@@ -80,4 +80,8 @@
 
 2026-10-18T02:47:08+05:30 — Phase C overview committed as 535-style checkpoint (see git log for exact SHA). Visual review found a pre-existing header label issue: role-entity deleted attributes were included by substring matching. Header now restricts legal-status chips to the three company identity fields; role facts remain in their section.
 
-NEXT: Commit the narrow legal-status header correction, then run full suite and Phase C smoke/24 gate.
+2026-10-18T02:48:02+05:30 — Correction: Phase C overview commit is 846c45d; narrow legal-status UI fix a5800a8. Full suite active. Reserve tuning A4 does not meet the requested 30 s >=80% research threshold, so it will be dropped under the master prompt fail-and-drop rule; bulk loader and bounded missing-row fix are independent and retained.
+
+2026-10-18T02:49:34+05:30 — Phase C full suite 486 passed in 89.87 s before A4 drop. A4 reserve tuning now reverted independently because its 30 s >=80% research gate failed; 23 reserve/cancellation/bulk checks pass on the reduced candidate. The measured 120 s improvement is historical experimental evidence, not shipped behavior.
+
+NEXT: Commit A4 drop, add conservative newly-checked-page refresh classification, then run final full/100/24 gate and freeze.

@@ -588,7 +588,7 @@ async def _run(config, client=None,synthesis_provider=None):
     await save_report()
     if config.site_dir is not None:
         site_estimate = budget.site_estimate
-        if not budget.site_reserved or budget.seconds_left() < site_estimate:
+        if budget.seconds_left() < site_estimate:
             report['site'] = {'state': 'skipped', 'reason': 'time_budget', 'seconds_left': round(budget.seconds_left(), 2),
                               'estimated_seconds': round(site_estimate, 2)}
             report['warnings'].append('site generation skipped: not enough time budget left; envelopes, profiles and report are complete')
