@@ -423,6 +423,13 @@ async def _run(config, client=None,synthesis_provider=None):
         website_http.search=Search(active_client,config,budget)
         search_metrics.update(website_http.search.metrics)
         website_http.search.metrics=search_metrics
+        # CSV omissions must not queue behind optional NAV startup or hundreds
+        # of subunit requests. Use the same live identity extractor and budget.
+        urgent = []
+        if bulk and not config.verify_bulk:
+            urgent = [asyncio.create_task(isolate(envelopes[org], 'identity',
+                      lambda org=org: brreg_enhet.fetch(org, http)))
+                      for org in inputs.unique if valid(org) and org not in bulk]
         nav_task=asyncio.create_task(nav.prefetch(nav_client or active_client,config,budget,blobs,nav_index,nav_names,prior)) if config.hiring and valid_orgs else None
         if nav_task:
             nav_task.add_done_callback(lambda _: subunit_consumer.stopped.set())
@@ -437,6 +444,8 @@ async def _run(config, client=None,synthesis_provider=None):
             finally:
                 if not started_task.done():started_task.cancel()
                 await asyncio.gather(started_task,return_exceptions=True)
+        if urgent:
+            await finish_before_deadline(urgent, budget, CANCEL_GRACE_SECONDS)
         progress.stage_update("Registry & Subunits", "running")
         tasks = [asyncio.create_task(company(org, http, website_http,nav_task)) for org in inputs.unique if valid(org)]
         try:
