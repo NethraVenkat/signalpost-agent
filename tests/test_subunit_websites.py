@@ -13,13 +13,19 @@ def test_candidate_order_subunit_before_slugs_with_unchanged_cap():
     assert not any(c.domain=='gmail.com' for c in generate({'subunits':[{'orgnr':OTHER,'email':'office@gmail.com'}]}))
 
 
+@pytest.mark.parametrize('origin', ['subunit_registry_website', 'subunit_registry_email'])
 @pytest.mark.parametrize('owner,accepted',[(OUR,True),(OTHER,True),('988258229',False),('',False)])
-def test_subunit_candidate_requires_exact_parent_or_that_subunit(owner,accepted):
-    candidate=Candidate('https://workplace.no/','workplace.no','subunit_registry_website',OTHER)
+def test_subunit_candidate_requires_exact_parent_or_that_subunit(owner,accepted,origin):
+    candidate=Candidate('https://workplace.no/','workplace.no',origin,OTHER)
     page=Page(html('Org nr '+owner).encode(),candidate.url)
     proof=candidate_proof(page,OUR,{'name':'Example AS'},candidate,[])
     assert (proof.level=='VERIFIED')==accepted
     if accepted:assert proof.token==owner
+
+
+@pytest.mark.parametrize('email', ['office@online.no', 'name@yahoo.co.uk', 'name@broadpark.no'])
+def test_isp_email_never_nominates_a_company_website(email):
+    assert not generate({'email': email})
 
 
 @pytest.mark.parametrize('owner', [OUR, OTHER])

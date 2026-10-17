@@ -434,6 +434,8 @@ def publish_result(org,envelope,http,section,choices,attempts,context):
     if candidate.subunit_orgnr and matched==candidate.subunit_orgnr:
         value['matched_via_subunit']=matched
     publish(section, response, org, "official_website", value, "identity-proof:" + matched, span)
+    if candidate.origin in {'registry_email', 'subunit_registry_email'}:
+        section.claims[-1].reasons['discovery_method'] = 'registry email domain'
     if value.get('matched_via_subunit'):
         section.claims[-1].reasons['relationship'] = 'Website of registered subunit ' + matched
         refs={ref for c in envelope.claims if c.field=='subunits.unit.'+matched for ref in c.evidence_ids}
