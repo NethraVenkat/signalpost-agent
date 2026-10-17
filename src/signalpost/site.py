@@ -312,7 +312,7 @@ def fact(claim, records):
         content += '<p class="financial-meta muted">' + esc(' · '.join(parts)) + '</p>'
     panel = bool(claim.get('evidence_ids') or available)
     if panel:
-        content += f'<button type="button" aria-expanded="false" aria-controls="source-{esc(local_id)}" data-toggle="source-{esc(local_id)}">Source</button><div id="source-{esc(local_id)}" data-source="{esc(local_id)}" class="evidence" hidden></div>'
+        content += f'<button type="button" aria-expanded="false" aria-controls="source-{esc(local_id)}" data-toggle="source-{esc(local_id)}">Check the evidence</button><div id="source-{esc(local_id)}" data-source="{esc(local_id)}" class="evidence" hidden></div>'
     if claim['family'] == 'accounts':
         return f'<tr id="{esc(anchor(claim))}"><th scope="row">{esc(label)} {chip(claim["availability"])}</th><td>{content}</td></tr>'
     return f'<article class="fact" id="{esc(anchor(claim))}"><h3>{esc(label)} {chip(claim["availability"])}</h3>{content}</article>'
@@ -691,6 +691,7 @@ def company_payload(row):
                       'field':claim.get('field'),'family':claim.get('family'),'availability':claim.get('availability'),
                       'values':list(leaves(v)), 'value':v, 'reporting_period':claim.get('reporting_period'),
                       'identity_level':v.get('identity_level') if isinstance(v,dict) else None})
+        facts[-1]['confidence'] = claim.get('confidence')
     if len({c['id'][:16] for c in row['claims']}) != len(row['claims']):
         raise ValueError('Conflicting local fact anchors')
     # Records from one response share source metadata. Store it once without losing fields.
