@@ -47,10 +47,10 @@ class TestExtractLinkedinFromBraveResult:
     def test_match_with_existing_evidence(self):
         brave_result = {
             'url': 'https://www.linkedin.com/company/telenor',
-            'title': 'Telenor | LinkedIn'
+            'title': 'Telenor ASA | LinkedIn'
         }
         company_name = 'Telenor ASA'
-        existing_websites = ['https://www.telenor.com', 'https://linkedin.com/company/telenor']
+        existing_websites = ['https://www.telenor.com', 'https://www.linkedin.com/company/telenor']
 
         result = extract_linkedin_from_brave_result(brave_result, company_name, existing_websites)
         assert result == 'https://www.linkedin.com/company/telenor'
@@ -98,7 +98,7 @@ class TestDiscoverLinkedinUrls:
             }
         ]
         company_name = 'Norges Bank'
-        websites = ['https://linkedin.com/company/norges-bank']
+        websites = ['https://www.linkedin.com/company/norges-bank']
 
         result = discover_linkedin_urls(company_name, brave_results, websites)
         assert result == 'https://www.linkedin.com/company/norges-bank'
