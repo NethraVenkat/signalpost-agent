@@ -373,6 +373,23 @@ def page(title, body, prefix='', kind='profile', company_data=None):
             f'<main id="main">{body}</main><footer>Evidence first. Unknown values remain unknown.</footer></body></html>\n')
 
 
+EXPLORER_VISIBLE_ROWS = 50
+
+
+def explorer_cells(c, records):
+    """Plain-text cells for one Evidence Explorer row (page and data file share this)."""
+    f = c.get('field', '')
+    v_str = value_text(c.get('value'))
+    if len(v_str) > 80: v_str = v_str[:77] + '…'
+    eids = c.get('evidence_ids', [])
+    e = records.get(eids[0]) if eids else None
+    span = e.get('claim_span', '—') if e else '—'
+    if len(span) > 100: span = span[:97] + '…'
+    return [f.replace('identity.', '').replace('accounts.', '').replace('_', ' '), c.get('availability', 'unknown'), v_str,
+            e.get('source_class', '—') if e else '—', e.get('locator', '—') if e else '—',
+            e.get('content_sha256', '') if e else '', span]
+
+
 def profile(row, title):
     claims = row['claims']
     claim_map = {c['id']: c for c in claims}
@@ -619,23 +636,16 @@ def profile(row, title):
     body += '<p class="muted">Audit trail of verified company facts with complete supporting provenance, exact source locators, cryptographic SHA-256 receipts, and verbatim source excerpts.</p>'
     body += '<div class="table-responsive"><table class="evidence-explorer-table" aria-label="Evidence Explorer audit trail">'
     body += '<thead><tr><th scope="col">Fact / Claim</th><th scope="col">Status</th><th scope="col">Value</th><th scope="col">Source Class</th><th scope="col">Locator</th><th scope="col">SHA-256</th><th scope="col">Verbatim Excerpt</th></tr></thead><tbody>'
-    for c in claims:
-        f = c.get('field', '')
-        lbl = f.replace('identity.', '').replace('accounts.', '').replace('_', ' ')
-        v = c.get('value')
-        v_str = value_text(v)
-        if len(v_str) > 80: v_str = v_str[:77] + '…'
-        avail = c.get('availability', 'unknown')
-        eids = c.get('evidence_ids', [])
-        e = records.get(eids[0]) if eids else None
-        s_class = e.get('source_class', '—') if e else '—'
-        loc = e.get('locator', '—') if e else '—'
-        sha = e.get('content_sha256', '') if e else ''
+    for c in claims[:EXPLORER_VISIBLE_ROWS]:
+        lbl, avail, v_str, s_class, loc, sha, span = explorer_cells(c, records)
         sha_disp = f'<code title="{esc(sha)}">{esc(sha[:12])}…</code>' if sha else '—'
-        span = e.get('claim_span', '—') if e else '—'
-        if len(span) > 100: span = span[:97] + '…'
         body += f'<tr><th scope="row">{esc(lbl)}</th><td>{chip(avail)}</td><td>{esc(v_str)}</td><td>{esc(s_class)}</td><td><code>{esc(loc)}</code></td><td>{sha_disp}</td><td><blockquote class="table-excerpt">{esc(span)}</blockquote></td></tr>'
-    body += '</tbody></table></div></section>'
+    body += '</tbody></table></div>'
+    hidden = len(claims) - EXPLORER_VISIBLE_ROWS
+    if hidden > 0:
+        body += (f'<p class="muted" id="explorer-more-note">Showing {EXPLORER_VISIBLE_ROWS} of {len(claims)} claims; every claim stays in the exports and the company data file.</p>'
+                 f'<button type="button" id="explorer-show-all" data-hidden="{hidden}">Show the remaining {hidden} claims</button>')
+    body += '</section>'
 
     body += f'<p><a href="../index.html">Back to search</a> · <a href="../compare.html#{esc(org)}">Compare with…</a></p>'
     return page(str(name) + ' · ' + title, body, '../', company_data=org+'.data.js')
@@ -680,9 +690,13 @@ def company_payload(row):
               'group':'people' if c['family']=='roles' else 'locations'} for c in row['claims']
              if c['field'].startswith(('roles.detail.','subunits.detail.'))]
     name = next((c['value'] for c in row['claims'] if c['field'] == 'identity.legal_name' and c['availability'] == 'available'), row['organisation_number'])
-    return {'orgnr': row['organisation_number'], 'name': name,
-            'source_fields':source_fields,'sources':sources,'evidence_fields':evidence_fields,
-            'records':records,'facts':facts,'registry_details':details}
+    all_records = {e['id']: e for e in row['evidence']}
+    payload = {'orgnr': row['organisation_number'], 'name': name,
+               'source_fields':source_fields,'sources':sources,'evidence_fields':evidence_fields,
+               'records':records,'facts':facts,'registry_details':details}
+    if len(row['claims']) > EXPLORER_VISIBLE_ROWS:
+        payload['explorer_rows'] = [explorer_cells(c, all_records) for c in row['claims'][EXPLORER_VISIBLE_ROWS:]]
+    return payload
 
 
 def index_record(row):
