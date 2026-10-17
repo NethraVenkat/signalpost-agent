@@ -57,7 +57,10 @@ def load(path: Path, wanted: set[str], blobs, budget):
 
         reader = csv.reader(lines(), delimiter=delimiter)
         fields = next(reader, [])
-        required={str(name).casefold() for name in fields}
+        normalized_fields = [str(name).casefold() for name in fields]
+        required = set(normalized_fields)
+        if len(required) != len(normalized_fields):
+            raise SourceFailure('malformed_bulk_columns', 'Bulk column names must be unique, including case variants')
         if not {'organisasjonsnummer','navn'} <= required:
             raise SourceFailure('malformed_bulk_columns','Bulk requires organisation-number and legal-name columns')
         header = "".join(captured)
