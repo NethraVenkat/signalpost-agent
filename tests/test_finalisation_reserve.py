@@ -2,6 +2,8 @@
 import json
 from types import SimpleNamespace
 
+import pytest
+
 from signalpost.budget import Budget, FINALISE_SECONDS_PER_COMPANY, SITE_SECONDS_PER_COMPANY
 from signalpost.sources.blobstore import BlobStore
 from tests.test_registry import config, execute, numbers
@@ -23,13 +25,23 @@ def test_reserve_covers_finalisation_and_site_for_a_comfortable_budget(tmp_path)
     reserve = 600 - crawl_seconds(budget)
     assert budget.site_reserved
     assert reserve >= 1000 * (FINALISE_SECONDS_PER_COMPANY + SITE_SECONDS_PER_COMPANY) - 0.01
-    assert reserve >= 60  # Never below 10 percent.
+    assert reserve >= 60 - 1e-6  # Never below 10 percent.
 
 
 def test_small_budget_drops_the_site_reserve_but_still_crawls(tmp_path):
     budget = budget_for(tmp_path, 1000, 30)
     assert not budget.site_reserved
-    assert 5 <= crawl_seconds(budget) <= 15
+    assert 5 <= crawl_seconds(budget) <= 15 + 1e-6  # Float subtraction of two clock readings is not exact.
+
+
+@pytest.mark.parametrize('clock', [0.0, 40.5, 63.86063473633481, 524281.25896297226])
+def test_deadline_arithmetic_does_not_depend_on_the_clock_value(tmp_path, monkeypatch, clock):
+    """A freshly booted CI runner has a monotonic clock of ~60 s; 63.86063473633481 gave
+    deadline - start = 15.000000000000007 for a 15 s crawl and broke an exact comparison."""
+    import signalpost.budget as budget_module
+    monkeypatch.setattr(budget_module.time, 'monotonic', lambda: clock)
+    assert crawl_seconds(budget_for(tmp_path, 1000, 30)) == pytest.approx(15, abs=1e-9)
+    assert crawl_seconds(budget_for(tmp_path / 'b', 1000, 600)) == pytest.approx(510, abs=1e-9)
 
 
 def test_no_site_means_no_site_reserve(tmp_path):
