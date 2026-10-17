@@ -20,6 +20,8 @@ def main():
     for flag in ("bulk", "previous"):
         command.add_argument("--" + flag, type=Path)
     command.add_argument("--state-dir", type=Path, default=Path("state"))
+    command.add_argument('--verify-bulk', action='store_true',
+                         help='Require an API identity check even on bulk hits; never fall back to CSV on verification failure')
     command.add_argument('--site-dir', type=Path)
     command.add_argument('--profiles-output', type=Path, help='Write kit-compatible raw profiles from the same verified claims')
     command.add_argument("--envelope-shape", choices=("union", "contract", "reference"), default="union")

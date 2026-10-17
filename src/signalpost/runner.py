@@ -77,11 +77,17 @@ async def isolate(envelope, family, call):
     update(envelope, family, result)
 
 
-def finalize(envelope, old, blobs, budget, began):
+def finalize(envelope, old, blobs, budget, began, verify_identity=False):
     for family in envelope.run.sections:
         if any(e.section == family and e.code == "not_started" for e in envelope.errors):
             update(envelope, family, missing(family, "deadline"))
     try:
+        if verify_identity and old is not None:
+            # Strict identity checks cannot be bypassed by refresh carry-forward.
+            import copy
+            old = copy.deepcopy(old)
+            holder = old if 'claims' in old else old.get('profile', old)
+            holder['claims'] = [c for c in holder.get('claims', []) if c.get('family') != 'identity']
         apply(envelope, old, blobs)
     except Exception as exc:
         envelope.errors.append(Error(section="refresh", code="previous_invalid", message=type(exc).__name__))
@@ -284,7 +290,7 @@ async def _run(config, client=None,synthesis_provider=None):
             async with semaphore:
                 budget.check()
                 async def identity():
-                    if org in bulk:
+                    if org in bulk and not config.verify_bulk:
                         return await offload(bulk_registry.extract,org,*bulk[org])
                     return await brreg_enhet.fetch(org, http)
                 await isolate(envelope, "identity", identity)
@@ -402,7 +408,7 @@ async def _run(config, client=None,synthesis_provider=None):
         progress.log_event("NAV hiring matching complete")
     for org, envelope in envelopes.items():
         # Invalid numbers must never inherit previously published information.
-        await offload(finalize,envelope,prior.get(org) if valid(org) and storage_error is None else None,blobs,budget,budget.start)
+        await offload(finalize,envelope,prior.get(org) if valid(org) and storage_error is None else None,blobs,budget,budget.start,config.verify_bulk)
     progress.stage_update("Cited Synthesis", "running")
     synthesis_service=SynthesisService(config,budget,synthesis_provider)
     for envelope in envelopes.values():
@@ -424,6 +430,9 @@ async def _run(config, client=None,synthesis_provider=None):
     report['dns_amortized_per_company'] = dns_metrics.get('dns_lookups', 0) / len(result) if result else 0
     report['max_dns_requests_per_company'] = max((n for org,n in dns_metrics.get('dns_by_company', {}).items() if org in envelopes), default=0)
     report["bulk_snapshot_sha256"] = bulk_sha
+    from .io.provenance import registry_provenance
+    report['registry_provenance'] = await offload(registry_provenance,result,budget.events,injected_client=client is not None)
+    report['registry_provenance']['verify_bulk'] = config.verify_bulk
     report['llm']=synthesis_service.metrics
     report['search']=search_metrics
     total=synthesis_service.metrics['estimated_usd']+search_metrics['estimated_usd']
