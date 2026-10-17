@@ -928,7 +928,7 @@ def generate_site(input_path, out, title='Signalpost'):
     input_path, out = Path(input_path), Path(out)
     if input_path.resolve().is_relative_to(out.resolve()):
         raise ValueError('Site directory must not contain its source envelopes')
-    input_rows = [normalize(json.loads(line)) for line in input_path.read_text(encoding='utf-8-sig').splitlines() if line.strip()]
+    input_rows = [normalize(json.loads(line)) for line in input_path.read_text(encoding='utf-8-sig').split('\n') if line.strip()]
     unique={}
     for row in input_rows:
         org=row['organisation_number']

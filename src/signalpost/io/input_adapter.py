@@ -54,7 +54,7 @@ def read(path: Path) -> Inputs:
                         values.append(org_val)
             else:
                 values = []
-                for line in text.splitlines():
+                for line in text.split("\n"):  # splitlines() would also split inside JSON strings on U+2028/U+2029.
                     if not line.strip():
                         continue
                     try:

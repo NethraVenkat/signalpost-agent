@@ -53,7 +53,7 @@ def is_valid_hiring_claim(claim: dict, evidence_map: dict) -> bool:
 
 def main():
     print(f"Reading historical cohort from {INPUT_PATH}...")
-    lines = INPUT_PATH.read_text(encoding="utf-8-sig").splitlines()
+    lines = [l for l in INPUT_PATH.read_text(encoding="utf-8-sig").split("\n") if l.strip()]
     total = len(lines)
     print(f"Loaded {total} envelope lines.")
 
