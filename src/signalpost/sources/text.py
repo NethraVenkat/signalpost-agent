@@ -9,7 +9,7 @@ class CharsetParser(HTMLParser):
     def handle_starttag(self, tag, attrs):
         if tag!='meta' or self.declared is not None:return
         attrs=dict(attrs)
-        match=re.search(r'charset\s*=\s*([\w-]+)',attrs.get('content',''),re.I)
+        match=re.search(r'charset\s*=\s*([\w-]+)',attrs.get('content') or '',re.I)
         self.declared=attrs.get('charset') or (match.group(1) if match else None)
 
 
