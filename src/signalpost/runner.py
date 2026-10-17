@@ -231,11 +231,9 @@ async def _run(config, client=None,synthesis_provider=None):
             warnings.append(f"bulk unavailable: {getattr(exc, 'code', type(exc).__name__)}; live fallback")
     bulk_seconds = time.monotonic() - bulk_started
     # Never grant a second full research budget after slow input preparation.
-    # CSV identities survive regardless. A bounded two-second lookup window
+    # CSV identities survive regardless. A bounded missing-row lookup window
     # covers missing rows (including deleted entities), while preparation still
     # counts toward the overall wall-time budget and is reported separately.
-    if config.bulk is not None and valid_orgs and storage_error is None:
-        budget.deadline = max(budget.deadline, time.monotonic() + min(2.0, config.time_budget_seconds))
     if bulk and not config.verify_bulk:
         # Identity comes straight from the CSV row, before any network work and
         # outside the deadline, so a deadline can never remove it. Only companies
@@ -436,6 +434,10 @@ async def _run(config, client=None,synthesis_provider=None):
         # of subunit requests. Use the same live identity extractor and budget.
         urgent = []
         if bulk and not config.verify_bulk:
+            if valid_orgs - bulk.keys():
+                # Start the missing-row opportunity when network work can
+                # actually begin, after selected-row extraction and setup.
+                budget.deadline = max(budget.deadline, time.monotonic() + min(3.0, config.time_budget_seconds))
             urgent = [asyncio.create_task(isolate(envelopes[org], 'identity',
                       lambda org=org: brreg_enhet.fetch(org, http)))
                       for org in inputs.unique if valid(org) and org not in bulk]

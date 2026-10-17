@@ -65,6 +65,21 @@ def test_bulk_preparation_does_not_consume_crawl_deadline(tmp_path, monkeypatch)
     assert any(c['field'] == 'identity.legal_name' and c['value'] == 'CSV Old Name' for c in rows[0]['claims'])
 
 
+def test_missing_csv_identity_window_starts_after_selected_row_extraction(tmp_path, monkeypatch):
+    import time
+    orgs = numbers(2)
+    original = bulk_registry.extract
+
+    def slow_extract(*args):
+        time.sleep(0.4)
+        return original(*args)
+
+    monkeypatch.setattr(bulk_registry, 'extract', slow_extract)
+    cfg = config(tmp_path, orgs, bulk=bulk_file(tmp_path, orgs[:1]), time_budget_seconds=0.2)
+    _, rows = execute(cfg)
+    assert all(row['run']['sections']['identity'] == 'available' for row in rows)
+
+
 @pytest.mark.parametrize('verify', [False, True])
 def test_bulk_verification_and_attribution(tmp_path, verify):
     org = numbers(1)[0]

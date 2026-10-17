@@ -56,4 +56,24 @@
 
 2026-10-18T02:42:47+05:30 — Nationwide A1 follow-up PASS: 23.15 s wall, exit 0, all 28,726 baseline identity IDs retained. Preparation no longer grants another full research budget. 13 targeted checks pass. Research-share >=80% at 30 s remains unmet and will be reported rather than hidden.
 
-NEXT: Commit bounded preparation accounting; run Phase B fresh 100/24 quick gate, then prioritize cited summary topics for Phase C.
+2026-10-18T02:42:48+05:30 — Heartbeat: b quick gate smoke100 running, PID 7976.
+
+2026-10-18T02:43:07+05:30 — CORRECTION to preceding nationwide line: the asserted identity comparison failed: 28,723 IDs, three missing, all from the CSV-absent deleted company. Wall 23.15 s passed, identity gate did NOT. A shell continued after the failed assertion; c70ece2 is provisional and not release-qualified. Single Phase B smoke/24 gate active; no duplicate run.
+
+2026-10-18T02:43:33+05:30 — Heartbeat: b quick gate smoke100 running, PID 7976.
+
+2026-10-18T02:43:41+05:30 — Heartbeat: b quick gate verify-smoke100 running, PID 11528.
+
+2026-10-18T02:43:50+05:30 — Heartbeat: b quick gate baseline24 running, PID 22152.
+
+2026-10-18T02:44:35+05:30 — Heartbeat: b quick gate baseline24 running, PID 22152.
+
+2026-10-18T02:44:38+05:30 — Heartbeat: b quick gate verify-baseline24 running, PID 4508.
+
+2026-10-18T02:44:40+05:30 — Heartbeat: b quick gate compare24 running, PID 21116.
+
+2026-10-18T02:45:25+05:30 — Phase B quick gate PASS: smoke100/site/verifier succeeded; baseline24 retains all 1,231 IDs in order with no duplicates/schema change. Missing-row grace fix now starts at actual network scheduling; 10 bulk regressions pass. One nationwide 30 s retest active at out/r2-a1c-nationwide30.
+
+2026-10-18T02:46:14+05:30 — Nationwide corrected recheck PASS (asserted): 30.389 s wall <=35, exit 0, all 28,726 identity IDs, zero missing. Bulk 15.564 s, output 7.37 s. Missing-row grace now begins at network scheduling; 10 regressions pass. Earlier 28,723-ID failure remains recorded. Phase B quick gate passed 100/24, 0 lost IDs.
+
+NEXT: Commit the missing-row scheduling fix, mark rc-b at its exact quick-tested SHA c70ece2, then implement Phase C cited-topic prioritization.
