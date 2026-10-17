@@ -42,3 +42,15 @@ def test_state_contract_values_stay_in_the_closed_sets(tmp_path):
         assert {c['availability'] for c in row['claims']} <= allowed_availability
         assert {m['state'] for m in row['modules'].values()} <= allowed_terminal
         json.dumps(row)
+
+
+def test_ambiguous_website_keeps_availability_and_envelope_stays_complete(tmp_path):
+    from signalpost.runner import placeholder, update
+    from signalpost.sources.extract import missing
+    envelope = placeholder('923609016', 'r', '2026-10-17T00:00:00Z', ('identity', 'website'))
+    update(envelope, 'identity', missing('identity', 'x', state='not_available'))
+    update(envelope, 'website', missing('website', 'no_localized_proof', state='ambiguous'))
+    assert envelope.run.sections['website'] == 'ambiguous'
+    assert any(c.family == 'website' and c.availability == 'ambiguous' for c in envelope.claims)
+    assert envelope.modules['website'].state == 'source_error'
+    assert not any(m.state == 'submission_error' for m in envelope.modules.values())

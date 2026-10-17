@@ -30,8 +30,8 @@ Raw bodies are never serialized into current envelopes. Legacy embedded-body inp
 | not_available | not_found | Checked absence within declared scope |
 | blocked | blocked_policy | Policy/access refusal; robots uses blocked_robots |
 | not_applicable | not_applicable | Explicitly supported exemption only |
-| ambiguous | submission_error | Lossy mapping; original ambiguity remains in claims/sections |
-| failed | source_error | Incomplete/unreliable check; budget_exhausted overrides; a deadline cut-off maps to budget_exhausted; only invalid input maps to submission_error |
+| ambiguous | source_error | Uncertain match: the claim and section stay `ambiguous`; the module is a checked-but-inconclusive source_error and does not make the envelope a submission_error |
+| failed | source_error | Incomplete/unreliable check; budget_exhausted overrides; a deadline cut-off maps to budget_exhausted; only invalid input maps to submission_error (the envelope is `submission_error` only for invalid input) |
 
 Terminal entity `complete` describes processing, not full coverage. It can coexist with source-error modules. Inspect section states and errors to assess coverage.
 
