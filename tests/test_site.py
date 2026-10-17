@@ -170,7 +170,23 @@ def test_reject_path_traversal_and_source_overlap(tmp_path):
     with pytest.raises(ValueError, match='contain'): generate_site(inp, tmp_path)
     raw = serialize(row, 'union'); raw['organisation_number'] = '../bad'
     inp.write_text(json.dumps(raw), encoding='utf8')
-    with pytest.raises(ValueError, match='nine digit'): generate_site(inp, tmp_path / 'site')
+    metrics = generate_site(inp, tmp_path / 'site')  # Malformed identifiers are isolated, not fatal.
+    assert metrics['companies'] == 0 and metrics['skipped_invalid_identifiers'] == 1
+    assert not list((tmp_path / 'site').rglob('*bad*'))  # Never used as a path.
+    assert 'id="invalid-inputs"' in (tmp_path / 'site/index.html').read_text(encoding='utf8')
+
+
+def test_malformed_identifier_does_not_block_valid_companies(tmp_path):
+    row, _ = envelope(tmp_path / 'run')
+    bad = serialize(row, 'union'); bad['organisation_number'] = '12345678'
+    out = tmp_path / 'site'
+    inp = tmp_path / 'mixed.jsonl'
+    inp.write_text(chr(10).join(json.dumps(x, ensure_ascii=False) for x in (serialize(row, 'union'), bad)), encoding='utf8')
+    metrics = generate_site(inp, out)
+    assert metrics['companies'] == 1 and metrics['input_records'] == 2 and metrics['skipped_invalid_identifiers'] == 1
+    assert (out / f'c/{row.organisation_number}.html').exists()
+    index = (out / 'index.html').read_text(encoding='utf8')
+    assert 'id="invalid-inputs"' in index and '12345678' in index
 
 
 def test_large_company_page_stays_under_gate_with_every_claim_reachable(tmp_path):
