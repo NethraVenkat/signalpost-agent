@@ -7,6 +7,7 @@ class Config(BaseModel):
     output: Path
     report: Path
     bulk: Path | None = None
+    verify_bulk: bool = False
     previous: Path | None = None
     site_dir: Path | None = None
     profiles_output: Path | None = None
