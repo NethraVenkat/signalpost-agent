@@ -75,14 +75,14 @@ def test_analyze_envelopes_coverage(sample_envelopes_file):
     stats = analyze_envelopes(sample_envelopes_file)
     coverage = stats['coverage_percent']
 
-    # All 3 have identity (complete or partial)
-    assert coverage['identity'] == 100.0
+    # 2 out of 3 have identity (complete or partial)
+    assert coverage['identity'] == pytest.approx(66.7, 0.1)
 
-    # 2 out of 3 have accounts
-    assert coverage['accounts'] == pytest.approx(66.7, 0.1)
+    # 1 out of 3 has accounts (not_available does not count as coverage)
+    assert coverage['accounts'] == pytest.approx(33.3, 0.1)
 
-    # 2 out of 3 have websites
-    assert coverage['websites'] == pytest.approx(66.7, 0.1)
+    # 1 out of 3 has websites (not_available does not count as coverage)
+    assert coverage['websites'] == pytest.approx(33.3, 0.1)
 
     # 1 out of 3 have hiring
     assert coverage['hiring'] == pytest.approx(33.3, 0.1)
