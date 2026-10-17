@@ -296,6 +296,8 @@ def fact(claim, records):
     v = claim.get('value')
     title = english_title(v) if claim['field'].startswith('identity.nace') and isinstance(v, dict) else None
     content = value_html(v) if available else '<p>' + esc(UNKNOWN.get(claim['availability'], 'Unknown.')) + '</p>'
+    if available and claim['field'] == 'official_website' and isinstance(v, dict) and v.get('matched_via_subunit'):
+        content = '<p class="relationship-note">Website of registered subunit ' + esc(v['matched_via_subunit']) + '</p>' + content
     if title:
         content = '<p>English industry title: ' + esc(title) + '</p>' + content
     if claim.get('carried_forward'):
