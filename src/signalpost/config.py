@@ -18,7 +18,7 @@ class Config(BaseModel):
     run_id: str = ""
     max_requests: int | None = Field(default=None, ge=0)
     time_budget_seconds: float = Field(default=2400, gt=0)
-    deadline_fraction: float = Field(default=0.85, gt=0, le=1)
+    deadline_fraction: float = Field(default=0.9, gt=0, le=1)
     max_cost_usd: float = Field(default=0, ge=0)
     host_concurrency: int = Field(default=10, ge=1)
     workers: int = Field(default=64, ge=1)

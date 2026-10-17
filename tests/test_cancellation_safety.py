@@ -69,10 +69,10 @@ def test_forced_deadline_with_stalled_nav_reader_finishes(tmp_path, monkeypatch)
         return index
     monkeypatch.setattr(nav, 'prefetch', stalled)
     orgs = numbers(COMPANIES)
-    cfg = config(tmp_path, orgs, hiring=True, workers=16, time_budget_seconds=2, deadline_fraction=1)
+    cfg = config(tmp_path, orgs, hiring=True, workers=16, time_budget_seconds=8, deadline_fraction=1)
     report, rows, elapsed = bounded(cfg, 60)
     membership(cfg, rows, orgs)
-    assert elapsed < 2 + 15, elapsed  # Deadline plus bounded cancellation grace and output.
+    assert elapsed < 8 + 5, elapsed  # Finalisation is reserved inside the budget.
     # Identity is either extracted or honestly marked as cut off by the deadline.
     assert any(r['run']['sections']['identity'] == 'available' for r in rows)
     for r in rows:
