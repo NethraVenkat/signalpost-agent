@@ -99,3 +99,22 @@ def test_historical_claim_recovery_is_observation_but_new_value_is_material(tmp_
     fresh.changes = []
     apply(fresh, serialize(absent, 'union'), BlobStore(cfg.state_dir))
     assert any(c.field == contact.field and c.type == 'added' for c in fresh.changes)
+
+
+def test_newly_checked_page_is_coverage_but_addition_on_checked_page_is_material(tmp_path, monkeypatch):
+    from tests.test_websites import execute_web, html
+    from signalpost.models.envelope import Envelope
+    from signalpost.models.shapes import serialize
+    from signalpost.refresh.diff import apply
+    from signalpost.sources.blobstore import BlobStore
+    _, raw, _, cfg = execute_web(tmp_path, monkeypatch, html(extra='<a href="mailto:office@example.no">Email</a>'))
+    fresh = Envelope.model_validate(raw)
+    contact = next(c for c in fresh.claims if c.field.startswith('contact.email.'))
+    previous = fresh.model_copy(deep=True)
+    previous.claims = [c for c in previous.claims if c.id != contact.id]
+    previous.run.refresh.pop('observed_claim_ids', None)
+    previous.run.refresh['website'] = {'checked_urls': ['https://example.no/other']}
+    apply(fresh, serialize(previous, 'union'), BlobStore(cfg.state_dir))
+    assert not any(c.field == contact.field for c in fresh.changes)
+    assert any(c.get('field') == contact.field and c['reason'] == 'newly_checked_supporting_page'
+               for c in fresh.run.refresh['observation_changes'])
