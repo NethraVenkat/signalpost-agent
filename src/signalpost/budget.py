@@ -18,7 +18,7 @@ MIN_RESERVE_FRACTION = 0.10
 # Keep at least this share of the budget for crawling before dropping the site reserve.
 MIN_WORK_FRACTION = 0.25
 # Never reserve more than this share without the site; small budgets must still crawl.
-MAX_RESERVE_FRACTION = 0.5
+MAX_RESERVE_FRACTION = 0.6
 
 
 def finalisation_estimates(companies, site):

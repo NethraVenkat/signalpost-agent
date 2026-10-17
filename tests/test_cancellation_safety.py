@@ -102,3 +102,17 @@ def test_verified_nav_detail_survives_website_deadline(tmp_path, monkeypatch):
     jobs=[c for c in rows[0]['claims'] if c['family']=='hiring' and c['availability']=='available']
     assert len(jobs)==1 and jobs[0]['value']['employer_orgnr']==ORG
     assert rows[0]['run']['sections']['website']=='failed'
+
+
+def test_csv_omission_identity_is_checked_during_stalled_nav_startup(tmp_path, monkeypatch):
+    async def stalled(*args, **kwargs):
+        await asyncio.sleep(3600)  # Does not even announce NAV startup.
+    monkeypatch.setattr(nav, 'prefetch', stalled)
+    orgs = numbers(3)
+    cfg = config(tmp_path, orgs, hiring=True, time_budget_seconds=2)
+    cfg.bulk = tmp_path/'partial.csv'
+    cfg.bulk.write_text('organisasjonsnummer,navn\n'+''.join(n+',Known AS\n' for n in orgs[:2]), encoding='utf8')
+    _, rows, _ = bounded(cfg, 15)
+    membership(cfg, rows, orgs)
+    assert all(r['run']['sections']['identity']=='available' for r in rows)
+    assert any(c['field']=='identity.legal_name' and c['availability']=='available' for c in rows[2]['claims'])

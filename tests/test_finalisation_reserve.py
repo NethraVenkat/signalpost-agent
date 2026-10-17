@@ -37,10 +37,10 @@ def test_small_budget_drops_the_site_reserve_but_still_crawls(tmp_path):
 @pytest.mark.parametrize('clock', [0.0, 40.5, 63.86063473633481, 524281.25896297226])
 def test_deadline_arithmetic_does_not_depend_on_the_clock_value(tmp_path, monkeypatch, clock):
     """A freshly booted CI runner has a monotonic clock of ~60 s; 63.86063473633481 gave
-    deadline - start = 15.000000000000007 for a 15 s crawl and broke an exact comparison."""
+    deadline subtraction once broke an exact comparison on a freshly booted runner."""
     import signalpost.budget as budget_module
     monkeypatch.setattr(budget_module.time, 'monotonic', lambda: clock)
-    assert crawl_seconds(budget_for(tmp_path, 1000, 30)) == pytest.approx(15, abs=1e-9)
+    assert crawl_seconds(budget_for(tmp_path, 1000, 30)) == pytest.approx(12, abs=1e-9)
     assert crawl_seconds(budget_for(tmp_path / 'b', 1000, 600)) == pytest.approx(510, abs=1e-9)
 
 
