@@ -7,6 +7,36 @@
   const stateChip = state => element('span', String(state).replace(/_/g,' '), 'chip '+state);
   const format = value => value == null ? 'Unknown' : typeof value === 'number' ? value.toLocaleString('en-US',{maximumFractionDigits:20}) : String(value);
 
+  const globalDialog = document.getElementById('global-search-dialog');
+  const globalInput = document.getElementById('global-search-input');
+  const globalResults = document.getElementById('global-search-results');
+  const companyPrefix = document.body.dataset.page === 'profile' ? '' : 'c/';
+  function globalSearch() {
+    globalResults.replaceChildren();
+    const query = fold(globalInput.value).trim();
+    const matches = records.filter(r => !query || fold(r.name + ' ' + r.orgnr).includes(query)).slice(0, 15);
+    for(const r of matches) {
+      const item = element('li');
+      const a = element('a', r.name + ' · ' + r.orgnr);
+      a.href = companyPrefix + r.orgnr + '.html';
+      item.append(a);globalResults.append(item);
+    }
+    if(!matches.length) globalResults.append(element('li', 'No matching company in this batch.'));
+  }
+  function openGlobalSearch() {
+    if(!globalDialog.open) globalDialog.showModal();
+    globalSearch();globalInput.focus();
+  }
+  document.getElementById('global-search-open')?.addEventListener('click', openGlobalSearch);
+  document.getElementById('global-search-close')?.addEventListener('click', () => globalDialog.close());
+  globalInput?.addEventListener('input', globalSearch);
+  document.addEventListener('keydown', event => {
+    const editing = event.target.closest('input,textarea,select,[contenteditable="true"]');
+    if(((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'k') || (event.key === '/' && !editing)) {
+      event.preventDefault();openGlobalSearch();
+    }
+  });
+
   const sanitizeCsvCell = value => {
     if (value == null) return '';
     if (typeof value === 'boolean') return value ? 'Yes' : 'No';
