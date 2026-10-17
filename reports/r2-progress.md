@@ -42,4 +42,6 @@
 
 2026-10-18T02:38:09+05:30 — f1281cd Phase A checkpoint, local rc-a. B1 five profile areas implemented while retaining old anchors, evidence controls and every claim; 24 site tests pass.
 
-NEXT: Commit B1, then implement global keyboard search on every page.
+2026-10-18T02:38:40+05:30 — 030c9f0 B1 committed. B2 adds offline global name/orgnr search on every page with / and Ctrl/Command+K, native modal focus handling and bounded results. JS syntax and 24 site tests pass; browser gate pending.
+
+NEXT: Commit B2; implement five-area directory filters and URL-based compare selection.
