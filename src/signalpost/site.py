@@ -11,9 +11,9 @@ from .synthesis.nace import english_title
 
 CSP = "default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; base-uri 'none'; form-action 'none'"
 ASSETS = Path(__file__).with_name('site_assets')
-GROUPS = [('what-it-does', 'What it does', 'identity'), ('financials', 'Financials', 'accounts'),
-          ('people', 'People', 'roles'), ('locations', 'Locations', 'subunits'),
-          ('online', 'Online presence', 'website'), ('hiring', 'Hiring', 'hiring'),
+GROUPS = [('what-it-does', 'What it does', 'identity'), ('online', 'Online presence', 'website'),
+          ('financials', 'Financials', 'accounts'), ('people', 'People', 'roles'),
+          ('hiring', 'Hiring', 'hiring'), ('locations', 'Locations', 'subunits'),
           ('activity', 'Public activity', 'activity')]
 UNKNOWN = {'not_available': 'Checked; no information found within the source scope.',
            'failed': 'Check incomplete because a source or request budget was unavailable.',
@@ -422,12 +422,21 @@ def profile(row, title):
     for c in claims:
         f = c['field']; family = c['family']
         key = ('what-it-does' if f.startswith('website_description.') else
-               'locations' if family == 'subunits' or 'address' in f else
+               'locations' if family == 'subunits' else
+               'hiring' if f == 'identity.employees' else
                'online' if family == 'website' or f == 'identity.registered_website' else
                'financials' if family == 'accounts' else 'people' if family == 'roles' else
                'hiring' if family == 'hiring' else 'activity' if family == 'activity' else 'what-it-does')
         buckets[key].append(c)
     for key, label, family in GROUPS:
+        areas = {'what-it-does': ('brief', 'Company brief'),
+                 'financials': ('financials', 'Latest financials'),
+                 'people': ('leadership', 'Who runs it?'),
+                 'hiring': ('workforce', 'Working here'),
+                 'activity': ('activity', 'Recent activity')}
+        if key in areas:
+            area, heading = areas[key]
+            body += f'<section class="company-area" data-area="{area}"><h2>{heading}</h2>'
         items = buckets[key]
         details=[c for c in items if c['field'].startswith(('roles.detail.','subunits.detail.'))]
         items=[c for c in items if not c['field'].startswith(('roles.detail.','subunits.detail.'))]
@@ -463,6 +472,8 @@ def profile(row, title):
         if details:
             body += '<details><summary>Additional official attributes ('+str(len(details))+')</summary><div data-registry-details="'+esc(key)+'"></div></details>'
         body += '</section>'
+        if key in {'online', 'financials', 'people', 'locations', 'activity'}:
+            body += '</section>'
 
     # 5. Verified Company Timeline (Dated business events)
     timeline_events = []
