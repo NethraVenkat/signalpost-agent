@@ -976,6 +976,30 @@ def audit_activity_claim(org: str, claim: dict, ev: dict, body: str) -> tuple[st
     if not body:
         return "UNVERIFIABLE", "Activity XML feed body unavailable", None
 
+    if ev.get('extraction_method') == 'signalpost.activity.html.v1':
+        from datetime import datetime
+        from urllib.parse import urljoin
+        locator = re.fullmatch(r'/article/(\d+)', ev.get('locator', ''))
+        blocks = re.findall(r'<article\b[^>]*>.*?</article\s*>', body, re.I | re.S)
+        if not locator or int(locator[1]) >= len(blocks):
+            return 'INCORRECT', 'HTML article locator missing', None
+        block = blocks[int(locator[1])]
+        dates = re.findall(r'<time\b[^>]*\bdatetime\s*=\s*[\'"]([^\'"]+)[\'"]', block, re.I)
+        links = re.findall(r'<a\b[^>]*\bhref\s*=\s*[\'"]([^\'"]+)[\'"][^>]*>(.*?)</a\s*>', block, re.I | re.S)
+        if len(dates) != 1 or len(links) != 1:
+            return 'INCORRECT', 'HTML article is not unambiguous', None
+        try:
+            normalized_date = datetime.fromisoformat(dates[0].replace('Z', '+00:00')).date().isoformat()
+        except ValueError:
+            return 'INCORRECT', 'HTML article date invalid', None
+        href, title = links[0]
+        expected_url = urljoin(ev.get('source_url', ''), html.unescape(href))
+        if (expected_url == act_url and normalized_date == date_str
+                and html.unescape(title.strip()) == val.get('title')
+                and val.get('date_source') == 'datetime'):
+            return 'CORRECT', 'URL, title and date co-occur in located HTML article', date_str
+        return 'INCORRECT', 'HTML article fields disagree', None
+
     try:
         clean_xml = re.sub(r'<\?xml[^>]*\?>', '', body).strip()
         root = ET.fromstring(clean_xml)
