@@ -82,6 +82,21 @@ def test_same_name_different_company():
     assert score(page, OTHER, {"name": "Example AS", "municipality": "BERGEN"}, "legal_name_slug", []).level == "REJECT"
 
 
+def test_foreign_home_requires_exact_contact_proof(tmp_path, monkeypatch):
+    def response(request):
+        if request.url.path == '/robots.txt':
+            return httpx.Response(200, text='User-agent: *\nAllow: /')
+        if request.url.host == 'example.no' and request.url.path == '/kontakt':
+            return httpx.Response(200, text=html('Org nr '+OUR))
+        return httpx.Response(200, text=html('Web agency Org nr '+OTHER,
+            '<footer><a href="https://instagram.com/agency">Agency</a></footer>'))
+    _, row, _, _ = execute_web(tmp_path, monkeypatch, response=response)
+    website = next(c for c in row['claims'] if c['field'] == 'official_website')
+    assert website['value']['identity_level'] == 'VERIFIED'
+    assert website['value']['proof_page_url'].endswith('/kontakt')
+    assert not any('agency' in str(c['value']) for c in row['claims'] if c['field'].startswith('social_profile.'))
+
+
 def test_robots_prevents_page(tmp_path, monkeypatch):
     _, row, requests, _ = execute_web(tmp_path, monkeypatch, robots="User-agent: *\nDisallow: /")
     assert row["run"]["sections"]["website"] == "blocked"
