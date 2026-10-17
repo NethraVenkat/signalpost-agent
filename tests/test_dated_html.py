@@ -15,6 +15,10 @@ def test_dated_article_has_local_verbatim_evidence():
                 'extraction_method': 'signalpost.activity.html.v1'}
     assert audit_activity_claim('923609016', {'value': value}, evidence, body.decode())[0] == 'CORRECT'
     assert audit_activity_claim('923609016', {'value': {**value, 'date': '2026-10-14'}}, evidence, body.decode())[0] == 'INCORRECT'
+    shifted = body.replace(b'2026-10-15', b'2026-10-14T23:30:00-04:00')
+    shifted_value, _, _ = parse_html(shifted, evidence['source_url'], datetime(2026, 10, 17, tzinfo=timezone.utc))[0]
+    assert shifted_value['date'] == '2026-10-15'
+    assert audit_activity_claim('923609016', {'value': shifted_value}, evidence, shifted.decode())[0] == 'CORRECT'
     for invalid in (body.replace(b'2026-10-15', b'2099-10-15'),
                     body.replace(b'/nyheter/opening', b'https://other.no/nyheter/opening'),
                     body.replace(b'<time', b'<div').replace(b'</time>', b'</div>'),

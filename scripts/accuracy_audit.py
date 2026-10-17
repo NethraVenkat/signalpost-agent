@@ -977,7 +977,7 @@ def audit_activity_claim(org: str, claim: dict, ev: dict, body: str) -> tuple[st
         return "UNVERIFIABLE", "Activity XML feed body unavailable", None
 
     if ev.get('extraction_method') == 'signalpost.activity.html.v1':
-        from datetime import datetime
+        from datetime import datetime, timezone
         from urllib.parse import urljoin
         locator = re.fullmatch(r'/article/(\d+)', ev.get('locator', ''))
         blocks = re.findall(r'<article\b[^>]*>.*?</article\s*>', body, re.I | re.S)
@@ -989,7 +989,10 @@ def audit_activity_claim(org: str, claim: dict, ev: dict, body: str) -> tuple[st
         if len(dates) != 1 or len(links) != 1:
             return 'INCORRECT', 'HTML article is not unambiguous', None
         try:
-            normalized_date = datetime.fromisoformat(dates[0].replace('Z', '+00:00')).date().isoformat()
+            parsed_date = datetime.fromisoformat(dates[0].replace('Z', '+00:00'))
+            if parsed_date.tzinfo is None:
+                parsed_date = parsed_date.replace(tzinfo=timezone.utc)
+            normalized_date = parsed_date.astimezone(timezone.utc).date().isoformat()
         except ValueError:
             return 'INCORRECT', 'HTML article date invalid', None
         href, title = links[0]
