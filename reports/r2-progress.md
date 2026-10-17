@@ -76,4 +76,6 @@
 
 2026-10-18T02:46:14+05:30 — Nationwide corrected recheck PASS (asserted): 30.389 s wall <=35, exit 0, all 28,726 identity IDs, zero missing. Bulk 15.564 s, output 7.37 s. Missing-row grace now begins at network scheduling; 10 regressions pass. Earlier 28,723-ID failure remains recorded. Phase B quick gate passed 100/24, 0 lost IDs.
 
-NEXT: Commit the missing-row scheduling fix, mark rc-b at its exact quick-tested SHA c70ece2, then implement Phase C cited-topic prioritization.
+2026-10-18T02:47:03+05:30 — 3b46f78 fixes the CSV-absent live lookup boundary; nationwide30 asserted PASS. Phase C: top overview selects up to eight existing validated/cited sentences across business, leadership, location, finances, jobs, dated activity and changes; remaining sentences remain available. Sparse profiles are never padded. 41 focused tests pass.
+
+NEXT: Commit Phase C overview; restrict header status chips to identity facts, then run the final Phase C full suite and 100/24 gate.
