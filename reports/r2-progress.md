@@ -196,4 +196,6 @@
 
 2026-10-18T03:24:10+05:30 — Long-anchor follow-up now handles quoted/unquoted href attributes and ignores href-like text inside other attributes; 58 website/LinkedIn/span tests pass. Strict auditor safeguards pass 61 tests, including exact deletion field, localized social span and independently validated branch ownership.
 
-NEXT: Commit long-anchor attribute handling separately, then commit auditor safeguards; improve refresh by revalidating prior exact-proven URLs before speculative rediscovery, without changing canonical values or proof rules.
+2026-10-18T03:24:13+05:30 — Long-anchor follow-up committed (see git log); auditor now validates root deletion fields, rejects unrelated social quotes and escaped group fallbacks, and checks branch websites only through structurally and semantically verified BRREG subunit relationships. 61 audit/adversarial tests pass. Prior artifacts remain unchanged and retain the real old-span failure.
+
+NEXT: Commit auditor safeguards, then implement exact revalidation of previous verified website nominations for refresh stability.
