@@ -1743,3 +1743,21 @@ html[data-theme="light"] .not_available, html[data-theme="light"] .not_applicabl
 
 
 
+
+/* R2: keyboard focus, touch targets and bounded offline search. */
+button, input, select, nav a { min-height: 40px; }
+:focus-visible { outline: 3px solid #147ca8; outline-offset: 3px; }
+#global-search-dialog { width: min(38rem, calc(100vw - 2rem)); max-height: 85vh; overflow: auto; color: var(--ink); background: var(--card); border: 2px solid var(--line); border-radius: 12px; }
+#global-search-dialog::backdrop { background: rgb(0 0 0 / 55%); }
+#global-search-dialog label, #global-search-dialog input { display: block; width: 100%; }
+#global-search-results { padding: 0; list-style: none; }
+#global-search-results a { display: block; padding: 12px 4px; overflow-wrap: anywhere; }
+.company-area { border-top: 2px solid var(--line); padding-top: 1rem; }
+@media (max-width: 600px) {
+  nav { flex-wrap: wrap; }
+  main, section, article, .compare-card, dialog { min-width: 0; max-width: 100%; box-sizing: border-box; }
+  table { max-width: 100%; }
+  .financial-table, .financial-table tbody, .financial-table tr, .financial-table th, .financial-table td { display: block; width: auto; }
+  .financial-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .values dd, code, blockquote, .fact, h1, h2, h3 { overflow-wrap: anywhere; }
+}

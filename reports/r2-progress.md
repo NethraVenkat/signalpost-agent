@@ -48,4 +48,6 @@
 
 2026-10-18T02:39:40+05:30 — 796e987 directory/compare committed. B4 evidence buttons explicitly say Check the evidence; expanded panels retain URL, UTC retrieval, period, verbatim quote, locator, method and hash, and now show claim confidence/availability. 24 site tests pass.
 
-NEXT: Commit B4, then apply responsive focus/target sizing and run browser checks on saved 24-company data.
+2026-10-18T02:40:28+05:30 — 04fbfbc B4 committed. B6 browser check PASS: ten 1440/375 screenshots, no horizontal overflow across large/small/missing profiles, directory and compare; keyboard search works, two-company query selection survives load. Equinor 127,629 bytes; claims retained separately. Optional Ask omitted to prioritize release gate.
+
+NEXT: Commit B6 responsive controls, then run Phase B full suite and fresh 100/24 quick gate before rc-b.
