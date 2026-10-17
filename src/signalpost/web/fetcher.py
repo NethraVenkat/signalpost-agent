@@ -171,6 +171,14 @@ class WebsiteHttp:
         # until the final authority's policy has also been checked.
         return await self.raw(url, org, domains, xml, obey_robots=True)
 
+    def discovery_cap(self, org):
+        """Original per-company ceiling (6, within a total of 9 with registry calls).
+
+        Sitemap/feed guessing for other domains keeps it; the larger cap is for proof pages.
+        """
+        registry_requests = sum(e['organisation_number'] == org and e.get('section') != 'website' for e in self.budget.events)
+        return min(6, max(0, 9 - registry_requests))
+
     async def candidate(self, candidate, org, proven=()):
         """Try hostname variants with verified TLS, then permitted plaintext."""
         await self.precheck(candidate, org)
