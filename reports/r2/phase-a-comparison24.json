@@ -1,0 +1,14 @@
+{
+  "before": "out/audit24-v1/fresh.jsonl",
+  "after": "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r2-quick-a\\baseline24\\envelopes.jsonl",
+  "before_rows": 24,
+  "after_rows": 24,
+  "same_order": true,
+  "lost_count": 0,
+  "lost_by_family": {},
+  "lost": [],
+  "added_count": 0,
+  "duplicate_claim_ids": 0,
+  "material_changes": 0,
+  "observation_changes": 0
+}
