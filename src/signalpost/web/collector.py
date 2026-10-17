@@ -147,6 +147,23 @@ def followup_links(page):
     return list(dict.fromkeys(url for _,url in sorted(ranked,key=lambda x:x[0])))
 
 
+# Pages where Norwegian companies state their organisation number. They are tried
+# after the links found on the home page; proof rules apply to them unchanged.
+FALLBACK_PROOF_PATHS = ('/kontakt', '/kontakt-oss', '/om-oss', '/om', '/personvern', '/personvernerklaering')
+FOLLOWUP_PAGES = len(FALLBACK_PROOF_PATHS)
+
+
+def proof_page_targets(page, base_url, limit=FOLLOWUP_PAGES):
+    base = urlsplit(base_url)
+    fixed = [urlunsplit((base.scheme, base.netloc, path, '', '')) for path in FALLBACK_PROOF_PATHS]
+    targets = []
+    for target in followup_links(page) + fixed:
+        target = normalize_url(target)
+        if target and target not in targets:
+            targets.append(target)
+    return targets[:limit]
+
+
 async def fetch(org, envelope, bulk, http):
     context, registry_source, registry_locator = await offload(registry_context,envelope,bulk,http.blobs)
     units={c.value['organisation_number']:{} for c in envelope.claims
@@ -215,9 +232,7 @@ async def fetch(org, envelope, bulk, http):
                             pass
             elif proof.level not in {"VERIFIED", "REJECT"}:
                 seen = {response.url}
-                links = followup_links(page)
-                for target in links[:2]:
-                    target = normalize_url(target)
+                for target in proof_page_targets(page, response.url):
                     if not target or target in seen or domain(target) != domain(response.url):
                         continue
                     seen.add(target)
