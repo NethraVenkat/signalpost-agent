@@ -80,6 +80,28 @@ def test_missing_csv_identity_window_starts_after_selected_row_extraction(tmp_pa
     assert all(row['run']['sections']['identity'] == 'available' for row in rows)
 
 
+@pytest.mark.parametrize('headers', ['organisasjonsnummer,organisasjonsnummer,navn',
+                                   'Organisasjonsnummer,organisasjonsnummer,navn'])
+def test_duplicate_bulk_headers_cannot_misattribute_another_company(tmp_path, headers):
+    from signalpost.budget import SourceFailure
+    from tests.test_registry import entity
+    org, other = numbers(2)
+    path = tmp_path / 'ambiguous.csv'
+    path.write_text(headers + f'\n{org},{other},Wrong Company AS\n', encoding='utf8')
+    cfg = config(tmp_path, [org], bulk=path)
+    blobs = BlobStore(cfg.state_dir)
+    with pytest.raises(SourceFailure, match='unique'):
+        bulk_registry.load(path, {org}, blobs, Budget(cfg))
+    assert not list(blobs.directory.iterdir())
+    # The production entry point falls back to checked API data, never the
+    # other company's CSV values, even though the prefilter's first value fits.
+    report, rows = execute(cfg)
+    name = next(c for c in rows[0]['claims'] if c['field'] == 'identity.legal_name')
+    assert name['value'] == entity(org)['navn']
+    assert report['registry_provenance']['requests_by_family']['identity'] == 1
+    assert any('malformed_bulk_columns' in warning for warning in report['warnings'])
+
+
 @pytest.mark.parametrize('verify', [False, True])
 def test_bulk_verification_and_attribution(tmp_path, verify):
     org = numbers(1)[0]

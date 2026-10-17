@@ -292,4 +292,40 @@
 
 2026-10-18T03:54:56+05:30 — 7d37e1e touch-target correction passed 494 tests in 78.47 s. Adversarial malformed-tag probe then showed unbounded attribute scanning (4,000-character unmatched attribute: 0.119 s vs bounded 0.000102 s); scanner now starts only at attribute boundaries. A 50,000-character isolated subprocess regression and 49 focused checks pass. No ownership matching or canonical values changed.
 
-NEXT: Commit bounded attribute scanning; run the complete 495-test candidate suite, then start the single out/r2_gate.py matrix at that exact SHA.
+2026-10-18T03:56:24+05:30 — a8c54ed complete corrected suite PASS: 495 tests in 73.23 s. Source tree clean; touch targets and all ten viewport checks passed; malformed-tag scanning bounded. This is the final frozen implementation. Earlier matrices remain evidence of fixes, not substitutes for the final run.
+
+2026-10-18T03:56:24+05:30 — Heartbeat: Phase E normal still running, PID 15628, frozen SHA a8c54ed6efb0.
+
+2026-10-18T03:57:09+05:30 — Heartbeat: Phase E normal still running, PID 15628, frozen SHA a8c54ed6efb0.
+
+2026-10-18T03:57:54+05:30 — Heartbeat: Phase E normal still running, PID 15628, frozen SHA a8c54ed6efb0.
+
+2026-10-18T03:58:39+05:30 — Heartbeat: Phase E normal still running, PID 15628, frozen SHA a8c54ed6efb0.
+
+2026-10-18T03:59:24+05:30 — Heartbeat: Phase E normal still running, PID 15628, frozen SHA a8c54ed6efb0.
+
+2026-10-18T03:59:26+05:30 — Heartbeat: Phase E 30 still running, PID 18344, frozen SHA a8c54ed6efb0.
+
+2026-10-18T03:59:44+05:30 — Heartbeat: Phase E 120 still running, PID 26444, frozen SHA a8c54ed6efb0.
+
+2026-10-18T04:00:29+05:30 — Heartbeat: Phase E 120 still running, PID 26444, frozen SHA a8c54ed6efb0.
+
+2026-10-18T04:00:41+05:30 — Heartbeat: Phase E 600 still running, PID 3136, frozen SHA a8c54ed6efb0.
+
+2026-10-18T04:01:19+05:30 — Additional adversarial bulk probe found a duplicate-header row-attribution flaw in fast CSV filtering: a row keyed 923609016 can contain selected dictionary orgnr 993578843. Probe is synthetic under out/r2-bulk-header-probe; frozen official inputs have unique headers and prior audited facts are unaffected. a8c54ed is not release-qualified until ambiguous headers are rejected. Keep the active matrix intact, then add guards/tests and validate the corrected SHA.
+
+2026-10-18T04:01:26+05:30 — Heartbeat: Phase E 600 still running, PID 3136, frozen SHA a8c54ed6efb0.
+
+2026-10-18T04:02:11+05:30 — Heartbeat: Phase E 600 still running, PID 3136, frozen SHA a8c54ed6efb0.
+
+2026-10-18T04:02:56+05:30 — Heartbeat: Phase E 600 still running, PID 3136, frozen SHA a8c54ed6efb0.
+
+2026-10-18T04:03:41+05:30 — Heartbeat: Phase E 600 still running, PID 3136, frozen SHA a8c54ed6efb0.
+
+2026-10-18T04:04:30+05:30 — Verified obsolete gate tree fully stopped. A child exited between inspection and Stop-Process; follow-up verified every captured creation-time identity is gone. Unrelated services untouched. out/r2-gate-validation/ABORTED.json preserves the incomplete case; it is not a pass.
+
+2026-10-18T04:04:58+05:30 — Corrected the PowerShell array parsing in the stop verifier: all seven planned PID/creation-time identities are now explicitly checked and none remain. ABORTED.json now records verified_no_remaining=true. No duplicate or new validation was started during verification.
+
+2026-10-18T04:07:02+05:30 — All obsolete gate processes verified stopped. Duplicate and case-colliding bulk headers are now rejected before any selected-row evidence is stored; production falls back to correct-company API data. 53 registry/bulk checks pass, including both new no-misattribution/fallback cases. Both frozen CSVs have 90 unique headers, so valid input behavior is unchanged.
+
+NEXT: Commit the bulk-header identity guard, run the full 497-test suite, then start out/r2_check.py exactly once at the corrected SHA.
