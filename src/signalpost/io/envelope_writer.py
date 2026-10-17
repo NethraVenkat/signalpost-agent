@@ -11,6 +11,14 @@ from ..models.evidence import digest
 from ..sources.text import decode_body
 
 
+def read_blob(blobs, sha):
+    reader = getattr(blobs, "read", None)
+    if reader is not None:
+        return reader(sha)
+    target = blobs.directory / sha
+    return target.read_bytes() if target.exists() else None
+
+
 def constrain(envelopes, shape, max_output_mb):
     def encode(e):
         return json.dumps(serialize(e, shape), ensure_ascii=False, separators=(",", ":"), allow_nan=False) + "\n"
@@ -59,12 +67,12 @@ def write(path: Path, envelopes, shape, blobs, max_output_mb=256):
             envelope.run.synthesis=validate_synthesis(envelope.run.synthesis,envelope)
             envelope.profile.synthesis=envelope.run.synthesis
         for evidence in envelope.evidence:
-            target = blobs.directory / evidence.content_sha256
-            if target.exists():
-                if evidence.content_sha256 not in bodies:
-                    bodies[evidence.content_sha256] = decode_body(target.read_bytes())
-                if evidence.claim_span not in bodies[evidence.content_sha256]:
-                    raise ValueError("Evidence excerpt is not verbatim source text")
+            sha = evidence.content_sha256
+            if sha not in bodies:
+                raw = read_blob(blobs, sha)
+                bodies[sha] = None if raw is None else decode_body(raw)
+            if bodies[sha] is not None and evidence.claim_span not in bodies[sha]:
+                raise ValueError("Evidence excerpt is not verbatim source text")
     lines, limited, minimum_exceeded = constrain(envelopes, shape, max_output_mb)
     with temporary.open("w", encoding="utf-8", newline="\n") as handle:
         for envelope in envelopes:

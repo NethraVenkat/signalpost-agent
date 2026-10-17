@@ -31,7 +31,7 @@ from .synthesis.service import Service as SynthesisService
 
 FAMILIES = ("identity", "roles", "subunits", "accounts")
 # Bound on waiting for cancelled work; terminal output is written regardless.
-CANCEL_GRACE_SECONDS = 10
+CANCEL_GRACE_SECONDS = 5
 
 
 def placeholder(org, run_id, started, families=FAMILIES):
@@ -460,6 +460,7 @@ async def _run(config, client=None,synthesis_provider=None):
     if config.hiring:
         progress.stage_update("NAV Hiring Matching", "completed")
         progress.log_event("NAV hiring matching complete")
+    finalisation_began = time.monotonic()
     for org, envelope in envelopes.items():
         # Invalid numbers must never inherit previously published information.
         await offload(finalize,envelope,prior.get(org) if valid(org) and storage_error is None else None,blobs,budget,budget.start,config.verify_bulk)
@@ -525,20 +526,40 @@ async def _run(config, client=None,synthesis_provider=None):
             report['warnings'].append('profiles output failed: '+type(exc).__name__)
     if minimum_exceeded:
         report["warnings"].append("max-output-mb is smaller than mandatory terminal membership; minimal output written and limit flagged")
+    # Envelopes and profiles are already written. Write the report next, so the
+    # required outputs exist before the optional site is attempted.
+    outputs_done = time.monotonic()
+    report['finalisation'] = {'crawl_seconds': round(finalisation_began - budget.start, 2),
+        'outputs_seconds': round(outputs_done - finalisation_began, 2),
+        'estimate_seconds': round(budget.finalise_estimate, 2), 'site_estimate_seconds': round(budget.site_estimate, 2),
+        'site_reserved': budget.site_reserved}
     if config.site_dir is not None:
+        report['site'] = {'state': 'pending'}
+    async def save_report():
         try:
-            from .site import generate_site
-            if any(p.resolve().is_relative_to(config.site_dir.resolve()) for p in
-                   (config.output, config.report, config.profiles_output, config.organisations, config.bulk, config.previous) if p):
-                raise ValueError('Site directory overlaps a run input or output')
-            report['site'] = {'state': 'available', **await offload(generate_site,config.output,config.site_dir)}
-        except Exception as exc:
-            report['site'] = {'state': 'failed', 'error': type(exc).__name__, 'message': str(exc)}
-            report['warnings'].append('site generation failed: ' + type(exc).__name__)
-    try:
-        await offload(write_report,config.report,report)
-    except OSError as exc:
-        report["warnings"].append(f"report write failed: {type(exc).__name__}")
+            await offload(write_report,config.report,report)
+        except OSError as exc:
+            report["warnings"].append(f"report write failed: {type(exc).__name__}")
+    await save_report()
+    if config.site_dir is not None:
+        site_estimate = budget.site_estimate
+        if budget.seconds_left() < site_estimate:
+            report['site'] = {'state': 'skipped', 'reason': 'time_budget', 'seconds_left': round(budget.seconds_left(), 2),
+                              'estimated_seconds': round(site_estimate, 2)}
+            report['warnings'].append('site generation skipped: not enough time budget left; envelopes, profiles and report are complete')
+        else:
+            try:
+                from .site import generate_site
+                if any(p.resolve().is_relative_to(config.site_dir.resolve()) for p in
+                       (config.output, config.report, config.profiles_output, config.organisations, config.bulk, config.previous) if p):
+                    raise ValueError('Site directory overlaps a run input or output')
+                site_began = time.monotonic()
+                report['site'] = {'state': 'available', **await offload(generate_site,config.output,config.site_dir)}
+                report['finalisation']['site_seconds'] = round(time.monotonic() - site_began, 2)
+            except Exception as exc:
+                report['site'] = {'state': 'failed', 'error': type(exc).__name__, 'message': str(exc)}
+                report['warnings'].append('site generation failed: ' + type(exc).__name__)
+        await save_report()
     progress.stage_update("Output & Site Publishing", "completed")
     progress.log_event("Pipeline complete")
     progress.set_cost(total)
