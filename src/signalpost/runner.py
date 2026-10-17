@@ -30,6 +30,8 @@ from .sources import nav
 from .synthesis.service import Service as SynthesisService
 
 FAMILIES = ("identity", "roles", "subunits", "accounts")
+# Bound on waiting for cancelled work; terminal output is written regardless.
+CANCEL_GRACE_SECONDS = 10
 
 
 def placeholder(org, run_id, started, families=FAMILIES):
@@ -244,6 +246,37 @@ async def _run(config, client=None,synthesis_provider=None):
                 scopes_dict[p].update(subs)
     subunit_queue = asyncio.Queue(maxsize=100) if config.hiring else None
     queue_closed = asyncio.Event()
+    # NAV prefetch sets `stopped` when its queue reader exits; the streaming
+    # fallback clears `used` because it never reads the queue. Producers must
+    # then stop waiting for queue space.
+    subunit_consumer = SimpleNamespace(stopped=asyncio.Event(), used=True)
+    undelivered_scopes = {}
+    scopes_delivered = set()
+
+    async def deliver(item):
+        """Queue one item, never waiting past the deadline or after the reader stopped."""
+        if subunit_consumer.stopped.is_set():
+            return 'nav_consumer_stopped'
+        try:
+            subunit_queue.put_nowait(item)
+            return None
+        except asyncio.QueueFull:
+            pass
+        remaining = budget.deadline - time.monotonic()
+        if remaining <= 0:
+            return 'deadline'
+        put = asyncio.ensure_future(subunit_queue.put(item))
+        stopped = asyncio.ensure_future(subunit_consumer.stopped.wait())
+        try:
+            await asyncio.wait({put, stopped}, timeout=remaining, return_when=asyncio.FIRST_COMPLETED)
+        finally:
+            for waiter in (put, stopped):
+                if not waiter.done():
+                    waiter.cancel()
+            await asyncio.gather(put, stopped, return_exceptions=True)
+        if put.done() and not put.cancelled() and put.exception() is None:
+            return None
+        return 'nav_consumer_stopped' if subunit_consumer.stopped.is_set() else 'deadline'
 
     async def push_subunit_scope(org, envelope):
         if org in scopes_pushed:
@@ -252,10 +285,19 @@ async def _run(config, client=None,synthesis_provider=None):
         if subunit_queue is not None:
             item = await offload(extract_company_scope, envelope, bulk.get(org), prior.get(org))
             scopes_dict[org] = item[1]
-            await subunit_queue.put(item)
-            if len(scopes_pushed) >= len(valid_orgs) and not queue_closed.is_set():
-                queue_closed.set()
-                await subunit_queue.put(None)
+            if not subunit_consumer.used:
+                return
+            failure = await deliver(item)
+            if failure and subunit_consumer.used:
+                # NAV never saw this scope. The queue stays open, so coverage is
+                # never reported ready and this company's hiring section fails.
+                undelivered_scopes[org] = failure
+                return
+            scopes_delivered.add(org)
+            # Close only after every scope is enqueued, so none lands behind the sentinel.
+            if valid_orgs <= scopes_delivered and not queue_closed.is_set():
+                if await deliver(None) is None:
+                    queue_closed.set()
 
     def mark_registry(org):
         registry_done.add(org)
@@ -271,6 +313,7 @@ async def _run(config, client=None,synthesis_provider=None):
     }
     nav_names.pre_loaded_subunit_map = pre_loaded_subunit_map
     nav_names.subunit_queue = subunit_queue
+    nav_names.subunit_consumer = subunit_consumer
     async def nav_scopes():
         await registry_ready.wait()
         return scopes_dict
@@ -330,6 +373,8 @@ async def _run(config, client=None,synthesis_provider=None):
             if config.hiring and nav_task:
                 async def hiring():
                     await asyncio.shield(nav_task)
+                    if org in undelivered_scopes:
+                        raise SourceFailure(undelivered_scopes[org])
                     return nav.section(envelope,nav_index,blobs,prior.get(org))
                 await isolate(envelope,'hiring',hiring)
         except asyncio.CancelledError:
@@ -363,6 +408,10 @@ async def _run(config, client=None,synthesis_provider=None):
         search_metrics.update(website_http.search.metrics)
         website_http.search.metrics=search_metrics
         nav_task=asyncio.create_task(nav.prefetch(nav_client or active_client,config,budget,blobs,nav_index,nav_names,prior)) if config.hiring and valid_orgs else None
+        if nav_task:
+            nav_task.add_done_callback(lambda _: subunit_consumer.stopped.set())
+        else:
+            subunit_consumer.stopped.set()
         # Start the credential/feed request before scheduling company crawls.
         if nav_task:
             started_task=asyncio.create_task(nav_index.started.wait())
@@ -375,7 +424,10 @@ async def _run(config, client=None,synthesis_provider=None):
         progress.stage_update("Registry & Subunits", "running")
         tasks = [asyncio.create_task(company(org, http, website_http,nav_task)) for org in inputs.unique if valid(org)]
         try:
-            return await finish_before_deadline(tasks, budget)
+            pending, stuck = await finish_before_deadline(tasks, budget, CANCEL_GRACE_SECONDS)
+            if stuck:
+                warnings.append(f"{stuck} company tasks did not stop within {CANCEL_GRACE_SECONDS}s of cancellation; unfinished sections are reported as deadline")
+            return pending
         finally:
             dns_metrics.update({'dns_precheck_lookups': website_http.dns_lookups, 'dns_candidates_by_company': website_http.dns_counts,
                                 'dns_scope': 'prechecks, website preflight and pinned-transport connection resolutions'})
@@ -383,11 +435,13 @@ async def _run(config, client=None,synthesis_provider=None):
                 for org in valid_orgs:
                     if org not in scopes_pushed:
                         await push_subunit_scope(org, envelopes[org])
-                if not queue_closed.is_set():
-                    queue_closed.set()
-                    await subunit_queue.put(None)
             if nav_task and not nav_task.done(): nav_task.cancel()
-            if nav_task: await asyncio.gather(nav_task,return_exceptions=True)
+            if nav_task:
+                await asyncio.wait({nav_task}, timeout=CANCEL_GRACE_SECONDS)
+                if not nav_task.done():
+                    warnings.append(f"NAV prefetch did not stop within {CANCEL_GRACE_SECONDS}s of cancellation")
+                elif not nav_task.cancelled():
+                    nav_task.exception()  # Retrieved; failures are already recorded on the index.
     dns_metrics = {'dns_lookups': 0}
     search_metrics={'status':'not configured','queries':0,'estimated_usd':0.}
     if client is None:

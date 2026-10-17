@@ -255,13 +255,18 @@ async def prefetch(client,config,budget,blobs,index,data,age,path,names_ready,pr
     async def prepare():
         if hasattr(names_ready,'subunit_queue') and names_ready.subunit_queue is not None:
             queue=names_ready.subunit_queue
-            while True:
-                item=await queue.get()
-                try:
-                    if item is None:break
-                    org,subunits,names=item
-                    state.add_company_scope(org,subunits,names,pre_loaded_subunit_map=pre_loaded)
-                finally:queue.task_done()
+            consumer=getattr(names_ready,'subunit_consumer',None)
+            try:
+                while True:
+                    item=await queue.get()
+                    try:
+                        if item is None:break
+                        org,subunits,names=item
+                        state.add_company_scope(org,subunits,names,pre_loaded_subunit_map=pre_loaded)
+                    finally:queue.task_done()
+            finally:
+                # Producers must never wait for queue space once this reader exits.
+                if consumer is not None:consumer.stopped.set()
             if callable(names_ready):
                 final_names=await names_ready()
                 for org,n_set in (final_names or {}).items():state.names.setdefault(org,set()).update(n_set)
