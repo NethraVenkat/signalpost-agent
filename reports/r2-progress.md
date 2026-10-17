@@ -88,4 +88,110 @@
 
 2026-10-18T02:51:31+05:30 — 6942865 refresh follow-up committed. Candidate version now 1.1.0; uv.lock changes only the local project version, no dependency pins. README documents evaluator flags, honest report checks, bulk preparation timing and pending release status. Optional discovery and Ask omitted; Patentstyret research retained only. No main/v1.0.0 mutation.
 
-NEXT: Commit version/docs, then run the final full suite plus Phase C 100/24 quick gate before frozen Phase E runs.
+2026-10-18T02:51:31+05:30 — Heartbeat: c quick gate full-suite running, PID 9952.
+
+2026-10-18T02:52:16+05:30 — Heartbeat: c quick gate full-suite running, PID 9952.
+
+2026-10-18T02:52:45+05:30 — Heartbeat: c quick gate smoke100 running, PID 10584.
+
+2026-10-18T02:53:30+05:30 — Heartbeat: c quick gate smoke100 running, PID 10584.
+
+2026-10-18T02:53:39+05:30 — Heartbeat: c quick gate verify-smoke100 running, PID 23000.
+
+2026-10-18T02:53:45+05:30 — Heartbeat: c quick gate baseline24 running, PID 25344.
+
+2026-10-18T02:54:30+05:30 — Heartbeat: c quick gate baseline24 running, PID 25344.
+
+2026-10-18T02:54:34+05:30 — Heartbeat: c quick gate verify-baseline24 running, PID 21764.
+
+2026-10-18T02:54:35+05:30 — Heartbeat: c quick gate compare24 running, PID 7452.
+
+2026-10-18T02:54:51+05:30 — FINAL QUICK GATE PASS at 299bb09: 487 tests in 72.77 s; 100-company smoke/site/verifier passed; 24-company comparison has 0 lost/added/duplicate IDs, 0 material changes, exact order and no schema changes. Local rc-c will mark this source. Phase D runtime discovery skipped to prioritize E; research-only findings retained.
+
+2026-10-18T02:54:51+05:30 — Heartbeat: Phase E normal still running, PID 20548, frozen SHA 299bb09ca5a6.
+
+2026-10-18T02:55:36+05:30 — Heartbeat: Phase E normal still running, PID 20548, frozen SHA 299bb09ca5a6.
+
+2026-10-18T02:56:21+05:30 — Heartbeat: Phase E normal still running, PID 20548, frozen SHA 299bb09ca5a6.
+
+2026-10-18T02:57:07+05:30 — Heartbeat: Phase E normal still running, PID 20548, frozen SHA 299bb09ca5a6.
+
+2026-10-18T02:57:52+05:30 — Heartbeat: Phase E normal still running, PID 20548, frozen SHA 299bb09ca5a6.
+
+2026-10-18T02:58:14+05:30 — Heartbeat: Phase E 30 still running, PID 13468, frozen SHA 299bb09ca5a6.
+
+2026-10-18T02:58:35+05:30 — Heartbeat: Phase E 120 still running, PID 23976, frozen SHA 299bb09ca5a6.
+
+2026-10-18T02:59:20+05:30 — Heartbeat: Phase E 120 still running, PID 23976, frozen SHA 299bb09ca5a6.
+
+2026-10-18T02:59:36+05:30 — Heartbeat: Phase E 600 still running, PID 26328, frozen SHA 299bb09ca5a6.
+
+2026-10-18T03:00:21+05:30 — Heartbeat: Phase E 600 still running, PID 26328, frozen SHA 299bb09ca5a6.
+
+2026-10-18T03:01:06+05:30 — Heartbeat: Phase E 600 still running, PID 26328, frozen SHA 299bb09ca5a6.
+
+2026-10-18T03:01:51+05:30 — Heartbeat: Phase E 600 still running, PID 26328, frozen SHA 299bb09ca5a6.
+
+2026-10-18T03:02:36+05:30 — Heartbeat: Phase E 600 still running, PID 26328, frozen SHA 299bb09ca5a6.
+
+2026-10-18T03:03:22+05:30 — Heartbeat: Phase E 600 still running, PID 26328, frozen SHA 299bb09ca5a6.
+
+2026-10-18T03:04:07+05:30 — Heartbeat: Phase E 600 still running, PID 26328, frozen SHA 299bb09ca5a6.
+
+2026-10-18T03:04:08+05:30 — Heartbeat: Phase E req3000 still running, PID 8456, frozen SHA 299bb09ca5a6.
+
+2026-10-18T03:04:53+05:30 — Heartbeat: Phase E req3000 still running, PID 8456, frozen SHA 299bb09ca5a6.
+
+2026-10-18T03:05:38+05:30 — Heartbeat: Phase E req3000 still running, PID 8456, frozen SHA 299bb09ca5a6.
+
+2026-10-18T03:06:13+05:30 — Heartbeat: Phase E nationwide30 still running, PID 25292, frozen SHA 299bb09ca5a6.
+
+2026-10-18T03:06:35+05:30 — Heartbeat: Phase E nationwide-normal still running, PID 18916, frozen SHA 299bb09ca5a6.
+
+2026-10-18T03:06:42+05:30 — Audit safety probe found a real false pass: identity.deleted=true accepted when its locator points to registration date. No production publisher logic involved. Frozen 299bb09 is NOT release-qualified. Finish active matrix; then require exact /slettedato, add negative regression and validate the corrected final SHA. Probe retained at out/r2-audit-safety-probe.json.
+
+2026-10-18T03:07:20+05:30 — Heartbeat: Phase E nationwide-normal still running, PID 18916, frozen SHA 299bb09ca5a6.
+
+2026-10-18T03:08:05+05:30 — Heartbeat: Phase E nationwide-normal still running, PID 18916, frozen SHA 299bb09ca5a6.
+
+2026-10-18T03:08:50+05:30 — Heartbeat: Phase E nationwide-normal still running, PID 18916, frozen SHA 299bb09ca5a6.
+
+2026-10-18T03:09:35+05:30 — Heartbeat: Phase E nationwide-normal still running, PID 18916, frozen SHA 299bb09ca5a6.
+
+2026-10-18T03:10:20+05:30 — Heartbeat: Phase E nationwide-normal still running, PID 18916, frozen SHA 299bb09ca5a6.
+
+2026-10-18T03:10:48+05:30 — Heartbeat: Phase E refresh still running, PID 20192, frozen SHA 299bb09ca5a6.
+
+2026-10-18T03:11:33+05:30 — Heartbeat: Phase E refresh still running, PID 20192, frozen SHA 299bb09ca5a6.
+
+2026-10-18T03:12:18+05:30 — Heartbeat: Phase E refresh still running, PID 20192, frozen SHA 299bb09ca5a6.
+
+2026-10-18T03:13:03+05:30 — Heartbeat: Phase E refresh still running, PID 20192, frozen SHA 299bb09ca5a6.
+
+2026-10-18T03:13:49+05:30 — Heartbeat: Phase E refresh still running, PID 20192, frozen SHA 299bb09ca5a6.
+
+2026-10-18T03:14:34+05:30 — Heartbeat: Phase E refresh still running, PID 20192, frozen SHA 299bb09ca5a6.
+
+2026-10-18T03:15:19+05:30 — Heartbeat: Phase E refresh still running, PID 20192, frozen SHA 299bb09ca5a6.
+
+2026-10-18T03:15:29+05:30 — Heartbeat: Phase E baseline24 still running, PID 5092, frozen SHA 299bb09ca5a6.
+
+2026-10-18T03:16:15+05:30 — Heartbeat: Phase E baseline24 still running, PID 5092, frozen SHA 299bb09ca5a6.
+
+2026-10-18T03:16:18+05:30 — Heartbeat: Phase E compare1000 still running, PID 10232, frozen SHA 299bb09ca5a6.
+
+2026-10-18T03:16:22+05:30 — Heartbeat: Phase E compare-refresh still running, PID 15636, frozen SHA 299bb09ca5a6.
+
+2026-10-18T03:16:26+05:30 — Heartbeat: Phase E compare24 still running, PID 24884, frozen SHA 299bb09ca5a6.
+
+2026-10-18T03:16:26+05:30 — Heartbeat: Phase E verify1000 still running, PID 8508, frozen SHA 299bb09ca5a6.
+
+2026-10-18T03:16:31+05:30 — Heartbeat: Phase E verify24 still running, PID 21436, frozen SHA 299bb09ca5a6.
+
+2026-10-18T03:16:32+05:30 — Heartbeat: Phase E audit still running, PID 20364, frozen SHA 299bb09ca5a6.
+
+2026-10-18T03:16:42+05:30 — Phase E live runs, refresh, comparisons and automated audit finished; inspect every gate before any release claim.
+
+2026-10-18T03:20:25+05:30 — First matrix finished: all 7 capacity gates PASS; cold comparison loses 10 IDs; refresh loses 8 IDs and needs material-event review, so release gate is NOT passed. Stricter audit reproduced a real long-anchor span truncation (929249526), now fixed by quoting around href in long tags; URLs/matching/claim values unchanged. 57 website/LinkedIn/span checks pass. Branch website audit false positive requires independently validated parent/subunit scope.
+
+NEXT: Commit long-anchor localization separately; finish auditor field/span/branch safeguards, run full tests, then freeze a corrected candidate and rerun mandatory gates.

@@ -63,7 +63,14 @@ class Page(HTMLParser):
         if tag == "meta":
             self.meta[attrs.get("property") or attrs.get("name") or ""] = attrs.get("content", "")
         if tag == "a":
-            self._anchor = Link(urljoin(self.url, attrs.get("href", "")), "", self.get_starttag_text()[:300], any(x[1] for x in self.stack) and not any(x[0] == "article" or x[2] for x in self.stack))
+            raw_tag = self.get_starttag_text()
+            span = raw_tag[:300]
+            if len(raw_tag) > 300:
+                target = re.search(r'\bhref\s*=\s*(["\'])(.*?)\1', raw_tag, re.I | re.S)
+                if target:
+                    start = max(0, target.start() - 20)
+                    span = raw_tag[start:start + 300]
+            self._anchor = Link(urljoin(self.url, attrs.get("href", "")), "", span, any(x[1] for x in self.stack) and not any(x[0] == "article" or x[2] for x in self.stack))
         if tag == "script" and attrs.get("type", "").lower() == "application/ld+json":
             self._script = ""
         if tag == 'p' and not any(x[2] for x in self.stack):
