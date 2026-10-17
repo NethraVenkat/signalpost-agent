@@ -7,9 +7,9 @@ STATE_MAP = {"available": "complete", "not_available": "not_found", "blocked": "
 
 def reference_state(availability, errors=()):
     codes = {e.code for e in errors}
-    if "budget_exhausted" in codes:
+    if codes & {"budget_exhausted", "deadline"}:
         return "budget_exhausted"
-    if codes & {"invalid_orgnr", "not_started", "deadline", "input_error"}:
+    if codes & {"invalid_orgnr", "not_started", "input_error"}:
         return "submission_error"
     if availability == "blocked" and "robots" in codes:
         return "blocked_robots"

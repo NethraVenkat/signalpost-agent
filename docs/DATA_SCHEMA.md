@@ -31,7 +31,7 @@ Raw bodies are never serialized into current envelopes. Legacy embedded-body inp
 | blocked | blocked_policy | Policy/access refusal; robots uses blocked_robots |
 | not_applicable | not_applicable | Explicitly supported exemption only |
 | ambiguous | submission_error | Lossy mapping; original ambiguity remains in claims/sections |
-| failed | source_error | Incomplete/unreliable check; budget_exhausted overrides; invalid input, not-started or deadline maps to submission_error |
+| failed | source_error | Incomplete/unreliable check; budget_exhausted overrides; a deadline cut-off maps to budget_exhausted; only invalid input maps to submission_error |
 
 Terminal entity `complete` describes processing, not full coverage. It can coexist with source-error modules. Inspect section states and errors to assess coverage.
 
