@@ -264,6 +264,38 @@ def test_real_domain_politeness(tmp_path):
     assert starts[1]-starts[0] >= .99
 
 
+@pytest.mark.parametrize("path", ["/kontakt", "/kontakt-oss", "/om-oss", "/om", "/personvern", "/personvernerklaering"])
+def test_unlinked_standard_pages_are_checked_for_the_org_number(tmp_path, monkeypatch, path):
+    """The home page has no links and no number; the number is on a standard page."""
+    def site(request):
+        if request.url.path == "/robots.txt":
+            return httpx.Response(200, text="User-agent: *\nAllow: /")
+        if request.url.host != "example.no":
+            return httpx.Response(404, text="not found")
+        if request.url.path == path:
+            return httpx.Response(200, text=html("Org.nr 923 609 016 MVA"))
+        if request.url.path in {"", "/"}:
+            return httpx.Response(200, text=html(""))
+        return httpx.Response(404, text="not found")
+    _, row, requests, _ = execute_web(tmp_path, monkeypatch, response=site)
+    claim = next(c for c in row["claims"] if c["field"] == "official_website")
+    assert claim["value"]["identity_level"] == "VERIFIED"
+    assert any(url.endswith(path) for url in requests)
+
+
+def test_foreign_number_on_a_standard_page_still_rejects(tmp_path, monkeypatch):
+    def site(request):
+        if request.url.path == "/robots.txt":
+            return httpx.Response(200, text="User-agent: *\nAllow: /")
+        if request.url.host != "example.no":
+            return httpx.Response(404, text="not found")
+        if request.url.path == "/kontakt":
+            return httpx.Response(200, text=html("Org nr " + OTHER))
+        return httpx.Response(200, text=html("")) if request.url.path in {"", "/"} else httpx.Response(404, text="not found")
+    _, row, _, _ = execute_web(tmp_path, monkeypatch, response=site)
+    assert not any(c["field"] == "official_website" and c["availability"] == "available" for c in row["claims"])
+
+
 def test_website_request_budget_defaults():
     from signalpost.config import Config
     cfg = Config(organisations=".", output="o", report="r")
