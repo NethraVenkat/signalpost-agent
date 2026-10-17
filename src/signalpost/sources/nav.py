@@ -309,6 +309,11 @@ async def prefetch(client,config,budget,blobs,index,names_ready=None,previous=No
     else:
         from .nav_cached import prefetch as cached_prefetch
         return await cached_prefetch(client,config,budget,blobs,index,data,age,path,names_ready,previous)
+    consumer=getattr(names_ready,'subunit_consumer',None)
+    if consumer is not None:
+        # The streaming path reads scopes after registry completion, not from
+        # the subunit queue; release any producer waiting for queue space.
+        consumer.used=False;consumer.stopped.set()
     from .nav_stream import prefetch as streaming_prefetch
     return await streaming_prefetch(client,config,budget,blobs,index,names_ready,previous)
 
