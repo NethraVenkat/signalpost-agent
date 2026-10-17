@@ -121,6 +121,19 @@ def apply(envelope, previous, blobs):
                 'previous_state': before.availability if before else 'not_observed',
                 'current_state': 'available', 'reason': 'previously_observed_claim_recovered'})
             continue
+        if before is None and after and family in {'website', 'activity'} and after.availability == 'available':
+            checked_before = previous_refresh.get(family, {}).get('checked_urls')
+            source_urls = {new_evidence[eid].source_url for eid in after.evidence_ids
+                           if eid in new_evidence and new_evidence[eid].source_class == 'company_owned'}
+            old_site = old_claims.get('official_website')
+            new_site = new_claims.get('official_website')
+            same_site = meaning(old_site) is not None and meaning(old_site) == meaning(new_site)
+            if same_site and checked_before is not None and source_urls and not source_urls <= set(checked_before):
+                envelope.run.refresh['observation_changes'].append({
+                    'section': family, 'field': field, 'claim_id': after.id,
+                    'previous_state': 'unchecked_page', 'current_state': 'available',
+                    'reason': 'newly_checked_supporting_page'})
+                continue
         if before is None and after and after.availability != "available":
             continue
         if after is None and before and before.availability != "available":

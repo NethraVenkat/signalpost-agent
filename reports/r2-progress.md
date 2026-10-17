@@ -84,4 +84,6 @@
 
 2026-10-18T02:49:34+05:30 — Phase C full suite 486 passed in 89.87 s before A4 drop. A4 reserve tuning now reverted independently because its 30 s >=80% research gate failed; 23 reserve/cancellation/bulk checks pass on the reduced candidate. The measured 120 s improvement is historical experimental evidence, not shipped behavior.
 
-NEXT: Commit A4 drop, add conservative newly-checked-page refresh classification, then run final full/100/24 gate and freeze.
+2026-10-18T02:50:18+05:30 — 5b4d949 drops A4. Refresh follow-up distinguishes newly checked supporting pages on the SAME accepted website from material changes. A changed-domain regression initially failed, was fixed by requiring unchanged website identity, and all 11 refresh tests now pass; genuine changed-site/contact additions stay material.
+
+NEXT: Commit refresh page-coverage classification, update candidate version/docs, then full-suite/Phase C quick gate and freeze for Phase E.
