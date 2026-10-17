@@ -2,7 +2,9 @@
 
 Signalpost researches Norwegian companies from official registries and bounded company-owned sources, verifies identity, and publishes evidence-linked facts, cited summaries and searchable offline profiles. Missing or incomplete information remains explicit. Deterministic template synthesis works without API keys and costs $0 in provider fees; no live model adapter is shipped.
 
-Latest verification (version 1.0.0): the [Phase 1 gate](reports/phase1-gate.md) — 463 tests pass; on a uniform 1,000-company sample (seed 20261017, public bulk subset) the final code produced 1,000 ordered `complete` envelopes with exit 0 in a normal run (248.7 s, 5,380 HTTP attempts, $0 provider fees) and under forced 30 s, 120 s, 600 s and 3,000-request limits (finishing at 29.3 s, 103.1 s, 270.9 s and 164.0 s), with all 28,726 baseline identity claim IDs preserved. The earlier [revision improvements](reports/revision-improvements.md), [remediation release](reports/remediation-release.md) and evaluations are historical evidence; their measurements are not relabeled as current performance or an official score.
+Release candidate **1.1.0** is developed on `revision/r2`; it has not replaced submitted `3944c89`. The [R2 progress log](reports/r2-progress.md) records current gates and exact next work. It adds five-area offline profiles, global keyboard search, coverage filters, URL-based comparison, broader cited overviews, bulk-load robustness and availability recovery classification. A release verdict requires the final gate report. [Source and operating limits](reports/r2/sources.md).
+
+Historical submitted verification (version 1.0.0): the [Phase 1 gate](reports/phase1-gate.md) — 463 tests pass; on a uniform 1,000-company sample (seed 20261017, public bulk subset) the final code produced 1,000 ordered `complete` envelopes with exit 0 in a normal run (248.7 s, 5,380 HTTP attempts, $0 provider fees) and under forced 30 s, 120 s, 600 s and 3,000-request limits (finishing at 29.3 s, 103.1 s, 270.9 s and 164.0 s), with all 28,726 baseline identity claim IDs preserved. The earlier [revision improvements](reports/revision-improvements.md), [remediation release](reports/remediation-release.md) and evaluations are historical evidence; their measurements are not relabeled as current performance or an official score.
 
 ## How it works
 
@@ -17,6 +19,8 @@ flowchart LR
     Summary --> Output[Validated envelopes + report + offline site]
 ```
 
+Frozen bulk files are streamed without interrupting the input scan at the crawl deadline, retaining selected rows only. Preparation remains charged to total wall time; report key `bulk_preparation_seconds` records it. Missing CSV records use live lookup with a bounded scheduling opportunity; neither source failure nor expiry invents identity facts.
+
 The agent reserves output membership before requests, isolates company/section failures, and preserves every input record in order, including duplicates. It prefers the bulk registry snapshot, uses live fallback, and optionally adds website identity proof, exact-company job advertisements and dated public activity. [Agent loop](docs/AGENT.md).
 
 ## Install and run
@@ -25,8 +29,10 @@ Python 3.12+ and [uv](https://docs.astral.sh/uv/) are required.
 
 ```sh
 uv sync --frozen
-uv run signalpost run --organisations batch.jsonl --bulk registry.csv --output envelopes.jsonl --profiles-output profiles.jsonl --report report.json --site-dir site --websites --hiring --public-activity
+uv run signalpost run --organisations batch.jsonl --bulk registry.csv --output envelopes.jsonl --profiles-output profiles.jsonl --report report.json --site-dir site --websites --hiring --public-activity --run-id signalpost-example --expected-count 100
 ```
+
+The example assumes 100 input rows; set `--expected-count` to your actual batch membership. All seven evaluator flags are supported: `--organisations`, `--bulk`, `--output`, `--profiles-output`, `--report`, `--run-id`, `--expected-count`. Always inspect `counts_by_state`, section states, warnings and `site.state`; exit zero alone is not all-source success. Optional site rendering can be skipped for insufficient remaining time, with mandatory outputs preserved.
 
 Input accepts JSONL organisation_number rows (extra keys ignored), numeric identifiers, a JSON list or organisation_numbers object, or plain lines, including BOM/CRLF and trailing blanks. Numbers remain strings; whitespace/BOM are normalized and mod-11 validated. The default preserves one envelope per input record in original order, including duplicates and invalid records; duplicates share research. `--deduplicate` explicitly emits unique identifiers only. Invalid identifiers retain failed envelopes without requests. Omit `--bulk` for live identity lookup; omit `--websites` or `--hiring` to disable those tools. Add `--previous prior.jsonl` for refresh.
 
