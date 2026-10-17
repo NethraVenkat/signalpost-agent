@@ -2,6 +2,8 @@
 
 17 October 2026 (IST). Branch `revision/judge-fixes`. Gate run on commit `7f197cb`; this report and the README line were added afterwards. Nothing pushed.
 
+> Commit IDs below are the ones in use when this was written. The history was later rewritten (messages only); the mapping is in [v1.0.0-gate-checks.md](v1.0.0-gate-checks.md#commit-ids-after-the-history-rewrite).
+
 ## What "the gate" was
 The master prompt did not reach this session, so the gate is the one defined from the approved Step 1 plan, stated here so it can be corrected:
 1. Full test suite passes.
