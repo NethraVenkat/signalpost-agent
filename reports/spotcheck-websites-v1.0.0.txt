@@ -1,0 +1,93 @@
+[NEW] 916561660 ELEKTROINNOVASJON AS: OK(number on page)
+   site=https://www.elektroinnovasjon.no level=VERIFIED/orgnr_on_page pages=['https://www.elektroinnovasjon.no/']
+   registry website=www.elinnovasjon.no email-domain=elinnovasjon.no; number-bearing pages=['https://www.elektroinnovasjon.no/']
+[NEW] 928602117 SKILLUP NETWORK AS: OK(number on page)
+   site=https://skillupnetwork.no level=VERIFIED/orgnr_on_page pages=['https://skillupnetwork.no/']
+   registry website=None email-domain=None; number-bearing pages=['https://skillupnetwork.no/']
+[NEW] 931878204 VASSBREKKO FOTO AS: OK(number on page)
+   site=https://www.vassbrekkofoto.no level=VERIFIED/orgnr_on_page pages=['https://www.vassbrekkofoto.no/kontakt-meg/']
+   registry website=None email-domain=None; number-bearing pages=['https://www.vassbrekkofoto.no/kontakt-meg/']
+[NEW] 935903556 DRAPE BEAUTY AS: OK(number on page)
+   site=https://drapebeauty.no level=VERIFIED/orgnr_on_page pages=['https://drapebeauty.no/policies/contact-information']
+   registry website=None email-domain=None; number-bearing pages=['https://drapebeauty.no/policies/contact-information']
+[NEW] 937893655 LILLESANDS SPAREBANK: OK(number on page + registry domain)
+   site=https://lillesands-sparebank.no level=VERIFIED/orgnr_on_page pages=['https://lillesands-sparebank.no/']
+   registry website=None email-domain=lillesands-sparebank.no; number-bearing pages=['https://lillesands-sparebank.no/']
+[NEW] 940590698 JBF FORSIKRING AS: REVIEW
+   site=https://www.jbf.no level=VERIFIED/orgnr_on_page pages=['https://www.jbf.no/']
+   registry website=www.jbf.no email-domain=jfg.no; number-bearing pages=['https://www.jbf.no/']
+   LABELLED foreign 982719445: ...'                               <div class="footer-list__text">Org.nr: 982 719 445 (JBF Sparebank AS) og 94'
+[NEW] 994677373 ALLMENNINGSDRIFT ROMERIKE SA: OK(number on page + registry domain)
+   site=https://www.romeriks-almenningene.no level=VERIFIED/orgnr_on_page pages=['https://www.romeriks-almenningene.no/personvern/']
+   registry website=www.romeriks-almenningene.no email-domain=rom-alm.no; number-bearing pages=['https://www.romeriks-almenningene.no/personvern/']
+[NEW] 998645964 LMG MARIN AS: OK(number on page)
+   site=https://www.lmgmarin.no level=VERIFIED/orgnr_on_page pages=['https://www.lmgmarin.no/']
+   registry website=None email-domain=None; number-bearing pages=['https://www.lmgmarin.no/']
+[EXISTING] 927655365 FJELLVED AS: OK(number on page + registry domain)
+   site=https://fjellved-as.no level=VERIFIED/orgnr_on_page pages=['https://fjellved-as.no/']
+   registry website=www.fjellved-as.no email-domain=fjellved-as.no; number-bearing pages=['https://fjellved-as.no/']
+[EXISTING] 826440082 JÆRPUKK AS: OK(number on page)
+   site=https://jaerpukk.no level=VERIFIED/orgnr_on_page pages=['https://jaerpukk.no/kontakt/']
+   registry website=None email-domain=None; number-bearing pages=['https://jaerpukk.no/kontakt/']
+[EXISTING] 934641434 POKELAGERET AS: OK(number on page)
+   site=https://pokelageret.no level=VERIFIED/orgnr_on_page pages=['https://pokelageret.no/']
+   registry website=None email-domain=None; number-bearing pages=['https://pokelageret.no/']
+[EXISTING] 921734808 BARDUFOSS HOTELL DRIFT AS: OK(number on page + registry domain)
+   site=https://www.bardufosshotell.no level=VERIFIED/orgnr_on_page pages=['https://www.bardufosshotell.no/']
+   registry website=Www.bardufosshotell.no email-domain=bardufosshotell.no; number-bearing pages=['https://www.bardufosshotell.no/']
+[EXISTING] 988964751 BARENTS SKIPSSERVICE AS: OK(official domain: matches registry website/email domain; number not on page)
+   site=https://barents-skipsservice.no level=HIGH/signals pages=['https://barents-skipsservice.no/']
+   registry website=www.barents-skipsservice.no email-domain=baskips.no; number-bearing pages=[]
+[EXISTING] 913292413 ELSYS AS: OK(official domain: matches registry website/email domain; number not on page)
+   site=https://www.elsys.no level=HIGH/signals pages=['https://www.elsys.no/']
+   registry website=www.elsys.no email-domain=elsys.no; number-bearing pages=[]
+[EXISTING] 936978134 NORD TOBAKK AS: OK(number on page)
+   site=https://nordtobakk.no level=VERIFIED/orgnr_on_page pages=['https://nordtobakk.no/foretaksopplysninger.html']
+   registry website=None email-domain=None; number-bearing pages=['https://nordtobakk.no/foretaksopplysninger.html']
+[EXISTING] 943760748 TALO ARKITEKTUR AS: OK(official domain: matches registry website/email domain; number not on page)
+   site=https://www.talo.no level=HIGH/signals pages=['https://www.talo.no/']
+   registry website=www.talo.no email-domain=talo.no; number-bearing pages=[]
+[EXISTING] 993310247 STIFTELSEN MOR FAR BARN: OK(number on page + registry domain)
+   site=https://morfarbarn.no level=VERIFIED/orgnr_on_page pages=['https://morfarbarn.no/']
+   registry website=www.morfarbarn.no email-domain=morfarbarn.no; number-bearing pages=['https://morfarbarn.no/']
+[EXISTING] 988330752 FILMTEK AS: REVIEW
+   site=https://www.audioped.no level=VERIFIED/orgnr_on_page pages=['https://www.audioped.no/']
+   registry website=www.filmtek.no email-domain=filmtek.no; number-bearing pages=[]
+[EXISTING] 964795037 CARTAGENA AS: OK(number on page + registry domain)
+   site=https://www.cartagena.no level=VERIFIED/jsonld_vatid pages=['https://www.cartagena.no/']
+   registry website=www.cartagena.no email-domain=cartagena.no; number-bearing pages=['https://www.cartagena.no/']
+[EXISTING] 987718927 HJERKINN FJELLSTUE & FJELLRIDNING AS: OK(number on page + registry domain)
+   site=https://www.hjerkinn.no level=VERIFIED/orgnr_on_page pages=['https://www.hjerkinn.no/no/personvernerklaring']
+   registry website=www.hjerkinn.no email-domain=hjerkinn.no; number-bearing pages=['https://www.hjerkinn.no/no/personvernerklaring']
+[EXISTING] 931246844 ODAL ELEKTRO AS: OK(number on page)
+   site=https://odalelektro.no level=VERIFIED/orgnr_on_page pages=['https://odalelektro.no/']
+   registry website=None email-domain=None; number-bearing pages=['https://odalelektro.no/']
+[EXISTING] 994315404 BRENNE ENTREPRENØR AS: OK(official domain: matches registry website/email domain; number not on page)
+   site=https://www.brenneentreprenor.no level=HIGH/signals pages=['https://www.brenneentreprenor.no/']
+   registry website=www.brenneentreprenor.no email-domain=brenneentreprenor.no; number-bearing pages=[]
+[EXISTING] 935770092 FALKPARTNER AS: OK(number on page)
+   site=https://www.falkpartner.no level=VERIFIED/orgnr_on_page pages=['https://www.falkpartner.no/']
+   registry website=None email-domain=None; number-bearing pages=['https://www.falkpartner.no/']
+[EXISTING] 939658106 SØR ARKITEKTER AS: OK(official domain: matches registry website/email domain; number not on page)
+   site=https://sorarkitekter.no level=HIGH/signals pages=['https://sorarkitekter.no/']
+   registry website=sorarkitekter.no email-domain=sorarkitekter.no; number-bearing pages=[]
+[EXISTING] 932137372 FJORD EMPORIUM AS: OK(number on page)
+   site=https://fjordemporium.no level=VERIFIED/orgnr_on_page pages=['https://fjordemporium.no/policies/contact-information']
+   registry website=None email-domain=None; number-bearing pages=['https://fjordemporium.no/policies/contact-information']
+[EXISTING] 912636410 BAKO AS: OK(number on page)
+   site=https://www.bako.no level=VERIFIED/orgnr_on_page pages=['https://www.bako.no/']
+   registry website=None email-domain=None; number-bearing pages=['https://www.bako.no/']
+[EXISTING] 977061415 ARNE BERGLI AS: OK(number on page + registry domain)
+   site=https://www.arnebergli.no level=VERIFIED/orgnr_on_page pages=['https://www.arnebergli.no/kontakt-oss']
+   registry website=www.arnebergli.no email-domain=None; number-bearing pages=['https://www.arnebergli.no/kontakt-oss']
+[EXISTING] 931693670 AKVA GROUP ASA: OK(number on page + registry domain)
+   site=https://www.akvagroup.com level=HIGH/signals pages=['https://www.akvagroup.com/']
+   registry website=www.akvagroup.com email-domain=akvagroup.com; number-bearing pages=['https://www.akvagroup.com/']
+[EXISTING] 964398003 FOLKSOM AS: OK(number on page + registry domain)
+   site=https://folksom.no level=VERIFIED/orgnr_on_page pages=['https://folksom.no/kontakt']
+   registry website=www.folksom.no email-domain=folksom.no; number-bearing pages=['https://folksom.no/kontakt']
+[EXISTING] 934797620 STREAMSTIX AS: OK(number on page)
+   site=https://streamstix.no level=VERIFIED/jsonld_vatid pages=['https://streamstix.no/']
+   registry website=None email-domain=None; number-bearing pages=['https://streamstix.no/']
+
+SUMMARY {'OK': 28, 'REVIEW': 2} checked 30
