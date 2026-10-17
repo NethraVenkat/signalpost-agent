@@ -29,7 +29,9 @@ def legal_name_slugs(name):
     tokens = [t for t in name.split() if t != "og"]
     slugs = []
     if tokens and not all(t in GENERIC for t in tokens):
-        for replacements in (("ae", "o", "aa"), ("a", "oe", "a")):
+        # Preserve existing nominations first, then add the requested spelling
+        # and native IDNA variants. These are nominations, never identity proof.
+        for replacements in (("ae", "o", "aa"), ("a", "oe", "a"), ("ae", "o", "a")):
             converted = " ".join(tokens).replace("æ", replacements[0]).replace("ø", replacements[1]).replace("å", replacements[2])
             words = re.findall(r"[a-z0-9]+", converted)
             for separator in ("", "-"):
@@ -37,7 +39,15 @@ def legal_name_slugs(name):
                 if len(slug) >= 4:
                     for suffix in ("no", "com"):
                         slugs.append(slug + "." + suffix)
-    return slugs
+        for separator in ('', '-'):
+            native = separator.join(tokens)
+            try:
+                label = native.encode('idna').decode('ascii')
+            except UnicodeError:
+                continue
+            if len(label) >= 4:
+                slugs.extend(label + '.' + suffix for suffix in ('no', 'com'))
+    return list(dict.fromkeys(slugs))
 
 
 def context_from_bulk(row):
@@ -68,7 +78,7 @@ def generate(context):
     name = legal_name(context.get("name"))
     for slug in legal_name_slugs(name):
         add(slug, "legal_name_slug")
-    return output[:4]
+    return output[:8]
 
 
 def extract_sitemap_domains(target, legal_name_str="", brand_name="", timeout=5):
