@@ -144,11 +144,75 @@ async def fetch(org, envelope, http, pages):
                     value, locator, span=span, effective=value['date'], source_class='company_owned', method='signalpost.activity.v1')
             if section.claims: section.state = 'available'
             break
+        if not section.claims:
+            return await fetch_html(org, proof, http, pages, checked)
         return section
     except SourceFailure as exc:
         return missing('activity', exc.code, state='blocked' if exc.code in {'robots', 'robots_unavailable', 'http_blocked'} else 'failed')
     except (ValueError, ET.ParseError):
-        return missing('activity', 'activity_invalid_xml')
+        return await fetch_html(org, proof, http, pages, checked)
     finally:
         http.activity_extra.discard(org)
         envelope.run.refresh['activity']={'checked_urls':sorted(checked)}
+
+
+def parse_html(body, source_url, now):
+    """Accept only a dated, single-link article with a bounded verbatim span."""
+    raw = body.decode('utf8', errors='replace')
+    items = []
+    for n, match in enumerate(re.finditer(r'<article\b[^>]*>.*?</article\s*>', raw, re.I | re.S)):
+        block = match.group()
+        dates = re.findall(r'<time\b[^>]*\bdatetime\s*=\s*[\'"]([^\'"]+)[\'"]', block, re.I)
+        links = re.findall(r'<a\b[^>]*\bhref\s*=\s*[\'"]([^\'"]+)[\'"][^>]*>(.*?)</a\s*>', block, re.I | re.S)
+        if len(dates) != 1 or len(links) != 1:
+            continue
+        date = dated(dates[0], now)
+        href, title_raw = links[0]
+        url = normalize_url(urljoin(source_url, html.unescape(href)))
+        title = html.unescape(title_raw.strip())
+        if not date or not url or domain(url) != domain(source_url) or not NEWS.search(urlsplit(url).path) or NON_ITEM.search(urlsplit(url).path):
+            continue
+        if re.fullmatch(r'/(?:[a-z]{2}/)?(?:nyheter|news|aktuelt|presse|blogg|blog)/?', urlsplit(url).path, re.I):
+            continue
+        if '<' in title or not title or len(title) > 200:
+            continue
+        needles = [href, title_raw.strip(), dates[0]]
+        ranges = [(block.find(t), block.find(t)+len(t)) for t in needles]
+        start, end = min(a for a, _ in ranges), max(b for _, b in ranges)
+        if start < 0 or end-start > 300:
+            continue
+        items.append(({'title': title, 'title_source': 'article link', 'url': url,
+                       'date': date, 'date_source': 'datetime', 'identity_level': None},
+                      f'/article/{n}', block[start:end]))
+    return items[:10]
+
+
+async def fetch_html(org, proof, http, pages, checked):
+    root = domain(proof.value['final_url'])
+    section = Section(state='not_available')
+    if proof.value.get('identity_level') != 'VERIFIED' or proof.value.get('other_orgnrs'):
+        return section
+    targets = []
+    for response, page in pages:
+        if domain(response.url) == root:
+            targets.extend(link.href for link in page.links if NEWS.search(urlsplit(link.href).path))
+    targets.extend(urljoin(proof.value['final_url']+'/', path) for path in ('nyheter', 'aktuelt', 'news', 'presse', 'blogg'))
+    targets = [u for u in dict.fromkeys(map(normalize_url, targets)) if u and domain(u) == root]
+    try:
+        for target in targets[:2]:
+            response = await http.get(target, org, root)
+            if response.status != 200:
+                continue
+            checked.add(response.url)
+            items = await offload(parse_html, response.body, response.url, datetime.now(timezone.utc))
+            for value, locator, span in items:
+                value['identity_level'] = proof.value['identity_level']
+                value['identity_claim_id'] = proof.id
+                add(section, response_source(response), org, 'activity', 'dated_item.'+digest(value['url'])[:20],
+                    value, locator, span=span, effective=value['date'], source_class='company_owned', method='signalpost.activity.html.v1')
+            if section.claims:
+                section.state = 'available'
+                break
+        return section
+    except SourceFailure as exc:
+        return missing('activity', exc.code, state='blocked' if exc.code in {'robots', 'robots_unavailable', 'http_blocked'} else 'failed')
