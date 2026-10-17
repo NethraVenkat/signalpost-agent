@@ -44,4 +44,6 @@
 
 2026-10-18T02:38:40+05:30 — 030c9f0 B1 committed. B2 adds offline global name/orgnr search on every page with / and Ctrl/Command+K, native modal focus handling and bounded results. JS syntax and 24 site tests pass; browser gate pending.
 
-NEXT: Commit B2; implement five-area directory filters and URL-based compare selection.
+2026-10-18T02:39:12+05:30 — 496d09c B2 committed. B3/B5: directory supports Most data found and all-five/per-area availability; compare persists 2-3 selections in URL query parameters while reading old hashes. Five areas displayed in comparison. 32 site/dashboard tests and JS syntax pass.
+
+NEXT: Commit directory/compare coverage navigation, then add explicit evidence confidence and mobile target sizing before browser checks.

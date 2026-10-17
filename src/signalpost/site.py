@@ -801,6 +801,12 @@ def index_record(row):
     for key, c in [('ceo', ceo), ('chair', chair), ('auditor', auditor)]:
         if c: result['anchors'][key] = anchor(c)
     result['flags'] = {key: bool(result[key]) for key in ('website', 'jobs', 'social', 'activity')}
+    result['areas'] = {'brief': any(c['family'] == 'identity' for c in available),
+                       'financials': any(c['family'] == 'accounts' for c in available),
+                       'leadership': any(c['family'] == 'roles' for c in available),
+                       'workforce': any(c['family'] in {'subunits', 'hiring'} or c['field'] == 'identity.employees' for c in available),
+                       'activity': bool(result['activity'])}
+    result['areas_found'] = sum(result['areas'].values())
     if result['activity'] and result['sections'].get('activity','not_applicable') in {'not_available','not_applicable'}:
         result['sections']['activity']='available'
     return result
@@ -901,7 +907,9 @@ def index_page(records, title, skipped=()):
     body += '<option value="unknown">Unknown / Unreported</option>'
     body += '</select></label>'
 
-    body += '<label>Sort<select id="sort"><option value="claim_count">By claims</option><option value="name">A–Z</option><option value="score">By score</option><option value="revenue">Revenue</option><option value="employees">Employees</option></select></label>'
+    body += '<label>Sort<select id="sort"><option value="areas_found">Most data found</option><option value="name">Name A–Z</option><option value="claim_count">By claims</option><option value="score">By score</option><option value="revenue">Revenue</option><option value="employees">Employees</option></select></label>'
+    body += '<label>Areas available<select id="area-filter"><option value="">Any area</option><option value="all">All five areas</option>'
+    body += ''.join(f'<option value="{key}">{label}</option>' for key, label in [('brief','Company brief'),('financials','Latest financials'),('leadership','Who runs it?'),('workforce','Working here'),('activity','Recent activity')]) + '</select></label>'
 
     for key, label in [('website', 'Verified website'), ('jobs', 'Job ads'), ('social', 'Social profiles'), ('activity', 'Public activity'), ('incomplete', 'Failed or blocked sections')]:
         body += f'<label class="check"><input id="filter-{key}" type="checkbox">{label}</label>'
