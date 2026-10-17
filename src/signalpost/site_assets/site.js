@@ -168,6 +168,8 @@
         dl.append(dd);
       };
       pair('Source / class', e.source_class);
+      pair('Claim availability', fact.availability);
+      pair('Claim confidence', fact.confidence);
       pair('Source link', sourceLink(e.source_url));
       pair('Registry identifier', e.source_identifier);
       pair('Retrieved at (UTC)', e.retrieved_at);

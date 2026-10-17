@@ -46,4 +46,6 @@
 
 2026-10-18T02:39:12+05:30 — 496d09c B2 committed. B3/B5: directory supports Most data found and all-five/per-area availability; compare persists 2-3 selections in URL query parameters while reading old hashes. Five areas displayed in comparison. 32 site/dashboard tests and JS syntax pass.
 
-NEXT: Commit directory/compare coverage navigation, then add explicit evidence confidence and mobile target sizing before browser checks.
+2026-10-18T02:39:40+05:30 — 796e987 directory/compare committed. B4 evidence buttons explicitly say Check the evidence; expanded panels retain URL, UTC retrieval, period, verbatim quote, locator, method and hash, and now show claim confidence/availability. 24 site tests pass.
+
+NEXT: Commit B4, then apply responsive focus/target sizing and run browser checks on saved 24-company data.
