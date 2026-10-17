@@ -78,4 +78,6 @@
 
 2026-10-18T02:47:03+05:30 — 3b46f78 fixes the CSV-absent live lookup boundary; nationwide30 asserted PASS. Phase C: top overview selects up to eight existing validated/cited sentences across business, leadership, location, finances, jobs, dated activity and changes; remaining sentences remain available. Sparse profiles are never padded. 41 focused tests pass.
 
-NEXT: Commit Phase C overview; restrict header status chips to identity facts, then run the final Phase C full suite and 100/24 gate.
+2026-10-18T02:47:08+05:30 — Phase C overview committed as 535-style checkpoint (see git log for exact SHA). Visual review found a pre-existing header label issue: role-entity deleted attributes were included by substring matching. Header now restricts legal-status chips to the three company identity fields; role facts remain in their section.
+
+NEXT: Commit the narrow legal-status header correction, then run full suite and Phase C smoke/24 gate.
