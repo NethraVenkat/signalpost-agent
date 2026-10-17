@@ -81,3 +81,24 @@ def test_forced_deadline_with_stalled_nav_reader_finishes(tmp_path, monkeypatch)
     assert all(r['run']['sections']['hiring'] == 'failed' for r in rows)
     stuck = [r for r in rows if any(e['code'] == 'deadline' and e['section'] == 'hiring' for e in r['errors'])]
     assert stuck, 'companies whose scope could not be handed over must report deadline'
+
+
+def test_verified_nav_detail_survives_website_deadline(tmp_path, monkeypatch):
+    from tests.test_nav import ORG, UUID, BASE
+    from signalpost.models.evidence import utc_now
+    async def verified(client, config, budget, blobs, index, *args):
+        value={'uuid':UUID,'employer_orgnr':ORG,'title':'Reported vacancy',
+               'published':'2026-10-01T00:00:00Z','expires':'2099-01-01T00:00:00Z'}
+        body=json.dumps({'ad_content':value}).encode()
+        index.ads[ORG]=[nav.Ad(value,blobs.put(body),BASE+'/api/v1/feedentry/'+UUID,utc_now(),None,None,None,None)]
+        index.complete=True;index.reason='complete';index.started.set()
+        return index
+    async def stalled(*args,**kwargs):
+        await asyncio.sleep(3600)
+    monkeypatch.setattr(nav,'prefetch',verified)
+    monkeypatch.setattr('signalpost.web.collector.fetch',stalled)
+    cfg=config(tmp_path,[ORG],hiring=True,websites=True,time_budget_seconds=2)
+    _,rows,_=bounded(cfg,15)
+    jobs=[c for c in rows[0]['claims'] if c['family']=='hiring' and c['availability']=='available']
+    assert len(jobs)==1 and jobs[0]['value']['employer_orgnr']==ORG
+    assert rows[0]['run']['sections']['website']=='failed'

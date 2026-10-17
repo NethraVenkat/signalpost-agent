@@ -333,6 +333,8 @@ def section(envelope,index,blobs,previous=None):
             if timestamp(ad.value['expires'])<=datetime.now(timezone.utc) or ad.value['uuid'] in index.closed or ad.value['uuid'] in seen_uuids: continue
             seen_uuids.add(ad.value['uuid'])
             actual_emp = ad.value.get('employer_orgnr')
+            if actual_emp not in parents:
+                continue  # Discovery/index aliases do not prove a current branch relationship.
             match_via = ('subunit ' + actual_emp) if (actual_emp and actual_emp != envelope.organisation_number) else (via or 'organisation ' + org)
             value={**ad.value,'matched_via':match_via}
             body=(blobs.directory/ad.sha).read_bytes()
