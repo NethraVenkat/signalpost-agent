@@ -55,19 +55,27 @@ def load(path: Path, wanted: set[str], blobs, budget):
                 captured.append(line)
                 yield line
 
-        reader = csv.DictReader(lines(), delimiter=delimiter)
-        _ = reader.fieldnames
-        required={str(name).casefold() for name in reader.fieldnames or []}
+        reader = csv.reader(lines(), delimiter=delimiter)
+        fields = next(reader, [])
+        required={str(name).casefold() for name in fields}
         if not {'organisasjonsnummer','navn'} <= required:
             raise SourceFailure('malformed_bulk_columns','Bulk requires organisation-number and legal-name columns')
         header = "".join(captured)
         captured.clear()
-        for row in reader:
+        org_index = next(i for i, name in enumerate(fields) if name.casefold() == 'organisasjonsnummer')
+        for values in reader:
             budget.check()
             raw = "".join(captured)
             captured.clear()
-            org, _ = column(row, "organisasjonsnummer")
+            org = values[org_index] if len(values) > org_index else None
             if org in wanted:
+                # Avoid allocating a full dictionary for every nationwide row.
+                # Preserve DictReader's selected-row semantics and exact bytes.
+                row = dict(zip(fields, values))
+                if len(values) > len(fields):
+                    row[None] = values[len(fields):]
+                elif len(values) < len(fields):
+                    row.update((key, None) for key in fields[len(values):])
                 body = (header + raw).encode("utf-8")
                 source = Source("https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv", body,
                                 blobs.put(body), utc_now(), f"{path.name}:sha256:{sha}")

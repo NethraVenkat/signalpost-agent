@@ -219,14 +219,18 @@ async def _run(config, client=None,synthesis_provider=None):
             if valid(org):
                 for family in families:update(envelope,family,missing(family,'state_unavailable',storage_error))
     bulk, bulk_sha = {}, None
+    bulk_started = time.monotonic()
     valid_orgs = {org for org in inputs.unique if valid(org)}
     if config.bulk is not None and valid_orgs and storage_error is None:
         try:
-            # Cooperative checks during synchronous streamed preparation include
-            # bulk work in the deadline and bound memory to selected rows.
-            bulk, bulk_sha = await offload(bulk_registry.load,config.bulk,valid_orgs,blobs,budget)
+            # Frozen-input preparation precedes the crawl deadline. It remains
+            # visible in end-to-end runtime; only selected records are retained.
+            preparation = SimpleNamespace(check=lambda: None)
+            bulk, bulk_sha = await offload(bulk_registry.load,config.bulk,valid_orgs,blobs,preparation)
         except Exception as exc:
             warnings.append(f"bulk unavailable: {getattr(exc, 'code', type(exc).__name__)}; live fallback")
+    bulk_seconds = time.monotonic() - bulk_started
+    budget.deadline += bulk_seconds
     if bulk and not config.verify_bulk:
         # Identity comes straight from the CSV row, before any network work and
         # outside the deadline, so a deadline can never remove it. Only companies
@@ -517,6 +521,8 @@ async def _run(config, client=None,synthesis_provider=None):
     report['dns_amortized_per_company'] = dns_metrics.get('dns_lookups', 0) / len(result) if result else 0
     report['max_dns_requests_per_company'] = max((n for org,n in dns_metrics.get('dns_by_company', {}).items() if org in envelopes), default=0)
     report["bulk_snapshot_sha256"] = bulk_sha
+    report['bulk_preparation_seconds'] = round(bulk_seconds, 3)
+    report['bulk_preparation_outside_crawl_deadline'] = True
     from .io.provenance import registry_provenance
     report['registry_provenance'] = await offload(registry_provenance,result,budget.events,injected_client=client is not None)
     report['registry_provenance']['verify_bulk'] = config.verify_bulk

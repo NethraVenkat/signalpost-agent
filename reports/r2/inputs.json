@@ -1,0 +1,18 @@
+{
+  "out/capacity-inputs/batch1000.jsonl": {
+    "sha256": "bba3114b5a611d05a80bbce11233aa3585c433a1580225dc5087a75372b9649a",
+    "bytes": 38000
+  },
+  "out/capacity-inputs/bulk1000.csv": {
+    "sha256": "9b5aeda58ea75c798061a22e61f82f0af2999b698c49429d942ce3e090481f91",
+    "bytes": 666749
+  },
+  "out/capacity-inputs/registry-retry.csv.gz": {
+    "sha256": "3183a281f41cd9859f93a6955b417808dc949c658c036d1c6128fde83bea104e",
+    "bytes": 155077474
+  },
+  "out/judge-evidence/batch.jsonl": {
+    "sha256": "5d3ddca65147b23ca73c0d842e5908182349d09f99b958036411b5228219fb7d",
+    "bytes": 913
+  }
+}
