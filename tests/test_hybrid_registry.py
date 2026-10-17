@@ -34,6 +34,37 @@ def test_bulk_thousand_rows_preserves_raw_evidence(tmp_path):
         assert (blobs.directory / source.sha).read_bytes() == source.body
 
 
+def test_bulk_selected_multiline_row_keeps_exact_record(tmp_path):
+    orgs = numbers(2)
+    path = tmp_path / 'multiline.csv'
+    header = 'organisasjonsnummer;navn;extra\r\n'
+    selected = f'{orgs[1]};"Two\r\nlines";value\r\n'
+    path.write_bytes((header + f'{orgs[0]};Other;skip\r\n' + selected).encode())
+    cfg = config(tmp_path, orgs)
+    rows, _ = bulk_registry.load(path, {orgs[1]}, BlobStore(cfg.state_dir), Budget(cfg))
+    assert set(rows) == {orgs[1]}
+    row, source = rows[orgs[1]]
+    assert row['navn'] == 'Two\r\nlines'
+    assert source.body == (header + selected).encode()
+
+
+def test_bulk_preparation_does_not_consume_crawl_deadline(tmp_path, monkeypatch):
+    import time
+    org = numbers(1)[0]
+    original = bulk_registry.load
+
+    def slow_load(*args):
+        time.sleep(0.25)
+        return original(*args)
+
+    monkeypatch.setattr(bulk_registry, 'load', slow_load)
+    cfg = config(tmp_path, [org], bulk=bulk_file(tmp_path, [org]), time_budget_seconds=0.2)
+    report, rows = execute(cfg)
+    assert report['bulk_preparation_seconds'] >= 0.25
+    assert report['bulk_preparation_outside_crawl_deadline']
+    assert any(c['field'] == 'identity.legal_name' and c['value'] == 'CSV Old Name' for c in rows[0]['claims'])
+
+
 @pytest.mark.parametrize('verify', [False, True])
 def test_bulk_verification_and_attribution(tmp_path, verify):
     org = numbers(1)[0]
