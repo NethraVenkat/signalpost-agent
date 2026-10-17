@@ -202,4 +202,92 @@
 
 2026-10-18T03:28:48+05:30 — 16196f8 commits live exact-site refresh revalidation. Prompt file was locally verbatim but Git had normalized line endings; a file-specific -text attribute and explicit renormalization now make the staged blob exactly match original SHA256 3d7bae9e9eae7b612d1c0e8448ce58ce41ddd1dc5269c92cade8caca4f38670d. No global Git settings changed.
 
-NEXT: Commit exact-byte prompt preservation, then run the full corrected test suite before final source freeze.
+2026-10-18T03:30:11+05:30 — 87d5877 preserves exact prompt bytes; source tree is clean. Corrected full pytest suite is active (tool session 2578); do not duplicate it. The next full matrix uses out/r2_final.py and fresh out/r2-final-* state, retaining the failed first-refresh artifacts for comparison.
+
+2026-10-18T03:30:31+05:30 — Corrected full suite PASS: 494 tests in 78.72 s at 87d5877. Runtime/CLI, long-anchor/JSON-LD evidence, branch scope, deletion-field and fresh previous-site revalidation checks are green. First matrix remains historical and failed refresh; the final matrix must stand on its own.
+
+2026-10-18T03:30:31+05:30 — Heartbeat: Phase E normal still running, PID 22628, frozen SHA 87d587759500.
+
+2026-10-18T03:31:16+05:30 — Heartbeat: Phase E normal still running, PID 22628, frozen SHA 87d587759500.
+
+2026-10-18T03:32:01+05:30 — Heartbeat: Phase E normal still running, PID 22628, frozen SHA 87d587759500.
+
+2026-10-18T03:32:46+05:30 — Heartbeat: Phase E normal still running, PID 22628, frozen SHA 87d587759500.
+
+2026-10-18T03:33:32+05:30 — Heartbeat: Phase E normal still running, PID 22628, frozen SHA 87d587759500.
+
+2026-10-18T03:33:44+05:30 — Heartbeat: Phase E 30 still running, PID 22672, frozen SHA 87d587759500.
+
+2026-10-18T03:34:02+05:30 — Heartbeat: Phase E 120 still running, PID 19868, frozen SHA 87d587759500.
+
+2026-10-18T03:34:47+05:30 — Heartbeat: Phase E 120 still running, PID 19868, frozen SHA 87d587759500.
+
+2026-10-18T03:34:59+05:30 — Heartbeat: Phase E 600 still running, PID 22380, frozen SHA 87d587759500.
+
+2026-10-18T03:35:44+05:30 — Heartbeat: Phase E 600 still running, PID 22380, frozen SHA 87d587759500.
+
+2026-10-18T03:36:29+05:30 — Heartbeat: Phase E 600 still running, PID 22380, frozen SHA 87d587759500.
+
+2026-10-18T03:37:14+05:30 — Heartbeat: Phase E 600 still running, PID 22380, frozen SHA 87d587759500.
+
+2026-10-18T03:37:59+05:30 — Heartbeat: Phase E 600 still running, PID 22380, frozen SHA 87d587759500.
+
+2026-10-18T03:38:44+05:30 — Heartbeat: Phase E 600 still running, PID 22380, frozen SHA 87d587759500.
+
+2026-10-18T03:38:55+05:30 — Heartbeat: Phase E req3000 still running, PID 23096, frozen SHA 87d587759500.
+
+2026-10-18T03:39:40+05:30 — Heartbeat: Phase E req3000 still running, PID 23096, frozen SHA 87d587759500.
+
+2026-10-18T03:40:25+05:30 — Heartbeat: Phase E req3000 still running, PID 23096, frozen SHA 87d587759500.
+
+2026-10-18T03:40:52+05:30 — Heartbeat: Phase E nationwide30 still running, PID 25296, frozen SHA 87d587759500.
+
+2026-10-18T03:41:12+05:30 — Heartbeat: Phase E nationwide-normal still running, PID 12860, frozen SHA 87d587759500.
+
+2026-10-18T03:41:57+05:30 — Heartbeat: Phase E nationwide-normal still running, PID 12860, frozen SHA 87d587759500.
+
+2026-10-18T03:42:42+05:30 — Heartbeat: Phase E nationwide-normal still running, PID 12860, frozen SHA 87d587759500.
+
+2026-10-18T03:43:27+05:30 — Heartbeat: Phase E nationwide-normal still running, PID 12860, frozen SHA 87d587759500.
+
+2026-10-18T03:44:13+05:30 — Heartbeat: Phase E nationwide-normal still running, PID 12860, frozen SHA 87d587759500.
+
+2026-10-18T03:44:58+05:30 — Heartbeat: Phase E nationwide-normal still running, PID 12860, frozen SHA 87d587759500.
+
+2026-10-18T03:45:43+05:30 — Heartbeat: Phase E nationwide-normal still running, PID 12860, frozen SHA 87d587759500.
+
+2026-10-18T03:45:52+05:30 — Heartbeat: Phase E refresh still running, PID 5596, frozen SHA 87d587759500.
+
+2026-10-18T03:46:37+05:30 — Heartbeat: Phase E refresh still running, PID 5596, frozen SHA 87d587759500.
+
+2026-10-18T03:47:22+05:30 — Heartbeat: Phase E refresh still running, PID 5596, frozen SHA 87d587759500.
+
+2026-10-18T03:48:07+05:30 — Heartbeat: Phase E refresh still running, PID 5596, frozen SHA 87d587759500.
+
+2026-10-18T03:48:52+05:30 — Heartbeat: Phase E refresh still running, PID 5596, frozen SHA 87d587759500.
+
+2026-10-18T03:49:37+05:30 — Heartbeat: Phase E refresh still running, PID 5596, frozen SHA 87d587759500.
+
+2026-10-18T03:50:22+05:30 — Heartbeat: Phase E refresh still running, PID 5596, frozen SHA 87d587759500.
+
+2026-10-18T03:50:23+05:30 — Heartbeat: Phase E baseline24 still running, PID 15288, frozen SHA 87d587759500.
+
+2026-10-18T03:51:09+05:30 — Heartbeat: Phase E baseline24 still running, PID 15288, frozen SHA 87d587759500.
+
+2026-10-18T03:51:14+05:30 — Heartbeat: Phase E compare1000 still running, PID 16992, frozen SHA 87d587759500.
+
+2026-10-18T03:51:17+05:30 — Heartbeat: Phase E compare-refresh still running, PID 12208, frozen SHA 87d587759500.
+
+2026-10-18T03:51:21+05:30 — Heartbeat: Phase E compare24 still running, PID 15744, frozen SHA 87d587759500.
+
+2026-10-18T03:51:21+05:30 — Heartbeat: Phase E verify1000 still running, PID 24900, frozen SHA 87d587759500.
+
+2026-10-18T03:51:26+05:30 — Heartbeat: Phase E verify24 still running, PID 22436, frozen SHA 87d587759500.
+
+2026-10-18T03:51:27+05:30 — Heartbeat: Phase E audit still running, PID 26420, frozen SHA 87d587759500.
+
+2026-10-18T03:51:37+05:30 — Phase E live runs, refresh, comparisons and automated audit finished; inspect every gate before any release claim.
+
+2026-10-18T03:52:02+05:30 — Second frozen matrix at 87d5877: all seven capacity checks PASS, all 28,726 identity IDs; refresh has 0 lost IDs, 0 duplicates, 0 material changes, 257 availability observations. Touch probe found legacy component classes overriding 40px sizing; isolated CSS floor fixes all observed targets and passes ten 1440/375 viewport checks. Applying only that CSS change, then regating the exact final source.
+
+NEXT: Commit the verified touch-target CSS, run full suite, then run out/r2_gate.py once with fresh state and inspect all release gates before branch push.

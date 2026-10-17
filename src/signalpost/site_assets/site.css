@@ -1761,3 +1761,7 @@ button, input, select, nav a { min-height: 40px; }
   .financial-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
   .values dd, code, blockquote, .fact, h1, h2, h3 { overflow-wrap: anywhere; }
 }
+
+/* Accessibility floors override smaller legacy component variants. */
+button, input, select, a[href] { min-height: 40px !important; min-width: 40px !important; }
+a[href] { display: inline-block; max-width: 100%; box-sizing: border-box; vertical-align: middle; }
