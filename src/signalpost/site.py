@@ -418,11 +418,14 @@ def profile(row, title):
     body += ''.join('<p><span class="chip">' + esc(c['field'].replace('identity.', '').replace('_', ' ')) + ': ' + esc(value_text(c['value'])) + '</span></p>' for c in claims if c['availability'] == 'available' and any(x in c['field'] for x in ('bankrupt', 'liquidation', 'deleted')))
     body += '<p>Last checked: <time>' + esc(display_time(row['run']['completed_at'])) + '</time></p></header>'
     sentences = [s for key in ('what_it_does', 'scale', 'leadership', 'changes') for s in synthesis.get('sections', {}).get(key, [])]
+    from .synthesis.brief import select
+    overview = select(synthesis, claims)
     body += '<section class="summary"><h2>Cited summary</h2>'
-    body += ''.join(sentence_html(s, claim_map, change_ids) for s in sentences[:4])
-    if len(sentences) > 4:
+    body += ''.join(sentence_html(s, claim_map, change_ids) for s in overview)
+    remaining = [s for s in sentences if s not in overview]
+    if remaining:
         body += '<button type="button" aria-expanded="false" aria-controls="full-summary" data-toggle="full-summary">Show full cited summary</button><div id="full-summary" hidden>'
-        body += ''.join(sentence_html(s, claim_map, change_ids) for s in sentences[4:]) + '</div>'
+        body += ''.join(sentence_html(s, claim_map, change_ids) for s in remaining) + '</div>'
     body += ''.join('<p class="muted">' + esc(u.get('text') or u['reason']) + '</p>' for u in synthesis.get('sections', {}).get('unknowns', [])) + '</section>'
     buckets = {key: [] for key, _, _ in GROUPS}
     for c in claims:
