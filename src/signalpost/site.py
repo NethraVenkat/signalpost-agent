@@ -787,13 +787,18 @@ def index_record(row):
     return result
 
 
-def index_page(records, title):
+def index_page(records, title, skipped=()):
     n = len(records)
     summary = f'{n} companies'
     for key in ('website', 'jobs', 'activity'):
         summary += f' · {sum(r["flags"][key] for r in records) / n * 100 if n else 0:.1f}% with {key}'
     summary += ' · Run date: ' + max((r['last_checked'] for r in records), default='Unknown')
     body = f'<header><p class="eyebrow">Company research, with receipts</p><h1>{esc(title)}</h1><p id="cohort-summary">{esc(summary)}</p></header>'
+    if skipped:
+        shown = ', '.join('<code>' + esc(str(x)[:40]) + '</code>' for x in skipped[:20])
+        more = f' and {len(skipped) - 20} more' if len(skipped) > 20 else ''
+        body += (f'<aside id="invalid-inputs" class="notice" role="note"><strong>{len(skipped)} input record(s) have no company page</strong> '
+                 f'because the organisation number is not valid: {shown}{more}. They keep an explicit terminal envelope in the JSON output.</aside>')
 
     # View switcher tabs
     body += '<div class="view-switcher" role="tablist" aria-label="View selection">'
@@ -948,13 +953,14 @@ def generate_site(input_path, out, title='Signalpost'):
         org=row['organisation_number']
         if org in unique and unique[org]!=row:raise ValueError('Conflicting duplicate company envelopes')
         unique[org]=row
-    rows=list(unique.values())
-    if any(not re.fullmatch(r'\d{9}', r['organisation_number']) for r in rows):
-        raise ValueError('Site filenames require nine digit identifiers')
+    # A malformed identifier must not abort the whole site, and never becomes a filename.
+    # Its terminal envelope stays in the JSON output; the site lists it in a batch notice.
+    skipped=[r['organisation_number'] for r in unique.values() if not re.fullmatch(r'\d{9}', r['organisation_number'])]
+    rows=[r for r in unique.values() if re.fullmatch(r'\d{9}', r['organisation_number'])]
     records = [index_record(r) for r in rows]
     payload = json.dumps(records, ensure_ascii=False, sort_keys=True, separators=(',', ':'), allow_nan=False)
     js_payload = payload.replace('</', '<\\/').replace('\u2028', '\\u2028').replace('\u2029', '\\u2029')
-    files = {'index.html': index_page(records, title), 'compare.html': compare_page(title),
+    files = {'index.html': index_page(records, title, skipped), 'compare.html': compare_page(title),
              'data/index.json': payload + '\n', 'data/index.js': 'window.SIGNALPOST_INDEX = ' + js_payload + ';\n'}
     for row in rows:
         org=row['organisation_number']
@@ -971,6 +977,6 @@ def generate_site(input_path, out, title='Signalpost'):
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(content, encoding='utf8', newline='\n')
     sizes = {filename: len(content.encode('utf8')) for filename, content in files.items()}
-    return {'companies': len(rows), 'input_records':len(input_rows), 'pages': len(rows) + 2, 'total_bytes': sum(sizes.values()),
+    return {'companies': len(rows), 'input_records':len(input_rows), 'pages': len(rows) + 2, 'skipped_invalid_identifiers': len(skipped), 'total_bytes': sum(sizes.values()),
             'largest_profile_data_bytes':max((size for path,size in sizes.items() if path.endswith('.data.js')),default=0),
             'largest_profile_bytes': max((size for path, size in sizes.items() if path.startswith('c/') and path.endswith('.html')), default=0)}
