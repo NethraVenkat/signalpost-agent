@@ -415,7 +415,7 @@ def profile(row, title):
             v = by_field[field]
             display = (str(v.get('beskrivelse') or '') + ' (' + str(v.get('kode') or '') + ')') if isinstance(v, dict) else value_text(v)
             body += '<p>' + esc(display) + '</p>'
-    body += ''.join('<p><span class="chip">' + esc(c['field'].replace('identity.', '').replace('_', ' ')) + ': ' + esc(value_text(c['value'])) + '</span></p>' for c in claims if c['availability'] == 'available' and any(x in c['field'] for x in ('bankrupt', 'liquidation', 'deleted')))
+    body += ''.join('<p><span class="chip">' + esc(c['field'].replace('identity.', '').replace('_', ' ')) + ': ' + esc(value_text(c['value'])) + '</span></p>' for c in claims if c['availability'] == 'available' and c['field'] in {'identity.bankrupt', 'identity.under_liquidation', 'identity.deleted'})
     body += '<p>Last checked: <time>' + esc(display_time(row['run']['completed_at'])) + '</time></p></header>'
     sentences = [s for key in ('what_it_does', 'scale', 'leadership', 'changes') for s in synthesis.get('sections', {}).get(key, [])]
     from .synthesis.brief import select
