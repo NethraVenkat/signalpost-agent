@@ -478,6 +478,13 @@ async def _run(config, client=None,synthesis_provider=None):
         progress.log_event("NAV hiring matching complete")
     finalisation_began = time.monotonic()
     for org, envelope in envelopes.items():
+        # A company's website deadline must not hide NAV details already
+        # verified by the independent shared reader. No requests occur here.
+        if config.hiring and valid(org) and not any(c.family=='hiring' and c.availability=='available' for c in envelope.claims):
+            scope={org} | {c.value['organisation_number'] for c in envelope.claims
+                if c.family=='subunits' and c.availability=='available' and isinstance(c.value,dict) and c.value.get('organisation_number')}
+            if any(nav_index.ads.get(number) for number in scope):
+                await isolate(envelope,'hiring',lambda:offload(nav.section,envelope,nav_index,blobs,prior.get(org)))
         # Invalid numbers must never inherit previously published information.
         await offload(finalize,envelope,prior.get(org) if valid(org) and storage_error is None else None,blobs,budget,budget.start,config.verify_bulk)
     progress.stage_update("Cited Synthesis", "running")

@@ -280,9 +280,6 @@ async def prefetch(client,config,budget,blobs,index,data,age,path,names_ready,pr
             state.ready=True;state.wake()
     try:
         async with asyncio.timeout(time_cap(config)):
-            token=token_from(os.environ.get('NAV_API_TOKEN'));from_environment=bool(token)
-            token=token or await http.public_token()
-            if not token:index.blocked=True;index.reason='token_unavailable';return index
             initial=getattr(names_ready,'initial_names',{}) if names_ready else {}
             scopes={org:{org} for org in initial}
             if pre_loaded:
@@ -294,6 +291,10 @@ async def prefetch(client,config,budget,blobs,index,data,age,path,names_ready,pr
                 for parent, subs in getattr(pre_loaded, 'parent_subunits', {}).items():
                     if parent in scopes:
                         state.add_company_scope(parent, subs, pre_loaded_subunit_map=pre_loaded)
+            index.metrics['offline_index_candidates']=len(state.discovered)
+            token=token_from(os.environ.get('NAV_API_TOKEN'));from_environment=bool(token)
+            token=token or await http.public_token()
+            if not token:index.blocked=True;index.reason='token_unavailable';return index
             header_task=asyncio.create_task(headers())
             tasks=[header_task,asyncio.create_task(prepare())]+[asyncio.create_task(worker()) for _ in range(config.nav_concurrency)]
             url=data['cursor'];seen=set();feed_began=time.monotonic()
@@ -346,6 +347,16 @@ async def prefetch(client,config,budget,blobs,index,data,age,path,names_ready,pr
         elif not index.blocked and not index.complete:
             index.metrics['failure_cause']=index.reason;index.reason='detail_unverified'
         total=time.monotonic()-began
+        parent_ids=set(state.scopes)
+        subunit_ids=set().union(*state.scopes.values())-parent_ids if state.scopes else set()
+        forward_counts={'parent_orgnr':0,'subunit_orgnr':0,'no_orgnr':0,'other_orgnr':0}
+        for _,item in state.headers.values():
+            entry=item.get('_feed_entry') or {}
+            employer=entry.get('employer') or item.get('employer') or {}
+            number=str(employer.get('orgnr') or '') if isinstance(employer,dict) else ''
+            key='no_orgnr' if not valid(number) else 'parent_orgnr' if number in parent_ids else 'subunit_orgnr' if number in subunit_ids else 'other_orgnr'
+            forward_counts[key]+=1
+        index.metrics['forward_header_orgnr_counts']=forward_counts
         feed_ms=index.metrics.get('feed_runtime_ms',round((time.monotonic()-feed_began)*1000) if feed_began else 0)
         index.metrics.update({'runtime_ms':round(total*1000),'runtime_seconds':total,'feed_runtime_ms':feed_ms,
             'feed_seconds':feed_ms/1000,'average_seconds_per_page':feed_ms/1000/index.metrics['pages'] if index.metrics['pages'] else None,
