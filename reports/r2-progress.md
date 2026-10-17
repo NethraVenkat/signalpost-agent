@@ -40,4 +40,6 @@
 
 2026-10-18T02:37:37+05:30 — Phase A QUICK GATE PASS: 483 tests, 100 ordered envelopes and site, 24 ordered envelopes with 0 lost/added/duplicate IDs and 0 schema changes. Local rc-a marks this checkpoint only; full release gate remains unpassed. Optional discovery will be trimmed first to prioritize UX and Phase E.
 
-NEXT: Commit the Phase A checkpoint and tag rc-a locally; implement B1 five-area profile grouping without changing claims.
+2026-10-18T02:38:09+05:30 — f1281cd Phase A checkpoint, local rc-a. B1 five profile areas implemented while retaining old anchors, evidence controls and every claim; 24 site tests pass.
+
+NEXT: Commit B1, then implement global keyboard search on every page.
