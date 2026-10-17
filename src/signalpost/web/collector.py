@@ -378,6 +378,7 @@ def extract_contacts_and_social(section, org, web_claim, pages, context=None, en
                         if c and c.is_sibling(org, other_orgnrs, subunits):
                             continue
                 publish(section, source_response, org, "social_profile." + digest(url)[:20], {"url": url, "platform": domain(url)}, "company-link:" + url, source_span)
+                section.claims[-1].reasons['relationship'] = 'Company-owned profile linked from verified website'
                 social_seen.add(url)
         contacts = []
         for link in source_page.links:

@@ -97,6 +97,20 @@ def test_foreign_home_requires_exact_contact_proof(tmp_path, monkeypatch):
     assert not any('agency' in str(c['value']) for c in row['claims'] if c['field'].startswith('social_profile.'))
 
 
+def test_company_profiles_are_sourced_without_fetching_platforms(tmp_path, monkeypatch):
+    urls = ['https://linkedin.com/company/example', 'https://facebook.com/example',
+            'https://instagram.com/example', 'https://youtube.com/@example',
+            'https://x.com/example', 'https://tiktok.com/@example']
+    links = ''.join('<a href="'+u+'">Profile</a>' for u in urls)
+    links += '<a href="https://facebook.com/sharer.php?u=example.no">Share</a>'
+    links += '<a href="https://instagram.com/">Instagram</a>'
+    _, row, requests, _ = execute_web(tmp_path, monkeypatch, html('Org nr '+OUR+' '+links))
+    claims = [c for c in row['claims'] if c['field'].startswith('social_profile.')]
+    assert {c['value']['url'] for c in claims} == set(urls)
+    assert all(c['reasons']['relationship'].startswith('Company-owned profile') for c in claims)
+    assert not any(urlsplit(u).hostname in {'linkedin.com','facebook.com','instagram.com','youtube.com','x.com','tiktok.com'} for u in requests)
+
+
 def test_robots_prevents_page(tmp_path, monkeypatch):
     _, row, requests, _ = execute_web(tmp_path, monkeypatch, robots="User-agent: *\nDisallow: /")
     assert row["run"]["sections"]["website"] == "blocked"
