@@ -119,6 +119,16 @@ class Page(HTMLParser):
         index = self.raw.find(token)
         if index >= 0:
             return self.raw[max(0, index - 50):max(0, index - 50) + 300]
+        if isinstance(token, str) and token.startswith(('https://', 'http://')):
+            # JSON-LD may escape slashes or Unicode. Localize the original JSON
+            # string rather than quoting unrelated document-opening markup.
+            for match in re.finditer(r'"(?:\\.|[^"\\])*"', self.raw):
+                try:
+                    decoded = json.loads(match.group())
+                except (ValueError, TypeError):
+                    continue
+                if decoded == token:
+                    return self.raw[match.start():match.start() + 300]
         return self.raw[:300]
 
     def name_span(self, token):
