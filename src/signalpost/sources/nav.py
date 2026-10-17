@@ -2,6 +2,7 @@
 from ..workers import nav_offload
 
 import asyncio
+import functools
 import json
 import os
 import re
@@ -43,6 +44,7 @@ def distinctive_tokens(value,frequency,active_headers):
             if frequency.get(token,0)<=rarity_limit(active_headers)}
 
 
+@functools.lru_cache(maxsize=8192)
 def discovery_text(value):
     text=str(value or '').casefold().replace('æ','ae').replace('ø','o').replace('å','a')
     # Alternate ASCII spellings converge for discovery only, never identity.
@@ -51,12 +53,14 @@ def discovery_text(value):
     return ''.join(c for c in text if not unicodedata.combining(c))
 
 
+@functools.lru_cache(maxsize=8192)
 def name_tokens(value):
     text=discovery_text(value)
     text=''.join(c for c in text if not unicodedata.combining(c))
     return {word for word in re.findall(r'[^\W\d_]+',text) if len(word)>=4 and word not in GENERIC_NAMES}
 
 
+@functools.lru_cache(maxsize=8192)
 def normal_name(value):
     text=discovery_text(value)
     text=''.join(c for c in text if not unicodedata.combining(c))
