@@ -1,2 +1,3 @@
 # Recorded HTTP response hashes depend on exact bytes on Windows as well.
 tests/fixtures/external_integration/blobs/* -text
+reports/r2/OVERNIGHT_PROMPT.md -text
