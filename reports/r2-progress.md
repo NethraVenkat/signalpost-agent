@@ -20,4 +20,24 @@
 
 2026-10-18T00:07:06+05:30 — A4 120 s measurement: exit 0; 1,000 envelopes, 28,726 identity IDs; wall 116.62 s; research 102.84 s; mandatory output 11.70 s; optional site skipped explicitly. Website availability 3->34, hiring 6->6, activity 1->3 versus saved R1 120 s run. Source/network variation limits causality. 30 s >=80% research target not met by measured mandatory-output reserve; nationwide wall still failing.
 
-NEXT: Commit A4 as an independently measured change, then run Phase A full suite, 100-company smoke and 24-company comparison before any RC tag.
+2026-10-18T02:35:06+05:30 — cb0b0e2 A4 committed; Phase A full suite 483 passed in 70.73 s. Starting single serialized 100-company smoke + 24-company baseline; no RC tag yet.
+
+2026-10-18T02:35:06+05:30 — Heartbeat: a quick gate smoke100 running, PID 14300.
+
+2026-10-18T02:35:51+05:30 — Heartbeat: a quick gate smoke100 running, PID 14300.
+
+2026-10-18T02:36:10+05:30 — Heartbeat: a quick gate verify-smoke100 running, PID 25000.
+
+2026-10-18T02:36:19+05:30 — Heartbeat: a quick gate baseline24 running, PID 23148.
+
+2026-10-18T02:37:04+05:30 — Heartbeat: a quick gate baseline24 running, PID 23148.
+
+2026-10-18T02:37:08+05:30 — Heartbeat: a quick gate verify-baseline24 running, PID 3200.
+
+2026-10-18T02:37:09+05:30 — Heartbeat: a quick gate compare24 running, PID 25380.
+
+2026-10-18T02:37:21+05:30 — Phase A full suite 483 passed; quick gate finished: 100-company delivery/site/schema/synthesis passed; 24-company run and verifier completed. All three prior audit flags pass corrected semantic checks (reports/r2/a3-known-flags.json). Full nationwide wall and 30 s research-share constraints remain open.
+
+2026-10-18T02:37:37+05:30 — Phase A QUICK GATE PASS: 483 tests, 100 ordered envelopes and site, 24 ordered envelopes with 0 lost/added/duplicate IDs and 0 schema changes. Local rc-a marks this checkpoint only; full release gate remains unpassed. Optional discovery will be trimmed first to prioritize UX and Phase E.
+
+NEXT: Commit the Phase A checkpoint and tag rc-a locally; implement B1 five-area profile grouping without changing claims.

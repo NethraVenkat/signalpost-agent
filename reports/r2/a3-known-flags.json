@@ -1,0 +1,29 @@
+[
+  {
+    "orgnr": "826440082",
+    "field": "official_website",
+    "result": [
+      "CORRECT",
+      "Exact orgnr 826440082 verified in company ownership context",
+      "https://jaerpukk.no"
+    ]
+  },
+  {
+    "orgnr": "827248592",
+    "field": "identity.deleted",
+    "result": [
+      "CORRECT",
+      "Deleted flag derived from source deletion date",
+      "2026-08-25"
+    ]
+  },
+  {
+    "orgnr": "939658106",
+    "field": "social_profile.e27886f45b4e23dc5c96",
+    "result": [
+      "CORRECT",
+      "Verified company-owned social link (linkedin.com) in page body",
+      "https://www.linkedin.com/company/sorarkitekter"
+    ]
+  }
+]
