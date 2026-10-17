@@ -1,0 +1,62 @@
+[
+  {
+    "page": "c/923609016.html",
+    "width": 1440,
+    "horizontal_overflow": false,
+    "screenshot": "reports\\r2\\screenshots\\large-1440.png"
+  },
+  {
+    "page": "c/930010499.html",
+    "width": 1440,
+    "horizontal_overflow": false,
+    "screenshot": "reports\\r2\\screenshots\\small-1440.png"
+  },
+  {
+    "page": "c/923609017.html",
+    "width": 1440,
+    "horizontal_overflow": false,
+    "screenshot": "reports\\r2\\screenshots\\missing-1440.png"
+  },
+  {
+    "page": "index.html#directory",
+    "width": 1440,
+    "horizontal_overflow": false,
+    "screenshot": "reports\\r2\\screenshots\\directory-1440.png"
+  },
+  {
+    "page": "compare.html?companies=923609016,930010499",
+    "width": 1440,
+    "horizontal_overflow": false,
+    "screenshot": "reports\\r2\\screenshots\\compare-1440.png"
+  },
+  {
+    "page": "c/923609016.html",
+    "width": 375,
+    "horizontal_overflow": false,
+    "screenshot": "reports\\r2\\screenshots\\large-375.png"
+  },
+  {
+    "page": "c/930010499.html",
+    "width": 375,
+    "horizontal_overflow": false,
+    "screenshot": "reports\\r2\\screenshots\\small-375.png"
+  },
+  {
+    "page": "c/923609017.html",
+    "width": 375,
+    "horizontal_overflow": false,
+    "screenshot": "reports\\r2\\screenshots\\missing-375.png"
+  },
+  {
+    "page": "index.html#directory",
+    "width": 375,
+    "horizontal_overflow": false,
+    "screenshot": "reports\\r2\\screenshots\\directory-375.png"
+  },
+  {
+    "page": "compare.html?companies=923609016,930010499",
+    "width": 375,
+    "horizontal_overflow": false,
+    "screenshot": "reports\\r2\\screenshots\\compare-375.png"
+  }
+]
