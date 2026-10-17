@@ -71,3 +71,31 @@ def test_unchecked_website_page_preserves_contact_without_company_removal(tmp_pa
     assert not any(e.field==contact.field for e in row.changes)
     assert next(c for c in row.claims if c.id==contact.id).carried_forward
     assert any(e.get('reason')=='supporting_website_page_not_checked' for e in row.run.refresh['observation_changes'])
+
+
+def test_historical_claim_recovery_is_observation_but_new_value_is_material(tmp_path, monkeypatch):
+    from tests.test_websites import execute_web, html
+    from signalpost.models.envelope import Envelope
+    from signalpost.models.shapes import serialize
+    from signalpost.refresh.diff import apply
+    from signalpost.sources.blobstore import BlobStore
+    _, raw, _, cfg = execute_web(tmp_path, monkeypatch, html(extra='<a href="mailto:office@example.no">Email</a>'))
+    original = Envelope.model_validate(raw)
+    contact = next(c for c in original.claims if c.field.startswith('contact.email.'))
+    absent = original.model_copy(deep=True)
+    absent.claims = [c for c in absent.claims if c.id != contact.id]
+    absent.run.refresh['website'] = {'checked_urls': ['https://example.no/']}
+    apply(absent, serialize(original, 'union'), BlobStore(cfg.state_dir))
+    assert contact.id in absent.run.refresh['observed_claim_ids']
+    recovered = original.model_copy(deep=True)
+    recovered.changes = []
+    apply(recovered, serialize(absent, 'union'), BlobStore(cfg.state_dir))
+    assert not any(c.field == contact.field for c in recovered.changes)
+    assert any(c.get('claim_id') == contact.id and c['reason'] == 'previously_observed_claim_recovered'
+               for c in recovered.run.refresh['observation_changes'])
+    # Unknown IDs remain additions; historical evidence alone cannot invent history.
+    absent.run.refresh.pop('observed_claim_ids')
+    fresh = original.model_copy(deep=True)
+    fresh.changes = []
+    apply(fresh, serialize(absent, 'union'), BlobStore(cfg.state_dir))
+    assert any(c.field == contact.field and c.type == 'added' for c in fresh.changes)

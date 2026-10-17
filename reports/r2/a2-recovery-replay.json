@@ -1,0 +1,44 @@
+[
+  {
+    "orgnr": "935770092",
+    "field": "website_description.meta_description.c37ace856d9315d1",
+    "recovered": true,
+    "material": false,
+    "history_source": "Explicit older baseline IDs; pre-R2 files do not contain history automatically."
+  },
+  {
+    "orgnr": "935770092",
+    "field": "website_description.og_description.c37ace856d9315d1",
+    "recovered": true,
+    "material": false,
+    "history_source": "Explicit older baseline IDs; pre-R2 files do not contain history automatically."
+  },
+  {
+    "orgnr": "993310247",
+    "field": "website_description.about_paragraph.473493537f7f2cd1",
+    "recovered": true,
+    "material": false,
+    "history_source": "Explicit older baseline IDs; pre-R2 files do not contain history automatically."
+  },
+  {
+    "orgnr": "994677373",
+    "field": "website_description.about_paragraph.354b01a4953e391a",
+    "recovered": true,
+    "material": false,
+    "history_source": "Explicit older baseline IDs; pre-R2 files do not contain history automatically."
+  },
+  {
+    "orgnr": "995707705",
+    "field": "website_description.meta_description.3b13321b6f023c26",
+    "recovered": true,
+    "material": false,
+    "history_source": "Explicit older baseline IDs; pre-R2 files do not contain history automatically."
+  },
+  {
+    "orgnr": "995707705",
+    "field": "website_description.og_description.3b13321b6f023c26",
+    "recovered": true,
+    "material": false,
+    "history_source": "Explicit older baseline IDs; pre-R2 files do not contain history automatically."
+  }
+]
