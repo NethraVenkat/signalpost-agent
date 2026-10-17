@@ -387,7 +387,7 @@ async def _run(config, client=None,synthesis_provider=None):
                     timing_markers['registry_complete_seconds'] = time.monotonic() - budget.start
             async with website_semaphore:
                 if config.websites:
-                    await isolate(envelope, "website", lambda: collector.fetch(org, envelope, bulk.get(org), website_http))
+                    await isolate(envelope, "website", lambda: collector.fetch(org, envelope, bulk.get(org), website_http, prior.get(org)))
                 if config.public_activity:
                     from .web.activity import fetch as fetch_activity
                     await isolate(envelope, 'activity', lambda: fetch_activity(org, envelope, website_http, website_http.accepted_pages.get(org, [])))

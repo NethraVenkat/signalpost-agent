@@ -198,4 +198,6 @@
 
 2026-10-18T03:24:13+05:30 — Long-anchor follow-up committed (see git log); auditor now validates root deletion fields, rejects unrelated social quotes and escaped group fallbacks, and checks branch websites only through structurally and semantically verified BRREG subunit relationships. 61 audit/adversarial tests pass. Prior artifacts remain unchanged and retain the real old-span failure.
 
-NEXT: Commit auditor safeguards, then implement exact revalidation of previous verified website nominations for refresh stability.
+2026-10-18T03:28:31+05:30 — c8306a0 long-anchor robustness and d50d21c strict auditor safeguards committed. Refresh revalidation now nominates only prior VERIFIED sites when the registry website is unchanged and any branch remains registered; it fetches the old proof page live within unchanged robots/DNS/request bounds, retains candidate origin and requires fresh exact proof. 13 refresh regressions and 8 focused adversarial checks pass, including foreign-owner and changed-registry negatives.
+
+NEXT: Commit refresh exact-site revalidation, preserve prompt bytes in Git, then run the full corrected suite and final frozen release matrix.
