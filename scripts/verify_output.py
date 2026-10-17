@@ -35,7 +35,7 @@ def verify_synthesis(row):
 
 
 def load(path):
-    rows = [json.loads(line) for line in path.read_text(encoding="utf-8-sig").splitlines() if line.strip()]
+    rows = [json.loads(line) for line in path.read_text(encoding="utf-8-sig").split("\n") if line.strip()]
     for row in rows:
         shape = "union" if "profile" in row and "claims" in row else "reference" if "profile" in row else "contract"
         validate(row, shape)

@@ -49,7 +49,7 @@ def regenerate_cohort(
         raise FileNotFoundError(f"Input envelopes not found: {input_path}")
 
     print(f"Reading envelopes from {input_path}...")
-    lines = input_path.read_text(encoding="utf-8-sig").splitlines()
+    lines = [l for l in input_path.read_text(encoding="utf-8-sig").split("\n") if l.strip()]
     print(f"Loaded {len(lines)} envelopes.")
 
     updated_envelopes = []
