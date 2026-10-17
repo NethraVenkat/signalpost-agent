@@ -79,3 +79,10 @@ def test_json_embedded_meta_does_not_select_a_legacy_codec():
 def test_script_literal_meta_does_not_select_a_codec():
     body='<html><script>const x=\'<meta charset="windows-1252">\';</script><p>æøå</p></html>'.encode('utf8')
     assert 'æøå' in decode_body(body)
+
+
+def test_valueless_meta_content_attribute_does_not_break_decoding():
+    # Found live on 994887580: <meta content> parses to None and raised TypeError,
+    # which failed that company's whole website section.
+    assert 'æ' in decode_body('<html><head><meta name="x" content><title>æ</title></head></html>'.encode('utf8'))
+    assert 'æ' in decode_body('<meta content><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">æ'.encode('cp1252'))
