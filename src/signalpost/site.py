@@ -299,7 +299,11 @@ def fact(claim, records):
     if available and claim['field'].startswith('registry_change.'):
         from .sources.registry_changes import sentence as registry_sentence
         label = v['title']
-        content = '<p>' + esc(registry_sentence(v)) + '</p><p>' + link(v['url'], 'Registry event') + '</p>'
+        wording = registry_sentence(v)
+        original_time = 'Registry publication time: ' + v['date'] + ' (not effective date).'
+        if v.get('date_source') and original_time in wording:
+            wording = wording.replace(original_time, v['date_source'] + ': ' + v['date'] + '.')
+        content = '<p>' + esc(wording) + '</p><p>' + link(v['url'], 'Registry event') + '</p>'
     if available and claim['field'] == 'official_website' and isinstance(v, dict) and v.get('matched_via_subunit'):
         content = '<p class="relationship-note">Website of registered subunit ' + esc(v['matched_via_subunit']) + '</p>' + content
     if title:
