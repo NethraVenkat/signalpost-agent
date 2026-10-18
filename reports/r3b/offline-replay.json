@@ -1,0 +1,231 @@
+{
+  "scope": "Production registry-change acquisition/extraction/merge and synthesis replayed over saved R2 envelopes and verified saved source bodies; no live requests. Existing external discovery is not rerun because historical redirect headers were not retained.",
+  "baseline": "out/r2-check-normal",
+  "baseline_source_facts": 69479,
+  "source_bodies_hash_checked": 4114,
+  "envelopes": 1000,
+  "feed_sample": 20,
+  "feed_requests": 2,
+  "lost_r2_source_fact_ids": [],
+  "changed_r2_values": [],
+  "new_registry_claims": 24,
+  "wrong_company": 0,
+  "checks": [
+    {
+      "org": "932525070",
+      "claim_id": "ed22d3b2c4d72ef2ae172f1a81580003c5e40c38e239716b7181df88ae4b285b",
+      "event_id": 23540812,
+      "publication_time": "2025-12-22T14:30:11.129Z",
+      "source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=925181536%2C829577372%2C932525070%2C919263601%2C988963259%2C915188389%2C934485718%2C936035523%2C936349676%2C935962196%2C997095987%2C950310499%2C948639416%2C927439794%2C975514412%2C918843183%2C934216385%2C935647142%2C930621927%2C946595845&dato=2024-10-18T00%3A00%3A00.000Z&includeChanges=true&size=1000",
+      "sha256": "347682ddfbb9ca1ed9346e0c90f6229d6add565b902873ae39f639cc4a632ceb",
+      "result": "verified"
+    },
+    {
+      "org": "932525070",
+      "claim_id": "23be675d74d2b04c0baad745e470a9d10ab3fdee254cb1a7a19462616d53d225",
+      "event_id": 23562299,
+      "publication_time": "2026-01-06T09:40:12.081Z",
+      "source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=925181536%2C829577372%2C932525070%2C919263601%2C988963259%2C915188389%2C934485718%2C936035523%2C936349676%2C935962196%2C997095987%2C950310499%2C948639416%2C927439794%2C975514412%2C918843183%2C934216385%2C935647142%2C930621927%2C946595845&dato=2024-10-18T00%3A00%3A00.000Z&includeChanges=true&size=1000",
+      "sha256": "347682ddfbb9ca1ed9346e0c90f6229d6add565b902873ae39f639cc4a632ceb",
+      "result": "verified"
+    },
+    {
+      "org": "932525070",
+      "claim_id": "a27b86a374b21b042f73ef17a9849d5789356590fd307aa569c15c65da0c8a61",
+      "event_id": 23562299,
+      "publication_time": "2026-01-06T09:40:12.081Z",
+      "source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=925181536%2C829577372%2C932525070%2C919263601%2C988963259%2C915188389%2C934485718%2C936035523%2C936349676%2C935962196%2C997095987%2C950310499%2C948639416%2C927439794%2C975514412%2C918843183%2C934216385%2C935647142%2C930621927%2C946595845&dato=2024-10-18T00%3A00%3A00.000Z&includeChanges=true&size=1000",
+      "sha256": "347682ddfbb9ca1ed9346e0c90f6229d6add565b902873ae39f639cc4a632ceb",
+      "result": "verified"
+    },
+    {
+      "org": "932525070",
+      "claim_id": "d245e0ff62c82929af4f0ddf6e06ecd645095244cbdf08215bed46176f208976",
+      "event_id": 23562299,
+      "publication_time": "2026-01-06T09:40:12.081Z",
+      "source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=925181536%2C829577372%2C932525070%2C919263601%2C988963259%2C915188389%2C934485718%2C936035523%2C936349676%2C935962196%2C997095987%2C950310499%2C948639416%2C927439794%2C975514412%2C918843183%2C934216385%2C935647142%2C930621927%2C946595845&dato=2024-10-18T00%3A00%3A00.000Z&includeChanges=true&size=1000",
+      "sha256": "347682ddfbb9ca1ed9346e0c90f6229d6add565b902873ae39f639cc4a632ceb",
+      "result": "verified"
+    },
+    {
+      "org": "932525070",
+      "claim_id": "684f94208c502e9f611e2fe226f616a14198a4fa91a28e36b1693880ea3c64d2",
+      "event_id": 23562299,
+      "publication_time": "2026-01-06T09:40:12.081Z",
+      "source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=925181536%2C829577372%2C932525070%2C919263601%2C988963259%2C915188389%2C934485718%2C936035523%2C936349676%2C935962196%2C997095987%2C950310499%2C948639416%2C927439794%2C975514412%2C918843183%2C934216385%2C935647142%2C930621927%2C946595845&dato=2024-10-18T00%3A00%3A00.000Z&includeChanges=true&size=1000",
+      "sha256": "347682ddfbb9ca1ed9346e0c90f6229d6add565b902873ae39f639cc4a632ceb",
+      "result": "verified"
+    },
+    {
+      "org": "932525070",
+      "claim_id": "0fdb4c877ce9cae5c3b909e413a58c657d90c5ae187738cdb10ebe339ef73a29",
+      "event_id": 23562299,
+      "publication_time": "2026-01-06T09:40:12.081Z",
+      "source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=925181536%2C829577372%2C932525070%2C919263601%2C988963259%2C915188389%2C934485718%2C936035523%2C936349676%2C935962196%2C997095987%2C950310499%2C948639416%2C927439794%2C975514412%2C918843183%2C934216385%2C935647142%2C930621927%2C946595845&dato=2024-10-18T00%3A00%3A00.000Z&includeChanges=true&size=1000",
+      "sha256": "347682ddfbb9ca1ed9346e0c90f6229d6add565b902873ae39f639cc4a632ceb",
+      "result": "verified"
+    },
+    {
+      "org": "932525070",
+      "claim_id": "58c5356d474e9c295304ccd46965735953e0c5855e1f76db4af0056cae0aae3d",
+      "event_id": 23562299,
+      "publication_time": "2026-01-06T09:40:12.081Z",
+      "source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=925181536%2C829577372%2C932525070%2C919263601%2C988963259%2C915188389%2C934485718%2C936035523%2C936349676%2C935962196%2C997095987%2C950310499%2C948639416%2C927439794%2C975514412%2C918843183%2C934216385%2C935647142%2C930621927%2C946595845&dato=2024-10-18T00%3A00%3A00.000Z&includeChanges=true&size=1000",
+      "sha256": "347682ddfbb9ca1ed9346e0c90f6229d6add565b902873ae39f639cc4a632ceb",
+      "result": "verified"
+    },
+    {
+      "org": "932525070",
+      "claim_id": "69d3411820087eaf1bc0a8c48a6f58b4d5a7b7a5ab7d6acb4f5b8c062da3917b",
+      "event_id": 23562299,
+      "publication_time": "2026-01-06T09:40:12.081Z",
+      "source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=925181536%2C829577372%2C932525070%2C919263601%2C988963259%2C915188389%2C934485718%2C936035523%2C936349676%2C935962196%2C997095987%2C950310499%2C948639416%2C927439794%2C975514412%2C918843183%2C934216385%2C935647142%2C930621927%2C946595845&dato=2024-10-18T00%3A00%3A00.000Z&includeChanges=true&size=1000",
+      "sha256": "347682ddfbb9ca1ed9346e0c90f6229d6add565b902873ae39f639cc4a632ceb",
+      "result": "verified"
+    },
+    {
+      "org": "932525070",
+      "claim_id": "0a0a0342fc19c1679d935e771bcc7ed982caa15dc3f8a7473becdb685fee220a",
+      "event_id": 23562299,
+      "publication_time": "2026-01-06T09:40:12.081Z",
+      "source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=925181536%2C829577372%2C932525070%2C919263601%2C988963259%2C915188389%2C934485718%2C936035523%2C936349676%2C935962196%2C997095987%2C950310499%2C948639416%2C927439794%2C975514412%2C918843183%2C934216385%2C935647142%2C930621927%2C946595845&dato=2024-10-18T00%3A00%3A00.000Z&includeChanges=true&size=1000",
+      "sha256": "347682ddfbb9ca1ed9346e0c90f6229d6add565b902873ae39f639cc4a632ceb",
+      "result": "verified"
+    },
+    {
+      "org": "932525070",
+      "claim_id": "784b63e7413a1c31c9078da722b1f49d0e1a91f3c609cefa222d11c7d2bbe3d6",
+      "event_id": 23562299,
+      "publication_time": "2026-01-06T09:40:12.081Z",
+      "source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=925181536%2C829577372%2C932525070%2C919263601%2C988963259%2C915188389%2C934485718%2C936035523%2C936349676%2C935962196%2C997095987%2C950310499%2C948639416%2C927439794%2C975514412%2C918843183%2C934216385%2C935647142%2C930621927%2C946595845&dato=2024-10-18T00%3A00%3A00.000Z&includeChanges=true&size=1000",
+      "sha256": "347682ddfbb9ca1ed9346e0c90f6229d6add565b902873ae39f639cc4a632ceb",
+      "result": "verified"
+    },
+    {
+      "org": "932525070",
+      "claim_id": "70a6e5e4f58afa06c69e63d4f7d8712a8bd2df1391c6a4ac006d1f2defd92632",
+      "event_id": 20773422,
+      "publication_time": "2026-02-23T14:35:14.592Z",
+      "source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=925284858%2C937214936%2C936845738%2C915261108%2C934488431%2C936067409%2C936626157%2C936044042%2C987999233%2C923866892%2C999637329%2C924147881%2C934239709%2C936078087%2C972350222&dato=2024-10-18T00%3A00%3A00.000Z&includeChanges=true&size=1000",
+      "sha256": "4a7cdcb1e518fc40f5972b9b4df8a5b6923ba9b80c8226184952cc002eea1e3e",
+      "result": "verified"
+    },
+    {
+      "org": "988963259",
+      "claim_id": "2c1d691a795d9c93348ed3ab3724e3a1f850d8adc908246b5fd18a858b0522e7",
+      "event_id": 20554495,
+      "publication_time": "2025-12-19T14:45:11.883Z",
+      "source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=925284858%2C937214936%2C936845738%2C915261108%2C934488431%2C936067409%2C936626157%2C936044042%2C987999233%2C923866892%2C999637329%2C924147881%2C934239709%2C936078087%2C972350222&dato=2024-10-18T00%3A00%3A00.000Z&includeChanges=true&size=1000",
+      "sha256": "4a7cdcb1e518fc40f5972b9b4df8a5b6923ba9b80c8226184952cc002eea1e3e",
+      "result": "verified"
+    },
+    {
+      "org": "934485718",
+      "claim_id": "4b2381e0d1b13955a94c6ac29907a57f08909083d67fdd63397b019acd4e0078",
+      "event_id": 23493349,
+      "publication_time": "2025-12-12T16:40:12.474Z",
+      "source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=925181536%2C829577372%2C932525070%2C919263601%2C988963259%2C915188389%2C934485718%2C936035523%2C936349676%2C935962196%2C997095987%2C950310499%2C948639416%2C927439794%2C975514412%2C918843183%2C934216385%2C935647142%2C930621927%2C946595845&dato=2024-10-18T00%3A00%3A00.000Z&includeChanges=true&size=1000",
+      "sha256": "347682ddfbb9ca1ed9346e0c90f6229d6add565b902873ae39f639cc4a632ceb",
+      "result": "verified"
+    },
+    {
+      "org": "934485718",
+      "claim_id": "9b2fd75fa215d57c0bc04025a8b05caf40098d5d6ed35722afcdb5bea402e14d",
+      "event_id": 23493349,
+      "publication_time": "2025-12-12T16:40:12.474Z",
+      "source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=925181536%2C829577372%2C932525070%2C919263601%2C988963259%2C915188389%2C934485718%2C936035523%2C936349676%2C935962196%2C997095987%2C950310499%2C948639416%2C927439794%2C975514412%2C918843183%2C934216385%2C935647142%2C930621927%2C946595845&dato=2024-10-18T00%3A00%3A00.000Z&includeChanges=true&size=1000",
+      "sha256": "347682ddfbb9ca1ed9346e0c90f6229d6add565b902873ae39f639cc4a632ceb",
+      "result": "verified"
+    },
+    {
+      "org": "934485718",
+      "claim_id": "d12874857f6e65d8d7cd30db1c6af66142107a468c4b94bc2f97eb741211d2df",
+      "event_id": 23493349,
+      "publication_time": "2025-12-12T16:40:12.474Z",
+      "source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=925181536%2C829577372%2C932525070%2C919263601%2C988963259%2C915188389%2C934485718%2C936035523%2C936349676%2C935962196%2C997095987%2C950310499%2C948639416%2C927439794%2C975514412%2C918843183%2C934216385%2C935647142%2C930621927%2C946595845&dato=2024-10-18T00%3A00%3A00.000Z&includeChanges=true&size=1000",
+      "sha256": "347682ddfbb9ca1ed9346e0c90f6229d6add565b902873ae39f639cc4a632ceb",
+      "result": "verified"
+    },
+    {
+      "org": "934485718",
+      "claim_id": "aee006e07194f77c1159b5e228eb48028585fdb02067bb6560773e386e1af474",
+      "event_id": 19377582,
+      "publication_time": "2024-11-19T05:00:50.525Z",
+      "source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=925284858%2C937214936%2C936845738%2C915261108%2C934488431%2C936067409%2C936626157%2C936044042%2C987999233%2C923866892%2C999637329%2C924147881%2C934239709%2C936078087%2C972350222&dato=2024-10-18T00%3A00%3A00.000Z&includeChanges=true&size=1000",
+      "sha256": "4a7cdcb1e518fc40f5972b9b4df8a5b6923ba9b80c8226184952cc002eea1e3e",
+      "result": "verified"
+    },
+    {
+      "org": "936035523",
+      "claim_id": "27ec0477d59756e3ee9bd58894679fdee1098e43061de916b046909d4bfb99df",
+      "event_id": 20194309,
+      "publication_time": "2025-09-01T22:05:28.569Z",
+      "source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=925284858%2C937214936%2C936845738%2C915261108%2C934488431%2C936067409%2C936626157%2C936044042%2C987999233%2C923866892%2C999637329%2C924147881%2C934239709%2C936078087%2C972350222&dato=2024-10-18T00%3A00%3A00.000Z&includeChanges=true&size=1000",
+      "sha256": "4a7cdcb1e518fc40f5972b9b4df8a5b6923ba9b80c8226184952cc002eea1e3e",
+      "result": "verified"
+    },
+    {
+      "org": "936349676",
+      "claim_id": "728d43d265babdc0bd32964fa4f517bf93c3e362e643992482096a0fe6dad00f",
+      "event_id": 23522825,
+      "publication_time": "2025-12-16T11:25:11.710Z",
+      "source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=925181536%2C829577372%2C932525070%2C919263601%2C988963259%2C915188389%2C934485718%2C936035523%2C936349676%2C935962196%2C997095987%2C950310499%2C948639416%2C927439794%2C975514412%2C918843183%2C934216385%2C935647142%2C930621927%2C946595845&dato=2024-10-18T00%3A00%3A00.000Z&includeChanges=true&size=1000",
+      "sha256": "347682ddfbb9ca1ed9346e0c90f6229d6add565b902873ae39f639cc4a632ceb",
+      "result": "verified"
+    },
+    {
+      "org": "936349676",
+      "claim_id": "e7916c9d6095fe5534944febaf91f94c145f59fb86fb32a3d69d09219bd93af6",
+      "event_id": 23522825,
+      "publication_time": "2025-12-16T11:25:11.710Z",
+      "source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=925181536%2C829577372%2C932525070%2C919263601%2C988963259%2C915188389%2C934485718%2C936035523%2C936349676%2C935962196%2C997095987%2C950310499%2C948639416%2C927439794%2C975514412%2C918843183%2C934216385%2C935647142%2C930621927%2C946595845&dato=2024-10-18T00%3A00%3A00.000Z&includeChanges=true&size=1000",
+      "sha256": "347682ddfbb9ca1ed9346e0c90f6229d6add565b902873ae39f639cc4a632ceb",
+      "result": "verified"
+    },
+    {
+      "org": "936349676",
+      "claim_id": "a11dbbb57b8bbaf75ce55ca009b758b19c142366db464fa021dfff8d221ecd2a",
+      "event_id": 23522825,
+      "publication_time": "2025-12-16T11:25:11.710Z",
+      "source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=925181536%2C829577372%2C932525070%2C919263601%2C988963259%2C915188389%2C934485718%2C936035523%2C936349676%2C935962196%2C997095987%2C950310499%2C948639416%2C927439794%2C975514412%2C918843183%2C934216385%2C935647142%2C930621927%2C946595845&dato=2024-10-18T00%3A00%3A00.000Z&includeChanges=true&size=1000",
+      "sha256": "347682ddfbb9ca1ed9346e0c90f6229d6add565b902873ae39f639cc4a632ceb",
+      "result": "verified"
+    },
+    {
+      "org": "936349676",
+      "claim_id": "8f27802a8fb5da17dbbe355f6030808ba4e8f5ed0c1db3f429c73a637022be31",
+      "event_id": 23522825,
+      "publication_time": "2025-12-16T11:25:11.710Z",
+      "source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=925181536%2C829577372%2C932525070%2C919263601%2C988963259%2C915188389%2C934485718%2C936035523%2C936349676%2C935962196%2C997095987%2C950310499%2C948639416%2C927439794%2C975514412%2C918843183%2C934216385%2C935647142%2C930621927%2C946595845&dato=2024-10-18T00%3A00%3A00.000Z&includeChanges=true&size=1000",
+      "sha256": "347682ddfbb9ca1ed9346e0c90f6229d6add565b902873ae39f639cc4a632ceb",
+      "result": "verified"
+    },
+    {
+      "org": "936349676",
+      "claim_id": "a1a93247e82d18d10744e3b4e701d6ccf3145c67dfa5da8092300ced6a32b8bf",
+      "event_id": 20463753,
+      "publication_time": "2025-11-20T23:00:48.165Z",
+      "source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=925284858%2C937214936%2C936845738%2C915261108%2C934488431%2C936067409%2C936626157%2C936044042%2C987999233%2C923866892%2C999637329%2C924147881%2C934239709%2C936078087%2C972350222&dato=2024-10-18T00%3A00%3A00.000Z&includeChanges=true&size=1000",
+      "sha256": "4a7cdcb1e518fc40f5972b9b4df8a5b6923ba9b80c8226184952cc002eea1e3e",
+      "result": "verified"
+    },
+    {
+      "org": "935962196",
+      "claim_id": "1bdb889e036e9ebd2841d88d32ee6b0d387ab30bda25b5c5cff45f5068839404",
+      "event_id": 20191269,
+      "publication_time": "2025-08-27T22:01:06.187Z",
+      "source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=925284858%2C937214936%2C936845738%2C915261108%2C934488431%2C936067409%2C936626157%2C936044042%2C987999233%2C923866892%2C999637329%2C924147881%2C934239709%2C936078087%2C972350222&dato=2024-10-18T00%3A00%3A00.000Z&includeChanges=true&size=1000",
+      "sha256": "4a7cdcb1e518fc40f5972b9b4df8a5b6923ba9b80c8226184952cc002eea1e3e",
+      "result": "verified"
+    },
+    {
+      "org": "935647142",
+      "claim_id": "ee38d0936f714c6b42005b58c5c43fab166a3fd66f09fb07216ae0a29698ea9f",
+      "event_id": 20195728,
+      "publication_time": "2025-09-02T22:01:05.902Z",
+      "source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=925284858%2C937214936%2C936845738%2C915261108%2C934488431%2C936067409%2C936626157%2C936044042%2C987999233%2C923866892%2C999637329%2C924147881%2C934239709%2C936078087%2C972350222&dato=2024-10-18T00%3A00%3A00.000Z&includeChanges=true&size=1000",
+      "sha256": "4a7cdcb1e518fc40f5972b9b4df8a5b6923ba9b80c8226184952cc002eea1e3e",
+      "result": "verified"
+    }
+  ]
+}

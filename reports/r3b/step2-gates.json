@@ -1,0 +1,33 @@
+{
+  "tested_code_sha": "fd18394f726704e5c4386b474532262fb481bd0f",
+  "full_suite": {
+    "passed": 516,
+    "seconds": 104.36,
+    "note": "Follow-up site-index and independent verifier additions covered by focused 20-test pass; final full suite pending"
+  },
+  "focused_tests": {
+    "passed": 20
+  },
+  "baseline_pilot": {
+    "exit": 0,
+    "envelopes": 50,
+    "runtime_ms": 38083,
+    "requests": 297
+  },
+  "release": "not yet gated; registry_changes default false",
+  "verdict": "DO NOT SHIP",
+  "stop_time_ist": "2026-10-18T12:37:53+05:30",
+  "blocking_failure": "Code regression: microsecond query timestamps rejected; requires exactly 3 fractional digits",
+  "live_pilot": {
+    "exit": 0,
+    "envelopes": 50,
+    "new_registry_claims": 0,
+    "activity_failed": 50,
+    "identity_ids": 1433,
+    "feed_http_statuses": [
+      400,
+      400
+    ]
+  },
+  "remaining_release_gates": "not run after failed pilot"
+}
