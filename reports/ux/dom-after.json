@@ -37,6 +37,9 @@
           "registry_label_exact": false,
           "registry_label_casefold": false,
           "unknown_block": false,
+          "unknown_item_count": 0,
+          "unknown_reason_count": 0,
+          "unknown_status_link_count": 0,
           "body_excerpt": "Skip to content\nSignalpost\nDashboard\nDirectory\nCompare\nSearch companies Ctrl/⌘ K\nUpdate status\n🌙 Dark\n\nCOMPANY RESEARCH, WITH RECEIPTS\n\nSignalpost\n\n49 companies · 4.1% with website · 2.0% with jobs · 30.6% with activity · Run date: 2026-10-18T08:43:04.246574Z\n\n1 input record(s) have no company page because the organisation number is not valid: 12345678. They keep an explicit terminal envelope in the JSON output.\n📊 Dashboard\n🏢 Company Directory\n💼 Hiring Explorer\nCOHORT SCOPE\nFull evaluated co"
         },
         "errors": {
@@ -71,6 +74,9 @@
           "registry_label_exact": false,
           "registry_label_casefold": false,
           "unknown_block": false,
+          "unknown_item_count": 0,
+          "unknown_reason_count": 0,
+          "unknown_status_link_count": 0,
           "body_excerpt": "Skip to content\nSignalpost\nDashboard\nDirectory\nCompare\nSearch companies Ctrl/⌘ K\nUpdate status\n🌙 Dark\n\nCOMPANY RESEARCH, WITH RECEIPTS\n\nSignalpost\n\n49 companies · 4.1% with website · 2.0% with jobs · 30.6% with activity · Run date: 2026-10-18T08:43:04.246574Z\n\n1 input record(s) have no company page because the organisation number is not valid: 12345678. They keep an explicit terminal envelope in the JSON output.\n📊 Dashboard\n🏢 Company Directory\n💼 Hiring Explorer\nCOHORT SCOPE\nFull evaluated co"
         },
         "errors": {
@@ -105,6 +111,9 @@
           "registry_label_exact": false,
           "registry_label_casefold": false,
           "unknown_block": false,
+          "unknown_item_count": 0,
+          "unknown_reason_count": 0,
+          "unknown_status_link_count": 0,
           "body_excerpt": "Skip to content\nSignalpost\nDashboard\nDirectory\nCompare\nSearch companies Ctrl/⌘ K\nUpdate status\n🌙 Dark\n\nCOMPANY RESEARCH, WITH RECEIPTS\n\nSignalpost\n\n49 companies · 4.1% with website · 2.0% with jobs · 30.6% with activity · Run date: 2026-10-18T08:43:04.246574Z\n\n1 input record(s) have no company page because the organisation number is not valid: 12345678. They keep an explicit terminal envelope in the JSON output.\n📊 Dashboard\n🏢 Company Directory\n💼 Hiring Explorer\nCOHORT SCOPE\nFull evaluated co"
         },
         "errors": {
@@ -124,7 +133,7 @@
           "client_width": 1440,
           "scroll_width": 1440,
           "overflow": false,
-          "tap_target_count": 474,
+          "tap_target_count": 478,
           "small_tap_count": 0,
           "small_tap_examples": [],
           "contrast_sample_count": 300,
@@ -137,10 +146,13 @@
           "images_without_alt": 0,
           "fact_count": 378,
           "evidence_button_count": 401,
-          "state_badge_count": 464,
-          "registry_label_exact": false,
+          "state_badge_count": 468,
+          "registry_label_exact": true,
           "registry_label_casefold": true,
-          "unknown_block": false,
+          "unknown_block": true,
+          "unknown_item_count": 4,
+          "unknown_reason_count": 4,
+          "unknown_status_link_count": 4,
           "body_excerpt": "Skip to content\nSignalpost\nDashboard\nDirectory\nCompare\nSearch companies Ctrl/⌘ K\nUpdate status\n🌙 Dark\n\nCOMPANY PROFILE\n\nEQUINOR ASA\n\nOrganisation number: 923609016 Copy organisation number ⭐ Add to Watchlist\n\nAllmennaksjeselskap (ASA)\n\nSTAVANGER\n\nbankrupt: No\n\nunder liquidation: No\n\nLast checked: 2026-10-18 08:43 UTC\n\nCited summary\n\nEQUINOR ASA is based in Stavanger and registered under Extraction of crude petroleum (NACE 06.100), with 21231 registered employees. [1] [2] [3] [4]\n\nAuditor: ERNST"
         },
         "errors": {
@@ -158,7 +170,7 @@
           "client_width": 375,
           "scroll_width": 375,
           "overflow": false,
-          "tap_target_count": 474,
+          "tap_target_count": 478,
           "small_tap_count": 0,
           "small_tap_examples": [],
           "contrast_sample_count": 300,
@@ -171,10 +183,13 @@
           "images_without_alt": 0,
           "fact_count": 378,
           "evidence_button_count": 401,
-          "state_badge_count": 464,
-          "registry_label_exact": false,
+          "state_badge_count": 468,
+          "registry_label_exact": true,
           "registry_label_casefold": true,
-          "unknown_block": false,
+          "unknown_block": true,
+          "unknown_item_count": 4,
+          "unknown_reason_count": 4,
+          "unknown_status_link_count": 4,
           "body_excerpt": "Skip to content\nSignalpost\nDashboard\nDirectory\nCompare\nSearch companies Ctrl/⌘ K\nUpdate status\n🌙 Dark\n\nCOMPANY PROFILE\n\nEQUINOR ASA\n\nOrganisation number: 923609016 Copy organisation number ⭐ Add to Watchlist\n\nAllmennaksjeselskap (ASA)\n\nSTAVANGER\n\nbankrupt: No\n\nunder liquidation: No\n\nLast checked: 2026-10-18 08:43 UTC\n\nCited summary\n\nEQUINOR ASA is based in Stavanger and registered under Extraction of crude petroleum (NACE 06.100), with 21231 registered employees. [1] [2] [3] [4]\n\nAuditor: ERNST"
         },
         "errors": {
@@ -192,7 +207,7 @@
           "client_width": 320,
           "scroll_width": 320,
           "overflow": false,
-          "tap_target_count": 474,
+          "tap_target_count": 478,
           "small_tap_count": 0,
           "small_tap_examples": [],
           "contrast_sample_count": 300,
@@ -205,10 +220,13 @@
           "images_without_alt": 0,
           "fact_count": 378,
           "evidence_button_count": 401,
-          "state_badge_count": 464,
-          "registry_label_exact": false,
+          "state_badge_count": 468,
+          "registry_label_exact": true,
           "registry_label_casefold": true,
-          "unknown_block": false,
+          "unknown_block": true,
+          "unknown_item_count": 4,
+          "unknown_reason_count": 4,
+          "unknown_status_link_count": 4,
           "body_excerpt": "Skip to content\nSignalpost\nDashboard\nDirectory\nCompare\nSearch companies Ctrl/⌘ K\nUpdate status\n🌙 Dark\n\nCOMPANY PROFILE\n\nEQUINOR ASA\n\nOrganisation number: 923609016 Copy organisation number ⭐ Add to Watchlist\n\nAllmennaksjeselskap (ASA)\n\nSTAVANGER\n\nbankrupt: No\n\nunder liquidation: No\n\nLast checked: 2026-10-18 08:43 UTC\n\nCited summary\n\nEQUINOR ASA is based in Stavanger and registered under Extraction of crude petroleum (NACE 06.100), with 21231 registered employees. [1] [2] [3] [4]\n\nAuditor: ERNST"
         },
         "errors": {
@@ -228,7 +246,7 @@
           "client_width": 1440,
           "scroll_width": 1440,
           "overflow": false,
-          "tap_target_count": 141,
+          "tap_target_count": 145,
           "small_tap_count": 0,
           "small_tap_examples": [],
           "contrast_sample_count": 300,
@@ -241,10 +259,13 @@
           "images_without_alt": 0,
           "fact_count": 71,
           "evidence_button_count": 99,
-          "state_badge_count": 163,
+          "state_badge_count": 167,
           "registry_label_exact": false,
           "registry_label_casefold": false,
-          "unknown_block": false,
+          "unknown_block": true,
+          "unknown_item_count": 4,
+          "unknown_reason_count": 4,
+          "unknown_status_link_count": 4,
           "body_excerpt": "Skip to content\nSignalpost\nDashboard\nDirectory\nCompare\nSearch companies Ctrl/⌘ K\nUpdate status\n🌙 Dark\n\nCOMPANY PROFILE\n\nFILMTEK AS\n\nOrganisation number: 988330752 Copy organisation number ⭐ Add to Watchlist\n\nAksjeselskap (AS)\n\nKRISTIANSAND\n\nbankrupt: No\n\nunder liquidation: No\n\nLast checked: 2026-10-18 08:43 UTC\n\nCited summary\n\nFILMTEK AS is based in Kristiansand and registered under Motion picture, video and television programme post-production activities (NACE 59.120), with NOK 222,039 in reve"
         },
         "errors": {
@@ -262,7 +283,7 @@
           "client_width": 375,
           "scroll_width": 375,
           "overflow": false,
-          "tap_target_count": 141,
+          "tap_target_count": 145,
           "small_tap_count": 0,
           "small_tap_examples": [],
           "contrast_sample_count": 300,
@@ -275,10 +296,13 @@
           "images_without_alt": 0,
           "fact_count": 71,
           "evidence_button_count": 99,
-          "state_badge_count": 163,
+          "state_badge_count": 167,
           "registry_label_exact": false,
           "registry_label_casefold": false,
-          "unknown_block": false,
+          "unknown_block": true,
+          "unknown_item_count": 4,
+          "unknown_reason_count": 4,
+          "unknown_status_link_count": 4,
           "body_excerpt": "Skip to content\nSignalpost\nDashboard\nDirectory\nCompare\nSearch companies Ctrl/⌘ K\nUpdate status\n🌙 Dark\n\nCOMPANY PROFILE\n\nFILMTEK AS\n\nOrganisation number: 988330752 Copy organisation number ⭐ Add to Watchlist\n\nAksjeselskap (AS)\n\nKRISTIANSAND\n\nbankrupt: No\n\nunder liquidation: No\n\nLast checked: 2026-10-18 08:43 UTC\n\nCited summary\n\nFILMTEK AS is based in Kristiansand and registered under Motion picture, video and television programme post-production activities (NACE 59.120), with NOK 222,039 in reve"
         },
         "errors": {
@@ -296,7 +320,7 @@
           "client_width": 320,
           "scroll_width": 320,
           "overflow": false,
-          "tap_target_count": 141,
+          "tap_target_count": 145,
           "small_tap_count": 0,
           "small_tap_examples": [],
           "contrast_sample_count": 300,
@@ -309,10 +333,13 @@
           "images_without_alt": 0,
           "fact_count": 71,
           "evidence_button_count": 99,
-          "state_badge_count": 163,
+          "state_badge_count": 167,
           "registry_label_exact": false,
           "registry_label_casefold": false,
-          "unknown_block": false,
+          "unknown_block": true,
+          "unknown_item_count": 4,
+          "unknown_reason_count": 4,
+          "unknown_status_link_count": 4,
           "body_excerpt": "Skip to content\nSignalpost\nDashboard\nDirectory\nCompare\nSearch companies Ctrl/⌘ K\nUpdate status\n🌙 Dark\n\nCOMPANY PROFILE\n\nFILMTEK AS\n\nOrganisation number: 988330752 Copy organisation number ⭐ Add to Watchlist\n\nAksjeselskap (AS)\n\nKRISTIANSAND\n\nbankrupt: No\n\nunder liquidation: No\n\nLast checked: 2026-10-18 08:43 UTC\n\nCited summary\n\nFILMTEK AS is based in Kristiansand and registered under Motion picture, video and television programme post-production activities (NACE 59.120), with NOK 222,039 in reve"
         },
         "errors": {
@@ -332,7 +359,7 @@
           "client_width": 1440,
           "scroll_width": 1440,
           "overflow": false,
-          "tap_target_count": 107,
+          "tap_target_count": 112,
           "small_tap_count": 0,
           "small_tap_examples": [],
           "contrast_sample_count": 300,
@@ -345,10 +372,13 @@
           "images_without_alt": 0,
           "fact_count": 49,
           "evidence_button_count": 71,
-          "state_badge_count": 137,
+          "state_badge_count": 142,
           "registry_label_exact": false,
           "registry_label_casefold": false,
-          "unknown_block": false,
+          "unknown_block": true,
+          "unknown_item_count": 5,
+          "unknown_reason_count": 5,
+          "unknown_status_link_count": 5,
           "body_excerpt": "Skip to content\nSignalpost\nDashboard\nDirectory\nCompare\nSearch companies Ctrl/⌘ K\nUpdate status\n🌙 Dark\n\nCOMPANY PROFILE\n\nSESTANTE AS\n\nOrganisation number: 925181536 Copy organisation number ⭐ Add to Watchlist\n\nAksjeselskap (AS)\n\nOSLO\n\nbankrupt: No\n\nunder liquidation: No\n\nLast checked: 2026-10-18 08:43 UTC\n\nCited summary\n\nSESTANTE AS is based in Oslo and registered under Computer consultancy and computer facilities management activities (NACE 62.200), with NOK 0 in revenue in FY2025. [1] [2] [3] "
         },
         "errors": {
@@ -366,7 +396,7 @@
           "client_width": 375,
           "scroll_width": 375,
           "overflow": false,
-          "tap_target_count": 107,
+          "tap_target_count": 112,
           "small_tap_count": 0,
           "small_tap_examples": [],
           "contrast_sample_count": 300,
@@ -379,10 +409,13 @@
           "images_without_alt": 0,
           "fact_count": 49,
           "evidence_button_count": 71,
-          "state_badge_count": 137,
+          "state_badge_count": 142,
           "registry_label_exact": false,
           "registry_label_casefold": false,
-          "unknown_block": false,
+          "unknown_block": true,
+          "unknown_item_count": 5,
+          "unknown_reason_count": 5,
+          "unknown_status_link_count": 5,
           "body_excerpt": "Skip to content\nSignalpost\nDashboard\nDirectory\nCompare\nSearch companies Ctrl/⌘ K\nUpdate status\n🌙 Dark\n\nCOMPANY PROFILE\n\nSESTANTE AS\n\nOrganisation number: 925181536 Copy organisation number ⭐ Add to Watchlist\n\nAksjeselskap (AS)\n\nOSLO\n\nbankrupt: No\n\nunder liquidation: No\n\nLast checked: 2026-10-18 08:43 UTC\n\nCited summary\n\nSESTANTE AS is based in Oslo and registered under Computer consultancy and computer facilities management activities (NACE 62.200), with NOK 0 in revenue in FY2025. [1] [2] [3] "
         },
         "errors": {
@@ -400,7 +433,7 @@
           "client_width": 320,
           "scroll_width": 320,
           "overflow": false,
-          "tap_target_count": 107,
+          "tap_target_count": 112,
           "small_tap_count": 0,
           "small_tap_examples": [],
           "contrast_sample_count": 300,
@@ -413,10 +446,13 @@
           "images_without_alt": 0,
           "fact_count": 49,
           "evidence_button_count": 71,
-          "state_badge_count": 137,
+          "state_badge_count": 142,
           "registry_label_exact": false,
           "registry_label_casefold": false,
-          "unknown_block": false,
+          "unknown_block": true,
+          "unknown_item_count": 5,
+          "unknown_reason_count": 5,
+          "unknown_status_link_count": 5,
           "body_excerpt": "Skip to content\nSignalpost\nDashboard\nDirectory\nCompare\nSearch companies Ctrl/⌘ K\nUpdate status\n🌙 Dark\n\nCOMPANY PROFILE\n\nSESTANTE AS\n\nOrganisation number: 925181536 Copy organisation number ⭐ Add to Watchlist\n\nAksjeselskap (AS)\n\nOSLO\n\nbankrupt: No\n\nunder liquidation: No\n\nLast checked: 2026-10-18 08:43 UTC\n\nCited summary\n\nSESTANTE AS is based in Oslo and registered under Computer consultancy and computer facilities management activities (NACE 62.200), with NOK 0 in revenue in FY2025. [1] [2] [3] "
         },
         "errors": {
@@ -436,7 +472,7 @@
           "client_width": 1440,
           "scroll_width": 1440,
           "overflow": false,
-          "tap_target_count": 79,
+          "tap_target_count": 85,
           "small_tap_count": 0,
           "small_tap_examples": [],
           "contrast_sample_count": 300,
@@ -449,10 +485,13 @@
           "images_without_alt": 0,
           "fact_count": 40,
           "evidence_button_count": 47,
-          "state_badge_count": 112,
+          "state_badge_count": 118,
           "registry_label_exact": false,
           "registry_label_casefold": false,
-          "unknown_block": false,
+          "unknown_block": true,
+          "unknown_item_count": 6,
+          "unknown_reason_count": 6,
+          "unknown_status_link_count": 6,
           "body_excerpt": "Skip to content\nSignalpost\nDashboard\nDirectory\nCompare\nSearch companies Ctrl/⌘ K\nUpdate status\n🌙 Dark\n\nCOMPANY PROFILE\n\nNATURPRESS AS\n\nOrganisation number: 820042182 Copy organisation number ⭐ Add to Watchlist\n\nAksjeselskap (AS)\n\nNESODDEN\n\nbankrupt: No\n\nunder liquidation: No\n\nLast checked: 2026-10-18 08:43 UTC\n\nCited summary\n\nNATURPRESS AS is based in Nesodden and registered under Arts creation activities in literature (NACE 90.111). [1] [2] [3]\n\nKjetil Fless Aasmundsson is both CEO and chair. "
         },
         "errors": {
@@ -470,7 +509,7 @@
           "client_width": 375,
           "scroll_width": 375,
           "overflow": false,
-          "tap_target_count": 79,
+          "tap_target_count": 85,
           "small_tap_count": 0,
           "small_tap_examples": [],
           "contrast_sample_count": 300,
@@ -483,10 +522,13 @@
           "images_without_alt": 0,
           "fact_count": 40,
           "evidence_button_count": 47,
-          "state_badge_count": 112,
+          "state_badge_count": 118,
           "registry_label_exact": false,
           "registry_label_casefold": false,
-          "unknown_block": false,
+          "unknown_block": true,
+          "unknown_item_count": 6,
+          "unknown_reason_count": 6,
+          "unknown_status_link_count": 6,
           "body_excerpt": "Skip to content\nSignalpost\nDashboard\nDirectory\nCompare\nSearch companies Ctrl/⌘ K\nUpdate status\n🌙 Dark\n\nCOMPANY PROFILE\n\nNATURPRESS AS\n\nOrganisation number: 820042182 Copy organisation number ⭐ Add to Watchlist\n\nAksjeselskap (AS)\n\nNESODDEN\n\nbankrupt: No\n\nunder liquidation: No\n\nLast checked: 2026-10-18 08:43 UTC\n\nCited summary\n\nNATURPRESS AS is based in Nesodden and registered under Arts creation activities in literature (NACE 90.111). [1] [2] [3]\n\nKjetil Fless Aasmundsson is both CEO and chair. "
         },
         "errors": {
@@ -504,7 +546,7 @@
           "client_width": 320,
           "scroll_width": 320,
           "overflow": false,
-          "tap_target_count": 79,
+          "tap_target_count": 85,
           "small_tap_count": 0,
           "small_tap_examples": [],
           "contrast_sample_count": 300,
@@ -517,10 +559,13 @@
           "images_without_alt": 0,
           "fact_count": 40,
           "evidence_button_count": 47,
-          "state_badge_count": 112,
+          "state_badge_count": 118,
           "registry_label_exact": false,
           "registry_label_casefold": false,
-          "unknown_block": false,
+          "unknown_block": true,
+          "unknown_item_count": 6,
+          "unknown_reason_count": 6,
+          "unknown_status_link_count": 6,
           "body_excerpt": "Skip to content\nSignalpost\nDashboard\nDirectory\nCompare\nSearch companies Ctrl/⌘ K\nUpdate status\n🌙 Dark\n\nCOMPANY PROFILE\n\nNATURPRESS AS\n\nOrganisation number: 820042182 Copy organisation number ⭐ Add to Watchlist\n\nAksjeselskap (AS)\n\nNESODDEN\n\nbankrupt: No\n\nunder liquidation: No\n\nLast checked: 2026-10-18 08:43 UTC\n\nCited summary\n\nNATURPRESS AS is based in Nesodden and registered under Arts creation activities in literature (NACE 90.111). [1] [2] [3]\n\nKjetil Fless Aasmundsson is both CEO and chair. "
         },
         "errors": {
@@ -540,7 +585,7 @@
           "client_width": 1440,
           "scroll_width": 1440,
           "overflow": false,
-          "tap_target_count": 163,
+          "tap_target_count": 168,
           "small_tap_count": 0,
           "small_tap_examples": [],
           "contrast_sample_count": 300,
@@ -553,10 +598,13 @@
           "images_without_alt": 0,
           "fact_count": 79,
           "evidence_button_count": 102,
-          "state_badge_count": 166,
-          "registry_label_exact": false,
+          "state_badge_count": 171,
+          "registry_label_exact": true,
           "registry_label_casefold": true,
-          "unknown_block": false,
+          "unknown_block": true,
+          "unknown_item_count": 5,
+          "unknown_reason_count": 5,
+          "unknown_status_link_count": 5,
           "body_excerpt": "Skip to content\nSignalpost\nDashboard\nDirectory\nCompare\nSearch companies Ctrl/⌘ K\nUpdate status\n🌙 Dark\n\nCOMPANY PROFILE\n\nAS ELVELY\n\nOrganisation number: 932525070 Copy organisation number ⭐ Add to Watchlist\n\nAksjeselskap (AS)\n\nOSLO\n\nbankrupt: No\n\nunder liquidation: No\n\nLast checked: 2026-10-18 08:43 UTC\n\nCited summary\n\nAS ELVELY is based in Oslo and registered under Construction of residential and non-residential buildings (NACE 41.000), with NOK 107,984 in revenue in FY2025. [1] [2] [3] [4]\n\nCh"
         },
         "errors": {
@@ -574,7 +622,7 @@
           "client_width": 375,
           "scroll_width": 375,
           "overflow": false,
-          "tap_target_count": 163,
+          "tap_target_count": 168,
           "small_tap_count": 0,
           "small_tap_examples": [],
           "contrast_sample_count": 300,
@@ -587,10 +635,13 @@
           "images_without_alt": 0,
           "fact_count": 79,
           "evidence_button_count": 102,
-          "state_badge_count": 166,
-          "registry_label_exact": false,
+          "state_badge_count": 171,
+          "registry_label_exact": true,
           "registry_label_casefold": true,
-          "unknown_block": false,
+          "unknown_block": true,
+          "unknown_item_count": 5,
+          "unknown_reason_count": 5,
+          "unknown_status_link_count": 5,
           "body_excerpt": "Skip to content\nSignalpost\nDashboard\nDirectory\nCompare\nSearch companies Ctrl/⌘ K\nUpdate status\n🌙 Dark\n\nCOMPANY PROFILE\n\nAS ELVELY\n\nOrganisation number: 932525070 Copy organisation number ⭐ Add to Watchlist\n\nAksjeselskap (AS)\n\nOSLO\n\nbankrupt: No\n\nunder liquidation: No\n\nLast checked: 2026-10-18 08:43 UTC\n\nCited summary\n\nAS ELVELY is based in Oslo and registered under Construction of residential and non-residential buildings (NACE 41.000), with NOK 107,984 in revenue in FY2025. [1] [2] [3] [4]\n\nCh"
         },
         "errors": {
@@ -608,7 +659,7 @@
           "client_width": 320,
           "scroll_width": 320,
           "overflow": false,
-          "tap_target_count": 163,
+          "tap_target_count": 168,
           "small_tap_count": 0,
           "small_tap_examples": [],
           "contrast_sample_count": 300,
@@ -621,10 +672,13 @@
           "images_without_alt": 0,
           "fact_count": 79,
           "evidence_button_count": 102,
-          "state_badge_count": 166,
-          "registry_label_exact": false,
+          "state_badge_count": 171,
+          "registry_label_exact": true,
           "registry_label_casefold": true,
-          "unknown_block": false,
+          "unknown_block": true,
+          "unknown_item_count": 5,
+          "unknown_reason_count": 5,
+          "unknown_status_link_count": 5,
           "body_excerpt": "Skip to content\nSignalpost\nDashboard\nDirectory\nCompare\nSearch companies Ctrl/⌘ K\nUpdate status\n🌙 Dark\n\nCOMPANY PROFILE\n\nAS ELVELY\n\nOrganisation number: 932525070 Copy organisation number ⭐ Add to Watchlist\n\nAksjeselskap (AS)\n\nOSLO\n\nbankrupt: No\n\nunder liquidation: No\n\nLast checked: 2026-10-18 08:43 UTC\n\nCited summary\n\nAS ELVELY is based in Oslo and registered under Construction of residential and non-residential buildings (NACE 41.000), with NOK 107,984 in revenue in FY2025. [1] [2] [3] [4]\n\nCh"
         },
         "errors": {
@@ -661,6 +715,9 @@
           "registry_label_exact": false,
           "registry_label_casefold": false,
           "unknown_block": false,
+          "unknown_item_count": 0,
+          "unknown_reason_count": 0,
+          "unknown_status_link_count": 0,
           "body_excerpt": "Skip to content\nSignalpost\nDashboard\nDirectory\nCompare\nSearch companies Ctrl/⌘ K\nUpdate status\n🌙 Dark\n\nSIDE BY SIDE\n\nCompare companies\n\nSelect up to four companies for side-by-side comparison across verified facts, scale, financials, and online presence.\n\nCompany 1\nCompany 2\nCompany 3\nCompany 4\nClear all\n\n2 companies compared side-by-side.\n\nEQUINOR ASA\n✕ Remove\nCOMPANY BRIEF\navailableEvidence available\nLATEST FINANCIALS\navailableEvidence available\nWHO RUNS IT?\navailableEvidence available\nWORKIN"
         },
         "errors": {
@@ -695,6 +752,9 @@
           "registry_label_exact": false,
           "registry_label_casefold": false,
           "unknown_block": false,
+          "unknown_item_count": 0,
+          "unknown_reason_count": 0,
+          "unknown_status_link_count": 0,
           "body_excerpt": "Skip to content\nSignalpost\nDashboard\nDirectory\nCompare\nSearch companies Ctrl/⌘ K\nUpdate status\n🌙 Dark\n\nSIDE BY SIDE\n\nCompare companies\n\nSelect up to four companies for side-by-side comparison across verified facts, scale, financials, and online presence.\n\nCompany 1\nCompany 2\nCompany 3\nCompany 4\nClear all\n\n2 companies compared side-by-side.\n\nEQUINOR ASA\n✕ Remove\nCOMPANY BRIEF\navailableEvidence available\nLATEST FINANCIALS\navailableEvidence available\nWHO RUNS IT?\navailableEvidence available\nWORKIN"
         },
         "errors": {
@@ -729,6 +789,9 @@
           "registry_label_exact": false,
           "registry_label_casefold": false,
           "unknown_block": false,
+          "unknown_item_count": 0,
+          "unknown_reason_count": 0,
+          "unknown_status_link_count": 0,
           "body_excerpt": "Skip to content\nSignalpost\nDashboard\nDirectory\nCompare\nSearch companies Ctrl/⌘ K\nUpdate status\n🌙 Dark\n\nSIDE BY SIDE\n\nCompare companies\n\nSelect up to four companies for side-by-side comparison across verified facts, scale, financials, and online presence.\n\nCompany 1\nCompany 2\nCompany 3\nCompany 4\nClear all\n\n2 companies compared side-by-side.\n\nEQUINOR ASA\n✕ Remove\nCOMPANY BRIEF\navailableEvidence available\nLATEST FINANCIALS\navailableEvidence available\nWHO RUNS IT?\navailableEvidence available\nWORKIN"
         },
         "errors": {
@@ -765,6 +828,9 @@
           "registry_label_exact": false,
           "registry_label_casefold": false,
           "unknown_block": false,
+          "unknown_item_count": 0,
+          "unknown_reason_count": 0,
+          "unknown_status_link_count": 0,
           "body_excerpt": "Skip to content\nSignalpost\nDashboard\nDirectory\nCompare\nSearch companies Ctrl/⌘ K\nUpdate status\n🌙 Dark\n\nSIDE BY SIDE\n\nCompare companies\n\nSelect up to four companies for side-by-side comparison across verified facts, scale, financials, and online presence.\n\nCompany 1\nCompany 2\nCompany 3\nCompany 4\nClear all\n\n4 companies compared side-by-side.\n\nEQUINOR ASA\n✕ Remove\nCOMPANY BRIEF\navailableEvidence available\nLATEST FINANCIALS\navailableEvidence available\nWHO RUNS IT?\navailableEvidence available\nWORKIN"
         },
         "errors": {
@@ -799,6 +865,9 @@
           "registry_label_exact": false,
           "registry_label_casefold": false,
           "unknown_block": false,
+          "unknown_item_count": 0,
+          "unknown_reason_count": 0,
+          "unknown_status_link_count": 0,
           "body_excerpt": "Skip to content\nSignalpost\nDashboard\nDirectory\nCompare\nSearch companies Ctrl/⌘ K\nUpdate status\n🌙 Dark\n\nSIDE BY SIDE\n\nCompare companies\n\nSelect up to four companies for side-by-side comparison across verified facts, scale, financials, and online presence.\n\nCompany 1\nCompany 2\nCompany 3\nCompany 4\nClear all\n\n4 companies compared side-by-side.\n\nEQUINOR ASA\n✕ Remove\nCOMPANY BRIEF\navailableEvidence available\nLATEST FINANCIALS\navailableEvidence available\nWHO RUNS IT?\navailableEvidence available\nWORKIN"
         },
         "errors": {
@@ -833,6 +902,9 @@
           "registry_label_exact": false,
           "registry_label_casefold": false,
           "unknown_block": false,
+          "unknown_item_count": 0,
+          "unknown_reason_count": 0,
+          "unknown_status_link_count": 0,
           "body_excerpt": "Skip to content\nSignalpost\nDashboard\nDirectory\nCompare\nSearch companies Ctrl/⌘ K\nUpdate status\n🌙 Dark\n\nSIDE BY SIDE\n\nCompare companies\n\nSelect up to four companies for side-by-side comparison across verified facts, scale, financials, and online presence.\n\nCompany 1\nCompany 2\nCompany 3\nCompany 4\nClear all\n\n4 companies compared side-by-side.\n\nEQUINOR ASA\n✕ Remove\nCOMPANY BRIEF\navailableEvidence available\nLATEST FINANCIALS\navailableEvidence available\nWHO RUNS IT?\navailableEvidence available\nWORKIN"
         },
         "errors": {
@@ -869,6 +941,9 @@
           "registry_label_exact": false,
           "registry_label_casefold": false,
           "unknown_block": false,
+          "unknown_item_count": 0,
+          "unknown_reason_count": 0,
+          "unknown_status_link_count": 0,
           "body_excerpt": "Skip to content\nSignalpost\nDashboard\nDirectory\nCompare\nSearch companies Ctrl/⌘ K\nUpdate status\n🌙 Dark\n\nCOMPANY RESEARCH, WITH RECEIPTS\n\nSignalpost\n\n49 companies · 4.1% with website · 2.0% with jobs · 30.6% with activity · Run date: 2026-10-18T08:43:04.246574Z\n\n1 input record(s) have no company page because the organisation number is not valid: 12345678. They keep an explicit terminal envelope in the JSON output.\n📊 Dashboard\n🏢 Company Directory\n💼 Hiring Explorer\nCOHORT SCOPE\nFull evaluated co"
         },
         "errors": {
@@ -903,6 +978,9 @@
           "registry_label_exact": false,
           "registry_label_casefold": false,
           "unknown_block": false,
+          "unknown_item_count": 0,
+          "unknown_reason_count": 0,
+          "unknown_status_link_count": 0,
           "body_excerpt": "Skip to content\nSignalpost\nDashboard\nDirectory\nCompare\nSearch companies Ctrl/⌘ K\nUpdate status\n🌙 Dark\n\nCOMPANY RESEARCH, WITH RECEIPTS\n\nSignalpost\n\n49 companies · 4.1% with website · 2.0% with jobs · 30.6% with activity · Run date: 2026-10-18T08:43:04.246574Z\n\n1 input record(s) have no company page because the organisation number is not valid: 12345678. They keep an explicit terminal envelope in the JSON output.\n📊 Dashboard\n🏢 Company Directory\n💼 Hiring Explorer\nCOHORT SCOPE\nFull evaluated co"
         },
         "errors": {
@@ -937,6 +1015,9 @@
           "registry_label_exact": false,
           "registry_label_casefold": false,
           "unknown_block": false,
+          "unknown_item_count": 0,
+          "unknown_reason_count": 0,
+          "unknown_status_link_count": 0,
           "body_excerpt": "Skip to content\nSignalpost\nDashboard\nDirectory\nCompare\nSearch companies Ctrl/⌘ K\nUpdate status\n🌙 Dark\n\nCOMPANY RESEARCH, WITH RECEIPTS\n\nSignalpost\n\n49 companies · 4.1% with website · 2.0% with jobs · 30.6% with activity · Run date: 2026-10-18T08:43:04.246574Z\n\n1 input record(s) have no company page because the organisation number is not valid: 12345678. They keep an explicit terminal envelope in the JSON output.\n📊 Dashboard\n🏢 Company Directory\n💼 Hiring Explorer\nCOHORT SCOPE\nFull evaluated co"
         },
         "errors": {
@@ -989,7 +1070,7 @@
         "method": true,
         "hash": true,
         "quote": true,
-        "excerpt": "Source / class\nofficial_registry\nClaim availability\navailable\nClaim confidence\n1\nSource link\nhttps://data.brreg.no/enhetsregisteret/api/enheter/923609016\nRegistry identifier\nNot supplied\nRetrieved at (UTC)\n2026-10-18T08:42:26.564262Z\nEffective / reporting date\n1972-09-18\nSHA-256\n9f6ef1a648ec9139…Copy full hash\nExtraction method / version\nsignalpost"
+        "excerpt": "Source / class\nBrønnøysundregistrene (official_registry)\nClaim availability\navailable\nClaim confidence\n1\nSource link\nhttps://data.brreg.no/enhetsregisteret/api/enheter/923609016\nRegistry identifier\nNot supplied\nRetrieved at (UTC)\n2026-10-18T08:42:26.564262Z\nEffective / reporting date\n1972-09-18\nSHA-256\n9f6ef1a648ec9139…Copy full hash\nExtraction met"
       }
     },
     "filmtek": {
@@ -1011,7 +1092,7 @@
         "method": true,
         "hash": true,
         "quote": true,
-        "excerpt": "Source / class\nofficial_registry\nClaim availability\navailable\nClaim confidence\n1\nSource link\nhttps://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv\nRegistry identifier\nbulk1000.csv:sha256:9b5aeda58ea75c798061a22e61f82f0af2999b698c49429d942ce3e090481f91\nRetrieved at (UTC)\n2026-10-18T08:42:24.457960Z\nEffective / reporting date\n2005-04-22\nSHA-"
+        "excerpt": "Source / class\nBrønnøysundregistrene (official_registry)\nClaim availability\navailable\nClaim confidence\n1\nSource link\nhttps://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv\nRegistry identifier\nbulk1000.csv:sha256:9b5aeda58ea75c798061a22e61f82f0af2999b698c49429d942ce3e090481f91\nRetrieved at (UTC)\n2026-10-18T08:42:24.457960Z\nEffective / report"
       }
     },
     "small": {
@@ -1033,7 +1114,7 @@
         "method": true,
         "hash": true,
         "quote": true,
-        "excerpt": "Source / class\nofficial_registry\nClaim availability\navailable\nClaim confidence\n1\nSource link\nhttps://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv\nRegistry identifier\nbulk1000.csv:sha256:9b5aeda58ea75c798061a22e61f82f0af2999b698c49429d942ce3e090481f91\nRetrieved at (UTC)\n2026-10-18T08:42:24.434413Z\nEffective / reporting date\n2020-05-28\nSHA-"
+        "excerpt": "Source / class\nBrønnøysundregistrene (official_registry)\nClaim availability\navailable\nClaim confidence\n1\nSource link\nhttps://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv\nRegistry identifier\nbulk1000.csv:sha256:9b5aeda58ea75c798061a22e61f82f0af2999b698c49429d942ce3e090481f91\nRetrieved at (UTC)\n2026-10-18T08:42:24.434413Z\nEffective / report"
       }
     },
     "near_empty": {
@@ -1055,7 +1136,7 @@
         "method": true,
         "hash": true,
         "quote": true,
-        "excerpt": "Source / class\nofficial_registry\nClaim availability\navailable\nClaim confidence\n1\nSource link\nhttps://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv\nRegistry identifier\nbulk1000.csv:sha256:9b5aeda58ea75c798061a22e61f82f0af2999b698c49429d942ce3e090481f91\nRetrieved at (UTC)\n2026-10-18T08:42:24.424355Z\nEffective / reporting date\n2017-11-17\nSHA-"
+        "excerpt": "Source / class\nBrønnøysundregistrene (official_registry)\nClaim availability\navailable\nClaim confidence\n1\nSource link\nhttps://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv\nRegistry identifier\nbulk1000.csv:sha256:9b5aeda58ea75c798061a22e61f82f0af2999b698c49429d942ce3e090481f91\nRetrieved at (UTC)\n2026-10-18T08:42:24.424355Z\nEffective / report"
       }
     },
     "registry_activity": {
@@ -1077,7 +1158,7 @@
         "method": true,
         "hash": true,
         "quote": true,
-        "excerpt": "Source / class\nofficial_registry\nClaim availability\navailable\nClaim confidence\n1\nSource link\nhttps://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv\nRegistry identifier\nbulk1000.csv:sha256:9b5aeda58ea75c798061a22e61f82f0af2999b698c49429d942ce3e090481f91\nRetrieved at (UTC)\n2026-10-18T08:42:24.446057Z\nEffective / reporting date\n1963-01-02\nSHA-"
+        "excerpt": "Source / class\nBrønnøysundregistrene (official_registry)\nClaim availability\navailable\nClaim confidence\n1\nSource link\nhttps://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv\nRegistry identifier\nbulk1000.csv:sha256:9b5aeda58ea75c798061a22e61f82f0af2999b698c49429d942ce3e090481f91\nRetrieved at (UTC)\n2026-10-18T08:42:24.446057Z\nEffective / report"
       }
     },
     "compare_2": {

@@ -1,5 +1,6 @@
 """Site-only regression checks for the approved UX gaps."""
 from copy import deepcopy
+from html import escape
 from pathlib import Path
 import re
 
@@ -62,3 +63,17 @@ def test_g5_registry_publication_label_is_literal_and_date_is_not_effective():
     markup = fact(claim, {})
     assert 'registry publication time (not effective date): 2026-10-01T12:00:00.000Z' in markup
     assert 'Registry publication time:' not in markup
+
+
+def test_g3_unknowns_show_state_reason_and_link_to_source_status(tmp_path):
+    row, _ = envelope(tmp_path)
+    data = serialize(row, 'union')
+    unknowns = data['run']['synthesis']['sections']['unknowns']
+    assert unknowns
+    markup = profile(data, 'Signalpost')
+    assert 'id="unknowns-heading">What remains unknown' in markup
+    for item in unknowns:
+        assert escape(item.get('text') or item['reason'], quote=True) in markup
+        if item.get('reason') != item.get('text'):
+            assert 'Reason: ' + escape(item['reason'], quote=True) in markup
+    assert markup.count('Review source status</a>') == len(unknowns)

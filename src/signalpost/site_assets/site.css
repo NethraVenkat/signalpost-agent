@@ -127,6 +127,20 @@ section, .company, .compare-card, .analytics-card {
 .summary {
   border-top: 4px solid var(--accent);
 }
+.unknowns {
+  margin-top: 20px;
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+}
+.unknowns ul {
+  padding-left: 20px;
+}
+.unknowns li {
+  margin-top: 12px;
+}
+.unknowns li p {
+  margin: 6px 0;
+}
 
 details > summary {
   min-height: 40px;
