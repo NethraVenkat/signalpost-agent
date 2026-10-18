@@ -1,0 +1,14 @@
+{
+  "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=918843183&size=1000",
+  "retrieved_at": "2026-10-18T06:54:34.471995+00:00",
+  "status": 200,
+  "units": [],
+  "page": {
+    "number": 0,
+    "size": 1000,
+    "totalElements": 0,
+    "totalPages": 0
+  },
+  "sha256": "7af2d62ba20adcb7a170fddd0e74e9b3e7c3755ba0afa49f63dcf1f3284d0952",
+  "seconds": 1.245
+}

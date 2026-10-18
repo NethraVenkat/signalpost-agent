@@ -1,0 +1,1 @@
+{"tidsstempel":1792306387426,"status":400,"feilmelding":"Feilaktig forespørsel","valideringsfeil":[{"feilmelding":"'includeChanges' er ikke et støttet parameter","parametere":["size","sort","includeChanges"]},{"feilmelding":"'sort' er ikke et støttet parameter","parametere":["size","sort","includeChanges"]}],"sti":"/enhetsregisteret/api/oppdateringer/roller","antallFeil":2}

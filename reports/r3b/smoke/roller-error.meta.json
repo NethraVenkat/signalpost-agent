@@ -1,0 +1,6 @@
+{
+  "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/roller?size=1&sort=id%2CASC&includeChanges=true",
+  "retrieved_at": "2026-10-18T06:53:06.373220+00:00",
+  "status": 400,
+  "seconds": 1.026
+}

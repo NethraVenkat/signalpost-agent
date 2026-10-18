@@ -1,0 +1,43 @@
+{
+  "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?size=1&sort=id%2CASC&includeChanges=true",
+  "retrieved_at": "2026-10-18T06:52:40.769700+00:00",
+  "status": 200,
+  "headers": {
+    "vary": "Origin",
+    "x-content-type-options": "nosniff",
+    "x-xss-protection": "0",
+    "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+    "pragma": "no-cache",
+    "expires": "0",
+    "strict-transport-security": "max-age=157680000; includeSubDomains",
+    "x-frame-options": "DENY",
+    "content-type": "application/json",
+    "transfer-encoding": "chunked",
+    "date": "Sun, 18 Oct 2026 06:52:41 GMT",
+    "set-cookie": "edebf11b02298cf5c6aee3fe794f9942=4c6e737642354364208305fa0c6e26f4; path=/; HttpOnly; Secure; SameSite=None",
+    "connection": "close",
+    "Set-Cookie": "edebf11b02298cf5c6aee3fe794f9942=4c6e737642354364208305fa0c6e26f4; path=/; HttpOnly; Secure; SameSite=None"
+  },
+  "sha256": "b58690fd5fd92e8a280f7b0698c971358ffc787bf583169c2878498598491e3f",
+  "bytes": 881,
+  "page": {
+    "number": 0,
+    "size": 1,
+    "totalElements": 11237881,
+    "totalPages": 11237881
+  },
+  "example": [
+    {
+      "_links": {
+        "underenhet": {
+          "href": "https://data.brreg.no/enhetsregisteret/api/underenheter/913277295"
+        }
+      },
+      "dato": "2018-04-23T06:03:29.830Z",
+      "endringstype": "Ukjent",
+      "oppdateringsid": 50,
+      "organisasjonsnummer": "913277295"
+    }
+  ],
+  "seconds": 1.035
+}
