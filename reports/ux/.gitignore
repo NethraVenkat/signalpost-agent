@@ -1,4 +1,6 @@
 sample/out/
 sample/site/
+sample/site-after/
 screenshots/
 tools/uv-cache/
+tools/pytest-temp/

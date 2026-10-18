@@ -1,0 +1,32 @@
+"""Site-only regression checks for the approved UX gaps."""
+from copy import deepcopy
+
+from signalpost.models.shapes import serialize
+from signalpost.site import index_record, profile
+from tests.test_synthesis import envelope
+
+
+def test_g1_index_uses_newest_dated_claim_with_receipt_anchor(tmp_path):
+    row, _ = envelope(tmp_path)
+    data = serialize(row, 'union')
+    source = next(c for c in data['claims'] if c['availability'] == 'available')
+    for ident, date, title in [('e' * 64, '2026-10-01', 'Older update'),
+                               ('f' * 64, '2026-10-17', 'Newer update')]:
+        event = deepcopy(source)
+        event.update(id=ident, family='activity', field='dated_item.' + ident[:8],
+                     value={'date': date, 'title': title, 'url': 'https://example.test/news'})
+        data['claims'].append(event)
+    record = index_record(data)
+    assert record['recent_events'] == [
+        {'date': '2026-10-17', 'label': 'Newer update', 'anchor': 'fact-' + 'f' * 16}]
+    assert record['latest_activity_label'] == 'Newer update'
+    assert record['activity'] >= 2
+
+
+def test_g1_no_changes_wording_requires_checked_not_available_state(tmp_path):
+    row, _ = envelope(tmp_path)
+    data = serialize(row, 'union')
+    data['run']['sections']['activity'] = 'not_available'
+    assert 'No dated changes found in sources checked.' in profile(data, 'Signalpost')
+    data['run']['sections']['activity'] = 'failed'
+    assert 'No dated changes found in sources checked.' not in profile(data, 'Signalpost')
