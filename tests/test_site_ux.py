@@ -4,7 +4,7 @@ from pathlib import Path
 import re
 
 from signalpost.models.shapes import serialize
-from signalpost.site import index_record, profile
+from signalpost.site import compare_page, index_record, profile
 from tests.test_synthesis import envelope
 
 
@@ -40,3 +40,13 @@ def test_g6_disclosure_controls_have_at_least_40px_target_rule():
     assert rule is not None
     height = re.search(r'min-height:\s*(\d+)px', rule.group(1))
     assert height is not None and int(height.group(1)) >= 40
+
+
+def test_g2_comparison_has_four_selectors_and_preserves_four_url_ids():
+    html = compare_page('Signalpost')
+    assert all(f'id="company-{i}"' in html for i in range(4))
+    assert 'id="company-4"' not in html
+    assert 'up to four companies' in html
+    js = (Path(__file__).resolve().parents[1] / 'src/signalpost/site_assets/site.js').read_text(encoding='utf8')
+    assert '.slice(0, 4)' in js
+    assert 'Select up to 4 companies' in js

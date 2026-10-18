@@ -977,9 +977,9 @@ def index_page(records, title, skipped=()):
 
 
 def compare_page(title):
-    body = '<header><p class="eyebrow">Side by side</p><h1>Compare companies</h1><p>Select up to three companies for side-by-side comparison across verified facts, scale, financials, and online presence.</p></header>'
+    body = '<header><p class="eyebrow">Side by side</p><h1>Compare companies</h1><p>Select up to four companies for side-by-side comparison across verified facts, scale, financials, and online presence.</p></header>'
     body += '<section class="filters compare-inputs-grid" aria-label="Company selectors">'
-    for i in range(3):
+    for i in range(4):
         body += f'<label>Company {i + 1}<input type="search" id="company-{i}" list="company-options" autocomplete="off" placeholder="Enter company name or orgnr..."></label>'
     body += '<div class="compare-actions"><button type="button" id="clear-compare" class="btn-clear-filters">Clear all</button></div>'
     body += '</section><datalist id="company-options"></datalist>'

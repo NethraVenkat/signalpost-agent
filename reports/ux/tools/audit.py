@@ -1,11 +1,12 @@
 """Offline file:// screenshot and DOM audit. No application code is modified."""
 import json
+import os
 from pathlib import Path
 from playwright.sync_api import sync_playwright
 
 UX = Path(__file__).resolve().parents[1]
-SITE = UX / 'sample/site'
-OUT = UX / 'screenshots/before'
+SITE = Path(os.environ.get('SIGNALPOST_AUDIT_SITE', str(UX / 'sample/site')))
+OUT = Path(os.environ.get('SIGNALPOST_SCREENSHOT_DIR', str(UX / 'screenshots/before')))
 OUT.mkdir(parents=True, exist_ok=True)
 selection = json.loads((UX / 'sample/selection.json').read_text(encoding='utf8'))['special_cases']
 cases = {
@@ -149,7 +150,8 @@ with sync_playwright() as p:
             results['pages'][key][str(width)] = entry
             context.close()
     browser.close()
-(UX / 'dom-audit.json').write_text(json.dumps(results, indent=2, ensure_ascii=False), encoding='utf8')
+Path(os.environ.get('SIGNALPOST_DOM_OUTPUT', str(UX / 'dom-audit.json'))).write_text(
+    json.dumps(results, indent=2, ensure_ascii=False), encoding='utf8')
 print(json.dumps({'screenshots': sum(len(v) for v in results['pages'].values()),
                   'load_failures': [(k,w) for k,v in results['pages'].items() for w,e in v.items() if e['load_error']],
                   'console_errors': sum(len(e['errors']['console']) for v in results['pages'].values() for e in v.values()),
