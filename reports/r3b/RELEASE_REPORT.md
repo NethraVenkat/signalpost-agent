@@ -1,100 +1,69 @@
-# Revision 3b ? Step 1 smoke test only
+# Revision 3b ? DO NOT SHIP
 
-Verdict: **GO for a narrow, opt-in entity-change implementation; DO NOT SHIP yet.** Step 1 is complete and work stops here. Revision 2 at `a704375` remains final. No Step 2/3 code, release gates, push, merge, tag or email was performed.
+**Stopped after the live 50-company gate failed. Revision 2 (`a704375`, v1.1.0) remains final.** Step 2 implementation SHA: `fd18394f726704e5c4386b474532262fb481bd0f`. Branch: `revision/r3b`, based directly on `a704375`. A documentation-only report commit follows; its final SHA is supplied in chat.
 
-Baseline inspected: `a704375`. The initial checkout was `revision/r3` at `a73f713`; preserved that branch and created `revision/r3b` directly from `a704375`. This commit adds only smoke evidence and reports. Source, tests, dependency files and existing claim values are unchanged. The final documentation SHA is supplied in chat.
+Stop recorded 2026-10-18T12:37:53+05:30, before the 16:30 IST hard stop. The user's instruction was: ?If anything fails or 16:30 is reached: stop; revision 2 stays final.? No remediation, further live gates, default enablement, push, merge, tag or email followed the failed pilot. Step 3 was not performed.
 
-Recorded on 18 October 2026, before 16:30 IST and within the 20-minute smoke budget. Raw response timestamps are UTC. First time checkpoint: 12:21:15 IST; report generated 2026-10-18T12:25:55.413033+05:30.
+## Blocking failure ? code regression
 
-## Sample and observed coverage
+Both new feed requests returned **HTTP 400**. The implementation serializes Python run timestamps with microseconds, for example `2026-10-18T07:04:40.345521Z`. BRREG requires the millisecond format `yyyy-MM-dd'T'HH:mm:ss.SSS'Z'` for both `dato` and `updatedBefore`. The response explicitly identifies both parameters as invalid. This is an implementation error, **not a home-network loss or live-source change**.
 
-First 20 rows of the existing 1,000-company input, without selecting for coverage. Its SHA-256 is `bba3114b5a611d05a80bbce11233aa3585c433a1580225dc5087a75372b9649a`, matching `reports/r2/inputs.json`. Exact sample, selection and source hash: [sample](smoke/sample.json). This small input-order sample is not a representative coverage estimate.
+No new registry activity claims were published by the live pilot. All 50 activity sections correctly became `failed`; previously obtained website activity facts remained present. All 50 envelopes were emitted in input order with exit 0, and all 1,433 pilot identity IDs were retained. Exit 0 does not pass the source-coverage gate.
 
-Window requested: `2024-10-18T00:00:00.000Z` through retrieval on 2026-10-18. This calendar-date window includes several hours before the exact rolling 24-month boundary; the earliest returned sample event is November 2024, so counts are unaffected.
+The diagnosed fix would be to format query bounds with exactly three fractional digits and add a contract test, but it was **not applied**, honoring the stop instruction. The feature remains default **OFF** (`registry_changes=False`); `--registry-changes` explicitly enables this unshipped implementation, and `--no-registry-changes` disables it.
 
-| Feed | Events | Companies with >=1 event | Events with field details |
-|---|---:|---:|---:|
-| Entity | 121 | 20/20 | 44 |
-| Subunit, using verified parent-to-subunit mappings | 36 | 13/20 | 16 |
-| Roles | 45 | 15/20 | 0 |
+Evidence: [pilot request/results](pilot-results.json), [entity HTTP 400 body](http400-cf5511abe5fdf69f64e4c675ee330e0feb19e05a04706ea315c4a73f07e2daca.json), [subunit HTTP 400 body](http400-9b77c5e4c889b68ef4c6b1e6ba0ff91cbc10f0abc023354f30c01a42d03a6650.json). Those filenames are the original source-body SHA-256 values.
 
-All three final sample responses were HTTP 200 and complete for their query: entity/subunit `totalPages=1`; roles returned 45, below requested size 1000. Every returned entity/role number belongs to the sample; mapped subunit IDs were checked against exact `overordnetEnhet`. Current mappings found 15 subunits; historical subunits no longer linked today are not measured. Passing the parent org numbers directly to the subunit feed returned zero events, which does **not** mean zero subsidiary activity.
+## Implemented scope, held locally
 
-**Publishable potential is much smaller than raw coverage.** All 20 have some named entity detail, but many are annual-account fields, employee reporting metadata or industry-code changes. A conservative address/name/capital allowlist yields **4 events across 3/20 companies**. No claims have been published. Seventy-seven entity events have no details and must not become bare ?record updated? claims.
+- Flag-controlled shared entity and subunit feeds, per-run acquisition, existing request/deadline/host policies, bounded 200-ID query chunks and checked pagination.
+- Entity allowlist: business/postal address fields, `/navn`, `/kapital/belop`; add/replace retains the reported new value, remove reports field removal without inventing a new/old value.
+- Subunit `Ny` / `Sletting` only for an exact parent mapping backed by retained source bytes and hash. `Ny` includes separately labelled `oppstartsdato` when present. Historical removed units absent from the current verified scope are skipped; the implementation does not infer their parent.
+- No role notifications, annual accounts, NACE, employee metadata or bare updates. Publication timestamps are labelled ?registry publication time (not effective date)?; evidence effective dates remain unset.
+- New facts carry source URL, event/field locator, retrieval time, source hash and extraction method. Newest registry change enters cited synthesis and Recent activity; existing source claims retain their values and IDs.
 
-## Real contracts, history and dates
+The source schema, existing website extraction/proof code and subunit registry extractor are unchanged from `a704375`. Default-on readiness is not established.
 
-Entity and subunit responses are HAL objects: `_embedded.oppdaterteEnheter` / `_embedded.oppdaterteUnderenheter`, `_links`, and `page` with `number`, `size`, `totalElements`, `totalPages`. Events contain `organisasjonsnummer`, integer `oppdateringsid`, UTC `dato`, `endringstype`, a registry link, and optionally `endringer`. Observed entity types: 96 `Endring`, 20 `Ukjent`, 5 `Ny`.
+## Gates and actual evidence
 
-`includeChanges=true` is verified live. Details are JSON Patch-like operations with `op`, `path`, and `value` for add/replace; remove may have no value. Do not assume an old value is present. Example: org `932525070`, event `23540812`, `2025-12-22T14:30:11.129Z`, replaces `/kapital/belop` with 11000000 and also changes capital registration date and statutes date. Address events are `23493349`, `23522825`, and `23562299`; full original bodies are retained.
-
-Entity sample dates: 2024-11-18T14:05:12.971Z through 2026-09-15T22:01:20.888Z. Mapped subunit dates: 2024-11-19T05:00:50.525Z through 2026-09-15T22:01:22.937Z. Roles: 2024-11-18T14:05:11.773Z through 2026-10-12T22:21:46.382Z. These are API publication times, not necessarily the effective business-change dates.
-
-Earliest accessible records observed using ascending ID/default roles order:
-
-| Feed | Earliest observed timestamp | ID |
-|---|---|---|
-| Entity | 2018-04-23T06:03:29.443Z | 1 |
-| Subunit | 2018-04-23T06:03:29.830Z | 50 |
-| Roles | 2022-03-14T14:30:44.251Z | 1 |
-
-These probes demonstrate accessible history, not a retention guarantee or proof of historical completeness. Earliest detailed entity event in this sample is September 13, 2025; older events lack details. The official changelog records the `includeChanges`/`endringer` addition on September 23, 2025.
-
-Roles have a **different contract**: a plain array of CloudEvents containing `data.organisasjonsnummer`, string `id`, `source`, `specversion`, `time`, and `type=no.brreg.enhetsregisteret.rolle.oppdatert`. The working filter is `afterTime`, with cursor `afterId`, comma-separated `organisasjonsnummer`, and `size`. It rejects entity-feed parameters `dato`, `includeChanges`, and `sort`. These notifications do not identify a role type or historical role-holder change. Fetching current roles alone cannot prove which role changed at a past event. **Exclude role notifications from public activity unless independent historical comparison proves the named change.**
-
-Official contract and changelog: [BRREG documentation](https://data.brreg.no/enhetsregisteret/api/dokumentasjon/no/index.html). Exact URLs, UTC retrieval times, timings and SHA-256 values are in adjacent `*.meta.json` files; [summary](smoke/summary.json) includes conservative meaningful events and per-company counts.
-
-## Latency, failures and request implications
-
-Saved probe metadata: 31 requests, 27 HTTP 200, 4 HTTP 400 from deliberate/initial contract probes. Successful request wall times: min 1.035 s, median 1.245 s, max 3.712 s, using at most 3 concurrent requests. Twenty of these requests establish current parent/subunit mappings. One additional initial entity reachability call succeeded and one official documentation fetch succeeded; their bodies/latencies are not part of the measured dataset. No 429 or rate-limit headers were observed in the saved initial successful responses; service throughput limits were not load-tested.
-
-The first sandbox attempt failed with Windows socket permission error 10013; the authorized network retry succeeded. This was an environment restriction, not a flaky-network loss or code regression. Four HTTP 400s are query-contract errors, not source downtime. No remaining live network losses occurred. There is no implementation under test, so no code regression is asserted.
-
-Bulk entity filtering and detail retrieval are feasible in one request for this 20-company cohort. Do **not** promise <=10 requests for 1,000 companies from this smoke: URL length, number of events, pagination, subsidiary mapping and cursor handling need bounded planning. Reuse already acquired subunit mappings; keep all errors explicit. Large event histories must not silently truncate at 10,000.
-
-## What revision 2 already uses (inspection at a704375)
-
-| Proposed improvement | Existing behavior |
+| Gate | Outcome |
 |---|---|
-| Subunit `hjemmeside` candidates | Already implemented: `sources/brreg_underenheter.py` DETAILS; collector builds subunit context; `web/candidates.py:75` nominates with subunit ID. Exact subunit proof is labelled. |
-| NAV `employer.homepage` candidates | Not implemented: no `homepage` field use in the NAV sources and no NAV candidate origin in website generation. Recruiter exclusions would need implementation before nomination. |
-| Extra proof pages | Already implemented: ranked contact/about/privacy/terms links plus six fallback paths (`/kontakt`, `/kontakt-oss`, `/om-oss`, `/om`, `/personvern`, `/personvernerklaering`), within existing page limits. `/vilkar` is not a fixed fallback. |
-| schema.org `vatID` / `taxID` | Already implemented with `identifier`, excluding Person objects. Explicit string identifiers normalize NO/MVA wrappers; object identifiers inspect `value`. |
-| Spaced, dotted, NBSP numbers / mod-11 | Already implemented via `orgnrs()` and `identity.orgnr.valid()`. Hyphens and adjacent NO/MVA wrappers in ordinary visible text are not generally handled. |
-| Wix inline data | No general Wix inline-state extraction; parser admits `application/ld+json`, not arbitrary scripts. |
-| Agency/parent/footer guard | Partial: foreign-number rejection, directory/multi-entity checks and entity-card rules exist, but no general agency/parent ownership attribution guard; visible footer text remains in owner text. Do not claim this proposed guard is complete. |
+| Full suite plus new tests | 516 passed in 104.36 s during implementation. Subsequently added site-index/verifier changes received a focused 20-test pass; no final full-suite rerun after the failed live gate. |
+| Saved R2 bodies replay | PASS within declared replay scope: 1,000 saved envelopes, 69,479 available source facts retained, 4,114 bodies hash-checked, zero lost available R2 fact IDs / changed existing values; 24 new offline registry claims independently matched to source, zero wrong-company findings. |
+| Live 50 pilot | **FAIL: new code sends invalid timestamp precision; both feeds HTTP 400; zero new registry claims.** |
+| 20 new live activity claims checked | NOT SATISFIED: no new live claims existed. Offline 24-claim checks are not substituted for this gate. |
+| Forced-failure 100-company run | Unit integration test PASS: 100/100 ordered schema-valid envelopes, identity available, activity failed under forced HTTP 503. Separate real-cohort CLI fault run NOT RUN. |
+| Default 1,000-company run / 28,726 identity IDs | NOT RUN after failed pilot. The offline 1,000 snapshot replay is not a default production run. |
+| 24-company baseline | NOT RUN after failed pilot. |
+| Push / CI / clean remote clone / frozen install / 100 smoke | NOT RUN. Branch remains local. |
+| Wrong-company new facts | 24 offline new claims checked with zero mismatches. Live new registry claims: zero, so no live precision certification. |
 
-Baseline source references: `web/proof.py:9,217`, `web/collector.py:139,152,192`, `web/candidates.py:75`, `web/html.py:56,112`, `sources/brreg_underenheter.py:8`. Existing tests/source were inspected; no full suite is needed for this documentation-only smoke.
+[Offline replay evidence](offline-replay.json) records scope explicitly: production registry acquisition/extraction/merge and synthesis ran against saved source bytes and R2 envelope snapshots. Existing external discovery was not rerun because historical redirects lack retained response headers. All original source-body hashes were checked. This is not a claim of a complete HTTP transport replay. Source-backed available fact IDs were compared; availability placeholders are section-state outputs, not retained source facts.
 
-## Recommendation and release status
+The already-running replay completed during shutdown/diagnostic collection; no new gate was started after the live failure. Its local reproduction command is `$env:PYTHONPATH = (Get-Location).Path; .\.venv\Scripts\python.exe out/r3b-gates/replay.py`. Raw replay output/state are under `out/r3b-gates/replay-*`.
 
-Proceed only with an explicitly enabled, conservative entity-change source that publishes named, meaningful fields; skip generic role notifications. Prioritize preserving exact proof, IDs, schema, budgets and explicit failed-section behavior. Most Step 3 suggestions already exist and should be skipped; new candidates/proof expansions require their own strict precision checks.
+## Same-50 live coverage
 
-Risk: **registry change events may not count as public activity in Builderr's pool**. Reporting metadata, mass NACE migrations and account filing years are not automatically meaningful business news. Never synthesize an effective event date or old value that the feed does not provide.
+The sample includes FILMTEK `988330752`, Equinor `923609016`, five known exact-proof website controls (`991853995`, `927094266`, `964398003`, `846870792`, `937893655`), then remaining input-order cohort members. R2 control uses code archived from `a704375`; both runs use the same 50 inputs, frozen bulk subset and existing defaults, with external families enabled. Only R3b adds `--registry-changes`.
 
-All implementation/release gates (full suite, source replay, live 50, fault 100, default 1,000, 24 baseline, pushed CI and clean clone) are **NOT RUN**. Pilot coverage comparisons, final implementation SHA, release commands and revision email draft are not yet applicable. No release recommendation beyond Step 1 is made. Stop here as requested.
+| Companies with >=1 available fact | R2 | R3b |
+|---|---:|---:|
+| Website | 6 | 6 |
+| Activity (existing website facts) | 3 | 3 |
+| Social | 4 | 5 |
+| Jobs | 0 | 0 |
+| New registry activity | 0 | 0 |
+| Envelopes in input order | 50 | 50 |
+| Identity claim IDs | 1,433 | 1,433 |
+| HTTP requests | 297 | 299 |
+| Pipeline runtime | 38.083 s | 32.126 s |
 
-## Per-company raw event counts
+These availability counts do not override failed activity section states. The 1,000-company live coverage comparison is unavailable because that gate was not run.
 
-| Org | Entity | Mapped subunit | Roles |
-|---|---:|---:|---:|
-| 925181536 | 4 | 0 | 0 |
-| 829577372 | 4 | 0 | 0 |
-| 932525070 | 13 | 1 | 7 |
-| 919263601 | 3 | 0 | 0 |
-| 988963259 | 3 | 1 | 5 |
-| 915188389 | 15 | 12 | 4 |
-| 934485718 | 5 | 2 | 4 |
-| 936035523 | 6 | 3 | 1 |
-| 936349676 | 7 | 3 | 4 |
-| 935962196 | 5 | 2 | 2 |
-| 997095987 | 5 | 2 | 1 |
-| 950310499 | 9 | 0 | 3 |
-| 948639416 | 4 | 0 | 3 |
-| 927439794 | 5 | 1 | 0 |
-| 975514412 | 4 | 2 | 1 |
-| 918843183 | 3 | 0 | 0 |
-| 934216385 | 6 | 1 | 2 |
-| 935647142 | 3 | 1 | 2 |
-| 930621927 | 3 | 0 | 2 |
-| 946595845 | 14 | 5 | 4 |
+Five lost available IDs and six added IDs are all FILMTEK website-family claims. R2 accepted `www.filmtek.no` by its existing HIGH rule after the audioped candidate exhausted its allowance; R3b obtained `www.audioped.no`, exact registered subunit `933248380`, and selected it by the unchanged R2 policy. This is acquisition/budget variance exposing R2's already disclosed main/subunit selection instability, not a change to company identity or a new website-selection implementation. The extra social profile is linked to that selected subunit site. The source code for website collection/proof is byte-for-byte unchanged, and the new feed runs after website research. This attribution does not certify every live website fact; fresh reopening was not continued after the blocking gate failure. [Per-ID comparison and acquisition errors](pilot-diff.json).
+
+## Step 1 and known risks
+
+The earlier [Step 1 smoke report](STEP1_REPORT.md) is preserved separately. It found 121 entity events across 20 companies, 44 with details; the conservative address/capital filter covered 4 events across 3 companies. Mapped subunits had 36 events across 13 companies. Roles lacked named role-change details and were excluded. Earliest observed history was April 2018 for entity/subunit feeds and March 2022 for roles; these are observations, not retention guarantees.
+
+**Registry change events may not count as public activity in Builderr's pool.** Deleted workplaces absent from exact verified scope are abstentions. Query pagination and wrong-company unit cases pass, but tests missed the live timestamp serialization contract. Gate coverage remains incomplete, so there is no SHIP SHA, merge/tag instruction or revision email draft. Do not merge or tag this candidate.

@@ -1,0 +1,730 @@
+{
+  "lost_available_claims": [
+    {
+      "org": "988330752",
+      "claim": {
+        "field": "website_description.og_description.c08e093da4be3807",
+        "value": {
+          "text": "Filmskanning og videodigitalisering for produksjon, TV, arkiv og museer. Leveranse tilpasset bevaring, etterarbeid og visning.",
+          "kind": "og_description",
+          "self_description": true,
+          "identity_level": "HIGH",
+          "identity_claim_id": "eb13c32ba63ca593dc0bacfc71cbb8e6a9c021358f406a4e5a5751ebe1f03278"
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "82d03643ccbf9c4992f9a9d22b4f0d971ad65ca9fc782cfc1610ed078cf2889d",
+          "77a8423a031c181154c4043ce61928310f52f017301ded08bb2c891b138ab5eb",
+          "7020377672d5ed863cf8e8995f24bae1e376c5de2a9bf3578496b09d85cccc19",
+          "a17318374f2505fec0f92c9fd5f7cb8490265b5f0bc21b80d3c2f968a5ab4a8b",
+          "1bba341da09892a14e0cc37e4cde15b773c6f363584150ec565b50999ae11c63",
+          "ec4f42e798fd38e378c18288ada7cbb6f4424b75b317977986841ab072d90402",
+          "3da4e3dea11a93fbaaf7633de86e84dcaceb88ba7dbb57df46e41265c4638f54",
+          "9753558ce58be25e37a34b3feea12aef97a609c6aec8713b1085f3a8a71c00b2",
+          "f6c19747a08145f3e22c9ccfd136e3ae4d7f4431c71a74e6930f935e1f65328c",
+          "3e389209f919ed41ae2ce96d3d655badb49f1c0724c00a63e26e63a992a82cd0",
+          "5dca071df9e9325160e798e877533881442a2d4fbb93bbd6cb00e19a2f4fb094",
+          "ef3d8018d3dbd78e83b222037f16f8bcb039d14f3db82d1c4472590b6ceda48d",
+          "bd0873a6ff4d5de99080648661c57febbab3e5171a291d91ed81d53f413a4778",
+          "aaba381e2a6b8c380281ccd185d3b68b77515519a23d64c56273938de8ea8b2b",
+          "fccb66200fe7e388b42cc9b5df5174036428b16192cd7a83504eb019488775eb",
+          "22bc3dff4aa9cedd089383d1ecc34b606b95e8803410ca77825e06d5a166919e",
+          "2c69ba99b26d9a92bc539977bac9aa6944de30b18342050353adb6f2afbfd4ce",
+          "19d7380317cda31919d1535ac9a40f4d2a043c3f91271820b6ff1b7699dd8b69",
+          "6d3c60aae750eed22577f4816f2065ed5c8320696b5d3100b11f0abe8d99eeed",
+          "7c384d0474fcac2c37658707524cfff89636f109543891bfa88e19460a5cf738",
+          "3d10ed7290d731f64d75d6a06ab6a7656849d2bd8e501c42b57cc80ed08a032e",
+          "dd94d5aee217aab4817b1e39f6836b81db83fed019ee5d4ed06123eaab7174cf",
+          "9f90d1508a866cadb81c9041e85c3e8c344ecdba092e43b526987997aed5e06c",
+          "f10bef1787afae4b3098dc814856c85ebc66fcc82e1cdbab9af1debe84bfe194",
+          "7a78e4505e3c4f5e3aa84087e9c6415fcc8254db42bbe3ca29ff6f6d4f950115",
+          "bc3a004675db17cf45e5a39e44b89fece2c9a9650334a11de4ed1f3e4c76334a",
+          "05269c996bb1463daad9ef6369db0d14d58f0f44da5e19aab27a2228051bc610",
+          "b95b4f86c67dfed81ca1aa4388a54a297b49ca51738edb3f0df4109a3c4570a6",
+          "69e5f2aa1bca155330370ceb1b256c08d9df57ebdfd999b382934fc4e961a05d",
+          "c66ca6e11733eef314a8d7b33b6485418b73f0e64b844f9925070ccda59db80d",
+          "9202e0daac32ab7353c81c9b8ad2438e1f8e3d0a8551bea44ea80b1d01b10fdf",
+          "1ee4d0e5b6f3ba2009b2d48af7612fe5007884f74b81f66b17c6ddb41439c343",
+          "e4bfbb07593c54b4ffff9542d5614c421d7b2df36579cc562dd7b399fc73c488",
+          "f768a3720286767c107ac91d3c0b269296ddb0273d1b3fd4a7f6e316d5667d06",
+          "cf6b440e8abf57991d6271bb40f79e39b27ee942443e9b5f4e84c1ee13001505",
+          "ff837ecabe6aadbb0669617d48f8960f0f202ff52968a4fa0148f49ce3fd9119",
+          "dc0928c391d060d0aac092d1c60e70b9789cdaa42a4b48b7eef294bd3a911819",
+          "0b97f53e309b0f2bc7bd007d041f99dc0e12b8d9075a7e620ad24eb85ec0517c",
+          "7c449a5379714800686d754a4fa08c766af3be7940fa894d12eb14c229898c84",
+          "e2754cca1af7e40d025127b78569c9b9eba5aff3ff6139c8d15b835cb531020d",
+          "bc1ccfcd1b5568ea0b65febe0c11dee0ae319cdbfea2aa749736e41fcf771624",
+          "6b81a247a0e122672aa381fef83eb4d142aaf1502f089653f9083c6bceaf573a",
+          "6a4a2df72ea7f67f25936e43e6ae57f2f7f96a81aeb5346d80fa90bebf16efd3",
+          "b0a3d967a3ee0e68f284d0c3c5b57d101112ec6a5933c12a3d87be2f975cbfba",
+          "176ea3814c5d8733eeeb8b053b6ccdc152e5c1409bb1aa3d575f274935156ba6",
+          "2271a3eacc7090be2906a773d36a71b257b25a79744bfa382b351775f7b8c835",
+          "2436e6eed945f4a729796ab5268fc8d5c212d3c789818ecbcb780b3f8fbf5f3c",
+          "d42f7f2ca81bff2b6a266f5fa66ef77ad3324fb05a1b06ada427ee38b7347c42",
+          "57135cc89f49b0685dccf03dd6bcaed2d08021dd162090883a28fb5143f9c71e",
+          "1ab8af0890399c3b74297e6a84d9a2f791823c00f0be237e46a0de2971c1a04e",
+          "8efb6f8b43ea3602f07a30eda61e447d4f333a12f2069280a24352bcac7e8cb2",
+          "a44aa3250169d8842048ff2929001b51cee12f900b994cf35756d9dcc79eee5c",
+          "b72bfd0feca6ab924bb8612e470c2c5e948ddb8d0a7ab5ef047a60db32abee9f",
+          "a49b1ad3ac261de481f68eb47c7ed21369b485cf07a8f070780f368a24854345",
+          "a94e4fef0c1d05fc74af1de5ac6a5b90f5ddb187148a809a1d4790bb242e4d1f",
+          "9afc7151268f652d543888e093a92688a70dcdc80955b92a19f3538d893335da",
+          "1826a0300606de21bad0658d8069db2839bd4e8bbebbd0bc8ca5b36c8cbeadd2",
+          "ca9e0e7c45ee5e0d994b728d53fb6edf136243d91523261c9503b5f1727a39ce",
+          "e9bb3e5553a1bd07bd07117668b71d9bd25d978cb8e57c138538acb27cbd3429",
+          "04ad3aa4969915ad3e004006b116f89b3958a86d52d50ef24e03aa9cba1bc577",
+          "7327435e3931e623d1af457e75b439a4cd39cacbf8a3d21707efbe2199cbbd79",
+          "f9891911cc42d5cd3a821547938fd2c35d9b6179ce04b38a54f1adea9203c803",
+          "2cc47fbb345001fa4c6330e3f606fa664dbd51e375d695767bc11a311010b12b",
+          "a1a9e9efdf84de92c6fd1a7c8fdbbb7d03d9fea4082fdafeb37ee4c2cdacc045",
+          "cd789c697c4e5a1b8873de00f130b8b4b487d9814235c06ae864e03c867433f3",
+          "4e03b8c8939bb46ef889aa38becb50b31f74b369cd096d0e66be2ce8d5b0adbe",
+          "d958acd4ec0fcb2fc1720ef80db67671df6db38ee634ef69fea2cfbf9f2d0209",
+          "3230b579676ef15345a1d765e677aaf772f4c1bf00ff315c2218c887222e8d4c",
+          "f1115ef388ec349115d0411b9446067198b41c9aeb02e7fe31dc04678325fe39",
+          "8abd1f5abcf51965830a53d4a2a8b25b2882118f2ca10ac8b92d64af49605573",
+          "acb23e6bc859d07e0d12221f02fb6ffe22811151cb3d147f28b8051a4e1ba88f",
+          "04bb285c90ce6a3816dc342378c7dfe040ec71846f0deeb963690ee3e2e835cd",
+          "3271dd058a384266c8a9ca9bf293a90452785cd7811e60300a7aa4d1955b902a",
+          "100e1c64bf3b4762098dd051932ea3a06cce1860ea8c159d9b05bf34bb384c68",
+          "f18da26cae83e13c2b8a3de44f39f54856c0210e096656f84ad0cf75960b018a",
+          "e6ff2c1d050b4a79ef748d51e2b7aabe5a58649a2b504a4ea343c989ed63d719",
+          "0018bf4a917ab95244e42fa8444d1b82df29c67f207512a0ad0dd1b5573dffec",
+          "56aa351f4bc4b99ff2cd4a3e106c5a88cb6e3c2b74453ebe877c9b92f8b0927d",
+          "1682d3d673eeb3f40ac9d8372ba8f8d613fa0953e45324e97ea38568db3f8acf",
+          "474b8b1bc0cc0c5f3199f374cc4c0cf46385117fabf8f1b1927205d2034d40dd",
+          "7435e3d0a0e57ec5b666bb753d061aea09cb8be891cf3c06a5f9c06f42815756",
+          "86fa3b0baae8292968c284fb5ae1e7982ff25d1912d281a3ed5450b7faef1ca1",
+          "0a15a126c711f2f1a3155f243d9d90f94941d17d2093d99c88aeb6211a61c0ce",
+          "f3a2ba6bf0c711487fb1b1140b46d3fe819c4ad8d73924ef0de26fa89f8fb151",
+          "1b148145e29dcb1877a0b709ec2c0f7716c26533ffd1307ee3851b5a221d5839",
+          "1c5f395c456304be5ead43d271a81d608e534aaa9880c4588460c9fe9565e6c9",
+          "7197f3ada870d9ed5e1aa7c5870e66eed26fcf949451734c3b16bdab61fa0314",
+          "8fb64c47a3de1ac7bc1ec0aa2c6d62884ac2824e44a2e4bc799e3e93d01ba297",
+          "8079c1f6848678ebd9f51deb8cbbaf8bfca6eb6f64fd7a1f7cd7cda3d1eae407",
+          "569430bee0849f16e9977ef68d939cd3fd281d6ad6fda47994893a03402f0242",
+          "34e1456df27cfcaed100343e54f73aa8801efb4c38bbcff2acfbe0a3950ba2c8",
+          "b67c4e28efde196b93018f0e978bb782862f469d02af1872f3b25668a352b876",
+          "aea4f11853da6aa0f689c40ea695cf65b9c1c8fa2943acf78795925d51fb5cd7",
+          "5b1cb67a7f49c0d05b21f99a02f27967e072e0fcc9936d6c5d515070d2a59ed9",
+          "3d774f2a8cb1a3f4e30fce68f39d7baacf7e91b47065cb520e766e0eaf883791"
+        ],
+        "id": "39f7650013976d73e4dd7881a33f93547bf2a55ebe1aa2a5eed8dd451ff48612",
+        "family": "website",
+        "reporting_period": null,
+        "carried_forward": false,
+        "first_observed_at": "2026-10-18T07:03:06.626171Z",
+        "last_observed_at": "2026-10-18T07:03:06.626171Z",
+        "reasons": {}
+      },
+      "r2_errors": [
+        {
+          "section": "website",
+          "code": "website_candidates",
+          "message": "[{\"domain\": \"filmtek.no\", \"level\": \"HIGH\", \"points\": 7, \"signals\": [\"legal_name\", \"address\", \"registry_website\", \"municipality\"], \"origin\": \"registry_website\", \"reason\": \"corroboration\"}, {\"domain\": \"audioped.no\", \"origin\": \"subunit_registry_email\", \"level\": \"LOW\", \"reason\": \"website_budget_exhausted\"}, {\"domain\": \"filmtek.no\", \"origin\": \"registry_website\", \"url\": \"https://www.filmtek.no/\", \"status\": 200}, {\"domain\": \"audioped.no\", \"origin\": \"subunit_registry_email\", \"url\": \"https://audioped.no/\", \"reason\": \"website_budget_exhausted\"}]"
+        },
+        {
+          "section": "activity",
+          "code": "website_budget_exhausted",
+          "message": "website_budget_exhausted"
+        }
+      ],
+      "r3b_errors": [
+        {
+          "section": "website",
+          "code": "website_candidates",
+          "message": "[{\"domain\": \"filmtek.no\", \"level\": \"HIGH\", \"points\": 7, \"signals\": [\"legal_name\", \"address\", \"registry_website\", \"municipality\"], \"origin\": \"registry_website\", \"reason\": \"corroboration\"}, {\"domain\": \"audioped.no\", \"level\": \"VERIFIED\", \"points\": 0, \"signals\": [], \"origin\": \"subunit_registry_email\", \"reason\": \"\"}, {\"domain\": \"filmtek.no\", \"origin\": \"registry_website\", \"url\": \"https://www.filmtek.no/\", \"status\": 200}, {\"domain\": \"audioped.no\", \"origin\": \"subunit_registry_email\", \"url\": \"https://audioped.no/\", \"reason\": \"website_timeout\"}, {\"domain\": \"audioped.no\", \"origin\": \"subunit_registry_email\", \"url\": \"https://www.audioped.no/\", \"status\": 200}]"
+        },
+        {
+          "section": "activity",
+          "code": "website_budget_exhausted",
+          "message": "website_budget_exhausted"
+        },
+        {
+          "section": "activity",
+          "code": "registry_change_http_400",
+          "message": "registry_change_http_400"
+        },
+        {
+          "section": "activity",
+          "code": "registry_change_http_400",
+          "message": "registry_change_http_400"
+        }
+      ]
+    },
+    {
+      "org": "988330752",
+      "claim": {
+        "field": "website_description.meta_description.c08e093da4be3807",
+        "value": {
+          "text": "Profesjonell digitalisering av film og video for produksjon, TV, arkiv og museer. Filmskanning opptil 6K. Kontakt Filmtek for tilbud.",
+          "kind": "meta_description",
+          "self_description": true,
+          "identity_level": "HIGH",
+          "identity_claim_id": "eb13c32ba63ca593dc0bacfc71cbb8e6a9c021358f406a4e5a5751ebe1f03278"
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "2976d85bf972bd307043575262a1024c720d2dc9942a524d8e8f192000b41361",
+          "77a8423a031c181154c4043ce61928310f52f017301ded08bb2c891b138ab5eb",
+          "7020377672d5ed863cf8e8995f24bae1e376c5de2a9bf3578496b09d85cccc19",
+          "a17318374f2505fec0f92c9fd5f7cb8490265b5f0bc21b80d3c2f968a5ab4a8b",
+          "1bba341da09892a14e0cc37e4cde15b773c6f363584150ec565b50999ae11c63",
+          "ec4f42e798fd38e378c18288ada7cbb6f4424b75b317977986841ab072d90402",
+          "3da4e3dea11a93fbaaf7633de86e84dcaceb88ba7dbb57df46e41265c4638f54",
+          "9753558ce58be25e37a34b3feea12aef97a609c6aec8713b1085f3a8a71c00b2",
+          "f6c19747a08145f3e22c9ccfd136e3ae4d7f4431c71a74e6930f935e1f65328c",
+          "3e389209f919ed41ae2ce96d3d655badb49f1c0724c00a63e26e63a992a82cd0",
+          "5dca071df9e9325160e798e877533881442a2d4fbb93bbd6cb00e19a2f4fb094",
+          "ef3d8018d3dbd78e83b222037f16f8bcb039d14f3db82d1c4472590b6ceda48d",
+          "bd0873a6ff4d5de99080648661c57febbab3e5171a291d91ed81d53f413a4778",
+          "aaba381e2a6b8c380281ccd185d3b68b77515519a23d64c56273938de8ea8b2b",
+          "fccb66200fe7e388b42cc9b5df5174036428b16192cd7a83504eb019488775eb",
+          "22bc3dff4aa9cedd089383d1ecc34b606b95e8803410ca77825e06d5a166919e",
+          "2c69ba99b26d9a92bc539977bac9aa6944de30b18342050353adb6f2afbfd4ce",
+          "19d7380317cda31919d1535ac9a40f4d2a043c3f91271820b6ff1b7699dd8b69",
+          "6d3c60aae750eed22577f4816f2065ed5c8320696b5d3100b11f0abe8d99eeed",
+          "7c384d0474fcac2c37658707524cfff89636f109543891bfa88e19460a5cf738",
+          "3d10ed7290d731f64d75d6a06ab6a7656849d2bd8e501c42b57cc80ed08a032e",
+          "dd94d5aee217aab4817b1e39f6836b81db83fed019ee5d4ed06123eaab7174cf",
+          "9f90d1508a866cadb81c9041e85c3e8c344ecdba092e43b526987997aed5e06c",
+          "f10bef1787afae4b3098dc814856c85ebc66fcc82e1cdbab9af1debe84bfe194",
+          "7a78e4505e3c4f5e3aa84087e9c6415fcc8254db42bbe3ca29ff6f6d4f950115",
+          "bc3a004675db17cf45e5a39e44b89fece2c9a9650334a11de4ed1f3e4c76334a",
+          "05269c996bb1463daad9ef6369db0d14d58f0f44da5e19aab27a2228051bc610",
+          "b95b4f86c67dfed81ca1aa4388a54a297b49ca51738edb3f0df4109a3c4570a6",
+          "69e5f2aa1bca155330370ceb1b256c08d9df57ebdfd999b382934fc4e961a05d",
+          "c66ca6e11733eef314a8d7b33b6485418b73f0e64b844f9925070ccda59db80d",
+          "9202e0daac32ab7353c81c9b8ad2438e1f8e3d0a8551bea44ea80b1d01b10fdf",
+          "1ee4d0e5b6f3ba2009b2d48af7612fe5007884f74b81f66b17c6ddb41439c343",
+          "e4bfbb07593c54b4ffff9542d5614c421d7b2df36579cc562dd7b399fc73c488",
+          "f768a3720286767c107ac91d3c0b269296ddb0273d1b3fd4a7f6e316d5667d06",
+          "cf6b440e8abf57991d6271bb40f79e39b27ee942443e9b5f4e84c1ee13001505",
+          "ff837ecabe6aadbb0669617d48f8960f0f202ff52968a4fa0148f49ce3fd9119",
+          "dc0928c391d060d0aac092d1c60e70b9789cdaa42a4b48b7eef294bd3a911819",
+          "0b97f53e309b0f2bc7bd007d041f99dc0e12b8d9075a7e620ad24eb85ec0517c",
+          "7c449a5379714800686d754a4fa08c766af3be7940fa894d12eb14c229898c84",
+          "e2754cca1af7e40d025127b78569c9b9eba5aff3ff6139c8d15b835cb531020d",
+          "bc1ccfcd1b5568ea0b65febe0c11dee0ae319cdbfea2aa749736e41fcf771624",
+          "6b81a247a0e122672aa381fef83eb4d142aaf1502f089653f9083c6bceaf573a",
+          "6a4a2df72ea7f67f25936e43e6ae57f2f7f96a81aeb5346d80fa90bebf16efd3",
+          "b0a3d967a3ee0e68f284d0c3c5b57d101112ec6a5933c12a3d87be2f975cbfba",
+          "176ea3814c5d8733eeeb8b053b6ccdc152e5c1409bb1aa3d575f274935156ba6",
+          "2271a3eacc7090be2906a773d36a71b257b25a79744bfa382b351775f7b8c835",
+          "2436e6eed945f4a729796ab5268fc8d5c212d3c789818ecbcb780b3f8fbf5f3c",
+          "d42f7f2ca81bff2b6a266f5fa66ef77ad3324fb05a1b06ada427ee38b7347c42",
+          "57135cc89f49b0685dccf03dd6bcaed2d08021dd162090883a28fb5143f9c71e",
+          "1ab8af0890399c3b74297e6a84d9a2f791823c00f0be237e46a0de2971c1a04e",
+          "8efb6f8b43ea3602f07a30eda61e447d4f333a12f2069280a24352bcac7e8cb2",
+          "a44aa3250169d8842048ff2929001b51cee12f900b994cf35756d9dcc79eee5c",
+          "b72bfd0feca6ab924bb8612e470c2c5e948ddb8d0a7ab5ef047a60db32abee9f",
+          "a49b1ad3ac261de481f68eb47c7ed21369b485cf07a8f070780f368a24854345",
+          "a94e4fef0c1d05fc74af1de5ac6a5b90f5ddb187148a809a1d4790bb242e4d1f",
+          "9afc7151268f652d543888e093a92688a70dcdc80955b92a19f3538d893335da",
+          "1826a0300606de21bad0658d8069db2839bd4e8bbebbd0bc8ca5b36c8cbeadd2",
+          "ca9e0e7c45ee5e0d994b728d53fb6edf136243d91523261c9503b5f1727a39ce",
+          "e9bb3e5553a1bd07bd07117668b71d9bd25d978cb8e57c138538acb27cbd3429",
+          "04ad3aa4969915ad3e004006b116f89b3958a86d52d50ef24e03aa9cba1bc577",
+          "7327435e3931e623d1af457e75b439a4cd39cacbf8a3d21707efbe2199cbbd79",
+          "f9891911cc42d5cd3a821547938fd2c35d9b6179ce04b38a54f1adea9203c803",
+          "2cc47fbb345001fa4c6330e3f606fa664dbd51e375d695767bc11a311010b12b",
+          "a1a9e9efdf84de92c6fd1a7c8fdbbb7d03d9fea4082fdafeb37ee4c2cdacc045",
+          "cd789c697c4e5a1b8873de00f130b8b4b487d9814235c06ae864e03c867433f3",
+          "4e03b8c8939bb46ef889aa38becb50b31f74b369cd096d0e66be2ce8d5b0adbe",
+          "d958acd4ec0fcb2fc1720ef80db67671df6db38ee634ef69fea2cfbf9f2d0209",
+          "3230b579676ef15345a1d765e677aaf772f4c1bf00ff315c2218c887222e8d4c",
+          "f1115ef388ec349115d0411b9446067198b41c9aeb02e7fe31dc04678325fe39",
+          "8abd1f5abcf51965830a53d4a2a8b25b2882118f2ca10ac8b92d64af49605573",
+          "acb23e6bc859d07e0d12221f02fb6ffe22811151cb3d147f28b8051a4e1ba88f",
+          "04bb285c90ce6a3816dc342378c7dfe040ec71846f0deeb963690ee3e2e835cd",
+          "3271dd058a384266c8a9ca9bf293a90452785cd7811e60300a7aa4d1955b902a",
+          "100e1c64bf3b4762098dd051932ea3a06cce1860ea8c159d9b05bf34bb384c68",
+          "f18da26cae83e13c2b8a3de44f39f54856c0210e096656f84ad0cf75960b018a",
+          "e6ff2c1d050b4a79ef748d51e2b7aabe5a58649a2b504a4ea343c989ed63d719",
+          "0018bf4a917ab95244e42fa8444d1b82df29c67f207512a0ad0dd1b5573dffec",
+          "56aa351f4bc4b99ff2cd4a3e106c5a88cb6e3c2b74453ebe877c9b92f8b0927d",
+          "1682d3d673eeb3f40ac9d8372ba8f8d613fa0953e45324e97ea38568db3f8acf",
+          "474b8b1bc0cc0c5f3199f374cc4c0cf46385117fabf8f1b1927205d2034d40dd",
+          "7435e3d0a0e57ec5b666bb753d061aea09cb8be891cf3c06a5f9c06f42815756",
+          "86fa3b0baae8292968c284fb5ae1e7982ff25d1912d281a3ed5450b7faef1ca1",
+          "0a15a126c711f2f1a3155f243d9d90f94941d17d2093d99c88aeb6211a61c0ce",
+          "f3a2ba6bf0c711487fb1b1140b46d3fe819c4ad8d73924ef0de26fa89f8fb151",
+          "1b148145e29dcb1877a0b709ec2c0f7716c26533ffd1307ee3851b5a221d5839",
+          "1c5f395c456304be5ead43d271a81d608e534aaa9880c4588460c9fe9565e6c9",
+          "7197f3ada870d9ed5e1aa7c5870e66eed26fcf949451734c3b16bdab61fa0314",
+          "8fb64c47a3de1ac7bc1ec0aa2c6d62884ac2824e44a2e4bc799e3e93d01ba297",
+          "8079c1f6848678ebd9f51deb8cbbaf8bfca6eb6f64fd7a1f7cd7cda3d1eae407",
+          "569430bee0849f16e9977ef68d939cd3fd281d6ad6fda47994893a03402f0242",
+          "34e1456df27cfcaed100343e54f73aa8801efb4c38bbcff2acfbe0a3950ba2c8",
+          "b67c4e28efde196b93018f0e978bb782862f469d02af1872f3b25668a352b876",
+          "aea4f11853da6aa0f689c40ea695cf65b9c1c8fa2943acf78795925d51fb5cd7",
+          "5b1cb67a7f49c0d05b21f99a02f27967e072e0fcc9936d6c5d515070d2a59ed9",
+          "3d774f2a8cb1a3f4e30fce68f39d7baacf7e91b47065cb520e766e0eaf883791"
+        ],
+        "id": "3367b4bef12086a51e7d47769d1dac4976005bcfb014f7a2c6fac131d09769e2",
+        "family": "website",
+        "reporting_period": null,
+        "carried_forward": false,
+        "first_observed_at": "2026-10-18T07:03:06.626171Z",
+        "last_observed_at": "2026-10-18T07:03:06.626171Z",
+        "reasons": {}
+      },
+      "r2_errors": [
+        {
+          "section": "website",
+          "code": "website_candidates",
+          "message": "[{\"domain\": \"filmtek.no\", \"level\": \"HIGH\", \"points\": 7, \"signals\": [\"legal_name\", \"address\", \"registry_website\", \"municipality\"], \"origin\": \"registry_website\", \"reason\": \"corroboration\"}, {\"domain\": \"audioped.no\", \"origin\": \"subunit_registry_email\", \"level\": \"LOW\", \"reason\": \"website_budget_exhausted\"}, {\"domain\": \"filmtek.no\", \"origin\": \"registry_website\", \"url\": \"https://www.filmtek.no/\", \"status\": 200}, {\"domain\": \"audioped.no\", \"origin\": \"subunit_registry_email\", \"url\": \"https://audioped.no/\", \"reason\": \"website_budget_exhausted\"}]"
+        },
+        {
+          "section": "activity",
+          "code": "website_budget_exhausted",
+          "message": "website_budget_exhausted"
+        }
+      ],
+      "r3b_errors": [
+        {
+          "section": "website",
+          "code": "website_candidates",
+          "message": "[{\"domain\": \"filmtek.no\", \"level\": \"HIGH\", \"points\": 7, \"signals\": [\"legal_name\", \"address\", \"registry_website\", \"municipality\"], \"origin\": \"registry_website\", \"reason\": \"corroboration\"}, {\"domain\": \"audioped.no\", \"level\": \"VERIFIED\", \"points\": 0, \"signals\": [], \"origin\": \"subunit_registry_email\", \"reason\": \"\"}, {\"domain\": \"filmtek.no\", \"origin\": \"registry_website\", \"url\": \"https://www.filmtek.no/\", \"status\": 200}, {\"domain\": \"audioped.no\", \"origin\": \"subunit_registry_email\", \"url\": \"https://audioped.no/\", \"reason\": \"website_timeout\"}, {\"domain\": \"audioped.no\", \"origin\": \"subunit_registry_email\", \"url\": \"https://www.audioped.no/\", \"status\": 200}]"
+        },
+        {
+          "section": "activity",
+          "code": "website_budget_exhausted",
+          "message": "website_budget_exhausted"
+        },
+        {
+          "section": "activity",
+          "code": "registry_change_http_400",
+          "message": "registry_change_http_400"
+        },
+        {
+          "section": "activity",
+          "code": "registry_change_http_400",
+          "message": "registry_change_http_400"
+        }
+      ]
+    },
+    {
+      "org": "988330752",
+      "claim": {
+        "field": "contact.email.003b3c745257182ca66d",
+        "value": "post@filmtek.no",
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "e18434ea33e678dd31d7b16ec13ff43033c2fd54987c4fcbd65c9c7cba6fe32c"
+        ],
+        "id": "dbfa282b6ea0653f9c6205b86147a11fd1df01767b3ee6ddf8155f441eb9f74a",
+        "family": "website",
+        "reporting_period": null,
+        "carried_forward": false,
+        "first_observed_at": "2026-10-18T07:03:06.626171Z",
+        "last_observed_at": "2026-10-18T07:03:06.626171Z",
+        "reasons": {}
+      },
+      "r2_errors": [
+        {
+          "section": "website",
+          "code": "website_candidates",
+          "message": "[{\"domain\": \"filmtek.no\", \"level\": \"HIGH\", \"points\": 7, \"signals\": [\"legal_name\", \"address\", \"registry_website\", \"municipality\"], \"origin\": \"registry_website\", \"reason\": \"corroboration\"}, {\"domain\": \"audioped.no\", \"origin\": \"subunit_registry_email\", \"level\": \"LOW\", \"reason\": \"website_budget_exhausted\"}, {\"domain\": \"filmtek.no\", \"origin\": \"registry_website\", \"url\": \"https://www.filmtek.no/\", \"status\": 200}, {\"domain\": \"audioped.no\", \"origin\": \"subunit_registry_email\", \"url\": \"https://audioped.no/\", \"reason\": \"website_budget_exhausted\"}]"
+        },
+        {
+          "section": "activity",
+          "code": "website_budget_exhausted",
+          "message": "website_budget_exhausted"
+        }
+      ],
+      "r3b_errors": [
+        {
+          "section": "website",
+          "code": "website_candidates",
+          "message": "[{\"domain\": \"filmtek.no\", \"level\": \"HIGH\", \"points\": 7, \"signals\": [\"legal_name\", \"address\", \"registry_website\", \"municipality\"], \"origin\": \"registry_website\", \"reason\": \"corroboration\"}, {\"domain\": \"audioped.no\", \"level\": \"VERIFIED\", \"points\": 0, \"signals\": [], \"origin\": \"subunit_registry_email\", \"reason\": \"\"}, {\"domain\": \"filmtek.no\", \"origin\": \"registry_website\", \"url\": \"https://www.filmtek.no/\", \"status\": 200}, {\"domain\": \"audioped.no\", \"origin\": \"subunit_registry_email\", \"url\": \"https://audioped.no/\", \"reason\": \"website_timeout\"}, {\"domain\": \"audioped.no\", \"origin\": \"subunit_registry_email\", \"url\": \"https://www.audioped.no/\", \"status\": 200}]"
+        },
+        {
+          "section": "activity",
+          "code": "website_budget_exhausted",
+          "message": "website_budget_exhausted"
+        },
+        {
+          "section": "activity",
+          "code": "registry_change_http_400",
+          "message": "registry_change_http_400"
+        },
+        {
+          "section": "activity",
+          "code": "registry_change_http_400",
+          "message": "registry_change_http_400"
+        }
+      ]
+    },
+    {
+      "org": "988330752",
+      "claim": {
+        "field": "contact.phone.d55dd5cb2fbeb4b8611c",
+        "value": "+4790926121",
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "8810a4a06901ad3f48e11597d5d2db84af957e31455f311fb675725715896f9f"
+        ],
+        "id": "c660c22c80c29aa88306f7f61767d14de4af7fc6ac984a5a1bd5601fb3f5a040",
+        "family": "website",
+        "reporting_period": null,
+        "carried_forward": false,
+        "first_observed_at": "2026-10-18T07:03:06.626171Z",
+        "last_observed_at": "2026-10-18T07:03:06.626171Z",
+        "reasons": {}
+      },
+      "r2_errors": [
+        {
+          "section": "website",
+          "code": "website_candidates",
+          "message": "[{\"domain\": \"filmtek.no\", \"level\": \"HIGH\", \"points\": 7, \"signals\": [\"legal_name\", \"address\", \"registry_website\", \"municipality\"], \"origin\": \"registry_website\", \"reason\": \"corroboration\"}, {\"domain\": \"audioped.no\", \"origin\": \"subunit_registry_email\", \"level\": \"LOW\", \"reason\": \"website_budget_exhausted\"}, {\"domain\": \"filmtek.no\", \"origin\": \"registry_website\", \"url\": \"https://www.filmtek.no/\", \"status\": 200}, {\"domain\": \"audioped.no\", \"origin\": \"subunit_registry_email\", \"url\": \"https://audioped.no/\", \"reason\": \"website_budget_exhausted\"}]"
+        },
+        {
+          "section": "activity",
+          "code": "website_budget_exhausted",
+          "message": "website_budget_exhausted"
+        }
+      ],
+      "r3b_errors": [
+        {
+          "section": "website",
+          "code": "website_candidates",
+          "message": "[{\"domain\": \"filmtek.no\", \"level\": \"HIGH\", \"points\": 7, \"signals\": [\"legal_name\", \"address\", \"registry_website\", \"municipality\"], \"origin\": \"registry_website\", \"reason\": \"corroboration\"}, {\"domain\": \"audioped.no\", \"level\": \"VERIFIED\", \"points\": 0, \"signals\": [], \"origin\": \"subunit_registry_email\", \"reason\": \"\"}, {\"domain\": \"filmtek.no\", \"origin\": \"registry_website\", \"url\": \"https://www.filmtek.no/\", \"status\": 200}, {\"domain\": \"audioped.no\", \"origin\": \"subunit_registry_email\", \"url\": \"https://audioped.no/\", \"reason\": \"website_timeout\"}, {\"domain\": \"audioped.no\", \"origin\": \"subunit_registry_email\", \"url\": \"https://www.audioped.no/\", \"status\": 200}]"
+        },
+        {
+          "section": "activity",
+          "code": "website_budget_exhausted",
+          "message": "website_budget_exhausted"
+        },
+        {
+          "section": "activity",
+          "code": "registry_change_http_400",
+          "message": "registry_change_http_400"
+        },
+        {
+          "section": "activity",
+          "code": "registry_change_http_400",
+          "message": "registry_change_http_400"
+        }
+      ]
+    },
+    {
+      "org": "988330752",
+      "claim": {
+        "field": "official_website",
+        "value": {
+          "final_url": "https://www.filmtek.no",
+          "identity_level": "HIGH",
+          "proof_type": "signals",
+          "proof_page_url": "https://www.filmtek.no/",
+          "signals": [
+            "legal_name",
+            "address",
+            "registry_website",
+            "municipality"
+          ],
+          "points": 7,
+          "candidate_origin": "registry_website",
+          "relationship_note": null,
+          "other_orgnrs": []
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "77a8423a031c181154c4043ce61928310f52f017301ded08bb2c891b138ab5eb",
+          "7020377672d5ed863cf8e8995f24bae1e376c5de2a9bf3578496b09d85cccc19",
+          "a17318374f2505fec0f92c9fd5f7cb8490265b5f0bc21b80d3c2f968a5ab4a8b",
+          "1bba341da09892a14e0cc37e4cde15b773c6f363584150ec565b50999ae11c63",
+          "ec4f42e798fd38e378c18288ada7cbb6f4424b75b317977986841ab072d90402",
+          "3da4e3dea11a93fbaaf7633de86e84dcaceb88ba7dbb57df46e41265c4638f54",
+          "9753558ce58be25e37a34b3feea12aef97a609c6aec8713b1085f3a8a71c00b2",
+          "f6c19747a08145f3e22c9ccfd136e3ae4d7f4431c71a74e6930f935e1f65328c",
+          "3e389209f919ed41ae2ce96d3d655badb49f1c0724c00a63e26e63a992a82cd0",
+          "5dca071df9e9325160e798e877533881442a2d4fbb93bbd6cb00e19a2f4fb094",
+          "ef3d8018d3dbd78e83b222037f16f8bcb039d14f3db82d1c4472590b6ceda48d",
+          "bd0873a6ff4d5de99080648661c57febbab3e5171a291d91ed81d53f413a4778",
+          "aaba381e2a6b8c380281ccd185d3b68b77515519a23d64c56273938de8ea8b2b",
+          "fccb66200fe7e388b42cc9b5df5174036428b16192cd7a83504eb019488775eb",
+          "22bc3dff4aa9cedd089383d1ecc34b606b95e8803410ca77825e06d5a166919e",
+          "2c69ba99b26d9a92bc539977bac9aa6944de30b18342050353adb6f2afbfd4ce",
+          "19d7380317cda31919d1535ac9a40f4d2a043c3f91271820b6ff1b7699dd8b69",
+          "6d3c60aae750eed22577f4816f2065ed5c8320696b5d3100b11f0abe8d99eeed",
+          "7c384d0474fcac2c37658707524cfff89636f109543891bfa88e19460a5cf738",
+          "3d10ed7290d731f64d75d6a06ab6a7656849d2bd8e501c42b57cc80ed08a032e",
+          "dd94d5aee217aab4817b1e39f6836b81db83fed019ee5d4ed06123eaab7174cf",
+          "9f90d1508a866cadb81c9041e85c3e8c344ecdba092e43b526987997aed5e06c",
+          "f10bef1787afae4b3098dc814856c85ebc66fcc82e1cdbab9af1debe84bfe194",
+          "7a78e4505e3c4f5e3aa84087e9c6415fcc8254db42bbe3ca29ff6f6d4f950115",
+          "bc3a004675db17cf45e5a39e44b89fece2c9a9650334a11de4ed1f3e4c76334a",
+          "05269c996bb1463daad9ef6369db0d14d58f0f44da5e19aab27a2228051bc610",
+          "b95b4f86c67dfed81ca1aa4388a54a297b49ca51738edb3f0df4109a3c4570a6",
+          "69e5f2aa1bca155330370ceb1b256c08d9df57ebdfd999b382934fc4e961a05d",
+          "c66ca6e11733eef314a8d7b33b6485418b73f0e64b844f9925070ccda59db80d",
+          "9202e0daac32ab7353c81c9b8ad2438e1f8e3d0a8551bea44ea80b1d01b10fdf",
+          "1ee4d0e5b6f3ba2009b2d48af7612fe5007884f74b81f66b17c6ddb41439c343",
+          "e4bfbb07593c54b4ffff9542d5614c421d7b2df36579cc562dd7b399fc73c488",
+          "f768a3720286767c107ac91d3c0b269296ddb0273d1b3fd4a7f6e316d5667d06",
+          "cf6b440e8abf57991d6271bb40f79e39b27ee942443e9b5f4e84c1ee13001505",
+          "ff837ecabe6aadbb0669617d48f8960f0f202ff52968a4fa0148f49ce3fd9119",
+          "dc0928c391d060d0aac092d1c60e70b9789cdaa42a4b48b7eef294bd3a911819",
+          "0b97f53e309b0f2bc7bd007d041f99dc0e12b8d9075a7e620ad24eb85ec0517c",
+          "7c449a5379714800686d754a4fa08c766af3be7940fa894d12eb14c229898c84",
+          "e2754cca1af7e40d025127b78569c9b9eba5aff3ff6139c8d15b835cb531020d",
+          "bc1ccfcd1b5568ea0b65febe0c11dee0ae319cdbfea2aa749736e41fcf771624",
+          "6b81a247a0e122672aa381fef83eb4d142aaf1502f089653f9083c6bceaf573a",
+          "6a4a2df72ea7f67f25936e43e6ae57f2f7f96a81aeb5346d80fa90bebf16efd3",
+          "b0a3d967a3ee0e68f284d0c3c5b57d101112ec6a5933c12a3d87be2f975cbfba",
+          "176ea3814c5d8733eeeb8b053b6ccdc152e5c1409bb1aa3d575f274935156ba6",
+          "2271a3eacc7090be2906a773d36a71b257b25a79744bfa382b351775f7b8c835",
+          "2436e6eed945f4a729796ab5268fc8d5c212d3c789818ecbcb780b3f8fbf5f3c",
+          "d42f7f2ca81bff2b6a266f5fa66ef77ad3324fb05a1b06ada427ee38b7347c42",
+          "57135cc89f49b0685dccf03dd6bcaed2d08021dd162090883a28fb5143f9c71e",
+          "1ab8af0890399c3b74297e6a84d9a2f791823c00f0be237e46a0de2971c1a04e",
+          "8efb6f8b43ea3602f07a30eda61e447d4f333a12f2069280a24352bcac7e8cb2",
+          "a44aa3250169d8842048ff2929001b51cee12f900b994cf35756d9dcc79eee5c",
+          "b72bfd0feca6ab924bb8612e470c2c5e948ddb8d0a7ab5ef047a60db32abee9f",
+          "a49b1ad3ac261de481f68eb47c7ed21369b485cf07a8f070780f368a24854345",
+          "a94e4fef0c1d05fc74af1de5ac6a5b90f5ddb187148a809a1d4790bb242e4d1f",
+          "9afc7151268f652d543888e093a92688a70dcdc80955b92a19f3538d893335da",
+          "1826a0300606de21bad0658d8069db2839bd4e8bbebbd0bc8ca5b36c8cbeadd2",
+          "ca9e0e7c45ee5e0d994b728d53fb6edf136243d91523261c9503b5f1727a39ce",
+          "e9bb3e5553a1bd07bd07117668b71d9bd25d978cb8e57c138538acb27cbd3429",
+          "04ad3aa4969915ad3e004006b116f89b3958a86d52d50ef24e03aa9cba1bc577",
+          "7327435e3931e623d1af457e75b439a4cd39cacbf8a3d21707efbe2199cbbd79",
+          "f9891911cc42d5cd3a821547938fd2c35d9b6179ce04b38a54f1adea9203c803",
+          "2cc47fbb345001fa4c6330e3f606fa664dbd51e375d695767bc11a311010b12b",
+          "a1a9e9efdf84de92c6fd1a7c8fdbbb7d03d9fea4082fdafeb37ee4c2cdacc045",
+          "cd789c697c4e5a1b8873de00f130b8b4b487d9814235c06ae864e03c867433f3",
+          "4e03b8c8939bb46ef889aa38becb50b31f74b369cd096d0e66be2ce8d5b0adbe",
+          "d958acd4ec0fcb2fc1720ef80db67671df6db38ee634ef69fea2cfbf9f2d0209",
+          "3230b579676ef15345a1d765e677aaf772f4c1bf00ff315c2218c887222e8d4c",
+          "f1115ef388ec349115d0411b9446067198b41c9aeb02e7fe31dc04678325fe39",
+          "8abd1f5abcf51965830a53d4a2a8b25b2882118f2ca10ac8b92d64af49605573",
+          "acb23e6bc859d07e0d12221f02fb6ffe22811151cb3d147f28b8051a4e1ba88f",
+          "04bb285c90ce6a3816dc342378c7dfe040ec71846f0deeb963690ee3e2e835cd",
+          "3271dd058a384266c8a9ca9bf293a90452785cd7811e60300a7aa4d1955b902a",
+          "100e1c64bf3b4762098dd051932ea3a06cce1860ea8c159d9b05bf34bb384c68",
+          "f18da26cae83e13c2b8a3de44f39f54856c0210e096656f84ad0cf75960b018a",
+          "e6ff2c1d050b4a79ef748d51e2b7aabe5a58649a2b504a4ea343c989ed63d719",
+          "0018bf4a917ab95244e42fa8444d1b82df29c67f207512a0ad0dd1b5573dffec",
+          "56aa351f4bc4b99ff2cd4a3e106c5a88cb6e3c2b74453ebe877c9b92f8b0927d",
+          "1682d3d673eeb3f40ac9d8372ba8f8d613fa0953e45324e97ea38568db3f8acf",
+          "474b8b1bc0cc0c5f3199f374cc4c0cf46385117fabf8f1b1927205d2034d40dd",
+          "7435e3d0a0e57ec5b666bb753d061aea09cb8be891cf3c06a5f9c06f42815756",
+          "86fa3b0baae8292968c284fb5ae1e7982ff25d1912d281a3ed5450b7faef1ca1",
+          "0a15a126c711f2f1a3155f243d9d90f94941d17d2093d99c88aeb6211a61c0ce",
+          "f3a2ba6bf0c711487fb1b1140b46d3fe819c4ad8d73924ef0de26fa89f8fb151",
+          "1b148145e29dcb1877a0b709ec2c0f7716c26533ffd1307ee3851b5a221d5839",
+          "1c5f395c456304be5ead43d271a81d608e534aaa9880c4588460c9fe9565e6c9",
+          "7197f3ada870d9ed5e1aa7c5870e66eed26fcf949451734c3b16bdab61fa0314",
+          "8fb64c47a3de1ac7bc1ec0aa2c6d62884ac2824e44a2e4bc799e3e93d01ba297",
+          "8079c1f6848678ebd9f51deb8cbbaf8bfca6eb6f64fd7a1f7cd7cda3d1eae407",
+          "569430bee0849f16e9977ef68d939cd3fd281d6ad6fda47994893a03402f0242",
+          "34e1456df27cfcaed100343e54f73aa8801efb4c38bbcff2acfbe0a3950ba2c8",
+          "b67c4e28efde196b93018f0e978bb782862f469d02af1872f3b25668a352b876",
+          "aea4f11853da6aa0f689c40ea695cf65b9c1c8fa2943acf78795925d51fb5cd7",
+          "5b1cb67a7f49c0d05b21f99a02f27967e072e0fcc9936d6c5d515070d2a59ed9",
+          "3d774f2a8cb1a3f4e30fce68f39d7baacf7e91b47065cb520e766e0eaf883791"
+        ],
+        "id": "eb13c32ba63ca593dc0bacfc71cbb8e6a9c021358f406a4e5a5751ebe1f03278",
+        "family": "website",
+        "reporting_period": null,
+        "carried_forward": false,
+        "first_observed_at": "2026-10-18T07:03:06.626171Z",
+        "last_observed_at": "2026-10-18T07:03:06.626171Z",
+        "reasons": {}
+      },
+      "r2_errors": [
+        {
+          "section": "website",
+          "code": "website_candidates",
+          "message": "[{\"domain\": \"filmtek.no\", \"level\": \"HIGH\", \"points\": 7, \"signals\": [\"legal_name\", \"address\", \"registry_website\", \"municipality\"], \"origin\": \"registry_website\", \"reason\": \"corroboration\"}, {\"domain\": \"audioped.no\", \"origin\": \"subunit_registry_email\", \"level\": \"LOW\", \"reason\": \"website_budget_exhausted\"}, {\"domain\": \"filmtek.no\", \"origin\": \"registry_website\", \"url\": \"https://www.filmtek.no/\", \"status\": 200}, {\"domain\": \"audioped.no\", \"origin\": \"subunit_registry_email\", \"url\": \"https://audioped.no/\", \"reason\": \"website_budget_exhausted\"}]"
+        },
+        {
+          "section": "activity",
+          "code": "website_budget_exhausted",
+          "message": "website_budget_exhausted"
+        }
+      ],
+      "r3b_errors": [
+        {
+          "section": "website",
+          "code": "website_candidates",
+          "message": "[{\"domain\": \"filmtek.no\", \"level\": \"HIGH\", \"points\": 7, \"signals\": [\"legal_name\", \"address\", \"registry_website\", \"municipality\"], \"origin\": \"registry_website\", \"reason\": \"corroboration\"}, {\"domain\": \"audioped.no\", \"level\": \"VERIFIED\", \"points\": 0, \"signals\": [], \"origin\": \"subunit_registry_email\", \"reason\": \"\"}, {\"domain\": \"filmtek.no\", \"origin\": \"registry_website\", \"url\": \"https://www.filmtek.no/\", \"status\": 200}, {\"domain\": \"audioped.no\", \"origin\": \"subunit_registry_email\", \"url\": \"https://audioped.no/\", \"reason\": \"website_timeout\"}, {\"domain\": \"audioped.no\", \"origin\": \"subunit_registry_email\", \"url\": \"https://www.audioped.no/\", \"status\": 200}]"
+        },
+        {
+          "section": "activity",
+          "code": "website_budget_exhausted",
+          "message": "website_budget_exhausted"
+        },
+        {
+          "section": "activity",
+          "code": "registry_change_http_400",
+          "message": "registry_change_http_400"
+        },
+        {
+          "section": "activity",
+          "code": "registry_change_http_400",
+          "message": "registry_change_http_400"
+        }
+      ]
+    }
+  ],
+  "added_available_claims": [
+    {
+      "org": "988330752",
+      "claim": {
+        "field": "contact.email.95630f353b39561b8b2e",
+        "value": "hei@audioped.no",
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "91bf1dced5ebc12b38082994d62a1cab4eccaef19f49e875ca2fb1b7511aa719"
+        ],
+        "id": "cd8d320b1797c1e220b62f6ffdd169bf5169430c4e11d3e38c7bc22144b3dae1",
+        "family": "website",
+        "reporting_period": null,
+        "carried_forward": false,
+        "first_observed_at": "2026-10-18T07:05:05.445828Z",
+        "last_observed_at": "2026-10-18T07:05:05.445828Z",
+        "reasons": {}
+      }
+    },
+    {
+      "org": "988330752",
+      "claim": {
+        "field": "website_description.meta_description.fb53b933d9b051d1",
+        "value": {
+          "text": "Therese Wider\u00f8e hjelper deg med nedsatt h\u00f8rsel, tinnitus, hyperakusis og misofoni. Gratis behandling via HELFO i Kristiansand. Over 20 \u00e5rs erfaring.",
+          "kind": "meta_description",
+          "self_description": true,
+          "identity_level": "VERIFIED",
+          "identity_claim_id": "da3e6f3a60f877364cd4f2fd7f877de6e78b25ad8bba5ec2abc72660a05553db"
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "0b2c5fd8c2b302b6588b984e4a8ff25d17d883efd87b2fc71250f5b54f1282ae",
+          "3f34bac6ed3423c38ba14c4dabfbe67252eec3539487d0253c2c5658d01d3fad",
+          "bc1ccfcd1b5568ea0b65febe0c11dee0ae319cdbfea2aa749736e41fcf771624"
+        ],
+        "id": "c546edd42d4f7157880b892a059d28978aebc24650ebfda2c58380c05a4432fd",
+        "family": "website",
+        "reporting_period": null,
+        "carried_forward": false,
+        "first_observed_at": "2026-10-18T07:05:05.445828Z",
+        "last_observed_at": "2026-10-18T07:05:05.445828Z",
+        "reasons": {}
+      }
+    },
+    {
+      "org": "988330752",
+      "claim": {
+        "field": "social_profile.bf7baa658b98e6deb5b3",
+        "value": {
+          "url": "https://www.instagram.com/og_hva_sa_du",
+          "platform": "instagram.com"
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "6e0e4f5529c9208aebf2a03b6511bcac1be82856f3d483217faa8ae59ac0e763"
+        ],
+        "id": "e34d887c9f18e26146c7b51c8e8e5233bd7dfb50942ed31f78f876e63bf8b7a4",
+        "family": "website",
+        "reporting_period": null,
+        "carried_forward": false,
+        "first_observed_at": "2026-10-18T07:05:05.445828Z",
+        "last_observed_at": "2026-10-18T07:05:05.445828Z",
+        "reasons": {
+          "relationship": "Company-owned profile linked from verified website"
+        }
+      }
+    },
+    {
+      "org": "988330752",
+      "claim": {
+        "field": "website_description.og_description.fb53b933d9b051d1",
+        "value": {
+          "text": "Therese Wider\u00f8e hjelper deg med nedsatt h\u00f8rsel, tinnitus, hyperakusis og misofoni. Gratis behandling via HELFO i Kristiansand. Over 20 \u00e5rs erfaring.",
+          "kind": "og_description",
+          "self_description": true,
+          "identity_level": "VERIFIED",
+          "identity_claim_id": "da3e6f3a60f877364cd4f2fd7f877de6e78b25ad8bba5ec2abc72660a05553db"
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "ea4ef9c80fe28216eb87a75ab872c50d7c2509d88a55963b3ac6701b30875095",
+          "3f34bac6ed3423c38ba14c4dabfbe67252eec3539487d0253c2c5658d01d3fad",
+          "bc1ccfcd1b5568ea0b65febe0c11dee0ae319cdbfea2aa749736e41fcf771624"
+        ],
+        "id": "af032233dc3540710c496f1c96274e1c37e2770ffb52f301e39cee43f9146863",
+        "family": "website",
+        "reporting_period": null,
+        "carried_forward": false,
+        "first_observed_at": "2026-10-18T07:05:05.445828Z",
+        "last_observed_at": "2026-10-18T07:05:05.445828Z",
+        "reasons": {}
+      }
+    },
+    {
+      "org": "988330752",
+      "claim": {
+        "field": "official_website",
+        "value": {
+          "final_url": "https://www.audioped.no",
+          "identity_level": "VERIFIED",
+          "proof_type": "orgnr_on_page",
+          "proof_page_url": "https://www.audioped.no/",
+          "signals": [],
+          "points": 0,
+          "candidate_origin": "subunit_registry_email",
+          "relationship_note": null,
+          "other_orgnrs": [],
+          "matched_via_subunit": "933248380"
+        },
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "3f34bac6ed3423c38ba14c4dabfbe67252eec3539487d0253c2c5658d01d3fad",
+          "bc1ccfcd1b5568ea0b65febe0c11dee0ae319cdbfea2aa749736e41fcf771624"
+        ],
+        "id": "da3e6f3a60f877364cd4f2fd7f877de6e78b25ad8bba5ec2abc72660a05553db",
+        "family": "website",
+        "reporting_period": null,
+        "carried_forward": false,
+        "first_observed_at": "2026-10-18T07:05:05.445828Z",
+        "last_observed_at": "2026-10-18T07:05:05.445828Z",
+        "reasons": {
+          "discovery_method": "registry email domain",
+          "relationship": "Website of registered subunit 933248380"
+        }
+      }
+    },
+    {
+      "org": "988330752",
+      "claim": {
+        "field": "public_brand",
+        "value": "Audiopedagog Therese Wider\u00f8e",
+        "availability": "available",
+        "confidence": 1.0,
+        "evidence_ids": [
+          "11fbf5b0dfce41c73ca17bf167dc724f19eb7a96853d4bab9e0d966c2f563679"
+        ],
+        "id": "44a06eeb338cf2c1b1eda6daf3d6c81703dc74a7eb9bec4c134edfbb623a4305",
+        "family": "website",
+        "reporting_period": null,
+        "carried_forward": false,
+        "first_observed_at": "2026-10-18T07:05:05.445828Z",
+        "last_observed_at": "2026-10-18T07:05:05.445828Z",
+        "reasons": {}
+      }
+    }
+  ],
+  "lost_identity_ids": []
+}
