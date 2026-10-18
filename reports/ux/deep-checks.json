@@ -1,0 +1,152 @@
+{
+  "claim_checks": {
+    "identity": {
+      "org": "923609016",
+      "field": "identity.legal_name",
+      "fact_found": true,
+      "button_found": true,
+      "opened": true,
+      "source_link": true,
+      "retrieval_utc": true,
+      "method": true,
+      "sha256": true,
+      "source_quote": true,
+      "source_href": "https://data.brreg.no/enhetsregisteret/api/enheter/923609016",
+      "screenshot": "screenshots\\before\\identity_evidence.png"
+    },
+    "roles": {
+      "org": "923609016",
+      "field": "roles.role.9d5bc2ce57bcd8c6ea169d71.0",
+      "fact_found": true,
+      "button_found": true,
+      "opened": true,
+      "source_link": true,
+      "retrieval_utc": true,
+      "method": true,
+      "sha256": true,
+      "source_quote": true,
+      "source_href": "https://data.brreg.no/enhetsregisteret/api/enheter/923609016/roller",
+      "screenshot": "screenshots\\before\\roles_evidence.png"
+    },
+    "subunits": {
+      "org": "923609016",
+      "field": "subunits.unit.973861883",
+      "fact_found": true,
+      "button_found": true,
+      "opened": true,
+      "source_link": true,
+      "retrieval_utc": true,
+      "method": true,
+      "sha256": true,
+      "source_quote": true,
+      "source_href": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=923609016&size=1000&page=0",
+      "screenshot": "screenshots\\before\\subunits_evidence.png"
+    },
+    "registry": {
+      "org": "932525070",
+      "field": "registry_change.376bb7c715fde6e007e4e652",
+      "fact_found": true,
+      "button_found": true,
+      "opened": true,
+      "source_link": true,
+      "retrieval_utc": true,
+      "method": true,
+      "sha256": true,
+      "source_quote": true,
+      "source_href": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=814635562%2C820042182%2C820162692%2C829577372%2C912435911%2C912579433%2C915188389%2C916249985%2C918079327%2C918843183%2C918953612%2C918982523%2C919263601%2C919414944%2C923399658%2C923609016%2C925181536%2C926818317%2C927177978%2C927342677%2C927439794%2C928054780%2C928892956%2C929583027%2C929868323%2C930621927%2C932525070%2C933025160%2C934216385%2C934485718%2C935465567%2C935647142%2C935962196%2C936035523%2C936349676%2C946595845%2C948639416%2C950302011%2C950310499%2C956409071%2C957687504%2C975514412%2C988330752%2C988963259%2C991835423%2C991853995%2C997095987%2C997995414%2C999504116&dato=2024-10-18T08%3A42%3A24.409Z&updatedBefore=2026-10-18T08%3A42%3A24.409Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+      "screenshot": "screenshots\\before\\registry_evidence.png",
+      "visible_registry_label": true,
+      "raw_registry_label": "registry publication time (not effective date)",
+      "visible_publication_timestamp": true
+    },
+    "website": {
+      "org": "991853995",
+      "field": "official_website",
+      "fact_found": true,
+      "button_found": true,
+      "opened": true,
+      "source_link": true,
+      "retrieval_utc": true,
+      "method": true,
+      "sha256": true,
+      "source_quote": true,
+      "source_href": "https://www.bien.no/",
+      "screenshot": "screenshots\\before\\website_evidence.png",
+      "proof_type": "orgnr_on_page",
+      "identity_level": "VERIFIED",
+      "proof_url_in_source_panel": true,
+      "proof_reason_visible": true
+    },
+    "social": {
+      "org": "991853995",
+      "field": "social_profile.a642d67c76a4508a3fd1",
+      "fact_found": true,
+      "button_found": true,
+      "opened": true,
+      "source_link": true,
+      "retrieval_utc": true,
+      "method": true,
+      "sha256": true,
+      "source_quote": true,
+      "source_href": "https://www.bien.no/",
+      "screenshot": "screenshots\\before\\social_evidence.png"
+    },
+    "website_activity": {
+      "org": "991853995",
+      "field": "dated_item.1afd7d0d56b99624dbd4",
+      "fact_found": true,
+      "button_found": true,
+      "opened": true,
+      "source_link": true,
+      "retrieval_utc": true,
+      "method": true,
+      "sha256": true,
+      "source_quote": true,
+      "source_href": "https://www.bien.no/sitemap-1720.xml",
+      "screenshot": "screenshots\\before\\website_activity_evidence.png"
+    },
+    "nav": {
+      "org": "929583027",
+      "field": "hiring.job.3c4d88d0-bf7f-4d1e-ac4d-27127e2f27e9",
+      "fact_found": true,
+      "button_found": true,
+      "opened": true,
+      "source_link": true,
+      "retrieval_utc": true,
+      "method": true,
+      "sha256": true,
+      "source_quote": true,
+      "source_href": "https://pam-stilling-feed.nav.no/api/v1/feedentry/3c4d88d0-bf7f-4d1e-ac4d-27127e2f27e9",
+      "screenshot": "screenshots\\before\\nav_evidence.png",
+      "source_class": [
+        "official_nav"
+      ],
+      "job_title_visible": true
+    },
+    "accounts": {
+      "org": "923609016",
+      "field": "accounts.revenue",
+      "fact_found": true,
+      "button_found": true,
+      "opened": true,
+      "source_link": true,
+      "retrieval_utc": true,
+      "method": true,
+      "sha256": true,
+      "source_quote": true,
+      "source_href": "https://data.brreg.no/regnskapsregisteret/regnskap/923609016",
+      "screenshot": "screenshots\\before\\accounts_evidence.png"
+    }
+  },
+  "status_file": {
+    "panel_visible": true,
+    "snapshot_note": "Snapshot from completed run at 2026-10-18 08:43:04 UTC. No live updates available.",
+    "non_file_requests": [],
+    "progress_requests": []
+  },
+  "dashboard": {
+    "reported_activity_companies": "15",
+    "recent_list_text": "No recent verified registry filings within 2-year window for current selection.",
+    "index_records_with_recent_events": 0
+  }
+}

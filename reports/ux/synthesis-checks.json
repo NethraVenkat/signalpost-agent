@@ -1,0 +1,265 @@
+{
+  "companies": 50,
+  "section_sentence_count": 420,
+  "uncited_section_sentences": [],
+  "unresolved_citations": [],
+  "unknown_sentence_count": 257,
+  "unknowns_with_claim_ids": 0,
+  "unknown_texts": {
+    "Activity check incomplete.": 18,
+    "No active job ads on NAV.": 48,
+    "Website check incomplete (source access refused).": 1,
+    "Financial trend unknown: only FY2025 accounts are available.": 48,
+    "Employee count not reported.": 41,
+    "Website check incomplete.": 11,
+    "No dated website updates found within the checked scope.": 23,
+    "No verified website found.": 31,
+    "Accounts check incomplete.": 2,
+    "Workplace not reported.": 13,
+    "First observation; no earlier run to compare.": 1,
+    "Job ads check incomplete.": 1,
+    "Registry check incomplete.": 1,
+    "Leadership check incomplete.": 1,
+    "Workplace check incomplete.": 1,
+    "Activity not reported.": 1,
+    "Scale not reported.": 1,
+    "Leadership not reported.": 1,
+    "Industry code not specified.": 8,
+    "Website unknown: identity or source coverage is ambiguous.": 4,
+    "Website check incomplete (source unavailable).": 1
+  },
+  "examples": {
+    "923609016": {
+      "what_it_does": [
+        {
+          "text": "EQUINOR ASA is based in Stavanger and registered under Extraction of crude petroleum (NACE 06.100), with 21231 registered employees.",
+          "claim_ids": [
+            "639939b9e0d1c934581468a2e5b058f089cbf8efb20eadaecee84b21b408c557",
+            "e59ddce66b8633427d7cde47b76722b6a24cd914c5d624b1bdb0e53802262d70",
+            "a4a60bcc9d3a259d6673af1cdfd9cafb6c52b8cb2f51e3baf83f14b3249b5562",
+            "da9473d18c74e714356c8136302c4d4e6bedccc680d0024e86ca80e569d9b7c5"
+          ],
+          "reason": null
+        },
+        {
+          "text": "Registered activity: «Selv, eller gjennom deltakelse i eller sammen med andre selskaper å».",
+          "claim_ids": [
+            "6f61fb8d805fafe6b84ab98fe8adce3e9df1c2dd093f5a277af45f53b50f54e5"
+          ],
+          "reason": null
+        },
+        {
+          "text": "Registered purpose: «Å utvikle, produsere og markedsføre ulike former for energi, avledede».",
+          "claim_ids": [
+            "ce4fa1cc71b7dcfbce1e3c902a6ba557dcdad7c9591514c799b9f683349fce39"
+          ],
+          "reason": null
+        }
+      ],
+      "changes": [
+        {
+          "text": "Registered share capital changed (/kapital/belop): 5976872600.0. Registry publication time: 2026-07-02T22:00:22.145Z (not effective date).",
+          "claim_ids": [
+            "06a4b0e4203576a2bb08ea66a98fbeb45e7af424b2cdecdf59f0b5045df47600"
+          ],
+          "reason": null
+        },
+        {
+          "text": "First observation; no earlier run to compare.",
+          "claim_ids": [
+            "cce5feb1225cd90acd9763557dc8c482ec3c0845ee7e9d2d27eb91cd87553e38"
+          ],
+          "reason": null
+        }
+      ],
+      "unknowns": [
+        {
+          "text": "Activity check incomplete.",
+          "claim_ids": [],
+          "reason": "Source checking was incomplete. Recorded reason: website_check_incomplete."
+        },
+        {
+          "text": "No active job ads on NAV.",
+          "claim_ids": [],
+          "reason": "No supported values were found in the checked source scope."
+        },
+        {
+          "text": "Website check incomplete (source access refused).",
+          "claim_ids": [],
+          "reason": "Source access was refused. Recorded reason: block_page."
+        }
+      ]
+    },
+    "932525070": {
+      "what_it_does": [
+        {
+          "text": "AS ELVELY is based in Oslo and registered under Construction of residential and non-residential buildings (NACE 41.000), with NOK 107,984 in revenue in FY2025.",
+          "claim_ids": [
+            "a4dac46d4fe6694ec463e43d3ced8df1bf24e886453e3203dbf5badd303b2a8d",
+            "593bbe6119e0e708e54073ebbf44fcf1d14dfedf45befbaf73b76eec4ad9ba7b",
+            "666be5c639f67c54f078ab590b26617849b96bc51f318a15c0f4fb5c3789f876",
+            "58f893a5119be0b7865a2af38a2480bad84ea0b84996f890f475857b002de902"
+          ],
+          "reason": null
+        },
+        {
+          "text": "Registered activity: «Byggevirksomhet, bestyrelse av den faste eien- dom gnr. 2, bnr. 56, Asker, og hva dermed står i forbindelse.».",
+          "claim_ids": [
+            "1736d2b186bc5b68c850d77d59fa5d4ff13e6875fa167a722fc2320d6ae50246"
+          ],
+          "reason": null
+        },
+        {
+          "text": "Registered purpose: «Investere i fast eiendom eller selskaper som eier fast eiendom, og alt som dermed står i forbindelse.».",
+          "claim_ids": [
+            "9965ac61ab2d4d13938a14d1fca8c67045155a9309f08504bee36afdf7dbf35f"
+          ],
+          "reason": null
+        }
+      ],
+      "changes": [
+        {
+          "text": "New registered workplace: 937214936; registered start date 2025-09-01. Registry publication time: 2026-02-23T14:35:14.592Z (not effective date).",
+          "claim_ids": [
+            "70a6e5e4f58afa06c69e63d4f7d8712a8bd2df1391c6a4ac006d1f2defd92632"
+          ],
+          "reason": null
+        },
+        {
+          "text": "First observation; no earlier run to compare.",
+          "claim_ids": [
+            "91ee6b2d040ef146532d1d92fb771b518495f544c687a178c416e54b17ecc638"
+          ],
+          "reason": null
+        }
+      ],
+      "unknowns": [
+        {
+          "text": "Activity check incomplete.",
+          "claim_ids": [],
+          "reason": "Source checking was incomplete. Recorded reason: website_check_incomplete."
+        },
+        {
+          "text": "No active job ads on NAV.",
+          "claim_ids": [],
+          "reason": "No supported values were found in the checked source scope."
+        },
+        {
+          "text": "Website check incomplete.",
+          "claim_ids": [],
+          "reason": "Source checking was incomplete. Recorded reason: website_budget_exhausted."
+        }
+      ]
+    },
+    "991853995": {
+      "what_it_does": [
+        {
+          "text": "BIEN SPAREBANK ASA is based in Oslo and registered under Other monetary intermediation (NACE 64.190), with 41 registered employees.",
+          "claim_ids": [
+            "be20e90a8aef818f6937d1668bae2da1ec79343ca11ce82dc5f7e6dea83ff08e",
+            "616f216e2ac68758bc0e7207f70bd01ba7f2f9fe557cd366dce565fbe3324dc1",
+            "eacac7ce8becbe46c88f23b7bdac63f3ce349c8bf24f57b763138824cda5cfef",
+            "9ffb4379c08ef15104df99f79feef0b841f0c95d04bf9284a3d9883c500bb98a"
+          ],
+          "reason": null
+        },
+        {
+          "text": "Registered activity: «Utføre alle forretninger og tjenester som er vanlig eller naturlig at banker utfører.».",
+          "claim_ids": [
+            "d7fc20e4018d538b94a46118a109a6723303e9de6269c26e2ba5284e4bfdf4d0"
+          ],
+          "reason": null
+        },
+        {
+          "text": "Registered purpose: «Utføre forretninger og tjenester som er vanlig eller naturlig at banker kan utføre i henhold til den til enhver tid gjeldende lovgivning og de til enhver tid gitte konsesjoner.».",
+          "claim_ids": [
+            "37b0fd917b9ebdb5973f839c75a95a42af74414f62086a8b8bded94bc794f7fe"
+          ],
+          "reason": null
+        }
+      ],
+      "changes": [
+        {
+          "text": "Latest dated update on its website: «Presse» (2026-10-14).",
+          "claim_ids": [
+            "5489e131d317ddcd720f2d2c7458f5c43bd63589e1560d85278b1e14d90f54f3"
+          ],
+          "reason": null
+        },
+        {
+          "text": "First observation; no earlier run to compare.",
+          "claim_ids": [
+            "5a069d6261e3c7149611954d2dcd9944317ff11efd9ffef5c7b82be6e641ac1c"
+          ],
+          "reason": null
+        }
+      ],
+      "unknowns": [
+        {
+          "text": "Accounts check incomplete.",
+          "claim_ids": [],
+          "reason": "Source checking was incomplete. Recorded reason: source_error."
+        },
+        {
+          "text": "No active job ads on NAV.",
+          "claim_ids": [],
+          "reason": "No supported values were found in the checked source scope."
+        }
+      ]
+    },
+    "820042182": {
+      "what_it_does": [
+        {
+          "text": "NATURPRESS AS is based in Nesodden and registered under Arts creation activities in literature (NACE 90.111).",
+          "claim_ids": [
+            "2727cd4c489f8e7240b84cb43bffd9ba8f260431672741eb463464e902ea7251",
+            "4b8fb4d9e4612d42f4ed5ebb3424df934f64f218e8d15f55c8c340888a72f745",
+            "7e16b16cf1d4f33d684662c69474a78f62164ec1f983a7972b6d5b1f7e851735"
+          ],
+          "reason": null
+        },
+        {
+          "text": "Registered activity: «Miljø- og klimajournalistikk i nettavis, samt formidling av annonser (varer, tjenester, stillinger) innen det samme feltet, innenfor pressens Vær varsom-plakat.».",
+          "claim_ids": [
+            "9ef0ed90a598b8a40f02da3d1c1123bbba3e940e8660588ebecbbc57609fd151"
+          ],
+          "reason": null
+        },
+        {
+          "text": "Registered purpose: «Medievirksomhet, publisering og journalistikk innen miljøfeltet, herunder deltakelse i andre selskaper med liknende virksomhet.».",
+          "claim_ids": [
+            "599edeee56073b6c35be09217c82368c722eebccc0a3921c2a81f8c7cb720266"
+          ],
+          "reason": null
+        }
+      ],
+      "changes": [
+        {
+          "text": "First observation; no earlier run to compare.",
+          "claim_ids": [
+            "9b51f1d35ad6904ab3a8e0e596dc01a9e396b75b38beb27a5c81116fb1b208fa"
+          ],
+          "reason": null
+        }
+      ],
+      "unknowns": [
+        {
+          "text": "No dated website updates found within the checked scope.",
+          "claim_ids": [],
+          "reason": "No supported values were found in the checked source scope. Recorded reason: no_verified_website."
+        },
+        {
+          "text": "No active job ads on NAV.",
+          "claim_ids": [],
+          "reason": "No supported values were found in the checked source scope."
+        },
+        {
+          "text": "Workplace not reported.",
+          "claim_ids": [],
+          "reason": "No supported values were found in the checked source scope."
+        }
+      ]
+    }
+  },
+  "no_change_phrase_count": 0
+}
