@@ -1,6 +1,6 @@
 # Signalpost Revision 4 — local site gates
 
-**Local status: passed with the user-authorized network exception.** Branch `ux/r4` is based on submitted `c28b580` (`v1.1.1`). No push, merge, tag, email, or remote smoke was performed. The final branch SHA is the commit containing this report; obtain it with `git rev-parse ux/r4`. Remote CI and clean-clone smoke remain pending until the branch is pushed by the user.
+**Release candidate `fa23555abf0944353029706dc9ef429d6911fed4` (`ux/r4`): local gates passed with the user-authorized network exception; GitHub CI is green per the user; the clean GitHub clone and 100-company smoke passed.** Branch `ux/r4` is based on submitted `c28b580` (`v1.1.1`). The user pushed `ux/r4`; this follow-up performed no push, merge, tag or email. This report update is intentionally local and uncommitted, so it does not change the tested/pushed release SHA.
 
 ## Changes and scorecard
 
@@ -42,23 +42,52 @@ The before/after browser artifacts are local at `screenshots/before/` and `scree
 | Offline browser | **PASS:** 27 page/viewport cases at 1440/375/320, zero load/console/page/request errors, zero attempted external requests, zero document-level horizontal overflow; [DOM audit](dom-after.json). |
 | Default 1,000 run | **ACCEPTED under the user's explicit exception:** first and retry each emitted 1,000 distinct ordered envelopes and 28,723 available identity IDs. The only three absent baseline IDs belong to `827248592` (`identity.legal_name`, `identity.organisation_form`, `identity.deleted`). This company is absent from the frozen CSV; both runs mark identity `failed`/`network_error`, with four BRREG `ConnectError` attempts and no HTTP status. The retry verifier passed: 1,000 schema-valid lines, 999 source blobs checked, zero unverified synthesis values. No third run was made. [Compact request and count evidence](default1000-gate.json); full local report: `gates/default1000-retry/report.json`. |
 
-The default 1,000 run did **not** literally reach 28,726 available identity IDs. Its acceptance is limited to the exact network-loss condition the user specified. Remote CI and clean-clone/100-company smoke are unrun and require the user to push first.
+The default 1,000 run did **not** literally reach 28,726 available identity IDs. Its acceptance is limited to the exact network-loss condition the user specified.
 
-## User-controlled release steps, after push and remote gates
+## GitHub clone and final guard, 2026-10-18
 
-These are review commands, **not actions performed here**. After pushing `ux/r4`, wait for CI green and run `uv sync --frozen` plus the README 100-company command from a clean GitHub clone. If those pass, the release can fast-forward `main` from `c28b580` to the branch SHA and tag `v1.1.2`:
+GitHub `refs/heads/ux/r4` resolved to `fa23555abf0944353029706dc9ef429d6911fed4`. A fresh clone at `out/ux-r4-github-clone` had that exact HEAD and a clean starting status. Remote `main` remained `c28b580763e550aa1d74a8899edfd072a1b94148`; `v1.1.2` did not exist. `uv sync --frozen` installed the locked environment without changing `uv.lock` (a workspace-local uv cache was used because the default cache was inaccessible in the sandbox).
+
+The README `signalpost run` command was run on the first 100 frozen cohort inputs, with the frozen `bulk1000.csv`, all three external flags, profiles, report and site enabled. It exited 0 in 49.718 s, emitted **100/100 ordered, schema-valid envelopes**, and generated an available **102-page site**. The largest HTML profile was 118,979 bytes. The independent schema/synthesis check validated 100 companies and all **817 synthesis sentences**, with 2,819 available identity IDs. The run made 514 requests and reported no run warnings or deadline hits. Section states accurately recorded one accounts, 23 website and 30 activity failures; this smoke confirms output and site integrity, not universal external-source availability.
+
+From the clean clone, after copying the first 100 lines of the frozen `batch1000.jsonl` to `out/smoke100/batch.jsonl`, the command was:
 
 ```powershell
-$r4Sha = git rev-parse ux/r4
+$env:UV_CACHE_DIR = Join-Path (Get-Location) '.uv-cache'
+uv sync --frozen
+uv run --frozen signalpost run --organisations out/smoke100/batch.jsonl --bulk C:\Users\Manish\Downloads\Signalpost-v5\out\capacity-inputs\bulk1000.csv --output out/smoke100/envelopes.jsonl --profiles-output out/smoke100/profiles.jsonl --report out/smoke100/report.json --site-dir out/smoke100/site --websites --hiring --public-activity --run-id ux-r4-github-smoke100 --expected-count 100
+```
+
+Local evidence remains under `out/ux-r4-github-clone/out/smoke100/`: input `batch.jsonl` SHA-256 `7d59169d3fd274ec576dca84430beac887b4a1cf06697e20ab7e875420673686`, `envelopes.jsonl` SHA-256 `8b094560db61643d0bd57b921e8836b573603f1d2191f4a9a20d23bdf60b5b10`, and `report.json` SHA-256 `ad951624bb010d5dc51e9671c3922dfe318be731f6dcca61bcaf2669c65261dd`. The clean-clone guard diff from `c28b580` had 29 changed paths, all within `src/signalpost/site.py`, `src/signalpost/site_assets/*`, `tests/*` or `reports/ux/*`. The exact protected-path diff command below exited 0 with no output.
+
+## User-controlled merge, tag and push steps
+
+These are **commands for the user, not actions performed here**. They assume CI remains green. The guards stop if the remote release candidate or `main` has moved:
+
+```powershell
+$r4Sha = 'fa23555abf0944353029706dc9ef429d6911fed4'
+git fetch origin
+if ($LASTEXITCODE -ne 0) { throw 'Fetch failed' }
+if ((git rev-parse origin/ux/r4).Trim() -ne $r4Sha) { throw 'ux/r4 moved; review again' }
+if ((git rev-parse origin/main).Trim() -ne 'c28b580763e550aa1d74a8899edfd072a1b94148') { throw 'main moved; review again' }
 git diff --exit-code c28b580 $r4Sha -- src/signalpost/sources src/signalpost/web src/signalpost/runner.py src/signalpost/cli.py pyproject.toml uv.lock
+if ($LASTEXITCODE -ne 0) { throw 'Protected path diff is not empty' }
 git switch main
-git merge-base --is-ancestor c28b580 $r4Sha
+if ($LASTEXITCODE -ne 0) { throw 'Could not switch to main' }
+git merge --ff-only origin/main
+if ($LASTEXITCODE -ne 0) { throw 'Could not align local main with origin/main' }
 git merge --ff-only $r4Sha
-git tag v1.1.2 $r4Sha
+if ($LASTEXITCODE -ne 0) { throw 'Fast-forward merge failed' }
+git tag -a v1.1.2 $r4Sha -m 'Signalpost v1.1.2'
+if ($LASTEXITCODE -ne 0) { throw 'Tag creation failed' }
+git push origin main
+if ($LASTEXITCODE -ne 0) { throw 'Main push failed' }
+git push origin refs/tags/v1.1.2
+if ($LASTEXITCODE -ne 0) { throw 'Tag push failed' }
 ```
 
 Revision email draft for the existing thread:
 
 > Subject: Re: Signalpost revision
 >
-> Revision 4, v1.1.2, replaces c28b580. The site now shows recent activity when verified events are present, supports four-company comparison, explains unknown data, and presents registry publication time and evidence more clearly. The fixed 50-company site audit and local test suite passed. The 1,000-company gate was accepted under the agreed network exception for 827248592. The release SHA is the tagged `ux/r4` commit.
+> Revision 4, v1.1.2, replaces c28b580. The site now shows recent activity when verified events are present, supports four-company comparison, explains unknown data, and presents registry publication time and evidence more clearly. The fixed 50-company audit, 532-test suite, GitHub CI and clean-clone 100-company smoke passed. The 1,000-company gate was accepted under the agreed network exception for 827248592. Release SHA: fa23555abf0944353029706dc9ef429d6911fed4.
