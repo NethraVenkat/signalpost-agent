@@ -51,7 +51,10 @@ def dom_metrics(page):
         state_badge_count:document.querySelectorAll('.chip.available,.chip.not_available,.chip.not_applicable,.chip.failed,.chip.blocked,.chip.ambiguous').length,
         registry_label_exact:document.body.innerText.includes('registry publication time (not effective date)'),
         registry_label_casefold:document.body.innerText.toLowerCase().includes('registry publication time'),
-        unknown_block:document.body.innerText.includes("What we don't know"),
+        unknown_block:document.body.innerText.includes('What remains unknown'),
+        unknown_item_count:document.querySelectorAll('.unknowns li').length,
+        unknown_reason_count:[...document.querySelectorAll('.unknowns li p')].filter(e=>e.innerText.startsWith('Reason:')).length,
+        unknown_status_link_count:document.querySelectorAll('.unknowns li a[href^="#"]').length,
         body_excerpt:document.body.innerText.slice(0,500)};
     }""")
 

@@ -161,7 +161,7 @@ def test_latest_summary_citation_and_site_publication_label():
     assert sentence.claim_ids == [b.claims[0].id]
     assert sentence_error(sentence, env) is None
     rendered = fact(b.claims[0].model_dump(), {e.id: e.model_dump() for e in b.evidence})
-    assert 'Registry publication time:' in rendered and 'not effective date' in rendered
+    assert 'registry publication time (not effective date):' in rendered
     assert 'New name AS' in rendered
 
 

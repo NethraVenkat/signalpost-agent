@@ -434,7 +434,28 @@ def profile(row, title):
     if remaining:
         body += '<button type="button" aria-expanded="false" aria-controls="full-summary" data-toggle="full-summary">Show full cited summary</button><div id="full-summary" hidden>'
         body += ''.join(sentence_html(s, claim_map, change_ids) for s in remaining) + '</div>'
-    body += ''.join('<p class="muted">' + esc(u.get('text') or u['reason']) + '</p>' for u in synthesis.get('sections', {}).get('unknowns', [])) + '</section>'
+    unknowns = synthesis.get('sections', {}).get('unknowns', [])
+    if unknowns:
+        targets = {'identity': 'what-it-does', 'what_it_does': 'what-it-does',
+                   'scale': 'financials', 'accounts': 'financials',
+                   'leadership': 'people', 'roles': 'people',
+                   'subunits': 'locations', 'hiring': 'hiring',
+                   'website': 'online', 'activity': 'activity', 'refresh': 'changes'}
+        labels = {'not_available': 'Not found', 'not_applicable': 'Not applicable',
+                  'blocked': 'Blocked', 'ambiguous': 'Ambiguous', 'failed': 'Failed'}
+        body += '<div class="unknowns" role="region" aria-labelledby="unknowns-heading"><h3 id="unknowns-heading">What remains unknown</h3><ul>'
+        for item in unknowns:
+            state = item.get('state') or 'not_available'
+            label = labels.get(state, state.replace('_', ' ').title())
+            note = item.get('text') or item['reason']
+            reason = item.get('reason')
+            target = targets.get(item.get('family'), 'main')
+            body += '<li><p><span class="chip ' + esc(state) + '">' + esc(label) + '</span> ' + esc(note) + '</p>'
+            if reason and reason != note:
+                body += '<p class="muted">Reason: ' + esc(reason) + '</p>'
+            body += '<a href="#' + esc(target) + '">Review source status</a></li>'
+        body += '</ul></div>'
+    body += '</section>'
     buckets = {key: [] for key, _, _ in GROUPS}
     for c in claims:
         f = c['field']; family = c['family']
