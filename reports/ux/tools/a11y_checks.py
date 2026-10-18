@@ -1,10 +1,11 @@
 """Focused keyboard, missing-value and focus checks for the offline audit."""
 import json
+import os
 from pathlib import Path
 from playwright.sync_api import sync_playwright
 
 UX = Path(__file__).resolve().parents[1]
-SITE = UX / 'sample/site'
+SITE = Path(os.environ.get('SIGNALPOST_AUDIT_SITE', str(UX / 'sample/site')))
 cases = {'directory': 'index.html', 'profile': 'c/820042182.html', 'compare': 'compare.html?companies=923609016,820042182'}
 result = {}
 with sync_playwright() as p:
@@ -28,14 +29,22 @@ with sync_playwright() as p:
         compare_missing = page.evaluate('''() => [...document.querySelectorAll('.compare-cell')].filter(e=>
             e.querySelector('.chip.not_available,.chip.failed,.chip.blocked,.chip.ambiguous,.chip.not_applicable'))
             .map(e=>e.innerText.slice(0,140)).slice(0,15)''')
+        small_targets = page.evaluate('''() => [...document.querySelectorAll('a[href],button,input,select,summary')]
+            .filter(e=>{const r=e.getBoundingClientRect(),s=getComputedStyle(e);return r.width>0&&r.height>0&&s.visibility!=='hidden'})
+            .map(e=>{const r=e.getBoundingClientRect();return {text:(e.innerText||e.getAttribute('aria-label')||'').slice(0,60),
+                       width:Math.round(r.width),height:Math.round(r.height)}})
+            .filter(e=>e.width<40||e.height<40).slice(0,25)''')
         result[label] = {'focus_sequence': focus, 'missing_examples': missing,
                          'compare_missing_examples': compare_missing,
+                         'small_tap_targets': small_targets,
                          'unlabelled_visible_inputs': page.evaluate('''() => [...document.querySelectorAll('input,select')]
                              .filter(e=>e.getClientRects().length && !e.closest('label') &&
                                !e.getAttribute('aria-label') && !e.getAttribute('aria-labelledby')).map(e=>e.outerHTML.slice(0,150))''')}
         context.close()
     browser.close()
-(UX / 'a11y-checks.json').write_text(json.dumps(result, indent=2, ensure_ascii=False), encoding='utf8')
+Path(os.environ.get('SIGNALPOST_A11Y_OUTPUT', str(UX / 'a11y-checks.json'))).write_text(
+    json.dumps(result, indent=2, ensure_ascii=False), encoding='utf8')
 print(json.dumps({k:{'focus':len(v['focus_sequence']), 'missing':len(v['missing_examples']),
                      'compare_missing':len(v['compare_missing_examples']),
-                     'unlabelled':len(v['unlabelled_visible_inputs'])} for k,v in result.items()}))
+                     'unlabelled':len(v['unlabelled_visible_inputs']),
+                     'small_tap_targets':v['small_tap_targets']} for k,v in result.items()}))

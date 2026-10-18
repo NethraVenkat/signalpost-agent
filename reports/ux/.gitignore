@@ -4,3 +4,4 @@ sample/site-after/
 screenshots/
 tools/uv-cache/
 tools/pytest-temp/
+gates/

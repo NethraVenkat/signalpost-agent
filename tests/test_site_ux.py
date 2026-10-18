@@ -1,5 +1,7 @@
 """Site-only regression checks for the approved UX gaps."""
 from copy import deepcopy
+from pathlib import Path
+import re
 
 from signalpost.models.shapes import serialize
 from signalpost.site import index_record, profile
@@ -30,3 +32,11 @@ def test_g1_no_changes_wording_requires_checked_not_available_state(tmp_path):
     assert 'No dated changes found in sources checked.' in profile(data, 'Signalpost')
     data['run']['sections']['activity'] = 'failed'
     assert 'No dated changes found in sources checked.' not in profile(data, 'Signalpost')
+
+
+def test_g6_disclosure_controls_have_at_least_40px_target_rule():
+    css = (Path(__file__).resolve().parents[1] / 'src/signalpost/site_assets/site.css').read_text(encoding='utf8')
+    rule = re.search(r'details\s*>\s*summary\s*\{([^}]+)\}', css)
+    assert rule is not None
+    height = re.search(r'min-height:\s*(\d+)px', rule.group(1))
+    assert height is not None and int(height.group(1)) >= 40

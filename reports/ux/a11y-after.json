@@ -1,0 +1,323 @@
+{
+  "directory": {
+    "focus_sequence": [
+      {
+        "tag": "A",
+        "text": "Skip to content",
+        "outline_style": "solid",
+        "outline_width": "3px",
+        "box_shadow": "none",
+        "visible": true
+      },
+      {
+        "tag": "A",
+        "text": "Signalpost",
+        "outline_style": "solid",
+        "outline_width": "3px",
+        "box_shadow": "none",
+        "visible": true
+      },
+      {
+        "tag": "A",
+        "text": "Dashboard",
+        "outline_style": "solid",
+        "outline_width": "3px",
+        "box_shadow": "none",
+        "visible": true
+      },
+      {
+        "tag": "A",
+        "text": "Directory",
+        "outline_style": "solid",
+        "outline_width": "3px",
+        "box_shadow": "none",
+        "visible": true
+      },
+      {
+        "tag": "A",
+        "text": "Compare",
+        "outline_style": "solid",
+        "outline_width": "3px",
+        "box_shadow": "none",
+        "visible": true
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Search companies Ctrl/⌘ K",
+        "outline_style": "solid",
+        "outline_width": "3px",
+        "box_shadow": "none",
+        "visible": true
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Update status",
+        "outline_style": "solid",
+        "outline_width": "3px",
+        "box_shadow": "none",
+        "visible": true
+      },
+      {
+        "tag": "BUTTON",
+        "text": "🌙 Dark",
+        "outline_style": "solid",
+        "outline_width": "3px",
+        "box_shadow": "none",
+        "visible": true
+      },
+      {
+        "tag": "BUTTON",
+        "text": "📊 Dashboard",
+        "outline_style": "solid",
+        "outline_width": "3px",
+        "box_shadow": "none",
+        "visible": true
+      },
+      {
+        "tag": "BUTTON",
+        "text": "🏢 Company Directory",
+        "outline_style": "solid",
+        "outline_width": "3px",
+        "box_shadow": "none",
+        "visible": true
+      }
+    ],
+    "missing_examples": [],
+    "compare_missing_examples": [],
+    "small_tap_targets": [],
+    "unlabelled_visible_inputs": []
+  },
+  "profile": {
+    "focus_sequence": [
+      {
+        "tag": "A",
+        "text": "Skip to content",
+        "outline_style": "solid",
+        "outline_width": "3px",
+        "box_shadow": "none",
+        "visible": true
+      },
+      {
+        "tag": "A",
+        "text": "Signalpost",
+        "outline_style": "solid",
+        "outline_width": "3px",
+        "box_shadow": "none",
+        "visible": true
+      },
+      {
+        "tag": "A",
+        "text": "Dashboard",
+        "outline_style": "solid",
+        "outline_width": "3px",
+        "box_shadow": "none",
+        "visible": true
+      },
+      {
+        "tag": "A",
+        "text": "Directory",
+        "outline_style": "solid",
+        "outline_width": "3px",
+        "box_shadow": "none",
+        "visible": true
+      },
+      {
+        "tag": "A",
+        "text": "Compare",
+        "outline_style": "solid",
+        "outline_width": "3px",
+        "box_shadow": "none",
+        "visible": true
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Search companies Ctrl/⌘ K",
+        "outline_style": "solid",
+        "outline_width": "3px",
+        "box_shadow": "none",
+        "visible": true
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Update status",
+        "outline_style": "solid",
+        "outline_width": "3px",
+        "box_shadow": "none",
+        "visible": true
+      },
+      {
+        "tag": "BUTTON",
+        "text": "🌙 Dark",
+        "outline_style": "solid",
+        "outline_width": "3px",
+        "box_shadow": "none",
+        "visible": true
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Copy organisation number",
+        "outline_style": "solid",
+        "outline_width": "3px",
+        "box_shadow": "none",
+        "visible": true
+      },
+      {
+        "tag": "BUTTON",
+        "text": "⭐ Add to Watchlist",
+        "outline_style": "solid",
+        "outline_width": "3px",
+        "box_shadow": "none",
+        "visible": true
+      }
+    ],
+    "missing_examples": [
+      {
+        "heading": "deleted not available",
+        "text": "deleted not available\n\nChecked; no information found within the source scope.\n\nCheck the evidence"
+      },
+      {
+        "heading": "postal address not available",
+        "text": "postal address not available\n\nChecked; no information found within the source scope.\n\nCheck the evidence"
+      },
+      {
+        "heading": "nace2 not available",
+        "text": "nace2 not available\n\nChecked; no information found within the source scope.\n\nCheck the evidence"
+      },
+      {
+        "heading": "nace3 not available",
+        "text": "nace3 not available\n\nChecked; no information found within the source scope.\n\nCheck the evidence"
+      },
+      {
+        "heading": "registered website not available",
+        "text": "registered website not available\n\nChecked; no information found within the source scope.\n\nCheck the evidence"
+      },
+      {
+        "heading": "website.section not available",
+        "text": "website.section not available\n\nChecked; no information found within the source scope."
+      },
+      {
+        "heading": "employees not available",
+        "text": "employees not available\n\nChecked; no information found within the source scope.\n\nCheck the evidence"
+      },
+      {
+        "heading": "hiring.section not available",
+        "text": "hiring.section not available\n\nChecked; no information found within the source scope."
+      },
+      {
+        "heading": "subunits.units not available",
+        "text": "subunits.units not available\n\nChecked; no information found within the source scope.\n\nCheck the evidence"
+      },
+      {
+        "heading": "activity.section not available",
+        "text": "activity.section not available\n\nChecked; no information found within the source scope."
+      }
+    ],
+    "compare_missing_examples": [],
+    "small_tap_targets": [],
+    "unlabelled_visible_inputs": []
+  },
+  "compare": {
+    "focus_sequence": [
+      {
+        "tag": "A",
+        "text": "Skip to content",
+        "outline_style": "solid",
+        "outline_width": "3px",
+        "box_shadow": "none",
+        "visible": true
+      },
+      {
+        "tag": "A",
+        "text": "Signalpost",
+        "outline_style": "solid",
+        "outline_width": "3px",
+        "box_shadow": "none",
+        "visible": true
+      },
+      {
+        "tag": "A",
+        "text": "Dashboard",
+        "outline_style": "solid",
+        "outline_width": "3px",
+        "box_shadow": "none",
+        "visible": true
+      },
+      {
+        "tag": "A",
+        "text": "Directory",
+        "outline_style": "solid",
+        "outline_width": "3px",
+        "box_shadow": "none",
+        "visible": true
+      },
+      {
+        "tag": "A",
+        "text": "Compare",
+        "outline_style": "solid",
+        "outline_width": "3px",
+        "box_shadow": "none",
+        "visible": true
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Search companies Ctrl/⌘ K",
+        "outline_style": "solid",
+        "outline_width": "3px",
+        "box_shadow": "none",
+        "visible": true
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Update status",
+        "outline_style": "solid",
+        "outline_width": "3px",
+        "box_shadow": "none",
+        "visible": true
+      },
+      {
+        "tag": "BUTTON",
+        "text": "🌙 Dark",
+        "outline_style": "solid",
+        "outline_width": "3px",
+        "box_shadow": "none",
+        "visible": true
+      },
+      {
+        "tag": "INPUT",
+        "text": "",
+        "outline_style": "solid",
+        "outline_width": "3px",
+        "box_shadow": "none",
+        "visible": true
+      },
+      {
+        "tag": "INPUT",
+        "text": "",
+        "outline_style": "solid",
+        "outline_width": "3px",
+        "box_shadow": "none",
+        "visible": true
+      }
+    ],
+    "missing_examples": [],
+    "compare_missing_examples": [
+      "VERIFIED WEBSITE\nblockedUnknown",
+      "WEBSITE PROVENANCE\nblockedUnknown",
+      "PROOF TYPE\nblockedUnknown",
+      "ACTIVE JOB POSTINGS\nnot availableUnknown",
+      "PUBLIC ACTIVITY ITEMS\nfailedUnknown",
+      "WORKING HERE\nnot availableUnknown",
+      "RECENT ACTIVITY\nnot availableUnknown",
+      "EMPLOYEE COUNT\nnot availableUnknown",
+      "WORKPLACES COUNT\nnot availableUnknown",
+      "VERIFIED WEBSITE\nnot availableUnknown",
+      "WEBSITE PROVENANCE\nnot availableUnknown",
+      "PROOF TYPE\nnot availableUnknown",
+      "REVENUE\nnot availableUnknown",
+      "AUDITOR / REVISOR\nnot availableUnknown",
+      "ACTIVE JOB POSTINGS\nnot availableUnknown"
+    ],
+    "small_tap_targets": [],
+    "unlabelled_visible_inputs": []
+  }
+}
