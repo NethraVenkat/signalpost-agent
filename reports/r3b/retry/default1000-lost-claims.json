@@ -1,0 +1,338 @@
+[
+  {
+    "org": "988330752",
+    "id": "dbfa282b6ea0653f9c6205b86147a11fd1df01767b3ee6ddf8155f441eb9f74a",
+    "family": "website",
+    "field": "contact.email.003b3c745257182ca66d",
+    "old_value": "post@filmtek.no",
+    "new_same_field": [],
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"filmtek.no\", \"level\": \"HIGH\", \"points\": 7, \"signals\": [\"legal_name\", \"address\", \"registry_website\", \"municipality\"], \"origin\": \"registry_website\", \"reason\": \"corroboration\"}, {\"domain\": \"audioped.no\", \"level\": \"VERIFIED\", \"points\": 0, \"signals\": [], \"origin\": \"subunit_registry_email\", \"reason\": \"\"}, {\"domain\": \"filmtek.no\", \"origin\": \"registry_website\", \"url\": \"https://www.filmtek.no/\", \"status\": 200}, {\"domain\": \"audioped.no\", \"origin\": \"subunit_registry_email\", \"url\": \"https://audioped.no/\", \"reason\": \"website_timeout\"}, {\"domain\": \"audioped.no\", \"origin\": \"subunit_registry_email\", \"url\": \"https://www.audioped.no/\", \"status\": 200}]"
+      },
+      {
+        "section": "activity",
+        "code": "website_budget_exhausted",
+        "message": "website_budget_exhausted"
+      }
+    ]
+  },
+  {
+    "org": "988330752",
+    "id": "3367b4bef12086a51e7d47769d1dac4976005bcfb014f7a2c6fac131d09769e2",
+    "family": "website",
+    "field": "website_description.meta_description.c08e093da4be3807",
+    "old_value": {
+      "text": "Profesjonell digitalisering av film og video for produksjon, TV, arkiv og museer. Filmskanning opptil 6K. Kontakt Filmtek for tilbud.",
+      "kind": "meta_description",
+      "self_description": true,
+      "identity_level": "HIGH",
+      "identity_claim_id": "eb13c32ba63ca593dc0bacfc71cbb8e6a9c021358f406a4e5a5751ebe1f03278"
+    },
+    "new_same_field": [],
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"filmtek.no\", \"level\": \"HIGH\", \"points\": 7, \"signals\": [\"legal_name\", \"address\", \"registry_website\", \"municipality\"], \"origin\": \"registry_website\", \"reason\": \"corroboration\"}, {\"domain\": \"audioped.no\", \"level\": \"VERIFIED\", \"points\": 0, \"signals\": [], \"origin\": \"subunit_registry_email\", \"reason\": \"\"}, {\"domain\": \"filmtek.no\", \"origin\": \"registry_website\", \"url\": \"https://www.filmtek.no/\", \"status\": 200}, {\"domain\": \"audioped.no\", \"origin\": \"subunit_registry_email\", \"url\": \"https://audioped.no/\", \"reason\": \"website_timeout\"}, {\"domain\": \"audioped.no\", \"origin\": \"subunit_registry_email\", \"url\": \"https://www.audioped.no/\", \"status\": 200}]"
+      },
+      {
+        "section": "activity",
+        "code": "website_budget_exhausted",
+        "message": "website_budget_exhausted"
+      }
+    ]
+  },
+  {
+    "org": "988330752",
+    "id": "eb13c32ba63ca593dc0bacfc71cbb8e6a9c021358f406a4e5a5751ebe1f03278",
+    "family": "website",
+    "field": "official_website",
+    "old_value": {
+      "final_url": "https://www.filmtek.no",
+      "identity_level": "HIGH",
+      "proof_type": "signals",
+      "proof_page_url": "https://www.filmtek.no/",
+      "signals": [
+        "legal_name",
+        "address",
+        "registry_website",
+        "municipality"
+      ],
+      "points": 7,
+      "candidate_origin": "registry_website",
+      "relationship_note": null,
+      "other_orgnrs": []
+    },
+    "new_same_field": [
+      {
+        "final_url": "https://www.audioped.no",
+        "identity_level": "VERIFIED",
+        "proof_type": "orgnr_on_page",
+        "proof_page_url": "https://www.audioped.no/",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "subunit_registry_email",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "matched_via_subunit": "933248380"
+      }
+    ],
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"filmtek.no\", \"level\": \"HIGH\", \"points\": 7, \"signals\": [\"legal_name\", \"address\", \"registry_website\", \"municipality\"], \"origin\": \"registry_website\", \"reason\": \"corroboration\"}, {\"domain\": \"audioped.no\", \"level\": \"VERIFIED\", \"points\": 0, \"signals\": [], \"origin\": \"subunit_registry_email\", \"reason\": \"\"}, {\"domain\": \"filmtek.no\", \"origin\": \"registry_website\", \"url\": \"https://www.filmtek.no/\", \"status\": 200}, {\"domain\": \"audioped.no\", \"origin\": \"subunit_registry_email\", \"url\": \"https://audioped.no/\", \"reason\": \"website_timeout\"}, {\"domain\": \"audioped.no\", \"origin\": \"subunit_registry_email\", \"url\": \"https://www.audioped.no/\", \"status\": 200}]"
+      },
+      {
+        "section": "activity",
+        "code": "website_budget_exhausted",
+        "message": "website_budget_exhausted"
+      }
+    ]
+  },
+  {
+    "org": "988330752",
+    "id": "39f7650013976d73e4dd7881a33f93547bf2a55ebe1aa2a5eed8dd451ff48612",
+    "family": "website",
+    "field": "website_description.og_description.c08e093da4be3807",
+    "old_value": {
+      "text": "Filmskanning og videodigitalisering for produksjon, TV, arkiv og museer. Leveranse tilpasset bevaring, etterarbeid og visning.",
+      "kind": "og_description",
+      "self_description": true,
+      "identity_level": "HIGH",
+      "identity_claim_id": "eb13c32ba63ca593dc0bacfc71cbb8e6a9c021358f406a4e5a5751ebe1f03278"
+    },
+    "new_same_field": [],
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"filmtek.no\", \"level\": \"HIGH\", \"points\": 7, \"signals\": [\"legal_name\", \"address\", \"registry_website\", \"municipality\"], \"origin\": \"registry_website\", \"reason\": \"corroboration\"}, {\"domain\": \"audioped.no\", \"level\": \"VERIFIED\", \"points\": 0, \"signals\": [], \"origin\": \"subunit_registry_email\", \"reason\": \"\"}, {\"domain\": \"filmtek.no\", \"origin\": \"registry_website\", \"url\": \"https://www.filmtek.no/\", \"status\": 200}, {\"domain\": \"audioped.no\", \"origin\": \"subunit_registry_email\", \"url\": \"https://audioped.no/\", \"reason\": \"website_timeout\"}, {\"domain\": \"audioped.no\", \"origin\": \"subunit_registry_email\", \"url\": \"https://www.audioped.no/\", \"status\": 200}]"
+      },
+      {
+        "section": "activity",
+        "code": "website_budget_exhausted",
+        "message": "website_budget_exhausted"
+      }
+    ]
+  },
+  {
+    "org": "988330752",
+    "id": "c660c22c80c29aa88306f7f61767d14de4af7fc6ac984a5a1bd5601fb3f5a040",
+    "family": "website",
+    "field": "contact.phone.d55dd5cb2fbeb4b8611c",
+    "old_value": "+4790926121",
+    "new_same_field": [],
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"filmtek.no\", \"level\": \"HIGH\", \"points\": 7, \"signals\": [\"legal_name\", \"address\", \"registry_website\", \"municipality\"], \"origin\": \"registry_website\", \"reason\": \"corroboration\"}, {\"domain\": \"audioped.no\", \"level\": \"VERIFIED\", \"points\": 0, \"signals\": [], \"origin\": \"subunit_registry_email\", \"reason\": \"\"}, {\"domain\": \"filmtek.no\", \"origin\": \"registry_website\", \"url\": \"https://www.filmtek.no/\", \"status\": 200}, {\"domain\": \"audioped.no\", \"origin\": \"subunit_registry_email\", \"url\": \"https://audioped.no/\", \"reason\": \"website_timeout\"}, {\"domain\": \"audioped.no\", \"origin\": \"subunit_registry_email\", \"url\": \"https://www.audioped.no/\", \"status\": 200}]"
+      },
+      {
+        "section": "activity",
+        "code": "website_budget_exhausted",
+        "message": "website_budget_exhausted"
+      }
+    ]
+  },
+  {
+    "org": "998788870",
+    "id": "0dddd1b29223c61f99a42be7b516f4df850edd6ac185ae4e1c116fb93c7bab09",
+    "family": "website",
+    "field": "contact.email.e42deb008e83cd810cce",
+    "old_value": "support@infoss.no",
+    "new_same_field": [],
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_budget_exhausted",
+        "message": "Website work ended at configured budget"
+      },
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"infoss.no\", \"origin\": \"registry_website\", \"level\": \"LOW\", \"reason\": \"website_budget_exhausted\"}, {\"domain\": \"infoss.no\", \"origin\": \"registry_website\", \"url\": \"https://www.infoss.no/\", \"reason\": \"website_timeout\"}, {\"domain\": \"infoss.no\", \"origin\": \"registry_website\", \"url\": \"https://www.infoss.no/\", \"reason\": \"website_budget_exhausted\"}]"
+      },
+      {
+        "section": "activity",
+        "code": "website_check_incomplete",
+        "message": "website_check_incomplete"
+      }
+    ]
+  },
+  {
+    "org": "998788870",
+    "id": "651d899df929de2e3e1e3ceaa2a501e510a48d88b89e62f9d1f2c7ffa413328d",
+    "family": "website",
+    "field": "contact.email.f4b9613020661da67f80",
+    "old_value": "lerheim@infoss.no",
+    "new_same_field": [],
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_budget_exhausted",
+        "message": "Website work ended at configured budget"
+      },
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"infoss.no\", \"origin\": \"registry_website\", \"level\": \"LOW\", \"reason\": \"website_budget_exhausted\"}, {\"domain\": \"infoss.no\", \"origin\": \"registry_website\", \"url\": \"https://www.infoss.no/\", \"reason\": \"website_timeout\"}, {\"domain\": \"infoss.no\", \"origin\": \"registry_website\", \"url\": \"https://www.infoss.no/\", \"reason\": \"website_budget_exhausted\"}]"
+      },
+      {
+        "section": "activity",
+        "code": "website_check_incomplete",
+        "message": "website_check_incomplete"
+      }
+    ]
+  },
+  {
+    "org": "998788870",
+    "id": "06a83f2edc489306d90e79e2a7007b1fe91fba1323e3ffa83d9d4f3a0ce38fb2",
+    "family": "website",
+    "field": "contact.email.b0d09fbfece2f6e7df68",
+    "old_value": "sales@infoss.no",
+    "new_same_field": [],
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_budget_exhausted",
+        "message": "Website work ended at configured budget"
+      },
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"infoss.no\", \"origin\": \"registry_website\", \"level\": \"LOW\", \"reason\": \"website_budget_exhausted\"}, {\"domain\": \"infoss.no\", \"origin\": \"registry_website\", \"url\": \"https://www.infoss.no/\", \"reason\": \"website_timeout\"}, {\"domain\": \"infoss.no\", \"origin\": \"registry_website\", \"url\": \"https://www.infoss.no/\", \"reason\": \"website_budget_exhausted\"}]"
+      },
+      {
+        "section": "activity",
+        "code": "website_check_incomplete",
+        "message": "website_check_incomplete"
+      }
+    ]
+  },
+  {
+    "org": "998788870",
+    "id": "004beb020724942f154b9526ea181c44aa0e5058b40064a968c9a2871f15391a",
+    "family": "website",
+    "field": "contact.email.5fcbf6d75f836cf461dd",
+    "old_value": "info@infoss.no",
+    "new_same_field": [],
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_budget_exhausted",
+        "message": "Website work ended at configured budget"
+      },
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"infoss.no\", \"origin\": \"registry_website\", \"level\": \"LOW\", \"reason\": \"website_budget_exhausted\"}, {\"domain\": \"infoss.no\", \"origin\": \"registry_website\", \"url\": \"https://www.infoss.no/\", \"reason\": \"website_timeout\"}, {\"domain\": \"infoss.no\", \"origin\": \"registry_website\", \"url\": \"https://www.infoss.no/\", \"reason\": \"website_budget_exhausted\"}]"
+      },
+      {
+        "section": "activity",
+        "code": "website_check_incomplete",
+        "message": "website_check_incomplete"
+      }
+    ]
+  },
+  {
+    "org": "998788870",
+    "id": "21ab90da60d50d5f93a80e32b6acdc585aafb1a1e5b9de7a85c543a3c161df2a",
+    "family": "website",
+    "field": "official_website",
+    "old_value": {
+      "final_url": "https://infoss.no",
+      "identity_level": "HIGH",
+      "proof_type": "signals",
+      "proof_page_url": "https://infoss.no/en/",
+      "signals": [
+        "legal_name",
+        "leader",
+        "registry_website",
+        "municipality"
+      ],
+      "points": 7,
+      "candidate_origin": "registry_website",
+      "relationship_note": null,
+      "other_orgnrs": []
+    },
+    "new_same_field": [],
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_budget_exhausted",
+        "message": "Website work ended at configured budget"
+      },
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"infoss.no\", \"origin\": \"registry_website\", \"level\": \"LOW\", \"reason\": \"website_budget_exhausted\"}, {\"domain\": \"infoss.no\", \"origin\": \"registry_website\", \"url\": \"https://www.infoss.no/\", \"reason\": \"website_timeout\"}, {\"domain\": \"infoss.no\", \"origin\": \"registry_website\", \"url\": \"https://www.infoss.no/\", \"reason\": \"website_budget_exhausted\"}]"
+      },
+      {
+        "section": "activity",
+        "code": "website_check_incomplete",
+        "message": "website_check_incomplete"
+      }
+    ]
+  },
+  {
+    "org": "998788870",
+    "id": "217a31dce0e9a51856242a6b8dc63ee8e4ad1ad07ee226fa8cd617bb80e67bc8",
+    "family": "website",
+    "field": "social_profile.fc23e58621408622fb63",
+    "old_value": {
+      "url": "https://www.facebook.com/InfossAs",
+      "platform": "facebook.com"
+    },
+    "new_same_field": [],
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_budget_exhausted",
+        "message": "Website work ended at configured budget"
+      },
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"infoss.no\", \"origin\": \"registry_website\", \"level\": \"LOW\", \"reason\": \"website_budget_exhausted\"}, {\"domain\": \"infoss.no\", \"origin\": \"registry_website\", \"url\": \"https://www.infoss.no/\", \"reason\": \"website_timeout\"}, {\"domain\": \"infoss.no\", \"origin\": \"registry_website\", \"url\": \"https://www.infoss.no/\", \"reason\": \"website_budget_exhausted\"}]"
+      },
+      {
+        "section": "activity",
+        "code": "website_check_incomplete",
+        "message": "website_check_incomplete"
+      }
+    ]
+  },
+  {
+    "org": "998788870",
+    "id": "82aa8a5db40a792d614f9dbb26dc6b7d4214c5406099e5289c6d97c76183b620",
+    "family": "website",
+    "field": "social_profile.c809163479b87ee01413",
+    "old_value": {
+      "url": "http://www.linkedin.com/company/897623",
+      "platform": "linkedin.com"
+    },
+    "new_same_field": [],
+    "errors": [
+      {
+        "section": "website",
+        "code": "website_budget_exhausted",
+        "message": "Website work ended at configured budget"
+      },
+      {
+        "section": "website",
+        "code": "website_candidates",
+        "message": "[{\"domain\": \"infoss.no\", \"origin\": \"registry_website\", \"level\": \"LOW\", \"reason\": \"website_budget_exhausted\"}, {\"domain\": \"infoss.no\", \"origin\": \"registry_website\", \"url\": \"https://www.infoss.no/\", \"reason\": \"website_timeout\"}, {\"domain\": \"infoss.no\", \"origin\": \"registry_website\", \"url\": \"https://www.infoss.no/\", \"reason\": \"website_budget_exhausted\"}]"
+      },
+      {
+        "section": "activity",
+        "code": "website_check_incomplete",
+        "message": "website_check_incomplete"
+      }
+    ]
+  }
+]

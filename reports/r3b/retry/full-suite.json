@@ -1,0 +1,19 @@
+{
+  "command": [
+    "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\.venv\\Scripts\\python.exe",
+    "-m",
+    "pytest",
+    "tests",
+    "-q",
+    "--basetemp",
+    "out/r3b-retry-suite-temp",
+    "-p",
+    "no:cacheprovider",
+    "--tb=short"
+  ],
+  "exit": 0,
+  "seconds": 108.8770586999999,
+  "sha": "9d9d80679b2e86ec17f386c2300a31e8c80bc9d8",
+  "passed": 523,
+  "pytest_seconds": 106.74
+}

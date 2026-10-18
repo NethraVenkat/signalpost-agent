@@ -1,0 +1,58 @@
+{
+  "emitted_envelopes": 1000,
+  "requests": 5511,
+  "runtime_ms": 248523,
+  "invalid_inputs": [],
+  "warnings": [],
+  "deadline_hits": 0,
+  "handled_exceptions": 0,
+  "unhandled_exceptions": 0,
+  "counts_by_state": {
+    "complete": 1000
+  },
+  "site": {
+    "state": "available",
+    "companies": 1000,
+    "input_records": 1000,
+    "pages": 1002,
+    "skipped_invalid_identifiers": 0,
+    "total_bytes": 156768310,
+    "largest_profile_data_bytes": 336296,
+    "largest_profile_bytes": 122799
+  },
+  "schema_validated": true,
+  "membership_validated": true,
+  "command": {
+    "label": "default1000",
+    "command": [
+      "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\.venv\\Scripts\\python.exe",
+      "-m",
+      "signalpost.cli",
+      "run",
+      "--organisations",
+      "out/capacity-inputs/batch1000.jsonl",
+      "--output",
+      "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r3b-retry\\default1000\\envelopes.jsonl",
+      "--report",
+      "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r3b-retry\\default1000\\report.json",
+      "--profiles-output",
+      "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r3b-retry\\default1000\\profiles.jsonl",
+      "--site-dir",
+      "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r3b-retry\\default1000\\site",
+      "--state-dir",
+      "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r3b-retry\\default1000\\state",
+      "--expected-count",
+      "1000",
+      "--websites",
+      "--hiring",
+      "--public-activity",
+      "--bulk",
+      "out/capacity-inputs/bulk1000.csv"
+    ],
+    "exit": 0,
+    "seconds": 272.34116169999834,
+    "source_sha": "a2e7b70fd4fe2ec1757eaf6c97c52a4249afdb85",
+    "source_path": "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\src"
+  },
+  "report_sha256": "9eeb7bd2c4f0a5ac67ef9c1b809eef2c107d47b048025fbd0ac7012eeeca8651"
+}

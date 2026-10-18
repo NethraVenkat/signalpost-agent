@@ -1,0 +1,144 @@
+{
+  "label": "baseline24",
+  "envelopes": 24,
+  "identity_ids": 488,
+  "lost_identity_ids": [],
+  "lost_available_ids": 0,
+  "losses_by_family": {},
+  "losses": [],
+  "registry_companies": 2,
+  "registry_claims_checked": 3,
+  "registry_mismatches": 0,
+  "checks": [
+    {
+      "org": "932531526",
+      "claim_id": "5af394b1726a4a962cfbbd48b0ac0175fbdb68830e936bec4b7e8ef50d810da5",
+      "event_id": 24157971,
+      "publication_time": "2026-04-15T04:05:12.508Z",
+      "source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827024422%2C886581432%2C913748174%2C921611420%2C923018808%2C923609016%2C926345427%2C926616056%2C926736299%2C927066491%2C928202003%2C928241017%2C928274616%2C928435741%2C928953165%2C930010499%2C932531526%2C933365573%2C933768430%2C933941272%2C938690111&dato=2024-10-18T07%3A29%3A21.234Z&updatedBefore=2026-10-18T07%3A29%3A21.234Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+      "sha256": "da18cec6f3889b3d3137e64e613ceb6e58f985741a97189bf471fe6b2f63e85a",
+      "result": "verified"
+    },
+    {
+      "org": "932531526",
+      "claim_id": "ddbfbf3e3f1e82b126c25fa88392b682ddd47db7b354737bff0dd36d62806c42",
+      "event_id": 24157971,
+      "publication_time": "2026-04-15T04:05:12.508Z",
+      "source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827024422%2C886581432%2C913748174%2C921611420%2C923018808%2C923609016%2C926345427%2C926616056%2C926736299%2C927066491%2C928202003%2C928241017%2C928274616%2C928435741%2C928953165%2C930010499%2C932531526%2C933365573%2C933768430%2C933941272%2C938690111&dato=2024-10-18T07%3A29%3A21.234Z&updatedBefore=2026-10-18T07%3A29%3A21.234Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+      "sha256": "da18cec6f3889b3d3137e64e613ceb6e58f985741a97189bf471fe6b2f63e85a",
+      "result": "verified"
+    },
+    {
+      "org": "923609016",
+      "claim_id": "06a4b0e4203576a2bb08ea66a98fbeb45e7af424b2cdecdf59f0b5045df47600",
+      "event_id": 24767418,
+      "publication_time": "2026-07-02T22:00:22.145Z",
+      "source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827024422%2C886581432%2C913748174%2C921611420%2C923018808%2C923609016%2C926345427%2C926616056%2C926736299%2C927066491%2C928202003%2C928241017%2C928274616%2C928435741%2C928953165%2C930010499%2C932531526%2C933365573%2C933768430%2C933941272%2C938690111&dato=2024-10-18T07%3A29%3A21.234Z&updatedBefore=2026-10-18T07%3A29%3A21.234Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+      "sha256": "da18cec6f3889b3d3137e64e613ceb6e58f985741a97189bf471fe6b2f63e85a",
+      "result": "verified"
+    }
+  ],
+  "baseline_coverage": {
+    "website": {
+      "companies": 0,
+      "facts": 0
+    },
+    "social": {
+      "companies": 0,
+      "facts": 0
+    },
+    "activity": {
+      "companies": 0,
+      "facts": 0
+    },
+    "jobs": {
+      "companies": 0,
+      "facts": 0
+    },
+    "registry": {
+      "companies": 0,
+      "facts": 0
+    }
+  },
+  "coverage": {
+    "website": {
+      "companies": 0,
+      "facts": 0
+    },
+    "social": {
+      "companies": 0,
+      "facts": 0
+    },
+    "activity": {
+      "companies": 2,
+      "facts": 3
+    },
+    "jobs": {
+      "companies": 0,
+      "facts": 0
+    },
+    "registry": {
+      "companies": 2,
+      "facts": 3
+    }
+  },
+  "activity_states": {
+    "failed": 11,
+    "not_available": 12,
+    "available": 1
+  },
+  "feed_requests": [
+    {
+      "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827024422%2C886581432%2C913748174%2C921611420%2C923018808%2C923609016%2C926345427%2C926616056%2C926736299%2C927066491%2C928202003%2C928241017%2C928274616%2C928435741%2C928953165%2C930010499%2C932531526%2C933365573%2C933768430%2C933941272%2C938690111&dato=2024-10-18T07%3A29%3A21.234Z&updatedBefore=2026-10-18T07%3A29%3A21.234Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+      "host": "data.brreg.no",
+      "organisation_number": "__registry_changes__",
+      "attempt_started": 39.364682899999025,
+      "status": 200,
+      "error": null,
+      "content_sha256": "da18cec6f3889b3d3137e64e613ceb6e58f985741a97189bf471fe6b2f63e85a",
+      "runtime_ms": 1821
+    },
+    {
+      "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=827222712%2C873152362%2C891770812%2C893247092%2C913776062%2C922500886%2C923047433%2C924658622%2C926554034%2C926643592%2C926842625%2C927160153%2C928289397%2C928964477%2C932532980%2C933489272%2C933769410%2C933943488%2C934203631%2C973101862%2C973101870%2C973152351%2C973152378%2C973152386%2C973152394%2C973152408%2C973152416%2C973152424%2C973861778%2C973861832%2C973861840%2C973861875%2C973861883%2C973861891%2C973861913%2C974076039%2C974160099%2C981524403%2C984042442%2C991770526%2C991770534%2C991770542%2C991770577%2C991770593%2C991770631%2C991770682%2C991770771%2C991770798%2C997341783%2C998271711&dato=2024-10-18T07%3A29%3A21.234Z&updatedBefore=2026-10-18T07%3A29%3A21.234Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+      "host": "data.brreg.no",
+      "organisation_number": "__registry_changes__",
+      "attempt_started": 41.20112389999849,
+      "status": 200,
+      "error": null,
+      "content_sha256": "2b402ceb3b7846326f8f12ff47d68e91caefd4e98e7a37dfa7842f41984a62af",
+      "runtime_ms": 1893
+    }
+  ],
+  "command": {
+    "label": "baseline24",
+    "command": [
+      "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\.venv\\Scripts\\python.exe",
+      "-m",
+      "signalpost.cli",
+      "run",
+      "--organisations",
+      "out/judge-evidence/batch.jsonl",
+      "--output",
+      "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r3b-retry\\baseline24\\envelopes.jsonl",
+      "--report",
+      "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r3b-retry\\baseline24\\report.json",
+      "--profiles-output",
+      "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r3b-retry\\baseline24\\profiles.jsonl",
+      "--site-dir",
+      "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r3b-retry\\baseline24\\site",
+      "--state-dir",
+      "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r3b-retry\\baseline24\\state",
+      "--expected-count",
+      "24",
+      "--websites",
+      "--hiring",
+      "--public-activity",
+      "--registry-changes"
+    ],
+    "exit": 0,
+    "seconds": 44.3441387999992,
+    "source_sha": "9d9d80679b2e86ec17f386c2300a31e8c80bc9d8",
+    "source_path": "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\src"
+  },
+  "envelopes_sha256": "3f6a152810ad5652ee5527dd33ee47274982bc1ed7b5de5ca61746b222350b1a"
+}

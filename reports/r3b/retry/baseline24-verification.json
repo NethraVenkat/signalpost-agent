@@ -1,0 +1,11 @@
+{
+  "lines": 24,
+  "schema_valid": true,
+  "published_claims": 1234,
+  "source_blobs_verified": 65,
+  "synthesis_companies": 24,
+  "synthesis_sentences": 125,
+  "synthesis_unverified_values": 0,
+  "source": "scripts/verify_output.py successful CLI result",
+  "input_directory": "out/r3b-retry/baseline24"
+}

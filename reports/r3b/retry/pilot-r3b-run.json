@@ -1,0 +1,59 @@
+{
+  "emitted_envelopes": 50,
+  "requests": 202,
+  "runtime_ms": 116519,
+  "invalid_inputs": [],
+  "warnings": [],
+  "deadline_hits": 0,
+  "handled_exceptions": 0,
+  "unhandled_exceptions": 0,
+  "counts_by_state": {
+    "complete": 50
+  },
+  "site": {
+    "state": "available",
+    "companies": 50,
+    "input_records": 50,
+    "pages": 52,
+    "skipped_invalid_identifiers": 0,
+    "total_bytes": 8438646,
+    "largest_profile_data_bytes": 516857,
+    "largest_profile_bytes": 127555
+  },
+  "schema_validated": true,
+  "membership_validated": true,
+  "command": {
+    "label": "pilot-r3b",
+    "command": [
+      "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\.venv\\Scripts\\python.exe",
+      "-m",
+      "signalpost.cli",
+      "run",
+      "--organisations",
+      "out/r3b-gates/pilot50.jsonl",
+      "--output",
+      "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r3b-retry\\pilot-r3b\\envelopes.jsonl",
+      "--report",
+      "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r3b-retry\\pilot-r3b\\report.json",
+      "--profiles-output",
+      "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r3b-retry\\pilot-r3b\\profiles.jsonl",
+      "--site-dir",
+      "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r3b-retry\\pilot-r3b\\site",
+      "--state-dir",
+      "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r3b-retry\\pilot-r3b\\state",
+      "--expected-count",
+      "50",
+      "--websites",
+      "--hiring",
+      "--public-activity",
+      "--bulk",
+      "out/capacity-inputs/bulk1000.csv",
+      "--registry-changes"
+    ],
+    "exit": 0,
+    "seconds": 119.73789709999983,
+    "source_sha": "9d9d80679b2e86ec17f386c2300a31e8c80bc9d8",
+    "source_path": "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\src"
+  },
+  "report_sha256": "41c215d90356068ff6d1760b1d7ef90cece15beb1c9cf7cd783fd73d41ef0167"
+}

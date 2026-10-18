@@ -1,0 +1,58 @@
+{
+  "emitted_envelopes": 100,
+  "requests": 349,
+  "runtime_ms": 70482,
+  "invalid_inputs": [],
+  "warnings": [],
+  "deadline_hits": 0,
+  "handled_exceptions": 0,
+  "unhandled_exceptions": 0,
+  "counts_by_state": {
+    "complete": 100
+  },
+  "site": {
+    "state": "available",
+    "companies": 100,
+    "input_records": 100,
+    "pages": 102,
+    "skipped_invalid_identifiers": 0,
+    "total_bytes": 15304773,
+    "largest_profile_data_bytes": 278755,
+    "largest_profile_bytes": 116804
+  },
+  "schema_validated": true,
+  "membership_validated": true,
+  "command": {
+    "label": "fault100",
+    "command": [
+      "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\.venv\\Scripts\\python.exe",
+      "out/r3b-gates/fault_cli.py",
+      "run",
+      "--organisations",
+      "out/smoke100-inputs/batch100.jsonl",
+      "--output",
+      "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r3b-retry\\fault100\\envelopes.jsonl",
+      "--report",
+      "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r3b-retry\\fault100\\report.json",
+      "--profiles-output",
+      "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r3b-retry\\fault100\\profiles.jsonl",
+      "--site-dir",
+      "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r3b-retry\\fault100\\site",
+      "--state-dir",
+      "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r3b-retry\\fault100\\state",
+      "--expected-count",
+      "100",
+      "--websites",
+      "--hiring",
+      "--public-activity",
+      "--bulk",
+      "out/capacity-inputs/bulk1000.csv",
+      "--registry-changes"
+    ],
+    "exit": 0,
+    "seconds": 73.24630139999863,
+    "source_sha": "9d9d80679b2e86ec17f386c2300a31e8c80bc9d8",
+    "source_path": "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\src"
+  },
+  "report_sha256": "5a042d383c0c8e30ee3d2be8d992cabc5ced895e610f46d38e29901088d111a6"
+}

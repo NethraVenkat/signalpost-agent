@@ -1,0 +1,61 @@
+{
+  "emitted_envelopes": 24,
+  "requests": 154,
+  "runtime_ms": 43296,
+  "invalid_inputs": [
+    "923609017",
+    "12345678"
+  ],
+  "warnings": [],
+  "deadline_hits": 0,
+  "handled_exceptions": 0,
+  "unhandled_exceptions": 0,
+  "counts_by_state": {
+    "complete": 22,
+    "submission_error": 2
+  },
+  "site": {
+    "state": "available",
+    "companies": 23,
+    "input_records": 24,
+    "pages": 25,
+    "skipped_invalid_identifiers": 1,
+    "total_bytes": 2876869,
+    "largest_profile_data_bytes": 519254,
+    "largest_profile_bytes": 128305
+  },
+  "schema_validated": true,
+  "membership_validated": true,
+  "command": {
+    "label": "baseline24",
+    "command": [
+      "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\.venv\\Scripts\\python.exe",
+      "-m",
+      "signalpost.cli",
+      "run",
+      "--organisations",
+      "out/judge-evidence/batch.jsonl",
+      "--output",
+      "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r3b-retry\\baseline24\\envelopes.jsonl",
+      "--report",
+      "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r3b-retry\\baseline24\\report.json",
+      "--profiles-output",
+      "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r3b-retry\\baseline24\\profiles.jsonl",
+      "--site-dir",
+      "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r3b-retry\\baseline24\\site",
+      "--state-dir",
+      "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r3b-retry\\baseline24\\state",
+      "--expected-count",
+      "24",
+      "--websites",
+      "--hiring",
+      "--public-activity",
+      "--registry-changes"
+    ],
+    "exit": 0,
+    "seconds": 44.3441387999992,
+    "source_sha": "9d9d80679b2e86ec17f386c2300a31e8c80bc9d8",
+    "source_path": "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\src"
+  },
+  "report_sha256": "9e42e0c7ec41f20efc995438e381de18718de4ce07929b14c1614b7aa671f93c"
+}

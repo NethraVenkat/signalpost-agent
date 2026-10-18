@@ -1,0 +1,19 @@
+{
+  "sha": "a2e7b70fd4fe2ec1757eaf6c97c52a4249afdb85",
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "pytest",
+    "tests",
+    "-q",
+    "--basetemp",
+    "out/r3b-default-suite-temp",
+    "-p",
+    "no:cacheprovider",
+    "--tb=short"
+  ],
+  "exit": 0,
+  "passed": 526,
+  "pytest_seconds": 97.73,
+  "registry_changes_default": true
+}

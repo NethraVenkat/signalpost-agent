@@ -1,0 +1,6 @@
+Cloning into 'C:\Users\Manish\Downloads\Signalpost-v5\out\r3b-retry\final-smoke100\clone'...
+error: RPC failed; curl 56 Recv failure: Connection was reset
+error: 13462 bytes of body are still expected
+fetch-pack: unexpected disconnect while reading sideband packet
+fatal: early EOF
+fatal: fetch-pack: invalid index-pack output

@@ -1,0 +1,60 @@
+{
+  "emitted_envelopes": 50,
+  "requests": 204,
+  "runtime_ms": 27661,
+  "invalid_inputs": [],
+  "warnings": [],
+  "deadline_hits": 0,
+  "handled_exceptions": 0,
+  "unhandled_exceptions": 0,
+  "counts_by_state": {
+    "complete": 50
+  },
+  "site": {
+    "state": "available",
+    "companies": 50,
+    "input_records": 50,
+    "pages": 52,
+    "skipped_invalid_identifiers": 0,
+    "total_bytes": 8396706,
+    "largest_profile_data_bytes": 516865,
+    "largest_profile_bytes": 127561
+  },
+  "schema_validated": true,
+  "membership_validated": true,
+  "command": {
+    "label": "pilot-r2",
+    "command": [
+      "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\.venv\\Scripts\\python.exe",
+      "-m",
+      "signalpost.cli",
+      "run",
+      "--organisations",
+      "out/r3b-gates/pilot50.jsonl",
+      "--output",
+      "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r3b-retry\\pilot-r2\\envelopes.jsonl",
+      "--report",
+      "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r3b-retry\\pilot-r2\\report.json",
+      "--profiles-output",
+      "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r3b-retry\\pilot-r2\\profiles.jsonl",
+      "--site-dir",
+      "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r3b-retry\\pilot-r2\\site",
+      "--state-dir",
+      "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r3b-retry\\pilot-r2\\state",
+      "--expected-count",
+      "50",
+      "--websites",
+      "--hiring",
+      "--public-activity",
+      "--bulk",
+      "out/capacity-inputs/bulk1000.csv"
+    ],
+    "exit": 0,
+    "seconds": 31.396525700001803,
+    "source_sha": "a704375fe6b7d643e3075025af5f37d8f496fe7b",
+    "source_path": "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r3b-gates\\r2-control\\src",
+    "workspace_sha": "9d9d80679b2e86ec17f386c2300a31e8c80bc9d8",
+    "source_provenance": "git archive a704375, imported via explicit PYTHONPATH"
+  },
+  "report_sha256": "efa0d486f03942f672820f2e8d8322803e1f6fc48b78d524f95d5d938b8f8788"
+}

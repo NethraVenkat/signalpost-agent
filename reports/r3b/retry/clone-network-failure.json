@@ -1,0 +1,17 @@
+[
+  {
+    "name": "clone",
+    "command": [
+      "git",
+      "clone",
+      "--single-branch",
+      "--branch",
+      "revision/r3b",
+      "https://github.com/NethraVenkat/signalpost-agent.git",
+      "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r3b-retry\\final-smoke100\\clone"
+    ],
+    "cwd": "C:\\Users\\Manish\\Downloads\\Signalpost-v5",
+    "exit": 128,
+    "seconds": 118.74850590000278
+  }
+]

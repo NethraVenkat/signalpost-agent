@@ -1,0 +1,126 @@
+{
+  "sha": "a2e7b70fd4fe2ec1757eaf6c97c52a4249afdb85",
+  "default_on": true,
+  "commands": [
+    {
+      "name": "clone",
+      "command": [
+        "git",
+        "clone",
+        "--single-branch",
+        "--branch",
+        "revision/r3b",
+        "https://github.com/NethraVenkat/signalpost-agent.git",
+        "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r3b-retry\\final-smoke100-retry\\clone"
+      ],
+      "cwd": "C:\\Users\\Manish\\Downloads\\Signalpost-v5",
+      "exit": 0,
+      "seconds": 10.023254699997779
+    },
+    {
+      "name": "install",
+      "command": [
+        "uv",
+        "sync",
+        "--frozen",
+        "--python",
+        "3.12"
+      ],
+      "cwd": "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r3b-retry\\final-smoke100-retry\\clone",
+      "exit": 0,
+      "seconds": 7.239267999997537
+    },
+    {
+      "name": "smoke",
+      "command": [
+        "uv",
+        "run",
+        "--frozen",
+        "signalpost",
+        "run",
+        "--organisations",
+        "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\smoke100-inputs\\batch100.jsonl",
+        "--bulk",
+        "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\capacity-inputs\\bulk1000.csv",
+        "--output",
+        "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r3b-retry\\final-smoke100-retry\\envelopes.jsonl",
+        "--profiles-output",
+        "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r3b-retry\\final-smoke100-retry\\profiles.jsonl",
+        "--report",
+        "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r3b-retry\\final-smoke100-retry\\report.json",
+        "--site-dir",
+        "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r3b-retry\\final-smoke100-retry\\site",
+        "--state-dir",
+        "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r3b-retry\\final-smoke100-retry\\state",
+        "--websites",
+        "--hiring",
+        "--public-activity",
+        "--run-id",
+        "final-smoke100-retry",
+        "--expected-count",
+        "100"
+      ],
+      "cwd": "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r3b-retry\\final-smoke100-retry\\clone",
+      "exit": 0,
+      "seconds": 75.39680640000006
+    },
+    {
+      "name": "verify",
+      "command": [
+        "uv",
+        "run",
+        "--frozen",
+        "python",
+        "scripts/verify_output.py",
+        "--first",
+        "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r3b-retry\\final-smoke100-retry\\envelopes.jsonl",
+        "--state-dir",
+        "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r3b-retry\\final-smoke100-retry\\state",
+        "--count",
+        "100",
+        "--organisations",
+        "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\smoke100-inputs\\batch100.jsonl",
+        "--report",
+        "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r3b-retry\\final-smoke100-retry\\report.json"
+      ],
+      "cwd": "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r3b-retry\\final-smoke100-retry\\clone",
+      "exit": 0,
+      "seconds": 5.996380500000669
+    },
+    {
+      "name": "registry-audit",
+      "command": [
+        "uv",
+        "run",
+        "--frozen",
+        "python",
+        "scripts/verify_registry_changes.py",
+        "--envelopes",
+        "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r3b-retry\\final-smoke100-retry\\envelopes.jsonl",
+        "--state-dir",
+        "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r3b-retry\\final-smoke100-retry\\state",
+        "--output",
+        "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r3b-retry\\final-smoke100-retry\\registry-audit.json"
+      ],
+      "cwd": "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r3b-retry\\final-smoke100-retry\\clone",
+      "exit": 0,
+      "seconds": 0.25018879999697674
+    }
+  ],
+  "verification": {
+    "lines": 100,
+    "schema_valid": true,
+    "published_claims": 6808,
+    "source_blobs_verified": 371,
+    "synthesis_companies": 100,
+    "synthesis_sentences": 779,
+    "synthesis_unverified_values": 0
+  },
+  "registry_audit": {
+    "checked": 0,
+    "mismatches": 0,
+    "checks": []
+  },
+  "input_sha256": "7d59169d3fd274ec576dca84430beac887b4a1cf06697e20ab7e875420673686",
+  "envelopes_sha256": "0ae69864deba78d176cb9bd1013eba9d4d673dd2f15d74c0dec01d5849d6c1bc"
+}
