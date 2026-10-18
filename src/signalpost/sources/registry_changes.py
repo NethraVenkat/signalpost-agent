@@ -137,6 +137,10 @@ def extract(event, response, locator, org, endpoint, scope=None):
 
 async def pages(http, endpoint, numbers, since, until):
     """Construct every page locally; never follow untrusted next links or truncate."""
+    # BRREG accepts exactly millisecond precision in UTC, not Python's default
+    # microseconds. Validate events against the same bounds sent to the API.
+    since = timestamp(since).isoformat(timespec='milliseconds').replace('+00:00', 'Z')
+    until = timestamp(until).isoformat(timespec='milliseconds').replace('+00:00', 'Z')
     key = 'oppdaterteEnheter' if endpoint == 'enheter' else 'oppdaterteUnderenheter'
     page, total, seen, count = 0, None, set(), 0
     while True:
