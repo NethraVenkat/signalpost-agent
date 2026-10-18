@@ -1,6 +1,7 @@
 import asyncio
 import hashlib
 import json
+import re
 from dataclasses import replace
 from types import SimpleNamespace
 
@@ -109,6 +110,44 @@ def test_timeout_fails_even_with_no_website():
         async def get(self, *args): raise SourceFailure('timeout')
     result = asyncio.run(rc.fetch_batch({ORG: envelope()}, Http(), None, NOW))
     assert result[ORG].state == 'failed' and result[ORG].errors[0].code == 'timeout'
+
+
+@pytest.mark.parametrize('endpoint', ['enheter', 'underenheter'])
+@pytest.mark.parametrize('until,expected', [
+    ('2026-10-18T07:04:40.345521Z', '2026-10-18T07:04:40.345Z'),
+    ('2026-10-18T12:34:40.345521+05:30', '2026-10-18T07:04:40.345Z'),
+    ('2026-10-18T07:04:40Z', '2026-10-18T07:04:40.000Z'),
+])
+def test_brreg_query_timestamp_contract(endpoint, until, expected):
+    class Http:
+        async def get(self, url, org):
+            params = httpx.URL(url).params
+            assert params['dato'] == '2024-10-18T07:04:40.000Z'
+            assert params['updatedBefore'] == expected
+            for name in ('dato', 'updatedBefore'):
+                assert re.fullmatch(r'\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z', params[name])
+            return response({'page': {'number': 0, 'size': 1000, 'totalElements': 0, 'totalPages': 0}})
+    async def collect():
+        return [item async for item in rc.pages(Http(), endpoint, [ORG], '2024-10-18T07:04:40Z', until)]
+    assert asyncio.run(collect()) == []
+
+
+def test_brreg_http400_marks_activity_failed(tmp_path):
+    original = handler()
+    def respond(request):
+        if '/oppdateringer/' in request.url.path:
+            return httpx.Response(400, json={'status': 400, 'valideringsfeil': []})
+        return original(request)
+    async def go():
+        cfg = config(tmp_path, [ORG], registry_changes=True)
+        async with httpx.AsyncClient(transport=httpx.MockTransport(respond)) as client:
+            await run(cfg, client=client)
+        return json.loads(cfg.output.read_text(encoding='utf8').split('\n')[0])
+    row = asyncio.run(go())
+    assert row['run']['sections']['identity'] == 'available'
+    assert row['run']['sections']['activity'] == 'failed'
+    assert any(e['section'] == 'activity' and e['code'] == 'registry_change_http_400' for e in row['errors'])
+    assert not any(c['field'].startswith('registry_change.') for c in row['claims'])
 
 
 def test_latest_summary_citation_and_site_publication_label():
