@@ -1,0 +1,61 @@
+{
+  "before": "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r2-check-normal\\envelopes.jsonl",
+  "after": "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r2-check-refresh\\envelopes.jsonl",
+  "before_rows": 1000,
+  "after_rows": 1000,
+  "same_order": true,
+  "lost_count": 1,
+  "lost_by_family": {
+    "website": 1
+  },
+  "lost": [
+    {
+      "orgnr": "988330752",
+      "family": "website",
+      "field": "official_website",
+      "id": "eb13c32ba63ca593dc0bacfc71cbb8e6a9c021358f406a4e5a5751ebe1f03278",
+      "before": {
+        "final_url": "https://www.filmtek.no",
+        "identity_level": "HIGH",
+        "proof_type": "signals",
+        "proof_page_url": "https://www.filmtek.no/",
+        "signals": [
+          "legal_name",
+          "address",
+          "registry_website",
+          "municipality"
+        ],
+        "points": 7,
+        "candidate_origin": "registry_website",
+        "relationship_note": null,
+        "other_orgnrs": []
+      },
+      "after": [
+        {
+          "final_url": "https://www.audioped.no",
+          "identity_level": "VERIFIED",
+          "proof_type": "orgnr_on_page",
+          "proof_page_url": "https://www.audioped.no/",
+          "signals": [],
+          "points": 0,
+          "candidate_origin": "subunit_registry_email",
+          "relationship_note": null,
+          "other_orgnrs": [],
+          "matched_via_subunit": "933248380"
+        }
+      ],
+      "section_state": "available",
+      "errors": [
+        {
+          "section": "website",
+          "code": "website_candidates",
+          "message": "[{\"domain\": \"filmtek.no\", \"level\": \"HIGH\", \"points\": 7, \"signals\": [\"legal_name\", \"address\", \"registry_website\", \"municipality\"], \"origin\": \"registry_website\", \"reason\": \"corroboration\"}, {\"domain\": \"audioped.no\", \"level\": \"VERIFIED\", \"points\": 0, \"signals\": [], \"origin\": \"subunit_registry_email\", \"reason\": \"\"}, {\"domain\": \"filmtek.no\", \"origin\": \"registry_website\", \"url\": \"https://www.filmtek.no/\", \"status\": 200}, {\"domain\": \"audioped.no\", \"origin\": \"subunit_registry_email\", \"url\": \"https://audioped.no/\", \"reason\": \"website_timeout\"}, {\"domain\": \"audioped.no\", \"origin\": \"subunit_registry_email\", \"url\": \"https://www.audioped.no/\", \"status\": 200}]"
+        }
+      ]
+    }
+  ],
+  "added_count": 7,
+  "duplicate_claim_ids": 0,
+  "material_changes": 6,
+  "observation_changes": 175
+}

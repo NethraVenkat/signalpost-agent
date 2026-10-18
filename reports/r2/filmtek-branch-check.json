@@ -1,0 +1,45 @@
+{
+  "parent_orgnr": "988330752",
+  "registered_subunit": "933248380",
+  "http_status": 200,
+  "url": "https://www.audioped.no/",
+  "body_sha256": "406943c382a989f9566464ebb6354a0794eb4dd888918ec72f33d11f29191375",
+  "exact_subunit_span": "ter-bottom\">\n<span>AudioPed AS · Org.nr 933 248 380 · Besøk: Vigeveien 15a · Post: Harald Gilles vei 2, 4633 Kristiansand</span>\n<span class=\"footer-t",
+  "registered_unit_value": {
+    "organisation_number": "933248380",
+    "name": "AUDIOPEDAGOG THERESE WIDERØE",
+    "address": {
+      "adresse": [
+        "Fyrveien 18"
+      ],
+      "kommune": "FARSUND",
+      "kommunenummer": "4206",
+      "land": "Norge",
+      "landkode": "NO",
+      "postnummer": "4563",
+      "poststed": "BORHAUG"
+    },
+    "nace": {
+      "beskrivelse": "Andre helsetjenester ellers",
+      "kode": "86.993"
+    },
+    "employees": null
+  },
+  "registry_evidence": [
+    {
+      "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+      "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+      "locator": "/_embedded/underenheter/0"
+    }
+  ],
+  "scope": "Registered-subunit website, not parent-number proof.",
+  "independent_brreg_check": {
+    "url": "https://data.brreg.no/enhetsregisteret/api/underenheter/933248380",
+    "retrieved_at": "2026-10-18T04:06:03.859249+00:00",
+    "sha256": "8b6bc939ad5e03d51e2fda5780577a8627f3e80df43d9c909362c2f87c5552e7",
+    "organisation_number": "933248380",
+    "parent_orgnr": "988330752",
+    "registered_website": null,
+    "registered_email": "post@audioped.no"
+  }
+}

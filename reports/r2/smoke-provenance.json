@@ -1,0 +1,143 @@
+{
+  "tested_code_sha": "27a3bb0cc2e4a9cf3802da6eaaec761da623a5c9",
+  "remote": "https://github.com/NethraVenkat/signalpost-agent.git",
+  "clone": "out/r2-ship27-clean-clone",
+  "clone_clean": true,
+  "python": "Python 3.12.15",
+  "commands": [
+    {
+      "label": "network-clone",
+      "args": [
+        "git",
+        "clone",
+        "--single-branch",
+        "--branch",
+        "revision/r2",
+        "https://github.com/NethraVenkat/signalpost-agent.git",
+        "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r2-ship27-clean-clone"
+      ],
+      "cwd": "C:\\Users\\Manish\\Downloads\\Signalpost-v5",
+      "exit": 0,
+      "wall_seconds": 3.2290337000013096
+    },
+    {
+      "label": "install",
+      "args": [
+        "uv",
+        "sync",
+        "--frozen",
+        "--python",
+        "3.12",
+        "--cache-dir",
+        "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r2-ship27-clean-uv-cache"
+      ],
+      "cwd": "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r2-ship27-clean-clone",
+      "exit": 0,
+      "wall_seconds": 4.25962840000102
+    },
+    {
+      "label": "python-version",
+      "args": [
+        "uv",
+        "run",
+        "--frozen",
+        "--cache-dir",
+        "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r2-ship27-clean-uv-cache",
+        "python",
+        "--version"
+      ],
+      "cwd": "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r2-ship27-clean-clone",
+      "exit": 0,
+      "wall_seconds": 0.2505615999998554
+    },
+    {
+      "label": "smoke100",
+      "args": [
+        "uv",
+        "run",
+        "--frozen",
+        "--cache-dir",
+        "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r2-ship27-clean-uv-cache",
+        "signalpost",
+        "run",
+        "--organisations",
+        "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\smoke100-inputs\\batch100.jsonl",
+        "--bulk",
+        "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\smoke100-inputs\\bulk100.csv",
+        "--output",
+        "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r2-ship27-clean-smoke\\envelopes.jsonl",
+        "--profiles-output",
+        "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r2-ship27-clean-smoke\\profiles.jsonl",
+        "--report",
+        "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r2-ship27-clean-smoke\\report.json",
+        "--run-id",
+        "r2-smoke-27a3bb0cc2e4",
+        "--expected-count",
+        "100",
+        "--state-dir",
+        "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r2-ship27-clean-smoke\\state",
+        "--site-dir",
+        "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r2-ship27-clean-smoke\\site",
+        "--websites",
+        "--hiring",
+        "--public-activity",
+        "--time-budget-seconds",
+        "600",
+        "--max-requests",
+        "2000",
+        "--max-cost-usd",
+        "0",
+        "--search-max-queries",
+        "0"
+      ],
+      "cwd": "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r2-ship27-clean-clone",
+      "exit": 0,
+      "wall_seconds": 45.21501730000091
+    },
+    {
+      "label": "verify100",
+      "args": [
+        "uv",
+        "run",
+        "--frozen",
+        "--cache-dir",
+        "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r2-ship27-clean-uv-cache",
+        "python",
+        "scripts/verify_output.py",
+        "--first",
+        "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r2-ship27-clean-smoke\\envelopes.jsonl",
+        "--state-dir",
+        "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r2-ship27-clean-smoke\\state",
+        "--organisations",
+        "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\smoke100-inputs\\batch100.jsonl",
+        "--count",
+        "100",
+        "--report",
+        "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r2-ship27-clean-smoke\\report.json"
+      ],
+      "cwd": "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r2-ship27-clean-clone",
+      "exit": 0,
+      "wall_seconds": 4.897311800001262
+    }
+  ],
+  "hashes": {
+    "out/smoke100-inputs/batch100.jsonl": "7d59169d3fd274ec576dca84430beac887b4a1cf06697e20ab7e875420673686",
+    "out/smoke100-inputs/bulk100.csv": "ba43cd709ad2debe7b6b8ead95bf39f5ebec260bda0561e511a44d594fd2c0d2",
+    "out/r2-ship27-clean-smoke/envelopes.jsonl": "7b69b45d6775b666723f37bc4f77ad64d7bf6c8395176506f5c6bb051e61f8f7",
+    "out/r2-ship27-clean-smoke/profiles.jsonl": "0dc80be1a0f8f072bf884d8a1885f9632bedfe4b5212d57332415c0efd050318",
+    "out/r2-ship27-clean-smoke/report.json": "8b5195b1e5f7964ee01620b2e4fee98de260933e79cdd0f27f05b39d8ac6c59f",
+    "out/r2-ship27-clean-clone/uv.lock": "1f1c3185545fa2e630ffc700b9a40ec77416150c98c1529adf6412a539a7d864"
+  },
+  "envelopes": 100,
+  "exact_input_order": true,
+  "profiles": 100,
+  "verification": {
+    "lines": 100,
+    "schema_valid": true,
+    "published_claims": 6858,
+    "source_blobs_verified": 380,
+    "synthesis_companies": 100,
+    "synthesis_sentences": 795,
+    "synthesis_unverified_values": 0
+  }
+}

@@ -1,0 +1,252 @@
+{
+  "before": "out/cancelfix-gate-normal/envelopes.jsonl",
+  "after": "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\r2-check-normal\\envelopes.jsonl",
+  "before_rows": 1000,
+  "after_rows": 1000,
+  "same_order": true,
+  "lost_count": 9,
+  "lost_by_family": {
+    "roles": 2,
+    "website": 6,
+    "subunits": 1
+  },
+  "lost": [
+    {
+      "orgnr": "963070276",
+      "family": "roles",
+      "field": "roles.role.b6ffd901f45c686b19952ea4.0",
+      "id": "6ceb55fcbbb68c3abe4af4941d9701596a178b24ee4166d4fb974a480c561649",
+      "before": {
+        "role_type": {
+          "_links": {
+            "self": {
+              "href": "https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/DAGL"
+            }
+          },
+          "beskrivelse": "Daglig leder",
+          "kode": "DAGL"
+        },
+        "name": "Fred Louis Mollerin",
+        "entity_organisation_number": null,
+        "inactive": false,
+        "group_type": {
+          "_links": {
+            "self": {
+              "href": "https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper/DAGL"
+            }
+          },
+          "beskrivelse": "Daglig leder",
+          "kode": "DAGL"
+        },
+        "last_changed": "1992-01-17",
+        "from_date": null
+      },
+      "after": [],
+      "section_state": "available",
+      "errors": []
+    },
+    {
+      "orgnr": "963070276",
+      "family": "roles",
+      "field": "roles.detail.b6ffd901f45c686b19952ea4.0.order",
+      "id": "97825f5546ce00dc3956a42a87d08042f8ce9384f87ebd63fa19357ef0f49e8a",
+      "before": 0,
+      "after": [],
+      "section_state": "available",
+      "errors": []
+    },
+    {
+      "orgnr": "988330752",
+      "family": "website",
+      "field": "official_website",
+      "id": "da3e6f3a60f877364cd4f2fd7f877de6e78b25ad8bba5ec2abc72660a05553db",
+      "before": {
+        "final_url": "https://www.audioped.no",
+        "identity_level": "VERIFIED",
+        "proof_type": "orgnr_on_page",
+        "proof_page_url": "https://www.audioped.no/",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "subunit_registry_email",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "matched_via_subunit": "933248380"
+      },
+      "after": [
+        {
+          "final_url": "https://www.filmtek.no",
+          "identity_level": "HIGH",
+          "proof_type": "signals",
+          "proof_page_url": "https://www.filmtek.no/",
+          "signals": [
+            "legal_name",
+            "address",
+            "registry_website",
+            "municipality"
+          ],
+          "points": 7,
+          "candidate_origin": "registry_website",
+          "relationship_note": null,
+          "other_orgnrs": []
+        }
+      ],
+      "section_state": "available",
+      "errors": [
+        {
+          "section": "website",
+          "code": "website_candidates",
+          "message": "[{\"domain\": \"filmtek.no\", \"level\": \"HIGH\", \"points\": 7, \"signals\": [\"legal_name\", \"address\", \"registry_website\", \"municipality\"], \"origin\": \"registry_website\", \"reason\": \"corroboration\"}, {\"domain\": \"audioped.no\", \"origin\": \"subunit_registry_email\", \"level\": \"LOW\", \"reason\": \"website_budget_exhausted\"}, {\"domain\": \"filmtek.no\", \"origin\": \"registry_website\", \"url\": \"https://www.filmtek.no/\", \"status\": 200}, {\"domain\": \"audioped.no\", \"origin\": \"subunit_registry_email\", \"url\": \"https://audioped.no/\", \"reason\": \"website_budget_exhausted\"}]"
+        }
+      ]
+    },
+    {
+      "orgnr": "988330752",
+      "family": "website",
+      "field": "website_description.meta_description.fb53b933d9b051d1",
+      "id": "c546edd42d4f7157880b892a059d28978aebc24650ebfda2c58380c05a4432fd",
+      "before": {
+        "text": "Therese Widerøe hjelper deg med nedsatt hørsel, tinnitus, hyperakusis og misofoni. Gratis behandling via HELFO i Kristiansand. Over 20 års erfaring.",
+        "kind": "meta_description",
+        "self_description": true,
+        "identity_level": "VERIFIED",
+        "identity_claim_id": "da3e6f3a60f877364cd4f2fd7f877de6e78b25ad8bba5ec2abc72660a05553db"
+      },
+      "after": [],
+      "section_state": "available",
+      "errors": [
+        {
+          "section": "website",
+          "code": "website_candidates",
+          "message": "[{\"domain\": \"filmtek.no\", \"level\": \"HIGH\", \"points\": 7, \"signals\": [\"legal_name\", \"address\", \"registry_website\", \"municipality\"], \"origin\": \"registry_website\", \"reason\": \"corroboration\"}, {\"domain\": \"audioped.no\", \"origin\": \"subunit_registry_email\", \"level\": \"LOW\", \"reason\": \"website_budget_exhausted\"}, {\"domain\": \"filmtek.no\", \"origin\": \"registry_website\", \"url\": \"https://www.filmtek.no/\", \"status\": 200}, {\"domain\": \"audioped.no\", \"origin\": \"subunit_registry_email\", \"url\": \"https://audioped.no/\", \"reason\": \"website_budget_exhausted\"}]"
+        }
+      ]
+    },
+    {
+      "orgnr": "988330752",
+      "family": "website",
+      "field": "website_description.og_description.fb53b933d9b051d1",
+      "id": "af032233dc3540710c496f1c96274e1c37e2770ffb52f301e39cee43f9146863",
+      "before": {
+        "text": "Therese Widerøe hjelper deg med nedsatt hørsel, tinnitus, hyperakusis og misofoni. Gratis behandling via HELFO i Kristiansand. Over 20 års erfaring.",
+        "kind": "og_description",
+        "self_description": true,
+        "identity_level": "VERIFIED",
+        "identity_claim_id": "da3e6f3a60f877364cd4f2fd7f877de6e78b25ad8bba5ec2abc72660a05553db"
+      },
+      "after": [],
+      "section_state": "available",
+      "errors": [
+        {
+          "section": "website",
+          "code": "website_candidates",
+          "message": "[{\"domain\": \"filmtek.no\", \"level\": \"HIGH\", \"points\": 7, \"signals\": [\"legal_name\", \"address\", \"registry_website\", \"municipality\"], \"origin\": \"registry_website\", \"reason\": \"corroboration\"}, {\"domain\": \"audioped.no\", \"origin\": \"subunit_registry_email\", \"level\": \"LOW\", \"reason\": \"website_budget_exhausted\"}, {\"domain\": \"filmtek.no\", \"origin\": \"registry_website\", \"url\": \"https://www.filmtek.no/\", \"status\": 200}, {\"domain\": \"audioped.no\", \"origin\": \"subunit_registry_email\", \"url\": \"https://audioped.no/\", \"reason\": \"website_budget_exhausted\"}]"
+        }
+      ]
+    },
+    {
+      "orgnr": "988330752",
+      "family": "website",
+      "field": "social_profile.bf7baa658b98e6deb5b3",
+      "id": "e34d887c9f18e26146c7b51c8e8e5233bd7dfb50942ed31f78f876e63bf8b7a4",
+      "before": {
+        "url": "https://www.instagram.com/og_hva_sa_du",
+        "platform": "instagram.com"
+      },
+      "after": [],
+      "section_state": "available",
+      "errors": [
+        {
+          "section": "website",
+          "code": "website_candidates",
+          "message": "[{\"domain\": \"filmtek.no\", \"level\": \"HIGH\", \"points\": 7, \"signals\": [\"legal_name\", \"address\", \"registry_website\", \"municipality\"], \"origin\": \"registry_website\", \"reason\": \"corroboration\"}, {\"domain\": \"audioped.no\", \"origin\": \"subunit_registry_email\", \"level\": \"LOW\", \"reason\": \"website_budget_exhausted\"}, {\"domain\": \"filmtek.no\", \"origin\": \"registry_website\", \"url\": \"https://www.filmtek.no/\", \"status\": 200}, {\"domain\": \"audioped.no\", \"origin\": \"subunit_registry_email\", \"url\": \"https://audioped.no/\", \"reason\": \"website_budget_exhausted\"}]"
+        }
+      ]
+    },
+    {
+      "orgnr": "988330752",
+      "family": "website",
+      "field": "contact.email.95630f353b39561b8b2e",
+      "id": "cd8d320b1797c1e220b62f6ffdd169bf5169430c4e11d3e38c7bc22144b3dae1",
+      "before": "hei@audioped.no",
+      "after": [],
+      "section_state": "available",
+      "errors": [
+        {
+          "section": "website",
+          "code": "website_candidates",
+          "message": "[{\"domain\": \"filmtek.no\", \"level\": \"HIGH\", \"points\": 7, \"signals\": [\"legal_name\", \"address\", \"registry_website\", \"municipality\"], \"origin\": \"registry_website\", \"reason\": \"corroboration\"}, {\"domain\": \"audioped.no\", \"origin\": \"subunit_registry_email\", \"level\": \"LOW\", \"reason\": \"website_budget_exhausted\"}, {\"domain\": \"filmtek.no\", \"origin\": \"registry_website\", \"url\": \"https://www.filmtek.no/\", \"status\": 200}, {\"domain\": \"audioped.no\", \"origin\": \"subunit_registry_email\", \"url\": \"https://audioped.no/\", \"reason\": \"website_budget_exhausted\"}]"
+        }
+      ]
+    },
+    {
+      "orgnr": "988330752",
+      "family": "website",
+      "field": "public_brand",
+      "id": "44a06eeb338cf2c1b1eda6daf3d6c81703dc74a7eb9bec4c134edfbb623a4305",
+      "before": "Audiopedagog Therese Widerøe",
+      "after": [],
+      "section_state": "available",
+      "errors": [
+        {
+          "section": "website",
+          "code": "website_candidates",
+          "message": "[{\"domain\": \"filmtek.no\", \"level\": \"HIGH\", \"points\": 7, \"signals\": [\"legal_name\", \"address\", \"registry_website\", \"municipality\"], \"origin\": \"registry_website\", \"reason\": \"corroboration\"}, {\"domain\": \"audioped.no\", \"origin\": \"subunit_registry_email\", \"level\": \"LOW\", \"reason\": \"website_budget_exhausted\"}, {\"domain\": \"filmtek.no\", \"origin\": \"registry_website\", \"url\": \"https://www.filmtek.no/\", \"status\": 200}, {\"domain\": \"audioped.no\", \"origin\": \"subunit_registry_email\", \"url\": \"https://audioped.no/\", \"reason\": \"website_budget_exhausted\"}]"
+        }
+      ]
+    },
+    {
+      "orgnr": "913300564",
+      "family": "subunits",
+      "field": "subunits.unit.913309472",
+      "id": "6a45492da4b01e2efbbd69946e467a44f912670e47adc2753f2a9d3a995cd69f",
+      "before": {
+        "organisation_number": "913309472",
+        "name": "BLAASOPP AS",
+        "address": {
+          "adresse": [
+            "Buvikstranda 12"
+          ],
+          "kommune": "FREDRIKSTAD",
+          "kommunenummer": "3107",
+          "land": "Norge",
+          "landkode": "NO",
+          "postnummer": "1622",
+          "poststed": "GRESSVIK"
+        },
+        "nace": {
+          "beskrivelse": "Konsulentvirksomhet tilknyttet informasjonsteknologi og forvaltning og drift av it-systemer",
+          "kode": "62.200"
+        },
+        "employees": null
+      },
+      "after": [
+        {
+          "organisation_number": "913309472",
+          "name": "BLAASOPP AS",
+          "address": {
+            "adresse": [
+              "Buvikstranda 12"
+            ],
+            "kommune": "FREDRIKSTAD",
+            "kommunenummer": "3107",
+            "land": "Norge",
+            "landkode": "NO",
+            "postnummer": "1622",
+            "poststed": "GRESSVIK"
+          },
+          "nace": {
+            "beskrivelse": "Andre egeninvesteringsselskaper",
+            "kode": "64.323"
+          },
+          "employees": null
+        }
+      ],
+      "section_state": "available",
+      "errors": []
+    }
+  ],
+  "added_count": 41,
+  "duplicate_claim_ids": 0,
+  "material_changes": 0,
+  "observation_changes": 0
+}

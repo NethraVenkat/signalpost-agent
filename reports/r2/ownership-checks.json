@@ -1,0 +1,498 @@
+{
+  "source_sha": "27a3bb0cc2e4a9cf3802da6eaaec761da623a5c9",
+  "new_websites_total": 4,
+  "new_checked": 4,
+  "other_checked": 20,
+  "checked": 24,
+  "unresolved": 0,
+  "observed_mismatches": 0,
+  "scope": "Fresh website body reopening, not an independent audit of every role/account fact. Legacy HIGH registry-declared sites remain corroborated rather than exact-number verified.",
+  "checks": [
+    {
+      "orgnr": "988330752",
+      "claim_id": "eb13c32ba63ca593dc0bacfc71cbb8e6a9c021358f406a4e5a5751ebe1f03278",
+      "url": "https://www.filmtek.no/",
+      "expected_orgnr": "988330752",
+      "identity_level": "HIGH",
+      "new_claim": true,
+      "http_status": 200,
+      "sha256": "494c94df5e06889d4967227744fcf88777d7cb9d90772bc9600ed80b05f748e9",
+      "final_url": "https://www.filmtek.no/",
+      "title": "Filmtek – profesjonell digitalisering av film og video",
+      "owner_excerpt": "ilformat og eventuell restaurering avtales for oppdraget. \n         \n         \n           \n           \n           \n           \n         \n         \n           Leveranse Filer tilpasset bruken \n           \n             Arkiv og bevaring Masterfiler i avtalt oppløsning og kodek. Eventuell bildebehandling avklares separat. \n             Produksjon og TV Arbeidsfiler til etterarbeid, med avtalt utsnitt og lydoppsett. \n             Museer og visning Visningsfiler til utstilling og publisering, tilpasset avspillingsløsningen. \n           \n           Leveranse via nedlasting eller fysisk lagringsmedium, etter avtale. \n         \n       \n     \n\n\n     \n       \n         \n           Kontakt Filmtek \n           Be om tilbud på digitalisering \n           Send en kort beskrivelse av prosjektet til post@filmtek.no, eller ring oss for å avklare behovet. \n           \n             +47 909 26 121 \n             post@filmtek.no \n           \n         \n         \n           Dette trenger vi for å gi et tilbud \n           \n             Materiale og mengde Format, antall spoler eller kassetter, og spilletid hvis kjent. \n             Bruk og leveranse Bevaring, produksjon eller visning. Oppgi eventuelle tekniske krav. \n             Tidsplan Ønsket ferdigstillelse og eventuell prosjektfrist. \n           \n           Be om tilbud på e-post  \n           Usikker på formatet? Legg gjerne ved et bilde av materialet i e-posten. \n         \n       \n     \n   \n\n   \n     \n       \n         \n           \n           Digitalisering av film og video for produksjon, TV, arkiv og museer. \n         \n         Navigasjon Tjenester Arbeidsflyt Formater \n         Besøk / kontakt Harald Gilles vei 2 4633 Kristiansand S 909 26 121 post@filmtek.no \n       \n       ©   Filmtek AS. Alle rettigheter reservert. \n     \n   \n\n   \n \n \n",
+      "orgnrs": [],
+      "exact_number_reopened": false,
+      "result": "registry_declaration_and_current_high_corroboration",
+      "registry_legal_name": "FILMTEK AS",
+      "registry_domain": "www.filmtek.no",
+      "corroboration_signals": [
+        "legal_name",
+        "address",
+        "registry_website",
+        "municipality"
+      ],
+      "review_result": "registry_declaration_and_current_high_corroboration"
+    },
+    {
+      "orgnr": "979384378",
+      "claim_id": "1c1f3be75ad4b9c227da979841d7ae08a7398ec5ef633957206311227512d222",
+      "url": "https://altinstallasjon.no/",
+      "expected_orgnr": "979384378",
+      "identity_level": "VERIFIED",
+      "new_claim": true,
+      "http_status": 200,
+      "sha256": "5fa5f5265971a0c6a4b1bf695fe19f4d792f1a1802f612ca317df1db13505bb2",
+      "final_url": "https://altinstallasjon.no/",
+      "title": "ALT Installasjon - Din elektriker i Vestfold",
+      "owner_excerpt": "\n         \n         \n             \n             \n                 \n                   Kundeservice Meny Din elektriker i Vestfold \n ALT Installasjon leverer alt du trenger av elektrikertjenester for privat og bedriftsmarkedet. Vi er en ambisiøs elektrikerbedrift som kan hjelpe deg med alt fra el-kontroll/boligkontroll og belysning, til energirådgivning, varme og solcelle. \n Om oss Kontakt oss Energirådgivning for bedrift \n Hjemmelading av elbil \n Smarte løsninger med ALT+ \n ALT om bedrift \n Gratis befaring Skal du pusse opp, bytte ut det elektriske anlegget eller se på noen andre el-prosjekter? Våre elektrikere kommer hjem til deg for en vurdering og et tilbud på jobben.   Bestill gratis befaring Spar strøm med StrømKontroll™ Med strømstyring fra Futurehome får du en komplett løsning for strømstyring, som kvalifiserer deg til å søke støtte fra Enova.  \n Les mer og bestill installasjon Våre tjenester   24-timers service Termografering Internkontroll Prosjektering Energirådgivning Serviceavtale Trenger du pris på et prosjekt? \n Ta kontakt med vår kalkulasjonsavdeling! Vi gir pris på alle type prosjekter. \n Ring oss  på telefonnummer  33 06 10 20   \n eller  send oss en mail  på  kalkulasjon@altinstallasjon.no    \n Våre flinke prosjektarbeidere står parate til å hjelpe deg med det du trenger utført. \n \n \n Alt om prosjektering Kontakt oss \n \n \n   Trustpilot \n \n Kontakt ALT Installasjon 33 06 10 20 foresporsel@altinstallasjon.no Hjelp Om oss Personvernerklæring Informasjonskapsler 24-timers service Leasing ALT INSTALLASJON AS Organisasjonsnummer: 979 384 378 Skaugveien 2, 3178 Våle Smartløsninger Solcellepanel Smarthus Byggautomasjon for bedrift Snarveier Facebook LinkedIn Instagram YouTube \n                 \n           \n           \n         \n       \n    ",
+      "orgnrs": [
+        "979384378"
+      ],
+      "exact_number_reopened": true,
+      "result": "exact_number_present",
+      "review_result": "exact_number_present"
+    },
+    {
+      "orgnr": "932688573",
+      "claim_id": "271908a70e44d1ddce259b989fffc11314630aee719eb0313fd949615f98a33c",
+      "url": "https://treblasstudio.no/kontakt-oss/",
+      "expected_orgnr": "932688573",
+      "identity_level": "VERIFIED",
+      "new_claim": true,
+      "http_status": 200,
+      "sha256": "83860614871935c15c5fe27e79ec68dc69b466994fc677651291eb0cab49699e",
+      "final_url": "https://treblasstudio.no/kontakt-oss/",
+      "title": "Kontakt oss - Treblås Studio AS",
+      "owner_excerpt": "\t\n\t\t\t \n\n\t\t\t\t\n\t\n\t \n\n\t\t\n\t\t \n\n\t\t\t\n\t\t\t \n\n\t\t\t\t\n\t\t\t\t\n \n\n\t\t\t\t\n\t\t\t \n\n\t\t\t\n\t\t \n\n\t\t\n\t \n\n\t\n\r\n\t \r\n\r\n\t\r\n\t\r\n\t\t\t \n\t\t\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t\t \n\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t \n\t\t\t\t\t\t\t \n\t\t\t \n\t\t \n\t\t\t\t\t\t \n\t\t\t\t \n\t\t\t\t\t \n\t\t \n\t\t\t\t\t \n\t\t \n\t\t\t\t \n\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t \n\t\t\t\t\t \n\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t \n\t\t\t\t\t Musikkbutikk  og  verksted  for alle \t\t\t\t \n\t\t\t\t \n\t\t\t\t \n\t\t\t\t \n\t\t\t\t\t\t\t \n\t\t\t \n\t\t \n\t\t\t\t\t\t \n\t\t\t\t \n\t\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t\t \n\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t \n\t\t\t\t\t\t\t\t\t Har du et instrument som trenger vedlikehold, overhaling eller justering? \t\t\t\t\t\t\t\t \n\t\t\t\t \n\t\t\t\t \n\t\t\t\t \n\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t Snakk med oss \n\t\t\t\t\t \n\t\t\t\t\t \n\t\t\t\t \n\t\t\t\t\t\t\t\t \n\t\t\t\t \n\t\t\t\t\t \n\t\t \n\t\t\t\t\t \n\t\t \n\t\t\t\t\t \n\t\t \n\t\t\t\t \n\t\t\t \n\t\t\t\t\t\t\t \n\t\t \n\t\t\t\t\t \n\t\t \n\t\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t\t \n\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t\t \n\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t \n\t\t\t\t\t \n\t\t \n\t\t\t\t \n\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t \n\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t \n\n\t\t\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t \t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t +47 977 76 943 \n\t\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t \n\n\t\t\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t \t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t info@treblasstudio.no \n\t\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t \n\n\t\t\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t \t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t treblasstudio \n\t\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t \n\n\t\t\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t \t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t Industrigata 47 OSLO \n\t\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t \n\t\t\t\t\t \n\t\t \n\t\t\t\t\t \n\t\t \n\t\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t\t \n\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t \n\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t Treblås Studio AS - 2026  | Nettsted utviklet hos  Oslo Webdesign AS\n \n\t\t\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t \n\t\t\t\t\t \n\t\t \n\t\t\t\t\t \n\t\t \n\t\t\t\t\t \n\t\t \n\t\t\t\t\t \n\t\t \n\t\t\t\t \n\t\t\r\n\t\r\n \r\n\r\n\r\n \r\n\r\n\r\n\n \n\r\n\r\n\n \n\t \n\t\t \t\t Lukk meny \n\t \n \n\r\n\t\n\t \n\n\t\t Startside \n Produkter \n \n\t Klarinetter \n\t Saksofoner \n\t Andre instrumenter \n\t Rekvisita \n\t Produktliste \n \n \n Verksted \n Om oss \n Kontakt oss \n \n\t \n\n\r\n\t\r\n\r\n \n\t\t\t \n\t\t\t \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \r\n \r\n",
+      "orgnrs": [],
+      "exact_number_reopened": true,
+      "result": "exact_number_present",
+      "review_result": "exact_number_present"
+    },
+    {
+      "orgnr": "936887902",
+      "claim_id": "92f29d9ada8a5c4bf7457ebf37a01ae2efbafedb3af543d5467ba0bf78a95e26",
+      "url": "https://wahlbergarchive.com/policies/contact-information",
+      "expected_orgnr": "936887902",
+      "identity_level": "VERIFIED",
+      "new_claim": true,
+      "http_status": 200,
+      "sha256": "af7dee6f3389913987d757d756a7e1312de6db40cb4f44bf0a4e656a776301fe",
+      "final_url": "https://wahlbergarchive.com/policies/contact-information",
+      "title": "\n  Contact information\n – WÅHLBERG ARCHIVE",
+      "owner_excerpt": "             Tiktok \n            \n               \n            \n           \n         \n      \n    \n  \n    \n\n    \n    \n  \n    \n\n    \n    \n  \n    \n\n    \n    \n  \n    \n\n    \n    \n  \n    \n\n    \n    \n  \n    \n\n    \n    \n  \n    \n\n    \n    \n  \n    \n\n    \n    \n  \n    \n\n    \n    \n  \n \n\n\n\n\n\n   \n \n\n\n\n\n \n\n \n \n   \n\n Visa \n Apple Pay \n Google Pay \n Klarna Mastercard \n PayPal \n   \n     \n   \n \n \n\n\n \n \n     \n\n     \n\n \n\n \n   \n     \n      Search\n     \n     \n       \n         \n           \n             Search \n             \n             \n             \n               \n\n             \n             \n           \n           \n             \n               \n   \n   \n \n\n             \n           \n         \n\n         \n           \n            \n\n \n  \n     \n      \n      \n        \n        \n        \n           \n  \n     \n      Products\n     \n     \n      \n      \n         \n          \n \n   \n     \n      Cream Overshirt\n     \n   \n   \n      \n      \n\n         \n\n           \n \n\n   \n     Cream Overshirt \n\n    \n       \n  \n    \n    \n\n    \n       1.499,00 NOK \n    \n\n    \n  \n \n    \n   \n \n\n         \n      \n         \n          \n \n   \n     \n      Khaki Overshirt\n     \n   \n   \n      \n      \n\n         \n\n           \n \n\n   \n     Khaki Overshirt \n\n    \n       \n  \n    \n    \n\n    \n       1.499,00 NOK \n    \n\n    \n  \n \n    \n   \n \n\n         \n      \n         \n          \n \n   \n     \n      Navy Overshirt\n     \n   \n   \n      \n      \n\n         \n\n           \n \n\n   \n     Navy Overshirt \n\n    \n       \n  \n    \n    \n\n    \n       1.499,00 NOK \n    \n\n    \n  \n \n    \n   \n \n\n         \n      \n     \n  \n \n\n\n\n        \n      \n     \n  \n \n\n           \n\n           \n             \n              View all\n             \n           \n         \n       \n     \n   \n \n\n\n\n\n    \n       \n   \n     \n   \n   \n \n \n\n     \n   \n \n\n\n\n    \n    \n   \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n \n\n\n\n\n\n\n\n \n \n \n",
+      "orgnrs": [
+        "936887902"
+      ],
+      "exact_number_reopened": true,
+      "result": "exact_number_present",
+      "review_result": "exact_number_present"
+    },
+    {
+      "orgnr": "826440082",
+      "claim_id": "da2a99889b20949df7ab24a6f517d4159418271a9eadfbb37498c85aab0f3264",
+      "url": "https://jaerpukk.no/kontakt/",
+      "expected_orgnr": "826440082",
+      "identity_level": "VERIFIED",
+      "new_claim": false,
+      "http_status": 200,
+      "sha256": "2d5d08a69ae51a24e45798fb533d4ee6c44e12545c0fa02adade8296d83af728",
+      "final_url": "https://jaerpukk.no/kontakt/",
+      "title": "Kontakt «  ",
+      "owner_excerpt": "         \n             \n                 \n     \n \n\n \n \n\n \n \n     \n         \n    \n     \n \n\n \n \n         \n         \n             \n             \n         \n         \n        \n         \n                 \n             \n                 \n             \n         \n                 \n    \n         \n             \n         \n \n \n\n \n \n \n \n\n \n \n \n \n\n \n     \n            \n             \n             \n                 \n                     \n                         \n                     \n                                     \n             \n             \n    \n             \n \n\n \n     \n     \n \n\n \n     \n     \n \n\n \n \n \n \n\n \n \n\n \n \n \n \n\n \n \n     \n    \n         \n                 \n\n         \n             \n                 \n\n                     \n                                         \n                    \n                     \n                                         \n\n                     \n                                         \n                    \n                     \n                    \t\n                     \n                    \n                     \n                                         Framside \n Nettbutikk \n \n\t Nettbutikk \n\t Levering \n\t Min konto \n\t Handlekurv \n\t Til kassen \n \n \n HMS \n Tjenester \n Produkter \n Om oss \n Kontakt \n                      \n\n                     \n                     \n                                                                     \n                     \n\n                     \n                                         \n                                             \n                     \n                    \n                     \n                    \t\n                     \n                    \n                 \n             \n         \n     \n \n \n\n \n \n \n\n \n \n\n \n\n\n \t \n\t \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n\n\t \n\t\n\t \n\t\n \n",
+      "orgnrs": [
+        "826440082"
+      ],
+      "exact_number_reopened": true,
+      "result": "exact_number_present",
+      "review_result": "exact_number_present"
+    },
+    {
+      "orgnr": "914558441",
+      "claim_id": "9ba0de8a0ba5054aac2cb65df1035f41c55268e5ba4f62bccb266e4b275971e2",
+      "url": "https://www.fje.no/",
+      "expected_orgnr": "914558441",
+      "identity_level": "VERIFIED",
+      "new_claim": false,
+      "http_status": 200,
+      "sha256": "0d10a083bbf0f102ccc43adf377cdef3039997dcd2d3663a554d89cd9e13e7bd",
+      "final_url": "https://www.fje.no/",
+      "title": "Fjordane Elektro",
+      "owner_excerpt": "\n\n \n \n \n\t\n \n     \n         \n     \n     \n         Forside \n         Tjenester \n         Offshore \n         Byggeplaner \n         Tips til oppussing \n         Garanti \n         Leverandører \n         Everk \n         Sakkyndig Driftsleder \n         Kontakt \n     \n \n\t \n\t \n\t\t \n\t\t\t Velkommen til Fjordane Elektro - Din lokale elektriker \n\t\t\t Våre åpningstider er: Måndag til Fredag 08:00 til 16:00. \n\t\t\t Telefon:   97 77 73 58 \n\t\t\t \n\t\t\t Vårt geografiske arbeidsområde er Sogn og Fjordane \n\t\t\t \n\t\t \n\t \n\t\n \n   \n     \n     Installatør \n       Øystein Hellerud \n       oystein.hellerud@fje.no \n       \n       Forespørsler kan sendes til: \n       post@fje.no \n       \n       Forretningsadresse: \n       Fjordane Elektro AS \n       Arnestad \n       6823 Sandane \n       \n       Org nr 914 558 441  \n     \n       Du kan finne oss her: \n       \n     \n     \n       Fjordane Elektro AS er medlem av   \n     \n   \n \n \n \n",
+      "orgnrs": [
+        "914558441"
+      ],
+      "exact_number_reopened": true,
+      "result": "exact_number_present",
+      "review_result": "exact_number_present"
+    },
+    {
+      "orgnr": "922865493",
+      "claim_id": "e599e939261ccea1c25a7749d9163e6605ba02cc7099af1590deb4152df493b9",
+      "url": "https://www.resetaqua.no/",
+      "expected_orgnr": "922865493",
+      "identity_level": "VERIFIED",
+      "new_claim": false,
+      "http_status": 200,
+      "sha256": "63a3840afa69cc7ba4cb99def99e0f09b7690b0f8300d167880ed021d3e86f76",
+      "final_url": "https://www.resetaqua.no/",
+      "title": "reset aqua",
+      "owner_excerpt": "   \n            \n\n\n \n\n \n \n   \n     \n     \n     \n       \n         \n         \n         \n       \n     \n   \n \n\n          \n          \n          \n          \n          \n         \n       \n     \n     \n     \n       \n       \n         \n           \n             \n               \n \n  \n    \n      \n        \n          \n             \n               \n                 \n                  Hjem\n                 \n               \n             \n          \n        \n      \n    \n      \n        \n          \n             \n               \n                 \n                  Prosjekt.\n                 \n               \n             \n          \n        \n      \n    \n      \n        \n          \n             \n               \n                 \n                  Om oss.\n                 \n               \n             \n          \n        \n      \n    \n      \n        \n          \n             \n               \n                 \n                  Kunnskap og erfaring.\n                 \n               \n             \n          \n        \n      \n    \n  \n \n\n              \n             \n            \n            \n            \n             \n               \n                Kontakt\n               \n             \n            \n           \n         \n       \n     \n    \n     \n   \n\n\n\n\n       \n        \n          \n            \n \n\n          \n\n          \n\n          \n            \n          \n        \n       \n      \n         \n  \n  \n  \n  \n  \n  \n    \n    \n\n\n  \n  \n\n\n\n\n\n\n\n\n\n\n\n \n   \n     \n    \n      \n    \n     \n   \n   \n     \n      \n      \n      \n      \n      \n      \n      \n      \n      \n      \n       \n  \n   PERSONVERN & COOKIES © Copyright 2020 Reset Aqua as  -  Alfabygget 1  -  5392 Storebø  -  Org.nr: 922 865 493 Vidar Vangen  -  +47 917 80 790  -   post@resetaqua.no \n\n\n  \n \n\n \n \n\n\n\n\n \n \n     \n  \n   \n  \n \n\n  \n \n\n      \n     \n\n     \n     \n\n   \n \n",
+      "orgnrs": [
+        "922865493"
+      ],
+      "exact_number_reopened": true,
+      "result": "exact_number_present",
+      "review_result": "exact_number_present"
+    },
+    {
+      "orgnr": "935903556",
+      "claim_id": "8bbee662169fe156ae6810130589d03f6e84eea1a7b4c5418c575144758d1fa3",
+      "url": "https://drapebeauty.no/policies/contact-information",
+      "expected_orgnr": "935903556",
+      "identity_level": "VERIFIED",
+      "new_claim": false,
+      "http_status": 200,
+      "sha256": "52b7fde08ad7df57a60bd4b8d7cea0de0b6bd6a4e70651c67fbda63da24b1387",
+      "final_url": "https://drapebeauty.no/policies/contact-information",
+      "title": "\n      Kontaktinformasjon\n – Dråpe beauty",
+      "owner_excerpt": "\n     \n   \n \n\n     \n\n     \n \n \n \n   \n             La oss holde kontakten! \n           \n             \n               \n               \n                 \n                   \n                   \n                    E-post\n                   \n                   \n                     \n \n                   \n                 \n           \n \n\n\n \n \n \n \n \n \n \n\n \n       \n         \n \n         Facebook \n       \n     \n       \n         \n \n         Instagram \n       \n     \n       \n         \n \n         TikTok \n       \n     \n       \n         \n \n         Snapchat \n       \n     \n \n       \n     \n       \n       \n             Betalingsmåter \n             \n                   American Express \n\n                 \n                   Apple Pay \n\n                 \n                   Google Pay \n\n                 \n                   Klarna \n                 \n                   Maestro \n                 \n                   Mastercard \n\n                 \n                   PayPal \n                 \n                   Shop Pay \n\n                 \n                   Union Pay \n                 \n                   Visa \n\n                 \n           \n     \n     \n       \n         © 2026,  Dråpe beauty \n         Drevet av Dråpe Beauty AS \n                   Personvernerklæring \n                 \n                   Retningslinjer for angrerett \n                 \n                   Vilkår for bruk \n                 \n                   Retningslinjer for frakt \n                 \n                   Kontaktinformasjon \n                 \n                   Juridisk merknad \n                 \n     \n   \n \n\n\n \n \n\n     \n\n     \n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n  \n     \n\n     \n\n     \n\n\n   \n\n \n     \n\n\n   \n\n \n\n    \n       \n\n\n   \n\n \n    \n\n    \n\n    \n\n     \n\n\n   \n\n \n     \n\n\n   \n\n \n\n    \n       \n\n\n   \n\n \n    \n\n\n\n\n \n \n \n",
+      "orgnrs": [
+        "935903556"
+      ],
+      "exact_number_reopened": true,
+      "result": "exact_number_present",
+      "review_result": "exact_number_present"
+    },
+    {
+      "orgnr": "933812634",
+      "claim_id": "a2348e6f1843bee39b7571d6d64aa4bf1818a68f78a910ab83ca193a616df1a9",
+      "url": "https://sydelektro.no/",
+      "expected_orgnr": "933812634",
+      "identity_level": "VERIFIED",
+      "new_claim": false,
+      "http_status": 200,
+      "sha256": "7214eb828fa488a7bed26f9a1c05eda45e7c6418d4a2e2d88af2312b30113b8a",
+      "final_url": "https://sydelektro.no/",
+      "title": "Syd Elektro AS",
+      "owner_excerpt": "lektrikere med mange års erfaring og høy kompetanse. Vi tilbyr elektrotjenester for privatkunder og bedrifter, fra Mandal i vest, til Lillesand i øst. Vi har elektriker i Vennesla og tar også på oss oppdrag på Hovden, Brokke og Bortelid. I tillegg har vi servicebåt og er tilgjengelig for oppdrag til sjøs. \n \n \n Våre elektrotjenester  \n \n \n \n Bolig Vi tilbyr alt fra servicearbeider, El-sjekk av boligen, smarthus, svakstrøm, solenergi, elbillading, strømsparing og belysning.  \n \n \n \n Prosjekt og næring Våre ansatte har erfaring fra prosjekter knyttet til nybygg og renovering av bolig, leilighetsbygg og næringsbygg. Vi tilbyr internkontroll og vedlikeholdsavtale.  Vårt team Anders Lossius Installatør / Elektriker 90 88 32 17 anders@sydelektro.no Stian Moy Holmesland Daglig leder / Elektriker 91 16 02 94 stian@sydelektro.no Fredrik Lytomt Elektriker 48 19 33 65 fredrik@sydelektro.no Mats Lohne Elektriker 92 21 64 23 mats@sydelektro.no Aleksander Enoksen Elektriker 46 88 76 82 aleksander@sydelektro.no Martin Arnø Elektriker 48 03 38 99 martin@sydelektro.no Daniel Øyri Elektriker 99 02 65 32 daniel@sydelektro.no Morten Olsen Elektriker 91 77 69 07 morten@sydelektro.no Sofie Aamodt Elektriker  97 12 21 81 sofie@sydelektro.no Eivind Jensen Elektriker 46 55 42 99 eivind@sydelektro.no Erlend Bakkevold Elektriker 48 14 67 85 Adrian E.L. Kristensen Lærling Benjamin Severinsen Lærling Leif Arne Lohne Lærling Mandag - Fredag 07:00 - 15:30 Lørdag - Søndag Stengt KONTAKT OSS Linnegrøvan 16, 4640 Søgne, Norway post@sydelektro.no +47 31 01 44 32 Fornavn Etternavn *   E-post *   Hva kan vi hjelpe deg med? *   some-randome-random   Friendly Captcha Org. nr 933812634 MVA \n                     \n                     \n                     \n                     \n                    \n           ",
+      "orgnrs": [
+        "933812634"
+      ],
+      "exact_number_reopened": true,
+      "result": "exact_number_present",
+      "review_result": "exact_number_present"
+    },
+    {
+      "orgnr": "846870792",
+      "claim_id": "91dc6d95d17b4ea98d6b54f147a9f2aba92d0b8c0c4b80064c85bd69bfcb1284",
+      "url": "https://www.allmaritim.com/",
+      "expected_orgnr": "846870792",
+      "identity_level": "VERIFIED",
+      "new_claim": false,
+      "http_status": 200,
+      "sha256": "3763121fa1bb194763fbd98df4825865495b14dcfca1d29a56a482ea82f7061b",
+      "final_url": "https://www.allmaritim.com/",
+      "title": "Hjem - AllMaritim",
+      "owner_excerpt": " \n\n\t\t \n\t\t\t\t\t\t \n\t\t\t\t \n\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t 30.08.2024 \n\t\t\t\t Ny Spill Kit Bag \n\t\t\t\t\t Vi lanserer vår nye oppgraderte ECOSORB Spill Kit Bag! \n\t\t\t\t \n\t\t \n\n\n     \n\n \n\t\t\t\t\t\n \n\t \n \t\t\t\t\t\n \n\t\n\t \n\n\t\n\t \n\t\n \t\t\t\t\t \n     \n        \n         \n                         \n                 \n                 Lokasjoner \n             \n            \n                     \n\n         \n\n         \n             NOFI Lokasjoner \n             | \n             \n                 \n                     \n                     \n                     \n                 \n                Klikk på markøren for mer informasjon\n             \n         \n\n     \n \n\n \n \n\t\t\t \n\t\n\n\n \n\n \n\n\n\n     \n    \n         \n        \n             \n\n\t\n\t\t                 \n                     AllMaritim AS \n Hillerenveien 82, 5174 Mathopen Org.nr: 846 870 792 \n                 \n\t\t                 \n                     Kontakt oss \n Tlf:  +47 5533 6160 E-post:  post@allmaritim.com \n                 \n\t\t                 \n                     Bærekraft Etiske retningslinjer Åpenhetsloven Personvern Sertifiseringer \n                 \n\t\t                 \n                     \n                 \n\t\t\t\n\t\n                 \n                     \n\t\t\t\t\t\t\t Facebook \n\t\n\t\n\t\t\t\t\t\t\t LinkedIn \n\t\n\t\n\t                     \n                 \n\n             \n        \n         \n        \n     \n    \n    \n     \n         \n            \n             \n            \n\t                 \n                     \n                 \n\n\t                 \n                     \n                 \n\n\t                 \n                     \n                 \n\n\t                 \n                     \n                 \n\n\t                 \n                     \n                 \n\n\t                 \n                     \n                 \n\n\t             \n            \n         \n     \n    \n \n \n \n \n \n \n\n\n \n",
+      "orgnrs": [
+        "846870792"
+      ],
+      "exact_number_reopened": true,
+      "result": "exact_number_present",
+      "review_result": "exact_number_present"
+    },
+    {
+      "orgnr": "998788870",
+      "claim_id": "21ab90da60d50d5f93a80e32b6acdc585aafb1a1e5b9de7a85c543a3c161df2a",
+      "url": "https://infoss.no/en/",
+      "expected_orgnr": "998788870",
+      "identity_level": "HIGH",
+      "new_claim": false,
+      "http_status": 200,
+      "sha256": "cf1504b75354242a4a390afde0e25afa6c803fa4c417e58efe65c5fd2a7228c2",
+      "final_url": "https://infoss.no/en/",
+      "title": "INFOSS AS - Information Security Services",
+      "owner_excerpt": "ustomization. Technical support 24x7. \n\t\t\t\t\t \n\t\t\t\t\t \n\t\t\t\t \n\t\t\t\t \n\t\t\t\t\t \n\t\t\t\t\t\t Virtual Private Networks \n\t\t\t\t\t\t A VPN supplies network connectivity over a possibly long physical distance. In this respect, a VPN is a form of Wide Area Network (WAN). VPNs enable file sharing, video conferencing and similar network services. Virtual private networks generally don't provide any new functionality that isn't already offered through alternative mechanisms, but a VPN implements those services more securely/efficiently in most cases. \n\t\t\t\t\t \n\t\t\t\t\t \n\t\t\t\t\t \n\t\t\t\t\t\t Public Key Infrastructure \n\t\t\t\t\t\t A public-key infrastructure (PKI) is a system for the creation, storage, and distribution of digital certificates which are used to verify that a particular public key belongs to a certain entity. The PKI creates digital certificates which map public keys to entities, securely stores these certificates in a central repository, and revokes them if needed. \n\t\t\t\t\t \n\t\t\t\t\t \n\t\t\t\t\t \n\t\t\t\t\t\t Mobile Device Management \n\t\t\t\t\t\t Mobile Device Management (MDM) software secures, monitors, manages and supports mobile devices deployed across mobile operators, service providers and enterprises. MDM functionality typically includes over-the-air distribution of applications, data and configuration settings for all types of mobile devices, including mobile phones, smartphones, tablet computers, ruggedized mobile computers, mobile printers, mobile POS devices, etc. \n\t\t\t\t\t \n\t\t\t\t \n\t\t\t \n\t\t \n\t \n\t\n\t \n\t\t \n\t\t\t \n\t\t\t\t Contacts \n\t\t\t\t \n\t\t\t \n\t\t\t \n\t\t\t\t \n\t\t\t\t\t Sales \n\t\t\t\t \n\t\t\t\t sales@infoss.no \n\t\t\t \n\t\t\t \n\t\t\t\t \n\t\t\t\t\t General information \n\t\t\t\t \n\t\t\t\t info@infoss.no \n\t\t\t \n\t\t\t \n\t\t\t\t \n\t\t\t\t\t Technical support \n\t\t\t\t \n\t\t\t\t support@infoss.no \n\t\t\t \n\t\t \n\t \n\t\n\t \n\t\t \n\t\t\t \n\t\t\t © INFOSS AS, 2012—2022 \n\t\t\t \n\t\t\t\t \n\t\t\t\t \n\t\t\t \n\t\t\t \n\t\t \n\t \n \n \n",
+      "orgnrs": [],
+      "exact_number_reopened": false,
+      "result": "manual_review_required",
+      "registry_legal_name": "INFOSS AS",
+      "registry_domain": "www.infoss.no",
+      "corroboration_signals": [
+        "legal_name",
+        "registry_website",
+        "municipality"
+      ],
+      "reviewed_current_signals": [
+        "legal_name",
+        "leader",
+        "registry_website",
+        "municipality"
+      ],
+      "matched_registry_leaders": [
+        "Maxim Izergin"
+      ],
+      "review_result": "registry_declaration_and_current_high_corroboration"
+    },
+    {
+      "orgnr": "924811315",
+      "claim_id": "da866e498644ed1830f552543c1b113905649ea03f0e9ce8d3cb18ac7b8dc2ef",
+      "url": "https://athletix.no/",
+      "expected_orgnr": "924811315",
+      "identity_level": "VERIFIED",
+      "new_claim": false,
+      "http_status": 200,
+      "sha256": "962abe2581b84e0597f9d9815296e800dd0e605c7f243ff692adb488fc11a10a",
+      "final_url": "https://athletix.no/",
+      "title": "Athletix.no",
+      "owner_excerpt": " susanne@athletix.no      Telefon:  +47 45 49 47 87 \n\n\t\t \n\t \n \t\t\t\t\t\t\t\t\t \n\t\t\t \n\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t \n\t\t\t \n \n\t\t\t  \t\t\t\t\t \n\t\t\t\t\t  \t\t\t\t\t\t  \t\t\t\t\t\t  \t\t\t\t\t\t  \t\t\t\t\t\t  \t\t\t \n\t \n\t\t \n\t\t\t \n\t\t \n\t \n\n\t\n\t \n\t\t \n\t\t \n\n\t\t\n\t\t\n\t\t \n\t\t\t \n\t\t\t\tSearch\t\t\t \n\t\t\t\t\t \n\t \n\n\t \n\n\t\n\t\n\t\n\t\t\t \n\t\t\n\t\t\t Begynn å skrive for å se produktene du leter etter. \n\t\n\t \n \n\t\t\t\t  \t\t\t\n\t \n\t\t \n\t\t \n\n\t\t \n\n\t\t\n\t\t \n\t\t\t \n\t\t\t\tSearch\t\t\t \n\t\t\t\t\t \n\t \n\n\t\t\t \n\t\t\t \n\t\t\t\t \n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t \n\t\t\t \n\t\t \n\t\n \n\t\t\t\t \n\t\t\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\tMeny\t\t\t\t\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t\t \n\t\t\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\tKlubber\t\t\t\t\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t\t \n\t\t\t\t \n\t\t\t Lagbestilling \n Bobcats \n BSK Cheerleading Team \n Charmers \n Diamonds Cheersport \n FGT Lightning \n NRC Tigers \n North Nova \n OCT Galaxy \n Seahawks \n Storm Cheerleading \n Team Norway \n UGT Miracle \n Viqueens Cheerleaders \n West Coast Insanity Shop \n Butikk \n \n\t Sko \n\t \n\t\t NFINTIY \n\t\t Varsity \n\t \n \n\t Soffe Shortser \n\t Skilt til Cheerleading \n\t NM / Summit genser lagbestilling \n \n \n Hjem \n Om Athletix AS \n Kontakt oss \n \t\t\t \n\t\t\t\t Ønskeliste \n\t\t\t \n\t\t\t Login / Register \n\t\t \t\t\t  \t\t\t\t\t\t  \t\t\t\t\t\t \n\t\t\t\t \n\t\t\t\t\t Handlekurv \n\t\t\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\tLukk\t\t\t\t\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t\t \n\t\t\t\t \n\t\t\t\t \t\t\t \n\t\t\t\t\t \n\t\t\t\t \n\t\t\t\t\t Sign in \n\t\t\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\tLukk\t\t\t\t\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t\t \n\t\t\t\t \n\n\t\t\t\t\t\t\t\t\t \t\t\t\t\n\t\t\t\t\t\t\t \n\n\t\t\n\t\t\t\t \n\t\t\t\t\t No account yet? \n\t\t\t\t\t Create an Account \n\t\t\t\t \n\t\t\t \n\t\t\t\t\t  \t\t\t\t\t \n\t\t\t\t\t \n\t\t\t \n\t\t\t\t \n\t\t\t\t \n\t\t\t\t\tButikk\t\t\t\t \n\t\t\t \n\t\t \n\t\t\t\t \n\t\t\t \n\t\t\t\t \n\t\t\t\t\t\t\t\t\t \n\t\t\t\t \n\t\t\t\t\tØnskeliste\t\t\t\t \n\t\t\t \n\t\t \n\t\t\t\t \n\t\t\t \n\t\t\t\t \n\t\t\t\t\t\t\t 0  items \n\t\t\t\t\t\t \n\t\t\t\t \n\t\t\t\t\tHandlekurv\t\t\t\t \n\t\t\t \n\t\t \n\t\t\t\t \n\t\t \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n\t \n\t \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \t\t \n\t\t \n \n",
+      "orgnrs": [
+        "924811315"
+      ],
+      "exact_number_reopened": true,
+      "result": "exact_number_present",
+      "review_result": "exact_number_present"
+    },
+    {
+      "orgnr": "934797620",
+      "claim_id": "e3fee291eeb52edb3d3201e16789b76c2b613172c98a121ee99ca7346364bc34",
+      "url": "https://streamstix.no/",
+      "expected_orgnr": "934797620",
+      "identity_level": "VERIFIED",
+      "new_claim": false,
+      "http_status": 200,
+      "sha256": "1ed0315eca52224e3f1ece8bef61815e5e3828897b9b0827d2c39fb1a4942ebc",
+      "final_url": "https://streamstix.no/",
+      "title": "Streamstix",
+      "owner_excerpt": "              \n                             \n                         \n                     \n                     +4746440008 \n                 \n             \n        \n                     \n                 \n                     \n                         \n                             \n                             \n                         \n                     \n                    Rudssletta 85, 1351 RUD\n                 \n             \n             \n \n\n \n\n         \n             \n     \n                     \n                 \n                     \n                 \n             \n                     \n                 \n                     \n                 \n             \n                     \n                 \n                     \n                 \n             \n                     \n                 \n                     \n                 \n             \n                     \n                 \n                     \n                 \n             \n                     \n                 \n                     \n                 \n             \n             \n \n         \n     \n     \n     \n         \n             \n                 \n                     Powered by 24Nettbutikk \n                 \n             \n             \n                 \n                     \n                                                     \n                                Salgsbetingelser\n                             \n                                                     \n                                Cookies\n                             \n                                                     \n                                Sikkerhet og personvern\n                             \n                                             \n                 \n             \n         \n     \n \n \n \n\n             \n \n\n\n \n\n     \n\n \n",
+      "orgnrs": [
+        "934797620"
+      ],
+      "exact_number_reopened": true,
+      "result": "exact_number_present",
+      "review_result": "exact_number_present"
+    },
+    {
+      "orgnr": "940590698",
+      "claim_id": "e9df90069caae768f6da770b4985cd698373da770c59301284d5bcf169c7a844",
+      "url": "https://www.jbf.no/",
+      "expected_orgnr": "940590698",
+      "identity_level": "VERIFIED",
+      "new_claim": false,
+      "http_status": 200,
+      "sha256": "f51fbd6e43664183284f30f693f62a0f6b3fa284c4714c30d4cfb92e1451ac64",
+      "final_url": "https://www.jbf.no/",
+      "title": "JBF Bank og Forsikring",
+      "owner_excerpt": "                   \r\n                                 \r\n                                     Jobb hos oss \r\n                                 \r\n                             \r\n                     \r\n                 \r\n\r\n                     \r\n                         Priser \r\n                         Sammenlign våre priser med andre selskaper på  \r\n                         \r\n                                 \r\n                                     \r\n                                         \r\n                                            Finansportalen.no\r\n                                             \r\n                                         \r\n                                     \r\n                                 \r\n                                                             \r\n                                     \r\n                                         \r\n                                            Våre priser\r\n                                         \r\n                                     \r\n                                 \r\n                         \r\n                     \r\n             \r\n\r\n             \r\n                 \r\n                     \r\n                         Personvern og informasjonskapsler \r\n                     \r\n                 \r\n                     \r\n                             \r\n                                 Sikkerhet og antihvitvask \r\n                             \r\n                     \r\n                                 \r\n                         \r\n                             \r\n                                Banken vår er en alliansebank i  Eika \r\n                             \r\n                         \r\n                 \r\n             \r\n         \r\n     \r\n \n     \n    \n     \r\n     \r\n             \r\n             \r\n             \r\n     \r\n \n     \n \n\n",
+      "orgnrs": [
+        "940590698",
+        "982719445"
+      ],
+      "exact_number_reopened": true,
+      "result": "exact_number_present",
+      "review_result": "exact_number_present"
+    },
+    {
+      "orgnr": "998645964",
+      "claim_id": "a81c17b2b3de95e4ef763889f70187d4c1fbdde510945135da842ed779949034",
+      "url": "https://www.lmgmarin.no/",
+      "expected_orgnr": "998645964",
+      "identity_level": "VERIFIED",
+      "new_claim": false,
+      "http_status": 200,
+      "sha256": "6d51b501c1e6a17603c5b334efa8454b45fdc500edbb727fd77cb2b0e0d82fb3",
+      "final_url": "https://www.lmgmarin.no/",
+      "title": "Home | Lmg Marin",
+      "owner_excerpt": "\n \n \n\n \n \n\n\t \n\t \n\n\t\t Skip to content \n\n\n\n                 \n\n\n\n         \n\t\t\t\tMain Navigation\t\t\t \n\n\n\t\t\t\t\t \n\t\t\t\t\t \n\n                 \n                     \n                         \n                     \n                 \n\n                 \n\n\t\t\t\t \n\t\t\t\t Home \n References \n Designs \n About us  \n \n\t About us \n\t What we do \n \n \n News \n Contact \n \n\n\t\t \n\n\t \n\n \n\n\t \n\n\t\t \n\n\t\t\t \n\t\t\t\n\n \n\n\t\t\t \n\n\t\t\t\t\n\t\t\t\t\t\n \n\n\t\t\t\t\t\n\t\t\t\t\n\t\t\t \n\n\t\t\t \n\t\t\t\n \n\n\n\n\t\n\n\t\t \n\n\t \n\n \n\n\n\n\n\t \n\n\t \n\n\t\t \n\n\t\t\t \n\n\t\t\t\t \n\t\t\t \n\t\t\t\t \n\t\t\t\t\n\t\t\t Contact \n\t \n\t\t \n\t\t\t Adresse:  Damsgårdsveien 14 \n Epost:   \n Telefon: (+47) 55 59 40 00 \n Org. nr: 998 645 964 \n Transparency Act Reporting \n\n\t\t \n\t \n Sitemap \n\t \n\t\t \n\t\t\t Home \n About us \n Contact \n Personvern \n\n\t\t \n\t \n Follow us \n\t \n\t\t\n\t\t \n\t\t\t \n\t\t \n\t \n \n \n\t\t\t \n\n\t\t \n\n\t \n\n\n \n\n\t \n\n\t\t \n\n\t\t\t \n\n\t\t\t\t \n\n\t\t\t\t\t \n\n\t\t\t\t\t\t  ©  Lmg Marin    Personvern  |  Mint Media AS \n\t\t\t\t\t \n\n\t\t\t\t \n\n\t\t\t \n\n\t\t \n\n\t \n\n \n\n \n\n \n Vi bruker informasjonskapsler på nettstedet vårt for å gi deg den mest relevante opplevelsen ved å huske dine preferanser. Ved å klikke “Godta”, samtykker du i bruken av alle informasjonskapslene. Cookie instillinger Godta \n \n \n \r\n \r\n \r\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n\n \n\n",
+      "orgnrs": [
+        "998645964"
+      ],
+      "exact_number_reopened": true,
+      "result": "exact_number_present",
+      "review_result": "exact_number_present"
+    },
+    {
+      "orgnr": "915573290",
+      "claim_id": "19e3240dec14e0034da2b53e8a5564fd620aef8adafbf0506c5f3dace2a0322e",
+      "url": "https://trolltungacamping.no/",
+      "expected_orgnr": "915573290",
+      "identity_level": "HIGH",
+      "new_claim": false,
+      "http_status": 200,
+      "sha256": "58ecb59aedfdfc673c8acff164e6b76002dc57c65cb8b61e73e5b4f9b1e5a7bb",
+      "final_url": "https://trolltungacamping.no/",
+      "title": "Forside - Trolltunga Camping",
+      "owner_excerpt": "\t\t\t\t\t\t\t\t\t\t\t\t \r\n\r\n\t\t\t\t \r\n\t\t\t \r\n\t\t\t\t\t\t \r\n\r\n\t\t\t \r\n\t\t\t\t\t \r\n\t\t\t \r\n\t\t\t\t \r\n\t\t\t\t \r\n\t\t\t\t\t \r\n\t\t\t\t \r\n\t\t\t\t \r\n\t\t\t\t \r\n\t\t\t\t\t\r\n\t\t\t\t\t \r\n\t\t\t\t\t\t Camping \n Bobilcamp \n Våre enheter \n \n\t Alle enheter \n\t Leilighet 5 personer \n\t Leilighet 4 personer \n\t Hytte 5 personer \n\t Hytte 2 personer \n\t Rom 3 personer \n\t Rom 2 personer \n\t Rom 2 personer – økonomi \n\t Rom 1 person – økonomi \n \n \n Aktiviteter \n Trolltunga \n Bilder \n Kontakt \n Booking \n \n \t\t\t\t\t \r\n\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t \r\n \t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t \r\n\t\t\t\t \r\n\r\n\t\t\t \r\n\t\t \r\n\t\t\t\t\t\t \r\n\r\n\t\t\t\t\t\t \r\n\t\t\t\t \r\n\t\t\t\t\t \r\n\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t         Enter your text here            \t\t\t\t\t\t \r\n\t\t\t\t\t \r\n\t\t\t\t \r\n\t\t\t \r\n\t\t\t\t\t\t\t \r\n\t\t\t\t \r\n\t\t\t\t\t \r\n\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t \r\n\t\t\t\t\t \r\n\t\t\t\t \r\n\t\t\t \r\n\r\n\t\t\t \r\n\t\t\t\t \r\n\t\t\t\t\t \r\n\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t \r\n\t\t\t\t\t \r\n\t\t\t\t \r\n\t\t\t \r\n\r\n\t\t\t \r\n\t\t\t\t \r\n\t\t\t\t\t \r\n\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t \r\n\t\t\t\t\t \r\n\t\t\t\t \r\n\t\t\t \r\n\t\t\t\t\t\t \r\n\t\t\t \r\n\t\t\t\t \r\n\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t \r\n\t\t \r\n\t\t\t\t\t \r\n\t\t\t\t \r\n\t\t\t \r\n\t\t \r\n\t\t\t\t\t\t \r\n\t\t\t \r\n\t\t\t\t \r\n\t\t\t\t\t \r\n\t\t\t\t\t\t\n\t \n\t\t\n\t\t\t\t \n\t\t\t\t \n\n\t\t\t\t\t Logg inn på Trolltunga Camping \n\n\t\t\t\t\t \n\n\t\t\t\t\t\t \n\t\t\t\t\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t Logg inn \n\t\t\t\t\t\t\t Mistet passord? \n\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\t \t\t\t\t\t \n\t\t\t\t\t \n\t\t\t\t \n\n\t\t\t\t \n\t\t\t\t \n\n\t\t\t\t\t Tilbakestill passord \n\t\t\t\t\t Skriv inn brukernavnet eller e-postadressen du brukte i profilen din. En lenke for tilbakestilling av passord vil bli sendt til deg på e-post. \n\n\t\t\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t Få nytt passord \n\t\t\t\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t\t\t\t Har du allerede en konto?\t\t\t\t\t\t\t\t Logg inn \n\t\t\t\t\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t\t\t \t\t\t\t\t \n\t\t\t\t\t \n\t\t\t\t \n\t \n\t\t\t\t\t \r\n\t\t\t\t \r\n\t\t\t \r\n\t\t \r\n\t\t\t\t\r\n\t\t\t\r\n\t\t\t\t\t\t \r\n\t\t\t\t \r\n\t\t\t\t\t \r\n\t\t\t\t \r\n\t\t\t \r\n\t\t\t\t\t   \r\n\t\t\t\t\t   \r\n\t\t\t\t \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \t \r\n \r\n",
+      "orgnrs": [],
+      "exact_number_reopened": false,
+      "result": "registry_declaration_and_current_high_corroboration",
+      "registry_legal_name": "TROLLTUNGA CAMPING AS",
+      "registry_domain": "www.trolltungacamping.no",
+      "corroboration_signals": [
+        "legal_name",
+        "address",
+        "registry_website"
+      ],
+      "review_result": "registry_declaration_and_current_high_corroboration"
+    },
+    {
+      "orgnr": "995873656",
+      "claim_id": "43711b203127ef93071e4c0bc4a1e1e1eac26863237bf8a81a6c85f173071263",
+      "url": "https://www.stenholm.no/",
+      "expected_orgnr": "995873656",
+      "identity_level": "VERIFIED",
+      "new_claim": false,
+      "http_status": 200,
+      "sha256": "09f286336b1eb65481916982d606df52fbdff0dc1a88d74bd148e68a2b870dd1",
+      "final_url": "https://www.stenholm.no/",
+      "title": "STENHOLM ",
+      "owner_excerpt": "       \n                      \n\n\n     \n       TJENESTER \n     \n  \n\n\n\n     \n       FILOSOFI \n     \n  \n\n\n\n     \n       OM \n     \n  \n\n\n\n     \n       KONTAKT \n     \n  \n\n\n\n\n                     \n                   \n                 \n              \n              \n             \n          \n            \n\n\n \n\n \n \n   \n     \n     \n     \n       \n         \n         \n         \n       \n     \n   \n \n\n          \n          \n          \n          \n         \n       \n     \n     \n     \n       \n       \n         \n           \n             \n               \n \n  \n    \n      \n        \n           \n             TJENESTER \n           \n        \n      \n    \n      \n        \n           \n             FILOSOFI \n           \n        \n      \n    \n      \n        \n           \n             OM \n           \n        \n      \n    \n      \n        \n           \n             KONTAKT \n           \n        \n      \n    \n  \n \n\n              \n             \n            \n            \n            \n           \n         \n       \n     \n    \n     \n   \n\n\n\n\n       \n        \n          \n             \n\n          \n\n          \n\n          \n            \n          \n        \n       \n      \n         \n  \n  \n  \n  \n  \n  \n    \n    \n\n\n  \n  \n\n\n\n\n\n\n\n\n\n\n\n \n   \n     \n    \n      \n    \n     \n   \n   \n     \n      \n      \n      \n      \n      \n      \n      \n      \n      \n      \n       \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n  \n  \n   \n     \n       \n        \n          \n  \n      \n        \n        \n        \n  \n   \n    \n      \n         \n          \n  \n  \n  \n  \n  \n  \n   \n  \n    \n  \n   \n\n         \n      \n    \n   \n  \n  \n  \n\n\n      \n    \n      \n         \n      \n    \n  \n\n        \n       \n     \n     \n     \n\n    \n\n\n\n   \n\n \n  \n   Bygdøy allé 2 0257 Oslo Org nr: 995 873 656 + 47 977 24 000 glenn@stenholm.no \n\n\n  \n \n\n \n \n\n\n\n\n \n \n     \n  \n   \n  \n \n\n  \n \n\n      \n     \n\n     \n     \n\n   \n \n",
+      "orgnrs": [
+        "995873656"
+      ],
+      "exact_number_reopened": true,
+      "result": "exact_number_present",
+      "review_result": "exact_number_present"
+    },
+    {
+      "orgnr": "980520218",
+      "claim_id": "b0d864130188454245c28b9e9d3246c3572b014829925af2fe5a2b4a2783790a",
+      "url": "https://dittklubbhus.no/",
+      "expected_orgnr": "980520218",
+      "identity_level": "VERIFIED",
+      "new_claim": false,
+      "http_status": 200,
+      "sha256": "43eeebc1e9aac5ab3f7a12c94e2a673e876fa2efcc463872799b340cde8409e4",
+      "final_url": "https://dittklubbhus.no/",
+      "title": "Hjem - Ditt Klubbhus",
+      "owner_excerpt": " \n Stor og bred parkering på Revetal sørger for enkel ankomst uten kostnader. \n 1500M² EKTE SPORT \n Vi har alle de beste merkevarene. Spør oss om ditt behov. \n SERVICE OG EKSPERTISE \n Vårt fokus på service og ekspertise er din trygghet. Vi hjelper deg finne den beste løsningen. \n KLUBBRABATT \n Alle medlemmer i avtaleklubben nyter godt av spesialpriser på  alle  varer i butikk – ikke bare klubbutstyr. Spør oss om kundeklubb/QR-kode. \n FÅ ET \n FORSPRANG \n Er du på jakt etter en samarbeidspartner på klubbtøy og utstyr? Om du er involvert i et idrettslag, bedriftsidrettslag, klubb, lag eller forening, finner vi gode løsninger sammen med deg. Slik får dere alle forutsetningene til å prestere best mulig med riktig tøy og utstyr. \n TA KONTAKT \n\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\t \n\t \n\t\t\t\t\t\t\n\t\t\t\t\t    \n\t\t\t\t    \n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t SPØRSMÅL? \n SPØR OSS \n TA KONTAKT \n DITT KLUBBHUS AS Torggata 3 \n3174 Revetal \n(+47) 33 06 26 00 \npost@dittklubbhus.no \nOrg. nr: 980 520 218 \n DITT KONTOR AS Revetalgata 4 \n3174 Revetal \n(+47) 33 30 67 67 \npost@dittkontor.no \n Nettside \n DITT GRAFISK AS Revetalgata 2 \n3174 Revetal \n(+47) 33 74 04 04 \npost@dittgrafisk.no \n Nettside \n BRÅKMAKER AS Trondheimsveien 2 \n0560 Oslo \n(+47) 952 12 738 \nhei@brakmaker.no \n Nettside \n Salgsvilkår \n © Copyright 2026   |   Levert av  Ditt Grafisk \n \n \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t   \n\t\t   \n\t\t\t\t \n\n\t\t \n\t\t\t \n Vi er opptatt av våre brukeres personvern og sørger for at all behandling av personopplysninger skjer i henhold til gjeldende lovgivning. Klikk her for å lese vår  personvernerklæring Godta \n \n \n \t \n\t \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n\t\t \n\n\t\t\t \n\t\t \n\t\t\t Gå til toppen \n\n\t\t\t\t\t \n\t \n\t\t \n \n\n",
+      "orgnrs": [
+        "980520218"
+      ],
+      "exact_number_reopened": true,
+      "result": "exact_number_present",
+      "review_result": "exact_number_present"
+    },
+    {
+      "orgnr": "934336798",
+      "claim_id": "a0c6b9fa643db0b840b30ef4c83886bc9b6b9256e6a6760e59bb01c609eb364d",
+      "url": "https://lumenai.no/about",
+      "expected_orgnr": "934336798",
+      "identity_level": "VERIFIED",
+      "new_claim": false,
+      "http_status": 200,
+      "sha256": "db3ffc8ad79028fbb50487468328c6be2c9024be98eb97f51806c679e47e4058",
+      "final_url": "https://lumenai.no/about",
+      "title": "Lumenai - Innovative AI Solutions",
+      "owner_excerpt": "Lumenai Products Innovation About Try VeloWear About Lumenai Lumenai AS is a Norwegian technology company founded with a vision to illuminate the path forward through artificial intelligence. We create AI solutions that make a real difference, bringing light and clarity to complex problems through intelligent technology. Based in Oslo, Norway, we're building innovative products that transcend geographical boundaries. Precision We build AI solutions with surgical precision, focusing on real-world impact and measurable results. Innovation Constantly pushing boundaries, we transform cutting-edge research into practical applications. Human-Centric Our AI enhances human capabilities rather than replacing them, creating symbiotic relationships. Global Impact From Norway to the world, we're building AI solutions that transcend geographical boundaries. Our Journey VeloWear.ai represents our first step into the AI solutions market, demonstrating our ability to identify real-world problems and solve them with elegant artificial intelligence. As a private limited company registered in Norway, we're committed to developing more innovative products that push the boundaries of what's possible with AI technology. Registered in Norway (Org. 934 336 798 MVA) AI-First Approach Global Vision Lumenai Illuminating tomorrow with intelligent AI solutions. From smart cycling gear to enterprise applications, we're building the future today. Norway Products VeloWear.ai More products coming soon Company About Us Innovation Privacy Policy Contact ©  2026  Lumenai. All rights reserved. Illuminating the future with AI. \n",
+      "orgnrs": [
+        "934336798"
+      ],
+      "exact_number_reopened": true,
+      "result": "exact_number_present",
+      "review_result": "exact_number_present"
+    },
+    {
+      "orgnr": "964795037",
+      "claim_id": "ce2adb625913baf9fdbc14a22aebd70dbd188f0d60cd4bc898ddba7cd741e23d",
+      "url": "https://www.cartagena.no/",
+      "expected_orgnr": "964795037",
+      "identity_level": "VERIFIED",
+      "new_claim": false,
+      "http_status": 200,
+      "sha256": "5b35875b1a8c4e8de33608c7f0ab9c8ef805e78b72747b7b2ee94b64b7822844",
+      "final_url": "https://www.cartagena.no/",
+      "title": "CRM-eksperter på Microsoft Dynamics 365 - Cartagena AS",
+      "owner_excerpt": " 1. januar 2027. Fordi dataene allerede ligger i Dataverse, er dette i praksis en skjemamigrering innenfor samme plattform, ikke en plattformflytting. Organisasjoner som starter tidlig rekker en kontrollert overgang før innsamlingssesongen. \n           Kostnad og tidslinje for migreringen \n         \n         \n           Er Cartagena Microsoft-partner? \n           Ja. Cartagena er Microsoft Solutions Partner for Digital & App Innovation, og har levert på Microsoft-plattformen siden 2006. Statusen tildeles av Microsoft og måles på leveranseevne, sertifisert kompetanse og dokumenterte kundeprosjekter i reelle leveranser. \n         \n     \n   \n \n\n \n   \n     \n       09 / Ta kontakt \n       Start med en samtale om prosessene deres \n       Enten dere skal velge retning, rydde i det dere har, eller bygge nytt: første steg er en konkret prat med noen som har gjort det før. \n       Start en kartleggingsprat \n     \n     \n       Glenn-Robert Monsen CEO glenn-robert@cartagena.no +47 452 80 649 \n       Bjørn Lundell COO bjorn@cartagena.no +47 929 25 938 \n       Knut Eivind Handeland Grunnlegger & CFO knute@cartagena.no +47 906 97 989 \n       Morten Fari Salgssjef morten@cartagena.no +47 926 00 373 \n     \n     \n       Hovedkontor Oslo Norge +47 24 13 41 20 \n       Kontor Bergen Norge \n       Utviklingssenter Bangkok Thailand \n       Kontor Mumbai India · 15+ års partnerskap \n       Brukerstøtte support@cartagena.no LinkedIn · Cartagena AS \n     \n   \n \n\n \n\n \n   Snakk med en D365-rådgiver \n   Start en kartleggingsprat \n \n\n \n   \n     © 2026 Cartagena AS · Org.nr 964 795 037 \n     \n       D365-implementering \n       For medlemsorganisasjoner \n       CRM og CPQ for logistikk \n       Om Cartagena \n       Personvern \n       Fjernsupport (TeamViewer) \n       Til toppen ↑ \n     \n   \n \n\n \n \n \n \n",
+      "orgnrs": [
+        "964795037"
+      ],
+      "exact_number_reopened": true,
+      "result": "exact_number_present",
+      "review_result": "exact_number_present"
+    },
+    {
+      "orgnr": "994315404",
+      "claim_id": "09ef19c5317647a17a87731653cbad57934f2119fc7433affcb6062f5c42ff26",
+      "url": "https://www.brenneentreprenor.no/",
+      "expected_orgnr": "994315404",
+      "identity_level": "HIGH",
+      "new_claim": false,
+      "http_status": 200,
+      "sha256": "7404d5e1ce2da9faae24769f846dda2e7a18c9ec26f7592b8125732d7329f5f7",
+      "final_url": "https://www.brenneentreprenor.no/",
+      "title": "Byggentreprenør | Brenne Entreprenør AS | Møre og Romsdal",
+      "owner_excerpt": "for å møte deres behov og preferanser, og det vellykkede resultatet taler for seg selv. Les mer og se flere prosjekter Kundeomtaler Brenne Entreprenør AS har vært en flott aktør å forholde seg til. Vi har hatt et utmerket forhold i hele prosessen og de har levert etter våre ønsker med det mål for øyet at kunden står alltid først. Ole Sande \nCEO, Finefish Group Brenne Entreprenør AS har gjort en god jobb med de to byggene de har vært ansvarlig for hos oss. Vi kan anbefale dem til fremtidige kunder. Frode Erlandsen \nDaglig leder RIR Vikomar ønsket å benytte oss av det fremste i markedet og da ble det naturlig for oss å bruke Brenne Entreprenør AS. Dersom vi skulle ha lignende behov i fremtiden, vil vi på nytt bruke deres kompetanse og tjenester. Kristofer Reiten \nCEO, Vikomar AS Vi har bygget det mest moderne foredlingsbygget for laks i Norge og Brenne Entreprenør AS ble valgt fordi de kunne levere på øverste nivå. Vi er svært godt fornøyd med leveransene. Per Olav Mevold \nCEO, Vikenco AS Hjem: Testimonials Om oss Brenne Entreprenør AS ble stiftet i 2009 og leverer mange typer tjenester innenfor byggebransjen. Selskapet har stor kompetanse med hoved- og delentreprise for lager/industihaller og kontorlokaler for næringslivet.  \n\n ​ Les mer Kontakt Brenne Entreprenør AS \nHaugsetvegen 32, \n6230 Sykkylven E-post:  post@brenneentreprenor.no Telefon: 400 28 970 ©Brenne Entreprenør AS. Produsert av Tind Media bottom of page \n\n \n\n     \n     \n\n    \n         \n    \n\n     \n     \n\n\n \n \n \n \n \n\n\n \n\n    \n     \n\n    \n     \n\n    \n     \n\n    \n     \n\n\n\n\n\n   \n   \n   \n   \n   \n   \n   \n   \n\n\n \n \n\n \n\n \n \n\n \n\n\n \n\n\n \n \n \n \n\n \n\n \n\n     \n\n \n\n \n \n \n \n \n \n \n \n \n \n \n \n \n\n \n\n\n\n     \n     \n\n\n \n \n \n \n \n \n    \n         \n    \n\n    \n     \n\n\n\n\n\n\n\n     \n     \n    \n     \n     \n\n\n\n\n\n \n \n \n\n\n \n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n \n \n",
+      "orgnrs": [],
+      "exact_number_reopened": false,
+      "result": "registry_declaration_and_current_high_corroboration",
+      "registry_legal_name": "BRENNE ENTREPRENØR AS",
+      "registry_domain": "www.brenneentreprenor.no",
+      "corroboration_signals": [
+        "legal_name",
+        "address",
+        "registry_website",
+        "municipality"
+      ],
+      "review_result": "registry_declaration_and_current_high_corroboration"
+    },
+    {
+      "orgnr": "912636410",
+      "claim_id": "6981366037b4458726a8c46e3db6550bd4507429b529fbfe8722fe559d1e4250",
+      "url": "https://www.bako.no/",
+      "expected_orgnr": "912636410",
+      "identity_level": "VERIFIED",
+      "new_claim": false,
+      "http_status": 200,
+      "sha256": "086804e500a909afeaed737cb4114c6d010c79085146d81117894f3ad33da3c6",
+      "final_url": "https://www.bako.no/",
+      "title": "BAKO | Emballasje, pynt og utstyr til bakeri, konditori og servering",
+      "owner_excerpt": " på samtykker du til å motta e-post fra oss og godtar vilkårene i vår personvernerklæring.\n\t\t\t\t\t\t\t\t \n\t\t\t\t \n\t\t\t\t \n\t\t\t\t \n\t\t\t\t\t Følg oss \t\t\t\t \n\t\t\t\t \n\t\t\t\t \n\t\t\t\t \n\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t \n\t\t\t\t\t \n\t\t\t\t\t\t Facebook-f \n\t\t\t\t\t\t \t\t\t\t\t \n\t\t\t\t \n\t\t\t\t\t\t\t \n\t\t\t\t\t \n\t\t\t\t\t\t Instagram \n\t\t\t\t\t\t \t\t\t\t\t \n\t\t\t\t \n\t\t\t\t\t\t\t \n\t\t\t\t\t \n\t\t\t\t\t\t Linkedin \n\t\t\t\t\t\t \t\t\t\t\t \n\t\t\t\t \n\t\t\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t \n\t\t\t\t\t \n\t\t \n\t\t\t\t\t \n\t\t \n\t\t\t\t\t \n\t\t \n\t\t\t\t\t \n\t\t \n\t\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t\t \n\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t \n\t\t\t\t\t\t\t \n\t\t\t \n\t\t\t\t\t\t \n\t\t \n\t\t\t\t\t\t \n\t\t\t\t \n\t\t\t\t \n\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t \t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t \n\t\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t\t \n\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t \n\t\t\t\t\t\t\t\t\t Ansvarserklæring Personvern og informasjonskapsler \t\t\t\t\t\t\t\t \n\t\t\t\t \n\t\t\t\t\t \n\t\t \n\t\t\t\t\t \n\t\t \n\t\t\t\t\t \n\t\t \n\t\t\t\t\t \n\t\t \n\t\t\t\t \n\t\t\t \n \n     \n     \r\n \r\n\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t \n\t\t\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t\t \n\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t \n\t\t\t\t\t\t\t \n\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t Search \n\n\t\t\t\t\t\n\t\t\t\t\t \n\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSøk\t\t\t\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t \n\t\t\t \n\t\t \n\t\t\t\t\t\t \n\t\t\t\t \n\t\t\t\t\t \n\t\t \n\t\t\t\t\t \n\t\t \n\t\t\t\t \n\t\t\t\t \n\t\t\t\t\t \n\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t \n\t\t\t\t\t \n\t\t\t \n\t\t\t\t\t\t\t \n\t\t \n\t\t\t\t \n\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t \n\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t \n\t\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t\t \n\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t \n\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t \n\n\t\t\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t \t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t Søk \n\t\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t \n\t\t\t\t\t \n\t\t \n\t\t\t\t \n\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t \n\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t \n\t\t\t\t\t \n\t\t\t\t\t\t Facebook \n\t\t\t\t\t\t \t\t\t\t\t \n\t\t\t\t \n\t\t\t\t\t\t\t \n\t\t\t\t\t \n\t\t\t\t\t\t Instagram \n\t\t\t\t\t\t \t\t\t\t\t \n\t\t\t\t \n\t\t\t\t\t\t\t \n\t\t\t\t\t \n\t\t\t\t\t\t Youtube \n\t\t\t\t\t\t \t\t\t\t\t \n\t\t\t\t \n\t\t\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t \n\t\t\t\t\t \n\t\t \n\t\t\t\t\t \n\t\t \n\t\t\t\t\t \n\t\t \n\t\t\t\t\t \n\t\t \n\t\t\t\t \n\t\t\t\t\t \n\t\t\t\t \n\t\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t \n \n",
+      "orgnrs": [
+        "912636410"
+      ],
+      "exact_number_reopened": true,
+      "result": "exact_number_present",
+      "review_result": "exact_number_present"
+    },
+    {
+      "orgnr": "937893655",
+      "claim_id": "d0a5deee8322d25a1a6fa4007d6c374eaa3a0a7a8420ded408558a69f67796eb",
+      "url": "https://lillesands-sparebank.no/",
+      "expected_orgnr": "937893655",
+      "identity_level": "VERIFIED",
+      "new_claim": false,
+      "http_status": 200,
+      "sha256": "63a5aff5c7dbd7a3d261e952518b0ea1bf0ff77fb125a11472a787492e10fc43",
+      "final_url": "https://lillesands-sparebank.no/",
+      "title": "Lillesands Sparebank",
+      "owner_excerpt": "tilbud \t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t\t \n\n\t\t\t\t\t\n\t\t\t\t\t\t\t \n\n\t\t\t\n\t\t\t \n\n\t \n\n\n\n \n \n \n\t \n\t\t\n\n Nyttige temaer \n\n Banken for barn og unge    Kjøp og salg av bolig   Juridiske tjenester   Kundefordeler    \t \n\n\t \n \n\n\n\n \n \n\t \n\t\t\n\n Livssituasjoner \n\n Har du snart en 18-åring i hus?   Jeg har fylt 18 år, hva nå?    Jeg skal kjøpe min første bolig   Hvordan kan jeg spare til pensjon?   Jeg ønsker å spare i fond til barnet mitt   Dødsfall og etterlatte, hva må du huske på?   Jeg skal bli samboer   \t \n\n\t \n \n \n\n\n Instagram Facebook LinkedIn       Podkast \n\n\n \n\n\n\n \n \t\t \n\t \n\n\n \n\t \n\t\t \n\t\t\t \n\t\t\t\t Nyttig Om oss \n Ansatte \n Bli kunde \n Kontakt oss \n Selvbetjent lånesøknad \n \t\t\t \n\n\t\t\t \n\t\t\t\t Juridisk Klagebehandling \n Kundeopplysninger \n Personvernerklæring \n Finansiell informasjon \n PSD2 og Open Banking \n \t\t\t \n\n\t\t\t\n\t\t\t \n\t\t\t\t Sosiale medier \n\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t \n\t\t\t \n\t\t \n\n\t\t \n\t\t\t \n\t\t\t\t \n\t\t\t\t\t \n\t\t\t\t\t\t Lillesands Sparebank \n\t\t\t\t\t\t \t\t\t\t\t \n\t\t\t\t \n\n\t\t\t\t \n\t Miljøfyrtårn-logo \n\t \n \n Vi er Miljøfyrtårn-sertifisert! \t\t\t \n\n\t\t\t Org.nr. 937893655 \t\t \n\n\t\t Sammenlign våre priser med andre selskaper på  Finansportalen.no \n\t \n \n\n   \n\n \n \r\n \r\n \n \n \n \n \n \n \n \n \n \n \n \n\n \n\n",
+      "orgnrs": [
+        "937893655"
+      ],
+      "exact_number_reopened": true,
+      "result": "exact_number_present",
+      "review_result": "exact_number_present"
+    },
+    {
+      "orgnr": "994677373",
+      "claim_id": "97df02fd6be19e75f66328333dabe58cebb8090671588b0e2f258ca307cb262e",
+      "url": "https://www.romeriks-almenningene.no/personvern/",
+      "expected_orgnr": "994677373",
+      "identity_level": "VERIFIED",
+      "new_claim": false,
+      "http_status": 200,
+      "sha256": "a03c3d8097ea36bdec390f7c5a013e4171d9751b3a50023541150dad02f19fb8",
+      "final_url": "https://www.romeriks-almenningene.no/personvern/",
+      "title": "Personvern – Romeriks almenningene",
+      "owner_excerpt": "e deler av virksomheten. Når slike tjenesteleverandører behandler personopplysninger på vegne av Allmenningsdrift Romerike SA, gjøres det basert på en skriftlig databehandleravtale som regulerer behandlingsoppdraget. \n \nSletterutiner \n Allmenningsdrift Romerike SA har utarbeidet rutiner som skal sikre at personopplysninger slettes når formålet opplysningene var innhentet for, er oppfylt. \n Rettigheter \n Personer som er registrerte i systemene til Allmenningsdrift Romerike SA har rett til innsyn i egne opplysninger. Dersom personopplysningene er feil eller ufullstendige, eller dersom Allmenningsdrift Romerike SA behandler personopplysninger de ikke har lov til, kan den registrerte kreve at slike opplysninger rettes, slettes eller suppleres. Slike henvendelser behandles innen 30 dager etter at henvendelsen er mottatt. \n Kontakt for spørsmål og henvendelser om personvern \n Har du spørsmål knyttet til denne personvernerklæringen eller hvordan vi behandler personopplysninger, kan du kontakte Allmenningsdrift Romerike SA på e-post post@rom-alm.no. Her kan du også henvende deg dersom du ønsker innsyn i opplysninger som Allmenningsdrift Romerike SA har registrert om deg. \n Postadresse: Allmenningsdrift Romerike SA \n Besøksadresse: Nordåsvegen 5 \n Postnummer: 2032 \n Poststed: Maura \n Telefon: 94 84 74 70 \n E-post:  post@rom-alm.no \n Orgnr: 994 677 373 \n\n\t\t \n\t \n \n \n\t\t\t\t \n\t\t\t\t\t \n\n\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\t\t \n\n\t\t\t\t\t \n\t\t\t\t \n\n\t\t\t\t\t\t\t\t\n\t\t\t \n\n\t\t\t\n\t\t \n\n\t\t\n\t \n \n\n\n \n\n\t \n\n\t\t\n\t\t \t\t\t Allmenningsdrift Romerike Nordåsveien 5 \r\n2032 Maura \r\nRing osss: +47 948 47 470  Eller mail:  post@rom-alm.no \r\n\r\n \r\n\r\n\r\n\r\n\r\n\r\n\r\n \n\t\t \n\t\t\n\t\t\t \n\t\t\t\t \n\t\t\t\t\t \n\n\t\t\t\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t\t\t\t 2023 © romeriks almenningene | All Rights Reserved | Levert av attme.no\t\t\t\t\t\t \n\n\t\t\t\t\t\t \n\t\t\t\t\t \n\t\t\t\t \n\t\t\t \n\n\t\t\n\t\t\n\t \n\n \n\n \n\n \n\n\n\n \n\n \n \n \n",
+      "orgnrs": [
+        "994677373"
+      ],
+      "exact_number_reopened": true,
+      "result": "exact_number_present",
+      "review_result": "exact_number_present"
+    }
+  ]
+}

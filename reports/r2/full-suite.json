@@ -1,0 +1,13 @@
+{
+  "sha": "27a3bb0cc2e4a9cf3802da6eaaec761da623a5c9",
+  "command": [
+    "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\.venv\\Scripts\\python.exe",
+    "-m",
+    "pytest",
+    "tests/",
+    "-q",
+    "--tb=short"
+  ],
+  "exit": 0,
+  "wall_seconds": 73.08454150000034
+}

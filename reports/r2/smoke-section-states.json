@@ -1,0 +1,32 @@
+{
+  "identity": {
+    "available": 100
+  },
+  "accounts": {
+    "available": 99,
+    "failed": 1
+  },
+  "roles": {
+    "available": 100
+  },
+  "subunits": {
+    "available": 70,
+    "not_available": 30
+  },
+  "website": {
+    "failed": 23,
+    "not_available": 66,
+    "ambiguous": 6,
+    "available": 5
+  },
+  "hiring": {
+    "not_available": 100
+  },
+  "activity": {
+    "failed": 24,
+    "not_applicable": 66,
+    "ambiguous": 6,
+    "available": 3,
+    "not_available": 1
+  }
+}

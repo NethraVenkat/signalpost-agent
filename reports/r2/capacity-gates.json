@@ -1,0 +1,596 @@
+{
+  "tested_code_sha": "27a3bb0cc2e4a9cf3802da6eaaec761da623a5c9",
+  "runs": [
+    {
+      "label": "normal",
+      "budget_seconds": 2400,
+      "request_cap": 20000,
+      "pass": true,
+      "exit": 0,
+      "wall_seconds": 168.2591203999982,
+      "p50_ms": 69073,
+      "p95_ms": 106803,
+      "peak_tree_mib": 1273.23828125,
+      "requests": 5452,
+      "envelopes": 1000,
+      "profiles": 1000,
+      "exact_order": true,
+      "identity_ids": 28726,
+      "missing_identity_ids": 0,
+      "duplicate_claim_ids": 0,
+      "available_claims": 69479,
+      "coverage": {
+        "website": 61,
+        "hiring": 6,
+        "activity": 9,
+        "social": 41
+      },
+      "states": {
+        "identity": {
+          "available": 1000
+        },
+        "accounts": {
+          "available": 995,
+          "failed": 5
+        },
+        "roles": {
+          "available": 999,
+          "not_available": 1
+        },
+        "subunits": {
+          "available": 754,
+          "not_available": 246
+        },
+        "website": {
+          "failed": 260,
+          "not_available": 593,
+          "ambiguous": 80,
+          "blocked": 6,
+          "available": 61
+        },
+        "hiring": {
+          "not_available": 994,
+          "available": 6
+        },
+        "activity": {
+          "failed": 296,
+          "not_applicable": 593,
+          "ambiguous": 80,
+          "blocked": 7,
+          "available": 9,
+          "not_available": 15
+        }
+      },
+      "timings": {
+        "timing_markers": {
+          "subunits_complete_seconds": 25.958040299999993,
+          "registry_complete_seconds": 78.57024770000135,
+          "first_detail_seconds": 5.6734768000023905,
+          "last_detail_seconds": 20.488501399995585,
+          "nav_runtime_seconds": 26.327067300000635
+        }
+      },
+      "bulk_preparation_seconds": 0.493,
+      "finalisation": {
+        "crawl_seconds": 143.56,
+        "outputs_seconds": 9.92,
+        "estimate_seconds": 30.0,
+        "site_estimate_seconds": 50.0,
+        "site_reserved": true,
+        "site_seconds": 12.76
+      },
+      "site": {
+        "state": "available",
+        "companies": 1000,
+        "input_records": 1000,
+        "pages": 1002,
+        "skipped_invalid_identifiers": 0,
+        "total_bytes": 154547724,
+        "largest_profile_data_bytes": 336296,
+        "largest_profile_bytes": 122797
+      }
+    },
+    {
+      "label": "30",
+      "budget_seconds": 30,
+      "request_cap": 20000,
+      "pass": true,
+      "exit": 0,
+      "wall_seconds": 17.48052020000614,
+      "p50_ms": 8706,
+      "p95_ms": 8713,
+      "peak_tree_mib": 321.61328125,
+      "requests": 388,
+      "envelopes": 1000,
+      "profiles": 1000,
+      "exact_order": true,
+      "identity_ids": 28726,
+      "missing_identity_ids": 0,
+      "duplicate_claim_ids": 0,
+      "available_claims": 30917,
+      "coverage": {
+        "website": 0,
+        "hiring": 0,
+        "activity": 0,
+        "social": 0
+      },
+      "states": {
+        "identity": {
+          "available": 1000
+        },
+        "accounts": {
+          "failed": 1000
+        },
+        "roles": {
+          "failed": 1000
+        },
+        "subunits": {
+          "available": 276,
+          "not_available": 88,
+          "failed": 636
+        },
+        "website": {
+          "failed": 1000
+        },
+        "hiring": {
+          "failed": 1000
+        },
+        "activity": {
+          "failed": 1000
+        }
+      },
+      "timings": {
+        "timing_markers": {
+          "subunits_complete_seconds": 12.06952199999796,
+          "registry_complete_seconds": 12.069538399999146,
+          "first_detail_seconds": 5.088008500002616,
+          "last_detail_seconds": 9.427849400002742,
+          "nav_runtime_seconds": 9.59538660000544
+        }
+      },
+      "bulk_preparation_seconds": 0.568,
+      "finalisation": {
+        "crawl_seconds": 12.08,
+        "outputs_seconds": 4.32,
+        "estimate_seconds": 30.0,
+        "site_estimate_seconds": 50.0,
+        "site_reserved": false
+      },
+      "site": {
+        "state": "skipped",
+        "reason": "time_budget",
+        "seconds_left": 13.47,
+        "estimated_seconds": 50.0
+      }
+    },
+    {
+      "label": "120",
+      "budget_seconds": 120,
+      "request_cap": 20000,
+      "pass": true,
+      "exit": 0,
+      "wall_seconds": 57.09856839999702,
+      "p50_ms": 36339,
+      "p95_ms": 36360,
+      "peak_tree_mib": 775.98046875,
+      "requests": 1867,
+      "envelopes": 1000,
+      "profiles": 1000,
+      "exact_order": true,
+      "identity_ids": 28726,
+      "missing_identity_ids": 0,
+      "duplicate_claim_ids": 0,
+      "available_claims": 44399,
+      "coverage": {
+        "website": 5,
+        "hiring": 6,
+        "activity": 2,
+        "social": 4
+      },
+      "states": {
+        "identity": {
+          "available": 1000
+        },
+        "accounts": {
+          "available": 253,
+          "failed": 747
+        },
+        "roles": {
+          "available": 299,
+          "not_available": 1,
+          "failed": 700
+        },
+        "subunits": {
+          "available": 754,
+          "not_available": 246
+        },
+        "website": {
+          "failed": 885,
+          "not_available": 105,
+          "blocked": 1,
+          "ambiguous": 4,
+          "available": 5
+        },
+        "hiring": {
+          "failed": 844,
+          "not_available": 150,
+          "available": 6
+        },
+        "activity": {
+          "failed": 888,
+          "not_applicable": 105,
+          "blocked": 1,
+          "ambiguous": 4,
+          "available": 2
+        }
+      },
+      "timings": {
+        "timing_markers": {
+          "subunits_complete_seconds": 26.561280000001716,
+          "registry_complete_seconds": 40.095257299995865,
+          "first_detail_seconds": 5.294808500002546,
+          "last_detail_seconds": 20.426878700003726,
+          "nav_runtime_seconds": 26.28151010000147
+        }
+      },
+      "bulk_preparation_seconds": 0.591,
+      "finalisation": {
+        "crawl_seconds": 40.1,
+        "outputs_seconds": 6.66,
+        "estimate_seconds": 30.0,
+        "site_estimate_seconds": 50.0,
+        "site_reserved": true,
+        "site_seconds": 8.83
+      },
+      "site": {
+        "state": "available",
+        "companies": 1000,
+        "input_records": 1000,
+        "pages": 1002,
+        "skipped_invalid_identifiers": 0,
+        "total_bytes": 102616185,
+        "largest_profile_data_bytes": 278748,
+        "largest_profile_bytes": 116781
+      }
+    },
+    {
+      "label": "600",
+      "budget_seconds": 600,
+      "request_cap": 20000,
+      "pass": true,
+      "exit": 0,
+      "wall_seconds": 187.1627243999974,
+      "p50_ms": 68010,
+      "p95_ms": 125398,
+      "peak_tree_mib": 1315.015625,
+      "requests": 5344,
+      "envelopes": 1000,
+      "profiles": 1000,
+      "exact_order": true,
+      "identity_ids": 28726,
+      "missing_identity_ids": 0,
+      "duplicate_claim_ids": 0,
+      "available_claims": 69418,
+      "coverage": {
+        "website": 57,
+        "hiring": 6,
+        "activity": 9,
+        "social": 39
+      },
+      "states": {
+        "identity": {
+          "available": 1000
+        },
+        "accounts": {
+          "available": 995,
+          "failed": 5
+        },
+        "roles": {
+          "available": 999,
+          "not_available": 1
+        },
+        "subunits": {
+          "available": 754,
+          "not_available": 246
+        },
+        "website": {
+          "failed": 297,
+          "not_available": 567,
+          "ambiguous": 72,
+          "blocked": 7,
+          "available": 57
+        },
+        "hiring": {
+          "not_available": 994,
+          "available": 6
+        },
+        "activity": {
+          "failed": 329,
+          "not_applicable": 567,
+          "ambiguous": 72,
+          "blocked": 8,
+          "available": 9,
+          "not_available": 15
+        }
+      },
+      "timings": {
+        "timing_markers": {
+          "subunits_complete_seconds": 26.44735049999872,
+          "registry_complete_seconds": 78.47335820000444,
+          "first_detail_seconds": 5.271511800005101,
+          "last_detail_seconds": 20.56578580000496,
+          "nav_runtime_seconds": 26.24406530000124
+        }
+      },
+      "bulk_preparation_seconds": 0.543,
+      "finalisation": {
+        "crawl_seconds": 162.74,
+        "outputs_seconds": 9.78,
+        "estimate_seconds": 30.0,
+        "site_estimate_seconds": 50.0,
+        "site_reserved": true,
+        "site_seconds": 12.57
+      },
+      "site": {
+        "state": "available",
+        "companies": 1000,
+        "input_records": 1000,
+        "pages": 1002,
+        "skipped_invalid_identifiers": 0,
+        "total_bytes": 154453540,
+        "largest_profile_data_bytes": 336296,
+        "largest_profile_bytes": 122797
+      }
+    },
+    {
+      "label": "req3000",
+      "budget_seconds": 2400,
+      "request_cap": 3000,
+      "pass": true,
+      "exit": 0,
+      "wall_seconds": 136.34016210000118,
+      "p50_ms": 75544,
+      "p95_ms": 112746,
+      "peak_tree_mib": 1025.17578125,
+      "requests": 3000,
+      "envelopes": 1000,
+      "profiles": 1000,
+      "exact_order": true,
+      "identity_ids": 28726,
+      "missing_identity_ids": 0,
+      "duplicate_claim_ids": 0,
+      "available_claims": 60344,
+      "coverage": {
+        "website": 9,
+        "hiring": 6,
+        "activity": 3,
+        "social": 8
+      },
+      "states": {
+        "identity": {
+          "available": 1000
+        },
+        "accounts": {
+          "available": 725,
+          "failed": 275
+        },
+        "roles": {
+          "available": 762,
+          "not_available": 1,
+          "failed": 237
+        },
+        "subunits": {
+          "available": 754,
+          "not_available": 246
+        },
+        "website": {
+          "failed": 620,
+          "not_available": 352,
+          "ambiguous": 18,
+          "blocked": 1,
+          "available": 9
+        },
+        "hiring": {
+          "not_available": 994,
+          "available": 6
+        },
+        "activity": {
+          "failed": 625,
+          "not_applicable": 352,
+          "ambiguous": 18,
+          "blocked": 2,
+          "available": 3
+        }
+      },
+      "timings": {
+        "timing_markers": {
+          "subunits_complete_seconds": 25.85455709999951,
+          "registry_complete_seconds": 60.90848169999663,
+          "first_detail_seconds": 6.579080600000452,
+          "last_detail_seconds": 18.96512619999703,
+          "nav_runtime_seconds": 26.29626269999426
+        }
+      },
+      "bulk_preparation_seconds": 0.486,
+      "finalisation": {
+        "crawl_seconds": 117.08,
+        "outputs_seconds": 7.93,
+        "estimate_seconds": 30.0,
+        "site_estimate_seconds": 50.0,
+        "site_reserved": true,
+        "site_seconds": 9.86
+      },
+      "site": {
+        "state": "available",
+        "companies": 1000,
+        "input_records": 1000,
+        "pages": 1002,
+        "skipped_invalid_identifiers": 0,
+        "total_bytes": 135568368,
+        "largest_profile_data_bytes": 279621,
+        "largest_profile_bytes": 116802
+      }
+    },
+    {
+      "label": "nationwide30",
+      "budget_seconds": 30,
+      "request_cap": 20000,
+      "pass": true,
+      "exit": 0,
+      "wall_seconds": 19.147565599996597,
+      "p50_ms": 2151,
+      "p95_ms": 2155,
+      "peak_tree_mib": 316.70703125,
+      "requests": 77,
+      "envelopes": 1000,
+      "profiles": 1000,
+      "exact_order": true,
+      "identity_ids": 28726,
+      "missing_identity_ids": 0,
+      "duplicate_claim_ids": 0,
+      "available_claims": 29084,
+      "coverage": {
+        "website": 0,
+        "hiring": 0,
+        "activity": 0,
+        "social": 0
+      },
+      "states": {
+        "identity": {
+          "available": 1000
+        },
+        "accounts": {
+          "failed": 1000
+        },
+        "roles": {
+          "failed": 1000
+        },
+        "subunits": {
+          "available": 45,
+          "not_available": 19,
+          "failed": 936
+        },
+        "website": {
+          "failed": 1000
+        },
+        "hiring": {
+          "failed": 1000
+        },
+        "activity": {
+          "failed": 1000
+        }
+      },
+      "timings": {
+        "timing_markers": {
+          "subunits_complete_seconds": 13.961668299998564,
+          "registry_complete_seconds": 13.973151599995617,
+          "last_detail_seconds": null,
+          "nav_runtime_seconds": 2.9795259999955306
+        }
+      },
+      "bulk_preparation_seconds": 9.297,
+      "finalisation": {
+        "crawl_seconds": 14.02,
+        "outputs_seconds": 4.1,
+        "estimate_seconds": 30.0,
+        "site_estimate_seconds": 50.0,
+        "site_reserved": false
+      },
+      "site": {
+        "state": "skipped",
+        "reason": "time_budget",
+        "seconds_left": 11.79,
+        "estimated_seconds": 50.0
+      }
+    },
+    {
+      "label": "nationwide-normal",
+      "budget_seconds": 2400,
+      "request_cap": 20000,
+      "pass": true,
+      "exit": 0,
+      "wall_seconds": 237.64030529999582,
+      "p50_ms": 94773,
+      "p95_ms": 166284,
+      "peak_tree_mib": 1256.15625,
+      "requests": 4830,
+      "envelopes": 1000,
+      "profiles": 1000,
+      "exact_order": true,
+      "identity_ids": 28726,
+      "missing_identity_ids": 0,
+      "duplicate_claim_ids": 0,
+      "available_claims": 69330,
+      "coverage": {
+        "website": 46,
+        "hiring": 6,
+        "activity": 9,
+        "social": 32
+      },
+      "states": {
+        "identity": {
+          "available": 1000
+        },
+        "accounts": {
+          "available": 995,
+          "failed": 5
+        },
+        "roles": {
+          "available": 999,
+          "not_available": 1
+        },
+        "subunits": {
+          "available": 754,
+          "not_available": 246
+        },
+        "website": {
+          "failed": 391,
+          "not_available": 490,
+          "ambiguous": 66,
+          "blocked": 7,
+          "available": 46
+        },
+        "hiring": {
+          "not_available": 994,
+          "available": 6
+        },
+        "activity": {
+          "failed": 418,
+          "not_applicable": 490,
+          "ambiguous": 66,
+          "blocked": 8,
+          "available": 9,
+          "not_available": 9
+        }
+      },
+      "timings": {
+        "timing_markers": {
+          "subunits_complete_seconds": 35.57480560000113,
+          "registry_complete_seconds": 83.10252529999707,
+          "first_detail_seconds": 4.98900390000199,
+          "last_detail_seconds": 20.29539289999957,
+          "nav_runtime_seconds": 25.87222940000356
+        }
+      },
+      "bulk_preparation_seconds": 10.115,
+      "finalisation": {
+        "crawl_seconds": 214.19,
+        "outputs_seconds": 9.37,
+        "estimate_seconds": 30.0,
+        "site_estimate_seconds": 50.0,
+        "site_reserved": true,
+        "site_seconds": 12.07
+      },
+      "site": {
+        "state": "available",
+        "companies": 1000,
+        "input_records": 1000,
+        "pages": 1002,
+        "skipped_invalid_identifiers": 0,
+        "total_bytes": 160069469,
+        "largest_profile_data_bytes": 304788,
+        "largest_profile_bytes": 120376
+      }
+    }
+  ]
+}
