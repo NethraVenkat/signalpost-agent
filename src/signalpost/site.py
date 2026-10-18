@@ -296,6 +296,10 @@ def fact(claim, records):
     v = claim.get('value')
     title = english_title(v) if claim['field'].startswith('identity.nace') and isinstance(v, dict) else None
     content = value_html(v) if available else '<p>' + esc(UNKNOWN.get(claim['availability'], 'Unknown.')) + '</p>'
+    if available and claim['field'].startswith('registry_change.'):
+        from .sources.registry_changes import sentence as registry_sentence
+        label = v['title']
+        content = '<p>' + esc(registry_sentence(v)) + '</p><p>' + link(v['url'], 'Registry event') + '</p>'
     if available and claim['field'] == 'official_website' and isinstance(v, dict) and v.get('matched_via_subunit'):
         content = '<p class="relationship-note">Website of registered subunit ' + esc(v['matched_via_subunit']) + '</p>' + content
     if title:
@@ -458,7 +462,7 @@ def profile(row, title):
             if dated_registry: body += '<h3>Recent registry dates</h3>'
             for day, label, c in dated_registry:
                 body += '<p>' + esc(label + ': ' + day) + f' <a href="#fact-{esc(c.id[:16])}">Registry source</a></p>'
-            body += '<h3>Website updates ' + chip(state) + '</h3>'
+            body += '<h3>Published updates ' + chip(state) + '</h3>'
         if key == 'financials':
             body += '<p>Reported values from Regnskapsregisteret; no figures or growth ratios are calculated.</p>'
             years = sorted({(c.get('reporting_period') or {}).get('fiscal_year') for c in items if (c.get('reporting_period') or {}).get('fiscal_year')}, reverse=True)
@@ -769,7 +773,10 @@ def index_record(row):
     job_dates = [j['published'] for j in job_postings if j.get('published')]
 
     reg_events = registry_events(row)
-    latest_event = reg_events[0] if reg_events else None
+    published = [(c['value']['date'], c['value']['title'], c) for c in available
+                 if c['field'].startswith('registry_change.') and not c.get('carried_forward')]
+    all_events = sorted(list(reg_events) + published, key=lambda event: event[0], reverse=True)
+    latest_event = all_events[0] if all_events else None
 
     result = {'orgnr': row['organisation_number'], 'name': get('identity.legal_name') or row['organisation_number'],
               'municipality': get('identity.municipality'), 'nace': iv.get('kode'), 'industry_en': english_title(iv) if iv else None,

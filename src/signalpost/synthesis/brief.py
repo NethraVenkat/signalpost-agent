@@ -19,8 +19,8 @@ def select(synthesis, claims, limit=8):
         lambda s: matches(s, ('identity.municipality', 'identity.registered_address', 'subunits.unit.')),
         lambda s: matches(s, ('accounts.',)),
         lambda s: matches(s, ('hiring.job.',)),
-        lambda s: matches(s, ('dated_item.',)),
-        lambda s: s in sections.get('changes', []) and not matches(s, ('dated_item.',)),
+        lambda s: matches(s, ('registry_change.', 'dated_item.')),
+        lambda s: s in sections.get('changes', []) and not matches(s, ('registry_change.', 'dated_item.')),
         lambda s: matches(s, ('website_description.',)),
     ]
     for predicate in predicates:

@@ -40,6 +40,12 @@ def generate(envelope):
     result=Synthesis(generator=Generator(version='3',input_sha256=input_hash(envelope)),change_claims=change_claims(envelope))
     claims=sorted((c for c in envelope.claims if c.availability=='available' and permitted(c,envelope)),key=lambda c:c.field)
     by_field={c.field:c for c in claims}
+    registry_changes = sorted((c for c in claims if c.field.startswith('registry_change.') and not c.carried_forward),
+                              key=lambda c: (c.value['date'], c.field), reverse=True)
+    if registry_changes:
+        from ..sources.registry_changes import sentence as registry_sentence
+        item = registry_changes[0]
+        result.sections.changes.append(Sentence(text=registry_sentence(item.value), claim_ids=[item.id]))
     activity_items = sorted((c for c in claims if c.family == 'activity' and c.field.startswith('dated_item.') and not c.carried_forward), key=lambda c: (c.value['date'], c.value['url']), reverse=True)
     if activity_items:
         item = activity_items[0]

@@ -178,7 +178,7 @@ async def _run(config, client=None,synthesis_provider=None):
         # warning, never falsely claim the supplied batch was processed.
         inputs = Inputs([], [], [], 0)
         warnings.append(f"input unreadable: {type(exc).__name__}")
-    families = FAMILIES + (("website",) if config.websites else ()) + (('hiring',) if config.hiring else ()) + (('activity',) if config.public_activity else ())
+    families = FAMILIES + (("website",) if config.websites else ()) + (('hiring',) if config.hiring else ()) + (('activity',) if config.public_activity or config.registry_changes else ())
     envelopes = {org: placeholder(org, config.run_id, started, families) for org in inputs.unique}
     for org in inputs.invalid:
         for family in families:
@@ -463,6 +463,20 @@ async def _run(config, client=None,synthesis_provider=None):
             pending, stuck = await finish_before_deadline(tasks, budget, CANCEL_GRACE_SECONDS)
             if stuck:
                 warnings.append(f"{stuck} company tasks did not stop within {CANCEL_GRACE_SECONDS}s of cancellation; unfinished sections are reported as deadline")
+            if config.registry_changes:
+                from .sources import registry_changes
+                eligible = {org: envelopes[org] for org in sorted(valid_orgs)
+                            if envelopes[org].run.sections.get('identity') == 'available'}
+                async def registry_activity():
+                    sections = await registry_changes.fetch_batch(eligible, http, blobs, started)
+                    for org, section in sections.items():
+                        update(envelopes[org], 'activity', registry_changes.merge(envelopes[org], section, config.public_activity))
+                task = asyncio.create_task(registry_activity())
+                unfinished, _ = await finish_before_deadline([task], budget, CANCEL_GRACE_SECONDS)
+                if unfinished or task.cancelled() or (task.done() and task.exception() is not None):
+                    for org in eligible:
+                        update(envelopes[org], 'activity', registry_changes.merge(
+                            envelopes[org], missing('activity', 'registry_change_incomplete'), config.public_activity))
             return pending
         finally:
             dns_metrics.update({'dns_precheck_lookups': website_http.dns_lookups, 'dns_candidates_by_company': website_http.dns_counts,
