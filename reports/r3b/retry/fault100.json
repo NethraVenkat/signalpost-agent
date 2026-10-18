@@ -1,0 +1,10 @@
+{
+  "envelopes": 100,
+  "identity_available": 100,
+  "activity_failed": 100,
+  "lost_r2_identity_ids": 0,
+  "identity_ids": 2819,
+  "forced_feed_requests": 4,
+  "exit": 0,
+  "source_sha": "9d9d80679b2e86ec17f386c2300a31e8c80bc9d8"
+}

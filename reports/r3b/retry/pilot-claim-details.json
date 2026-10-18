@@ -1,0 +1,640 @@
+[
+  {
+    "org": "932525070",
+    "claim": {
+      "field": "registry_change.753520133788df253eface0b",
+      "value": {
+        "company_orgnr": "932525070",
+        "event_id": 20773422,
+        "date": "2026-02-23T14:35:14.592Z",
+        "date_source": "registry publication time (not effective date)",
+        "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?oppdateringsid=20773422&size=1&includeChanges=true",
+        "title": "New registered workplace",
+        "subunit_orgnr": "937214936",
+        "event_type": "Ny",
+        "start_date": "2025-09-01"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "3b9a3053d450d0f215dfaf7ded08d97f9a88ffa9a6eb9f41cd611940625fbf40",
+        "3a104236be73ccb38d6199033341f46d5bc906665777c4d3cb714cd84ddf1573"
+      ],
+      "id": "70a6e5e4f58afa06c69e63d4f7d8712a8bd2df1391c6a4ac006d1f2defd92632",
+      "family": "activity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "first_observed_at": "2026-10-18T07:17:37.602149Z",
+      "last_observed_at": "2026-10-18T07:17:37.602149Z",
+      "reasons": {}
+    },
+    "evidence": [
+      {
+        "id": "3b9a3053d450d0f215dfaf7ded08d97f9a88ffa9a6eb9f41cd611940625fbf40",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=873152362%2C891770812%2C891843712%2C893247092%2C912760936%2C914741254%2C915261108%2C920172814%2C923498826%2C923505075%2C923866892%2C923902082%2C924147881%2C924658622%2C925284858%2C926653008%2C926935321%2C927111683%2C927359952%2C933096998%2C933248380%2C934203631%2C934239709%2C934488431%2C934703286%2C935470986%2C936044042%2C936067409%2C936078087%2C936603564%2C936626157%2C936819389%2C936845738%2C937214936%2C971665777%2C971729066%2C972129666%2C972214701%2C972350222%2C973101862%2C973101870%2C973152351%2C973152378%2C973152386%2C973152394%2C973152408%2C973152416%2C973152424%2C973861778%2C973861832%2C973861840%2C973861875%2C973861883%2C973861891%2C973861913%2C974160099%2C981524403%2C983322832%2C984042442%2C984821670%2C987999233%2C990876991%2C991770526%2C991770534%2C991770542%2C991770577%2C991770593%2C991770631%2C991770682%2C991770771%2C991770798%2C997341783%2C998011345%2C998271711%2C999637329&dato=2024-10-18T07%3A15%3A42.679Z&updatedBefore=2026-10-18T07%3A15%3A42.679Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-10-18T07:17:37.602149Z",
+        "content_sha256": "27e6c762a2273dec1dc40896bf1e736c9cc8bded59deac9fcfccf95cbde49879",
+        "claim_span": "gsid\":20748055,\"organisasjonsnummer\":\"973152378\"},{\"_links\":{\"underenhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/937214936\"}},\"dato\":\"2026-02-23T14:35:14.592Z\",\"endringstype\":\"Ny\",\"oppdateringsid\":20773422,\"organisasjonsnummer\":\"937214936\"},{\"_links\":{\"underenhet\":{\"href\":\"",
+        "locator": "/_embedded/oppdaterteUnderenheter/346",
+        "extraction_method": "registry change feed",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "3a104236be73ccb38d6199033341f46d5bc906665777c4d3cb714cd84ddf1573",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=932525070&size=1000&page=0",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-10-18T07:15:45.053713Z",
+        "content_sha256": "1a1a8cd3c8064db1075df253cb815c2df8c7e2370e24b38354783344595a0fb4",
+        "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/937214936\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/932525070\"}},\"beliggenhetsadresse\":{\"adresse\":[\"c/o Newsec Basale AS\",\"Munkedamsveien 45D\"],\"kommune\":\"OSLO\",\"kommunenummer\":\"0",
+        "locator": "/_embedded/underenheter/0",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ]
+  },
+  {
+    "org": "988963259",
+    "claim": {
+      "field": "registry_change.2ec5e9147f8eba0ef038f37e",
+      "value": {
+        "company_orgnr": "988963259",
+        "event_id": 20554495,
+        "date": "2025-12-19T14:45:11.883Z",
+        "date_source": "registry publication time (not effective date)",
+        "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?oppdateringsid=20554495&size=1&includeChanges=true",
+        "title": "New registered workplace",
+        "subunit_orgnr": "936845738",
+        "event_type": "Ny",
+        "start_date": "2024-01-01"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "edad9f4efe44bcce8339ea6292b06280c8674a3d215b04496a009462f8c7747a",
+        "2723e0dafcf512719b3dbb0fadad4ba11401db24a0ddd4da427143464b9392bf"
+      ],
+      "id": "2c1d691a795d9c93348ed3ab3724e3a1f850d8adc908246b5fd18a858b0522e7",
+      "family": "activity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "first_observed_at": "2026-10-18T07:17:37.602149Z",
+      "last_observed_at": "2026-10-18T07:17:37.602149Z",
+      "reasons": {}
+    },
+    "evidence": [
+      {
+        "id": "edad9f4efe44bcce8339ea6292b06280c8674a3d215b04496a009462f8c7747a",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=873152362%2C891770812%2C891843712%2C893247092%2C912760936%2C914741254%2C915261108%2C920172814%2C923498826%2C923505075%2C923866892%2C923902082%2C924147881%2C924658622%2C925284858%2C926653008%2C926935321%2C927111683%2C927359952%2C933096998%2C933248380%2C934203631%2C934239709%2C934488431%2C934703286%2C935470986%2C936044042%2C936067409%2C936078087%2C936603564%2C936626157%2C936819389%2C936845738%2C937214936%2C971665777%2C971729066%2C972129666%2C972214701%2C972350222%2C973101862%2C973101870%2C973152351%2C973152378%2C973152386%2C973152394%2C973152408%2C973152416%2C973152424%2C973861778%2C973861832%2C973861840%2C973861875%2C973861883%2C973861891%2C973861913%2C974160099%2C981524403%2C983322832%2C984042442%2C984821670%2C987999233%2C990876991%2C991770526%2C991770534%2C991770542%2C991770577%2C991770593%2C991770631%2C991770682%2C991770771%2C991770798%2C997341783%2C998011345%2C998271711%2C999637329&dato=2024-10-18T07%3A15%3A42.679Z&updatedBefore=2026-10-18T07%3A15%3A42.679Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-10-18T07:17:37.602149Z",
+        "content_sha256": "27e6c762a2273dec1dc40896bf1e736c9cc8bded59deac9fcfccf95cbde49879",
+        "claim_span": "gsid\":20540782,\"organisasjonsnummer\":\"936626157\"},{\"_links\":{\"underenhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/936845738\"}},\"dato\":\"2025-12-19T14:45:11.883Z\",\"endringstype\":\"Ny\",\"oppdateringsid\":20554495,\"organisasjonsnummer\":\"936845738\"},{\"_links\":{\"underenhet\":{\"href\":\"",
+        "locator": "/_embedded/oppdaterteUnderenheter/306",
+        "extraction_method": "registry change feed",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "2723e0dafcf512719b3dbb0fadad4ba11401db24a0ddd4da427143464b9392bf",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988963259&size=1000&page=0",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-10-18T07:15:44.800207Z",
+        "content_sha256": "621ad1ee74cb5230ee3f9c183fafbb8c782bb53dee75e276058e9ccb3c610c3d",
+        "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/936845738\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/988963259\"}},\"beliggenhetsadresse\":{\"adresse\":[\"Haglandsvegen 145\"],\"kommune\":\"HAUGESUND\",\"kommunenummer\":\"1106\",\"land\":\"Norge\"",
+        "locator": "/_embedded/underenheter/0",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ]
+  },
+  {
+    "org": "934485718",
+    "claim": {
+      "field": "registry_change.704ab586deebc8e9b64311bd",
+      "value": {
+        "company_orgnr": "934485718",
+        "event_id": 19377582,
+        "date": "2024-11-19T05:00:50.525Z",
+        "date_source": "registry publication time (not effective date)",
+        "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?oppdateringsid=19377582&size=1&includeChanges=true",
+        "title": "New registered workplace",
+        "subunit_orgnr": "934488431",
+        "event_type": "Ny",
+        "start_date": "2024-11-13"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "390b798951cee63923828e1489e4d001cb7b1ffa65186a88da7163291b8a0de7",
+        "08a9b88273bc3e8c3497bbfa058178929010234aa3a3c8869e037df7214dd1e7"
+      ],
+      "id": "aee006e07194f77c1159b5e228eb48028585fdb02067bb6560773e386e1af474",
+      "family": "activity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "first_observed_at": "2026-10-18T07:17:37.602149Z",
+      "last_observed_at": "2026-10-18T07:17:37.602149Z",
+      "reasons": {}
+    },
+    "evidence": [
+      {
+        "id": "390b798951cee63923828e1489e4d001cb7b1ffa65186a88da7163291b8a0de7",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=873152362%2C891770812%2C891843712%2C893247092%2C912760936%2C914741254%2C915261108%2C920172814%2C923498826%2C923505075%2C923866892%2C923902082%2C924147881%2C924658622%2C925284858%2C926653008%2C926935321%2C927111683%2C927359952%2C933096998%2C933248380%2C934203631%2C934239709%2C934488431%2C934703286%2C935470986%2C936044042%2C936067409%2C936078087%2C936603564%2C936626157%2C936819389%2C936845738%2C937214936%2C971665777%2C971729066%2C972129666%2C972214701%2C972350222%2C973101862%2C973101870%2C973152351%2C973152378%2C973152386%2C973152394%2C973152408%2C973152416%2C973152424%2C973861778%2C973861832%2C973861840%2C973861875%2C973861883%2C973861891%2C973861913%2C974160099%2C981524403%2C983322832%2C984042442%2C984821670%2C987999233%2C990876991%2C991770526%2C991770534%2C991770542%2C991770577%2C991770593%2C991770631%2C991770682%2C991770771%2C991770798%2C997341783%2C998011345%2C998271711%2C999637329&dato=2024-10-18T07%3A15%3A42.679Z&updatedBefore=2026-10-18T07%3A15%3A42.679Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-10-18T07:17:37.602149Z",
+        "content_sha256": "27e6c762a2273dec1dc40896bf1e736c9cc8bded59deac9fcfccf95cbde49879",
+        "claim_span": "gsid\":19361848,\"organisasjonsnummer\":\"998011345\"},{\"_links\":{\"underenhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/934488431\"}},\"dato\":\"2024-11-19T05:00:50.525Z\",\"endringstype\":\"Ny\",\"oppdateringsid\":19377582,\"organisasjonsnummer\":\"934488431\"},{\"_links\":{\"underenhet\":{\"href\":\"",
+        "locator": "/_embedded/oppdaterteUnderenheter/21",
+        "extraction_method": "registry change feed",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "08a9b88273bc3e8c3497bbfa058178929010234aa3a3c8869e037df7214dd1e7",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=934485718&size=1000&page=0",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-10-18T07:15:45.306307Z",
+        "content_sha256": "c2843a2f55fcc02702a1113bd6939fb6c928a0377b67a4b560052647cf13cbce",
+        "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/934488431\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/934485718\"}},\"beliggenhetsadresse\":{\"adresse\":[\"c/o Sondre Br\u00e5then Geitz\",\"Landerokollen 90\"],\"kommune\":\"OSLO\",\"kommunenummer\":",
+        "locator": "/_embedded/underenheter/0",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ]
+  },
+  {
+    "org": "936035523",
+    "claim": {
+      "field": "registry_change.06a02d56209b80ff6797a8c7",
+      "value": {
+        "company_orgnr": "936035523",
+        "event_id": 20194309,
+        "date": "2025-09-01T22:05:28.569Z",
+        "date_source": "registry publication time (not effective date)",
+        "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?oppdateringsid=20194309&size=1&includeChanges=true",
+        "title": "New registered workplace",
+        "subunit_orgnr": "936067409",
+        "event_type": "Ny",
+        "start_date": "2025-08-18"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "6240ae1370b3a3fafd41005759e0a266b232873295e70220938e169697232100",
+        "93eef049d7a48fd5972191629c17981ca03bc48c4c8128df574257d96c7f68e2"
+      ],
+      "id": "27ec0477d59756e3ee9bd58894679fdee1098e43061de916b046909d4bfb99df",
+      "family": "activity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "first_observed_at": "2026-10-18T07:17:37.602149Z",
+      "last_observed_at": "2026-10-18T07:17:37.602149Z",
+      "reasons": {}
+    },
+    "evidence": [
+      {
+        "id": "6240ae1370b3a3fafd41005759e0a266b232873295e70220938e169697232100",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=873152362%2C891770812%2C891843712%2C893247092%2C912760936%2C914741254%2C915261108%2C920172814%2C923498826%2C923505075%2C923866892%2C923902082%2C924147881%2C924658622%2C925284858%2C926653008%2C926935321%2C927111683%2C927359952%2C933096998%2C933248380%2C934203631%2C934239709%2C934488431%2C934703286%2C935470986%2C936044042%2C936067409%2C936078087%2C936603564%2C936626157%2C936819389%2C936845738%2C937214936%2C971665777%2C971729066%2C972129666%2C972214701%2C972350222%2C973101862%2C973101870%2C973152351%2C973152378%2C973152386%2C973152394%2C973152408%2C973152416%2C973152424%2C973861778%2C973861832%2C973861840%2C973861875%2C973861883%2C973861891%2C973861913%2C974160099%2C981524403%2C983322832%2C984042442%2C984821670%2C987999233%2C990876991%2C991770526%2C991770534%2C991770542%2C991770577%2C991770593%2C991770631%2C991770682%2C991770771%2C991770798%2C997341783%2C998011345%2C998271711%2C999637329&dato=2024-10-18T07%3A15%3A42.679Z&updatedBefore=2026-10-18T07%3A15%3A42.679Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-10-18T07:17:37.602149Z",
+        "content_sha256": "27e6c762a2273dec1dc40896bf1e736c9cc8bded59deac9fcfccf95cbde49879",
+        "claim_span": "gsid\":20191269,\"organisasjonsnummer\":\"936044042\"},{\"_links\":{\"underenhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/936067409\"}},\"dato\":\"2025-09-01T22:05:28.569Z\",\"endringstype\":\"Ny\",\"oppdateringsid\":20194309,\"organisasjonsnummer\":\"936067409\"},{\"_links\":{\"underenhet\":{\"href\":\"",
+        "locator": "/_embedded/oppdaterteUnderenheter/215",
+        "extraction_method": "registry change feed",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "93eef049d7a48fd5972191629c17981ca03bc48c4c8128df574257d96c7f68e2",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=936035523&size=1000&page=0",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-10-18T07:15:45.324419Z",
+        "content_sha256": "0c3f2317d8b96f51c3b78361ef251d037f9c91d0727ea9029342500f92c5d77c",
+        "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/936067409\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/936035523\"}},\"beliggenhetsadresse\":{\"adresse\":[\"Flaengrenda 15\"],\"kommune\":\"OSLO\",\"kommunenummer\":\"0301\",\"land\":\"Norge\",\"landko",
+        "locator": "/_embedded/underenheter/0",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ]
+  },
+  {
+    "org": "936349676",
+    "claim": {
+      "field": "registry_change.208268ef40fa68a3eb384759",
+      "value": {
+        "company_orgnr": "936349676",
+        "event_id": 20463753,
+        "date": "2025-11-20T23:00:48.165Z",
+        "date_source": "registry publication time (not effective date)",
+        "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?oppdateringsid=20463753&size=1&includeChanges=true",
+        "title": "New registered workplace",
+        "subunit_orgnr": "936626157",
+        "event_type": "Ny",
+        "start_date": "2025-09-29"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "7d04bea6636ba766345fd6879760fa532721e0e6f8762912aeedf12b40343938",
+        "02cdf46de31712e92ed7c8a1e5251e2dc52e3453317abfdb1dac48e060b6fbac"
+      ],
+      "id": "a1a93247e82d18d10744e3b4e701d6ccf3145c67dfa5da8092300ced6a32b8bf",
+      "family": "activity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "first_observed_at": "2026-10-18T07:17:37.602149Z",
+      "last_observed_at": "2026-10-18T07:17:37.602149Z",
+      "reasons": {}
+    },
+    "evidence": [
+      {
+        "id": "7d04bea6636ba766345fd6879760fa532721e0e6f8762912aeedf12b40343938",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=873152362%2C891770812%2C891843712%2C893247092%2C912760936%2C914741254%2C915261108%2C920172814%2C923498826%2C923505075%2C923866892%2C923902082%2C924147881%2C924658622%2C925284858%2C926653008%2C926935321%2C927111683%2C927359952%2C933096998%2C933248380%2C934203631%2C934239709%2C934488431%2C934703286%2C935470986%2C936044042%2C936067409%2C936078087%2C936603564%2C936626157%2C936819389%2C936845738%2C937214936%2C971665777%2C971729066%2C972129666%2C972214701%2C972350222%2C973101862%2C973101870%2C973152351%2C973152378%2C973152386%2C973152394%2C973152408%2C973152416%2C973152424%2C973861778%2C973861832%2C973861840%2C973861875%2C973861883%2C973861891%2C973861913%2C974160099%2C981524403%2C983322832%2C984042442%2C984821670%2C987999233%2C990876991%2C991770526%2C991770534%2C991770542%2C991770577%2C991770593%2C991770631%2C991770682%2C991770771%2C991770798%2C997341783%2C998011345%2C998271711%2C999637329&dato=2024-10-18T07%3A15%3A42.679Z&updatedBefore=2026-10-18T07%3A15%3A42.679Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-10-18T07:17:37.602149Z",
+        "content_sha256": "27e6c762a2273dec1dc40896bf1e736c9cc8bded59deac9fcfccf95cbde49879",
+        "claim_span": "gsid\":20461102,\"organisasjonsnummer\":\"926935321\"},{\"_links\":{\"underenhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/936626157\"}},\"dato\":\"2025-11-20T23:00:48.165Z\",\"endringstype\":\"Ny\",\"oppdateringsid\":20463753,\"organisasjonsnummer\":\"936626157\"},{\"_links\":{\"underenhet\":{\"href\":\"",
+        "locator": "/_embedded/oppdaterteUnderenheter/283",
+        "extraction_method": "registry change feed",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "02cdf46de31712e92ed7c8a1e5251e2dc52e3453317abfdb1dac48e060b6fbac",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=936349676&size=1000&page=0",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-10-18T07:15:45.320837Z",
+        "content_sha256": "4c194ddf81f45e6d80f35b797e284839582f7eb5616f7198bdc538d46bd068de",
+        "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/936626157\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/936349676\"}},\"beliggenhetsadresse\":{\"adresse\":[\"Oster\u00f8yvegen 915\"],\"kommune\":\"OSTER\u00d8Y\",\"kommunenummer\":\"4630\",\"land\":\"Norge\",\"l",
+        "locator": "/_embedded/underenheter/0",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ]
+  },
+  {
+    "org": "935962196",
+    "claim": {
+      "field": "registry_change.f3fae074a6af5066739bb639",
+      "value": {
+        "company_orgnr": "935962196",
+        "event_id": 20191269,
+        "date": "2025-08-27T22:01:06.187Z",
+        "date_source": "registry publication time (not effective date)",
+        "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?oppdateringsid=20191269&size=1&includeChanges=true",
+        "title": "New registered workplace",
+        "subunit_orgnr": "936044042",
+        "event_type": "Ny",
+        "start_date": "2025-09-01"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "92e25ab94333ae342ac76e411cbed30e8b3d1a0a95d04640ce50479e451355c4",
+        "6a4719b785154d4746f42dc7821057ed0945d0cebed4059f86ae8df7e64d45a9"
+      ],
+      "id": "1bdb889e036e9ebd2841d88d32ee6b0d387ab30bda25b5c5cff45f5068839404",
+      "family": "activity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "first_observed_at": "2026-10-18T07:17:37.602149Z",
+      "last_observed_at": "2026-10-18T07:17:37.602149Z",
+      "reasons": {}
+    },
+    "evidence": [
+      {
+        "id": "92e25ab94333ae342ac76e411cbed30e8b3d1a0a95d04640ce50479e451355c4",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=873152362%2C891770812%2C891843712%2C893247092%2C912760936%2C914741254%2C915261108%2C920172814%2C923498826%2C923505075%2C923866892%2C923902082%2C924147881%2C924658622%2C925284858%2C926653008%2C926935321%2C927111683%2C927359952%2C933096998%2C933248380%2C934203631%2C934239709%2C934488431%2C934703286%2C935470986%2C936044042%2C936067409%2C936078087%2C936603564%2C936626157%2C936819389%2C936845738%2C937214936%2C971665777%2C971729066%2C972129666%2C972214701%2C972350222%2C973101862%2C973101870%2C973152351%2C973152378%2C973152386%2C973152394%2C973152408%2C973152416%2C973152424%2C973861778%2C973861832%2C973861840%2C973861875%2C973861883%2C973861891%2C973861913%2C974160099%2C981524403%2C983322832%2C984042442%2C984821670%2C987999233%2C990876991%2C991770526%2C991770534%2C991770542%2C991770577%2C991770593%2C991770631%2C991770682%2C991770771%2C991770798%2C997341783%2C998011345%2C998271711%2C999637329&dato=2024-10-18T07%3A15%3A42.679Z&updatedBefore=2026-10-18T07%3A15%3A42.679Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-10-18T07:17:37.602149Z",
+        "content_sha256": "27e6c762a2273dec1dc40896bf1e736c9cc8bded59deac9fcfccf95cbde49879",
+        "claim_span": "gsid\":20174315,\"organisasjonsnummer\":\"973861913\"},{\"_links\":{\"underenhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/936044042\"}},\"dato\":\"2025-08-27T22:01:06.187Z\",\"endringstype\":\"Ny\",\"oppdateringsid\":20191269,\"organisasjonsnummer\":\"936044042\"},{\"_links\":{\"underenhet\":{\"href\":\"",
+        "locator": "/_embedded/oppdaterteUnderenheter/214",
+        "extraction_method": "registry change feed",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "6a4719b785154d4746f42dc7821057ed0945d0cebed4059f86ae8df7e64d45a9",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=935962196&size=1000&page=0",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-10-18T07:15:45.322874Z",
+        "content_sha256": "92233248efea11bb10d001177f60bf09d716a1d3598784acd25c9ff3fb8433a4",
+        "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/936044042\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/935962196\"}},\"beliggenhetsadresse\":{\"adresse\":[\"c/o Andre Fonn Sk\u00e5re\",\"Kringlevegen 17\"],\"kommune\":\"SULA\",\"kommunenummer\":\"1531",
+        "locator": "/_embedded/underenheter/0",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ]
+  },
+  {
+    "org": "935647142",
+    "claim": {
+      "field": "registry_change.5e948329223dbaee72a2bf21",
+      "value": {
+        "company_orgnr": "935647142",
+        "event_id": 20195728,
+        "date": "2025-09-02T22:01:05.902Z",
+        "date_source": "registry publication time (not effective date)",
+        "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?oppdateringsid=20195728&size=1&includeChanges=true",
+        "title": "New registered workplace",
+        "subunit_orgnr": "936078087",
+        "event_type": "Ny",
+        "start_date": "2025-04-01"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "a7bda1fa4fcdd7de5f32aba7594eddcc26945e20ccafce221860d6e54f2f1358",
+        "d8508b6a961f45a6ae335c6c5be18684ab8a594e0f4df821d9f7cc48e3f8717f"
+      ],
+      "id": "ee38d0936f714c6b42005b58c5c43fab166a3fd66f09fb07216ae0a29698ea9f",
+      "family": "activity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "first_observed_at": "2026-10-18T07:17:37.602149Z",
+      "last_observed_at": "2026-10-18T07:17:37.602149Z",
+      "reasons": {}
+    },
+    "evidence": [
+      {
+        "id": "a7bda1fa4fcdd7de5f32aba7594eddcc26945e20ccafce221860d6e54f2f1358",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=873152362%2C891770812%2C891843712%2C893247092%2C912760936%2C914741254%2C915261108%2C920172814%2C923498826%2C923505075%2C923866892%2C923902082%2C924147881%2C924658622%2C925284858%2C926653008%2C926935321%2C927111683%2C927359952%2C933096998%2C933248380%2C934203631%2C934239709%2C934488431%2C934703286%2C935470986%2C936044042%2C936067409%2C936078087%2C936603564%2C936626157%2C936819389%2C936845738%2C937214936%2C971665777%2C971729066%2C972129666%2C972214701%2C972350222%2C973101862%2C973101870%2C973152351%2C973152378%2C973152386%2C973152394%2C973152408%2C973152416%2C973152424%2C973861778%2C973861832%2C973861840%2C973861875%2C973861883%2C973861891%2C973861913%2C974160099%2C981524403%2C983322832%2C984042442%2C984821670%2C987999233%2C990876991%2C991770526%2C991770534%2C991770542%2C991770577%2C991770593%2C991770631%2C991770682%2C991770771%2C991770798%2C997341783%2C998011345%2C998271711%2C999637329&dato=2024-10-18T07%3A15%3A42.679Z&updatedBefore=2026-10-18T07%3A15%3A42.679Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-10-18T07:17:37.602149Z",
+        "content_sha256": "27e6c762a2273dec1dc40896bf1e736c9cc8bded59deac9fcfccf95cbde49879",
+        "claim_span": "gsid\":20194309,\"organisasjonsnummer\":\"936067409\"},{\"_links\":{\"underenhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/936078087\"}},\"dato\":\"2025-09-02T22:01:05.902Z\",\"endringstype\":\"Ny\",\"oppdateringsid\":20195728,\"organisasjonsnummer\":\"936078087\"},{\"_links\":{\"underenhet\":{\"href\":\"",
+        "locator": "/_embedded/oppdaterteUnderenheter/216",
+        "extraction_method": "registry change feed",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "d8508b6a961f45a6ae335c6c5be18684ab8a594e0f4df821d9f7cc48e3f8717f",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=935647142&size=1000&page=0",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-10-18T07:15:45.631030Z",
+        "content_sha256": "8fdf6ab6e66f28a1c1c66acd002a143d64755a8e85f2001d491258e8f7f44079",
+        "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/936078087\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/935647142\"}},\"beliggenhetsadresse\":{\"adresse\":[\"Eliasbakken 7\"],\"kommune\":\"FAUSKE\",\"kommunenummer\":\"1841\",\"land\":\"Norge\",\"landk",
+        "locator": "/_embedded/underenheter/0",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ]
+  },
+  {
+    "org": "919414944",
+    "claim": {
+      "field": "registry_change.8b21dfa5c3d4c106b4b299e7",
+      "value": {
+        "company_orgnr": "919414944",
+        "event_id": 20557918,
+        "date": "2025-12-19T14:45:21.767Z",
+        "date_source": "registry publication time (not effective date)",
+        "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?oppdateringsid=20557918&size=1&includeChanges=true",
+        "title": "New registered workplace",
+        "subunit_orgnr": "936819389",
+        "event_type": "Ny",
+        "start_date": "2024-01-01"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "be156424dad40b4eda6016ed919a644a8adf90a3e7353335e5c43c231dd5132f",
+        "5b24869d2d7ef2fbe21d2cd3c1d5651ae589fdca30b3c76e2a2dc156a45e27a1"
+      ],
+      "id": "2ba2ec437f6c987eb46abfb7cc577e577b572866bdac99d19c2b80e8d4c4899f",
+      "family": "activity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "first_observed_at": "2026-10-18T07:17:37.602149Z",
+      "last_observed_at": "2026-10-18T07:17:37.602149Z",
+      "reasons": {}
+    },
+    "evidence": [
+      {
+        "id": "be156424dad40b4eda6016ed919a644a8adf90a3e7353335e5c43c231dd5132f",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=873152362%2C891770812%2C891843712%2C893247092%2C912760936%2C914741254%2C915261108%2C920172814%2C923498826%2C923505075%2C923866892%2C923902082%2C924147881%2C924658622%2C925284858%2C926653008%2C926935321%2C927111683%2C927359952%2C933096998%2C933248380%2C934203631%2C934239709%2C934488431%2C934703286%2C935470986%2C936044042%2C936067409%2C936078087%2C936603564%2C936626157%2C936819389%2C936845738%2C937214936%2C971665777%2C971729066%2C972129666%2C972214701%2C972350222%2C973101862%2C973101870%2C973152351%2C973152378%2C973152386%2C973152394%2C973152408%2C973152416%2C973152424%2C973861778%2C973861832%2C973861840%2C973861875%2C973861883%2C973861891%2C973861913%2C974160099%2C981524403%2C983322832%2C984042442%2C984821670%2C987999233%2C990876991%2C991770526%2C991770534%2C991770542%2C991770577%2C991770593%2C991770631%2C991770682%2C991770771%2C991770798%2C997341783%2C998011345%2C998271711%2C999637329&dato=2024-10-18T07%3A15%3A42.679Z&updatedBefore=2026-10-18T07%3A15%3A42.679Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-10-18T07:17:37.602149Z",
+        "content_sha256": "27e6c762a2273dec1dc40896bf1e736c9cc8bded59deac9fcfccf95cbde49879",
+        "claim_span": "gsid\":20554495,\"organisasjonsnummer\":\"936845738\"},{\"_links\":{\"underenhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/936819389\"}},\"dato\":\"2025-12-19T14:45:21.767Z\",\"endringstype\":\"Ny\",\"oppdateringsid\":20557918,\"organisasjonsnummer\":\"936819389\"},{\"_links\":{\"underenhet\":{\"href\":\"",
+        "locator": "/_embedded/oppdaterteUnderenheter/307",
+        "extraction_method": "registry change feed",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "5b24869d2d7ef2fbe21d2cd3c1d5651ae589fdca30b3c76e2a2dc156a45e27a1",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=919414944&size=1000&page=0",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-10-18T07:15:45.834751Z",
+        "content_sha256": "9ba301684eed5a37cc80e9e07ea874886f3aac215e747450204f848c5e697d3b",
+        "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/936819389\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/919414944\"}},\"beliggenhetsadresse\":{\"adresse\":[\"Kringsj\u00e5vegen 53\"],\"kommune\":\"TRONDHEIM\",\"kommunenummer\":\"5001\",\"land\":\"Norge\",",
+        "locator": "/_embedded/underenheter/0",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ]
+  },
+  {
+    "org": "923399658",
+    "claim": {
+      "field": "registry_change.ed3e3d043dcc493e15976f5d",
+      "value": {
+        "company_orgnr": "923399658",
+        "event_id": 19481015,
+        "date": "2024-12-20T14:35:28.798Z",
+        "date_source": "registry publication time (not effective date)",
+        "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?oppdateringsid=19481015&size=1&includeChanges=true",
+        "title": "New registered workplace",
+        "subunit_orgnr": "934703286",
+        "event_type": "Ny",
+        "start_date": "2023-01-01"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "db885c1a31d68cc7d62fd990094917d5235703885d883b349a06655ff8c07a69",
+        "769524c1a38aae5b22c680f793cf5da362527217d7f8327a9fa6834653768559"
+      ],
+      "id": "527645b83f8ceaec63387da990751713d749f2cdf31600448be488f7bd5adc43",
+      "family": "activity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "first_observed_at": "2026-10-18T07:17:37.602149Z",
+      "last_observed_at": "2026-10-18T07:17:37.602149Z",
+      "reasons": {}
+    },
+    "evidence": [
+      {
+        "id": "db885c1a31d68cc7d62fd990094917d5235703885d883b349a06655ff8c07a69",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=873152362%2C891770812%2C891843712%2C893247092%2C912760936%2C914741254%2C915261108%2C920172814%2C923498826%2C923505075%2C923866892%2C923902082%2C924147881%2C924658622%2C925284858%2C926653008%2C926935321%2C927111683%2C927359952%2C933096998%2C933248380%2C934203631%2C934239709%2C934488431%2C934703286%2C935470986%2C936044042%2C936067409%2C936078087%2C936603564%2C936626157%2C936819389%2C936845738%2C937214936%2C971665777%2C971729066%2C972129666%2C972214701%2C972350222%2C973101862%2C973101870%2C973152351%2C973152378%2C973152386%2C973152394%2C973152408%2C973152416%2C973152424%2C973861778%2C973861832%2C973861840%2C973861875%2C973861883%2C973861891%2C973861913%2C974160099%2C981524403%2C983322832%2C984042442%2C984821670%2C987999233%2C990876991%2C991770526%2C991770534%2C991770542%2C991770577%2C991770593%2C991770631%2C991770682%2C991770771%2C991770798%2C997341783%2C998011345%2C998271711%2C999637329&dato=2024-10-18T07%3A15%3A42.679Z&updatedBefore=2026-10-18T07%3A15%3A42.679Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-10-18T07:17:37.602149Z",
+        "content_sha256": "27e6c762a2273dec1dc40896bf1e736c9cc8bded59deac9fcfccf95cbde49879",
+        "claim_span": "gsid\":19459195,\"organisasjonsnummer\":\"873152362\"},{\"_links\":{\"underenhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/934703286\"}},\"dato\":\"2024-12-20T14:35:28.798Z\",\"endringstype\":\"Ny\",\"oppdateringsid\":19481015,\"organisasjonsnummer\":\"934703286\"},{\"_links\":{\"underenhet\":{\"href\":\"",
+        "locator": "/_embedded/oppdaterteUnderenheter/38",
+        "extraction_method": "registry change feed",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "769524c1a38aae5b22c680f793cf5da362527217d7f8327a9fa6834653768559",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=923399658&size=1000&page=0",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-10-18T07:15:45.907607Z",
+        "content_sha256": "5ab9616b6acbafc8a088f685141d6c723b51d52fae9ae1aa459971b5b7d24a81",
+        "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/934703286\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/923399658\"}},\"beliggenhetsadresse\":{\"adresse\":[\"c/o Frank Nordmo\",\"Overlege Cappelens gate 21A\"],\"kommune\":\"STAVANGER\",\"kommune",
+        "locator": "/_embedded/underenheter/0",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ]
+  },
+  {
+    "org": "926818317",
+    "claim": {
+      "field": "registry_change.88fd60807fb129989cd37d98",
+      "value": {
+        "company_orgnr": "926818317",
+        "event_id": 20461101,
+        "date": "2025-11-18T23:00:37.132Z",
+        "date_source": "registry publication time (not effective date)",
+        "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?oppdateringsid=20461101&size=1&includeChanges=true",
+        "title": "New registered workplace",
+        "subunit_orgnr": "936603564",
+        "event_type": "Ny",
+        "start_date": "2025-11-01"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "8b16f13c6f9af2ae39a1207a399482f95b63d69c0f230c9479ba6e0ac20b64b8",
+        "f2e3f72b21425e663a91b8ee44721ba9cd99564715264379f40bdcff88d074ef"
+      ],
+      "id": "d0567f0d179756b241d496916af8c9820eb0395943ba07c15685b67e844aa817",
+      "family": "activity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "first_observed_at": "2026-10-18T07:17:37.602149Z",
+      "last_observed_at": "2026-10-18T07:17:37.602149Z",
+      "reasons": {}
+    },
+    "evidence": [
+      {
+        "id": "8b16f13c6f9af2ae39a1207a399482f95b63d69c0f230c9479ba6e0ac20b64b8",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=873152362%2C891770812%2C891843712%2C893247092%2C912760936%2C914741254%2C915261108%2C920172814%2C923498826%2C923505075%2C923866892%2C923902082%2C924147881%2C924658622%2C925284858%2C926653008%2C926935321%2C927111683%2C927359952%2C933096998%2C933248380%2C934203631%2C934239709%2C934488431%2C934703286%2C935470986%2C936044042%2C936067409%2C936078087%2C936603564%2C936626157%2C936819389%2C936845738%2C937214936%2C971665777%2C971729066%2C972129666%2C972214701%2C972350222%2C973101862%2C973101870%2C973152351%2C973152378%2C973152386%2C973152394%2C973152408%2C973152416%2C973152424%2C973861778%2C973861832%2C973861840%2C973861875%2C973861883%2C973861891%2C973861913%2C974160099%2C981524403%2C983322832%2C984042442%2C984821670%2C987999233%2C990876991%2C991770526%2C991770534%2C991770542%2C991770577%2C991770593%2C991770631%2C991770682%2C991770771%2C991770798%2C997341783%2C998011345%2C998271711%2C999637329&dato=2024-10-18T07%3A15%3A42.679Z&updatedBefore=2026-10-18T07%3A15%3A42.679Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-10-18T07:17:37.602149Z",
+        "content_sha256": "27e6c762a2273dec1dc40896bf1e736c9cc8bded59deac9fcfccf95cbde49879",
+        "claim_span": "gsid\":20455242,\"organisasjonsnummer\":\"927111683\"},{\"_links\":{\"underenhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/936603564\"}},\"dato\":\"2025-11-18T23:00:37.132Z\",\"endringstype\":\"Ny\",\"oppdateringsid\":20461101,\"organisasjonsnummer\":\"936603564\"},{\"_links\":{\"underenhet\":{\"href\":\"",
+        "locator": "/_embedded/oppdaterteUnderenheter/281",
+        "extraction_method": "registry change feed",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "f2e3f72b21425e663a91b8ee44721ba9cd99564715264379f40bdcff88d074ef",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=926818317&size=1000&page=0",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-10-18T07:15:45.908185Z",
+        "content_sha256": "d9ee0c38214db740a25d52294c0242e28fc2f35b928d5f7aa410f6fd366bf482",
+        "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/936603564\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/926818317\"}},\"beliggenhetsadresse\":{\"adresse\":[\"Svaddevegen 125\"],\"kommune\":\"TINN\",\"kommunenummer\":\"4026\",\"land\":\"Norge\",\"landk",
+        "locator": "/_embedded/underenheter/1",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ]
+  },
+  {
+    "org": "935465567",
+    "claim": {
+      "field": "registry_change.0115dcfcb9ffea8707cd74da",
+      "value": {
+        "company_orgnr": "935465567",
+        "event_id": 19860369,
+        "date": "2025-05-10T22:17:54.762Z",
+        "date_source": "registry publication time (not effective date)",
+        "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?oppdateringsid=19860369&size=1&includeChanges=true",
+        "title": "New registered workplace",
+        "subunit_orgnr": "935470986",
+        "event_type": "Ny",
+        "start_date": "2025-05-01"
+      },
+      "availability": "available",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "b31e72f16ef0cd847f288443f4f19e1ce8ec60d6e3c2c47c8a93be45cd0eef9a",
+        "dc640a579aee48537228fdfad88145bcc8a628ef00beedbf78f8be088048bd22"
+      ],
+      "id": "101390a4a1d929064ff8b6475933a730ca5b558790fff83be5c10699b7338679",
+      "family": "activity",
+      "reporting_period": null,
+      "carried_forward": false,
+      "first_observed_at": "2026-10-18T07:17:37.602149Z",
+      "last_observed_at": "2026-10-18T07:17:37.602149Z",
+      "reasons": {}
+    },
+    "evidence": [
+      {
+        "id": "b31e72f16ef0cd847f288443f4f19e1ce8ec60d6e3c2c47c8a93be45cd0eef9a",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=873152362%2C891770812%2C891843712%2C893247092%2C912760936%2C914741254%2C915261108%2C920172814%2C923498826%2C923505075%2C923866892%2C923902082%2C924147881%2C924658622%2C925284858%2C926653008%2C926935321%2C927111683%2C927359952%2C933096998%2C933248380%2C934203631%2C934239709%2C934488431%2C934703286%2C935470986%2C936044042%2C936067409%2C936078087%2C936603564%2C936626157%2C936819389%2C936845738%2C937214936%2C971665777%2C971729066%2C972129666%2C972214701%2C972350222%2C973101862%2C973101870%2C973152351%2C973152378%2C973152386%2C973152394%2C973152408%2C973152416%2C973152424%2C973861778%2C973861832%2C973861840%2C973861875%2C973861883%2C973861891%2C973861913%2C974160099%2C981524403%2C983322832%2C984042442%2C984821670%2C987999233%2C990876991%2C991770526%2C991770534%2C991770542%2C991770577%2C991770593%2C991770631%2C991770682%2C991770771%2C991770798%2C997341783%2C998011345%2C998271711%2C999637329&dato=2024-10-18T07%3A15%3A42.679Z&updatedBefore=2026-10-18T07%3A15%3A42.679Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-10-18T07:17:37.602149Z",
+        "content_sha256": "27e6c762a2273dec1dc40896bf1e736c9cc8bded59deac9fcfccf95cbde49879",
+        "claim_span": "gsid\":19843493,\"organisasjonsnummer\":\"873152362\"},{\"_links\":{\"underenhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/935470986\"}},\"dato\":\"2025-05-10T22:17:54.762Z\",\"endringstype\":\"Ny\",\"oppdateringsid\":19860369,\"organisasjonsnummer\":\"935470986\"},{\"_links\":{\"underenhet\":{\"href\":\"",
+        "locator": "/_embedded/oppdaterteUnderenheter/127",
+        "extraction_method": "registry change feed",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      },
+      {
+        "id": "dc640a579aee48537228fdfad88145bcc8a628ef00beedbf78f8be088048bd22",
+        "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=935465567&size=1000&page=0",
+        "source_class": "official_registry",
+        "retrieved_at": "2026-10-18T07:15:46.187841Z",
+        "content_sha256": "446483fd45c8cf9ca7736324849841e89ef54848036aa8c2244922b6e86354f8",
+        "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/935470986\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/935465567\"}},\"beliggenhetsadresse\":{\"adresse\":[\"Dustadveien 8\"],\"kommune\":\"ASKER\",\"kommunenummer\":\"3203\",\"land\":\"Norge\",\"landko",
+        "locator": "/_embedded/underenheter/0",
+        "extraction_method": "signalpost.registry.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ]
+  }
+]
