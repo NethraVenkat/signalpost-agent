@@ -328,4 +328,24 @@
 
 2026-10-18T04:07:02+05:30 — All obsolete gate processes verified stopped. Duplicate and case-colliding bulk headers are now rejected before any selected-row evidence is stored; production falls back to correct-company API data. 53 registry/bulk checks pass, including both new no-misattribution/fallback cases. Both frozen CSVs have 90 unique headers, so valid input behavior is unchanged.
 
-NEXT: Commit the bulk-header identity guard, run the full 497-test suite, then start out/r2_check.py exactly once at the corrected SHA.
+2026-10-18T09:21:49+05:30 — User superseded fixed candidate: release source is 27a3bb0. Later fix and reports preserved on archive/r2-post-filmtek-356fb1c; revision/r3 will not start before email-sent confirmation. Independent reopening of frozen-run websites active.
+
+2026-10-18T09:34:59+05:30 — Heartbeat: waiting for remote CI at 27a3bb0cc2e4.
+
+2026-10-18T09:35:40+05:30 — Heartbeat: waiting for remote CI at 27a3bb0cc2e4.
+
+2026-10-18T09:36:55+05:30 — Heartbeat: clean-clone network-clone running, PID 10024, SHA 27a3bb0cc2e4.
+
+2026-10-18T09:36:58+05:30 — Heartbeat: clean-clone install running, PID 7264, SHA 27a3bb0cc2e4.
+
+2026-10-18T09:37:03+05:30 — Heartbeat: clean-clone python-version running, PID 13320, SHA 27a3bb0cc2e4.
+
+2026-10-18T09:37:03+05:30 — Heartbeat: clean-clone smoke100 running, PID 736, SHA 27a3bb0cc2e4.
+
+2026-10-18T09:37:48+05:30 — Heartbeat: clean-clone smoke100 running, PID 736, SHA 27a3bb0cc2e4.
+
+2026-10-18T09:37:48+05:30 — Heartbeat: clean-clone verify100 running, PID 18044, SHA 27a3bb0cc2e4.
+
+2026-10-18T09:39:09+05:30 — Frozen 27a3bb0 source CI green; all 4 new plus 20 other website claims reopened with zero mismatches; independent live BRREG confirms FILMTEK branch. Remote exact-SHA smoke passes: 100 ordered complete envelopes/profiles, 41.078 s pipeline, 512 requests, zero provider fees. Docs-only release commit next. FILMTEK issue retained; R3 not started.
+
+NEXT: Verify final docs-only CI and hand off merge/tag/email draft; start revision/r3 only AFTER the user confirms the revision email was sent.

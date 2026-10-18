@@ -1,0 +1,1219 @@
+{
+  "scope": "The nine losses in the frozen 27a3bb0 cold comparison requested for review; not a blanket classification of future losses.",
+  "claims": [
+    {
+      "orgnr": "963070276",
+      "family": "roles",
+      "field": "roles.role.b6ffd901f45c686b19952ea4.0",
+      "id": "6ceb55fcbbb68c3abe4af4941d9701596a178b24ee4166d4fb974a480c561649",
+      "before": {
+        "role_type": {
+          "_links": {
+            "self": {
+              "href": "https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/DAGL"
+            }
+          },
+          "beskrivelse": "Daglig leder",
+          "kode": "DAGL"
+        },
+        "name": "Fred Louis Mollerin",
+        "entity_organisation_number": null,
+        "inactive": false,
+        "group_type": {
+          "_links": {
+            "self": {
+              "href": "https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper/DAGL"
+            }
+          },
+          "beskrivelse": "Daglig leder",
+          "kode": "DAGL"
+        },
+        "last_changed": "1992-01-17",
+        "from_date": null
+      },
+      "after": [],
+      "section_state": "available",
+      "errors": [],
+      "old_sources": [
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/enheter/963070276/roller",
+          "hash": "989a6090b30da6dbaf1e5f6521e29f7fe6d266279c99584d694c12c53ad53265",
+          "locator": "/rollegrupper/0/roller/0",
+          "span": "oller\":[{\"avregistrert\":false,\"person\":{\"erDoed\":false,\"fodselsdato\":\"1951-02-21\",\"navn\":{\"etternavn\":\"Mollerin\",\"fornavn\":\"Fred Louis\"}},\"rekkefolge\":0,\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/DAGL\"}},\"beskrivelse\":\"Daglig leder\",\"kode\":\"DAGL\"}}"
+        }
+      ],
+      "current_sources": [
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/enheter/963070276/roller",
+          "hash": "aad3939556f9fc7995582cd2e91f85f9d1254f6f73c65c9d40b5d6ace58826ba",
+          "locator": "/rollegrupper/0/roller/0"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/enheter/963070276/roller",
+          "hash": "aad3939556f9fc7995582cd2e91f85f9d1254f6f73c65c9d40b5d6ace58826ba",
+          "locator": "/rollegrupper/0/roller/0/rekkefolge"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/enheter/963070276/roller",
+          "hash": "aad3939556f9fc7995582cd2e91f85f9d1254f6f73c65c9d40b5d6ace58826ba",
+          "locator": "/rollegrupper/0/roller/1"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/enheter/963070276/roller",
+          "hash": "aad3939556f9fc7995582cd2e91f85f9d1254f6f73c65c9d40b5d6ace58826ba",
+          "locator": "/rollegrupper/0/roller/1/rekkefolge"
+        }
+      ],
+      "matching_attempts": [
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/enheter/963070276/roller",
+          "status": 200,
+          "error": null,
+          "content_sha256": "aad3939556f9fc7995582cd2e91f85f9d1254f6f73c65c9d40b5d6ace58826ba"
+        }
+      ],
+      "classification": "live_source_variance",
+      "classification_basis": "Unchanged registry extractor with a changed current primary-source body; old and current hashes/locators recorded for review.",
+      "qualification": "Primary-source JSON manually compared: DAGL group removed for 963070276 (STYR group remains), or subunit 913309472 NACE changes from 62.200 to 64.323. Registry extraction code is unchanged."
+    },
+    {
+      "orgnr": "963070276",
+      "family": "roles",
+      "field": "roles.detail.b6ffd901f45c686b19952ea4.0.order",
+      "id": "97825f5546ce00dc3956a42a87d08042f8ce9384f87ebd63fa19357ef0f49e8a",
+      "before": 0,
+      "after": [],
+      "section_state": "available",
+      "errors": [],
+      "old_sources": [
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/enheter/963070276/roller",
+          "hash": "989a6090b30da6dbaf1e5f6521e29f7fe6d266279c99584d694c12c53ad53265",
+          "locator": "/rollegrupper/0/roller/0/rekkefolge",
+          "span": ":\"Mollerin\",\"fornavn\":\"Fred Louis\"}},\"rekkefolge\":0,\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/DAGL\"}},\"beskrivelse\":\"Daglig leder\",\"kode\":\"DAGL\"}}],\"sistEndret\":\"1992-01-17\",\"type\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/"
+        }
+      ],
+      "current_sources": [
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/enheter/963070276/roller",
+          "hash": "aad3939556f9fc7995582cd2e91f85f9d1254f6f73c65c9d40b5d6ace58826ba",
+          "locator": "/rollegrupper/0/roller/0"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/enheter/963070276/roller",
+          "hash": "aad3939556f9fc7995582cd2e91f85f9d1254f6f73c65c9d40b5d6ace58826ba",
+          "locator": "/rollegrupper/0/roller/0/rekkefolge"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/enheter/963070276/roller",
+          "hash": "aad3939556f9fc7995582cd2e91f85f9d1254f6f73c65c9d40b5d6ace58826ba",
+          "locator": "/rollegrupper/0/roller/1"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/enheter/963070276/roller",
+          "hash": "aad3939556f9fc7995582cd2e91f85f9d1254f6f73c65c9d40b5d6ace58826ba",
+          "locator": "/rollegrupper/0/roller/1/rekkefolge"
+        }
+      ],
+      "matching_attempts": [
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/enheter/963070276/roller",
+          "status": 200,
+          "error": null,
+          "content_sha256": "aad3939556f9fc7995582cd2e91f85f9d1254f6f73c65c9d40b5d6ace58826ba"
+        }
+      ],
+      "classification": "live_source_variance",
+      "classification_basis": "Unchanged registry extractor with a changed current primary-source body; old and current hashes/locators recorded for review.",
+      "qualification": "Primary-source JSON manually compared: DAGL group removed for 963070276 (STYR group remains), or subunit 913309472 NACE changes from 62.200 to 64.323. Registry extraction code is unchanged."
+    },
+    {
+      "orgnr": "988330752",
+      "family": "website",
+      "field": "official_website",
+      "id": "da3e6f3a60f877364cd4f2fd7f877de6e78b25ad8bba5ec2abc72660a05553db",
+      "before": {
+        "final_url": "https://www.audioped.no",
+        "identity_level": "VERIFIED",
+        "proof_type": "orgnr_on_page",
+        "proof_page_url": "https://www.audioped.no/",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "subunit_registry_email",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "matched_via_subunit": "933248380"
+      },
+      "after": [
+        {
+          "final_url": "https://www.filmtek.no",
+          "identity_level": "HIGH",
+          "proof_type": "signals",
+          "proof_page_url": "https://www.filmtek.no/",
+          "signals": [
+            "legal_name",
+            "address",
+            "registry_website",
+            "municipality"
+          ],
+          "points": 7,
+          "candidate_origin": "registry_website",
+          "relationship_note": null,
+          "other_orgnrs": []
+        }
+      ],
+      "section_state": "available",
+      "errors": [
+        {
+          "section": "website",
+          "code": "website_candidates",
+          "message": "[{\"domain\": \"filmtek.no\", \"level\": \"HIGH\", \"points\": 7, \"signals\": [\"legal_name\", \"address\", \"registry_website\", \"municipality\"], \"origin\": \"registry_website\", \"reason\": \"corroboration\"}, {\"domain\": \"audioped.no\", \"origin\": \"subunit_registry_email\", \"level\": \"LOW\", \"reason\": \"website_budget_exhausted\"}, {\"domain\": \"filmtek.no\", \"origin\": \"registry_website\", \"url\": \"https://www.filmtek.no/\", \"status\": 200}, {\"domain\": \"audioped.no\", \"origin\": \"subunit_registry_email\", \"url\": \"https://audioped.no/\", \"reason\": \"website_budget_exhausted\"}]"
+        }
+      ],
+      "old_sources": [
+        {
+          "url": "https://www.audioped.no/",
+          "hash": "406943c382a989f9566464ebb6354a0794eb4dd888918ec72f33d11f29191375",
+          "locator": "identity-proof:933248380",
+          "span": "ter-bottom\">\n<span>AudioPed AS · Org.nr 933 248 380 · Besøk: Vigeveien 15a · Post: Harald Gilles vei 2, 4633 Kristiansand</span>\n<span class=\"footer-t"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/0",
+          "span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/933248380\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/988330752\"}},\"beliggenhetsadresse\":{\"adresse\":[\"Fyrveien 18\"],\"kommune\":\"FARSUND\",\"kommunenummer\":\"4206\",\"land\":\"Norge\",\"landko"
+        }
+      ],
+      "current_sources": [
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/0"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/0/oppstartsdato"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/0/registreringsdatoEnhetsregisteret"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/0/epostadresse"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/0/postadresse"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/0/organisasjonsform"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/0/harRegistrertAntallAnsatte"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/0/registrertIMvaregisteret"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/1"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/1/oppstartsdato"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/1/registreringsdatoEnhetsregisteret"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/1/datoEierskifte"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/1/hjemmeside"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/1/epostadresse"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/1/mobil"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/1/organisasjonsform"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/1/harRegistrertAntallAnsatte"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/1/registrertIMvaregisteret"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/1/registreringsdatoAntallAnsatteEnhetsregisteret"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/1/registreringsdatoAntallAnsatteNAVAaregisteret"
+        }
+      ],
+      "matching_attempts": [
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "status": 200,
+          "error": null,
+          "content_sha256": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d"
+        }
+      ],
+      "classification": "live_source_variance",
+      "classification_basis": "Company-specific request records show that this cold run never obtained the audioped.no page for FILMTEK: redirects and robots requests ended at the unchanged website allowance. A matching body fetched for another company is not successful acquisition for this company. These six cold losses are acquisition variance. The distinct main/subunit selection instability remains a known issue; no deterministic main-site-priority fix is included in 27a3bb0.",
+      "company_scoped_attempts": [
+        {
+          "url": "https://www.filmtek.no/robots.txt",
+          "host": "www.filmtek.no",
+          "organisation_number": "988330752",
+          "attempt_started": 71.20437419999507,
+          "status": 404,
+          "error": null,
+          "section": "website",
+          "content_sha256": "4c13d452dd5d49671bd93ca32f2b4f85c78e39b6ab0ad1f38d98ed267f8fd896",
+          "runtime_ms": 732
+        },
+        {
+          "url": "https://www.filmtek.no/",
+          "host": "www.filmtek.no",
+          "organisation_number": "988330752",
+          "attempt_started": 72.96657859999686,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "494c94df5e06889d4967227744fcf88777d7cb9d90772bc9600ed80b05f748e9",
+          "runtime_ms": 187
+        },
+        {
+          "url": "https://www.filmtek.no/",
+          "host": "www.filmtek.no",
+          "organisation_number": "988330752",
+          "attempt_started": 74.16167180000048,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "494c94df5e06889d4967227744fcf88777d7cb9d90772bc9600ed80b05f748e9",
+          "runtime_ms": 224
+        },
+        {
+          "url": "https://audioped.no/robots.txt",
+          "host": "audioped.no",
+          "organisation_number": "988330752",
+          "attempt_started": 74.48995379999542,
+          "status": 301,
+          "error": null,
+          "section": "website",
+          "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "runtime_ms": 4196
+        },
+        {
+          "url": "https://www.audioped.no/robots.txt",
+          "host": "www.audioped.no",
+          "organisation_number": "988330752",
+          "attempt_started": 79.68917299999885,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "fe55a95d8e0e5962a41fff5ef1b1d6e4ce3accc545a1fe18c502470471c4cf3c",
+          "runtime_ms": 1642
+        },
+        {
+          "url": "https://audioped.no/",
+          "host": "audioped.no",
+          "organisation_number": "988330752",
+          "attempt_started": 82.33336050000071,
+          "status": 301,
+          "error": null,
+          "section": "website",
+          "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "runtime_ms": 1374
+        }
+      ],
+      "qualification": "Original cold acquisition failed before this company received the branch page; unchanged request allowance ended during redirects/robots. Known refresh selection instability is separately disclosed, not counted as a passed zero-loss gate."
+    },
+    {
+      "orgnr": "988330752",
+      "family": "website",
+      "field": "website_description.meta_description.fb53b933d9b051d1",
+      "id": "c546edd42d4f7157880b892a059d28978aebc24650ebfda2c58380c05a4432fd",
+      "before": {
+        "text": "Therese Widerøe hjelper deg med nedsatt hørsel, tinnitus, hyperakusis og misofoni. Gratis behandling via HELFO i Kristiansand. Over 20 års erfaring.",
+        "kind": "meta_description",
+        "self_description": true,
+        "identity_level": "VERIFIED",
+        "identity_claim_id": "da3e6f3a60f877364cd4f2fd7f877de6e78b25ad8bba5ec2abc72660a05553db"
+      },
+      "after": [],
+      "section_state": "available",
+      "errors": [
+        {
+          "section": "website",
+          "code": "website_candidates",
+          "message": "[{\"domain\": \"filmtek.no\", \"level\": \"HIGH\", \"points\": 7, \"signals\": [\"legal_name\", \"address\", \"registry_website\", \"municipality\"], \"origin\": \"registry_website\", \"reason\": \"corroboration\"}, {\"domain\": \"audioped.no\", \"origin\": \"subunit_registry_email\", \"level\": \"LOW\", \"reason\": \"website_budget_exhausted\"}, {\"domain\": \"filmtek.no\", \"origin\": \"registry_website\", \"url\": \"https://www.filmtek.no/\", \"status\": 200}, {\"domain\": \"audioped.no\", \"origin\": \"subunit_registry_email\", \"url\": \"https://audioped.no/\", \"reason\": \"website_budget_exhausted\"}]"
+        }
+      ],
+      "old_sources": [
+        {
+          "url": "https://www.audioped.no/",
+          "hash": "406943c382a989f9566464ebb6354a0794eb4dd888918ec72f33d11f29191375",
+          "locator": "meta:description@content",
+          "span": "<meta name=\"description\" content=\"Therese Widerøe hjelper deg med nedsatt hørsel, tinnitus, hyperakusis og misofoni. Gratis behandling via HELFO i Kristiansand. Over 20 års erfaring.\"/>"
+        },
+        {
+          "url": "https://www.audioped.no/",
+          "hash": "406943c382a989f9566464ebb6354a0794eb4dd888918ec72f33d11f29191375",
+          "locator": "identity-proof:933248380",
+          "span": "ter-bottom\">\n<span>AudioPed AS · Org.nr 933 248 380 · Besøk: Vigeveien 15a · Post: Harald Gilles vei 2, 4633 Kristiansand</span>\n<span class=\"footer-t"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/0",
+          "span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/933248380\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/988330752\"}},\"beliggenhetsadresse\":{\"adresse\":[\"Fyrveien 18\"],\"kommune\":\"FARSUND\",\"kommunenummer\":\"4206\",\"land\":\"Norge\",\"landko"
+        }
+      ],
+      "current_sources": [
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/0"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/0/oppstartsdato"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/0/registreringsdatoEnhetsregisteret"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/0/epostadresse"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/0/postadresse"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/0/organisasjonsform"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/0/harRegistrertAntallAnsatte"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/0/registrertIMvaregisteret"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/1"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/1/oppstartsdato"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/1/registreringsdatoEnhetsregisteret"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/1/datoEierskifte"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/1/hjemmeside"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/1/epostadresse"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/1/mobil"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/1/organisasjonsform"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/1/harRegistrertAntallAnsatte"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/1/registrertIMvaregisteret"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/1/registreringsdatoAntallAnsatteEnhetsregisteret"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/1/registreringsdatoAntallAnsatteNAVAaregisteret"
+        }
+      ],
+      "matching_attempts": [
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "status": 200,
+          "error": null,
+          "content_sha256": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d"
+        }
+      ],
+      "classification": "live_source_variance",
+      "classification_basis": "Company-specific request records show that this cold run never obtained the audioped.no page for FILMTEK: redirects and robots requests ended at the unchanged website allowance. A matching body fetched for another company is not successful acquisition for this company. These six cold losses are acquisition variance. The distinct main/subunit selection instability remains a known issue; no deterministic main-site-priority fix is included in 27a3bb0.",
+      "company_scoped_attempts": [
+        {
+          "url": "https://www.filmtek.no/robots.txt",
+          "host": "www.filmtek.no",
+          "organisation_number": "988330752",
+          "attempt_started": 71.20437419999507,
+          "status": 404,
+          "error": null,
+          "section": "website",
+          "content_sha256": "4c13d452dd5d49671bd93ca32f2b4f85c78e39b6ab0ad1f38d98ed267f8fd896",
+          "runtime_ms": 732
+        },
+        {
+          "url": "https://www.filmtek.no/",
+          "host": "www.filmtek.no",
+          "organisation_number": "988330752",
+          "attempt_started": 72.96657859999686,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "494c94df5e06889d4967227744fcf88777d7cb9d90772bc9600ed80b05f748e9",
+          "runtime_ms": 187
+        },
+        {
+          "url": "https://www.filmtek.no/",
+          "host": "www.filmtek.no",
+          "organisation_number": "988330752",
+          "attempt_started": 74.16167180000048,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "494c94df5e06889d4967227744fcf88777d7cb9d90772bc9600ed80b05f748e9",
+          "runtime_ms": 224
+        },
+        {
+          "url": "https://audioped.no/robots.txt",
+          "host": "audioped.no",
+          "organisation_number": "988330752",
+          "attempt_started": 74.48995379999542,
+          "status": 301,
+          "error": null,
+          "section": "website",
+          "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "runtime_ms": 4196
+        },
+        {
+          "url": "https://www.audioped.no/robots.txt",
+          "host": "www.audioped.no",
+          "organisation_number": "988330752",
+          "attempt_started": 79.68917299999885,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "fe55a95d8e0e5962a41fff5ef1b1d6e4ce3accc545a1fe18c502470471c4cf3c",
+          "runtime_ms": 1642
+        },
+        {
+          "url": "https://audioped.no/",
+          "host": "audioped.no",
+          "organisation_number": "988330752",
+          "attempt_started": 82.33336050000071,
+          "status": 301,
+          "error": null,
+          "section": "website",
+          "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "runtime_ms": 1374
+        }
+      ],
+      "qualification": "Original cold acquisition failed before this company received the branch page; unchanged request allowance ended during redirects/robots. Known refresh selection instability is separately disclosed, not counted as a passed zero-loss gate."
+    },
+    {
+      "orgnr": "988330752",
+      "family": "website",
+      "field": "website_description.og_description.fb53b933d9b051d1",
+      "id": "af032233dc3540710c496f1c96274e1c37e2770ffb52f301e39cee43f9146863",
+      "before": {
+        "text": "Therese Widerøe hjelper deg med nedsatt hørsel, tinnitus, hyperakusis og misofoni. Gratis behandling via HELFO i Kristiansand. Over 20 års erfaring.",
+        "kind": "og_description",
+        "self_description": true,
+        "identity_level": "VERIFIED",
+        "identity_claim_id": "da3e6f3a60f877364cd4f2fd7f877de6e78b25ad8bba5ec2abc72660a05553db"
+      },
+      "after": [],
+      "section_state": "available",
+      "errors": [
+        {
+          "section": "website",
+          "code": "website_candidates",
+          "message": "[{\"domain\": \"filmtek.no\", \"level\": \"HIGH\", \"points\": 7, \"signals\": [\"legal_name\", \"address\", \"registry_website\", \"municipality\"], \"origin\": \"registry_website\", \"reason\": \"corroboration\"}, {\"domain\": \"audioped.no\", \"origin\": \"subunit_registry_email\", \"level\": \"LOW\", \"reason\": \"website_budget_exhausted\"}, {\"domain\": \"filmtek.no\", \"origin\": \"registry_website\", \"url\": \"https://www.filmtek.no/\", \"status\": 200}, {\"domain\": \"audioped.no\", \"origin\": \"subunit_registry_email\", \"url\": \"https://audioped.no/\", \"reason\": \"website_budget_exhausted\"}]"
+        }
+      ],
+      "old_sources": [
+        {
+          "url": "https://www.audioped.no/",
+          "hash": "406943c382a989f9566464ebb6354a0794eb4dd888918ec72f33d11f29191375",
+          "locator": "meta:og:description@content",
+          "span": "<meta property=\"og:description\" content=\"Therese Widerøe hjelper deg med nedsatt hørsel, tinnitus, hyperakusis og misofoni. Gratis behandling via HELFO i Kristiansand. Over 20 års erfaring.\" />"
+        },
+        {
+          "url": "https://www.audioped.no/",
+          "hash": "406943c382a989f9566464ebb6354a0794eb4dd888918ec72f33d11f29191375",
+          "locator": "identity-proof:933248380",
+          "span": "ter-bottom\">\n<span>AudioPed AS · Org.nr 933 248 380 · Besøk: Vigeveien 15a · Post: Harald Gilles vei 2, 4633 Kristiansand</span>\n<span class=\"footer-t"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/0",
+          "span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/933248380\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/988330752\"}},\"beliggenhetsadresse\":{\"adresse\":[\"Fyrveien 18\"],\"kommune\":\"FARSUND\",\"kommunenummer\":\"4206\",\"land\":\"Norge\",\"landko"
+        }
+      ],
+      "current_sources": [
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/0"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/0/oppstartsdato"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/0/registreringsdatoEnhetsregisteret"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/0/epostadresse"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/0/postadresse"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/0/organisasjonsform"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/0/harRegistrertAntallAnsatte"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/0/registrertIMvaregisteret"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/1"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/1/oppstartsdato"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/1/registreringsdatoEnhetsregisteret"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/1/datoEierskifte"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/1/hjemmeside"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/1/epostadresse"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/1/mobil"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/1/organisasjonsform"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/1/harRegistrertAntallAnsatte"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/1/registrertIMvaregisteret"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/1/registreringsdatoAntallAnsatteEnhetsregisteret"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "hash": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d",
+          "locator": "/_embedded/underenheter/1/registreringsdatoAntallAnsatteNAVAaregisteret"
+        }
+      ],
+      "matching_attempts": [
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988330752&size=1000&page=0",
+          "status": 200,
+          "error": null,
+          "content_sha256": "4e95c1bb63202b56036591706684e6f86b3b9281be3d2ea35664623a8f10940d"
+        }
+      ],
+      "classification": "live_source_variance",
+      "classification_basis": "Company-specific request records show that this cold run never obtained the audioped.no page for FILMTEK: redirects and robots requests ended at the unchanged website allowance. A matching body fetched for another company is not successful acquisition for this company. These six cold losses are acquisition variance. The distinct main/subunit selection instability remains a known issue; no deterministic main-site-priority fix is included in 27a3bb0.",
+      "company_scoped_attempts": [
+        {
+          "url": "https://www.filmtek.no/robots.txt",
+          "host": "www.filmtek.no",
+          "organisation_number": "988330752",
+          "attempt_started": 71.20437419999507,
+          "status": 404,
+          "error": null,
+          "section": "website",
+          "content_sha256": "4c13d452dd5d49671bd93ca32f2b4f85c78e39b6ab0ad1f38d98ed267f8fd896",
+          "runtime_ms": 732
+        },
+        {
+          "url": "https://www.filmtek.no/",
+          "host": "www.filmtek.no",
+          "organisation_number": "988330752",
+          "attempt_started": 72.96657859999686,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "494c94df5e06889d4967227744fcf88777d7cb9d90772bc9600ed80b05f748e9",
+          "runtime_ms": 187
+        },
+        {
+          "url": "https://www.filmtek.no/",
+          "host": "www.filmtek.no",
+          "organisation_number": "988330752",
+          "attempt_started": 74.16167180000048,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "494c94df5e06889d4967227744fcf88777d7cb9d90772bc9600ed80b05f748e9",
+          "runtime_ms": 224
+        },
+        {
+          "url": "https://audioped.no/robots.txt",
+          "host": "audioped.no",
+          "organisation_number": "988330752",
+          "attempt_started": 74.48995379999542,
+          "status": 301,
+          "error": null,
+          "section": "website",
+          "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "runtime_ms": 4196
+        },
+        {
+          "url": "https://www.audioped.no/robots.txt",
+          "host": "www.audioped.no",
+          "organisation_number": "988330752",
+          "attempt_started": 79.68917299999885,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "fe55a95d8e0e5962a41fff5ef1b1d6e4ce3accc545a1fe18c502470471c4cf3c",
+          "runtime_ms": 1642
+        },
+        {
+          "url": "https://audioped.no/",
+          "host": "audioped.no",
+          "organisation_number": "988330752",
+          "attempt_started": 82.33336050000071,
+          "status": 301,
+          "error": null,
+          "section": "website",
+          "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "runtime_ms": 1374
+        }
+      ],
+      "qualification": "Original cold acquisition failed before this company received the branch page; unchanged request allowance ended during redirects/robots. Known refresh selection instability is separately disclosed, not counted as a passed zero-loss gate."
+    },
+    {
+      "orgnr": "988330752",
+      "family": "website",
+      "field": "social_profile.bf7baa658b98e6deb5b3",
+      "id": "e34d887c9f18e26146c7b51c8e8e5233bd7dfb50942ed31f78f876e63bf8b7a4",
+      "before": {
+        "url": "https://www.instagram.com/og_hva_sa_du",
+        "platform": "instagram.com"
+      },
+      "after": [],
+      "section_state": "available",
+      "errors": [
+        {
+          "section": "website",
+          "code": "website_candidates",
+          "message": "[{\"domain\": \"filmtek.no\", \"level\": \"HIGH\", \"points\": 7, \"signals\": [\"legal_name\", \"address\", \"registry_website\", \"municipality\"], \"origin\": \"registry_website\", \"reason\": \"corroboration\"}, {\"domain\": \"audioped.no\", \"origin\": \"subunit_registry_email\", \"level\": \"LOW\", \"reason\": \"website_budget_exhausted\"}, {\"domain\": \"filmtek.no\", \"origin\": \"registry_website\", \"url\": \"https://www.filmtek.no/\", \"status\": 200}, {\"domain\": \"audioped.no\", \"origin\": \"subunit_registry_email\", \"url\": \"https://audioped.no/\", \"reason\": \"website_budget_exhausted\"}]"
+        }
+      ],
+      "old_sources": [
+        {
+          "url": "https://www.audioped.no/",
+          "hash": "406943c382a989f9566464ebb6354a0794eb4dd888918ec72f33d11f29191375",
+          "locator": "company-link:https://www.instagram.com/og_hva_sa_du",
+          "span": "<a href=\"https://www.instagram.com/og_hva_sa_du/\" target=\"_blank\" rel=\"noopener\" aria-label=\"Instagram\">"
+        }
+      ],
+      "current_sources": [],
+      "matching_attempts": [],
+      "classification": "live_source_variance",
+      "classification_basis": "Company-specific request records show that this cold run never obtained the audioped.no page for FILMTEK: redirects and robots requests ended at the unchanged website allowance. A matching body fetched for another company is not successful acquisition for this company. These six cold losses are acquisition variance. The distinct main/subunit selection instability remains a known issue; no deterministic main-site-priority fix is included in 27a3bb0.",
+      "company_scoped_attempts": [
+        {
+          "url": "https://www.filmtek.no/robots.txt",
+          "host": "www.filmtek.no",
+          "organisation_number": "988330752",
+          "attempt_started": 71.20437419999507,
+          "status": 404,
+          "error": null,
+          "section": "website",
+          "content_sha256": "4c13d452dd5d49671bd93ca32f2b4f85c78e39b6ab0ad1f38d98ed267f8fd896",
+          "runtime_ms": 732
+        },
+        {
+          "url": "https://www.filmtek.no/",
+          "host": "www.filmtek.no",
+          "organisation_number": "988330752",
+          "attempt_started": 72.96657859999686,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "494c94df5e06889d4967227744fcf88777d7cb9d90772bc9600ed80b05f748e9",
+          "runtime_ms": 187
+        },
+        {
+          "url": "https://www.filmtek.no/",
+          "host": "www.filmtek.no",
+          "organisation_number": "988330752",
+          "attempt_started": 74.16167180000048,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "494c94df5e06889d4967227744fcf88777d7cb9d90772bc9600ed80b05f748e9",
+          "runtime_ms": 224
+        },
+        {
+          "url": "https://audioped.no/robots.txt",
+          "host": "audioped.no",
+          "organisation_number": "988330752",
+          "attempt_started": 74.48995379999542,
+          "status": 301,
+          "error": null,
+          "section": "website",
+          "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "runtime_ms": 4196
+        },
+        {
+          "url": "https://www.audioped.no/robots.txt",
+          "host": "www.audioped.no",
+          "organisation_number": "988330752",
+          "attempt_started": 79.68917299999885,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "fe55a95d8e0e5962a41fff5ef1b1d6e4ce3accc545a1fe18c502470471c4cf3c",
+          "runtime_ms": 1642
+        },
+        {
+          "url": "https://audioped.no/",
+          "host": "audioped.no",
+          "organisation_number": "988330752",
+          "attempt_started": 82.33336050000071,
+          "status": 301,
+          "error": null,
+          "section": "website",
+          "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "runtime_ms": 1374
+        }
+      ],
+      "qualification": "Original cold acquisition failed before this company received the branch page; unchanged request allowance ended during redirects/robots. Known refresh selection instability is separately disclosed, not counted as a passed zero-loss gate."
+    },
+    {
+      "orgnr": "988330752",
+      "family": "website",
+      "field": "contact.email.95630f353b39561b8b2e",
+      "id": "cd8d320b1797c1e220b62f6ffdd169bf5169430c4e11d3e38c7bc22144b3dae1",
+      "before": "hei@audioped.no",
+      "after": [],
+      "section_state": "available",
+      "errors": [
+        {
+          "section": "website",
+          "code": "website_candidates",
+          "message": "[{\"domain\": \"filmtek.no\", \"level\": \"HIGH\", \"points\": 7, \"signals\": [\"legal_name\", \"address\", \"registry_website\", \"municipality\"], \"origin\": \"registry_website\", \"reason\": \"corroboration\"}, {\"domain\": \"audioped.no\", \"origin\": \"subunit_registry_email\", \"level\": \"LOW\", \"reason\": \"website_budget_exhausted\"}, {\"domain\": \"filmtek.no\", \"origin\": \"registry_website\", \"url\": \"https://www.filmtek.no/\", \"status\": 200}, {\"domain\": \"audioped.no\", \"origin\": \"subunit_registry_email\", \"url\": \"https://audioped.no/\", \"reason\": \"website_budget_exhausted\"}]"
+        }
+      ],
+      "old_sources": [
+        {
+          "url": "https://www.audioped.no/",
+          "hash": "406943c382a989f9566464ebb6354a0794eb4dd888918ec72f33d11f29191375",
+          "locator": "contact:hei@audioped.no",
+          "span": "<a href=\"mailto:hei@audioped.no\">"
+        }
+      ],
+      "current_sources": [],
+      "matching_attempts": [],
+      "classification": "live_source_variance",
+      "classification_basis": "Company-specific request records show that this cold run never obtained the audioped.no page for FILMTEK: redirects and robots requests ended at the unchanged website allowance. A matching body fetched for another company is not successful acquisition for this company. These six cold losses are acquisition variance. The distinct main/subunit selection instability remains a known issue; no deterministic main-site-priority fix is included in 27a3bb0.",
+      "company_scoped_attempts": [
+        {
+          "url": "https://www.filmtek.no/robots.txt",
+          "host": "www.filmtek.no",
+          "organisation_number": "988330752",
+          "attempt_started": 71.20437419999507,
+          "status": 404,
+          "error": null,
+          "section": "website",
+          "content_sha256": "4c13d452dd5d49671bd93ca32f2b4f85c78e39b6ab0ad1f38d98ed267f8fd896",
+          "runtime_ms": 732
+        },
+        {
+          "url": "https://www.filmtek.no/",
+          "host": "www.filmtek.no",
+          "organisation_number": "988330752",
+          "attempt_started": 72.96657859999686,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "494c94df5e06889d4967227744fcf88777d7cb9d90772bc9600ed80b05f748e9",
+          "runtime_ms": 187
+        },
+        {
+          "url": "https://www.filmtek.no/",
+          "host": "www.filmtek.no",
+          "organisation_number": "988330752",
+          "attempt_started": 74.16167180000048,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "494c94df5e06889d4967227744fcf88777d7cb9d90772bc9600ed80b05f748e9",
+          "runtime_ms": 224
+        },
+        {
+          "url": "https://audioped.no/robots.txt",
+          "host": "audioped.no",
+          "organisation_number": "988330752",
+          "attempt_started": 74.48995379999542,
+          "status": 301,
+          "error": null,
+          "section": "website",
+          "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "runtime_ms": 4196
+        },
+        {
+          "url": "https://www.audioped.no/robots.txt",
+          "host": "www.audioped.no",
+          "organisation_number": "988330752",
+          "attempt_started": 79.68917299999885,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "fe55a95d8e0e5962a41fff5ef1b1d6e4ce3accc545a1fe18c502470471c4cf3c",
+          "runtime_ms": 1642
+        },
+        {
+          "url": "https://audioped.no/",
+          "host": "audioped.no",
+          "organisation_number": "988330752",
+          "attempt_started": 82.33336050000071,
+          "status": 301,
+          "error": null,
+          "section": "website",
+          "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "runtime_ms": 1374
+        }
+      ],
+      "qualification": "Original cold acquisition failed before this company received the branch page; unchanged request allowance ended during redirects/robots. Known refresh selection instability is separately disclosed, not counted as a passed zero-loss gate."
+    },
+    {
+      "orgnr": "988330752",
+      "family": "website",
+      "field": "public_brand",
+      "id": "44a06eeb338cf2c1b1eda6daf3d6c81703dc74a7eb9bec4c134edfbb623a4305",
+      "before": "Audiopedagog Therese Widerøe",
+      "after": [],
+      "section_state": "available",
+      "errors": [
+        {
+          "section": "website",
+          "code": "website_candidates",
+          "message": "[{\"domain\": \"filmtek.no\", \"level\": \"HIGH\", \"points\": 7, \"signals\": [\"legal_name\", \"address\", \"registry_website\", \"municipality\"], \"origin\": \"registry_website\", \"reason\": \"corroboration\"}, {\"domain\": \"audioped.no\", \"origin\": \"subunit_registry_email\", \"level\": \"LOW\", \"reason\": \"website_budget_exhausted\"}, {\"domain\": \"filmtek.no\", \"origin\": \"registry_website\", \"url\": \"https://www.filmtek.no/\", \"status\": 200}, {\"domain\": \"audioped.no\", \"origin\": \"subunit_registry_email\", \"url\": \"https://audioped.no/\", \"reason\": \"website_budget_exhausted\"}]"
+        }
+      ],
+      "old_sources": [
+        {
+          "url": "https://www.audioped.no/",
+          "hash": "406943c382a989f9566464ebb6354a0794eb4dd888918ec72f33d11f29191375",
+          "locator": "meta:brand",
+          "span": "\n<meta property=\"og:site_name\" content=\"Audiopedagog Therese Widerøe\" />\n<meta property=\"og:updated_time\" content=\"2026-08-06T12:58:19+02:00\" />\n<meta"
+        }
+      ],
+      "current_sources": [],
+      "matching_attempts": [],
+      "classification": "live_source_variance",
+      "classification_basis": "Company-specific request records show that this cold run never obtained the audioped.no page for FILMTEK: redirects and robots requests ended at the unchanged website allowance. A matching body fetched for another company is not successful acquisition for this company. These six cold losses are acquisition variance. The distinct main/subunit selection instability remains a known issue; no deterministic main-site-priority fix is included in 27a3bb0.",
+      "company_scoped_attempts": [
+        {
+          "url": "https://www.filmtek.no/robots.txt",
+          "host": "www.filmtek.no",
+          "organisation_number": "988330752",
+          "attempt_started": 71.20437419999507,
+          "status": 404,
+          "error": null,
+          "section": "website",
+          "content_sha256": "4c13d452dd5d49671bd93ca32f2b4f85c78e39b6ab0ad1f38d98ed267f8fd896",
+          "runtime_ms": 732
+        },
+        {
+          "url": "https://www.filmtek.no/",
+          "host": "www.filmtek.no",
+          "organisation_number": "988330752",
+          "attempt_started": 72.96657859999686,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "494c94df5e06889d4967227744fcf88777d7cb9d90772bc9600ed80b05f748e9",
+          "runtime_ms": 187
+        },
+        {
+          "url": "https://www.filmtek.no/",
+          "host": "www.filmtek.no",
+          "organisation_number": "988330752",
+          "attempt_started": 74.16167180000048,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "494c94df5e06889d4967227744fcf88777d7cb9d90772bc9600ed80b05f748e9",
+          "runtime_ms": 224
+        },
+        {
+          "url": "https://audioped.no/robots.txt",
+          "host": "audioped.no",
+          "organisation_number": "988330752",
+          "attempt_started": 74.48995379999542,
+          "status": 301,
+          "error": null,
+          "section": "website",
+          "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "runtime_ms": 4196
+        },
+        {
+          "url": "https://www.audioped.no/robots.txt",
+          "host": "www.audioped.no",
+          "organisation_number": "988330752",
+          "attempt_started": 79.68917299999885,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "fe55a95d8e0e5962a41fff5ef1b1d6e4ce3accc545a1fe18c502470471c4cf3c",
+          "runtime_ms": 1642
+        },
+        {
+          "url": "https://audioped.no/",
+          "host": "audioped.no",
+          "organisation_number": "988330752",
+          "attempt_started": 82.33336050000071,
+          "status": 301,
+          "error": null,
+          "section": "website",
+          "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "runtime_ms": 1374
+        }
+      ],
+      "qualification": "Original cold acquisition failed before this company received the branch page; unchanged request allowance ended during redirects/robots. Known refresh selection instability is separately disclosed, not counted as a passed zero-loss gate."
+    },
+    {
+      "orgnr": "913300564",
+      "family": "subunits",
+      "field": "subunits.unit.913309472",
+      "id": "6a45492da4b01e2efbbd69946e467a44f912670e47adc2753f2a9d3a995cd69f",
+      "before": {
+        "organisation_number": "913309472",
+        "name": "BLAASOPP AS",
+        "address": {
+          "adresse": [
+            "Buvikstranda 12"
+          ],
+          "kommune": "FREDRIKSTAD",
+          "kommunenummer": "3107",
+          "land": "Norge",
+          "landkode": "NO",
+          "postnummer": "1622",
+          "poststed": "GRESSVIK"
+        },
+        "nace": {
+          "beskrivelse": "Konsulentvirksomhet tilknyttet informasjonsteknologi og forvaltning og drift av it-systemer",
+          "kode": "62.200"
+        },
+        "employees": null
+      },
+      "after": [
+        {
+          "organisation_number": "913309472",
+          "name": "BLAASOPP AS",
+          "address": {
+            "adresse": [
+              "Buvikstranda 12"
+            ],
+            "kommune": "FREDRIKSTAD",
+            "kommunenummer": "3107",
+            "land": "Norge",
+            "landkode": "NO",
+            "postnummer": "1622",
+            "poststed": "GRESSVIK"
+          },
+          "nace": {
+            "beskrivelse": "Andre egeninvesteringsselskaper",
+            "kode": "64.323"
+          },
+          "employees": null
+        }
+      ],
+      "section_state": "available",
+      "errors": [],
+      "old_sources": [
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=913300564&size=1000&page=0",
+          "hash": "55c3f2c1018d3dcbf03af0b17b4ff747e15febb078163707d090071487203928",
+          "locator": "/_embedded/underenheter/0",
+          "span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/913309472\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/913300564\"}},\"beliggenhetsadresse\":{\"adresse\":[\"Buvikstranda 12\"],\"kommune\":\"FREDRIKSTAD\",\"kommunenummer\":\"3107\",\"land\":\"Norge\""
+        }
+      ],
+      "current_sources": [
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=913300564&size=1000&page=0",
+          "hash": "eba2c2c9440447fe347fc52ee4f081898dd9b2ff9ad672d69c3cd7042602e9eb",
+          "locator": "/_embedded/underenheter/0"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=913300564&size=1000&page=0",
+          "hash": "eba2c2c9440447fe347fc52ee4f081898dd9b2ff9ad672d69c3cd7042602e9eb",
+          "locator": "/_embedded/underenheter/0/oppstartsdato"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=913300564&size=1000&page=0",
+          "hash": "eba2c2c9440447fe347fc52ee4f081898dd9b2ff9ad672d69c3cd7042602e9eb",
+          "locator": "/_embedded/underenheter/0/registreringsdatoEnhetsregisteret"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=913300564&size=1000&page=0",
+          "hash": "eba2c2c9440447fe347fc52ee4f081898dd9b2ff9ad672d69c3cd7042602e9eb",
+          "locator": "/_embedded/underenheter/0/organisasjonsform"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=913300564&size=1000&page=0",
+          "hash": "eba2c2c9440447fe347fc52ee4f081898dd9b2ff9ad672d69c3cd7042602e9eb",
+          "locator": "/_embedded/underenheter/0/harRegistrertAntallAnsatte"
+        },
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=913300564&size=1000&page=0",
+          "hash": "eba2c2c9440447fe347fc52ee4f081898dd9b2ff9ad672d69c3cd7042602e9eb",
+          "locator": "/_embedded/underenheter/0/registrertIMvaregisteret"
+        }
+      ],
+      "matching_attempts": [
+        {
+          "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=913300564&size=1000&page=0",
+          "status": 200,
+          "error": null,
+          "content_sha256": "eba2c2c9440447fe347fc52ee4f081898dd9b2ff9ad672d69c3cd7042602e9eb"
+        }
+      ],
+      "classification": "live_source_variance",
+      "classification_basis": "Unchanged registry extractor with a changed current primary-source body; old and current hashes/locators recorded for review.",
+      "qualification": "Primary-source JSON manually compared: DAGL group removed for 963070276 (STYR group remains), or subunit 913309472 NACE changes from 62.200 to 64.323. Registry extraction code is unchanged."
+    }
+  ],
+  "source_sha": "27a3bb0cc2e4a9cf3802da6eaaec761da623a5c9",
+  "known_refresh_issue": {
+    "orgnr": "988330752",
+    "lost_ids": 1,
+    "material_events": 6,
+    "classification": "Known single-company main/subunit site-selection instability; no wrong-company or unsupported-fact publication found.",
+    "deferred_fix": "Revision 3 only after user confirms revision email sent."
+  }
+}
