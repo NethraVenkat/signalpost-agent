@@ -1,0 +1,98 @@
+{
+  "baseline_identity_ids_required": 28726,
+  "target": "827248592",
+  "target_absent_from_frozen_bulk_csv": true,
+  "first": {
+    "envelopes": 1000,
+    "distinct_organisation_numbers": 1000,
+    "available_identity_ids": 28723,
+    "envelopes_sha256": "db2f215aa584b7c8025593c8cf26df287261633aa620f3b532c972d9fbdaac7f",
+    "target_identity_section": "failed",
+    "target_errors": [
+      {
+        "section": "identity",
+        "code": "network_error",
+        "message": "network_error"
+      }
+    ],
+    "target_available_identity_fields": [],
+    "target_failed_requests": [
+      {
+        "url": "https://data.brreg.no/enhetsregisteret/api/enheter/827248592",
+        "organisation_number": "827248592",
+        "status": null,
+        "error": "ConnectError",
+        "runtime_ms": 656
+      },
+      {
+        "url": "https://data.brreg.no/enhetsregisteret/api/enheter/827248592",
+        "organisation_number": "827248592",
+        "status": null,
+        "error": "ConnectError",
+        "runtime_ms": 0
+      },
+      {
+        "url": "https://data.brreg.no/enhetsregisteret/api/enheter/827248592",
+        "organisation_number": "827248592",
+        "status": null,
+        "error": "ConnectError",
+        "runtime_ms": 31
+      },
+      {
+        "url": "https://data.brreg.no/enhetsregisteret/api/enheter/827248592",
+        "organisation_number": "827248592",
+        "status": null,
+        "error": "ConnectError",
+        "runtime_ms": 31
+      }
+    ]
+  },
+  "retry": {
+    "envelopes": 1000,
+    "distinct_organisation_numbers": 1000,
+    "available_identity_ids": 28723,
+    "envelopes_sha256": "2b17075117ddc8cc4beb23f1b17b5bbbd1744e5e300a12b0f81ad1006bd150a3",
+    "target_identity_section": "failed",
+    "target_errors": [
+      {
+        "section": "identity",
+        "code": "network_error",
+        "message": "network_error"
+      }
+    ],
+    "target_available_identity_fields": [],
+    "target_failed_requests": [
+      {
+        "url": "https://data.brreg.no/enhetsregisteret/api/enheter/827248592",
+        "organisation_number": "827248592",
+        "status": null,
+        "error": "ConnectError",
+        "runtime_ms": 500
+      },
+      {
+        "url": "https://data.brreg.no/enhetsregisteret/api/enheter/827248592",
+        "organisation_number": "827248592",
+        "status": null,
+        "error": "ConnectError",
+        "runtime_ms": 313
+      },
+      {
+        "url": "https://data.brreg.no/enhetsregisteret/api/enheter/827248592",
+        "organisation_number": "827248592",
+        "status": null,
+        "error": "ConnectError",
+        "runtime_ms": 109
+      },
+      {
+        "url": "https://data.brreg.no/enhetsregisteret/api/enheter/827248592",
+        "organisation_number": "827248592",
+        "status": null,
+        "error": "ConnectError",
+        "runtime_ms": 109
+      }
+    ]
+  },
+  "retry_lost_ids_relative_to_first": [],
+  "retry_added_ids_relative_to_first": [],
+  "accepted_under_user_exception": true
+}
