@@ -1135,7 +1135,7 @@
       }
     }
 
-    const inputs = [0, 1, 2].map(i => document.getElementById('company-' + i));
+    const inputs = [0, 1, 2, 3].map(i => document.getElementById('company-' + i));
     const clearBtn = document.getElementById('clear-compare');
 
     const fields = [
@@ -1179,7 +1179,7 @@
       const root = document.getElementById('comparison');
       const status = document.getElementById('compare-status');
       if(status) {
-        status.textContent = selected.length === 0 ? 'Select up to 3 companies above to compare.' :
+        status.textContent = selected.length === 0 ? 'Select up to 4 companies above to compare.' :
                              selected.length === 1 ? '1 company selected. Select another to compare.' :
                              selected.length + ' companies compared side-by-side.';
       }
@@ -1261,7 +1261,7 @@
     }
 
     function fromHash() {
-      const ids = (new URLSearchParams(location.search).get('companies') || location.hash.slice(1)).split(',').filter(Boolean).slice(0, 3);
+      const ids = (new URLSearchParams(location.search).get('companies') || location.hash.slice(1)).split(',').filter(Boolean).slice(0, 4);
       inputs.forEach((input, i) => {
         if(input) input.value = byId.has(ids[i]) ? ids[i] : '';
       });
