@@ -536,7 +536,7 @@
         recentEvents.sort((a,b) => (b.date || '').localeCompare(a.date || ''));
         const slice = recentEvents.slice(0, 8);
         if(!slice.length) {
-          actBox.append(element('p', 'No recent verified registry filings within 2-year window for current selection.', 'muted'));
+          actBox.append(element('p', 'No dated activity found in sources checked for current selection.', 'muted'));
         } else {
           for(const ev of slice) {
             const row = element('div', null, 'activity-row');

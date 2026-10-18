@@ -463,6 +463,8 @@ def profile(row, title):
             for day, label, c in dated_registry:
                 body += '<p>' + esc(label + ': ' + day) + f' <a href="#fact-{esc(c.id[:16])}">Registry source</a></p>'
             body += '<h3>Published updates ' + chip(state) + '</h3>'
+            if state == 'not_available' and not dated_registry:
+                body += '<p>No dated changes found in sources checked.</p>'
         if key == 'financials':
             body += '<p>Reported values from Regnskapsregisteret; no figures or growth ratios are calculated.</p>'
             years = sorted({(c.get('reporting_period') or {}).get('fiscal_year') for c in items if (c.get('reporting_period') or {}).get('fiscal_year')}, reverse=True)
@@ -774,9 +776,13 @@ def index_record(row):
 
     reg_events = registry_events(row)
     published = [(c['value']['date'], c['value']['title'], c) for c in available
-                 if c['field'].startswith('registry_change.') and not c.get('carried_forward')]
+                 if c['family'] == 'activity' and isinstance(c.get('value'), dict)
+                 and c['value'].get('date') and c['value'].get('title') and not c.get('carried_forward')]
     all_events = sorted(list(reg_events) + published, key=lambda event: event[0], reverse=True)
     latest_event = all_events[0] if all_events else None
+    recent_events = ([{'date': latest_event[0], 'label': latest_event[1],
+                       'anchor': 'fact-' + (getattr(latest_event[2], 'id', None) or latest_event[2]['id'])[:16]}]
+                     if latest_event else [])
 
     result = {'orgnr': row['organisation_number'], 'name': get('identity.legal_name') or row['organisation_number'],
               'municipality': get('identity.municipality'), 'nace': iv.get('kode'), 'industry_en': english_title(iv) if iv else None,
@@ -800,6 +806,7 @@ def index_record(row):
               'activity': sum(c['family'] == 'activity' for c in available) + len(reg_events),
               'latest_activity_date': latest_event[0] if latest_event else None,
               'latest_activity_label': latest_event[1] if latest_event else None,
+              'recent_events': recent_events,
               'sections': dict(row['run']['sections']),
               'claim_count': len(available), 'last_checked': row['run']['completed_at'], 'anchors': {}}
     mapping = {'name': 'identity.legal_name', 'municipality': 'identity.municipality', 'employees': 'identity.employees',
@@ -883,9 +890,9 @@ def index_page(records, title, skipped=()):
 
     body += '<div class="analytics-card full-width">'
     body += '<h3>Recent Verified Company Activity</h3>'
-    body += '<p class="card-subtitle">Official business filings, amendments, and verified events (most recent first)</p>'
+    body += '<p class="card-subtitle">Dated registry and verified company updates (most recent first)</p>'
     body += '<div id="recent-activity-list" class="recent-activity-list"></div>'
-    body += '<p class="card-footer-note">Fetch failures and observation changes are excluded. Only verified registry events are shown.</p>'
+    body += '<p class="card-footer-note">Fetch failures and observation changes are excluded. Open a company receipt to inspect each dated source.</p>'
     body += '</div>'
     body += '</section>'
 
