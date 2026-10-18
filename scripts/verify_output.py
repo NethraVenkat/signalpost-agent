@@ -21,7 +21,7 @@ def verify_synthesis(row):
     raw=row['run'].get('synthesis') if 'run' in row else row['profile'].get('synthesis')
     if raw is None:return 0,0
     synthesis=Synthesis.model_validate(raw)
-    envelope=SimpleNamespace(claims=[Claim.model_validate(c) for c in data['claims']],
+    envelope=SimpleNamespace(organisation_number=row['organisation_number'], claims=[Claim.model_validate(c) for c in data['claims']],
         evidence=[Evidence.model_validate(e) for e in data['evidence']],changes=[Change.model_validate(c) for c in data['changes']],
         run=SimpleNamespace(refresh=row['run']['refresh'] if 'run' in row else data['refresh'],
                             completed_at=row['run']['completed_at'] if 'run' in row else row['completed_at']))

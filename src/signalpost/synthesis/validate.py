@@ -48,6 +48,10 @@ def claim_strings(claim):
 
 def permitted(claim,envelope):
     if getattr(claim,'family',None)=='activity':
+        if claim.field.startswith('registry_change.'):
+            from ..sources.registry_changes import permitted as registry_permitted
+            return registry_permitted(claim, envelope)
+        if not isinstance(claim.value, dict): return False
         parent=next((c for c in envelope.claims if c.id==claim.value.get('identity_claim_id')),None)
         return bool(parent and parent.availability=='available' and parent.field=='official_website' and permitted(parent,envelope))
     if getattr(claim,'family',None)=='website':
@@ -71,6 +75,14 @@ def sentence_error(sentence,envelope):
     # These new frames are checked in full, bound to every claim they use.
     # Table titles authorize only the matching NACE frame or headline.
     plain=sentence.text.removeprefix('Previously supported. ')
+    if 'Registry publication time:' in plain:
+        from ..sources.registry_changes import sentence as registry_sentence
+        if (len(claims) != 1 or not claims[0].field.startswith('registry_change.')
+                or claims[0].carried_forward or sentence.text != registry_sentence(claims[0].value)):
+            return 'unverified_registry_change'
+        if sentence.value_kind != 'reported' or sentence.count is not None or sentence.record_type is not None:
+            return 'unmarked_derived_count'
+        return None
     if plain.startswith('Latest dated update on its website: '):
         if len(claims)!=1 or getattr(claims[0],'family',None)!='activity' or claims[0].carried_forward:return 'misbound_dated_activity'
         value=claims[0].value
