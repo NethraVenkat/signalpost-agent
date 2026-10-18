@@ -1,0 +1,43 @@
+{
+  "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?size=1&sort=id%2CASC&includeChanges=true",
+  "retrieved_at": "2026-10-18T06:52:39.708912+00:00",
+  "status": 200,
+  "headers": {
+    "vary": "Origin",
+    "x-content-type-options": "nosniff",
+    "x-xss-protection": "0",
+    "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+    "pragma": "no-cache",
+    "expires": "0",
+    "strict-transport-security": "max-age=157680000; includeSubDomains",
+    "x-frame-options": "DENY",
+    "content-type": "application/json",
+    "transfer-encoding": "chunked",
+    "date": "Sun, 18 Oct 2026 06:52:40 GMT",
+    "set-cookie": "edebf11b02298cf5c6aee3fe794f9942=41f09045fd664ddf67554dcc89d0e175; path=/; HttpOnly; Secure; SameSite=None",
+    "connection": "close",
+    "Set-Cookie": "edebf11b02298cf5c6aee3fe794f9942=41f09045fd664ddf67554dcc89d0e175; path=/; HttpOnly; Secure; SameSite=None"
+  },
+  "sha256": "288f92701196616d0e6080cde76023f14aa3a028608c105cabc9c1dafeeba3d4",
+  "bytes": 845,
+  "page": {
+    "number": 0,
+    "size": 1,
+    "totalElements": 16573441,
+    "totalPages": 16573441
+  },
+  "example": [
+    {
+      "_links": {
+        "enhet": {
+          "href": "https://data.brreg.no/enhetsregisteret/api/enheter/913189892"
+        }
+      },
+      "dato": "2018-04-23T06:03:29.443Z",
+      "endringstype": "Ukjent",
+      "oppdateringsid": 1,
+      "organisasjonsnummer": "913189892"
+    }
+  ],
+  "seconds": 1.127
+}

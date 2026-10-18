@@ -1,0 +1,16 @@
+{
+  "url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=932525070&size=1000",
+  "retrieved_at": "2026-10-18T06:54:23.958545+00:00",
+  "status": 200,
+  "units": [
+    "937214936"
+  ],
+  "page": {
+    "number": 0,
+    "size": 1000,
+    "totalElements": 1,
+    "totalPages": 1
+  },
+  "sha256": "cb7780a263e3e7728b37d74e0a5f9b0947f80708a9339824c2a94fb91e60f9b6",
+  "seconds": 1.212
+}

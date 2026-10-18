@@ -1,0 +1,324 @@
+{
+  "sample": {
+    "selection": "first 20 input rows; no coverage-based selection",
+    "source": "out\\capacity-inputs\\batch1000.jsonl",
+    "source_sha256": "bba3114b5a611d05a80bbce11233aa3585c433a1580225dc5087a75372b9649a",
+    "orgs": [
+      "925181536",
+      "829577372",
+      "932525070",
+      "919263601",
+      "988963259",
+      "915188389",
+      "934485718",
+      "936035523",
+      "936349676",
+      "935962196",
+      "997095987",
+      "950310499",
+      "948639416",
+      "927439794",
+      "975514412",
+      "918843183",
+      "934216385",
+      "935647142",
+      "930621927",
+      "946595845"
+    ]
+  },
+  "entity_events": 121,
+  "entity_companies": 20,
+  "entity_events_with_details": 44,
+  "entity_bare_events": 77,
+  "conservative_meaningful_events": [
+    {
+      "_links": {
+        "enhet": {
+          "href": "https://data.brreg.no/enhetsregisteret/api/enheter/934485718"
+        }
+      },
+      "dato": "2025-12-12T16:40:12.474Z",
+      "endringer": [
+        {
+          "op": "replace",
+          "path": "/forretningsadresse/postnummer",
+          "value": "0672"
+        },
+        {
+          "op": "replace",
+          "path": "/forretningsadresse/adresse/0",
+          "value": "c/o Sondre Br\u00c3\u00a5then Geitz"
+        },
+        {
+          "op": "add",
+          "path": "/forretningsadresse/adresse/-",
+          "value": "Landerokollen 90"
+        }
+      ],
+      "endringstype": "Endring",
+      "oppdateringsid": 23493349,
+      "organisasjonsnummer": "934485718"
+    },
+    {
+      "_links": {
+        "enhet": {
+          "href": "https://data.brreg.no/enhetsregisteret/api/enheter/936349676"
+        }
+      },
+      "dato": "2025-12-16T11:25:11.710Z",
+      "endringer": [
+        {
+          "op": "replace",
+          "path": "/forretningsadresse/postnummer",
+          "value": "5281"
+        },
+        {
+          "op": "remove",
+          "path": "/forretningsadresse/adresse/1"
+        },
+        {
+          "op": "replace",
+          "path": "/forretningsadresse/adresse/0",
+          "value": "Oster\u00c3\u00b8yvegen 915"
+        },
+        {
+          "op": "replace",
+          "path": "/forretningsadresse/poststed",
+          "value": "VALESTRANDSFOSSEN"
+        }
+      ],
+      "endringstype": "Endring",
+      "oppdateringsid": 23522825,
+      "organisasjonsnummer": "936349676"
+    },
+    {
+      "_links": {
+        "enhet": {
+          "href": "https://data.brreg.no/enhetsregisteret/api/enheter/932525070"
+        }
+      },
+      "dato": "2025-12-22T14:30:11.129Z",
+      "endringer": [
+        {
+          "op": "replace",
+          "path": "/vedtektsdato",
+          "value": "2025-12-03"
+        },
+        {
+          "op": "replace",
+          "path": "/kapital/innfortDato",
+          "value": "2025-12-22"
+        },
+        {
+          "op": "replace",
+          "path": "/kapital/belop",
+          "value": 11000000.0
+        }
+      ],
+      "endringstype": "Endring",
+      "oppdateringsid": 23540812,
+      "organisasjonsnummer": "932525070"
+    },
+    {
+      "_links": {
+        "enhet": {
+          "href": "https://data.brreg.no/enhetsregisteret/api/enheter/932525070"
+        }
+      },
+      "dato": "2026-01-06T09:40:12.081Z",
+      "endringer": [
+        {
+          "op": "remove",
+          "path": "/telefon"
+        },
+        {
+          "op": "replace",
+          "path": "/forretningsadresse/postnummer",
+          "value": "0250"
+        },
+        {
+          "op": "replace",
+          "path": "/forretningsadresse/adresse/0",
+          "value": "c/o Newsec Basale AS"
+        },
+        {
+          "op": "add",
+          "path": "/forretningsadresse/adresse/-",
+          "value": "Munkedamsveien 45D"
+        },
+        {
+          "op": "replace",
+          "path": "/postadresse/kommune",
+          "value": "TRONDHEIM"
+        },
+        {
+          "op": "replace",
+          "path": "/postadresse/postnummer",
+          "value": "7484"
+        },
+        {
+          "op": "replace",
+          "path": "/postadresse/adresse/0",
+          "value": "c/o Newsec Basale AS"
+        },
+        {
+          "op": "add",
+          "path": "/postadresse/adresse/-",
+          "value": "Postboks 5666 Torgarden"
+        },
+        {
+          "op": "replace",
+          "path": "/postadresse/kommunenummer",
+          "value": "5001"
+        },
+        {
+          "op": "replace",
+          "path": "/postadresse/poststed",
+          "value": "TRONDHEIM"
+        },
+        {
+          "op": "replace",
+          "path": "/epostadresse",
+          "value": "gjermund@svill.no"
+        }
+      ],
+      "endringstype": "Endring",
+      "oppdateringsid": 23562299,
+      "organisasjonsnummer": "932525070"
+    }
+  ],
+  "role_events": 45,
+  "role_companies": 15,
+  "subunit_events": 36,
+  "subunit_companies": 13,
+  "subunit_events_with_details": 16,
+  "per_company": [
+    {
+      "org": "925181536",
+      "entity_events": 4,
+      "role_events": 0,
+      "mapped_subunit_events": 0
+    },
+    {
+      "org": "829577372",
+      "entity_events": 4,
+      "role_events": 0,
+      "mapped_subunit_events": 0
+    },
+    {
+      "org": "932525070",
+      "entity_events": 13,
+      "role_events": 7,
+      "mapped_subunit_events": 1
+    },
+    {
+      "org": "919263601",
+      "entity_events": 3,
+      "role_events": 0,
+      "mapped_subunit_events": 0
+    },
+    {
+      "org": "988963259",
+      "entity_events": 3,
+      "role_events": 5,
+      "mapped_subunit_events": 1
+    },
+    {
+      "org": "915188389",
+      "entity_events": 15,
+      "role_events": 4,
+      "mapped_subunit_events": 12
+    },
+    {
+      "org": "934485718",
+      "entity_events": 5,
+      "role_events": 4,
+      "mapped_subunit_events": 2
+    },
+    {
+      "org": "936035523",
+      "entity_events": 6,
+      "role_events": 1,
+      "mapped_subunit_events": 3
+    },
+    {
+      "org": "936349676",
+      "entity_events": 7,
+      "role_events": 4,
+      "mapped_subunit_events": 3
+    },
+    {
+      "org": "935962196",
+      "entity_events": 5,
+      "role_events": 2,
+      "mapped_subunit_events": 2
+    },
+    {
+      "org": "997095987",
+      "entity_events": 5,
+      "role_events": 1,
+      "mapped_subunit_events": 2
+    },
+    {
+      "org": "950310499",
+      "entity_events": 9,
+      "role_events": 3,
+      "mapped_subunit_events": 0
+    },
+    {
+      "org": "948639416",
+      "entity_events": 4,
+      "role_events": 3,
+      "mapped_subunit_events": 0
+    },
+    {
+      "org": "927439794",
+      "entity_events": 5,
+      "role_events": 0,
+      "mapped_subunit_events": 1
+    },
+    {
+      "org": "975514412",
+      "entity_events": 4,
+      "role_events": 1,
+      "mapped_subunit_events": 2
+    },
+    {
+      "org": "918843183",
+      "entity_events": 3,
+      "role_events": 0,
+      "mapped_subunit_events": 0
+    },
+    {
+      "org": "934216385",
+      "entity_events": 6,
+      "role_events": 2,
+      "mapped_subunit_events": 1
+    },
+    {
+      "org": "935647142",
+      "entity_events": 3,
+      "role_events": 2,
+      "mapped_subunit_events": 1
+    },
+    {
+      "org": "930621927",
+      "entity_events": 3,
+      "role_events": 2,
+      "mapped_subunit_events": 0
+    },
+    {
+      "org": "946595845",
+      "entity_events": 14,
+      "role_events": 4,
+      "mapped_subunit_events": 5
+    }
+  ],
+  "saved_requests": {
+    "attempts": 31,
+    "http200": 27,
+    "min_seconds": 1.035,
+    "median_seconds": 1.245,
+    "max_seconds": 3.712
+  }
+}
