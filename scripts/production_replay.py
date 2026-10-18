@@ -382,6 +382,7 @@ async def run_production_replay(
         websites=websites,
         hiring=hiring,
         public_activity=public_activity,
+        registry_changes=False,  # Historical R2 transport fixtures have no change-feed responses.
         workers=workers,
         time_budget_seconds=120,
         website_politeness_seconds=1,

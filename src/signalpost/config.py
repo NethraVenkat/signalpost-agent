@@ -31,7 +31,7 @@ class Config(BaseModel):
     website_stop_after_verified: bool = True
     nav_rank_candidates: bool = True
     public_activity: bool = False
-    registry_changes: bool = False
+    registry_changes: bool = True
     website_request_cap: int = Field(default=6, ge=0, le=8)
     website_total_request_cap: int = Field(default=9, ge=0)
     website_politeness_seconds: float = Field(default=1, ge=1)

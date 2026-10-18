@@ -32,8 +32,8 @@ def main():
     command.add_argument('--no-website-stop-after-verified', dest='website_stop_after_verified', action='store_false')
     command.add_argument('--no-nav-rank-candidates', dest='nav_rank_candidates', action='store_false')
     command.add_argument('--public-activity', action='store_true')
-    command.add_argument('--registry-changes', action=argparse.BooleanOptionalAction, default=False,
-                         help='Publish narrowly verified registry changes (default off until release gates pass)')
+    command.add_argument('--registry-changes', action=argparse.BooleanOptionalAction, default=True,
+                         help='Publish narrowly verified registry changes (default on; disable with --no-registry-changes)')
     command.add_argument('--registry-declared', action='store_true', help='Enable the default-off weak registry-declared website path')
     command.add_argument("--website-request-cap", type=int, default=6)
     command.add_argument('--website-total-request-cap',type=int,default=9)

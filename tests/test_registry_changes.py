@@ -175,6 +175,23 @@ def test_disabled_flag_makes_no_feed_requests_and_preserves_ids(tmp_path):
     assert 'activity' not in row['run']['sections']
 
 
+@pytest.mark.parametrize('flags,enabled', [([], True), (['--registry-changes'], True), (['--no-registry-changes'], False)])
+def test_release_default_and_cli_off_switch(tmp_path, monkeypatch, flags, enabled):
+    from signalpost import cli
+    from signalpost.config import Config
+    paths = dict(organisations=tmp_path/'input', output=tmp_path/'output', report=tmp_path/'report')
+    assert Config(**paths).registry_changes is True
+    seen = []
+    async def capture(cfg):
+        seen.append(cfg.registry_changes)
+        return dict(emitted_envelopes=0, invalid_inputs=[], requests=0, runtime_ms=0,
+                    changes=0, observation_changes=0, deadline_hits=0, warnings=[])
+    monkeypatch.setattr(cli, 'run', capture)
+    monkeypatch.setattr('sys.argv', ['signalpost', 'run', *[arg for key, value in paths.items()
+                                                         for arg in ('--'+key, str(value))], *flags])
+    assert cli.main() == 0 and seen == [enabled]
+
+
 def test_forced_feed_failure_100_terminal_envelopes(tmp_path):
     orgs = numbers(100)
     baseline = handler()
