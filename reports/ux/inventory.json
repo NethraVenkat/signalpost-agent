@@ -1,0 +1,2366 @@
+{
+  "site": "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\ux-audit-worktree\\reports\\ux\\sample\\site",
+  "file_count": 105,
+  "total_bytes": 8240897,
+  "files": {
+    "assets/site.css": {
+      "bytes": 33797,
+      "purpose": "UI stylesheet; synchronously loaded on every page",
+      "loaded_by": [
+        "compare.html",
+        "index.html",
+        "c/814635562.html",
+        "c/820042182.html",
+        "c/820162692.html",
+        "c/829577372.html",
+        "c/912435911.html",
+        "c/912579433.html",
+        "c/915188389.html",
+        "c/916249985.html",
+        "c/918079327.html",
+        "c/918843183.html",
+        "c/918953612.html",
+        "c/918982523.html",
+        "c/919263601.html",
+        "c/919414944.html",
+        "c/923399658.html",
+        "c/923609016.html",
+        "c/925181536.html",
+        "c/926818317.html",
+        "c/927177978.html",
+        "c/927342677.html",
+        "c/927439794.html",
+        "c/928054780.html",
+        "c/928892956.html",
+        "c/929583027.html",
+        "c/929868323.html",
+        "c/930621927.html",
+        "c/932525070.html",
+        "c/933025160.html",
+        "c/934216385.html",
+        "c/934485718.html",
+        "c/935465567.html",
+        "c/935647142.html",
+        "c/935962196.html",
+        "c/936035523.html",
+        "c/936349676.html",
+        "c/946595845.html",
+        "c/948639416.html",
+        "c/950302011.html",
+        "c/950310499.html",
+        "c/956409071.html",
+        "c/957687504.html",
+        "c/975514412.html",
+        "c/988330752.html",
+        "c/988963259.html",
+        "c/991835423.html",
+        "c/991853995.html",
+        "c/997095987.html",
+        "c/997995414.html",
+        "c/999504116.html"
+      ],
+      "lazy": false
+    },
+    "assets/site.js": {
+      "bytes": 67153,
+      "purpose": "interactive UI script; synchronously loaded on every page",
+      "loaded_by": [
+        "compare.html",
+        "index.html",
+        "c/814635562.html",
+        "c/820042182.html",
+        "c/820162692.html",
+        "c/829577372.html",
+        "c/912435911.html",
+        "c/912579433.html",
+        "c/915188389.html",
+        "c/916249985.html",
+        "c/918079327.html",
+        "c/918843183.html",
+        "c/918953612.html",
+        "c/918982523.html",
+        "c/919263601.html",
+        "c/919414944.html",
+        "c/923399658.html",
+        "c/923609016.html",
+        "c/925181536.html",
+        "c/926818317.html",
+        "c/927177978.html",
+        "c/927342677.html",
+        "c/927439794.html",
+        "c/928054780.html",
+        "c/928892956.html",
+        "c/929583027.html",
+        "c/929868323.html",
+        "c/930621927.html",
+        "c/932525070.html",
+        "c/933025160.html",
+        "c/934216385.html",
+        "c/934485718.html",
+        "c/935465567.html",
+        "c/935647142.html",
+        "c/935962196.html",
+        "c/936035523.html",
+        "c/936349676.html",
+        "c/946595845.html",
+        "c/948639416.html",
+        "c/950302011.html",
+        "c/950310499.html",
+        "c/956409071.html",
+        "c/957687504.html",
+        "c/975514412.html",
+        "c/988330752.html",
+        "c/988963259.html",
+        "c/991835423.html",
+        "c/991853995.html",
+        "c/997095987.html",
+        "c/997995414.html",
+        "c/999504116.html"
+      ],
+      "lazy": false
+    },
+    "c/814635562.data.js": {
+      "bytes": 98417,
+      "purpose": "profile evidence/claim payload; synchronously loaded on its profile",
+      "loaded_by": [
+        "c/814635562.html"
+      ],
+      "lazy": false
+    },
+    "c/814635562.html": {
+      "bytes": 75071,
+      "purpose": "one company profile",
+      "loaded_by": [],
+      "lazy": null
+    },
+    "c/820042182.data.js": {
+      "bytes": 42694,
+      "purpose": "profile evidence/claim payload; synchronously loaded on its profile",
+      "loaded_by": [
+        "c/820042182.html"
+      ],
+      "lazy": false
+    },
+    "c/820042182.html": {
+      "bytes": 58430,
+      "purpose": "one company profile",
+      "loaded_by": [],
+      "lazy": null
+    },
+    "c/820162692.data.js": {
+      "bytes": 74818,
+      "purpose": "profile evidence/claim payload; synchronously loaded on its profile",
+      "loaded_by": [
+        "c/820162692.html"
+      ],
+      "lazy": false
+    },
+    "c/820162692.html": {
+      "bytes": 68273,
+      "purpose": "one company profile",
+      "loaded_by": [],
+      "lazy": null
+    },
+    "c/829577372.data.js": {
+      "bytes": 61357,
+      "purpose": "profile evidence/claim payload; synchronously loaded on its profile",
+      "loaded_by": [
+        "c/829577372.html"
+      ],
+      "lazy": false
+    },
+    "c/829577372.html": {
+      "bytes": 64884,
+      "purpose": "one company profile",
+      "loaded_by": [],
+      "lazy": null
+    },
+    "c/912435911.data.js": {
+      "bytes": 105067,
+      "purpose": "profile evidence/claim payload; synchronously loaded on its profile",
+      "loaded_by": [
+        "c/912435911.html"
+      ],
+      "lazy": false
+    },
+    "c/912435911.html": {
+      "bytes": 80219,
+      "purpose": "one company profile",
+      "loaded_by": [],
+      "lazy": null
+    },
+    "c/912579433.data.js": {
+      "bytes": 67210,
+      "purpose": "profile evidence/claim payload; synchronously loaded on its profile",
+      "loaded_by": [
+        "c/912579433.html"
+      ],
+      "lazy": false
+    },
+    "c/912579433.html": {
+      "bytes": 65593,
+      "purpose": "one company profile",
+      "loaded_by": [],
+      "lazy": null
+    },
+    "c/915188389.data.js": {
+      "bytes": 95852,
+      "purpose": "profile evidence/claim payload; synchronously loaded on its profile",
+      "loaded_by": [
+        "c/915188389.html"
+      ],
+      "lazy": false
+    },
+    "c/915188389.html": {
+      "bytes": 75794,
+      "purpose": "one company profile",
+      "loaded_by": [],
+      "lazy": null
+    },
+    "c/916249985.data.js": {
+      "bytes": 83583,
+      "purpose": "profile evidence/claim payload; synchronously loaded on its profile",
+      "loaded_by": [
+        "c/916249985.html"
+      ],
+      "lazy": false
+    },
+    "c/916249985.html": {
+      "bytes": 71551,
+      "purpose": "one company profile",
+      "loaded_by": [],
+      "lazy": null
+    },
+    "c/918079327.data.js": {
+      "bytes": 66894,
+      "purpose": "profile evidence/claim payload; synchronously loaded on its profile",
+      "loaded_by": [
+        "c/918079327.html"
+      ],
+      "lazy": false
+    },
+    "c/918079327.html": {
+      "bytes": 67435,
+      "purpose": "one company profile",
+      "loaded_by": [],
+      "lazy": null
+    },
+    "c/918843183.data.js": {
+      "bytes": 59099,
+      "purpose": "profile evidence/claim payload; synchronously loaded on its profile",
+      "loaded_by": [
+        "c/918843183.html"
+      ],
+      "lazy": false
+    },
+    "c/918843183.html": {
+      "bytes": 65937,
+      "purpose": "one company profile",
+      "loaded_by": [],
+      "lazy": null
+    },
+    "c/918953612.data.js": {
+      "bytes": 90202,
+      "purpose": "profile evidence/claim payload; synchronously loaded on its profile",
+      "loaded_by": [
+        "c/918953612.html"
+      ],
+      "lazy": false
+    },
+    "c/918953612.html": {
+      "bytes": 75576,
+      "purpose": "one company profile",
+      "loaded_by": [],
+      "lazy": null
+    },
+    "c/918982523.data.js": {
+      "bytes": 68214,
+      "purpose": "profile evidence/claim payload; synchronously loaded on its profile",
+      "loaded_by": [
+        "c/918982523.html"
+      ],
+      "lazy": false
+    },
+    "c/918982523.html": {
+      "bytes": 67322,
+      "purpose": "one company profile",
+      "loaded_by": [],
+      "lazy": null
+    },
+    "c/919263601.data.js": {
+      "bytes": 62287,
+      "purpose": "profile evidence/claim payload; synchronously loaded on its profile",
+      "loaded_by": [
+        "c/919263601.html"
+      ],
+      "lazy": false
+    },
+    "c/919263601.html": {
+      "bytes": 66301,
+      "purpose": "one company profile",
+      "loaded_by": [],
+      "lazy": null
+    },
+    "c/919414944.data.js": {
+      "bytes": 78950,
+      "purpose": "profile evidence/claim payload; synchronously loaded on its profile",
+      "loaded_by": [
+        "c/919414944.html"
+      ],
+      "lazy": false
+    },
+    "c/919414944.html": {
+      "bytes": 69153,
+      "purpose": "one company profile",
+      "loaded_by": [],
+      "lazy": null
+    },
+    "c/923399658.data.js": {
+      "bytes": 73246,
+      "purpose": "profile evidence/claim payload; synchronously loaded on its profile",
+      "loaded_by": [
+        "c/923399658.html"
+      ],
+      "lazy": false
+    },
+    "c/923399658.html": {
+      "bytes": 67165,
+      "purpose": "one company profile",
+      "loaded_by": [],
+      "lazy": null
+    },
+    "c/923609016.data.js": {
+      "bytes": 519590,
+      "purpose": "profile evidence/claim payload; synchronously loaded on its profile",
+      "loaded_by": [
+        "c/923609016.html"
+      ],
+      "lazy": false
+    },
+    "c/923609016.html": {
+      "bytes": 128305,
+      "purpose": "one company profile",
+      "loaded_by": [],
+      "lazy": null
+    },
+    "c/925181536.data.js": {
+      "bytes": 74572,
+      "purpose": "profile evidence/claim payload; synchronously loaded on its profile",
+      "loaded_by": [
+        "c/925181536.html"
+      ],
+      "lazy": false
+    },
+    "c/925181536.html": {
+      "bytes": 70206,
+      "purpose": "one company profile",
+      "loaded_by": [],
+      "lazy": null
+    },
+    "c/926818317.data.js": {
+      "bytes": 112265,
+      "purpose": "profile evidence/claim payload; synchronously loaded on its profile",
+      "loaded_by": [
+        "c/926818317.html"
+      ],
+      "lazy": false
+    },
+    "c/926818317.html": {
+      "bytes": 79120,
+      "purpose": "one company profile",
+      "loaded_by": [],
+      "lazy": null
+    },
+    "c/927177978.data.js": {
+      "bytes": 68171,
+      "purpose": "profile evidence/claim payload; synchronously loaded on its profile",
+      "loaded_by": [
+        "c/927177978.html"
+      ],
+      "lazy": false
+    },
+    "c/927177978.html": {
+      "bytes": 67785,
+      "purpose": "one company profile",
+      "loaded_by": [],
+      "lazy": null
+    },
+    "c/927342677.data.js": {
+      "bytes": 84854,
+      "purpose": "profile evidence/claim payload; synchronously loaded on its profile",
+      "loaded_by": [
+        "c/927342677.html"
+      ],
+      "lazy": false
+    },
+    "c/927342677.html": {
+      "bytes": 73597,
+      "purpose": "one company profile",
+      "loaded_by": [],
+      "lazy": null
+    },
+    "c/927439794.data.js": {
+      "bytes": 91868,
+      "purpose": "profile evidence/claim payload; synchronously loaded on its profile",
+      "loaded_by": [
+        "c/927439794.html"
+      ],
+      "lazy": false
+    },
+    "c/927439794.html": {
+      "bytes": 76009,
+      "purpose": "one company profile",
+      "loaded_by": [],
+      "lazy": null
+    },
+    "c/928054780.data.js": {
+      "bytes": 62222,
+      "purpose": "profile evidence/claim payload; synchronously loaded on its profile",
+      "loaded_by": [
+        "c/928054780.html"
+      ],
+      "lazy": false
+    },
+    "c/928054780.html": {
+      "bytes": 66602,
+      "purpose": "one company profile",
+      "loaded_by": [],
+      "lazy": null
+    },
+    "c/928892956.data.js": {
+      "bytes": 90264,
+      "purpose": "profile evidence/claim payload; synchronously loaded on its profile",
+      "loaded_by": [
+        "c/928892956.html"
+      ],
+      "lazy": false
+    },
+    "c/928892956.html": {
+      "bytes": 72450,
+      "purpose": "one company profile",
+      "loaded_by": [],
+      "lazy": null
+    },
+    "c/929583027.data.js": {
+      "bytes": 86016,
+      "purpose": "profile evidence/claim payload; synchronously loaded on its profile",
+      "loaded_by": [
+        "c/929583027.html"
+      ],
+      "lazy": false
+    },
+    "c/929583027.html": {
+      "bytes": 72985,
+      "purpose": "one company profile",
+      "loaded_by": [],
+      "lazy": null
+    },
+    "c/929868323.data.js": {
+      "bytes": 58627,
+      "purpose": "profile evidence/claim payload; synchronously loaded on its profile",
+      "loaded_by": [
+        "c/929868323.html"
+      ],
+      "lazy": false
+    },
+    "c/929868323.html": {
+      "bytes": 64409,
+      "purpose": "one company profile",
+      "loaded_by": [],
+      "lazy": null
+    },
+    "c/930621927.data.js": {
+      "bytes": 63968,
+      "purpose": "profile evidence/claim payload; synchronously loaded on its profile",
+      "loaded_by": [
+        "c/930621927.html"
+      ],
+      "lazy": false
+    },
+    "c/930621927.html": {
+      "bytes": 66415,
+      "purpose": "one company profile",
+      "loaded_by": [],
+      "lazy": null
+    },
+    "c/932525070.data.js": {
+      "bytes": 124411,
+      "purpose": "profile evidence/claim payload; synchronously loaded on its profile",
+      "loaded_by": [
+        "c/932525070.html"
+      ],
+      "lazy": false
+    },
+    "c/932525070.html": {
+      "bytes": 89321,
+      "purpose": "one company profile",
+      "loaded_by": [],
+      "lazy": null
+    },
+    "c/933025160.data.js": {
+      "bytes": 58486,
+      "purpose": "profile evidence/claim payload; synchronously loaded on its profile",
+      "loaded_by": [
+        "c/933025160.html"
+      ],
+      "lazy": false
+    },
+    "c/933025160.html": {
+      "bytes": 61820,
+      "purpose": "one company profile",
+      "loaded_by": [],
+      "lazy": null
+    },
+    "c/934216385.data.js": {
+      "bytes": 76011,
+      "purpose": "profile evidence/claim payload; synchronously loaded on its profile",
+      "loaded_by": [
+        "c/934216385.html"
+      ],
+      "lazy": false
+    },
+    "c/934216385.html": {
+      "bytes": 70975,
+      "purpose": "one company profile",
+      "loaded_by": [],
+      "lazy": null
+    },
+    "c/934485718.data.js": {
+      "bytes": 76820,
+      "purpose": "profile evidence/claim payload; synchronously loaded on its profile",
+      "loaded_by": [
+        "c/934485718.html"
+      ],
+      "lazy": false
+    },
+    "c/934485718.html": {
+      "bytes": 69540,
+      "purpose": "one company profile",
+      "loaded_by": [],
+      "lazy": null
+    },
+    "c/935465567.data.js": {
+      "bytes": 74566,
+      "purpose": "profile evidence/claim payload; synchronously loaded on its profile",
+      "loaded_by": [
+        "c/935465567.html"
+      ],
+      "lazy": false
+    },
+    "c/935465567.html": {
+      "bytes": 69275,
+      "purpose": "one company profile",
+      "loaded_by": [],
+      "lazy": null
+    },
+    "c/935647142.data.js": {
+      "bytes": 65005,
+      "purpose": "profile evidence/claim payload; synchronously loaded on its profile",
+      "loaded_by": [
+        "c/935647142.html"
+      ],
+      "lazy": false
+    },
+    "c/935647142.html": {
+      "bytes": 67617,
+      "purpose": "one company profile",
+      "loaded_by": [],
+      "lazy": null
+    },
+    "c/935962196.data.js": {
+      "bytes": 67503,
+      "purpose": "profile evidence/claim payload; synchronously loaded on its profile",
+      "loaded_by": [
+        "c/935962196.html"
+      ],
+      "lazy": false
+    },
+    "c/935962196.html": {
+      "bytes": 69266,
+      "purpose": "one company profile",
+      "loaded_by": [],
+      "lazy": null
+    },
+    "c/936035523.data.js": {
+      "bytes": 75589,
+      "purpose": "profile evidence/claim payload; synchronously loaded on its profile",
+      "loaded_by": [
+        "c/936035523.html"
+      ],
+      "lazy": false
+    },
+    "c/936035523.html": {
+      "bytes": 70543,
+      "purpose": "one company profile",
+      "loaded_by": [],
+      "lazy": null
+    },
+    "c/936349676.data.js": {
+      "bytes": 98514,
+      "purpose": "profile evidence/claim payload; synchronously loaded on its profile",
+      "loaded_by": [
+        "c/936349676.html"
+      ],
+      "lazy": false
+    },
+    "c/936349676.html": {
+      "bytes": 78385,
+      "purpose": "one company profile",
+      "loaded_by": [],
+      "lazy": null
+    },
+    "c/946595845.data.js": {
+      "bytes": 115356,
+      "purpose": "profile evidence/claim payload; synchronously loaded on its profile",
+      "loaded_by": [
+        "c/946595845.html"
+      ],
+      "lazy": false
+    },
+    "c/946595845.html": {
+      "bytes": 80531,
+      "purpose": "one company profile",
+      "loaded_by": [],
+      "lazy": null
+    },
+    "c/948639416.data.js": {
+      "bytes": 78661,
+      "purpose": "profile evidence/claim payload; synchronously loaded on its profile",
+      "loaded_by": [
+        "c/948639416.html"
+      ],
+      "lazy": false
+    },
+    "c/948639416.html": {
+      "bytes": 71010,
+      "purpose": "one company profile",
+      "loaded_by": [],
+      "lazy": null
+    },
+    "c/950302011.data.js": {
+      "bytes": 101117,
+      "purpose": "profile evidence/claim payload; synchronously loaded on its profile",
+      "loaded_by": [
+        "c/950302011.html"
+      ],
+      "lazy": false
+    },
+    "c/950302011.html": {
+      "bytes": 78646,
+      "purpose": "one company profile",
+      "loaded_by": [],
+      "lazy": null
+    },
+    "c/950310499.data.js": {
+      "bytes": 59795,
+      "purpose": "profile evidence/claim payload; synchronously loaded on its profile",
+      "loaded_by": [
+        "c/950310499.html"
+      ],
+      "lazy": false
+    },
+    "c/950310499.html": {
+      "bytes": 65954,
+      "purpose": "one company profile",
+      "loaded_by": [],
+      "lazy": null
+    },
+    "c/956409071.data.js": {
+      "bytes": 80053,
+      "purpose": "profile evidence/claim payload; synchronously loaded on its profile",
+      "loaded_by": [
+        "c/956409071.html"
+      ],
+      "lazy": false
+    },
+    "c/956409071.html": {
+      "bytes": 73512,
+      "purpose": "one company profile",
+      "loaded_by": [],
+      "lazy": null
+    },
+    "c/957687504.data.js": {
+      "bytes": 95456,
+      "purpose": "profile evidence/claim payload; synchronously loaded on its profile",
+      "loaded_by": [
+        "c/957687504.html"
+      ],
+      "lazy": false
+    },
+    "c/957687504.html": {
+      "bytes": 75568,
+      "purpose": "one company profile",
+      "loaded_by": [],
+      "lazy": null
+    },
+    "c/975514412.data.js": {
+      "bytes": 73724,
+      "purpose": "profile evidence/claim payload; synchronously loaded on its profile",
+      "loaded_by": [
+        "c/975514412.html"
+      ],
+      "lazy": false
+    },
+    "c/975514412.html": {
+      "bytes": 69111,
+      "purpose": "one company profile",
+      "loaded_by": [],
+      "lazy": null
+    },
+    "c/988330752.data.js": {
+      "bytes": 127994,
+      "purpose": "profile evidence/claim payload; synchronously loaded on its profile",
+      "loaded_by": [
+        "c/988330752.html"
+      ],
+      "lazy": false
+    },
+    "c/988330752.html": {
+      "bytes": 80075,
+      "purpose": "one company profile",
+      "loaded_by": [],
+      "lazy": null
+    },
+    "c/988963259.data.js": {
+      "bytes": 84439,
+      "purpose": "profile evidence/claim payload; synchronously loaded on its profile",
+      "loaded_by": [
+        "c/988963259.html"
+      ],
+      "lazy": false
+    },
+    "c/988963259.html": {
+      "bytes": 72441,
+      "purpose": "one company profile",
+      "loaded_by": [],
+      "lazy": null
+    },
+    "c/991835423.data.js": {
+      "bytes": 98475,
+      "purpose": "profile evidence/claim payload; synchronously loaded on its profile",
+      "loaded_by": [
+        "c/991835423.html"
+      ],
+      "lazy": false
+    },
+    "c/991835423.html": {
+      "bytes": 74756,
+      "purpose": "one company profile",
+      "loaded_by": [],
+      "lazy": null
+    },
+    "c/991853995.data.js": {
+      "bytes": 104285,
+      "purpose": "profile evidence/claim payload; synchronously loaded on its profile",
+      "loaded_by": [
+        "c/991853995.html"
+      ],
+      "lazy": false
+    },
+    "c/991853995.html": {
+      "bytes": 85252,
+      "purpose": "one company profile",
+      "loaded_by": [],
+      "lazy": null
+    },
+    "c/997095987.data.js": {
+      "bytes": 92718,
+      "purpose": "profile evidence/claim payload; synchronously loaded on its profile",
+      "loaded_by": [
+        "c/997095987.html"
+      ],
+      "lazy": false
+    },
+    "c/997095987.html": {
+      "bytes": 73849,
+      "purpose": "one company profile",
+      "loaded_by": [],
+      "lazy": null
+    },
+    "c/997995414.data.js": {
+      "bytes": 90518,
+      "purpose": "profile evidence/claim payload; synchronously loaded on its profile",
+      "loaded_by": [
+        "c/997995414.html"
+      ],
+      "lazy": false
+    },
+    "c/997995414.html": {
+      "bytes": 74184,
+      "purpose": "one company profile",
+      "loaded_by": [],
+      "lazy": null
+    },
+    "c/999504116.data.js": {
+      "bytes": 59575,
+      "purpose": "profile evidence/claim payload; synchronously loaded on its profile",
+      "loaded_by": [
+        "c/999504116.html"
+      ],
+      "lazy": false
+    },
+    "c/999504116.html": {
+      "bytes": 65784,
+      "purpose": "one company profile",
+      "loaded_by": [],
+      "lazy": null
+    },
+    "compare.html": {
+      "bytes": 3789,
+      "purpose": "company comparison selectors and cards",
+      "loaded_by": [],
+      "lazy": null
+    },
+    "data/index.js": {
+      "bytes": 65188,
+      "purpose": "directory/search index; synchronously loaded on every page",
+      "loaded_by": [
+        "compare.html",
+        "index.html",
+        "c/814635562.html",
+        "c/820042182.html",
+        "c/820162692.html",
+        "c/829577372.html",
+        "c/912435911.html",
+        "c/912579433.html",
+        "c/915188389.html",
+        "c/916249985.html",
+        "c/918079327.html",
+        "c/918843183.html",
+        "c/918953612.html",
+        "c/918982523.html",
+        "c/919263601.html",
+        "c/919414944.html",
+        "c/923399658.html",
+        "c/923609016.html",
+        "c/925181536.html",
+        "c/926818317.html",
+        "c/927177978.html",
+        "c/927342677.html",
+        "c/927439794.html",
+        "c/928054780.html",
+        "c/928892956.html",
+        "c/929583027.html",
+        "c/929868323.html",
+        "c/930621927.html",
+        "c/932525070.html",
+        "c/933025160.html",
+        "c/934216385.html",
+        "c/934485718.html",
+        "c/935465567.html",
+        "c/935647142.html",
+        "c/935962196.html",
+        "c/936035523.html",
+        "c/936349676.html",
+        "c/946595845.html",
+        "c/948639416.html",
+        "c/950302011.html",
+        "c/950310499.html",
+        "c/956409071.html",
+        "c/957687504.html",
+        "c/975514412.html",
+        "c/988330752.html",
+        "c/988963259.html",
+        "c/991835423.html",
+        "c/991853995.html",
+        "c/997095987.html",
+        "c/997995414.html",
+        "c/999504116.html"
+      ],
+      "lazy": false
+    },
+    "data/index.json": {
+      "bytes": 65161,
+      "purpose": "optional directory export; not loaded on navigation",
+      "loaded_by": [],
+      "lazy": null
+    },
+    "index.html": {
+      "bytes": 21006,
+      "purpose": "dashboard, directory, invalid-input notice",
+      "loaded_by": [],
+      "lazy": null
+    },
+    "progress.json": {
+      "bytes": 1423,
+      "purpose": "other generated file",
+      "loaded_by": [],
+      "lazy": null
+    }
+  },
+  "pages": {
+    "compare.html": {
+      "html_bytes": 3789,
+      "sync_loads": [
+        {
+          "mode": "stylesheet",
+          "path": "assets/site.css",
+          "bytes": 33797
+        },
+        {
+          "mode": "script",
+          "path": "data/index.js",
+          "bytes": 65188
+        },
+        {
+          "mode": "script",
+          "path": "assets/site.js",
+          "bytes": 67153
+        }
+      ],
+      "initial_load_bytes": 169927,
+      "over_html_limit": false,
+      "over_initial_limit": false
+    },
+    "index.html": {
+      "html_bytes": 21006,
+      "sync_loads": [
+        {
+          "mode": "stylesheet",
+          "path": "assets/site.css",
+          "bytes": 33797
+        },
+        {
+          "mode": "script",
+          "path": "data/index.js",
+          "bytes": 65188
+        },
+        {
+          "mode": "script",
+          "path": "assets/site.js",
+          "bytes": 67153
+        }
+      ],
+      "initial_load_bytes": 187144,
+      "over_html_limit": false,
+      "over_initial_limit": false
+    },
+    "c/814635562.html": {
+      "html_bytes": 75071,
+      "sync_loads": [
+        {
+          "mode": "stylesheet",
+          "path": "assets/site.css",
+          "bytes": 33797
+        },
+        {
+          "mode": "script",
+          "path": "data/index.js",
+          "bytes": 65188
+        },
+        {
+          "mode": "script",
+          "path": "c/814635562.data.js",
+          "bytes": 98417
+        },
+        {
+          "mode": "script",
+          "path": "assets/site.js",
+          "bytes": 67153
+        }
+      ],
+      "initial_load_bytes": 339626,
+      "over_html_limit": false,
+      "over_initial_limit": true
+    },
+    "c/820042182.html": {
+      "html_bytes": 58430,
+      "sync_loads": [
+        {
+          "mode": "stylesheet",
+          "path": "assets/site.css",
+          "bytes": 33797
+        },
+        {
+          "mode": "script",
+          "path": "data/index.js",
+          "bytes": 65188
+        },
+        {
+          "mode": "script",
+          "path": "c/820042182.data.js",
+          "bytes": 42694
+        },
+        {
+          "mode": "script",
+          "path": "assets/site.js",
+          "bytes": 67153
+        }
+      ],
+      "initial_load_bytes": 267262,
+      "over_html_limit": false,
+      "over_initial_limit": true
+    },
+    "c/820162692.html": {
+      "html_bytes": 68273,
+      "sync_loads": [
+        {
+          "mode": "stylesheet",
+          "path": "assets/site.css",
+          "bytes": 33797
+        },
+        {
+          "mode": "script",
+          "path": "data/index.js",
+          "bytes": 65188
+        },
+        {
+          "mode": "script",
+          "path": "c/820162692.data.js",
+          "bytes": 74818
+        },
+        {
+          "mode": "script",
+          "path": "assets/site.js",
+          "bytes": 67153
+        }
+      ],
+      "initial_load_bytes": 309229,
+      "over_html_limit": false,
+      "over_initial_limit": true
+    },
+    "c/829577372.html": {
+      "html_bytes": 64884,
+      "sync_loads": [
+        {
+          "mode": "stylesheet",
+          "path": "assets/site.css",
+          "bytes": 33797
+        },
+        {
+          "mode": "script",
+          "path": "data/index.js",
+          "bytes": 65188
+        },
+        {
+          "mode": "script",
+          "path": "c/829577372.data.js",
+          "bytes": 61357
+        },
+        {
+          "mode": "script",
+          "path": "assets/site.js",
+          "bytes": 67153
+        }
+      ],
+      "initial_load_bytes": 292379,
+      "over_html_limit": false,
+      "over_initial_limit": true
+    },
+    "c/912435911.html": {
+      "html_bytes": 80219,
+      "sync_loads": [
+        {
+          "mode": "stylesheet",
+          "path": "assets/site.css",
+          "bytes": 33797
+        },
+        {
+          "mode": "script",
+          "path": "data/index.js",
+          "bytes": 65188
+        },
+        {
+          "mode": "script",
+          "path": "c/912435911.data.js",
+          "bytes": 105067
+        },
+        {
+          "mode": "script",
+          "path": "assets/site.js",
+          "bytes": 67153
+        }
+      ],
+      "initial_load_bytes": 351424,
+      "over_html_limit": false,
+      "over_initial_limit": true
+    },
+    "c/912579433.html": {
+      "html_bytes": 65593,
+      "sync_loads": [
+        {
+          "mode": "stylesheet",
+          "path": "assets/site.css",
+          "bytes": 33797
+        },
+        {
+          "mode": "script",
+          "path": "data/index.js",
+          "bytes": 65188
+        },
+        {
+          "mode": "script",
+          "path": "c/912579433.data.js",
+          "bytes": 67210
+        },
+        {
+          "mode": "script",
+          "path": "assets/site.js",
+          "bytes": 67153
+        }
+      ],
+      "initial_load_bytes": 298941,
+      "over_html_limit": false,
+      "over_initial_limit": true
+    },
+    "c/915188389.html": {
+      "html_bytes": 75794,
+      "sync_loads": [
+        {
+          "mode": "stylesheet",
+          "path": "assets/site.css",
+          "bytes": 33797
+        },
+        {
+          "mode": "script",
+          "path": "data/index.js",
+          "bytes": 65188
+        },
+        {
+          "mode": "script",
+          "path": "c/915188389.data.js",
+          "bytes": 95852
+        },
+        {
+          "mode": "script",
+          "path": "assets/site.js",
+          "bytes": 67153
+        }
+      ],
+      "initial_load_bytes": 337784,
+      "over_html_limit": false,
+      "over_initial_limit": true
+    },
+    "c/916249985.html": {
+      "html_bytes": 71551,
+      "sync_loads": [
+        {
+          "mode": "stylesheet",
+          "path": "assets/site.css",
+          "bytes": 33797
+        },
+        {
+          "mode": "script",
+          "path": "data/index.js",
+          "bytes": 65188
+        },
+        {
+          "mode": "script",
+          "path": "c/916249985.data.js",
+          "bytes": 83583
+        },
+        {
+          "mode": "script",
+          "path": "assets/site.js",
+          "bytes": 67153
+        }
+      ],
+      "initial_load_bytes": 321272,
+      "over_html_limit": false,
+      "over_initial_limit": true
+    },
+    "c/918079327.html": {
+      "html_bytes": 67435,
+      "sync_loads": [
+        {
+          "mode": "stylesheet",
+          "path": "assets/site.css",
+          "bytes": 33797
+        },
+        {
+          "mode": "script",
+          "path": "data/index.js",
+          "bytes": 65188
+        },
+        {
+          "mode": "script",
+          "path": "c/918079327.data.js",
+          "bytes": 66894
+        },
+        {
+          "mode": "script",
+          "path": "assets/site.js",
+          "bytes": 67153
+        }
+      ],
+      "initial_load_bytes": 300467,
+      "over_html_limit": false,
+      "over_initial_limit": true
+    },
+    "c/918843183.html": {
+      "html_bytes": 65937,
+      "sync_loads": [
+        {
+          "mode": "stylesheet",
+          "path": "assets/site.css",
+          "bytes": 33797
+        },
+        {
+          "mode": "script",
+          "path": "data/index.js",
+          "bytes": 65188
+        },
+        {
+          "mode": "script",
+          "path": "c/918843183.data.js",
+          "bytes": 59099
+        },
+        {
+          "mode": "script",
+          "path": "assets/site.js",
+          "bytes": 67153
+        }
+      ],
+      "initial_load_bytes": 291174,
+      "over_html_limit": false,
+      "over_initial_limit": true
+    },
+    "c/918953612.html": {
+      "html_bytes": 75576,
+      "sync_loads": [
+        {
+          "mode": "stylesheet",
+          "path": "assets/site.css",
+          "bytes": 33797
+        },
+        {
+          "mode": "script",
+          "path": "data/index.js",
+          "bytes": 65188
+        },
+        {
+          "mode": "script",
+          "path": "c/918953612.data.js",
+          "bytes": 90202
+        },
+        {
+          "mode": "script",
+          "path": "assets/site.js",
+          "bytes": 67153
+        }
+      ],
+      "initial_load_bytes": 331916,
+      "over_html_limit": false,
+      "over_initial_limit": true
+    },
+    "c/918982523.html": {
+      "html_bytes": 67322,
+      "sync_loads": [
+        {
+          "mode": "stylesheet",
+          "path": "assets/site.css",
+          "bytes": 33797
+        },
+        {
+          "mode": "script",
+          "path": "data/index.js",
+          "bytes": 65188
+        },
+        {
+          "mode": "script",
+          "path": "c/918982523.data.js",
+          "bytes": 68214
+        },
+        {
+          "mode": "script",
+          "path": "assets/site.js",
+          "bytes": 67153
+        }
+      ],
+      "initial_load_bytes": 301674,
+      "over_html_limit": false,
+      "over_initial_limit": true
+    },
+    "c/919263601.html": {
+      "html_bytes": 66301,
+      "sync_loads": [
+        {
+          "mode": "stylesheet",
+          "path": "assets/site.css",
+          "bytes": 33797
+        },
+        {
+          "mode": "script",
+          "path": "data/index.js",
+          "bytes": 65188
+        },
+        {
+          "mode": "script",
+          "path": "c/919263601.data.js",
+          "bytes": 62287
+        },
+        {
+          "mode": "script",
+          "path": "assets/site.js",
+          "bytes": 67153
+        }
+      ],
+      "initial_load_bytes": 294726,
+      "over_html_limit": false,
+      "over_initial_limit": true
+    },
+    "c/919414944.html": {
+      "html_bytes": 69153,
+      "sync_loads": [
+        {
+          "mode": "stylesheet",
+          "path": "assets/site.css",
+          "bytes": 33797
+        },
+        {
+          "mode": "script",
+          "path": "data/index.js",
+          "bytes": 65188
+        },
+        {
+          "mode": "script",
+          "path": "c/919414944.data.js",
+          "bytes": 78950
+        },
+        {
+          "mode": "script",
+          "path": "assets/site.js",
+          "bytes": 67153
+        }
+      ],
+      "initial_load_bytes": 314241,
+      "over_html_limit": false,
+      "over_initial_limit": true
+    },
+    "c/923399658.html": {
+      "html_bytes": 67165,
+      "sync_loads": [
+        {
+          "mode": "stylesheet",
+          "path": "assets/site.css",
+          "bytes": 33797
+        },
+        {
+          "mode": "script",
+          "path": "data/index.js",
+          "bytes": 65188
+        },
+        {
+          "mode": "script",
+          "path": "c/923399658.data.js",
+          "bytes": 73246
+        },
+        {
+          "mode": "script",
+          "path": "assets/site.js",
+          "bytes": 67153
+        }
+      ],
+      "initial_load_bytes": 306549,
+      "over_html_limit": false,
+      "over_initial_limit": true
+    },
+    "c/923609016.html": {
+      "html_bytes": 128305,
+      "sync_loads": [
+        {
+          "mode": "stylesheet",
+          "path": "assets/site.css",
+          "bytes": 33797
+        },
+        {
+          "mode": "script",
+          "path": "data/index.js",
+          "bytes": 65188
+        },
+        {
+          "mode": "script",
+          "path": "c/923609016.data.js",
+          "bytes": 519590
+        },
+        {
+          "mode": "script",
+          "path": "assets/site.js",
+          "bytes": 67153
+        }
+      ],
+      "initial_load_bytes": 814033,
+      "over_html_limit": false,
+      "over_initial_limit": true
+    },
+    "c/925181536.html": {
+      "html_bytes": 70206,
+      "sync_loads": [
+        {
+          "mode": "stylesheet",
+          "path": "assets/site.css",
+          "bytes": 33797
+        },
+        {
+          "mode": "script",
+          "path": "data/index.js",
+          "bytes": 65188
+        },
+        {
+          "mode": "script",
+          "path": "c/925181536.data.js",
+          "bytes": 74572
+        },
+        {
+          "mode": "script",
+          "path": "assets/site.js",
+          "bytes": 67153
+        }
+      ],
+      "initial_load_bytes": 310916,
+      "over_html_limit": false,
+      "over_initial_limit": true
+    },
+    "c/926818317.html": {
+      "html_bytes": 79120,
+      "sync_loads": [
+        {
+          "mode": "stylesheet",
+          "path": "assets/site.css",
+          "bytes": 33797
+        },
+        {
+          "mode": "script",
+          "path": "data/index.js",
+          "bytes": 65188
+        },
+        {
+          "mode": "script",
+          "path": "c/926818317.data.js",
+          "bytes": 112265
+        },
+        {
+          "mode": "script",
+          "path": "assets/site.js",
+          "bytes": 67153
+        }
+      ],
+      "initial_load_bytes": 357523,
+      "over_html_limit": false,
+      "over_initial_limit": true
+    },
+    "c/927177978.html": {
+      "html_bytes": 67785,
+      "sync_loads": [
+        {
+          "mode": "stylesheet",
+          "path": "assets/site.css",
+          "bytes": 33797
+        },
+        {
+          "mode": "script",
+          "path": "data/index.js",
+          "bytes": 65188
+        },
+        {
+          "mode": "script",
+          "path": "c/927177978.data.js",
+          "bytes": 68171
+        },
+        {
+          "mode": "script",
+          "path": "assets/site.js",
+          "bytes": 67153
+        }
+      ],
+      "initial_load_bytes": 302094,
+      "over_html_limit": false,
+      "over_initial_limit": true
+    },
+    "c/927342677.html": {
+      "html_bytes": 73597,
+      "sync_loads": [
+        {
+          "mode": "stylesheet",
+          "path": "assets/site.css",
+          "bytes": 33797
+        },
+        {
+          "mode": "script",
+          "path": "data/index.js",
+          "bytes": 65188
+        },
+        {
+          "mode": "script",
+          "path": "c/927342677.data.js",
+          "bytes": 84854
+        },
+        {
+          "mode": "script",
+          "path": "assets/site.js",
+          "bytes": 67153
+        }
+      ],
+      "initial_load_bytes": 324589,
+      "over_html_limit": false,
+      "over_initial_limit": true
+    },
+    "c/927439794.html": {
+      "html_bytes": 76009,
+      "sync_loads": [
+        {
+          "mode": "stylesheet",
+          "path": "assets/site.css",
+          "bytes": 33797
+        },
+        {
+          "mode": "script",
+          "path": "data/index.js",
+          "bytes": 65188
+        },
+        {
+          "mode": "script",
+          "path": "c/927439794.data.js",
+          "bytes": 91868
+        },
+        {
+          "mode": "script",
+          "path": "assets/site.js",
+          "bytes": 67153
+        }
+      ],
+      "initial_load_bytes": 334015,
+      "over_html_limit": false,
+      "over_initial_limit": true
+    },
+    "c/928054780.html": {
+      "html_bytes": 66602,
+      "sync_loads": [
+        {
+          "mode": "stylesheet",
+          "path": "assets/site.css",
+          "bytes": 33797
+        },
+        {
+          "mode": "script",
+          "path": "data/index.js",
+          "bytes": 65188
+        },
+        {
+          "mode": "script",
+          "path": "c/928054780.data.js",
+          "bytes": 62222
+        },
+        {
+          "mode": "script",
+          "path": "assets/site.js",
+          "bytes": 67153
+        }
+      ],
+      "initial_load_bytes": 294962,
+      "over_html_limit": false,
+      "over_initial_limit": true
+    },
+    "c/928892956.html": {
+      "html_bytes": 72450,
+      "sync_loads": [
+        {
+          "mode": "stylesheet",
+          "path": "assets/site.css",
+          "bytes": 33797
+        },
+        {
+          "mode": "script",
+          "path": "data/index.js",
+          "bytes": 65188
+        },
+        {
+          "mode": "script",
+          "path": "c/928892956.data.js",
+          "bytes": 90264
+        },
+        {
+          "mode": "script",
+          "path": "assets/site.js",
+          "bytes": 67153
+        }
+      ],
+      "initial_load_bytes": 328852,
+      "over_html_limit": false,
+      "over_initial_limit": true
+    },
+    "c/929583027.html": {
+      "html_bytes": 72985,
+      "sync_loads": [
+        {
+          "mode": "stylesheet",
+          "path": "assets/site.css",
+          "bytes": 33797
+        },
+        {
+          "mode": "script",
+          "path": "data/index.js",
+          "bytes": 65188
+        },
+        {
+          "mode": "script",
+          "path": "c/929583027.data.js",
+          "bytes": 86016
+        },
+        {
+          "mode": "script",
+          "path": "assets/site.js",
+          "bytes": 67153
+        }
+      ],
+      "initial_load_bytes": 325139,
+      "over_html_limit": false,
+      "over_initial_limit": true
+    },
+    "c/929868323.html": {
+      "html_bytes": 64409,
+      "sync_loads": [
+        {
+          "mode": "stylesheet",
+          "path": "assets/site.css",
+          "bytes": 33797
+        },
+        {
+          "mode": "script",
+          "path": "data/index.js",
+          "bytes": 65188
+        },
+        {
+          "mode": "script",
+          "path": "c/929868323.data.js",
+          "bytes": 58627
+        },
+        {
+          "mode": "script",
+          "path": "assets/site.js",
+          "bytes": 67153
+        }
+      ],
+      "initial_load_bytes": 289174,
+      "over_html_limit": false,
+      "over_initial_limit": true
+    },
+    "c/930621927.html": {
+      "html_bytes": 66415,
+      "sync_loads": [
+        {
+          "mode": "stylesheet",
+          "path": "assets/site.css",
+          "bytes": 33797
+        },
+        {
+          "mode": "script",
+          "path": "data/index.js",
+          "bytes": 65188
+        },
+        {
+          "mode": "script",
+          "path": "c/930621927.data.js",
+          "bytes": 63968
+        },
+        {
+          "mode": "script",
+          "path": "assets/site.js",
+          "bytes": 67153
+        }
+      ],
+      "initial_load_bytes": 296521,
+      "over_html_limit": false,
+      "over_initial_limit": true
+    },
+    "c/932525070.html": {
+      "html_bytes": 89321,
+      "sync_loads": [
+        {
+          "mode": "stylesheet",
+          "path": "assets/site.css",
+          "bytes": 33797
+        },
+        {
+          "mode": "script",
+          "path": "data/index.js",
+          "bytes": 65188
+        },
+        {
+          "mode": "script",
+          "path": "c/932525070.data.js",
+          "bytes": 124411
+        },
+        {
+          "mode": "script",
+          "path": "assets/site.js",
+          "bytes": 67153
+        }
+      ],
+      "initial_load_bytes": 379870,
+      "over_html_limit": false,
+      "over_initial_limit": true
+    },
+    "c/933025160.html": {
+      "html_bytes": 61820,
+      "sync_loads": [
+        {
+          "mode": "stylesheet",
+          "path": "assets/site.css",
+          "bytes": 33797
+        },
+        {
+          "mode": "script",
+          "path": "data/index.js",
+          "bytes": 65188
+        },
+        {
+          "mode": "script",
+          "path": "c/933025160.data.js",
+          "bytes": 58486
+        },
+        {
+          "mode": "script",
+          "path": "assets/site.js",
+          "bytes": 67153
+        }
+      ],
+      "initial_load_bytes": 286444,
+      "over_html_limit": false,
+      "over_initial_limit": true
+    },
+    "c/934216385.html": {
+      "html_bytes": 70975,
+      "sync_loads": [
+        {
+          "mode": "stylesheet",
+          "path": "assets/site.css",
+          "bytes": 33797
+        },
+        {
+          "mode": "script",
+          "path": "data/index.js",
+          "bytes": 65188
+        },
+        {
+          "mode": "script",
+          "path": "c/934216385.data.js",
+          "bytes": 76011
+        },
+        {
+          "mode": "script",
+          "path": "assets/site.js",
+          "bytes": 67153
+        }
+      ],
+      "initial_load_bytes": 313124,
+      "over_html_limit": false,
+      "over_initial_limit": true
+    },
+    "c/934485718.html": {
+      "html_bytes": 69540,
+      "sync_loads": [
+        {
+          "mode": "stylesheet",
+          "path": "assets/site.css",
+          "bytes": 33797
+        },
+        {
+          "mode": "script",
+          "path": "data/index.js",
+          "bytes": 65188
+        },
+        {
+          "mode": "script",
+          "path": "c/934485718.data.js",
+          "bytes": 76820
+        },
+        {
+          "mode": "script",
+          "path": "assets/site.js",
+          "bytes": 67153
+        }
+      ],
+      "initial_load_bytes": 312498,
+      "over_html_limit": false,
+      "over_initial_limit": true
+    },
+    "c/935465567.html": {
+      "html_bytes": 69275,
+      "sync_loads": [
+        {
+          "mode": "stylesheet",
+          "path": "assets/site.css",
+          "bytes": 33797
+        },
+        {
+          "mode": "script",
+          "path": "data/index.js",
+          "bytes": 65188
+        },
+        {
+          "mode": "script",
+          "path": "c/935465567.data.js",
+          "bytes": 74566
+        },
+        {
+          "mode": "script",
+          "path": "assets/site.js",
+          "bytes": 67153
+        }
+      ],
+      "initial_load_bytes": 309979,
+      "over_html_limit": false,
+      "over_initial_limit": true
+    },
+    "c/935647142.html": {
+      "html_bytes": 67617,
+      "sync_loads": [
+        {
+          "mode": "stylesheet",
+          "path": "assets/site.css",
+          "bytes": 33797
+        },
+        {
+          "mode": "script",
+          "path": "data/index.js",
+          "bytes": 65188
+        },
+        {
+          "mode": "script",
+          "path": "c/935647142.data.js",
+          "bytes": 65005
+        },
+        {
+          "mode": "script",
+          "path": "assets/site.js",
+          "bytes": 67153
+        }
+      ],
+      "initial_load_bytes": 298760,
+      "over_html_limit": false,
+      "over_initial_limit": true
+    },
+    "c/935962196.html": {
+      "html_bytes": 69266,
+      "sync_loads": [
+        {
+          "mode": "stylesheet",
+          "path": "assets/site.css",
+          "bytes": 33797
+        },
+        {
+          "mode": "script",
+          "path": "data/index.js",
+          "bytes": 65188
+        },
+        {
+          "mode": "script",
+          "path": "c/935962196.data.js",
+          "bytes": 67503
+        },
+        {
+          "mode": "script",
+          "path": "assets/site.js",
+          "bytes": 67153
+        }
+      ],
+      "initial_load_bytes": 302907,
+      "over_html_limit": false,
+      "over_initial_limit": true
+    },
+    "c/936035523.html": {
+      "html_bytes": 70543,
+      "sync_loads": [
+        {
+          "mode": "stylesheet",
+          "path": "assets/site.css",
+          "bytes": 33797
+        },
+        {
+          "mode": "script",
+          "path": "data/index.js",
+          "bytes": 65188
+        },
+        {
+          "mode": "script",
+          "path": "c/936035523.data.js",
+          "bytes": 75589
+        },
+        {
+          "mode": "script",
+          "path": "assets/site.js",
+          "bytes": 67153
+        }
+      ],
+      "initial_load_bytes": 312270,
+      "over_html_limit": false,
+      "over_initial_limit": true
+    },
+    "c/936349676.html": {
+      "html_bytes": 78385,
+      "sync_loads": [
+        {
+          "mode": "stylesheet",
+          "path": "assets/site.css",
+          "bytes": 33797
+        },
+        {
+          "mode": "script",
+          "path": "data/index.js",
+          "bytes": 65188
+        },
+        {
+          "mode": "script",
+          "path": "c/936349676.data.js",
+          "bytes": 98514
+        },
+        {
+          "mode": "script",
+          "path": "assets/site.js",
+          "bytes": 67153
+        }
+      ],
+      "initial_load_bytes": 343037,
+      "over_html_limit": false,
+      "over_initial_limit": true
+    },
+    "c/946595845.html": {
+      "html_bytes": 80531,
+      "sync_loads": [
+        {
+          "mode": "stylesheet",
+          "path": "assets/site.css",
+          "bytes": 33797
+        },
+        {
+          "mode": "script",
+          "path": "data/index.js",
+          "bytes": 65188
+        },
+        {
+          "mode": "script",
+          "path": "c/946595845.data.js",
+          "bytes": 115356
+        },
+        {
+          "mode": "script",
+          "path": "assets/site.js",
+          "bytes": 67153
+        }
+      ],
+      "initial_load_bytes": 362025,
+      "over_html_limit": false,
+      "over_initial_limit": true
+    },
+    "c/948639416.html": {
+      "html_bytes": 71010,
+      "sync_loads": [
+        {
+          "mode": "stylesheet",
+          "path": "assets/site.css",
+          "bytes": 33797
+        },
+        {
+          "mode": "script",
+          "path": "data/index.js",
+          "bytes": 65188
+        },
+        {
+          "mode": "script",
+          "path": "c/948639416.data.js",
+          "bytes": 78661
+        },
+        {
+          "mode": "script",
+          "path": "assets/site.js",
+          "bytes": 67153
+        }
+      ],
+      "initial_load_bytes": 315809,
+      "over_html_limit": false,
+      "over_initial_limit": true
+    },
+    "c/950302011.html": {
+      "html_bytes": 78646,
+      "sync_loads": [
+        {
+          "mode": "stylesheet",
+          "path": "assets/site.css",
+          "bytes": 33797
+        },
+        {
+          "mode": "script",
+          "path": "data/index.js",
+          "bytes": 65188
+        },
+        {
+          "mode": "script",
+          "path": "c/950302011.data.js",
+          "bytes": 101117
+        },
+        {
+          "mode": "script",
+          "path": "assets/site.js",
+          "bytes": 67153
+        }
+      ],
+      "initial_load_bytes": 345901,
+      "over_html_limit": false,
+      "over_initial_limit": true
+    },
+    "c/950310499.html": {
+      "html_bytes": 65954,
+      "sync_loads": [
+        {
+          "mode": "stylesheet",
+          "path": "assets/site.css",
+          "bytes": 33797
+        },
+        {
+          "mode": "script",
+          "path": "data/index.js",
+          "bytes": 65188
+        },
+        {
+          "mode": "script",
+          "path": "c/950310499.data.js",
+          "bytes": 59795
+        },
+        {
+          "mode": "script",
+          "path": "assets/site.js",
+          "bytes": 67153
+        }
+      ],
+      "initial_load_bytes": 291887,
+      "over_html_limit": false,
+      "over_initial_limit": true
+    },
+    "c/956409071.html": {
+      "html_bytes": 73512,
+      "sync_loads": [
+        {
+          "mode": "stylesheet",
+          "path": "assets/site.css",
+          "bytes": 33797
+        },
+        {
+          "mode": "script",
+          "path": "data/index.js",
+          "bytes": 65188
+        },
+        {
+          "mode": "script",
+          "path": "c/956409071.data.js",
+          "bytes": 80053
+        },
+        {
+          "mode": "script",
+          "path": "assets/site.js",
+          "bytes": 67153
+        }
+      ],
+      "initial_load_bytes": 319703,
+      "over_html_limit": false,
+      "over_initial_limit": true
+    },
+    "c/957687504.html": {
+      "html_bytes": 75568,
+      "sync_loads": [
+        {
+          "mode": "stylesheet",
+          "path": "assets/site.css",
+          "bytes": 33797
+        },
+        {
+          "mode": "script",
+          "path": "data/index.js",
+          "bytes": 65188
+        },
+        {
+          "mode": "script",
+          "path": "c/957687504.data.js",
+          "bytes": 95456
+        },
+        {
+          "mode": "script",
+          "path": "assets/site.js",
+          "bytes": 67153
+        }
+      ],
+      "initial_load_bytes": 337162,
+      "over_html_limit": false,
+      "over_initial_limit": true
+    },
+    "c/975514412.html": {
+      "html_bytes": 69111,
+      "sync_loads": [
+        {
+          "mode": "stylesheet",
+          "path": "assets/site.css",
+          "bytes": 33797
+        },
+        {
+          "mode": "script",
+          "path": "data/index.js",
+          "bytes": 65188
+        },
+        {
+          "mode": "script",
+          "path": "c/975514412.data.js",
+          "bytes": 73724
+        },
+        {
+          "mode": "script",
+          "path": "assets/site.js",
+          "bytes": 67153
+        }
+      ],
+      "initial_load_bytes": 308973,
+      "over_html_limit": false,
+      "over_initial_limit": true
+    },
+    "c/988330752.html": {
+      "html_bytes": 80075,
+      "sync_loads": [
+        {
+          "mode": "stylesheet",
+          "path": "assets/site.css",
+          "bytes": 33797
+        },
+        {
+          "mode": "script",
+          "path": "data/index.js",
+          "bytes": 65188
+        },
+        {
+          "mode": "script",
+          "path": "c/988330752.data.js",
+          "bytes": 127994
+        },
+        {
+          "mode": "script",
+          "path": "assets/site.js",
+          "bytes": 67153
+        }
+      ],
+      "initial_load_bytes": 374207,
+      "over_html_limit": false,
+      "over_initial_limit": true
+    },
+    "c/988963259.html": {
+      "html_bytes": 72441,
+      "sync_loads": [
+        {
+          "mode": "stylesheet",
+          "path": "assets/site.css",
+          "bytes": 33797
+        },
+        {
+          "mode": "script",
+          "path": "data/index.js",
+          "bytes": 65188
+        },
+        {
+          "mode": "script",
+          "path": "c/988963259.data.js",
+          "bytes": 84439
+        },
+        {
+          "mode": "script",
+          "path": "assets/site.js",
+          "bytes": 67153
+        }
+      ],
+      "initial_load_bytes": 323018,
+      "over_html_limit": false,
+      "over_initial_limit": true
+    },
+    "c/991835423.html": {
+      "html_bytes": 74756,
+      "sync_loads": [
+        {
+          "mode": "stylesheet",
+          "path": "assets/site.css",
+          "bytes": 33797
+        },
+        {
+          "mode": "script",
+          "path": "data/index.js",
+          "bytes": 65188
+        },
+        {
+          "mode": "script",
+          "path": "c/991835423.data.js",
+          "bytes": 98475
+        },
+        {
+          "mode": "script",
+          "path": "assets/site.js",
+          "bytes": 67153
+        }
+      ],
+      "initial_load_bytes": 339369,
+      "over_html_limit": false,
+      "over_initial_limit": true
+    },
+    "c/991853995.html": {
+      "html_bytes": 85252,
+      "sync_loads": [
+        {
+          "mode": "stylesheet",
+          "path": "assets/site.css",
+          "bytes": 33797
+        },
+        {
+          "mode": "script",
+          "path": "data/index.js",
+          "bytes": 65188
+        },
+        {
+          "mode": "script",
+          "path": "c/991853995.data.js",
+          "bytes": 104285
+        },
+        {
+          "mode": "script",
+          "path": "assets/site.js",
+          "bytes": 67153
+        }
+      ],
+      "initial_load_bytes": 355675,
+      "over_html_limit": false,
+      "over_initial_limit": true
+    },
+    "c/997095987.html": {
+      "html_bytes": 73849,
+      "sync_loads": [
+        {
+          "mode": "stylesheet",
+          "path": "assets/site.css",
+          "bytes": 33797
+        },
+        {
+          "mode": "script",
+          "path": "data/index.js",
+          "bytes": 65188
+        },
+        {
+          "mode": "script",
+          "path": "c/997095987.data.js",
+          "bytes": 92718
+        },
+        {
+          "mode": "script",
+          "path": "assets/site.js",
+          "bytes": 67153
+        }
+      ],
+      "initial_load_bytes": 332705,
+      "over_html_limit": false,
+      "over_initial_limit": true
+    },
+    "c/997995414.html": {
+      "html_bytes": 74184,
+      "sync_loads": [
+        {
+          "mode": "stylesheet",
+          "path": "assets/site.css",
+          "bytes": 33797
+        },
+        {
+          "mode": "script",
+          "path": "data/index.js",
+          "bytes": 65188
+        },
+        {
+          "mode": "script",
+          "path": "c/997995414.data.js",
+          "bytes": 90518
+        },
+        {
+          "mode": "script",
+          "path": "assets/site.js",
+          "bytes": 67153
+        }
+      ],
+      "initial_load_bytes": 330840,
+      "over_html_limit": false,
+      "over_initial_limit": true
+    },
+    "c/999504116.html": {
+      "html_bytes": 65784,
+      "sync_loads": [
+        {
+          "mode": "stylesheet",
+          "path": "assets/site.css",
+          "bytes": 33797
+        },
+        {
+          "mode": "script",
+          "path": "data/index.js",
+          "bytes": 65188
+        },
+        {
+          "mode": "script",
+          "path": "c/999504116.data.js",
+          "bytes": 59575
+        },
+        {
+          "mode": "script",
+          "path": "assets/site.js",
+          "bytes": 67153
+        }
+      ],
+      "initial_load_bytes": 291497,
+      "over_html_limit": false,
+      "over_initial_limit": true
+    }
+  },
+  "largest_html": 128305,
+  "largest_initial": 814033,
+  "html_limit_failures": [],
+  "initial_limit_failures": [
+    "c/814635562.html",
+    "c/820042182.html",
+    "c/820162692.html",
+    "c/829577372.html",
+    "c/912435911.html",
+    "c/912579433.html",
+    "c/915188389.html",
+    "c/916249985.html",
+    "c/918079327.html",
+    "c/918843183.html",
+    "c/918953612.html",
+    "c/918982523.html",
+    "c/919263601.html",
+    "c/919414944.html",
+    "c/923399658.html",
+    "c/923609016.html",
+    "c/925181536.html",
+    "c/926818317.html",
+    "c/927177978.html",
+    "c/927342677.html",
+    "c/927439794.html",
+    "c/928054780.html",
+    "c/928892956.html",
+    "c/929583027.html",
+    "c/929868323.html",
+    "c/930621927.html",
+    "c/932525070.html",
+    "c/933025160.html",
+    "c/934216385.html",
+    "c/934485718.html",
+    "c/935465567.html",
+    "c/935647142.html",
+    "c/935962196.html",
+    "c/936035523.html",
+    "c/936349676.html",
+    "c/946595845.html",
+    "c/948639416.html",
+    "c/950302011.html",
+    "c/950310499.html",
+    "c/956409071.html",
+    "c/957687504.html",
+    "c/975514412.html",
+    "c/988330752.html",
+    "c/988963259.html",
+    "c/991835423.html",
+    "c/991853995.html",
+    "c/997095987.html",
+    "c/997995414.html",
+    "c/999504116.html"
+  ],
+  "lazy_chunk_limit_failures": []
+}

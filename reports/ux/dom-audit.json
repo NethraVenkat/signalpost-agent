@@ -1,0 +1,1259 @@
+{
+  "site": "C:\\Users\\Manish\\Downloads\\Signalpost-v5\\out\\ux-audit-worktree\\reports\\ux\\sample\\site",
+  "browser": "Playwright Chrome, file://, all non-file requests aborted",
+  "selection": {
+    "923609016": "Equinor large-company layout",
+    "988330752": "FILMTEK known main/subunit website ambiguity",
+    "932525070": "registry activity in the saved default 1,000 run",
+    "929583027": "exact-company NAV hiring in the saved default 1,000 run",
+    "991853995": "exact-proof verified website in the saved default 1,000 run",
+    "820042182": "near-empty external coverage and few available facts in the saved run",
+    "12345678": "invalid identifier for terminal-envelope and site-notice audit"
+  },
+  "pages": {
+    "directory": {
+      "1440": {
+        "url": "file:///C:/Users/Manish/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/index.html",
+        "screenshot": "screenshots\\before\\directory_1440.png",
+        "load_error": null,
+        "dom": {
+          "client_width": 1440,
+          "scroll_width": 1440,
+          "overflow": false,
+          "tap_target_count": 13,
+          "small_tap_count": 0,
+          "small_tap_examples": [],
+          "contrast_sample_count": 42,
+          "low_contrast_count": 0,
+          "low_contrast_examples": [],
+          "header_count": 1,
+          "nav_count": 1,
+          "main_count": 1,
+          "unlabelled_inputs": [],
+          "images_without_alt": 0,
+          "fact_count": 0,
+          "evidence_button_count": 0,
+          "state_badge_count": 184,
+          "registry_label_exact": false,
+          "registry_label_casefold": false,
+          "unknown_block": false,
+          "body_excerpt": "Skip to content\nSignalpost\nDashboard\nDirectory\nCompare\nSearch companies Ctrl/⌘ K\nUpdate status\n🌙 Dark\n\nCOMPANY RESEARCH, WITH RECEIPTS\n\nSignalpost\n\n49 companies · 4.1% with website · 2.0% with jobs · 30.6% with activity · Run date: 2026-10-18T08:43:04.246574Z\n\n1 input record(s) have no company page because the organisation number is not valid: 12345678. They keep an explicit terminal envelope in the JSON output.\n📊 Dashboard\n🏢 Company Directory\n💼 Hiring Explorer\nCOHORT SCOPE\nFull evaluated co"
+        },
+        "errors": {
+          "console": [],
+          "pageerror": [],
+          "requestfailed": [],
+          "blocked_external": []
+        }
+      },
+      "375": {
+        "url": "file:///C:/Users/Manish/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/index.html",
+        "screenshot": "screenshots\\before\\directory_375.png",
+        "load_error": null,
+        "dom": {
+          "client_width": 375,
+          "scroll_width": 375,
+          "overflow": false,
+          "tap_target_count": 13,
+          "small_tap_count": 0,
+          "small_tap_examples": [],
+          "contrast_sample_count": 42,
+          "low_contrast_count": 0,
+          "low_contrast_examples": [],
+          "header_count": 1,
+          "nav_count": 1,
+          "main_count": 1,
+          "unlabelled_inputs": [],
+          "images_without_alt": 0,
+          "fact_count": 0,
+          "evidence_button_count": 0,
+          "state_badge_count": 184,
+          "registry_label_exact": false,
+          "registry_label_casefold": false,
+          "unknown_block": false,
+          "body_excerpt": "Skip to content\nSignalpost\nDashboard\nDirectory\nCompare\nSearch companies Ctrl/⌘ K\nUpdate status\n🌙 Dark\n\nCOMPANY RESEARCH, WITH RECEIPTS\n\nSignalpost\n\n49 companies · 4.1% with website · 2.0% with jobs · 30.6% with activity · Run date: 2026-10-18T08:43:04.246574Z\n\n1 input record(s) have no company page because the organisation number is not valid: 12345678. They keep an explicit terminal envelope in the JSON output.\n📊 Dashboard\n🏢 Company Directory\n💼 Hiring Explorer\nCOHORT SCOPE\nFull evaluated co"
+        },
+        "errors": {
+          "console": [],
+          "pageerror": [],
+          "requestfailed": [],
+          "blocked_external": []
+        }
+      },
+      "320": {
+        "url": "file:///C:/Users/Manish/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/index.html",
+        "screenshot": "screenshots\\before\\directory_320.png",
+        "load_error": null,
+        "dom": {
+          "client_width": 320,
+          "scroll_width": 320,
+          "overflow": false,
+          "tap_target_count": 13,
+          "small_tap_count": 0,
+          "small_tap_examples": [],
+          "contrast_sample_count": 42,
+          "low_contrast_count": 0,
+          "low_contrast_examples": [],
+          "header_count": 1,
+          "nav_count": 1,
+          "main_count": 1,
+          "unlabelled_inputs": [],
+          "images_without_alt": 0,
+          "fact_count": 0,
+          "evidence_button_count": 0,
+          "state_badge_count": 184,
+          "registry_label_exact": false,
+          "registry_label_casefold": false,
+          "unknown_block": false,
+          "body_excerpt": "Skip to content\nSignalpost\nDashboard\nDirectory\nCompare\nSearch companies Ctrl/⌘ K\nUpdate status\n🌙 Dark\n\nCOMPANY RESEARCH, WITH RECEIPTS\n\nSignalpost\n\n49 companies · 4.1% with website · 2.0% with jobs · 30.6% with activity · Run date: 2026-10-18T08:43:04.246574Z\n\n1 input record(s) have no company page because the organisation number is not valid: 12345678. They keep an explicit terminal envelope in the JSON output.\n📊 Dashboard\n🏢 Company Directory\n💼 Hiring Explorer\nCOHORT SCOPE\nFull evaluated co"
+        },
+        "errors": {
+          "console": [],
+          "pageerror": [],
+          "requestfailed": [],
+          "blocked_external": []
+        }
+      }
+    },
+    "equinor": {
+      "1440": {
+        "url": "file:///C:/Users/Manish/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/c/923609016.html",
+        "screenshot": "screenshots\\before\\equinor_1440.png",
+        "load_error": null,
+        "dom": {
+          "client_width": 1440,
+          "scroll_width": 1440,
+          "overflow": false,
+          "tap_target_count": 474,
+          "small_tap_count": 2,
+          "small_tap_examples": [
+            {
+              "tag": "SUMMARY",
+              "text": "Additional official attributes (24)",
+              "width": 1020,
+              "height": 24
+            },
+            {
+              "tag": "SUMMARY",
+              "text": "Additional official attributes (264)",
+              "width": 1020,
+              "height": 24
+            }
+          ],
+          "contrast_sample_count": 300,
+          "low_contrast_count": 0,
+          "low_contrast_examples": [],
+          "header_count": 1,
+          "nav_count": 1,
+          "main_count": 1,
+          "unlabelled_inputs": [],
+          "images_without_alt": 0,
+          "fact_count": 378,
+          "evidence_button_count": 401,
+          "state_badge_count": 464,
+          "registry_label_exact": false,
+          "registry_label_casefold": true,
+          "unknown_block": false,
+          "body_excerpt": "Skip to content\nSignalpost\nDashboard\nDirectory\nCompare\nSearch companies Ctrl/⌘ K\nUpdate status\n🌙 Dark\n\nCOMPANY PROFILE\n\nEQUINOR ASA\n\nOrganisation number: 923609016 Copy organisation number ⭐ Add to Watchlist\n\nAllmennaksjeselskap (ASA)\n\nSTAVANGER\n\nbankrupt: No\n\nunder liquidation: No\n\nLast checked: 2026-10-18 08:43 UTC\n\nCited summary\n\nEQUINOR ASA is based in Stavanger and registered under Extraction of crude petroleum (NACE 06.100), with 21231 registered employees. [1] [2] [3] [4]\n\nAuditor: ERNST"
+        },
+        "errors": {
+          "console": [],
+          "pageerror": [],
+          "requestfailed": [],
+          "blocked_external": []
+        }
+      },
+      "375": {
+        "url": "file:///C:/Users/Manish/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/c/923609016.html",
+        "screenshot": "screenshots\\before\\equinor_375.png",
+        "load_error": null,
+        "dom": {
+          "client_width": 375,
+          "scroll_width": 375,
+          "overflow": false,
+          "tap_target_count": 474,
+          "small_tap_count": 2,
+          "small_tap_examples": [
+            {
+              "tag": "SUMMARY",
+              "text": "Additional official attributes (24)",
+              "width": 271,
+              "height": 24
+            },
+            {
+              "tag": "SUMMARY",
+              "text": "Additional official attributes (264)",
+              "width": 271,
+              "height": 24
+            }
+          ],
+          "contrast_sample_count": 300,
+          "low_contrast_count": 0,
+          "low_contrast_examples": [],
+          "header_count": 1,
+          "nav_count": 1,
+          "main_count": 1,
+          "unlabelled_inputs": [],
+          "images_without_alt": 0,
+          "fact_count": 378,
+          "evidence_button_count": 401,
+          "state_badge_count": 464,
+          "registry_label_exact": false,
+          "registry_label_casefold": true,
+          "unknown_block": false,
+          "body_excerpt": "Skip to content\nSignalpost\nDashboard\nDirectory\nCompare\nSearch companies Ctrl/⌘ K\nUpdate status\n🌙 Dark\n\nCOMPANY PROFILE\n\nEQUINOR ASA\n\nOrganisation number: 923609016 Copy organisation number ⭐ Add to Watchlist\n\nAllmennaksjeselskap (ASA)\n\nSTAVANGER\n\nbankrupt: No\n\nunder liquidation: No\n\nLast checked: 2026-10-18 08:43 UTC\n\nCited summary\n\nEQUINOR ASA is based in Stavanger and registered under Extraction of crude petroleum (NACE 06.100), with 21231 registered employees. [1] [2] [3] [4]\n\nAuditor: ERNST"
+        },
+        "errors": {
+          "console": [],
+          "pageerror": [],
+          "requestfailed": [],
+          "blocked_external": []
+        }
+      },
+      "320": {
+        "url": "file:///C:/Users/Manish/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/c/923609016.html",
+        "screenshot": "screenshots\\before\\equinor_320.png",
+        "load_error": null,
+        "dom": {
+          "client_width": 320,
+          "scroll_width": 320,
+          "overflow": false,
+          "tap_target_count": 474,
+          "small_tap_count": 0,
+          "small_tap_examples": [],
+          "contrast_sample_count": 300,
+          "low_contrast_count": 0,
+          "low_contrast_examples": [],
+          "header_count": 1,
+          "nav_count": 1,
+          "main_count": 1,
+          "unlabelled_inputs": [],
+          "images_without_alt": 0,
+          "fact_count": 378,
+          "evidence_button_count": 401,
+          "state_badge_count": 464,
+          "registry_label_exact": false,
+          "registry_label_casefold": true,
+          "unknown_block": false,
+          "body_excerpt": "Skip to content\nSignalpost\nDashboard\nDirectory\nCompare\nSearch companies Ctrl/⌘ K\nUpdate status\n🌙 Dark\n\nCOMPANY PROFILE\n\nEQUINOR ASA\n\nOrganisation number: 923609016 Copy organisation number ⭐ Add to Watchlist\n\nAllmennaksjeselskap (ASA)\n\nSTAVANGER\n\nbankrupt: No\n\nunder liquidation: No\n\nLast checked: 2026-10-18 08:43 UTC\n\nCited summary\n\nEQUINOR ASA is based in Stavanger and registered under Extraction of crude petroleum (NACE 06.100), with 21231 registered employees. [1] [2] [3] [4]\n\nAuditor: ERNST"
+        },
+        "errors": {
+          "console": [],
+          "pageerror": [],
+          "requestfailed": [],
+          "blocked_external": []
+        }
+      }
+    },
+    "filmtek": {
+      "1440": {
+        "url": "file:///C:/Users/Manish/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/c/988330752.html",
+        "screenshot": "screenshots\\before\\filmtek_1440.png",
+        "load_error": null,
+        "dom": {
+          "client_width": 1440,
+          "scroll_width": 1440,
+          "overflow": false,
+          "tap_target_count": 141,
+          "small_tap_count": 2,
+          "small_tap_examples": [
+            {
+              "tag": "SUMMARY",
+              "text": "Additional official attributes (3)",
+              "width": 1020,
+              "height": 24
+            },
+            {
+              "tag": "SUMMARY",
+              "text": "Additional official attributes (18)",
+              "width": 1020,
+              "height": 24
+            }
+          ],
+          "contrast_sample_count": 300,
+          "low_contrast_count": 0,
+          "low_contrast_examples": [],
+          "header_count": 1,
+          "nav_count": 1,
+          "main_count": 1,
+          "unlabelled_inputs": [],
+          "images_without_alt": 0,
+          "fact_count": 71,
+          "evidence_button_count": 99,
+          "state_badge_count": 163,
+          "registry_label_exact": false,
+          "registry_label_casefold": false,
+          "unknown_block": false,
+          "body_excerpt": "Skip to content\nSignalpost\nDashboard\nDirectory\nCompare\nSearch companies Ctrl/⌘ K\nUpdate status\n🌙 Dark\n\nCOMPANY PROFILE\n\nFILMTEK AS\n\nOrganisation number: 988330752 Copy organisation number ⭐ Add to Watchlist\n\nAksjeselskap (AS)\n\nKRISTIANSAND\n\nbankrupt: No\n\nunder liquidation: No\n\nLast checked: 2026-10-18 08:43 UTC\n\nCited summary\n\nFILMTEK AS is based in Kristiansand and registered under Motion picture, video and television programme post-production activities (NACE 59.120), with NOK 222,039 in reve"
+        },
+        "errors": {
+          "console": [],
+          "pageerror": [],
+          "requestfailed": [],
+          "blocked_external": []
+        }
+      },
+      "375": {
+        "url": "file:///C:/Users/Manish/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/c/988330752.html",
+        "screenshot": "screenshots\\before\\filmtek_375.png",
+        "load_error": null,
+        "dom": {
+          "client_width": 375,
+          "scroll_width": 375,
+          "overflow": false,
+          "tap_target_count": 141,
+          "small_tap_count": 2,
+          "small_tap_examples": [
+            {
+              "tag": "SUMMARY",
+              "text": "Additional official attributes (3)",
+              "width": 271,
+              "height": 24
+            },
+            {
+              "tag": "SUMMARY",
+              "text": "Additional official attributes (18)",
+              "width": 271,
+              "height": 24
+            }
+          ],
+          "contrast_sample_count": 300,
+          "low_contrast_count": 0,
+          "low_contrast_examples": [],
+          "header_count": 1,
+          "nav_count": 1,
+          "main_count": 1,
+          "unlabelled_inputs": [],
+          "images_without_alt": 0,
+          "fact_count": 71,
+          "evidence_button_count": 99,
+          "state_badge_count": 163,
+          "registry_label_exact": false,
+          "registry_label_casefold": false,
+          "unknown_block": false,
+          "body_excerpt": "Skip to content\nSignalpost\nDashboard\nDirectory\nCompare\nSearch companies Ctrl/⌘ K\nUpdate status\n🌙 Dark\n\nCOMPANY PROFILE\n\nFILMTEK AS\n\nOrganisation number: 988330752 Copy organisation number ⭐ Add to Watchlist\n\nAksjeselskap (AS)\n\nKRISTIANSAND\n\nbankrupt: No\n\nunder liquidation: No\n\nLast checked: 2026-10-18 08:43 UTC\n\nCited summary\n\nFILMTEK AS is based in Kristiansand and registered under Motion picture, video and television programme post-production activities (NACE 59.120), with NOK 222,039 in reve"
+        },
+        "errors": {
+          "console": [],
+          "pageerror": [],
+          "requestfailed": [],
+          "blocked_external": []
+        }
+      },
+      "320": {
+        "url": "file:///C:/Users/Manish/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/c/988330752.html",
+        "screenshot": "screenshots\\before\\filmtek_320.png",
+        "load_error": null,
+        "dom": {
+          "client_width": 320,
+          "scroll_width": 320,
+          "overflow": false,
+          "tap_target_count": 141,
+          "small_tap_count": 0,
+          "small_tap_examples": [],
+          "contrast_sample_count": 300,
+          "low_contrast_count": 0,
+          "low_contrast_examples": [],
+          "header_count": 1,
+          "nav_count": 1,
+          "main_count": 1,
+          "unlabelled_inputs": [],
+          "images_without_alt": 0,
+          "fact_count": 71,
+          "evidence_button_count": 99,
+          "state_badge_count": 163,
+          "registry_label_exact": false,
+          "registry_label_casefold": false,
+          "unknown_block": false,
+          "body_excerpt": "Skip to content\nSignalpost\nDashboard\nDirectory\nCompare\nSearch companies Ctrl/⌘ K\nUpdate status\n🌙 Dark\n\nCOMPANY PROFILE\n\nFILMTEK AS\n\nOrganisation number: 988330752 Copy organisation number ⭐ Add to Watchlist\n\nAksjeselskap (AS)\n\nKRISTIANSAND\n\nbankrupt: No\n\nunder liquidation: No\n\nLast checked: 2026-10-18 08:43 UTC\n\nCited summary\n\nFILMTEK AS is based in Kristiansand and registered under Motion picture, video and television programme post-production activities (NACE 59.120), with NOK 222,039 in reve"
+        },
+        "errors": {
+          "console": [],
+          "pageerror": [],
+          "requestfailed": [],
+          "blocked_external": []
+        }
+      }
+    },
+    "small": {
+      "1440": {
+        "url": "file:///C:/Users/Manish/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/c/925181536.html",
+        "screenshot": "screenshots\\before\\small_1440.png",
+        "load_error": null,
+        "dom": {
+          "client_width": 1440,
+          "scroll_width": 1440,
+          "overflow": false,
+          "tap_target_count": 107,
+          "small_tap_count": 2,
+          "small_tap_examples": [
+            {
+              "tag": "SUMMARY",
+              "text": "Additional official attributes (2)",
+              "width": 1020,
+              "height": 24
+            },
+            {
+              "tag": "SUMMARY",
+              "text": "Additional official attributes (6)",
+              "width": 1020,
+              "height": 24
+            }
+          ],
+          "contrast_sample_count": 300,
+          "low_contrast_count": 0,
+          "low_contrast_examples": [],
+          "header_count": 1,
+          "nav_count": 1,
+          "main_count": 1,
+          "unlabelled_inputs": [],
+          "images_without_alt": 0,
+          "fact_count": 49,
+          "evidence_button_count": 71,
+          "state_badge_count": 137,
+          "registry_label_exact": false,
+          "registry_label_casefold": false,
+          "unknown_block": false,
+          "body_excerpt": "Skip to content\nSignalpost\nDashboard\nDirectory\nCompare\nSearch companies Ctrl/⌘ K\nUpdate status\n🌙 Dark\n\nCOMPANY PROFILE\n\nSESTANTE AS\n\nOrganisation number: 925181536 Copy organisation number ⭐ Add to Watchlist\n\nAksjeselskap (AS)\n\nOSLO\n\nbankrupt: No\n\nunder liquidation: No\n\nLast checked: 2026-10-18 08:43 UTC\n\nCited summary\n\nSESTANTE AS is based in Oslo and registered under Computer consultancy and computer facilities management activities (NACE 62.200), with NOK 0 in revenue in FY2025. [1] [2] [3] "
+        },
+        "errors": {
+          "console": [],
+          "pageerror": [],
+          "requestfailed": [],
+          "blocked_external": []
+        }
+      },
+      "375": {
+        "url": "file:///C:/Users/Manish/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/c/925181536.html",
+        "screenshot": "screenshots\\before\\small_375.png",
+        "load_error": null,
+        "dom": {
+          "client_width": 375,
+          "scroll_width": 375,
+          "overflow": false,
+          "tap_target_count": 107,
+          "small_tap_count": 2,
+          "small_tap_examples": [
+            {
+              "tag": "SUMMARY",
+              "text": "Additional official attributes (2)",
+              "width": 271,
+              "height": 24
+            },
+            {
+              "tag": "SUMMARY",
+              "text": "Additional official attributes (6)",
+              "width": 271,
+              "height": 24
+            }
+          ],
+          "contrast_sample_count": 300,
+          "low_contrast_count": 0,
+          "low_contrast_examples": [],
+          "header_count": 1,
+          "nav_count": 1,
+          "main_count": 1,
+          "unlabelled_inputs": [],
+          "images_without_alt": 0,
+          "fact_count": 49,
+          "evidence_button_count": 71,
+          "state_badge_count": 137,
+          "registry_label_exact": false,
+          "registry_label_casefold": false,
+          "unknown_block": false,
+          "body_excerpt": "Skip to content\nSignalpost\nDashboard\nDirectory\nCompare\nSearch companies Ctrl/⌘ K\nUpdate status\n🌙 Dark\n\nCOMPANY PROFILE\n\nSESTANTE AS\n\nOrganisation number: 925181536 Copy organisation number ⭐ Add to Watchlist\n\nAksjeselskap (AS)\n\nOSLO\n\nbankrupt: No\n\nunder liquidation: No\n\nLast checked: 2026-10-18 08:43 UTC\n\nCited summary\n\nSESTANTE AS is based in Oslo and registered under Computer consultancy and computer facilities management activities (NACE 62.200), with NOK 0 in revenue in FY2025. [1] [2] [3] "
+        },
+        "errors": {
+          "console": [],
+          "pageerror": [],
+          "requestfailed": [],
+          "blocked_external": []
+        }
+      },
+      "320": {
+        "url": "file:///C:/Users/Manish/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/c/925181536.html",
+        "screenshot": "screenshots\\before\\small_320.png",
+        "load_error": null,
+        "dom": {
+          "client_width": 320,
+          "scroll_width": 320,
+          "overflow": false,
+          "tap_target_count": 107,
+          "small_tap_count": 0,
+          "small_tap_examples": [],
+          "contrast_sample_count": 300,
+          "low_contrast_count": 0,
+          "low_contrast_examples": [],
+          "header_count": 1,
+          "nav_count": 1,
+          "main_count": 1,
+          "unlabelled_inputs": [],
+          "images_without_alt": 0,
+          "fact_count": 49,
+          "evidence_button_count": 71,
+          "state_badge_count": 137,
+          "registry_label_exact": false,
+          "registry_label_casefold": false,
+          "unknown_block": false,
+          "body_excerpt": "Skip to content\nSignalpost\nDashboard\nDirectory\nCompare\nSearch companies Ctrl/⌘ K\nUpdate status\n🌙 Dark\n\nCOMPANY PROFILE\n\nSESTANTE AS\n\nOrganisation number: 925181536 Copy organisation number ⭐ Add to Watchlist\n\nAksjeselskap (AS)\n\nOSLO\n\nbankrupt: No\n\nunder liquidation: No\n\nLast checked: 2026-10-18 08:43 UTC\n\nCited summary\n\nSESTANTE AS is based in Oslo and registered under Computer consultancy and computer facilities management activities (NACE 62.200), with NOK 0 in revenue in FY2025. [1] [2] [3] "
+        },
+        "errors": {
+          "console": [],
+          "pageerror": [],
+          "requestfailed": [],
+          "blocked_external": []
+        }
+      }
+    },
+    "near_empty": {
+      "1440": {
+        "url": "file:///C:/Users/Manish/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/c/820042182.html",
+        "screenshot": "screenshots\\before\\near_empty_1440.png",
+        "load_error": null,
+        "dom": {
+          "client_width": 1440,
+          "scroll_width": 1440,
+          "overflow": false,
+          "tap_target_count": 79,
+          "small_tap_count": 1,
+          "small_tap_examples": [
+            {
+              "tag": "SUMMARY",
+              "text": "Additional official attributes (2)",
+              "width": 1020,
+              "height": 24
+            }
+          ],
+          "contrast_sample_count": 300,
+          "low_contrast_count": 0,
+          "low_contrast_examples": [],
+          "header_count": 1,
+          "nav_count": 1,
+          "main_count": 1,
+          "unlabelled_inputs": [],
+          "images_without_alt": 0,
+          "fact_count": 40,
+          "evidence_button_count": 47,
+          "state_badge_count": 112,
+          "registry_label_exact": false,
+          "registry_label_casefold": false,
+          "unknown_block": false,
+          "body_excerpt": "Skip to content\nSignalpost\nDashboard\nDirectory\nCompare\nSearch companies Ctrl/⌘ K\nUpdate status\n🌙 Dark\n\nCOMPANY PROFILE\n\nNATURPRESS AS\n\nOrganisation number: 820042182 Copy organisation number ⭐ Add to Watchlist\n\nAksjeselskap (AS)\n\nNESODDEN\n\nbankrupt: No\n\nunder liquidation: No\n\nLast checked: 2026-10-18 08:43 UTC\n\nCited summary\n\nNATURPRESS AS is based in Nesodden and registered under Arts creation activities in literature (NACE 90.111). [1] [2] [3]\n\nKjetil Fless Aasmundsson is both CEO and chair. "
+        },
+        "errors": {
+          "console": [],
+          "pageerror": [],
+          "requestfailed": [],
+          "blocked_external": []
+        }
+      },
+      "375": {
+        "url": "file:///C:/Users/Manish/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/c/820042182.html",
+        "screenshot": "screenshots\\before\\near_empty_375.png",
+        "load_error": null,
+        "dom": {
+          "client_width": 375,
+          "scroll_width": 375,
+          "overflow": false,
+          "tap_target_count": 79,
+          "small_tap_count": 1,
+          "small_tap_examples": [
+            {
+              "tag": "SUMMARY",
+              "text": "Additional official attributes (2)",
+              "width": 271,
+              "height": 24
+            }
+          ],
+          "contrast_sample_count": 300,
+          "low_contrast_count": 0,
+          "low_contrast_examples": [],
+          "header_count": 1,
+          "nav_count": 1,
+          "main_count": 1,
+          "unlabelled_inputs": [],
+          "images_without_alt": 0,
+          "fact_count": 40,
+          "evidence_button_count": 47,
+          "state_badge_count": 112,
+          "registry_label_exact": false,
+          "registry_label_casefold": false,
+          "unknown_block": false,
+          "body_excerpt": "Skip to content\nSignalpost\nDashboard\nDirectory\nCompare\nSearch companies Ctrl/⌘ K\nUpdate status\n🌙 Dark\n\nCOMPANY PROFILE\n\nNATURPRESS AS\n\nOrganisation number: 820042182 Copy organisation number ⭐ Add to Watchlist\n\nAksjeselskap (AS)\n\nNESODDEN\n\nbankrupt: No\n\nunder liquidation: No\n\nLast checked: 2026-10-18 08:43 UTC\n\nCited summary\n\nNATURPRESS AS is based in Nesodden and registered under Arts creation activities in literature (NACE 90.111). [1] [2] [3]\n\nKjetil Fless Aasmundsson is both CEO and chair. "
+        },
+        "errors": {
+          "console": [],
+          "pageerror": [],
+          "requestfailed": [],
+          "blocked_external": []
+        }
+      },
+      "320": {
+        "url": "file:///C:/Users/Manish/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/c/820042182.html",
+        "screenshot": "screenshots\\before\\near_empty_320.png",
+        "load_error": null,
+        "dom": {
+          "client_width": 320,
+          "scroll_width": 320,
+          "overflow": false,
+          "tap_target_count": 79,
+          "small_tap_count": 0,
+          "small_tap_examples": [],
+          "contrast_sample_count": 300,
+          "low_contrast_count": 0,
+          "low_contrast_examples": [],
+          "header_count": 1,
+          "nav_count": 1,
+          "main_count": 1,
+          "unlabelled_inputs": [],
+          "images_without_alt": 0,
+          "fact_count": 40,
+          "evidence_button_count": 47,
+          "state_badge_count": 112,
+          "registry_label_exact": false,
+          "registry_label_casefold": false,
+          "unknown_block": false,
+          "body_excerpt": "Skip to content\nSignalpost\nDashboard\nDirectory\nCompare\nSearch companies Ctrl/⌘ K\nUpdate status\n🌙 Dark\n\nCOMPANY PROFILE\n\nNATURPRESS AS\n\nOrganisation number: 820042182 Copy organisation number ⭐ Add to Watchlist\n\nAksjeselskap (AS)\n\nNESODDEN\n\nbankrupt: No\n\nunder liquidation: No\n\nLast checked: 2026-10-18 08:43 UTC\n\nCited summary\n\nNATURPRESS AS is based in Nesodden and registered under Arts creation activities in literature (NACE 90.111). [1] [2] [3]\n\nKjetil Fless Aasmundsson is both CEO and chair. "
+        },
+        "errors": {
+          "console": [],
+          "pageerror": [],
+          "requestfailed": [],
+          "blocked_external": []
+        }
+      }
+    },
+    "registry_activity": {
+      "1440": {
+        "url": "file:///C:/Users/Manish/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/c/932525070.html",
+        "screenshot": "screenshots\\before\\registry_activity_1440.png",
+        "load_error": null,
+        "dom": {
+          "client_width": 1440,
+          "scroll_width": 1440,
+          "overflow": false,
+          "tap_target_count": 163,
+          "small_tap_count": 2,
+          "small_tap_examples": [
+            {
+              "tag": "SUMMARY",
+              "text": "Additional official attributes (15)",
+              "width": 1020,
+              "height": 24
+            },
+            {
+              "tag": "SUMMARY",
+              "text": "Additional official attributes (6)",
+              "width": 1020,
+              "height": 24
+            }
+          ],
+          "contrast_sample_count": 300,
+          "low_contrast_count": 0,
+          "low_contrast_examples": [],
+          "header_count": 1,
+          "nav_count": 1,
+          "main_count": 1,
+          "unlabelled_inputs": [],
+          "images_without_alt": 0,
+          "fact_count": 79,
+          "evidence_button_count": 102,
+          "state_badge_count": 166,
+          "registry_label_exact": false,
+          "registry_label_casefold": true,
+          "unknown_block": false,
+          "body_excerpt": "Skip to content\nSignalpost\nDashboard\nDirectory\nCompare\nSearch companies Ctrl/⌘ K\nUpdate status\n🌙 Dark\n\nCOMPANY PROFILE\n\nAS ELVELY\n\nOrganisation number: 932525070 Copy organisation number ⭐ Add to Watchlist\n\nAksjeselskap (AS)\n\nOSLO\n\nbankrupt: No\n\nunder liquidation: No\n\nLast checked: 2026-10-18 08:43 UTC\n\nCited summary\n\nAS ELVELY is based in Oslo and registered under Construction of residential and non-residential buildings (NACE 41.000), with NOK 107,984 in revenue in FY2025. [1] [2] [3] [4]\n\nCh"
+        },
+        "errors": {
+          "console": [],
+          "pageerror": [],
+          "requestfailed": [],
+          "blocked_external": []
+        }
+      },
+      "375": {
+        "url": "file:///C:/Users/Manish/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/c/932525070.html",
+        "screenshot": "screenshots\\before\\registry_activity_375.png",
+        "load_error": null,
+        "dom": {
+          "client_width": 375,
+          "scroll_width": 375,
+          "overflow": false,
+          "tap_target_count": 163,
+          "small_tap_count": 2,
+          "small_tap_examples": [
+            {
+              "tag": "SUMMARY",
+              "text": "Additional official attributes (15)",
+              "width": 271,
+              "height": 24
+            },
+            {
+              "tag": "SUMMARY",
+              "text": "Additional official attributes (6)",
+              "width": 271,
+              "height": 24
+            }
+          ],
+          "contrast_sample_count": 300,
+          "low_contrast_count": 0,
+          "low_contrast_examples": [],
+          "header_count": 1,
+          "nav_count": 1,
+          "main_count": 1,
+          "unlabelled_inputs": [],
+          "images_without_alt": 0,
+          "fact_count": 79,
+          "evidence_button_count": 102,
+          "state_badge_count": 166,
+          "registry_label_exact": false,
+          "registry_label_casefold": true,
+          "unknown_block": false,
+          "body_excerpt": "Skip to content\nSignalpost\nDashboard\nDirectory\nCompare\nSearch companies Ctrl/⌘ K\nUpdate status\n🌙 Dark\n\nCOMPANY PROFILE\n\nAS ELVELY\n\nOrganisation number: 932525070 Copy organisation number ⭐ Add to Watchlist\n\nAksjeselskap (AS)\n\nOSLO\n\nbankrupt: No\n\nunder liquidation: No\n\nLast checked: 2026-10-18 08:43 UTC\n\nCited summary\n\nAS ELVELY is based in Oslo and registered under Construction of residential and non-residential buildings (NACE 41.000), with NOK 107,984 in revenue in FY2025. [1] [2] [3] [4]\n\nCh"
+        },
+        "errors": {
+          "console": [],
+          "pageerror": [],
+          "requestfailed": [],
+          "blocked_external": []
+        }
+      },
+      "320": {
+        "url": "file:///C:/Users/Manish/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/c/932525070.html",
+        "screenshot": "screenshots\\before\\registry_activity_320.png",
+        "load_error": null,
+        "dom": {
+          "client_width": 320,
+          "scroll_width": 320,
+          "overflow": false,
+          "tap_target_count": 163,
+          "small_tap_count": 0,
+          "small_tap_examples": [],
+          "contrast_sample_count": 300,
+          "low_contrast_count": 0,
+          "low_contrast_examples": [],
+          "header_count": 1,
+          "nav_count": 1,
+          "main_count": 1,
+          "unlabelled_inputs": [],
+          "images_without_alt": 0,
+          "fact_count": 79,
+          "evidence_button_count": 102,
+          "state_badge_count": 166,
+          "registry_label_exact": false,
+          "registry_label_casefold": true,
+          "unknown_block": false,
+          "body_excerpt": "Skip to content\nSignalpost\nDashboard\nDirectory\nCompare\nSearch companies Ctrl/⌘ K\nUpdate status\n🌙 Dark\n\nCOMPANY PROFILE\n\nAS ELVELY\n\nOrganisation number: 932525070 Copy organisation number ⭐ Add to Watchlist\n\nAksjeselskap (AS)\n\nOSLO\n\nbankrupt: No\n\nunder liquidation: No\n\nLast checked: 2026-10-18 08:43 UTC\n\nCited summary\n\nAS ELVELY is based in Oslo and registered under Construction of residential and non-residential buildings (NACE 41.000), with NOK 107,984 in revenue in FY2025. [1] [2] [3] [4]\n\nCh"
+        },
+        "errors": {
+          "console": [],
+          "pageerror": [],
+          "requestfailed": [],
+          "blocked_external": []
+        }
+      }
+    },
+    "compare_2": {
+      "1440": {
+        "url": "file:///C:/Users/Manish/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/compare.html?companies=923609016,988330752",
+        "screenshot": "screenshots\\before\\compare_2_1440.png",
+        "load_error": null,
+        "dom": {
+          "client_width": 1440,
+          "scroll_width": 1440,
+          "overflow": false,
+          "tap_target_count": 68,
+          "small_tap_count": 0,
+          "small_tap_examples": [],
+          "contrast_sample_count": 127,
+          "low_contrast_count": 0,
+          "low_contrast_examples": [],
+          "header_count": 1,
+          "nav_count": 1,
+          "main_count": 1,
+          "unlabelled_inputs": [],
+          "images_without_alt": 0,
+          "fact_count": 0,
+          "evidence_button_count": 0,
+          "state_badge_count": 52,
+          "registry_label_exact": false,
+          "registry_label_casefold": false,
+          "unknown_block": false,
+          "body_excerpt": "Skip to content\nSignalpost\nDashboard\nDirectory\nCompare\nSearch companies Ctrl/⌘ K\nUpdate status\n🌙 Dark\n\nSIDE BY SIDE\n\nCompare companies\n\nSelect up to three companies for side-by-side comparison across verified facts, scale, financials, and online presence.\n\nCompany 1\nCompany 2\nCompany 3\nClear all\n\n2 companies compared side-by-side.\n\nEQUINOR ASA\n✕ Remove\nCOMPANY BRIEF\navailableEvidence available\nLATEST FINANCIALS\navailableEvidence available\nWHO RUNS IT?\navailableEvidence available\nWORKING HERE\nav"
+        },
+        "errors": {
+          "console": [],
+          "pageerror": [],
+          "requestfailed": [],
+          "blocked_external": []
+        }
+      },
+      "375": {
+        "url": "file:///C:/Users/Manish/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/compare.html?companies=923609016,988330752",
+        "screenshot": "screenshots\\before\\compare_2_375.png",
+        "load_error": null,
+        "dom": {
+          "client_width": 375,
+          "scroll_width": 375,
+          "overflow": false,
+          "tap_target_count": 68,
+          "small_tap_count": 0,
+          "small_tap_examples": [],
+          "contrast_sample_count": 127,
+          "low_contrast_count": 0,
+          "low_contrast_examples": [],
+          "header_count": 1,
+          "nav_count": 1,
+          "main_count": 1,
+          "unlabelled_inputs": [],
+          "images_without_alt": 0,
+          "fact_count": 0,
+          "evidence_button_count": 0,
+          "state_badge_count": 52,
+          "registry_label_exact": false,
+          "registry_label_casefold": false,
+          "unknown_block": false,
+          "body_excerpt": "Skip to content\nSignalpost\nDashboard\nDirectory\nCompare\nSearch companies Ctrl/⌘ K\nUpdate status\n🌙 Dark\n\nSIDE BY SIDE\n\nCompare companies\n\nSelect up to three companies for side-by-side comparison across verified facts, scale, financials, and online presence.\n\nCompany 1\nCompany 2\nCompany 3\nClear all\n\n2 companies compared side-by-side.\n\nEQUINOR ASA\n✕ Remove\nCOMPANY BRIEF\navailableEvidence available\nLATEST FINANCIALS\navailableEvidence available\nWHO RUNS IT?\navailableEvidence available\nWORKING HERE\nav"
+        },
+        "errors": {
+          "console": [],
+          "pageerror": [],
+          "requestfailed": [],
+          "blocked_external": []
+        }
+      },
+      "320": {
+        "url": "file:///C:/Users/Manish/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/compare.html?companies=923609016,988330752",
+        "screenshot": "screenshots\\before\\compare_2_320.png",
+        "load_error": null,
+        "dom": {
+          "client_width": 320,
+          "scroll_width": 320,
+          "overflow": false,
+          "tap_target_count": 68,
+          "small_tap_count": 0,
+          "small_tap_examples": [],
+          "contrast_sample_count": 127,
+          "low_contrast_count": 0,
+          "low_contrast_examples": [],
+          "header_count": 1,
+          "nav_count": 1,
+          "main_count": 1,
+          "unlabelled_inputs": [],
+          "images_without_alt": 0,
+          "fact_count": 0,
+          "evidence_button_count": 0,
+          "state_badge_count": 52,
+          "registry_label_exact": false,
+          "registry_label_casefold": false,
+          "unknown_block": false,
+          "body_excerpt": "Skip to content\nSignalpost\nDashboard\nDirectory\nCompare\nSearch companies Ctrl/⌘ K\nUpdate status\n🌙 Dark\n\nSIDE BY SIDE\n\nCompare companies\n\nSelect up to three companies for side-by-side comparison across verified facts, scale, financials, and online presence.\n\nCompany 1\nCompany 2\nCompany 3\nClear all\n\n2 companies compared side-by-side.\n\nEQUINOR ASA\n✕ Remove\nCOMPANY BRIEF\navailableEvidence available\nLATEST FINANCIALS\navailableEvidence available\nWHO RUNS IT?\navailableEvidence available\nWORKING HERE\nav"
+        },
+        "errors": {
+          "console": [],
+          "pageerror": [],
+          "requestfailed": [],
+          "blocked_external": []
+        }
+      }
+    },
+    "compare_4": {
+      "1440": {
+        "url": "file:///C:/Users/Manish/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/compare.html?companies=923609016,988330752,932525070,929583027",
+        "screenshot": "screenshots\\before\\compare_4_1440.png",
+        "load_error": null,
+        "dom": {
+          "client_width": 1440,
+          "scroll_width": 1440,
+          "overflow": false,
+          "tap_target_count": 96,
+          "small_tap_count": 0,
+          "small_tap_examples": [],
+          "contrast_sample_count": 182,
+          "low_contrast_count": 0,
+          "low_contrast_examples": [],
+          "header_count": 1,
+          "nav_count": 1,
+          "main_count": 1,
+          "unlabelled_inputs": [],
+          "images_without_alt": 0,
+          "fact_count": 0,
+          "evidence_button_count": 0,
+          "state_badge_count": 78,
+          "registry_label_exact": false,
+          "registry_label_casefold": false,
+          "unknown_block": false,
+          "body_excerpt": "Skip to content\nSignalpost\nDashboard\nDirectory\nCompare\nSearch companies Ctrl/⌘ K\nUpdate status\n🌙 Dark\n\nSIDE BY SIDE\n\nCompare companies\n\nSelect up to three companies for side-by-side comparison across verified facts, scale, financials, and online presence.\n\nCompany 1\nCompany 2\nCompany 3\nClear all\n\n3 companies compared side-by-side.\n\nEQUINOR ASA\n✕ Remove\nCOMPANY BRIEF\navailableEvidence available\nLATEST FINANCIALS\navailableEvidence available\nWHO RUNS IT?\navailableEvidence available\nWORKING HERE\nav"
+        },
+        "errors": {
+          "console": [],
+          "pageerror": [],
+          "requestfailed": [],
+          "blocked_external": []
+        }
+      },
+      "375": {
+        "url": "file:///C:/Users/Manish/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/compare.html?companies=923609016,988330752,932525070,929583027",
+        "screenshot": "screenshots\\before\\compare_4_375.png",
+        "load_error": null,
+        "dom": {
+          "client_width": 375,
+          "scroll_width": 375,
+          "overflow": false,
+          "tap_target_count": 96,
+          "small_tap_count": 0,
+          "small_tap_examples": [],
+          "contrast_sample_count": 182,
+          "low_contrast_count": 0,
+          "low_contrast_examples": [],
+          "header_count": 1,
+          "nav_count": 1,
+          "main_count": 1,
+          "unlabelled_inputs": [],
+          "images_without_alt": 0,
+          "fact_count": 0,
+          "evidence_button_count": 0,
+          "state_badge_count": 78,
+          "registry_label_exact": false,
+          "registry_label_casefold": false,
+          "unknown_block": false,
+          "body_excerpt": "Skip to content\nSignalpost\nDashboard\nDirectory\nCompare\nSearch companies Ctrl/⌘ K\nUpdate status\n🌙 Dark\n\nSIDE BY SIDE\n\nCompare companies\n\nSelect up to three companies for side-by-side comparison across verified facts, scale, financials, and online presence.\n\nCompany 1\nCompany 2\nCompany 3\nClear all\n\n3 companies compared side-by-side.\n\nEQUINOR ASA\n✕ Remove\nCOMPANY BRIEF\navailableEvidence available\nLATEST FINANCIALS\navailableEvidence available\nWHO RUNS IT?\navailableEvidence available\nWORKING HERE\nav"
+        },
+        "errors": {
+          "console": [],
+          "pageerror": [],
+          "requestfailed": [],
+          "blocked_external": []
+        }
+      },
+      "320": {
+        "url": "file:///C:/Users/Manish/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/compare.html?companies=923609016,988330752,932525070,929583027",
+        "screenshot": "screenshots\\before\\compare_4_320.png",
+        "load_error": null,
+        "dom": {
+          "client_width": 320,
+          "scroll_width": 320,
+          "overflow": false,
+          "tap_target_count": 96,
+          "small_tap_count": 0,
+          "small_tap_examples": [],
+          "contrast_sample_count": 182,
+          "low_contrast_count": 0,
+          "low_contrast_examples": [],
+          "header_count": 1,
+          "nav_count": 1,
+          "main_count": 1,
+          "unlabelled_inputs": [],
+          "images_without_alt": 0,
+          "fact_count": 0,
+          "evidence_button_count": 0,
+          "state_badge_count": 78,
+          "registry_label_exact": false,
+          "registry_label_casefold": false,
+          "unknown_block": false,
+          "body_excerpt": "Skip to content\nSignalpost\nDashboard\nDirectory\nCompare\nSearch companies Ctrl/⌘ K\nUpdate status\n🌙 Dark\n\nSIDE BY SIDE\n\nCompare companies\n\nSelect up to three companies for side-by-side comparison across verified facts, scale, financials, and online presence.\n\nCompany 1\nCompany 2\nCompany 3\nClear all\n\n3 companies compared side-by-side.\n\nEQUINOR ASA\n✕ Remove\nCOMPANY BRIEF\navailableEvidence available\nLATEST FINANCIALS\navailableEvidence available\nWHO RUNS IT?\navailableEvidence available\nWORKING HERE\nav"
+        },
+        "errors": {
+          "console": [],
+          "pageerror": [],
+          "requestfailed": [],
+          "blocked_external": []
+        }
+      }
+    },
+    "invalid_input": {
+      "1440": {
+        "url": "file:///C:/Users/Manish/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/index.html#invalid-inputs",
+        "screenshot": "screenshots\\before\\invalid_input_1440.png",
+        "load_error": null,
+        "dom": {
+          "client_width": 1440,
+          "scroll_width": 1440,
+          "overflow": false,
+          "tap_target_count": 13,
+          "small_tap_count": 0,
+          "small_tap_examples": [],
+          "contrast_sample_count": 42,
+          "low_contrast_count": 0,
+          "low_contrast_examples": [],
+          "header_count": 1,
+          "nav_count": 1,
+          "main_count": 1,
+          "unlabelled_inputs": [],
+          "images_without_alt": 0,
+          "fact_count": 0,
+          "evidence_button_count": 0,
+          "state_badge_count": 184,
+          "registry_label_exact": false,
+          "registry_label_casefold": false,
+          "unknown_block": false,
+          "body_excerpt": "Skip to content\nSignalpost\nDashboard\nDirectory\nCompare\nSearch companies Ctrl/⌘ K\nUpdate status\n🌙 Dark\n\nCOMPANY RESEARCH, WITH RECEIPTS\n\nSignalpost\n\n49 companies · 4.1% with website · 2.0% with jobs · 30.6% with activity · Run date: 2026-10-18T08:43:04.246574Z\n\n1 input record(s) have no company page because the organisation number is not valid: 12345678. They keep an explicit terminal envelope in the JSON output.\n📊 Dashboard\n🏢 Company Directory\n💼 Hiring Explorer\nCOHORT SCOPE\nFull evaluated co"
+        },
+        "errors": {
+          "console": [],
+          "pageerror": [],
+          "requestfailed": [],
+          "blocked_external": []
+        }
+      },
+      "375": {
+        "url": "file:///C:/Users/Manish/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/index.html#invalid-inputs",
+        "screenshot": "screenshots\\before\\invalid_input_375.png",
+        "load_error": null,
+        "dom": {
+          "client_width": 375,
+          "scroll_width": 375,
+          "overflow": false,
+          "tap_target_count": 13,
+          "small_tap_count": 0,
+          "small_tap_examples": [],
+          "contrast_sample_count": 42,
+          "low_contrast_count": 0,
+          "low_contrast_examples": [],
+          "header_count": 1,
+          "nav_count": 1,
+          "main_count": 1,
+          "unlabelled_inputs": [],
+          "images_without_alt": 0,
+          "fact_count": 0,
+          "evidence_button_count": 0,
+          "state_badge_count": 184,
+          "registry_label_exact": false,
+          "registry_label_casefold": false,
+          "unknown_block": false,
+          "body_excerpt": "Skip to content\nSignalpost\nDashboard\nDirectory\nCompare\nSearch companies Ctrl/⌘ K\nUpdate status\n🌙 Dark\n\nCOMPANY RESEARCH, WITH RECEIPTS\n\nSignalpost\n\n49 companies · 4.1% with website · 2.0% with jobs · 30.6% with activity · Run date: 2026-10-18T08:43:04.246574Z\n\n1 input record(s) have no company page because the organisation number is not valid: 12345678. They keep an explicit terminal envelope in the JSON output.\n📊 Dashboard\n🏢 Company Directory\n💼 Hiring Explorer\nCOHORT SCOPE\nFull evaluated co"
+        },
+        "errors": {
+          "console": [],
+          "pageerror": [],
+          "requestfailed": [],
+          "blocked_external": []
+        }
+      },
+      "320": {
+        "url": "file:///C:/Users/Manish/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/index.html#invalid-inputs",
+        "screenshot": "screenshots\\before\\invalid_input_320.png",
+        "load_error": null,
+        "dom": {
+          "client_width": 320,
+          "scroll_width": 320,
+          "overflow": false,
+          "tap_target_count": 13,
+          "small_tap_count": 0,
+          "small_tap_examples": [],
+          "contrast_sample_count": 42,
+          "low_contrast_count": 0,
+          "low_contrast_examples": [],
+          "header_count": 1,
+          "nav_count": 1,
+          "main_count": 1,
+          "unlabelled_inputs": [],
+          "images_without_alt": 0,
+          "fact_count": 0,
+          "evidence_button_count": 0,
+          "state_badge_count": 184,
+          "registry_label_exact": false,
+          "registry_label_casefold": false,
+          "unknown_block": false,
+          "body_excerpt": "Skip to content\nSignalpost\nDashboard\nDirectory\nCompare\nSearch companies Ctrl/⌘ K\nUpdate status\n🌙 Dark\n\nCOMPANY RESEARCH, WITH RECEIPTS\n\nSignalpost\n\n49 companies · 4.1% with website · 2.0% with jobs · 30.6% with activity · Run date: 2026-10-18T08:43:04.246574Z\n\n1 input record(s) have no company page because the organisation number is not valid: 12345678. They keep an explicit terminal envelope in the JSON output.\n📊 Dashboard\n🏢 Company Directory\n💼 Hiring Explorer\nCOHORT SCOPE\nFull evaluated co"
+        },
+        "errors": {
+          "console": [],
+          "pageerror": [],
+          "requestfailed": [],
+          "blocked_external": []
+        }
+      }
+    }
+  },
+  "interactions": {
+    "directory": {
+      "search": {
+        "name": [
+          "EQUINOR ASA · 923609016"
+        ],
+        "org": [
+          "EQUINOR ASA · 923609016"
+        ],
+        "slash_opens": true,
+        "ctrl_k_opens": true
+      },
+      "evidence": {
+        "available": false
+      },
+      "directory": {
+        "sort_name_selected": "name",
+        "all_five_selected": "all",
+        "result_before": "Showing 49 companies (100.0% of dataset)",
+        "result_after": "Showing 14 companies (28.6% of dataset)"
+      }
+    },
+    "equinor": {
+      "search": {
+        "name": [
+          "EQUINOR ASA · 923609016"
+        ],
+        "org": [
+          "EQUINOR ASA · 923609016"
+        ],
+        "slash_opens": true,
+        "ctrl_k_opens": true
+      },
+      "evidence": {
+        "available": true,
+        "opened": true,
+        "source": true,
+        "retrieval": true,
+        "method": true,
+        "hash": true,
+        "quote": true,
+        "excerpt": "Source / class\nofficial_registry\nClaim availability\navailable\nClaim confidence\n1\nSource link\nhttps://data.brreg.no/enhetsregisteret/api/enheter/923609016\nRegistry identifier\nNot supplied\nRetrieved at (UTC)\n2026-10-18T08:42:26.564262Z\nEffective / reporting date\n1972-09-18\nSHA-256\n9f6ef1a648ec9139…Copy full hash\nExtraction method / version\nsignalpost"
+      }
+    },
+    "filmtek": {
+      "search": {
+        "name": [
+          "EQUINOR ASA · 923609016"
+        ],
+        "org": [
+          "EQUINOR ASA · 923609016"
+        ],
+        "slash_opens": true,
+        "ctrl_k_opens": true
+      },
+      "evidence": {
+        "available": true,
+        "opened": true,
+        "source": true,
+        "retrieval": true,
+        "method": true,
+        "hash": true,
+        "quote": true,
+        "excerpt": "Source / class\nofficial_registry\nClaim availability\navailable\nClaim confidence\n1\nSource link\nhttps://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv\nRegistry identifier\nbulk1000.csv:sha256:9b5aeda58ea75c798061a22e61f82f0af2999b698c49429d942ce3e090481f91\nRetrieved at (UTC)\n2026-10-18T08:42:24.457960Z\nEffective / reporting date\n2005-04-22\nSHA-"
+      }
+    },
+    "small": {
+      "search": {
+        "name": [
+          "EQUINOR ASA · 923609016"
+        ],
+        "org": [
+          "EQUINOR ASA · 923609016"
+        ],
+        "slash_opens": true,
+        "ctrl_k_opens": true
+      },
+      "evidence": {
+        "available": true,
+        "opened": true,
+        "source": true,
+        "retrieval": true,
+        "method": true,
+        "hash": true,
+        "quote": true,
+        "excerpt": "Source / class\nofficial_registry\nClaim availability\navailable\nClaim confidence\n1\nSource link\nhttps://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv\nRegistry identifier\nbulk1000.csv:sha256:9b5aeda58ea75c798061a22e61f82f0af2999b698c49429d942ce3e090481f91\nRetrieved at (UTC)\n2026-10-18T08:42:24.434413Z\nEffective / reporting date\n2020-05-28\nSHA-"
+      }
+    },
+    "near_empty": {
+      "search": {
+        "name": [
+          "EQUINOR ASA · 923609016"
+        ],
+        "org": [
+          "EQUINOR ASA · 923609016"
+        ],
+        "slash_opens": true,
+        "ctrl_k_opens": true
+      },
+      "evidence": {
+        "available": true,
+        "opened": true,
+        "source": true,
+        "retrieval": true,
+        "method": true,
+        "hash": true,
+        "quote": true,
+        "excerpt": "Source / class\nofficial_registry\nClaim availability\navailable\nClaim confidence\n1\nSource link\nhttps://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv\nRegistry identifier\nbulk1000.csv:sha256:9b5aeda58ea75c798061a22e61f82f0af2999b698c49429d942ce3e090481f91\nRetrieved at (UTC)\n2026-10-18T08:42:24.424355Z\nEffective / reporting date\n2017-11-17\nSHA-"
+      }
+    },
+    "registry_activity": {
+      "search": {
+        "name": [
+          "EQUINOR ASA · 923609016"
+        ],
+        "org": [
+          "EQUINOR ASA · 923609016"
+        ],
+        "slash_opens": true,
+        "ctrl_k_opens": true
+      },
+      "evidence": {
+        "available": true,
+        "opened": true,
+        "source": true,
+        "retrieval": true,
+        "method": true,
+        "hash": true,
+        "quote": true,
+        "excerpt": "Source / class\nofficial_registry\nClaim availability\navailable\nClaim confidence\n1\nSource link\nhttps://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv\nRegistry identifier\nbulk1000.csv:sha256:9b5aeda58ea75c798061a22e61f82f0af2999b698c49429d942ce3e090481f91\nRetrieved at (UTC)\n2026-10-18T08:42:24.446057Z\nEffective / reporting date\n1963-01-02\nSHA-"
+      }
+    },
+    "compare_2": {
+      "search": {
+        "name": [
+          "EQUINOR ASA · 923609016"
+        ],
+        "org": [
+          "EQUINOR ASA · 923609016"
+        ],
+        "slash_opens": true,
+        "ctrl_k_opens": true
+      },
+      "evidence": {
+        "available": false
+      },
+      "compare": {
+        "cards": 2,
+        "cards_after_reload": 2,
+        "input_count": 3,
+        "url": "file:///C:/Users/Manish/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/compare.html?companies=923609016%2C988330752"
+      }
+    },
+    "compare_4": {
+      "search": {
+        "name": [
+          "EQUINOR ASA · 923609016"
+        ],
+        "org": [
+          "EQUINOR ASA · 923609016"
+        ],
+        "slash_opens": true,
+        "ctrl_k_opens": true
+      },
+      "evidence": {
+        "available": false
+      },
+      "compare": {
+        "cards": 3,
+        "cards_after_reload": 3,
+        "input_count": 3,
+        "url": "file:///C:/Users/Manish/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/compare.html?companies=923609016%2C988330752%2C932525070"
+      }
+    },
+    "invalid_input": {
+      "search": {
+        "name": [
+          "EQUINOR ASA · 923609016"
+        ],
+        "org": [
+          "EQUINOR ASA · 923609016"
+        ],
+        "slash_opens": true,
+        "ctrl_k_opens": true
+      },
+      "evidence": {
+        "available": false
+      }
+    }
+  }
+}
