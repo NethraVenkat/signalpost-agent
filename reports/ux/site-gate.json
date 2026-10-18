@@ -1,0 +1,45 @@
+{
+  "before_file_count_excluding_progress": 104,
+  "after_file_count": 104,
+  "file_names_match": true,
+  "data_file_count": 49,
+  "data_file_byte_mismatches": [],
+  "claim_ids_and_values_identical": true,
+  "fixed_envelopes": 50,
+  "fixed_envelopes_sha256": "827b6972d1f459cffc06dab0ebcd166050e844cf96c1d7f6a3abfbb732a8d4d4",
+  "max_html_bytes": 129133,
+  "largest_growth": [
+    {
+      "path": "compare.html",
+      "before": 3789,
+      "after": 3935,
+      "ratio": 1.038533
+    },
+    {
+      "path": "data/index.json",
+      "before": 65161,
+      "after": 67649,
+      "ratio": 1.038182
+    },
+    {
+      "path": "data/index.js",
+      "before": 65188,
+      "after": 67676,
+      "ratio": 1.038167
+    },
+    {
+      "path": "c/820042182.html",
+      "before": 58430,
+      "after": 59683,
+      "ratio": 1.021444
+    },
+    {
+      "path": "c/929868323.html",
+      "before": 64409,
+      "after": 65755,
+      "ratio": 1.020898
+    }
+  ],
+  "oversized_html": [],
+  "over_ten_percent": []
+}
