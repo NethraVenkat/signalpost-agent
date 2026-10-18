@@ -1,10 +1,13 @@
 """Targeted source and synthesis checks against the generated offline site."""
 import json
+import os
 from pathlib import Path
 from playwright.sync_api import sync_playwright
 
 UX = Path(__file__).resolve().parents[1]
-SITE = UX / 'sample/site'
+SITE = Path(os.environ.get('SIGNALPOST_AUDIT_SITE', str(UX / 'sample/site')))
+SHOTS = Path(os.environ.get('SIGNALPOST_SCREENSHOT_DIR', str(UX / 'screenshots/before')))
+SHOTS.mkdir(parents=True, exist_ok=True)
 rows = {r['organisation_number']: r for r in (json.loads(line) for line in (UX / 'sample/out/envelopes.jsonl').open(encoding='utf8'))}
 cases = {
     'identity': ('923609016', next(c for c in rows['923609016']['claims'] if c['field'] == 'identity.legal_name')),
@@ -40,11 +43,13 @@ with sync_playwright() as p:
                           'sha256': 'SHA-256' in body,
                           'source_quote': bool(panel.locator('blockquote').count()),
                           'source_href': panel.locator('a[href^="http"]').first.get_attribute('href') if panel.locator('a[href^="http"]').count() else None})
-            shot = UX / 'screenshots/before' / f'{label}_evidence.png'
+            entry['friendly_source_name'] = any(name in body for name in
+                ('Brønnøysundregistrene', 'NAV Arbeidsplassen', 'Company website', 'Company report'))
+            shot = SHOTS / f'{label}_evidence.png'
             target.screenshot(path=str(shot))
             entry['screenshot'] = str(shot.relative_to(UX))
         if label == 'registry':
-            entry['visible_registry_label'] = 'Registry publication time:' in target.inner_text()
+            entry['visible_registry_label'] = 'registry publication time (not effective date)' in target.inner_text()
             entry['raw_registry_label'] = claim['value'].get('date_source')
             entry['visible_publication_timestamp'] = claim['value']['date'] in target.inner_text()
         if label == 'website':
@@ -66,13 +71,19 @@ with sync_playwright() as p:
     result['dashboard'] = {'reported_activity_companies': page.locator('#dash-total-activity').inner_text(),
                            'recent_list_text': page.locator('#recent-activity-list').inner_text(),
                            'index_records_with_recent_events': sum(bool(r.get('recent_events')) for r in json.loads((SITE / 'data/index.json').read_text(encoding='utf8')) if isinstance(r, dict))}
+    compare = browser.new_page()
+    compare.goto((SITE / 'compare.html').resolve().as_uri() + '?companies=923609016,820042182')
+    result['compare_missing'] = {'reason_count': compare.locator('.compare-reason').count(),
+                                 'sample_reason': compare.locator('.compare-reason').first.inner_text()}
+    compare.close()
     page.locator('#status-toggle').click()
-    page.locator('#status-panel').screenshot(path=str(UX / 'screenshots/before/status_file.png'))
+    page.locator('#status-panel').screenshot(path=str(SHOTS / 'status_file.png'))
     result['status_file'] = {'panel_visible': page.locator('#status-panel').is_visible(),
                              'snapshot_note': page.locator('#status-snapshot-note').inner_text(),
                              'non_file_requests': [x for x in requests if not x.startswith('file:')],
                              'progress_requests': [x for x in requests if 'progress.json' in x]}
     page.close()
     browser.close()
-(UX / 'deep-checks.json').write_text(json.dumps(result, indent=2, ensure_ascii=False), encoding='utf8')
+Path(os.environ.get('SIGNALPOST_DEEP_OUTPUT', str(UX / 'deep-checks.json'))).write_text(
+    json.dumps(result, indent=2, ensure_ascii=False), encoding='utf8')
 print(json.dumps(result, indent=2, ensure_ascii=False))

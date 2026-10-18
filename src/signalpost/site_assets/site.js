@@ -167,7 +167,13 @@
         dd.append(value?.nodeType ? value : element('span', value ?? 'Not supplied'));
         dl.append(dd);
       };
-      pair('Source / class', e.source_class);
+      const sourceNames = {
+        official_registry: 'Brønnøysundregistrene',
+        official_nav: 'NAV Arbeidsplassen',
+        company_owned: 'Company website',
+        company_report: 'Company report'
+      };
+      pair('Source / class', (sourceNames[e.source_class] || e.source_class) + ' (' + e.source_class + ')');
       pair('Claim availability', fact.availability);
       pair('Claim confidence', fact.confidence);
       pair('Source link', sourceLink(e.source_url));
@@ -1166,6 +1172,13 @@
       ['activity', 'Public Activity Items', 'activity'],
       ['last_checked', 'Last Verification Run', 'identity']
     ];
+    const missingReasons = {
+      not_available: 'No value found in the checked source scope.',
+      not_applicable: 'This source was not applicable or enabled.',
+      blocked: 'Source access was refused.',
+      ambiguous: 'The value could not be safely attributed to this company.',
+      failed: 'The source check was incomplete.'
+    };
 
     function draw() {
       const selected = [];
@@ -1242,6 +1255,7 @@
           };
           aVal.href = 'c/' + r.orgnr + '.html#' + (r.anchors[key] || fallback[key] || 'main');
           cell.append(aVal);
+          if(!hasVal) cell.append(element('small', missingReasons[chipState] || 'No value reported in the checked sources.', 'muted compare-reason'));
           card.append(cell);
         }
         root.append(card);

@@ -4,7 +4,7 @@ from pathlib import Path
 import re
 
 from signalpost.models.shapes import serialize
-from signalpost.site import compare_page, index_record, profile
+from signalpost.site import compare_page, fact, index_record, profile
 from tests.test_synthesis import envelope
 
 
@@ -50,3 +50,15 @@ def test_g2_comparison_has_four_selectors_and_preserves_four_url_ids():
     js = (Path(__file__).resolve().parents[1] / 'src/signalpost/site_assets/site.js').read_text(encoding='utf8')
     assert '.slice(0, 4)' in js
     assert 'Select up to 4 companies' in js
+
+
+def test_g5_registry_publication_label_is_literal_and_date_is_not_effective():
+    claim = {'id': 'a' * 64, 'field': 'registry_change.example', 'family': 'activity',
+             'availability': 'available', 'evidence_ids': ['b' * 64],
+             'value': {'title': 'Registered name changed', 'changed_field': '/navn',
+                       'new_value': 'Example AS', 'date': '2026-10-01T12:00:00.000Z',
+                       'date_source': 'registry publication time (not effective date)',
+                       'url': 'https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter'}}
+    markup = fact(claim, {})
+    assert 'registry publication time (not effective date): 2026-10-01T12:00:00.000Z' in markup
+    assert 'Registry publication time:' not in markup
