@@ -245,6 +245,11 @@ def score(page, org, context, origin, leaders):
         return Proof("VERIFIED", "jsonld_vatid" if org in json_ids else "orgnr_on_page", other_orgnrs=others, token=org)
     if others:
         return Proof("REJECT", other_orgnrs=others, reason="foreign_orgnr")
+    # Shared group/provider sites require the exact entity number even when
+    # registered branding/address/contact signals happen to coincide.
+    if (re.search(r'\b(?:our companies|group companies|våre selskaper|konsernselskaper|våre borettslag|our subsidiaries)\b', page.visible, re.I)
+            or re.search(r'\b(?:group|gruppen|konsern|holding)\b', page.title + ' ' + page.meta.get('og:site_name', ''), re.I)):
+        return Proof('REJECT', reason='group_without_exact_orgnr')
     text = legal_name(page.title + " " + page.meta.get("og:site_name", "") + " " + page.owner_text)
     signals = []
     points = 0

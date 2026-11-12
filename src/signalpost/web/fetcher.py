@@ -1,7 +1,7 @@
 from ..workers import offload
 import asyncio
 import time
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from urllib.parse import urlsplit, urljoin, urlunsplit
 from urllib.robotparser import RobotFileParser
 import httpx
@@ -181,11 +181,20 @@ class WebsiteHttp:
 
     async def candidate(self, candidate, org, proven=()):
         """Try hostname variants with verified TLS, then permitted plaintext."""
-        await self.precheck(candidate, org)
         p = urlsplit(candidate.url)
         host = p.hostname
         other = host[4:] if host.startswith('www.') else 'www.' + host
         hosts = [host, other]
+        try:
+            await self.precheck(candidate, org)
+        except SourceFailure as exc:
+            if exc.code not in {'no_such_domain', 'dns_unavailable'}: raise
+            alternative = replace(candidate, url=urlunsplit((p.scheme, other, p.path or '/', '', '')))
+            try: await self.precheck(alternative, org)
+            except SourceFailure as second:
+                if second.code == 'no_such_domain' and exc.code == 'dns_unavailable': raise exc
+                raise
+            hosts = [other, host]
         trials = [urlunsplit(('https', h, p.path or '/', '', '')) for h in hosts]
         notes = self.attempts.setdefault(org, [])
         last = None

@@ -1,0 +1,3882 @@
+{
+  "primary_counts": {
+    "budget": 19,
+    "ambiguity": 5,
+    "robots/access block": 1,
+    "timeout": 2,
+    "DNS": 2,
+    "transport/content refusal": 1
+  },
+  "companies": [
+    {
+      "org": "925181536",
+      "state": "failed",
+      "domains": [
+        "sestante.no",
+        "sestante.com"
+      ],
+      "codes": [
+        "corroboration",
+        "website_budget_exhausted",
+        "website_connect_error"
+      ],
+      "cause": "budget",
+      "details": [
+        "No exact company-number proof; partial signals or short/JS content",
+        "Six website / nine total company slots exhausted; proof/redirect/robots attempts compete for the same cap",
+        "TLS/connect failure; saved logs cannot distinguish certificate vs remote transport cause"
+      ],
+      "attempts": [
+        {
+          "domain": "sestante.no",
+          "level": "LOW",
+          "reason": "website_budget_exhausted",
+          "page": "http://sestante.no/om-oss"
+        },
+        {
+          "domain": "sestante.no",
+          "level": "LOW",
+          "points": 2,
+          "signals": [
+            "legal_name"
+          ],
+          "origin": "legal_name_slug",
+          "reason": "corroboration"
+        },
+        {
+          "domain": "sestante.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "website_budget_exhausted"
+        },
+        {
+          "domain": "sestante.no",
+          "origin": "legal_name_slug",
+          "url": "https://sestante.no/",
+          "reason": "website_connect_error"
+        },
+        {
+          "domain": "sestante.no",
+          "origin": "legal_name_slug",
+          "url": "https://www.sestante.no/",
+          "reason": "website_connect_error"
+        },
+        {
+          "domain": "sestante.no",
+          "origin": "legal_name_slug",
+          "url": "http://sestante.no/",
+          "status": 200
+        },
+        {
+          "domain": "sestante.com",
+          "origin": "legal_name_slug",
+          "url": "https://sestante.com/",
+          "reason": "website_budget_exhausted"
+        }
+      ],
+      "requests": [
+        {
+          "url": "https://sestante.no/robots.txt",
+          "host": "sestante.no",
+          "organisation_number": "925181536",
+          "attempt_started": 4.85899999999674,
+          "status": null,
+          "error": "ConnectError",
+          "section": "website",
+          "runtime_ms": 313
+        },
+        {
+          "url": "https://www.sestante.no/robots.txt",
+          "host": "www.sestante.no",
+          "organisation_number": "925181536",
+          "attempt_started": 6.171999999998661,
+          "status": null,
+          "error": "ConnectError",
+          "section": "website",
+          "runtime_ms": 265
+        },
+        {
+          "url": "http://sestante.no/robots.txt",
+          "host": "sestante.no",
+          "organisation_number": "925181536",
+          "attempt_started": 7.436999999998079,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "56688d823f6fdd66241d22eeea3d556267dae64a8e248f1a8bef20523f43631c",
+          "runtime_ms": 360
+        },
+        {
+          "url": "http://sestante.no/",
+          "host": "sestante.no",
+          "organisation_number": "925181536",
+          "attempt_started": 8.796999999998661,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "fac3a11fec2234a5a2e3d16f3ffd4f093405c0c858fde082ea1069646fba3ec1",
+          "runtime_ms": 203
+        },
+        {
+          "url": "http://sestante.no/kontakt",
+          "host": "sestante.no",
+          "organisation_number": "925181536",
+          "attempt_started": 10.0,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "2caf57f46148b596e52daef28f57c45605bdc6c1ddc22a7cf55d58e520e8dadc",
+          "runtime_ms": 187
+        },
+        {
+          "url": "http://sestante.no/kontakt-oss",
+          "host": "sestante.no",
+          "organisation_number": "925181536",
+          "attempt_started": 11.18699999999808,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "090bb41128c1d2d0ef25c481a01dfbe87c48c8e05f1e59bd71a8e1eabadc845d",
+          "runtime_ms": 188
+        }
+      ]
+    },
+    {
+      "org": "932525070",
+      "state": "failed",
+      "domains": [
+        "svill.no",
+        "aselvely.no",
+        "aselvely.com",
+        "as-elvely.no",
+        "as-elvely.com"
+      ],
+      "codes": [
+        "no_such_domain",
+        "short_or_js_shell",
+        "website_budget_exhausted"
+      ],
+      "cause": "budget",
+      "details": [
+        "Candidate DNS returned no public destination; not proof the company has no website",
+        "No exact company-number proof; partial signals or short/JS content",
+        "Six website / nine total company slots exhausted; proof/redirect/robots attempts compete for the same cap"
+      ],
+      "attempts": [
+        {
+          "domain": "svill.no",
+          "level": "LOW",
+          "reason": "website_budget_exhausted",
+          "page": "https://svill.no/personvern"
+        },
+        {
+          "domain": "svill.no",
+          "level": "LOW",
+          "points": 0,
+          "signals": [],
+          "origin": "registry_email",
+          "reason": "short_or_js_shell"
+        },
+        {
+          "domain": "aselvely.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "aselvely.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "as-elvely.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "as-elvely.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "svill.no",
+          "origin": "registry_email",
+          "url": "https://svill.no/",
+          "status": 200
+        }
+      ],
+      "requests": [
+        {
+          "url": "https://svill.no/robots.txt",
+          "host": "svill.no",
+          "organisation_number": "932525070",
+          "attempt_started": 4.828000000001339,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "runtime_ms": 281
+        },
+        {
+          "url": "https://svill.no/",
+          "host": "svill.no",
+          "organisation_number": "932525070",
+          "attempt_started": 6.10899999999674,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "74127d774996775f2c9df5840e27f331e4eea387acb3442a8fe4497b2416631b",
+          "runtime_ms": 391
+        },
+        {
+          "url": "https://svill.no/kontakt",
+          "host": "svill.no",
+          "organisation_number": "932525070",
+          "attempt_started": 7.5,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "2b6159f9efaa3f13133d2b392eb52afe49ba1eba62e442177cfc3d999e71588f",
+          "runtime_ms": 172
+        },
+        {
+          "url": "https://svill.no/kontakt-oss",
+          "host": "svill.no",
+          "organisation_number": "932525070",
+          "attempt_started": 8.68699999999808,
+          "status": 404,
+          "error": null,
+          "section": "website",
+          "content_sha256": "2bf5f0aebaea858c5b57265b0dbb15fa3b176c67c11b36381a5a1e56bedf2e9f",
+          "runtime_ms": 125
+        },
+        {
+          "url": "https://svill.no/om-oss",
+          "host": "svill.no",
+          "organisation_number": "932525070",
+          "attempt_started": 9.81199999999808,
+          "status": 404,
+          "error": null,
+          "section": "website",
+          "content_sha256": "2bf5f0aebaea858c5b57265b0dbb15fa3b176c67c11b36381a5a1e56bedf2e9f",
+          "runtime_ms": 141
+        },
+        {
+          "url": "https://svill.no/om",
+          "host": "svill.no",
+          "organisation_number": "932525070",
+          "attempt_started": 10.953000000001339,
+          "status": 404,
+          "error": null,
+          "section": "website",
+          "content_sha256": "2bf5f0aebaea858c5b57265b0dbb15fa3b176c67c11b36381a5a1e56bedf2e9f",
+          "runtime_ms": 78
+        }
+      ]
+    },
+    {
+      "org": "915188389",
+      "state": "ambiguous",
+      "domains": [
+        "hischool.no",
+        "haugesundinternationalschool.no",
+        "haugesundinternationalschool.com",
+        "haugesund-international-school.no",
+        "haugesund-international-school.com"
+      ],
+      "codes": [
+        "corroboration",
+        "no_such_domain",
+        "website_budget_exhausted"
+      ],
+      "cause": "ambiguity",
+      "details": [
+        "No exact company-number proof; partial signals or short/JS content",
+        "Candidate DNS returned no public destination; not proof the company has no website",
+        "Six website / nine total company slots exhausted; proof/redirect/robots attempts compete for the same cap"
+      ],
+      "attempts": [
+        {
+          "domain": "hischool.no",
+          "level": "LOW",
+          "reason": "website_budget_exhausted",
+          "page": "https://hischool.no/om"
+        },
+        {
+          "domain": "hischool.no",
+          "level": "MEDIUM",
+          "points": 5,
+          "signals": [
+            "legal_name",
+            "address",
+            "municipality"
+          ],
+          "origin": "registry_email",
+          "reason": "corroboration"
+        },
+        {
+          "domain": "haugesundinternationalschool.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "haugesundinternationalschool.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "haugesund-international-school.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "haugesund-international-school.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "hischool.no",
+          "origin": "registry_email",
+          "url": "https://hischool.no/",
+          "status": 200
+        }
+      ],
+      "requests": [
+        {
+          "url": "https://hischool.no/robots.txt",
+          "host": "hischool.no",
+          "organisation_number": "915188389",
+          "attempt_started": 4.828000000001339,
+          "status": 404,
+          "error": null,
+          "section": "website",
+          "content_sha256": "7ed957d1672a22d561ee8394ea415414653884b1bd77f883d84a78ba4147f2ea",
+          "runtime_ms": 3359
+        },
+        {
+          "url": "https://hischool.no/",
+          "host": "hischool.no",
+          "organisation_number": "915188389",
+          "attempt_started": 9.18699999999808,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "89b2a9c44d50cdcd63611300567f7fa73815e467d2c8e8ff0379d77a6b13f2e3",
+          "runtime_ms": 360
+        },
+        {
+          "url": "https://hischool.no/contact",
+          "host": "hischool.no",
+          "organisation_number": "915188389",
+          "attempt_started": 10.56199999999808,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "16df687950438b823472dfc173ba2e7aea4378ffe732cdc0118960acd716999b",
+          "runtime_ms": 672
+        },
+        {
+          "url": "https://hischool.no/kontakt",
+          "host": "hischool.no",
+          "organisation_number": "915188389",
+          "attempt_started": 12.23399999999674,
+          "status": 404,
+          "error": null,
+          "section": "website",
+          "content_sha256": "f064e3974f3d89b5e79e29346eceb71d8c1003c9347c5321ec3988b9261a82a5",
+          "runtime_ms": 781
+        },
+        {
+          "url": "https://hischool.no/kontakt-oss",
+          "host": "hischool.no",
+          "organisation_number": "915188389",
+          "attempt_started": 14.014999999999418,
+          "status": 404,
+          "error": null,
+          "section": "website",
+          "content_sha256": "829c641abbb5b2550096c679f148e253e0ac068df021494ed0e480c58f28b5aa",
+          "runtime_ms": 750
+        },
+        {
+          "url": "https://hischool.no/om-oss",
+          "host": "hischool.no",
+          "organisation_number": "915188389",
+          "attempt_started": 15.764999999999418,
+          "status": 404,
+          "error": null,
+          "section": "website",
+          "content_sha256": "5e0e71959b430719f6dd52989115772164e489a385c5e2e06ca477ffa69e2f0e",
+          "runtime_ms": 641
+        }
+      ]
+    },
+    {
+      "org": "936035523",
+      "state": "failed",
+      "domains": [
+        "rettrorservice.no",
+        "rettrorservice.com",
+        "rett-rorservice.no",
+        "rett-rorservice.com",
+        "rettroerservice.no",
+        "rettroerservice.com",
+        "rett-roerservice.no",
+        "rett-roerservice.com"
+      ],
+      "codes": [
+        "no_such_domain",
+        "short_or_js_shell",
+        "website_budget_exhausted"
+      ],
+      "cause": "budget",
+      "details": [
+        "Candidate DNS returned no public destination; not proof the company has no website",
+        "No exact company-number proof; partial signals or short/JS content",
+        "Six website / nine total company slots exhausted; proof/redirect/robots attempts compete for the same cap"
+      ],
+      "attempts": [
+        {
+          "domain": "rettrorservice.no",
+          "level": "LOW",
+          "reason": "website_budget_exhausted",
+          "page": "https://rettrorservice.no/personvern"
+        },
+        {
+          "domain": "rettrorservice.no",
+          "level": "LOW",
+          "points": 0,
+          "signals": [],
+          "origin": "legal_name_slug",
+          "reason": "short_or_js_shell"
+        },
+        {
+          "domain": "rettrorservice.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "rett-rorservice.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "rett-rorservice.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "rettroerservice.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "rettroerservice.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "rett-roerservice.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "rett-roerservice.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "rettrorservice.no",
+          "origin": "legal_name_slug",
+          "url": "https://rettrorservice.no/",
+          "status": 200
+        }
+      ],
+      "requests": [
+        {
+          "url": "https://rettrorservice.no/robots.txt",
+          "host": "rettrorservice.no",
+          "organisation_number": "936035523",
+          "attempt_started": 4.828000000001339,
+          "status": 404,
+          "error": null,
+          "section": "website",
+          "content_sha256": "e149b5f6935f334dc4d0b8292dfd2db88d96f5b76189be5092bd23030c5990c8",
+          "runtime_ms": 1625
+        },
+        {
+          "url": "https://rettrorservice.no/",
+          "host": "rettrorservice.no",
+          "organisation_number": "936035523",
+          "attempt_started": 7.453000000001339,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "a61ee8b3f06b9b53643a1a28eb2f7d5c97e77977b36cfab10eec302d877248e9",
+          "runtime_ms": 234
+        },
+        {
+          "url": "https://rettrorservice.no/kontakt",
+          "host": "rettrorservice.no",
+          "organisation_number": "936035523",
+          "attempt_started": 8.703000000001339,
+          "status": 404,
+          "error": null,
+          "section": "website",
+          "content_sha256": "e149b5f6935f334dc4d0b8292dfd2db88d96f5b76189be5092bd23030c5990c8",
+          "runtime_ms": 203
+        },
+        {
+          "url": "https://rettrorservice.no/kontakt-oss",
+          "host": "rettrorservice.no",
+          "organisation_number": "936035523",
+          "attempt_started": 9.905999999995402,
+          "status": 404,
+          "error": null,
+          "section": "website",
+          "content_sha256": "e149b5f6935f334dc4d0b8292dfd2db88d96f5b76189be5092bd23030c5990c8",
+          "runtime_ms": 219
+        },
+        {
+          "url": "https://rettrorservice.no/om-oss",
+          "host": "rettrorservice.no",
+          "organisation_number": "936035523",
+          "attempt_started": 11.125,
+          "status": 404,
+          "error": null,
+          "section": "website",
+          "content_sha256": "e149b5f6935f334dc4d0b8292dfd2db88d96f5b76189be5092bd23030c5990c8",
+          "runtime_ms": 203
+        },
+        {
+          "url": "https://rettrorservice.no/om",
+          "host": "rettrorservice.no",
+          "organisation_number": "936035523",
+          "attempt_started": 12.328000000001339,
+          "status": 404,
+          "error": null,
+          "section": "website",
+          "content_sha256": "e149b5f6935f334dc4d0b8292dfd2db88d96f5b76189be5092bd23030c5990c8",
+          "runtime_ms": 203
+        }
+      ]
+    },
+    {
+      "org": "935962196",
+      "state": "failed",
+      "domains": [
+        "munchy.no",
+        "munchy.com"
+      ],
+      "codes": [
+        "corroboration",
+        "website_budget_exhausted"
+      ],
+      "cause": "budget",
+      "details": [
+        "No exact company-number proof; partial signals or short/JS content",
+        "Six website / nine total company slots exhausted; proof/redirect/robots attempts compete for the same cap"
+      ],
+      "attempts": [
+        {
+          "domain": "munchy.no",
+          "level": "LOW",
+          "reason": "website_budget_exhausted",
+          "page": "https://munchy.no/personvern"
+        },
+        {
+          "domain": "munchy.no",
+          "level": "LOW",
+          "points": 2,
+          "signals": [
+            "legal_name"
+          ],
+          "origin": "legal_name_slug",
+          "reason": "corroboration"
+        },
+        {
+          "domain": "munchy.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "website_budget_exhausted"
+        },
+        {
+          "domain": "munchy.no",
+          "origin": "legal_name_slug",
+          "url": "https://munchy.no/",
+          "status": 200
+        },
+        {
+          "domain": "munchy.com",
+          "origin": "legal_name_slug",
+          "url": "https://munchy.com/",
+          "reason": "website_budget_exhausted"
+        }
+      ],
+      "requests": [
+        {
+          "url": "https://munchy.no/robots.txt",
+          "host": "munchy.no",
+          "organisation_number": "935962196",
+          "attempt_started": 4.828000000001339,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "02b8a3c379c42d143e684ad8c5297b2baa1c91dc7b927ba4f29310c5b36c172c",
+          "runtime_ms": 2359
+        },
+        {
+          "url": "https://munchy.no/",
+          "host": "munchy.no",
+          "organisation_number": "935962196",
+          "attempt_started": 8.18699999999808,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "3c627becd05ee86c920fb2a4be7fb15467e92cf276cb166c515dc8c8a14c8b6f",
+          "runtime_ms": 1156
+        },
+        {
+          "url": "https://munchy.no/kontakt",
+          "host": "munchy.no",
+          "organisation_number": "935962196",
+          "attempt_started": 10.35899999999674,
+          "status": 404,
+          "error": null,
+          "section": "website",
+          "content_sha256": "d75d84eab92a7edec946b4cbd8260013f8ff597e4e95b5de14c19b7a0fbdfc62",
+          "runtime_ms": 828
+        },
+        {
+          "url": "https://munchy.no/kontakt-oss",
+          "host": "munchy.no",
+          "organisation_number": "935962196",
+          "attempt_started": 12.203000000001339,
+          "status": 404,
+          "error": null,
+          "section": "website",
+          "content_sha256": "d75d84eab92a7edec946b4cbd8260013f8ff597e4e95b5de14c19b7a0fbdfc62",
+          "runtime_ms": 1156
+        },
+        {
+          "url": "https://munchy.no/om-oss",
+          "host": "munchy.no",
+          "organisation_number": "935962196",
+          "attempt_started": 14.35899999999674,
+          "status": 404,
+          "error": null,
+          "section": "website",
+          "content_sha256": "d75d84eab92a7edec946b4cbd8260013f8ff597e4e95b5de14c19b7a0fbdfc62",
+          "runtime_ms": 813
+        },
+        {
+          "url": "https://munchy.no/om",
+          "host": "munchy.no",
+          "organisation_number": "935962196",
+          "attempt_started": 16.17199999999866,
+          "status": 404,
+          "error": null,
+          "section": "website",
+          "content_sha256": "d75d84eab92a7edec946b4cbd8260013f8ff597e4e95b5de14c19b7a0fbdfc62",
+          "runtime_ms": 859
+        }
+      ]
+    },
+    {
+      "org": "948639416",
+      "state": "failed",
+      "domains": [
+        "nbbo.no",
+        "sverstadborettslag.no",
+        "sverstadborettslag.com",
+        "sverstad-borettslag.no",
+        "sverstad-borettslag.com"
+      ],
+      "codes": [
+        "foreign_orgnr",
+        "no_such_domain",
+        "website_budget_exhausted"
+      ],
+      "cause": "budget",
+      "details": [
+        "Another entity number was found; correct identity veto",
+        "Candidate DNS returned no public destination; not proof the company has no website",
+        "Six website / nine total company slots exhausted; proof/redirect/robots attempts compete for the same cap"
+      ],
+      "attempts": [
+        {
+          "domain": "nbbo.no",
+          "level": "LOW",
+          "reason": "website_budget_exhausted",
+          "page": "https://nbbo.no/om-oss/generalforsamling/"
+        },
+        {
+          "domain": "nbbo.no",
+          "level": "REJECT",
+          "points": 0,
+          "signals": [],
+          "origin": "registry_website",
+          "reason": "foreign_orgnr"
+        },
+        {
+          "domain": "sverstadborettslag.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "sverstadborettslag.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "sverstad-borettslag.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "sverstad-borettslag.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "nbbo.no",
+          "origin": "registry_website",
+          "url": "https://www.nbbo.no/",
+          "status": 200
+        }
+      ],
+      "requests": [
+        {
+          "url": "https://www.nbbo.no/robots.txt",
+          "host": "www.nbbo.no",
+          "organisation_number": "948639416",
+          "attempt_started": 4.936999999998079,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "3073d1e371afb3271c7666148766fedc5145f7d8440f7114062db79b7bd58add",
+          "runtime_ms": 172
+        },
+        {
+          "url": "https://www.nbbo.no/",
+          "host": "www.nbbo.no",
+          "organisation_number": "948639416",
+          "attempt_started": 6.10899999999674,
+          "status": 301,
+          "error": null,
+          "section": "website",
+          "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "runtime_ms": 1063
+        },
+        {
+          "url": "https://nbbo.no/robots.txt",
+          "host": "nbbo.no",
+          "organisation_number": "948639416",
+          "attempt_started": 8.171999999998661,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "dc00231724de3f0182125647eba53ba15c0760e3bbb3e5952fba0be135d9e5f4",
+          "runtime_ms": 1281
+        },
+        {
+          "url": "https://nbbo.no/",
+          "host": "nbbo.no",
+          "organisation_number": "948639416",
+          "attempt_started": 10.453000000001339,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "0f939b7e74c636e048086ddbce8d2f50c92908cf9a886a6f1332e6c1fc5efb99",
+          "runtime_ms": 1765
+        },
+        {
+          "url": "https://nbbo.no/kontakt/",
+          "host": "nbbo.no",
+          "organisation_number": "948639416",
+          "attempt_started": 13.218000000000757,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "3ff7e1050699c636f7e77f4d0945e9c54202b9e37bb8df0406b3b9c8a04ac8bc",
+          "runtime_ms": 1594
+        },
+        {
+          "url": "https://nbbo.no/om-oss/",
+          "host": "nbbo.no",
+          "organisation_number": "948639416",
+          "attempt_started": 15.828000000001339,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "4a4f4f4adf24ac7f497b05d0745cfb4c5a999c6046b12aca9d840616081f73c8",
+          "runtime_ms": 1609
+        }
+      ]
+    },
+    {
+      "org": "927439794",
+      "state": "failed",
+      "domains": [
+        "fjerstad.no",
+        "fjerstad.com"
+      ],
+      "codes": [
+        "short_or_js_shell",
+        "website_budget_exhausted"
+      ],
+      "cause": "budget",
+      "details": [
+        "No exact company-number proof; partial signals or short/JS content",
+        "Six website / nine total company slots exhausted; proof/redirect/robots attempts compete for the same cap"
+      ],
+      "attempts": [
+        {
+          "domain": "fjerstad.no",
+          "level": "LOW",
+          "reason": "website_budget_exhausted",
+          "page": "https://fjerstad.no/personvern"
+        },
+        {
+          "domain": "fjerstad.no",
+          "level": "LOW",
+          "points": 0,
+          "signals": [],
+          "origin": "legal_name_slug",
+          "reason": "short_or_js_shell"
+        },
+        {
+          "domain": "fjerstad.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "website_budget_exhausted"
+        },
+        {
+          "domain": "fjerstad.no",
+          "origin": "legal_name_slug",
+          "url": "https://fjerstad.no/",
+          "status": 200
+        },
+        {
+          "domain": "fjerstad.com",
+          "origin": "legal_name_slug",
+          "url": "https://fjerstad.com/",
+          "reason": "website_budget_exhausted"
+        }
+      ],
+      "requests": [
+        {
+          "url": "https://fjerstad.no/robots.txt",
+          "host": "fjerstad.no",
+          "organisation_number": "927439794",
+          "attempt_started": 5.014999999999418,
+          "status": 404,
+          "error": null,
+          "section": "website",
+          "content_sha256": "cc0b4e42510d49c6decd464123ecf3b14ae9b47f9b4ed2ee64893e2d6520a264",
+          "runtime_ms": 1141
+        },
+        {
+          "url": "https://fjerstad.no/",
+          "host": "fjerstad.no",
+          "organisation_number": "927439794",
+          "attempt_started": 7.155999999995402,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "656be9606c71e2e9a58664b446c0d5b3d5c7e81967056c00f9ad7f2b840b2abe",
+          "runtime_ms": 734
+        },
+        {
+          "url": "https://fjerstad.no/kontakt",
+          "host": "fjerstad.no",
+          "organisation_number": "927439794",
+          "attempt_started": 8.889999999999418,
+          "status": 404,
+          "error": null,
+          "section": "website",
+          "content_sha256": "cc0b4e42510d49c6decd464123ecf3b14ae9b47f9b4ed2ee64893e2d6520a264",
+          "runtime_ms": 219
+        },
+        {
+          "url": "https://fjerstad.no/kontakt-oss",
+          "host": "fjerstad.no",
+          "organisation_number": "927439794",
+          "attempt_started": 10.10899999999674,
+          "status": 404,
+          "error": null,
+          "section": "website",
+          "content_sha256": "cc0b4e42510d49c6decd464123ecf3b14ae9b47f9b4ed2ee64893e2d6520a264",
+          "runtime_ms": 219
+        },
+        {
+          "url": "https://fjerstad.no/om-oss",
+          "host": "fjerstad.no",
+          "organisation_number": "927439794",
+          "attempt_started": 11.328000000001339,
+          "status": 404,
+          "error": null,
+          "section": "website",
+          "content_sha256": "cc0b4e42510d49c6decd464123ecf3b14ae9b47f9b4ed2ee64893e2d6520a264",
+          "runtime_ms": 250
+        },
+        {
+          "url": "https://fjerstad.no/om",
+          "host": "fjerstad.no",
+          "organisation_number": "927439794",
+          "attempt_started": 12.578000000001339,
+          "status": 404,
+          "error": null,
+          "section": "website",
+          "content_sha256": "cc0b4e42510d49c6decd464123ecf3b14ae9b47f9b4ed2ee64893e2d6520a264",
+          "runtime_ms": 203
+        }
+      ]
+    },
+    {
+      "org": "918843183",
+      "state": "failed",
+      "domains": [
+        "firstflush.no",
+        "firstflush.com"
+      ],
+      "codes": [
+        "corroboration",
+        "website_budget_exhausted",
+        "website_connect_error"
+      ],
+      "cause": "budget",
+      "details": [
+        "No exact company-number proof; partial signals or short/JS content",
+        "Six website / nine total company slots exhausted; proof/redirect/robots attempts compete for the same cap",
+        "TLS/connect failure; saved logs cannot distinguish certificate vs remote transport cause"
+      ],
+      "attempts": [
+        {
+          "domain": "firstflush.no",
+          "level": "LOW",
+          "reason": "website_budget_exhausted",
+          "page": "http://firstflush.no/om-oss"
+        },
+        {
+          "domain": "firstflush.no",
+          "level": "LOW",
+          "points": 0,
+          "signals": [],
+          "origin": "legal_name_slug",
+          "reason": "corroboration"
+        },
+        {
+          "domain": "firstflush.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "website_budget_exhausted"
+        },
+        {
+          "domain": "firstflush.no",
+          "origin": "legal_name_slug",
+          "url": "https://firstflush.no/",
+          "reason": "website_connect_error"
+        },
+        {
+          "domain": "firstflush.no",
+          "origin": "legal_name_slug",
+          "url": "https://www.firstflush.no/",
+          "reason": "website_connect_error"
+        },
+        {
+          "domain": "firstflush.no",
+          "origin": "legal_name_slug",
+          "url": "http://firstflush.no/",
+          "status": 200
+        },
+        {
+          "domain": "firstflush.com",
+          "origin": "legal_name_slug",
+          "url": "https://firstflush.com/",
+          "reason": "website_budget_exhausted"
+        }
+      ],
+      "requests": [
+        {
+          "url": "https://firstflush.no/robots.txt",
+          "host": "firstflush.no",
+          "organisation_number": "918843183",
+          "attempt_started": 5.030999999995402,
+          "status": null,
+          "error": "ConnectError",
+          "section": "website",
+          "runtime_ms": 297
+        },
+        {
+          "url": "https://www.firstflush.no/robots.txt",
+          "host": "www.firstflush.no",
+          "organisation_number": "918843183",
+          "attempt_started": 6.328000000001339,
+          "status": null,
+          "error": "ConnectError",
+          "section": "website",
+          "runtime_ms": 234
+        },
+        {
+          "url": "http://firstflush.no/robots.txt",
+          "host": "firstflush.no",
+          "organisation_number": "918843183",
+          "attempt_started": 7.625,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "cce47af1ff11ca0b6dbf15f4fb21ce29519c6ee7a0b98175e6f8aad43bec1593",
+          "runtime_ms": 515
+        },
+        {
+          "url": "http://firstflush.no/",
+          "host": "firstflush.no",
+          "organisation_number": "918843183",
+          "attempt_started": 9.139999999999418,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "2dde183500797d96cb4d75bede5d9393ec0fbad110d45baf5bb8af9f78d0878b",
+          "runtime_ms": 235
+        },
+        {
+          "url": "http://firstflush.no/kontakt",
+          "host": "firstflush.no",
+          "organisation_number": "918843183",
+          "attempt_started": 10.375,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "ca4500c151bf070c5e8e66cc0a58f48deb301ae92c050f761ea096459b635c07",
+          "runtime_ms": 250
+        },
+        {
+          "url": "http://firstflush.no/kontakt-oss",
+          "host": "firstflush.no",
+          "organisation_number": "918843183",
+          "attempt_started": 11.639999999999418,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "ec008eb41ca84920c97cabae00b9b22fd01442106f3a22d6b4823c7c9736d11c",
+          "runtime_ms": 219
+        }
+      ]
+    },
+    {
+      "org": "930621927",
+      "state": "failed",
+      "domains": [
+        "dentalholding.no",
+        "dentalholding.com",
+        "dental-holding.no",
+        "dental-holding.com"
+      ],
+      "codes": [
+        "corroboration",
+        "no_such_domain",
+        "website_budget_exhausted"
+      ],
+      "cause": "budget",
+      "details": [
+        "No exact company-number proof; partial signals or short/JS content",
+        "Candidate DNS returned no public destination; not proof the company has no website",
+        "Six website / nine total company slots exhausted; proof/redirect/robots attempts compete for the same cap"
+      ],
+      "attempts": [
+        {
+          "domain": "dentalholding.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "dentalholding.com",
+          "level": "LOW",
+          "reason": "website_budget_exhausted",
+          "page": "https://dentalholding.com/om-oss"
+        },
+        {
+          "domain": "dentalholding.com",
+          "level": "LOW",
+          "points": 0,
+          "signals": [],
+          "origin": "legal_name_slug",
+          "reason": "corroboration"
+        },
+        {
+          "domain": "dental-holding.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "dental-holding.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "website_budget_exhausted"
+        },
+        {
+          "domain": "dentalholding.com",
+          "origin": "legal_name_slug",
+          "url": "https://dentalholding.com/",
+          "status": 200
+        },
+        {
+          "domain": "dental-holding.com",
+          "origin": "legal_name_slug",
+          "url": "https://dental-holding.com/",
+          "reason": "website_budget_exhausted"
+        }
+      ],
+      "requests": [
+        {
+          "url": "https://dentalholding.com/robots.txt",
+          "host": "dentalholding.com",
+          "organisation_number": "930621927",
+          "attempt_started": 5.046999999998661,
+          "status": 404,
+          "error": null,
+          "section": "website",
+          "content_sha256": "e2731769fe4a7858d77c8d86679c7a9fcfe0866b882b311aa163934152bff201",
+          "runtime_ms": 671
+        },
+        {
+          "url": "https://dentalholding.com/",
+          "host": "dentalholding.com",
+          "organisation_number": "930621927",
+          "attempt_started": 6.718000000000757,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "d75b741cbb41fe625aca9de1904226fc0b219d7d9da7ee0596be3e6d7c28cfe5",
+          "runtime_ms": 750
+        },
+        {
+          "url": "https://www.dentalholding.com/robots.txt",
+          "host": "www.dentalholding.com",
+          "organisation_number": "930621927",
+          "attempt_started": 8.48399999999674,
+          "status": 404,
+          "error": null,
+          "section": "website",
+          "content_sha256": "d37a61557615db7d5f55baa64106ce1e1f6e8ad4101acc8ac12800fa65464b7f",
+          "runtime_ms": 1453
+        },
+        {
+          "url": "https://www.dentalholding.com/kontakt.html",
+          "host": "www.dentalholding.com",
+          "organisation_number": "930621927",
+          "attempt_started": 10.93699999999808,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "88371cbb9b0e618d3f66330f43944422b9379969d575c27d85ebe11e9e3962c8",
+          "runtime_ms": 578
+        },
+        {
+          "url": "https://dentalholding.com/kontakt",
+          "host": "dentalholding.com",
+          "organisation_number": "930621927",
+          "attempt_started": 12.514999999999418,
+          "status": 404,
+          "error": null,
+          "section": "website",
+          "content_sha256": "e2731769fe4a7858d77c8d86679c7a9fcfe0866b882b311aa163934152bff201",
+          "runtime_ms": 860
+        },
+        {
+          "url": "https://dentalholding.com/kontakt-oss",
+          "host": "dentalholding.com",
+          "organisation_number": "930621927",
+          "attempt_started": 14.389999999999418,
+          "status": 404,
+          "error": null,
+          "section": "website",
+          "content_sha256": "e2731769fe4a7858d77c8d86679c7a9fcfe0866b882b311aa163934152bff201",
+          "runtime_ms": 203
+        }
+      ]
+    },
+    {
+      "org": "912579433",
+      "state": "failed",
+      "domains": [
+        "lmc.as",
+        "kampenhotel.no"
+      ],
+      "codes": [
+        "short_or_js_shell",
+        "website_budget_exhausted",
+        "website_connect_error"
+      ],
+      "cause": "budget",
+      "details": [
+        "No exact company-number proof; partial signals or short/JS content",
+        "Six website / nine total company slots exhausted; proof/redirect/robots attempts compete for the same cap",
+        "TLS/connect failure; saved logs cannot distinguish certificate vs remote transport cause"
+      ],
+      "attempts": [
+        {
+          "domain": "lmc.as",
+          "level": "LOW",
+          "reason": "website_budget_exhausted",
+          "page": "http://lmc.as/om-oss"
+        },
+        {
+          "domain": "lmc.as",
+          "level": "LOW",
+          "points": 0,
+          "signals": [],
+          "origin": "registry_email",
+          "reason": "short_or_js_shell"
+        },
+        {
+          "domain": "kampenhotel.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "website_budget_exhausted"
+        },
+        {
+          "domain": "lmc.as",
+          "origin": "registry_email",
+          "url": "https://lmc.as/",
+          "reason": "website_connect_error"
+        },
+        {
+          "domain": "lmc.as",
+          "origin": "registry_email",
+          "url": "https://www.lmc.as/",
+          "reason": "website_connect_error"
+        },
+        {
+          "domain": "lmc.as",
+          "origin": "registry_email",
+          "url": "http://lmc.as/",
+          "status": 200
+        },
+        {
+          "domain": "kampenhotel.no",
+          "origin": "legal_name_slug",
+          "url": "https://kampenhotel.no/",
+          "reason": "website_budget_exhausted"
+        }
+      ],
+      "requests": [
+        {
+          "url": "https://lmc.as/robots.txt",
+          "host": "lmc.as",
+          "organisation_number": "912579433",
+          "attempt_started": 5.203000000001339,
+          "status": null,
+          "error": "ConnectError",
+          "section": "website",
+          "runtime_ms": 765
+        },
+        {
+          "url": "https://www.lmc.as/robots.txt",
+          "host": "www.lmc.as",
+          "organisation_number": "912579433",
+          "attempt_started": 6.968000000000757,
+          "status": null,
+          "error": "ConnectError",
+          "section": "website",
+          "runtime_ms": 438
+        },
+        {
+          "url": "http://lmc.as/robots.txt",
+          "host": "lmc.as",
+          "organisation_number": "912579433",
+          "attempt_started": 8.405999999995402,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "130bdab038723ae2d90106299e02d23e86db2f8011395124328ca394f946b8ec",
+          "runtime_ms": 422
+        },
+        {
+          "url": "http://lmc.as/",
+          "host": "lmc.as",
+          "organisation_number": "912579433",
+          "attempt_started": 9.843000000000757,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "00bfba3eb691644b2835a1ec936bd77c3c7b96f25bc5861b4382999e5d12f1d4",
+          "runtime_ms": 235
+        },
+        {
+          "url": "http://lmc.as/kontakt",
+          "host": "lmc.as",
+          "organisation_number": "912579433",
+          "attempt_started": 11.078000000001339,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "5e6bf71e5f148b1c67845bab3a81e6f232deb18ad3945990a845396347a87e3e",
+          "runtime_ms": 250
+        },
+        {
+          "url": "http://lmc.as/kontakt-oss",
+          "host": "lmc.as",
+          "organisation_number": "912579433",
+          "attempt_started": 12.328000000001339,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "edb47f7ceb8cb75c173f4b48b3e985b8ee31fb7f12ceb74261a8f668de77d304",
+          "runtime_ms": 234
+        }
+      ]
+    },
+    {
+      "org": "991835423",
+      "state": "failed",
+      "domains": [
+        "ragde.no",
+        "h2eiendom.no",
+        "h2eiendom.com",
+        "h-2-eiendom.no",
+        "h-2-eiendom.com"
+      ],
+      "codes": [
+        "corroboration",
+        "no_such_domain",
+        "website_budget_exhausted",
+        "website_timeout"
+      ],
+      "cause": "budget",
+      "details": [
+        "No exact company-number proof; partial signals or short/JS content",
+        "Candidate DNS returned no public destination; not proof the company has no website",
+        "Six website / nine total company slots exhausted; proof/redirect/robots attempts compete for the same cap",
+        "Bounded HTTP attempt timed out"
+      ],
+      "attempts": [
+        {
+          "domain": "ragde.no",
+          "level": "LOW",
+          "reason": "website_budget_exhausted",
+          "page": "https://ragde.no/kontakt-oss/"
+        },
+        {
+          "domain": "ragde.no",
+          "level": "LOW",
+          "points": 2,
+          "signals": [
+            "registry_website"
+          ],
+          "origin": "registry_website",
+          "reason": "corroboration"
+        },
+        {
+          "domain": "h2eiendom.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "h2eiendom.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "h-2-eiendom.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "h-2-eiendom.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "ragde.no",
+          "origin": "registry_website",
+          "url": "https://www.ragde.no/",
+          "reason": "website_timeout"
+        },
+        {
+          "domain": "ragde.no",
+          "origin": "registry_website",
+          "url": "https://www.ragde.no/",
+          "status": 200
+        }
+      ],
+      "requests": [
+        {
+          "url": "https://www.ragde.no/robots.txt",
+          "host": "www.ragde.no",
+          "organisation_number": "991835423",
+          "attempt_started": 5.203000000001339,
+          "status": 301,
+          "error": null,
+          "section": "website",
+          "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "runtime_ms": 906
+        },
+        {
+          "url": "https://ragde.no/robots.txt",
+          "host": "ragde.no",
+          "organisation_number": "991835423",
+          "attempt_started": 7.10899999999674,
+          "status": null,
+          "error": "TimeoutError",
+          "section": "website",
+          "runtime_ms": 8000
+        },
+        {
+          "url": "https://www.ragde.no/robots.txt",
+          "host": "www.ragde.no",
+          "organisation_number": "991835423",
+          "attempt_started": 16.125,
+          "status": 301,
+          "error": null,
+          "section": "website",
+          "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "runtime_ms": 797
+        },
+        {
+          "url": "https://ragde.no/robots.txt",
+          "host": "ragde.no",
+          "organisation_number": "991835423",
+          "attempt_started": 17.92199999999866,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "1f06c5b03508131a9f18425889fe79cdf35646490cc8929f9ab12e8a3b7274e5",
+          "runtime_ms": 781
+        },
+        {
+          "url": "https://www.ragde.no/",
+          "host": "www.ragde.no",
+          "organisation_number": "991835423",
+          "attempt_started": 19.718000000000757,
+          "status": 301,
+          "error": null,
+          "section": "website",
+          "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "runtime_ms": 438
+        },
+        {
+          "url": "https://ragde.no/",
+          "host": "ragde.no",
+          "organisation_number": "991835423",
+          "attempt_started": 21.17199999999866,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "d7e4d1bf62cbe664ab3a24a1f099c1ae363a64998aec758f9fb5ac8042380324",
+          "runtime_ms": 687
+        }
+      ]
+    },
+    {
+      "org": "926818317",
+      "state": "failed",
+      "domains": [
+        "assistco.no",
+        "spedify.no"
+      ],
+      "codes": [
+        "corroboration",
+        "website_budget_exhausted"
+      ],
+      "cause": "budget",
+      "details": [
+        "No exact company-number proof; partial signals or short/JS content",
+        "Six website / nine total company slots exhausted; proof/redirect/robots attempts compete for the same cap"
+      ],
+      "attempts": [
+        {
+          "domain": "assistco.no",
+          "level": "LOW",
+          "reason": "website_budget_exhausted",
+          "page": "https://assistco.no/policies/terms-of-service"
+        },
+        {
+          "domain": "assistco.no",
+          "level": "LOW",
+          "points": 0,
+          "signals": [],
+          "origin": "subunit_registry_email",
+          "reason": "corroboration"
+        },
+        {
+          "domain": "spedify.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "website_budget_exhausted"
+        },
+        {
+          "domain": "assistco.no",
+          "origin": "subunit_registry_email",
+          "url": "https://assistco.no/",
+          "status": 200
+        },
+        {
+          "domain": "spedify.no",
+          "origin": "legal_name_slug",
+          "url": "https://spedify.no/",
+          "reason": "website_budget_exhausted"
+        }
+      ],
+      "requests": [
+        {
+          "url": "https://assistco.no/robots.txt",
+          "host": "assistco.no",
+          "organisation_number": "926818317",
+          "attempt_started": 5.23399999999674,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "266d980ae82cb302357a3504a716bace349ec65efe228ff94fdeb210a42b7039",
+          "runtime_ms": 703
+        },
+        {
+          "url": "https://assistco.no/",
+          "host": "assistco.no",
+          "organisation_number": "926818317",
+          "attempt_started": 6.936999999998079,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "62543c42febea1d43aa8a5c3af758ada839ed3e8042a723c0c76b3ca50d8bc28",
+          "runtime_ms": 594
+        },
+        {
+          "url": "https://assistco.no/pages/contact",
+          "host": "assistco.no",
+          "organisation_number": "926818317",
+          "attempt_started": 8.530999999995402,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "ecb3fef15f512880c1c759d329bb4b77b5cba0c5550d2b8ea70da47a35d3539b",
+          "runtime_ms": 406
+        },
+        {
+          "url": "https://assistco.no/policies/contact-information",
+          "host": "assistco.no",
+          "organisation_number": "926818317",
+          "attempt_started": 9.93699999999808,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "2e6ad35bb7bd7c502b61ea53c040ac65f512a60de1093b65a6f8cae490b71c88",
+          "runtime_ms": 297
+        },
+        {
+          "url": "https://assistco.no/pages/personvernerklaering-assistco",
+          "host": "assistco.no",
+          "organisation_number": "926818317",
+          "attempt_started": 11.23399999999674,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "411717dd0325fab903cc6ec2a9fe25af450943cebe9ed9b6bbe9d9d43f964ef0",
+          "runtime_ms": 438
+        },
+        {
+          "url": "https://assistco.no/policies/privacy-policy",
+          "host": "assistco.no",
+          "organisation_number": "926818317",
+          "attempt_started": 12.671999999998661,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "8521e1157081eb825b8b01e345736ee7675b2aa79ee7ae43c3018dc206aec19f",
+          "runtime_ms": 343
+        }
+      ]
+    },
+    {
+      "org": "997995414",
+      "state": "ambiguous",
+      "domains": [
+        "peaklandscapes.no",
+        "peaklandscapes.com"
+      ],
+      "codes": [
+        "corroboration",
+        "website_budget_exhausted"
+      ],
+      "cause": "ambiguity",
+      "details": [
+        "No exact company-number proof; partial signals or short/JS content",
+        "Six website / nine total company slots exhausted; proof/redirect/robots attempts compete for the same cap"
+      ],
+      "attempts": [
+        {
+          "domain": "peaklandscapes.no",
+          "level": "LOW",
+          "reason": "website_budget_exhausted",
+          "page": "https://www.peaklandscapes.no/kontakt-oss"
+        },
+        {
+          "domain": "peaklandscapes.no",
+          "level": "MEDIUM",
+          "points": 5,
+          "signals": [
+            "legal_name",
+            "address",
+            "municipality"
+          ],
+          "origin": "legal_name_slug",
+          "reason": "corroboration"
+        },
+        {
+          "domain": "peaklandscapes.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "website_budget_exhausted"
+        },
+        {
+          "domain": "peaklandscapes.no",
+          "origin": "legal_name_slug",
+          "url": "https://peaklandscapes.no/",
+          "status": 200
+        },
+        {
+          "domain": "peaklandscapes.com",
+          "origin": "legal_name_slug",
+          "url": "https://peaklandscapes.com/",
+          "reason": "website_budget_exhausted"
+        }
+      ],
+      "requests": [
+        {
+          "url": "https://peaklandscapes.no/robots.txt",
+          "host": "peaklandscapes.no",
+          "organisation_number": "997995414",
+          "attempt_started": 5.264999999999418,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "66f4c2106d04946a2f85c03f5e842349e31b55b3a668da60701d620d16b23521",
+          "runtime_ms": 828
+        },
+        {
+          "url": "https://peaklandscapes.no/",
+          "host": "peaklandscapes.no",
+          "organisation_number": "997995414",
+          "attempt_started": 7.093000000000757,
+          "status": 301,
+          "error": null,
+          "section": "website",
+          "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "runtime_ms": 235
+        },
+        {
+          "url": "https://www.peaklandscapes.no/robots.txt",
+          "host": "www.peaklandscapes.no",
+          "organisation_number": "997995414",
+          "attempt_started": 8.328000000001339,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "66f4c2106d04946a2f85c03f5e842349e31b55b3a668da60701d620d16b23521",
+          "runtime_ms": 265
+        },
+        {
+          "url": "https://www.peaklandscapes.no/",
+          "host": "www.peaklandscapes.no",
+          "organisation_number": "997995414",
+          "attempt_started": 9.593000000000757,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "3a6eb3ef5be3ffbfe51e837088b8bf0560744cc1f37395d5b4bc2488499c9450",
+          "runtime_ms": 125
+        },
+        {
+          "url": "https://www.peaklandscapes.no/about-us",
+          "host": "www.peaklandscapes.no",
+          "organisation_number": "997995414",
+          "attempt_started": 10.75,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "a4002088458f76e9326d04111a57709d05eab8e740ebb05a34abf3640fa3cb98",
+          "runtime_ms": 78
+        },
+        {
+          "url": "https://www.peaklandscapes.no/kontakt",
+          "host": "www.peaklandscapes.no",
+          "organisation_number": "997995414",
+          "attempt_started": 11.843000000000757,
+          "status": 404,
+          "error": null,
+          "section": "website",
+          "content_sha256": "6871417a33591e94edad5fbee165772c62262a3b27b4f64ef71d2c3265f831fd",
+          "runtime_ms": 47
+        }
+      ]
+    },
+    {
+      "org": "916249985",
+      "state": "ambiguous",
+      "domains": [
+        "olsenbygg.com",
+        "kaldvellfjordeneiendom.no",
+        "kaldvellfjordeneiendom.com",
+        "kaldvellfjorden-eiendom.no",
+        "kaldvellfjorden-eiendom.com"
+      ],
+      "codes": [
+        "corroboration",
+        "no_such_domain",
+        "website_budget_exhausted"
+      ],
+      "cause": "ambiguity",
+      "details": [
+        "No exact company-number proof; partial signals or short/JS content",
+        "Candidate DNS returned no public destination; not proof the company has no website",
+        "Six website / nine total company slots exhausted; proof/redirect/robots attempts compete for the same cap"
+      ],
+      "attempts": [
+        {
+          "domain": "olsenbygg.com",
+          "level": "LOW",
+          "reason": "website_budget_exhausted",
+          "page": "https://www.olsenbygg.com/kontakt"
+        },
+        {
+          "domain": "olsenbygg.com",
+          "level": "MEDIUM",
+          "points": 5,
+          "signals": [
+            "address",
+            "leader",
+            "municipality"
+          ],
+          "origin": "registry_email",
+          "reason": "corroboration"
+        },
+        {
+          "domain": "kaldvellfjordeneiendom.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "kaldvellfjordeneiendom.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "kaldvellfjorden-eiendom.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "kaldvellfjorden-eiendom.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "olsenbygg.com",
+          "origin": "registry_email",
+          "url": "https://olsenbygg.com/",
+          "status": 200
+        }
+      ],
+      "requests": [
+        {
+          "url": "https://olsenbygg.com/robots.txt",
+          "host": "olsenbygg.com",
+          "organisation_number": "916249985",
+          "attempt_started": 5.436999999998079,
+          "status": 301,
+          "error": null,
+          "section": "website",
+          "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "runtime_ms": 1641
+        },
+        {
+          "url": "https://www.olsenbygg.com/robots.txt",
+          "host": "www.olsenbygg.com",
+          "organisation_number": "916249985",
+          "attempt_started": 8.078000000001339,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "c64529ed8fbcd9bb339edcef1434840e515b60fe1104e028fba825078029a662",
+          "runtime_ms": 1484
+        },
+        {
+          "url": "https://olsenbygg.com/",
+          "host": "olsenbygg.com",
+          "organisation_number": "916249985",
+          "attempt_started": 10.578000000001339,
+          "status": 301,
+          "error": null,
+          "section": "website",
+          "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "runtime_ms": 422
+        },
+        {
+          "url": "https://www.olsenbygg.com/",
+          "host": "www.olsenbygg.com",
+          "organisation_number": "916249985",
+          "attempt_started": 12.014999999999418,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "c640c40ad11132ea52a6ef99fa95171859a61616daf3f778754e8c31e5b4f6a3",
+          "runtime_ms": 1422
+        },
+        {
+          "url": "https://www.olsenbygg.com/kontakt-olsenbygg/",
+          "host": "www.olsenbygg.com",
+          "organisation_number": "916249985",
+          "attempt_started": 14.43699999999808,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "fca1be01eb544d6256816324665933ddb40df64fe1c5aed8d2f8ee6277fe6daa",
+          "runtime_ms": 1219
+        },
+        {
+          "url": "https://www.olsenbygg.com/om-olsenbygg/",
+          "host": "www.olsenbygg.com",
+          "organisation_number": "916249985",
+          "attempt_started": 16.6559999999954,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "4f2894a1dee3f7c8b3e036c7424e268e9cdef2726cfb10a764fd3f627d548a35",
+          "runtime_ms": 1312
+        }
+      ]
+    },
+    {
+      "org": "814635562",
+      "state": "blocked",
+      "domains": [
+        "bellasburrito.com",
+        "bellas.no",
+        "bellas.com"
+      ],
+      "codes": [
+        "no_such_domain",
+        "robots",
+        "robots_unavailable",
+        "website_connect_error"
+      ],
+      "cause": "robots/access block",
+      "details": [
+        "Candidate DNS returned no public destination; not proof the company has no website",
+        "Policy/access refused; no bypass permitted",
+        "TLS/connect failure; saved logs cannot distinguish certificate vs remote transport cause"
+      ],
+      "attempts": [
+        {
+          "domain": "bellasburrito.com",
+          "origin": "registry_website",
+          "level": "BLOCKED",
+          "reason": "robots_unavailable"
+        },
+        {
+          "domain": "bellas.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "bellas.com",
+          "origin": "legal_name_slug",
+          "level": "BLOCKED",
+          "reason": "robots"
+        },
+        {
+          "domain": "bellasburrito.com",
+          "origin": "registry_website",
+          "url": "https://www.bellasburrito.com/",
+          "reason": "website_connect_error"
+        },
+        {
+          "domain": "bellasburrito.com",
+          "origin": "registry_website",
+          "url": "https://bellasburrito.com/",
+          "reason": "website_connect_error"
+        },
+        {
+          "domain": "bellasburrito.com",
+          "origin": "registry_website",
+          "url": "http://www.bellasburrito.com/",
+          "reason": "robots_unavailable"
+        },
+        {
+          "domain": "bellas.com",
+          "origin": "legal_name_slug",
+          "url": "https://bellas.com/",
+          "reason": "robots"
+        }
+      ],
+      "requests": [
+        {
+          "url": "https://www.bellasburrito.com/robots.txt",
+          "host": "www.bellasburrito.com",
+          "organisation_number": "814635562",
+          "attempt_started": 5.436999999998079,
+          "status": null,
+          "error": "ConnectError",
+          "section": "website",
+          "runtime_ms": 78
+        },
+        {
+          "url": "https://bellasburrito.com/robots.txt",
+          "host": "bellasburrito.com",
+          "organisation_number": "814635562",
+          "attempt_started": 6.514999999999418,
+          "status": null,
+          "error": "ConnectError",
+          "section": "website",
+          "runtime_ms": 110
+        },
+        {
+          "url": "http://www.bellasburrito.com/robots.txt",
+          "host": "www.bellasburrito.com",
+          "organisation_number": "814635562",
+          "attempt_started": 7.655999999995402,
+          "status": 403,
+          "error": null,
+          "section": "website",
+          "content_sha256": "bf58fad90a0c30662e4138a5fca1a4bb8283f410da0f80c725191f5615d6171f",
+          "runtime_ms": 109
+        },
+        {
+          "url": "https://bellas.com/robots.txt",
+          "host": "bellas.com",
+          "organisation_number": "814635562",
+          "attempt_started": 7.811999999998079,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "ec0067fb0925e79d7a0158e78266ecc507f27b30733f13fad8df5958bfad6110",
+          "runtime_ms": 688
+        }
+      ]
+    },
+    {
+      "org": "999504116",
+      "state": "failed",
+      "domains": [
+        "mlcinvest.no",
+        "mlcinvest.com",
+        "mlc-invest.no",
+        "mlc-invest.com"
+      ],
+      "codes": [
+        "no_such_domain",
+        "robots",
+        "website_connect_error",
+        "website_source_unavailable",
+        "website_timeout"
+      ],
+      "cause": "timeout",
+      "details": [
+        "Candidate DNS returned no public destination; not proof the company has no website",
+        "Policy/access refused; no bypass permitted",
+        "TLS/connect failure; saved logs cannot distinguish certificate vs remote transport cause",
+        "Bounded HTTP attempt timed out"
+      ],
+      "attempts": [
+        {
+          "domain": "mlcinvest.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "mlcinvest.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "website_timeout"
+        },
+        {
+          "domain": "mlc-invest.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "mlc-invest.com",
+          "origin": "legal_name_slug",
+          "level": "BLOCKED",
+          "reason": "robots"
+        },
+        {
+          "domain": "mlcinvest.com",
+          "origin": "legal_name_slug",
+          "url": "https://mlcinvest.com/",
+          "reason": "website_timeout"
+        },
+        {
+          "domain": "mlcinvest.com",
+          "origin": "legal_name_slug",
+          "url": "https://www.mlcinvest.com/",
+          "reason": "website_timeout"
+        },
+        {
+          "domain": "mlc-invest.com",
+          "origin": "legal_name_slug",
+          "url": "https://mlc-invest.com/",
+          "reason": "website_connect_error"
+        },
+        {
+          "domain": "mlc-invest.com",
+          "origin": "legal_name_slug",
+          "url": "https://www.mlc-invest.com/",
+          "reason": "website_connect_error"
+        },
+        {
+          "domain": "mlc-invest.com",
+          "origin": "legal_name_slug",
+          "url": "http://mlc-invest.com/",
+          "reason": "robots"
+        }
+      ],
+      "requests": [
+        {
+          "url": "https://mlcinvest.com/robots.txt",
+          "host": "mlcinvest.com",
+          "organisation_number": "999504116",
+          "attempt_started": 5.514999999999418,
+          "status": null,
+          "error": "TimeoutError",
+          "section": "website",
+          "runtime_ms": 8000
+        },
+        {
+          "url": "https://www.mlcinvest.com/robots.txt",
+          "host": "www.mlcinvest.com",
+          "organisation_number": "999504116",
+          "attempt_started": 14.530999999995402,
+          "status": null,
+          "error": "ConnectTimeout",
+          "section": "website",
+          "runtime_ms": 8016
+        },
+        {
+          "url": "https://mlc-invest.com/robots.txt",
+          "host": "mlc-invest.com",
+          "organisation_number": "999504116",
+          "attempt_started": 22.57800000000134,
+          "status": null,
+          "error": "ConnectError",
+          "section": "website",
+          "runtime_ms": 500
+        },
+        {
+          "url": "https://www.mlc-invest.com/robots.txt",
+          "host": "www.mlc-invest.com",
+          "organisation_number": "999504116",
+          "attempt_started": 24.093000000000757,
+          "status": null,
+          "error": "ConnectError",
+          "section": "website",
+          "runtime_ms": 438
+        },
+        {
+          "url": "http://mlc-invest.com/robots.txt",
+          "host": "mlc-invest.com",
+          "organisation_number": "999504116",
+          "attempt_started": 25.54699999999866,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "331ea9090db0c9f6f597bd9840fd5b171830f6e0b3ba1cb24dfa91f0c95aedc1",
+          "runtime_ms": 421
+        }
+      ]
+    },
+    {
+      "org": "998320143",
+      "state": "failed",
+      "domains": [
+        "caelisystem.no",
+        "caelisystem.com",
+        "caeli-system.no",
+        "caeli-system.com"
+      ],
+      "codes": [
+        "no_such_domain",
+        "short_or_js_shell",
+        "website_budget_exhausted",
+        "website_connect_error"
+      ],
+      "cause": "budget",
+      "details": [
+        "Candidate DNS returned no public destination; not proof the company has no website",
+        "No exact company-number proof; partial signals or short/JS content",
+        "Six website / nine total company slots exhausted; proof/redirect/robots attempts compete for the same cap",
+        "TLS/connect failure; saved logs cannot distinguish certificate vs remote transport cause"
+      ],
+      "attempts": [
+        {
+          "domain": "caelisystem.no",
+          "level": "LOW",
+          "reason": "website_budget_exhausted",
+          "page": "http://caelisystem.no/om-oss"
+        },
+        {
+          "domain": "caelisystem.no",
+          "level": "LOW",
+          "points": 0,
+          "signals": [],
+          "origin": "legal_name_slug",
+          "reason": "short_or_js_shell"
+        },
+        {
+          "domain": "caelisystem.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "caeli-system.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "caeli-system.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "caelisystem.no",
+          "origin": "legal_name_slug",
+          "url": "https://caelisystem.no/",
+          "reason": "website_connect_error"
+        },
+        {
+          "domain": "caelisystem.no",
+          "origin": "legal_name_slug",
+          "url": "https://www.caelisystem.no/",
+          "reason": "website_connect_error"
+        },
+        {
+          "domain": "caelisystem.no",
+          "origin": "legal_name_slug",
+          "url": "http://caelisystem.no/",
+          "status": 200
+        }
+      ],
+      "requests": [
+        {
+          "url": "https://caelisystem.no/robots.txt",
+          "host": "caelisystem.no",
+          "organisation_number": "998320143",
+          "attempt_started": 5.718000000000757,
+          "status": null,
+          "error": "ConnectError",
+          "section": "website",
+          "runtime_ms": 500
+        },
+        {
+          "url": "https://www.caelisystem.no/robots.txt",
+          "host": "www.caelisystem.no",
+          "organisation_number": "998320143",
+          "attempt_started": 7.218000000000757,
+          "status": null,
+          "error": "ConnectError",
+          "section": "website",
+          "runtime_ms": 469
+        },
+        {
+          "url": "http://caelisystem.no/robots.txt",
+          "host": "caelisystem.no",
+          "organisation_number": "998320143",
+          "attempt_started": 8.68699999999808,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "9881d1f5c11fa80003e717b1ba1471f3b0cf855a526d6b57e7cadd3ed278ef20",
+          "runtime_ms": 391
+        },
+        {
+          "url": "http://caelisystem.no/",
+          "host": "caelisystem.no",
+          "organisation_number": "998320143",
+          "attempt_started": 10.078000000001339,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "fc89267facf827c06d63e9a750e01446d3e1f44d3c04151ebc6c1abd90194afc",
+          "runtime_ms": 203
+        },
+        {
+          "url": "http://caelisystem.no/kontakt",
+          "host": "caelisystem.no",
+          "organisation_number": "998320143",
+          "attempt_started": 11.280999999995402,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "ee5cea386826faecef6a636fcb9bca292c7799e981633df5afbcb7578184d290",
+          "runtime_ms": 187
+        },
+        {
+          "url": "http://caelisystem.no/kontakt-oss",
+          "host": "caelisystem.no",
+          "organisation_number": "998320143",
+          "attempt_started": 12.468000000000757,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "caa0b3af8147d1110c9b72332fda164496c906d7fa8f947cd16e727886151dc5",
+          "runtime_ms": 204
+        }
+      ]
+    },
+    {
+      "org": "918109099",
+      "state": "failed",
+      "domains": [
+        "dokfestivalen.no",
+        "stiftelsendokfestivalen.no",
+        "stiftelsendokfestivalen.com",
+        "stiftelsen-dok-festivalen.no",
+        "stiftelsen-dok-festivalen.com"
+      ],
+      "codes": [
+        "corroboration",
+        "no_such_domain",
+        "website_budget_exhausted"
+      ],
+      "cause": "budget",
+      "details": [
+        "No exact company-number proof; partial signals or short/JS content",
+        "Candidate DNS returned no public destination; not proof the company has no website",
+        "Six website / nine total company slots exhausted; proof/redirect/robots attempts compete for the same cap"
+      ],
+      "attempts": [
+        {
+          "domain": "dokfestivalen.no",
+          "level": "LOW",
+          "reason": "website_budget_exhausted",
+          "page": "https://www.dokfestivalen.no/om"
+        },
+        {
+          "domain": "dokfestivalen.no",
+          "level": "LOW",
+          "points": 2,
+          "signals": [
+            "registry_website"
+          ],
+          "origin": "registry_website",
+          "reason": "corroboration"
+        },
+        {
+          "domain": "stiftelsendokfestivalen.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "stiftelsendokfestivalen.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "stiftelsen-dok-festivalen.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "stiftelsen-dok-festivalen.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "dokfestivalen.no",
+          "origin": "registry_website",
+          "url": "https://www.dokfestivalen.no/",
+          "status": 200
+        }
+      ],
+      "requests": [
+        {
+          "url": "https://www.dokfestivalen.no/robots.txt",
+          "host": "www.dokfestivalen.no",
+          "organisation_number": "918109099",
+          "attempt_started": 5.718000000000757,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "e1afd38662dd5d8ba67d740551f9522bd6133fbee57c76b9575bcbf4628bde08",
+          "runtime_ms": 579
+        },
+        {
+          "url": "https://www.dokfestivalen.no/",
+          "host": "www.dokfestivalen.no",
+          "organisation_number": "918109099",
+          "attempt_started": 7.296999999998661,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "5c2c155c35d1ffa4f771e2211b2abde58dcc91a4d5ab4ff1ef4e71ce768f5ff2",
+          "runtime_ms": 390
+        },
+        {
+          "url": "https://www.dokfestivalen.no/about",
+          "host": "www.dokfestivalen.no",
+          "organisation_number": "918109099",
+          "attempt_started": 8.68699999999808,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "2c1c7360793f5d9cee72e2df09e6571ad7d43d89af49af2d72c68e135d6e6aeb",
+          "runtime_ms": 313
+        },
+        {
+          "url": "https://www.dokfestivalen.no/kontakt",
+          "host": "www.dokfestivalen.no",
+          "organisation_number": "918109099",
+          "attempt_started": 10.0,
+          "status": 404,
+          "error": null,
+          "section": "website",
+          "content_sha256": "f11de2a92f2a7711dad8ecfe27d6b0fdf0134ec41bb091151cf1fed2529a515e",
+          "runtime_ms": 484
+        },
+        {
+          "url": "https://www.dokfestivalen.no/kontakt-oss",
+          "host": "www.dokfestivalen.no",
+          "organisation_number": "918109099",
+          "attempt_started": 11.48399999999674,
+          "status": 404,
+          "error": null,
+          "section": "website",
+          "content_sha256": "f11de2a92f2a7711dad8ecfe27d6b0fdf0134ec41bb091151cf1fed2529a515e",
+          "runtime_ms": 641
+        },
+        {
+          "url": "https://www.dokfestivalen.no/om-oss",
+          "host": "www.dokfestivalen.no",
+          "organisation_number": "918109099",
+          "attempt_started": 13.125,
+          "status": 404,
+          "error": null,
+          "section": "website",
+          "content_sha256": "f11de2a92f2a7711dad8ecfe27d6b0fdf0134ec41bb091151cf1fed2529a515e",
+          "runtime_ms": 453
+        }
+      ]
+    },
+    {
+      "org": "932112183",
+      "state": "failed",
+      "domains": [
+        "purecapital.no",
+        "purecapital.com",
+        "pure-capital.no",
+        "pure-capital.com"
+      ],
+      "codes": [
+        "corroboration",
+        "no_such_domain",
+        "website_budget_exhausted"
+      ],
+      "cause": "budget",
+      "details": [
+        "No exact company-number proof; partial signals or short/JS content",
+        "Candidate DNS returned no public destination; not proof the company has no website",
+        "Six website / nine total company slots exhausted; proof/redirect/robots attempts compete for the same cap"
+      ],
+      "attempts": [
+        {
+          "domain": "purecapital.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "purecapital.com",
+          "level": "LOW",
+          "reason": "website_budget_exhausted",
+          "page": "https://purecapital.com/om"
+        },
+        {
+          "domain": "purecapital.com",
+          "level": "LOW",
+          "points": 2,
+          "signals": [
+            "legal_name"
+          ],
+          "origin": "legal_name_slug",
+          "reason": "corroboration"
+        },
+        {
+          "domain": "pure-capital.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "pure-capital.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "website_budget_exhausted"
+        },
+        {
+          "domain": "purecapital.com",
+          "origin": "legal_name_slug",
+          "url": "https://purecapital.com/",
+          "status": 200
+        },
+        {
+          "domain": "pure-capital.com",
+          "origin": "legal_name_slug",
+          "url": "https://pure-capital.com/",
+          "reason": "website_budget_exhausted"
+        }
+      ],
+      "requests": [
+        {
+          "url": "https://purecapital.com/robots.txt",
+          "host": "purecapital.com",
+          "organisation_number": "932112183",
+          "attempt_started": 5.875,
+          "status": 404,
+          "error": null,
+          "section": "website",
+          "content_sha256": "cea75b0a503a77e1c60a39c02d8849c285aed5d983b1e96c6e7c90b735982d32",
+          "runtime_ms": 1203
+        },
+        {
+          "url": "https://purecapital.com/",
+          "host": "purecapital.com",
+          "organisation_number": "932112183",
+          "attempt_started": 8.078000000001339,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "cf0d5f193f4df5a90059fc583b3e7167184e442ff9c699827bbd5b2f160decb4",
+          "runtime_ms": 312
+        },
+        {
+          "url": "https://purecapital.com/contact-us/",
+          "host": "purecapital.com",
+          "organisation_number": "932112183",
+          "attempt_started": 9.389999999999418,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "a29d343c4a8255a019d8cbeb30137c0202bc2fd7e5c5a9ff5b0b8decb7a04f8d",
+          "runtime_ms": 328
+        },
+        {
+          "url": "https://purecapital.com/kontakt",
+          "host": "purecapital.com",
+          "organisation_number": "932112183",
+          "attempt_started": 10.73399999999674,
+          "status": 404,
+          "error": null,
+          "section": "website",
+          "content_sha256": "cea75b0a503a77e1c60a39c02d8849c285aed5d983b1e96c6e7c90b735982d32",
+          "runtime_ms": 297
+        },
+        {
+          "url": "https://purecapital.com/kontakt-oss",
+          "host": "purecapital.com",
+          "organisation_number": "932112183",
+          "attempt_started": 12.046999999998661,
+          "status": 404,
+          "error": null,
+          "section": "website",
+          "content_sha256": "cea75b0a503a77e1c60a39c02d8849c285aed5d983b1e96c6e7c90b735982d32",
+          "runtime_ms": 328
+        },
+        {
+          "url": "https://purecapital.com/om-oss",
+          "host": "purecapital.com",
+          "organisation_number": "932112183",
+          "attempt_started": 13.375,
+          "status": 404,
+          "error": null,
+          "section": "website",
+          "content_sha256": "cea75b0a503a77e1c60a39c02d8849c285aed5d983b1e96c6e7c90b735982d32",
+          "runtime_ms": 297
+        }
+      ]
+    },
+    {
+      "org": "899174682",
+      "state": "ambiguous",
+      "domains": [
+        "paretosec.com",
+        "fantoftutvikling.no",
+        "fantoftutvikling.com",
+        "fantoft-utvikling.no",
+        "fantoft-utvikling.com"
+      ],
+      "codes": [
+        "corroboration",
+        "no_such_domain",
+        "website_budget_exhausted"
+      ],
+      "cause": "ambiguity",
+      "details": [
+        "No exact company-number proof; partial signals or short/JS content",
+        "Candidate DNS returned no public destination; not proof the company has no website",
+        "Six website / nine total company slots exhausted; proof/redirect/robots attempts compete for the same cap"
+      ],
+      "attempts": [
+        {
+          "domain": "paretosec.com",
+          "level": "LOW",
+          "reason": "website_budget_exhausted",
+          "page": "https://paretosec.com/privacydocuments/Global_Privacy_Notice_Pareto_Securities.pdf"
+        },
+        {
+          "domain": "paretosec.com",
+          "level": "MEDIUM",
+          "points": 5,
+          "signals": [
+            "address",
+            "phone",
+            "municipality"
+          ],
+          "origin": "registry_email",
+          "reason": "corroboration"
+        },
+        {
+          "domain": "fantoftutvikling.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "fantoftutvikling.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "fantoft-utvikling.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "fantoft-utvikling.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "paretosec.com",
+          "origin": "registry_email",
+          "url": "https://paretosec.com/",
+          "status": 200
+        }
+      ],
+      "requests": [
+        {
+          "url": "https://paretosec.com/robots.txt",
+          "host": "paretosec.com",
+          "organisation_number": "899174682",
+          "attempt_started": 5.889999999999418,
+          "status": 404,
+          "error": null,
+          "section": "website",
+          "content_sha256": "21c7304fa4eb8990bf32306db8e329e9077e2b9736f0b3ec30c6af7d4c90ac5d",
+          "runtime_ms": 969
+        },
+        {
+          "url": "https://paretosec.com/",
+          "host": "paretosec.com",
+          "organisation_number": "899174682",
+          "attempt_started": 7.85899999999674,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "29177e60dff8b6a4ccbbb4a8bc7452ec2d75752ccbc307898f1b6d2579cb41c6",
+          "runtime_ms": 391
+        },
+        {
+          "url": "https://paretosec.com/contact",
+          "host": "paretosec.com",
+          "organisation_number": "899174682",
+          "attempt_started": 9.264999999999418,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "1e5261907e1641e28ab2f419dff0a1d9a5b1c92b28cf99a1ff16bed283fbd82a",
+          "runtime_ms": 250
+        },
+        {
+          "url": "https://paretosec.com/energy-conference",
+          "host": "paretosec.com",
+          "organisation_number": "899174682",
+          "attempt_started": 10.514999999999418,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "18a1c51a77da955ce1676a15846ce5e42c2654999f8a2bdd3e63028822eda724",
+          "runtime_ms": 235
+        },
+        {
+          "url": "https://paretosec.com/updates/events-and-conferences",
+          "host": "paretosec.com",
+          "organisation_number": "899174682",
+          "attempt_started": 11.75,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "b838e062fb5983b04ef3e3cfdd6ba387dbdf3791c7a0a682a0332e33d06db152",
+          "runtime_ms": 672
+        },
+        {
+          "url": "https://paretosec.com/terms-of-use",
+          "host": "paretosec.com",
+          "organisation_number": "899174682",
+          "attempt_started": 13.421999999998661,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "b5456e57af81bb881c50487e5783e4247f66d066044128443810da8d0a758910",
+          "runtime_ms": 312
+        }
+      ]
+    },
+    {
+      "org": "983739377",
+      "state": "failed",
+      "domains": [
+        "indra.es",
+        "indrasistemas.no",
+        "indrasistemas.com",
+        "indra-sistemas.no",
+        "indra-sistemas.com"
+      ],
+      "codes": [
+        "no_such_domain",
+        "website_source_unavailable",
+        "website_timeout"
+      ],
+      "cause": "timeout",
+      "details": [
+        "Candidate DNS returned no public destination; not proof the company has no website",
+        "Bounded HTTP attempt timed out"
+      ],
+      "attempts": [
+        {
+          "domain": "indra.es",
+          "origin": "registry_website",
+          "level": "LOW",
+          "reason": "website_timeout"
+        },
+        {
+          "domain": "indrasistemas.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "indrasistemas.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "indra-sistemas.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "indra-sistemas.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "indra.es",
+          "origin": "registry_website",
+          "url": "https://www.indra.es/",
+          "reason": "website_timeout"
+        },
+        {
+          "domain": "indra.es",
+          "origin": "registry_website",
+          "url": "https://www.indra.es/",
+          "reason": "website_timeout"
+        },
+        {
+          "domain": "indra.es",
+          "origin": "registry_website",
+          "url": "https://indra.es/",
+          "reason": "website_timeout"
+        }
+      ],
+      "requests": [
+        {
+          "url": "https://www.indra.es/robots.txt",
+          "host": "www.indra.es",
+          "organisation_number": "983739377",
+          "attempt_started": 6.875,
+          "status": null,
+          "error": "ConnectTimeout",
+          "section": "website",
+          "runtime_ms": 8015
+        },
+        {
+          "url": "https://www.indra.es/robots.txt",
+          "host": "www.indra.es",
+          "organisation_number": "983739377",
+          "attempt_started": 15.889999999999418,
+          "status": null,
+          "error": "TimeoutError",
+          "section": "website",
+          "runtime_ms": 8000
+        },
+        {
+          "url": "https://indra.es/robots.txt",
+          "host": "indra.es",
+          "organisation_number": "983739377",
+          "attempt_started": 24.9059999999954,
+          "status": null,
+          "error": "TimeoutError",
+          "section": "website",
+          "runtime_ms": 8016
+        }
+      ]
+    },
+    {
+      "org": "926433873",
+      "state": "failed",
+      "domains": [
+        "wattar.no",
+        "wattar.com"
+      ],
+      "codes": [
+        "dns_unavailable",
+        "no_such_domain",
+        "website_source_unavailable"
+      ],
+      "cause": "DNS",
+      "details": [
+        "DNS resolution incomplete",
+        "Candidate DNS returned no public destination; not proof the company has no website"
+      ],
+      "attempts": [
+        {
+          "domain": "wattar.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "wattar.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "dns_unavailable"
+        }
+      ],
+      "requests": []
+    },
+    {
+      "org": "933581411",
+      "state": "failed",
+      "domains": [
+        "pawbygg.no",
+        "pawbygg.com",
+        "paw-bygg.no",
+        "paw-bygg.com"
+      ],
+      "codes": [
+        "no_such_domain",
+        "short_or_js_shell",
+        "website_budget_exhausted"
+      ],
+      "cause": "budget",
+      "details": [
+        "Candidate DNS returned no public destination; not proof the company has no website",
+        "No exact company-number proof; partial signals or short/JS content",
+        "Six website / nine total company slots exhausted; proof/redirect/robots attempts compete for the same cap"
+      ],
+      "attempts": [
+        {
+          "domain": "pawbygg.no",
+          "level": "LOW",
+          "reason": "website_budget_exhausted",
+          "page": "https://pawbygg.no/personvern"
+        },
+        {
+          "domain": "pawbygg.no",
+          "level": "LOW",
+          "points": 0,
+          "signals": [],
+          "origin": "legal_name_slug",
+          "reason": "short_or_js_shell"
+        },
+        {
+          "domain": "pawbygg.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "paw-bygg.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "paw-bygg.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "pawbygg.no",
+          "origin": "legal_name_slug",
+          "url": "https://pawbygg.no/",
+          "status": 200
+        }
+      ],
+      "requests": [
+        {
+          "url": "https://pawbygg.no/robots.txt",
+          "host": "pawbygg.no",
+          "organisation_number": "933581411",
+          "attempt_started": 7.046999999998661,
+          "status": 404,
+          "error": null,
+          "section": "website",
+          "content_sha256": "83b669e566e408f0eca82a159a559ea1bce7bf4eea5f7b6f24f48bac72628161",
+          "runtime_ms": 875
+        },
+        {
+          "url": "https://pawbygg.no/",
+          "host": "pawbygg.no",
+          "organisation_number": "933581411",
+          "attempt_started": 8.921999999998661,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "e6650452947240047f1ec934d0d20be939c4de7d5081d8af466bda99749ca09a",
+          "runtime_ms": 187
+        },
+        {
+          "url": "https://pawbygg.no/kontakt",
+          "host": "pawbygg.no",
+          "organisation_number": "933581411",
+          "attempt_started": 10.10899999999674,
+          "status": 404,
+          "error": null,
+          "section": "website",
+          "content_sha256": "83b669e566e408f0eca82a159a559ea1bce7bf4eea5f7b6f24f48bac72628161",
+          "runtime_ms": 219
+        },
+        {
+          "url": "https://pawbygg.no/kontakt-oss",
+          "host": "pawbygg.no",
+          "organisation_number": "933581411",
+          "attempt_started": 11.328000000001339,
+          "status": 404,
+          "error": null,
+          "section": "website",
+          "content_sha256": "83b669e566e408f0eca82a159a559ea1bce7bf4eea5f7b6f24f48bac72628161",
+          "runtime_ms": 219
+        },
+        {
+          "url": "https://pawbygg.no/om-oss",
+          "host": "pawbygg.no",
+          "organisation_number": "933581411",
+          "attempt_started": 12.56199999999808,
+          "status": 404,
+          "error": null,
+          "section": "website",
+          "content_sha256": "83b669e566e408f0eca82a159a559ea1bce7bf4eea5f7b6f24f48bac72628161",
+          "runtime_ms": 203
+        },
+        {
+          "url": "https://pawbygg.no/om",
+          "host": "pawbygg.no",
+          "organisation_number": "933581411",
+          "attempt_started": 13.764999999999418,
+          "status": 404,
+          "error": null,
+          "section": "website",
+          "content_sha256": "83b669e566e408f0eca82a159a559ea1bce7bf4eea5f7b6f24f48bac72628161",
+          "runtime_ms": 188
+        }
+      ]
+    },
+    {
+      "org": "912238504",
+      "state": "failed",
+      "domains": [
+        "terminalenbyscene.no",
+        "terminalenbyscene.com",
+        "terminalen-byscene.no",
+        "terminalen-byscene.com"
+      ],
+      "codes": [
+        "corroboration",
+        "no_such_domain",
+        "website_budget_exhausted"
+      ],
+      "cause": "budget",
+      "details": [
+        "No exact company-number proof; partial signals or short/JS content",
+        "Candidate DNS returned no public destination; not proof the company has no website",
+        "Six website / nine total company slots exhausted; proof/redirect/robots attempts compete for the same cap"
+      ],
+      "attempts": [
+        {
+          "domain": "terminalenbyscene.no",
+          "level": "LOW",
+          "reason": "website_budget_exhausted",
+          "page": "https://www.terminalenbyscene.no/om-oss"
+        },
+        {
+          "domain": "terminalenbyscene.no",
+          "level": "LOW",
+          "points": 2,
+          "signals": [
+            "legal_name"
+          ],
+          "origin": "legal_name_slug",
+          "reason": "corroboration"
+        },
+        {
+          "domain": "terminalenbyscene.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "terminalen-byscene.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "terminalen-byscene.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "terminalenbyscene.no",
+          "origin": "legal_name_slug",
+          "url": "https://terminalenbyscene.no/",
+          "status": 200
+        }
+      ],
+      "requests": [
+        {
+          "url": "https://terminalenbyscene.no/robots.txt",
+          "host": "terminalenbyscene.no",
+          "organisation_number": "912238504",
+          "attempt_started": 7.078000000001339,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "4ffa6eb60ce7f7acd0267b8eecc226b4cbcedf67d4dad9e54d296420ec36b8b1",
+          "runtime_ms": 578
+        },
+        {
+          "url": "https://terminalenbyscene.no/",
+          "host": "terminalenbyscene.no",
+          "organisation_number": "912238504",
+          "attempt_started": 8.655999999995402,
+          "status": 301,
+          "error": null,
+          "section": "website",
+          "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "runtime_ms": 266
+        },
+        {
+          "url": "https://www.terminalenbyscene.no/robots.txt",
+          "host": "www.terminalenbyscene.no",
+          "organisation_number": "912238504",
+          "attempt_started": 9.921999999998661,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "4ffa6eb60ce7f7acd0267b8eecc226b4cbcedf67d4dad9e54d296420ec36b8b1",
+          "runtime_ms": 578
+        },
+        {
+          "url": "https://www.terminalenbyscene.no/",
+          "host": "www.terminalenbyscene.no",
+          "organisation_number": "912238504",
+          "attempt_started": 11.5,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "2f964389ecdd9f22b1aaf822765f219c5465b84326cf0eab09ca536e3529eab4",
+          "runtime_ms": 859
+        },
+        {
+          "url": "https://www.terminalenbyscene.no/kontakt",
+          "host": "www.terminalenbyscene.no",
+          "organisation_number": "912238504",
+          "attempt_started": 13.35899999999674,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "b05b87c61950309f645e9fc85023704f239c60e54f9f1c25738039ea3f3707b5",
+          "runtime_ms": 781
+        },
+        {
+          "url": "https://www.terminalenbyscene.no/kontakt-oss",
+          "host": "www.terminalenbyscene.no",
+          "organisation_number": "912238504",
+          "attempt_started": 15.139999999999418,
+          "status": 404,
+          "error": null,
+          "section": "website",
+          "content_sha256": "261bf962be5d6496f78effb1df8970bcf74a3f276a9bea0edb7d45d0b5167f98",
+          "runtime_ms": 547
+        }
+      ]
+    },
+    {
+      "org": "815566602",
+      "state": "failed",
+      "domains": [
+        "mclholding.no",
+        "mclholding.com",
+        "mcl-holding.no",
+        "mcl-holding.com"
+      ],
+      "codes": [
+        "dns_unavailable",
+        "no_such_domain",
+        "url_refused",
+        "website_connect_error",
+        "website_source_unavailable"
+      ],
+      "cause": "DNS",
+      "details": [
+        "DNS resolution incomplete",
+        "Candidate DNS returned no public destination; not proof the company has no website",
+        "Non-HTML response or redirect outside permitted company domains; correct refusal",
+        "TLS/connect failure; saved logs cannot distinguish certificate vs remote transport cause"
+      ],
+      "attempts": [
+        {
+          "domain": "mclholding.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "mclholding.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "url_refused"
+        },
+        {
+          "domain": "mcl-holding.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "mcl-holding.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "dns_unavailable"
+        },
+        {
+          "domain": "mclholding.com",
+          "origin": "legal_name_slug",
+          "url": "https://mclholding.com/",
+          "reason": "website_connect_error"
+        },
+        {
+          "domain": "mclholding.com",
+          "origin": "legal_name_slug",
+          "url": "https://www.mclholding.com/",
+          "reason": "website_connect_error"
+        },
+        {
+          "domain": "mclholding.com",
+          "origin": "legal_name_slug",
+          "url": "http://mclholding.com/",
+          "reason": "url_refused"
+        }
+      ],
+      "requests": [
+        {
+          "url": "https://mclholding.com/robots.txt",
+          "host": "mclholding.com",
+          "organisation_number": "815566602",
+          "attempt_started": 7.671999999998661,
+          "status": null,
+          "error": "ConnectError",
+          "section": "website",
+          "runtime_ms": 921
+        },
+        {
+          "url": "https://www.mclholding.com/robots.txt",
+          "host": "www.mclholding.com",
+          "organisation_number": "815566602",
+          "attempt_started": 9.593000000000757,
+          "status": null,
+          "error": "ConnectError",
+          "section": "website",
+          "runtime_ms": 829
+        },
+        {
+          "url": "http://mclholding.com/robots.txt",
+          "host": "mclholding.com",
+          "organisation_number": "815566602",
+          "attempt_started": 11.43699999999808,
+          "status": 301,
+          "error": null,
+          "section": "website",
+          "content_sha256": "87a9323ac85ce28867d5d7ce590c8f29b8d1a999961fca71bb33adef48683691",
+          "runtime_ms": 406
+        }
+      ]
+    },
+    {
+      "org": "925622605",
+      "state": "failed",
+      "domains": [
+        "perho.no",
+        "perho.com"
+      ],
+      "codes": [
+        "short_or_js_shell",
+        "website_budget_exhausted"
+      ],
+      "cause": "budget",
+      "details": [
+        "No exact company-number proof; partial signals or short/JS content",
+        "Six website / nine total company slots exhausted; proof/redirect/robots attempts compete for the same cap"
+      ],
+      "attempts": [
+        {
+          "domain": "perho.no",
+          "level": "LOW",
+          "reason": "website_budget_exhausted",
+          "page": "https://perho.no/personvern"
+        },
+        {
+          "domain": "perho.no",
+          "level": "LOW",
+          "points": 0,
+          "signals": [],
+          "origin": "legal_name_slug",
+          "reason": "short_or_js_shell"
+        },
+        {
+          "domain": "perho.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "website_budget_exhausted"
+        },
+        {
+          "domain": "perho.no",
+          "origin": "legal_name_slug",
+          "url": "https://perho.no/",
+          "status": 200
+        },
+        {
+          "domain": "perho.com",
+          "origin": "legal_name_slug",
+          "url": "https://perho.com/",
+          "reason": "website_budget_exhausted"
+        }
+      ],
+      "requests": [
+        {
+          "url": "https://perho.no/robots.txt",
+          "host": "perho.no",
+          "organisation_number": "925622605",
+          "attempt_started": 7.203000000001339,
+          "status": 404,
+          "error": null,
+          "section": "website",
+          "content_sha256": "9448f8a1159c9b14e3e1b9d8eab1a6ddf88d26e1f888a34cef430c756e4e6e1e",
+          "runtime_ms": 672
+        },
+        {
+          "url": "https://perho.no/",
+          "host": "perho.no",
+          "organisation_number": "925622605",
+          "attempt_started": 8.889999999999418,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "0c7a9169f0c04b7d4152c78ec65ca55b58e356e982a994b63219c38e9ab62d63",
+          "runtime_ms": 203
+        },
+        {
+          "url": "https://perho.no/kontakt",
+          "host": "perho.no",
+          "organisation_number": "925622605",
+          "attempt_started": 10.093000000000757,
+          "status": 404,
+          "error": null,
+          "section": "website",
+          "content_sha256": "9448f8a1159c9b14e3e1b9d8eab1a6ddf88d26e1f888a34cef430c756e4e6e1e",
+          "runtime_ms": 204
+        },
+        {
+          "url": "https://perho.no/kontakt-oss",
+          "host": "perho.no",
+          "organisation_number": "925622605",
+          "attempt_started": 11.296999999998661,
+          "status": 404,
+          "error": null,
+          "section": "website",
+          "content_sha256": "9448f8a1159c9b14e3e1b9d8eab1a6ddf88d26e1f888a34cef430c756e4e6e1e",
+          "runtime_ms": 187
+        },
+        {
+          "url": "https://perho.no/om-oss",
+          "host": "perho.no",
+          "organisation_number": "925622605",
+          "attempt_started": 12.48399999999674,
+          "status": 404,
+          "error": null,
+          "section": "website",
+          "content_sha256": "9448f8a1159c9b14e3e1b9d8eab1a6ddf88d26e1f888a34cef430c756e4e6e1e",
+          "runtime_ms": 172
+        },
+        {
+          "url": "https://perho.no/om",
+          "host": "perho.no",
+          "organisation_number": "925622605",
+          "attempt_started": 13.655999999995402,
+          "status": 404,
+          "error": null,
+          "section": "website",
+          "content_sha256": "9448f8a1159c9b14e3e1b9d8eab1a6ddf88d26e1f888a34cef430c756e4e6e1e",
+          "runtime_ms": 219
+        }
+      ]
+    },
+    {
+      "org": "998309530",
+      "state": "failed",
+      "domains": [
+        "haarfokus.no",
+        "haarfokus.com",
+        "harfokus.no",
+        "harfokus.com",
+        "xn--hrfokus-exa.no",
+        "xn--hrfokus-exa.com"
+      ],
+      "codes": [
+        "corroboration",
+        "no_such_domain",
+        "website_budget_exhausted"
+      ],
+      "cause": "budget",
+      "details": [
+        "No exact company-number proof; partial signals or short/JS content",
+        "Candidate DNS returned no public destination; not proof the company has no website",
+        "Six website / nine total company slots exhausted; proof/redirect/robots attempts compete for the same cap"
+      ],
+      "attempts": [
+        {
+          "domain": "haarfokus.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "haarfokus.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "harfokus.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "harfokus.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "xn--hrfokus-exa.no",
+          "level": "LOW",
+          "reason": "website_budget_exhausted",
+          "page": "https://xn--hrfokus-exa.no/personvern"
+        },
+        {
+          "domain": "xn--hrfokus-exa.no",
+          "level": "LOW",
+          "points": 2,
+          "signals": [
+            "legal_name"
+          ],
+          "origin": "legal_name_slug",
+          "reason": "corroboration"
+        },
+        {
+          "domain": "xn--hrfokus-exa.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "xn--hrfokus-exa.no",
+          "origin": "legal_name_slug",
+          "url": "https://xn--hrfokus-exa.no/",
+          "status": 200
+        }
+      ],
+      "requests": [
+        {
+          "url": "https://xn--hrfokus-exa.no/robots.txt",
+          "host": "xn--hrfokus-exa.no",
+          "organisation_number": "998309530",
+          "attempt_started": 7.468000000000757,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "a70fb93bfe8ea1ac09137f0dd94b179a9fc168f0f88eabe346ad7f904acd4753",
+          "runtime_ms": 438
+        },
+        {
+          "url": "https://xn--hrfokus-exa.no/",
+          "host": "xn--hrfokus-exa.no",
+          "organisation_number": "998309530",
+          "attempt_started": 8.905999999995402,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "8589771265553d99982750c1f9f6a891b582f8016870c7126d48c89bb9aea751",
+          "runtime_ms": 125
+        },
+        {
+          "url": "https://xn--hrfokus-exa.no/kontakt",
+          "host": "xn--hrfokus-exa.no",
+          "organisation_number": "998309530",
+          "attempt_started": 10.046999999998661,
+          "status": 307,
+          "error": null,
+          "section": "website",
+          "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "runtime_ms": 78
+        },
+        {
+          "url": "https://xn--hrfokus-exa.no/kontakt/",
+          "host": "xn--hrfokus-exa.no",
+          "organisation_number": "998309530",
+          "attempt_started": 11.125,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "0bd78f86ed99099a9b06cb75f5b6cd4bf7362d05bd5d534e473401f9916eea8a",
+          "runtime_ms": 156
+        },
+        {
+          "url": "https://xn--hrfokus-exa.no/om-oss",
+          "host": "xn--hrfokus-exa.no",
+          "organisation_number": "998309530",
+          "attempt_started": 12.280999999995402,
+          "status": 307,
+          "error": null,
+          "section": "website",
+          "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "runtime_ms": 94
+        },
+        {
+          "url": "https://xn--hrfokus-exa.no/om-oss/",
+          "host": "xn--hrfokus-exa.no",
+          "organisation_number": "998309530",
+          "attempt_started": 13.375,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "d8a009015343bfa9676be4f929b0b1d017cb4e02a2d51e3e9b4980a829f73c8b",
+          "runtime_ms": 93
+        }
+      ]
+    },
+    {
+      "org": "912702847",
+      "state": "failed",
+      "domains": [
+        "gauldal.no",
+        "storendrift.no",
+        "storendrift.com",
+        "storen-drift.no",
+        "storen-drift.com",
+        "stoerendrift.no",
+        "stoerendrift.com",
+        "stoeren-drift.no"
+      ],
+      "codes": [
+        "content_type",
+        "no_such_domain",
+        "website_connect_error",
+        "website_source_unavailable"
+      ],
+      "cause": "transport/content refusal",
+      "details": [
+        "Non-HTML response or redirect outside permitted company domains; correct refusal",
+        "Candidate DNS returned no public destination; not proof the company has no website",
+        "TLS/connect failure; saved logs cannot distinguish certificate vs remote transport cause"
+      ],
+      "attempts": [
+        {
+          "domain": "gauldal.no",
+          "origin": "subunit_registry_email",
+          "level": "LOW",
+          "reason": "website_connect_error"
+        },
+        {
+          "domain": "storendrift.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "storendrift.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "storen-drift.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "storen-drift.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "stoerendrift.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "stoerendrift.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "stoeren-drift.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "gauldal.no",
+          "origin": "subunit_registry_email",
+          "url": "https://gauldal.no/",
+          "reason": "website_connect_error"
+        },
+        {
+          "domain": "gauldal.no",
+          "origin": "subunit_registry_email",
+          "url": "https://www.gauldal.no/",
+          "reason": "website_connect_error"
+        },
+        {
+          "domain": "gauldal.no",
+          "origin": "subunit_registry_email",
+          "url": "http://gauldal.no/",
+          "reason": "content_type"
+        },
+        {
+          "domain": "gauldal.no",
+          "origin": "subunit_registry_email",
+          "url": "http://www.gauldal.no/",
+          "reason": "content_type"
+        }
+      ],
+      "requests": [
+        {
+          "url": "https://gauldal.no/robots.txt",
+          "host": "gauldal.no",
+          "organisation_number": "912702847",
+          "attempt_started": 7.280999999995402,
+          "status": null,
+          "error": "ConnectError",
+          "section": "website",
+          "runtime_ms": 891
+        },
+        {
+          "url": "https://www.gauldal.no/robots.txt",
+          "host": "www.gauldal.no",
+          "organisation_number": "912702847",
+          "attempt_started": 9.171999999998661,
+          "status": null,
+          "error": "ConnectError",
+          "section": "website",
+          "runtime_ms": 906
+        },
+        {
+          "url": "http://gauldal.no/robots.txt",
+          "host": "gauldal.no",
+          "organisation_number": "912702847",
+          "attempt_started": 11.078000000001339,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "runtime_ms": 812
+        },
+        {
+          "url": "http://www.gauldal.no/robots.txt",
+          "host": "www.gauldal.no",
+          "organisation_number": "912702847",
+          "attempt_started": 12.889999999999418,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "runtime_ms": 860
+        }
+      ]
+    },
+    {
+      "org": "915412262",
+      "state": "ambiguous",
+      "domains": [
+        "helgelandbbl.no",
+        "moheiaborettslag.no",
+        "moheiaborettslag.com",
+        "moheia-borettslag.no",
+        "moheia-borettslag.com"
+      ],
+      "codes": [
+        "corroboration",
+        "no_such_domain",
+        "website_budget_exhausted"
+      ],
+      "cause": "ambiguity",
+      "details": [
+        "No exact company-number proof; partial signals or short/JS content",
+        "Candidate DNS returned no public destination; not proof the company has no website",
+        "Six website / nine total company slots exhausted; proof/redirect/robots attempts compete for the same cap"
+      ],
+      "attempts": [
+        {
+          "domain": "helgelandbbl.no",
+          "level": "LOW",
+          "reason": "website_budget_exhausted",
+          "page": "https://helgelandbbl.no/personvernerklaering-eu/"
+        },
+        {
+          "domain": "helgelandbbl.no",
+          "level": "MEDIUM",
+          "points": 5,
+          "signals": [
+            "address",
+            "registry_website",
+            "municipality"
+          ],
+          "origin": "registry_website",
+          "reason": "corroboration"
+        },
+        {
+          "domain": "moheiaborettslag.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "moheiaborettslag.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "moheia-borettslag.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "moheia-borettslag.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "helgelandbbl.no",
+          "origin": "registry_website",
+          "url": "https://www.helgelandbbl.no/",
+          "status": 200
+        }
+      ],
+      "requests": [
+        {
+          "url": "https://www.helgelandbbl.no/robots.txt",
+          "host": "www.helgelandbbl.no",
+          "organisation_number": "915412262",
+          "attempt_started": 7.343000000000757,
+          "status": 301,
+          "error": null,
+          "section": "website",
+          "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "runtime_ms": 3985
+        },
+        {
+          "url": "https://helgelandbbl.no/robots.txt",
+          "host": "helgelandbbl.no",
+          "organisation_number": "915412262",
+          "attempt_started": 12.328000000001339,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "b828633c2bbfa85829d688efe811894537eb006c97a328e291e44f1950906171",
+          "runtime_ms": 1047
+        },
+        {
+          "url": "https://www.helgelandbbl.no/",
+          "host": "www.helgelandbbl.no",
+          "organisation_number": "915412262",
+          "attempt_started": 14.389999999999418,
+          "status": 301,
+          "error": null,
+          "section": "website",
+          "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "runtime_ms": 500
+        },
+        {
+          "url": "https://helgelandbbl.no/",
+          "host": "helgelandbbl.no",
+          "organisation_number": "915412262",
+          "attempt_started": 15.889999999999418,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "5fbfb5efe71bc1a6d5dc617d005c8357f1cfac8eb8dbd16d33901c3aeadfb059",
+          "runtime_ms": 375
+        },
+        {
+          "url": "https://helgelandbbl.no/kontakt/",
+          "host": "helgelandbbl.no",
+          "organisation_number": "915412262",
+          "attempt_started": 17.264999999999418,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "a9c453dc95fe46a73457681d03bdd78b428771724dc7514b95988bcad607b795",
+          "runtime_ms": 391
+        },
+        {
+          "url": "https://helgelandbbl.no/kort-om-oss/",
+          "host": "helgelandbbl.no",
+          "organisation_number": "915412262",
+          "attempt_started": 18.6559999999954,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "e587cdfcc94ad2fbc5dbe74361e8c9d832f906d238d5fbdd592675e25e4e5510",
+          "runtime_ms": 375
+        }
+      ]
+    },
+    {
+      "org": "934616081",
+      "state": "failed",
+      "domains": [
+        "naprapatgruppen.no",
+        "dicksonnaprapati.no",
+        "dicksonnaprapati.com",
+        "dickson-naprapati.no",
+        "dickson-naprapati.com"
+      ],
+      "codes": [
+        "block_page",
+        "content_type",
+        "corroboration",
+        "no_such_domain",
+        "website_budget_exhausted",
+        "website_timeout"
+      ],
+      "cause": "budget",
+      "details": [
+        "Policy/access refused; no bypass permitted",
+        "Non-HTML response or redirect outside permitted company domains; correct refusal",
+        "No exact company-number proof; partial signals or short/JS content",
+        "Candidate DNS returned no public destination; not proof the company has no website",
+        "Six website / nine total company slots exhausted; proof/redirect/robots attempts compete for the same cap",
+        "Bounded HTTP attempt timed out"
+      ],
+      "attempts": [
+        {
+          "domain": "naprapatgruppen.no",
+          "origin": "registry_email",
+          "reason": "block_page",
+          "page": "https://www.naprapatgruppen.no/kontakt-oss"
+        },
+        {
+          "domain": "naprapatgruppen.no",
+          "level": "LOW",
+          "reason": "content_type",
+          "page": "https://www.naprapatgruppen.no/_files/ugd/bfc5ed_93cbb36f0c8c4b00a84419be3d66313d.pdf"
+        },
+        {
+          "domain": "naprapatgruppen.no",
+          "level": "LOW",
+          "reason": "website_budget_exhausted",
+          "page": "https://www.naprapatgruppen.no/om-oss"
+        },
+        {
+          "domain": "naprapatgruppen.no",
+          "level": "LOW",
+          "points": 1,
+          "signals": [
+            "municipality"
+          ],
+          "origin": "registry_email",
+          "reason": "corroboration"
+        },
+        {
+          "domain": "dicksonnaprapati.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "dicksonnaprapati.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "dickson-naprapati.no",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "dickson-naprapati.com",
+          "origin": "legal_name_slug",
+          "level": "LOW",
+          "reason": "no_such_domain"
+        },
+        {
+          "domain": "naprapatgruppen.no",
+          "origin": "registry_email",
+          "url": "https://naprapatgruppen.no/",
+          "reason": "website_timeout"
+        },
+        {
+          "domain": "naprapatgruppen.no",
+          "origin": "registry_email",
+          "url": "https://www.naprapatgruppen.no/",
+          "status": 200
+        }
+      ],
+      "requests": [
+        {
+          "url": "https://naprapatgruppen.no/robots.txt",
+          "host": "naprapatgruppen.no",
+          "organisation_number": "934616081",
+          "attempt_started": 7.436999999998079,
+          "status": null,
+          "error": "TimeoutError",
+          "section": "website",
+          "runtime_ms": 8000
+        },
+        {
+          "url": "https://www.naprapatgruppen.no/robots.txt",
+          "host": "www.naprapatgruppen.no",
+          "organisation_number": "934616081",
+          "attempt_started": 16.43699999999808,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "d7cf0b0a8059189b61dcac83eed8e36c6b73d6623a897cf9ed54d5cf2d32cfda",
+          "runtime_ms": 297
+        },
+        {
+          "url": "https://www.naprapatgruppen.no/",
+          "host": "www.naprapatgruppen.no",
+          "organisation_number": "934616081",
+          "attempt_started": 17.73399999999674,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "0e17f00d03b1eb29c6e80e91d59fd7e8c7507afd7aa128b25a3c76e02b5d4cd1",
+          "runtime_ms": 94
+        },
+        {
+          "url": "https://www.naprapatgruppen.no/kontakt-oss",
+          "host": "www.naprapatgruppen.no",
+          "organisation_number": "934616081",
+          "attempt_started": 18.82800000000134,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "135c33cb5442f36360879c1c365eb80aa9f1c604026acd4a0a9f7fc5ce87a6c8",
+          "runtime_ms": 78
+        },
+        {
+          "url": "https://www.naprapatgruppen.no/_files/ugd/bfc5ed_93cbb36f0c8c4b00a84419be3d66313d.pdf",
+          "host": "www.naprapatgruppen.no",
+          "organisation_number": "934616081",
+          "attempt_started": 19.9059999999954,
+          "status": 200,
+          "error": null,
+          "section": "website",
+          "content_sha256": "0f23974fcbe6333ca808a004348557fea5f6fc47639615c99e6607fdad3ff229",
+          "runtime_ms": 62
+        },
+        {
+          "url": "https://www.naprapatgruppen.no/kontakt",
+          "host": "www.naprapatgruppen.no",
+          "organisation_number": "934616081",
+          "attempt_started": 20.98399999999674,
+          "status": 404,
+          "error": null,
+          "section": "website",
+          "content_sha256": "fb9ea055b58a6d53894232b1b2ab9f05c26cc06b329d65b12d26c4038633dba0",
+          "runtime_ms": 344
+        }
+      ]
+    }
+  ]
+}

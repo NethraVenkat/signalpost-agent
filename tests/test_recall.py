@@ -33,9 +33,15 @@ def test_dns_no_http_and_cached_failure(tmp_path, failure, code):
             for org in [OUR, '993578843']:
                 with pytest.raises(SourceFailure) as exc: await http.candidate(Candidate('https://missing.no/','missing.no','legal_name_slug'),org)
                 assert exc.value.code==code
-            assert http.dns_lookups==1
+            # Each hostname is resolved once, shared across both companies.
+            # Stage 4 explicitly checks the www alternative after DNS failure;
+            # a private destination remains an immediate, non-fallback veto.
+            expected = 1 if failure == 'private' else 2
+            assert http.dns_lookups == expected
+            assert dns == ['missing.no'] if expected == 1 else dns == ['missing.no', 'www.missing.no']
     asyncio.run(run())
-    assert dns==['missing.no'] and not calls
+    assert dns == (['missing.no'] if failure == 'private' else ['missing.no', 'www.missing.no'])
+    assert not calls
 
 
 def test_dns_cap_eight_and_ssrf_recheck(tmp_path):

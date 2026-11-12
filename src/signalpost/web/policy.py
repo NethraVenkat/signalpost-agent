@@ -12,6 +12,7 @@ extract = tldextract.TLDExtract(suffix_list_urls=(), cache_dir=None, include_psl
 DNS_ORG = ContextVar('signalpost_dns_org', default='__shared__')
 SOCIAL = {"facebook.com", "instagram.com", "linkedin.com", "x.com", "twitter.com", "youtube.com", "tiktok.com"}
 DIRECTORIES = {"proff.no", "proff.com", "proff.dk", "proff.se", "gulesider.no", "1881.no", "purehelp.no", "finn.no", "fb.me", "fb.com", "youtu.be", "lnkd.in", "t.co", "threads.net"}
+MARKETPLACES = {'amazon.com', 'amazon.no', 'ebay.com', 'etsy.com', 'alibaba.com', 'aliexpress.com', 'myshopify.com', 'shop.app'}
 FREE_MAIL = {"gmail.com", "googlemail.com", "hotmail.com", "hotmail.no", "outlook.com", "live.com", "live.no", "yahoo.com", "yahoo.no", "online.no", "icloud.com", "me.com", "protonmail.com", "proton.me", "aol.com", "msn.com", "mail.com"}
 FREE_MAIL |= {'outlook.no', 'hotmail.co.uk', 'outlook.co.uk', 'yahoo.co.uk',
               'yahoo.fr', 'ymail.com', 'mac.com', 'getmail.no', 'start.no',
@@ -45,7 +46,7 @@ def normalize_url(value):
 
 def validate_url(url, domains):
     normalized = normalize_url(url)
-    if normalized is None or domain(normalized) not in domains or domain(normalized) in SOCIAL | DIRECTORIES:
+    if normalized is None or domain(normalized) not in domains or domain(normalized) in SOCIAL | DIRECTORIES | MARKETPLACES:
         raise SourceFailure("url_refused", "URL lies outside this company's permitted candidate domains")
     return normalized
 

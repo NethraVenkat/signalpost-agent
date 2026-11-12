@@ -159,7 +159,7 @@ def proof_page_targets(page, base_url, limit=FOLLOWUP_PAGES):
     targets = []
     for target in followup_links(page) + fixed:
         target = normalize_url(target)
-        if target and target not in targets:
+        if target and not re.search(r'\.(?:pdf|docx?|xlsx?|zip|jpe?g|png)(?:$|/)', urlsplit(target).path, re.I) and target not in targets:
             targets.append(target)
     return targets[:limit]
 
@@ -316,34 +316,6 @@ async def fetch(org, envelope, bulk, http, previous=None):
                         break
             elif proof.level in {"MEDIUM", 'REGISTRY_DECLARED'}:
                 ambiguous = True
-            if not successes and http.counts.get(org, 0) + 2 <= http.discovery_cap(org):
-                legal_nm = context.get('name')
-                brand_nm = context.get('brand')
-                metrics = getattr(http, 'discovery_metrics', None)
-                if metrics is None:
-                    http.discovery_metrics = {'sitemaps_found': 0, 'sitemap_candidates': 0, 'rss_feeds_found': 0, 'rss_candidates': 0}
-                    metrics = http.discovery_metrics
-                try:
-                    sm_resp = await http.get(f'https://{candidate.domain}/sitemap.xml', org, candidate.domain, xml=True)
-                    if sm_resp.status == 200:
-                        metrics['sitemaps_found'] += 1
-                        for u, d in extract_sitemap_domains(sm_resp.body, legal_nm, brand_nm):
-                            if d not in checked and d not in {c.domain for c in candidates}:
-                                metrics['sitemap_candidates'] += 1
-                                candidates.append(Candidate(u, d, 'sitemap'))
-                except SourceFailure: pass
-                for feed_path in ('/feed.xml', '/rss.xml', '/feed/', '/blog/feed.xml'):
-                    if successes or http.counts.get(org, 0) >= http.discovery_cap(org): break
-                    try:
-                        rss_resp = await http.get(f'https://{candidate.domain}{feed_path}', org, candidate.domain, xml=True)
-                        if rss_resp.status == 200:
-                            metrics['rss_feeds_found'] += 1
-                            for u, d in extract_rss_domains(rss_resp.body, legal_nm, brand_nm):
-                                if d not in checked and d not in {c.domain for c in candidates}:
-                                    metrics['rss_candidates'] += 1
-                                    candidates.append(Candidate(u, d, 'rss'))
-                            break
-                    except SourceFailure: pass
         except SourceFailure as exc:
             if exc.code in {'website_timeout','website_connect_error','website_http_5xx','dns_timeout','dns_error','dns_unavailable'}:
                 source_unavailable = True

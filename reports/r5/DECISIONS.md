@@ -1,5 +1,13 @@
 # R5 decisions
 
+## Stage 4.0 and 4.1
+
+- Diagnose first using Stage 3 saved envelopes/request logs only: 24 failed, 5 ambiguous, 1 blocked. Primary causes: 19 budget, 5 ambiguity, 2 timeout, 2 DNS, 1 access block, 1 transport/content refusal. Full company/domain/code lists are in `stage4/diagnosis.md` and machine diagnostics in `diagnosis.json`.
+- Fix original-host DNS precheck preventing www/non-www fallback, retaining eight DNS nominations and unchanged HTTP/time caps. HTTPS is tried first even for HTTP nominations; plaintext still requires real TLS/connect failure. Private-address failures do not authorize fallback.
+- Remove existing sitemap/RSS candidate discovery, and filter known non-HTML proof targets before requests. These are budget/policy fixes before recall expansion; no caps are raised. Exhausted proof work remains failed/ambiguous rather than absence.
+- Keep exact-number VERIFIED, strictly corroborated registry-origin HIGH and default-off REGISTRY_DECLARED tiers. Group sites without the exact number are vetoed; parked domains, marketplaces and directories cannot become company sources. No AS masthead, unique-name or loose social rule is added.
+- 4.1 verification: 671 tests passed. Frozen run retains five websites/two social companies, with no new URLs. Two-host DNS checking spends the unchanged eight-check allowance sooner: website failures are 41 rather than Stage 3's 24 (not_available 47 rather than 65). These are explicit incomplete checks, not a claimed coverage gain. HTTP attempts 870, provider cost $0, unsupported synthesis/briefing values zero. The old DNS test now asserts each hostname is cached exactly once across companies, preserves zero-HTTP and private-address veto assertions, and does not loosen timeout or proof checks.
+
 ## Stage 1
 
 - The 32 baseline failed activity sections were caused by incomplete website checks (30) and website budget exhaustion (2). Both registry update calls returned 200. These failures are retained: the combined activity section must not imply that all enabled sources were checked. Separate `run.refresh.registry_activity` metadata records registry state, 36-month bounds and unavailable announcement types.
