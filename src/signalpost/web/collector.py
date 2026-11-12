@@ -12,7 +12,7 @@ from ..sources.extract import Section, Source, add, missing, response_source
 from .candidates import generate, context_from_bulk, legal_name, Candidate, GENERIC
 from .html import Page
 from .policy import domain, normalize_url, SOCIAL, DIRECTORIES, FREE_MAIL
-from .proof import score, phone, extract_entity_cards, find_containing_card
+from .proof import score, phone, extract_entity_cards, find_containing_card, registry_contacts
 from .social import discover, profile_url
 
 
@@ -431,6 +431,12 @@ def candidate_proof(page,org,context,candidate,leaders):
     if candidate.subunit_orgnr and proof.level not in {'VERIFIED','BLOCKED'}:
         unit=score(page,candidate.subunit_orgnr,context,candidate.origin,leaders)
         if unit.level=='VERIFIED':return unit
+    matches = registry_contacts(page, context)
+    if proof.level in {'HIGH','REGISTRY_DECLARED'} and not matches:
+        from .proof import Proof
+        return Proof('MEDIUM', signals=proof.signals, points=proof.points, reason='registry_contact_missing')
+    # A shared registry phone/domain is corroboration, never a replacement for
+    # exact-entity proof or an override of parked/foreign/group/source vetoes.
     return proof
 
 
@@ -448,7 +454,26 @@ def publish_result(org,envelope,http,section,choices,attempts,context):
              "other_orgnrs": proof.other_orgnrs}
     if candidate.subunit_orgnr and matched==candidate.subunit_orgnr:
         value['matched_via_subunit']=matched
+    contact_matches = registry_contacts(page, context) if not proof.other_orgnrs else {}
+    contact_refs = {}
+    for kind in contact_matches:
+        field = 'identity.registered_phone' if kind == 'phone' else 'identity.registered_email'
+        refs = {ref for c in envelope.claims if c.field == field and c.availability == 'available' and not c.carried_forward for ref in c.evidence_ids}
+        if refs: contact_refs[kind] = refs
+    if contact_refs:
+        value['registry_contact_matches'] = {kind:contact_matches[kind][0] for kind in contact_refs}
     publish(section, response, org, "official_website", value, "identity-proof:" + matched, span)
+    web_claim = section.claims[-1]
+    for kind, refs in contact_refs.items():
+        contact_value, contact_span = contact_matches[kind]
+        if not contact_span or len(contact_span) > 300 or contact_span not in page.raw: continue
+        temporary = Section()
+        add(temporary, response_source(response), org, 'website', 'registry_contact.'+kind, contact_value,
+            'registry-contact:'+kind, span=contact_span, source_class='company_owned', method='signalpost.registry_contact.v1')
+        section.evidence.extend(temporary.evidence)
+        section.evidence.extend(e for e in envelope.evidence if e.id in refs)
+        web_claim.evidence_ids.extend(sorted(refs))
+        web_claim.evidence_ids.extend(e.id for e in temporary.evidence)
     if candidate.origin in {'registry_email', 'subunit_registry_email'}:
         section.claims[-1].reasons['discovery_method'] = 'registry email domain'
     if value.get('matched_via_subunit'):

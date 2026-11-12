@@ -1,5 +1,12 @@
 # R5 decisions
 
+## Stage 4.5
+
+- Exact Norwegian registry phone normalization or exact full corporate email-domain agreement can corroborate a website. No fuzzy phone match, parent-domain/subdomain substring, free-mail-domain match or name similarity substitutes for it. HIGH/default-off registry-declared signal tiers now also require this contact agreement; exact organisation-number proof remains the stronger tier.
+- Contact agreement alone cannot establish exact-entity ownership. Parked, foreign-number, directory/marketplace and group-without-exact-number vetoes win. Shared management-provider phones/domains do not bypass the firewall. This deliberately conservative interpretation preserves the earlier exact-entity rule.
+- Published agreement metadata links both the current registry field evidence and a bounded verbatim page span with extractor version `signalpost.registry_contact.v1`. Group pages with multiple entity numbers do not receive contact-agreement metadata. No extra request or paid provider.
+- 4.5: 719 tests passed; frozen run retains five websites/two social companies and 7,320 facts, with no new URLs. Exact agreement records are saved in `step4_5/contact_agreements.json`. 866 HTTP attempts, $0 cost, zero unsupported values. Contact agreement was not used as a recall shortcut without entity proof.
+
 ## Stage 4.4
 
 - Prioritize linked proof pages, then /kontakt, /om-oss and /personvern before alternate spellings; retain original request ceilings and robots checks. No sitemap news or browser rendering is added.

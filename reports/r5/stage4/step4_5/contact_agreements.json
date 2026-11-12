@@ -1,0 +1,21 @@
+[
+  {
+    "org": "991853995",
+    "matches": {
+      "email_domain": "bien.no"
+    }
+  },
+  {
+    "org": "964398003",
+    "matches": {
+      "email_domain": "folksom.no"
+    }
+  },
+  {
+    "org": "987769386",
+    "matches": {
+      "email_domain": "irev.no",
+      "phone": "+4761222568"
+    }
+  }
+]

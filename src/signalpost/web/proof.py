@@ -50,6 +50,35 @@ def phone(value):
     return "+47" + number if len(number) == 8 else None
 
 
+def registry_contacts(page, context):
+    """Exact phone or exact corporate email domain; no fuzzy/name inference."""
+    from .policy import FREE_MAIL, DIRECTORIES, SOCIAL, domain, normalize_url
+    expected_phone = phone(context.get('phone'))
+    email = str(context.get('email') or '').strip()
+    expected_domain = email.rsplit('@', 1)[-1].lower() if re.fullmatch(r'[^\s@]+@[^\s@]+', email) else None
+    if (expected_domain and (not normalize_url('https://'+expected_domain)
+            or domain(expected_domain) in FREE_MAIL | DIRECTORIES | SOCIAL)):
+        expected_domain = None
+    result = {}
+    for link in page.links:
+        if expected_phone and link.href.startswith('tel:') and phone(link.href[4:]) == expected_phone:
+            result.setdefault('phone', (expected_phone, link.span))
+        if expected_domain and link.href.startswith('mailto:'):
+            actual = link.href[7:].split('?',1)[0].rsplit('@',1)[-1].lower()
+            if actual == expected_domain: result.setdefault('email_domain', (expected_domain, link.span))
+    if expected_phone and 'phone' not in result:
+        for match in re.finditer(r'(?:telefon|tlf|phone)\s*:?\s*((?:\+47|0047)?[ .()0-9-]{8,20})', page.visible, re.I):
+            if phone(match.group(1)) == expected_phone:
+                result['phone'] = (expected_phone, page.span_for(match.group(1)))
+                break
+    if expected_domain and 'email_domain' not in result:
+        for match in re.finditer(r'[A-Za-z0-9.!#$%&\x27*+/=?^_`{|}~-]+@([A-Za-z0-9.-]+\.[A-Za-z]{2,})', page.visible):
+            if match.group(1).lower() == expected_domain:
+                result['email_domain'] = (expected_domain, page.span_for(match.group()))
+                break
+    return result
+
+
 from html.parser import HTMLParser
 
 
