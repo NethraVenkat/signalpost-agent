@@ -33,6 +33,8 @@ class WebsiteHttp:
         self.dns_nominations = set()
         self.page_cache = {}
         self.page_locks = {}
+        self.candidate_results = {}
+        self.candidate_locks = {}
         self.dns_lookups = 0
         self.activity_extra = set()
         self.accepted_pages = {}
@@ -199,6 +201,31 @@ class WebsiteHttp:
         return min(6, max(0, 9 - registry_requests))
 
     async def candidate(self, candidate, org, proven=()):
+        """Reuse a completed hostname-pair check, never another entity's proof."""
+        policy.validate_url(candidate.url, {candidate.domain, *proven})
+        parts = urlsplit(candidate.url)
+        key = (parts.hostname.removeprefix('www.'), parts.path or '/', candidate.domain, tuple(sorted(proven)))
+        async with self.candidate_locks.setdefault(key, asyncio.Lock()):
+            if key in self.candidate_results:
+                result = self.candidate_results[key]
+                note = {'domain': candidate.domain, 'origin': candidate.origin, 'reused_candidate': True}
+                if isinstance(result, SourceFailure):
+                    note['reason'] = result.code
+                else:
+                    note.update(url=result.url, status=result.status)
+                self.attempts.setdefault(org, []).append(note)
+                if isinstance(result, SourceFailure): raise SourceFailure(result.code)
+                return result
+            try:
+                result = await self._candidate(candidate, org, proven)
+            except SourceFailure as exc:
+                if exc.code not in {'website_budget_exhausted', 'budget_exhausted', 'deadline'}:
+                    self.candidate_results[key] = exc
+                raise
+            self.candidate_results[key] = result
+            return result
+
+    async def _candidate(self, candidate, org, proven=()):
         """Try hostname variants with verified TLS, then permitted plaintext."""
         p = urlsplit(candidate.url)
         policy.validate_url(candidate.url, {candidate.domain, *proven})

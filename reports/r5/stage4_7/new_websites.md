@@ -372,6 +372,19 @@ Source: https://folksom.no/ · SHA-256 `531faa54187b05780303bc835f6bc6d738dffdb1
 <a href="https://www.linkedin.com/company/2534098">
 ```
 
+## social to reuse: added
+
+927094266 — SPORTLET.NO AS — https://www.sportlet.no
+
+Proof tier: `VERIFIED`
+
+Source: https://www.sportlet.no/ · SHA-256 `f46c6260a9254264b95d5561f26f32c2169a04fb1977f6772078aa1db8aea422` · locator `identity-proof:927094266`
+
+```html
+      <li class="no-list py-2">Org. nr. 927 094 266</li>
+                                                    <li class="no-list py-2"><i class="icon-p
+```
+
 ## Recheck of withheld numeric LinkedIn URLs
 
 ### 991853995 — BIEN SPAREBANK ASA

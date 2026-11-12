@@ -15,7 +15,7 @@ def sha(path):
 
 def main():
     stage = sys.argv[1]
-    assert stage in ('budget','caps','order','social','singlehost')
+    assert stage in ('budget','caps','order','social','singlehost','reuse')
     base = Path('reports/r5/baseline')
     dest = Path('reports/r5/stage4_7') / ('step'+stage.replace('.', '_'))
     out = Path('.data/r5/stage4_7') / ('step'+stage.replace('.', '_')+'-run')
@@ -37,7 +37,7 @@ def main():
     if attempt: config['run_id'] += '-'+attempt
     command = (base/'run.ps1').read_text(encoding='utf8').replace('.data/r5/baseline-run', out.as_posix())
     command = command.replace('r5-baseline-seed20261017', config['run_id'])
-    if stage in ('caps', 'singlehost', 'social'):
+    if stage in ('caps', 'singlehost', 'social', 'reuse'):
         config['website_request_cap'] = 8
         config['website_total_request_cap'] = 13
         command = command.replace('--websites --hiring', '--website-request-cap 8 --website-total-request-cap 13 --websites --hiring')

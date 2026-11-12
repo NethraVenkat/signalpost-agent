@@ -100,3 +100,49 @@ def test_activity_allowance_cannot_exceed_absolute_eight_request_ceiling(tmp_pat
             assert error.value.code == 'website_budget_exhausted'
             assert not fetcher.budget.events
     asyncio.run(go())
+
+
+def test_hostname_pair_reuses_candidate_without_reusing_entity_verdict(tmp_path):
+    from types import SimpleNamespace
+    from signalpost.web.html import Page
+    from signalpost.web.proof import score
+    cfg = config(tmp_path, [OUR, OTHER])
+    calls = []
+    async def resolve(host, port): return ['93.184.216.34']
+    async def go():
+        async with httpx.AsyncClient() as client:
+            fetcher = WebsiteHttp(client, cfg, Budget(cfg), BlobStore(tmp_path), resolver=resolve)
+            async def get(url, *args):
+                calls.append(url)
+                return SimpleNamespace(status=200, url=url, body=html('Org nr '+OUR).encode())
+            fetcher.get = get
+            first, second = await asyncio.gather(
+                fetcher.candidate(Candidate('https://example.no/', 'example.no', 'registry_email'), OUR),
+                fetcher.candidate(Candidate('https://www.example.no/', 'example.no', 'registry_website'), OTHER))
+            assert first is second
+            page = Page(second.body, second.url)
+            assert score(page, OUR, {}, 'registry_email', []).level == 'VERIFIED'
+            assert score(page, OTHER, {}, 'registry_website', []).level == 'REJECT'
+            assert fetcher.dns_counts == {OUR: 1}
+            assert fetcher.attempts[OTHER][-1]['reused_candidate']
+    asyncio.run(go())
+    assert calls == ['https://example.no/']
+
+
+def test_source_veto_reused_across_hostname_pair_without_another_request(tmp_path):
+    cfg = config(tmp_path, [OUR, OTHER])
+    calls = []
+    async def resolve(host, port): return ['93.184.216.34']
+    async def go():
+        async with httpx.AsyncClient() as client:
+            fetcher = WebsiteHttp(client, cfg, Budget(cfg), BlobStore(tmp_path), resolver=resolve)
+            async def get(url, *args):
+                calls.append(url)
+                raise SourceFailure('url_refused')
+            fetcher.get = get
+            for org, host in [(OUR, 'example.no'), (OTHER, 'www.example.no')]:
+                with pytest.raises(SourceFailure) as error:
+                    await fetcher.candidate(Candidate('https://'+host+'/', 'example.no', 'registry_email'), org)
+                assert error.value.code == 'url_refused'
+    asyncio.run(go())
+    assert calls == ['https://example.no/']

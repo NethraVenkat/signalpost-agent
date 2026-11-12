@@ -45,7 +45,7 @@ def main():
     settings = json.loads(Path('reports/r5/stage4/step4_6/settings.json').read_text())['resolved_config']
     stages = [('Stage 3', '.data/r5/stage3-run/envelopes.jsonl', '.data/r5/stage3-run/state'),
               ('4.6', settings['output'], settings['state_dir'])]
-    for step in ('budget', 'caps', 'order', 'singlehost', 'social'):
+    for step in ('budget', 'caps', 'order', 'singlehost', 'social', 'reuse'):
         path = ROOT / ('step' + step) / 'settings.json'
         if path.exists():
             cfg = json.loads(path.read_text(encoding='utf-8-sig'))['resolved_config']

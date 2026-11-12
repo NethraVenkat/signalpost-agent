@@ -749,6 +749,30 @@
           "reporting_period": null
         }
       ]
+    },
+    {
+      "step": "reuse",
+      "comparison": "social",
+      "action": "added",
+      "organisation_number": "927094266",
+      "name": "SPORTLET.NO AS",
+      "url": "https://www.sportlet.no",
+      "proof_tier": "VERIFIED",
+      "evidence": [
+        {
+          "id": "0f9ba57c56a9d2915dd9968a56ff7e9f1d2bc67bca0e12e14b23a4d05a53be1d",
+          "source_url": "https://www.sportlet.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-12T17:35:53.371436Z",
+          "content_sha256": "f46c6260a9254264b95d5561f26f32c2169a04fb1977f6772078aa1db8aea422",
+          "claim_span": "      <li class=\"no-list py-2\">Org. nr. 927 094 266</li>\n                                                    <li class=\"no-list py-2\"><i class=\"icon-p",
+          "locator": "identity-proof:927094266",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
     }
   ],
   "withheld_recheck": [

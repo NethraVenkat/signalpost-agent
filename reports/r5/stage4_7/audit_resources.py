@@ -5,7 +5,7 @@ from pathlib import Path
 
 root = Path('reports/r5/stage4_7')
 result = {}
-for step in ('budget', 'caps', 'order', 'singlehost', 'social'):
+for step in ('budget', 'caps', 'order', 'singlehost', 'social', 'reuse'):
     folder = root / ('step'+step)
     if not (folder/'verification.json').exists(): continue
     report = json.loads((folder/'report.json').read_text())
