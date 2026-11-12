@@ -37,7 +37,7 @@ def projected(claim):
 
 
 def generate(envelope):
-    result=Synthesis(generator=Generator(version='3',input_sha256=input_hash(envelope)),change_claims=change_claims(envelope))
+    result=Synthesis(generator=Generator(version='r5-4',input_sha256=input_hash(envelope)),change_claims=change_claims(envelope))
     claims=sorted((c for c in envelope.claims if c.availability=='available' and permitted(c,envelope)),key=lambda c:c.field)
     by_field={c.field:c for c in claims}
     registry_changes = sorted((c for c in claims if c.field.startswith('registry_change.') and not c.carried_forward),
@@ -157,4 +157,18 @@ def generate(envelope):
         if not getattr(result.sections,key):
             result.sections.unknowns.append(Unknown(family=key,state='not_available',reason='No supported claims are available for this section.'))
     for unknown in result.sections.unknowns:unknown.text=unknown_text(unknown,envelope)
+    from .brief import build, depth_text, period_claims, LIMITATION
+    for claim in claims:
+        frame = depth_text(claim)
+        if frame: result.sections.scale.append(Sentence(text=frame, claim_ids=[claim.id]))
+    periods = period_claims(envelope)
+    if periods:
+        result.sections.scale.append(Sentence(text=LIMITATION, claim_ids=[c.id for c in periods]))
+    # Select only after validation, then independently validate the briefing.
+    result = validate_synthesis(result,envelope)
+    result.briefing = [Sentence.model_validate(s) for s in build(result.model_dump(mode='json'),
+                       [c.model_dump(mode='json') for c in envelope.claims])]
+    if len(result.briefing) < 4:
+        result.sections.unknowns.append(Unknown(family='briefing', state='not_available',
+            reason='Fewer than four supported briefing sentences; no unsupported padding was added.'))
     return validate_synthesis(result,envelope)

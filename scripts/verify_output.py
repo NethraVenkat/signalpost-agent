@@ -27,6 +27,8 @@ def verify_synthesis(row):
                             completed_at=row['run']['completed_at'] if 'run' in row else row['completed_at']))
     sentences=[s for key in SECTIONS for s in getattr(synthesis.sections,key)]
     assert all(sentence_error(s,envelope) is None for s in sentences),'Unverified synthesis sentence'
+    assert len(synthesis.briefing) <= 6, 'Briefing exceeds six sentences'
+    assert all(s.claim_ids and sentence_error(s,envelope) is None for s in synthesis.briefing), 'Unverified briefing sentence'
     assert synthesis.summary==' '.join(s.text for s in sentences),'Summary differs from checked sentences'
     assert synthesis.checks.sentences==synthesis.checks.cited==len(sentences) and synthesis.checks.values_verified
     assert synthesis.change_claims==change_claims(envelope),'Change citations differ from source events'
@@ -87,6 +89,11 @@ def verify(first, state_dir, count, organisations=None, report=None, require_cle
                 assert len(e['claim_span']) <= 300 and e['claim_span'] in body, 'Non-verbatim evidence span'
     result = {"lines": len(rows), "schema_valid": True, "published_claims": published, "source_blobs_verified": len(seen)}
     result.update(synthesis_companies=synthesis_companies,synthesis_sentences=synthesis_sentences,synthesis_unverified_values=0)
+    briefings = [(row['run'].get('synthesis') if 'run' in row else row['profile'].get('synthesis')) or {} for row in rows]
+    result.update(briefing_companies=sum(bool(s.get('briefing')) for s in briefings),
+                  briefing_sentences=sum(len(s.get('briefing', [])) for s in briefings),
+                  briefing_short_companies=sum(len(s.get('briefing', [])) < 4 for s in briefings),
+                  briefing_unverified_values=0)
     if report is not None:
         metrics = json.loads(report.read_text(encoding='utf8'))
         assert metrics['emitted_envelopes'] == len(rows)

@@ -56,6 +56,7 @@ class Synthesis(Model):
     mode: Literal['template','llm'] = 'template'
     language: Literal['en'] = 'en'
     summary: str = ''
+    briefing: list[Sentence] = Field(default_factory=list)
     sections: Sections = Field(default_factory=Sections)
     checks: Checks = Field(default_factory=Checks)
     generator: Generator

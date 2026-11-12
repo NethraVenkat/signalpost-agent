@@ -1,0 +1,1 @@
+﻿Full suite: uv run pytest — 663 passed in 85.81 seconds. Targeted briefing/synthesis suite: 41 passed in 3.08 seconds. Nine new briefing cases test citations, invented values, wrong bindings, topic coverage, sparse companies, contradictory gaps, field-bound frames and all three envelope shapes. Existing tests and timing-sensitive timeout unchanged.

@@ -75,6 +75,25 @@ def sentence_error(sentence,envelope):
     # These new frames are checked in full, bound to every claim they use.
     # Table titles authorize only the matching NACE frame or headline.
     plain=sentence.text.removeprefix('Previously supported. ')
+    from .brief import DEPTH_LABELS, depth_text, period_claims, LIMITATION, EMPLOYEE_GAP
+    if sentence.text == EMPLOYEE_GAP or sentence.text.startswith('The registry does not report'):
+        if (len(claims) != 1 or claims[0].field != 'identity.employees_reported' or claims[0].value is not False
+                or claims[0].carried_forward or sentence.text != EMPLOYEE_GAP
+                or any(c.field == 'identity.employees' and c.availability == 'available' for c in envelope.claims)
+                or sentence.value_kind != 'reported' or sentence.count is not None or sentence.record_type is not None):
+            return 'unverified_employee_gap'
+        return None
+    if sentence.text == LIMITATION or sentence.text.startswith('Only one reported fiscal period'):
+        expected = period_claims(envelope)
+        if (sentence.text != LIMITATION or not expected or sentence.claim_ids != [c.id for c in expected]
+                or sentence.value_kind != 'reported' or sentence.count is not None or sentence.record_type is not None):
+            return 'unverified_reporting_limitation'
+        return None
+    if any(plain.startswith(label + ':') for label in DEPTH_LABELS.values()):
+        if (len(claims) != 1 or sentence.text != depth_text(claims[0])
+                or sentence.value_kind != 'reported' or sentence.count is not None or sentence.record_type is not None):
+            return 'misbound_registry_depth'
+        return None
     if 'Registry publication time:' in plain:
         from ..sources.registry_changes import sentence as registry_sentence
         if (len(claims) != 1 or not claims[0].field.startswith('registry_change.')
@@ -192,6 +211,13 @@ def validate_synthesis(synthesis,envelope):
         setattr(synthesis.sections,section,valid)
         if sentences and not valid:
             synthesis.sections.unknowns.append(Unknown(family=section,state='failed',reason='No sentence passed evidence validation.'))
+    briefing = []
+    for sentence in synthesis.briefing:
+        reason = sentence_error(sentence,envelope)
+        if not reason and len(briefing) >= 6: reason = 'briefing_sentence_cap'
+        if reason: rejected.append({'section':'briefing','reason':reason})
+        else: briefing.append(sentence)
+    synthesis.briefing = briefing
     total=sum(len(getattr(synthesis.sections,key)) for key in SECTIONS)
     synthesis.checks.sentences=synthesis.checks.cited=total
     synthesis.checks.values_verified=True

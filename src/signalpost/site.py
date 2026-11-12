@@ -430,7 +430,7 @@ def profile(row, title):
     body += '<p>Last checked: <time>' + esc(display_time(row['run']['completed_at'])) + '</time></p></header>'
     sentences = [s for key in ('what_it_does', 'scale', 'leadership', 'changes') for s in synthesis.get('sections', {}).get(key, [])]
     from .synthesis.brief import select
-    overview = select(synthesis, claims)
+    overview = select(synthesis, claims, limit=6)
     body += '<section class="summary"><h2>Cited summary</h2>'
     body += ''.join(sentence_html(s, claim_map, change_ids) for s in overview)
     remaining = [s for s in sentences if s not in overview]
