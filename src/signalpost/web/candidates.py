@@ -31,7 +31,7 @@ def legal_name_slugs(name):
     if tokens and not all(t in GENERIC for t in tokens):
         # Preserve existing nominations first, then add the requested spelling
         # and native IDNA variants. These are nominations, never identity proof.
-        for replacements in (("ae", "o", "aa"), ("a", "oe", "a"), ("ae", "o", "a")):
+        for replacements in (("ae", "oe", "aa"), ("a", "o", "a"), ("ae", "o", "aa"), ("a", "oe", "a"), ("ae", "o", "a")):
             converted = " ".join(tokens).replace("æ", replacements[0]).replace("ø", replacements[1]).replace("å", replacements[2])
             words = re.findall(r"[a-z0-9]+", converted)
             for separator in ("", "-"):
@@ -75,9 +75,17 @@ def generate(context):
         add(unit.get('website'),'subunit_registry_website',unit['orgnr'])
         email=str(unit.get('email') or '')
         if '@' in email:add(email.rsplit('@',1)[1],'subunit_registry_email',unit['orgnr'])
+    # Brands/aliases nominate only. They never modify the legal identity used
+    # by the proof layer or imply a unique-name/domain ownership relationship.
+    for brand in context.get('brands', []):
+        for slug in legal_name_slugs(legal_name(brand)):
+            add(slug, 'brand_variant')
     name = legal_name(context.get("name"))
     for slug in legal_name_slugs(name):
         add(slug, "legal_name_slug")
+    for unit in context.get('subunits', []):
+        for slug in legal_name_slugs(legal_name(unit.get('name'))):
+            add(slug, 'registry_subunit_name', unit['orgnr'])
     return output[:8]
 
 

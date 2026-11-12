@@ -188,7 +188,7 @@ def previous_nomination(previous, context, units):
 
 async def fetch(org, envelope, bulk, http, previous=None):
     context, registry_source, registry_locator = await offload(registry_context,envelope,bulk,http.blobs)
-    units={c.value['organisation_number']:{} for c in envelope.claims
+    units={c.value['organisation_number']:{'name': c.value.get('name')} for c in envelope.claims
            if c.field.startswith('subunits.unit.') and c.availability=='available' and isinstance(c.value,dict)}
     for c in envelope.claims:
         if c.availability!='available' or not c.field.startswith('subunits.detail.'):continue
@@ -196,6 +196,10 @@ async def fetch(org, envelope, bulk, http, previous=None):
         if unit in units and field in {'registered_website','registered_email'}:
             units[unit]['website' if field=='registered_website' else 'email']=c.value
     context['subunits']=[{'orgnr':unit,**data} for unit,data in units.items()]
+    if previous:
+        old = previous if 'claims' in previous else previous.get('profile', {})
+        context['brands'] = [c['value'] for c in old.get('claims', []) if c.get('field') == 'public_brand'
+                             and c.get('availability') == 'available' and isinstance(c.get('value'), str)]
     section = Section(state="not_available")
     if registry_source and (social := profile_url(normalize_url(context.get("website")) or "")):
         add(section, registry_source, org, "website", "registry_social." + digest(social)[:20],

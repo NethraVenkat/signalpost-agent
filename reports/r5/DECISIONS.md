@@ -1,5 +1,11 @@
 # R5 decisions
 
+## Stage 4.3
+
+- Prioritize the requested ae/oe/aa and a/o/a spellings, with hyphen/no-hyphen full-name variants and suffix stripping. Registry URL/email origins remain first; the eight-candidate and DNS/HTTP ceilings are unchanged. Existing native IDNA and legacy spellings remain bounded alternatives.
+- Brand strings from previous supported public-brand claims and registry-proven subunit names nominate candidates only. None changes the legal-name proof context or authorizes publication. No token-only/unique-name shortcut, leading-AS masthead rule, search provider or sitemap discovery is added.
+- 4.3: 686 tests passed; five websites/two social companies, no new URLs. Facts 7,310 and activity claims 79 (versus 7,320/89 in 4.2) reflect incomplete live website activity, not manufactured replacement facts. All 100 envelopes and 600 briefing sentences verify with zero unsupported values. HTTP attempts 866; provider cost $0.
+
 ## Stage 4.2
 
 - Publish typed business/postal/workplace locations from their exact registry fields and proven company/subunit scope. Preserve the compatible core address/workplace records; postal fallback is never relabelled as physical workplace. No map/geocoding source or new requests. Newly observed typed fields are coverage observations on refresh, not invented company moves.
