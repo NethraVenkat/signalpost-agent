@@ -32,7 +32,7 @@ def test_dns_fallback_checks_other_hostname_without_raising_caps(tmp_path, monke
                 return type('Response',(),{'status':200})()
             fetcher.get=get
             await fetcher.candidate(Candidate('http://example.no/','example.no','registry_email'),OUR)
-            assert fetcher.dns_counts[OUR]==2
+            assert fetcher.dns_counts[OUR]==1
     asyncio.run(go())
     assert calls==['example.no','www.example.no']
 

@@ -259,7 +259,7 @@ async def fetch(org, envelope, bulk, http, previous=None):
                 except SourceFailure as exc:
                     attempts.append({'domain': candidate.domain, 'origin': candidate.origin,
                                      'reason': exc.code, 'page': refresh_proof})
-            if proof.level in {"VERIFIED", "HIGH"} and len(pages) == 1 and http.counts.get(org, 0) + 1 <= http.config.website_request_cap:
+            if proof.level == "HIGH" and len(pages) == 1 and http.counts.get(org, 0) + 1 <= http.config.website_request_cap:
                 links = followup_links(page)
                 for target in links[:1]:
                     target = normalize_url(target)

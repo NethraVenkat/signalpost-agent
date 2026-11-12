@@ -1,4 +1,13 @@
-# R5 decisions
+﻿# R5 decisions
+
+## Stage 4.7 â€” budget accounting and candidate work
+
+- A www/non-www pair is one DNS nomination. Cached DNS results do not consume another company's nomination allowance. Validate source/domain vetoes before nomination work; cache responses and non-budget source failures within the run under a URL/permission-scope lock. Each company still scores the returned content against its own exact identity, and cached failures retain their source-failure semantics.
+- Try the alternate hostname only after DNS or connection failure. HTTP errors, content refusal, robots, private addresses and access refusal do not authorize it. Preserve the existing bounded retry for registry-origin timeouts and plaintext only following actual connection failure.
+- Registry homepage and registry email-domain candidates already precede subunit/name variants. Stop proof-page work immediately upon exact-number proof, retaining the existing bounded collector, identity firewall, proof tiers and $0 provider settings.
+- Preserve two unusable acquisitions locally: the sandbox-denied run (source network unavailable), and a run interrupted by a long host pause (100 deadline hits, wall 2509.575 seconds). Neither is used as evidence of recovered coverage. The comparison is repeated with fresh state and unchanged timeouts/budgets.
+
+- Budget step: 743 tests passed. Fresh frozen run: 3 verified websites, website failed 30, activity failed 35, 858 HTTP attempts, runtime 406.828s, wall 445.715s, $0 and zero unsupported values. This remains worse than Stage 3, so test the authorized 8/13 caps as a separate measured commit.
 
 ## Stage 4.6
 
@@ -46,7 +55,7 @@
 - Use the official Enhetsregisteret entity/subunit update APIs only. Formal announcement types/text are `not_available` with a reason in coverage metadata; no kunngjoringer HTML requests. This is a 36-month update history, not a promise of comprehensive formal announcements.
 - Preserve strict pagination and date validation; duplicate events or invalid pages fail the affected scope while retaining verified earlier facts. Historical workplace changes without current registry parent proof abstain.
 - Source: [official API documentation](https://data.brreg.no/enhetsregisteret/api/dokumentasjon/en/index.html), checked 12 November 2026. `dato` and `updatedBefore` bound API publication time. Registry effective dates remain separately labelled and are never relabelled publication dates.
-- Stage 1 live comparison: activity companies 25 → 31, activity claims 72 → 89, total facts 6,907 → 6,924. All other fact metrics are unchanged. The aggregate activity failures changed 32 → 31 because live website activity outcomes can vary; no failure state was suppressed. The independent verifier passed with zero unsupported values. Full pytest: 545 passed.
+- Stage 1 live comparison: activity companies 25 â†’ 31, activity claims 72 â†’ 89, total facts 6,907 â†’ 6,924. All other fact metrics are unchanged. The aggregate activity failures changed 32 â†’ 31 because live website activity outcomes can vary; no failure state was suppressed. The independent verifier passed with zero unsupported values. Full pytest: 545 passed.
 
 ## Stage 2
 
@@ -63,6 +72,8 @@
 - Add a separate template-only `synthesis.briefing` (four to six sentences when supported) while retaining the complete cited section catalog and summary. The profile displays the briefing first. Sparse companies remain shorter with an explicit reason; never invent facts to meet a sentence target.
 - Briefing topics prioritize activity, scale, leadership, recent dated activity, evidence-backed gaps and registry context. No source claim is created by synthesis. Depth frames are bound to exact fields; financial-history limitations require all supported account claims to share one fiscal period; a missing employee-count statement requires a current false registry reporting flag.
 - Keep the existing citation validator and extend it with exact frame checks and independent briefing checks. The output verifier also checks every briefing sentence; no LLM/provider call is enabled.
-- Stage 3 full pytest: 663 passed. Live verification: 100 companies with exactly six briefing sentences each (600 total), zero short briefings and zero unsupported values; 1,203 full-catalog sentences also validate. Source facts remain 7,102 and provider cost is $0. Website state drift (ambiguous 6 → 5, failed 23 → 24) is retained as a live observation, not hidden or relabelled.
+- Stage 3 full pytest: 663 passed. Live verification: 100 companies with exactly six briefing sentences each (600 total), zero short briefings and zero unsupported values; 1,203 full-catalog sentences also validate. Source facts remain 7,102 and provider cost is $0. Website state drift (ambiguous 6 â†’ 5, failed 23 â†’ 24) is retained as a live observation, not hidden or relabelled.
 - The final summary was written after the Stage 3 commit so it can contain that commit's actual hash. The user subsequently requested a separate docs-only commit for the summary and decisions log. All application changes and stage measurements are committed. No Stage 4 work.
 - Manual follow-up: inspect sample profiles, optional-field failures, the formal-announcement limitation and refresh migration from older schema versions. The fresh fixed-cohort comparisons are not a historical-schema migration audit; enriched address/form components should not be treated as proven historic company changes without review.
+
+

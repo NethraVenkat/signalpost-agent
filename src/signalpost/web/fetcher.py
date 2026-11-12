@@ -30,6 +30,9 @@ class WebsiteHttp:
         self.dns_cache = {}
         self.dns_locks = {}
         self.dns_counts = {}
+        self.dns_nominations = set()
+        self.page_cache = {}
+        self.page_locks = {}
         self.dns_lookups = 0
         self.activity_extra = set()
         self.accepted_pages = {}
@@ -46,12 +49,15 @@ class WebsiteHttp:
         if candidate.origin == 'registry_website' or not self.config.dns_precheck:
             return
         host = urlsplit(candidate.url).hostname
-        if self.dns_counts.get(org, 0) >= 8:
-            raise SourceFailure('dns_unavailable')
-        self.dns_counts[org] = self.dns_counts.get(org, 0) + 1
         lock = self.dns_locks.setdefault(host, asyncio.Lock())
         async with lock:
             if host not in self.dns_cache:
+                nomination = (org, host.removeprefix('www.'))
+                if nomination not in self.dns_nominations:
+                    if self.dns_counts.get(org, 0) >= 8:
+                        raise SourceFailure('dns_unavailable')
+                    self.dns_counts[org] = self.dns_counts.get(org, 0) + 1
+                    self.dns_nominations.add(nomination)
                 self.budget.check()
                 self.dns_lookups += 1
                 try:
@@ -166,10 +172,23 @@ class WebsiteHttp:
 
     async def get(self, url, org, candidate_domain, proven=(), xml=False):
         domains = {candidate_domain, *proven}
+        url = policy.validate_url(url, domains)
         # Robots are checked again on the effective redirect authority. raw()
         # can follow only already permitted domains; content is not extracted
         # until the final authority's policy has also been checked.
-        return await self.raw(url, org, domains, xml, obey_robots=True)
+        key = (url, xml, tuple(sorted(domains)))
+        async with self.page_locks.setdefault(key, asyncio.Lock()):
+            if key not in self.page_cache:
+                try:
+                    self.page_cache[key] = await self.raw(url, org, domains, xml, obey_robots=True)
+                except SourceFailure as exc:
+                    if exc.code not in {'website_budget_exhausted', 'budget_exhausted', 'deadline'}:
+                        self.page_cache[key] = exc
+                    raise
+            result = self.page_cache[key]
+            if isinstance(result, SourceFailure):
+                raise SourceFailure(result.code)
+            return result
 
     def discovery_cap(self, org):
         """Original per-company ceiling (6, within a total of 9 with registry calls).
@@ -182,6 +201,7 @@ class WebsiteHttp:
     async def candidate(self, candidate, org, proven=()):
         """Try hostname variants with verified TLS, then permitted plaintext."""
         p = urlsplit(candidate.url)
+        policy.validate_url(candidate.url, {candidate.domain, *proven})
         host = p.hostname
         other = host[4:] if host.startswith('www.') else 'www.' + host
         hosts = [host, other]
@@ -194,7 +214,7 @@ class WebsiteHttp:
             except SourceFailure as second:
                 if second.code == 'no_such_domain' and exc.code == 'dns_unavailable': raise exc
                 raise
-            hosts = [other, host]
+            hosts = [other]
         trials = [urlunsplit(('https', h, p.path or '/', '', '')) for h in hosts]
         notes = self.attempts.setdefault(org, [])
         last = None
@@ -211,17 +231,22 @@ class WebsiteHttp:
                         last = SourceFailure('website_http_5xx')
                     else:
                         last = SourceFailure('http_' + str(response.status))
-                    break
+                    raise last
                 except SourceFailure as exc:
                     notes.append({'domain':candidate.domain,'origin':candidate.origin,'url':target,'reason':exc.code})
                     last = exc
                     if exc.code in {'robots','robots_unavailable','block_page','ssrf','url_refused','budget_exhausted','website_budget_exhausted','deadline'}:
                         raise
+                    if exc.code not in {'no_such_domain', 'dns_unavailable', 'dns_error', 'dns_timeout', 'website_connect_error', 'website_timeout'}:
+                        raise
                     if exc.code == 'website_connect_error':
                         connect_hosts.append(urlsplit(target).hostname)
                     if exc.code in {'website_timeout','dns_timeout'} and candidate.origin == 'registry_website' and not retried and self.counts.get(org,0) < self.config.website_request_cap:
                         retried = True
+                        self.page_cache.pop((target, False, tuple(sorted({candidate.domain, *proven}))), None)
                         continue
+                    if exc.code in {'website_timeout', 'dns_timeout'}:
+                        raise
                     break
         # Plain HTTP is permitted only after actual TLS/connect failure.
         for host in dict.fromkeys(connect_hosts):

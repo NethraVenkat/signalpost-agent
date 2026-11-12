@@ -1,0 +1,52 @@
+"""Build the final comparison from the committed measurement artifacts."""
+import json
+import subprocess
+from pathlib import Path
+
+root = Path('reports/r5/stage4_7')
+paths = [('Stage 3', Path('reports/r5/stage3')), ('4.6', Path('reports/r5/stage4/step4_6'))]
+paths += [('4.7 '+step, root/('step'+step)) for step in ('budget','caps','singlehost','social') if (root/('step'+step)/'counts.json').exists()]
+counts = [json.loads((p/'counts.json').read_text()) for _,p in paths]
+text = '# Stage 4.7 summary\n\n'
+last = counts[-1]
+text += (f"Frozen 100: **{last['metrics']['verified_websites']} verified websites**, "
+         f"**{last['counts_by_section_state']['website']['failed']} failed website sections**, "
+         f"**{last['counts_by_section_state']['activity']['failed']} failed activity sections**. "
+         'Exact-number and corroborated proof rules remain enforced. Every measured run uses fresh state, the hash-checked seed-20261017 inputs, $0 provider cost, no search queries and no model calls.\n\n')
+text += '| Metric / section state | '+' | '.join(label for label,_ in paths)+' |\n|---|'+'---:|'*len(paths)+'\n'
+for key in counts[0]['metrics']:
+    values = [c['metrics'][key] for c in counts]
+    text += '| '+key+' | '+' | '.join(f'{v:.3f}' if isinstance(v,float) else str(v) for v in values)+' |\n'
+text += '| Provider cost USD | '+' | '.join('0' for _ in paths)+' |\n'
+for section, states in counts[0]['counts_by_section_state'].items():
+    for state in states:
+        text += f'| {section} / {state} | '+' | '.join(str(c['counts_by_section_state'][section][state]) for c in counts)+' |\n'
+text += '\n## Changes and decisions\n\n'
+text += ('- Budget: one DNS nomination for a www/non-www pair; cached checks cost no additional nomination. Source vetoes precede work, and in-run responses/errors are reused across companies under a URL/permission-scope lock. Identity is independently proved for each company. Alternate hosts require DNS/connect failure; HTTP errors and source vetoes cannot trigger them.\n'
+         '- Candidate order: registry homepage, registry email domain, then the existing bounded registry-subunit/name/brand nominations. Tests explicitly check registry precedence. Exact-number proof immediately stops further candidate/proof-page work.\n')
+if any(label=='4.7 caps' for label,_ in paths):
+    text += '- The separate 8/13 cap experiment was required because failures remained above Stage 3. Its HTTP cost/runtime and section states are shown separately; no cap above 8/13 was used.\n'
+else:
+    text += '- The 6/9 caps remain unchanged: the budget correction met the failure targets and raised verified websites above five, so the conditional 8/13 experiment was not needed.\n'
+if any(label=='4.7 singlehost' for label,_ in paths):
+    text += '- Website failures still exceeded Stage 3 after the bounded cap experiment, so the 4.1 two-host fallback was reverted in a separate measured step. Other 4.x identity, location, nomination, proof, contact and social improvements remain.\n'
+else:
+    text += '- The conditional fallback reversion was not needed after recovery to the Stage 3 failure targets.\n'
+text += ('- Numeric LinkedIn `/company/<digits>` links are accepted only in the verified site\'s own header/footer, with group, founder, agency, hidden and article contexts excluded. Named profiles still require exact-name handle agreement. The numeric exception has a distinct proof tier and retains website identity, registry name and verbatim link evidence. No platform page is fetched.\n'
+         '- Both withheld links and every website/social URL addition/removal are listed with organisation number, company name, URL, proof tier and exact excerpts in [new_websites.md](new_websites.md). Full locators, hashes and link context are in [url_audit.json](url_audit.json).\n'
+         '- Fresh acquisition is subject to live source variation. No incomplete result is relabelled as checked absence. Section failures and partial available activity claims are reported independently.\n\n')
+text += '## Verification and commits\n\n'
+text += '| Step | Full pytest | Source bodies | Unsupported synthesis / briefing values |\n|---|---|---:|---:|\n'
+import re
+for label, path in paths[2:]:
+    tests = (path/'tests.txt').read_text(encoding='utf-8-sig')
+    result = re.findall(r'\d+ passed[^\n]*', tests)[-1]
+    v = json.loads((path/'verification.json').read_text())
+    text += f"| {label} | {result} | {v['source_blobs_verified']} | {v['synthesis_unverified_values']} / {v['briefing_unverified_values']} |\n"
+text += '\nEach comparison verifies 100 ordered, schema-valid envelopes, stored-body hashes, verbatim spans and all cited synthesis/briefing values. Each step directory preserves exact commands, resolved settings, execution timestamps, full report, counts and verifier output; raw bodies, envelopes, profiles and site stay local under `.data/r5/stage4_7/`.\n\n'
+text += 'Implementation commits (author Nethra Venkat; no persistent Git identity configuration changed; no push):\n\n```text\n'
+text += subprocess.check_output(['git','log','--format=%h %an <%ae> %s','3d428ad..HEAD'], text=True)
+text += '```\n\n'
+text += ('Two excluded diagnostic acquisitions remain local: sandbox-denied requests, and a long host pause producing 100 deadline hits (2509.575 seconds wall). They are not used in the comparison. An interrupted pytest run failed the unchanged two-second partial-progress assertion; the full suite was rerun without changing any timeout or assertion. All commit gates use the subsequent green full-suite results.\n\n'
+         'Decisions: [DECISIONS.md](../DECISIONS.md). Stage 4.7 ends with this committed report; no Stage 5 work or push was performed.\n')
+(root/'SUMMARY.md').write_text(text, encoding='utf8')

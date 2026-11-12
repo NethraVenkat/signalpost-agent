@@ -1,0 +1,28 @@
+{
+  "command": [
+    "C:\\Users\\<USER>\\signal-nethra\\.venv\\Scripts\\python.exe",
+    "scripts/verify_output.py",
+    "--first",
+    ".data/r5/stage4_7/stepbudget-run-uninterrupted/envelopes.jsonl",
+    "--organisations",
+    "reports\\r5\\baseline\\companies.jsonl",
+    "--count",
+    "100",
+    "--state-dir",
+    ".data/r5/stage4_7/stepbudget-run-uninterrupted/state",
+    "--report",
+    ".data/r5/stage4_7/stepbudget-run-uninterrupted/report.json"
+  ],
+  "exit_code": 0,
+  "lines": 100,
+  "schema_valid": true,
+  "published_claims": 7294,
+  "source_blobs_verified": 378,
+  "synthesis_companies": 100,
+  "synthesis_sentences": 1195,
+  "synthesis_unverified_values": 0,
+  "briefing_companies": 100,
+  "briefing_sentences": 600,
+  "briefing_short_companies": 0,
+  "briefing_unverified_values": 0
+}
