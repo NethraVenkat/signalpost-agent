@@ -11,11 +11,27 @@ from ..workers import offload
 from .extract import Section, add, missing, response_source
 
 BASE = 'https://data.brreg.no/enhetsregisteret/api/'
-METHOD = 'registry change feed'
+METHOD = 'signalpost.registry_changes.v2'
 PREFIX = 'registry_change.'
 DATE_LABEL = 'registry publication time (not effective date)'
 CHUNK = 200
 PAGE_SIZE = 1000
+LOOKBACK_MONTHS = 36
+
+
+def cutoff(now):
+    """36 calendar months, clamping leap day to the final valid day."""
+    try: return now.replace(year=now.year - 3)
+    except ValueError: return now.replace(year=now.year - 3, day=28)
+
+
+def coverage(since, until):
+    return {'lookback_months': LOOKBACK_MONTHS, 'since': since, 'until': until,
+            'date_label': 'registry publication time, not effective date',
+            'unavailable_types': {'formal_announcements': {
+                'state': 'not_available',
+                'reason': 'The public Enhetsregisteret update APIs do not supply formal announcement text/types; kunngjoringer HTML is not fetched because robots.txt blocks it.'}},
+            'scope': 'Named name/address/capital changes and currently registry-proven workplace additions/removals; not all formal announcements.'}
 
 
 def timestamp(value):
@@ -96,6 +112,11 @@ def extract(event, response, locator, org, endpoint, scope=None):
     section = Section(state='not_available')
     source = response_source(response)
     event_id = event['oppdateringsid']
+    if type(event_id) is not int or event_id < 1:
+        raise SourceFailure('registry_change_invalid_id')
+    try: timestamp(event['dato'])
+    except (KeyError, ValueError, TypeError, AttributeError):
+        raise SourceFailure('registry_change_missing_or_invalid_date') from None
     common = {'company_orgnr': org, 'event_id': event_id, 'date': event['dato'],
               'date_source': DATE_LABEL,
               'url': BASE + 'oppdateringer/' + endpoint + '?' + urlencode(
@@ -118,6 +139,8 @@ def extract(event, response, locator, org, endpoint, scope=None):
                 value, locator + '/endringer/' + str(index), method=METHOD)
     elif event.get('endringstype') in {'Ny', 'Sletting'}:
         unit = event['organisasjonsnummer']
+        if not scope or unit not in scope:
+            return missing('activity', 'registry_change_parent_not_proven', state='not_available')
         item, proof = scope[unit]
         if item.get('overordnetEnhet') != org:
             raise SourceFailure('registry_change_wrong_parent')
@@ -167,7 +190,10 @@ async def pages(http, endpoint, numbers, since, until):
                 raise SourceFailure('registry_change_pagination_repeated')
             if event['organisasjonsnummer'] not in numbers:
                 raise SourceFailure('registry_change_wrong_company')
-            if not timestamp(since) <= timestamp(event['dato']) <= timestamp(until):
+            try: published = timestamp(event['dato'])
+            except (KeyError, ValueError, TypeError, AttributeError):
+                raise SourceFailure('registry_change_missing_or_invalid_date') from None
+            if not timestamp(since) <= published <= timestamp(until):
                 raise SourceFailure('registry_change_date_outside_window')
             seen.add(ident)
             yield event, response, '/_embedded/' + key + '/' + str(index)
@@ -179,10 +205,11 @@ async def pages(http, endpoint, numbers, since, until):
 async def fetch_batch(envelopes, http, blobs, until):
     """One run-local acquisition, shared by the entire batch; errors stay explicit."""
     now = timestamp(until)
-    try: since = now.replace(year=now.year - 2)
-    except ValueError: since = now.replace(year=now.year - 2, day=28)
+    since = cutoff(now)
     since = since.isoformat().replace('+00:00', 'Z')
     result = {org: Section(state='not_available') for org in envelopes}
+    for envelope in envelopes.values():
+        envelope.run.refresh['registry_activity'] = coverage(since, until)
     scopes, owners = {}, {}
     for org, envelope in envelopes.items():
         try:
@@ -214,6 +241,9 @@ async def fetch_batch(envelopes, http, blobs, until):
                 for org in affected:
                     result[org].state = 'failed'
                     result[org].errors.extend(missing('activity', code).errors)
+    for org, section in result.items():
+        envelopes[org].run.refresh['registry_activity'].update(
+            state=section.state, errors=sorted({e.code for e in section.errors}))
     return result
 
 

@@ -4,6 +4,8 @@ The MIT licence covers this repository's code and documentation. Third-party dat
 
 ## Registry
 
+R5 registry activity uses only official `/api/oppdateringer/enheter` and `/api/oppdateringer/underenheter` requests bounded to the last 36 calendar months. `dato` is API publication time, not the effective date of the business event. A complete paginated response can establish checked absence only for the named fields/types supported by the extractor. Formal announcement text/types unavailable from these APIs are explicitly recorded as `not_available` in `run.refresh.registry_activity.unavailable_types`; kunngjoringer HTML is never fetched. Registry-only state is recorded separately from the combined website/registry activity state. Duplicate IDs, missing/invalid timestamps, changing totals and short pages fail the affected scope while retaining verified partial facts. Workplace publication still requires current exact-parent registry proof.
+
 Official HTTPS `data.brreg.no:443` endpoints:
 
 - `/enhetsregisteret/api/enheter/{orgnr}` and `/roller`.

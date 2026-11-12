@@ -9,8 +9,8 @@ LABELS = {'identity.registration_date': 'Registered in Enhetsregisteret',
 def recent(envelope):
     try:
         checked = date.fromisoformat(envelope.run.completed_at[:10])
-        try: cutoff = checked.replace(year=checked.year-2)
-        except ValueError: cutoff = checked.replace(year=checked.year-2, day=28)
+        try: cutoff = checked.replace(year=checked.year-3)
+        except ValueError: cutoff = checked.replace(year=checked.year-3, day=28)
     except (ValueError, AttributeError):
         return []
     evidence = {e.id: e for e in envelope.evidence}
