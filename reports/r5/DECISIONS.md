@@ -1,5 +1,13 @@
 # R5 decisions
 
+## Stage 4.6
+
+- Publish social profiles only from the verified site's own header/footer (or semantic equivalents), with exact full-name handle agreement after bounded spelling/format normalization. Founder/agency-credit/hidden/article contexts, loose navigation, sameAs-only nominations, wrong-name handles and shared group-site profiles abstain. No platform page is fetched; profile-name support is the literal linked handle, not a claimed platform display-name lookup.
+- Attach registry legal-name, website identity and verbatim source-link evidence. Legacy loose social facts cannot be carried forward, even on failed refresh. Tightening the proof policy is an observation rather than a company event. No new domain guessing or AS masthead rule.
+- Two legacy publication tests expected nav/sameAs-only or shared-group social claims. Their assertions now explicitly reject those publications under the user's stricter rule; the discovery-only nominations and all other integration/provenance checks are retained. Positive own-header/footer publication and negative founder/agency/group/hidden cases are separately tested. No timing or safety assertion is relaxed.
+- Before committing 4.6, a non-Latin-name normalization edge case was found: removing all non-ASCII letters could leave a misleading partial name or corporate suffix. Preserve Unicode letters, normalize only the requested Norwegian spellings/formatting, reject suffix-only names, and add positive/negative Unicode tests. Repeat the frozen run in a new `-final` state/output directory and run ID; preserve the first run locally rather than overwrite its source artifacts.
+- Final 4.6: 737 tests passed. Fresh `-final` run: five verified website companies, two social-profile companies, 7,318 facts, 866 HTTP attempts, 100 ordered envelopes, 600 briefing sentences, $0 cost and zero unsupported values. Two older social URLs are withheld under the stricter rule; the number of companies with at least one qualifying profile remains two. No new website/social URL was published versus Stage 3 in any sub-step. Budget/DNS-limited website failures remain explicit (42 final versus 24 in Stage 3).
+
 ## Stage 4.5
 
 - Exact Norwegian registry phone normalization or exact full corporate email-domain agreement can corroborate a website. No fuzzy phone match, parent-domain/subdomain substring, free-mail-domain match or name similarity substitutes for it. HIGH/default-off registry-declared signal tiers now also require this contact agreement; exact organisation-number proof remains the stronger tier.

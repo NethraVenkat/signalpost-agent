@@ -20,6 +20,8 @@ def meaning(claim):
         # Proof strength/location and www/HTTPS variants describe observation,
         # rather than a move to another company website domain.
         return domain(claim.value['final_url'])
+    if claim.field.startswith('social_profile.') and isinstance(claim.value,dict):
+        return canonical(claim.value.get('url'))
     if claim.field.startswith('website_description.'):
         return canonical({k:v for k,v in claim.value.items() if k not in {'identity_level','identity_claim_id'}})
     if claim.family=='accounts' and claim.reporting_period:
@@ -64,6 +66,7 @@ def apply(envelope, previous, blobs):
         available = {c.field: c for c in envelope.claims if c.family == family and c.availability == "available"}
         for claim in old_claims.values():
             if claim.family == family and claim.availability == "available":
+                if claim.field.startswith('social_profile.'): continue  # Current strict-link proof is mandatory.
                 if family=='hiring':
                     from ..sources.nav import timestamp
                     from datetime import datetime,timezone
@@ -83,6 +86,7 @@ def apply(envelope, previous, blobs):
         if checked_urls is None or envelope.run.sections.get(scoped_family) not in {'available','not_available'}:continue
         for field, claim in old_claims.items():
             if claim.family != scoped_family or claim.availability != 'available' or field in new_claims or field == 'official_website': continue
+            if field.startswith('social_profile.'): continue
             source_urls = {old_evidence[eid].source_url for eid in claim.evidence_ids if old_evidence[eid].source_class == 'company_owned'}
             if source_urls and not source_urls <= set(checked_urls):
                 carried = claim.model_copy(update={'carried_forward': True})
@@ -93,6 +97,11 @@ def apply(envelope, previous, blobs):
         before, after = old_claims.get(field), new_claims.get(field)
         family = (after or before).family
         if family not in envelope.run.sections or family in failed:
+            continue
+        if field.startswith('social_profile.') and before and isinstance(before.value,dict) and before.value.get('proof_tier')!='own_header_footer_exact_name_v1':
+            envelope.run.refresh['observation_changes'].append({'section':'website','field':field,
+                'previous_state':before.availability,'current_state':after.availability if after else 'not_published',
+                'reason':'social_proof_policy_changed'})
             continue
         if family=='hiring' and before and before.availability=='available' and meaning(after) is None:
             hiring=envelope.run.refresh.get('hiring',{})

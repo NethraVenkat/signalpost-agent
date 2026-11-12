@@ -19,6 +19,10 @@ def main():
     base = Path('reports/r5/baseline')
     dest = Path('reports/r5/stage4') / ('step'+stage.replace('.', '_'))
     out = Path('.data/r5/stage4') / ('step'+stage.replace('.', '_')+'-run')
+    attempt = sys.argv[2] if len(sys.argv)>2 else None
+    if attempt:
+        assert attempt.isalnum()
+        out = out.with_name(out.name+'-'+attempt)
     if out.exists(): raise ValueError('Preserve prior run; output must be fresh')
     dest.mkdir(parents=True, exist_ok=True)
     settings = json.loads((base/'settings.json').read_text(encoding='utf8'))
@@ -30,6 +34,7 @@ def main():
                       ('report','report.json'), ('site_dir','site'), ('state_dir','state')]:
         config[key] = (out/name).as_posix()
     config['run_id'] = f'r5-stage{stage}-seed20261017'
+    if attempt: config['run_id'] += '-'+attempt
     command = (base/'run.ps1').read_text(encoding='utf8').replace('.data/r5/baseline-run', out.as_posix())
     command = command.replace('r5-baseline-seed20261017', config['run_id'])
     (dest/'run.ps1').write_text(command, encoding='utf8')

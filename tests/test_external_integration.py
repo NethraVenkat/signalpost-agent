@@ -26,7 +26,8 @@ def test_external_sources_strict_replay(tmp_path):
     assert claims['official_website']['identity_level']=='VERIFIED'
     assert claims['official_website']['relationship_note']=='group_site'
     assert any(key.startswith('contact.email.') for key in claims)
-    assert any(key.startswith('social_profile.') for key in claims)
+    # A shared group-site footer cannot establish this exact entity's account.
+    assert not any(key.startswith('social_profile.') for key in claims)
     assert 'sibling@zephyrsynthetic.no' not in claims.values()
     assert not any(isinstance(value,dict) and 'sibling-synthetic' in str(value.get('url','')) for value in claims.values())
     assert any(key.startswith('website_description.') for key in claims)

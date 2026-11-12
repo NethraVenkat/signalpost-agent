@@ -12,6 +12,7 @@ class Link:
     text: str
     span: str
     owned_context: bool
+    header_footer_context: bool = False
 
 
 def decode_html(body: bytes) -> str:
@@ -59,7 +60,9 @@ class Page(HTMLParser):
         context = tag in {"header", "footer", "nav"} or attrs.get("role") in {"contentinfo", "banner", "navigation"} or any(word in (attrs.get("id", "") + " " + attrs.get("class", "")).lower() for word in ("footer", "header", "navigation"))
         if tag not in {"meta", "link", "img", "br", "hr", "input", "source", "area", "base", "embed", "wbr"}:
             hidden = "hidden" in attrs or attrs.get("aria-hidden") == "true" or any(x in attrs.get("style", "").replace(" ", "").lower() for x in ("display:none", "visibility:hidden"))
-            self.stack.append((tag, context, hidden))
+            strict = tag in {'header','footer'} or attrs.get('role') in {'contentinfo','banner'}
+            disowned = bool(re.search(r'credits?|agency|founder|grunnlegger|designer|utviklet', attrs.get('class','')+' '+attrs.get('id',''), re.I))
+            self.stack.append((tag, context, hidden, strict, disowned))
         if tag == "meta":
             self.meta[attrs.get("property") or attrs.get("name") or ""] = attrs.get("content", "")
         if tag == "a":
@@ -73,7 +76,9 @@ class Page(HTMLParser):
                         start = max(0, target.start() - 20)
                         span = raw_tag[start:start + 300]
                         break
-            self._anchor = Link(urljoin(self.url, attrs.get("href", "")), "", span, any(x[1] for x in self.stack) and not any(x[0] == "article" or x[2] for x in self.stack))
+            own = any(x[1] for x in self.stack) and not any(x[0] == 'article' or x[2] for x in self.stack)
+            strict = any(x[3] for x in self.stack) and not any(x[0] in {'article','script','template'} or x[2] or x[4] for x in self.stack)
+            self._anchor = Link(urljoin(self.url, attrs.get("href", "")), "", span, own, strict)
         if tag == "script" and attrs.get("type", "").lower() == "application/ld+json":
             self._script = ""
         if tag == 'p' and not any(x[2] for x in self.stack):

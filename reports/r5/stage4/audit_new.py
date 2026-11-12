@@ -18,6 +18,8 @@ def main():
     entries=[]
     for step in ('4_1','4_2','4_3','4_4','4_5','4_6'):
         path=Path(f'.data/r5/stage4/step{step}-run/envelopes.jsonl')
+        settings=Path(f'reports/r5/stage4/step{step}/settings.json')
+        if settings.exists(): path=Path(json.loads(settings.read_text(encoding='utf8'))['resolved_config']['output'])
         if not path.exists():continue
         for row in load(path):
             org=row['organisation_number']; evidence={e['id']:e for e in row['evidence']}

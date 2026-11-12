@@ -23,6 +23,8 @@ Guessed slug and email domains require exact organisation-number proof. Hidden t
 
 Contacts and social-profile links are extracted only from accepted company sites. Social platforms are never fetched. Company profile links are restricted to accepted-site navigation/footer/header or non-person `sameAs`; sharing, article, platform-root and personal links are excluded.
 
+R5 Stage 4 tightens publication: social links must occur in the site's own header/footer (including equivalent banner/contentinfo roles), outside hidden/article/agency-credit/founder contexts, and their literal profile handle must match the full registered company name with bounded spelling/format normalization. Generic navigation and JSON-LD `sameAs` alone remain discovery only. Shared group-site profiles abstain. The source link span, registry legal-name evidence and accepted website identity evidence are retained. Platforms are not fetched, so no platform display-name verification is claimed. Legacy loose social facts are not carried forward; policy transitions are observations, not invented company changes.
+
 ## Job advertisements
 
 NAV header employer names are discovery only. Normalize legal, known brand and subunit names, strip legal suffixes, and require a distinctive token of at least four letters. Distinctive-token overlap ranks candidate details by inverse header-token frequency; Norwegian and ASCII spelling variants converge. Names never authorize publication. The optional unranked reproduction mode uses full-phrase matching. Nameless headers fall back to unfiltered detail discovery within the same cap.

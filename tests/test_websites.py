@@ -165,7 +165,12 @@ def test_social_and_registry_social(tmp_path, monkeypatch):
     extra = '<nav><a href="https://linkedin.com/company/example/?trk=x">LinkedIn</a><a href="https://facebook.com/sharer.php?u=x">Share</a></nav><article><a href="https://instagram.com/someother/">Other</a></article><script type="application/ld+json">{"@type":"Organization","sameAs":["https://youtube.com/@example"]}</script>'
     _, row, requests, _ = execute_web(tmp_path / "site", monkeypatch, html(extra=extra))
     social = [c for c in row["claims"] if c["field"].startswith("social_profile.")]
-    assert len(social) == 2
+    # Navigation and sameAs still nominate, but neither is own-header/footer
+    # publication proof under the requested Stage 4 strict social policy.
+    from signalpost.web.social import discover
+    nominations = discover(Page(html(extra=extra).encode(), 'https://example.no/'))
+    assert set(nominations) == {'https://linkedin.com/company/example', 'https://youtube.com/@example'}
+    assert social == []
     assert not any(urlsplit(url).hostname in policy.SOCIAL for url in requests)
     _, row, requests, _ = execute_web(tmp_path / "registry", monkeypatch, html(""), website="https://facebook.com/example")
     assert any(c["field"].startswith("registry_social.") for c in row["claims"])

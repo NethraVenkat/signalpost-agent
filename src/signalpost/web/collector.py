@@ -13,7 +13,7 @@ from .candidates import generate, context_from_bulk, legal_name, Candidate, GENE
 from .html import Page
 from .policy import domain, normalize_url, SOCIAL, DIRECTORIES, FREE_MAIL
 from .proof import score, phone, extract_entity_cards, find_containing_card, registry_contacts
-from .social import discover, profile_url
+from .social import discover, discover_strict, profile_url
 
 
 def extract_sitemap_domains(xml_body, legal_nm, brand_nm):
@@ -379,7 +379,8 @@ def extract_contacts_and_social(section, org, web_claim, pages, context=None, en
         if domain(source_response.url) != target_domain:
             continue
         cards = extract_entity_cards(source_page.raw) if is_group else []
-        for url, source_span in discover(source_page).items():
+        for url, source_span in discover_strict(source_page, context.get('name')).items():
+            if is_group: continue  # A shared group footer is not this entity's own account.
             if url not in social_seen:
                 if is_group:
                     p_path = urlsplit(url).path.rstrip("/").lower()
@@ -391,7 +392,13 @@ def extract_contacts_and_social(section, org, web_claim, pages, context=None, en
                         c = find_containing_card(cards, pos)
                         if c and c.is_sibling(org, other_orgnrs, subunits):
                             continue
-                publish(section, source_response, org, "social_profile." + digest(url)[:20], {"url": url, "platform": domain(url)}, "company-link:" + url, source_span)
+                publish(section, source_response, org, "social_profile." + digest(url)[:20],
+                        {"url": url, "platform": domain(url), 'proof_tier':'own_header_footer_exact_name_v1',
+                         'company_name':context.get('name')}, "company-link:" + url, source_span)
+                refs={eid for c in envelope.claims if c.field=='identity.legal_name' and c.availability=='available' for eid in c.evidence_ids} if envelope else set()
+                section.evidence.extend(e for e in envelope.evidence if e.id in refs) if envelope else None
+                section.claims[-1].evidence_ids.extend(sorted(refs))
+                section.claims[-1].evidence_ids.extend(web_claim.evidence_ids)
                 section.claims[-1].reasons['relationship'] = 'Company-owned profile linked from verified website'
                 social_seen.add(url)
         contacts = []
@@ -497,6 +504,7 @@ def publish_result(org,envelope,http,section,choices,attempts,context):
         publish(section, response, org, "public_brand", brand, "meta:brand", span)
     section.state = "available"
     http.accepted_pages[org] = [(r, p) for r, p in pages if domain(r.url) == domain(response.url)]
-    envelope.run.refresh['website'] = {'checked_urls': sorted({r.url for r, _ in http.accepted_pages[org]})}
+    envelope.run.refresh['website'] = {'checked_urls': sorted({r.url for r, _ in http.accepted_pages[org]}),
+                                       'social_policy':'own_header_footer_exact_name_v1'}
     section.errors.append(Error(section='website',code='website_candidates',message=json.dumps(attempts+http.attempts.get(org,[]),ensure_ascii=False)))
     return section

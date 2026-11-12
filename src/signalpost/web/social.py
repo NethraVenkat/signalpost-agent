@@ -30,6 +30,7 @@ def profile_url(url):
 
 
 def discover(page):
+    """Discovery nominations; publication additionally requires discover_strict."""
     found = {}
     for link in page.links:
         url = profile_url(link.href)
@@ -40,4 +41,28 @@ def discover(page):
             for value in values if isinstance(values, list) else [values]:
                 if isinstance(value, str) and (url := profile_url(value)):
                     found.setdefault(url, page.span_for(value))
+    return found
+
+
+def discover_strict(page, company_name):
+    """Own header/footer AND full company-name handle; never fetch platforms."""
+    from .candidates import legal_name
+    def forms(value):
+        text=str(value or '').casefold()
+        return {re.sub(r'[\W_]', '', text.replace('æ',ae).replace('ø',oe).replace('å',aa))
+                for ae,oe,aa in [('ae','oe','aa'),('a','o','a')]}
+    legal = legal_name(company_name)
+    if not legal: return {}
+    names=(forms(company_name)|forms(legal))-{''}
+    if not names: return {}
+    found={}
+    for link in page.links:
+        if not link.header_footer_context: continue
+        if re.search(r'\b(?:founder|grunnlegger|agency|designer|byrå|group|gruppen|holding)\b', link.text, re.I): continue
+        url=profile_url(link.href)
+        if not url: continue
+        bits=[x for x in urlsplit(url).path.split('/') if x]
+        handle=bits[1] if bits and bits[0].lower() in {'company','pages','c','user','channel'} and len(bits)>1 else bits[0]
+        if not forms(handle.lstrip('@')) & names: continue
+        found.setdefault(url,link.span)
     return found
