@@ -44,8 +44,17 @@ def discover(page):
     return found
 
 
+def numeric_linkedin(url):
+    return domain(url) == 'linkedin.com' and bool(re.fullmatch(r'/company/[0-9]+', urlsplit(url).path, re.I))
+
+
+def shared_group_context(page):
+    return bool(re.search(r'\b(?:our companies|group companies|våre selskaper|konsernselskaper|våre borettslag|our subsidiaries)\b', page.visible, re.I)
+                or re.search(r'\b(?:group|gruppen|konsern|holding)\b', page.title+' '+page.meta.get('og:site_name',''), re.I))
+
+
 def discover_strict(page, company_name):
-    """Own header/footer AND full company-name handle; never fetch platforms."""
+    """Own header/footer and exact-name handle, or bounded numeric LinkedIn."""
     from .candidates import legal_name
     def forms(value):
         text=str(value or '').casefold()
@@ -61,6 +70,13 @@ def discover_strict(page, company_name):
         if re.search(r'\b(?:founder|grunnlegger|agency|designer|byrå|group|gruppen|holding)\b', link.text, re.I): continue
         url=profile_url(link.href)
         if not url: continue
+        pos = page.raw.find(link.span)
+        prefix = re.sub(r'<[^>]*>', ' ', page.raw[max(0, pos-200):pos]) if pos >= 0 else ''
+        if re.search(r'\b(?:founders?|grunnlegger|agency|byrå|designer|designed|developed|utviklet|webdesign|powered)\b[^.!?]{0,60}$', prefix, re.I):
+            continue
+        if numeric_linkedin(url):
+            if not shared_group_context(page): found.setdefault(url,link.span)
+            continue
         bits=[x for x in urlsplit(url).path.split('/') if x]
         handle=bits[1] if bits and bits[0].lower() in {'company','pages','c','user','channel'} and len(bits)>1 else bits[0]
         if not forms(handle.lstrip('@')) & names: continue

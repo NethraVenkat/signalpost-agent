@@ -98,7 +98,7 @@ def apply(envelope, previous, blobs):
         family = (after or before).family
         if family not in envelope.run.sections or family in failed:
             continue
-        if field.startswith('social_profile.') and before and isinstance(before.value,dict) and before.value.get('proof_tier')!='own_header_footer_exact_name_v1':
+        if field.startswith('social_profile.') and before and isinstance(before.value,dict) and before.value.get('proof_tier') not in {'own_header_footer_exact_name_v1', 'own_header_footer_numeric_linkedin_v1'}:
             envelope.run.refresh['observation_changes'].append({'section':'website','field':field,
                 'previous_state':before.availability,'current_state':after.availability if after else 'not_published',
                 'reason':'social_proof_policy_changed'})

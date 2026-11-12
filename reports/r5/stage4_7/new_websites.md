@@ -258,6 +258,120 @@ Source: https://spedify.no/ · SHA-256 `52ab413b475db6341975f9892d087395e9ac5428
         <div class="footer-social" aria-label="Spedify i sosiale medier"
 ```
 
+## order to social: added
+
+926818317 — SPEDIFY AS — https://www.linkedin.com/company/74060067
+
+Proof tier: `own_header_footer_numeric_linkedin_v1`
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv · SHA-256 `6a296a4898f7a215fafd9a94433c851034b6ef5af9d8692449ec89b7b210f04e` · locator `row:926818317/column:navn`
+
+```html
+926818317,SPEDIFY AS,AS,Aksjeselskap,52.100,Lagring,,,,,,,true,77,2026-09-14,2026-09-10,,,,,,,,,,,,"c/o AssistCo AS
+Svaddevegen 125",RJUKAN,3660,TINN,4026,Norge,NO,2100,Private aksjeselskaper mv.,2025,2021-03-23,2021-02-27,true,2024-03-22,2024-04-22,,,false,,true,2021-03-23,false,false,,false,,false
+```
+
+Source: https://spedify.no/ · SHA-256 `52ab413b475db6341975f9892d087395e9ac54286f4b9a571b53edd30a2b25e2` · locator `identity-proof:926818317`
+
+```html
+ footer-item" role="none"><span>Org.nr. 926 818 317</span></li>
+        </ul>
+        <div class="footer-social" aria-label="Spedify i sosiale medier"
+```
+
+Source: https://spedify.no/ · SHA-256 `52ab413b475db6341975f9892d087395e9ac54286f4b9a571b53edd30a2b25e2` · locator `company-link:https://www.linkedin.com/company/74060067`
+
+```html
+<a href="https://www.linkedin.com/company/74060067/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+```
+
+## order to social: added
+
+991853995 — BIEN SPAREBANK ASA — https://www.linkedin.com/company/123301
+
+Proof tier: `own_header_footer_numeric_linkedin_v1`
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv · SHA-256 `ea02b2b6d59ff2248a7caa75e570734ffda7081217da0340e98e7a2736606061` · locator `row:991853995/column:navn`
+
+```html
+991853995,BIEN SPAREBANK ASA,ASA,Allmennaksjeselskap,64.190,Banker og kredittforetak,,,,,,,true,45,2026-09-14,2026-09-10,www.bien.no,post@bien.no,,91502436,Postboks 6790 St Olavs Plass,OSLO,0130,OSLO,0301,Norge,NO,Dronning Mauds gate 11,OSLO,0250,OSLO,0301,Norge,NO,3200,Banker,2025,2007-11-08,2007-0
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv · SHA-256 `ea02b2b6d59ff2248a7caa75e570734ffda7081217da0340e98e7a2736606061` · locator `row:991853995/column:epostadresse`
+
+```html
+dittforetak,,,,,,,true,45,2026-09-14,2026-09-10,www.bien.no,post@bien.no,,91502436,Postboks 6790 St Olavs Plass,OSLO,0130,OSLO,0301,Norge,NO,Dronning Mauds gate 11,OSLO,0250,OSLO,0301,Norge,NO,3200,Banker,2025,2007-11-08,2007-09-18,false,,,,,false,,true,2007-11-08,false,false,,false,,false,,false,,,
+```
+
+Source: https://www.bien.no/ · SHA-256 `0d0ae1d5dfadcd7a4bb69f55dffa5c2a5fe02eb14aaba4986f46cc5c67cd7a8d` · locator `identity-proof:991853995`
+
+```html
+ <div class="footer-list__text">Org.nr: 991853995</div>
+                            </li>
+                                                    <li clas
+```
+
+Source: https://www.bien.no/ · SHA-256 `0d0ae1d5dfadcd7a4bb69f55dffa5c2a5fe02eb14aaba4986f46cc5c67cd7a8d` · locator `registry-contact:email_domain`
+
+```html
+<a class="sgw-link sgw-button-common link button--link button--size-standard" href="mailto:post@bien.no" data-track-id="sitecore-footer" data-track-linkname="postbienno">
+```
+
+Source: https://www.bien.no/ · SHA-256 `0d0ae1d5dfadcd7a4bb69f55dffa5c2a5fe02eb14aaba4986f46cc5c67cd7a8d` · locator `company-link:https://www.linkedin.com/company/123301`
+
+```html
+<a class="sgw-button sgw-button-common button--icon-negative button--size-standard" href="https://www.linkedin.com/company/123301" target="_blank" aria-label="Linkedin" data-track-id="sitecore-footer" data-track-linkname="linkedin">
+```
+
+## order to social: removed
+
+927094266 — SPORTLET.NO AS — https://www.sportlet.no
+
+Proof tier: `VERIFIED`
+
+Source: https://www.sportlet.no/ · SHA-256 `3954e983d743c6f720435fdd8aa317411c657c993c8e1c030ea4a4e44d4a5870` · locator `identity-proof:927094266`
+
+```html
+      <li class="no-list py-2">Org. nr. 927 094 266</li>
+                                                    <li class="no-list py-2"><i class="icon-p
+```
+
+## order to social: added
+
+964398003 — FOLKSOM AS — https://www.linkedin.com/company/2534098
+
+Proof tier: `own_header_footer_numeric_linkedin_v1`
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv · SHA-256 `d20651d65ca28a04498198e140f5db8cb0f4cc744016e8bb632e39d278c3b1b1` · locator `row:964398003/column:navn`
+
+```html
+964398003,FOLKSOM AS,AS,Aksjeselskap,68.320,Eiendomsforvaltning på oppdrag,,,,,,,true,9,2024-06-12,2024-06-10,www.folksom.no,hei@folksom.no,33 30 98 80,,,,,,,,,Storgaten 32,TØNSBERG,3126,TØNSBERG,3905,Norge,NO,2100,Private aksjeselskaper mv.,2025,1995-02-20,1992-01-05,true,2001-07-01,2001-09-20,Utle
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv · SHA-256 `d20651d65ca28a04498198e140f5db8cb0f4cc744016e8bb632e39d278c3b1b1` · locator `row:964398003/column:epostadresse`
+
+```html
+å oppdrag,,,,,,,true,9,2024-06-12,2024-06-10,www.folksom.no,hei@folksom.no,33 30 98 80,,,,,,,,,Storgaten 32,TØNSBERG,3126,TØNSBERG,3905,Norge,NO,2100,Private aksjeselskaper mv.,2025,1995-02-20,1992-01-05,true,2001-07-01,2001-09-20,Utleier av bygg eller anlegg,2018-07-04,false,,true,1992-07-20,false,
+```
+
+Source: https://folksom.no/kontakt · SHA-256 `5c8d0c4669590fdba8578ddd5d55377b258e4864effc153cddeeeeb962441c84` · locator `identity-proof:964398003`
+
+```html
+HF. Du må da oppgi Folksom sitt org.nr. 964 398 003. Alternativt kan faktura sendes i PDF format til<span>&nbsp;</span><a href="mailto:faktura@folksom
+```
+
+Source: https://folksom.no/kontakt · SHA-256 `5c8d0c4669590fdba8578ddd5d55377b258e4864effc153cddeeeeb962441c84` · locator `registry-contact:email_domain`
+
+```html
+<a href="mailto:faktura@folksom.no">
+```
+
+Source: https://folksom.no/ · SHA-256 `531faa54187b05780303bc835f6bc6d738dffdb12ac848ff031fad55e4e812cb` · locator `company-link:https://www.linkedin.com/company/2534098`
+
+```html
+<a href="https://www.linkedin.com/company/2534098">
+```
+
 ## Recheck of withheld numeric LinkedIn URLs
 
 ### 991853995 — BIEN SPAREBANK ASA
@@ -266,7 +380,7 @@ URL: https://www.linkedin.com/company/123301
 
 Source: https://www.bien.no/ · SHA-256 `0d0ae1d5dfadcd7a4bb69f55dffa5c2a5fe02eb14aaba4986f46cc5c67cd7a8d`
 
-Own header/footer: True; group site: False; accepted: False.
+Own header/footer: True; group site: False; accepted: True.
 
 Exact link text: `
                                     
@@ -312,7 +426,7 @@ URL: https://www.linkedin.com/company/2534098
 
 Source: https://folksom.no/ · SHA-256 `531faa54187b05780303bc835f6bc6d738dffdb12ac848ff031fad55e4e812cb`
 
-Own header/footer: True; group site: False; accepted: False.
+Own header/footer: True; group site: False; accepted: True.
 
 Exact link text: `
       
@@ -380,7 +494,7 @@ URL: https://www.linkedin.com/company/2534098
 
 Source: https://folksom.no/kontakt · SHA-256 `5c8d0c4669590fdba8578ddd5d55377b258e4864effc153cddeeeeb962441c84`
 
-Own header/footer: True; group site: False; accepted: False.
+Own header/footer: True; group site: False; accepted: True.
 
 Exact link text: `
       

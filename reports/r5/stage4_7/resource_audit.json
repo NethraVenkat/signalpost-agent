@@ -1531,5 +1531,516 @@
         "dns_nominations": 4
       }
     }
+  },
+  "social": {
+    "configured_website_cap": 8,
+    "configured_total_cap": 13,
+    "website_http_attempts": 226,
+    "max_website_http_attempts": 8,
+    "max_company_http_attempts": 11,
+    "max_dns_nominations": 8,
+    "dns_precheck_lookups": 810,
+    "per_company": {
+      "814635562": {
+        "website_http_attempts": 4,
+        "all_http_attempts": 7,
+        "dns_nominations": 2
+      },
+      "815566602": {
+        "website_http_attempts": 3,
+        "all_http_attempts": 6,
+        "dns_nominations": 4
+      },
+      "820162692": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 4
+      },
+      "829577372": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 4
+      },
+      "833467972": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 8
+      },
+      "899174682": {
+        "website_http_attempts": 8,
+        "all_http_attempts": 11,
+        "dns_nominations": 5
+      },
+      "912238504": {
+        "website_http_attempts": 8,
+        "all_http_attempts": 11,
+        "dns_nominations": 4
+      },
+      "912435911": {
+        "website_http_attempts": 3,
+        "all_http_attempts": 6,
+        "dns_nominations": 5
+      },
+      "912579433": {
+        "website_http_attempts": 8,
+        "all_http_attempts": 11,
+        "dns_nominations": 2
+      },
+      "912702847": {
+        "website_http_attempts": 2,
+        "all_http_attempts": 5,
+        "dns_nominations": 8
+      },
+      "913129601": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 4
+      },
+      "915188389": {
+        "website_http_attempts": 7,
+        "all_http_attempts": 10,
+        "dns_nominations": 5
+      },
+      "915412262": {
+        "website_http_attempts": 8,
+        "all_http_attempts": 11,
+        "dns_nominations": 4
+      },
+      "915596436": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 4
+      },
+      "916249985": {
+        "website_http_attempts": 2,
+        "all_http_attempts": 5,
+        "dns_nominations": 5
+      },
+      "916374801": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 4
+      },
+      "917281696": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 4
+      },
+      "917403562": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 8
+      },
+      "917751412": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 4
+      },
+      "918079327": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 4
+      },
+      "918109099": {
+        "website_http_attempts": 8,
+        "all_http_attempts": 11,
+        "dns_nominations": 4
+      },
+      "918703853": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 4
+      },
+      "918824642": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 0
+      },
+      "918843183": {
+        "website_http_attempts": 8,
+        "all_http_attempts": 11,
+        "dns_nominations": 3
+      },
+      "918953612": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 8
+      },
+      "918982523": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 4
+      },
+      "919263601": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 4
+      },
+      "919414944": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 4
+      },
+      "922688532": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 0
+      },
+      "923399658": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 4
+      },
+      "925181536": {
+        "website_http_attempts": 8,
+        "all_http_attempts": 11,
+        "dns_nominations": 2
+      },
+      "925590266": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 8
+      },
+      "925622605": {
+        "website_http_attempts": 8,
+        "all_http_attempts": 11,
+        "dns_nominations": 2
+      },
+      "925841722": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 8
+      },
+      "926201905": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 4
+      },
+      "926358154": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 2
+      },
+      "926433873": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 2
+      },
+      "926489380": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 0
+      },
+      "926818317": {
+        "website_http_attempts": 3,
+        "all_http_attempts": 6,
+        "dns_nominations": 1
+      },
+      "927094266": {
+        "website_http_attempts": 4,
+        "all_http_attempts": 7,
+        "dns_nominations": 4
+      },
+      "927157985": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 8
+      },
+      "927177978": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 4
+      },
+      "927342677": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 4
+      },
+      "927439794": {
+        "website_http_attempts": 8,
+        "all_http_attempts": 11,
+        "dns_nominations": 2
+      },
+      "928027678": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 4
+      },
+      "928054780": {
+        "website_http_attempts": 3,
+        "all_http_attempts": 6,
+        "dns_nominations": 4
+      },
+      "928542742": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 4
+      },
+      "928565637": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 4
+      },
+      "928597695": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 4
+      },
+      "928892956": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 8
+      },
+      "929141369": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 4
+      },
+      "929603176": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 8
+      },
+      "929676130": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 8
+      },
+      "929868323": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 4
+      },
+      "930012130": {
+        "website_http_attempts": 2,
+        "all_http_attempts": 5,
+        "dns_nominations": 4
+      },
+      "930621927": {
+        "website_http_attempts": 8,
+        "all_http_attempts": 11,
+        "dns_nominations": 4
+      },
+      "930777102": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 4
+      },
+      "931515152": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 8
+      },
+      "931605712": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 4
+      },
+      "932004437": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 4
+      },
+      "932112183": {
+        "website_http_attempts": 8,
+        "all_http_attempts": 11,
+        "dns_nominations": 4
+      },
+      "932525070": {
+        "website_http_attempts": 8,
+        "all_http_attempts": 11,
+        "dns_nominations": 5
+      },
+      "933025160": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 4
+      },
+      "933581411": {
+        "website_http_attempts": 8,
+        "all_http_attempts": 11,
+        "dns_nominations": 4
+      },
+      "934216385": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 4
+      },
+      "934485718": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 4
+      },
+      "934616081": {
+        "website_http_attempts": 4,
+        "all_http_attempts": 7,
+        "dns_nominations": 5
+      },
+      "934836189": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 4
+      },
+      "934843355": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 7
+      },
+      "934962435": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 4
+      },
+      "935465567": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 0
+      },
+      "935647142": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 4
+      },
+      "935962196": {
+        "website_http_attempts": 4,
+        "all_http_attempts": 7,
+        "dns_nominations": 2
+      },
+      "936035523": {
+        "website_http_attempts": 8,
+        "all_http_attempts": 11,
+        "dns_nominations": 8
+      },
+      "936349676": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 4
+      },
+      "946595845": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 4
+      },
+      "948639416": {
+        "website_http_attempts": 4,
+        "all_http_attempts": 7,
+        "dns_nominations": 4
+      },
+      "950302011": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 8
+      },
+      "950310499": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 4
+      },
+      "956409071": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 8
+      },
+      "957687504": {
+        "website_http_attempts": 8,
+        "all_http_attempts": 11,
+        "dns_nominations": 3
+      },
+      "960480120": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 8
+      },
+      "964398003": {
+        "website_http_attempts": 6,
+        "all_http_attempts": 9,
+        "dns_nominations": 0
+      },
+      "975514412": {
+        "website_http_attempts": 1,
+        "all_http_attempts": 4,
+        "dns_nominations": 4
+      },
+      "983739377": {
+        "website_http_attempts": 3,
+        "all_http_attempts": 6,
+        "dns_nominations": 4
+      },
+      "987769386": {
+        "website_http_attempts": 7,
+        "all_http_attempts": 10,
+        "dns_nominations": 0
+      },
+      "988963259": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 4
+      },
+      "989214209": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 4
+      },
+      "989965964": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 5
+      },
+      "991835423": {
+        "website_http_attempts": 5,
+        "all_http_attempts": 8,
+        "dns_nominations": 4
+      },
+      "991853995": {
+        "website_http_attempts": 3,
+        "all_http_attempts": 8,
+        "dns_nominations": 0
+      },
+      "993016446": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 8
+      },
+      "997095987": {
+        "website_http_attempts": 2,
+        "all_http_attempts": 5,
+        "dns_nominations": 6
+      },
+      "997995414": {
+        "website_http_attempts": 8,
+        "all_http_attempts": 11,
+        "dns_nominations": 3
+      },
+      "998181410": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 4
+      },
+      "998309530": {
+        "website_http_attempts": 8,
+        "all_http_attempts": 11,
+        "dns_nominations": 6
+      },
+      "998320143": {
+        "website_http_attempts": 8,
+        "all_http_attempts": 11,
+        "dns_nominations": 4
+      },
+      "998340888": {
+        "website_http_attempts": 6,
+        "all_http_attempts": 9,
+        "dns_nominations": 1
+      },
+      "998795621": {
+        "website_http_attempts": 0,
+        "all_http_attempts": 3,
+        "dns_nominations": 4
+      },
+      "999504116": {
+        "website_http_attempts": 4,
+        "all_http_attempts": 7,
+        "dns_nominations": 4
+      }
+    }
   }
 }

@@ -523,6 +523,232 @@
           "reporting_period": null
         }
       ]
+    },
+    {
+      "step": "social",
+      "comparison": "order",
+      "action": "added",
+      "organisation_number": "926818317",
+      "name": "SPEDIFY AS",
+      "url": "https://www.linkedin.com/company/74060067",
+      "proof_tier": "own_header_footer_numeric_linkedin_v1",
+      "evidence": [
+        {
+          "id": "845bdfe95e1e0129e44d6a7f282fef53965fa39f3781764b53d8a74931d8c566",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-12T17:07:37.002877Z",
+          "content_sha256": "6a296a4898f7a215fafd9a94433c851034b6ef5af9d8692449ec89b7b210f04e",
+          "claim_span": "926818317,SPEDIFY AS,AS,Aksjeselskap,52.100,Lagring,,,,,,,true,77,2026-09-14,2026-09-10,,,,,,,,,,,,\"c/o AssistCo AS\nSvaddevegen 125\",RJUKAN,3660,TINN,4026,Norge,NO,2100,Private aksjeselskaper mv.,2025,2021-03-23,2021-02-27,true,2024-03-22,2024-04-22,,,false,,true,2021-03-23,false,false,,false,,false",
+          "locator": "row:926818317/column:navn",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": "registry100.csv:sha256:bd244f0fe6ad92bfcadcbce9ba545863c0ca0afa8b9b5b4c5e3425830a63186d",
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "4f9e3c2c0100ea4c947342055839969dbeeaeb69303016b3357803eec53cce96",
+          "source_url": "https://spedify.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-12T17:07:46.251428Z",
+          "content_sha256": "52ab413b475db6341975f9892d087395e9ac54286f4b9a571b53edd30a2b25e2",
+          "claim_span": " footer-item\" role=\"none\"><span>Org.nr. 926 818 317</span></li>\n        </ul>\n        <div class=\"footer-social\" aria-label=\"Spedify i sosiale medier\"",
+          "locator": "identity-proof:926818317",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "5e340356b3d4ebfd7f606526978f0c6478ca44672e4a5b1fd519378ab8599790",
+          "source_url": "https://spedify.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-12T17:07:46.251428Z",
+          "content_sha256": "52ab413b475db6341975f9892d087395e9ac54286f4b9a571b53edd30a2b25e2",
+          "claim_span": "<a href=\"https://www.linkedin.com/company/74060067/\" target=\"_blank\" rel=\"noopener\" aria-label=\"LinkedIn\" title=\"LinkedIn\">",
+          "locator": "company-link:https://www.linkedin.com/company/74060067",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    {
+      "step": "social",
+      "comparison": "order",
+      "action": "added",
+      "organisation_number": "991853995",
+      "name": "BIEN SPAREBANK ASA",
+      "url": "https://www.linkedin.com/company/123301",
+      "proof_tier": "own_header_footer_numeric_linkedin_v1",
+      "evidence": [
+        {
+          "id": "155e2afbc464ff3cc4b17c4ee67e11237967ccaf06795eb6ad13682f46331091",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-12T17:07:37.067976Z",
+          "content_sha256": "ea02b2b6d59ff2248a7caa75e570734ffda7081217da0340e98e7a2736606061",
+          "claim_span": "991853995,BIEN SPAREBANK ASA,ASA,Allmennaksjeselskap,64.190,Banker og kredittforetak,,,,,,,true,45,2026-09-14,2026-09-10,www.bien.no,post@bien.no,,91502436,Postboks 6790 St Olavs Plass,OSLO,0130,OSLO,0301,Norge,NO,Dronning Mauds gate 11,OSLO,0250,OSLO,0301,Norge,NO,3200,Banker,2025,2007-11-08,2007-0",
+          "locator": "row:991853995/column:navn",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": "registry100.csv:sha256:bd244f0fe6ad92bfcadcbce9ba545863c0ca0afa8b9b5b4c5e3425830a63186d",
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "cb45d2ca4a3932618caeed57402877aaaa1044164c7af94316371e8f28c144d3",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-12T17:07:37.067976Z",
+          "content_sha256": "ea02b2b6d59ff2248a7caa75e570734ffda7081217da0340e98e7a2736606061",
+          "claim_span": "dittforetak,,,,,,,true,45,2026-09-14,2026-09-10,www.bien.no,post@bien.no,,91502436,Postboks 6790 St Olavs Plass,OSLO,0130,OSLO,0301,Norge,NO,Dronning Mauds gate 11,OSLO,0250,OSLO,0301,Norge,NO,3200,Banker,2025,2007-11-08,2007-09-18,false,,,,,false,,true,2007-11-08,false,false,,false,,false,,false,,,",
+          "locator": "row:991853995/column:epostadresse",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": "registry100.csv:sha256:bd244f0fe6ad92bfcadcbce9ba545863c0ca0afa8b9b5b4c5e3425830a63186d",
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "9043f67365662cecd799053f4b5b23580ea320d002ffa0349f309b09f93c0fdd",
+          "source_url": "https://www.bien.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-12T17:07:59.942409Z",
+          "content_sha256": "0d0ae1d5dfadcd7a4bb69f55dffa5c2a5fe02eb14aaba4986f46cc5c67cd7a8d",
+          "claim_span": " <div class=\"footer-list__text\">Org.nr: 991853995</div>\n                            </li>\n                                                    <li clas",
+          "locator": "identity-proof:991853995",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "b26e64b43b1aa49f8b5c0be3bbaa646bb7e0f23010436a9ff017cc6d53aba8ec",
+          "source_url": "https://www.bien.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-12T17:07:59.942409Z",
+          "content_sha256": "0d0ae1d5dfadcd7a4bb69f55dffa5c2a5fe02eb14aaba4986f46cc5c67cd7a8d",
+          "claim_span": "<a class=\"sgw-link sgw-button-common link button--link button--size-standard\" href=\"mailto:post@bien.no\" data-track-id=\"sitecore-footer\" data-track-linkname=\"postbienno\">",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "b0e893e5d7577742206a22060c99ffb6ebf21f9f2046febb6117ad25f79f7572",
+          "source_url": "https://www.bien.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-12T17:07:59.942409Z",
+          "content_sha256": "0d0ae1d5dfadcd7a4bb69f55dffa5c2a5fe02eb14aaba4986f46cc5c67cd7a8d",
+          "claim_span": "<a class=\"sgw-button sgw-button-common button--icon-negative button--size-standard\" href=\"https://www.linkedin.com/company/123301\" target=\"_blank\" aria-label=\"Linkedin\" data-track-id=\"sitecore-footer\" data-track-linkname=\"linkedin\">",
+          "locator": "company-link:https://www.linkedin.com/company/123301",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    {
+      "step": "social",
+      "comparison": "order",
+      "action": "removed",
+      "organisation_number": "927094266",
+      "name": "SPORTLET.NO AS",
+      "url": "https://www.sportlet.no",
+      "proof_tier": "VERIFIED",
+      "evidence": [
+        {
+          "id": "2e7a428e3c4f0b71ed9b93aad806dd8d2874fca84c54d6caedbb656b0c107a2d",
+          "source_url": "https://www.sportlet.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-12T16:51:38.685104Z",
+          "content_sha256": "3954e983d743c6f720435fdd8aa317411c657c993c8e1c030ea4a4e44d4a5870",
+          "claim_span": "      <li class=\"no-list py-2\">Org. nr. 927 094 266</li>\n                                                    <li class=\"no-list py-2\"><i class=\"icon-p",
+          "locator": "identity-proof:927094266",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    {
+      "step": "social",
+      "comparison": "order",
+      "action": "added",
+      "organisation_number": "964398003",
+      "name": "FOLKSOM AS",
+      "url": "https://www.linkedin.com/company/2534098",
+      "proof_tier": "own_header_footer_numeric_linkedin_v1",
+      "evidence": [
+        {
+          "id": "1de605485556df4b54df204f6c66b0f4950b7a2bea82e30341494655e05b21d6",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-12T17:07:37.059977Z",
+          "content_sha256": "d20651d65ca28a04498198e140f5db8cb0f4cc744016e8bb632e39d278c3b1b1",
+          "claim_span": "964398003,FOLKSOM AS,AS,Aksjeselskap,68.320,Eiendomsforvaltning på oppdrag,,,,,,,true,9,2024-06-12,2024-06-10,www.folksom.no,hei@folksom.no,33 30 98 80,,,,,,,,,Storgaten 32,TØNSBERG,3126,TØNSBERG,3905,Norge,NO,2100,Private aksjeselskaper mv.,2025,1995-02-20,1992-01-05,true,2001-07-01,2001-09-20,Utle",
+          "locator": "row:964398003/column:navn",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": "registry100.csv:sha256:bd244f0fe6ad92bfcadcbce9ba545863c0ca0afa8b9b5b4c5e3425830a63186d",
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "b653667a7755ba42ab6c006984c82c6aeb0ffb81740b86656da67cc372a66fdc",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-12T17:07:37.059977Z",
+          "content_sha256": "d20651d65ca28a04498198e140f5db8cb0f4cc744016e8bb632e39d278c3b1b1",
+          "claim_span": "å oppdrag,,,,,,,true,9,2024-06-12,2024-06-10,www.folksom.no,hei@folksom.no,33 30 98 80,,,,,,,,,Storgaten 32,TØNSBERG,3126,TØNSBERG,3905,Norge,NO,2100,Private aksjeselskaper mv.,2025,1995-02-20,1992-01-05,true,2001-07-01,2001-09-20,Utleier av bygg eller anlegg,2018-07-04,false,,true,1992-07-20,false,",
+          "locator": "row:964398003/column:epostadresse",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": "registry100.csv:sha256:bd244f0fe6ad92bfcadcbce9ba545863c0ca0afa8b9b5b4c5e3425830a63186d",
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "e0e94616625d93b045ce120605050b45a0a84413071cfb13df44c6c482618799",
+          "source_url": "https://folksom.no/kontakt",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-12T17:08:00.633672Z",
+          "content_sha256": "5c8d0c4669590fdba8578ddd5d55377b258e4864effc153cddeeeeb962441c84",
+          "claim_span": "HF. Du må da oppgi Folksom sitt org.nr. 964 398 003. Alternativt kan faktura sendes i PDF format til<span>&nbsp;</span><a href=\"mailto:faktura@folksom",
+          "locator": "identity-proof:964398003",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "6bd44e187880a68c0592cc4c4c7fe481f829794fd69e52e42af0e9bc2594ab99",
+          "source_url": "https://folksom.no/kontakt",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-12T17:08:00.633672Z",
+          "content_sha256": "5c8d0c4669590fdba8578ddd5d55377b258e4864effc153cddeeeeb962441c84",
+          "claim_span": "<a href=\"mailto:faktura@folksom.no\">",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "d2e32784008941b64916ed3d9fce9abdd55adad118f2a01acc6ba814def7dd11",
+          "source_url": "https://folksom.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-12T17:07:59.029179Z",
+          "content_sha256": "531faa54187b05780303bc835f6bc6d738dffdb12ac848ff031fad55e4e812cb",
+          "claim_span": "<a href=\"https://www.linkedin.com/company/2534098\">",
+          "locator": "company-link:https://www.linkedin.com/company/2534098",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
     }
   ],
   "withheld_recheck": [
@@ -536,7 +762,7 @@
       "anchor_text": "\n                                    \n                                        \n                                            \n                                                \n                                            \n                                        \n                                    \n                                ",
       "header_footer_context": true,
       "group_site": false,
-      "accepted": false,
+      "accepted": true,
       "ancestor_opening_tags": [
         [
           "<html lang=\"nb-NO\" >",
@@ -563,7 +789,7 @@
       "anchor_text": "\n      \n\n        \n        \n      \n      ",
       "header_footer_context": true,
       "group_site": false,
-      "accepted": false,
+      "accepted": true,
       "ancestor_opening_tags": [
         [
           "<html lang=\"no\">",
@@ -590,7 +816,7 @@
       "anchor_text": "\n      \n\n        \n        \n      \n      ",
       "header_footer_context": true,
       "group_site": false,
-      "accepted": false,
+      "accepted": true,
       "ancestor_opening_tags": [
         [
           "<html lang=\"no\">",

@@ -88,7 +88,7 @@ class WebsiteHttp:
                     self.budget.check()
                     gate.next_start = time.monotonic() + self.config.website_politeness_seconds
                 registry_requests = sum(e['organisation_number']==org and e.get('section')!='website' for e in self.budget.events)
-                company_cap = min(self.config.website_request_cap + int(org in self.activity_extra),max(0,self.config.website_total_request_cap-registry_requests))
+                company_cap = min(8, self.config.website_request_cap + int(org in self.activity_extra),max(0,self.config.website_total_request_cap-registry_requests))
                 if self.counts.get(org, 0) >= company_cap:
                     raise SourceFailure("website_budget_exhausted")
                 event = self.budget.reserve(url, parts.hostname, org)

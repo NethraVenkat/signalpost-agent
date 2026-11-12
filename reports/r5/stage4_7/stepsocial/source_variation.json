@@ -1,0 +1,51 @@
+﻿{
+    "name":  "SPORTLET.NO AS",
+    "interpretation":  "Prior verified URL withheld after live robots/homepage timeouts; no assertion of closure or current ownership.",
+    "reason":  "website_source_unavailable / website_timeout",
+    "current_state":  "failed",
+    "organisation_number":  "927094266",
+    "attempts":  [
+                     {
+                         "url":  "https://sportlet.no/robots.txt",
+                         "host":  "sportlet.no",
+                         "organisation_number":  "927094266",
+                         "attempt_started":  7.312000000005355,
+                         "status":  200,
+                         "error":  null,
+                         "section":  "website",
+                         "content_sha256":  "4e95636c2e51e899b1ab6937d2c17e318e3062abae3c7760bfe289ba6ab8d12c",
+                         "runtime_ms":  2953
+                     },
+                     {
+                         "url":  "https://sportlet.no/",
+                         "host":  "sportlet.no",
+                         "organisation_number":  "927094266",
+                         "attempt_started":  17.875,
+                         "status":  301,
+                         "error":  null,
+                         "section":  "website",
+                         "content_sha256":  "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                         "runtime_ms":  1578
+                     },
+                     {
+                         "url":  "https://www.sportlet.no/robots.txt",
+                         "host":  "www.sportlet.no",
+                         "organisation_number":  "927094266",
+                         "attempt_started":  20.46799999999348,
+                         "status":  null,
+                         "error":  "TimeoutError",
+                         "section":  "website",
+                         "runtime_ms":  7985
+                     },
+                     {
+                         "url":  "https://sportlet.no/",
+                         "host":  "sportlet.no",
+                         "organisation_number":  "927094266",
+                         "attempt_started":  32.57799999999406,
+                         "status":  null,
+                         "error":  "TimeoutError",
+                         "section":  "website",
+                         "runtime_ms":  10047
+                     }
+                 ]
+}

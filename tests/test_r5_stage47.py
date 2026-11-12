@@ -64,3 +64,39 @@ def test_proof_page_veto_stops_remaining_requests(tmp_path, monkeypatch):
     _, row, urls, _ = execute_web(tmp_path, monkeypatch, response=response)
     assert not any(c['field'] == 'official_website' for c in row['claims'])
     assert sum(url.startswith('https://example.no/') for url in urls) == 3
+
+
+def test_cached_dns_does_not_charge_another_company_at_its_nomination_limit(tmp_path):
+    cfg = config(tmp_path, [OUR, OTHER])
+    calls = []
+    async def resolve(host, port):
+        calls.append(host)
+        return ['93.184.216.34']
+    async def go():
+        async with httpx.AsyncClient() as client:
+            fetcher = WebsiteHttp(client, cfg, Budget(cfg), BlobStore(tmp_path), resolver=resolve)
+            candidate = Candidate('https://cached.no/', 'cached.no', 'legal_name_slug')
+            await fetcher.precheck(candidate, OUR)
+            fetcher.dns_counts[OTHER] = 8
+            await fetcher.precheck(candidate, OTHER)
+            assert fetcher.dns_counts == {OUR: 1, OTHER: 8}
+            with pytest.raises(SourceFailure):
+                await fetcher.precheck(Candidate('https://new.no/', 'new.no', 'legal_name_slug'), OTHER)
+            assert not fetcher.budget.events
+    asyncio.run(go())
+    assert calls == ['cached.no']
+
+
+def test_activity_allowance_cannot_exceed_absolute_eight_request_ceiling(tmp_path):
+    cfg = config(tmp_path, [OUR], website_request_cap=8, website_total_request_cap=13)
+    async def resolve(host, port): return ['93.184.216.34']
+    async def go():
+        async with httpx.AsyncClient() as client:
+            fetcher = WebsiteHttp(client, cfg, Budget(cfg), BlobStore(tmp_path), resolver=resolve)
+            fetcher.counts[OUR] = 8
+            fetcher.activity_extra.add(OUR)
+            with pytest.raises(SourceFailure) as error:
+                await fetcher.raw('https://example.no/', OUR, {'example.no'})
+            assert error.value.code == 'website_budget_exhausted'
+            assert not fetcher.budget.events
+    asyncio.run(go())
