@@ -2,10 +2,30 @@
 import hashlib
 import json
 from pathlib import Path
+from html.parser import HTMLParser
+from urllib.parse import urljoin
 from signalpost.web.html import Page
 from signalpost.web.social import discover_strict
 
 ROOT = Path('reports/r5/stage4_7')
+
+
+def ancestor_tags(raw, base, target):
+    class Context(HTMLParser):
+        def __init__(self):
+            super().__init__(); self.stack=[]; self.found=[]
+        def handle_starttag(self, tag, attrs):
+            attrs=dict(attrs)
+            if tag=='a' and urljoin(base, attrs.get('href','')).rstrip('/')==target.rstrip('/'):
+                self.found.append([literal for _,literal in self.stack])
+            if tag not in {'meta','link','img','br','hr','input','source','area','base','embed','wbr'}:
+                self.stack.append((tag,self.get_starttag_text()))
+        def handle_endtag(self, tag):
+            for i in range(len(self.stack)-1,-1,-1):
+                if self.stack[i][0]==tag:
+                    self.stack=self.stack[:i]; break
+    parser=Context(); parser.feed(raw)
+    return parser.found
 
 
 def rows(path):
@@ -74,6 +94,7 @@ def main():
                     header_footer_context=link.header_footer_context,
                     group_site=bool(web and web['value'].get('other_orgnrs')),
                     accepted=link.href.rstrip('/') in discover_strict(page, name) and bool(web) and not web['value'].get('other_orgnrs'),
+                    ancestor_opening_tags=ancestor_tags(page.raw,url,link.href),
                     exact_context=page.raw[max(0, pos-350):pos+len(link.span)+350]))
     (ROOT/'url_audit.json').write_text(json.dumps({'transitions':transitions,'withheld_recheck':contexts}, ensure_ascii=False, indent=2)+'\n', encoding='utf8')
     text = '# Stage 4.7 website and social URL audit\n\nEvery transition is shown, including Stage 3 to 4.6 for the two previously withheld URLs. Evidence excerpts below are verbatim; complete evidence and context are in `url_audit.json`.\n\n'
@@ -85,6 +106,8 @@ def main():
     text += '## Recheck of withheld numeric LinkedIn URLs\n\n'
     for item in contexts:
         text += f"### {item['organisation_number']} — {item['name']}\n\nURL: {item['url']}\n\nSource: {item['source_url']} · SHA-256 `{item['content_sha256']}`\n\nOwn header/footer: {item['header_footer_context']}; group site: {item['group_site']}; accepted: {item['accepted']}.\n\nExact link text: `{item['anchor_text']}`\n\n```html\n{item['exact_context']}\n```\n\n"
+        for ancestors in item['ancestor_opening_tags']:
+            text += 'Enclosing ancestor opening tags, each verbatim from this body:\n\n```html\n'+'\n'.join(ancestors)+'\n```\n\n'
     (ROOT/'new_websites.md').write_text(text, encoding='utf8')
     print(json.dumps({'transitions':len(transitions),'contexts':len(contexts)}))
 

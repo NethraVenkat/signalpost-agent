@@ -5,7 +5,7 @@ from pathlib import Path
 
 root = Path('reports/r5/stage4_7')
 paths = [('Stage 3', Path('reports/r5/stage3')), ('4.6', Path('reports/r5/stage4/step4_6'))]
-paths += [('4.7 '+step, root/('step'+step)) for step in ('budget','caps','singlehost','social') if (root/('step'+step)/'counts.json').exists()]
+paths += [('4.7 '+step, root/('step'+step)) for step in ('budget','caps','order','singlehost','social') if (root/('step'+step)/'counts.json').exists()]
 counts = [json.loads((p/'counts.json').read_text()) for _,p in paths]
 text = '# Stage 4.7 summary\n\n'
 last = counts[-1]
@@ -18,12 +18,15 @@ for key in counts[0]['metrics']:
     values = [c['metrics'][key] for c in counts]
     text += '| '+key+' | '+' | '.join(f'{v:.3f}' if isinstance(v,float) else str(v) for v in values)+' |\n'
 text += '| Provider cost USD | '+' | '.join('0' for _ in paths)+' |\n'
+text += '| Website request / total caps | '+' | '.join(
+    str(json.loads((p/'settings.json').read_text())['resolved_config']['website_request_cap'])+'/'+
+    str(json.loads((p/'settings.json').read_text())['resolved_config']['website_total_request_cap']) for _,p in paths)+' |\n'
 for section, states in counts[0]['counts_by_section_state'].items():
     for state in states:
         text += f'| {section} / {state} | '+' | '.join(str(c['counts_by_section_state'][section][state]) for c in counts)+' |\n'
 text += '\n## Changes and decisions\n\n'
 text += ('- Budget: one DNS nomination for a www/non-www pair; cached checks cost no additional nomination. Source vetoes precede work, and in-run responses/errors are reused across companies under a URL/permission-scope lock. Identity is independently proved for each company. Alternate hosts require DNS/connect failure; HTTP errors and source vetoes cannot trigger them.\n'
-         '- Candidate order: registry homepage, registry email domain, then the existing bounded registry-subunit/name/brand nominations. Tests explicitly check registry precedence. Exact-number proof immediately stops further candidate/proof-page work.\n')
+         '- Candidate order: registry homepage, registry email domain, then the strongest full-name variants before subunit/brand and remaining spelling nominations. Tests explicitly check registry and full-name precedence. Exact-number proof immediately stops further candidate/proof-page work.\n')
 if any(label=='4.7 caps' for label,_ in paths):
     text += '- The separate 8/13 cap experiment was required because failures remained above Stage 3. Its HTTP cost/runtime and section states are shown separately; no cap above 8/13 was used.\n'
 else:
@@ -48,5 +51,6 @@ text += 'Implementation commits (author Nethra Venkat; no persistent Git identit
 text += subprocess.check_output(['git','log','--format=%h %an <%ae> %s','3d428ad..HEAD'], text=True)
 text += '```\n\n'
 text += ('Two excluded diagnostic acquisitions remain local: sandbox-denied requests, and a long host pause producing 100 deadline hits (2509.575 seconds wall). They are not used in the comparison. An interrupted pytest run failed the unchanged two-second partial-progress assertion; the full suite was rerun without changing any timeout or assertion. All commit gates use the subsequent green full-suite results.\n\n'
+         'Failed test attempts are retained in `test_attempts/`. Later gates use the recorded `run_tests.py` command, which raises only its own Windows process priority to Above Normal to reduce scheduling contention; it changes no assertion or timeout. Crawl measurements use normal process priority.\n\n'
          'Decisions: [DECISIONS.md](../DECISIONS.md). Stage 4.7 ends with this committed report; no Stage 5 work or push was performed.\n')
 (root/'SUMMARY.md').write_text(text, encoding='utf8')

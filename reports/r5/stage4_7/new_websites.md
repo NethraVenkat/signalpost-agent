@@ -135,6 +135,115 @@ Source: https://folksom.no/ · SHA-256 `531faa54187b05780303bc835f6bc6d738dffdb1
 <a href="https://www.instagram.com/folksom/">
 ```
 
+## budget to caps: added
+
+927094266 — SPORTLET.NO AS — https://www.sportlet.no
+
+Proof tier: `VERIFIED`
+
+Source: https://www.sportlet.no/ · SHA-256 `36251238b03cae3538eadfa22aa6484fb1959f462ce21a66fcd5b30bf8b9f881` · locator `identity-proof:927094266`
+
+```html
+      <li class="no-list py-2">Org. nr. 927 094 266</li>
+                                                    <li class="no-list py-2"><i class="icon-p
+```
+
+## budget to caps: added
+
+964398003 — FOLKSOM AS — https://folksom.no
+
+Proof tier: `VERIFIED`
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv · SHA-256 `d20651d65ca28a04498198e140f5db8cb0f4cc744016e8bb632e39d278c3b1b1` · locator `row:964398003/column:epostadresse`
+
+```html
+å oppdrag,,,,,,,true,9,2024-06-12,2024-06-10,www.folksom.no,hei@folksom.no,33 30 98 80,,,,,,,,,Storgaten 32,TØNSBERG,3126,TØNSBERG,3905,Norge,NO,2100,Private aksjeselskaper mv.,2025,1995-02-20,1992-01-05,true,2001-07-01,2001-09-20,Utleier av bygg eller anlegg,2018-07-04,false,,true,1992-07-20,false,
+```
+
+Source: https://folksom.no/kontakt · SHA-256 `5c8d0c4669590fdba8578ddd5d55377b258e4864effc153cddeeeeb962441c84` · locator `identity-proof:964398003`
+
+```html
+HF. Du må da oppgi Folksom sitt org.nr. 964 398 003. Alternativt kan faktura sendes i PDF format til<span>&nbsp;</span><a href="mailto:faktura@folksom
+```
+
+Source: https://folksom.no/kontakt · SHA-256 `5c8d0c4669590fdba8578ddd5d55377b258e4864effc153cddeeeeb962441c84` · locator `registry-contact:email_domain`
+
+```html
+<a href="mailto:faktura@folksom.no">
+```
+
+## budget to caps: added
+
+964398003 — FOLKSOM AS — https://www.facebook.com/folksomas
+
+Proof tier: `own_header_footer_exact_name_v1`
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv · SHA-256 `d20651d65ca28a04498198e140f5db8cb0f4cc744016e8bb632e39d278c3b1b1` · locator `row:964398003/column:navn`
+
+```html
+964398003,FOLKSOM AS,AS,Aksjeselskap,68.320,Eiendomsforvaltning på oppdrag,,,,,,,true,9,2024-06-12,2024-06-10,www.folksom.no,hei@folksom.no,33 30 98 80,,,,,,,,,Storgaten 32,TØNSBERG,3126,TØNSBERG,3905,Norge,NO,2100,Private aksjeselskaper mv.,2025,1995-02-20,1992-01-05,true,2001-07-01,2001-09-20,Utle
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv · SHA-256 `d20651d65ca28a04498198e140f5db8cb0f4cc744016e8bb632e39d278c3b1b1` · locator `row:964398003/column:epostadresse`
+
+```html
+å oppdrag,,,,,,,true,9,2024-06-12,2024-06-10,www.folksom.no,hei@folksom.no,33 30 98 80,,,,,,,,,Storgaten 32,TØNSBERG,3126,TØNSBERG,3905,Norge,NO,2100,Private aksjeselskaper mv.,2025,1995-02-20,1992-01-05,true,2001-07-01,2001-09-20,Utleier av bygg eller anlegg,2018-07-04,false,,true,1992-07-20,false,
+```
+
+Source: https://folksom.no/kontakt · SHA-256 `5c8d0c4669590fdba8578ddd5d55377b258e4864effc153cddeeeeb962441c84` · locator `identity-proof:964398003`
+
+```html
+HF. Du må da oppgi Folksom sitt org.nr. 964 398 003. Alternativt kan faktura sendes i PDF format til<span>&nbsp;</span><a href="mailto:faktura@folksom
+```
+
+Source: https://folksom.no/kontakt · SHA-256 `5c8d0c4669590fdba8578ddd5d55377b258e4864effc153cddeeeeb962441c84` · locator `registry-contact:email_domain`
+
+```html
+<a href="mailto:faktura@folksom.no">
+```
+
+Source: https://folksom.no/ · SHA-256 `531faa54187b05780303bc835f6bc6d738dffdb12ac848ff031fad55e4e812cb` · locator `company-link:https://www.facebook.com/folksomas`
+
+```html
+<a href="https://www.facebook.com/folksomas">
+```
+
+## budget to caps: added
+
+964398003 — FOLKSOM AS — https://www.instagram.com/folksom
+
+Proof tier: `own_header_footer_exact_name_v1`
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv · SHA-256 `d20651d65ca28a04498198e140f5db8cb0f4cc744016e8bb632e39d278c3b1b1` · locator `row:964398003/column:navn`
+
+```html
+964398003,FOLKSOM AS,AS,Aksjeselskap,68.320,Eiendomsforvaltning på oppdrag,,,,,,,true,9,2024-06-12,2024-06-10,www.folksom.no,hei@folksom.no,33 30 98 80,,,,,,,,,Storgaten 32,TØNSBERG,3126,TØNSBERG,3905,Norge,NO,2100,Private aksjeselskaper mv.,2025,1995-02-20,1992-01-05,true,2001-07-01,2001-09-20,Utle
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv · SHA-256 `d20651d65ca28a04498198e140f5db8cb0f4cc744016e8bb632e39d278c3b1b1` · locator `row:964398003/column:epostadresse`
+
+```html
+å oppdrag,,,,,,,true,9,2024-06-12,2024-06-10,www.folksom.no,hei@folksom.no,33 30 98 80,,,,,,,,,Storgaten 32,TØNSBERG,3126,TØNSBERG,3905,Norge,NO,2100,Private aksjeselskaper mv.,2025,1995-02-20,1992-01-05,true,2001-07-01,2001-09-20,Utleier av bygg eller anlegg,2018-07-04,false,,true,1992-07-20,false,
+```
+
+Source: https://folksom.no/kontakt · SHA-256 `5c8d0c4669590fdba8578ddd5d55377b258e4864effc153cddeeeeb962441c84` · locator `identity-proof:964398003`
+
+```html
+HF. Du må da oppgi Folksom sitt org.nr. 964 398 003. Alternativt kan faktura sendes i PDF format til<span>&nbsp;</span><a href="mailto:faktura@folksom
+```
+
+Source: https://folksom.no/kontakt · SHA-256 `5c8d0c4669590fdba8578ddd5d55377b258e4864effc153cddeeeeb962441c84` · locator `registry-contact:email_domain`
+
+```html
+<a href="mailto:faktura@folksom.no">
+```
+
+Source: https://folksom.no/ · SHA-256 `531faa54187b05780303bc835f6bc6d738dffdb12ac848ff031fad55e4e812cb` · locator `company-link:https://www.instagram.com/folksom`
+
+```html
+<a href="https://www.instagram.com/folksom/">
+```
+
 ## Recheck of withheld numeric LinkedIn URLs
 
 ### 991853995 — BIEN SPAREBANK ASA
@@ -166,5 +275,156 @@ Exact link text: `
                                         <span class="sgw-button__icon-container">
                                             <span class="sgw-icon">
                                                 <span class="icon icon--24 icon--linkedin-24" role="img"
+```
+
+Enclosing ancestor opening tags, each verbatim from this body:
+
+```html
+<html lang="nb-NO" >
+<body class="eika-web">
+<div class="no-eika-engine">
+<footer data-elastic-exclude class="ebanking-footer footer23">
+<div class="footer-layout">
+<div class="footer-layout__content">
+<div class="footer-layout__content--top">
+<div class="footer-link-item">
+<div class="footer-link-item--top">
+<div class="social-icons">
+```
+
+### 964398003 — FOLKSOM AS
+
+URL: https://www.linkedin.com/company/2534098
+
+Source: https://folksom.no/ · SHA-256 `531faa54187b05780303bc835f6bc6d738dffdb12ac848ff031fad55e4e812cb`
+
+Own header/footer: True; group site: False; accepted: False.
+
+Exact link text: `
+      
+
+        
+        
+      
+      `
+
+```html
+
+        <img src="https://folksom.no/hubfs/assets/facebook-1.svg" alt="facebook-1" loading="lazy">
+      
+      </a>
+    
+      
+      
+      <a href="https://www.instagram.com/folksom/">
+      
+
+        
+        <img src="https://folksom.no/hubfs/assets/instagram-1.svg" alt="instagram-1" loading="lazy">
+      
+      </a>
+    
+      
+      
+      <a href="https://www.linkedin.com/company/2534098">
+      
+
+        
+        <img src="https://folksom.no/hubfs/assets/linkedin-1.svg" alt="linkedin-1" loading="lazy">
+      
+      </a>
+      
+    </div>
+    <div class="column5">
+    
+      
+      
+        
+      
+      
+      <img src="https://folksom.no/hs-fs/hubfs/assets/Miljofyrtarn_Sertifisert-virksomhet__Liten.png?width=120&amp;height=141&amp
+```
+
+Enclosing ancestor opening tags, each verbatim from this body:
+
+```html
+<html lang="no">
+<body>
+<div class="body-wrapper   hs-content-id-84761566423 hs-site-page page ">
+<div data-global-resource-path="fard-theme-v2/templates/partials/footer.html">
+<footer class="footer">
+<div class="ft-footer-container">
+<div id="hs_cos_wrapper_module_170005942483025" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+<div class="module_170005942483025 parallax-container bottom-up ft-module ft-footer-container ">
+<div class="ft-footer-container-items">
+<div class="column4">
+```
+
+### 964398003 — FOLKSOM AS
+
+URL: https://www.linkedin.com/company/2534098
+
+Source: https://folksom.no/kontakt · SHA-256 `5c8d0c4669590fdba8578ddd5d55377b258e4864effc153cddeeeeb962441c84`
+
+Own header/footer: True; group site: False; accepted: False.
+
+Exact link text: `
+      
+
+        
+        
+      
+      `
+
+```html
+
+        <img src="https://folksom.no/hubfs/assets/facebook-1.svg" alt="facebook-1" loading="lazy">
+      
+      </a>
+    
+      
+      
+      <a href="https://www.instagram.com/folksom/">
+      
+
+        
+        <img src="https://folksom.no/hubfs/assets/instagram-1.svg" alt="instagram-1" loading="lazy">
+      
+      </a>
+    
+      
+      
+      <a href="https://www.linkedin.com/company/2534098">
+      
+
+        
+        <img src="https://folksom.no/hubfs/assets/linkedin-1.svg" alt="linkedin-1" loading="lazy">
+      
+      </a>
+      
+    </div>
+    <div class="column5">
+    
+      
+      
+        
+      
+      
+      <img src="https://folksom.no/hs-fs/hubfs/assets/Miljofyrtarn_Sertifisert-virksomhet__Liten.png?width=120&amp;height=141&amp
+```
+
+Enclosing ancestor opening tags, each verbatim from this body:
+
+```html
+<html lang="no">
+<body>
+<div class="body-wrapper   hs-content-id-87725260500 hs-site-page page ">
+<div data-global-resource-path="fard-theme-v2/templates/partials/footer.html">
+<footer class="footer">
+<div class="ft-footer-container">
+<div id="hs_cos_wrapper_module_170005942483025" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+<div class="module_170005942483025 parallax-container bottom-up ft-module ft-footer-container ">
+<div class="ft-footer-container-items">
+<div class="column4">
 ```
 

@@ -9,6 +9,10 @@
 
 - Budget step: 743 tests passed. Fresh frozen run: 3 verified websites, website failed 30, activity failed 35, 858 HTTP attempts, runtime 406.828s, wall 445.715s, $0 and zero unsupported values. This remains worse than Stage 3, so test the authorized 8/13 caps as a separate measured commit.
 
+- Separate 8/13 experiment: 5 verified websites, website failed 23 and activity failed 27; 919 HTTP attempts, runtime 422.203s, wall 443.260s, $0 and zero unsupported synthesis/briefing values. Targets are met with explicit 8/13 flags; library/CLI defaults remain 6/9. No higher cap or timeout was used. The conditional 4.1 fallback reversion is therefore not triggered. The full-name candidate ordering correction is measured next to try raising website recall above five.
+- Retain the failed full-suite attempts in `stage4_7/test_attempts/`: the interrupted budget run failed the existing partial-progress check; the first cap gate failed unchanged stalled-NAV and partial-progress timing checks (18.719s versus 13s; 3.156s versus 3s). Re-run the full suite after the crawl, using a fresh workspace-local temporary directory. No test assertion or production timeout is changed.
+- The second cap gate failed the unchanged 0.15-second NAV feed/detail timing check. A new test launcher initially omitted the Windows multiprocessing main guard and caused child-process failures; fix the launcher, retain that failed log, and re-run. Corrected launcher: **743 passed in 144.93s**, with only its own process at Above Normal priority and unchanged test deadlines/assertions. Live crawl measurements use normal priority. No unrelated Python process was stopped or modified.
+
 ## Stage 4.6
 
 - Publish social profiles only from the verified site's own header/footer (or semantic equivalents), with exact full-name handle agreement after bounded spelling/format normalization. Founder/agency-credit/hidden/article contexts, loose navigation, sameAs-only nominations, wrong-name handles and shared group-site profiles abstain. No platform page is fetched; profile-name support is the literal linked handle, not a claimed platform display-name lookup.

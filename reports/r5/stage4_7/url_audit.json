@@ -273,6 +273,232 @@
           "reporting_period": null
         }
       ]
+    },
+    {
+      "step": "caps",
+      "comparison": "budget",
+      "action": "added",
+      "organisation_number": "927094266",
+      "name": "SPORTLET.NO AS",
+      "url": "https://www.sportlet.no",
+      "proof_tier": "VERIFIED",
+      "evidence": [
+        {
+          "id": "39648c76c525283608d629ab91535ad783d60ea8dc9aa6e898166777ed7cfb9c",
+          "source_url": "https://www.sportlet.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-12T16:26:36.509843Z",
+          "content_sha256": "36251238b03cae3538eadfa22aa6484fb1959f462ce21a66fcd5b30bf8b9f881",
+          "claim_span": "      <li class=\"no-list py-2\">Org. nr. 927 094 266</li>\n                                                    <li class=\"no-list py-2\"><i class=\"icon-p",
+          "locator": "identity-proof:927094266",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    {
+      "step": "caps",
+      "comparison": "budget",
+      "action": "added",
+      "organisation_number": "964398003",
+      "name": "FOLKSOM AS",
+      "url": "https://folksom.no",
+      "proof_tier": "VERIFIED",
+      "evidence": [
+        {
+          "id": "b653667a7755ba42ab6c006984c82c6aeb0ffb81740b86656da67cc372a66fdc",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-12T16:25:33.177716Z",
+          "content_sha256": "d20651d65ca28a04498198e140f5db8cb0f4cc744016e8bb632e39d278c3b1b1",
+          "claim_span": "å oppdrag,,,,,,,true,9,2024-06-12,2024-06-10,www.folksom.no,hei@folksom.no,33 30 98 80,,,,,,,,,Storgaten 32,TØNSBERG,3126,TØNSBERG,3905,Norge,NO,2100,Private aksjeselskaper mv.,2025,1995-02-20,1992-01-05,true,2001-07-01,2001-09-20,Utleier av bygg eller anlegg,2018-07-04,false,,true,1992-07-20,false,",
+          "locator": "row:964398003/column:epostadresse",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": "registry100.csv:sha256:bd244f0fe6ad92bfcadcbce9ba545863c0ca0afa8b9b5b4c5e3425830a63186d",
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "e0e94616625d93b045ce120605050b45a0a84413071cfb13df44c6c482618799",
+          "source_url": "https://folksom.no/kontakt",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-12T16:26:38.487945Z",
+          "content_sha256": "5c8d0c4669590fdba8578ddd5d55377b258e4864effc153cddeeeeb962441c84",
+          "claim_span": "HF. Du må da oppgi Folksom sitt org.nr. 964 398 003. Alternativt kan faktura sendes i PDF format til<span>&nbsp;</span><a href=\"mailto:faktura@folksom",
+          "locator": "identity-proof:964398003",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "6bd44e187880a68c0592cc4c4c7fe481f829794fd69e52e42af0e9bc2594ab99",
+          "source_url": "https://folksom.no/kontakt",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-12T16:26:38.487945Z",
+          "content_sha256": "5c8d0c4669590fdba8578ddd5d55377b258e4864effc153cddeeeeb962441c84",
+          "claim_span": "<a href=\"mailto:faktura@folksom.no\">",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    {
+      "step": "caps",
+      "comparison": "budget",
+      "action": "added",
+      "organisation_number": "964398003",
+      "name": "FOLKSOM AS",
+      "url": "https://www.facebook.com/folksomas",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "evidence": [
+        {
+          "id": "1de605485556df4b54df204f6c66b0f4950b7a2bea82e30341494655e05b21d6",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-12T16:25:33.177716Z",
+          "content_sha256": "d20651d65ca28a04498198e140f5db8cb0f4cc744016e8bb632e39d278c3b1b1",
+          "claim_span": "964398003,FOLKSOM AS,AS,Aksjeselskap,68.320,Eiendomsforvaltning på oppdrag,,,,,,,true,9,2024-06-12,2024-06-10,www.folksom.no,hei@folksom.no,33 30 98 80,,,,,,,,,Storgaten 32,TØNSBERG,3126,TØNSBERG,3905,Norge,NO,2100,Private aksjeselskaper mv.,2025,1995-02-20,1992-01-05,true,2001-07-01,2001-09-20,Utle",
+          "locator": "row:964398003/column:navn",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": "registry100.csv:sha256:bd244f0fe6ad92bfcadcbce9ba545863c0ca0afa8b9b5b4c5e3425830a63186d",
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "b653667a7755ba42ab6c006984c82c6aeb0ffb81740b86656da67cc372a66fdc",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-12T16:25:33.177716Z",
+          "content_sha256": "d20651d65ca28a04498198e140f5db8cb0f4cc744016e8bb632e39d278c3b1b1",
+          "claim_span": "å oppdrag,,,,,,,true,9,2024-06-12,2024-06-10,www.folksom.no,hei@folksom.no,33 30 98 80,,,,,,,,,Storgaten 32,TØNSBERG,3126,TØNSBERG,3905,Norge,NO,2100,Private aksjeselskaper mv.,2025,1995-02-20,1992-01-05,true,2001-07-01,2001-09-20,Utleier av bygg eller anlegg,2018-07-04,false,,true,1992-07-20,false,",
+          "locator": "row:964398003/column:epostadresse",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": "registry100.csv:sha256:bd244f0fe6ad92bfcadcbce9ba545863c0ca0afa8b9b5b4c5e3425830a63186d",
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "e0e94616625d93b045ce120605050b45a0a84413071cfb13df44c6c482618799",
+          "source_url": "https://folksom.no/kontakt",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-12T16:26:38.487945Z",
+          "content_sha256": "5c8d0c4669590fdba8578ddd5d55377b258e4864effc153cddeeeeb962441c84",
+          "claim_span": "HF. Du må da oppgi Folksom sitt org.nr. 964 398 003. Alternativt kan faktura sendes i PDF format til<span>&nbsp;</span><a href=\"mailto:faktura@folksom",
+          "locator": "identity-proof:964398003",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "6bd44e187880a68c0592cc4c4c7fe481f829794fd69e52e42af0e9bc2594ab99",
+          "source_url": "https://folksom.no/kontakt",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-12T16:26:38.487945Z",
+          "content_sha256": "5c8d0c4669590fdba8578ddd5d55377b258e4864effc153cddeeeeb962441c84",
+          "claim_span": "<a href=\"mailto:faktura@folksom.no\">",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "75b2b75913de14908bcd0ce6b1baf060f18bec2ed79c70111dd3196db56a81b8",
+          "source_url": "https://folksom.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-12T16:26:37.152174Z",
+          "content_sha256": "531faa54187b05780303bc835f6bc6d738dffdb12ac848ff031fad55e4e812cb",
+          "claim_span": "<a href=\"https://www.facebook.com/folksomas\">",
+          "locator": "company-link:https://www.facebook.com/folksomas",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    {
+      "step": "caps",
+      "comparison": "budget",
+      "action": "added",
+      "organisation_number": "964398003",
+      "name": "FOLKSOM AS",
+      "url": "https://www.instagram.com/folksom",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "evidence": [
+        {
+          "id": "1de605485556df4b54df204f6c66b0f4950b7a2bea82e30341494655e05b21d6",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-12T16:25:33.177716Z",
+          "content_sha256": "d20651d65ca28a04498198e140f5db8cb0f4cc744016e8bb632e39d278c3b1b1",
+          "claim_span": "964398003,FOLKSOM AS,AS,Aksjeselskap,68.320,Eiendomsforvaltning på oppdrag,,,,,,,true,9,2024-06-12,2024-06-10,www.folksom.no,hei@folksom.no,33 30 98 80,,,,,,,,,Storgaten 32,TØNSBERG,3126,TØNSBERG,3905,Norge,NO,2100,Private aksjeselskaper mv.,2025,1995-02-20,1992-01-05,true,2001-07-01,2001-09-20,Utle",
+          "locator": "row:964398003/column:navn",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": "registry100.csv:sha256:bd244f0fe6ad92bfcadcbce9ba545863c0ca0afa8b9b5b4c5e3425830a63186d",
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "b653667a7755ba42ab6c006984c82c6aeb0ffb81740b86656da67cc372a66fdc",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-12T16:25:33.177716Z",
+          "content_sha256": "d20651d65ca28a04498198e140f5db8cb0f4cc744016e8bb632e39d278c3b1b1",
+          "claim_span": "å oppdrag,,,,,,,true,9,2024-06-12,2024-06-10,www.folksom.no,hei@folksom.no,33 30 98 80,,,,,,,,,Storgaten 32,TØNSBERG,3126,TØNSBERG,3905,Norge,NO,2100,Private aksjeselskaper mv.,2025,1995-02-20,1992-01-05,true,2001-07-01,2001-09-20,Utleier av bygg eller anlegg,2018-07-04,false,,true,1992-07-20,false,",
+          "locator": "row:964398003/column:epostadresse",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": "registry100.csv:sha256:bd244f0fe6ad92bfcadcbce9ba545863c0ca0afa8b9b5b4c5e3425830a63186d",
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "e0e94616625d93b045ce120605050b45a0a84413071cfb13df44c6c482618799",
+          "source_url": "https://folksom.no/kontakt",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-12T16:26:38.487945Z",
+          "content_sha256": "5c8d0c4669590fdba8578ddd5d55377b258e4864effc153cddeeeeb962441c84",
+          "claim_span": "HF. Du må da oppgi Folksom sitt org.nr. 964 398 003. Alternativt kan faktura sendes i PDF format til<span>&nbsp;</span><a href=\"mailto:faktura@folksom",
+          "locator": "identity-proof:964398003",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "6bd44e187880a68c0592cc4c4c7fe481f829794fd69e52e42af0e9bc2594ab99",
+          "source_url": "https://folksom.no/kontakt",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-12T16:26:38.487945Z",
+          "content_sha256": "5c8d0c4669590fdba8578ddd5d55377b258e4864effc153cddeeeeb962441c84",
+          "claim_span": "<a href=\"mailto:faktura@folksom.no\">",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "e935c93c0c8bd8b4563937c8b58d356c2328278278e7a4833657ed18d32637a6",
+          "source_url": "https://folksom.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-12T16:26:37.152174Z",
+          "content_sha256": "531faa54187b05780303bc835f6bc6d738dffdb12ac848ff031fad55e4e812cb",
+          "claim_span": "<a href=\"https://www.instagram.com/folksom/\">",
+          "locator": "company-link:https://www.instagram.com/folksom",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
     }
   ],
   "withheld_recheck": [
@@ -287,7 +513,75 @@
       "header_footer_context": true,
       "group_site": false,
       "accepted": false,
+      "ancestor_opening_tags": [
+        [
+          "<html lang=\"nb-NO\" >",
+          "<body class=\"eika-web\">",
+          "<div class=\"no-eika-engine\">",
+          "<footer data-elastic-exclude class=\"ebanking-footer footer23\">",
+          "<div class=\"footer-layout\">",
+          "<div class=\"footer-layout__content\">",
+          "<div class=\"footer-layout__content--top\">",
+          "<div class=\"footer-link-item\">",
+          "<div class=\"footer-link-item--top\">",
+          "<div class=\"social-icons\">"
+        ]
+      ],
       "exact_context": "                          <div class=\"footer-list__header\">&#197;pningstider</div>\n                                        <div class=\"footer-list__text\">Mandag - Fredag: 09:00 - 16:00</div>\n                                    </li>\n                            </ul>\n                        <div class=\"social-icons\">\n                                <a class=\"sgw-button sgw-button-common button--icon-negative button--size-standard\" href=\"https://www.linkedin.com/company/123301\" target=\"_blank\" aria-label=\"Linkedin\" data-track-id=\"sitecore-footer\" data-track-linkname=\"linkedin\">\n                                    <span class=\"sgw-link__text sgw-link__text--icon-visible\">\n                                        <span class=\"sgw-button__icon-container\">\n                                            <span class=\"sgw-icon\">\n                                                <span class=\"icon icon--24 icon--linkedin-24\" role=\"img\""
+    },
+    {
+      "organisation_number": "964398003",
+      "name": "FOLKSOM AS",
+      "source_url": "https://folksom.no/",
+      "content_sha256": "531faa54187b05780303bc835f6bc6d738dffdb12ac848ff031fad55e4e812cb",
+      "url": "https://www.linkedin.com/company/2534098",
+      "anchor": "<a href=\"https://www.linkedin.com/company/2534098\">",
+      "anchor_text": "\n      \n\n        \n        \n      \n      ",
+      "header_footer_context": true,
+      "group_site": false,
+      "accepted": false,
+      "ancestor_opening_tags": [
+        [
+          "<html lang=\"no\">",
+          "<body>",
+          "<div class=\"body-wrapper   hs-content-id-84761566423 hs-site-page page \">",
+          "<div data-global-resource-path=\"fard-theme-v2/templates/partials/footer.html\">",
+          "<footer class=\"footer\">",
+          "<div class=\"ft-footer-container\">",
+          "<div id=\"hs_cos_wrapper_module_170005942483025\" class=\"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module\" style=\"\" data-hs-cos-general-type=\"widget\" data-hs-cos-type=\"module\">",
+          "<div class=\"module_170005942483025 parallax-container bottom-up ft-module ft-footer-container \">",
+          "<div class=\"ft-footer-container-items\">",
+          "<div class=\"column4\">"
+        ]
+      ],
+      "exact_context": "\n        <img src=\"https://folksom.no/hubfs/assets/facebook-1.svg\" alt=\"facebook-1\" loading=\"lazy\">\n      \n      </a>\n    \n      \n      \n      <a href=\"https://www.instagram.com/folksom/\">\n      \n\n        \n        <img src=\"https://folksom.no/hubfs/assets/instagram-1.svg\" alt=\"instagram-1\" loading=\"lazy\">\n      \n      </a>\n    \n      \n      \n      <a href=\"https://www.linkedin.com/company/2534098\">\n      \n\n        \n        <img src=\"https://folksom.no/hubfs/assets/linkedin-1.svg\" alt=\"linkedin-1\" loading=\"lazy\">\n      \n      </a>\n      \n    </div>\n    <div class=\"column5\">\n    \n      \n      \n        \n      \n      \n      <img src=\"https://folksom.no/hs-fs/hubfs/assets/Miljofyrtarn_Sertifisert-virksomhet__Liten.png?width=120&amp;height=141&amp"
+    },
+    {
+      "organisation_number": "964398003",
+      "name": "FOLKSOM AS",
+      "source_url": "https://folksom.no/kontakt",
+      "content_sha256": "5c8d0c4669590fdba8578ddd5d55377b258e4864effc153cddeeeeb962441c84",
+      "url": "https://www.linkedin.com/company/2534098",
+      "anchor": "<a href=\"https://www.linkedin.com/company/2534098\">",
+      "anchor_text": "\n      \n\n        \n        \n      \n      ",
+      "header_footer_context": true,
+      "group_site": false,
+      "accepted": false,
+      "ancestor_opening_tags": [
+        [
+          "<html lang=\"no\">",
+          "<body>",
+          "<div class=\"body-wrapper   hs-content-id-87725260500 hs-site-page page \">",
+          "<div data-global-resource-path=\"fard-theme-v2/templates/partials/footer.html\">",
+          "<footer class=\"footer\">",
+          "<div class=\"ft-footer-container\">",
+          "<div id=\"hs_cos_wrapper_module_170005942483025\" class=\"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module\" style=\"\" data-hs-cos-general-type=\"widget\" data-hs-cos-type=\"module\">",
+          "<div class=\"module_170005942483025 parallax-container bottom-up ft-module ft-footer-container \">",
+          "<div class=\"ft-footer-container-items\">",
+          "<div class=\"column4\">"
+        ]
+      ],
+      "exact_context": "\n        <img src=\"https://folksom.no/hubfs/assets/facebook-1.svg\" alt=\"facebook-1\" loading=\"lazy\">\n      \n      </a>\n    \n      \n      \n      <a href=\"https://www.instagram.com/folksom/\">\n      \n\n        \n        <img src=\"https://folksom.no/hubfs/assets/instagram-1.svg\" alt=\"instagram-1\" loading=\"lazy\">\n      \n      </a>\n    \n      \n      \n      <a href=\"https://www.linkedin.com/company/2534098\">\n      \n\n        \n        <img src=\"https://folksom.no/hubfs/assets/linkedin-1.svg\" alt=\"linkedin-1\" loading=\"lazy\">\n      \n      </a>\n      \n    </div>\n    <div class=\"column5\">\n    \n      \n      \n        \n      \n      \n      <img src=\"https://folksom.no/hs-fs/hubfs/assets/Miljofyrtarn_Sertifisert-virksomhet__Liten.png?width=120&amp;height=141&amp"
     }
   ]
 }

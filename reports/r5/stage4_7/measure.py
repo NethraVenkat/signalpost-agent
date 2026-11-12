@@ -37,6 +37,10 @@ def main():
     if attempt: config['run_id'] += '-'+attempt
     command = (base/'run.ps1').read_text(encoding='utf8').replace('.data/r5/baseline-run', out.as_posix())
     command = command.replace('r5-baseline-seed20261017', config['run_id'])
+    if stage in ('caps', 'singlehost', 'social'):
+        config['website_request_cap'] = 8
+        config['website_total_request_cap'] = 13
+        command = command.replace('--websites --hiring', '--website-request-cap 8 --website-total-request-cap 13 --websites --hiring')
     (dest/'run.ps1').write_text(command, encoding='utf8')
     metadata = {'stage': stage, 'parent_commit': subprocess.check_output(['git','rev-parse','HEAD'], text=True).strip(),
                 'source_diff_sha256': hashlib.sha256(subprocess.check_output(['git','diff','HEAD','--','src','tests','docs'])).hexdigest(),
