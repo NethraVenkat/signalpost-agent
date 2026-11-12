@@ -244,6 +244,20 @@ Source: https://folksom.no/ · SHA-256 `531faa54187b05780303bc835f6bc6d738dffdb1
 <a href="https://www.instagram.com/folksom/">
 ```
 
+## caps to order: added
+
+926818317 — SPEDIFY AS — https://spedify.no
+
+Proof tier: `VERIFIED`
+
+Source: https://spedify.no/ · SHA-256 `52ab413b475db6341975f9892d087395e9ac54286f4b9a571b53edd30a2b25e2` · locator `identity-proof:926818317`
+
+```html
+ footer-item" role="none"><span>Org.nr. 926 818 317</span></li>
+        </ul>
+        <div class="footer-social" aria-label="Spedify i sosiale medier"
+```
+
 ## Recheck of withheld numeric LinkedIn URLs
 
 ### 991853995 — BIEN SPAREBANK ASA

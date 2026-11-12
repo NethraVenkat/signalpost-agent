@@ -15,7 +15,7 @@ def main():
         priority_set = bool(kernel.SetPriorityClass(kernel.GetCurrentProcess(), 0x8000))
     print(json.dumps({'command': [sys.executable, __file__, *sys.argv[1:]],
                       'priority': 'above_normal' if priority_set else 'unchanged',
-                      'test_assertions_and_timeouts': 'unchanged'}), flush=True)
+                      'mutates_test_assertions_or_timeouts': False}), flush=True)
     return pytest.main(sys.argv[1:])
 
 

@@ -47,3 +47,20 @@ def test_shared_page_reused_but_domain_veto_precedes_all_work(tmp_path):
 def test_registry_fields_precede_variants():
     candidates = generate({'name': 'Example AS', 'website': 'registered.no', 'email': 'a@email.no'})
     assert [c.origin for c in candidates[:2]] == ['registry_website', 'registry_email']
+
+
+def test_full_name_precedes_subunit_provider_contact():
+    candidates = generate({'name': 'Spedify AS', 'subunits': [
+        {'orgnr': OTHER, 'name': 'Spedify Workshop', 'email': 'a@provider.no'}]})
+    domains = [c.domain for c in candidates]
+    assert domains.index('spedify.no') < domains.index('provider.no')
+
+
+def test_proof_page_veto_stops_remaining_requests(tmp_path, monkeypatch):
+    def response(request):
+        if request.url.path == '/robots.txt': return httpx.Response(200, text='User-agent: *\nAllow: /')
+        if request.url.path == '/': return httpx.Response(200, text=html('', title='Unrelated'))
+        return httpx.Response(200, text=html('Org nr '+OTHER, title='Unrelated'))
+    _, row, urls, _ = execute_web(tmp_path, monkeypatch, response=response)
+    assert not any(c['field'] == 'official_website' for c in row['claims'])
+    assert sum(url.startswith('https://example.no/') for url in urls) == 3

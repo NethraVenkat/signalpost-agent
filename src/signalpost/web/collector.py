@@ -269,11 +269,13 @@ async def fetch(org, envelope, bulk, http, previous=None):
                             if extra.status == 200:
                                 extra_page = await offload(Page, extra.body, extra.url)
                                 extra_proof = await offload(candidate_proof, extra_page, org, context, candidate, leaders)
-                                if extra_proof.level != 'BLOCKED' and not (extra_proof.level == 'REJECT' and extra_proof.reason == 'foreign_orgnr'):
+                                if extra_proof.level == 'REJECT':
+                                    best = (extra_proof, extra, extra_page)
+                                elif extra_proof.level != 'BLOCKED':
                                     pages.append((extra, extra_page))
                         except SourceFailure:
                             pass
-            elif proof.level not in {"VERIFIED", "REJECT"} or (proof.reason == 'foreign_orgnr' and candidate.origin in {'registry_website', 'subunit_registry_website'}):
+            elif proof.level not in {"VERIFIED", "REJECT"}:
                 seen = {response.url}
                 for target in proof_page_targets(page, response.url):
                     if not target or target in seen or domain(target) != domain(response.url):
@@ -295,9 +297,9 @@ async def fetch(org, envelope, bulk, http, previous=None):
                         attempts.append({'domain':candidate.domain,'origin':candidate.origin,'reason':'block_page','page':target})
                         continue
                     pages.append((extra, extra_page))
-                    if extra_proof.level == "REJECT" and extra_proof.reason == "foreign_orgnr":
+                    if extra_proof.level == "REJECT":
                         best = (extra_proof, extra, extra_page)
-                        continue
+                        break
                     ranks = {"REJECT": -1, "BLOCKED": -1, "LOW": 0, "MEDIUM": 1,'REGISTRY_DECLARED':2, "HIGH": 3, "VERIFIED": 4}
                     if ranks[extra_proof.level] > ranks[best[0].level] and (extra_proof.level == 'VERIFIED' or best[0].reason != 'foreign_orgnr'):
                         best = (extra_proof, extra, extra_page)

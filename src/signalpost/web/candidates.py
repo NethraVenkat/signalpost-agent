@@ -71,6 +71,11 @@ def generate(context):
     email = str(context.get("email") or "")
     if "@" in email:
         add(email.rsplit("@", 1)[1], "registry_email")
+    name_slugs = legal_name_slugs(legal_name(context.get('name')))
+    # The entity's strongest full-name spellings precede subunit contacts,
+    # which may belong to a management provider or unrelated group domain.
+    for slug in sorted(name_slugs, key=lambda value: not value.endswith('.no'))[:2]:
+        add(slug, 'legal_name_slug')
     for unit in context.get('subunits',[]):
         add(unit.get('website'),'subunit_registry_website',unit['orgnr'])
         email=str(unit.get('email') or '')
@@ -80,8 +85,7 @@ def generate(context):
     for brand in context.get('brands', []):
         for slug in legal_name_slugs(legal_name(brand)):
             add(slug, 'brand_variant')
-    name = legal_name(context.get("name"))
-    for slug in legal_name_slugs(name):
+    for slug in name_slugs:
         add(slug, "legal_name_slug")
     for unit in context.get('subunits', []):
         for slug in legal_name_slugs(legal_name(unit.get('name'))):

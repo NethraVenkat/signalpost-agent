@@ -499,6 +499,30 @@
           "reporting_period": null
         }
       ]
+    },
+    {
+      "step": "order",
+      "comparison": "caps",
+      "action": "added",
+      "organisation_number": "926818317",
+      "name": "SPEDIFY AS",
+      "url": "https://spedify.no",
+      "proof_tier": "VERIFIED",
+      "evidence": [
+        {
+          "id": "4f9e3c2c0100ea4c947342055839969dbeeaeb69303016b3357803eec53cce96",
+          "source_url": "https://spedify.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-12T16:51:19.189713Z",
+          "content_sha256": "52ab413b475db6341975f9892d087395e9ac54286f4b9a571b53edd30a2b25e2",
+          "claim_span": " footer-item\" role=\"none\"><span>Org.nr. 926 818 317</span></li>\n        </ul>\n        <div class=\"footer-social\" aria-label=\"Spedify i sosiale medier\"",
+          "locator": "identity-proof:926818317",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
     }
   ],
   "withheld_recheck": [

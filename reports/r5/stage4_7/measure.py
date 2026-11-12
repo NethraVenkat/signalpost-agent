@@ -15,7 +15,7 @@ def sha(path):
 
 def main():
     stage = sys.argv[1]
-    assert stage in ('budget','caps','social','singlehost')
+    assert stage in ('budget','caps','order','social','singlehost')
     base = Path('reports/r5/baseline')
     dest = Path('reports/r5/stage4_7') / ('step'+stage.replace('.', '_'))
     out = Path('.data/r5/stage4_7') / ('step'+stage.replace('.', '_')+'-run')
