@@ -594,6 +594,8 @@ async def _run(config, client=None,synthesis_provider=None):
         'site_reserved': budget.site_reserved}
     if config.site_dir is not None:
         report['site'] = {'state': 'pending'}
+    else:
+        report['site'] = {'state': 'disabled', 'reason': 'Site generation was not requested'}
     async def save_report():
         try:
             await offload(write_report,config.report,report)

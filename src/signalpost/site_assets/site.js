@@ -182,7 +182,7 @@
       const period = e.reporting_period || fact.reporting_period;
       pair('Effective / reporting date', e.effective_at || (period ? JSON.stringify(period) : 'Unknown'));
       const hash = element('div');
-      const code = element('code', e.content_sha256.slice(0, 16) + '…');
+      const code = element('code', e.content_sha256);
       code.title = e.content_sha256;
       const copy = element('button', 'Copy full hash');
       copy.type = 'button';
@@ -251,6 +251,13 @@
     panel.dataset.source = fact.id;
     panel.hidden = true;
     article.append(button, panel);
+    const primary = evidence.get(facts.get(fact.id)?.evidence_ids?.[0]);
+    if(primary) {
+      const original = sourceLink(primary.source_url);
+      original.textContent = 'Original source';
+      original.classList.add('fact-source');
+      article.append(original);
+    }
     root.append(article);
   }
 
@@ -1036,9 +1043,10 @@
       showAllBtn.addEventListener('click', () => {
         const body = document.querySelector('.evidence-explorer-table tbody');
         const fragment = document.createDocumentFragment();
-        for (const [label, availability, value, sourceClass, locator, sha, span] of (localData.explorer_rows || [])) {
+        for (const [label, availability, value, sourceClass, locator, sha, span, factAnchor] of (localData.explorer_rows || [])) {
           const tr = element('tr');
-          const th = element('th', label); th.scope = 'row';
+          const th = element('th'); th.scope = 'row';
+          if(factAnchor) { const a=element('a',label); a.href='#'+factAnchor; th.append(a); } else th.textContent=label;
           const state = element('td'); state.append(stateChip(availability));
           const loc = element('td'); loc.append(element('code', locator));
           const hash = element('td');

@@ -270,7 +270,7 @@ def evidence_panel(claim, records, shared=False):
                      f'<dt>Registry identifier</dt><dd>{esc(e.get("source_identifier") or "Not supplied")}</dd>'
                      f'<dt>Retrieved at (UTC)</dt><dd>{esc(e["retrieved_at"])}</dd>'
                      f'<dt>Effective / reporting date</dt><dd>{esc(value_text(e.get("effective_at") or e.get("reporting_period") or claim.get("reporting_period")))}</dd>'
-                     f'<dt>SHA-256</dt><dd><code title="{esc(sha)}">{esc(sha[:16])}…</code> '
+                     f'<dt>SHA-256</dt><dd><code title="{esc(sha)}">{esc(sha)}</code> '
                      f'<button type="button" data-copy="{esc(sha)}">Copy full hash</button></dd>'
                      f'<dt>Extraction method / version</dt><dd>{esc(e["extraction_method"])}</dd>'
                      f'<dt>Locator</dt><dd>{esc(e["locator"])}</dd></dl>'
@@ -326,6 +326,9 @@ def fact(claim, records):
     panel = bool(claim.get('evidence_ids') or available)
     if panel:
         content += f'<button type="button" aria-expanded="false" aria-controls="source-{esc(local_id)}" data-toggle="source-{esc(local_id)}">Check the evidence</button><div id="source-{esc(local_id)}" data-source="{esc(local_id)}" class="evidence" hidden></div>'
+        primary = next((records[eid] for eid in claim.get('evidence_ids', []) if eid in records), None)
+        if primary:
+            content += '<span class="fact-source">' + link(primary['source_url'], 'Original source') + '</span>'
     if claim['family'] == 'accounts':
         return f'<tr id="{esc(anchor(claim))}"><th scope="row">{esc(label)} {chip(claim["availability"])}</th><td>{content}</td></tr>'
     return f'<article class="fact" id="{esc(anchor(claim))}"><h3>{esc(label)} {chip(claim["availability"])}</h3>{content}</article>'
@@ -422,14 +425,17 @@ def profile(row, title):
     support = synthesis.get('change_claims') or []
     change_ids = {c['id'] for c in support}
     name = by_field.get('identity.legal_name', org)
-    body = f'<header><p class="eyebrow">Company profile</p><h1>{esc(name)}</h1><p>Organisation number: <code>{esc(org)}</code> <button type="button" data-copy="{esc(org)}">Copy organisation number</button> <button type="button" class="btn-watchlist" data-watchlist="{esc(org)}">⭐ Watchlist</button></p>'
+    body = f'<header class="profile-header"><p class="eyebrow">Company profile</p><h1>{esc(name)}</h1><p>Organisation number: <code>{esc(org)}</code> <button type="button" data-copy="{esc(org)}">Copy organisation number</button> <button type="button" class="btn-watchlist" data-watchlist="{esc(org)}">⭐ Watchlist</button></p>'
     for field in ('identity.organisation_form', 'identity.legal_form', 'identity.municipality'):
         if field in by_field:
             v = by_field[field]
             display = (str(v.get('beskrivelse') or '') + ' (' + str(v.get('kode') or '') + ')') if isinstance(v, dict) else value_text(v)
             body += '<p>' + esc(display) + '</p>'
-    body += ''.join('<p><span class="chip">' + esc(c['field'].replace('identity.', '').replace('_', ' ')) + ': ' + esc(value_text(c['value'])) + '</span></p>' for c in claims if c['availability'] == 'available' and c['field'] in {'identity.bankrupt', 'identity.under_liquidation', 'identity.deleted'})
+    body += ''.join('<p><span class="chip">' + esc(c['field'].replace('identity.', '').replace('_', ' ')) + ': ' + esc(value_text(c['value'])) + '</span></p>' for c in claims if c['availability'] == 'available' and c['value'] is True and c['field'] in {'identity.bankrupt', 'identity.under_liquidation', 'identity.deleted'})
     body += '<p>Last checked: <time>' + esc(display_time(row['run']['completed_at'])) + '</time></p></header>'
+    body += ('<details class="verification-hint"><summary id="verify-hint">How to verify a fact</summary>'
+             '<p>Choose <strong>Check the evidence</strong> beside a fact to see its exact excerpt, publisher URL, retrieval date and full SHA-256 hash. '
+             'Use <strong>Original source</strong> to visit the publisher. The hash identifies the stored response at the shown retrieval time; a later live page may differ.</p></details>')
     sentences = [s for key in ('what_it_does', 'scale', 'leadership', 'changes') for s in synthesis.get('sections', {}).get(key, [])]
     from .synthesis.brief import select
     overview = select(synthesis, claims, limit=6)
@@ -697,7 +703,7 @@ def profile(row, title):
     for c in claims[:EXPLORER_VISIBLE_ROWS]:
         lbl, avail, v_str, s_class, loc, sha, span = explorer_cells(c, records)
         sha_disp = f'<code title="{esc(sha)}">{esc(sha[:12])}…</code>' if sha else '—'
-        body += f'<tr><th scope="row">{esc(lbl)}</th><td>{chip(avail)}</td><td>{esc(v_str)}</td><td>{esc(s_class)}</td><td><code>{esc(loc)}</code></td><td>{sha_disp}</td><td><blockquote class="table-excerpt">{esc(span)}</blockquote></td></tr>'
+        body += f'<tr><th scope="row"><a href="#{esc(anchor(c))}">{esc(lbl)}</a></th><td>{chip(avail)}</td><td>{esc(v_str)}</td><td>{esc(s_class)}</td><td><code>{esc(loc)}</code></td><td>{sha_disp}</td><td><blockquote class="table-excerpt">{esc(span)}</blockquote></td></tr>'
     body += '</tbody></table></div>'
     hidden = len(claims) - EXPLORER_VISIBLE_ROWS
     if hidden > 0:
@@ -754,7 +760,7 @@ def company_payload(row):
                'source_fields':source_fields,'sources':sources,'evidence_fields':evidence_fields,
                'records':records,'facts':facts,'registry_details':details}
     if len(row['claims']) > EXPLORER_VISIBLE_ROWS:
-        payload['explorer_rows'] = [explorer_cells(c, all_records) for c in row['claims'][EXPLORER_VISIBLE_ROWS:]]
+        payload['explorer_rows'] = [(*explorer_cells(c, all_records), anchor(c)) for c in row['claims'][EXPLORER_VISIBLE_ROWS:]]
     return payload
 
 

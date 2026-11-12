@@ -143,7 +143,7 @@ section, .company, .compare-card, .analytics-card {
 }
 
 details > summary {
-  min-height: 40px;
+  min-height: 44px;
   padding-block: 10px;
   box-sizing: border-box;
   cursor: pointer;
@@ -1784,5 +1784,36 @@ button, input, select, nav a { min-height: 40px; }
 }
 
 /* Accessibility floors override smaller legacy component variants. */
-button, input, select, a[href] { min-height: 40px !important; min-width: 40px !important; }
+button, input, select, a[href], details > summary { min-height: 44px !important; min-width: 44px !important; }
 a[href] { display: inline-block; max-width: 100%; box-sizing: border-box; vertical-align: middle; }
+
+.verification-hint { padding: 18px; border-left: 4px solid var(--accent); background: var(--soft); border-radius: 8px; }
+.verification-hint summary { font-size: 17px; font-weight: 700; }
+.profile-header p { margin-block: 6px; }
+.compare-card-header { min-height: 84px; }
+.compare-cell { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 8px; min-height: 126px; }
+.compare-cell strong, .compare-cell .compare-reason { grid-column: 1 / -1; }
+.compare-cell .chip { align-self: center; }
+.compare-cell a { align-self: center; padding-block: 10px; }
+.fact-source { display: inline-block; margin: 6px 10px; }
+pre { white-space: pre-wrap; overflow-wrap: anywhere; max-width: 100%; }
+.hiring-results { grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); }
+@media (max-width: 600px) {
+  .table-responsive { overflow-x: visible; }
+  .evidence-explorer-table, .evidence-explorer-table tbody,
+  .observation-table, .observation-table tbody { display: block; width: 100%; }
+  .evidence-explorer-table thead, .observation-table thead { display: none; }
+  .evidence-explorer-table tr, .observation-table tr { display: block; padding: 12px; margin-block: 12px; border: 1px solid var(--line); border-radius: 8px; }
+  .evidence-explorer-table th, .evidence-explorer-table td,
+  .observation-table th, .observation-table td { display: block; width: 100%; padding: 8px 0; font-size: 14px; overflow-wrap: anywhere; }
+  .evidence-explorer-table td::before, .observation-table td::before { display: block; font-weight: 700; color: var(--muted); }
+  .evidence-explorer-table td:nth-child(2)::before { content: 'Status'; }
+  .evidence-explorer-table td:nth-child(3)::before { content: 'Value'; }
+  .evidence-explorer-table td:nth-child(4)::before { content: 'Source class'; }
+  .evidence-explorer-table td:nth-child(5)::before { content: 'Locator'; }
+  .evidence-explorer-table td:nth-child(6)::before { content: 'SHA-256'; }
+  .evidence-explorer-table td:nth-child(7)::before { content: 'Verbatim excerpt'; }
+  .observation-table td:nth-child(2)::before { content: 'Previous state'; }
+  .observation-table td:nth-child(3)::before { content: 'Current state'; }
+  .observation-table td:nth-child(4)::before { content: 'Reason'; }
+}

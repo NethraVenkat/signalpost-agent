@@ -22,7 +22,9 @@ def main():
     command.add_argument("--state-dir", type=Path, default=Path("state"))
     command.add_argument('--verify-bulk', action='store_true',
                          help='Require an API identity check even on bulk hits; never fall back to CSV on verification failure')
-    command.add_argument('--site-dir', type=Path)
+    site_options = command.add_mutually_exclusive_group()
+    site_options.add_argument('--site-dir', type=Path)
+    site_options.add_argument('--no-site', action='store_true', help='Disable the default offline profile site')
     command.add_argument('--profiles-output', type=Path, help='Write kit-compatible raw profiles from the same verified claims')
     command.add_argument("--envelope-shape", choices=("union", "contract", "reference"), default="union")
     command.add_argument("--emit-duplicates", action="store_true", default=True)
@@ -64,6 +66,9 @@ def main():
             from .site import generate_site
             print(json.dumps(generate_site(args['input'], args['out'], args['title'])))
             return 0
+        no_site = args.pop('no_site')
+        if not no_site and args['site_dir'] is None:
+            args['site_dir'] = args['output'].parent / 'site'
         config = Config(**args)
         resolved = [p.resolve() for p in (config.output, config.report, config.profiles_output) if p]
         temporary = [p.with_name(p.name+'.tmp').resolve() for p in (config.output,config.profiles_output) if p]

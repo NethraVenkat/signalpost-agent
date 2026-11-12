@@ -98,3 +98,11 @@
 - Manual follow-up: inspect sample profiles, optional-field failures, the formal-announcement limitation and refresh migration from older schema versions. The fresh fixed-cohort comparisons are not a historical-schema migration audit; enriched address/form components should not be treated as proven historic company changes without review.
 
 
+
+
+## Stage U - UX
+
+- Default site generation is resolved at the CLI boundary to output-parent/site, including the seven evaluator flags. --no-site and --site-dir are exclusive. Programmatic Config control, mandatory outputs and optional deadline rendering remain intact; disabled state is explicit.
+- Source links stay bound to evidence IDs. Full hashes, expandable verification hint, direct publisher links, explorer-to-fact anchors and mobile labelled rows make receipts inspectable. No source data or proof rule is changed.
+- Authored Playwright at 1280/360 px passes 12 checks, with 44 px controls, no page overflow or JS errors and external requests blocked. Ten screenshots are retained. Only an installed Playwright library/browser is used; no other application's code is copied.
+- docs/demo is generated locally with a file/hash manifest and Pages instructions. No publication or push. Full pytest: 771 passed in 131.00s. Fresh frozen-100 fact metrics equal best 4.7; independent verification finds zero unsupported values and an available 100-company site. HTTP/runtime variation is not a claimed causal speedup.

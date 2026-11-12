@@ -98,7 +98,7 @@ uv run signalpost site --input out/envelopes.jsonl --out site/ --title "Signalpo
 
 Open `site/index.html` directly or serve the directory with a static server. Search names or organisation numbers, filter coverage and municipality/industry, and compare two or three companies. Profiles include cited summaries, section states, financials, people, locations, hiring, public activity and changes. Source buttons show exact excerpts, hashes, retrieval dates and extraction provenance; all supporting records load from local per-company data files. Previously supported facts are marked explicitly.
 
-Add `--site-dir site/` to `signalpost run` to generate profiles after envelopes are written. Site errors are recorded under `site` in the run report and preserve run output and exit behavior. Generation accepts contract/reference/union shapes, isolates malformed identifiers (no page; a notice lists them) and merges identical duplicate envelopes into one profile. Large companies render the first 50 Evidence Explorer rows and reveal the rest from the local data file, which keeps every profile page under the 250 KB gate without dropping a claim, and uses no network or extra dependency. Static CSS/JavaScript, a safely escaped local index script and `c/<orgnr>.data.js` evidence tables work under `file://`; untrusted text is escaped and only HTTP(S) fact links are clickable. Identical envelopes produce identical files. Use a new empty output directory for a different company population; generation does not delete older files.
+`signalpost run` generates profiles in `<output directory>/site/` by default, including with only the seven evaluator flags. Use `--site-dir site/` to choose another directory or `--no-site` to disable it. The report records `site.state` as available, skipped, failed or disabled; deadlines can skip the site while preserving required JSON outputs. Site errors are recorded under `site` in the run report and preserve run output and exit behavior. Generation accepts contract/reference/union shapes, isolates malformed identifiers (no page; a notice lists them) and merges identical duplicate envelopes into one profile. Large companies render the first 50 Evidence Explorer rows and reveal the rest from the local data file, which keeps every profile page under the 250 KB gate without dropping a claim, and uses no network or extra dependency. Static CSS/JavaScript, a safely escaped local index script and `c/<orgnr>.data.js` evidence tables work under `file://`; untrusted text is escaped and only HTTP(S) fact links are clickable. Identical envelopes produce identical files. Use a new empty output directory for a different company population; generation does not delete older files.
 
 ## Measured results
 
@@ -149,3 +149,21 @@ Website recall measured 20/300 (6.667%) and 19/300 (6.333%) in the two audited s
 Raw profiles: `--profiles-output profiles.jsonl` preserves input-record order and duplicates, including invalid/failed rows with explicit states and null missing values. Module records use the reference field/status/source_type/source_class/source_url/retrieved_at/value/as_of/note/content_sha256/source_row_key/effective_at layout. `verified_claims` and `source_records` retain exact claim values and their provenance; no additional source facts are retrieved or inferred. Profiles are a separate output, not a replacement envelope shape. The kit scorer is invoked with `--profiles profiles.jsonl`.
 
 Runner compatibility: `--organisations`, `--bulk`, `--output`, `--profiles-output`, `--report`, `--run-id` and `--expected-count` accept the kit runner's exact flag names. Existing invocations without `--profiles-output` keep writing envelopes and a report; add the flag for the two-file evaluator form above. `--envelope-shape contract` and `reference` remain optional overrides; union is default. The default time budget is 2,400 seconds, NAV gets 900 seconds (provisional pending the cold 1,000-company headroom gate), and the configurable output safety valve is now 256 MiB.
+
+
+## Frozen-100 static demo
+
+The ready-to-host directory is [`docs/demo/`](docs/demo/). Expected URL **after you deploy it**: https://nethravenkat.github.io/signalpost-agent/. It has not been published by this work.
+
+For GitHub Pages, select GitHub Actions as the publishing source and upload **the contents of `docs/demo/` as the Pages artifact root**. The root must contain `index.html`, `compare.html`, `assets/`, `data/` and `c/`. Deploy that artifact only after reviewing the saved public-source data. Do not select `/docs` as the branch source and expect `/docs/demo` to become the project root. All links are relative and tested under `/signalpost-agent/`.
+
+Rebuild locally from a retained frozen run:
+
+```powershell
+uv run signalpost site --input .data/r5/stageU-run/envelopes.jsonl --out docs/demo
+python -m http.server 8000 --directory docs/demo
+```
+
+This is a saved research sample, not a live directory: 100 companies, seed 20261017; registry identity uses the frozen 13 October 2026 snapshot. Check each receipt's retrieval date, exact excerpt and hash. Registry data attribution: Bronnoysundregistrene, NLOD 2.0; other source content retains its original rights.
+
+Headless QA is authored in `reports/r5/stageU/browser_check.cjs`. It checks 1280 px and 360 px, name/number search, profiles, two-company comparison, source receipts, 44 px targets, expanded tables and page overflow. Screenshots and results are in `reports/r5/stageU/`. To run with your own Playwright installation, set `PLAYWRIGHT_MODULE` to the installed `playwright` package path and run `node reports/r5/stageU/browser_check.cjs docs/demo reports/r5/stageU` (Chromium must already be installed). The recorded QA used preinstalled Playwright-core 1.64.1 and Chromium 156; no application code was copied from other projects.
