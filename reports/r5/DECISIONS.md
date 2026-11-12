@@ -1,5 +1,11 @@
 # R5 decisions
 
+## Stage 4.4
+
+- Prioritize linked proof pages, then /kontakt, /om-oss and /personvern before alternate spellings; retain original request ceilings and robots checks. No sitemap news or browser rendering is added.
+- Accept bounded organisation-number forms with NO/MVA, spaces and dots in owner/footer content, explicit identifier meta fields and owner JSON-LD nodes. Generic SEO descriptions, Person nodes (including mixed-type lists), nested customer/about objects, ISBN/LEI and arbitrary scripts cannot prove ownership. Hidden display:none text is still excluded; this sub-step supports structured metadata, not arbitrary hidden instructions.
+- 4.4: 703 tests passed, including long numeric-run suffix rejection. Frozen comparison: five websites/two social companies, no new URLs; 7,320 facts, 867 HTTP attempts, zero unsupported values and $0 provider cost. More permissive hidden-text or generic SEO matching was not enabled to increase recall.
+
 ## Stage 4.3
 
 - Prioritize the requested ae/oe/aa and a/o/a spellings, with hyphen/no-hyphen full-name variants and suffix stripping. Registry URL/email origins remain first; the eight-candidate and DNS/HTTP ceilings are unchanged. Existing native IDNA and legacy spellings remain bounded alternatives.

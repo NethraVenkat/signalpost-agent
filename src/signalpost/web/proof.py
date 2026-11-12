@@ -8,11 +8,34 @@ from .candidates import GENERIC
 
 def orgnrs(text):
     result = set()
-    for match in re.finditer(r"(?<!\w)[0-9](?:[0-9 .\u00a0]*[0-9])?(?!\w)", str(text)):
-        digits = re.sub(r"[^0-9]", "", match.group())
+    for match in re.finditer(r'(?<!\w)(?:NO\s*)?([0-9](?:[0-9 .\u00a0]*[0-9])?)(?:\s*MVA)?(?!\w)', str(text), re.I):
+        digits = re.sub(r"[^0-9]", "", match.group(1))
         if valid(digits):
             result.add(digits)
     return result
+
+
+IDENTIFIER_META = {'orgnr','org.nr','organisasjonsnummer','organisation_number','organization_number','vatid','taxid','business:orgnr'}
+
+
+def owner_identifiers(body):
+    """Read owner nodes only; customer/person/arbitrary nested objects abstain."""
+    if isinstance(body, list):
+        for item in body: yield from owner_identifiers(item)
+    elif isinstance(body, dict):
+        types = body.get('@type', [])
+        if isinstance(types, str): types = [types]
+        if not isinstance(types, list) or 'Person' in types: return
+        if '@graph' in body: yield from owner_identifiers(body['@graph'])
+        allowed = {'Organization','LocalBusiness','Corporation','NGO','EducationalOrganization','GovernmentOrganization','Store','ProfessionalService'}
+        if types and not set(types) & allowed: return
+        for key in ('vatID','taxID','identifier'):
+            value=body.get(key)
+            if isinstance(value, dict):
+                prop=str(value.get('propertyID','')).casefold()
+                if prop and prop not in {'orgnr','organisasjonsnummer','vatid','taxid','organisation number','organization number'}: continue
+                value=value.get('value')
+            if isinstance(value, str): yield value
 
 
 def phone(value):
@@ -211,18 +234,11 @@ def score(page, org, context, origin, leaders):
     if len(page.visible.strip()) < 300:
         return Proof("LOW", reason="short_or_js_shell")
     visible = orgnrs(page.owner_text)
-    meta = orgnrs(" ".join(page.meta.values()))
+    meta = orgnrs(' '.join(v for k,v in page.meta.items() if k.casefold() in IDENTIFIER_META))
     json_ids = set()
     for body in page.jsonld:
-        for key in ("vatID", "taxID", "identifier"):
-            for value in json_values(body, key, exclude_person=True):
-                # NO123456789MVA is permitted only inside an explicit identifier
-                # field. Never search leiCode or arbitrary script contents.
-                if isinstance(value, str):
-                    normalized = re.sub(r"^\s*NO\s*|\s*MVA\s*$", " ", value, flags=re.I).strip()
-                    json_ids |= orgnrs(normalized)
-                elif isinstance(value, dict):
-                    json_ids |= orgnrs(value.get("value", ""))
+        for value in owner_identifiers(body):
+            json_ids |= orgnrs(value)
     all_ids = visible | meta | json_ids
     others = sorted(all_ids - {org})
     if org in all_ids:

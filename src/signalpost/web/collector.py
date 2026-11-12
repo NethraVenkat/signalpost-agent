@@ -149,7 +149,7 @@ def followup_links(page):
 
 # Pages where Norwegian companies state their organisation number. They are tried
 # after the links found on the home page; proof rules apply to them unchanged.
-FALLBACK_PROOF_PATHS = ('/kontakt', '/kontakt-oss', '/om-oss', '/om', '/personvern', '/personvernerklaering')
+FALLBACK_PROOF_PATHS = ('/kontakt', '/om-oss', '/personvern', '/kontakt-oss', '/om', '/personvernerklaering')
 FOLLOWUP_PAGES = len(FALLBACK_PROOF_PATHS)
 
 
