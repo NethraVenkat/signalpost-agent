@@ -3,6 +3,7 @@ from urllib.parse import urlencode
 import asyncio
 from ..budget import SourceFailure
 from .extract import Section, add, finish, decode, response_source
+from .registry_fields import SUBUNIT_ADDITIONAL,publish_additional,boolean,reported
 
 DETAILS={'start_date':'oppstartsdato','registration_date':'registreringsdatoEnhetsregisteret',
          'ownership_change_date':'datoEierskifte','registered_website':'hjemmeside','registered_email':'epostadresse',
@@ -37,7 +38,7 @@ def extract_page(org,response,section,page):
         normalized = [{"organisation_number": item.get("organisasjonsnummer"), "name": item.get("navn"),
                        "address": item.get("beliggenhetsadresse") or item.get("postadresse"),
                        "nace": item.get("naeringskode1"),
-                       "employees": None if item.get("harRegistrertAntallAnsatte") is False else item.get("antallAnsatte")}
+                       "employees": None if boolean(item.get("harRegistrertAntallAnsatte")) is False else reported(item.get("antallAnsatte"), 'employees')}
                       for item in items]
         # Preserve every page's evidence, including empty search responses.
         for index, item in enumerate(normalized):
@@ -46,12 +47,16 @@ def extract_page(org,response,section,page):
                 raise SourceFailure("malformed_subunit", "A subunit lacks its organisation number")
             add(section, response_source(response), org, "subunits", f"subunits.unit.{key}", item, f"/_embedded/underenheter/{index}")
             raw=items[index]
+            publish_additional(section, response_source(response), org, 'subunits', f'subunits.detail.{key}.',
+                               raw, SUBUNIT_ADDITIONAL, f'/_embedded/underenheter/{index}')
             for name,field in DETAILS.items():
-                value=raw.get(field)
+                actual=next((k for k in raw if k.casefold()==field.casefold()),field)
+                value=raw.get(actual)
+                if name in {'employees_reported','registered_in_vat'}: value=boolean(value)
                 if isinstance(value,dict):value={k:v for k,v in value.items() if k!='_links'}
                 if value is not None:
                     add(section,response_source(response),org,'subunits',f'subunits.detail.{key}.{name}',value,
-                        f'/_embedded/underenheter/{index}/{field}',effective=value if name.endswith('_date') else None)
+                        f'/_embedded/underenheter/{index}/{actual}',effective=value if name.endswith('_date') else None)
         if not normalized and page == 0:
             add(section, response_source(response), org, "subunits", "subunits.units", None, "/_embedded/underenheter")
         return int(data.get('page',{}).get('totalPages',1))

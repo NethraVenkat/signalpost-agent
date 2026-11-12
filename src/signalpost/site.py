@@ -288,7 +288,10 @@ def fact(claim, records):
     local_id = claim['id'][:16]
     available = claim['availability'] == 'available'
     label = claim['field'].replace('identity.', '').replace('accounts.', '').replace('_', ' ')
-    if claim['family'] in {'roles', 'subunits', 'hiring'} and isinstance(claim['value'], dict):
+    if claim['field'].startswith('subunits.detail.'):
+        parts = claim['field'].split('.', 3)
+        label = 'Workplace ' + parts[2] + ': ' + parts[3].replace('_', ' ')
+    if claim['family'] in {'roles', 'subunits', 'hiring'} and not claim['field'].startswith('subunits.detail.') and isinstance(claim['value'], dict):
         v = claim['value']
         label = v.get('title') or v.get('name') or {'roles': 'Registered role', 'subunits': 'Registered workplace', 'hiring': 'Job advertisement'}[claim['family']]
     if claim['field'].startswith('website_description.'):

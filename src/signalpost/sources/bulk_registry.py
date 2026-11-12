@@ -6,7 +6,7 @@ from pathlib import Path
 from .extract import Section, Source, add, finish
 from ..models.evidence import utc_now
 from ..budget import SourceFailure
-from .registry_fields import EXTRA,GROUPS,boolean
+from .registry_fields import EXTRA,GROUPS,boolean,ADDITIONAL,publish_additional,reported
 
 ALIASES = {"organisasjonsnummer": "Organisasjonsnummer", "navn": "Navn", "antallAnsatte": "Antall ansatte",
            "konkurs": "Konkurs", "underAvvikling": "Under avvikling", "hjemmeside": "Hjemmeside",
@@ -106,6 +106,9 @@ def extract(org, row, source):
             if str(column(row, "harRegistrertAntallAnsatte")[0]).casefold() == "false":
                 value = None
         effective = value if name == "registration_date" else None
+        if name == 'deleted':
+            try: value = reported(value, 'date')
+            except (ValueError, TypeError): value = None
         if name == "deleted" and value is not None:
             effective, value = value, True
         if value is not None and name in ("bankrupt", "under_liquidation"):
@@ -113,9 +116,9 @@ def extract(org, row, source):
                 raise SourceFailure("malformed_flag")
             value = value.casefold() == "true"
         add(section, source, org, "identity", "identity." + name, value, f"row:{org}/column:{actual}", effective=effective)
-    for name, prefix, keys in (("organisation_form", "organisasjonsform", ("kode", "beskrivelse")),
-                               ("registered_address", "forretningsadresse", ("adresse", "postnummer", "poststed", "kommune", "kommunenummer", "land")),
-                               ("postal_address", "postadresse", ("adresse", "postnummer", "poststed", "kommune", "kommunenummer", "land"))):
+    for name, prefix, keys in (("organisation_form", "organisasjonsform", ("kode", "beskrivelse", "utgaatt")),
+                               ("registered_address", "forretningsadresse", ("adresse", "postnummer", "poststed", "kommune", "kommunenummer", "land", "landkode")),
+                               ("postal_address", "postadresse", ("adresse", "postnummer", "poststed", "kommune", "kommunenummer", "land", "landkode"))):
         value = {key: column(row, prefix + "." + key)[0] for key in keys if column(row, prefix + "." + key)[0] is not None}
         add(section, source, org, "identity", "identity." + name, value or None, f"row:{org}/columns:{prefix}.*")
     for i in range(1, 4):
@@ -132,4 +135,13 @@ def extract(org, row, source):
         value={k:column(row,prefix+'.'+k)[0] for k in keys if column(row,prefix+'.'+k)[0] is not None}
         if not value:continue
         add(section,source,org,'identity','identity.'+field,value or None,f'row:{org}/columns:{prefix}.*')
+    # Foreign-address/form fields are flattened in CSV. Reuse exact component
+    # locators rather than inventing an object from unrelated columns.
+    flat = {name: spec for name, spec in ADDITIONAL.items() if spec[1] != 'object'}
+    publish_additional(section, source, org, 'identity', 'identity.', row, flat, csv=True)
+    for name, prefix, keys in [('foreign_register_address', 'utenlandskRegisterAdresse', ('adresse','land','poststed')),
+                               ('home_country_organisation_form', 'foretaksformIHjemlandet', ('kode','beskrivelse','beskrivelseBokmaal'))]:
+        value = {key: column(row, prefix+'.'+key)[0] for key in keys if column(row, prefix+'.'+key)[0] is not None}
+        if value:
+            add(section, source, org, 'identity', 'identity.'+name, value, f'row:{org}/columns:{prefix}.*', method='signalpost.registry_fields.v2')
     return finish(section)

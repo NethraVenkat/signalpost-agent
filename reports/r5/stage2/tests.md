@@ -1,0 +1,1 @@
+﻿Full suite: uv run pytest — 654 passed in 84.87 seconds. Added 109 field-depth cases covering each new field, absent/null/odd values, JSON/CSV parity, provenance, employee zero/false, address distinctions and refresh classification. Existing tests and timeouts unchanged.

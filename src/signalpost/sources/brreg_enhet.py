@@ -2,7 +2,7 @@ from ..workers import offload
 from ..budget import SourceFailure
 import asyncio
 from .extract import Section, Source, add, finish, get, decode, response_source
-from .registry_fields import EXTRA,GROUPS,boolean
+from .registry_fields import EXTRA,GROUPS,boolean,ADDITIONAL,publish_additional,reported
 
 BASE = "https://data.brreg.no/enhetsregisteret/api/enheter/"
 FIELDS = {
@@ -26,8 +26,12 @@ def extract(org, data, source):
             add(section, source, org, 'identity', 'identity.' + field, data[key], '/' + key, effective=data[key])
     for field, path in FIELDS.items():
         value = get(data, path)
-        if field == "employees" and data.get("harRegistrertAntallAnsatte") is False:
-            value = None
+        if field == 'employees':
+            value = None if boolean(data.get('harRegistrertAntallAnsatte')) is False else reported(value, 'employees')
+        if field in {'bankrupt', 'under_liquidation'}: value = boolean(value)
+        if field == 'deleted':
+            try: value = reported(value, 'date')
+            except (ValueError, TypeError): value = None
         if field == "deleted" and value is not None:
             deleted_date, value = value, True
         else:
@@ -49,6 +53,7 @@ def extract(org, data, source):
         if isinstance(value,dict):value={k:value[k] for k in keys if k in value}
         if value in (None,{}):continue
         add(section,source,org,'identity','identity.'+field,value,'/'+key)
+    publish_additional(section, source, org, 'identity', 'identity.', data, ADDITIONAL)
     return finish(section)
 
 

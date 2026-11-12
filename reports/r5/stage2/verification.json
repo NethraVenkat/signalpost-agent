@@ -1,0 +1,26 @@
+{
+  "command": [
+    "uv",
+    "run",
+    "python",
+    "scripts/verify_output.py",
+    "--first",
+    ".data/r5/stage2-run/envelopes.jsonl",
+    "--organisations",
+    "reports\\r5\\baseline\\companies.jsonl",
+    "--count",
+    "100",
+    "--state-dir",
+    ".data/r5/stage2-run/state",
+    "--report",
+    ".data/r5/stage2-run/report.json"
+  ],
+  "exit_code": 0,
+  "lines": 100,
+  "schema_valid": true,
+  "published_claims": 7102,
+  "source_blobs_verified": 383,
+  "synthesis_companies": 100,
+  "synthesis_sentences": 834,
+  "synthesis_unverified_values": 0
+}
