@@ -47,6 +47,12 @@ def extract_page(org,response,section,page):
                 raise SourceFailure("malformed_subunit", "A subunit lacks its organisation number")
             add(section, response_source(response), org, "subunits", f"subunits.unit.{key}", item, f"/_embedded/underenheter/{index}")
             raw=items[index]
+            from .locations import publish as location
+            # A postal fallback in the compatible unit record does not prove
+            # a workplace physical address. Retain the types independently.
+            for kind, field in [('workplace','beliggenhetsadresse'),('postal','postadresse')]:
+                location(section, response_source(response), org, 'subunits', f'subunits.detail.{key}.location.',
+                         kind, raw.get(field), f'/_embedded/underenheter/{index}/{field}', unit=key)
             publish_additional(section, response_source(response), org, 'subunits', f'subunits.detail.{key}.',
                                raw, SUBUNIT_ADDITIONAL, f'/_embedded/underenheter/{index}')
             for name,field in DETAILS.items():

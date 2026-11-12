@@ -288,6 +288,8 @@ def fact(claim, records):
     local_id = claim['id'][:16]
     available = claim['availability'] == 'available'
     label = claim['field'].replace('identity.', '').replace('accounts.', '').replace('_', ' ')
+    if claim['field'].startswith('identity.location.'):
+        label = 'Registry ' + claim['field'].rsplit('.',1)[-1] + ' location'
     if claim['field'].startswith('subunits.detail.'):
         parts = claim['field'].split('.', 3)
         label = 'Workplace ' + parts[2] + ': ' + parts[3].replace('_', ' ')

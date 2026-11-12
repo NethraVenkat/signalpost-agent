@@ -54,6 +54,9 @@ def extract(org, data, source):
         if value in (None,{}):continue
         add(section,source,org,'identity','identity.'+field,value,'/'+key)
     publish_additional(section, source, org, 'identity', 'identity.', data, ADDITIONAL)
+    from .locations import publish as location
+    for kind, key in [('business','forretningsadresse'), ('postal','postadresse')]:
+        location(section, source, org, 'identity', 'identity.location.', kind, data.get(key), '/'+key)
     return finish(section)
 
 

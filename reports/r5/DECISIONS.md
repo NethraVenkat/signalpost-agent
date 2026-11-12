@@ -1,5 +1,10 @@
 # R5 decisions
 
+## Stage 4.2
+
+- Publish typed business/postal/workplace locations from their exact registry fields and proven company/subunit scope. Preserve the compatible core address/workplace records; postal fallback is never relabelled as physical workplace. No map/geocoding source or new requests. Newly observed typed fields are coverage observations on refresh, not invented company moves.
+- 4.2: 679 tests passed; total facts 7,320 versus Stage 3's 7,102; workplace records remain 73. Five websites/two social companies, no new URLs, zero unsupported values. Exact typed counts are in `step4_2/typed_locations.json`.
+
 ## Stage 4.0 and 4.1
 
 - Diagnose first using Stage 3 saved envelopes/request logs only: 24 failed, 5 ambiguous, 1 blocked. Primary causes: 19 budget, 5 ambiguity, 2 timeout, 2 DNS, 1 access block, 1 transport/content refusal. Full company/domain/code lists are in `stage4/diagnosis.md` and machine diagnostics in `diagnosis.json`.

@@ -144,4 +144,9 @@ def extract(org, row, source):
         value = {key: column(row, prefix+'.'+key)[0] for key in keys if column(row, prefix+'.'+key)[0] is not None}
         if value:
             add(section, source, org, 'identity', 'identity.'+name, value, f'row:{org}/columns:{prefix}.*', method='signalpost.registry_fields.v2')
+    from .locations import publish as location
+    for kind, prefix in [('business','forretningsadresse'),('postal','postadresse')]:
+        address = {key: column(row, prefix+'.'+key)[0] for key in ('adresse','postnummer','poststed','kommune','kommunenummer','land','landkode')
+                   if column(row, prefix+'.'+key)[0] is not None}
+        location(section, source, org, 'identity', 'identity.location.', kind, address, f'row:{org}/columns:{prefix}.*')
     return finish(section)

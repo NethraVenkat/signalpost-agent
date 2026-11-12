@@ -37,6 +37,8 @@ Terminal entity `complete` describes processing, not full coverage. It can coexi
 
 ## Field families
 
+Stage 4 typed locations: `identity.location.business` / `identity.location.postal` classify the exact registry business/postal address fields. `subunits.detail.<orgnr>.location.workplace` uses only `beliggenhetsadresse`; `.location.postal` uses only `postadresse`. Values retain `location_type`, `address`, exact organisation number and, for a subunit, its registry-proven parent. Evidence uses the original JSON pointer/CSV prefix and `signalpost.registry_locations.v1`. A postal fallback never becomes a physical workplace. No geocoding, map source or inferred coordinates are used. These attributes do not increase the count of workplace records.
+
 R5 field depth: `sources/registry_fields.py` contains the explicit inventory `DROPPED_BEFORE_R5`, `ADDITIONAL` and `SUBUNIT_ADDITIONAL`. Existing `EXTRA`, `GROUPS` and core extractors already publish founding/registration dates, sector, NACE1–3, register/VAT flags, employee counts, separate business/postal addresses, registered homepage and bankruptcy/liquidation flags. R5 retains these and adds:
 
 - `identity.deletion_date`, `forced_closure_missing_deletion_date`, `home_country_registration_number`, `foreign_register_name`, `foreign_register_address`, `legislation_country`, `legislation_country_code`, `home_country_organisation_form`, `voluntary_vat_descriptions`, `historical_names`, `registry_annotations` (all prefixed `identity.`). These are reported attributes, never ownership proof or inferred events.
