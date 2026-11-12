@@ -1,0 +1,13 @@
+{
+  "command": "uv run python scripts/verify_output.py --first .data/r5/baseline-run/envelopes.jsonl --organisations reports/r5/baseline/companies.jsonl --count 100 --state-dir .data/r5/baseline-run/state --report .data/r5/baseline-run/report.json",
+  "exit_code": 0,
+  "lines": 100,
+  "schema_valid": true,
+  "published_claims": 6907,
+  "source_blobs_verified": 382,
+  "synthesis_companies": 100,
+  "synthesis_sentences": 817,
+  "synthesis_unverified_values": 0,
+  "require_clean": false,
+  "note": "Source failures and ambiguities are preserved; this validates membership, schema, evidence and synthesis, not all-source completeness."
+}

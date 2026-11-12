@@ -1,0 +1,102 @@
+{
+  "source_commit": "7eb9bba21d4225d0008d22c112d0d5a0abe9a38e",
+  "prepared_at_utc": "2026-11-12T10:47:07.610646Z",
+  "seed": 20261017,
+  "sample_count": 100,
+  "python": "3.12.15 (main, Oct  9 2026, 15:21:55) [MSC v.1944 64 bit (AMD64)]",
+  "universe_rows": 411160,
+  "universe_content_sha256": "b82d6a3e7231d1759a958c282bc4366b80ec2fab8095053d8ed7fa9cd01bc838",
+  "inputs": {
+    "universe_archive": {
+      "path": "C:/Users/<USER>/Downloads/Signalpost/state/downloads/universe.jsonl.gz",
+      "sha256": "1c89710e5b01f8617e86d09fbdff4a52f2f8dbbba297e74f7164b5984f5a0384"
+    },
+    "registry_snapshot": {
+      "path": "C:/Users/<USER>/Downloads/Signalpost/state/downloads/registry.csv",
+      "sha256": "5b0df27c5567a655320b8dfb8975049b76c46ba93d748a8a763f8db7050b7862"
+    },
+    "sample": {
+      "path": "reports/r5/baseline/companies.jsonl",
+      "sha256": "7d59169d3fd274ec576dca84430beac887b4a1cf06697e20ab7e875420673686"
+    },
+    "registry_subset": {
+      "path": "reports/r5/baseline/registry100.csv",
+      "sha256": "bd244f0fe6ad92bfcadcbce9ba545863c0ca0afa8b9b5b4c5e3425830a63186d"
+    },
+    "uv_lock": {
+      "path": "uv.lock",
+      "sha256": "da856b8a1bf3d4b4cf3cb51e11862cef598cc986ae197914cacb787d4906bdae"
+    },
+    "shipped_nav_index": {
+      "path": "src/signalpost/data/nav_index.json.gz",
+      "sha256": "5b6d18a9d853d0b788e01d18b66eba1c9459b1d61498e0559a528dca8a37ed97"
+    }
+  },
+  "sampling_command": "uv run python scripts/sample_universe.py --universe C:\\Users\\<USER>\\Downloads\\Signalpost\\state\\downloads\\universe.jsonl.gz --output reports/r5/baseline/companies.jsonl --count 100 --seed 20261017",
+  "bulk_extraction_command": "uv run python scripts/extract_bulk.py --bulk C:\\Users\\<USER>\\Downloads\\Signalpost\\state\\downloads\\registry.csv --batch reports/r5/baseline/companies.jsonl --output reports/r5/baseline/registry100.csv",
+  "bulk_extraction": {
+    "rows": 100,
+    "expected": 100,
+    "missing_organisation_numbers": []
+  },
+  "run_command_file": "reports/r5/baseline/run.ps1",
+  "environment_overrides": {
+    "SIGNALPOST_SEARCH_PROVIDER": "disabled",
+    "SIGNALPOST_SEARCH_MOCK": "0",
+    "PYTHONUTF8": "1"
+  },
+  "cache_policy": "Fresh empty runtime state, no prior envelopes or copied runtime responses; unchanged shipped NAV index and default age policy (stale index falls back to full feed).",
+  "resolved_config": {
+    "organisations": "reports\\r5\\baseline\\companies.jsonl",
+    "output": ".data\\r5\\baseline-run\\envelopes.jsonl",
+    "report": ".data\\r5\\baseline-run\\report.json",
+    "bulk": "reports\\r5\\baseline\\registry100.csv",
+    "verify_bulk": false,
+    "previous": null,
+    "site_dir": ".data\\r5\\baseline-run\\site",
+    "profiles_output": ".data\\r5\\baseline-run\\profiles.jsonl",
+    "state_dir": ".data\\r5\\baseline-run\\state",
+    "envelope_shape": "union",
+    "emit_duplicates": true,
+    "expected_count": 100,
+    "run_id": "r5-baseline-seed20261017",
+    "max_requests": 2000,
+    "time_budget_seconds": 2400.0,
+    "deadline_fraction": 0.85,
+    "max_cost_usd": 0.0,
+    "host_concurrency": 10,
+    "workers": 64,
+    "request_timeout": 10.0,
+    "official_batch_size": 1100,
+    "max_output_mb": 256.0,
+    "websites": true,
+    "dns_precheck": true,
+    "registry_declared": false,
+    "website_stop_after_verified": true,
+    "nav_rank_candidates": true,
+    "public_activity": true,
+    "registry_changes": true,
+    "website_request_cap": 6,
+    "website_total_request_cap": 9,
+    "website_politeness_seconds": 1.0,
+    "website_user_agent": "SignalpostAgent/1.0 (+https://github.com/NethraVenkat/signalpost-agent)",
+    "hiring": true,
+    "nav_max_pages": 512,
+    "nav_max_details": null,
+    "nav_time_cap_seconds": null,
+    "nav_lookback_days": 185,
+    "nav_concurrency": 4,
+    "nav_request_timeout": 30.0,
+    "nav_body_cap_mb": 2.0,
+    "nav_index_path": null,
+    "nav_index_max_age_days": 21.0,
+    "prevent_system_sleep": true,
+    "search_max_queries": 0,
+    "search_max_cost_usd": 0.0,
+    "search_unit_price_usd": 0.005,
+    "synthesis": "template",
+    "llm_max_calls": 0,
+    "llm_max_cost_usd": 0.0,
+    "llm_timeout_seconds": 15.0
+  }
+}
