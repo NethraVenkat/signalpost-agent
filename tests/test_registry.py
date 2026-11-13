@@ -71,6 +71,7 @@ def config(tmp, orgs, **kwargs):
     # Registry-only fixtures explicitly opt out; production defaults are tested separately.
     for feature in ('websites', 'hiring', 'public_activity'):
         kwargs.setdefault(feature, False)
+    kwargs.setdefault('adaptive_websites', False)  # Legacy single-pass source fixtures.
     return Config(organisations=path, output=tmp / "envelopes.jsonl", report=tmp / "report.json", state_dir=tmp / "state", **kwargs)
 
 

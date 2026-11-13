@@ -38,6 +38,7 @@ class WebsiteHttp:
         self.dns_lookups = 0
         self.activity_extra = set()
         self.accepted_pages = {}
+        self.discovery_sessions = {}
         self.dns_metrics = dns_metrics
 
     async def resolve(self, host, port, org):

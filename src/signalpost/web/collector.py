@@ -9,7 +9,7 @@ from ..models.envelope import Error
 from ..models.evidence import digest
 import xml.etree.ElementTree as ET
 from ..sources.extract import Section, Source, add, missing, response_source
-from .candidates import generate, context_from_bulk, legal_name, Candidate, GENERIC
+from .candidates import generate, context_from_bulk, legal_name, Candidate, GENERIC, candidate_key
 from .html import Page
 from .policy import domain, normalize_url, SOCIAL, DIRECTORIES, FREE_MAIL
 from .proof import score, phone, extract_entity_cards, find_containing_card, registry_contacts
@@ -186,7 +186,7 @@ def previous_nomination(previous, context, units):
     return Candidate(url, domain(url), value['candidate_origin'], branch), proof_url
 
 
-async def fetch(org, envelope, bulk, http, previous=None):
+async def fetch(org, envelope, bulk, http, previous=None, *, resume=False, candidates_override=None, nav_homepages=()):
     context, registry_source, registry_locator = await offload(registry_context,envelope,bulk,http.blobs)
     units={c.value['organisation_number']:{'name': c.value.get('name')} for c in envelope.claims
            if c.field.startswith('subunits.unit.') and c.availability=='available' and isinstance(c.value,dict)}
@@ -204,29 +204,37 @@ async def fetch(org, envelope, bulk, http, previous=None):
     if registry_source and (social := profile_url(normalize_url(context.get("website")) or "")):
         add(section, registry_source, org, "website", "registry_social." + digest(social)[:20],
             {"url": social, "platform": domain(social), "verification": "registry_asserted"}, registry_locator)
-    candidates = generate(context)
+    context['nav_homepages'] = list(nav_homepages)
+    candidates = list(candidates_override) if candidates_override is not None else generate(context)
     refresh_candidate, refresh_proof = previous_nomination(previous, context, units)
     if refresh_candidate:
         candidates = [refresh_candidate] + [c for c in candidates if c.url != refresh_candidate.url]
     leaders = [c.value.get("name") for c in envelope.claims if c.family == "roles" and isinstance(c.value, dict) and (c.value.get("role_type") or {}).get("kode") in {"DAGL", "LEDE"} and c.value.get("name")]
-    proved = set()
-    successes = []
-    attempts = []
-    blocked = False
-    ambiguous = False
+    saved = http.discovery_sessions.get(org) if resume else None
+    proved = saved['proved'] if saved else set()
+    successes = saved['successes'] if saved else []
+    attempts = saved['attempts'] if saved else []
+    blocked = saved['blocked'] if saved else False
+    ambiguous = saved['ambiguous'] if saved else False
     budget_hit = None
-    source_unavailable = False
-    registry_failed = False
-    fetchable_failures = set()
-    checked = set()
+    source_unavailable = saved['source_unavailable'] if saved else False
+    registry_failed = saved['registry_failed'] if saved else False
+    fetchable_failures = saved['fetchable_failures'] if saved else set()
+    checked = saved['checked'] if saved else set()
+    attempted = saved['attempted'] if saved else set()
+    vetoed = saved['vetoed'] if saved else set()
+    if saved:section.errors.extend(saved['access_errors'])
     async def nominations():
         for candidate in candidates:yield candidate
         search=getattr(http,'search',None)
-        if not successes and search:
+        if not resume and not successes and search:
             existing={c.domain for c in candidates}
             for candidate in await search.nominate(org,context,http):
                 if candidate.domain not in existing:yield candidate
     async for candidate in nominations():
+        key = candidate_key(candidate)
+        if key in attempted or candidate.domain in vetoed: continue
+        attempted.add(key)
         pages = []
         best = None
         try:
@@ -310,6 +318,7 @@ async def fetch(org, envelope, bulk, http, previous=None):
                             pages = [(extra, extra_page)]
                         break
             proof, response, page = best
+            if proof.level in {'REJECT','BLOCKED'}:vetoed.add(candidate.domain)
             attempts.append({"domain": candidate.domain, "level": proof.level, "points": proof.points, "signals": proof.signals, "origin": candidate.origin, "reason": proof.reason})
             if candidate is refresh_candidate and proof.level != 'VERIFIED':
                 continue  # Previous metadata nominates; only fresh exact proof publishes.
@@ -323,6 +332,7 @@ async def fetch(org, envelope, bulk, http, previous=None):
             elif proof.level in {"MEDIUM", 'REGISTRY_DECLARED'}:
                 ambiguous = True
         except SourceFailure as exc:
+            if exc.code in {'robots','robots_unavailable','http_blocked','block_page','ssrf','url_refused'}:vetoed.add(candidate.domain)
             if exc.code in {'website_timeout','website_connect_error','website_http_5xx','dns_timeout','dns_error','dns_unavailable'}:
                 source_unavailable = True
                 fetchable_failures.add(candidate.domain)
@@ -333,7 +343,12 @@ async def fetch(org, envelope, bulk, http, previous=None):
                 section.errors.append(Error(section="website", code=exc.code, message=f"{candidate.domain}: access refused"))
             if exc.code in {"website_budget_exhausted", "budget_exhausted", "deadline"}:
                 budget_hit = exc.code
+                attempted.discard(key)  # Not a completed candidate check.
                 break
+    http.discovery_sessions[org] = dict(context=context, proved=proved, successes=successes,
+        attempts=attempts, blocked=blocked, ambiguous=ambiguous, source_unavailable=source_unavailable,
+        registry_failed=registry_failed, fetchable_failures=fetchable_failures, checked=checked,
+        attempted=attempted, vetoed=vetoed, access_errors=list(section.errors))
     unique = {}
     for result in successes:
         root = domain(result[2].url)

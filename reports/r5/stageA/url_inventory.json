@@ -1,0 +1,893 @@
+{
+  "inputs": {
+    "stageS": {
+      "output": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageS-run\\envelopes.jsonl",
+      "sha256": "77813314c0d835c5160f6fd78e98f13f9b6f47e931aeec0f9ba3c364b97ecf2b",
+      "website_urls": 6,
+      "social_urls": 8,
+      "records": [
+        {
+          "organisation_number": "926818317",
+          "name": "SPEDIFY AS",
+          "kind": "website",
+          "url": "https://spedify.no",
+          "proof_tier": "VERIFIED",
+          "candidate_origin": "legal_name_slug",
+          "claim_id": "65bc01725b1d15fc108a6a5ce8196c5d7f68437ff2d5d0f270b9585e7d1eb71b",
+          "exact_excerpt": " footer-item\" role=\"none\"><span>Org.nr. 926 818 317</span></li>\n        </ul>\n        <div class=\"footer-social\" aria-label=\"Spedify i sosiale medier\"",
+          "source_url": "https://spedify.no/",
+          "retrieved_at": "2026-11-13T00:02:32.851267Z",
+          "content_sha256": "52ab413b475db6341975f9892d087395e9ac54286f4b9a571b53edd30a2b25e2",
+          "locator": "identity-proof:926818317",
+          "evidence_ids": [
+            "4f9e3c2c0100ea4c947342055839969dbeeaeb69303016b3357803eec53cce96"
+          ]
+        },
+        {
+          "organisation_number": "926818317",
+          "name": "SPEDIFY AS",
+          "kind": "social",
+          "url": "https://www.linkedin.com/company/74060067",
+          "proof_tier": "own_header_footer_numeric_linkedin_v1",
+          "candidate_origin": null,
+          "claim_id": "33adb77ff4b58563cf22a4fa276d7043913e1101eabcd2e8f318fe00674574ea",
+          "exact_excerpt": "<a href=\"https://www.linkedin.com/company/74060067/\" target=\"_blank\" rel=\"noopener\" aria-label=\"LinkedIn\" title=\"LinkedIn\">",
+          "source_url": "https://spedify.no/",
+          "retrieved_at": "2026-11-13T00:02:32.851267Z",
+          "content_sha256": "52ab413b475db6341975f9892d087395e9ac54286f4b9a571b53edd30a2b25e2",
+          "locator": "company-link:https://www.linkedin.com/company/74060067",
+          "evidence_ids": [
+            "5e340356b3d4ebfd7f606526978f0c6478ca44672e4a5b1fd519378ab8599790",
+            "845bdfe95e1e0129e44d6a7f282fef53965fa39f3781764b53d8a74931d8c566",
+            "4f9e3c2c0100ea4c947342055839969dbeeaeb69303016b3357803eec53cce96"
+          ]
+        },
+        {
+          "organisation_number": "991853995",
+          "name": "BIEN SPAREBANK ASA",
+          "kind": "website",
+          "url": "https://www.bien.no",
+          "proof_tier": "VERIFIED",
+          "candidate_origin": "registry_website",
+          "claim_id": "6e2ba1904d670263f2f1eead4352f2eee48d7b79efb3065b9e8cef016dd8f74b",
+          "exact_excerpt": " <div class=\"footer-list__text\">Org.nr: 991853995</div>\n                            </li>\n                                                    <li clas",
+          "source_url": "https://www.bien.no/",
+          "retrieved_at": "2026-11-13T00:02:35.876374Z",
+          "content_sha256": "0d0ae1d5dfadcd7a4bb69f55dffa5c2a5fe02eb14aaba4986f46cc5c67cd7a8d",
+          "locator": "identity-proof:991853995",
+          "evidence_ids": [
+            "9043f67365662cecd799053f4b5b23580ea320d002ffa0349f309b09f93c0fdd",
+            "cb45d2ca4a3932618caeed57402877aaaa1044164c7af94316371e8f28c144d3",
+            "b26e64b43b1aa49f8b5c0be3bbaa646bb7e0f23010436a9ff017cc6d53aba8ec"
+          ]
+        },
+        {
+          "organisation_number": "991853995",
+          "name": "BIEN SPAREBANK ASA",
+          "kind": "social",
+          "url": "https://www.linkedin.com/company/123301",
+          "proof_tier": "own_header_footer_numeric_linkedin_v1",
+          "candidate_origin": null,
+          "claim_id": "be8e0aa7ffe2862458461e619827e1e8f91dc0a97d1f6e080300e4061eb5a872",
+          "exact_excerpt": "<a class=\"sgw-button sgw-button-common button--icon-negative button--size-standard\" href=\"https://www.linkedin.com/company/123301\" target=\"_blank\" aria-label=\"Linkedin\" data-track-id=\"sitecore-footer\" data-track-linkname=\"linkedin\">",
+          "source_url": "https://www.bien.no/",
+          "retrieved_at": "2026-11-13T00:02:35.876374Z",
+          "content_sha256": "0d0ae1d5dfadcd7a4bb69f55dffa5c2a5fe02eb14aaba4986f46cc5c67cd7a8d",
+          "locator": "company-link:https://www.linkedin.com/company/123301",
+          "evidence_ids": [
+            "b0e893e5d7577742206a22060c99ffb6ebf21f9f2046febb6117ad25f79f7572",
+            "155e2afbc464ff3cc4b17c4ee67e11237967ccaf06795eb6ad13682f46331091",
+            "9043f67365662cecd799053f4b5b23580ea320d002ffa0349f309b09f93c0fdd",
+            "cb45d2ca4a3932618caeed57402877aaaa1044164c7af94316371e8f28c144d3",
+            "b26e64b43b1aa49f8b5c0be3bbaa646bb7e0f23010436a9ff017cc6d53aba8ec"
+          ]
+        },
+        {
+          "organisation_number": "991853995",
+          "name": "BIEN SPAREBANK ASA",
+          "kind": "social",
+          "url": "https://www.facebook.com/BienSparebank",
+          "proof_tier": "own_header_footer_exact_name_v1",
+          "candidate_origin": null,
+          "claim_id": "d4043442a567cf863ac6b6e17d493444650de0eab4f495d7f2d10c80b4ab2be9",
+          "exact_excerpt": "<a class=\"sgw-button sgw-button-common button--icon-negative button--size-standard\" href=\"https://www.facebook.com/BienSparebank\" target=\"_blank\" aria-label=\"Facebook\" data-track-id=\"sitecore-footer\" data-track-linkname=\"facebook\">",
+          "source_url": "https://www.bien.no/",
+          "retrieved_at": "2026-11-13T00:02:35.876374Z",
+          "content_sha256": "0d0ae1d5dfadcd7a4bb69f55dffa5c2a5fe02eb14aaba4986f46cc5c67cd7a8d",
+          "locator": "company-link:https://www.facebook.com/BienSparebank",
+          "evidence_ids": [
+            "4b0313a40afe6041cbf6daba31d6b171fd56da81af202486c78a60b4c5fde8b4",
+            "155e2afbc464ff3cc4b17c4ee67e11237967ccaf06795eb6ad13682f46331091",
+            "9043f67365662cecd799053f4b5b23580ea320d002ffa0349f309b09f93c0fdd",
+            "cb45d2ca4a3932618caeed57402877aaaa1044164c7af94316371e8f28c144d3",
+            "b26e64b43b1aa49f8b5c0be3bbaa646bb7e0f23010436a9ff017cc6d53aba8ec"
+          ]
+        },
+        {
+          "organisation_number": "991853995",
+          "name": "BIEN SPAREBANK ASA",
+          "kind": "social",
+          "url": "http://instagram.com/biensparebank",
+          "proof_tier": "own_header_footer_exact_name_v1",
+          "candidate_origin": null,
+          "claim_id": "7fb7722f415b20b8aeb303f5e6d8f108c58974d034d9bddd45a6565a98500da6",
+          "exact_excerpt": "<a class=\"sgw-button sgw-button-common button--icon-negative button--size-standard\" href=\"http://instagram.com/biensparebank\" target=\"_blank\" aria-label=\"Facebook\" data-track-id=\"sitecore-footer\" data-track-linkname=\"instagram\">",
+          "source_url": "https://www.bien.no/",
+          "retrieved_at": "2026-11-13T00:02:35.876374Z",
+          "content_sha256": "0d0ae1d5dfadcd7a4bb69f55dffa5c2a5fe02eb14aaba4986f46cc5c67cd7a8d",
+          "locator": "company-link:http://instagram.com/biensparebank",
+          "evidence_ids": [
+            "d4777c36586cc3b73b7dc921e34ea515f1d147bd106ba2907cf36e945125aa1c",
+            "155e2afbc464ff3cc4b17c4ee67e11237967ccaf06795eb6ad13682f46331091",
+            "9043f67365662cecd799053f4b5b23580ea320d002ffa0349f309b09f93c0fdd",
+            "cb45d2ca4a3932618caeed57402877aaaa1044164c7af94316371e8f28c144d3",
+            "b26e64b43b1aa49f8b5c0be3bbaa646bb7e0f23010436a9ff017cc6d53aba8ec"
+          ]
+        },
+        {
+          "organisation_number": "991853995",
+          "name": "BIEN SPAREBANK ASA",
+          "kind": "social",
+          "url": "https://twitter.com/BienSparebank",
+          "proof_tier": "own_header_footer_exact_name_v1",
+          "candidate_origin": null,
+          "claim_id": "2c19be4e3d5cfda4732b4a56b0759e6487aebac58d7f2e59e41523f6026149c1",
+          "exact_excerpt": "<a class=\"sgw-button sgw-button-common button--icon-negative button--size-standard\" href=\"https://twitter.com/BienSparebank\" target=\"_blank\" aria-label=\"X\" data-track-id=\"sitecore-footer\" data-track-linkname=\"twitter\">",
+          "source_url": "https://www.bien.no/",
+          "retrieved_at": "2026-11-13T00:02:35.876374Z",
+          "content_sha256": "0d0ae1d5dfadcd7a4bb69f55dffa5c2a5fe02eb14aaba4986f46cc5c67cd7a8d",
+          "locator": "company-link:https://twitter.com/BienSparebank",
+          "evidence_ids": [
+            "ab8fbbaee9f7900f48b58cf2af636e53ba71d8c87be534b0b3ffb3db0c2d16ab",
+            "155e2afbc464ff3cc4b17c4ee67e11237967ccaf06795eb6ad13682f46331091",
+            "9043f67365662cecd799053f4b5b23580ea320d002ffa0349f309b09f93c0fdd",
+            "cb45d2ca4a3932618caeed57402877aaaa1044164c7af94316371e8f28c144d3",
+            "b26e64b43b1aa49f8b5c0be3bbaa646bb7e0f23010436a9ff017cc6d53aba8ec"
+          ]
+        },
+        {
+          "organisation_number": "927094266",
+          "name": "SPORTLET.NO AS",
+          "kind": "website",
+          "url": "https://www.sportlet.no",
+          "proof_tier": "VERIFIED",
+          "candidate_origin": "registry_website",
+          "claim_id": "6f202d1ab51d2e2a655d7906e628132711bb72613ab3215ef30dac1dd4a85971",
+          "exact_excerpt": "      <li class=\"no-list py-2\">Org. nr. 927 094 266</li>\n                                                    <li class=\"no-list py-2\"><i class=\"icon-p",
+          "source_url": "https://www.sportlet.no/",
+          "retrieved_at": "2026-11-13T00:02:36.778460Z",
+          "content_sha256": "ef3e538a7397cae4eedda033a1f34969246a7e294ab8f970bb5766a82a17d802",
+          "locator": "identity-proof:927094266",
+          "evidence_ids": [
+            "eb60fd2efccf377ea228b4aa977925c517046e1904bcb0f517d9dd5907c7c715"
+          ]
+        },
+        {
+          "organisation_number": "964398003",
+          "name": "FOLKSOM AS",
+          "kind": "website",
+          "url": "https://folksom.no",
+          "proof_tier": "VERIFIED",
+          "candidate_origin": "registry_website",
+          "claim_id": "8d7142aa018c0c83d853b59ba7a4c78c6f08a74ca24124009e65633e574d0efe",
+          "exact_excerpt": "HF. Du må da oppgi Folksom sitt org.nr. 964 398 003. Alternativt kan faktura sendes i PDF format til<span>&nbsp;</span><a href=\"mailto:faktura@folksom",
+          "source_url": "https://folksom.no/kontakt",
+          "retrieved_at": "2026-11-13T00:02:38.590315Z",
+          "content_sha256": "5c8d0c4669590fdba8578ddd5d55377b258e4864effc153cddeeeeb962441c84",
+          "locator": "identity-proof:964398003",
+          "evidence_ids": [
+            "e0e94616625d93b045ce120605050b45a0a84413071cfb13df44c6c482618799",
+            "b653667a7755ba42ab6c006984c82c6aeb0ffb81740b86656da67cc372a66fdc",
+            "6bd44e187880a68c0592cc4c4c7fe481f829794fd69e52e42af0e9bc2594ab99"
+          ]
+        },
+        {
+          "organisation_number": "964398003",
+          "name": "FOLKSOM AS",
+          "kind": "social",
+          "url": "https://www.facebook.com/folksomas",
+          "proof_tier": "own_header_footer_exact_name_v1",
+          "candidate_origin": null,
+          "claim_id": "e3363f98af636e1f1011ec46abdb367fd965b127f43433608fc9ffe4d0d68976",
+          "exact_excerpt": "<a href=\"https://www.facebook.com/folksomas\">",
+          "source_url": "https://folksom.no/",
+          "retrieved_at": "2026-11-13T00:02:36.896112Z",
+          "content_sha256": "531faa54187b05780303bc835f6bc6d738dffdb12ac848ff031fad55e4e812cb",
+          "locator": "company-link:https://www.facebook.com/folksomas",
+          "evidence_ids": [
+            "75b2b75913de14908bcd0ce6b1baf060f18bec2ed79c70111dd3196db56a81b8",
+            "1de605485556df4b54df204f6c66b0f4950b7a2bea82e30341494655e05b21d6",
+            "e0e94616625d93b045ce120605050b45a0a84413071cfb13df44c6c482618799",
+            "b653667a7755ba42ab6c006984c82c6aeb0ffb81740b86656da67cc372a66fdc",
+            "6bd44e187880a68c0592cc4c4c7fe481f829794fd69e52e42af0e9bc2594ab99"
+          ]
+        },
+        {
+          "organisation_number": "964398003",
+          "name": "FOLKSOM AS",
+          "kind": "social",
+          "url": "https://www.instagram.com/folksom",
+          "proof_tier": "own_header_footer_exact_name_v1",
+          "candidate_origin": null,
+          "claim_id": "ff4cb53fbf9c29fb1ac54089996f3160bbe8b91c3aa44ab93f4ae7f52db0ff0a",
+          "exact_excerpt": "<a href=\"https://www.instagram.com/folksom/\">",
+          "source_url": "https://folksom.no/",
+          "retrieved_at": "2026-11-13T00:02:36.896112Z",
+          "content_sha256": "531faa54187b05780303bc835f6bc6d738dffdb12ac848ff031fad55e4e812cb",
+          "locator": "company-link:https://www.instagram.com/folksom",
+          "evidence_ids": [
+            "e935c93c0c8bd8b4563937c8b58d356c2328278278e7a4833657ed18d32637a6",
+            "1de605485556df4b54df204f6c66b0f4950b7a2bea82e30341494655e05b21d6",
+            "e0e94616625d93b045ce120605050b45a0a84413071cfb13df44c6c482618799",
+            "b653667a7755ba42ab6c006984c82c6aeb0ffb81740b86656da67cc372a66fdc",
+            "6bd44e187880a68c0592cc4c4c7fe481f829794fd69e52e42af0e9bc2594ab99"
+          ]
+        },
+        {
+          "organisation_number": "964398003",
+          "name": "FOLKSOM AS",
+          "kind": "social",
+          "url": "https://www.linkedin.com/company/2534098",
+          "proof_tier": "own_header_footer_numeric_linkedin_v1",
+          "candidate_origin": null,
+          "claim_id": "fc88cf6f748c9ac5e538ab079d09309c2d104df3c9175d7234b7efec37865ddc",
+          "exact_excerpt": "<a href=\"https://www.linkedin.com/company/2534098\">",
+          "source_url": "https://folksom.no/",
+          "retrieved_at": "2026-11-13T00:02:36.896112Z",
+          "content_sha256": "531faa54187b05780303bc835f6bc6d738dffdb12ac848ff031fad55e4e812cb",
+          "locator": "company-link:https://www.linkedin.com/company/2534098",
+          "evidence_ids": [
+            "d2e32784008941b64916ed3d9fce9abdd55adad118f2a01acc6ba814def7dd11",
+            "1de605485556df4b54df204f6c66b0f4950b7a2bea82e30341494655e05b21d6",
+            "e0e94616625d93b045ce120605050b45a0a84413071cfb13df44c6c482618799",
+            "b653667a7755ba42ab6c006984c82c6aeb0ffb81740b86656da67cc372a66fdc",
+            "6bd44e187880a68c0592cc4c4c7fe481f829794fd69e52e42af0e9bc2594ab99"
+          ]
+        },
+        {
+          "organisation_number": "998340888",
+          "name": "NAPOLITANA AS",
+          "kind": "website",
+          "url": "https://napolitana.no",
+          "proof_tier": "VERIFIED",
+          "candidate_origin": "legal_name_slug",
+          "claim_id": "175594a7a61b2a08668374ebc9e02e3ea411b5fa5004ea92893bf263c8106625",
+          "exact_excerpt": "]/60\"><p>© 2026 Napolitana AS • Org.nr: 998 340 888</p><p>Laget med 🍕 og ☕ i Saksvik av <a href=\"https://digital1.no\" target=\"_blank\" rel=\"noopener no",
+          "source_url": "https://napolitana.no/",
+          "retrieved_at": "2026-11-13T00:02:35.091743Z",
+          "content_sha256": "ec86b13980a11c8171d6eeaffcbbc4ba6a446d1b17de23acfe9d8f74cb8f294a",
+          "locator": "identity-proof:998340888",
+          "evidence_ids": [
+            "da9a671a8b8ddb0c8a9a00bf164c12cda6af92bc9cec9b14da5487690021ce3d"
+          ]
+        },
+        {
+          "organisation_number": "987769386",
+          "name": "INNLANDET REVISJON IKS",
+          "kind": "website",
+          "url": "https://irev.no",
+          "proof_tier": "VERIFIED",
+          "candidate_origin": "registry_website",
+          "claim_id": "1006a5e05b6bf44098d4671f1a1ed6c4425f02149f0b77d9169e7328e499c41b",
+          "exact_excerpt": "nnlandet Revisjon IKS</h3>\n<p>Org. nr.: 987 769 386</p></div>\n\t\t\t</div><div class=\"et_pb_module et_pb_text et_pb_text_1_tb_footer  et_pb_text_align_le",
+          "source_url": "https://irev.no/",
+          "retrieved_at": "2026-11-13T00:02:40.807468Z",
+          "content_sha256": "f59e22ef0f8231ba4f0f8be4c4de924013ffeed751efe8bab3a7f40531c3276b",
+          "locator": "identity-proof:987769386",
+          "evidence_ids": [
+            "98e0146dc21f91ef97dea27497e2aca9fb4f13b0e2f717c4269bc179520b670c",
+            "77301d0dc8e0e12dfe13a69930ccac563a316caad53371544e888c10963e91d8",
+            "33c7f4243a84efd19bdac334e5857bb0ab105112023e635a3d40c487ad2f0399",
+            "310e8e0b5e8d72636245ff45c64c4027f225d878154a40802983066e3bd65cd3",
+            "96567d157a0fc152195fd68fff424445d8bbe2df67cd80bc471c5dd9d656ca4e"
+          ]
+        }
+      ]
+    },
+    "stageA0": {
+      "output": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageA0-run\\envelopes.jsonl",
+      "sha256": "9d1ccb0c9270078857f4d95a67d4d04900a7dbc8602ffae0385aec615935fbe7",
+      "website_urls": 6,
+      "social_urls": 8,
+      "records": [
+        {
+          "organisation_number": "926818317",
+          "name": "SPEDIFY AS",
+          "kind": "website",
+          "url": "https://spedify.no",
+          "proof_tier": "VERIFIED",
+          "candidate_origin": "legal_name_slug",
+          "claim_id": "65bc01725b1d15fc108a6a5ce8196c5d7f68437ff2d5d0f270b9585e7d1eb71b",
+          "exact_excerpt": " footer-item\" role=\"none\"><span>Org.nr. 926 818 317</span></li>\n        </ul>\n        <div class=\"footer-social\" aria-label=\"Spedify i sosiale medier\"",
+          "source_url": "https://spedify.no/",
+          "retrieved_at": "2026-11-13T00:27:58.882129Z",
+          "content_sha256": "52ab413b475db6341975f9892d087395e9ac54286f4b9a571b53edd30a2b25e2",
+          "locator": "identity-proof:926818317",
+          "evidence_ids": [
+            "4f9e3c2c0100ea4c947342055839969dbeeaeb69303016b3357803eec53cce96"
+          ]
+        },
+        {
+          "organisation_number": "926818317",
+          "name": "SPEDIFY AS",
+          "kind": "social",
+          "url": "https://www.linkedin.com/company/74060067",
+          "proof_tier": "own_header_footer_numeric_linkedin_v1",
+          "candidate_origin": null,
+          "claim_id": "33adb77ff4b58563cf22a4fa276d7043913e1101eabcd2e8f318fe00674574ea",
+          "exact_excerpt": "<a href=\"https://www.linkedin.com/company/74060067/\" target=\"_blank\" rel=\"noopener\" aria-label=\"LinkedIn\" title=\"LinkedIn\">",
+          "source_url": "https://spedify.no/",
+          "retrieved_at": "2026-11-13T00:27:58.882129Z",
+          "content_sha256": "52ab413b475db6341975f9892d087395e9ac54286f4b9a571b53edd30a2b25e2",
+          "locator": "company-link:https://www.linkedin.com/company/74060067",
+          "evidence_ids": [
+            "5e340356b3d4ebfd7f606526978f0c6478ca44672e4a5b1fd519378ab8599790",
+            "845bdfe95e1e0129e44d6a7f282fef53965fa39f3781764b53d8a74931d8c566",
+            "4f9e3c2c0100ea4c947342055839969dbeeaeb69303016b3357803eec53cce96"
+          ]
+        },
+        {
+          "organisation_number": "991853995",
+          "name": "BIEN SPAREBANK ASA",
+          "kind": "website",
+          "url": "https://www.bien.no",
+          "proof_tier": "VERIFIED",
+          "candidate_origin": "registry_website",
+          "claim_id": "6e2ba1904d670263f2f1eead4352f2eee48d7b79efb3065b9e8cef016dd8f74b",
+          "exact_excerpt": " <div class=\"footer-list__text\">Org.nr: 991853995</div>\n                            </li>\n                                                    <li clas",
+          "source_url": "https://www.bien.no/",
+          "retrieved_at": "2026-11-13T00:28:17.394390Z",
+          "content_sha256": "0d0ae1d5dfadcd7a4bb69f55dffa5c2a5fe02eb14aaba4986f46cc5c67cd7a8d",
+          "locator": "identity-proof:991853995",
+          "evidence_ids": [
+            "9043f67365662cecd799053f4b5b23580ea320d002ffa0349f309b09f93c0fdd",
+            "cb45d2ca4a3932618caeed57402877aaaa1044164c7af94316371e8f28c144d3",
+            "b26e64b43b1aa49f8b5c0be3bbaa646bb7e0f23010436a9ff017cc6d53aba8ec"
+          ]
+        },
+        {
+          "organisation_number": "991853995",
+          "name": "BIEN SPAREBANK ASA",
+          "kind": "social",
+          "url": "https://www.linkedin.com/company/123301",
+          "proof_tier": "own_header_footer_numeric_linkedin_v1",
+          "candidate_origin": null,
+          "claim_id": "be8e0aa7ffe2862458461e619827e1e8f91dc0a97d1f6e080300e4061eb5a872",
+          "exact_excerpt": "<a class=\"sgw-button sgw-button-common button--icon-negative button--size-standard\" href=\"https://www.linkedin.com/company/123301\" target=\"_blank\" aria-label=\"Linkedin\" data-track-id=\"sitecore-footer\" data-track-linkname=\"linkedin\">",
+          "source_url": "https://www.bien.no/",
+          "retrieved_at": "2026-11-13T00:28:17.394390Z",
+          "content_sha256": "0d0ae1d5dfadcd7a4bb69f55dffa5c2a5fe02eb14aaba4986f46cc5c67cd7a8d",
+          "locator": "company-link:https://www.linkedin.com/company/123301",
+          "evidence_ids": [
+            "b0e893e5d7577742206a22060c99ffb6ebf21f9f2046febb6117ad25f79f7572",
+            "155e2afbc464ff3cc4b17c4ee67e11237967ccaf06795eb6ad13682f46331091",
+            "9043f67365662cecd799053f4b5b23580ea320d002ffa0349f309b09f93c0fdd",
+            "cb45d2ca4a3932618caeed57402877aaaa1044164c7af94316371e8f28c144d3",
+            "b26e64b43b1aa49f8b5c0be3bbaa646bb7e0f23010436a9ff017cc6d53aba8ec"
+          ]
+        },
+        {
+          "organisation_number": "991853995",
+          "name": "BIEN SPAREBANK ASA",
+          "kind": "social",
+          "url": "https://www.facebook.com/BienSparebank",
+          "proof_tier": "own_header_footer_exact_name_v1",
+          "candidate_origin": null,
+          "claim_id": "d4043442a567cf863ac6b6e17d493444650de0eab4f495d7f2d10c80b4ab2be9",
+          "exact_excerpt": "<a class=\"sgw-button sgw-button-common button--icon-negative button--size-standard\" href=\"https://www.facebook.com/BienSparebank\" target=\"_blank\" aria-label=\"Facebook\" data-track-id=\"sitecore-footer\" data-track-linkname=\"facebook\">",
+          "source_url": "https://www.bien.no/",
+          "retrieved_at": "2026-11-13T00:28:17.394390Z",
+          "content_sha256": "0d0ae1d5dfadcd7a4bb69f55dffa5c2a5fe02eb14aaba4986f46cc5c67cd7a8d",
+          "locator": "company-link:https://www.facebook.com/BienSparebank",
+          "evidence_ids": [
+            "4b0313a40afe6041cbf6daba31d6b171fd56da81af202486c78a60b4c5fde8b4",
+            "155e2afbc464ff3cc4b17c4ee67e11237967ccaf06795eb6ad13682f46331091",
+            "9043f67365662cecd799053f4b5b23580ea320d002ffa0349f309b09f93c0fdd",
+            "cb45d2ca4a3932618caeed57402877aaaa1044164c7af94316371e8f28c144d3",
+            "b26e64b43b1aa49f8b5c0be3bbaa646bb7e0f23010436a9ff017cc6d53aba8ec"
+          ]
+        },
+        {
+          "organisation_number": "991853995",
+          "name": "BIEN SPAREBANK ASA",
+          "kind": "social",
+          "url": "http://instagram.com/biensparebank",
+          "proof_tier": "own_header_footer_exact_name_v1",
+          "candidate_origin": null,
+          "claim_id": "7fb7722f415b20b8aeb303f5e6d8f108c58974d034d9bddd45a6565a98500da6",
+          "exact_excerpt": "<a class=\"sgw-button sgw-button-common button--icon-negative button--size-standard\" href=\"http://instagram.com/biensparebank\" target=\"_blank\" aria-label=\"Facebook\" data-track-id=\"sitecore-footer\" data-track-linkname=\"instagram\">",
+          "source_url": "https://www.bien.no/",
+          "retrieved_at": "2026-11-13T00:28:17.394390Z",
+          "content_sha256": "0d0ae1d5dfadcd7a4bb69f55dffa5c2a5fe02eb14aaba4986f46cc5c67cd7a8d",
+          "locator": "company-link:http://instagram.com/biensparebank",
+          "evidence_ids": [
+            "d4777c36586cc3b73b7dc921e34ea515f1d147bd106ba2907cf36e945125aa1c",
+            "155e2afbc464ff3cc4b17c4ee67e11237967ccaf06795eb6ad13682f46331091",
+            "9043f67365662cecd799053f4b5b23580ea320d002ffa0349f309b09f93c0fdd",
+            "cb45d2ca4a3932618caeed57402877aaaa1044164c7af94316371e8f28c144d3",
+            "b26e64b43b1aa49f8b5c0be3bbaa646bb7e0f23010436a9ff017cc6d53aba8ec"
+          ]
+        },
+        {
+          "organisation_number": "991853995",
+          "name": "BIEN SPAREBANK ASA",
+          "kind": "social",
+          "url": "https://twitter.com/BienSparebank",
+          "proof_tier": "own_header_footer_exact_name_v1",
+          "candidate_origin": null,
+          "claim_id": "2c19be4e3d5cfda4732b4a56b0759e6487aebac58d7f2e59e41523f6026149c1",
+          "exact_excerpt": "<a class=\"sgw-button sgw-button-common button--icon-negative button--size-standard\" href=\"https://twitter.com/BienSparebank\" target=\"_blank\" aria-label=\"X\" data-track-id=\"sitecore-footer\" data-track-linkname=\"twitter\">",
+          "source_url": "https://www.bien.no/",
+          "retrieved_at": "2026-11-13T00:28:17.394390Z",
+          "content_sha256": "0d0ae1d5dfadcd7a4bb69f55dffa5c2a5fe02eb14aaba4986f46cc5c67cd7a8d",
+          "locator": "company-link:https://twitter.com/BienSparebank",
+          "evidence_ids": [
+            "ab8fbbaee9f7900f48b58cf2af636e53ba71d8c87be534b0b3ffb3db0c2d16ab",
+            "155e2afbc464ff3cc4b17c4ee67e11237967ccaf06795eb6ad13682f46331091",
+            "9043f67365662cecd799053f4b5b23580ea320d002ffa0349f309b09f93c0fdd",
+            "cb45d2ca4a3932618caeed57402877aaaa1044164c7af94316371e8f28c144d3",
+            "b26e64b43b1aa49f8b5c0be3bbaa646bb7e0f23010436a9ff017cc6d53aba8ec"
+          ]
+        },
+        {
+          "organisation_number": "927094266",
+          "name": "SPORTLET.NO AS",
+          "kind": "website",
+          "url": "https://www.sportlet.no",
+          "proof_tier": "VERIFIED",
+          "candidate_origin": "registry_website",
+          "claim_id": "6f202d1ab51d2e2a655d7906e628132711bb72613ab3215ef30dac1dd4a85971",
+          "exact_excerpt": "      <li class=\"no-list py-2\">Org. nr. 927 094 266</li>\n                                                    <li class=\"no-list py-2\"><i class=\"icon-p",
+          "source_url": "https://www.sportlet.no/",
+          "retrieved_at": "2026-11-13T00:28:12.725687Z",
+          "content_sha256": "3c353b9a4876b7241cc7e64f3d82c469b0bb2d905c996640c810f207ea52e566",
+          "locator": "identity-proof:927094266",
+          "evidence_ids": [
+            "e9d50f7ac599471539f7a796d2d5698eb6cdce54f19d67598a7f78cb6edb7b3d"
+          ]
+        },
+        {
+          "organisation_number": "964398003",
+          "name": "FOLKSOM AS",
+          "kind": "website",
+          "url": "https://folksom.no",
+          "proof_tier": "VERIFIED",
+          "candidate_origin": "registry_website",
+          "claim_id": "8d7142aa018c0c83d853b59ba7a4c78c6f08a74ca24124009e65633e574d0efe",
+          "exact_excerpt": "HF. Du må da oppgi Folksom sitt org.nr. 964 398 003. Alternativt kan faktura sendes i PDF format til<span>&nbsp;</span><a href=\"mailto:faktura@folksom",
+          "source_url": "https://folksom.no/kontakt",
+          "retrieved_at": "2026-11-13T00:28:14.516122Z",
+          "content_sha256": "5c8d0c4669590fdba8578ddd5d55377b258e4864effc153cddeeeeb962441c84",
+          "locator": "identity-proof:964398003",
+          "evidence_ids": [
+            "e0e94616625d93b045ce120605050b45a0a84413071cfb13df44c6c482618799",
+            "b653667a7755ba42ab6c006984c82c6aeb0ffb81740b86656da67cc372a66fdc",
+            "6bd44e187880a68c0592cc4c4c7fe481f829794fd69e52e42af0e9bc2594ab99"
+          ]
+        },
+        {
+          "organisation_number": "964398003",
+          "name": "FOLKSOM AS",
+          "kind": "social",
+          "url": "https://www.facebook.com/folksomas",
+          "proof_tier": "own_header_footer_exact_name_v1",
+          "candidate_origin": null,
+          "claim_id": "e3363f98af636e1f1011ec46abdb367fd965b127f43433608fc9ffe4d0d68976",
+          "exact_excerpt": "<a href=\"https://www.facebook.com/folksomas\">",
+          "source_url": "https://folksom.no/",
+          "retrieved_at": "2026-11-13T00:28:13.357230Z",
+          "content_sha256": "531faa54187b05780303bc835f6bc6d738dffdb12ac848ff031fad55e4e812cb",
+          "locator": "company-link:https://www.facebook.com/folksomas",
+          "evidence_ids": [
+            "75b2b75913de14908bcd0ce6b1baf060f18bec2ed79c70111dd3196db56a81b8",
+            "1de605485556df4b54df204f6c66b0f4950b7a2bea82e30341494655e05b21d6",
+            "e0e94616625d93b045ce120605050b45a0a84413071cfb13df44c6c482618799",
+            "b653667a7755ba42ab6c006984c82c6aeb0ffb81740b86656da67cc372a66fdc",
+            "6bd44e187880a68c0592cc4c4c7fe481f829794fd69e52e42af0e9bc2594ab99"
+          ]
+        },
+        {
+          "organisation_number": "964398003",
+          "name": "FOLKSOM AS",
+          "kind": "social",
+          "url": "https://www.instagram.com/folksom",
+          "proof_tier": "own_header_footer_exact_name_v1",
+          "candidate_origin": null,
+          "claim_id": "ff4cb53fbf9c29fb1ac54089996f3160bbe8b91c3aa44ab93f4ae7f52db0ff0a",
+          "exact_excerpt": "<a href=\"https://www.instagram.com/folksom/\">",
+          "source_url": "https://folksom.no/",
+          "retrieved_at": "2026-11-13T00:28:13.357230Z",
+          "content_sha256": "531faa54187b05780303bc835f6bc6d738dffdb12ac848ff031fad55e4e812cb",
+          "locator": "company-link:https://www.instagram.com/folksom",
+          "evidence_ids": [
+            "e935c93c0c8bd8b4563937c8b58d356c2328278278e7a4833657ed18d32637a6",
+            "1de605485556df4b54df204f6c66b0f4950b7a2bea82e30341494655e05b21d6",
+            "e0e94616625d93b045ce120605050b45a0a84413071cfb13df44c6c482618799",
+            "b653667a7755ba42ab6c006984c82c6aeb0ffb81740b86656da67cc372a66fdc",
+            "6bd44e187880a68c0592cc4c4c7fe481f829794fd69e52e42af0e9bc2594ab99"
+          ]
+        },
+        {
+          "organisation_number": "964398003",
+          "name": "FOLKSOM AS",
+          "kind": "social",
+          "url": "https://www.linkedin.com/company/2534098",
+          "proof_tier": "own_header_footer_numeric_linkedin_v1",
+          "candidate_origin": null,
+          "claim_id": "fc88cf6f748c9ac5e538ab079d09309c2d104df3c9175d7234b7efec37865ddc",
+          "exact_excerpt": "<a href=\"https://www.linkedin.com/company/2534098\">",
+          "source_url": "https://folksom.no/",
+          "retrieved_at": "2026-11-13T00:28:13.357230Z",
+          "content_sha256": "531faa54187b05780303bc835f6bc6d738dffdb12ac848ff031fad55e4e812cb",
+          "locator": "company-link:https://www.linkedin.com/company/2534098",
+          "evidence_ids": [
+            "d2e32784008941b64916ed3d9fce9abdd55adad118f2a01acc6ba814def7dd11",
+            "1de605485556df4b54df204f6c66b0f4950b7a2bea82e30341494655e05b21d6",
+            "e0e94616625d93b045ce120605050b45a0a84413071cfb13df44c6c482618799",
+            "b653667a7755ba42ab6c006984c82c6aeb0ffb81740b86656da67cc372a66fdc",
+            "6bd44e187880a68c0592cc4c4c7fe481f829794fd69e52e42af0e9bc2594ab99"
+          ]
+        },
+        {
+          "organisation_number": "998340888",
+          "name": "NAPOLITANA AS",
+          "kind": "website",
+          "url": "https://napolitana.no",
+          "proof_tier": "VERIFIED",
+          "candidate_origin": "legal_name_slug",
+          "claim_id": "175594a7a61b2a08668374ebc9e02e3ea411b5fa5004ea92893bf263c8106625",
+          "exact_excerpt": "]/60\"><p>© 2026 Napolitana AS • Org.nr: 998 340 888</p><p>Laget med 🍕 og ☕ i Saksvik av <a href=\"https://digital1.no\" target=\"_blank\" rel=\"noopener no",
+          "source_url": "https://napolitana.no/",
+          "retrieved_at": "2026-11-13T00:28:16.216353Z",
+          "content_sha256": "ec86b13980a11c8171d6eeaffcbbc4ba6a446d1b17de23acfe9d8f74cb8f294a",
+          "locator": "identity-proof:998340888",
+          "evidence_ids": [
+            "da9a671a8b8ddb0c8a9a00bf164c12cda6af92bc9cec9b14da5487690021ce3d"
+          ]
+        },
+        {
+          "organisation_number": "987769386",
+          "name": "INNLANDET REVISJON IKS",
+          "kind": "website",
+          "url": "https://irev.no",
+          "proof_tier": "VERIFIED",
+          "candidate_origin": "registry_website",
+          "claim_id": "1006a5e05b6bf44098d4671f1a1ed6c4425f02149f0b77d9169e7328e499c41b",
+          "exact_excerpt": "nnlandet Revisjon IKS</h3>\n<p>Org. nr.: 987 769 386</p></div>\n\t\t\t</div><div class=\"et_pb_module et_pb_text et_pb_text_1_tb_footer  et_pb_text_align_le",
+          "source_url": "https://irev.no/",
+          "retrieved_at": "2026-11-13T00:28:23.097256Z",
+          "content_sha256": "f59e22ef0f8231ba4f0f8be4c4de924013ffeed751efe8bab3a7f40531c3276b",
+          "locator": "identity-proof:987769386",
+          "evidence_ids": [
+            "98e0146dc21f91ef97dea27497e2aca9fb4f13b0e2f717c4269bc179520b670c",
+            "77301d0dc8e0e12dfe13a69930ccac563a316caad53371544e888c10963e91d8",
+            "33c7f4243a84efd19bdac334e5857bb0ab105112023e635a3d40c487ad2f0399",
+            "310e8e0b5e8d72636245ff45c64c4027f225d878154a40802983066e3bd65cd3",
+            "96567d157a0fc152195fd68fff424445d8bbe2df67cd80bc471c5dd9d656ca4e"
+          ]
+        }
+      ]
+    },
+    "stageA": {
+      "output": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageA-run-release\\envelopes.jsonl",
+      "sha256": "2883e6443144fe5e04aa779bd978024bce8121bf3a8d57185ca90fe7ab5d831a",
+      "website_urls": 5,
+      "social_urls": 8,
+      "records": [
+        {
+          "organisation_number": "926818317",
+          "name": "SPEDIFY AS",
+          "kind": "website",
+          "url": "https://spedify.no",
+          "proof_tier": "VERIFIED",
+          "candidate_origin": "legal_name_slug",
+          "claim_id": "65bc01725b1d15fc108a6a5ce8196c5d7f68437ff2d5d0f270b9585e7d1eb71b",
+          "exact_excerpt": " footer-item\" role=\"none\"><span>Org.nr. 926 818 317</span></li>\n        </ul>\n        <div class=\"footer-social\" aria-label=\"Spedify i sosiale medier\"",
+          "source_url": "https://spedify.no/",
+          "retrieved_at": "2026-11-13T05:33:59.093540Z",
+          "content_sha256": "52ab413b475db6341975f9892d087395e9ac54286f4b9a571b53edd30a2b25e2",
+          "locator": "identity-proof:926818317",
+          "evidence_ids": [
+            "4f9e3c2c0100ea4c947342055839969dbeeaeb69303016b3357803eec53cce96"
+          ]
+        },
+        {
+          "organisation_number": "926818317",
+          "name": "SPEDIFY AS",
+          "kind": "social",
+          "url": "https://www.linkedin.com/company/74060067",
+          "proof_tier": "own_header_footer_numeric_linkedin_v1",
+          "candidate_origin": null,
+          "claim_id": "33adb77ff4b58563cf22a4fa276d7043913e1101eabcd2e8f318fe00674574ea",
+          "exact_excerpt": "<a href=\"https://www.linkedin.com/company/74060067/\" target=\"_blank\" rel=\"noopener\" aria-label=\"LinkedIn\" title=\"LinkedIn\">",
+          "source_url": "https://spedify.no/",
+          "retrieved_at": "2026-11-13T05:33:59.093540Z",
+          "content_sha256": "52ab413b475db6341975f9892d087395e9ac54286f4b9a571b53edd30a2b25e2",
+          "locator": "company-link:https://www.linkedin.com/company/74060067",
+          "evidence_ids": [
+            "5e340356b3d4ebfd7f606526978f0c6478ca44672e4a5b1fd519378ab8599790",
+            "845bdfe95e1e0129e44d6a7f282fef53965fa39f3781764b53d8a74931d8c566",
+            "4f9e3c2c0100ea4c947342055839969dbeeaeb69303016b3357803eec53cce96"
+          ]
+        },
+        {
+          "organisation_number": "991853995",
+          "name": "BIEN SPAREBANK ASA",
+          "kind": "website",
+          "url": "https://www.bien.no",
+          "proof_tier": "VERIFIED",
+          "candidate_origin": "registry_website",
+          "claim_id": "6e2ba1904d670263f2f1eead4352f2eee48d7b79efb3065b9e8cef016dd8f74b",
+          "exact_excerpt": " <div class=\"footer-list__text\">Org.nr: 991853995</div>\n                            </li>\n                                                    <li clas",
+          "source_url": "https://www.bien.no/",
+          "retrieved_at": "2026-11-13T05:34:05.447303Z",
+          "content_sha256": "0d0ae1d5dfadcd7a4bb69f55dffa5c2a5fe02eb14aaba4986f46cc5c67cd7a8d",
+          "locator": "identity-proof:991853995",
+          "evidence_ids": [
+            "9043f67365662cecd799053f4b5b23580ea320d002ffa0349f309b09f93c0fdd",
+            "cb45d2ca4a3932618caeed57402877aaaa1044164c7af94316371e8f28c144d3",
+            "b26e64b43b1aa49f8b5c0be3bbaa646bb7e0f23010436a9ff017cc6d53aba8ec"
+          ]
+        },
+        {
+          "organisation_number": "991853995",
+          "name": "BIEN SPAREBANK ASA",
+          "kind": "social",
+          "url": "https://www.linkedin.com/company/123301",
+          "proof_tier": "own_header_footer_numeric_linkedin_v1",
+          "candidate_origin": null,
+          "claim_id": "be8e0aa7ffe2862458461e619827e1e8f91dc0a97d1f6e080300e4061eb5a872",
+          "exact_excerpt": "<a class=\"sgw-button sgw-button-common button--icon-negative button--size-standard\" href=\"https://www.linkedin.com/company/123301\" target=\"_blank\" aria-label=\"Linkedin\" data-track-id=\"sitecore-footer\" data-track-linkname=\"linkedin\">",
+          "source_url": "https://www.bien.no/",
+          "retrieved_at": "2026-11-13T05:34:05.447303Z",
+          "content_sha256": "0d0ae1d5dfadcd7a4bb69f55dffa5c2a5fe02eb14aaba4986f46cc5c67cd7a8d",
+          "locator": "company-link:https://www.linkedin.com/company/123301",
+          "evidence_ids": [
+            "b0e893e5d7577742206a22060c99ffb6ebf21f9f2046febb6117ad25f79f7572",
+            "155e2afbc464ff3cc4b17c4ee67e11237967ccaf06795eb6ad13682f46331091",
+            "9043f67365662cecd799053f4b5b23580ea320d002ffa0349f309b09f93c0fdd",
+            "cb45d2ca4a3932618caeed57402877aaaa1044164c7af94316371e8f28c144d3",
+            "b26e64b43b1aa49f8b5c0be3bbaa646bb7e0f23010436a9ff017cc6d53aba8ec"
+          ]
+        },
+        {
+          "organisation_number": "991853995",
+          "name": "BIEN SPAREBANK ASA",
+          "kind": "social",
+          "url": "https://www.facebook.com/BienSparebank",
+          "proof_tier": "own_header_footer_exact_name_v1",
+          "candidate_origin": null,
+          "claim_id": "d4043442a567cf863ac6b6e17d493444650de0eab4f495d7f2d10c80b4ab2be9",
+          "exact_excerpt": "<a class=\"sgw-button sgw-button-common button--icon-negative button--size-standard\" href=\"https://www.facebook.com/BienSparebank\" target=\"_blank\" aria-label=\"Facebook\" data-track-id=\"sitecore-footer\" data-track-linkname=\"facebook\">",
+          "source_url": "https://www.bien.no/",
+          "retrieved_at": "2026-11-13T05:34:05.447303Z",
+          "content_sha256": "0d0ae1d5dfadcd7a4bb69f55dffa5c2a5fe02eb14aaba4986f46cc5c67cd7a8d",
+          "locator": "company-link:https://www.facebook.com/BienSparebank",
+          "evidence_ids": [
+            "4b0313a40afe6041cbf6daba31d6b171fd56da81af202486c78a60b4c5fde8b4",
+            "155e2afbc464ff3cc4b17c4ee67e11237967ccaf06795eb6ad13682f46331091",
+            "9043f67365662cecd799053f4b5b23580ea320d002ffa0349f309b09f93c0fdd",
+            "cb45d2ca4a3932618caeed57402877aaaa1044164c7af94316371e8f28c144d3",
+            "b26e64b43b1aa49f8b5c0be3bbaa646bb7e0f23010436a9ff017cc6d53aba8ec"
+          ]
+        },
+        {
+          "organisation_number": "991853995",
+          "name": "BIEN SPAREBANK ASA",
+          "kind": "social",
+          "url": "http://instagram.com/biensparebank",
+          "proof_tier": "own_header_footer_exact_name_v1",
+          "candidate_origin": null,
+          "claim_id": "7fb7722f415b20b8aeb303f5e6d8f108c58974d034d9bddd45a6565a98500da6",
+          "exact_excerpt": "<a class=\"sgw-button sgw-button-common button--icon-negative button--size-standard\" href=\"http://instagram.com/biensparebank\" target=\"_blank\" aria-label=\"Facebook\" data-track-id=\"sitecore-footer\" data-track-linkname=\"instagram\">",
+          "source_url": "https://www.bien.no/",
+          "retrieved_at": "2026-11-13T05:34:05.447303Z",
+          "content_sha256": "0d0ae1d5dfadcd7a4bb69f55dffa5c2a5fe02eb14aaba4986f46cc5c67cd7a8d",
+          "locator": "company-link:http://instagram.com/biensparebank",
+          "evidence_ids": [
+            "d4777c36586cc3b73b7dc921e34ea515f1d147bd106ba2907cf36e945125aa1c",
+            "155e2afbc464ff3cc4b17c4ee67e11237967ccaf06795eb6ad13682f46331091",
+            "9043f67365662cecd799053f4b5b23580ea320d002ffa0349f309b09f93c0fdd",
+            "cb45d2ca4a3932618caeed57402877aaaa1044164c7af94316371e8f28c144d3",
+            "b26e64b43b1aa49f8b5c0be3bbaa646bb7e0f23010436a9ff017cc6d53aba8ec"
+          ]
+        },
+        {
+          "organisation_number": "991853995",
+          "name": "BIEN SPAREBANK ASA",
+          "kind": "social",
+          "url": "https://twitter.com/BienSparebank",
+          "proof_tier": "own_header_footer_exact_name_v1",
+          "candidate_origin": null,
+          "claim_id": "2c19be4e3d5cfda4732b4a56b0759e6487aebac58d7f2e59e41523f6026149c1",
+          "exact_excerpt": "<a class=\"sgw-button sgw-button-common button--icon-negative button--size-standard\" href=\"https://twitter.com/BienSparebank\" target=\"_blank\" aria-label=\"X\" data-track-id=\"sitecore-footer\" data-track-linkname=\"twitter\">",
+          "source_url": "https://www.bien.no/",
+          "retrieved_at": "2026-11-13T05:34:05.447303Z",
+          "content_sha256": "0d0ae1d5dfadcd7a4bb69f55dffa5c2a5fe02eb14aaba4986f46cc5c67cd7a8d",
+          "locator": "company-link:https://twitter.com/BienSparebank",
+          "evidence_ids": [
+            "ab8fbbaee9f7900f48b58cf2af636e53ba71d8c87be534b0b3ffb3db0c2d16ab",
+            "155e2afbc464ff3cc4b17c4ee67e11237967ccaf06795eb6ad13682f46331091",
+            "9043f67365662cecd799053f4b5b23580ea320d002ffa0349f309b09f93c0fdd",
+            "cb45d2ca4a3932618caeed57402877aaaa1044164c7af94316371e8f28c144d3",
+            "b26e64b43b1aa49f8b5c0be3bbaa646bb7e0f23010436a9ff017cc6d53aba8ec"
+          ]
+        },
+        {
+          "organisation_number": "927094266",
+          "name": "SPORTLET.NO AS",
+          "kind": "website",
+          "url": "https://www.sportlet.no",
+          "proof_tier": "VERIFIED",
+          "candidate_origin": "registry_website",
+          "claim_id": "6f202d1ab51d2e2a655d7906e628132711bb72613ab3215ef30dac1dd4a85971",
+          "exact_excerpt": "      <li class=\"no-list py-2\">Org. nr. 927 094 266</li>\n                                                    <li class=\"no-list py-2\"><i class=\"icon-p",
+          "source_url": "https://www.sportlet.no/",
+          "retrieved_at": "2026-11-13T05:34:03.725098Z",
+          "content_sha256": "93cd007533cc12dbc800380541e57151f09c563e237f8f6d77f7d7dfcdf803c2",
+          "locator": "identity-proof:927094266",
+          "evidence_ids": [
+            "b27411b42b52f772f51fc1609ab5a270e7647ef06ea63448262a25f32a502f73"
+          ]
+        },
+        {
+          "organisation_number": "964398003",
+          "name": "FOLKSOM AS",
+          "kind": "website",
+          "url": "https://folksom.no",
+          "proof_tier": "VERIFIED",
+          "candidate_origin": "registry_website",
+          "claim_id": "8d7142aa018c0c83d853b59ba7a4c78c6f08a74ca24124009e65633e574d0efe",
+          "exact_excerpt": "HF. Du må da oppgi Folksom sitt org.nr. 964 398 003. Alternativt kan faktura sendes i PDF format til<span>&nbsp;</span><a href=\"mailto:faktura@folksom",
+          "source_url": "https://folksom.no/kontakt",
+          "retrieved_at": "2026-11-13T05:34:04.167117Z",
+          "content_sha256": "5c8d0c4669590fdba8578ddd5d55377b258e4864effc153cddeeeeb962441c84",
+          "locator": "identity-proof:964398003",
+          "evidence_ids": [
+            "e0e94616625d93b045ce120605050b45a0a84413071cfb13df44c6c482618799",
+            "b653667a7755ba42ab6c006984c82c6aeb0ffb81740b86656da67cc372a66fdc",
+            "6bd44e187880a68c0592cc4c4c7fe481f829794fd69e52e42af0e9bc2594ab99"
+          ]
+        },
+        {
+          "organisation_number": "964398003",
+          "name": "FOLKSOM AS",
+          "kind": "social",
+          "url": "https://www.facebook.com/folksomas",
+          "proof_tier": "own_header_footer_exact_name_v1",
+          "candidate_origin": null,
+          "claim_id": "e3363f98af636e1f1011ec46abdb367fd965b127f43433608fc9ffe4d0d68976",
+          "exact_excerpt": "<a href=\"https://www.facebook.com/folksomas\">",
+          "source_url": "https://folksom.no/",
+          "retrieved_at": "2026-11-13T05:34:02.887776Z",
+          "content_sha256": "531faa54187b05780303bc835f6bc6d738dffdb12ac848ff031fad55e4e812cb",
+          "locator": "company-link:https://www.facebook.com/folksomas",
+          "evidence_ids": [
+            "75b2b75913de14908bcd0ce6b1baf060f18bec2ed79c70111dd3196db56a81b8",
+            "1de605485556df4b54df204f6c66b0f4950b7a2bea82e30341494655e05b21d6",
+            "e0e94616625d93b045ce120605050b45a0a84413071cfb13df44c6c482618799",
+            "b653667a7755ba42ab6c006984c82c6aeb0ffb81740b86656da67cc372a66fdc",
+            "6bd44e187880a68c0592cc4c4c7fe481f829794fd69e52e42af0e9bc2594ab99"
+          ]
+        },
+        {
+          "organisation_number": "964398003",
+          "name": "FOLKSOM AS",
+          "kind": "social",
+          "url": "https://www.instagram.com/folksom",
+          "proof_tier": "own_header_footer_exact_name_v1",
+          "candidate_origin": null,
+          "claim_id": "ff4cb53fbf9c29fb1ac54089996f3160bbe8b91c3aa44ab93f4ae7f52db0ff0a",
+          "exact_excerpt": "<a href=\"https://www.instagram.com/folksom/\">",
+          "source_url": "https://folksom.no/",
+          "retrieved_at": "2026-11-13T05:34:02.887776Z",
+          "content_sha256": "531faa54187b05780303bc835f6bc6d738dffdb12ac848ff031fad55e4e812cb",
+          "locator": "company-link:https://www.instagram.com/folksom",
+          "evidence_ids": [
+            "e935c93c0c8bd8b4563937c8b58d356c2328278278e7a4833657ed18d32637a6",
+            "1de605485556df4b54df204f6c66b0f4950b7a2bea82e30341494655e05b21d6",
+            "e0e94616625d93b045ce120605050b45a0a84413071cfb13df44c6c482618799",
+            "b653667a7755ba42ab6c006984c82c6aeb0ffb81740b86656da67cc372a66fdc",
+            "6bd44e187880a68c0592cc4c4c7fe481f829794fd69e52e42af0e9bc2594ab99"
+          ]
+        },
+        {
+          "organisation_number": "964398003",
+          "name": "FOLKSOM AS",
+          "kind": "social",
+          "url": "https://www.linkedin.com/company/2534098",
+          "proof_tier": "own_header_footer_numeric_linkedin_v1",
+          "candidate_origin": null,
+          "claim_id": "fc88cf6f748c9ac5e538ab079d09309c2d104df3c9175d7234b7efec37865ddc",
+          "exact_excerpt": "<a href=\"https://www.linkedin.com/company/2534098\">",
+          "source_url": "https://folksom.no/",
+          "retrieved_at": "2026-11-13T05:34:02.887776Z",
+          "content_sha256": "531faa54187b05780303bc835f6bc6d738dffdb12ac848ff031fad55e4e812cb",
+          "locator": "company-link:https://www.linkedin.com/company/2534098",
+          "evidence_ids": [
+            "d2e32784008941b64916ed3d9fce9abdd55adad118f2a01acc6ba814def7dd11",
+            "1de605485556df4b54df204f6c66b0f4950b7a2bea82e30341494655e05b21d6",
+            "e0e94616625d93b045ce120605050b45a0a84413071cfb13df44c6c482618799",
+            "b653667a7755ba42ab6c006984c82c6aeb0ffb81740b86656da67cc372a66fdc",
+            "6bd44e187880a68c0592cc4c4c7fe481f829794fd69e52e42af0e9bc2594ab99"
+          ]
+        },
+        {
+          "organisation_number": "998340888",
+          "name": "NAPOLITANA AS",
+          "kind": "website",
+          "url": "https://napolitana.no",
+          "proof_tier": "VERIFIED",
+          "candidate_origin": "legal_name_slug",
+          "claim_id": "175594a7a61b2a08668374ebc9e02e3ea411b5fa5004ea92893bf263c8106625",
+          "exact_excerpt": "]/60\"><p>© 2026 Napolitana AS • Org.nr: 998 340 888</p><p>Laget med 🍕 og ☕ i Saksvik av <a href=\"https://digital1.no\" target=\"_blank\" rel=\"noopener no",
+          "source_url": "https://napolitana.no/",
+          "retrieved_at": "2026-11-13T05:34:04.924985Z",
+          "content_sha256": "ec86b13980a11c8171d6eeaffcbbc4ba6a446d1b17de23acfe9d8f74cb8f294a",
+          "locator": "identity-proof:998340888",
+          "evidence_ids": [
+            "da9a671a8b8ddb0c8a9a00bf164c12cda6af92bc9cec9b14da5487690021ce3d"
+          ]
+        }
+      ]
+    }
+  },
+  "comparisons": {
+    "stageS to stageA0": {
+      "added": [],
+      "removed": []
+    },
+    "stageA0 to stageA": {
+      "added": [],
+      "removed": [
+        {
+          "organisation_number": "987769386",
+          "name": "INNLANDET REVISJON IKS",
+          "kind": "website",
+          "url": "https://irev.no",
+          "proof_tier": "VERIFIED",
+          "candidate_origin": "registry_website",
+          "claim_id": "1006a5e05b6bf44098d4671f1a1ed6c4425f02149f0b77d9169e7328e499c41b",
+          "exact_excerpt": "nnlandet Revisjon IKS</h3>\n<p>Org. nr.: 987 769 386</p></div>\n\t\t\t</div><div class=\"et_pb_module et_pb_text et_pb_text_1_tb_footer  et_pb_text_align_le",
+          "source_url": "https://irev.no/",
+          "retrieved_at": "2026-11-13T00:28:23.097256Z",
+          "content_sha256": "f59e22ef0f8231ba4f0f8be4c4de924013ffeed751efe8bab3a7f40531c3276b",
+          "locator": "identity-proof:987769386",
+          "evidence_ids": [
+            "98e0146dc21f91ef97dea27497e2aca9fb4f13b0e2f717c4269bc179520b670c",
+            "77301d0dc8e0e12dfe13a69930ccac563a316caad53371544e888c10963e91d8",
+            "33c7f4243a84efd19bdac334e5857bb0ab105112023e635a3d40c487ad2f0399",
+            "310e8e0b5e8d72636245ff45c64c4027f225d878154a40802983066e3bd65cd3",
+            "96567d157a0fc152195fd68fff424445d8bbe2df67cd80bc471c5dd9d656ca4e"
+          ]
+        }
+      ]
+    },
+    "stageS to stageA": {
+      "added": [],
+      "removed": [
+        {
+          "organisation_number": "987769386",
+          "name": "INNLANDET REVISJON IKS",
+          "kind": "website",
+          "url": "https://irev.no",
+          "proof_tier": "VERIFIED",
+          "candidate_origin": "registry_website",
+          "claim_id": "1006a5e05b6bf44098d4671f1a1ed6c4425f02149f0b77d9169e7328e499c41b",
+          "exact_excerpt": "nnlandet Revisjon IKS</h3>\n<p>Org. nr.: 987 769 386</p></div>\n\t\t\t</div><div class=\"et_pb_module et_pb_text et_pb_text_1_tb_footer  et_pb_text_align_le",
+          "source_url": "https://irev.no/",
+          "retrieved_at": "2026-11-13T00:02:40.807468Z",
+          "content_sha256": "f59e22ef0f8231ba4f0f8be4c4de924013ffeed751efe8bab3a7f40531c3276b",
+          "locator": "identity-proof:987769386",
+          "evidence_ids": [
+            "98e0146dc21f91ef97dea27497e2aca9fb4f13b0e2f717c4269bc179520b670c",
+            "77301d0dc8e0e12dfe13a69930ccac563a316caad53371544e888c10963e91d8",
+            "33c7f4243a84efd19bdac334e5857bb0ab105112023e635a3d40c487ad2f0399",
+            "310e8e0b5e8d72636245ff45c64c4027f225d878154a40802983066e3bd65cd3",
+            "96567d157a0fc152195fd68fff424445d8bbe2df67cd80bc471c5dd9d656ca4e"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -2,7 +2,7 @@
 
 The exact seven evaluator flags now enable website discovery, hiring and public website activity, with unchanged 8/13 website ceilings. CLI negative opt-outs and library booleans disable them; positive flags remain compatible. README's command now uses only the seven official flags. Registry changes remain enabled.
 
-The shared request meter enforces floor(1,850 ? unique inputs / 100) including shared NAV, robots, redirects and retries; explicit limits may only lower it. Time defaults to 2,100 seconds, clamped to 21 seconds per unique input with output/site reserves. Missing CSV lookups cannot extend the original deadline. Reports expose effective limits, enrichment switches and end-to-end completion. Duplicate rows cannot inflate limits. Slow/uninterruptible input or filesystem work and unrealistically tiny budgets remain explicitly reported limitations, not promises of impossible timing.
+The shared request meter enforces floor(1850 * unique inputs / 100) including shared NAV, robots, redirects and retries; explicit limits may only lower it. Time defaults to 2,100 seconds, clamped to 21 seconds per unique input with output/site reserves. Missing CSV lookups cannot extend the original deadline. Reports expose effective limits, enrichment switches and end-to-end completion. Duplicate rows cannot inflate limits. Slow/uninterruptible input or filesystem work and unrealistically tiny budgets remain explicitly reported limitations, not promises of impossible timing.
 
 ## Fresh seven-flag measurement
 

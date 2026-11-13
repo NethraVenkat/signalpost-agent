@@ -1,0 +1,28 @@
+{
+  "source_manifest_matches_final_source": true,
+  "exactly_seven_flags": true,
+  "max_website_http_per_company": 8,
+  "max_dns_nominations": 8,
+  "phase_http_requests": {
+    "pass1": 905
+  },
+  "site": {
+    "state": "available",
+    "companies": 100,
+    "input_records": 100,
+    "pages": 102,
+    "skipped_invalid_identifiers": 0,
+    "total_bytes": 24454252,
+    "largest_profile_data_bytes": 330891,
+    "largest_profile_bytes": 169585
+  },
+  "completion": {
+    "wall_seconds": 501.609,
+    "within_requested_time_budget": true,
+    "within_effective_time_budget": true,
+    "note": "Includes preparation, crawl, mandatory outputs and site; final report flush adds filesystem latency."
+  },
+  "handled_exceptions": 0,
+  "unhandled_exceptions": 0,
+  "warnings": []
+}

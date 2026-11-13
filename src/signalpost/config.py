@@ -26,6 +26,7 @@ class Config(BaseModel):
     official_batch_size: int = Field(default=1100, ge=1)
     max_output_mb: float = Field(default=256, gt=0)
     websites: bool = True
+    adaptive_websites: bool = True
     dns_precheck: bool = True
     registry_declared: bool = False
     website_stop_after_verified: bool = True

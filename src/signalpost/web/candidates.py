@@ -1,6 +1,7 @@
 import re
 from functools import lru_cache
 from dataclasses import dataclass
+from urllib.parse import urlsplit
 from .policy import domain, normalize_url, SOCIAL, DIRECTORIES, FREE_MAIL
 from ..sources.bulk_registry import column
 
@@ -58,7 +59,12 @@ def context_from_bulk(row):
             "postcode": column(row, "forretningsadresse.postnummer")[0], "city": column(row, "forretningsadresse.poststed")[0]}
 
 
-def generate(context):
+def candidate_key(candidate):
+    parts = urlsplit(candidate.url)
+    return (parts.hostname.removeprefix('www.'), parts.path or '/')
+
+
+def generate(context, limit=8):
     output = []
     seen = set()
     def add(value, origin, subunit_orgnr=None):
@@ -72,14 +78,16 @@ def generate(context):
     if "@" in email:
         add(email.rsplit("@", 1)[1], "registry_email")
     name_slugs = legal_name_slugs(legal_name(context.get('name')))
-    # The entity's strongest full-name spellings precede subunit contacts,
-    # which may belong to a management provider or unrelated group domain.
+    # Preserve the measured first-pass priority: strongest exact-name spellings
+    # precede branch/provider contacts, which can consume the entire allowance.
     for slug in sorted(name_slugs, key=lambda value: not value.endswith('.no'))[:2]:
         add(slug, 'legal_name_slug')
     for unit in context.get('subunits',[]):
         add(unit.get('website'),'subunit_registry_website',unit['orgnr'])
         email=str(unit.get('email') or '')
         if '@' in email:add(email.rsplit('@',1)[1],'subunit_registry_email',unit['orgnr'])
+    for item in context.get('nav_homepages', []):
+        add(item['url'], 'nav_employer_homepage', item.get('subunit_orgnr'))
     # Brands/aliases nominate only. They never modify the legal identity used
     # by the proof layer or imply a unique-name/domain ownership relationship.
     for brand in context.get('brands', []):
@@ -90,7 +98,7 @@ def generate(context):
     for unit in context.get('subunits', []):
         for slug in legal_name_slugs(legal_name(unit.get('name'))):
             add(slug, 'registry_subunit_name', unit['orgnr'])
-    return output[:8]
+    return output[:min(32, limit)]
 
 
 def extract_sitemap_domains(target, legal_name_str="", brand_name="", timeout=5):

@@ -1,0 +1,20 @@
+.\.venv\Scripts\python.exe : warning: in the working copy of 'tests/test_r5_stage47.py', LF will be replaced by CRLF 
+the next time Git touches it
+At line:2 char:22
++ ... ONUTF8='1'; .\.venv\Scripts\python.exe reports/r5/measure_adaptive.py ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (warning: in the... Git touches it:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Traceback (most recent call last):
+  File "C:\Users\<USER>\signal-nethra\reports\r5\measure_adaptive.py", line 129, in <module>
+    else: main()
+          ^^^^^^
+  File "C:\Users\<USER>\signal-nethra\reports\r5\measure_adaptive.py", line 66, in main
+    summarize()
+  File "C:\Users\<USER>\signal-nethra\reports\r5\measure_adaptive.py", line 82, in summarize
+    assert report['completion']['within_requested_time_budget'] and 
+report['completion']['within_effective_time_budget']
+           
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

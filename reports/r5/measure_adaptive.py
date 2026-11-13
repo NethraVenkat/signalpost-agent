@@ -21,10 +21,13 @@ def stage_name():
 
 def main():
     stage = stage_name()
+    attempt=sys.argv[2] if len(sys.argv)>2 and sys.argv[2]!='--summarize-only' else None
+    if attempt:assert attempt.isalnum()
     project = Path(__file__).resolve().parents[2]
     base = project / 'reports/r5/baseline'
     dest = project / 'reports/r5' / ('stage'+stage)
     out = project / '.data/r5' / ('stage'+stage+'-run')
+    if attempt:out=out.with_name(out.name+'-'+attempt)
     if out.exists(): raise ValueError('Preserve prior run; output must be fresh')
     dest.mkdir(parents=True, exist_ok=True)
     settings = json.loads((base/'settings.json').read_text(encoding='utf8'))
@@ -34,7 +37,7 @@ def main():
     from signalpost.config import Config
     flags = {'organisations':base/'companies.jsonl', 'bulk':base/'registry100.csv',
              'output':out/'envelopes.jsonl', 'profiles_output':out/'profiles.jsonl',
-             'report':out/'report.json', 'run_id':'r5-stage'+stage+'-seed20261017', 'expected_count':100}
+             'report':out/'report.json', 'run_id':'r5-stage'+stage+'-seed20261017'+('-'+attempt if attempt else ''), 'expected_count':100}
     config = Config(**flags,site_dir=out/'site').model_dump(mode='json')
     # Only the seven official flags; the fresh working directory isolates default state/.
     args=[sys.executable,'-m','signalpost.cli','run']
@@ -43,11 +46,15 @@ def main():
     quote = lambda value: "'" + str(value).replace("'", "''") + "'"
     command = '# Run from '+out.as_posix()+' with the environment_overrides in settings.json.\n& '+' '.join(quote(arg) for arg in args)+'\n'
     (dest/'run.ps1').write_text(command,encoding='utf8')
+    source_manifest={p.relative_to(project).as_posix():sha(p) for p in sorted((project/'src').rglob('*'))
+                     if p.is_file() and '__pycache__' not in p.parts}
+    (dest/'source_manifest.json').write_text(json.dumps(source_manifest,indent=2)+'\n',encoding='utf8')
     metadata = {'stage': stage, 'parent_commit': subprocess.check_output(['git','rev-parse','HEAD'], text=True).strip(),
                 'source_diff_sha256': hashlib.sha256(subprocess.check_output(['git','diff','HEAD','--','src','tests','docs'])).hexdigest(),
                 'working_directory':out.as_posix(),'effective_state_dir':(out/'state').as_posix(),
                 'command_argv':args,'exact_seven_flags':True,'resolved_config': config, 'environment_overrides': settings['environment_overrides'],
                 'input_sha256': sha(base/'companies.jsonl'), 'registry_sha256': sha(base/'registry100.csv'),
+                'source_manifest_sha256':sha(dest/'source_manifest.json'),
                 'started_at_utc': datetime.now(timezone.utc).isoformat()}
     (dest/'settings.json').write_text(json.dumps(metadata, indent=2)+'\n', encoding='utf8')
     env = os.environ.copy(); env.update(settings['environment_overrides'])

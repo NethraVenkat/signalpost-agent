@@ -59,6 +59,7 @@ class Budget:
         self.cap = min(config.max_requests, self.hard_request_cap) if config.max_requests is not None else self.hard_request_cap
         self.events = []
         self.by_host = Counter()
+        self.phase = 'pass1'
 
     def seconds_left(self):
         return self.start + self.total_seconds - time.monotonic()
@@ -72,6 +73,7 @@ class Budget:
         if len(self.events) >= self.cap:
             raise SourceFailure("budget_exhausted")
         event = {"url": url, "host": host, "organisation_number": org, "attempt_started": time.monotonic() - self.start, "status": None, "error": None}
+        event['pass'] = self.phase
         self.events.append(event)
         self.by_host[host] += 1
         return event

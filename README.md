@@ -44,7 +44,7 @@ Useful defaults and controls:
 
 | Scope | Flags / defaults |
 |---|---|
-| Batch | `--workers 64`, `--host-concurrency 10`, `--request-timeout 10`; hard ceiling floor(1,850 ? unique inputs / 100) HTTP requests, including shared feed/robots/retries; `--max-requests` may only lower it. `--time-budget-seconds 2100`; effective time is min(requested, 35 minutes ? unique inputs / 100), with crawl deadline/reserve for mandatory outputs and the site. Duplicate rows cannot inflate safety limits. |
+| Batch | `--workers 64`, `--host-concurrency 10`, `--request-timeout 10`; hard ceiling floor(1850 * unique inputs / 100) HTTP requests, including shared feed/robots/retries; `--max-requests` may only lower it. `--time-budget-seconds 2100`; effective time is min(requested, 35 minutes * unique inputs / 100), with crawl deadline/reserve for mandatory outputs and the site. Duplicate rows cannot inflate safety limits. |
 | Output | `--state-dir state`, `--envelope-shape union`, `--max-output-mb 256`, optional `--expected-count` |
 | Websites | `--website-request-cap 8`, `--website-total-request-cap 13` are the CLI and library defaults and upper bounds, measured in [Stage 4.7](reports/r5/stage4_7/SUMMARY.md). Website discovery, hiring and public website activity are ON in CLI/library defaults, including with only the seven evaluator flags. Opt out with `--no-websites`, `--no-hiring`, `--no-public-activity`; positive flags remain compatible. Eight DNS nominations (a www/non-www pair is one), 3-second prechecks, 8-second HTTP bounds, 1-second domain politeness, 2 in flight/domain |
 | NAV | `--nav-max-pages 512`, `--nav-max-details` defaults to min(candidate ads, max(300, 2 × unique companies)), `--nav-time-cap-seconds` defaults to min(900, 40% of run time), `--nav-lookback-days 185`, `--nav-concurrency 4`, `--nav-request-timeout 30`; independent connection pool |
@@ -167,6 +167,14 @@ python -m http.server 8000 --directory docs/demo
 This is a saved research sample, not a live directory: 100 companies, seed 20261017; registry identity uses the frozen 13 October 2026 snapshot. Check each receipt's retrieval date, exact excerpt and hash. Registry data attribution: Bronnoysundregistrene, NLOD 2.0; other source content retains its original rights.
 
 Headless QA is authored in `reports/r5/stageU/browser_check.cjs`. It checks 1280 px and 360 px, name/number search, profiles, two-company comparison, source receipts, 44 px targets, expanded tables and page overflow. Screenshots and results are in `reports/r5/stageU/`. To run with your own Playwright installation, set `PLAYWRIGHT_MODULE` to the installed `playwright` package path and run `node reports/r5/stageU/browser_check.cjs docs/demo reports/r5/stageU` (Chromium must already be installed). The recorded QA used preinstalled Playwright-core 1.64.1 and Chromium 156; no application code was copied from other projects.
+
+### Adaptive website scheduling (Stage A)
+
+With the seven evaluator flags, pass 1 preserves registry homepage/email and the two strongest full-name spellings before branch/provider contacts; it also uses registered subunit websites/emails, any already verified live NAV employer homepage and remaining name variants. A NAV homepage is a nomination only: its saved active detail must match the exact company or a currently registered subunit; headers/index names never authorize publication.
+
+After pass 1 and shared source processing finish, pass 2 ranks untried nominations by source strength (registry, subunit, verified NAV detail, then name/brand variants), preferring `.no` within a tier. It spends only the remaining global budget, within the original deadline and cumulative 8/13 per-company HTTP / eight DNS nomination ceilings. No counters, robots policy, vetoes or page/candidate caches reset. Exact-number proof ends work for that company; cached pages are re-scored for the current entity. Exhausted allowances stay explicit, so a second pass may gain zero websites.
+
+`report.adaptive_websites` records pass requests, websites gained and per-company states; each request log entry has a pass label. Planning skips at a capacity limit retain pass 1's completed checked scope, with explicit pass-2 states/errors; attempted checks keep their actual source/budget states. `--no-adaptive-websites` (or `Config(adaptive_websites=False)`) keeps single-pass discovery. A newly verified second-pass site can feed public activity without dropping retained registry activity. No paid search or model is enabled by the scheduler.
 
 ### Cited briefing contract (Stage S)
 

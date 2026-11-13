@@ -1,0 +1,76 @@
+{"command": ["C:\\Users\\<USER>\\signal-nethra\\.venv\\Scripts\\python.exe", "C:\\Users\\<USER>\\signal-nethra\\reports\\r5\\stage4_7\\run_tests.py", "-q", "-p", "no:cacheprovider", "--basetemp=.data/r5/pytest-stageA"], "priority": "above_normal", "mutates_test_assertions_or_timeouts": false}
+........................................................................ [  8%]
+........................................................................ [ 17%]
+.......................................F................................ [ 25%]
+........................................................................ [ 34%]
+........................................................................ [ 43%]
+........................................................................ [ 51%]
+........................................................................ [ 60%]
+...F.................................................................... [ 68%]
+........................................................................ [ 77%]
+........................................................................ [ 86%]
+........F............................................................... [ 94%]
+...........................................                              [100%]
+================================== FAILURES ===================================
+_________ test_website_wait_does_not_hold_next_company_registry_slot __________
+
+tmp_path = WindowsPath('C:/Users/<USER>/signal-nethra/.data/r5/pytest-stageA/test_website_wait_does_not_hol0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001BA9A049D60>
+
+    def test_website_wait_does_not_hold_next_company_registry_slot(tmp_path,monkeypatch):
+        from signalpost.runner import run
+        from signalpost.sources.extract import Section
+        from tests.test_nav import OTHER
+        from tests.test_registry import handler
+        ready=asyncio.Event();base=handler()
+        async def website(org,*args):
+            if org==ORG:await asyncio.wait_for(ready.wait(),2)
+            return Section(state='not_available')
+        def response(request):
+            if request.url.path.endswith(OTHER+'/roller'):ready.set()
+            return base(request)
+        monkeypatch.setattr('signalpost.runner.collector.fetch',website)
+        cfg=config(tmp_path,[ORG,OTHER],workers=1,websites=True)
+        async def gate():
+            async with httpx.AsyncClient(transport=httpx.MockTransport(response)) as client:return await run(cfg,client)
+        report=asyncio.run(gate())
+>       assert report['handled_exceptions']==report['unhandled_exceptions']==0
+E       assert 2 == 0
+
+tests\test_loop_responsiveness.py:98: AssertionError
+_ test_numeric_linkedin_from_shared_group_site_is_withheld[Org nr 923609016 Our companies-Example AS] _
+
+tmp_path = WindowsPath('C:/Users/<USER>/signal-nethra/.data/r5/pytest-stageA/test_numeric_linkedin_from_sha2')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001BA99F96810>
+footer = 'Org nr 923609016 Our companies', title = 'Example AS'
+
+    @pytest.mark.parametrize('footer,title', [
+        ('Org nr '+OUR+' Parent '+OTHER, 'Example AS'),
+        ('Org nr '+OUR, 'Example Holding'),
+        ('Org nr '+OUR+' Our companies', 'Example AS'),
+    ])
+    def test_numeric_linkedin_from_shared_group_site_is_withheld(tmp_path, monkeypatch, footer, title):
+        _, row, _, _ = execute_web(tmp_path, monkeypatch, body=html(footer, title=title,
+                            extra=f'<footer><a href="{URL}">LinkedIn</a></footer>'))
+>       assert any(c['field'] == 'official_website' for c in row['claims'])
+E       assert False
+E        +  where False = any(<generator object test_numeric_linkedin_from_shared_group_site_is_withheld.<locals>.<genexpr> at 0x000001BA99EDB5E0>)
+
+tests\test_r5_stage47_social.py:42: AssertionError
+_____ test_candidate_order_full_name_before_subunits_and_remaining_slugs ______
+
+    def test_candidate_order_full_name_before_subunits_and_remaining_slugs():
+        rows=generate({'name':'Distinctive Name AS','website':'parent.no','email':'office@email.no',
+                      'subunits':[{'orgnr':OTHER,'website':'workplace.no','email':'contact@unit.no'}]})
+>       assert [c.origin for c in rows[:6]]==['registry_website','registry_email','legal_name_slug','legal_name_slug','subunit_registry_website','subunit_registry_email']
+E       AssertionError: assert ['registry_we...al_name_slug'] == ['registry_we...gistry_email']
+E         
+E         At index 2 diff: 'subunit_registry_website' != 'legal_name_slug'
+E         Use -v to get more diff
+
+tests\test_subunit_websites.py:11: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_loop_responsiveness.py::test_website_wait_does_not_hold_next_company_registry_slot
+FAILED tests/test_r5_stage47_social.py::test_numeric_linkedin_from_shared_group_site_is_withheld[Org nr 923609016 Our companies-Example AS]
+FAILED tests/test_subunit_websites.py::test_candidate_order_full_name_before_subunits_and_remaining_slugs
+3 failed, 832 passed in 15339.29s (4:15:39)

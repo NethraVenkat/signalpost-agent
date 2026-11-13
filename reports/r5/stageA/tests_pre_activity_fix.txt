@@ -1,0 +1,142 @@
+{"command": ["C:\\Users\\<USER>\\signal-nethra\\.venv\\Scripts\\python.exe", "C:\\Users\\<USER>\\signal-nethra\\reports\\r5\\stage4_7\\run_tests.py", "-q", "-p", "no:cacheprovider", "--basetemp=.data/r5/pytest-stageA-final"], "priority": "above_normal", "mutates_test_assertions_or_timeouts": false}
+........................................................................ [  8%]
+........................................................................ [ 17%]
+..................F..................................................... [ 25%]
+........................................................................ [ 34%]
+........................................................................ [ 43%]
+........................................................................ [ 51%]
+........................................................................ [ 60%]
+...................F.................................................... [ 68%]
+........................................................................ [ 77%]
+........................................................................ [ 86%]
+........................................................................ [ 94%]
+............................................                             [100%]
+================================== FAILURES ===================================
+________ test_large_boolean_attribute_does_not_stall_link_localization ________
+
+    def test_large_boolean_attribute_does_not_stall_link_localization():
+        import subprocess
+        import sys
+        script = """
+    from signalpost.web.html import Page
+    from signalpost.web.social import discover
+    url = 'https://www.instagram.com/example'
+    body = '<footer><a ' + 'x' * 50000 + ' href=' + url + '>Profile</a></footer>'
+    assert url in discover(Page(body.encode(), 'https://example.no/'))[url]
+    """
+>       subprocess.run([sys.executable, '-c', script], timeout=5, check=True, capture_output=True)
+
+tests\test_link_evidence_spans.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\subprocess.py:550: in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\subprocess.py:1209: in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <Popen: returncode: 1 args: ['C:\\Users\\<USER>\\signal-nethra\\.venv\\Scrip...>
+input = None, endtime = 115860.312, orig_timeout = 5
+
+    def _communicate(self, input, endtime, orig_timeout):
+        # Start reader threads feeding into a list hanging off of this
+        # object, unless they've already been started.
+        if self.stdout and not hasattr(self, "_stdout_buff"):
+            self._stdout_buff = []
+            self.stdout_thread = \
+                    threading.Thread(target=self._readerthread,
+                                     args=(self.stdout, self._stdout_buff))
+            self.stdout_thread.daemon = True
+            self.stdout_thread.start()
+        if self.stderr and not hasattr(self, "_stderr_buff"):
+            self._stderr_buff = []
+            self.stderr_thread = \
+                    threading.Thread(target=self._readerthread,
+                                     args=(self.stderr, self._stderr_buff))
+            self.stderr_thread.daemon = True
+            self.stderr_thread.start()
+    
+        if self.stdin:
+            self._stdin_write(input)
+    
+        # Wait for the reader threads, or time out.  If we time out, the
+        # threads remain reading and the fds left open in case the user
+        # calls communicate again.
+        if self.stdout is not None:
+            self.stdout_thread.join(self._remaining_time(endtime))
+            if self.stdout_thread.is_alive():
+>               raise TimeoutExpired(self.args, orig_timeout)
+E               subprocess.TimeoutExpired: Command '['C:\\Users\\<USER>\\signal-nethra\\.venv\\Scripts\\python.exe', '-c', "\nfrom signalpost.web.html import Page\nfrom signalpost.web.social import discover\nurl = 'https://www.instagram.com/example'\nbody = '<footer><a ' + 'x' * 50000 + ' href=' + url + '>Profile</a></footer>'\nassert url in discover(Page(body.encode(), 'https://example.no/'))[url]\n"]' timed out after 5 seconds
+
+..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\subprocess.py:1630: TimeoutExpired
+___ test_new_pass2_website_activity_cannot_drop_existing_registry_activity ____
+
+tmp_path = WindowsPath('C:/Users/<USER>/signal-nethra/.data/r5/pytest-stageA-final/test_new_pass2_website_activit0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000018B8FCAD820>
+
+    def test_new_pass2_website_activity_cannot_drop_existing_registry_activity(tmp_path,monkeypatch):
+>       report,row,_,cfg=exercise(tmp_path,monkeypatch,public_activity=True,registry=True)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_r5_stage_a.py:173: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_r5_stage_a.py:77: in exercise
+    report=asyncio.run(run(cfg))
+           ^^^^^^^^^^^^^^^^^^^^^
+..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\runners.py:195: in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\runners.py:118: in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\base_events.py:691: in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+src\signalpost\runner.py:158: in run
+    try:report=await _run(config,client,synthesis_provider)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\signalpost\runner.py:560: in _run
+    size, output_limited, minimum_exceeded = await offload(write,config.output,result,config.envelope_shape,blobs,config.max_output_mb)
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\signalpost\workers.py:37: in offload
+    async def offload(fn,*args,**kwargs):return await _run(SOURCE_POOL,fn,args,kwargs)
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\signalpost\workers.py:34: in _run
+    return await asyncio.get_running_loop().run_in_executor(pool,context.run,call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\concurrent\futures\thread.py:59: in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\signalpost\workers.py:29: in call
+    try:return fn(*args,**kwargs)
+               ^^^^^^^^^^^^^^^^^^
+src\signalpost\io\envelope_writer.py:76: in write
+    lines, limited, minimum_exceeded = constrain(envelopes, shape, max_output_mb)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\signalpost\io\envelope_writer.py:27: in constrain
+    lines = {key: encode(e) for key, e in unique.items()}
+                  ^^^^^^^^^
+src\signalpost\io\envelope_writer.py:24: in encode
+    return json.dumps(serialize(e, shape), ensure_ascii=False, separators=(",", ":"), allow_nan=False) + "\n"
+                      ^^^^^^^^^^^^^^^^^^^
+src\signalpost\models\shapes.py:41: in serialize
+    validate(data, shape)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+data = {'organisation_number': '923609016', 'run': {'run_id': 'd9f962a19021403ebce88e8e2dcf33d7', 'started_at': '2026-11-13T0...nheter/923609016', 'source_class': 'official_registry', 'retrieved_at': '2026-11-13T05:13:29.657117Z', ...}, ...], ...}
+shape = 'union'
+
+    def validate(data, shape):
+        if shape == "union":
+>           return Envelope.model_validate(data)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           pydantic_core._pydantic_core.ValidationError: 1 validation error for Envelope
+E             Value error, Duplicate claim fields [type=value_error, input_value={'organisation_number': '...ial_year_check': None}}}, input_type=dict]
+E               For further information visit https://errors.pydantic.dev/2.14/v/value_error
+
+src\signalpost\models\shapes.py:47: ValidationError
+=========================== short test summary info ===========================
+FAILED tests/test_link_evidence_spans.py::test_large_boolean_attribute_does_not_stall_link_localization
+FAILED tests/test_r5_stage_a.py::test_new_pass2_website_activity_cannot_drop_existing_registry_activity
+2 failed, 834 passed in 215.54s (0:03:35)
