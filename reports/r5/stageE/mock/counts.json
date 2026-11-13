@@ -1,0 +1,1970 @@
+{
+  "metrics": {
+    "verified_websites": 3,
+    "social_profile_companies": 2,
+    "activity_companies": 100,
+    "activity_claims": 1093,
+    "total_facts": 13248,
+    "locations": 81,
+    "job_ad_companies": 0,
+    "contacts": 4,
+    "http_requests": 719,
+    "runtime_seconds": 331.843,
+    "process_wall_seconds": 347.0723968000093
+  },
+  "counts_by_section_state": {
+    "accounts": {
+      "available": 100,
+      "not_recorded": 0
+    },
+    "activity": {
+      "available": 71,
+      "failed": 29,
+      "not_recorded": 0
+    },
+    "hiring": {
+      "not_available": 100,
+      "not_recorded": 0
+    },
+    "identity": {
+      "available": 100,
+      "not_recorded": 0
+    },
+    "roles": {
+      "available": 100,
+      "not_recorded": 0
+    },
+    "subunits": {
+      "available": 79,
+      "not_available": 21,
+      "not_recorded": 0
+    },
+    "website": {
+      "ambiguous": 8,
+      "available": 3,
+      "failed": 17,
+      "not_available": 72,
+      "not_recorded": 0
+    }
+  },
+  "per_company": [
+    {
+      "organisation_number": "892442762",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 4,
+      "total_facts": 140,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "failed",
+        "hiring": "not_available",
+        "activity": "failed"
+      }
+    },
+    {
+      "organisation_number": "922699836",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 35,
+      "total_facts": 169,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "948783118",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 10,
+      "total_facts": 151,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "975590291",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 4,
+      "total_facts": 128,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "934490835",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 4,
+      "total_facts": 54,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "935352398",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 7,
+      "total_facts": 81,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "ambiguous",
+        "hiring": "not_available",
+        "activity": "failed"
+      }
+    },
+    {
+      "organisation_number": "998081831",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 9,
+      "total_facts": 162,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "915682448",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 31,
+      "total_facts": 169,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "935033381",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 7,
+      "total_facts": 85,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "failed"
+      }
+    },
+    {
+      "organisation_number": "827012122",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 5,
+      "total_facts": 99,
+      "locations": 0,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "not_available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "932522209",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 10,
+      "total_facts": 127,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "failed",
+        "hiring": "not_available",
+        "activity": "failed"
+      }
+    },
+    {
+      "organisation_number": "999630480",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 8,
+      "total_facts": 117,
+      "locations": 0,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "not_available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "failed"
+      }
+    },
+    {
+      "organisation_number": "922337195",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 11,
+      "total_facts": 148,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "932156016",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 6,
+      "total_facts": 120,
+      "locations": 0,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "not_available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "995636468",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 26,
+      "total_facts": 191,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "failed",
+        "hiring": "not_available",
+        "activity": "failed"
+      }
+    },
+    {
+      "organisation_number": "917438986",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 6,
+      "total_facts": 113,
+      "locations": 0,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "not_available",
+        "accounts": "available",
+        "website": "failed",
+        "hiring": "not_available",
+        "activity": "failed"
+      }
+    },
+    {
+      "organisation_number": "827869082",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 4,
+      "total_facts": 87,
+      "locations": 0,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "not_available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "931717472",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 7,
+      "total_facts": 128,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "981304772",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 17,
+      "total_facts": 168,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "failed",
+        "hiring": "not_available",
+        "activity": "failed"
+      }
+    },
+    {
+      "organisation_number": "988217867",
+      "verified_websites": 1,
+      "social_profiles": 1,
+      "activity_claims": 35,
+      "total_facts": 218,
+      "locations": 2,
+      "job_ads": 0,
+      "contacts": 2,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "998543118",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 17,
+      "total_facts": 147,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "failed",
+        "hiring": "not_available",
+        "activity": "failed"
+      }
+    },
+    {
+      "organisation_number": "936874495",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 5,
+      "total_facts": 77,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "929674006",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 4,
+      "total_facts": 115,
+      "locations": 0,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "not_available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "930644382",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 6,
+      "total_facts": 94,
+      "locations": 0,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "not_available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "990623376",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 8,
+      "total_facts": 149,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "ambiguous",
+        "hiring": "not_available",
+        "activity": "failed"
+      }
+    },
+    {
+      "organisation_number": "924691379",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 6,
+      "total_facts": 139,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "failed",
+        "hiring": "not_available",
+        "activity": "failed"
+      }
+    },
+    {
+      "organisation_number": "921483597",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 7,
+      "total_facts": 116,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "922590117",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 4,
+      "total_facts": 132,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "933252353",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 9,
+      "total_facts": 97,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "917148627",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 6,
+      "total_facts": 138,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "failed",
+        "hiring": "not_available",
+        "activity": "failed"
+      }
+    },
+    {
+      "organisation_number": "988330116",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 7,
+      "total_facts": 151,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "936011896",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 4,
+      "total_facts": 57,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "958507739",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 27,
+      "total_facts": 183,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "920951783",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 10,
+      "total_facts": 145,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "929209850",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 50,
+      "total_facts": 196,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "failed"
+      }
+    },
+    {
+      "organisation_number": "919909676",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 4,
+      "total_facts": 140,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "930517259",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 6,
+      "total_facts": 107,
+      "locations": 0,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "not_available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "934358945",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 16,
+      "total_facts": 111,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "failed",
+        "hiring": "not_available",
+        "activity": "failed"
+      }
+    },
+    {
+      "organisation_number": "925719641",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 6,
+      "total_facts": 116,
+      "locations": 0,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "not_available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "998989493",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 31,
+      "total_facts": 186,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "ambiguous",
+        "hiring": "not_available",
+        "activity": "failed"
+      }
+    },
+    {
+      "organisation_number": "994808540",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 11,
+      "total_facts": 164,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "failed",
+        "hiring": "not_available",
+        "activity": "failed"
+      }
+    },
+    {
+      "organisation_number": "915448666",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 8,
+      "total_facts": 123,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "986250875",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 10,
+      "total_facts": 157,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "919370424",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 5,
+      "total_facts": 141,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "956960673",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 9,
+      "total_facts": 152,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "928746828",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 4,
+      "total_facts": 94,
+      "locations": 0,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "not_available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "918912746",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 5,
+      "total_facts": 104,
+      "locations": 0,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "not_available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "failed"
+      }
+    },
+    {
+      "organisation_number": "933368947",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 11,
+      "total_facts": 114,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "failed",
+        "hiring": "not_available",
+        "activity": "failed"
+      }
+    },
+    {
+      "organisation_number": "986464492",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 21,
+      "total_facts": 182,
+      "locations": 2,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "ambiguous",
+        "hiring": "not_available",
+        "activity": "failed"
+      }
+    },
+    {
+      "organisation_number": "931694995",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 6,
+      "total_facts": 108,
+      "locations": 0,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "not_available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "985216630",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 4,
+      "total_facts": 130,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "984360312",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 5,
+      "total_facts": 126,
+      "locations": 0,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "not_available",
+        "accounts": "available",
+        "website": "failed",
+        "hiring": "not_available",
+        "activity": "failed"
+      }
+    },
+    {
+      "organisation_number": "916580371",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 17,
+      "total_facts": 165,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "980584224",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 8,
+      "total_facts": 126,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "911697688",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 18,
+      "total_facts": 154,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "failed",
+        "hiring": "not_available",
+        "activity": "failed"
+      }
+    },
+    {
+      "organisation_number": "921441835",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 33,
+      "total_facts": 179,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "919301538",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 20,
+      "total_facts": 159,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "914556139",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 10,
+      "total_facts": 144,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "929032861",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 4,
+      "total_facts": 118,
+      "locations": 0,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "not_available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "936187854",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 13,
+      "total_facts": 89,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "failed",
+        "hiring": "not_available",
+        "activity": "failed"
+      }
+    },
+    {
+      "organisation_number": "919002271",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 8,
+      "total_facts": 110,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "986128662",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 15,
+      "total_facts": 164,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "ambiguous",
+        "hiring": "not_available",
+        "activity": "failed"
+      }
+    },
+    {
+      "organisation_number": "927636166",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 5,
+      "total_facts": 100,
+      "locations": 0,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "not_available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "989244779",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 6,
+      "total_facts": 146,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "916522770",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 4,
+      "total_facts": 140,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "932527197",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 15,
+      "total_facts": 134,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "925246883",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 10,
+      "total_facts": 128,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "918842527",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 5,
+      "total_facts": 91,
+      "locations": 0,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "not_available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "917124426",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 5,
+      "total_facts": 141,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "929545338",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 10,
+      "total_facts": 127,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "994882597",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 4,
+      "total_facts": 159,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "ambiguous",
+        "hiring": "not_available",
+        "activity": "failed"
+      }
+    },
+    {
+      "organisation_number": "924379197",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 4,
+      "total_facts": 122,
+      "locations": 0,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "not_available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "917071209",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 21,
+      "total_facts": 156,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "921764766",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 12,
+      "total_facts": 151,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "919083603",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 41,
+      "total_facts": 190,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "889320222",
+      "verified_websites": 1,
+      "social_profiles": 1,
+      "activity_claims": 5,
+      "total_facts": 158,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "917208417",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 7,
+      "total_facts": 137,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "931788698",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 6,
+      "total_facts": 98,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "934216466",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 6,
+      "total_facts": 83,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "935341205",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 10,
+      "total_facts": 88,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "ambiguous",
+        "hiring": "not_available",
+        "activity": "failed"
+      }
+    },
+    {
+      "organisation_number": "931891022",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 5,
+      "total_facts": 115,
+      "locations": 0,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "not_available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "928723240",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 32,
+      "total_facts": 167,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "failed",
+        "hiring": "not_available",
+        "activity": "failed"
+      }
+    },
+    {
+      "organisation_number": "930309664",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 11,
+      "total_facts": 126,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "979814666",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 9,
+      "total_facts": 149,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "917222975",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 7,
+      "total_facts": 153,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "ambiguous",
+        "hiring": "not_available",
+        "activity": "failed"
+      }
+    },
+    {
+      "organisation_number": "927572338",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 5,
+      "total_facts": 112,
+      "locations": 0,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "not_available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "981500253",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 6,
+      "total_facts": 129,
+      "locations": 0,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "not_available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "928603229",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 13,
+      "total_facts": 145,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "979993609",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 7,
+      "total_facts": 144,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "997963903",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 18,
+      "total_facts": 162,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "928978575",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 8,
+      "total_facts": 116,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "936195296",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 6,
+      "total_facts": 74,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "920629148",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 11,
+      "total_facts": 146,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "failed",
+        "hiring": "not_available",
+        "activity": "failed"
+      }
+    },
+    {
+      "organisation_number": "934609085",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 7,
+      "total_facts": 102,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "934920651",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 11,
+      "total_facts": 105,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "917468788",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 6,
+      "total_facts": 133,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "failed",
+        "hiring": "not_available",
+        "activity": "failed"
+      }
+    },
+    {
+      "organisation_number": "927123851",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 5,
+      "total_facts": 146,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "934903463",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 13,
+      "total_facts": 158,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "915324258",
+      "verified_websites": 1,
+      "social_profiles": 0,
+      "activity_claims": 5,
+      "total_facts": 113,
+      "locations": 0,
+      "job_ads": 0,
+      "contacts": 2,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "not_available",
+        "accounts": "available",
+        "website": "available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    },
+    {
+      "organisation_number": "990455341",
+      "verified_websites": 0,
+      "social_profiles": 0,
+      "activity_claims": 8,
+      "total_facts": 150,
+      "locations": 1,
+      "job_ads": 0,
+      "contacts": 0,
+      "section_states": {
+        "identity": "available",
+        "roles": "available",
+        "subunits": "available",
+        "accounts": "available",
+        "website": "not_available",
+        "hiring": "not_available",
+        "activity": "available"
+      }
+    }
+  ],
+  "metric_definitions": {
+    "verified_websites": "Companies with an available official_website claim accepted by current identity policy; identity levels listed separately.",
+    "social_profile_companies": "Companies with at least one available social_profile.* claim.",
+    "activity_companies": "Companies with at least one available claim in family activity, regardless of aggregate section state.",
+    "activity_claims": "Available claims in family activity, including website and registry-change activity; excludes registry dates remaining in family identity.",
+    "total_facts": "All available source claims across all families, including compound claims as one fact; excludes placeholders, synthesis and derived summary counts.",
+    "locations": "Available subunits.unit.* records, excluding subunits.detail.* fields.",
+    "job_ad_companies": "Companies with at least one available hiring.job.* claim.",
+    "contacts": "Available contact.* claims (phone/email), counted per company claim.",
+    "http_requests": "All report requests, including retries, robots, NAV and shared registry activity; DNS is excluded.",
+    "runtime_seconds": "Runner report runtime_ms / 1000; captured before optional profile/site/report completion.",
+    "process_wall_seconds": "Stopwatch around the exact uv command, including launcher and all final output/site work."
+  },
+  "artifacts": {
+    "envelopes.jsonl": "23597f2d375a941c28cc9e06cd94db3711dd416552da200d77f24d395c2f3691",
+    "profiles.jsonl": "5a7e67360c9f431c69daf7ed8273d07af9443dea29074886b2223733ff8e44ac",
+    "report.json": "2ed8982ce1119ae2824fcdf2a9a1a67492e2204674e677256d635840af223fa0"
+  }
+}

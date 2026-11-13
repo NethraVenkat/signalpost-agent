@@ -1,0 +1,2960 @@
+{
+  "fixture": "C:/Users/<USER>/signal-nethra/tests/fixtures/refresh_proof",
+  "scope": "One exact-identity company from saved seed-20261113 responses, seven isolated mutation types plus unchanged/idempotence/transient checks; not a 100-company generalization.",
+  "baseline_execution": {
+    "argv": [
+      "run",
+      "--organisations",
+      "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\baseline\\companies.jsonl",
+      "--bulk",
+      "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\baseline\\registry.csv",
+      "--output",
+      "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\baseline\\envelopes.jsonl",
+      "--profiles-output",
+      "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\baseline\\profiles.jsonl",
+      "--report",
+      "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\baseline\\report.json",
+      "--run-id",
+      "offline-refresh-baseline",
+      "--expected-count",
+      "1"
+    ],
+    "previous_injected_by_offline_harness": null,
+    "exit_code": 0,
+    "case": "unchanged",
+    "unrecorded_urls": [],
+    "batch_aliases": [
+      {
+        "requested": "https://pam-stilling-feed.nav.no/api/v1/feed/43d79fff-1808-42b4-8e86-987ef556a07f",
+        "synthetic": "empty completed forward-tail scaffold; original forward bodies were not persisted; no ad fact derives from this response"
+      },
+      {
+        "requested": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=918266917&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+        "saved": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=812049712%2C818330952%2C821052092%2C823569262%2C827878782%2C830009612%2C837186102%2C852122722%2C865560052%2C877144232%2C891858442%2C894542012%2C910929097%2C911818191%2C912994392%2C913143930%2C913244702%2C913502752%2C914324769%2C915469132%2C915813372%2C915963102%2C916101538%2C916794894%2C917604509%2C917664986%2C918031502%2C918266917%2C918994793%2C920711197%2C921380259%2C922718059%2C923142827%2C924004843%2C924592753%2C924911719%2C925293180%2C925496251%2C926073737%2C926317490%2C926364715%2C926766228%2C926963023%2C927265222%2C927550563%2C928506908%2C928745813%2C929048709%2C929376935%2C930090077%2C930338877%2C930475173%2C930491721%2C930532223%2C931575678%2C931647067%2C932335530%2C932354322%2C932587904%2C933379779%2C933741761%2C934058577%2C934385411%2C934626176%2C935121612%2C935265606%2C935294746%2C935656176%2C935737672%2C935829747%2C935928125%2C936106374%2C937969104%2C948230798%2C971131535%2C979311729%2C980038661%2C982039177%2C985689377%2C988060933%2C988894826%2C989162691%2C989194283%2C989221981%2C989237683%2C989424157%2C989704516%2C990959366%2C990980683%2C992100753%2C992143827%2C992231963%2C993821403%2C994900544%2C995194163%2C995744562%2C995991993%2C996904490%2C997274253%2C997887476&dato=2023-11-13T12%3A34%3A07.468Z&updatedBefore=2026-11-13T12%3A34%3A07.468Z&includeChanges=true&size=1000&sort=id%2CASC&page=0"
+      },
+      {
+        "requested": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=918338063&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+        "saved": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=816118972%2C819615942%2C823025602%2C825531912%2C892122792%2C912053741%2C912121003%2C912562204%2C913003195%2C913310853%2C914370604%2C914437385%2C914683599%2C914689244%2C918086641%2C918338063%2C919135948%2C921443420%2C923600582%2C924181109%2C924278331%2C925647632%2C926029142%2C926353489%2C926394363%2C927039214%2C927216736%2C927290928%2C928524507%2C928787664%2C930150797%2C930416223%2C930421375%2C930439037%2C930476358%2C930533157%2C930582433%2C930944351%2C932179563%2C932337584%2C932505312%2C932932350%2C933391302%2C934194462%2C934516303%2C934661141%2C935319609%2C935603234%2C935777119%2C935832004%2C936137792%2C936304249%2C936566936%2C937960433%2C971630744%2C971810521%2C971810564%2C971875348%2C971973749%2C973469789%2C973656759%2C973768301%2C977464072%2C979314388%2C982620279%2C982640040%2C987836733%2C988080314%2C990910944%2C991015507%2C992217162%2C993829528%2C994572865%2C994941321%2C995202808%2C995808269%2C997331834%2C997959442%2C998108500%2C999363903&dato=2023-11-13T12%3A34%3A07.468Z&updatedBefore=2026-11-13T12%3A34%3A07.468Z&includeChanges=true&size=1000&sort=id%2CASC&page=0"
+      }
+    ],
+    "requested_urls": [
+      "https://pam-stilling-feed.nav.no/api/v1/feed/43d79fff-1808-42b4-8e86-987ef556a07f",
+      "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=918266917&size=1000&page=0",
+      "https://data.brreg.no/enhetsregisteret/api/enheter/918266917/roller",
+      "https://pam-stilling-feed.nav.no/api/v1/feedentry/52c02dd7-b354-4765-a221-a594aca6b2d6",
+      "https://data.brreg.no/regnskapsregisteret/regnskap/918266917",
+      "https://data.brreg.no/regnskapsregisteret/regnskap/aarsregnskap/kopi/918266917/aar",
+      "https://digitaliq.no/robots.txt",
+      "https://digitaliq.no/",
+      "https://digitaliq.no/no/artikler",
+      "https://digitaliq.no/nyheter",
+      "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=918266917&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+      "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=918338063&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0"
+    ],
+    "verification": {
+      "lines": 1,
+      "schema_valid": true,
+      "published_claims": 164,
+      "source_blobs_verified": 7,
+      "synthesis_companies": 1,
+      "synthesis_sentences": 21,
+      "synthesis_unverified_values": 0,
+      "financial_inputs_verified": 78,
+      "derived_financial_metrics_verified": 3,
+      "registry_events_verified": 0,
+      "filing_year_facts_verified": 10,
+      "briefing_companies": 1,
+      "briefing_sentences": 6,
+      "briefing_short_companies": 0,
+      "briefing_unverified_values": 0,
+      "briefing_topic_coverage": {
+        "activity": 1,
+        "change": 1,
+        "unknown": 1,
+        "financial": 1,
+        "takeaway": 1
+      },
+      "complete_briefing_contracts": 1,
+      "newer_filing_flags": 0
+    },
+    "output_sha256": "a0b6ebf1a65756123fc66a375388274c6d99223baf8c1ed96a2255237599bb94",
+    "snapshot_changes": [],
+    "coverage_observations": []
+  },
+  "nav_scaffold": "Synthetic empty forward tail only; no claims derive from it. Exact live ad detail from saved source is mandatory. This is not full-feed discovery coverage validation.",
+  "planted_causal_changes": 7,
+  "true_positives": 7,
+  "false_positives": 0,
+  "false_negatives": 0,
+  "precision": 1.0,
+  "recall": 1.0,
+  "precision_unit": "supported field events / all emitted field events in seven isolated interventions",
+  "recall_unit": "detected causal source interventions / seven predeclared interventions",
+  "supported_field_events": 40,
+  "unchanged_changes": 0,
+  "false_change_rate_unchanged": 0.0,
+  "idempotent_changes": 0,
+  "cases": {
+    "employees": {
+      "detected": true,
+      "supported_field_events": 1,
+      "unexpected_changes": [],
+      "idempotent_changes": 0,
+      "execution": {
+        "argv": [
+          "run",
+          "--organisations",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\employees\\companies.jsonl",
+          "--bulk",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\employees\\registry.csv",
+          "--output",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\employees\\envelopes.jsonl",
+          "--profiles-output",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\employees\\profiles.jsonl",
+          "--report",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\employees\\report.json",
+          "--run-id",
+          "offline-refresh-employees",
+          "--expected-count",
+          "1"
+        ],
+        "previous_injected_by_offline_harness": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\baseline\\envelopes.jsonl",
+        "exit_code": 0,
+        "case": "employees",
+        "unrecorded_urls": [],
+        "batch_aliases": [
+          {
+            "requested": "https://pam-stilling-feed.nav.no/api/v1/feed/43d79fff-1808-42b4-8e86-987ef556a07f",
+            "synthetic": "empty completed forward-tail scaffold; original forward bodies were not persisted; no ad fact derives from this response"
+          },
+          {
+            "requested": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=918266917&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+            "saved": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=812049712%2C818330952%2C821052092%2C823569262%2C827878782%2C830009612%2C837186102%2C852122722%2C865560052%2C877144232%2C891858442%2C894542012%2C910929097%2C911818191%2C912994392%2C913143930%2C913244702%2C913502752%2C914324769%2C915469132%2C915813372%2C915963102%2C916101538%2C916794894%2C917604509%2C917664986%2C918031502%2C918266917%2C918994793%2C920711197%2C921380259%2C922718059%2C923142827%2C924004843%2C924592753%2C924911719%2C925293180%2C925496251%2C926073737%2C926317490%2C926364715%2C926766228%2C926963023%2C927265222%2C927550563%2C928506908%2C928745813%2C929048709%2C929376935%2C930090077%2C930338877%2C930475173%2C930491721%2C930532223%2C931575678%2C931647067%2C932335530%2C932354322%2C932587904%2C933379779%2C933741761%2C934058577%2C934385411%2C934626176%2C935121612%2C935265606%2C935294746%2C935656176%2C935737672%2C935829747%2C935928125%2C936106374%2C937969104%2C948230798%2C971131535%2C979311729%2C980038661%2C982039177%2C985689377%2C988060933%2C988894826%2C989162691%2C989194283%2C989221981%2C989237683%2C989424157%2C989704516%2C990959366%2C990980683%2C992100753%2C992143827%2C992231963%2C993821403%2C994900544%2C995194163%2C995744562%2C995991993%2C996904490%2C997274253%2C997887476&dato=2023-11-13T12%3A34%3A07.468Z&updatedBefore=2026-11-13T12%3A34%3A07.468Z&includeChanges=true&size=1000&sort=id%2CASC&page=0"
+          },
+          {
+            "requested": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=918338063&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+            "saved": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=816118972%2C819615942%2C823025602%2C825531912%2C892122792%2C912053741%2C912121003%2C912562204%2C913003195%2C913310853%2C914370604%2C914437385%2C914683599%2C914689244%2C918086641%2C918338063%2C919135948%2C921443420%2C923600582%2C924181109%2C924278331%2C925647632%2C926029142%2C926353489%2C926394363%2C927039214%2C927216736%2C927290928%2C928524507%2C928787664%2C930150797%2C930416223%2C930421375%2C930439037%2C930476358%2C930533157%2C930582433%2C930944351%2C932179563%2C932337584%2C932505312%2C932932350%2C933391302%2C934194462%2C934516303%2C934661141%2C935319609%2C935603234%2C935777119%2C935832004%2C936137792%2C936304249%2C936566936%2C937960433%2C971630744%2C971810521%2C971810564%2C971875348%2C971973749%2C973469789%2C973656759%2C973768301%2C977464072%2C979314388%2C982620279%2C982640040%2C987836733%2C988080314%2C990910944%2C991015507%2C992217162%2C993829528%2C994572865%2C994941321%2C995202808%2C995808269%2C997331834%2C997959442%2C998108500%2C999363903&dato=2023-11-13T12%3A34%3A07.468Z&updatedBefore=2026-11-13T12%3A34%3A07.468Z&includeChanges=true&size=1000&sort=id%2CASC&page=0"
+          }
+        ],
+        "requested_urls": [
+          "https://pam-stilling-feed.nav.no/api/v1/feed/43d79fff-1808-42b4-8e86-987ef556a07f",
+          "https://pam-stilling-feed.nav.no/api/v1/feedentry/52c02dd7-b354-4765-a221-a594aca6b2d6",
+          "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=918266917&size=1000&page=0",
+          "https://data.brreg.no/enhetsregisteret/api/enheter/918266917/roller",
+          "https://data.brreg.no/regnskapsregisteret/regnskap/918266917",
+          "https://data.brreg.no/regnskapsregisteret/regnskap/aarsregnskap/kopi/918266917/aar",
+          "https://digitaliq.no/robots.txt",
+          "https://digitaliq.no/",
+          "https://digitaliq.no/no/artikler",
+          "https://digitaliq.no/nyheter",
+          "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=918266917&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+          "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=918338063&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0"
+        ],
+        "verification": {
+          "lines": 1,
+          "schema_valid": true,
+          "published_claims": 164,
+          "source_blobs_verified": 7,
+          "synthesis_companies": 1,
+          "synthesis_sentences": 21,
+          "synthesis_unverified_values": 0,
+          "financial_inputs_verified": 78,
+          "derived_financial_metrics_verified": 3,
+          "registry_events_verified": 0,
+          "filing_year_facts_verified": 10,
+          "briefing_companies": 1,
+          "briefing_sentences": 6,
+          "briefing_short_companies": 0,
+          "briefing_unverified_values": 0,
+          "briefing_topic_coverage": {
+            "activity": 1,
+            "change": 1,
+            "unknown": 1,
+            "financial": 1,
+            "takeaway": 1
+          },
+          "complete_briefing_contracts": 1,
+          "newer_filing_flags": 0
+        },
+        "output_sha256": "ad118effa4e250772abb825fcdc25ebc6b31d7a95a308da7ccc2e94a460d5be7",
+        "snapshot_changes": [
+          {
+            "organisation_number": "918266917",
+            "type": "changed",
+            "field": "identity.employees",
+            "old_value": 6,
+            "new_value": 42,
+            "old_evidence_ids": [
+              "de5ba004530dc3b539f05154d839a769d90c5da7806ce616f1762c06166c785a"
+            ],
+            "new_evidence_ids": [
+              "692f8b730932e5a9f4ffccc45cc444f775c812d17dfd1316e2861e394b9a9940"
+            ],
+            "materiality": "material",
+            "first_observed_at": "2026-11-13T12:34:07Z",
+            "last_observed_at": "2026-11-13T12:34:07Z",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "retrieved_at": "2026-11-13T12:34:07Z",
+            "effective_at": null,
+            "source_class": "official_registry",
+            "old_locator": "row:918266917/column:antallAnsatte",
+            "new_locator": "row:918266917/column:antallAnsatte",
+            "old_content_sha256": "579e3735876d763bc50e2ae059ed1c663b50134ab77d99d847ccffdb477b75f6",
+            "new_content_sha256": "6963c909c23be460389af8a68f29cc4bc152ec4ec0102097948124ec5adb2b0f",
+            "status": "available"
+          }
+        ],
+        "coverage_observations": []
+      },
+      "repeat_execution": {
+        "argv": [
+          "run",
+          "--organisations",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\employees-repeat\\companies.jsonl",
+          "--bulk",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\employees-repeat\\registry.csv",
+          "--output",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\employees-repeat\\envelopes.jsonl",
+          "--profiles-output",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\employees-repeat\\profiles.jsonl",
+          "--report",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\employees-repeat\\report.json",
+          "--run-id",
+          "offline-refresh-employees-repeat",
+          "--expected-count",
+          "1"
+        ],
+        "previous_injected_by_offline_harness": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\employees\\envelopes.jsonl",
+        "exit_code": 0,
+        "case": "employees",
+        "unrecorded_urls": [],
+        "batch_aliases": [
+          {
+            "requested": "https://pam-stilling-feed.nav.no/api/v1/feed/43d79fff-1808-42b4-8e86-987ef556a07f",
+            "synthetic": "empty completed forward-tail scaffold; original forward bodies were not persisted; no ad fact derives from this response"
+          },
+          {
+            "requested": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=918266917&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+            "saved": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=812049712%2C818330952%2C821052092%2C823569262%2C827878782%2C830009612%2C837186102%2C852122722%2C865560052%2C877144232%2C891858442%2C894542012%2C910929097%2C911818191%2C912994392%2C913143930%2C913244702%2C913502752%2C914324769%2C915469132%2C915813372%2C915963102%2C916101538%2C916794894%2C917604509%2C917664986%2C918031502%2C918266917%2C918994793%2C920711197%2C921380259%2C922718059%2C923142827%2C924004843%2C924592753%2C924911719%2C925293180%2C925496251%2C926073737%2C926317490%2C926364715%2C926766228%2C926963023%2C927265222%2C927550563%2C928506908%2C928745813%2C929048709%2C929376935%2C930090077%2C930338877%2C930475173%2C930491721%2C930532223%2C931575678%2C931647067%2C932335530%2C932354322%2C932587904%2C933379779%2C933741761%2C934058577%2C934385411%2C934626176%2C935121612%2C935265606%2C935294746%2C935656176%2C935737672%2C935829747%2C935928125%2C936106374%2C937969104%2C948230798%2C971131535%2C979311729%2C980038661%2C982039177%2C985689377%2C988060933%2C988894826%2C989162691%2C989194283%2C989221981%2C989237683%2C989424157%2C989704516%2C990959366%2C990980683%2C992100753%2C992143827%2C992231963%2C993821403%2C994900544%2C995194163%2C995744562%2C995991993%2C996904490%2C997274253%2C997887476&dato=2023-11-13T12%3A34%3A07.468Z&updatedBefore=2026-11-13T12%3A34%3A07.468Z&includeChanges=true&size=1000&sort=id%2CASC&page=0"
+          },
+          {
+            "requested": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=918338063&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+            "saved": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=816118972%2C819615942%2C823025602%2C825531912%2C892122792%2C912053741%2C912121003%2C912562204%2C913003195%2C913310853%2C914370604%2C914437385%2C914683599%2C914689244%2C918086641%2C918338063%2C919135948%2C921443420%2C923600582%2C924181109%2C924278331%2C925647632%2C926029142%2C926353489%2C926394363%2C927039214%2C927216736%2C927290928%2C928524507%2C928787664%2C930150797%2C930416223%2C930421375%2C930439037%2C930476358%2C930533157%2C930582433%2C930944351%2C932179563%2C932337584%2C932505312%2C932932350%2C933391302%2C934194462%2C934516303%2C934661141%2C935319609%2C935603234%2C935777119%2C935832004%2C936137792%2C936304249%2C936566936%2C937960433%2C971630744%2C971810521%2C971810564%2C971875348%2C971973749%2C973469789%2C973656759%2C973768301%2C977464072%2C979314388%2C982620279%2C982640040%2C987836733%2C988080314%2C990910944%2C991015507%2C992217162%2C993829528%2C994572865%2C994941321%2C995202808%2C995808269%2C997331834%2C997959442%2C998108500%2C999363903&dato=2023-11-13T12%3A34%3A07.468Z&updatedBefore=2026-11-13T12%3A34%3A07.468Z&includeChanges=true&size=1000&sort=id%2CASC&page=0"
+          }
+        ],
+        "requested_urls": [
+          "https://pam-stilling-feed.nav.no/api/v1/feed/43d79fff-1808-42b4-8e86-987ef556a07f",
+          "https://pam-stilling-feed.nav.no/api/v1/feedentry/52c02dd7-b354-4765-a221-a594aca6b2d6",
+          "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=918266917&size=1000&page=0",
+          "https://data.brreg.no/enhetsregisteret/api/enheter/918266917/roller",
+          "https://data.brreg.no/regnskapsregisteret/regnskap/918266917",
+          "https://data.brreg.no/regnskapsregisteret/regnskap/aarsregnskap/kopi/918266917/aar",
+          "https://digitaliq.no/robots.txt",
+          "https://digitaliq.no/",
+          "https://digitaliq.no/no/artikler",
+          "https://digitaliq.no/nyheter",
+          "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=918266917&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+          "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=918338063&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0"
+        ],
+        "verification": {
+          "lines": 1,
+          "schema_valid": true,
+          "published_claims": 164,
+          "source_blobs_verified": 7,
+          "synthesis_companies": 1,
+          "synthesis_sentences": 21,
+          "synthesis_unverified_values": 0,
+          "financial_inputs_verified": 78,
+          "derived_financial_metrics_verified": 3,
+          "registry_events_verified": 0,
+          "filing_year_facts_verified": 10,
+          "briefing_companies": 1,
+          "briefing_sentences": 6,
+          "briefing_short_companies": 0,
+          "briefing_unverified_values": 0,
+          "briefing_topic_coverage": {
+            "activity": 1,
+            "change": 1,
+            "unknown": 1,
+            "financial": 1,
+            "takeaway": 1
+          },
+          "complete_briefing_contracts": 1,
+          "newer_filing_flags": 0
+        },
+        "output_sha256": "c0be89c6e5609f5df26142b88c58de0387655021d0986e0c8251e6d2678f4715",
+        "snapshot_changes": [],
+        "coverage_observations": []
+      }
+    },
+    "address": {
+      "detected": true,
+      "supported_field_events": 2,
+      "unexpected_changes": [],
+      "idempotent_changes": 0,
+      "execution": {
+        "argv": [
+          "run",
+          "--organisations",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\address\\companies.jsonl",
+          "--bulk",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\address\\registry.csv",
+          "--output",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\address\\envelopes.jsonl",
+          "--profiles-output",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\address\\profiles.jsonl",
+          "--report",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\address\\report.json",
+          "--run-id",
+          "offline-refresh-address",
+          "--expected-count",
+          "1"
+        ],
+        "previous_injected_by_offline_harness": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\baseline\\envelopes.jsonl",
+        "exit_code": 0,
+        "case": "address",
+        "unrecorded_urls": [],
+        "batch_aliases": [
+          {
+            "requested": "https://pam-stilling-feed.nav.no/api/v1/feed/43d79fff-1808-42b4-8e86-987ef556a07f",
+            "synthetic": "empty completed forward-tail scaffold; original forward bodies were not persisted; no ad fact derives from this response"
+          },
+          {
+            "requested": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=918266917&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+            "saved": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=812049712%2C818330952%2C821052092%2C823569262%2C827878782%2C830009612%2C837186102%2C852122722%2C865560052%2C877144232%2C891858442%2C894542012%2C910929097%2C911818191%2C912994392%2C913143930%2C913244702%2C913502752%2C914324769%2C915469132%2C915813372%2C915963102%2C916101538%2C916794894%2C917604509%2C917664986%2C918031502%2C918266917%2C918994793%2C920711197%2C921380259%2C922718059%2C923142827%2C924004843%2C924592753%2C924911719%2C925293180%2C925496251%2C926073737%2C926317490%2C926364715%2C926766228%2C926963023%2C927265222%2C927550563%2C928506908%2C928745813%2C929048709%2C929376935%2C930090077%2C930338877%2C930475173%2C930491721%2C930532223%2C931575678%2C931647067%2C932335530%2C932354322%2C932587904%2C933379779%2C933741761%2C934058577%2C934385411%2C934626176%2C935121612%2C935265606%2C935294746%2C935656176%2C935737672%2C935829747%2C935928125%2C936106374%2C937969104%2C948230798%2C971131535%2C979311729%2C980038661%2C982039177%2C985689377%2C988060933%2C988894826%2C989162691%2C989194283%2C989221981%2C989237683%2C989424157%2C989704516%2C990959366%2C990980683%2C992100753%2C992143827%2C992231963%2C993821403%2C994900544%2C995194163%2C995744562%2C995991993%2C996904490%2C997274253%2C997887476&dato=2023-11-13T12%3A34%3A07.468Z&updatedBefore=2026-11-13T12%3A34%3A07.468Z&includeChanges=true&size=1000&sort=id%2CASC&page=0"
+          },
+          {
+            "requested": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=918338063&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+            "saved": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=816118972%2C819615942%2C823025602%2C825531912%2C892122792%2C912053741%2C912121003%2C912562204%2C913003195%2C913310853%2C914370604%2C914437385%2C914683599%2C914689244%2C918086641%2C918338063%2C919135948%2C921443420%2C923600582%2C924181109%2C924278331%2C925647632%2C926029142%2C926353489%2C926394363%2C927039214%2C927216736%2C927290928%2C928524507%2C928787664%2C930150797%2C930416223%2C930421375%2C930439037%2C930476358%2C930533157%2C930582433%2C930944351%2C932179563%2C932337584%2C932505312%2C932932350%2C933391302%2C934194462%2C934516303%2C934661141%2C935319609%2C935603234%2C935777119%2C935832004%2C936137792%2C936304249%2C936566936%2C937960433%2C971630744%2C971810521%2C971810564%2C971875348%2C971973749%2C973469789%2C973656759%2C973768301%2C977464072%2C979314388%2C982620279%2C982640040%2C987836733%2C988080314%2C990910944%2C991015507%2C992217162%2C993829528%2C994572865%2C994941321%2C995202808%2C995808269%2C997331834%2C997959442%2C998108500%2C999363903&dato=2023-11-13T12%3A34%3A07.468Z&updatedBefore=2026-11-13T12%3A34%3A07.468Z&includeChanges=true&size=1000&sort=id%2CASC&page=0"
+          }
+        ],
+        "requested_urls": [
+          "https://pam-stilling-feed.nav.no/api/v1/feed/43d79fff-1808-42b4-8e86-987ef556a07f",
+          "https://pam-stilling-feed.nav.no/api/v1/feedentry/52c02dd7-b354-4765-a221-a594aca6b2d6",
+          "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=918266917&size=1000&page=0",
+          "https://data.brreg.no/enhetsregisteret/api/enheter/918266917/roller",
+          "https://data.brreg.no/regnskapsregisteret/regnskap/918266917",
+          "https://data.brreg.no/regnskapsregisteret/regnskap/aarsregnskap/kopi/918266917/aar",
+          "https://digitaliq.no/robots.txt",
+          "https://digitaliq.no/",
+          "https://digitaliq.no/no/artikler",
+          "https://digitaliq.no/nyheter",
+          "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=918266917&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+          "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=918338063&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0"
+        ],
+        "verification": {
+          "lines": 1,
+          "schema_valid": true,
+          "published_claims": 164,
+          "source_blobs_verified": 7,
+          "synthesis_companies": 1,
+          "synthesis_sentences": 22,
+          "synthesis_unverified_values": 0,
+          "financial_inputs_verified": 78,
+          "derived_financial_metrics_verified": 3,
+          "registry_events_verified": 0,
+          "filing_year_facts_verified": 10,
+          "briefing_companies": 1,
+          "briefing_sentences": 6,
+          "briefing_short_companies": 0,
+          "briefing_unverified_values": 0,
+          "briefing_topic_coverage": {
+            "activity": 1,
+            "change": 1,
+            "unknown": 1,
+            "financial": 1,
+            "takeaway": 1
+          },
+          "complete_briefing_contracts": 1,
+          "newer_filing_flags": 0
+        },
+        "output_sha256": "c547689281dff8c0e790d41a7409aa4d3221e0dbc1de4995fe297e042d5d86d9",
+        "snapshot_changes": [
+          {
+            "organisation_number": "918266917",
+            "type": "changed",
+            "field": "identity.location.business",
+            "old_value": {
+              "location_type": "business",
+              "address": {
+                "adresse": "Torgallmenningen 3B",
+                "postnummer": "5014",
+                "poststed": "BERGEN",
+                "kommune": "BERGEN",
+                "kommunenummer": "4601",
+                "land": "Norge",
+                "landkode": "NO"
+              },
+              "organisation_number": "918266917"
+            },
+            "new_value": {
+              "location_type": "business",
+              "address": {
+                "adresse": "Refresh proof test address 17",
+                "postnummer": "5014",
+                "poststed": "BERGEN",
+                "kommune": "BERGEN",
+                "kommunenummer": "4601",
+                "land": "Norge",
+                "landkode": "NO"
+              },
+              "organisation_number": "918266917"
+            },
+            "old_evidence_ids": [
+              "e31da654775a9e4d9ea18260bd2d9d2e856a07ff9c0cfe189ee1f6a0641c569e"
+            ],
+            "new_evidence_ids": [
+              "36692468fd3c79e51eb09be98cb37865dec56b798ceb12ec0fdc78ab1c3a75e3"
+            ],
+            "materiality": "material",
+            "first_observed_at": "2026-11-13T12:34:07Z",
+            "last_observed_at": "2026-11-13T12:34:07Z",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "retrieved_at": "2026-11-13T12:34:07Z",
+            "effective_at": null,
+            "source_class": "official_registry",
+            "old_locator": "row:918266917/columns:forretningsadresse.*",
+            "new_locator": "row:918266917/columns:forretningsadresse.*",
+            "old_content_sha256": "579e3735876d763bc50e2ae059ed1c663b50134ab77d99d847ccffdb477b75f6",
+            "new_content_sha256": "de9f38b4cb4f3365cbdd1e32ca42aeeb79e53f202c37208a08907704f5492483",
+            "status": "available"
+          },
+          {
+            "organisation_number": "918266917",
+            "type": "changed",
+            "field": "identity.registered_address",
+            "old_value": {
+              "adresse": "Torgallmenningen 3B",
+              "postnummer": "5014",
+              "poststed": "BERGEN",
+              "kommune": "BERGEN",
+              "kommunenummer": "4601",
+              "land": "Norge",
+              "landkode": "NO"
+            },
+            "new_value": {
+              "adresse": "Refresh proof test address 17",
+              "postnummer": "5014",
+              "poststed": "BERGEN",
+              "kommune": "BERGEN",
+              "kommunenummer": "4601",
+              "land": "Norge",
+              "landkode": "NO"
+            },
+            "old_evidence_ids": [
+              "81db7257848bf712a538c5d969dfd7576c0b5dcb3573e59650de7e8a0e99f597"
+            ],
+            "new_evidence_ids": [
+              "26f1d3eb56d5df9e23216179fc0d80138be1d6658612915fb3a10b205d4504d8"
+            ],
+            "materiality": "material",
+            "first_observed_at": "2026-11-13T12:34:07Z",
+            "last_observed_at": "2026-11-13T12:34:07Z",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "retrieved_at": "2026-11-13T12:34:07Z",
+            "effective_at": null,
+            "source_class": "official_registry",
+            "old_locator": "row:918266917/columns:forretningsadresse.*",
+            "new_locator": "row:918266917/columns:forretningsadresse.*",
+            "old_content_sha256": "579e3735876d763bc50e2ae059ed1c663b50134ab77d99d847ccffdb477b75f6",
+            "new_content_sha256": "de9f38b4cb4f3365cbdd1e32ca42aeeb79e53f202c37208a08907704f5492483",
+            "status": "available"
+          }
+        ],
+        "coverage_observations": []
+      },
+      "repeat_execution": {
+        "argv": [
+          "run",
+          "--organisations",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\address-repeat\\companies.jsonl",
+          "--bulk",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\address-repeat\\registry.csv",
+          "--output",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\address-repeat\\envelopes.jsonl",
+          "--profiles-output",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\address-repeat\\profiles.jsonl",
+          "--report",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\address-repeat\\report.json",
+          "--run-id",
+          "offline-refresh-address-repeat",
+          "--expected-count",
+          "1"
+        ],
+        "previous_injected_by_offline_harness": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\address\\envelopes.jsonl",
+        "exit_code": 0,
+        "case": "address",
+        "unrecorded_urls": [],
+        "batch_aliases": [
+          {
+            "requested": "https://pam-stilling-feed.nav.no/api/v1/feed/43d79fff-1808-42b4-8e86-987ef556a07f",
+            "synthetic": "empty completed forward-tail scaffold; original forward bodies were not persisted; no ad fact derives from this response"
+          },
+          {
+            "requested": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=918266917&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+            "saved": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=812049712%2C818330952%2C821052092%2C823569262%2C827878782%2C830009612%2C837186102%2C852122722%2C865560052%2C877144232%2C891858442%2C894542012%2C910929097%2C911818191%2C912994392%2C913143930%2C913244702%2C913502752%2C914324769%2C915469132%2C915813372%2C915963102%2C916101538%2C916794894%2C917604509%2C917664986%2C918031502%2C918266917%2C918994793%2C920711197%2C921380259%2C922718059%2C923142827%2C924004843%2C924592753%2C924911719%2C925293180%2C925496251%2C926073737%2C926317490%2C926364715%2C926766228%2C926963023%2C927265222%2C927550563%2C928506908%2C928745813%2C929048709%2C929376935%2C930090077%2C930338877%2C930475173%2C930491721%2C930532223%2C931575678%2C931647067%2C932335530%2C932354322%2C932587904%2C933379779%2C933741761%2C934058577%2C934385411%2C934626176%2C935121612%2C935265606%2C935294746%2C935656176%2C935737672%2C935829747%2C935928125%2C936106374%2C937969104%2C948230798%2C971131535%2C979311729%2C980038661%2C982039177%2C985689377%2C988060933%2C988894826%2C989162691%2C989194283%2C989221981%2C989237683%2C989424157%2C989704516%2C990959366%2C990980683%2C992100753%2C992143827%2C992231963%2C993821403%2C994900544%2C995194163%2C995744562%2C995991993%2C996904490%2C997274253%2C997887476&dato=2023-11-13T12%3A34%3A07.468Z&updatedBefore=2026-11-13T12%3A34%3A07.468Z&includeChanges=true&size=1000&sort=id%2CASC&page=0"
+          },
+          {
+            "requested": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=918338063&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+            "saved": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=816118972%2C819615942%2C823025602%2C825531912%2C892122792%2C912053741%2C912121003%2C912562204%2C913003195%2C913310853%2C914370604%2C914437385%2C914683599%2C914689244%2C918086641%2C918338063%2C919135948%2C921443420%2C923600582%2C924181109%2C924278331%2C925647632%2C926029142%2C926353489%2C926394363%2C927039214%2C927216736%2C927290928%2C928524507%2C928787664%2C930150797%2C930416223%2C930421375%2C930439037%2C930476358%2C930533157%2C930582433%2C930944351%2C932179563%2C932337584%2C932505312%2C932932350%2C933391302%2C934194462%2C934516303%2C934661141%2C935319609%2C935603234%2C935777119%2C935832004%2C936137792%2C936304249%2C936566936%2C937960433%2C971630744%2C971810521%2C971810564%2C971875348%2C971973749%2C973469789%2C973656759%2C973768301%2C977464072%2C979314388%2C982620279%2C982640040%2C987836733%2C988080314%2C990910944%2C991015507%2C992217162%2C993829528%2C994572865%2C994941321%2C995202808%2C995808269%2C997331834%2C997959442%2C998108500%2C999363903&dato=2023-11-13T12%3A34%3A07.468Z&updatedBefore=2026-11-13T12%3A34%3A07.468Z&includeChanges=true&size=1000&sort=id%2CASC&page=0"
+          }
+        ],
+        "requested_urls": [
+          "https://pam-stilling-feed.nav.no/api/v1/feed/43d79fff-1808-42b4-8e86-987ef556a07f",
+          "https://pam-stilling-feed.nav.no/api/v1/feedentry/52c02dd7-b354-4765-a221-a594aca6b2d6",
+          "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=918266917&size=1000&page=0",
+          "https://data.brreg.no/enhetsregisteret/api/enheter/918266917/roller",
+          "https://data.brreg.no/regnskapsregisteret/regnskap/918266917",
+          "https://data.brreg.no/regnskapsregisteret/regnskap/aarsregnskap/kopi/918266917/aar",
+          "https://digitaliq.no/robots.txt",
+          "https://digitaliq.no/",
+          "https://digitaliq.no/no/artikler",
+          "https://digitaliq.no/nyheter",
+          "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=918266917&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+          "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=918338063&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0"
+        ],
+        "verification": {
+          "lines": 1,
+          "schema_valid": true,
+          "published_claims": 164,
+          "source_blobs_verified": 7,
+          "synthesis_companies": 1,
+          "synthesis_sentences": 21,
+          "synthesis_unverified_values": 0,
+          "financial_inputs_verified": 78,
+          "derived_financial_metrics_verified": 3,
+          "registry_events_verified": 0,
+          "filing_year_facts_verified": 10,
+          "briefing_companies": 1,
+          "briefing_sentences": 6,
+          "briefing_short_companies": 0,
+          "briefing_unverified_values": 0,
+          "briefing_topic_coverage": {
+            "activity": 1,
+            "change": 1,
+            "unknown": 1,
+            "financial": 1,
+            "takeaway": 1
+          },
+          "complete_briefing_contracts": 1,
+          "newer_filing_flags": 0
+        },
+        "output_sha256": "7f541612b892242fb5bfdec3415bf9801ca4fed9399988ed2074d20caac22ab5",
+        "snapshot_changes": [],
+        "coverage_observations": []
+      }
+    },
+    "accounts_year": {
+      "detected": true,
+      "supported_field_events": 28,
+      "unexpected_changes": [],
+      "idempotent_changes": 0,
+      "execution": {
+        "argv": [
+          "run",
+          "--organisations",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\accounts_year\\companies.jsonl",
+          "--bulk",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\accounts_year\\registry.csv",
+          "--output",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\accounts_year\\envelopes.jsonl",
+          "--profiles-output",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\accounts_year\\profiles.jsonl",
+          "--report",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\accounts_year\\report.json",
+          "--run-id",
+          "offline-refresh-accounts_year",
+          "--expected-count",
+          "1"
+        ],
+        "previous_injected_by_offline_harness": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\baseline\\envelopes.jsonl",
+        "exit_code": 0,
+        "case": "accounts_year",
+        "unrecorded_urls": [],
+        "batch_aliases": [
+          {
+            "requested": "https://pam-stilling-feed.nav.no/api/v1/feed/43d79fff-1808-42b4-8e86-987ef556a07f",
+            "synthetic": "empty completed forward-tail scaffold; original forward bodies were not persisted; no ad fact derives from this response"
+          },
+          {
+            "requested": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=918266917&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+            "saved": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=812049712%2C818330952%2C821052092%2C823569262%2C827878782%2C830009612%2C837186102%2C852122722%2C865560052%2C877144232%2C891858442%2C894542012%2C910929097%2C911818191%2C912994392%2C913143930%2C913244702%2C913502752%2C914324769%2C915469132%2C915813372%2C915963102%2C916101538%2C916794894%2C917604509%2C917664986%2C918031502%2C918266917%2C918994793%2C920711197%2C921380259%2C922718059%2C923142827%2C924004843%2C924592753%2C924911719%2C925293180%2C925496251%2C926073737%2C926317490%2C926364715%2C926766228%2C926963023%2C927265222%2C927550563%2C928506908%2C928745813%2C929048709%2C929376935%2C930090077%2C930338877%2C930475173%2C930491721%2C930532223%2C931575678%2C931647067%2C932335530%2C932354322%2C932587904%2C933379779%2C933741761%2C934058577%2C934385411%2C934626176%2C935121612%2C935265606%2C935294746%2C935656176%2C935737672%2C935829747%2C935928125%2C936106374%2C937969104%2C948230798%2C971131535%2C979311729%2C980038661%2C982039177%2C985689377%2C988060933%2C988894826%2C989162691%2C989194283%2C989221981%2C989237683%2C989424157%2C989704516%2C990959366%2C990980683%2C992100753%2C992143827%2C992231963%2C993821403%2C994900544%2C995194163%2C995744562%2C995991993%2C996904490%2C997274253%2C997887476&dato=2023-11-13T12%3A34%3A07.468Z&updatedBefore=2026-11-13T12%3A34%3A07.468Z&includeChanges=true&size=1000&sort=id%2CASC&page=0"
+          },
+          {
+            "requested": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=918338063&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+            "saved": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=816118972%2C819615942%2C823025602%2C825531912%2C892122792%2C912053741%2C912121003%2C912562204%2C913003195%2C913310853%2C914370604%2C914437385%2C914683599%2C914689244%2C918086641%2C918338063%2C919135948%2C921443420%2C923600582%2C924181109%2C924278331%2C925647632%2C926029142%2C926353489%2C926394363%2C927039214%2C927216736%2C927290928%2C928524507%2C928787664%2C930150797%2C930416223%2C930421375%2C930439037%2C930476358%2C930533157%2C930582433%2C930944351%2C932179563%2C932337584%2C932505312%2C932932350%2C933391302%2C934194462%2C934516303%2C934661141%2C935319609%2C935603234%2C935777119%2C935832004%2C936137792%2C936304249%2C936566936%2C937960433%2C971630744%2C971810521%2C971810564%2C971875348%2C971973749%2C973469789%2C973656759%2C973768301%2C977464072%2C979314388%2C982620279%2C982640040%2C987836733%2C988080314%2C990910944%2C991015507%2C992217162%2C993829528%2C994572865%2C994941321%2C995202808%2C995808269%2C997331834%2C997959442%2C998108500%2C999363903&dato=2023-11-13T12%3A34%3A07.468Z&updatedBefore=2026-11-13T12%3A34%3A07.468Z&includeChanges=true&size=1000&sort=id%2CASC&page=0"
+          }
+        ],
+        "requested_urls": [
+          "https://pam-stilling-feed.nav.no/api/v1/feed/43d79fff-1808-42b4-8e86-987ef556a07f",
+          "https://pam-stilling-feed.nav.no/api/v1/feedentry/52c02dd7-b354-4765-a221-a594aca6b2d6",
+          "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=918266917&size=1000&page=0",
+          "https://data.brreg.no/enhetsregisteret/api/enheter/918266917/roller",
+          "https://data.brreg.no/regnskapsregisteret/regnskap/918266917",
+          "https://data.brreg.no/regnskapsregisteret/regnskap/aarsregnskap/kopi/918266917/aar",
+          "https://digitaliq.no/robots.txt",
+          "https://digitaliq.no/",
+          "https://digitaliq.no/no/artikler",
+          "https://digitaliq.no/nyheter",
+          "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=918266917&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+          "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=918338063&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0"
+        ],
+        "verification": {
+          "lines": 1,
+          "schema_valid": true,
+          "published_claims": 191,
+          "source_blobs_verified": 7,
+          "synthesis_companies": 1,
+          "synthesis_sentences": 48,
+          "synthesis_unverified_values": 0,
+          "financial_inputs_verified": 104,
+          "derived_financial_metrics_verified": 3,
+          "registry_events_verified": 0,
+          "filing_year_facts_verified": 11,
+          "briefing_companies": 1,
+          "briefing_sentences": 6,
+          "briefing_short_companies": 0,
+          "briefing_unverified_values": 0,
+          "briefing_topic_coverage": {
+            "activity": 1,
+            "change": 1,
+            "unknown": 1,
+            "financial": 1,
+            "takeaway": 1
+          },
+          "complete_briefing_contracts": 1,
+          "newer_filing_flags": 0
+        },
+        "output_sha256": "d111b2d545744a418384ff7b28f0f8a362673ffc8fa3ddee950f9f14fd6129c8",
+        "snapshot_changes": [
+          {
+            "organisation_number": "918266917",
+            "type": "changed",
+            "field": "accounts.cash_and_bank",
+            "old_value": 420806.0,
+            "new_value": 400978.0,
+            "old_evidence_ids": [
+              "dbe8f254f0526212bc4f53ebad2d8bd9755fb3bb419fab4f24e69a0e614ce8ac"
+            ],
+            "new_evidence_ids": [
+              "98a13e667cb1da3648fa1f4910810ef5617bec5aa3551f8c71296998feae1997"
+            ],
+            "materiality": "material",
+            "first_observed_at": "2026-11-13T12:34:07Z",
+            "last_observed_at": "2026-11-13T12:34:07Z",
+            "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/918266917",
+            "retrieved_at": "2026-11-13T12:34:07Z",
+            "effective_at": "2026-12-31",
+            "source_class": "official_registry",
+            "old_locator": "/2/eiendeler/sumBankinnskuddOgKontanter",
+            "new_locator": "/0/eiendeler/sumBankinnskuddOgKontanter",
+            "old_content_sha256": "1a1794e660f2d59d68b34c25723c22fc330feb40e3e97f67e5e65223e60e92c0",
+            "new_content_sha256": "92dcc67c1149e528d02cf8b7b668804517c5b69b55de131069eee24ba2ff9507",
+            "status": "available"
+          },
+          {
+            "organisation_number": "918266917",
+            "type": "changed",
+            "field": "accounts.current_assets",
+            "old_value": 2046125.0,
+            "new_value": 1582262.0,
+            "old_evidence_ids": [
+              "47772f0ab8b8eaacd760cc8e13af82fed5079af98f303427bc39e5dc444b24a1"
+            ],
+            "new_evidence_ids": [
+              "ec7123b6f8d88d6bf1af6051333bc35bd3440860b34d628573cce30822788fa2"
+            ],
+            "materiality": "material",
+            "first_observed_at": "2026-11-13T12:34:07Z",
+            "last_observed_at": "2026-11-13T12:34:07Z",
+            "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/918266917",
+            "retrieved_at": "2026-11-13T12:34:07Z",
+            "effective_at": "2026-12-31",
+            "source_class": "official_registry",
+            "old_locator": "/2/eiendeler/omloepsmidler/sumOmloepsmidler",
+            "new_locator": "/0/eiendeler/omloepsmidler/sumOmloepsmidler",
+            "old_content_sha256": "1a1794e660f2d59d68b34c25723c22fc330feb40e3e97f67e5e65223e60e92c0",
+            "new_content_sha256": "92dcc67c1149e528d02cf8b7b668804517c5b69b55de131069eee24ba2ff9507",
+            "status": "available"
+          },
+          {
+            "organisation_number": "918266917",
+            "type": "changed",
+            "field": "accounts.current_liabilities",
+            "old_value": 3028386.0,
+            "new_value": 2357403.0,
+            "old_evidence_ids": [
+              "114a60d3f904c37df5a197dc5cefa21a5975b42ae8edfd0f98e3c1c1c97e8d03"
+            ],
+            "new_evidence_ids": [
+              "5a1e443431a92b01a1e1c9556a28c245556f899b03b86f2a4abc8b4c13f8e545"
+            ],
+            "materiality": "material",
+            "first_observed_at": "2026-11-13T12:34:07Z",
+            "last_observed_at": "2026-11-13T12:34:07Z",
+            "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/918266917",
+            "retrieved_at": "2026-11-13T12:34:07Z",
+            "effective_at": "2026-12-31",
+            "source_class": "official_registry",
+            "old_locator": "/2/egenkapitalGjeld/gjeldOversikt/kortsiktigGjeld/sumKortsiktigGjeld",
+            "new_locator": "/0/egenkapitalGjeld/gjeldOversikt/kortsiktigGjeld/sumKortsiktigGjeld",
+            "old_content_sha256": "1a1794e660f2d59d68b34c25723c22fc330feb40e3e97f67e5e65223e60e92c0",
+            "new_content_sha256": "92dcc67c1149e528d02cf8b7b668804517c5b69b55de131069eee24ba2ff9507",
+            "status": "available"
+          },
+          {
+            "organisation_number": "918266917",
+            "type": "changed",
+            "field": "accounts.equity",
+            "old_value": 763779.0,
+            "new_value": -1589985.0,
+            "old_evidence_ids": [
+              "bab0cb4685ac502887be227caab177b9688b7f6215980da8e8280271332e4d3a"
+            ],
+            "new_evidence_ids": [
+              "553b86cfa75ed3068b037ec1b834110fb03f2bdcd7a52c441e46155c34e3bd58"
+            ],
+            "materiality": "material",
+            "first_observed_at": "2026-11-13T12:34:07Z",
+            "last_observed_at": "2026-11-13T12:34:07Z",
+            "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/918266917",
+            "retrieved_at": "2026-11-13T12:34:07Z",
+            "effective_at": "2026-12-31",
+            "source_class": "official_registry",
+            "old_locator": "/2/egenkapitalGjeld/egenkapital/sumEgenkapital",
+            "new_locator": "/0/egenkapitalGjeld/egenkapital/sumEgenkapital",
+            "old_content_sha256": "1a1794e660f2d59d68b34c25723c22fc330feb40e3e97f67e5e65223e60e92c0",
+            "new_content_sha256": "92dcc67c1149e528d02cf8b7b668804517c5b69b55de131069eee24ba2ff9507",
+            "status": "available"
+          },
+          {
+            "organisation_number": "918266917",
+            "type": "changed",
+            "field": "accounts.equity_and_liabilities",
+            "old_value": 4493296.0,
+            "new_value": 3167418.0,
+            "old_evidence_ids": [
+              "3341b999eb006cf45714472c35b0b1dd0fb5e3691b2887d2e38c0e10e18d8cf2"
+            ],
+            "new_evidence_ids": [
+              "b282310b73e5852a00414bba55c8794769e0ccd0d47583e67862a1dee5da862a"
+            ],
+            "materiality": "material",
+            "first_observed_at": "2026-11-13T12:34:07Z",
+            "last_observed_at": "2026-11-13T12:34:07Z",
+            "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/918266917",
+            "retrieved_at": "2026-11-13T12:34:07Z",
+            "effective_at": "2026-12-31",
+            "source_class": "official_registry",
+            "old_locator": "/2/egenkapitalGjeld/sumEgenkapitalGjeld",
+            "new_locator": "/0/egenkapitalGjeld/sumEgenkapitalGjeld",
+            "old_content_sha256": "1a1794e660f2d59d68b34c25723c22fc330feb40e3e97f67e5e65223e60e92c0",
+            "new_content_sha256": "92dcc67c1149e528d02cf8b7b668804517c5b69b55de131069eee24ba2ff9507",
+            "status": "available"
+          },
+          {
+            "organisation_number": "918266917",
+            "type": "changed",
+            "field": "accounts.filed_years",
+            "old_value": [
+              "2025",
+              "2024",
+              "2023",
+              "2022",
+              "2021",
+              "2020",
+              "2019",
+              "2018",
+              "2017"
+            ],
+            "new_value": [
+              "2026",
+              "2025",
+              "2024",
+              "2023",
+              "2022",
+              "2021",
+              "2020",
+              "2019",
+              "2018",
+              "2017"
+            ],
+            "old_evidence_ids": [
+              "c4a6c2307be83910d370b09d14173f2af1d289ec2a7d97fbbd74091e95601f5a"
+            ],
+            "new_evidence_ids": [
+              "241b9009eef8a6bd4f8e63ea24bd26d88c86a4648a484e9b30bc1b757a9e78b8"
+            ],
+            "materiality": "material",
+            "first_observed_at": "2026-11-13T12:34:07Z",
+            "last_observed_at": "2026-11-13T12:34:07Z",
+            "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/aarsregnskap/kopi/918266917/aar",
+            "retrieved_at": "2026-11-13T12:34:07Z",
+            "effective_at": null,
+            "source_class": "official_registry",
+            "old_locator": "/",
+            "new_locator": "/",
+            "old_content_sha256": "18709b22655401bb42e354aa643f67ae944048b035fdf241b37d5712e2260cfa",
+            "new_content_sha256": "553b590847b07e8599882745130071d2cad79f9bf74e778354ae73414ad77642",
+            "status": "available"
+          },
+          {
+            "organisation_number": "918266917",
+            "type": "changed",
+            "field": "accounts.financial_expenses",
+            "old_value": 98609.0,
+            "new_value": 127962.0,
+            "old_evidence_ids": [
+              "1d1e4590474405aad22d337ed7c522d79d0ac175c20f6587be47ebc739e09b2d"
+            ],
+            "new_evidence_ids": [
+              "eb725e6c46a3f7e38f381a5f81fde5fd8b11dbb10e2361456cc29f912c03abc4"
+            ],
+            "materiality": "material",
+            "first_observed_at": "2026-11-13T12:34:07Z",
+            "last_observed_at": "2026-11-13T12:34:07Z",
+            "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/918266917",
+            "retrieved_at": "2026-11-13T12:34:07Z",
+            "effective_at": "2026-12-31",
+            "source_class": "official_registry",
+            "old_locator": "/2/resultatregnskapResultat/finansresultat/finanskostnad/sumFinanskostnad",
+            "new_locator": "/0/resultatregnskapResultat/finansresultat/finanskostnad/sumFinanskostnad",
+            "old_content_sha256": "1a1794e660f2d59d68b34c25723c22fc330feb40e3e97f67e5e65223e60e92c0",
+            "new_content_sha256": "92dcc67c1149e528d02cf8b7b668804517c5b69b55de131069eee24ba2ff9507",
+            "status": "available"
+          },
+          {
+            "organisation_number": "918266917",
+            "type": "changed",
+            "field": "accounts.financial_income",
+            "old_value": 1409.0,
+            "new_value": 161272.0,
+            "old_evidence_ids": [
+              "590f54111ca4d661228fbbc83663d91a2d6f7af2aac5ded337b31d8deaf93cef"
+            ],
+            "new_evidence_ids": [
+              "92d60b3096222cb0bf26dae1faedb7cd6c29225fbe81ffcc4ccef14b332980bb"
+            ],
+            "materiality": "material",
+            "first_observed_at": "2026-11-13T12:34:07Z",
+            "last_observed_at": "2026-11-13T12:34:07Z",
+            "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/918266917",
+            "retrieved_at": "2026-11-13T12:34:07Z",
+            "effective_at": "2026-12-31",
+            "source_class": "official_registry",
+            "old_locator": "/2/resultatregnskapResultat/finansresultat/finansinntekt/sumFinansinntekter",
+            "new_locator": "/0/resultatregnskapResultat/finansresultat/finansinntekt/sumFinansinntekter",
+            "old_content_sha256": "1a1794e660f2d59d68b34c25723c22fc330feb40e3e97f67e5e65223e60e92c0",
+            "new_content_sha256": "92dcc67c1149e528d02cf8b7b668804517c5b69b55de131069eee24ba2ff9507",
+            "status": "available"
+          },
+          {
+            "organisation_number": "918266917",
+            "type": "changed",
+            "field": "accounts.financial_result",
+            "old_value": -97200.0,
+            "new_value": 33310.0,
+            "old_evidence_ids": [
+              "291f99856f0de9fec3c97ef118d814de4429d1714e415c4f584f06318f2ff1b4"
+            ],
+            "new_evidence_ids": [
+              "8bbe357f0d704248a978ce595a1ad4e4117cab4abdc1e04dfb70d05d5ca44979"
+            ],
+            "materiality": "material",
+            "first_observed_at": "2026-11-13T12:34:07Z",
+            "last_observed_at": "2026-11-13T12:34:07Z",
+            "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/918266917",
+            "retrieved_at": "2026-11-13T12:34:07Z",
+            "effective_at": "2026-12-31",
+            "source_class": "official_registry",
+            "old_locator": "/2/resultatregnskapResultat/finansresultat/nettoFinans",
+            "new_locator": "/0/resultatregnskapResultat/finansresultat/nettoFinans",
+            "old_content_sha256": "1a1794e660f2d59d68b34c25723c22fc330feb40e3e97f67e5e65223e60e92c0",
+            "new_content_sha256": "92dcc67c1149e528d02cf8b7b668804517c5b69b55de131069eee24ba2ff9507",
+            "status": "available"
+          },
+          {
+            "organisation_number": "918266917",
+            "type": "changed",
+            "field": "accounts.inventories",
+            "old_value": 0.0,
+            "new_value": 0.0,
+            "old_evidence_ids": [
+              "eb2b61d72374943d77d7c9eba6bcbbd5aeba6c1d3d33c4a0b4255c9ce7ef317f"
+            ],
+            "new_evidence_ids": [
+              "334439261547db6fff733cce8140745f1a811a85c1c78a8e62dbc0d3c4438add"
+            ],
+            "materiality": "material",
+            "first_observed_at": "2026-11-13T12:34:07Z",
+            "last_observed_at": "2026-11-13T12:34:07Z",
+            "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/918266917",
+            "retrieved_at": "2026-11-13T12:34:07Z",
+            "effective_at": "2026-12-31",
+            "source_class": "official_registry",
+            "old_locator": "/2/eiendeler/sumVarer",
+            "new_locator": "/0/eiendeler/sumVarer",
+            "old_content_sha256": "1a1794e660f2d59d68b34c25723c22fc330feb40e3e97f67e5e65223e60e92c0",
+            "new_content_sha256": "92dcc67c1149e528d02cf8b7b668804517c5b69b55de131069eee24ba2ff9507",
+            "status": "available"
+          },
+          {
+            "organisation_number": "918266917",
+            "type": "changed",
+            "field": "accounts.investments",
+            "old_value": 0.0,
+            "new_value": 0.0,
+            "old_evidence_ids": [
+              "4d1b7efec6c902d945cdcef8d6f100c2a16d8d1eeecef13bf02c321b5b8c93d0"
+            ],
+            "new_evidence_ids": [
+              "2088ae7de7c1cb42bd499839c12a72b2dde41664669359d9e29075b3f407afe2"
+            ],
+            "materiality": "material",
+            "first_observed_at": "2026-11-13T12:34:07Z",
+            "last_observed_at": "2026-11-13T12:34:07Z",
+            "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/918266917",
+            "retrieved_at": "2026-11-13T12:34:07Z",
+            "effective_at": "2026-12-31",
+            "source_class": "official_registry",
+            "old_locator": "/2/eiendeler/sumInvesteringer",
+            "new_locator": "/0/eiendeler/sumInvesteringer",
+            "old_content_sha256": "1a1794e660f2d59d68b34c25723c22fc330feb40e3e97f67e5e65223e60e92c0",
+            "new_content_sha256": "92dcc67c1149e528d02cf8b7b668804517c5b69b55de131069eee24ba2ff9507",
+            "status": "available"
+          },
+          {
+            "organisation_number": "918266917",
+            "type": "changed",
+            "field": "accounts.long_term_liabilities",
+            "old_value": 0.0,
+            "new_value": 0.0,
+            "old_evidence_ids": [
+              "c5e68576d78d64a7c1492fb51e8954b3294bc953b0ed07aaef48ebc0a9fdf717"
+            ],
+            "new_evidence_ids": [
+              "d186f3bb4f0a7a986ce584e44bc1d6bae39b0379007511a089d0c30ce0440b5c"
+            ],
+            "materiality": "material",
+            "first_observed_at": "2026-11-13T12:34:07Z",
+            "last_observed_at": "2026-11-13T12:34:07Z",
+            "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/918266917",
+            "retrieved_at": "2026-11-13T12:34:07Z",
+            "effective_at": "2026-12-31",
+            "source_class": "official_registry",
+            "old_locator": "/2/egenkapitalGjeld/gjeldOversikt/langsiktigGjeld/sumLangsiktigGjeld",
+            "new_locator": "/0/egenkapitalGjeld/gjeldOversikt/langsiktigGjeld/sumLangsiktigGjeld",
+            "old_content_sha256": "1a1794e660f2d59d68b34c25723c22fc330feb40e3e97f67e5e65223e60e92c0",
+            "new_content_sha256": "92dcc67c1149e528d02cf8b7b668804517c5b69b55de131069eee24ba2ff9507",
+            "status": "available"
+          },
+          {
+            "organisation_number": "918266917",
+            "type": "changed",
+            "field": "accounts.net_result",
+            "old_value": 1625522.0,
+            "new_value": 130447.0,
+            "old_evidence_ids": [
+              "fbad9d242affd5583e3ce0bcc637181e0c1c19be5281832e365c1d168a7f0d2d"
+            ],
+            "new_evidence_ids": [
+              "892c374053e99820ae392f59de3b95ac4e4f31c9f26d0721ab6c31a22de3ac59"
+            ],
+            "materiality": "material",
+            "first_observed_at": "2026-11-13T12:34:07Z",
+            "last_observed_at": "2026-11-13T12:34:07Z",
+            "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/918266917",
+            "retrieved_at": "2026-11-13T12:34:07Z",
+            "effective_at": "2026-12-31",
+            "source_class": "official_registry",
+            "old_locator": "/2/resultatregnskapResultat/aarsresultat",
+            "new_locator": "/0/resultatregnskapResultat/aarsresultat",
+            "old_content_sha256": "1a1794e660f2d59d68b34c25723c22fc330feb40e3e97f67e5e65223e60e92c0",
+            "new_content_sha256": "92dcc67c1149e528d02cf8b7b668804517c5b69b55de131069eee24ba2ff9507",
+            "status": "available"
+          },
+          {
+            "organisation_number": "918266917",
+            "type": "changed",
+            "field": "accounts.non_current_assets",
+            "old_value": 2447171.0,
+            "new_value": 1585156.0,
+            "old_evidence_ids": [
+              "691da8231a487ec58153cda87edf122b23079988399547bb2fb75b435b9a010b"
+            ],
+            "new_evidence_ids": [
+              "9b2b4e6a4987850a82bad0bb458d349b50841b637f9263127997b963435fc36d"
+            ],
+            "materiality": "material",
+            "first_observed_at": "2026-11-13T12:34:07Z",
+            "last_observed_at": "2026-11-13T12:34:07Z",
+            "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/918266917",
+            "retrieved_at": "2026-11-13T12:34:07Z",
+            "effective_at": "2026-12-31",
+            "source_class": "official_registry",
+            "old_locator": "/2/eiendeler/anleggsmidler/sumAnleggsmidler",
+            "new_locator": "/0/eiendeler/anleggsmidler/sumAnleggsmidler",
+            "old_content_sha256": "1a1794e660f2d59d68b34c25723c22fc330feb40e3e97f67e5e65223e60e92c0",
+            "new_content_sha256": "92dcc67c1149e528d02cf8b7b668804517c5b69b55de131069eee24ba2ff9507",
+            "status": "available"
+          },
+          {
+            "organisation_number": "918266917",
+            "type": "changed",
+            "field": "accounts.operating_expenses",
+            "old_value": 3511421.0,
+            "new_value": 3443391.0,
+            "old_evidence_ids": [
+              "683f1bb1bba4f5060d3e443b1e4762be7a2cb6e8c32688cddb1ef6e5abff9258"
+            ],
+            "new_evidence_ids": [
+              "1a957ad92433daab2870e5b1b433c45d0b8cc332f79af248d68c78b297490509"
+            ],
+            "materiality": "material",
+            "first_observed_at": "2026-11-13T12:34:07Z",
+            "last_observed_at": "2026-11-13T12:34:07Z",
+            "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/918266917",
+            "retrieved_at": "2026-11-13T12:34:07Z",
+            "effective_at": "2026-12-31",
+            "source_class": "official_registry",
+            "old_locator": "/2/resultatregnskapResultat/driftsresultat/driftskostnad/sumDriftskostnad",
+            "new_locator": "/0/resultatregnskapResultat/driftsresultat/driftskostnad/sumDriftskostnad",
+            "old_content_sha256": "1a1794e660f2d59d68b34c25723c22fc330feb40e3e97f67e5e65223e60e92c0",
+            "new_content_sha256": "92dcc67c1149e528d02cf8b7b668804517c5b69b55de131069eee24ba2ff9507",
+            "status": "available"
+          },
+          {
+            "organisation_number": "918266917",
+            "type": "changed",
+            "field": "accounts.operating_result",
+            "old_value": 1722722.0,
+            "new_value": 97137.0,
+            "old_evidence_ids": [
+              "ae61c1f8581f7da41f780464348a04a2ad3fffe3f1b4552c0c7fb7b2165818d8"
+            ],
+            "new_evidence_ids": [
+              "ed5a08b0825868f0e3120b685ba8236b27b6cf448c0e96e8ccfd01dfebd6272b"
+            ],
+            "materiality": "material",
+            "first_observed_at": "2026-11-13T12:34:07Z",
+            "last_observed_at": "2026-11-13T12:34:07Z",
+            "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/918266917",
+            "retrieved_at": "2026-11-13T12:34:07Z",
+            "effective_at": "2026-12-31",
+            "source_class": "official_registry",
+            "old_locator": "/2/resultatregnskapResultat/driftsresultat/driftsresultat",
+            "new_locator": "/0/resultatregnskapResultat/driftsresultat/driftsresultat",
+            "old_content_sha256": "1a1794e660f2d59d68b34c25723c22fc330feb40e3e97f67e5e65223e60e92c0",
+            "new_content_sha256": "92dcc67c1149e528d02cf8b7b668804517c5b69b55de131069eee24ba2ff9507",
+            "status": "available"
+          },
+          {
+            "organisation_number": "918266917",
+            "type": "changed",
+            "field": "accounts.other_interest_expense",
+            "old_value": 96061.0,
+            "new_value": 126819.0,
+            "old_evidence_ids": [
+              "195e7e5413bb47515be730d3562463a488c9cf7634f0f49ac93ea8d35d30a248"
+            ],
+            "new_evidence_ids": [
+              "10a355d064e3da3fc0c31fe72ec7f6f464a5cbc0495eb4ce06ef70bd6c7f4745"
+            ],
+            "materiality": "material",
+            "first_observed_at": "2026-11-13T12:34:07Z",
+            "last_observed_at": "2026-11-13T12:34:07Z",
+            "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/918266917",
+            "retrieved_at": "2026-11-13T12:34:07Z",
+            "effective_at": "2026-12-31",
+            "source_class": "official_registry",
+            "old_locator": "/2/resultatregnskapResultat/finansresultat/finanskostnad/annenRentekostnad",
+            "new_locator": "/0/resultatregnskapResultat/finansresultat/finanskostnad/annenRentekostnad",
+            "old_content_sha256": "1a1794e660f2d59d68b34c25723c22fc330feb40e3e97f67e5e65223e60e92c0",
+            "new_content_sha256": "92dcc67c1149e528d02cf8b7b668804517c5b69b55de131069eee24ba2ff9507",
+            "status": "available"
+          },
+          {
+            "organisation_number": "918266917",
+            "type": "changed",
+            "field": "accounts.paid_in_equity",
+            "old_value": 1601000.0,
+            "new_value": 1601000.0,
+            "old_evidence_ids": [
+              "2bd6affb146197359f9d83629907b7cd7f4ceb4f8023112dc56306b9e4fed85b"
+            ],
+            "new_evidence_ids": [
+              "fd1b01385345d7b2226f009640828854a42797170e8f318ddacd325349a8f733"
+            ],
+            "materiality": "material",
+            "first_observed_at": "2026-11-13T12:34:07Z",
+            "last_observed_at": "2026-11-13T12:34:07Z",
+            "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/918266917",
+            "retrieved_at": "2026-11-13T12:34:07Z",
+            "effective_at": "2026-12-31",
+            "source_class": "official_registry",
+            "old_locator": "/2/egenkapitalGjeld/egenkapital/innskuttEgenkapital/sumInnskuttEgenkaptial",
+            "new_locator": "/0/egenkapitalGjeld/egenkapital/innskuttEgenkapital/sumInnskuttEgenkaptial",
+            "old_content_sha256": "1a1794e660f2d59d68b34c25723c22fc330feb40e3e97f67e5e65223e60e92c0",
+            "new_content_sha256": "92dcc67c1149e528d02cf8b7b668804517c5b69b55de131069eee24ba2ff9507",
+            "status": "available"
+          },
+          {
+            "organisation_number": "918266917",
+            "type": "changed",
+            "field": "accounts.receivables",
+            "old_value": 1625319.0,
+            "new_value": 1181284.0,
+            "old_evidence_ids": [
+              "c42313099dbab8f098d70068519951cc08dcaf90de55e457737c3ef27c2762ff"
+            ],
+            "new_evidence_ids": [
+              "c7ca4b4ebf924fae1745630e9570c6d89b05254aa261111851cd1d78992176ad"
+            ],
+            "materiality": "material",
+            "first_observed_at": "2026-11-13T12:34:07Z",
+            "last_observed_at": "2026-11-13T12:34:07Z",
+            "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/918266917",
+            "retrieved_at": "2026-11-13T12:34:07Z",
+            "effective_at": "2026-12-31",
+            "source_class": "official_registry",
+            "old_locator": "/2/eiendeler/sumFordringer",
+            "new_locator": "/0/eiendeler/sumFordringer",
+            "old_content_sha256": "1a1794e660f2d59d68b34c25723c22fc330feb40e3e97f67e5e65223e60e92c0",
+            "new_content_sha256": "92dcc67c1149e528d02cf8b7b668804517c5b69b55de131069eee24ba2ff9507",
+            "status": "available"
+          },
+          {
+            "organisation_number": "918266917",
+            "type": "changed",
+            "field": "accounts.result_before_tax",
+            "old_value": 1625522.0,
+            "new_value": 130447.0,
+            "old_evidence_ids": [
+              "30cc6ee4be383a14c893a34a4bc3aa500e9ea8b6bb4b9e298f38db9f02141dc5"
+            ],
+            "new_evidence_ids": [
+              "979e71bf33be9dec13dffaf86d8478f159e7f247e1bb8e3c2c24e49eccc8db09"
+            ],
+            "materiality": "material",
+            "first_observed_at": "2026-11-13T12:34:07Z",
+            "last_observed_at": "2026-11-13T12:34:07Z",
+            "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/918266917",
+            "retrieved_at": "2026-11-13T12:34:07Z",
+            "effective_at": "2026-12-31",
+            "source_class": "official_registry",
+            "old_locator": "/2/resultatregnskapResultat/ordinaertResultatFoerSkattekostnad",
+            "new_locator": "/0/resultatregnskapResultat/ordinaertResultatFoerSkattekostnad",
+            "old_content_sha256": "1a1794e660f2d59d68b34c25723c22fc330feb40e3e97f67e5e65223e60e92c0",
+            "new_content_sha256": "92dcc67c1149e528d02cf8b7b668804517c5b69b55de131069eee24ba2ff9507",
+            "status": "available"
+          },
+          {
+            "organisation_number": "918266917",
+            "type": "changed",
+            "field": "accounts.retained_equity",
+            "old_value": -837221.0,
+            "new_value": -3190985.0,
+            "old_evidence_ids": [
+              "ac772b9d1fe1dffa93e26ff96cf20e96cea4a5d0f654ff4c9d45fa4e51c5a63d"
+            ],
+            "new_evidence_ids": [
+              "9f5e93f5c81a95fdc777b6c215fe63344be9beca6b33ddcd3e7be008219dc0a3"
+            ],
+            "materiality": "material",
+            "first_observed_at": "2026-11-13T12:34:07Z",
+            "last_observed_at": "2026-11-13T12:34:07Z",
+            "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/918266917",
+            "retrieved_at": "2026-11-13T12:34:07Z",
+            "effective_at": "2026-12-31",
+            "source_class": "official_registry",
+            "old_locator": "/2/egenkapitalGjeld/egenkapital/opptjentEgenkapital/sumOpptjentEgenkapital",
+            "new_locator": "/0/egenkapitalGjeld/egenkapital/opptjentEgenkapital/sumOpptjentEgenkapital",
+            "old_content_sha256": "1a1794e660f2d59d68b34c25723c22fc330feb40e3e97f67e5e65223e60e92c0",
+            "new_content_sha256": "92dcc67c1149e528d02cf8b7b668804517c5b69b55de131069eee24ba2ff9507",
+            "status": "available"
+          },
+          {
+            "organisation_number": "918266917",
+            "type": "changed",
+            "field": "accounts.revenue",
+            "old_value": 5234143.0,
+            "new_value": 3540528.0,
+            "old_evidence_ids": [
+              "4aae457c01c1700e6b4216e7d2ddc0d635e61661df3e32c6411368d296e47038"
+            ],
+            "new_evidence_ids": [
+              "2b334d8b6b9d8099d49b84170b0d5111deaa0d66fd89fe0a6ad08c595706ede6"
+            ],
+            "materiality": "material",
+            "first_observed_at": "2026-11-13T12:34:07Z",
+            "last_observed_at": "2026-11-13T12:34:07Z",
+            "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/918266917",
+            "retrieved_at": "2026-11-13T12:34:07Z",
+            "effective_at": "2026-12-31",
+            "source_class": "official_registry",
+            "old_locator": "/2/resultatregnskapResultat/driftsresultat/driftsinntekter/sumDriftsinntekter",
+            "new_locator": "/0/resultatregnskapResultat/driftsresultat/driftsinntekter/sumDriftsinntekter",
+            "old_content_sha256": "1a1794e660f2d59d68b34c25723c22fc330feb40e3e97f67e5e65223e60e92c0",
+            "new_content_sha256": "92dcc67c1149e528d02cf8b7b668804517c5b69b55de131069eee24ba2ff9507",
+            "status": "available"
+          },
+          {
+            "organisation_number": "918266917",
+            "type": "changed",
+            "field": "accounts.salary_expenses",
+            "old_value": 3077209.0,
+            "new_value": 2765502.0,
+            "old_evidence_ids": [
+              "a2e3e79a71a07c877d4e19ff6fca8f13b743070d6a0ce1193f32c37b0ab160ce"
+            ],
+            "new_evidence_ids": [
+              "e5eba5a184e34d097ac56e29b4bce9f6bab0355aab02d88f52d92162a55f4a49"
+            ],
+            "materiality": "material",
+            "first_observed_at": "2026-11-13T12:34:07Z",
+            "last_observed_at": "2026-11-13T12:34:07Z",
+            "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/918266917",
+            "retrieved_at": "2026-11-13T12:34:07Z",
+            "effective_at": "2026-12-31",
+            "source_class": "official_registry",
+            "old_locator": "/2/resultatregnskapResultat/driftsresultat/driftskostnad/loennskostnad",
+            "new_locator": "/0/resultatregnskapResultat/driftsresultat/driftskostnad/loennskostnad",
+            "old_content_sha256": "1a1794e660f2d59d68b34c25723c22fc330feb40e3e97f67e5e65223e60e92c0",
+            "new_content_sha256": "92dcc67c1149e528d02cf8b7b668804517c5b69b55de131069eee24ba2ff9507",
+            "status": "available"
+          },
+          {
+            "organisation_number": "918266917",
+            "type": "changed",
+            "field": "accounts.sales_income",
+            "old_value": 5234143.0,
+            "new_value": 3540528.0,
+            "old_evidence_ids": [
+              "a8449fa32eeea5fdbb03457efdca2529b23087fa7192980f058474ee7273fa47"
+            ],
+            "new_evidence_ids": [
+              "2525f38424e852d784cd5d855aa4a93bbaaa350608776d03387cacd3a1432301"
+            ],
+            "materiality": "material",
+            "first_observed_at": "2026-11-13T12:34:07Z",
+            "last_observed_at": "2026-11-13T12:34:07Z",
+            "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/918266917",
+            "retrieved_at": "2026-11-13T12:34:07Z",
+            "effective_at": "2026-12-31",
+            "source_class": "official_registry",
+            "old_locator": "/2/resultatregnskapResultat/driftsresultat/driftsinntekter/salgsinntekter",
+            "new_locator": "/0/resultatregnskapResultat/driftsresultat/driftsinntekter/salgsinntekter",
+            "old_content_sha256": "1a1794e660f2d59d68b34c25723c22fc330feb40e3e97f67e5e65223e60e92c0",
+            "new_content_sha256": "92dcc67c1149e528d02cf8b7b668804517c5b69b55de131069eee24ba2ff9507",
+            "status": "available"
+          },
+          {
+            "organisation_number": "918266917",
+            "type": "changed",
+            "field": "accounts.total_assets",
+            "old_value": 4493296.0,
+            "new_value": 3167418.0,
+            "old_evidence_ids": [
+              "a53e82c6d6ea81fd4b625a728ff7d12ec77d9a17856cbe984347c7daf9d7ac0e"
+            ],
+            "new_evidence_ids": [
+              "4224196a0e103a1edb0bcab54f919c5e759e2e90eec670b2cc5b4ca63590064c"
+            ],
+            "materiality": "material",
+            "first_observed_at": "2026-11-13T12:34:07Z",
+            "last_observed_at": "2026-11-13T12:34:07Z",
+            "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/918266917",
+            "retrieved_at": "2026-11-13T12:34:07Z",
+            "effective_at": "2026-12-31",
+            "source_class": "official_registry",
+            "old_locator": "/2/eiendeler/sumEiendeler",
+            "new_locator": "/0/eiendeler/sumEiendeler",
+            "old_content_sha256": "1a1794e660f2d59d68b34c25723c22fc330feb40e3e97f67e5e65223e60e92c0",
+            "new_content_sha256": "92dcc67c1149e528d02cf8b7b668804517c5b69b55de131069eee24ba2ff9507",
+            "status": "available"
+          },
+          {
+            "organisation_number": "918266917",
+            "type": "changed",
+            "field": "accounts.total_comprehensive_result",
+            "old_value": 1625522.0,
+            "new_value": 130447.0,
+            "old_evidence_ids": [
+              "627e96f69110c4e579f1aad0c1221de812c505d597103c27ed9fbaf8773c7ff1"
+            ],
+            "new_evidence_ids": [
+              "7111daa6b7f6f1a97ef43d1dcd5f237cbc13ab5c2f8b7815432bd4aaf8a8ce8e"
+            ],
+            "materiality": "material",
+            "first_observed_at": "2026-11-13T12:34:07Z",
+            "last_observed_at": "2026-11-13T12:34:07Z",
+            "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/918266917",
+            "retrieved_at": "2026-11-13T12:34:07Z",
+            "effective_at": "2026-12-31",
+            "source_class": "official_registry",
+            "old_locator": "/2/resultatregnskapResultat/totalresultat",
+            "new_locator": "/0/resultatregnskapResultat/totalresultat",
+            "old_content_sha256": "1a1794e660f2d59d68b34c25723c22fc330feb40e3e97f67e5e65223e60e92c0",
+            "new_content_sha256": "92dcc67c1149e528d02cf8b7b668804517c5b69b55de131069eee24ba2ff9507",
+            "status": "available"
+          },
+          {
+            "organisation_number": "918266917",
+            "type": "changed",
+            "field": "accounts.total_liabilities",
+            "old_value": 3729516.0,
+            "new_value": 4757403.0,
+            "old_evidence_ids": [
+              "879fbd63fbef7727aa5b37cb606ce62690dcb1fd40cc0c75b126c4abc43d0515"
+            ],
+            "new_evidence_ids": [
+              "9b4d5c3911560fcba2c9bfaf29bab653cab4f6f49b848fa25cedd4724f79309f"
+            ],
+            "materiality": "material",
+            "first_observed_at": "2026-11-13T12:34:07Z",
+            "last_observed_at": "2026-11-13T12:34:07Z",
+            "source_url": "https://data.brreg.no/regnskapsregisteret/regnskap/918266917",
+            "retrieved_at": "2026-11-13T12:34:07Z",
+            "effective_at": "2026-12-31",
+            "source_class": "official_registry",
+            "old_locator": "/2/egenkapitalGjeld/gjeldOversikt/sumGjeld",
+            "new_locator": "/0/egenkapitalGjeld/gjeldOversikt/sumGjeld",
+            "old_content_sha256": "1a1794e660f2d59d68b34c25723c22fc330feb40e3e97f67e5e65223e60e92c0",
+            "new_content_sha256": "92dcc67c1149e528d02cf8b7b668804517c5b69b55de131069eee24ba2ff9507",
+            "status": "available"
+          },
+          {
+            "organisation_number": "918266917",
+            "type": "changed",
+            "field": "identity.latest_submitted_accounts",
+            "old_value": "2025",
+            "new_value": "2026",
+            "old_evidence_ids": [
+              "c5c98b11ea5053a578155fd3a6de4fb799c61e4ec30d6586502e3d298ccaa03e"
+            ],
+            "new_evidence_ids": [
+              "9c73572f8b1fcbd0591a1929ab0e89987997c8a5a5407b794d42471f21e0bb1c"
+            ],
+            "materiality": "material",
+            "first_observed_at": "2026-11-13T12:34:07Z",
+            "last_observed_at": "2026-11-13T12:34:07Z",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "retrieved_at": "2026-11-13T12:34:07Z",
+            "effective_at": null,
+            "source_class": "official_registry",
+            "old_locator": "row:918266917/column:sisteInnsendteAarsregnskap",
+            "new_locator": "row:918266917/column:sisteInnsendteAarsregnskap",
+            "old_content_sha256": "579e3735876d763bc50e2ae059ed1c663b50134ab77d99d847ccffdb477b75f6",
+            "new_content_sha256": "27ef4ec42b93c8878ddd18e9e0ea28e6b0360d8374629958cfff39a07ddea7f9",
+            "status": "available"
+          }
+        ],
+        "coverage_observations": [
+          {
+            "section": "accounts",
+            "field": "accounts.filed_year.2026",
+            "previous_state": "unchecked_field",
+            "current_state": "available",
+            "reason": "dated_field_not_checked_in_previous_extractor"
+          },
+          {
+            "section": "accounts",
+            "field": "accounts.history.2025-12-31.cash_and_bank",
+            "previous_state": "unchecked_field",
+            "current_state": "available",
+            "reason": "dated_field_not_checked_in_previous_extractor"
+          },
+          {
+            "section": "accounts",
+            "field": "accounts.history.2025-12-31.current_assets",
+            "previous_state": "unchecked_field",
+            "current_state": "available",
+            "reason": "dated_field_not_checked_in_previous_extractor"
+          },
+          {
+            "section": "accounts",
+            "field": "accounts.history.2025-12-31.current_liabilities",
+            "previous_state": "unchecked_field",
+            "current_state": "available",
+            "reason": "dated_field_not_checked_in_previous_extractor"
+          },
+          {
+            "section": "accounts",
+            "field": "accounts.history.2025-12-31.equity",
+            "previous_state": "unchecked_field",
+            "current_state": "available",
+            "reason": "dated_field_not_checked_in_previous_extractor"
+          },
+          {
+            "section": "accounts",
+            "field": "accounts.history.2025-12-31.equity_and_liabilities",
+            "previous_state": "unchecked_field",
+            "current_state": "available",
+            "reason": "dated_field_not_checked_in_previous_extractor"
+          },
+          {
+            "section": "accounts",
+            "field": "accounts.history.2025-12-31.financial_expenses",
+            "previous_state": "unchecked_field",
+            "current_state": "available",
+            "reason": "dated_field_not_checked_in_previous_extractor"
+          },
+          {
+            "section": "accounts",
+            "field": "accounts.history.2025-12-31.financial_income",
+            "previous_state": "unchecked_field",
+            "current_state": "available",
+            "reason": "dated_field_not_checked_in_previous_extractor"
+          },
+          {
+            "section": "accounts",
+            "field": "accounts.history.2025-12-31.financial_result",
+            "previous_state": "unchecked_field",
+            "current_state": "available",
+            "reason": "dated_field_not_checked_in_previous_extractor"
+          },
+          {
+            "section": "accounts",
+            "field": "accounts.history.2025-12-31.inventories",
+            "previous_state": "unchecked_field",
+            "current_state": "available",
+            "reason": "dated_field_not_checked_in_previous_extractor"
+          },
+          {
+            "section": "accounts",
+            "field": "accounts.history.2025-12-31.investments",
+            "previous_state": "unchecked_field",
+            "current_state": "available",
+            "reason": "dated_field_not_checked_in_previous_extractor"
+          },
+          {
+            "section": "accounts",
+            "field": "accounts.history.2025-12-31.long_term_liabilities",
+            "previous_state": "unchecked_field",
+            "current_state": "available",
+            "reason": "dated_field_not_checked_in_previous_extractor"
+          },
+          {
+            "section": "accounts",
+            "field": "accounts.history.2025-12-31.net_result",
+            "previous_state": "unchecked_field",
+            "current_state": "available",
+            "reason": "dated_field_not_checked_in_previous_extractor"
+          },
+          {
+            "section": "accounts",
+            "field": "accounts.history.2025-12-31.non_current_assets",
+            "previous_state": "unchecked_field",
+            "current_state": "available",
+            "reason": "dated_field_not_checked_in_previous_extractor"
+          },
+          {
+            "section": "accounts",
+            "field": "accounts.history.2025-12-31.operating_expenses",
+            "previous_state": "unchecked_field",
+            "current_state": "available",
+            "reason": "dated_field_not_checked_in_previous_extractor"
+          },
+          {
+            "section": "accounts",
+            "field": "accounts.history.2025-12-31.operating_result",
+            "previous_state": "unchecked_field",
+            "current_state": "available",
+            "reason": "dated_field_not_checked_in_previous_extractor"
+          },
+          {
+            "section": "accounts",
+            "field": "accounts.history.2025-12-31.other_interest_expense",
+            "previous_state": "unchecked_field",
+            "current_state": "available",
+            "reason": "dated_field_not_checked_in_previous_extractor"
+          },
+          {
+            "section": "accounts",
+            "field": "accounts.history.2025-12-31.paid_in_equity",
+            "previous_state": "unchecked_field",
+            "current_state": "available",
+            "reason": "dated_field_not_checked_in_previous_extractor"
+          },
+          {
+            "section": "accounts",
+            "field": "accounts.history.2025-12-31.receivables",
+            "previous_state": "unchecked_field",
+            "current_state": "available",
+            "reason": "dated_field_not_checked_in_previous_extractor"
+          },
+          {
+            "section": "accounts",
+            "field": "accounts.history.2025-12-31.result_before_tax",
+            "previous_state": "unchecked_field",
+            "current_state": "available",
+            "reason": "dated_field_not_checked_in_previous_extractor"
+          },
+          {
+            "section": "accounts",
+            "field": "accounts.history.2025-12-31.retained_equity",
+            "previous_state": "unchecked_field",
+            "current_state": "available",
+            "reason": "dated_field_not_checked_in_previous_extractor"
+          },
+          {
+            "section": "accounts",
+            "field": "accounts.history.2025-12-31.revenue",
+            "previous_state": "unchecked_field",
+            "current_state": "available",
+            "reason": "dated_field_not_checked_in_previous_extractor"
+          },
+          {
+            "section": "accounts",
+            "field": "accounts.history.2025-12-31.salary_expenses",
+            "previous_state": "unchecked_field",
+            "current_state": "available",
+            "reason": "dated_field_not_checked_in_previous_extractor"
+          },
+          {
+            "section": "accounts",
+            "field": "accounts.history.2025-12-31.sales_income",
+            "previous_state": "unchecked_field",
+            "current_state": "available",
+            "reason": "dated_field_not_checked_in_previous_extractor"
+          },
+          {
+            "section": "accounts",
+            "field": "accounts.history.2025-12-31.total_assets",
+            "previous_state": "unchecked_field",
+            "current_state": "available",
+            "reason": "dated_field_not_checked_in_previous_extractor"
+          },
+          {
+            "section": "accounts",
+            "field": "accounts.history.2025-12-31.total_comprehensive_result",
+            "previous_state": "unchecked_field",
+            "current_state": "available",
+            "reason": "dated_field_not_checked_in_previous_extractor"
+          },
+          {
+            "section": "accounts",
+            "field": "accounts.history.2025-12-31.total_liabilities",
+            "previous_state": "unchecked_field",
+            "current_state": "available",
+            "reason": "dated_field_not_checked_in_previous_extractor"
+          }
+        ]
+      },
+      "repeat_execution": {
+        "argv": [
+          "run",
+          "--organisations",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\accounts_year-repeat\\companies.jsonl",
+          "--bulk",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\accounts_year-repeat\\registry.csv",
+          "--output",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\accounts_year-repeat\\envelopes.jsonl",
+          "--profiles-output",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\accounts_year-repeat\\profiles.jsonl",
+          "--report",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\accounts_year-repeat\\report.json",
+          "--run-id",
+          "offline-refresh-accounts_year-repeat",
+          "--expected-count",
+          "1"
+        ],
+        "previous_injected_by_offline_harness": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\accounts_year\\envelopes.jsonl",
+        "exit_code": 0,
+        "case": "accounts_year",
+        "unrecorded_urls": [],
+        "batch_aliases": [
+          {
+            "requested": "https://pam-stilling-feed.nav.no/api/v1/feed/43d79fff-1808-42b4-8e86-987ef556a07f",
+            "synthetic": "empty completed forward-tail scaffold; original forward bodies were not persisted; no ad fact derives from this response"
+          },
+          {
+            "requested": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=918266917&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+            "saved": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=812049712%2C818330952%2C821052092%2C823569262%2C827878782%2C830009612%2C837186102%2C852122722%2C865560052%2C877144232%2C891858442%2C894542012%2C910929097%2C911818191%2C912994392%2C913143930%2C913244702%2C913502752%2C914324769%2C915469132%2C915813372%2C915963102%2C916101538%2C916794894%2C917604509%2C917664986%2C918031502%2C918266917%2C918994793%2C920711197%2C921380259%2C922718059%2C923142827%2C924004843%2C924592753%2C924911719%2C925293180%2C925496251%2C926073737%2C926317490%2C926364715%2C926766228%2C926963023%2C927265222%2C927550563%2C928506908%2C928745813%2C929048709%2C929376935%2C930090077%2C930338877%2C930475173%2C930491721%2C930532223%2C931575678%2C931647067%2C932335530%2C932354322%2C932587904%2C933379779%2C933741761%2C934058577%2C934385411%2C934626176%2C935121612%2C935265606%2C935294746%2C935656176%2C935737672%2C935829747%2C935928125%2C936106374%2C937969104%2C948230798%2C971131535%2C979311729%2C980038661%2C982039177%2C985689377%2C988060933%2C988894826%2C989162691%2C989194283%2C989221981%2C989237683%2C989424157%2C989704516%2C990959366%2C990980683%2C992100753%2C992143827%2C992231963%2C993821403%2C994900544%2C995194163%2C995744562%2C995991993%2C996904490%2C997274253%2C997887476&dato=2023-11-13T12%3A34%3A07.468Z&updatedBefore=2026-11-13T12%3A34%3A07.468Z&includeChanges=true&size=1000&sort=id%2CASC&page=0"
+          },
+          {
+            "requested": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=918338063&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+            "saved": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=816118972%2C819615942%2C823025602%2C825531912%2C892122792%2C912053741%2C912121003%2C912562204%2C913003195%2C913310853%2C914370604%2C914437385%2C914683599%2C914689244%2C918086641%2C918338063%2C919135948%2C921443420%2C923600582%2C924181109%2C924278331%2C925647632%2C926029142%2C926353489%2C926394363%2C927039214%2C927216736%2C927290928%2C928524507%2C928787664%2C930150797%2C930416223%2C930421375%2C930439037%2C930476358%2C930533157%2C930582433%2C930944351%2C932179563%2C932337584%2C932505312%2C932932350%2C933391302%2C934194462%2C934516303%2C934661141%2C935319609%2C935603234%2C935777119%2C935832004%2C936137792%2C936304249%2C936566936%2C937960433%2C971630744%2C971810521%2C971810564%2C971875348%2C971973749%2C973469789%2C973656759%2C973768301%2C977464072%2C979314388%2C982620279%2C982640040%2C987836733%2C988080314%2C990910944%2C991015507%2C992217162%2C993829528%2C994572865%2C994941321%2C995202808%2C995808269%2C997331834%2C997959442%2C998108500%2C999363903&dato=2023-11-13T12%3A34%3A07.468Z&updatedBefore=2026-11-13T12%3A34%3A07.468Z&includeChanges=true&size=1000&sort=id%2CASC&page=0"
+          }
+        ],
+        "requested_urls": [
+          "https://pam-stilling-feed.nav.no/api/v1/feed/43d79fff-1808-42b4-8e86-987ef556a07f",
+          "https://pam-stilling-feed.nav.no/api/v1/feedentry/52c02dd7-b354-4765-a221-a594aca6b2d6",
+          "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=918266917&size=1000&page=0",
+          "https://data.brreg.no/enhetsregisteret/api/enheter/918266917/roller",
+          "https://data.brreg.no/regnskapsregisteret/regnskap/918266917",
+          "https://data.brreg.no/regnskapsregisteret/regnskap/aarsregnskap/kopi/918266917/aar",
+          "https://digitaliq.no/robots.txt",
+          "https://digitaliq.no/",
+          "https://digitaliq.no/no/artikler",
+          "https://digitaliq.no/nyheter",
+          "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=918266917&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+          "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=918338063&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0"
+        ],
+        "verification": {
+          "lines": 1,
+          "schema_valid": true,
+          "published_claims": 191,
+          "source_blobs_verified": 7,
+          "synthesis_companies": 1,
+          "synthesis_sentences": 21,
+          "synthesis_unverified_values": 0,
+          "financial_inputs_verified": 104,
+          "derived_financial_metrics_verified": 3,
+          "registry_events_verified": 0,
+          "filing_year_facts_verified": 11,
+          "briefing_companies": 1,
+          "briefing_sentences": 6,
+          "briefing_short_companies": 0,
+          "briefing_unverified_values": 0,
+          "briefing_topic_coverage": {
+            "activity": 1,
+            "change": 1,
+            "unknown": 1,
+            "financial": 1,
+            "takeaway": 1
+          },
+          "complete_briefing_contracts": 1,
+          "newer_filing_flags": 0
+        },
+        "output_sha256": "9e7b81bcc1cc910ea9abb1b19046b053ae04ff06a2bb10642d963b5f5ec7b6f7",
+        "snapshot_changes": [],
+        "coverage_observations": []
+      }
+    },
+    "name": {
+      "detected": true,
+      "supported_field_events": 1,
+      "unexpected_changes": [],
+      "idempotent_changes": 0,
+      "execution": {
+        "argv": [
+          "run",
+          "--organisations",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\name\\companies.jsonl",
+          "--bulk",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\name\\registry.csv",
+          "--output",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\name\\envelopes.jsonl",
+          "--profiles-output",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\name\\profiles.jsonl",
+          "--report",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\name\\report.json",
+          "--run-id",
+          "offline-refresh-name",
+          "--expected-count",
+          "1"
+        ],
+        "previous_injected_by_offline_harness": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\baseline\\envelopes.jsonl",
+        "exit_code": 0,
+        "case": "name",
+        "unrecorded_urls": [],
+        "batch_aliases": [
+          {
+            "requested": "https://pam-stilling-feed.nav.no/api/v1/feed/43d79fff-1808-42b4-8e86-987ef556a07f",
+            "synthetic": "empty completed forward-tail scaffold; original forward bodies were not persisted; no ad fact derives from this response"
+          },
+          {
+            "requested": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=918266917&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+            "saved": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=812049712%2C818330952%2C821052092%2C823569262%2C827878782%2C830009612%2C837186102%2C852122722%2C865560052%2C877144232%2C891858442%2C894542012%2C910929097%2C911818191%2C912994392%2C913143930%2C913244702%2C913502752%2C914324769%2C915469132%2C915813372%2C915963102%2C916101538%2C916794894%2C917604509%2C917664986%2C918031502%2C918266917%2C918994793%2C920711197%2C921380259%2C922718059%2C923142827%2C924004843%2C924592753%2C924911719%2C925293180%2C925496251%2C926073737%2C926317490%2C926364715%2C926766228%2C926963023%2C927265222%2C927550563%2C928506908%2C928745813%2C929048709%2C929376935%2C930090077%2C930338877%2C930475173%2C930491721%2C930532223%2C931575678%2C931647067%2C932335530%2C932354322%2C932587904%2C933379779%2C933741761%2C934058577%2C934385411%2C934626176%2C935121612%2C935265606%2C935294746%2C935656176%2C935737672%2C935829747%2C935928125%2C936106374%2C937969104%2C948230798%2C971131535%2C979311729%2C980038661%2C982039177%2C985689377%2C988060933%2C988894826%2C989162691%2C989194283%2C989221981%2C989237683%2C989424157%2C989704516%2C990959366%2C990980683%2C992100753%2C992143827%2C992231963%2C993821403%2C994900544%2C995194163%2C995744562%2C995991993%2C996904490%2C997274253%2C997887476&dato=2023-11-13T12%3A34%3A07.468Z&updatedBefore=2026-11-13T12%3A34%3A07.468Z&includeChanges=true&size=1000&sort=id%2CASC&page=0"
+          },
+          {
+            "requested": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=918338063&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+            "saved": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=816118972%2C819615942%2C823025602%2C825531912%2C892122792%2C912053741%2C912121003%2C912562204%2C913003195%2C913310853%2C914370604%2C914437385%2C914683599%2C914689244%2C918086641%2C918338063%2C919135948%2C921443420%2C923600582%2C924181109%2C924278331%2C925647632%2C926029142%2C926353489%2C926394363%2C927039214%2C927216736%2C927290928%2C928524507%2C928787664%2C930150797%2C930416223%2C930421375%2C930439037%2C930476358%2C930533157%2C930582433%2C930944351%2C932179563%2C932337584%2C932505312%2C932932350%2C933391302%2C934194462%2C934516303%2C934661141%2C935319609%2C935603234%2C935777119%2C935832004%2C936137792%2C936304249%2C936566936%2C937960433%2C971630744%2C971810521%2C971810564%2C971875348%2C971973749%2C973469789%2C973656759%2C973768301%2C977464072%2C979314388%2C982620279%2C982640040%2C987836733%2C988080314%2C990910944%2C991015507%2C992217162%2C993829528%2C994572865%2C994941321%2C995202808%2C995808269%2C997331834%2C997959442%2C998108500%2C999363903&dato=2023-11-13T12%3A34%3A07.468Z&updatedBefore=2026-11-13T12%3A34%3A07.468Z&includeChanges=true&size=1000&sort=id%2CASC&page=0"
+          }
+        ],
+        "requested_urls": [
+          "https://pam-stilling-feed.nav.no/api/v1/feed/43d79fff-1808-42b4-8e86-987ef556a07f",
+          "https://pam-stilling-feed.nav.no/api/v1/feedentry/52c02dd7-b354-4765-a221-a594aca6b2d6",
+          "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=918266917&size=1000&page=0",
+          "https://data.brreg.no/enhetsregisteret/api/enheter/918266917/roller",
+          "https://data.brreg.no/regnskapsregisteret/regnskap/918266917",
+          "https://data.brreg.no/regnskapsregisteret/regnskap/aarsregnskap/kopi/918266917/aar",
+          "https://digitaliq.no/robots.txt",
+          "https://digitaliq.no/",
+          "https://digitaliq.no/no/artikler",
+          "https://digitaliq.no/nyheter",
+          "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=918266917&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+          "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=918338063&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0"
+        ],
+        "verification": {
+          "lines": 1,
+          "schema_valid": true,
+          "published_claims": 164,
+          "source_blobs_verified": 7,
+          "synthesis_companies": 1,
+          "synthesis_sentences": 22,
+          "synthesis_unverified_values": 0,
+          "financial_inputs_verified": 78,
+          "derived_financial_metrics_verified": 3,
+          "registry_events_verified": 0,
+          "filing_year_facts_verified": 10,
+          "briefing_companies": 1,
+          "briefing_sentences": 6,
+          "briefing_short_companies": 0,
+          "briefing_unverified_values": 0,
+          "briefing_topic_coverage": {
+            "activity": 1,
+            "change": 1,
+            "unknown": 1,
+            "financial": 1,
+            "takeaway": 1
+          },
+          "complete_briefing_contracts": 1,
+          "newer_filing_flags": 0
+        },
+        "output_sha256": "54a1fadcabdcc76a33d61383187cffacbe4fd24d9925f0aa7300e198933354b8",
+        "snapshot_changes": [
+          {
+            "organisation_number": "918266917",
+            "type": "changed",
+            "field": "identity.legal_name",
+            "old_value": "DIGITALIQ AS",
+            "new_value": "DIGITALIQ REFRESH PROOF AS",
+            "old_evidence_ids": [
+              "e9358266c53d43b9b1e217c67599197c76bf2764f06430dcf391065db63b550b"
+            ],
+            "new_evidence_ids": [
+              "7376312db42cfaf1f9310590b7c61eaa37f7184682f58266cd14003b69d0b529"
+            ],
+            "materiality": "material",
+            "first_observed_at": "2026-11-13T12:34:07Z",
+            "last_observed_at": "2026-11-13T12:34:07Z",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "retrieved_at": "2026-11-13T12:34:07Z",
+            "effective_at": null,
+            "source_class": "official_registry",
+            "old_locator": "row:918266917/column:navn",
+            "new_locator": "row:918266917/column:navn",
+            "old_content_sha256": "579e3735876d763bc50e2ae059ed1c663b50134ab77d99d847ccffdb477b75f6",
+            "new_content_sha256": "b81797c5a08a2bd8dc89a12c9170b26d56a06f839896822cbb1244234d74745f",
+            "status": "available"
+          }
+        ],
+        "coverage_observations": []
+      },
+      "repeat_execution": {
+        "argv": [
+          "run",
+          "--organisations",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\name-repeat\\companies.jsonl",
+          "--bulk",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\name-repeat\\registry.csv",
+          "--output",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\name-repeat\\envelopes.jsonl",
+          "--profiles-output",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\name-repeat\\profiles.jsonl",
+          "--report",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\name-repeat\\report.json",
+          "--run-id",
+          "offline-refresh-name-repeat",
+          "--expected-count",
+          "1"
+        ],
+        "previous_injected_by_offline_harness": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\name\\envelopes.jsonl",
+        "exit_code": 0,
+        "case": "name",
+        "unrecorded_urls": [],
+        "batch_aliases": [
+          {
+            "requested": "https://pam-stilling-feed.nav.no/api/v1/feed/43d79fff-1808-42b4-8e86-987ef556a07f",
+            "synthetic": "empty completed forward-tail scaffold; original forward bodies were not persisted; no ad fact derives from this response"
+          },
+          {
+            "requested": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=918266917&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+            "saved": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=812049712%2C818330952%2C821052092%2C823569262%2C827878782%2C830009612%2C837186102%2C852122722%2C865560052%2C877144232%2C891858442%2C894542012%2C910929097%2C911818191%2C912994392%2C913143930%2C913244702%2C913502752%2C914324769%2C915469132%2C915813372%2C915963102%2C916101538%2C916794894%2C917604509%2C917664986%2C918031502%2C918266917%2C918994793%2C920711197%2C921380259%2C922718059%2C923142827%2C924004843%2C924592753%2C924911719%2C925293180%2C925496251%2C926073737%2C926317490%2C926364715%2C926766228%2C926963023%2C927265222%2C927550563%2C928506908%2C928745813%2C929048709%2C929376935%2C930090077%2C930338877%2C930475173%2C930491721%2C930532223%2C931575678%2C931647067%2C932335530%2C932354322%2C932587904%2C933379779%2C933741761%2C934058577%2C934385411%2C934626176%2C935121612%2C935265606%2C935294746%2C935656176%2C935737672%2C935829747%2C935928125%2C936106374%2C937969104%2C948230798%2C971131535%2C979311729%2C980038661%2C982039177%2C985689377%2C988060933%2C988894826%2C989162691%2C989194283%2C989221981%2C989237683%2C989424157%2C989704516%2C990959366%2C990980683%2C992100753%2C992143827%2C992231963%2C993821403%2C994900544%2C995194163%2C995744562%2C995991993%2C996904490%2C997274253%2C997887476&dato=2023-11-13T12%3A34%3A07.468Z&updatedBefore=2026-11-13T12%3A34%3A07.468Z&includeChanges=true&size=1000&sort=id%2CASC&page=0"
+          },
+          {
+            "requested": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=918338063&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+            "saved": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=816118972%2C819615942%2C823025602%2C825531912%2C892122792%2C912053741%2C912121003%2C912562204%2C913003195%2C913310853%2C914370604%2C914437385%2C914683599%2C914689244%2C918086641%2C918338063%2C919135948%2C921443420%2C923600582%2C924181109%2C924278331%2C925647632%2C926029142%2C926353489%2C926394363%2C927039214%2C927216736%2C927290928%2C928524507%2C928787664%2C930150797%2C930416223%2C930421375%2C930439037%2C930476358%2C930533157%2C930582433%2C930944351%2C932179563%2C932337584%2C932505312%2C932932350%2C933391302%2C934194462%2C934516303%2C934661141%2C935319609%2C935603234%2C935777119%2C935832004%2C936137792%2C936304249%2C936566936%2C937960433%2C971630744%2C971810521%2C971810564%2C971875348%2C971973749%2C973469789%2C973656759%2C973768301%2C977464072%2C979314388%2C982620279%2C982640040%2C987836733%2C988080314%2C990910944%2C991015507%2C992217162%2C993829528%2C994572865%2C994941321%2C995202808%2C995808269%2C997331834%2C997959442%2C998108500%2C999363903&dato=2023-11-13T12%3A34%3A07.468Z&updatedBefore=2026-11-13T12%3A34%3A07.468Z&includeChanges=true&size=1000&sort=id%2CASC&page=0"
+          }
+        ],
+        "requested_urls": [
+          "https://pam-stilling-feed.nav.no/api/v1/feed/43d79fff-1808-42b4-8e86-987ef556a07f",
+          "https://pam-stilling-feed.nav.no/api/v1/feedentry/52c02dd7-b354-4765-a221-a594aca6b2d6",
+          "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=918266917&size=1000&page=0",
+          "https://data.brreg.no/enhetsregisteret/api/enheter/918266917/roller",
+          "https://data.brreg.no/regnskapsregisteret/regnskap/918266917",
+          "https://data.brreg.no/regnskapsregisteret/regnskap/aarsregnskap/kopi/918266917/aar",
+          "https://digitaliq.no/robots.txt",
+          "https://digitaliq.no/",
+          "https://digitaliq.no/no/artikler",
+          "https://digitaliq.no/nyheter",
+          "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=918266917&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+          "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=918338063&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0"
+        ],
+        "verification": {
+          "lines": 1,
+          "schema_valid": true,
+          "published_claims": 164,
+          "source_blobs_verified": 7,
+          "synthesis_companies": 1,
+          "synthesis_sentences": 22,
+          "synthesis_unverified_values": 0,
+          "financial_inputs_verified": 78,
+          "derived_financial_metrics_verified": 3,
+          "registry_events_verified": 0,
+          "filing_year_facts_verified": 10,
+          "briefing_companies": 1,
+          "briefing_sentences": 6,
+          "briefing_short_companies": 0,
+          "briefing_unverified_values": 0,
+          "briefing_topic_coverage": {
+            "activity": 1,
+            "change": 1,
+            "unknown": 1,
+            "financial": 1,
+            "takeaway": 1
+          },
+          "complete_briefing_contracts": 1,
+          "newer_filing_flags": 0
+        },
+        "output_sha256": "d996b890b08333c88f2a6c9c68a90267b7ecd18b1a21228d1b8a951993c49f0f",
+        "snapshot_changes": [],
+        "coverage_observations": []
+      }
+    },
+    "subunit": {
+      "detected": true,
+      "supported_field_events": 1,
+      "unexpected_changes": [],
+      "idempotent_changes": 0,
+      "execution": {
+        "argv": [
+          "run",
+          "--organisations",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\subunit\\companies.jsonl",
+          "--bulk",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\subunit\\registry.csv",
+          "--output",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\subunit\\envelopes.jsonl",
+          "--profiles-output",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\subunit\\profiles.jsonl",
+          "--report",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\subunit\\report.json",
+          "--run-id",
+          "offline-refresh-subunit",
+          "--expected-count",
+          "1"
+        ],
+        "previous_injected_by_offline_harness": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\baseline\\envelopes.jsonl",
+        "exit_code": 0,
+        "case": "subunit",
+        "unrecorded_urls": [],
+        "batch_aliases": [
+          {
+            "requested": "https://pam-stilling-feed.nav.no/api/v1/feed/43d79fff-1808-42b4-8e86-987ef556a07f",
+            "synthetic": "empty completed forward-tail scaffold; original forward bodies were not persisted; no ad fact derives from this response"
+          },
+          {
+            "requested": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=918266917&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+            "saved": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=812049712%2C818330952%2C821052092%2C823569262%2C827878782%2C830009612%2C837186102%2C852122722%2C865560052%2C877144232%2C891858442%2C894542012%2C910929097%2C911818191%2C912994392%2C913143930%2C913244702%2C913502752%2C914324769%2C915469132%2C915813372%2C915963102%2C916101538%2C916794894%2C917604509%2C917664986%2C918031502%2C918266917%2C918994793%2C920711197%2C921380259%2C922718059%2C923142827%2C924004843%2C924592753%2C924911719%2C925293180%2C925496251%2C926073737%2C926317490%2C926364715%2C926766228%2C926963023%2C927265222%2C927550563%2C928506908%2C928745813%2C929048709%2C929376935%2C930090077%2C930338877%2C930475173%2C930491721%2C930532223%2C931575678%2C931647067%2C932335530%2C932354322%2C932587904%2C933379779%2C933741761%2C934058577%2C934385411%2C934626176%2C935121612%2C935265606%2C935294746%2C935656176%2C935737672%2C935829747%2C935928125%2C936106374%2C937969104%2C948230798%2C971131535%2C979311729%2C980038661%2C982039177%2C985689377%2C988060933%2C988894826%2C989162691%2C989194283%2C989221981%2C989237683%2C989424157%2C989704516%2C990959366%2C990980683%2C992100753%2C992143827%2C992231963%2C993821403%2C994900544%2C995194163%2C995744562%2C995991993%2C996904490%2C997274253%2C997887476&dato=2023-11-13T12%3A34%3A07.468Z&updatedBefore=2026-11-13T12%3A34%3A07.468Z&includeChanges=true&size=1000&sort=id%2CASC&page=0"
+          },
+          {
+            "requested": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=918338063%2C993578843&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+            "saved": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=816118972%2C819615942%2C823025602%2C825531912%2C892122792%2C912053741%2C912121003%2C912562204%2C913003195%2C913310853%2C914370604%2C914437385%2C914683599%2C914689244%2C918086641%2C918338063%2C919135948%2C921443420%2C923600582%2C924181109%2C924278331%2C925647632%2C926029142%2C926353489%2C926394363%2C927039214%2C927216736%2C927290928%2C928524507%2C928787664%2C930150797%2C930416223%2C930421375%2C930439037%2C930476358%2C930533157%2C930582433%2C930944351%2C932179563%2C932337584%2C932505312%2C932932350%2C933391302%2C934194462%2C934516303%2C934661141%2C935319609%2C935603234%2C935777119%2C935832004%2C936137792%2C936304249%2C936566936%2C937960433%2C971630744%2C971810521%2C971810564%2C971875348%2C971973749%2C973469789%2C973656759%2C973768301%2C977464072%2C979314388%2C982620279%2C982640040%2C987836733%2C988080314%2C990910944%2C991015507%2C992217162%2C993829528%2C994572865%2C994941321%2C995202808%2C995808269%2C997331834%2C997959442%2C998108500%2C999363903&dato=2023-11-13T12%3A34%3A07.468Z&updatedBefore=2026-11-13T12%3A34%3A07.468Z&includeChanges=true&size=1000&sort=id%2CASC&page=0"
+          }
+        ],
+        "requested_urls": [
+          "https://pam-stilling-feed.nav.no/api/v1/feed/43d79fff-1808-42b4-8e86-987ef556a07f",
+          "https://pam-stilling-feed.nav.no/api/v1/feedentry/52c02dd7-b354-4765-a221-a594aca6b2d6",
+          "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=918266917&size=1000&page=0",
+          "https://data.brreg.no/enhetsregisteret/api/enheter/918266917/roller",
+          "https://data.brreg.no/regnskapsregisteret/regnskap/918266917",
+          "https://data.brreg.no/regnskapsregisteret/regnskap/aarsregnskap/kopi/918266917/aar",
+          "https://digitaliq.no/robots.txt",
+          "https://digitaliq.no/",
+          "https://digitaliq.no/no/artikler",
+          "https://digitaliq.no/nyheter",
+          "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=918266917&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+          "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=918338063%2C993578843&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0"
+        ],
+        "verification": {
+          "lines": 1,
+          "schema_valid": true,
+          "published_claims": 168,
+          "source_blobs_verified": 7,
+          "synthesis_companies": 1,
+          "synthesis_sentences": 22,
+          "synthesis_unverified_values": 0,
+          "financial_inputs_verified": 78,
+          "derived_financial_metrics_verified": 3,
+          "registry_events_verified": 0,
+          "filing_year_facts_verified": 10,
+          "briefing_companies": 1,
+          "briefing_sentences": 6,
+          "briefing_short_companies": 0,
+          "briefing_unverified_values": 0,
+          "briefing_topic_coverage": {
+            "activity": 1,
+            "change": 1,
+            "unknown": 1,
+            "financial": 1,
+            "takeaway": 1
+          },
+          "complete_briefing_contracts": 1,
+          "newer_filing_flags": 0
+        },
+        "output_sha256": "0bb5ab1db8961f18e4a0aa701a82521ac9b0125ea838638dddd92cac7abc5b97",
+        "snapshot_changes": [
+          {
+            "organisation_number": "918266917",
+            "type": "added",
+            "field": "subunits.unit.993578843",
+            "old_value": null,
+            "new_value": {
+              "organisation_number": "993578843",
+              "name": "Offline planted proven workplace",
+              "address": {
+                "adresse": [
+                  "Refresh proof workplace 8"
+                ],
+                "poststed": "BERGEN",
+                "postnummer": "5014",
+                "land": "Norge",
+                "landkode": "NO"
+              },
+              "nace": null,
+              "employees": null
+            },
+            "old_evidence_ids": [],
+            "new_evidence_ids": [
+              "8abda525a7647f6ac3cb7c79a3ad6055ef1adac08687007f1fedd81ba724e5f7"
+            ],
+            "materiality": "material",
+            "first_observed_at": "2026-11-13T12:34:07Z",
+            "last_observed_at": "2026-11-13T12:34:07Z",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=918266917&size=1000&page=0",
+            "retrieved_at": "2026-11-13T12:34:07Z",
+            "effective_at": null,
+            "source_class": "official_registry",
+            "old_locator": null,
+            "new_locator": "/_embedded/underenheter/1",
+            "old_content_sha256": null,
+            "new_content_sha256": "cf66317f96ccf0828b22c367ec8011e09b6dcc285c86638537b41eef2f08ee6e",
+            "status": "available"
+          }
+        ],
+        "coverage_observations": [
+          {
+            "section": "subunits",
+            "field": "subunits.detail.993578843.employees_reported",
+            "previous_state": "unchecked_field",
+            "current_state": "available",
+            "reason": "dated_field_not_checked_in_previous_extractor"
+          },
+          {
+            "section": "subunits",
+            "field": "subunits.detail.993578843.location.workplace",
+            "previous_state": "unchecked_field",
+            "current_state": "available",
+            "reason": "dated_field_not_checked_in_previous_extractor"
+          },
+          {
+            "section": "subunits",
+            "field": "subunits.detail.993578843.physical_address",
+            "previous_state": "unchecked_field",
+            "current_state": "available",
+            "reason": "dated_field_not_checked_in_previous_extractor"
+          }
+        ]
+      },
+      "repeat_execution": {
+        "argv": [
+          "run",
+          "--organisations",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\subunit-repeat\\companies.jsonl",
+          "--bulk",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\subunit-repeat\\registry.csv",
+          "--output",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\subunit-repeat\\envelopes.jsonl",
+          "--profiles-output",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\subunit-repeat\\profiles.jsonl",
+          "--report",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\subunit-repeat\\report.json",
+          "--run-id",
+          "offline-refresh-subunit-repeat",
+          "--expected-count",
+          "1"
+        ],
+        "previous_injected_by_offline_harness": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\subunit\\envelopes.jsonl",
+        "exit_code": 0,
+        "case": "subunit",
+        "unrecorded_urls": [],
+        "batch_aliases": [
+          {
+            "requested": "https://pam-stilling-feed.nav.no/api/v1/feed/43d79fff-1808-42b4-8e86-987ef556a07f",
+            "synthetic": "empty completed forward-tail scaffold; original forward bodies were not persisted; no ad fact derives from this response"
+          },
+          {
+            "requested": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=918266917&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+            "saved": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=812049712%2C818330952%2C821052092%2C823569262%2C827878782%2C830009612%2C837186102%2C852122722%2C865560052%2C877144232%2C891858442%2C894542012%2C910929097%2C911818191%2C912994392%2C913143930%2C913244702%2C913502752%2C914324769%2C915469132%2C915813372%2C915963102%2C916101538%2C916794894%2C917604509%2C917664986%2C918031502%2C918266917%2C918994793%2C920711197%2C921380259%2C922718059%2C923142827%2C924004843%2C924592753%2C924911719%2C925293180%2C925496251%2C926073737%2C926317490%2C926364715%2C926766228%2C926963023%2C927265222%2C927550563%2C928506908%2C928745813%2C929048709%2C929376935%2C930090077%2C930338877%2C930475173%2C930491721%2C930532223%2C931575678%2C931647067%2C932335530%2C932354322%2C932587904%2C933379779%2C933741761%2C934058577%2C934385411%2C934626176%2C935121612%2C935265606%2C935294746%2C935656176%2C935737672%2C935829747%2C935928125%2C936106374%2C937969104%2C948230798%2C971131535%2C979311729%2C980038661%2C982039177%2C985689377%2C988060933%2C988894826%2C989162691%2C989194283%2C989221981%2C989237683%2C989424157%2C989704516%2C990959366%2C990980683%2C992100753%2C992143827%2C992231963%2C993821403%2C994900544%2C995194163%2C995744562%2C995991993%2C996904490%2C997274253%2C997887476&dato=2023-11-13T12%3A34%3A07.468Z&updatedBefore=2026-11-13T12%3A34%3A07.468Z&includeChanges=true&size=1000&sort=id%2CASC&page=0"
+          },
+          {
+            "requested": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=918338063%2C993578843&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+            "saved": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=816118972%2C819615942%2C823025602%2C825531912%2C892122792%2C912053741%2C912121003%2C912562204%2C913003195%2C913310853%2C914370604%2C914437385%2C914683599%2C914689244%2C918086641%2C918338063%2C919135948%2C921443420%2C923600582%2C924181109%2C924278331%2C925647632%2C926029142%2C926353489%2C926394363%2C927039214%2C927216736%2C927290928%2C928524507%2C928787664%2C930150797%2C930416223%2C930421375%2C930439037%2C930476358%2C930533157%2C930582433%2C930944351%2C932179563%2C932337584%2C932505312%2C932932350%2C933391302%2C934194462%2C934516303%2C934661141%2C935319609%2C935603234%2C935777119%2C935832004%2C936137792%2C936304249%2C936566936%2C937960433%2C971630744%2C971810521%2C971810564%2C971875348%2C971973749%2C973469789%2C973656759%2C973768301%2C977464072%2C979314388%2C982620279%2C982640040%2C987836733%2C988080314%2C990910944%2C991015507%2C992217162%2C993829528%2C994572865%2C994941321%2C995202808%2C995808269%2C997331834%2C997959442%2C998108500%2C999363903&dato=2023-11-13T12%3A34%3A07.468Z&updatedBefore=2026-11-13T12%3A34%3A07.468Z&includeChanges=true&size=1000&sort=id%2CASC&page=0"
+          }
+        ],
+        "requested_urls": [
+          "https://pam-stilling-feed.nav.no/api/v1/feed/43d79fff-1808-42b4-8e86-987ef556a07f",
+          "https://pam-stilling-feed.nav.no/api/v1/feedentry/52c02dd7-b354-4765-a221-a594aca6b2d6",
+          "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=918266917&size=1000&page=0",
+          "https://data.brreg.no/enhetsregisteret/api/enheter/918266917/roller",
+          "https://data.brreg.no/regnskapsregisteret/regnskap/918266917",
+          "https://data.brreg.no/regnskapsregisteret/regnskap/aarsregnskap/kopi/918266917/aar",
+          "https://digitaliq.no/robots.txt",
+          "https://digitaliq.no/",
+          "https://digitaliq.no/no/artikler",
+          "https://digitaliq.no/nyheter",
+          "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=918266917&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+          "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=918338063%2C993578843&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0"
+        ],
+        "verification": {
+          "lines": 1,
+          "schema_valid": true,
+          "published_claims": 168,
+          "source_blobs_verified": 7,
+          "synthesis_companies": 1,
+          "synthesis_sentences": 22,
+          "synthesis_unverified_values": 0,
+          "financial_inputs_verified": 78,
+          "derived_financial_metrics_verified": 3,
+          "registry_events_verified": 0,
+          "filing_year_facts_verified": 10,
+          "briefing_companies": 1,
+          "briefing_sentences": 6,
+          "briefing_short_companies": 0,
+          "briefing_unverified_values": 0,
+          "briefing_topic_coverage": {
+            "activity": 1,
+            "change": 1,
+            "unknown": 1,
+            "financial": 1,
+            "takeaway": 1
+          },
+          "complete_briefing_contracts": 1,
+          "newer_filing_flags": 0
+        },
+        "output_sha256": "53b7fcc53fd219a8eae06805c823f34bf5ccbd1be7cd1c54053f96086e4272d7",
+        "snapshot_changes": [],
+        "coverage_observations": []
+      }
+    },
+    "nav_removed": {
+      "detected": true,
+      "supported_field_events": 1,
+      "unexpected_changes": [],
+      "idempotent_changes": 0,
+      "execution": {
+        "argv": [
+          "run",
+          "--organisations",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\nav_removed\\companies.jsonl",
+          "--bulk",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\nav_removed\\registry.csv",
+          "--output",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\nav_removed\\envelopes.jsonl",
+          "--profiles-output",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\nav_removed\\profiles.jsonl",
+          "--report",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\nav_removed\\report.json",
+          "--run-id",
+          "offline-refresh-nav_removed",
+          "--expected-count",
+          "1"
+        ],
+        "previous_injected_by_offline_harness": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\baseline\\envelopes.jsonl",
+        "exit_code": 0,
+        "case": "nav_removed",
+        "unrecorded_urls": [],
+        "batch_aliases": [
+          {
+            "requested": "https://pam-stilling-feed.nav.no/api/v1/feed/43d79fff-1808-42b4-8e86-987ef556a07f",
+            "synthetic": "empty completed forward-tail scaffold; original forward bodies were not persisted; no ad fact derives from this response"
+          },
+          {
+            "requested": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=918266917&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+            "saved": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=812049712%2C818330952%2C821052092%2C823569262%2C827878782%2C830009612%2C837186102%2C852122722%2C865560052%2C877144232%2C891858442%2C894542012%2C910929097%2C911818191%2C912994392%2C913143930%2C913244702%2C913502752%2C914324769%2C915469132%2C915813372%2C915963102%2C916101538%2C916794894%2C917604509%2C917664986%2C918031502%2C918266917%2C918994793%2C920711197%2C921380259%2C922718059%2C923142827%2C924004843%2C924592753%2C924911719%2C925293180%2C925496251%2C926073737%2C926317490%2C926364715%2C926766228%2C926963023%2C927265222%2C927550563%2C928506908%2C928745813%2C929048709%2C929376935%2C930090077%2C930338877%2C930475173%2C930491721%2C930532223%2C931575678%2C931647067%2C932335530%2C932354322%2C932587904%2C933379779%2C933741761%2C934058577%2C934385411%2C934626176%2C935121612%2C935265606%2C935294746%2C935656176%2C935737672%2C935829747%2C935928125%2C936106374%2C937969104%2C948230798%2C971131535%2C979311729%2C980038661%2C982039177%2C985689377%2C988060933%2C988894826%2C989162691%2C989194283%2C989221981%2C989237683%2C989424157%2C989704516%2C990959366%2C990980683%2C992100753%2C992143827%2C992231963%2C993821403%2C994900544%2C995194163%2C995744562%2C995991993%2C996904490%2C997274253%2C997887476&dato=2023-11-13T12%3A34%3A07.468Z&updatedBefore=2026-11-13T12%3A34%3A07.468Z&includeChanges=true&size=1000&sort=id%2CASC&page=0"
+          },
+          {
+            "requested": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=918338063&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+            "saved": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=816118972%2C819615942%2C823025602%2C825531912%2C892122792%2C912053741%2C912121003%2C912562204%2C913003195%2C913310853%2C914370604%2C914437385%2C914683599%2C914689244%2C918086641%2C918338063%2C919135948%2C921443420%2C923600582%2C924181109%2C924278331%2C925647632%2C926029142%2C926353489%2C926394363%2C927039214%2C927216736%2C927290928%2C928524507%2C928787664%2C930150797%2C930416223%2C930421375%2C930439037%2C930476358%2C930533157%2C930582433%2C930944351%2C932179563%2C932337584%2C932505312%2C932932350%2C933391302%2C934194462%2C934516303%2C934661141%2C935319609%2C935603234%2C935777119%2C935832004%2C936137792%2C936304249%2C936566936%2C937960433%2C971630744%2C971810521%2C971810564%2C971875348%2C971973749%2C973469789%2C973656759%2C973768301%2C977464072%2C979314388%2C982620279%2C982640040%2C987836733%2C988080314%2C990910944%2C991015507%2C992217162%2C993829528%2C994572865%2C994941321%2C995202808%2C995808269%2C997331834%2C997959442%2C998108500%2C999363903&dato=2023-11-13T12%3A34%3A07.468Z&updatedBefore=2026-11-13T12%3A34%3A07.468Z&includeChanges=true&size=1000&sort=id%2CASC&page=0"
+          }
+        ],
+        "requested_urls": [
+          "https://pam-stilling-feed.nav.no/api/v1/feed/43d79fff-1808-42b4-8e86-987ef556a07f",
+          "https://pam-stilling-feed.nav.no/api/v1/feedentry/52c02dd7-b354-4765-a221-a594aca6b2d6",
+          "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=918266917&size=1000&page=0",
+          "https://data.brreg.no/enhetsregisteret/api/enheter/918266917/roller",
+          "https://data.brreg.no/regnskapsregisteret/regnskap/918266917",
+          "https://data.brreg.no/regnskapsregisteret/regnskap/aarsregnskap/kopi/918266917/aar",
+          "https://digitaliq.no/robots.txt",
+          "https://digitaliq.no/",
+          "https://digitaliq.no/no/artikler",
+          "https://digitaliq.no/nyheter",
+          "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=918266917&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+          "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=918338063&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0"
+        ],
+        "verification": {
+          "lines": 1,
+          "schema_valid": true,
+          "published_claims": 163,
+          "source_blobs_verified": 6,
+          "synthesis_companies": 1,
+          "synthesis_sentences": 20,
+          "synthesis_unverified_values": 0,
+          "financial_inputs_verified": 78,
+          "derived_financial_metrics_verified": 3,
+          "registry_events_verified": 0,
+          "filing_year_facts_verified": 10,
+          "briefing_companies": 1,
+          "briefing_sentences": 6,
+          "briefing_short_companies": 0,
+          "briefing_unverified_values": 0,
+          "briefing_topic_coverage": {
+            "activity": 1,
+            "change": 1,
+            "unknown": 1,
+            "financial": 1,
+            "takeaway": 1
+          },
+          "complete_briefing_contracts": 1,
+          "newer_filing_flags": 0
+        },
+        "output_sha256": "82d22b80930660b646e94c066571806c44f6e62018d0a3fe9674caf146d95958",
+        "snapshot_changes": [
+          {
+            "organisation_number": "918266917",
+            "type": "closed_job",
+            "field": "hiring.job.52c02dd7-b354-4765-a221-a594aca6b2d6",
+            "old_value": {
+              "uuid": "52c02dd7-b354-4765-a221-a594aca6b2d6",
+              "employer_orgnr": "918338063",
+              "title": "IT-student som snakker og skriver svensk s\u00f8kes til deltidsjobb i Bergen",
+              "location": [
+                {
+                  "municipality": "BERGEN",
+                  "city": "BERGEN"
+                }
+              ],
+              "published": "2026-11-11T11:35:38+01:00",
+              "expires": "2026-12-02T00:00:00+01:00",
+              "occupation_categories": [
+                {
+                  "level1": "IT",
+                  "level2": "Utvikling"
+                }
+              ],
+              "url": "https://arbeidsplassen.nav.no/stillinger/stilling/52c02dd7-b354-4765-a221-a594aca6b2d6",
+              "availability": {
+                "location": "available",
+                "occupation_categories": "available"
+              },
+              "matched_via": "subunit 918338063"
+            },
+            "new_value": null,
+            "old_evidence_ids": [
+              "e05504b34114eef0543b81b1d791e7248408024a9ee739eb32d570acfff9cf87"
+            ],
+            "new_evidence_ids": [
+              "d5f8fc6c92b11400181c85a1e897041e1df190139753155521eb09243a17e1af"
+            ],
+            "materiality": "material",
+            "first_observed_at": "2026-11-13T12:34:07Z",
+            "last_observed_at": "2026-11-13T12:34:07Z",
+            "source_url": "https://pam-stilling-feed.nav.no/api/v1/feedentry/52c02dd7-b354-4765-a221-a594aca6b2d6",
+            "retrieved_at": "2026-11-13T12:34:07Z",
+            "effective_at": null,
+            "source_class": "official_nav",
+            "old_locator": "/ad_content",
+            "new_locator": "/status",
+            "old_content_sha256": "19e1655000bd708bc5beb91b331fe6a87e0602d5cd1b9d92ec6f36e3b3f215c3",
+            "new_content_sha256": "0308cddb4eda193f4275fa6f8096acf279b903c492c8d74cc44053de6814a6b4",
+            "status": "not_available"
+          }
+        ],
+        "coverage_observations": []
+      },
+      "repeat_execution": {
+        "argv": [
+          "run",
+          "--organisations",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\nav_removed-repeat\\companies.jsonl",
+          "--bulk",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\nav_removed-repeat\\registry.csv",
+          "--output",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\nav_removed-repeat\\envelopes.jsonl",
+          "--profiles-output",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\nav_removed-repeat\\profiles.jsonl",
+          "--report",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\nav_removed-repeat\\report.json",
+          "--run-id",
+          "offline-refresh-nav_removed-repeat",
+          "--expected-count",
+          "1"
+        ],
+        "previous_injected_by_offline_harness": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\nav_removed\\envelopes.jsonl",
+        "exit_code": 0,
+        "case": "nav_removed",
+        "unrecorded_urls": [],
+        "batch_aliases": [
+          {
+            "requested": "https://pam-stilling-feed.nav.no/api/v1/feed/43d79fff-1808-42b4-8e86-987ef556a07f",
+            "synthetic": "empty completed forward-tail scaffold; original forward bodies were not persisted; no ad fact derives from this response"
+          },
+          {
+            "requested": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=918266917&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+            "saved": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=812049712%2C818330952%2C821052092%2C823569262%2C827878782%2C830009612%2C837186102%2C852122722%2C865560052%2C877144232%2C891858442%2C894542012%2C910929097%2C911818191%2C912994392%2C913143930%2C913244702%2C913502752%2C914324769%2C915469132%2C915813372%2C915963102%2C916101538%2C916794894%2C917604509%2C917664986%2C918031502%2C918266917%2C918994793%2C920711197%2C921380259%2C922718059%2C923142827%2C924004843%2C924592753%2C924911719%2C925293180%2C925496251%2C926073737%2C926317490%2C926364715%2C926766228%2C926963023%2C927265222%2C927550563%2C928506908%2C928745813%2C929048709%2C929376935%2C930090077%2C930338877%2C930475173%2C930491721%2C930532223%2C931575678%2C931647067%2C932335530%2C932354322%2C932587904%2C933379779%2C933741761%2C934058577%2C934385411%2C934626176%2C935121612%2C935265606%2C935294746%2C935656176%2C935737672%2C935829747%2C935928125%2C936106374%2C937969104%2C948230798%2C971131535%2C979311729%2C980038661%2C982039177%2C985689377%2C988060933%2C988894826%2C989162691%2C989194283%2C989221981%2C989237683%2C989424157%2C989704516%2C990959366%2C990980683%2C992100753%2C992143827%2C992231963%2C993821403%2C994900544%2C995194163%2C995744562%2C995991993%2C996904490%2C997274253%2C997887476&dato=2023-11-13T12%3A34%3A07.468Z&updatedBefore=2026-11-13T12%3A34%3A07.468Z&includeChanges=true&size=1000&sort=id%2CASC&page=0"
+          },
+          {
+            "requested": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=918338063&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+            "saved": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=816118972%2C819615942%2C823025602%2C825531912%2C892122792%2C912053741%2C912121003%2C912562204%2C913003195%2C913310853%2C914370604%2C914437385%2C914683599%2C914689244%2C918086641%2C918338063%2C919135948%2C921443420%2C923600582%2C924181109%2C924278331%2C925647632%2C926029142%2C926353489%2C926394363%2C927039214%2C927216736%2C927290928%2C928524507%2C928787664%2C930150797%2C930416223%2C930421375%2C930439037%2C930476358%2C930533157%2C930582433%2C930944351%2C932179563%2C932337584%2C932505312%2C932932350%2C933391302%2C934194462%2C934516303%2C934661141%2C935319609%2C935603234%2C935777119%2C935832004%2C936137792%2C936304249%2C936566936%2C937960433%2C971630744%2C971810521%2C971810564%2C971875348%2C971973749%2C973469789%2C973656759%2C973768301%2C977464072%2C979314388%2C982620279%2C982640040%2C987836733%2C988080314%2C990910944%2C991015507%2C992217162%2C993829528%2C994572865%2C994941321%2C995202808%2C995808269%2C997331834%2C997959442%2C998108500%2C999363903&dato=2023-11-13T12%3A34%3A07.468Z&updatedBefore=2026-11-13T12%3A34%3A07.468Z&includeChanges=true&size=1000&sort=id%2CASC&page=0"
+          }
+        ],
+        "requested_urls": [
+          "https://pam-stilling-feed.nav.no/api/v1/feed/43d79fff-1808-42b4-8e86-987ef556a07f",
+          "https://pam-stilling-feed.nav.no/api/v1/feedentry/52c02dd7-b354-4765-a221-a594aca6b2d6",
+          "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=918266917&size=1000&page=0",
+          "https://data.brreg.no/enhetsregisteret/api/enheter/918266917/roller",
+          "https://data.brreg.no/regnskapsregisteret/regnskap/918266917",
+          "https://data.brreg.no/regnskapsregisteret/regnskap/aarsregnskap/kopi/918266917/aar",
+          "https://digitaliq.no/robots.txt",
+          "https://digitaliq.no/",
+          "https://digitaliq.no/no/artikler",
+          "https://digitaliq.no/nyheter",
+          "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=918266917&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+          "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=918338063&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0"
+        ],
+        "verification": {
+          "lines": 1,
+          "schema_valid": true,
+          "published_claims": 163,
+          "source_blobs_verified": 6,
+          "synthesis_companies": 1,
+          "synthesis_sentences": 20,
+          "synthesis_unverified_values": 0,
+          "financial_inputs_verified": 78,
+          "derived_financial_metrics_verified": 3,
+          "registry_events_verified": 0,
+          "filing_year_facts_verified": 10,
+          "briefing_companies": 1,
+          "briefing_sentences": 6,
+          "briefing_short_companies": 0,
+          "briefing_unverified_values": 0,
+          "briefing_topic_coverage": {
+            "activity": 1,
+            "change": 1,
+            "unknown": 1,
+            "financial": 1,
+            "takeaway": 1
+          },
+          "complete_briefing_contracts": 1,
+          "newer_filing_flags": 0
+        },
+        "output_sha256": "4f258b67047b90fc1cbb68d0672a23e5cf8851721148485fd16a5b0d61bc7552",
+        "snapshot_changes": [],
+        "coverage_observations": []
+      }
+    },
+    "website_404": {
+      "detected": true,
+      "supported_field_events": 6,
+      "unexpected_changes": [],
+      "idempotent_changes": 0,
+      "execution": {
+        "argv": [
+          "run",
+          "--organisations",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\website_404\\companies.jsonl",
+          "--bulk",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\website_404\\registry.csv",
+          "--output",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\website_404\\envelopes.jsonl",
+          "--profiles-output",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\website_404\\profiles.jsonl",
+          "--report",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\website_404\\report.json",
+          "--run-id",
+          "offline-refresh-website_404",
+          "--expected-count",
+          "1"
+        ],
+        "previous_injected_by_offline_harness": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\baseline\\envelopes.jsonl",
+        "exit_code": 0,
+        "case": "website_404",
+        "unrecorded_urls": [],
+        "batch_aliases": [
+          {
+            "requested": "https://pam-stilling-feed.nav.no/api/v1/feed/43d79fff-1808-42b4-8e86-987ef556a07f",
+            "synthetic": "empty completed forward-tail scaffold; original forward bodies were not persisted; no ad fact derives from this response"
+          },
+          {
+            "requested": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=918266917&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+            "saved": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=812049712%2C818330952%2C821052092%2C823569262%2C827878782%2C830009612%2C837186102%2C852122722%2C865560052%2C877144232%2C891858442%2C894542012%2C910929097%2C911818191%2C912994392%2C913143930%2C913244702%2C913502752%2C914324769%2C915469132%2C915813372%2C915963102%2C916101538%2C916794894%2C917604509%2C917664986%2C918031502%2C918266917%2C918994793%2C920711197%2C921380259%2C922718059%2C923142827%2C924004843%2C924592753%2C924911719%2C925293180%2C925496251%2C926073737%2C926317490%2C926364715%2C926766228%2C926963023%2C927265222%2C927550563%2C928506908%2C928745813%2C929048709%2C929376935%2C930090077%2C930338877%2C930475173%2C930491721%2C930532223%2C931575678%2C931647067%2C932335530%2C932354322%2C932587904%2C933379779%2C933741761%2C934058577%2C934385411%2C934626176%2C935121612%2C935265606%2C935294746%2C935656176%2C935737672%2C935829747%2C935928125%2C936106374%2C937969104%2C948230798%2C971131535%2C979311729%2C980038661%2C982039177%2C985689377%2C988060933%2C988894826%2C989162691%2C989194283%2C989221981%2C989237683%2C989424157%2C989704516%2C990959366%2C990980683%2C992100753%2C992143827%2C992231963%2C993821403%2C994900544%2C995194163%2C995744562%2C995991993%2C996904490%2C997274253%2C997887476&dato=2023-11-13T12%3A34%3A07.468Z&updatedBefore=2026-11-13T12%3A34%3A07.468Z&includeChanges=true&size=1000&sort=id%2CASC&page=0"
+          },
+          {
+            "requested": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=918338063&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+            "saved": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=816118972%2C819615942%2C823025602%2C825531912%2C892122792%2C912053741%2C912121003%2C912562204%2C913003195%2C913310853%2C914370604%2C914437385%2C914683599%2C914689244%2C918086641%2C918338063%2C919135948%2C921443420%2C923600582%2C924181109%2C924278331%2C925647632%2C926029142%2C926353489%2C926394363%2C927039214%2C927216736%2C927290928%2C928524507%2C928787664%2C930150797%2C930416223%2C930421375%2C930439037%2C930476358%2C930533157%2C930582433%2C930944351%2C932179563%2C932337584%2C932505312%2C932932350%2C933391302%2C934194462%2C934516303%2C934661141%2C935319609%2C935603234%2C935777119%2C935832004%2C936137792%2C936304249%2C936566936%2C937960433%2C971630744%2C971810521%2C971810564%2C971875348%2C971973749%2C973469789%2C973656759%2C973768301%2C977464072%2C979314388%2C982620279%2C982640040%2C987836733%2C988080314%2C990910944%2C991015507%2C992217162%2C993829528%2C994572865%2C994941321%2C995202808%2C995808269%2C997331834%2C997959442%2C998108500%2C999363903&dato=2023-11-13T12%3A34%3A07.468Z&updatedBefore=2026-11-13T12%3A34%3A07.468Z&includeChanges=true&size=1000&sort=id%2CASC&page=0"
+          }
+        ],
+        "requested_urls": [
+          "https://pam-stilling-feed.nav.no/api/v1/feed/43d79fff-1808-42b4-8e86-987ef556a07f",
+          "https://pam-stilling-feed.nav.no/api/v1/feedentry/52c02dd7-b354-4765-a221-a594aca6b2d6",
+          "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=918266917&size=1000&page=0",
+          "https://data.brreg.no/enhetsregisteret/api/enheter/918266917/roller",
+          "https://data.brreg.no/regnskapsregisteret/regnskap/918266917",
+          "https://data.brreg.no/regnskapsregisteret/regnskap/aarsregnskap/kopi/918266917/aar",
+          "https://digitaliq.no/robots.txt",
+          "https://digitaliq.no/",
+          "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=918266917&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+          "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=918338063&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0"
+        ],
+        "verification": {
+          "lines": 1,
+          "schema_valid": true,
+          "published_claims": 158,
+          "source_blobs_verified": 6,
+          "synthesis_companies": 1,
+          "synthesis_sentences": 24,
+          "synthesis_unverified_values": 0,
+          "financial_inputs_verified": 78,
+          "derived_financial_metrics_verified": 3,
+          "registry_events_verified": 0,
+          "filing_year_facts_verified": 10,
+          "briefing_companies": 1,
+          "briefing_sentences": 6,
+          "briefing_short_companies": 0,
+          "briefing_unverified_values": 0,
+          "briefing_topic_coverage": {
+            "activity": 1,
+            "change": 1,
+            "unknown": 1,
+            "financial": 1,
+            "takeaway": 1
+          },
+          "complete_briefing_contracts": 1,
+          "newer_filing_flags": 0
+        },
+        "output_sha256": "aa26845576c93517e470d6e35e6a29b9ed1a4527bdd9d4811e399f2e877de948",
+        "snapshot_changes": [
+          {
+            "organisation_number": "918266917",
+            "type": "removed",
+            "field": "contact.email.c3937c781e4a48f1687b",
+            "old_value": "post@digitaliq.no",
+            "new_value": null,
+            "old_evidence_ids": [
+              "eb5c2eaf4ec41da90a2ee7c36127c7d182244e0366caeeab1d2dcb082b6b0393"
+            ],
+            "new_evidence_ids": [],
+            "materiality": "material",
+            "first_observed_at": "2026-11-13T12:34:07Z",
+            "last_observed_at": "2026-11-13T12:34:07Z",
+            "source_url": null,
+            "retrieved_at": null,
+            "effective_at": null,
+            "source_class": null,
+            "old_locator": "contact:post@digitaliq.no",
+            "new_locator": null,
+            "old_content_sha256": "f276bedb10cc322ab3a3d725f9edaf262639aaab2c1dfcd6744d153efcf498e9",
+            "new_content_sha256": null,
+            "status": "not_available"
+          },
+          {
+            "organisation_number": "918266917",
+            "type": "removed",
+            "field": "contact.phone.35d55731bad996fdc8e9",
+            "old_value": "+4746298666",
+            "new_value": null,
+            "old_evidence_ids": [
+              "380c3f1ac0e85237d80c753bb672675e5b5edf4f0700e32871f92be42a12b3f2"
+            ],
+            "new_evidence_ids": [],
+            "materiality": "material",
+            "first_observed_at": "2026-11-13T12:34:07Z",
+            "last_observed_at": "2026-11-13T12:34:07Z",
+            "source_url": null,
+            "retrieved_at": null,
+            "effective_at": null,
+            "source_class": null,
+            "old_locator": "contact:+4746298666",
+            "new_locator": null,
+            "old_content_sha256": "f276bedb10cc322ab3a3d725f9edaf262639aaab2c1dfcd6744d153efcf498e9",
+            "new_content_sha256": null,
+            "status": "not_available"
+          },
+          {
+            "organisation_number": "918266917",
+            "type": "removed",
+            "field": "official_website",
+            "old_value": {
+              "final_url": "https://digitaliq.no",
+              "identity_level": "VERIFIED",
+              "proof_type": "orgnr_on_page",
+              "proof_page_url": "https://digitaliq.no/",
+              "signals": [],
+              "points": 0,
+              "candidate_origin": "registry_website",
+              "relationship_note": null,
+              "other_orgnrs": [],
+              "registry_contact_matches": {
+                "email_domain": "digitaliq.no"
+              }
+            },
+            "new_value": null,
+            "old_evidence_ids": [
+              "34f0fe56a683a2536d411a8411be5ccebb9649d413240eb00538c6017ff956de",
+              "980ed42cf6c482bba86ae735d7010f3556d8e4612f1d9880e66a113b29085904",
+              "86eb30d35a1c445dc8a092676b83328bd721d0176c14431db12c54babfd544ec"
+            ],
+            "new_evidence_ids": [],
+            "materiality": "material",
+            "first_observed_at": "2026-11-13T12:34:07Z",
+            "last_observed_at": "2026-11-13T12:34:07Z",
+            "source_url": null,
+            "retrieved_at": null,
+            "effective_at": null,
+            "source_class": null,
+            "old_locator": "identity-proof:918266917",
+            "new_locator": null,
+            "old_content_sha256": "f276bedb10cc322ab3a3d725f9edaf262639aaab2c1dfcd6744d153efcf498e9",
+            "new_content_sha256": null,
+            "status": "not_available"
+          },
+          {
+            "organisation_number": "918266917",
+            "type": "removed",
+            "field": "public_brand",
+            "old_value": "DIGITALIQ / MittVarsel / TransparencyGate",
+            "new_value": null,
+            "old_evidence_ids": [
+              "a1bf6d83167a3b8fb1ca6b646adaab93ec4231d80caf7985b5762584909d4771"
+            ],
+            "new_evidence_ids": [],
+            "materiality": "material",
+            "first_observed_at": "2026-11-13T12:34:07Z",
+            "last_observed_at": "2026-11-13T12:34:07Z",
+            "source_url": null,
+            "retrieved_at": null,
+            "effective_at": null,
+            "source_class": null,
+            "old_locator": "meta:brand",
+            "new_locator": null,
+            "old_content_sha256": "f276bedb10cc322ab3a3d725f9edaf262639aaab2c1dfcd6744d153efcf498e9",
+            "new_content_sha256": null,
+            "status": "not_available"
+          },
+          {
+            "organisation_number": "918266917",
+            "type": "removed",
+            "field": "website_description.meta_description.ca2deb1401d66b93",
+            "old_value": {
+              "text": "Digitaliq AS leverer skybaserte l\u00f8sninger for risikoh\u00e5ndtering og compliance.",
+              "kind": "meta_description",
+              "self_description": true,
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "18279dadeb720b47fabe3744ec8197d88bb69bdbbfb021685e960d92ab19f8e8"
+            },
+            "new_value": null,
+            "old_evidence_ids": [
+              "6c35ceacee91faeec07c19749c234cd618ed4fe4ab2bdfee0fe260dfc84abc09",
+              "34f0fe56a683a2536d411a8411be5ccebb9649d413240eb00538c6017ff956de",
+              "980ed42cf6c482bba86ae735d7010f3556d8e4612f1d9880e66a113b29085904",
+              "86eb30d35a1c445dc8a092676b83328bd721d0176c14431db12c54babfd544ec"
+            ],
+            "new_evidence_ids": [],
+            "materiality": "material",
+            "first_observed_at": "2026-11-13T12:34:07Z",
+            "last_observed_at": "2026-11-13T12:34:07Z",
+            "source_url": null,
+            "retrieved_at": null,
+            "effective_at": null,
+            "source_class": null,
+            "old_locator": "meta:description@content",
+            "new_locator": null,
+            "old_content_sha256": "f276bedb10cc322ab3a3d725f9edaf262639aaab2c1dfcd6744d153efcf498e9",
+            "new_content_sha256": null,
+            "status": "not_available"
+          },
+          {
+            "organisation_number": "918266917",
+            "type": "removed",
+            "field": "website_description.og_description.ca2deb1401d66b93",
+            "old_value": {
+              "text": "Digitaliq AS leverer skybaserte l\u00f8sninger for risikoh\u00e5ndtering og compliance.",
+              "kind": "og_description",
+              "self_description": true,
+              "identity_level": "VERIFIED",
+              "identity_claim_id": "18279dadeb720b47fabe3744ec8197d88bb69bdbbfb021685e960d92ab19f8e8"
+            },
+            "new_value": null,
+            "old_evidence_ids": [
+              "dd00ce99133e8f3c9f29e5489a4239f216d84467bcb6bb3c4c1d03f19cfcaaf6",
+              "34f0fe56a683a2536d411a8411be5ccebb9649d413240eb00538c6017ff956de",
+              "980ed42cf6c482bba86ae735d7010f3556d8e4612f1d9880e66a113b29085904",
+              "86eb30d35a1c445dc8a092676b83328bd721d0176c14431db12c54babfd544ec"
+            ],
+            "new_evidence_ids": [],
+            "materiality": "material",
+            "first_observed_at": "2026-11-13T12:34:07Z",
+            "last_observed_at": "2026-11-13T12:34:07Z",
+            "source_url": null,
+            "retrieved_at": null,
+            "effective_at": null,
+            "source_class": null,
+            "old_locator": "meta:og:description@content",
+            "new_locator": null,
+            "old_content_sha256": "f276bedb10cc322ab3a3d725f9edaf262639aaab2c1dfcd6744d153efcf498e9",
+            "new_content_sha256": null,
+            "status": "not_available"
+          }
+        ],
+        "coverage_observations": []
+      },
+      "repeat_execution": {
+        "argv": [
+          "run",
+          "--organisations",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\website_404-repeat\\companies.jsonl",
+          "--bulk",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\website_404-repeat\\registry.csv",
+          "--output",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\website_404-repeat\\envelopes.jsonl",
+          "--profiles-output",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\website_404-repeat\\profiles.jsonl",
+          "--report",
+          "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\website_404-repeat\\report.json",
+          "--run-id",
+          "offline-refresh-website_404-repeat",
+          "--expected-count",
+          "1"
+        ],
+        "previous_injected_by_offline_harness": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\website_404\\envelopes.jsonl",
+        "exit_code": 0,
+        "case": "website_404",
+        "unrecorded_urls": [],
+        "batch_aliases": [
+          {
+            "requested": "https://pam-stilling-feed.nav.no/api/v1/feed/43d79fff-1808-42b4-8e86-987ef556a07f",
+            "synthetic": "empty completed forward-tail scaffold; original forward bodies were not persisted; no ad fact derives from this response"
+          },
+          {
+            "requested": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=918266917&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+            "saved": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=812049712%2C818330952%2C821052092%2C823569262%2C827878782%2C830009612%2C837186102%2C852122722%2C865560052%2C877144232%2C891858442%2C894542012%2C910929097%2C911818191%2C912994392%2C913143930%2C913244702%2C913502752%2C914324769%2C915469132%2C915813372%2C915963102%2C916101538%2C916794894%2C917604509%2C917664986%2C918031502%2C918266917%2C918994793%2C920711197%2C921380259%2C922718059%2C923142827%2C924004843%2C924592753%2C924911719%2C925293180%2C925496251%2C926073737%2C926317490%2C926364715%2C926766228%2C926963023%2C927265222%2C927550563%2C928506908%2C928745813%2C929048709%2C929376935%2C930090077%2C930338877%2C930475173%2C930491721%2C930532223%2C931575678%2C931647067%2C932335530%2C932354322%2C932587904%2C933379779%2C933741761%2C934058577%2C934385411%2C934626176%2C935121612%2C935265606%2C935294746%2C935656176%2C935737672%2C935829747%2C935928125%2C936106374%2C937969104%2C948230798%2C971131535%2C979311729%2C980038661%2C982039177%2C985689377%2C988060933%2C988894826%2C989162691%2C989194283%2C989221981%2C989237683%2C989424157%2C989704516%2C990959366%2C990980683%2C992100753%2C992143827%2C992231963%2C993821403%2C994900544%2C995194163%2C995744562%2C995991993%2C996904490%2C997274253%2C997887476&dato=2023-11-13T12%3A34%3A07.468Z&updatedBefore=2026-11-13T12%3A34%3A07.468Z&includeChanges=true&size=1000&sort=id%2CASC&page=0"
+          },
+          {
+            "requested": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=918338063&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+            "saved": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=816118972%2C819615942%2C823025602%2C825531912%2C892122792%2C912053741%2C912121003%2C912562204%2C913003195%2C913310853%2C914370604%2C914437385%2C914683599%2C914689244%2C918086641%2C918338063%2C919135948%2C921443420%2C923600582%2C924181109%2C924278331%2C925647632%2C926029142%2C926353489%2C926394363%2C927039214%2C927216736%2C927290928%2C928524507%2C928787664%2C930150797%2C930416223%2C930421375%2C930439037%2C930476358%2C930533157%2C930582433%2C930944351%2C932179563%2C932337584%2C932505312%2C932932350%2C933391302%2C934194462%2C934516303%2C934661141%2C935319609%2C935603234%2C935777119%2C935832004%2C936137792%2C936304249%2C936566936%2C937960433%2C971630744%2C971810521%2C971810564%2C971875348%2C971973749%2C973469789%2C973656759%2C973768301%2C977464072%2C979314388%2C982620279%2C982640040%2C987836733%2C988080314%2C990910944%2C991015507%2C992217162%2C993829528%2C994572865%2C994941321%2C995202808%2C995808269%2C997331834%2C997959442%2C998108500%2C999363903&dato=2023-11-13T12%3A34%3A07.468Z&updatedBefore=2026-11-13T12%3A34%3A07.468Z&includeChanges=true&size=1000&sort=id%2CASC&page=0"
+          }
+        ],
+        "requested_urls": [
+          "https://pam-stilling-feed.nav.no/api/v1/feed/43d79fff-1808-42b4-8e86-987ef556a07f",
+          "https://pam-stilling-feed.nav.no/api/v1/feedentry/52c02dd7-b354-4765-a221-a594aca6b2d6",
+          "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=918266917&size=1000&page=0",
+          "https://data.brreg.no/enhetsregisteret/api/enheter/918266917/roller",
+          "https://data.brreg.no/regnskapsregisteret/regnskap/918266917",
+          "https://data.brreg.no/regnskapsregisteret/regnskap/aarsregnskap/kopi/918266917/aar",
+          "https://digitaliq.no/robots.txt",
+          "https://digitaliq.no/",
+          "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=918266917&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+          "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=918338063&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0"
+        ],
+        "verification": {
+          "lines": 1,
+          "schema_valid": true,
+          "published_claims": 158,
+          "source_blobs_verified": 6,
+          "synthesis_companies": 1,
+          "synthesis_sentences": 19,
+          "synthesis_unverified_values": 0,
+          "financial_inputs_verified": 78,
+          "derived_financial_metrics_verified": 3,
+          "registry_events_verified": 0,
+          "filing_year_facts_verified": 10,
+          "briefing_companies": 1,
+          "briefing_sentences": 6,
+          "briefing_short_companies": 0,
+          "briefing_unverified_values": 0,
+          "briefing_topic_coverage": {
+            "activity": 1,
+            "change": 1,
+            "unknown": 1,
+            "financial": 1,
+            "takeaway": 1
+          },
+          "complete_briefing_contracts": 1,
+          "newer_filing_flags": 0
+        },
+        "output_sha256": "74803d127e9848ebe720a027579a8c64973e59a00cae2db264b624dfc4c76238",
+        "snapshot_changes": [],
+        "coverage_observations": []
+      }
+    }
+  },
+  "unchanged_execution": {
+    "argv": [
+      "run",
+      "--organisations",
+      "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\unchanged\\companies.jsonl",
+      "--bulk",
+      "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\unchanged\\registry.csv",
+      "--output",
+      "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\unchanged\\envelopes.jsonl",
+      "--profiles-output",
+      "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\unchanged\\profiles.jsonl",
+      "--report",
+      "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\unchanged\\report.json",
+      "--run-id",
+      "offline-refresh-unchanged",
+      "--expected-count",
+      "1"
+    ],
+    "previous_injected_by_offline_harness": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\baseline\\envelopes.jsonl",
+    "exit_code": 0,
+    "case": "unchanged",
+    "unrecorded_urls": [],
+    "batch_aliases": [
+      {
+        "requested": "https://pam-stilling-feed.nav.no/api/v1/feed/43d79fff-1808-42b4-8e86-987ef556a07f",
+        "synthetic": "empty completed forward-tail scaffold; original forward bodies were not persisted; no ad fact derives from this response"
+      },
+      {
+        "requested": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=918266917&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+        "saved": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=812049712%2C818330952%2C821052092%2C823569262%2C827878782%2C830009612%2C837186102%2C852122722%2C865560052%2C877144232%2C891858442%2C894542012%2C910929097%2C911818191%2C912994392%2C913143930%2C913244702%2C913502752%2C914324769%2C915469132%2C915813372%2C915963102%2C916101538%2C916794894%2C917604509%2C917664986%2C918031502%2C918266917%2C918994793%2C920711197%2C921380259%2C922718059%2C923142827%2C924004843%2C924592753%2C924911719%2C925293180%2C925496251%2C926073737%2C926317490%2C926364715%2C926766228%2C926963023%2C927265222%2C927550563%2C928506908%2C928745813%2C929048709%2C929376935%2C930090077%2C930338877%2C930475173%2C930491721%2C930532223%2C931575678%2C931647067%2C932335530%2C932354322%2C932587904%2C933379779%2C933741761%2C934058577%2C934385411%2C934626176%2C935121612%2C935265606%2C935294746%2C935656176%2C935737672%2C935829747%2C935928125%2C936106374%2C937969104%2C948230798%2C971131535%2C979311729%2C980038661%2C982039177%2C985689377%2C988060933%2C988894826%2C989162691%2C989194283%2C989221981%2C989237683%2C989424157%2C989704516%2C990959366%2C990980683%2C992100753%2C992143827%2C992231963%2C993821403%2C994900544%2C995194163%2C995744562%2C995991993%2C996904490%2C997274253%2C997887476&dato=2023-11-13T12%3A34%3A07.468Z&updatedBefore=2026-11-13T12%3A34%3A07.468Z&includeChanges=true&size=1000&sort=id%2CASC&page=0"
+      },
+      {
+        "requested": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=918338063&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+        "saved": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=816118972%2C819615942%2C823025602%2C825531912%2C892122792%2C912053741%2C912121003%2C912562204%2C913003195%2C913310853%2C914370604%2C914437385%2C914683599%2C914689244%2C918086641%2C918338063%2C919135948%2C921443420%2C923600582%2C924181109%2C924278331%2C925647632%2C926029142%2C926353489%2C926394363%2C927039214%2C927216736%2C927290928%2C928524507%2C928787664%2C930150797%2C930416223%2C930421375%2C930439037%2C930476358%2C930533157%2C930582433%2C930944351%2C932179563%2C932337584%2C932505312%2C932932350%2C933391302%2C934194462%2C934516303%2C934661141%2C935319609%2C935603234%2C935777119%2C935832004%2C936137792%2C936304249%2C936566936%2C937960433%2C971630744%2C971810521%2C971810564%2C971875348%2C971973749%2C973469789%2C973656759%2C973768301%2C977464072%2C979314388%2C982620279%2C982640040%2C987836733%2C988080314%2C990910944%2C991015507%2C992217162%2C993829528%2C994572865%2C994941321%2C995202808%2C995808269%2C997331834%2C997959442%2C998108500%2C999363903&dato=2023-11-13T12%3A34%3A07.468Z&updatedBefore=2026-11-13T12%3A34%3A07.468Z&includeChanges=true&size=1000&sort=id%2CASC&page=0"
+      }
+    ],
+    "requested_urls": [
+      "https://pam-stilling-feed.nav.no/api/v1/feed/43d79fff-1808-42b4-8e86-987ef556a07f",
+      "https://pam-stilling-feed.nav.no/api/v1/feedentry/52c02dd7-b354-4765-a221-a594aca6b2d6",
+      "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=918266917&size=1000&page=0",
+      "https://data.brreg.no/enhetsregisteret/api/enheter/918266917/roller",
+      "https://data.brreg.no/regnskapsregisteret/regnskap/918266917",
+      "https://data.brreg.no/regnskapsregisteret/regnskap/aarsregnskap/kopi/918266917/aar",
+      "https://digitaliq.no/robots.txt",
+      "https://digitaliq.no/",
+      "https://digitaliq.no/no/artikler",
+      "https://digitaliq.no/nyheter",
+      "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=918266917&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+      "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=918338063&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0"
+    ],
+    "verification": {
+      "lines": 1,
+      "schema_valid": true,
+      "published_claims": 164,
+      "source_blobs_verified": 7,
+      "synthesis_companies": 1,
+      "synthesis_sentences": 21,
+      "synthesis_unverified_values": 0,
+      "financial_inputs_verified": 78,
+      "derived_financial_metrics_verified": 3,
+      "registry_events_verified": 0,
+      "filing_year_facts_verified": 10,
+      "briefing_companies": 1,
+      "briefing_sentences": 6,
+      "briefing_short_companies": 0,
+      "briefing_unverified_values": 0,
+      "briefing_topic_coverage": {
+        "activity": 1,
+        "change": 1,
+        "unknown": 1,
+        "financial": 1,
+        "takeaway": 1
+      },
+      "complete_briefing_contracts": 1,
+      "newer_filing_flags": 0
+    },
+    "output_sha256": "4f83dcf19015b5693e04b569c4b6db8e9cb5e24b7c3a061bfe5d0466102e3d74",
+    "snapshot_changes": [],
+    "coverage_observations": []
+  },
+  "idempotent_execution": {
+    "argv": [
+      "run",
+      "--organisations",
+      "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\idempotent\\companies.jsonl",
+      "--bulk",
+      "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\idempotent\\registry.csv",
+      "--output",
+      "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\idempotent\\envelopes.jsonl",
+      "--profiles-output",
+      "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\idempotent\\profiles.jsonl",
+      "--report",
+      "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\idempotent\\report.json",
+      "--run-id",
+      "offline-refresh-idempotent",
+      "--expected-count",
+      "1"
+    ],
+    "previous_injected_by_offline_harness": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\unchanged\\envelopes.jsonl",
+    "exit_code": 0,
+    "case": "unchanged",
+    "unrecorded_urls": [],
+    "batch_aliases": [
+      {
+        "requested": "https://pam-stilling-feed.nav.no/api/v1/feed/43d79fff-1808-42b4-8e86-987ef556a07f",
+        "synthetic": "empty completed forward-tail scaffold; original forward bodies were not persisted; no ad fact derives from this response"
+      },
+      {
+        "requested": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=918266917&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+        "saved": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=812049712%2C818330952%2C821052092%2C823569262%2C827878782%2C830009612%2C837186102%2C852122722%2C865560052%2C877144232%2C891858442%2C894542012%2C910929097%2C911818191%2C912994392%2C913143930%2C913244702%2C913502752%2C914324769%2C915469132%2C915813372%2C915963102%2C916101538%2C916794894%2C917604509%2C917664986%2C918031502%2C918266917%2C918994793%2C920711197%2C921380259%2C922718059%2C923142827%2C924004843%2C924592753%2C924911719%2C925293180%2C925496251%2C926073737%2C926317490%2C926364715%2C926766228%2C926963023%2C927265222%2C927550563%2C928506908%2C928745813%2C929048709%2C929376935%2C930090077%2C930338877%2C930475173%2C930491721%2C930532223%2C931575678%2C931647067%2C932335530%2C932354322%2C932587904%2C933379779%2C933741761%2C934058577%2C934385411%2C934626176%2C935121612%2C935265606%2C935294746%2C935656176%2C935737672%2C935829747%2C935928125%2C936106374%2C937969104%2C948230798%2C971131535%2C979311729%2C980038661%2C982039177%2C985689377%2C988060933%2C988894826%2C989162691%2C989194283%2C989221981%2C989237683%2C989424157%2C989704516%2C990959366%2C990980683%2C992100753%2C992143827%2C992231963%2C993821403%2C994900544%2C995194163%2C995744562%2C995991993%2C996904490%2C997274253%2C997887476&dato=2023-11-13T12%3A34%3A07.468Z&updatedBefore=2026-11-13T12%3A34%3A07.468Z&includeChanges=true&size=1000&sort=id%2CASC&page=0"
+      },
+      {
+        "requested": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=918338063&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+        "saved": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=816118972%2C819615942%2C823025602%2C825531912%2C892122792%2C912053741%2C912121003%2C912562204%2C913003195%2C913310853%2C914370604%2C914437385%2C914683599%2C914689244%2C918086641%2C918338063%2C919135948%2C921443420%2C923600582%2C924181109%2C924278331%2C925647632%2C926029142%2C926353489%2C926394363%2C927039214%2C927216736%2C927290928%2C928524507%2C928787664%2C930150797%2C930416223%2C930421375%2C930439037%2C930476358%2C930533157%2C930582433%2C930944351%2C932179563%2C932337584%2C932505312%2C932932350%2C933391302%2C934194462%2C934516303%2C934661141%2C935319609%2C935603234%2C935777119%2C935832004%2C936137792%2C936304249%2C936566936%2C937960433%2C971630744%2C971810521%2C971810564%2C971875348%2C971973749%2C973469789%2C973656759%2C973768301%2C977464072%2C979314388%2C982620279%2C982640040%2C987836733%2C988080314%2C990910944%2C991015507%2C992217162%2C993829528%2C994572865%2C994941321%2C995202808%2C995808269%2C997331834%2C997959442%2C998108500%2C999363903&dato=2023-11-13T12%3A34%3A07.468Z&updatedBefore=2026-11-13T12%3A34%3A07.468Z&includeChanges=true&size=1000&sort=id%2CASC&page=0"
+      }
+    ],
+    "requested_urls": [
+      "https://pam-stilling-feed.nav.no/api/v1/feed/43d79fff-1808-42b4-8e86-987ef556a07f",
+      "https://pam-stilling-feed.nav.no/api/v1/feedentry/52c02dd7-b354-4765-a221-a594aca6b2d6",
+      "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=918266917&size=1000&page=0",
+      "https://data.brreg.no/enhetsregisteret/api/enheter/918266917/roller",
+      "https://data.brreg.no/regnskapsregisteret/regnskap/918266917",
+      "https://data.brreg.no/regnskapsregisteret/regnskap/aarsregnskap/kopi/918266917/aar",
+      "https://digitaliq.no/robots.txt",
+      "https://digitaliq.no/",
+      "https://digitaliq.no/no/artikler",
+      "https://digitaliq.no/nyheter",
+      "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=918266917&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+      "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=918338063&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0"
+    ],
+    "verification": {
+      "lines": 1,
+      "schema_valid": true,
+      "published_claims": 164,
+      "source_blobs_verified": 7,
+      "synthesis_companies": 1,
+      "synthesis_sentences": 21,
+      "synthesis_unverified_values": 0,
+      "financial_inputs_verified": 78,
+      "derived_financial_metrics_verified": 3,
+      "registry_events_verified": 0,
+      "filing_year_facts_verified": 10,
+      "briefing_companies": 1,
+      "briefing_sentences": 6,
+      "briefing_short_companies": 0,
+      "briefing_unverified_values": 0,
+      "briefing_topic_coverage": {
+        "activity": 1,
+        "change": 1,
+        "unknown": 1,
+        "financial": 1,
+        "takeaway": 1
+      },
+      "complete_briefing_contracts": 1,
+      "newer_filing_flags": 0
+    },
+    "output_sha256": "52553a10031dfdef977a3205610d666816e2ee3e5c5648fdcdd133f6a9ff52aa",
+    "snapshot_changes": [],
+    "coverage_observations": []
+  },
+  "transient": {
+    "changes": 0,
+    "carried_claims": 112,
+    "prior_receipts_and_times_preserved": true,
+    "stale_markers_present": true,
+    "execution": {
+      "argv": [
+        "run",
+        "--organisations",
+        "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\transient\\companies.jsonl",
+        "--bulk",
+        "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\transient\\registry.csv",
+        "--output",
+        "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\transient\\envelopes.jsonl",
+        "--profiles-output",
+        "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\transient\\profiles.jsonl",
+        "--report",
+        "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\transient\\report.json",
+        "--run-id",
+        "offline-refresh-transient",
+        "--expected-count",
+        "1"
+      ],
+      "previous_injected_by_offline_harness": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\baseline\\envelopes.jsonl",
+      "exit_code": 0,
+      "case": "transient",
+      "unrecorded_urls": [],
+      "batch_aliases": [
+        {
+          "requested": "https://pam-stilling-feed.nav.no/api/v1/feed/43d79fff-1808-42b4-8e86-987ef556a07f",
+          "synthetic": "empty completed forward-tail scaffold; original forward bodies were not persisted; no ad fact derives from this response"
+        },
+        {
+          "requested": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=918266917&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+          "saved": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=812049712%2C818330952%2C821052092%2C823569262%2C827878782%2C830009612%2C837186102%2C852122722%2C865560052%2C877144232%2C891858442%2C894542012%2C910929097%2C911818191%2C912994392%2C913143930%2C913244702%2C913502752%2C914324769%2C915469132%2C915813372%2C915963102%2C916101538%2C916794894%2C917604509%2C917664986%2C918031502%2C918266917%2C918994793%2C920711197%2C921380259%2C922718059%2C923142827%2C924004843%2C924592753%2C924911719%2C925293180%2C925496251%2C926073737%2C926317490%2C926364715%2C926766228%2C926963023%2C927265222%2C927550563%2C928506908%2C928745813%2C929048709%2C929376935%2C930090077%2C930338877%2C930475173%2C930491721%2C930532223%2C931575678%2C931647067%2C932335530%2C932354322%2C932587904%2C933379779%2C933741761%2C934058577%2C934385411%2C934626176%2C935121612%2C935265606%2C935294746%2C935656176%2C935737672%2C935829747%2C935928125%2C936106374%2C937969104%2C948230798%2C971131535%2C979311729%2C980038661%2C982039177%2C985689377%2C988060933%2C988894826%2C989162691%2C989194283%2C989221981%2C989237683%2C989424157%2C989704516%2C990959366%2C990980683%2C992100753%2C992143827%2C992231963%2C993821403%2C994900544%2C995194163%2C995744562%2C995991993%2C996904490%2C997274253%2C997887476&dato=2023-11-13T12%3A34%3A07.468Z&updatedBefore=2026-11-13T12%3A34%3A07.468Z&includeChanges=true&size=1000&sort=id%2CASC&page=0"
+        },
+        {
+          "requested": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=918338063&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+          "saved": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=816118972%2C819615942%2C823025602%2C825531912%2C892122792%2C912053741%2C912121003%2C912562204%2C913003195%2C913310853%2C914370604%2C914437385%2C914683599%2C914689244%2C918086641%2C918338063%2C919135948%2C921443420%2C923600582%2C924181109%2C924278331%2C925647632%2C926029142%2C926353489%2C926394363%2C927039214%2C927216736%2C927290928%2C928524507%2C928787664%2C930150797%2C930416223%2C930421375%2C930439037%2C930476358%2C930533157%2C930582433%2C930944351%2C932179563%2C932337584%2C932505312%2C932932350%2C933391302%2C934194462%2C934516303%2C934661141%2C935319609%2C935603234%2C935777119%2C935832004%2C936137792%2C936304249%2C936566936%2C937960433%2C971630744%2C971810521%2C971810564%2C971875348%2C971973749%2C973469789%2C973656759%2C973768301%2C977464072%2C979314388%2C982620279%2C982640040%2C987836733%2C988080314%2C990910944%2C991015507%2C992217162%2C993829528%2C994572865%2C994941321%2C995202808%2C995808269%2C997331834%2C997959442%2C998108500%2C999363903&dato=2023-11-13T12%3A34%3A07.468Z&updatedBefore=2026-11-13T12%3A34%3A07.468Z&includeChanges=true&size=1000&sort=id%2CASC&page=0"
+        }
+      ],
+      "requested_urls": [
+        "https://pam-stilling-feed.nav.no/api/v1/feed/43d79fff-1808-42b4-8e86-987ef556a07f",
+        "https://pam-stilling-feed.nav.no/api/v1/feedentry/52c02dd7-b354-4765-a221-a594aca6b2d6",
+        "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=918266917&size=1000&page=0",
+        "https://data.brreg.no/enhetsregisteret/api/enheter/918266917/roller",
+        "https://data.brreg.no/enhetsregisteret/api/enheter/918266917/roller",
+        "https://data.brreg.no/regnskapsregisteret/regnskap/918266917",
+        "https://data.brreg.no/regnskapsregisteret/regnskap/918266917",
+        "https://data.brreg.no/regnskapsregisteret/regnskap/918266917",
+        "https://digitaliq.no/robots.txt",
+        "https://digitaliq.no/",
+        "https://digitaliq.no/",
+        "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=918266917&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+        "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=918338063&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+        "https://digitaliq.no/"
+      ],
+      "verification": {
+        "lines": 1,
+        "schema_valid": true,
+        "published_claims": 164,
+        "source_blobs_verified": 7,
+        "synthesis_companies": 1,
+        "synthesis_sentences": 20,
+        "synthesis_unverified_values": 0,
+        "financial_inputs_verified": 78,
+        "derived_financial_metrics_verified": 3,
+        "registry_events_verified": 0,
+        "filing_year_facts_verified": 10,
+        "briefing_companies": 1,
+        "briefing_sentences": 6,
+        "briefing_short_companies": 0,
+        "briefing_unverified_values": 0,
+        "briefing_topic_coverage": {
+          "activity": 1,
+          "change": 1,
+          "unknown": 1,
+          "financial": 1,
+          "takeaway": 1
+        },
+        "complete_briefing_contracts": 1,
+        "newer_filing_flags": 0
+      },
+      "output_sha256": "87731292096c79197d76a8b710506c8cfa9e49bdd36965252e306c4194cecfb3",
+      "snapshot_changes": [],
+      "coverage_observations": [
+        {
+          "section": "accounts",
+          "previous_state": "available",
+          "current_state": "failed",
+          "reason": "timeout"
+        },
+        {
+          "section": "roles",
+          "previous_state": "available",
+          "current_state": "failed",
+          "reason": "timeout"
+        },
+        {
+          "section": "website",
+          "previous_state": "available",
+          "current_state": "failed",
+          "reason": "website_candidates,website_source_unavailable"
+        }
+      ]
+    }
+  },
+  "equivalent_timestamp_changes": 0,
+  "equivalent_timestamp_execution": {
+    "argv": [
+      "run",
+      "--organisations",
+      "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\timezone-equivalent\\companies.jsonl",
+      "--bulk",
+      "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\timezone-equivalent\\registry.csv",
+      "--output",
+      "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\timezone-equivalent\\envelopes.jsonl",
+      "--profiles-output",
+      "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\timezone-equivalent\\profiles.jsonl",
+      "--report",
+      "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\timezone-equivalent\\report.json",
+      "--run-id",
+      "offline-refresh-timezone-equivalent",
+      "--expected-count",
+      "1"
+    ],
+    "previous_injected_by_offline_harness": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-offline-timezone\\baseline\\envelopes.jsonl",
+    "exit_code": 0,
+    "case": "timezone_equivalent",
+    "unrecorded_urls": [],
+    "batch_aliases": [
+      {
+        "requested": "https://pam-stilling-feed.nav.no/api/v1/feed/43d79fff-1808-42b4-8e86-987ef556a07f",
+        "synthetic": "empty completed forward-tail scaffold; original forward bodies were not persisted; no ad fact derives from this response"
+      },
+      {
+        "requested": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=918266917&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+        "saved": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=812049712%2C818330952%2C821052092%2C823569262%2C827878782%2C830009612%2C837186102%2C852122722%2C865560052%2C877144232%2C891858442%2C894542012%2C910929097%2C911818191%2C912994392%2C913143930%2C913244702%2C913502752%2C914324769%2C915469132%2C915813372%2C915963102%2C916101538%2C916794894%2C917604509%2C917664986%2C918031502%2C918266917%2C918994793%2C920711197%2C921380259%2C922718059%2C923142827%2C924004843%2C924592753%2C924911719%2C925293180%2C925496251%2C926073737%2C926317490%2C926364715%2C926766228%2C926963023%2C927265222%2C927550563%2C928506908%2C928745813%2C929048709%2C929376935%2C930090077%2C930338877%2C930475173%2C930491721%2C930532223%2C931575678%2C931647067%2C932335530%2C932354322%2C932587904%2C933379779%2C933741761%2C934058577%2C934385411%2C934626176%2C935121612%2C935265606%2C935294746%2C935656176%2C935737672%2C935829747%2C935928125%2C936106374%2C937969104%2C948230798%2C971131535%2C979311729%2C980038661%2C982039177%2C985689377%2C988060933%2C988894826%2C989162691%2C989194283%2C989221981%2C989237683%2C989424157%2C989704516%2C990959366%2C990980683%2C992100753%2C992143827%2C992231963%2C993821403%2C994900544%2C995194163%2C995744562%2C995991993%2C996904490%2C997274253%2C997887476&dato=2023-11-13T12%3A34%3A07.468Z&updatedBefore=2026-11-13T12%3A34%3A07.468Z&includeChanges=true&size=1000&sort=id%2CASC&page=0"
+      },
+      {
+        "requested": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=918338063&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+        "saved": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=816118972%2C819615942%2C823025602%2C825531912%2C892122792%2C912053741%2C912121003%2C912562204%2C913003195%2C913310853%2C914370604%2C914437385%2C914683599%2C914689244%2C918086641%2C918338063%2C919135948%2C921443420%2C923600582%2C924181109%2C924278331%2C925647632%2C926029142%2C926353489%2C926394363%2C927039214%2C927216736%2C927290928%2C928524507%2C928787664%2C930150797%2C930416223%2C930421375%2C930439037%2C930476358%2C930533157%2C930582433%2C930944351%2C932179563%2C932337584%2C932505312%2C932932350%2C933391302%2C934194462%2C934516303%2C934661141%2C935319609%2C935603234%2C935777119%2C935832004%2C936137792%2C936304249%2C936566936%2C937960433%2C971630744%2C971810521%2C971810564%2C971875348%2C971973749%2C973469789%2C973656759%2C973768301%2C977464072%2C979314388%2C982620279%2C982640040%2C987836733%2C988080314%2C990910944%2C991015507%2C992217162%2C993829528%2C994572865%2C994941321%2C995202808%2C995808269%2C997331834%2C997959442%2C998108500%2C999363903&dato=2023-11-13T12%3A34%3A07.468Z&updatedBefore=2026-11-13T12%3A34%3A07.468Z&includeChanges=true&size=1000&sort=id%2CASC&page=0"
+      }
+    ],
+    "requested_urls": [
+      "https://pam-stilling-feed.nav.no/api/v1/feed/43d79fff-1808-42b4-8e86-987ef556a07f",
+      "https://pam-stilling-feed.nav.no/api/v1/feedentry/52c02dd7-b354-4765-a221-a594aca6b2d6",
+      "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=918266917&size=1000&page=0",
+      "https://data.brreg.no/enhetsregisteret/api/enheter/918266917/roller",
+      "https://data.brreg.no/regnskapsregisteret/regnskap/918266917",
+      "https://data.brreg.no/regnskapsregisteret/regnskap/aarsregnskap/kopi/918266917/aar",
+      "https://digitaliq.no/robots.txt",
+      "https://digitaliq.no/",
+      "https://digitaliq.no/no/artikler",
+      "https://digitaliq.no/nyheter",
+      "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=918266917&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+      "https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=918338063&dato=2023-11-13T12%3A34%3A07.000Z&updatedBefore=2026-11-13T12%3A34%3A07.000Z&includeChanges=true&size=1000&sort=id%2CASC&page=0"
+    ],
+    "verification": {
+      "lines": 1,
+      "schema_valid": true,
+      "published_claims": 164,
+      "source_blobs_verified": 7,
+      "synthesis_companies": 1,
+      "synthesis_sentences": 21,
+      "synthesis_unverified_values": 0,
+      "financial_inputs_verified": 78,
+      "derived_financial_metrics_verified": 3,
+      "registry_events_verified": 0,
+      "filing_year_facts_verified": 10,
+      "briefing_companies": 1,
+      "briefing_sentences": 6,
+      "briefing_short_companies": 0,
+      "briefing_unverified_values": 0,
+      "briefing_topic_coverage": {
+        "activity": 1,
+        "change": 1,
+        "unknown": 1,
+        "financial": 1,
+        "takeaway": 1
+      },
+      "complete_briefing_contracts": 1,
+      "newer_filing_flags": 0
+    },
+    "output_sha256": "b6c3790be59250a2295370eb103ffe8c5f6f36e73a1bec7dccd7d225b5f2f5c7",
+    "snapshot_changes": [],
+    "coverage_observations": []
+  },
+  "network_access": false,
+  "paid_cost_usd": 0,
+  "current_proof_never_reused": true,
+  "saved_100_company_pair": "saved_live_pair_replay.json",
+  "live_refresh": {
+    "http": 684,
+    "wall_seconds": 368.4485724999977,
+    "cost_usd": 0,
+    "rows": 100,
+    "changes": 0,
+    "material_changes": 0,
+    "minor_changes": 0,
+    "change_types": {},
+    "coverage_observations": 0,
+    "carried_claims": 0,
+    "previous_evidence_blobs_added_after_run_for_verification": 3,
+    "full_receipts": "live_refresh/results.json"
+  }
+}

@@ -23,3 +23,7 @@ reports/r5/stageE/new_websites.md -text
 # Offline refresh fixture checksums are byte-exact across platforms.
 tests/fixtures/refresh_proof/*.csv -text
 tests/fixtures/refresh_proof/*.jsonl -text
+
+# Preserve C2/E measured report and source-manifest checksums verbatim.
+reports/r5/stageC2/**/*.json -text whitespace=cr-at-eol
+reports/r5/stageE/**/*.json -text whitespace=cr-at-eol

@@ -1,0 +1,1 @@
+Pre-fix measurements retained intact. Live envelopes verified with zero unsupported values, but 620 false minor registry events differed only by equivalent timestamp timezone formatting, causing the unchanged 250 KB profile HTML gate to fail. Original output/state paths remain in settings. Do not use these as final Stage E results.

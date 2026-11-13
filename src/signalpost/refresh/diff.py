@@ -15,6 +15,17 @@ def newly_supported_field(field):
 
 def meaning(claim):
     if claim is None or claim.availability!='available': return None
+    if claim.field.startswith('registry_change.') and isinstance(claim.value,dict):
+        # Publisher timezone/precision presentation is not a changed event.
+        # Preserve original source text/evidence; normalize only comparison.
+        from datetime import datetime,timezone
+        value=dict(claim.value)
+        try:
+            at=datetime.fromisoformat(value['date'].replace('Z','+00:00'))
+            if at.tzinfo is not None:value['date']=at.astimezone(timezone.utc).isoformat(timespec='microseconds')
+        except (KeyError,TypeError,ValueError,AttributeError):
+            pass
+        return canonical(value)
     if claim.field=='official_website':
         from ..web.policy import domain
         # Proof strength/location and www/HTTPS variants describe observation,
@@ -66,8 +77,8 @@ def apply(envelope, previous, blobs):
     failed = {family for family,state in envelope.run.sections.items() if state not in CHECKED or old_sections.get(family) not in CHECKED}
     for family in failed:
         before=old_sections.get(family); after=envelope.run.sections.get(family)
-        old_values=canonical([c.value for c in old_claims.values() if c.family==family and c.availability=='available'])
-        new_values=canonical([c.value for c in envelope.claims if c.family==family and c.availability=='available'])
+        old_values=canonical(sorted((c.field,meaning(c)) for c in old_claims.values() if c.family==family and c.availability=='available'))
+        new_values=canonical(sorted((c.field,meaning(c)) for c in envelope.claims if c.family==family and c.availability=='available'))
         if before!=after or old_values!=new_values:
             reasons=sorted({e.code for e in envelope.errors if e.section==family})
             envelope.run.refresh['observation_changes'].append({'section':family,'previous_state':before,'current_state':after,'reason':','.join(reasons) or 'section_not_successfully_checked_in_both_runs'})

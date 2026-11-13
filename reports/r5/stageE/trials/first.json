@@ -1,0 +1,110 @@
+{
+  "fixture": "C:/Users/<USER>/signal-nethra/tests/fixtures/refresh_proof",
+  "scope": "One exact-identity company from saved seed-20261113 responses, seven isolated mutation types plus unchanged/idempotence/transient checks; not a 100-company generalization.",
+  "planted_causal_changes": 7,
+  "true_positives": 6,
+  "false_positives": 1,
+  "false_negatives": 1,
+  "precision": 0.8571428571428571,
+  "recall": 0.8571428571428571,
+  "unchanged_changes": 0,
+  "false_change_rate_unchanged": 0.0,
+  "idempotent_changes": 0,
+  "network_access": false,
+  "paid_cost_usd": 0,
+  "current_proof_never_reused": true,
+  "case_counts": {
+    "employees": {
+      "detected": true,
+      "supported_field_events": 1,
+      "unexpected_changes": [],
+      "idempotent_changes": 0
+    },
+    "address": {
+      "detected": true,
+      "supported_field_events": 1,
+      "unexpected_changes": [
+        {
+          "organisation_number": "918266917",
+          "type": "changed",
+          "field": "identity.location.business",
+          "old_value": {
+            "location_type": "business",
+            "address": {
+              "adresse": "Torgallmenningen 3B",
+              "postnummer": "5014",
+              "poststed": "BERGEN",
+              "kommune": "BERGEN",
+              "kommunenummer": "4601",
+              "land": "Norge",
+              "landkode": "NO"
+            },
+            "organisation_number": "918266917"
+          },
+          "new_value": {
+            "location_type": "business",
+            "address": {
+              "adresse": "Refresh proof test address 17",
+              "postnummer": "5014",
+              "poststed": "BERGEN",
+              "kommune": "BERGEN",
+              "kommunenummer": "4601",
+              "land": "Norge",
+              "landkode": "NO"
+            },
+            "organisation_number": "918266917"
+          },
+          "old_evidence_ids": [
+            "e31da654775a9e4d9ea18260bd2d9d2e856a07ff9c0cfe189ee1f6a0641c569e"
+          ],
+          "new_evidence_ids": [
+            "36692468fd3c79e51eb09be98cb37865dec56b798ceb12ec0fdc78ab1c3a75e3"
+          ],
+          "materiality": "material",
+          "first_observed_at": "2026-11-13T12:34:07Z",
+          "last_observed_at": "2026-11-13T12:34:07Z",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-13T12:34:07Z",
+          "effective_at": null,
+          "source_class": "official_registry",
+          "old_locator": "row:918266917/columns:forretningsadresse.*",
+          "new_locator": "row:918266917/columns:forretningsadresse.*",
+          "old_content_sha256": "579e3735876d763bc50e2ae059ed1c663b50134ab77d99d847ccffdb477b75f6",
+          "new_content_sha256": "de9f38b4cb4f3365cbdd1e32ca42aeeb79e53f202c37208a08907704f5492483",
+          "status": "available"
+        }
+      ],
+      "idempotent_changes": 0
+    },
+    "accounts_year": {
+      "detected": true,
+      "supported_field_events": 28,
+      "unexpected_changes": [],
+      "idempotent_changes": 0
+    },
+    "name": {
+      "detected": true,
+      "supported_field_events": 1,
+      "unexpected_changes": [],
+      "idempotent_changes": 0
+    },
+    "subunit": {
+      "detected": true,
+      "supported_field_events": 1,
+      "unexpected_changes": [],
+      "idempotent_changes": 0
+    },
+    "nav_removed": {
+      "detected": false,
+      "supported_field_events": 0,
+      "unexpected_changes": [],
+      "idempotent_changes": 0
+    },
+    "website_404": {
+      "detected": true,
+      "supported_field_events": 6,
+      "unexpected_changes": [],
+      "idempotent_changes": 0
+    }
+  }
+}

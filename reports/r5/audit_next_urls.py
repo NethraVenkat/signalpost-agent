@@ -16,7 +16,7 @@ def inventory(stage):
         path=Path(saved['cwd'])/'envelopes.jsonl'
     else:
         settings=json.loads((ROOT/'reports/r5'/stage/'settings.json').read_text(encoding='utf8'))
-        path=Path(settings['resolved_config']['output'])
+        path=Path(settings['cwd'])/'envelopes.jsonl' if stage=='stageE/live_refresh' else Path(settings['resolved_config']['output'])
     if not path.is_absolute():path=ROOT/path
     rows=[json.loads(line) for line in path.read_text(encoding='utf8').splitlines()]
     records={};states={}
@@ -48,7 +48,7 @@ def main():
         prior={'D':'B','I':'D','C':'F1'}[STAGE]
         pairs=[('stage'+prior+'/'+s,'stage'+STAGE+'/'+s) for s in ('frozen','daily')]
     if STAGE=='C2':pairs=[('stageC/frozen','stageC2/frozen'),('stageC/daily','stageC2/daily'),('release-v4b','stageC2/mock')]
-    if STAGE=='E':pairs=[('stageC2/'+s,'stageE/'+s) for s in ('frozen','daily','mock')]
+    if STAGE=='E':pairs=[('stageC2/'+s,'stageE/'+s) for s in ('frozen','daily','mock')]+[('stageE/frozen','stageE/live_refresh')]
     data={stage:inventory(stage) for pair in pairs for stage in pair}
     comparisons={}
     text='# Stage '+STAGE+' website/social URL changes\n\nAll deltas use exact saved proof excerpts; removed receipts are historical, not current proof. Unchanged URLs are fully inventoried in url_inventory.json.\n\n'

@@ -1,0 +1,61 @@
+{
+  "fixture": "C:/Users/<USER>/signal-nethra/tests/fixtures/refresh_proof",
+  "scope": "One exact-identity company from saved seed-20261113 responses, seven isolated mutation types plus unchanged/idempotence/transient checks; not a 100-company generalization.",
+  "nav_scaffold": "Synthetic empty forward tail only; no claims derive from it. Exact live ad detail from saved source is mandatory. This is not full-feed discovery coverage validation.",
+  "planted_causal_changes": 7,
+  "true_positives": 7,
+  "false_positives": 0,
+  "false_negatives": 0,
+  "precision": 1.0,
+  "recall": 1.0,
+  "unchanged_changes": 0,
+  "false_change_rate_unchanged": 0.0,
+  "idempotent_changes": 0,
+  "network_access": false,
+  "paid_cost_usd": 0,
+  "current_proof_never_reused": true,
+  "case_counts": {
+    "employees": {
+      "detected": true,
+      "supported_field_events": 1,
+      "unexpected_changes": [],
+      "idempotent_changes": 0
+    },
+    "address": {
+      "detected": true,
+      "supported_field_events": 2,
+      "unexpected_changes": [],
+      "idempotent_changes": 0
+    },
+    "accounts_year": {
+      "detected": true,
+      "supported_field_events": 28,
+      "unexpected_changes": [],
+      "idempotent_changes": 0
+    },
+    "name": {
+      "detected": true,
+      "supported_field_events": 1,
+      "unexpected_changes": [],
+      "idempotent_changes": 0
+    },
+    "subunit": {
+      "detected": true,
+      "supported_field_events": 1,
+      "unexpected_changes": [],
+      "idempotent_changes": 0
+    },
+    "nav_removed": {
+      "detected": true,
+      "supported_field_events": 1,
+      "unexpected_changes": [],
+      "idempotent_changes": 0
+    },
+    "website_404": {
+      "detected": true,
+      "supported_field_events": 6,
+      "unexpected_changes": [],
+      "idempotent_changes": 0
+    }
+  }
+}
