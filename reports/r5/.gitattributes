@@ -2,3 +2,7 @@
 *.md text eol=lf
 *.py text eol=lf
 *.ps1 text eol=lf
+
+# Preserve new-source and precision-ledger verbatim proof excerpts.
+stageT/items.md -text
+precision/LEDGER.md -text
