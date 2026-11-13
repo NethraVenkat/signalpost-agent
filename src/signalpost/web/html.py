@@ -76,7 +76,7 @@ class Page(HTMLParser):
                         start = max(0, target.start() - 20)
                         span = raw_tag[start:start + 300]
                         break
-            own = any(x[1] for x in self.stack) and not any(x[0] == 'article' or x[2] for x in self.stack)
+            own = any(x[1] for x in self.stack) and not any(x[0] == 'article' or x[2] or x[4] for x in self.stack)
             strict = any(x[3] for x in self.stack) and not any(x[0] in {'article','script','template'} or x[2] or x[4] for x in self.stack)
             self._anchor = Link(urljoin(self.url, attrs.get("href", "")), "", span, own, strict)
         if tag == "script" and attrs.get("type", "").lower() == "application/ld+json":

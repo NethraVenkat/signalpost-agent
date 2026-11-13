@@ -19,6 +19,54 @@ from decimal import Decimal, ROUND_HALF_UP, localcontext
 from datetime import date
 
 
+def verify_careers(row,data,evidence,stored_body):
+    from signalpost.web.careers import postings,links,target
+    from signalpost.web.html import Page
+    from signalpost.web.policy import domain
+    from signalpost.web.social import shared_group_context
+    from datetime import datetime
+    claims={c['id']:c for c in data['claims']}
+    for claim in data['claims']:
+        value=claim.get('value')
+        if claim['availability']=='available' and claim['field'].startswith('hiring.job.') and isinstance(value,dict) and value.get('source')!='verified_site_careers':
+            receipt=next(evidence[eid] for eid in claim['evidence_ids'] if evidence[eid]['extraction_method']=='signalpost.nav.v1' and evidence[eid]['locator']=='/ad_content')
+            document=json.loads(stored_body(receipt['content_sha256']))
+            ad=document['ad_content']
+            assert document['status']=='ACTIVE' and document['uuid']==ad['uuid']==value['uuid']
+            assert ad['title']==value['title'] and ad['published']==value['published'] and ad['expires']==value['expires']
+            employer=str(ad['employer']['orgnr']);assert employer==value['employer_orgnr']
+            scopes={row['organisation_number']}|{str(c['value']['organisation_number']) for c in data['claims'] if c['family']=='subunits' and c['availability']=='available' and isinstance(c['value'],dict) and c['value'].get('organisation_number')}
+            assert employer in scopes,'Job has no proven employer relationship'
+            from signalpost.sources.nav import timestamp
+            assert timestamp(value['expires'])>timestamp(receipt['retrieved_at'])>=timestamp(value['published'])
+        if claim['availability']!='available' or not isinstance(value,dict) or value.get('source')!='verified_site_careers':continue
+        proof=claims[value['identity_claim_id']]
+        assert proof['field']=='official_website' and proof['availability']=='available' and not proof['carried_forward']
+        assert proof['value']['identity_level']=='VERIFIED' and proof['value'].get('relationship_note')!='group_site'
+        root=domain(proof['value']['final_url'])
+        receipts=[evidence[eid] for eid in claim['evidence_ids'] if evidence[eid]['extraction_method']=='signalpost.careers.v1']
+        posting=next(e for e in receipts if e['locator']=='JobPosting/title')
+        assert posting['source_url']==value['url']
+        page=Page(stored_body(posting['content_sha256']).encode('utf8'),posting['source_url'])
+        found=postings(page,row['organisation_number'],datetime.fromisoformat(posting['retrieved_at'].replace('Z','+00:00')))
+        assert any(all(value.get(k)==v for k,v in parsed.items()) for parsed,spans in found),'Unsupported careers posting values'
+        chain=sorted((e for e in receipts if e['locator'].startswith('careers/link/')),key=lambda e:int(e['locator'].rsplit('/',1)[1]))
+        assert 1<=len(chain)<=2
+        expected=None
+        for depth,receipt in enumerate(chain):
+            parent=Page(stored_body(receipt['content_sha256']).encode('utf8'),receipt['source_url'])
+            assert not shared_group_context(parent)
+            if depth==0:
+                assert domain(parent.url)==root
+                allowed=links(parent,root)
+            else:
+                assert parent.url==expected
+                allowed=[(link,url) for link in parent.links if (url:=target(link.href,root)) and domain(url)==domain(parent.url)]
+            next_url=chain[depth+1]['source_url'] if depth+1<len(chain) else value['url']
+            assert any(url==next_url and link.span==receipt['claim_span'] for link,url in allowed),'Missing own careers link'
+            expected=next_url
+
+
 def verify_financial_sources(row, data, evidence, stored_body):
     raw=(row.get('run',{}).get('synthesis') or data.get('synthesis') or {})
     if raw.get('contract_version')!='r5-S': return 0,0
@@ -226,6 +274,7 @@ def verify(first, state_dir, count, organisations=None, report=None, require_cle
         inputs_checked,metrics_checked=verify_financial_sources(row,data,evidence,stored_body)
         financial_inputs+=inputs_checked; derived_metrics+=metrics_checked
         registry_events+=verify_registry_events(row,data,evidence,stored_body,registry_documents)
+        verify_careers(row,data,evidence,stored_body)
     result = {"lines": len(rows), "schema_valid": True, "published_claims": published, "source_blobs_verified": len(seen)}
     result.update(synthesis_companies=synthesis_companies,synthesis_sentences=synthesis_sentences,synthesis_unverified_values=0)
     result.update(financial_inputs_verified=financial_inputs,derived_financial_metrics_verified=derived_metrics)

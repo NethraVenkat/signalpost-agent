@@ -1,0 +1,35 @@
+{
+  "frozen": {
+    "job_claims": 0,
+    "job_ad_companies": 0,
+    "accounts_facts": 4208,
+    "companies_with_two_figure_periods": 92,
+    "yoy_sentences": 0,
+    "hiring_states": {
+      "not_available": 100
+    },
+    "careers_reasons": {
+      "no_current_exact_verified_website": 94,
+      "no_supported_current_posting": 6
+    },
+    "http_requests": 583,
+    "runtime_seconds": 107.594
+  },
+  "daily": {
+    "job_claims": 1,
+    "job_ad_companies": 1,
+    "accounts_facts": 4361,
+    "companies_with_two_figure_periods": 92,
+    "yoy_sentences": 0,
+    "hiring_states": {
+      "not_available": 99,
+      "available": 1
+    },
+    "careers_reasons": {
+      "no_current_exact_verified_website": 98,
+      "no_supported_current_posting": 2
+    },
+    "http_requests": 633,
+    "runtime_seconds": 157.406
+  }
+}

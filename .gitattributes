@@ -7,3 +7,7 @@ reports/r5/release-v4/*.csv -text
 # Keep verbatim HTML proof snippets intact across Windows checkouts.
 reports/r5/stageA2/new_websites.md -text
 reports/r5/stageB/new_websites.md -text
+reports/r5/stageD/jobs.md -text
+reports/r5/stageI/jobs.md -text
+reports/r5/stageD/new_websites.md -text
+reports/r5/stageI/new_websites.md -text

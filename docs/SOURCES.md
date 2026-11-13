@@ -44,6 +44,23 @@ Bundled SSB classification data retains [SSB's CC BY 4.0 licence](https://www.ss
 
 ## NAV job ads and credentials
 
+Stage D rebuilds the bundled exact-employer discovery index from the official
+feed and active detail endpoints only. The bounded maintenance builder is
+separate from evaluator budgets; daily runs still require current live detail
+proof and exact current parent/subunit membership. Build counts, date, HTTP
+attempts and runtime are recorded in `reports/r5/stageD/index_build.json`.
+The index exports identifiers/dates only, never job descriptions or credentials.
+
+Careers checks use the same website transport, robots rules and cumulative
+counters. A current exact-number VERIFIED site must own the navigation/footer
+link. External targets are restricted to the seven ATS registrable domains
+listed in `web/careers.py`; no search/name result can authorize a posting. A
+supported JobPosting needs a title and a non-expired deadline, a date within 60
+days or in the future, or an explicit open status in the title's paragraph.
+Group sites, other employer identifiers, unsupported layouts and query-dependent
+URLs are withheld. Receipts retain the own-link chain, title and date/status
+spans; the verifier replays that chain from saved bodies.
+
 [Official feed documentation](https://navikt.github.io/pam-stilling-feed/) and [reuse terms](https://arbeidsplassen.nav.no/vilkar-api). HTTPS `pam-stilling-feed.nav.no:443` only, paths `/api/publicToken`, `/api/v1/feed`, `/api/v1/feed/{UUID}`, `/api/v1/feedentry/{UUID}`. Redirects and arbitrary query/path values are refused. The same public-IP pinned transport is used. Public ad URLs on arbeidsplassen.nav.no are derived, never fetched.
 
 `NAV_API_TOKEN` is optional and read from the process environment. Otherwise retrieve the public credential at run start. Environment credentials can fall back once on rejected access. Credential bodies and Authorization headers are never stored or logged; credential-echo responses are refused. `.env.example` contains only a variable name; no .env loader runs.

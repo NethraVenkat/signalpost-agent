@@ -154,6 +154,10 @@ async def run(envelopes, http, index, bulk, previous, update, refresh_activity):
                 if exact(envelope):
                     record['websites_gained']=1
                     if http.config.public_activity:await refresh_activity(org,envelope)
+                    if http.config.hiring:
+                        from . import careers
+                        section=await careers.fetch(org,envelope,http,http.accepted_pages.get(org,[]))
+                        update(envelope,'hiring',careers.merge(envelope,section))
             except SourceFailure as exc:
                 record['state']=exc.code
             record['requests']+=len(budget.events)-before

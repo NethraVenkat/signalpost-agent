@@ -16,6 +16,18 @@ from signalpost.web.policy import safe_transport
 from nav_disk_seed import seed,detail_value
 
 
+def build_budget(config):
+    """Explicit maintenance allowance; never used by the evaluator runner.
+
+    The index is a whole-feed discovery artifact, not an empty daily batch.
+    Keep the builder's existing request/time ceilings and shared NAV limiter.
+    """
+    budget=Budget(config)
+    budget.cap=config.max_requests
+    budget.hard_request_cap=config.max_requests
+    return budget
+
+
 async def build(args):
     args.state_dir.mkdir(parents=True,exist_ok=True)
     db=sqlite3.connect(args.state_dir/'nav-index-checkpoint.sqlite3')
@@ -40,7 +52,7 @@ async def build(args):
     cfg=Config(organisations=Path('unused'),output=Path('unused'),report=Path('unused'),
         state_dir=args.state_dir,max_requests=args.max_requests,time_budget_seconds=args.time_budget_seconds,
         deadline_fraction=1,nav_concurrency=args.concurrency,nav_max_details=args.max_requests)
-    budget=Budget(cfg);index=Index();index.metrics['detail_request_cap']=args.max_requests
+    budget=build_budget(cfg);index=Index();index.metrics['detail_request_cap']=args.max_requests
     http=None;began=time.monotonic()
     try:
         async with httpx.AsyncClient(transport=safe_transport(args.concurrency+1),trust_env=False) as client:

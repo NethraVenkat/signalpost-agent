@@ -407,6 +407,10 @@ async def _run(config, client=None,synthesis_provider=None):
                         raise SourceFailure(undelivered_scopes[org])
                     return nav.section(envelope,nav_index,blobs,prior.get(org))
                 await isolate(envelope,'hiring',hiring)
+                if config.websites:
+                    from .web import careers
+                    section=await careers.fetch(org,envelope,website_http,website_http.accepted_pages.get(org,[]))
+                    update(envelope,'hiring',careers.merge(envelope,section))
         except asyncio.CancelledError:
             raise
         except SourceFailure as exc:

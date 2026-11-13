@@ -22,6 +22,24 @@ Historical submitted verification (version 1.0.0): the [Phase 1 gate](reports/ph
 
 ## How it works
 
+Hiring uses the bundled, org-number-keyed official NAV index for discovery,
+then checks each nominated ad live. Rebuild it with
+`python scripts/build_nav_index.py --no-seed-from-disk`; the maintenance build
+has its own explicit limits and report, while evaluator runs retain the shared
+1,850-request / 35-minute limit per 100 inputs. A stale or incomplete index is
+reported and falls back to the bounded official feed; a name match never proves
+an employer relationship.
+
+Careers discovery follows only a current exact-number VERIFIED site's own
+navigation/footer, including links to Webcruiter, Teamtailor, Jobylon, ReachMee,
+Easycruit, Recman or Varbi. At most four linked pages share the existing company
+and global counters, robots checks and politeness. Supported `JobPosting`
+records need their own title and a current posting date/deadline or an explicit
+open status attached to that title. Expired, undated and group-site postings
+are withheld. Unsupported layouts, query-dependent ATS URLs and unproven
+redirect chains remain discovery limitations; `run.refresh.careers` records
+checked URLs and cutoffs separately from NAV coverage.
+
 ```mermaid
 flowchart LR
     Input[Company numbers] --> Plan[Plan bounded source calls]

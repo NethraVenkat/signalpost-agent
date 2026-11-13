@@ -5,7 +5,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2]
 import sys
 STAGE=sys.argv[1]
-assert STAGE in ('A2','B')
+assert STAGE in ('A2','B','D','I')
 DEST=ROOT/'reports/r5'/('stage'+STAGE)
 
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
@@ -44,6 +44,9 @@ def inventory(stage):
 
 def main():
     pairs=[('stageA','stageA2/frozen'),('release','stageA2/daily')] if STAGE=='A2' else [('stageA2/frozen','stageB/frozen'),('stageA2/daily','stageB/daily')]
+    if STAGE in ('D','I'):
+        prior={'D':'B','I':'D'}[STAGE]
+        pairs=[('stage'+prior+'/'+s,'stage'+STAGE+'/'+s) for s in ('frozen','daily')]
     data={stage:inventory(stage) for pair in pairs for stage in pair}
     comparisons={}
     text='# Stage '+STAGE+' website/social URL changes\n\nAll deltas use exact saved proof excerpts; removed receipts are historical, not current proof. Unchanged URLs are fully inventoried in url_inventory.json.\n\n'
