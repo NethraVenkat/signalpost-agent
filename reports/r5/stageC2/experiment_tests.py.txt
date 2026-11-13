@@ -1,0 +1,41 @@
+from types import SimpleNamespace
+import pytest
+from signalpost.web.adaptive import extend_capped
+from signalpost.web.candidates import Candidate,candidate_key
+from signalpost.web.fetcher import WebsiteHttp
+from signalpost.budget import Budget
+from signalpost.sources.blobstore import BlobStore
+from tests.test_registry import config
+from tests.test_websites import OUR
+
+def setup(tmp_path):
+    cfg=config(tmp_path,[OUR],adaptive_extra_budget=True)
+    budget=Budget(cfg);budget.cap=1850;budget.phase='pass2'
+    http=WebsiteHttp(None,cfg,budget,BlobStore(cfg.state_dir));http.counts[OUR]=13;http.dns_counts[OUR]=12
+    http.pass2_allowances[OUR]={'http':5,'dns':4}
+    return http,Candidate('https://example.no/','example.no','legal_name_slug'),{'attempted':set(),'vetoed':set()},{}
+
+def test_capped_untried_candidate_extension_is_once_and_cumulative(tmp_path):
+    h,c,s,r=setup(tmp_path);extend_capped(h,OUR,c,s,r,None)
+    assert h.company_cap(OUR)==23 and h.dns_limit(OUR)==18
+    assert r['c2_extension']=={'http':10,'dns':6}
+    assert h.counts[OUR]==13 and h.dns_counts[OUR]==12
+    extend_capped(h,OUR,c,s,r,None);assert h.company_cap(OUR)==23
+    h.budget.phase='pass1';assert h.company_cap(OUR)==8 and h.dns_limit(OUR)==8
+
+@pytest.mark.parametrize('kind',['checked','veto','retry','room','no_global','unknown'])
+def test_ineligible_candidates_never_granted_more_budget(tmp_path,kind):
+    h,c,s,r=setup(tmp_path);retry=None
+    if kind=='checked':s['attempted'].add(candidate_key(c))
+    if kind=='veto':s['vetoed'].add(c.domain)
+    if kind=='retry':retry='website_timeout'
+    if kind=='room':h.counts[OUR]=0;h.dns_counts[OUR]=0
+    if kind=='no_global':h.budget.cap=0
+    if kind=='unknown':c=Candidate(c.url,c.domain,'search_brave')
+    extend_capped(h,OUR,c,s,r,retry)
+    assert h.pass2_allowances[OUR]=={'http':5,'dns':4}
+
+def test_extension_never_promises_more_http_than_remaining_global(tmp_path):
+    h,c,s,r=setup(tmp_path);h.budget.cap=2
+    extend_capped(h,OUR,c,s,r,None)
+    assert r['c2_extension']['http']==2 and h.company_cap(OUR)==15

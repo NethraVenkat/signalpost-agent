@@ -1,0 +1,64 @@
+diff --git a/src/signalpost/web/adaptive.py b/src/signalpost/web/adaptive.py
+index c612c7ff..1fccf050 100644
+--- a/src/signalpost/web/adaptive.py
++++ b/src/signalpost/web/adaptive.py
+@@ -17,6 +17,25 @@ ORIGIN_SCORE = {'registry_website':100, 'registry_email':95,
+     'subunit_registry_website':90, 'subunit_registry_email':88,
+     'nav_employer_homepage':85, 'legal_name_slug':70, 'brand_variant':60,
+     'registry_subunit_name':50}
++C2_HTTP=10
++C2_DNS=6
++
++
++def extend_capped(http,org,candidate,session,record,retry_reason):
++    """One cumulative extension, only for an untried eligible capped company."""
++    if (not http.config.adaptive_extra_budget or record.get('c2_extended') or retry_reason
++            or candidate.origin not in ORIGIN_SCORE or candidate_key(candidate) in session['attempted']
++            or candidate.domain in session['vetoed']):return
++    if room(http,org)>0 and dns_room(http,org,candidate):return
++    http.budget.check()
++    left=max(0,http.budget.cap-len(http.budget.events))
++    if not left:return
++    current=http.pass2_allowances.get(org,{'http':0,'dns':0})
++    grant={'http':min(15,current['http']+min(C2_HTTP,left)),
++           'dns':min(10,current['dns']+C2_DNS)}
++    http.pass2_allowances[org]=grant
++    record.update(c2_extended=True,c2_extension={'http':grant['http']-current['http'],'dns':grant['dns']-current['dns']},
++                  extra_allowance=dict(grant),extension_trigger='cumulative_http_or_dns_limit_with_untried_candidate')
+ 
+ 
+ def priority(candidate):
+@@ -132,6 +151,7 @@ async def run(envelopes, http, index, bulk, previous, update, refresh_activity):
+                 grant={'http':min(5,max(0,budget.cap-len(budget.events))),'dns':4}
+                 http.pass2_allowances[org]=grant
+                 record['extra_allowance']=dict(grant)
++            extend_capped(http,org,candidate,http.discovery_sessions[org],record,retry_reason)
+             if room(http,org)<=0:
+                 record['state']='website_budget_exhausted';continue
+             if not dns_room(http,org,candidate):
+@@ -183,6 +203,7 @@ async def run(envelopes, http, index, bulk, previous, update, refresh_activity):
+                      'states':dict(Counter(r['state'] for r in records.values())),
+                      'retry_attempts':sum(t['cache_action']=='retried' for r in records.values() for t in r['retry_outcomes']),
+                      'retry_outcomes':dict(Counter(t['outcome'] for r in records.values() for t in r['retry_outcomes'])),
++                     'extended_companies':sum(bool(r.get('c2_extended')) for r in records.values()),
+                      'per_company':records},
+-            'policy':'Pass 1 8/13 HTTP and 8 DNS; pass 2 up to +5 HTTP/+4 DNS from remaining global budget; no counter reset; unchanged proof/robots/politeness'}
++            'policy':'Pass 1 8/13 HTTP and 8 DNS; pass 2 existing +5/+4, capped untried strong/name candidates up to another +10 HTTP/+6 DNS; absolute 23 website HTTP/18 DNS; leftover global budget only; unchanged proof/robots/politeness'}
+     finally:budget.phase='pass1'
+diff --git a/src/signalpost/web/fetcher.py b/src/signalpost/web/fetcher.py
+index d219da1b..58c7bedc 100644
+--- a/src/signalpost/web/fetcher.py
++++ b/src/signalpost/web/fetcher.py
+@@ -49,10 +49,10 @@ class WebsiteHttp:
+         self.dns_metrics = dns_metrics
+ 
+     def extra_http(self, org):
+-        return self.pass2_allowances.get(org, {}).get('http', 0) if self.budget.phase=='pass2' else 0
++        return min(15,self.pass2_allowances.get(org, {}).get('http', 0)) if self.budget.phase=='pass2' else 0
+ 
+     def dns_limit(self, org):
+-        return 8 + (self.pass2_allowances.get(org, {}).get('dns', 0) if self.budget.phase=='pass2' else 0)
++        return 8 + (min(10,self.pass2_allowances.get(org, {}).get('dns', 0)) if self.budget.phase=='pass2' else 0)
+ 
+     def company_cap(self, org):
+         nonweb=sum(e['organisation_number']==org and e.get('section')!='website' for e in self.budget.events)

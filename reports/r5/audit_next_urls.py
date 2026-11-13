@@ -5,14 +5,14 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2]
 import sys
 STAGE=sys.argv[1]
-assert STAGE in ('A2','B','D','I','C')
+assert STAGE in ('A2','B','D','I','C','C2','E')
 DEST=ROOT/'reports/r5'/('stage'+STAGE)
 
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 
 def inventory(stage):
-    if stage=='release':
-        saved=json.loads((ROOT/'reports/r5/release-v4/daily.json').read_text(encoding='utf8'))
+    if stage in ('release','release-v4b'):
+        saved=json.loads((ROOT/('reports/r5/release-v4b' if stage=='release-v4b' else 'reports/r5/release-v4')/'daily.json').read_text(encoding='utf8'))
         path=Path(saved['cwd'])/'envelopes.jsonl'
     else:
         settings=json.loads((ROOT/'reports/r5'/stage/'settings.json').read_text(encoding='utf8'))
@@ -47,6 +47,8 @@ def main():
     if STAGE in ('D','I','C'):
         prior={'D':'B','I':'D','C':'F1'}[STAGE]
         pairs=[('stage'+prior+'/'+s,'stage'+STAGE+'/'+s) for s in ('frozen','daily')]
+    if STAGE=='C2':pairs=[('stageC/frozen','stageC2/frozen'),('stageC/daily','stageC2/daily'),('release-v4b','stageC2/mock')]
+    if STAGE=='E':pairs=[('stageC2/'+s,'stageE/'+s) for s in ('frozen','daily','mock')]
     data={stage:inventory(stage) for pair in pairs for stage in pair}
     comparisons={}
     text='# Stage '+STAGE+' website/social URL changes\n\nAll deltas use exact saved proof excerpts; removed receipts are historical, not current proof. Unchanged URLs are fully inventoried in url_inventory.json.\n\n'

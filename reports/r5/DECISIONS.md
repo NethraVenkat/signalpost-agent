@@ -247,3 +247,10 @@
 - Mock 100: 718 HTTP, 387.864s wall, 3 sites, 2 owned social URLs, 0 jobs, 13248 facts; 100 ordered terminal envelopes/site and all five topics, zero unsupported values, $0. Edge ten: two invalid checksums/one duplicate preserved, no invalid requests, 50 HTTP, site generated, zero unsupported values. Complete source failures remain explicit.
 - Inventory every published mock website/social/job, with weaker registry assertions separated and exact receipts in release-v4b/urls.md. README reports both prior C samples and the new disjoint mock without claiming causal improvement or an official score. Models/APIs/licences/cost and exact commands are in RELEASE_REPORT.md.
 - Release author/tagger Nethra Venkat; local commit and annotated v1.3.0 only. No push or publication; stop after release.
+
+
+## Stage C2 ? measured allowance experiment reverted
+
+- Tested another +10 HTTP/+6 DNS for capped companies with untried ranked candidates, cumulative maxima 23 website HTTP/18 DNS. Only leftover global budget; unchanged identity, veto, once-only cache, robots and politeness checks. Eight focused tests and 920 full tests passed for experimental code. Preserve exact patch/tests, source manifests, seven-flag commands, response hashes and independent verifier reports in stageC2.
+- Three fresh 100-input runs: frozen 5 sites / 690 HTTP / 398.807s wall; daily 4 / 793 / 447.791s; mock 3 / 719 / 333.011s. All ordered terminal envelopes, generated sites, five briefing topics, zero unsupported values, $0. Budget-limited companies before/after: 18/17, 24/18, 22/20. Live timing/state drift is not causal proof.
+- No new or removed website/social URL on any sample and no extension-proved site. Therefore restore both production files byte-for-byte to the preceding policy (+5 HTTP/+4 DNS); keep experimental tests as non-collected evidence. C2 changes no production behavior. Do not claim recall improvement.

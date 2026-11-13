@@ -15,7 +15,7 @@ def sha(path):
 
 def stage_name():
     stage=sys.argv[1]
-    assert stage in ('A2','B','D','I','F1','C')
+    assert stage in ('A2','B','D','I','F1','C','C2','E')
     return stage
 
 
@@ -25,8 +25,8 @@ def main():
     if attempt:assert attempt.isalnum()
     project = Path(__file__).resolve().parents[2]
     sample=sys.argv[2]
-    assert sample in ('frozen','daily')
-    base = project / ('reports/r5/baseline' if sample=='frozen' else 'reports/r5/release-v4')
+    assert sample in ('frozen','daily','mock')
+    base = project / {'frozen':'reports/r5/baseline','daily':'reports/r5/release-v4','mock':'reports/r5/release-v4b'}[sample]
     dest = project / 'reports/r5' / ('stage'+stage) / sample
     out = project / '.data/r5' / ('stage'+stage+'-'+sample+'-run')
     if attempt:out=out.with_name(out.name+'-'+attempt)
@@ -45,7 +45,7 @@ def main():
     from signalpost.config import Config
     flags = {'organisations':companies, 'bulk':base/'registry100.csv',
              'output':out/'envelopes.jsonl', 'profiles_output':out/'profiles.jsonl',
-             'report':out/'report.json', 'run_id':'r5-stage'+stage+'-'+sample+'-seed'+('20261017' if sample=='frozen' else '20261113')+('-'+attempt if attempt else ''), 'expected_count':100}
+             'report':out/'report.json', 'run_id':'r5-stage'+stage+'-'+sample+'-seed'+{'frozen':'20261017','daily':'20261113','mock':'20261114'}[sample]+('-'+attempt if attempt else ''), 'expected_count':100}
     config = Config(**flags,site_dir=out/'site').model_dump(mode='json')
     # Only the seven official flags; the fresh working directory isolates default state/.
     args=[sys.executable,'-m','signalpost.cli','run']
@@ -116,7 +116,20 @@ def summarize():
                'job_ad_companies':sum(c['job_ads']>0 for c in per), 'contacts':sum(c['contacts'] for c in per),
                'http_requests':report['requests'], 'runtime_seconds':report['runtime_ms']/1000,
                'process_wall_seconds':execution['wall_seconds']}
-    if stage in ('B','D','I','F1','C'):
+    if stage=='E' or (stage=='C2' and sample!='mock'):
+        baseline=json.loads((project/('reports/r5/stage'+('C2' if stage=='E' else 'C'))/sample/'counts.json').read_text(encoding='utf8'))
+    elif stage=='C2' and sample=='mock':
+        old=json.loads((project/'reports/r5/release-v4b/daily-summary.json').read_text(encoding='utf8'))
+        oldrun=json.loads((project/'reports/r5/release-v4b/daily.json').read_text(encoding='utf8'))
+        oldrows=[json.loads(line) for line in (Path(oldrun['cwd'])/'envelopes.jsonl').read_text(encoding='utf8').splitlines()]
+        cs=[[c for c in r['claims'] if c['availability']=='available'] for r in oldrows]
+        baseline={'metrics':{'verified_websites':old['websites'],'social_profile_companies':old['social_companies'],
+            'activity_companies':sum(any(c['family']=='activity' for c in claims) for claims in cs),'activity_claims':old['activity_claims'],
+            'total_facts':old['facts'],'locations':sum(c['field'].startswith('subunits.unit.') for claims in cs for c in claims),
+            'job_ad_companies':old['job_companies'],'contacts':old['contacts'],'http_requests':old['http_requests'],
+            'runtime_seconds':old['runtime_seconds'],'process_wall_seconds':old['wall_seconds']},
+            'counts_by_section_state':old['section_states'],'metric_definitions':json.loads((project/'reports/r5/stageC/frozen/counts.json').read_text(encoding='utf8'))['metric_definitions']}
+    elif stage in ('B','D','I','F1','C'):
         prior={'B':'A2','D':'B','I':'D','F1':'I','C':'F1'}[stage]
         baseline=json.loads((project/('reports/r5/stage'+prior)/sample/'counts.json').read_text(encoding='utf8'))
     elif sample=='frozen':baseline=json.loads((project/'reports/r5/stageA/counts.json').read_text(encoding='utf8'))

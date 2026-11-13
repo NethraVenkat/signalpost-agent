@@ -1,0 +1,354 @@
+{
+  "frozen": {
+    "prior_budget_exhausted_companies": 18,
+    "experiment_budget_exhausted_companies": 17,
+    "prior_sites": 5,
+    "experiment_sites": 5,
+    "added_orgs": [],
+    "removed_orgs": [],
+    "extended_companies": 2,
+    "extension_verified_gains": 0,
+    "pass2_websites_gained": 0,
+    "http": 690,
+    "wall_seconds": 398.8072637000005,
+    "pass2_requests": 32,
+    "pass2_states": {
+      "no_pending_candidates": 70,
+      "checked_no_gain": 24,
+      "already_verified": 5,
+      "dns_budget_exhausted": 1
+    },
+    "extended_records": {
+      "912702847": {
+        "state": "checked_no_gain",
+        "candidates": 5,
+        "attempts": 5,
+        "requests": 0,
+        "websites_gained": 0,
+        "retry_outcomes": [],
+        "extra_allowance": {
+          "http": 15,
+          "dns": 10
+        },
+        "c2_extended": true,
+        "c2_extension": {
+          "http": 10,
+          "dns": 6
+        },
+        "extension_trigger": "cumulative_http_or_dns_limit_with_untried_candidate"
+      },
+      "956409071": {
+        "state": "dns_budget_exhausted",
+        "candidates": 12,
+        "attempts": 10,
+        "requests": 0,
+        "websites_gained": 0,
+        "retry_outcomes": [],
+        "extra_allowance": {
+          "http": 15,
+          "dns": 10
+        },
+        "c2_extended": true,
+        "c2_extension": {
+          "http": 10,
+          "dns": 6
+        },
+        "extension_trigger": "cumulative_http_or_dns_limit_with_untried_candidate"
+      }
+    },
+    "website_http_max": 13,
+    "output_sha256": "e0d784bed92463fa4dd0bfb92a0ee6644281ee5209eaf58df62dd0e5c4c05d1a"
+  },
+  "daily": {
+    "prior_budget_exhausted_companies": 24,
+    "experiment_budget_exhausted_companies": 18,
+    "prior_sites": 4,
+    "experiment_sites": 4,
+    "added_orgs": [],
+    "removed_orgs": [],
+    "extended_companies": 8,
+    "extension_verified_gains": 0,
+    "pass2_websites_gained": 0,
+    "http": 793,
+    "wall_seconds": 447.7905063999933,
+    "pass2_requests": 65,
+    "pass2_states": {
+      "checked_no_gain": 31,
+      "no_pending_candidates": 63,
+      "dns_budget_exhausted": 2,
+      "already_verified": 3,
+      "website_budget_exhausted": 1
+    },
+    "extended_records": {
+      "910929097": {
+        "state": "dns_budget_exhausted",
+        "candidates": 13,
+        "attempts": 11,
+        "requests": 0,
+        "websites_gained": 0,
+        "retry_outcomes": [],
+        "extra_allowance": {
+          "http": 15,
+          "dns": 10
+        },
+        "c2_extended": true,
+        "c2_extension": {
+          "http": 10,
+          "dns": 6
+        },
+        "extension_trigger": "cumulative_http_or_dns_limit_with_untried_candidate"
+      },
+      "913143930": {
+        "state": "checked_no_gain",
+        "candidates": 2,
+        "attempts": 2,
+        "requests": 7,
+        "websites_gained": 0,
+        "retry_outcomes": [
+          {
+            "url": "https://acerta.no/",
+            "origin": "registry_website",
+            "pass1_reason": "website_connect_error",
+            "cache_action": "retried",
+            "outcome": "failed",
+            "requests": 5
+          }
+        ],
+        "extra_allowance": {
+          "http": 15,
+          "dns": 10
+        },
+        "c2_extended": true,
+        "c2_extension": {
+          "http": 10,
+          "dns": 6
+        },
+        "extension_trigger": "cumulative_http_or_dns_limit_with_untried_candidate"
+      },
+      "913502752": {
+        "state": "checked_no_gain",
+        "candidates": 5,
+        "attempts": 5,
+        "requests": 0,
+        "websites_gained": 0,
+        "retry_outcomes": [],
+        "extra_allowance": {
+          "http": 15,
+          "dns": 10
+        },
+        "c2_extended": true,
+        "c2_extension": {
+          "http": 10,
+          "dns": 6
+        },
+        "extension_trigger": "cumulative_http_or_dns_limit_with_untried_candidate"
+      },
+      "924004843": {
+        "state": "checked_no_gain",
+        "candidates": 5,
+        "attempts": 5,
+        "requests": 6,
+        "websites_gained": 0,
+        "retry_outcomes": [],
+        "extra_allowance": {
+          "http": 15,
+          "dns": 10
+        },
+        "c2_extended": true,
+        "c2_extension": {
+          "http": 10,
+          "dns": 6
+        },
+        "extension_trigger": "cumulative_http_or_dns_limit_with_untried_candidate"
+      },
+      "925496251": {
+        "state": "checked_no_gain",
+        "candidates": 8,
+        "attempts": 8,
+        "requests": 0,
+        "websites_gained": 0,
+        "retry_outcomes": [],
+        "extra_allowance": {
+          "http": 15,
+          "dns": 10
+        },
+        "c2_extended": true,
+        "c2_extension": {
+          "http": 10,
+          "dns": 6
+        },
+        "extension_trigger": "cumulative_http_or_dns_limit_with_untried_candidate"
+      },
+      "933741761": {
+        "state": "website_budget_exhausted",
+        "candidates": 7,
+        "attempts": 6,
+        "requests": 15,
+        "websites_gained": 0,
+        "retry_outcomes": [],
+        "extra_allowance": {
+          "http": 15,
+          "dns": 10
+        },
+        "c2_extended": true,
+        "c2_extension": {
+          "http": 10,
+          "dns": 6
+        },
+        "extension_trigger": "cumulative_http_or_dns_limit_with_untried_candidate"
+      },
+      "979311729": {
+        "state": "dns_budget_exhausted",
+        "candidates": 12,
+        "attempts": 10,
+        "requests": 0,
+        "websites_gained": 0,
+        "retry_outcomes": [],
+        "extra_allowance": {
+          "http": 15,
+          "dns": 10
+        },
+        "c2_extended": true,
+        "c2_extension": {
+          "http": 10,
+          "dns": 6
+        },
+        "extension_trigger": "cumulative_http_or_dns_limit_with_untried_candidate"
+      },
+      "993821403": {
+        "state": "checked_no_gain",
+        "candidates": 6,
+        "attempts": 6,
+        "requests": 5,
+        "websites_gained": 0,
+        "retry_outcomes": [],
+        "extra_allowance": {
+          "http": 15,
+          "dns": 10
+        },
+        "c2_extended": true,
+        "c2_extension": {
+          "http": 10,
+          "dns": 6
+        },
+        "extension_trigger": "cumulative_http_or_dns_limit_with_untried_candidate"
+      }
+    },
+    "website_http_max": 23,
+    "output_sha256": "45348a2c87137751d4dd716d7eae49d51485329be99e0e14d04a5af3038b2008"
+  },
+  "mock": {
+    "prior_budget_exhausted_companies": 22,
+    "experiment_budget_exhausted_companies": 20,
+    "prior_sites": 3,
+    "experiment_sites": 3,
+    "added_orgs": [],
+    "removed_orgs": [],
+    "extended_companies": 5,
+    "extension_verified_gains": 0,
+    "pass2_websites_gained": 0,
+    "http": 719,
+    "wall_seconds": 333.01098120000097,
+    "pass2_requests": 31,
+    "pass2_states": {
+      "no_pending_candidates": 74,
+      "already_verified": 2,
+      "checked_no_gain": 22,
+      "dns_budget_exhausted": 2
+    },
+    "extended_records": {
+      "917071209": {
+        "state": "checked_no_gain",
+        "candidates": 8,
+        "attempts": 8,
+        "requests": 0,
+        "websites_gained": 0,
+        "retry_outcomes": [],
+        "extra_allowance": {
+          "http": 15,
+          "dns": 10
+        },
+        "c2_extended": true,
+        "c2_extension": {
+          "http": 10,
+          "dns": 6
+        },
+        "extension_trigger": "cumulative_http_or_dns_limit_with_untried_candidate"
+      },
+      "917222975": {
+        "state": "checked_no_gain",
+        "candidates": 5,
+        "attempts": 5,
+        "requests": 5,
+        "websites_gained": 0,
+        "retry_outcomes": [],
+        "extra_allowance": {
+          "http": 15,
+          "dns": 10
+        },
+        "c2_extended": true,
+        "c2_extension": {
+          "http": 10,
+          "dns": 6
+        },
+        "extension_trigger": "cumulative_http_or_dns_limit_with_untried_candidate"
+      },
+      "936195296": {
+        "state": "dns_budget_exhausted",
+        "candidates": 16,
+        "attempts": 10,
+        "requests": 0,
+        "websites_gained": 0,
+        "retry_outcomes": [],
+        "extra_allowance": {
+          "http": 15,
+          "dns": 10
+        },
+        "c2_extended": true,
+        "c2_extension": {
+          "http": 10,
+          "dns": 6
+        },
+        "extension_trigger": "cumulative_http_or_dns_limit_with_untried_candidate"
+      },
+      "958507739": {
+        "state": "dns_budget_exhausted",
+        "candidates": 16,
+        "attempts": 10,
+        "requests": 0,
+        "websites_gained": 0,
+        "retry_outcomes": [],
+        "extra_allowance": {
+          "http": 15,
+          "dns": 10
+        },
+        "c2_extended": true,
+        "c2_extension": {
+          "http": 10,
+          "dns": 6
+        },
+        "extension_trigger": "cumulative_http_or_dns_limit_with_untried_candidate"
+      },
+      "988217867": {
+        "state": "checked_no_gain",
+        "candidates": 5,
+        "attempts": 5,
+        "requests": 5,
+        "websites_gained": 0,
+        "retry_outcomes": [],
+        "extra_allowance": {
+          "http": 15,
+          "dns": 10
+        },
+        "c2_extended": true,
+        "c2_extension": {
+          "http": 10,
+          "dns": 6
+        },
+        "extension_trigger": "cumulative_http_or_dns_limit_with_untried_candidate"
+      }
+    },
+    "website_http_max": 13,
+    "output_sha256": "8ac354f7e713f28ca4104bc37226a836a723313cf1a83e7ad640036361de6166"
+  }
+}
