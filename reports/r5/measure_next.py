@@ -15,7 +15,7 @@ def sha(path):
 
 def stage_name():
     stage=sys.argv[1]
-    assert stage in ('A2','B','D','I','F1','C','C2','E')
+    assert stage in ('A2','B','D','I','F1','C','C2','E','T')
     return stage
 
 
@@ -116,7 +116,9 @@ def summarize():
                'job_ad_companies':sum(c['job_ads']>0 for c in per), 'contacts':sum(c['contacts'] for c in per),
                'http_requests':report['requests'], 'runtime_seconds':report['runtime_ms']/1000,
                'process_wall_seconds':execution['wall_seconds']}
-    if stage=='E' or (stage=='C2' and sample!='mock'):
+    if stage=='T':
+        baseline=json.loads((project/'reports/r5/stageE'/sample/'counts.json').read_text(encoding='utf8'))
+    elif stage=='E' or (stage=='C2' and sample!='mock'):
         baseline=json.loads((project/('reports/r5/stage'+('C2' if stage=='E' else 'C'))/sample/'counts.json').read_text(encoding='utf8'))
     elif stage=='C2' and sample=='mock':
         old=json.loads((project/'reports/r5/release-v4b/daily-summary.json').read_text(encoding='utf8'))

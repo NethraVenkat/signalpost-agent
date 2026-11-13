@@ -1,0 +1,13 @@
+{
+  "query": "notice-type IN (can-standard can-social can-desg can-tran) AND publication-date>=20231113 AND ((winner-identifier IN (\"894984872\" \"894 984 872\")) OR (buyer-identifier IN (\"894984872\" \"894 984 872\")))",
+  "fields": [
+    "publication-number",
+    "winner-identifier",
+    "buyer-identifier"
+  ],
+  "limit": 100,
+  "page": 1,
+  "scope": "ALL",
+  "paginationMode": "PAGE_NUMBER",
+  "checkQuerySyntax": false
+}

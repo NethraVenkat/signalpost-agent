@@ -26,6 +26,8 @@ class Config(BaseModel):
     official_batch_size: int = Field(default=1100, ge=1)
     max_output_mb: float = Field(default=256, gt=0)
     websites: bool = True
+    gleif: bool = True
+    procurement: bool = True
     adaptive_websites: bool = True
     adaptive_extra_budget: bool = True
     dns_precheck: bool = True

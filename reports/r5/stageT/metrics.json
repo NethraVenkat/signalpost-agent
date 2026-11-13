@@ -1,0 +1,122 @@
+{
+  "frozen": {
+    "verified_websites": 5,
+    "social_profile_companies": 3,
+    "activity_companies": 100,
+    "activity_claims": 1202,
+    "total_facts": 13344,
+    "locations": 73,
+    "job_ad_companies": 0,
+    "contacts": 11,
+    "http_requests": 700,
+    "runtime_seconds": 357.609,
+    "process_wall_seconds": 370.77695110000786,
+    "lei_companies": 19,
+    "parent_companies": 0,
+    "award_companies": 0,
+    "lei_claims": 19,
+    "parent_claims": 0,
+    "award_claims": 0,
+    "source_http": {
+      "gleif": 5,
+      "procurement": 5
+    },
+    "source_states": {
+      "gleif": {
+        "available": 19,
+        "not_available": 81
+      },
+      "procurement": {
+        "not_available": 100
+      }
+    },
+    "source_error_codes": {
+      "gleif": {},
+      "procurement": {}
+    },
+    "ratios": 153,
+    "yoy": 50,
+    "activity_claims_including_procurement": 1202
+  },
+  "daily": {
+    "verified_websites": 4,
+    "social_profile_companies": 1,
+    "activity_companies": 100,
+    "activity_claims": 1137,
+    "total_facts": 13763,
+    "locations": 80,
+    "job_ad_companies": 1,
+    "contacts": 8,
+    "http_requests": 792,
+    "runtime_seconds": 404.109,
+    "process_wall_seconds": 412.76260120002553,
+    "lei_companies": 12,
+    "parent_companies": 0,
+    "award_companies": 0,
+    "lei_claims": 12,
+    "parent_claims": 0,
+    "award_claims": 0,
+    "source_http": {
+      "gleif": 5,
+      "procurement": 6
+    },
+    "source_states": {
+      "gleif": {
+        "not_available": 88,
+        "available": 12
+      },
+      "procurement": {
+        "not_available": 97,
+        "blocked": 3
+      }
+    },
+    "source_error_codes": {
+      "gleif": {},
+      "procurement": {
+        "public_robots_blocked": 3
+      }
+    },
+    "ratios": 169,
+    "yoy": 63,
+    "activity_claims_including_procurement": 1137
+  },
+  "mock": {
+    "verified_websites": 3,
+    "social_profile_companies": 2,
+    "activity_companies": 100,
+    "activity_claims": 1093,
+    "total_facts": 13260,
+    "locations": 81,
+    "job_ad_companies": 0,
+    "contacts": 4,
+    "http_requests": 736,
+    "runtime_seconds": 345.094,
+    "process_wall_seconds": 354.6484715999977,
+    "lei_companies": 10,
+    "parent_companies": 1,
+    "award_companies": 0,
+    "lei_claims": 10,
+    "parent_claims": 2,
+    "award_claims": 0,
+    "source_http": {
+      "gleif": 7,
+      "procurement": 5
+    },
+    "source_states": {
+      "gleif": {
+        "not_available": 90,
+        "available": 10
+      },
+      "procurement": {
+        "not_available": 100
+      }
+    },
+    "source_error_codes": {
+      "gleif": {},
+      "procurement": {}
+    },
+    "ratios": 164,
+    "yoy": 60,
+    "activity_claims_including_procurement": 1093
+  }
+}

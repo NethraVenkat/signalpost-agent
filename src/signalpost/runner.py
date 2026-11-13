@@ -107,7 +107,7 @@ def finalize(envelope, old, blobs, budget, began, verify_identity=False):
     envelope.operations.requests = len(events)
     for family, module in envelope.modules.items():
         hints = {"identity": "/api/enheter/", "roles": "/roller", "subunits": "/underenheter?", "accounts": "/regnskapsregisteret/"}
-        matching = [] if family in {'hiring','activity'} else [e for e in events if e.get("section") == "website"] if family == "website" else [e for e in events if hints[family] in e["url"] and (family != "identity" or not e["url"].endswith("/roller"))]
+        matching = [e for e in events if e.get('section')==family] if family in {'gleif','procurement'} else [] if family in {'hiring','activity'} else [e for e in events if e.get("section") == "website"] if family == "website" else [e for e in events if hints[family] in e["url"] and (family != "identity" or not e["url"].endswith("/roller"))]
         module.retry_count = max(0, len(matching) - len({e["url"] for e in matching}))
     envelope.profile = CompactProfile(organisation_number=envelope.organisation_number,
                                       values={c.field: c.value for c in envelope.claims},
@@ -180,7 +180,7 @@ async def _run(config, client=None,synthesis_provider=None):
         # warning, never falsely claim the supplied batch was processed.
         inputs = Inputs([], [], [], 0)
         warnings.append(f"input unreadable: {type(exc).__name__}")
-    families = FAMILIES + (("website",) if config.websites else ()) + (('hiring',) if config.hiring else ()) + (('activity',) if config.public_activity or config.registry_changes else ())
+    families = FAMILIES + (("website",) if config.websites else ()) + (('hiring',) if config.hiring else ()) + (('activity',) if config.public_activity or config.registry_changes else ()) + (('gleif',) if config.gleif else ()) + (('procurement',) if config.procurement else ())
     envelopes = {org: placeholder(org, config.run_id, started, families) for org in inputs.unique}
     for org in inputs.invalid:
         for family in families:
@@ -513,6 +513,14 @@ async def _run(config, client=None,synthesis_provider=None):
                         pass1={'requests':sum(e.get('pass')=='pass1' for e in budget.events)},
                         pass2={'requests':sum(e.get('pass')=='pass2' for e in budget.events)})
                     warnings.append('adaptive website pass failed: '+type(exc).__name__)
+            from .sources.exact_public import enrich
+            task=asyncio.create_task(enrich(envelopes,active_client,config,budget,blobs,update))
+            await finish_before_deadline([task],budget,CANCEL_GRACE_SECONDS)
+            if task.done() and not task.cancelled() and task.exception() is not None:
+                for envelope in envelopes.values():
+                    for family in ('gleif','procurement'):
+                        if envelope.run.sections.get(family)=='failed':
+                            update(envelope,family,missing(family,'public_enrichment_incomplete'))
             return pending
         finally:
             dns_metrics.update({'dns_precheck_lookups': website_http.dns_lookups, 'dns_candidates_by_company': website_http.dns_counts,

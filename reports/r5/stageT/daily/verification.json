@@ -1,0 +1,42 @@
+{
+  "command": [
+    "C:\\Users\\<USER>\\signal-nethra\\.venv\\Scripts\\python.exe",
+    "scripts/verify_output.py",
+    "--first",
+    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageT-daily-run-final\\envelopes.jsonl",
+    "--organisations",
+    "C:\\Users\\<USER>\\signal-nethra\\reports\\r5\\release-v4\\companies100.jsonl",
+    "--count",
+    "100",
+    "--state-dir",
+    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageT-daily-run-final\\state",
+    "--report",
+    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageT-daily-run-final\\report.json"
+  ],
+  "exit_code": 0,
+  "lines": 100,
+  "schema_valid": true,
+  "published_claims": 13763,
+  "source_blobs_verified": 405,
+  "synthesis_companies": 100,
+  "synthesis_sentences": 1857,
+  "synthesis_unverified_values": 0,
+  "financial_inputs_verified": 6354,
+  "derived_financial_metrics_verified": 232,
+  "registry_events_verified": 1137,
+  "filing_year_facts_verified": 1040,
+  "exact_public_items_verified": 12,
+  "briefing_companies": 100,
+  "briefing_sentences": 612,
+  "briefing_short_companies": 0,
+  "briefing_unverified_values": 0,
+  "briefing_topic_coverage": {
+    "activity": 100,
+    "change": 100,
+    "unknown": 100,
+    "financial": 100,
+    "takeaway": 100
+  },
+  "complete_briefing_contracts": 100,
+  "newer_filing_flags": 0
+}

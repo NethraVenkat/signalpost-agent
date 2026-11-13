@@ -76,7 +76,7 @@ def select(synthesis, claims, limit=8):
         observations={c['id'] for c in synthesis.get('observations', [])}
         return [s for s in synthesis['briefing'] if (s.get('claim_ids') or s.get('observation_ids'))
                 and all(cid in allowed for cid in s['claim_ids'])
-                and all(oid in observations for oid in s.get('observation_ids',[]))][:min(limit, 6)]
+                and all(oid in observations for oid in s.get('observation_ids',[]))][:min(limit, 10)]
     sections = synthesis.get('sections', {})
     sentences = [s for key in ('what_it_does', 'scale', 'leadership', 'changes')
                  for s in sections.get(key, [])]

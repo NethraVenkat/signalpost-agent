@@ -5,7 +5,7 @@ from .financial import analyze, metric_sentence
 from .catalog import change_claims, leaves
 
 TOPICS = ('activity','change','unknown','financial','takeaway')
-FAMILIES = ('identity','roles','subunits','accounts','website','hiring','activity')
+FAMILIES = ('identity','roles','subunits','accounts','website','hiring','activity','gleif','procurement')
 STATE_REASON = {'available':'Supported section facts were returned.', 'failed':'Source checking was incomplete.',
                 'blocked':'Source access was refused.', 'ambiguous':'Attribution or coverage was ambiguous.',
                 'not_available':'No supported value was found in the checked source scope.',
@@ -28,6 +28,7 @@ def observations(envelope):
     claims=supported(envelope); metrics,year_check,gaps=analyze(envelope)
     result=[]
     for family in FAMILIES:
+        if family in {'gleif','procurement'} and family not in envelope.run.sections:continue
         codes=sorted({e.code for e in getattr(envelope,'errors',[]) if e.section==family and e.code!='website_candidates'})
         state=envelope.run.sections.get(family,'not_recorded')
         result.append(observation(envelope,'source_status',family,{'state':state,'reason':STATE_REASON[state],'reason_codes':codes}))
@@ -159,6 +160,10 @@ def install(synthesis,envelope):
     synthesis.briefing=[core[t] for t in TOPICS]
     leader=next((s for s in synthesis.sections.leadership if s.claim_ids),None)
     if leader:synthesis.briefing.insert(1,leader)
+    from ..sources.exact_public import briefing_sentences
+    for sentence in briefing_sentences(envelope):
+        synthesis.briefing.append(sentence)
+        synthesis.sections.leadership.append(sentence)
     return synthesis
 
 

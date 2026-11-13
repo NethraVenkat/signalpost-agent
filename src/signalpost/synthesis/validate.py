@@ -89,6 +89,9 @@ def sentence_error(sentence,envelope):
     # These new frames are checked in full, bound to every claim they use.
     # Table titles authorize only the matching NACE frame or headline.
     plain=sentence.text.removeprefix('Previously supported. ')
+    if any(getattr(c,'family',None) in {'gleif','procurement'} for c in claims):
+        from ..sources.exact_public import briefing_sentences
+        return None if sentence in briefing_sentences(envelope) else 'unverified_public_frame'
     from .brief import DEPTH_LABELS, depth_text, period_claims, LIMITATION, EMPLOYEE_GAP
     if sentence.text == EMPLOYEE_GAP or sentence.text.startswith('The registry does not report'):
         if (len(claims) != 1 or claims[0].field != 'identity.employees_reported' or claims[0].value is not False
@@ -229,7 +232,8 @@ def validate_synthesis(synthesis,envelope):
     briefing = []
     for sentence in synthesis.briefing:
         reason = sentence_error(sentence,envelope)
-        if not reason and len(briefing) >= 6: reason = 'briefing_sentence_cap'
+        from ..sources.exact_public import briefing_sentences
+        if not reason and len(briefing) >= 6+len(briefing_sentences(envelope)): reason = 'briefing_sentence_cap'
         if reason: rejected.append({'section':'briefing','reason':reason})
         else: briefing.append(sentence)
     synthesis.briefing = briefing

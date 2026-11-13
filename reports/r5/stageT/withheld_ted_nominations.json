@@ -1,0 +1,50 @@
+[
+  {
+    "sample": "daily",
+    "organisation_number": "830009612",
+    "company": "VEKSTPARTNER AS",
+    "notice": "203993-2024",
+    "search_role": "winner-identifier",
+    "raw_search_id": "830009612",
+    "url": "https://ted.europa.eu/en/notice/-/detail/203993-2024",
+    "state": "blocked",
+    "reason_codes": [
+      "public_robots_blocked"
+    ],
+    "search_response_sha256": "f5e365c8b54ab04263ba4cacb5bff751553ce6986b9cb1f57e9668d8f80e4aa0",
+    "published": false,
+    "warning": "Search nomination only; XML country/role/lot proof was not obtained. Not a published award or verified company relationship."
+  },
+  {
+    "sample": "daily",
+    "organisation_number": "925293180",
+    "company": "ONZONZ AS",
+    "notice": "817000-2025",
+    "search_role": "winner-identifier",
+    "raw_search_id": "925 293 180",
+    "url": "https://ted.europa.eu/en/notice/-/detail/817000-2025",
+    "state": "blocked",
+    "reason_codes": [
+      "public_robots_blocked"
+    ],
+    "search_response_sha256": "2900af929bd1d741dc5cc79a4d7d9c1d734091c907a99b610911adac9c6701d7",
+    "published": false,
+    "warning": "Search nomination only; XML country/role/lot proof was not obtained. Not a published award or verified company relationship."
+  },
+  {
+    "sample": "daily",
+    "organisation_number": "980038661",
+    "company": "H & K SANDNES AS",
+    "notice": "749315-2025",
+    "search_role": "winner-identifier",
+    "raw_search_id": "980038661",
+    "url": "https://ted.europa.eu/en/notice/-/detail/749315-2025",
+    "state": "blocked",
+    "reason_codes": [
+      "public_robots_blocked"
+    ],
+    "search_response_sha256": "ec8abaefc14b343394723b5cdf732efb5f20dd143bbdfde4b15e5ad812faff0e",
+    "published": false,
+    "warning": "Search nomination only; XML country/role/lot proof was not obtained. Not a published award or verified company relationship."
+  }
+]

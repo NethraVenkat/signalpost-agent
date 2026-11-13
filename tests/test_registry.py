@@ -71,7 +71,7 @@ def config(tmp, orgs, **kwargs):
     kwargs.setdefault('nav_index_path',tmp/'missing-nav-index.json.gz')
     kwargs.setdefault('registry_changes', False)  # Legacy fixtures contain no change-feed responses.
     # Registry-only fixtures explicitly opt out; production defaults are tested separately.
-    for feature in ('websites', 'hiring', 'public_activity'):
+    for feature in ('websites', 'hiring', 'public_activity', 'gleif', 'procurement'):
         kwargs.setdefault(feature, False)
     kwargs.setdefault('adaptive_websites', False)  # Legacy single-pass source fixtures.
     kwargs.setdefault('adaptive_extra_budget', False)  # Legacy 8/13-only fixtures.

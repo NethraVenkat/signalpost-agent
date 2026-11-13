@@ -27,3 +27,10 @@ tests/fixtures/refresh_proof/*.jsonl -text
 # Preserve C2/E measured report and source-manifest checksums verbatim.
 reports/r5/stageC2/**/*.json -text whitespace=cr-at-eol
 reports/r5/stageE/**/*.json -text whitespace=cr-at-eol
+
+# Stage T/G policy receipts and evidence hashes stay byte-exact.
+reports/r5/stageT/**/*.json -text whitespace=cr-at-eol
+reports/r5/stageT/**/*.body -text
+reports/r5/stageT/items.md -text
+reports/r5/precision/LEDGER.md -text
+reports/r5/precision/*.json -text

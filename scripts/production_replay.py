@@ -374,6 +374,9 @@ async def run_production_replay(
     output_report.parent.mkdir(parents=True, exist_ok=True)
 
     config = Config(
+        # This legacy replay manifest predates GLEIF/TED. New exact-ID sources
+        # have their own isolated transport/receipt tests, never live fallback.
+        gleif=False, procurement=False,
         organisations=input_path,
         output=output_envelopes,
         report=output_report,

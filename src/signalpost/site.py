@@ -310,6 +310,8 @@ def fact(claim, records, filing_list=None):
         label = v.get('title') or v.get('name') or {'roles': 'Registered role', 'subunits': 'Registered workplace', 'hiring': 'Job advertisement'}[claim['family']]
     if claim['field'].startswith('website_description.'):
         label = "Company's own description"
+    if claim['field'].startswith('procurement.award.'):
+        label='Public procurement award'
     v = claim.get('value')
     title = english_title(v) if claim['field'].startswith('identity.nace') and isinstance(v, dict) else None
     content = value_html(v) if available else '<p>' + esc(UNKNOWN.get(claim['availability'], 'Unknown.')) + '</p>'
@@ -415,7 +417,9 @@ def page(title, body, prefix='', kind='profile', company_data=None):
             f'<main id="main">{body}</main><footer>Evidence first. Unknown values remain unknown.</footer></body></html>\n')
 
 
-EXPLORER_VISIBLE_ROWS = 50
+# Keep room for additional cited source-status records under the unchanged
+# 250 KB HTML gate. Remaining rows still load from the full local data file.
+EXPLORER_VISIBLE_ROWS = 48
 
 
 def explorer_cells(c, records):
@@ -458,7 +462,7 @@ def profile(row, title):
              'Use <strong>Original source</strong> to visit the publisher. The hash identifies the stored response at the shown retrieval time; a later live page may differ.</p></details>')
     sentences = [s for key in ('what_it_does', 'scale', 'leadership', 'changes','limitations','takeaway') for s in synthesis.get('sections', {}).get(key, [])]
     from .synthesis.brief import select
-    overview = select(synthesis, claims, limit=6)
+    overview = select(synthesis, claims, limit=10 if any(c['family'] in {'gleif','procurement'} and c['availability']=='available' for c in claims) else 6)
     body += '<section class="summary"><h2>Cited summary</h2>'
     body += ''.join(sentence_html(s, claim_map, change_ids, observation_ids) for s in overview)
     remaining = [s for s in sentences if s not in overview]
@@ -499,7 +503,8 @@ def profile(row, title):
                'locations' if family == 'subunits' else
                'hiring' if f == 'identity.employees' else
                'online' if family == 'website' or f == 'identity.registered_website' else
-               'financials' if family == 'accounts' else 'people' if family == 'roles' else
+               'financials' if family == 'accounts' else 'people' if family in {'roles','gleif'} else
+               'activity' if family == 'procurement' else
                'hiring' if family == 'hiring' else 'activity' if family == 'activity' else 'what-it-does')
         buckets[key].append(c)
     for key, label, family in GROUPS:
@@ -852,7 +857,7 @@ def index_record(row):
 
     reg_events = registry_events(row)
     published = [(c['value']['date'], c['value']['title'], c) for c in available
-                 if c['family'] == 'activity' and isinstance(c.get('value'), dict)
+                 if c['family'] in {'activity','procurement'} and isinstance(c.get('value'), dict)
                  and c['value'].get('date') and c['value'].get('title') and not c.get('carried_forward')]
     all_events = sorted(list(reg_events) + published, key=lambda event: event[0], reverse=True)
     latest_event = all_events[0] if all_events else None

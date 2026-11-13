@@ -67,6 +67,38 @@ def verify_careers(row,data,evidence,stored_body):
             expected=next_url
 
 
+def verify_exact_public(row,data,evidence,stored_body):
+    from signalpost.sources.exact_public import lei_record,parent_record,ted_xml,GLEIF,METHOD
+    from datetime import datetime
+    count=0
+    for claim in data['claims']:
+        if claim['family'] not in {'gleif','procurement'} or claim['availability']!='available':continue
+        receipts=[evidence[eid] for eid in claim['evidence_ids'] if evidence[eid]['extraction_method']==METHOD]
+        assert receipts,'Missing exact-ID source receipt'
+        org=row['organisation_number'];value=claim['value'];matched=False
+        for receipt in receipts:
+            url=receipt['source_url'];body=stored_body(receipt['content_sha256'])
+            if claim['field']=='gleif.record':
+                assert url.startswith(GLEIF+'lei-records?')
+                document=json.loads(body)
+                matched |= any(lei_record(item,org)==value for item in document['data'])
+            elif claim['field'].startswith('gleif.parent.'):
+                kind=claim['field'].rsplit('.',1)[-1];child=value['child_lei']
+                parent_identity=next(c for c in data['claims'] if c['field']=='gleif.record' and c['availability']=='available')
+                assert parent_identity['value']['lei']==child
+                assert set(parent_identity['evidence_ids'])<=set(claim['evidence_ids'])
+                if url==GLEIF+'lei-records/'+child+'/'+kind+'-parent-relationship':
+                    matched |= parent_record(json.loads(body)['data'],child,kind)==value
+            elif claim['field'].startswith('procurement.award.'):
+                assert url=='https://ted.europa.eu/en/notice/'+value['notice_id']+'/xml'
+                at=datetime.fromisoformat(receipt['retrieved_at'].replace('Z','+00:00'))
+                matched |= value in ted_xml(body.encode('utf8'),org,value['notice_id'],at)
+            else:raise AssertionError('Unknown public exact-ID claim')
+        assert matched,'Unsupported GLEIF/TED value or attribution'
+        count+=1
+    return count
+
+
 def verify_filing_years(row,data,evidence,stored_body):
     from signalpost.sources.accounts_years import YEARS
     checked=0
@@ -233,7 +265,8 @@ def verify_synthesis(row):
                             completed_at=row['run']['completed_at'] if 'run' in row else row['completed_at']))
     sentences=[s for key in SECTIONS for s in getattr(synthesis.sections,key)]
     assert all(sentence_error(s,envelope) is None for s in sentences),'Unverified synthesis sentence'
-    assert len(synthesis.briefing) <= 6, 'Briefing exceeds six sentences'
+    from signalpost.sources.exact_public import briefing_sentences
+    assert len(synthesis.briefing) <= 6+len(briefing_sentences(envelope)), 'Briefing exceeds cited frame bound'
     assert all((s.claim_ids or s.observation_ids) and sentence_error(s,envelope) is None for s in synthesis.briefing), 'Unverified briefing sentence'
     if synthesis.contract_version == 'r5-S':
         from signalpost.synthesis.overview import contract_errors
@@ -278,6 +311,7 @@ def verify(first, state_dir, count, organisations=None, report=None, require_cle
     synthesis_companies=synthesis_sentences=0
     financial_inputs=derived_metrics=registry_events=filing_year_facts=0
     registry_documents={}
+    exact_public=0
     for row in rows:
         companies,sentences=verify_synthesis(row)
         synthesis_companies+=companies;synthesis_sentences+=sentences
@@ -302,12 +336,14 @@ def verify(first, state_dir, count, organisations=None, report=None, require_cle
         financial_inputs+=inputs_checked; derived_metrics+=metrics_checked
         registry_events+=verify_registry_events(row,data,evidence,stored_body,registry_documents)
         verify_careers(row,data,evidence,stored_body)
+        exact_public+=verify_exact_public(row,data,evidence,stored_body)
         filing_year_facts+=verify_filing_years(row,data,evidence,stored_body)
     result = {"lines": len(rows), "schema_valid": True, "published_claims": published, "source_blobs_verified": len(seen)}
     result.update(synthesis_companies=synthesis_companies,synthesis_sentences=synthesis_sentences,synthesis_unverified_values=0)
     result.update(financial_inputs_verified=financial_inputs,derived_financial_metrics_verified=derived_metrics)
     result['registry_events_verified']=registry_events
     result['filing_year_facts_verified']=filing_year_facts
+    result['exact_public_items_verified']=exact_public
     briefings = [(row['run'].get('synthesis') if 'run' in row else row['profile'].get('synthesis')) or {} for row in rows]
     result.update(briefing_companies=sum(bool(s.get('briefing')) for s in briefings),
                   briefing_sentences=sum(len(s.get('briefing', [])) for s in briefings),

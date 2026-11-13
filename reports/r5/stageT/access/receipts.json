@@ -1,0 +1,72 @@
+[
+  {
+    "name": "gleifrobots",
+    "url": "https://api.gleif.org/robots.txt",
+    "status": 200,
+    "sha256": "e5c4b84484ee4216e9373be99380320c25dd94805f99f0a805846f087636553f",
+    "headers": {
+      "content-type": "text/plain"
+    },
+    "bytes": 24
+  },
+  {
+    "name": "tedrobots",
+    "url": "https://api.ted.europa.eu/robots.txt",
+    "status": 404,
+    "sha256": "e9210471313988fab0fcd464fb4914f2bd46ef43bd0ae3c687b30df604c26915",
+    "headers": {
+      "content-type": "application/json"
+    },
+    "bytes": 130
+  },
+  {
+    "name": "tedwebrobots",
+    "url": "https://ted.europa.eu/robots.txt",
+    "status": 202,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "headers": {
+      "content-type": "text/html; charset=UTF-8"
+    },
+    "bytes": 0
+  },
+  {
+    "name": "gleifterms",
+    "url": "https://www.gleif.org/en/meta/lei-data-terms-of-use",
+    "status": 200,
+    "sha256": "5b043c7863ad1ca1c26a20383526e007fde0283a795d8c34f7421ca9aa8ca7a3",
+    "headers": {
+      "content-type": "text/html; charset=UTF-8"
+    },
+    "bytes": 194868
+  },
+  {
+    "name": "tedterms",
+    "url": "https://ted.europa.eu/en/legal-notice",
+    "status": 202,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "headers": {
+      "content-type": "text/html; charset=UTF-8"
+    },
+    "bytes": 0
+  },
+  {
+    "name": "tedapi",
+    "url": "https://api.ted.europa.eu/api-v3.yaml",
+    "status": 200,
+    "sha256": "a6a55fad63d80b1fb0b3f3c00b89bcd718ee394e00944c949bc6b409463b76d4",
+    "headers": {
+      "content-type": "application/x-yaml;charset=UTF-8"
+    },
+    "bytes": 456129
+  },
+  {
+    "name": "gleifprobe",
+    "url": "https://api.gleif.org/api/v1/lei-records?filter[entity.registeredAs]=991853995,964398003&filter[entity.registeredAt]=RA000472&page[size]=100",
+    "status": 200,
+    "sha256": "02046fd5dfc77c3c1ad2e42de30f30f5728881b795aff013f8a7430290833b41",
+    "headers": {
+      "content-type": "application/vnd.api+json"
+    },
+    "bytes": 549
+  }
+]
