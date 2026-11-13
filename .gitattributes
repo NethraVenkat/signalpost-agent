@@ -1,3 +1,6 @@
 # Recorded HTTP response hashes depend on exact bytes on Windows as well.
 tests/fixtures/external_integration/blobs/* -text
 reports/r2/OVERNIGHT_PROMPT.md -text
+# Preserve the byte hashes of release smoke inputs across platforms.
+reports/r5/release-v4/*.jsonl -text
+reports/r5/release-v4/*.csv -text

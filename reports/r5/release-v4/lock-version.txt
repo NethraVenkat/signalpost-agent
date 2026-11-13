@@ -1,0 +1,2 @@
+Resolved 25 packages in 399ms
+Updated signalpost-agent v1.1.1 -> v1.2.0

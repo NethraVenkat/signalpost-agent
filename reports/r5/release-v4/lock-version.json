@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "uv",
+    "lock",
+    "--offline"
+  ],
+  "cwd": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\release-v4-20261113-112818\\repo",
+  "exit_code": 0,
+  "wall_seconds": 0.7030900999961887,
+  "finished_at_utc": "2026-11-13T06:22:35.782668+00:00"
+}

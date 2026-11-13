@@ -1,0 +1,15 @@
+{
+  "tested_source_commit": "3168e29b7224270ff1b3829ddad4fc596d1d6705",
+  "tested_git_source_tree": "3edf64c9f569b5ff6dfaf90a6f52ec0305af818b",
+  "release_version": "1.2.0",
+  "application_source_unchanged": true,
+  "dependency_pins_unchanged_except_project": true,
+  "all_daily_gates_passed": true,
+  "all_edge_gates_passed": true,
+  "daily_wall_under_45_min": true,
+  "daily_http_under_1850": true,
+  "site_generated": true,
+  "total_runtime_provider_cost_usd": 0.0,
+  "clone_frozen_sync_exit": 0,
+  "version_frozen_sync_exit": 0
+}

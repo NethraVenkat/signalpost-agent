@@ -1,0 +1,9 @@
+   Building signalpost-agent @ file:///C:/Users/<USER>/signal-nethra/.data/r5/release-v4-20261113-112818/repo
+WARN Retry attempt #0. Sleeping 1.4828761s before the next attempt
+WARN Retry attempt #1. Sleeping 3.2894284s before the next attempt
+      Built signalpost-agent @ file:///C:/Users/<USER>/signal-nethra/.data/r5/release-v4-20261113-112818/repo
+Prepared 1 package in 1m 13s
+Uninstalled 1 package in 19ms
+Installed 1 package in 15ms
+ - signalpost-agent==1.1.1 (from file:///C:/Users/<USER>/signal-nethra/.data/r5/release-v4-20261113-112818/repo)
+ + signalpost-agent==1.2.0 (from file:///C:/Users/<USER>/signal-nethra/.data/r5/release-v4-20261113-112818/repo)

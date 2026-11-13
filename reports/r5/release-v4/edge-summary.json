@@ -1,0 +1,98 @@
+{
+  "input_rows": 10,
+  "unique_inputs": 9,
+  "terminal_envelopes": 10,
+  "input_order_verified": true,
+  "duplicate_rows": 1,
+  "invalid_inputs": [
+    "123456789",
+    "923609017"
+  ],
+  "exit_code": 0,
+  "http_requests": 166,
+  "http_cap": 166,
+  "wall_seconds": 104.45519770000828,
+  "runtime_seconds": 102.14,
+  "completion": {
+    "wall_seconds": 102.656,
+    "within_requested_time_budget": true,
+    "within_effective_time_budget": true,
+    "note": "Includes preparation, crawl, mandatory outputs and site; final report flush adds filesystem latency."
+  },
+  "site": {
+    "state": "available",
+    "companies": 9,
+    "input_records": 10,
+    "pages": 11,
+    "skipped_invalid_identifiers": 0,
+    "total_bytes": 1827533,
+    "largest_profile_data_bytes": 153837,
+    "largest_profile_bytes": 126915
+  },
+  "total_cost_usd": 0.0,
+  "verification": {
+    "lines": 10,
+    "schema_valid": true,
+    "published_claims": 728,
+    "source_blobs_verified": 27,
+    "synthesis_companies": 10,
+    "synthesis_sentences": 136,
+    "synthesis_unverified_values": 0,
+    "financial_inputs_verified": 341,
+    "derived_financial_metrics_verified": 12,
+    "briefing_companies": 10,
+    "briefing_sentences": 58,
+    "briefing_short_companies": 0,
+    "briefing_unverified_values": 0,
+    "briefing_topic_coverage": {
+      "activity": 10,
+      "change": 10,
+      "unknown": 10,
+      "financial": 10,
+      "takeaway": 10
+    },
+    "complete_briefing_contracts": 10,
+    "newer_filing_flags": 0
+  },
+  "websites": 0,
+  "social_urls": 0,
+  "contacts": 0,
+  "jobs": 0,
+  "activity_claims": 0,
+  "facts": 728,
+  "section_states": {
+    "identity": {
+      "available": 8,
+      "failed": 2
+    },
+    "roles": {
+      "available": 8,
+      "failed": 2
+    },
+    "subunits": {
+      "available": 5,
+      "failed": 2,
+      "not_available": 3
+    },
+    "accounts": {
+      "available": 8,
+      "failed": 2
+    },
+    "website": {
+      "not_available": 6,
+      "failed": 2,
+      "ambiguous": 2
+    },
+    "hiring": {
+      "failed": 10
+    },
+    "activity": {
+      "failed": 10
+    }
+  },
+  "artifacts": {
+    "envelopes.jsonl": "e2c9ff5b702cc9b9e0f7fddc78c376bde625069a66fd3e3659bd63e9aa69560c",
+    "profiles.jsonl": "70863f04c7a8e72c58c0f94762ec075068cfd66541a8c05ca1d8af6599eeae01",
+    "report.json": "a7cad6c5346dfd7b45b57baab994e164e4bebb4a78271da836234cbdf2bad72a"
+  }
+}

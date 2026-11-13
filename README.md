@@ -2,7 +2,15 @@
 
 Signalpost researches Norwegian companies from official registries and bounded company-owned sources, verifies identity, and publishes evidence-linked facts, cited summaries and searchable offline profiles. Missing or incomplete information remains explicit. Deterministic template synthesis works without API keys and costs $0 in provider fees; no live model adapter is shipped.
 
-Revision 3b candidate **1.1.1** adds evidence-backed registry activity on `revision/r3b`, based on submitted revision 2 (`a704375`, v1.1.0). The [R3b release report](reports/r3b/RELEASE_REPORT.md) records the release decision, exact tested SHA and gates. Main and tags change only after the release handoff is approved.
+## Revision 5 / v1.2.0
+
+- The official seven evaluator flags enable website discovery, hiring and public website activity by default, and generate the profile site beside the output. Explicit opt-outs remain available.
+- Five-part briefings cover activity, changes/first-run registry context, unknowns, financial context and a supported decision takeaway, with citations on every sentence.
+- Website budget fixes preserve identity proof, one DNS nomination per www/non-www pair, veto/cache reuse, strong-name priority and cumulative 8/13 ceilings. The adaptive second pass stays inside the shared 1,850 HTTP / 35-minute limits per 100 unique inputs.
+
+[Release check and exact tested source commit](reports/r5/release-v4/RELEASE_REPORT.md). This is a local v1.2.0 release; nothing is published or pushed automatically.
+
+Historical revision 3b candidate **1.1.1** adds evidence-backed registry activity on `revision/r3b`, based on submitted revision 2 (`a704375`, v1.1.0). The [R3b release report](reports/r3b/RELEASE_REPORT.md) records the release decision, exact tested SHA and gates. Main and tags change only after the release handoff is approved.
 
 Registry activity is enabled by default in the release candidate. Use `--no-registry-changes` (or `Config(registry_changes=False)`) to disable it. It publishes only named business/postal address, registered-name and share-capital changes, plus new/removed workplaces with exact registry parent proof. Dates are explicitly labelled **registry publication time, not effective date**. Each fact retains the source URL, changed field/new value when supplied, retrieval time and source hash. New workplaces include their separately labelled registered start date when present. Removed workplaces absent from the current verified parent mapping are skipped. Feed errors or incomplete pagination mark activity failed; verified partial facts may remain visible. The newest event is cited in the summary and Recent activity.
 

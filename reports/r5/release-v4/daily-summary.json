@@ -1,0 +1,97 @@
+{
+  "input_rows": 100,
+  "unique_inputs": 100,
+  "terminal_envelopes": 100,
+  "input_order_verified": true,
+  "duplicate_rows": 0,
+  "invalid_inputs": [],
+  "exit_code": 0,
+  "http_requests": 961,
+  "http_cap": 1850,
+  "wall_seconds": 302.99600269999064,
+  "runtime_seconds": 276.812,
+  "completion": {
+    "wall_seconds": 283.328,
+    "within_requested_time_budget": true,
+    "within_effective_time_budget": true,
+    "note": "Includes preparation, crawl, mandatory outputs and site; final report flush adds filesystem latency."
+  },
+  "site": {
+    "state": "available",
+    "companies": 100,
+    "input_records": 100,
+    "pages": 102,
+    "skipped_invalid_identifiers": 0,
+    "total_bytes": 25089584,
+    "largest_profile_data_bytes": 180331,
+    "largest_profile_bytes": 145679
+  },
+  "total_cost_usd": 0.0,
+  "verification": {
+    "lines": 100,
+    "schema_valid": true,
+    "published_claims": 9677,
+    "source_blobs_verified": 389,
+    "synthesis_companies": 100,
+    "synthesis_sentences": 1642,
+    "synthesis_unverified_values": 0,
+    "financial_inputs_verified": 4361,
+    "derived_financial_metrics_verified": 169,
+    "briefing_companies": 100,
+    "briefing_sentences": 600,
+    "briefing_short_companies": 0,
+    "briefing_unverified_values": 0,
+    "briefing_topic_coverage": {
+      "activity": 100,
+      "change": 100,
+      "unknown": 100,
+      "financial": 100,
+      "takeaway": 100
+    },
+    "complete_briefing_contracts": 100,
+    "newer_filing_flags": 0
+  },
+  "websites": 4,
+  "social_urls": 2,
+  "contacts": 8,
+  "jobs": 1,
+  "activity_claims": 97,
+  "facts": 9677,
+  "section_states": {
+    "identity": {
+      "available": 100
+    },
+    "roles": {
+      "available": 100
+    },
+    "subunits": {
+      "available": 78,
+      "not_available": 22
+    },
+    "accounts": {
+      "available": 100
+    },
+    "website": {
+      "not_available": 60,
+      "ambiguous": 10,
+      "blocked": 1,
+      "failed": 25,
+      "available": 4
+    },
+    "hiring": {
+      "not_available": 94,
+      "failed": 5,
+      "available": 1
+    },
+    "activity": {
+      "not_available": 47,
+      "failed": 36,
+      "available": 17
+    }
+  },
+  "artifacts": {
+    "envelopes.jsonl": "5f8485d4eb0f79ba430aa96b4acc825759df7001b4343dd0b2807a995e384529",
+    "profiles.jsonl": "9bf4c13121436ef6e6e60fb3311a1999dbd93106fba9deab749d8a9709d9468a",
+    "report.json": "ec8235ba940dd9e0b91f7ad3333ce5dc74ec3a2a9cdf492ad5576bd58e222b77"
+  }
+}
