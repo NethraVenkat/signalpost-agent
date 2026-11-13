@@ -359,3 +359,9 @@
 
 - Add local extraction of labelled own title/site name/header/logo/footer/copyright and bounded contact/imprint blocks. Exclude hidden/script/article/news/client/partner/reference contexts and agency credits, including split-node credits. A contact-page URL alone does not make its full body publisher context.
 - Extractor does not alter the existing scorer or publish anything in R1; R4 will consume it only as a veto. Raw receipts remain the evidence, not normalized fragments. Seven focused tests and full pytest 961 passed in 255.15s (stageW/pytest-R1.txt). Stage R2/R4 working files are excluded from this commit.
+
+## Stage R2: local registry frequency bundle
+
+- Build counts from the existing 1,177,860-entity enheter snapshot only, with embedded SHA-256/date/NLOD 2.0 provenance. The 411,160 evaluation universe is not the nationwide snapshot. Optional underenheter input is supported but missing, never silently represented as included.
+- Count distinct entity/key pairs across phone/mobile and duplicate rows/snapshots. Normalize eight-digit Norwegian phones, full emails, non-free-mail email domains and folded/sorted legal-form/filler-free name keys. Local loader has schema/size bounds and no network fallback. The bundle is 10,853,314 bytes, SHA-256 900882536a574656025214e5163174812d4d4234e4922b9e452e86882b530d07; distributions in stageW/rarity.json and R2_REPORT.md.
+- Frequency does not prove ownership. R2 does not consume rarity for positive scoring or add a tier. Three targeted tests plus actual bundled-file reload/hash validation; full current working-tree suite 979 passed in 165.09s (pytest-R2-green.txt). R4 working files and their deliberately updated synthetic group expectations are excluded from the R2 commit. No push, models, paid search or paid APIs.

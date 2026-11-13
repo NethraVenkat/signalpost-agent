@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "built_at": "2026-11-13T19:05:51.310268+00:00",
+  "entity_count": 1177860,
+  "attribution": "Brønnøysundregistrene / Enhetsregisteret; NLOD 2.0",
+  "licence_url": "https://data.norge.no/nlod/no/2.0",
+  "sources": [
+    {
+      "kind": "enheter",
+      "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+      "file": "registry.csv",
+      "sha256": "5b0df27c5567a655320b8dfb8975049b76c46ba93d748a8a763f8db7050b7862",
+      "valid_rows": 1177860,
+      "local_file_modified_at": "2026-10-13T06:48:09.113086+00:00"
+    }
+  ],
+  "definition": "Distinct registered orgnrs per normalized key; duplicate phone/mobile/rows count once. Counts describe only the included snapshots, not the entire current registry. No ownership inference.",
+  "table_sha256": "900882536a574656025214e5163174812d4d4234e4922b9e452e86882b530d07",
+  "bytes": 10853314,
+  "distribution": {
+    "phone": {
+      "≥5": 2135,
+      "1": 363794,
+      "2": 33024,
+      "3–4": 8123
+    },
+    "email": {
+      "1": 277476,
+      "≥5": 836,
+      "2": 11472,
+      "3–4": 2337
+    },
+    "domain": {
+      "1": 76131,
+      "2": 9334,
+      "≥5": 2589,
+      "3–4": 3771
+    },
+    "name": {
+      "1": 1095275,
+      "2": 34983,
+      "3–4": 2717,
+      "≥5": 577
+    }
+  }
+}
