@@ -1,0 +1,9 @@
+{
+  "companies": 20,
+  "input_records": 20,
+  "pages": 22,
+  "skipped_invalid_identifiers": 0,
+  "total_bytes": 8547045,
+  "largest_profile_data_bytes": 720855,
+  "largest_profile_bytes": 248053
+}

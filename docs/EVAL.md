@@ -134,6 +134,8 @@ Method: saved body hashes and verbatim spans; exact company ID, registry spellin
 
 These are automated rule-verification verdicts, not independently human-labelled precision or a population accuracy claim. Saved samples are small, live sources can change, and a correct saved receipt does not establish current internet truth. Zero published items for a type is zero measured precision coverage for that type, not 100% precision. Source absence, blocking and incomplete pagination stay explicit. No notice amount is published without proven sole-winner lot attribution; this implementation abstains from all amounts.
 
+Human hand review (explicit user confirmation, 2026-11-13): 4 original Stage T items confirmed correct: GLÅMDAL MASKIN AS 995194163 website, CONCEDO AS 988217867 website and LinkedIn, and BØNES BØNES AS 922718059 LEI. All four automated-doubtful items are human-confirmed; automated counts and original proof tiers remain unchanged. This is a reviewed subset, not a broader precision estimate. See the separate ledger human-review column and human_reviews.json.
+
 ### Current three-sample measured results
 
 | Metric | Frozen 20261017 (T) | Seed 20261113 (T) | Seed 20261114 (T) |

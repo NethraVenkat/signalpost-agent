@@ -115,11 +115,14 @@ def recheck(row,claim,body):
     return ('doubtful' if reasons else 'correct'),reasons,checks
 
 
-def build(root=ROOT):
-    dest=root/'reports/r5/precision';dest.mkdir(parents=True,exist_ok=True)
+def build(root=ROOT,runs=None,dest=None):
+    dest=Path(dest) if dest else root/'reports/r5/precision';dest.mkdir(parents=True,exist_ok=True)
+    runs=runs or [(s,n,root/'reports/r5/stageT'/s) for s,n in [('frozen',20261017),('daily',20261113),('mock',20261114)]]
+    review_path=root/'reports/r5/precision/human_reviews.json'
+    human=json.loads(review_path.read_text(encoding='utf8')) if review_path.exists() else {'reviews':[],'pending':[]}
     records=[];inputs={};measurements={}
-    for sample,seed in [('frozen',20261017),('daily',20261113),('mock',20261114)]:
-        folder=root/'reports/r5/stageT'/sample
+    for sample,seed,folder in runs:
+        folder=Path(folder)
         settings=json.loads((folder/'settings.json').read_text(encoding='utf8'));work=Path(settings['working_directory'])
         output=work/'envelopes.jsonl';rows=[json.loads(x) for x in output.read_text(encoding='utf8').splitlines()]
         assert len(rows)==100
@@ -140,9 +143,12 @@ def build(root=ROOT):
                     'current_live_exact_employer_or_proven_subunit' if typ=='job' and value.get('source')!='verified_site_careers' else
                     'verified_site_own_link_current_posting' if typ=='job' else 'exact_NO_RA000472' if typ=='LEI' else
                     'exact_child_LEI_ACTIVE_relationship' if typ=='parent' else 'exact_NO_buyer_or_selected_winner_lot_contract')
+                value_sha=hashlib.sha256(json.dumps(value,sort_keys=True,ensure_ascii=False).encode()).hexdigest()
+                review=next((r for r in human['reviews'] if r['sample']==sample and r['organisation_number']==row['organisation_number']
+                    and r['field']==claim['field'] and r['value_sha256']==value_sha),None)
                 records.append({'sample':sample,'seed':seed,'organisation_number':row['organisation_number'],'company':name,'kind':typ,
                     'field':claim['field'],'claim_id':claim['id'],'value':value,'proof_tier':tier,'verdict':verdict,'reasons':reasons,
-                    'checks':checks,'evidence':receipts})
+                    'checks':checks,'evidence':receipts,'human_review':review})
         metrics=json.loads((folder/'counts.json').read_text(encoding='utf8'))['metrics']
         metrics.update(lei_companies=sum(any(c['field']=='gleif.record' and c['availability']=='available' for c in r['claims']) for r in rows),
             parent_companies=sum(any(c['field'].startswith('gleif.parent.') and c['availability']=='available' for c in r['claims']) for r in rows),
@@ -154,13 +160,13 @@ def build(root=ROOT):
     counts={kind:{v:sum(r['kind']==kind and r['verdict']==v for r in records) for v in ('correct','doubtful','wrong')} for kind in KINDS}
     report={'method':'Offline recheck of saved bytes and original proof/link/role constraints; no live re-fetch and no output edits',
         'unit':'published claim per sample, not deduplicated entities or a random hand-labelled accuracy sample',
-        'inputs':inputs,'counts':counts,'measurements':measurements,'items':records,
+        'inputs':inputs,'counts':counts,'measurements':measurements,'items':records,'human_reviews':human,
         'limits':['Automated verdicts are rule checks, not independent human precision ground truth.',
             'correct means clear under saved evidence rules at retrieval, not guaranteed current internet truth.',
             'Name/cross-entity/group/historical concerns are doubtful even if publication identity checks passed.',
             'Foreign counterparties/parents are legitimate; exact country/ID must match the target role, not every party in a batch.']}
     (dest/'ledger.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
-    text='# Precision ledger - three latest Stage T samples\n\n'+report['method']+'. No item is silently removed. Correct/doubtful/wrong are automated saved-evidence verdicts, not human-labelled accuracy. Every doubtful/wrong item needs hand review.\n\n'
+    text='# Precision ledger - measured samples\n\n'+report['method']+'. No item is silently removed. Correct/doubtful/wrong are automated saved-evidence verdicts, not human-labelled accuracy. The separate human-review column records explicit user verdicts for the exact sample/value, without upgrading original proof tiers. Remaining unreviewed doubtful/wrong items need hand review.\n\n'
     text+='| Type | Checked | Correct | Doubtful | Wrong |\n|---|---:|---:|---:|---:|\n'
     for typ,c in counts.items():text+=f"| {typ} | {sum(c.values())} | {c['correct']} | {c['doubtful']} | {c['wrong']} |\n"
     text+='\nMethod and limits:\n\n'+''.join('- '+x+'\n' for x in report['limits'])
@@ -168,8 +174,10 @@ def build(root=ROOT):
     for i,item in enumerate(records,1):
         text+=f"## {i}. {item['kind']} - {item['organisation_number']} - {item['company']} (seed {item['seed']})\n\n"
         display=json.dumps(item['value'],ensure_ascii=False,sort_keys=True)
-        text+='| Value / URL | Proof tier | Verdict | Review reason |\n|---|---|---|---|\n'
-        text+='| '+display.replace('|','&#124;').replace('\n',' ')+' | '+str(item['proof_tier'])+' | **'+item['verdict']+'** | '+('; '.join(item['reasons']) or 'All saved-evidence checks passed').replace('|','&#124;')+' |\n\n'
+        text+='| Value / URL | Proof tier | Automated verdict | Human review | Review reason |\n|---|---|---|---|---|\n'
+        review=item['human_review']
+        human_text=(review['verdict']+' - '+review['reviewer']+' ('+review['review_date']+')') if review else 'Pending explicit verdict' if item['organisation_number']=='995194163' else 'Not reviewed'
+        text+='| '+display.replace('|','&#124;').replace('\n',' ')+' | '+str(item['proof_tier'])+' | **'+item['verdict']+'** | '+human_text+' | '+('; '.join(item['reasons']) or 'All saved-evidence checks passed').replace('|','&#124;')+' |\n\n'
         for e in item['evidence']:
             text+=f"Source: {e['source_url']}\n\nRetrieved: {e['retrieved_at']}; SHA-256: `{e['content_sha256']}`; locator: `{e['locator']}`.\n\nExact excerpt:\n\n```text\n{e['claim_span']}\n```\n\n"
     (dest/'LEDGER.md').write_text(text,encoding='utf8',newline='')
@@ -177,4 +185,10 @@ def build(root=ROOT):
 
 
 if __name__=='__main__':
-    report=build();print(json.dumps({'counts':report['counts'],'measurements':report['measurements']}))
+    import argparse
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--runs',type=Path,help='JSON list of sample/seed/folder entries')
+    parser.add_argument('--destination',type=Path)
+    args=parser.parse_args()
+    runs=[(r['sample'],r['seed'],Path(r['folder'])) for r in json.loads(args.runs.read_text(encoding='utf8'))] if args.runs else None
+    report=build(runs=runs,dest=args.destination);print(json.dumps({'counts':report['counts'],'measurements':report['measurements']}))

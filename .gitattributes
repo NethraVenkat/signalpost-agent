@@ -34,3 +34,10 @@ reports/r5/stageT/**/*.body -text
 reports/r5/stageT/items.md -text
 reports/r5/precision/LEDGER.md -text
 reports/r5/precision/*.json -text
+
+# Qualification receipts and raw input hashes remain byte-exact.
+reports/r5/ci-fix/**/*.json -text whitespace=cr-at-eol
+reports/r5/precision/*.json -text whitespace=cr-at-eol
+reports/r5/stageH/**/*.json -text whitespace=cr-at-eol
+reports/r5/stageH/**/*.jsonl -text whitespace=cr-at-eol
+reports/r5/stageH/**/*.csv -text whitespace=cr-at-eol

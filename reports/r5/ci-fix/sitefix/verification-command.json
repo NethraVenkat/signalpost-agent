@@ -1,0 +1,21 @@
+{
+  "argv": [
+    "uv",
+    "run",
+    "python",
+    "scripts/check_live_run.py",
+    "--output",
+    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\ci-seven-sitefix\\envelopes.jsonl",
+    "--organisations",
+    "tests/fixtures/ci20.jsonl",
+    "--count",
+    "20",
+    "--state",
+    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\ci-seven-sitefix\\state",
+    "--report",
+    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\ci-seven-sitefix\\report.json",
+    "--site",
+    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\ci-seven-sitefix\\site"
+  ],
+  "exit_code": 0
+}

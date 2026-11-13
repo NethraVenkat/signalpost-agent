@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "C:\Users\<USER>\signal-nethra\.data\r5\ci-repro-1e93023\scripts\verify_output.py", line 359, in <module>
+    main()
+  File "C:\Users\<USER>\signal-nethra\.data\r5\ci-repro-1e93023\scripts\verify_output.py", line 355, in main
+    print(json.dumps(verify(args.first, args.state_dir, args.count, args.organisations, args.report, args.require_clean, args.second)))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\<USER>\signal-nethra\.data\r5\ci-repro-1e93023\scripts\verify_output.py", line 325, in verify
+    assert metrics['input_readable'] and not metrics['invalid_inputs'] and not metrics['warnings']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

@@ -1,6 +1,6 @@
-# Precision ledger - three latest Stage T samples
+# Precision ledger - measured samples
 
-Offline recheck of saved bytes and original proof/link/role constraints; no live re-fetch and no output edits. No item is silently removed. Correct/doubtful/wrong are automated saved-evidence verdicts, not human-labelled accuracy. Every doubtful/wrong item needs hand review.
+Offline recheck of saved bytes and original proof/link/role constraints; no live re-fetch and no output edits. No item is silently removed. Correct/doubtful/wrong are automated saved-evidence verdicts, not human-labelled accuracy. The separate human-review column records explicit user verdicts for the exact sample/value, without upgrading original proof tiers. Remaining unreviewed doubtful/wrong items need hand review.
 
 | Type | Checked | Correct | Doubtful | Wrong |
 |---|---:|---:|---:|---:|
@@ -22,9 +22,9 @@ Checks: SHA-256 and verbatim excerpts; website exact number, replayed proof, reg
 
 ## 1. LEI - 925181536 - SESTANTE AS (seed 20261017)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"entity_status": "ACTIVE", "initial_registration_date": "2021-03-08T15:11:32Z", "legal_form": "YI42", "lei": "984500F4TF2ED4D3F320", "next_renewal_date": "2022-03-08T15:11:34Z", "registration_status": "LAPSED"} | exact_NO_RA000472 | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"entity_status": "ACTIVE", "initial_registration_date": "2021-03-08T15:11:32Z", "legal_form": "YI42", "lei": "984500F4TF2ED4D3F320", "next_renewal_date": "2022-03-08T15:11:34Z", "registration_status": "LAPSED"} | exact_NO_RA000472 | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=918982523%2C918+982+523%2C919263601%2C919+263+601%2C919414944%2C919+414+944%2C922688532%2C922+688+532%2C923399658%2C923+399+658%2C925181536%2C925+181+536%2C925590266%2C925+590+266%2C925622605%2C925+622+605%2C925841722%2C925+841+722%2C926201905%2C926+201+905%2C926358154%2C926+358+154%2C926433873%2C926+433+873%2C926489380%2C926+489+380%2C926818317%2C926+818+317%2C927094266%2C927+094+266%2C927157985%2C927+157+985%2C927177978%2C927+177+978%2C927342677%2C927+342+677%2C927439794%2C927+439+794%2C928027678%2C928+027+678%2C928054780%2C928+054+780%2C928542742%2C928+542+742%2C928565637%2C928+565+637%2C928597695%2C928+597+695%2C928892956%2C928+892+956&filter%5Bentity.registeredAt%5D=RA000472&page%5Bsize%5D=100
 
@@ -128,9 +128,9 @@ Exact excerpt:
 
 ## 2. LEI - 829577372 - HANSSEN INVEST AS (seed 20261017)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"entity_status": "ACTIVE", "initial_registration_date": "2025-01-31T07:42:00Z", "legal_form": "YI42", "lei": "63670063X6LZM0LNVO18", "next_renewal_date": "2027-01-31T07:42:00Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"entity_status": "ACTIVE", "initial_registration_date": "2025-01-31T07:42:00Z", "legal_form": "YI42", "lei": "63670063X6LZM0LNVO18", "next_renewal_date": "2027-01-31T07:42:00Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=814635562%2C814+635+562%2C815566602%2C815+566+602%2C820162692%2C820+162+692%2C829577372%2C829+577+372%2C833467972%2C833+467+972%2C899174682%2C899+174+682%2C912238504%2C912+238+504%2C912435911%2C912+435+911%2C912579433%2C912+579+433%2C912702847%2C912+702+847%2C913129601%2C913+129+601%2C915188389%2C915+188+389%2C915412262%2C915+412+262%2C915596436%2C915+596+436%2C916249985%2C916+249+985%2C916374801%2C916+374+801%2C917281696%2C917+281+696%2C917403562%2C917+403+562%2C917751412%2C917+751+412%2C918079327%2C918+079+327%2C918109099%2C918+109+099%2C918703853%2C918+703+853%2C918824642%2C918+824+642%2C918843183%2C918+843+183%2C918953612%2C918+953+612&filter%5Bentity.registeredAt%5D=RA000472&page%5Bsize%5D=100
 
@@ -234,9 +234,9 @@ Exact excerpt:
 
 ## 3. LEI - 988963259 - BOGSHAMN HOLDING AS (seed 20261017)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"entity_status": "ACTIVE", "initial_registration_date": "2018-02-28T15:33:00Z", "legal_form": "YI42", "lei": "549300B0UWL2SET33910", "next_renewal_date": "2027-03-02T11:41:21Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"entity_status": "ACTIVE", "initial_registration_date": "2018-02-28T15:33:00Z", "legal_form": "YI42", "lei": "549300B0UWL2SET33910", "next_renewal_date": "2027-03-02T11:41:21Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=946595845%2C946+595+845%2C948639416%2C948+639+416%2C950302011%2C950+302+011%2C950310499%2C950+310+499%2C956409071%2C956+409+071%2C957687504%2C957+687+504%2C960480120%2C960+480+120%2C964398003%2C964+398+003%2C975514412%2C975+514+412%2C983739377%2C983+739+377%2C987769386%2C987+769+386%2C988963259%2C988+963+259%2C989214209%2C989+214+209%2C989965964%2C989+965+964%2C991835423%2C991+835+423%2C991853995%2C991+853+995%2C993016446%2C993+016+446%2C997095987%2C997+095+987%2C997995414%2C997+995+414%2C998181410%2C998+181+410%2C998309530%2C998+309+530%2C998320143%2C998+320+143%2C998340888%2C998+340+888%2C998795621%2C998+795+621%2C999504116%2C999+504+116&filter%5Bentity.registeredAt%5D=RA000472&page%5Bsize%5D=100
 
@@ -340,9 +340,9 @@ Exact excerpt:
 
 ## 4. LEI - 927439794 - FJERSTAD AS (seed 20261017)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"entity_status": "ACTIVE", "initial_registration_date": "2023-03-15T08:55:06Z", "legal_form": "YI42", "lei": "15955W1UX94EA0CNCN17", "next_renewal_date": "2027-03-15T07:55:06Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"entity_status": "ACTIVE", "initial_registration_date": "2023-03-15T08:55:06Z", "legal_form": "YI42", "lei": "15955W1UX94EA0CNCN17", "next_renewal_date": "2027-03-15T07:55:06Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=918982523%2C918+982+523%2C919263601%2C919+263+601%2C919414944%2C919+414+944%2C922688532%2C922+688+532%2C923399658%2C923+399+658%2C925181536%2C925+181+536%2C925590266%2C925+590+266%2C925622605%2C925+622+605%2C925841722%2C925+841+722%2C926201905%2C926+201+905%2C926358154%2C926+358+154%2C926433873%2C926+433+873%2C926489380%2C926+489+380%2C926818317%2C926+818+317%2C927094266%2C927+094+266%2C927157985%2C927+157+985%2C927177978%2C927+177+978%2C927342677%2C927+342+677%2C927439794%2C927+439+794%2C928027678%2C928+027+678%2C928054780%2C928+054+780%2C928542742%2C928+542+742%2C928565637%2C928+565+637%2C928597695%2C928+597+695%2C928892956%2C928+892+956&filter%5Bentity.registeredAt%5D=RA000472&page%5Bsize%5D=100
 
@@ -446,9 +446,9 @@ Exact excerpt:
 
 ## 5. LEI - 946595845 - Aanonsen Jernvarer AS (seed 20261017)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"entity_status": "ACTIVE", "initial_registration_date": "2023-12-07T10:32:05Z", "legal_form": "YI42", "lei": "25490040KYSUSVXLF046", "next_renewal_date": "2024-12-07T10:32:05Z", "registration_status": "LAPSED"} | exact_NO_RA000472 | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"entity_status": "ACTIVE", "initial_registration_date": "2023-12-07T10:32:05Z", "legal_form": "YI42", "lei": "25490040KYSUSVXLF046", "next_renewal_date": "2024-12-07T10:32:05Z", "registration_status": "LAPSED"} | exact_NO_RA000472 | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=946595845%2C946+595+845%2C948639416%2C948+639+416%2C950302011%2C950+302+011%2C950310499%2C950+310+499%2C956409071%2C956+409+071%2C957687504%2C957+687+504%2C960480120%2C960+480+120%2C964398003%2C964+398+003%2C975514412%2C975+514+412%2C983739377%2C983+739+377%2C987769386%2C987+769+386%2C988963259%2C988+963+259%2C989214209%2C989+214+209%2C989965964%2C989+965+964%2C991835423%2C991+835+423%2C991853995%2C991+853+995%2C993016446%2C993+016+446%2C997095987%2C997+095+987%2C997995414%2C997+995+414%2C998181410%2C998+181+410%2C998309530%2C998+309+530%2C998320143%2C998+320+143%2C998340888%2C998+340+888%2C998795621%2C998+795+621%2C999504116%2C999+504+116&filter%5Bentity.registeredAt%5D=RA000472&page%5Bsize%5D=100
 
@@ -552,9 +552,9 @@ Exact excerpt:
 
 ## 6. LEI - 991835423 - H-2 EIENDOM AS (seed 20261017)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"entity_status": "ACTIVE", "initial_registration_date": "2017-12-22T15:33:00Z", "legal_form": "YI42", "lei": "549300Y80BV9TH4W6105", "next_renewal_date": "2026-12-10T10:28:00Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"entity_status": "ACTIVE", "initial_registration_date": "2017-12-22T15:33:00Z", "legal_form": "YI42", "lei": "549300Y80BV9TH4W6105", "next_renewal_date": "2026-12-10T10:28:00Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=946595845%2C946+595+845%2C948639416%2C948+639+416%2C950302011%2C950+302+011%2C950310499%2C950+310+499%2C956409071%2C956+409+071%2C957687504%2C957+687+504%2C960480120%2C960+480+120%2C964398003%2C964+398+003%2C975514412%2C975+514+412%2C983739377%2C983+739+377%2C987769386%2C987+769+386%2C988963259%2C988+963+259%2C989214209%2C989+214+209%2C989965964%2C989+965+964%2C991835423%2C991+835+423%2C991853995%2C991+853+995%2C993016446%2C993+016+446%2C997095987%2C997+095+987%2C997995414%2C997+995+414%2C998181410%2C998+181+410%2C998309530%2C998+309+530%2C998320143%2C998+320+143%2C998340888%2C998+340+888%2C998795621%2C998+795+621%2C999504116%2C999+504+116&filter%5Bentity.registeredAt%5D=RA000472&page%5Bsize%5D=100
 
@@ -658,9 +658,9 @@ Exact excerpt:
 
 ## 7. LEI - 919414944 - SCHJETNE INVEST AS (seed 20261017)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"entity_status": "ACTIVE", "initial_registration_date": "2026-03-20T10:54:00Z", "legal_form": "YI42", "lei": "636700PUO0FOUNUH6H50", "next_renewal_date": "2027-03-20T10:54:00Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"entity_status": "ACTIVE", "initial_registration_date": "2026-03-20T10:54:00Z", "legal_form": "YI42", "lei": "636700PUO0FOUNUH6H50", "next_renewal_date": "2027-03-20T10:54:00Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=918982523%2C918+982+523%2C919263601%2C919+263+601%2C919414944%2C919+414+944%2C922688532%2C922+688+532%2C923399658%2C923+399+658%2C925181536%2C925+181+536%2C925590266%2C925+590+266%2C925622605%2C925+622+605%2C925841722%2C925+841+722%2C926201905%2C926+201+905%2C926358154%2C926+358+154%2C926433873%2C926+433+873%2C926489380%2C926+489+380%2C926818317%2C926+818+317%2C927094266%2C927+094+266%2C927157985%2C927+157+985%2C927177978%2C927+177+978%2C927342677%2C927+342+677%2C927439794%2C927+439+794%2C928027678%2C928+027+678%2C928054780%2C928+054+780%2C928542742%2C928+542+742%2C928565637%2C928+565+637%2C928597695%2C928+597+695%2C928892956%2C928+892+956&filter%5Bentity.registeredAt%5D=RA000472&page%5Bsize%5D=100
 
@@ -764,9 +764,9 @@ Exact excerpt:
 
 ## 8. LEI - 918079327 - ATVENGE HOLDING AS (seed 20261017)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"entity_status": "ACTIVE", "initial_registration_date": "2017-11-28T21:31:00Z", "legal_form": "YI42", "lei": "549300P61QZQRKUV0228", "next_renewal_date": "2027-03-23T08:38:29Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"entity_status": "ACTIVE", "initial_registration_date": "2017-11-28T21:31:00Z", "legal_form": "YI42", "lei": "549300P61QZQRKUV0228", "next_renewal_date": "2027-03-23T08:38:29Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=814635562%2C814+635+562%2C815566602%2C815+566+602%2C820162692%2C820+162+692%2C829577372%2C829+577+372%2C833467972%2C833+467+972%2C899174682%2C899+174+682%2C912238504%2C912+238+504%2C912435911%2C912+435+911%2C912579433%2C912+579+433%2C912702847%2C912+702+847%2C913129601%2C913+129+601%2C915188389%2C915+188+389%2C915412262%2C915+412+262%2C915596436%2C915+596+436%2C916249985%2C916+249+985%2C916374801%2C916+374+801%2C917281696%2C917+281+696%2C917403562%2C917+403+562%2C917751412%2C917+751+412%2C918079327%2C918+079+327%2C918109099%2C918+109+099%2C918703853%2C918+703+853%2C918824642%2C918+824+642%2C918843183%2C918+843+183%2C918953612%2C918+953+612&filter%5Bentity.registeredAt%5D=RA000472&page%5Bsize%5D=100
 
@@ -870,9 +870,9 @@ Exact excerpt:
 
 ## 9. LEI - 923399658 - STORFONNA INVEST AS (seed 20261017)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"entity_status": "ACTIVE", "initial_registration_date": "2026-02-10T08:17:00Z", "legal_form": "YI42", "lei": "6367003YHA0GZ5BTBU26", "next_renewal_date": "2027-02-10T08:17:00Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"entity_status": "ACTIVE", "initial_registration_date": "2026-02-10T08:17:00Z", "legal_form": "YI42", "lei": "6367003YHA0GZ5BTBU26", "next_renewal_date": "2027-02-10T08:17:00Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=918982523%2C918+982+523%2C919263601%2C919+263+601%2C919414944%2C919+414+944%2C922688532%2C922+688+532%2C923399658%2C923+399+658%2C925181536%2C925+181+536%2C925590266%2C925+590+266%2C925622605%2C925+622+605%2C925841722%2C925+841+722%2C926201905%2C926+201+905%2C926358154%2C926+358+154%2C926433873%2C926+433+873%2C926489380%2C926+489+380%2C926818317%2C926+818+317%2C927094266%2C927+094+266%2C927157985%2C927+157+985%2C927177978%2C927+177+978%2C927342677%2C927+342+677%2C927439794%2C927+439+794%2C928027678%2C928+027+678%2C928054780%2C928+054+780%2C928542742%2C928+542+742%2C928565637%2C928+565+637%2C928597695%2C928+597+695%2C928892956%2C928+892+956&filter%5Bentity.registeredAt%5D=RA000472&page%5Bsize%5D=100
 
@@ -976,9 +976,9 @@ Exact excerpt:
 
 ## 10. website - 926818317 - SPEDIFY AS (seed 20261017)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"candidate_origin": "legal_name_slug", "final_url": "https://spedify.no", "identity_level": "VERIFIED", "other_orgnrs": [], "points": 0, "proof_page_url": "https://spedify.no/", "proof_type": "orgnr_on_page", "relationship_note": null, "signals": []} | VERIFIED | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"candidate_origin": "legal_name_slug", "final_url": "https://spedify.no", "identity_level": "VERIFIED", "other_orgnrs": [], "points": 0, "proof_page_url": "https://spedify.no/", "proof_type": "orgnr_on_page", "relationship_note": null, "signals": []} | VERIFIED | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://spedify.no/
 
@@ -994,9 +994,9 @@ Exact excerpt:
 
 ## 11. social - 926818317 - SPEDIFY AS (seed 20261017)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"company_name": "SPEDIFY AS", "platform": "linkedin.com", "proof_tier": "own_header_footer_numeric_linkedin_v1", "url": "https://www.linkedin.com/company/74060067"} | own_header_footer_numeric_linkedin_v1 | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"company_name": "SPEDIFY AS", "platform": "linkedin.com", "proof_tier": "own_header_footer_numeric_linkedin_v1", "url": "https://www.linkedin.com/company/74060067"} | own_header_footer_numeric_linkedin_v1 | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://spedify.no/
 
@@ -1033,9 +1033,9 @@ Exact excerpt:
 
 ## 12. LEI - 957687504 - DECIBELPRODUKTER AS (seed 20261017)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"entity_status": "ACTIVE", "initial_registration_date": "2026-06-03T07:53:00Z", "legal_form": "YI42", "lei": "636700UGNP9XZHIXG934", "next_renewal_date": "2027-06-03T07:53:00Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"entity_status": "ACTIVE", "initial_registration_date": "2026-06-03T07:53:00Z", "legal_form": "YI42", "lei": "636700UGNP9XZHIXG934", "next_renewal_date": "2027-06-03T07:53:00Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=946595845%2C946+595+845%2C948639416%2C948+639+416%2C950302011%2C950+302+011%2C950310499%2C950+310+499%2C956409071%2C956+409+071%2C957687504%2C957+687+504%2C960480120%2C960+480+120%2C964398003%2C964+398+003%2C975514412%2C975+514+412%2C983739377%2C983+739+377%2C987769386%2C987+769+386%2C988963259%2C988+963+259%2C989214209%2C989+214+209%2C989965964%2C989+965+964%2C991835423%2C991+835+423%2C991853995%2C991+853+995%2C993016446%2C993+016+446%2C997095987%2C997+095+987%2C997995414%2C997+995+414%2C998181410%2C998+181+410%2C998309530%2C998+309+530%2C998320143%2C998+320+143%2C998340888%2C998+340+888%2C998795621%2C998+795+621%2C999504116%2C999+504+116&filter%5Bentity.registeredAt%5D=RA000472&page%5Bsize%5D=100
 
@@ -1139,9 +1139,9 @@ Exact excerpt:
 
 ## 13. website - 991853995 - BIEN SPAREBANK ASA (seed 20261017)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"candidate_origin": "registry_website", "final_url": "https://www.bien.no", "identity_level": "VERIFIED", "other_orgnrs": [], "points": 0, "proof_page_url": "https://www.bien.no/", "proof_type": "orgnr_on_page", "registry_contact_matches": {"email_domain": "bien.no"}, "relationship_note": null, "signals": []} | VERIFIED | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"candidate_origin": "registry_website", "final_url": "https://www.bien.no", "identity_level": "VERIFIED", "other_orgnrs": [], "points": 0, "proof_page_url": "https://www.bien.no/", "proof_type": "orgnr_on_page", "registry_contact_matches": {"email_domain": "bien.no"}, "relationship_note": null, "signals": []} | VERIFIED | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://www.bien.no/
 
@@ -1177,9 +1177,9 @@ Exact excerpt:
 
 ## 14. social - 991853995 - BIEN SPAREBANK ASA (seed 20261017)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"company_name": "BIEN SPAREBANK ASA", "platform": "linkedin.com", "proof_tier": "own_header_footer_numeric_linkedin_v1", "url": "https://www.linkedin.com/company/123301"} | own_header_footer_numeric_linkedin_v1 | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"company_name": "BIEN SPAREBANK ASA", "platform": "linkedin.com", "proof_tier": "own_header_footer_numeric_linkedin_v1", "url": "https://www.linkedin.com/company/123301"} | own_header_footer_numeric_linkedin_v1 | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://www.bien.no/
 
@@ -1235,9 +1235,9 @@ Exact excerpt:
 
 ## 15. social - 991853995 - BIEN SPAREBANK ASA (seed 20261017)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"company_name": "BIEN SPAREBANK ASA", "platform": "facebook.com", "proof_tier": "own_header_footer_exact_name_v1", "url": "https://www.facebook.com/BienSparebank"} | own_header_footer_exact_name_v1 | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"company_name": "BIEN SPAREBANK ASA", "platform": "facebook.com", "proof_tier": "own_header_footer_exact_name_v1", "url": "https://www.facebook.com/BienSparebank"} | own_header_footer_exact_name_v1 | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://www.bien.no/
 
@@ -1293,9 +1293,9 @@ Exact excerpt:
 
 ## 16. social - 991853995 - BIEN SPAREBANK ASA (seed 20261017)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"company_name": "BIEN SPAREBANK ASA", "platform": "instagram.com", "proof_tier": "own_header_footer_exact_name_v1", "url": "http://instagram.com/biensparebank"} | own_header_footer_exact_name_v1 | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"company_name": "BIEN SPAREBANK ASA", "platform": "instagram.com", "proof_tier": "own_header_footer_exact_name_v1", "url": "http://instagram.com/biensparebank"} | own_header_footer_exact_name_v1 | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://www.bien.no/
 
@@ -1351,9 +1351,9 @@ Exact excerpt:
 
 ## 17. social - 991853995 - BIEN SPAREBANK ASA (seed 20261017)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"company_name": "BIEN SPAREBANK ASA", "platform": "twitter.com", "proof_tier": "own_header_footer_exact_name_v1", "url": "https://twitter.com/BienSparebank"} | own_header_footer_exact_name_v1 | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"company_name": "BIEN SPAREBANK ASA", "platform": "twitter.com", "proof_tier": "own_header_footer_exact_name_v1", "url": "https://twitter.com/BienSparebank"} | own_header_footer_exact_name_v1 | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://www.bien.no/
 
@@ -1409,9 +1409,9 @@ Exact excerpt:
 
 ## 18. LEI - 991853995 - BIEN SPAREBANK ASA (seed 20261017)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"entity_status": "ACTIVE", "initial_registration_date": "2016-08-07T23:00:00Z", "legal_form": "IQGE", "lei": "5967007LIEEXZXEW2W49", "next_renewal_date": "2027-08-07T23:00:00Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"entity_status": "ACTIVE", "initial_registration_date": "2016-08-07T23:00:00Z", "legal_form": "IQGE", "lei": "5967007LIEEXZXEW2W49", "next_renewal_date": "2027-08-07T23:00:00Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=946595845%2C946+595+845%2C948639416%2C948+639+416%2C950302011%2C950+302+011%2C950310499%2C950+310+499%2C956409071%2C956+409+071%2C957687504%2C957+687+504%2C960480120%2C960+480+120%2C964398003%2C964+398+003%2C975514412%2C975+514+412%2C983739377%2C983+739+377%2C987769386%2C987+769+386%2C988963259%2C988+963+259%2C989214209%2C989+214+209%2C989965964%2C989+965+964%2C991835423%2C991+835+423%2C991853995%2C991+853+995%2C993016446%2C993+016+446%2C997095987%2C997+095+987%2C997995414%2C997+995+414%2C998181410%2C998+181+410%2C998309530%2C998+309+530%2C998320143%2C998+320+143%2C998340888%2C998+340+888%2C998795621%2C998+795+621%2C999504116%2C999+504+116&filter%5Bentity.registeredAt%5D=RA000472&page%5Bsize%5D=100
 
@@ -1515,9 +1515,9 @@ Exact excerpt:
 
 ## 19. LEI - 999504116 - MLC INVEST AS (seed 20261017)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"entity_status": "ACTIVE", "initial_registration_date": "2025-06-03T09:55:57Z", "legal_form": "YI42", "lei": "1595KMDUCQY17P3YCF92", "next_renewal_date": "2027-06-03T09:55:57Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"entity_status": "ACTIVE", "initial_registration_date": "2025-06-03T09:55:57Z", "legal_form": "YI42", "lei": "1595KMDUCQY17P3YCF92", "next_renewal_date": "2027-06-03T09:55:57Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=946595845%2C946+595+845%2C948639416%2C948+639+416%2C950302011%2C950+302+011%2C950310499%2C950+310+499%2C956409071%2C956+409+071%2C957687504%2C957+687+504%2C960480120%2C960+480+120%2C964398003%2C964+398+003%2C975514412%2C975+514+412%2C983739377%2C983+739+377%2C987769386%2C987+769+386%2C988963259%2C988+963+259%2C989214209%2C989+214+209%2C989965964%2C989+965+964%2C991835423%2C991+835+423%2C991853995%2C991+853+995%2C993016446%2C993+016+446%2C997095987%2C997+095+987%2C997995414%2C997+995+414%2C998181410%2C998+181+410%2C998309530%2C998+309+530%2C998320143%2C998+320+143%2C998340888%2C998+340+888%2C998795621%2C998+795+621%2C999504116%2C999+504+116&filter%5Bentity.registeredAt%5D=RA000472&page%5Bsize%5D=100
 
@@ -1621,9 +1621,9 @@ Exact excerpt:
 
 ## 20. LEI - 926489380 - TLH AS (seed 20261017)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"entity_status": "ACTIVE", "initial_registration_date": "2021-06-23T16:13:15Z", "legal_form": "YI42", "lei": "984500948BB53B877C86", "next_renewal_date": "2027-06-23T16:13:17Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"entity_status": "ACTIVE", "initial_registration_date": "2021-06-23T16:13:15Z", "legal_form": "YI42", "lei": "984500948BB53B877C86", "next_renewal_date": "2027-06-23T16:13:17Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=918982523%2C918+982+523%2C919263601%2C919+263+601%2C919414944%2C919+414+944%2C922688532%2C922+688+532%2C923399658%2C923+399+658%2C925181536%2C925+181+536%2C925590266%2C925+590+266%2C925622605%2C925+622+605%2C925841722%2C925+841+722%2C926201905%2C926+201+905%2C926358154%2C926+358+154%2C926433873%2C926+433+873%2C926489380%2C926+489+380%2C926818317%2C926+818+317%2C927094266%2C927+094+266%2C927157985%2C927+157+985%2C927177978%2C927+177+978%2C927342677%2C927+342+677%2C927439794%2C927+439+794%2C928027678%2C928+027+678%2C928054780%2C928+054+780%2C928542742%2C928+542+742%2C928565637%2C928+565+637%2C928597695%2C928+597+695%2C928892956%2C928+892+956&filter%5Bentity.registeredAt%5D=RA000472&page%5Bsize%5D=100
 
@@ -1727,9 +1727,9 @@ Exact excerpt:
 
 ## 21. website - 927094266 - SPORTLET.NO AS (seed 20261017)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"candidate_origin": "registry_website", "final_url": "https://www.sportlet.no", "identity_level": "VERIFIED", "other_orgnrs": [], "points": 0, "proof_page_url": "https://www.sportlet.no/", "proof_type": "orgnr_on_page", "relationship_note": null, "signals": []} | VERIFIED | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"candidate_origin": "registry_website", "final_url": "https://www.sportlet.no", "identity_level": "VERIFIED", "other_orgnrs": [], "points": 0, "proof_page_url": "https://www.sportlet.no/", "proof_type": "orgnr_on_page", "relationship_note": null, "signals": []} | VERIFIED | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://www.sportlet.no/
 
@@ -1744,9 +1744,9 @@ Exact excerpt:
 
 ## 22. LEI - 899174682 - FANTOFT UTVIKLING AS (seed 20261017)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"entity_status": "ACTIVE", "initial_registration_date": "2018-02-14T15:34:00Z", "legal_form": "YI42", "lei": "549300Q78YGXKD1O2040", "next_renewal_date": "2021-02-06T10:38:00Z", "registration_status": "LAPSED"} | exact_NO_RA000472 | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"entity_status": "ACTIVE", "initial_registration_date": "2018-02-14T15:34:00Z", "legal_form": "YI42", "lei": "549300Q78YGXKD1O2040", "next_renewal_date": "2021-02-06T10:38:00Z", "registration_status": "LAPSED"} | exact_NO_RA000472 | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=814635562%2C814+635+562%2C815566602%2C815+566+602%2C820162692%2C820+162+692%2C829577372%2C829+577+372%2C833467972%2C833+467+972%2C899174682%2C899+174+682%2C912238504%2C912+238+504%2C912435911%2C912+435+911%2C912579433%2C912+579+433%2C912702847%2C912+702+847%2C913129601%2C913+129+601%2C915188389%2C915+188+389%2C915412262%2C915+412+262%2C915596436%2C915+596+436%2C916249985%2C916+249+985%2C916374801%2C916+374+801%2C917281696%2C917+281+696%2C917403562%2C917+403+562%2C917751412%2C917+751+412%2C918079327%2C918+079+327%2C918109099%2C918+109+099%2C918703853%2C918+703+853%2C918824642%2C918+824+642%2C918843183%2C918+843+183%2C918953612%2C918+953+612&filter%5Bentity.registeredAt%5D=RA000472&page%5Bsize%5D=100
 
@@ -1850,9 +1850,9 @@ Exact excerpt:
 
 ## 23. website - 964398003 - FOLKSOM AS (seed 20261017)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"candidate_origin": "registry_website", "final_url": "https://folksom.no", "identity_level": "VERIFIED", "other_orgnrs": [], "points": 0, "proof_page_url": "https://folksom.no/kontakt", "proof_type": "orgnr_on_page", "registry_contact_matches": {"email_domain": "folksom.no"}, "relationship_note": null, "signals": []} | VERIFIED | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"candidate_origin": "registry_website", "final_url": "https://folksom.no", "identity_level": "VERIFIED", "other_orgnrs": [], "points": 0, "proof_page_url": "https://folksom.no/kontakt", "proof_type": "orgnr_on_page", "registry_contact_matches": {"email_domain": "folksom.no"}, "relationship_note": null, "signals": []} | VERIFIED | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://folksom.no/kontakt
 
@@ -1886,9 +1886,9 @@ Exact excerpt:
 
 ## 24. social - 964398003 - FOLKSOM AS (seed 20261017)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"company_name": "FOLKSOM AS", "platform": "facebook.com", "proof_tier": "own_header_footer_exact_name_v1", "url": "https://www.facebook.com/folksomas"} | own_header_footer_exact_name_v1 | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"company_name": "FOLKSOM AS", "platform": "facebook.com", "proof_tier": "own_header_footer_exact_name_v1", "url": "https://www.facebook.com/folksomas"} | own_header_footer_exact_name_v1 | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://folksom.no/
 
@@ -1942,9 +1942,9 @@ Exact excerpt:
 
 ## 25. social - 964398003 - FOLKSOM AS (seed 20261017)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"company_name": "FOLKSOM AS", "platform": "instagram.com", "proof_tier": "own_header_footer_exact_name_v1", "url": "https://www.instagram.com/folksom"} | own_header_footer_exact_name_v1 | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"company_name": "FOLKSOM AS", "platform": "instagram.com", "proof_tier": "own_header_footer_exact_name_v1", "url": "https://www.instagram.com/folksom"} | own_header_footer_exact_name_v1 | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://folksom.no/
 
@@ -1998,9 +1998,9 @@ Exact excerpt:
 
 ## 26. social - 964398003 - FOLKSOM AS (seed 20261017)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"company_name": "FOLKSOM AS", "platform": "linkedin.com", "proof_tier": "own_header_footer_numeric_linkedin_v1", "url": "https://www.linkedin.com/company/2534098"} | own_header_footer_numeric_linkedin_v1 | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"company_name": "FOLKSOM AS", "platform": "linkedin.com", "proof_tier": "own_header_footer_numeric_linkedin_v1", "url": "https://www.linkedin.com/company/2534098"} | own_header_footer_numeric_linkedin_v1 | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://folksom.no/
 
@@ -2054,9 +2054,9 @@ Exact excerpt:
 
 ## 27. LEI - 918703853 - AVARIA EQUITY AS (seed 20261017)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"entity_status": "ACTIVE", "initial_registration_date": "2018-01-19T15:32:00Z", "legal_form": "YI42", "lei": "549300GLEUIZQMIQTY51", "next_renewal_date": "2019-01-18T15:18:00Z", "registration_status": "LAPSED"} | exact_NO_RA000472 | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"entity_status": "ACTIVE", "initial_registration_date": "2018-01-19T15:32:00Z", "legal_form": "YI42", "lei": "549300GLEUIZQMIQTY51", "next_renewal_date": "2019-01-18T15:18:00Z", "registration_status": "LAPSED"} | exact_NO_RA000472 | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=814635562%2C814+635+562%2C815566602%2C815+566+602%2C820162692%2C820+162+692%2C829577372%2C829+577+372%2C833467972%2C833+467+972%2C899174682%2C899+174+682%2C912238504%2C912+238+504%2C912435911%2C912+435+911%2C912579433%2C912+579+433%2C912702847%2C912+702+847%2C913129601%2C913+129+601%2C915188389%2C915+188+389%2C915412262%2C915+412+262%2C915596436%2C915+596+436%2C916249985%2C916+249+985%2C916374801%2C916+374+801%2C917281696%2C917+281+696%2C917403562%2C917+403+562%2C917751412%2C917+751+412%2C918079327%2C918+079+327%2C918109099%2C918+109+099%2C918703853%2C918+703+853%2C918824642%2C918+824+642%2C918843183%2C918+843+183%2C918953612%2C918+953+612&filter%5Bentity.registeredAt%5D=RA000472&page%5Bsize%5D=100
 
@@ -2160,9 +2160,9 @@ Exact excerpt:
 
 ## 28. LEI - 917751412 - KAABE HOLDING AS (seed 20261017)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"entity_status": "ACTIVE", "initial_registration_date": "2025-02-06T06:46:00Z", "legal_form": "YI42", "lei": "6367001NMZ9HKFWJJY20", "next_renewal_date": "2027-02-06T06:46:00Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"entity_status": "ACTIVE", "initial_registration_date": "2025-02-06T06:46:00Z", "legal_form": "YI42", "lei": "6367001NMZ9HKFWJJY20", "next_renewal_date": "2027-02-06T06:46:00Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=814635562%2C814+635+562%2C815566602%2C815+566+602%2C820162692%2C820+162+692%2C829577372%2C829+577+372%2C833467972%2C833+467+972%2C899174682%2C899+174+682%2C912238504%2C912+238+504%2C912435911%2C912+435+911%2C912579433%2C912+579+433%2C912702847%2C912+702+847%2C913129601%2C913+129+601%2C915188389%2C915+188+389%2C915412262%2C915+412+262%2C915596436%2C915+596+436%2C916249985%2C916+249+985%2C916374801%2C916+374+801%2C917281696%2C917+281+696%2C917403562%2C917+403+562%2C917751412%2C917+751+412%2C918079327%2C918+079+327%2C918109099%2C918+109+099%2C918703853%2C918+703+853%2C918824642%2C918+824+642%2C918843183%2C918+843+183%2C918953612%2C918+953+612&filter%5Bentity.registeredAt%5D=RA000472&page%5Bsize%5D=100
 
@@ -2266,9 +2266,9 @@ Exact excerpt:
 
 ## 29. LEI - 989965964 - ANSTES II AS (seed 20261017)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"entity_status": "ACTIVE", "initial_registration_date": "2017-11-22T15:32:00Z", "legal_form": "YI42", "lei": "5493008JWEMIJY5V5B89", "next_renewal_date": "2026-12-13T07:20:33Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"entity_status": "ACTIVE", "initial_registration_date": "2017-11-22T15:32:00Z", "legal_form": "YI42", "lei": "5493008JWEMIJY5V5B89", "next_renewal_date": "2026-12-13T07:20:33Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=946595845%2C946+595+845%2C948639416%2C948+639+416%2C950302011%2C950+302+011%2C950310499%2C950+310+499%2C956409071%2C956+409+071%2C957687504%2C957+687+504%2C960480120%2C960+480+120%2C964398003%2C964+398+003%2C975514412%2C975+514+412%2C983739377%2C983+739+377%2C987769386%2C987+769+386%2C988963259%2C988+963+259%2C989214209%2C989+214+209%2C989965964%2C989+965+964%2C991835423%2C991+835+423%2C991853995%2C991+853+995%2C993016446%2C993+016+446%2C997095987%2C997+095+987%2C997995414%2C997+995+414%2C998181410%2C998+181+410%2C998309530%2C998+309+530%2C998320143%2C998+320+143%2C998340888%2C998+340+888%2C998795621%2C998+795+621%2C999504116%2C999+504+116&filter%5Bentity.registeredAt%5D=RA000472&page%5Bsize%5D=100
 
@@ -2372,9 +2372,9 @@ Exact excerpt:
 
 ## 30. LEI - 815566602 - MCL HOLDING AS (seed 20261017)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"entity_status": "ACTIVE", "initial_registration_date": "2017-11-16T16:28:00Z", "legal_form": "YI42", "lei": "549300JSNR06338XEX57", "next_renewal_date": "2027-02-02T06:54:33Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"entity_status": "ACTIVE", "initial_registration_date": "2017-11-16T16:28:00Z", "legal_form": "YI42", "lei": "549300JSNR06338XEX57", "next_renewal_date": "2027-02-02T06:54:33Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=814635562%2C814+635+562%2C815566602%2C815+566+602%2C820162692%2C820+162+692%2C829577372%2C829+577+372%2C833467972%2C833+467+972%2C899174682%2C899+174+682%2C912238504%2C912+238+504%2C912435911%2C912+435+911%2C912579433%2C912+579+433%2C912702847%2C912+702+847%2C913129601%2C913+129+601%2C915188389%2C915+188+389%2C915412262%2C915+412+262%2C915596436%2C915+596+436%2C916249985%2C916+249+985%2C916374801%2C916+374+801%2C917281696%2C917+281+696%2C917403562%2C917+403+562%2C917751412%2C917+751+412%2C918079327%2C918+079+327%2C918109099%2C918+109+099%2C918703853%2C918+703+853%2C918824642%2C918+824+642%2C918843183%2C918+843+183%2C918953612%2C918+953+612&filter%5Bentity.registeredAt%5D=RA000472&page%5Bsize%5D=100
 
@@ -2478,9 +2478,9 @@ Exact excerpt:
 
 ## 31. LEI - 925622605 - PERHO AS (seed 20261017)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"entity_status": "ACTIVE", "initial_registration_date": "2022-05-06T07:25:00Z", "legal_form": "YI42", "lei": "636700FFA9E61S4POG30", "next_renewal_date": "2027-05-06T07:25:00Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"entity_status": "ACTIVE", "initial_registration_date": "2022-05-06T07:25:00Z", "legal_form": "YI42", "lei": "636700FFA9E61S4POG30", "next_renewal_date": "2027-05-06T07:25:00Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=918982523%2C918+982+523%2C919263601%2C919+263+601%2C919414944%2C919+414+944%2C922688532%2C922+688+532%2C923399658%2C923+399+658%2C925181536%2C925+181+536%2C925590266%2C925+590+266%2C925622605%2C925+622+605%2C925841722%2C925+841+722%2C926201905%2C926+201+905%2C926358154%2C926+358+154%2C926433873%2C926+433+873%2C926489380%2C926+489+380%2C926818317%2C926+818+317%2C927094266%2C927+094+266%2C927157985%2C927+157+985%2C927177978%2C927+177+978%2C927342677%2C927+342+677%2C927439794%2C927+439+794%2C928027678%2C928+027+678%2C928054780%2C928+054+780%2C928542742%2C928+542+742%2C928565637%2C928+565+637%2C928597695%2C928+597+695%2C928892956%2C928+892+956&filter%5Bentity.registeredAt%5D=RA000472&page%5Bsize%5D=100
 
@@ -2584,9 +2584,9 @@ Exact excerpt:
 
 ## 32. website - 987769386 - INNLANDET REVISJON IKS (seed 20261017)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"candidate_origin": "registry_website", "final_url": "https://irev.no", "identity_level": "VERIFIED", "other_orgnrs": [], "points": 0, "proof_page_url": "https://irev.no/", "proof_type": "orgnr_on_page", "registry_contact_matches": {"email_domain": "irev.no", "phone": "+4761222568"}, "relationship_note": null, "signals": []} | VERIFIED | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"candidate_origin": "registry_website", "final_url": "https://irev.no", "identity_level": "VERIFIED", "other_orgnrs": [], "points": 0, "proof_page_url": "https://irev.no/", "proof_type": "orgnr_on_page", "registry_contact_matches": {"email_domain": "irev.no", "phone": "+4761222568"}, "relationship_note": null, "signals": []} | VERIFIED | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://irev.no/
 
@@ -2642,9 +2642,9 @@ Exact excerpt:
 
 ## 33. LEI - 926073737 - ANATAS AS (seed 20261113)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"entity_status": "ACTIVE", "initial_registration_date": "2021-01-15T12:09:59Z", "legal_form": "YI42", "lei": "9845003WC4T62ER88E73", "next_renewal_date": "2027-01-24T17:49:47Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"entity_status": "ACTIVE", "initial_registration_date": "2021-01-15T12:09:59Z", "legal_form": "YI42", "lei": "9845003WC4T62ER88E73", "next_renewal_date": "2027-01-24T17:49:47Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=917664986%2C917+664+986%2C918031502%2C918+031+502%2C918266917%2C918+266+917%2C918994793%2C918+994+793%2C920711197%2C920+711+197%2C921380259%2C921+380+259%2C922718059%2C922+718+059%2C923142827%2C923+142+827%2C924004843%2C924+004+843%2C924592753%2C924+592+753%2C924911719%2C924+911+719%2C925293180%2C925+293+180%2C925496251%2C925+496+251%2C926073737%2C926+073+737%2C926317490%2C926+317+490%2C926364715%2C926+364+715%2C926766228%2C926+766+228%2C926963023%2C926+963+023%2C927265222%2C927+265+222%2C927550563%2C927+550+563%2C928506908%2C928+506+908%2C928745813%2C928+745+813%2C929048709%2C929+048+709%2C929376935%2C929+376+935%2C930090077%2C930+090+077&filter%5Bentity.registeredAt%5D=RA000472&page%5Bsize%5D=100
 
@@ -2748,9 +2748,9 @@ Exact excerpt:
 
 ## 34. LEI - 995991993 - TOJ AS (seed 20261113)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"entity_status": "ACTIVE", "initial_registration_date": "2018-01-09T15:35:00Z", "legal_form": "YI42", "lei": "549300AWQUQCABJ5W230", "next_renewal_date": "2026-12-31T06:35:00Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"entity_status": "ACTIVE", "initial_registration_date": "2018-01-09T15:35:00Z", "legal_form": "YI42", "lei": "549300AWQUQCABJ5W230", "next_renewal_date": "2026-12-31T06:35:00Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=979311729%2C979+311+729%2C980038661%2C980+038+661%2C982039177%2C982+039+177%2C985689377%2C985+689+377%2C988060933%2C988+060+933%2C988894826%2C988+894+826%2C989162691%2C989+162+691%2C989194283%2C989+194+283%2C989221981%2C989+221+981%2C989237683%2C989+237+683%2C989424157%2C989+424+157%2C989704516%2C989+704+516%2C990959366%2C990+959+366%2C990980683%2C990+980+683%2C992100753%2C992+100+753%2C992143827%2C992+143+827%2C992231963%2C992+231+963%2C993821403%2C993+821+403%2C994900544%2C994+900+544%2C995194163%2C995+194+163%2C995744562%2C995+744+562%2C995991993%2C995+991+993%2C996904490%2C996+904+490%2C997274253%2C997+274+253%2C997887476%2C997+887+476&filter%5Bentity.registeredAt%5D=RA000472&page%5Bsize%5D=100
 
@@ -2854,9 +2854,9 @@ Exact excerpt:
 
 ## 35. LEI - 924004843 - STRØMSNES AS (seed 20261113)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"entity_status": "ACTIVE", "initial_registration_date": "2021-01-13T16:18:38Z", "legal_form": "YI42", "lei": "254900H463OH2KQWSW83", "next_renewal_date": "2027-01-13T17:16:05Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"entity_status": "ACTIVE", "initial_registration_date": "2021-01-13T16:18:38Z", "legal_form": "YI42", "lei": "254900H463OH2KQWSW83", "next_renewal_date": "2027-01-13T17:16:05Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=917664986%2C917+664+986%2C918031502%2C918+031+502%2C918266917%2C918+266+917%2C918994793%2C918+994+793%2C920711197%2C920+711+197%2C921380259%2C921+380+259%2C922718059%2C922+718+059%2C923142827%2C923+142+827%2C924004843%2C924+004+843%2C924592753%2C924+592+753%2C924911719%2C924+911+719%2C925293180%2C925+293+180%2C925496251%2C925+496+251%2C926073737%2C926+073+737%2C926317490%2C926+317+490%2C926364715%2C926+364+715%2C926766228%2C926+766+228%2C926963023%2C926+963+023%2C927265222%2C927+265+222%2C927550563%2C927+550+563%2C928506908%2C928+506+908%2C928745813%2C928+745+813%2C929048709%2C929+048+709%2C929376935%2C929+376+935%2C930090077%2C930+090+077&filter%5Bentity.registeredAt%5D=RA000472&page%5Bsize%5D=100
 
@@ -2960,9 +2960,9 @@ Exact excerpt:
 
 ## 36. LEI - 927550563 - ZILLA CAPITAL AS (seed 20261113)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"entity_status": "ACTIVE", "initial_registration_date": "2021-12-03T17:26:24Z", "legal_form": "YI42", "lei": "894500SG2HJYYALZT951", "next_renewal_date": "2027-03-03T07:52:41Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"entity_status": "ACTIVE", "initial_registration_date": "2021-12-03T17:26:24Z", "legal_form": "YI42", "lei": "894500SG2HJYYALZT951", "next_renewal_date": "2027-03-03T07:52:41Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=917664986%2C917+664+986%2C918031502%2C918+031+502%2C918266917%2C918+266+917%2C918994793%2C918+994+793%2C920711197%2C920+711+197%2C921380259%2C921+380+259%2C922718059%2C922+718+059%2C923142827%2C923+142+827%2C924004843%2C924+004+843%2C924592753%2C924+592+753%2C924911719%2C924+911+719%2C925293180%2C925+293+180%2C925496251%2C925+496+251%2C926073737%2C926+073+737%2C926317490%2C926+317+490%2C926364715%2C926+364+715%2C926766228%2C926+766+228%2C926963023%2C926+963+023%2C927265222%2C927+265+222%2C927550563%2C927+550+563%2C928506908%2C928+506+908%2C928745813%2C928+745+813%2C929048709%2C929+048+709%2C929376935%2C929+376+935%2C930090077%2C930+090+077&filter%5Bentity.registeredAt%5D=RA000472&page%5Bsize%5D=100
 
@@ -3066,9 +3066,9 @@ Exact excerpt:
 
 ## 37. website - 918266917 - DIGITALIQ AS (seed 20261113)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"candidate_origin": "registry_website", "final_url": "https://digitaliq.no", "identity_level": "VERIFIED", "other_orgnrs": [], "points": 0, "proof_page_url": "https://digitaliq.no/", "proof_type": "orgnr_on_page", "registry_contact_matches": {"email_domain": "digitaliq.no"}, "relationship_note": null, "signals": []} | VERIFIED | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"candidate_origin": "registry_website", "final_url": "https://digitaliq.no", "identity_level": "VERIFIED", "other_orgnrs": [], "points": 0, "proof_page_url": "https://digitaliq.no/", "proof_type": "orgnr_on_page", "registry_contact_matches": {"email_domain": "digitaliq.no"}, "relationship_note": null, "signals": []} | VERIFIED | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://digitaliq.no/
 
@@ -3102,9 +3102,9 @@ Exact excerpt:
 
 ## 38. job - 918266917 - DIGITALIQ AS (seed 20261113)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"availability": {"location": "available", "occupation_categories": "available"}, "employer_orgnr": "918338063", "expires": "2026-12-02T00:00:00+01:00", "location": [{"city": "BERGEN", "municipality": "BERGEN"}], "matched_via": "subunit 918338063", "occupation_categories": [{"level1": "IT", "level2": "Utvikling"}], "published": "2026-11-11T11:35:38+01:00", "title": "IT-student som snakker og skriver svensk søkes til deltidsjobb i Bergen", "url": "https://arbeidsplassen.nav.no/stillinger/stilling/52c02dd7-b354-4765-a221-a594aca6b2d6", "uuid": "52c02dd7-b354-4765-a221-a594aca6b2d6"} | current_live_exact_employer_or_proven_subunit | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"availability": {"location": "available", "occupation_categories": "available"}, "employer_orgnr": "918338063", "expires": "2026-12-02T00:00:00+01:00", "location": [{"city": "BERGEN", "municipality": "BERGEN"}], "matched_via": "subunit 918338063", "occupation_categories": [{"level1": "IT", "level2": "Utvikling"}], "published": "2026-11-11T11:35:38+01:00", "title": "IT-student som snakker og skriver svensk søkes til deltidsjobb i Bergen", "url": "https://arbeidsplassen.nav.no/stillinger/stilling/52c02dd7-b354-4765-a221-a594aca6b2d6", "uuid": "52c02dd7-b354-4765-a221-a594aca6b2d6"} | current_live_exact_employer_or_proven_subunit | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://pam-stilling-feed.nav.no/api/v1/feedentry/52c02dd7-b354-4765-a221-a594aca6b2d6
 
@@ -3118,9 +3118,9 @@ Exact excerpt:
 
 ## 39. LEI - 924592753 - KIBU HOLDING AS (seed 20261113)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"entity_status": "ACTIVE", "initial_registration_date": "2025-03-31T07:05:00Z", "legal_form": "YI42", "lei": "636700KRC09RP91PPL19", "next_renewal_date": "2027-03-31T07:05:00Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"entity_status": "ACTIVE", "initial_registration_date": "2025-03-31T07:05:00Z", "legal_form": "YI42", "lei": "636700KRC09RP91PPL19", "next_renewal_date": "2027-03-31T07:05:00Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=917664986%2C917+664+986%2C918031502%2C918+031+502%2C918266917%2C918+266+917%2C918994793%2C918+994+793%2C920711197%2C920+711+197%2C921380259%2C921+380+259%2C922718059%2C922+718+059%2C923142827%2C923+142+827%2C924004843%2C924+004+843%2C924592753%2C924+592+753%2C924911719%2C924+911+719%2C925293180%2C925+293+180%2C925496251%2C925+496+251%2C926073737%2C926+073+737%2C926317490%2C926+317+490%2C926364715%2C926+364+715%2C926766228%2C926+766+228%2C926963023%2C926+963+023%2C927265222%2C927+265+222%2C927550563%2C927+550+563%2C928506908%2C928+506+908%2C928745813%2C928+745+813%2C929048709%2C929+048+709%2C929376935%2C929+376+935%2C930090077%2C930+090+077&filter%5Bentity.registeredAt%5D=RA000472&page%5Bsize%5D=100
 
@@ -3224,9 +3224,9 @@ Exact excerpt:
 
 ## 40. LEI - 988894826 - SKAUG HOLDING AS (seed 20261113)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"entity_status": "ACTIVE", "initial_registration_date": "2019-04-12T14:33:16Z", "legal_form": "YI42", "lei": "254900LCSZPLZ7V2PY04", "next_renewal_date": "2027-04-12T14:33:26Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"entity_status": "ACTIVE", "initial_registration_date": "2019-04-12T14:33:16Z", "legal_form": "YI42", "lei": "254900LCSZPLZ7V2PY04", "next_renewal_date": "2027-04-12T14:33:26Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=979311729%2C979+311+729%2C980038661%2C980+038+661%2C982039177%2C982+039+177%2C985689377%2C985+689+377%2C988060933%2C988+060+933%2C988894826%2C988+894+826%2C989162691%2C989+162+691%2C989194283%2C989+194+283%2C989221981%2C989+221+981%2C989237683%2C989+237+683%2C989424157%2C989+424+157%2C989704516%2C989+704+516%2C990959366%2C990+959+366%2C990980683%2C990+980+683%2C992100753%2C992+100+753%2C992143827%2C992+143+827%2C992231963%2C992+231+963%2C993821403%2C993+821+403%2C994900544%2C994+900+544%2C995194163%2C995+194+163%2C995744562%2C995+744+562%2C995991993%2C995+991+993%2C996904490%2C996+904+490%2C997274253%2C997+274+253%2C997887476%2C997+887+476&filter%5Bentity.registeredAt%5D=RA000472&page%5Bsize%5D=100
 
@@ -3330,9 +3330,9 @@ Exact excerpt:
 
 ## 41. website - 995194163 - GLÅMDAL MASKIN AS (seed 20261113)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"candidate_origin": "registry_website", "final_url": "https://www.glomdalmaskin.no", "identity_level": "HIGH", "other_orgnrs": [], "points": 6, "proof_page_url": "https://www.glomdalmaskin.no/", "proof_type": "signals", "registry_contact_matches": {"email_domain": "glomdalmaskin.no"}, "relationship_note": null, "signals": ["legal_name", "address", "registry_website"]} | HIGH | **doubtful** | No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review; Published identity tier is below exact-number VERIFIED; Saved page proof needs review: corroboration |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"candidate_origin": "registry_website", "final_url": "https://www.glomdalmaskin.no", "identity_level": "HIGH", "other_orgnrs": [], "points": 6, "proof_page_url": "https://www.glomdalmaskin.no/", "proof_type": "signals", "registry_contact_matches": {"email_domain": "glomdalmaskin.no"}, "relationship_note": null, "signals": ["legal_name", "address", "registry_website"]} | HIGH | **doubtful** | correct - User confirmation in conversation (2026-11-13) | No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review; Published identity tier is below exact-number VERIFIED; Saved page proof needs review: corroboration |
 
 Source: https://www.glomdalmaskin.no/
 
@@ -5334,9 +5334,9 @@ to":"2026-07-18T12:20:34.560Z","endringer":[{"op":"replace","path":"/sisteInnsen
 
 ## 42. website - 931575678 - SOLID ØKONOMI AS (seed 20261113)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"candidate_origin": "registry_website", "final_url": "https://solidokonomi.no", "identity_level": "VERIFIED", "other_orgnrs": [], "points": 0, "proof_page_url": "https://solidokonomi.no/", "proof_type": "orgnr_on_page", "registry_contact_matches": {"email_domain": "solidokonomi.no"}, "relationship_note": null, "signals": []} | VERIFIED | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"candidate_origin": "registry_website", "final_url": "https://solidokonomi.no", "identity_level": "VERIFIED", "other_orgnrs": [], "points": 0, "proof_page_url": "https://solidokonomi.no/", "proof_type": "orgnr_on_page", "registry_contact_matches": {"email_domain": "solidokonomi.no"}, "relationship_note": null, "signals": []} | VERIFIED | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://solidokonomi.no/
 
@@ -5373,9 +5373,9 @@ Exact excerpt:
 
 ## 43. LEI - 937969104 - JWP AS (seed 20261113)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"entity_status": "ACTIVE", "initial_registration_date": "2018-01-17T15:34:00Z", "legal_form": "YI42", "lei": "549300BXQFCLE1ECGI79", "next_renewal_date": "2019-01-16T15:17:00Z", "registration_status": "LAPSED"} | exact_NO_RA000472 | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"entity_status": "ACTIVE", "initial_registration_date": "2018-01-17T15:34:00Z", "legal_form": "YI42", "lei": "549300BXQFCLE1ECGI79", "next_renewal_date": "2019-01-16T15:17:00Z", "registration_status": "LAPSED"} | exact_NO_RA000472 | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=930338877%2C930+338+877%2C930475173%2C930+475+173%2C930491721%2C930+491+721%2C930532223%2C930+532+223%2C931575678%2C931+575+678%2C931647067%2C931+647+067%2C932335530%2C932+335+530%2C932354322%2C932+354+322%2C932587904%2C932+587+904%2C933379779%2C933+379+779%2C933741761%2C933+741+761%2C934058577%2C934+058+577%2C934385411%2C934+385+411%2C934626176%2C934+626+176%2C935121612%2C935+121+612%2C935265606%2C935+265+606%2C935294746%2C935+294+746%2C935656176%2C935+656+176%2C935737672%2C935+737+672%2C935829747%2C935+829+747%2C935928125%2C935+928+125%2C936106374%2C936+106+374%2C937969104%2C937+969+104%2C948230798%2C948+230+798%2C971131535%2C971+131+535&filter%5Bentity.registeredAt%5D=RA000472&page%5Bsize%5D=100
 
@@ -5479,9 +5479,9 @@ Exact excerpt:
 
 ## 44. website - 918031502 - SUNNCOM AS (seed 20261113)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"candidate_origin": "legal_name_slug", "final_url": "https://www.sunncom.no", "identity_level": "VERIFIED", "other_orgnrs": [], "points": 0, "proof_page_url": "https://www.sunncom.no/", "proof_type": "orgnr_on_page", "relationship_note": null, "signals": []} | VERIFIED | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"candidate_origin": "legal_name_slug", "final_url": "https://www.sunncom.no", "identity_level": "VERIFIED", "other_orgnrs": [], "points": 0, "proof_page_url": "https://www.sunncom.no/", "proof_type": "orgnr_on_page", "relationship_note": null, "signals": []} | VERIFIED | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://www.sunncom.no/
 
@@ -5495,9 +5495,9 @@ Exact excerpt:
 
 ## 45. social - 918031502 - SUNNCOM AS (seed 20261113)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"company_name": "SUNNCOM AS", "platform": "facebook.com", "proof_tier": "own_header_footer_exact_name_v1", "url": "https://www.facebook.com/Sunncom"} | own_header_footer_exact_name_v1 | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"company_name": "SUNNCOM AS", "platform": "facebook.com", "proof_tier": "own_header_footer_exact_name_v1", "url": "https://www.facebook.com/Sunncom"} | own_header_footer_exact_name_v1 | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://www.sunncom.no/
 
@@ -5531,9 +5531,9 @@ Exact excerpt:
 
 ## 46. social - 918031502 - SUNNCOM AS (seed 20261113)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"company_name": "SUNNCOM AS", "platform": "linkedin.com", "proof_tier": "own_header_footer_numeric_linkedin_v1", "url": "http://www.linkedin.com/company/77713310"} | own_header_footer_numeric_linkedin_v1 | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"company_name": "SUNNCOM AS", "platform": "linkedin.com", "proof_tier": "own_header_footer_numeric_linkedin_v1", "url": "http://www.linkedin.com/company/77713310"} | own_header_footer_numeric_linkedin_v1 | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://www.sunncom.no/
 
@@ -5567,9 +5567,9 @@ Exact excerpt:
 
 ## 47. LEI - 989194283 - GLABELLA AS (seed 20261113)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"entity_status": "ACTIVE", "initial_registration_date": "2020-06-29T15:33:41Z", "legal_form": "YI42", "lei": "98450063799A5BC9EA72", "next_renewal_date": "2027-06-29T15:33:41Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"entity_status": "ACTIVE", "initial_registration_date": "2020-06-29T15:33:41Z", "legal_form": "YI42", "lei": "98450063799A5BC9EA72", "next_renewal_date": "2027-06-29T15:33:41Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=979311729%2C979+311+729%2C980038661%2C980+038+661%2C982039177%2C982+039+177%2C985689377%2C985+689+377%2C988060933%2C988+060+933%2C988894826%2C988+894+826%2C989162691%2C989+162+691%2C989194283%2C989+194+283%2C989221981%2C989+221+981%2C989237683%2C989+237+683%2C989424157%2C989+424+157%2C989704516%2C989+704+516%2C990959366%2C990+959+366%2C990980683%2C990+980+683%2C992100753%2C992+100+753%2C992143827%2C992+143+827%2C992231963%2C992+231+963%2C993821403%2C993+821+403%2C994900544%2C994+900+544%2C995194163%2C995+194+163%2C995744562%2C995+744+562%2C995991993%2C995+991+993%2C996904490%2C996+904+490%2C997274253%2C997+274+253%2C997887476%2C997+887+476&filter%5Bentity.registeredAt%5D=RA000472&page%5Bsize%5D=100
 
@@ -5673,9 +5673,9 @@ Exact excerpt:
 
 ## 48. LEI - 911818191 - VANADIUM AS (seed 20261113)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"entity_status": "ACTIVE", "initial_registration_date": "2017-10-08T04:03:00Z", "legal_form": "YI42", "lei": "549300BYQZNXJNEV6U52", "next_renewal_date": "2027-03-27T12:54:07Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"entity_status": "ACTIVE", "initial_registration_date": "2017-10-08T04:03:00Z", "legal_form": "YI42", "lei": "549300BYQZNXJNEV6U52", "next_renewal_date": "2027-03-27T12:54:07Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=812049712%2C812+049+712%2C818330952%2C818+330+952%2C821052092%2C821+052+092%2C823569262%2C823+569+262%2C827878782%2C827+878+782%2C830009612%2C830+009+612%2C837186102%2C837+186+102%2C852122722%2C852+122+722%2C865560052%2C865+560+052%2C877144232%2C877+144+232%2C891858442%2C891+858+442%2C894542012%2C894+542+012%2C910929097%2C910+929+097%2C911818191%2C911+818+191%2C912994392%2C912+994+392%2C913143930%2C913+143+930%2C913244702%2C913+244+702%2C913502752%2C913+502+752%2C914324769%2C914+324+769%2C915469132%2C915+469+132%2C915813372%2C915+813+372%2C915963102%2C915+963+102%2C916101538%2C916+101+538%2C916794894%2C916+794+894%2C917604509%2C917+604+509&filter%5Bentity.registeredAt%5D=RA000472&page%5Bsize%5D=100
 
@@ -5779,9 +5779,9 @@ Exact excerpt:
 
 ## 49. LEI - 929376935 - HAUKJEM INVEST AS (seed 20261113)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"entity_status": "ACTIVE", "initial_registration_date": "2022-06-30T16:07:59Z", "legal_form": "YI42", "lei": "254900Z0J7JRXZ1SIK77", "next_renewal_date": "2025-07-15T13:52:22Z", "registration_status": "LAPSED"} | exact_NO_RA000472 | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"entity_status": "ACTIVE", "initial_registration_date": "2022-06-30T16:07:59Z", "legal_form": "YI42", "lei": "254900Z0J7JRXZ1SIK77", "next_renewal_date": "2025-07-15T13:52:22Z", "registration_status": "LAPSED"} | exact_NO_RA000472 | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=917664986%2C917+664+986%2C918031502%2C918+031+502%2C918266917%2C918+266+917%2C918994793%2C918+994+793%2C920711197%2C920+711+197%2C921380259%2C921+380+259%2C922718059%2C922+718+059%2C923142827%2C923+142+827%2C924004843%2C924+004+843%2C924592753%2C924+592+753%2C924911719%2C924+911+719%2C925293180%2C925+293+180%2C925496251%2C925+496+251%2C926073737%2C926+073+737%2C926317490%2C926+317+490%2C926364715%2C926+364+715%2C926766228%2C926+766+228%2C926963023%2C926+963+023%2C927265222%2C927+265+222%2C927550563%2C927+550+563%2C928506908%2C928+506+908%2C928745813%2C928+745+813%2C929048709%2C929+048+709%2C929376935%2C929+376+935%2C930090077%2C930+090+077&filter%5Bentity.registeredAt%5D=RA000472&page%5Bsize%5D=100
 
@@ -5885,9 +5885,9 @@ Exact excerpt:
 
 ## 50. LEI - 922718059 - BØNES BØNES AS (seed 20261113)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"entity_status": "ACTIVE", "initial_registration_date": "2019-09-10T17:20:20Z", "legal_form": "YI42", "lei": "254900KE1LE3LPRM4Y96", "next_renewal_date": "2027-09-10T17:20:16Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **doubtful** | Exact-ID GLEIF legal name differs from registry spelling; saved GLEIF name: VIRBON INVEST BERGEN AS; review source recency |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"entity_status": "ACTIVE", "initial_registration_date": "2019-09-10T17:20:20Z", "legal_form": "YI42", "lei": "254900KE1LE3LPRM4Y96", "next_renewal_date": "2027-09-10T17:20:16Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **doubtful** | correct - User confirmation in conversation (2026-11-13) | Exact-ID GLEIF legal name differs from registry spelling; saved GLEIF name: VIRBON INVEST BERGEN AS; review source recency |
 
 Source: https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=917664986%2C917+664+986%2C918031502%2C918+031+502%2C918266917%2C918+266+917%2C918994793%2C918+994+793%2C920711197%2C920+711+197%2C921380259%2C921+380+259%2C922718059%2C922+718+059%2C923142827%2C923+142+827%2C924004843%2C924+004+843%2C924592753%2C924+592+753%2C924911719%2C924+911+719%2C925293180%2C925+293+180%2C925496251%2C925+496+251%2C926073737%2C926+073+737%2C926317490%2C926+317+490%2C926364715%2C926+364+715%2C926766228%2C926+766+228%2C926963023%2C926+963+023%2C927265222%2C927+265+222%2C927550563%2C927+550+563%2C928506908%2C928+506+908%2C928745813%2C928+745+813%2C929048709%2C929+048+709%2C929376935%2C929+376+935%2C930090077%2C930+090+077&filter%5Bentity.registeredAt%5D=RA000472&page%5Bsize%5D=100
 
@@ -5991,9 +5991,9 @@ Exact excerpt:
 
 ## 51. LEI - 982039177 - ETNE INVEST AS (seed 20261113)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"entity_status": "ACTIVE", "initial_registration_date": "2017-10-02T20:18:00Z", "legal_form": "YI42", "lei": "5493000GQ2NWMH6EJ353", "next_renewal_date": "2027-01-15T16:13:49Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"entity_status": "ACTIVE", "initial_registration_date": "2017-10-02T20:18:00Z", "legal_form": "YI42", "lei": "5493000GQ2NWMH6EJ353", "next_renewal_date": "2027-01-15T16:13:49Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=979311729%2C979+311+729%2C980038661%2C980+038+661%2C982039177%2C982+039+177%2C985689377%2C985+689+377%2C988060933%2C988+060+933%2C988894826%2C988+894+826%2C989162691%2C989+162+691%2C989194283%2C989+194+283%2C989221981%2C989+221+981%2C989237683%2C989+237+683%2C989424157%2C989+424+157%2C989704516%2C989+704+516%2C990959366%2C990+959+366%2C990980683%2C990+980+683%2C992100753%2C992+100+753%2C992143827%2C992+143+827%2C992231963%2C992+231+963%2C993821403%2C993+821+403%2C994900544%2C994+900+544%2C995194163%2C995+194+163%2C995744562%2C995+744+562%2C995991993%2C995+991+993%2C996904490%2C996+904+490%2C997274253%2C997+274+253%2C997887476%2C997+887+476&filter%5Bentity.registeredAt%5D=RA000472&page%5Bsize%5D=100
 
@@ -6097,9 +6097,9 @@ Exact excerpt:
 
 ## 52. website - 988217867 - CONCEDO AS (seed 20261114)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"candidate_origin": "registry_website", "final_url": "https://www.concedo.no", "identity_level": "HIGH", "other_orgnrs": [], "points": 7, "proof_page_url": "https://www.concedo.no/contact", "proof_type": "signals", "registry_contact_matches": {"email_domain": "concedo.no"}, "relationship_note": null, "signals": ["legal_name", "address", "registry_website", "municipality"]} | HIGH | **doubtful** | No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review; Published identity tier is below exact-number VERIFIED; Saved page proof needs review: corroboration |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"candidate_origin": "registry_website", "final_url": "https://www.concedo.no", "identity_level": "HIGH", "other_orgnrs": [], "points": 7, "proof_page_url": "https://www.concedo.no/contact", "proof_type": "signals", "registry_contact_matches": {"email_domain": "concedo.no"}, "relationship_note": null, "signals": ["legal_name", "address", "registry_website", "municipality"]} | HIGH | **doubtful** | correct - User confirmation in conversation (2026-11-13) | No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review; Published identity tier is below exact-number VERIFIED; Saved page proof needs review: corroboration |
 
 Source: https://www.concedo.no/contact
 
@@ -10180,9 +10180,9 @@ eplace","path":"/antallAnsatte","value":19},{"op":"replace","path":"/registrerin
 
 ## 53. social - 988217867 - CONCEDO AS (seed 20261114)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"company_name": "CONCEDO AS", "platform": "linkedin.com", "proof_tier": "own_header_footer_exact_name_v1", "url": "https://no.linkedin.com/company/concedo-as"} | own_header_footer_exact_name_v1 | **doubtful** | No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review; Published identity tier is below exact-number VERIFIED; Saved page proof needs review: corroboration |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"company_name": "CONCEDO AS", "platform": "linkedin.com", "proof_tier": "own_header_footer_exact_name_v1", "url": "https://no.linkedin.com/company/concedo-as"} | own_header_footer_exact_name_v1 | **doubtful** | correct - User confirmation in conversation (2026-11-13) | No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review; Published identity tier is below exact-number VERIFIED; Saved page proof needs review: corroboration |
 
 Source: https://www.concedo.no/
 
@@ -14284,9 +14284,9 @@ eplace","path":"/antallAnsatte","value":19},{"op":"replace","path":"/registrerin
 
 ## 54. LEI - 988217867 - CONCEDO AS (seed 20261114)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"entity_status": "ACTIVE", "initial_registration_date": "2017-11-22T15:33:00Z", "legal_form": "YI42", "lei": "5493002TC4BQC2CMWY51", "next_renewal_date": "2026-12-19T09:17:26Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"entity_status": "ACTIVE", "initial_registration_date": "2017-11-22T15:33:00Z", "legal_form": "YI42", "lei": "5493002TC4BQC2CMWY51", "next_renewal_date": "2026-12-19T09:17:26Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=958507739%2C958+507+739%2C975590291%2C975+590+291%2C979814666%2C979+814+666%2C979993609%2C979+993+609%2C980584224%2C980+584+224%2C981304772%2C981+304+772%2C981500253%2C981+500+253%2C984360312%2C984+360+312%2C985216630%2C985+216+630%2C986128662%2C986+128+662%2C986250875%2C986+250+875%2C986464492%2C986+464+492%2C988217867%2C988+217+867%2C988330116%2C988+330+116%2C989244779%2C989+244+779%2C990455341%2C990+455+341%2C990623376%2C990+623+376%2C994808540%2C994+808+540%2C994882597%2C994+882+597%2C995636468%2C995+636+468%2C997963903%2C997+963+903%2C998081831%2C998+081+831%2C998543118%2C998+543+118%2C998989493%2C998+989+493%2C999630480%2C999+630+480&filter%5Bentity.registeredAt%5D=RA000472&page%5Bsize%5D=100
 
@@ -14390,9 +14390,9 @@ Exact excerpt:
 
 ## 55. LEI - 929674006 - K. HOLM HOLDING AS (seed 20261114)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"entity_status": "ACTIVE", "initial_registration_date": "2022-10-18T15:20:54Z", "legal_form": "YI42", "lei": "894500KUX9BGDHUDMC38", "next_renewal_date": "2027-10-17T22:00:15Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"entity_status": "ACTIVE", "initial_registration_date": "2022-10-18T15:20:54Z", "legal_form": "YI42", "lei": "894500KUX9BGDHUDMC38", "next_renewal_date": "2027-10-17T22:00:15Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=920629148%2C920+629+148%2C920951783%2C920+951+783%2C921441835%2C921+441+835%2C921483597%2C921+483+597%2C921764766%2C921+764+766%2C922337195%2C922+337+195%2C922590117%2C922+590+117%2C922699836%2C922+699+836%2C924379197%2C924+379+197%2C924691379%2C924+691+379%2C925246883%2C925+246+883%2C925719641%2C925+719+641%2C927123851%2C927+123+851%2C927572338%2C927+572+338%2C927636166%2C927+636+166%2C928603229%2C928+603+229%2C928723240%2C928+723+240%2C928746828%2C928+746+828%2C928978575%2C928+978+575%2C929032861%2C929+032+861%2C929209850%2C929+209+850%2C929545338%2C929+545+338%2C929674006%2C929+674+006%2C930309664%2C930+309+664%2C930517259%2C930+517+259&filter%5Bentity.registeredAt%5D=RA000472&page%5Bsize%5D=100
 
@@ -14496,9 +14496,9 @@ Exact excerpt:
 
 ## 56. LEI - 917148627 - TRONDHEIM TILKOMSTTEKNIKK AS (seed 20261114)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"entity_status": "ACTIVE", "initial_registration_date": "2026-03-24T11:48:00Z", "legal_form": "YI42", "lei": "636700G6P2IW15ZWNT81", "next_renewal_date": "2027-03-24T11:48:00Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"entity_status": "ACTIVE", "initial_registration_date": "2026-03-24T11:48:00Z", "legal_form": "YI42", "lei": "636700G6P2IW15ZWNT81", "next_renewal_date": "2027-03-24T11:48:00Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=827012122%2C827+012+122%2C827869082%2C827+869+082%2C889320222%2C889+320+222%2C892442762%2C892+442+762%2C911697688%2C911+697+688%2C914556139%2C914+556+139%2C915324258%2C915+324+258%2C915448666%2C915+448+666%2C915682448%2C915+682+448%2C916522770%2C916+522+770%2C916580371%2C916+580+371%2C917071209%2C917+071+209%2C917124426%2C917+124+426%2C917148627%2C917+148+627%2C917208417%2C917+208+417%2C917222975%2C917+222+975%2C917438986%2C917+438+986%2C917468788%2C917+468+788%2C918842527%2C918+842+527%2C918912746%2C918+912+746%2C919002271%2C919+002+271%2C919083603%2C919+083+603%2C919301538%2C919+301+538%2C919370424%2C919+370+424%2C919909676%2C919+909+676&filter%5Bentity.registeredAt%5D=RA000472&page%5Bsize%5D=100
 
@@ -14602,9 +14602,9 @@ Exact excerpt:
 
 ## 57. LEI - 918912746 - EB GROUP AS (seed 20261114)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"entity_status": "ACTIVE", "initial_registration_date": "2018-01-03T15:35:00Z", "legal_form": "YI42", "lei": "5493006G35WLF8GYCM63", "next_renewal_date": "2027-01-03T08:02:50Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"entity_status": "ACTIVE", "initial_registration_date": "2018-01-03T15:35:00Z", "legal_form": "YI42", "lei": "5493006G35WLF8GYCM63", "next_renewal_date": "2027-01-03T08:02:50Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=827012122%2C827+012+122%2C827869082%2C827+869+082%2C889320222%2C889+320+222%2C892442762%2C892+442+762%2C911697688%2C911+697+688%2C914556139%2C914+556+139%2C915324258%2C915+324+258%2C915448666%2C915+448+666%2C915682448%2C915+682+448%2C916522770%2C916+522+770%2C916580371%2C916+580+371%2C917071209%2C917+071+209%2C917124426%2C917+124+426%2C917148627%2C917+148+627%2C917208417%2C917+208+417%2C917222975%2C917+222+975%2C917438986%2C917+438+986%2C917468788%2C917+468+788%2C918842527%2C918+842+527%2C918912746%2C918+912+746%2C919002271%2C919+002+271%2C919083603%2C919+083+603%2C919301538%2C919+301+538%2C919370424%2C919+370+424%2C919909676%2C919+909+676&filter%5Bentity.registeredAt%5D=RA000472&page%5Bsize%5D=100
 
@@ -14708,9 +14708,9 @@ Exact excerpt:
 
 ## 58. LEI - 911697688 - GRAM SVENDSEN AS (seed 20261114)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"entity_status": "ACTIVE", "initial_registration_date": "2020-07-28T00:00:00Z", "legal_form": "YI42", "lei": "213800ZZR9LT9WTKEJ36", "next_renewal_date": "2027-07-28T00:00:00Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"entity_status": "ACTIVE", "initial_registration_date": "2020-07-28T00:00:00Z", "legal_form": "YI42", "lei": "213800ZZR9LT9WTKEJ36", "next_renewal_date": "2027-07-28T00:00:00Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=827012122%2C827+012+122%2C827869082%2C827+869+082%2C889320222%2C889+320+222%2C892442762%2C892+442+762%2C911697688%2C911+697+688%2C914556139%2C914+556+139%2C915324258%2C915+324+258%2C915448666%2C915+448+666%2C915682448%2C915+682+448%2C916522770%2C916+522+770%2C916580371%2C916+580+371%2C917071209%2C917+071+209%2C917124426%2C917+124+426%2C917148627%2C917+148+627%2C917208417%2C917+208+417%2C917222975%2C917+222+975%2C917438986%2C917+438+986%2C917468788%2C917+468+788%2C918842527%2C918+842+527%2C918912746%2C918+912+746%2C919002271%2C919+002+271%2C919083603%2C919+083+603%2C919301538%2C919+301+538%2C919370424%2C919+370+424%2C919909676%2C919+909+676&filter%5Bentity.registeredAt%5D=RA000472&page%5Bsize%5D=100
 
@@ -14814,9 +14814,9 @@ Exact excerpt:
 
 ## 59. LEI - 927636166 - SJYLV AS (seed 20261114)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"entity_status": "ACTIVE", "initial_registration_date": "2025-08-06T06:01:00Z", "legal_form": "YI42", "lei": "636700S4FZ2LLCSAPO65", "next_renewal_date": "2027-08-06T06:01:00Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"entity_status": "ACTIVE", "initial_registration_date": "2025-08-06T06:01:00Z", "legal_form": "YI42", "lei": "636700S4FZ2LLCSAPO65", "next_renewal_date": "2027-08-06T06:01:00Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=920629148%2C920+629+148%2C920951783%2C920+951+783%2C921441835%2C921+441+835%2C921483597%2C921+483+597%2C921764766%2C921+764+766%2C922337195%2C922+337+195%2C922590117%2C922+590+117%2C922699836%2C922+699+836%2C924379197%2C924+379+197%2C924691379%2C924+691+379%2C925246883%2C925+246+883%2C925719641%2C925+719+641%2C927123851%2C927+123+851%2C927572338%2C927+572+338%2C927636166%2C927+636+166%2C928603229%2C928+603+229%2C928723240%2C928+723+240%2C928746828%2C928+746+828%2C928978575%2C928+978+575%2C929032861%2C929+032+861%2C929209850%2C929+209+850%2C929545338%2C929+545+338%2C929674006%2C929+674+006%2C930309664%2C930+309+664%2C930517259%2C930+517+259&filter%5Bentity.registeredAt%5D=RA000472&page%5Bsize%5D=100
 
@@ -14920,9 +14920,9 @@ Exact excerpt:
 
 ## 60. LEI - 917071209 - SESAM OPPLAND AS (seed 20261114)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"entity_status": "ACTIVE", "initial_registration_date": "2025-07-21T09:25:00Z", "legal_form": "YI42", "lei": "636700LNNZ2XEMR9N464", "next_renewal_date": "2027-07-21T09:25:00Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"entity_status": "ACTIVE", "initial_registration_date": "2025-07-21T09:25:00Z", "legal_form": "YI42", "lei": "636700LNNZ2XEMR9N464", "next_renewal_date": "2027-07-21T09:25:00Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=827012122%2C827+012+122%2C827869082%2C827+869+082%2C889320222%2C889+320+222%2C892442762%2C892+442+762%2C911697688%2C911+697+688%2C914556139%2C914+556+139%2C915324258%2C915+324+258%2C915448666%2C915+448+666%2C915682448%2C915+682+448%2C916522770%2C916+522+770%2C916580371%2C916+580+371%2C917071209%2C917+071+209%2C917124426%2C917+124+426%2C917148627%2C917+148+627%2C917208417%2C917+208+417%2C917222975%2C917+222+975%2C917438986%2C917+438+986%2C917468788%2C917+468+788%2C918842527%2C918+842+527%2C918912746%2C918+912+746%2C919002271%2C919+002+271%2C919083603%2C919+083+603%2C919301538%2C919+301+538%2C919370424%2C919+370+424%2C919909676%2C919+909+676&filter%5Bentity.registeredAt%5D=RA000472&page%5Bsize%5D=100
 
@@ -15026,9 +15026,9 @@ Exact excerpt:
 
 ## 61. website - 889320222 - SCANDINAVIAN NAILS BY ABAMEME AS (seed 20261114)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"candidate_origin": "registry_website", "final_url": "https://www.abameme.com", "identity_level": "VERIFIED", "other_orgnrs": [], "points": 0, "proof_page_url": "https://www.abameme.com/", "proof_type": "orgnr_on_page", "relationship_note": null, "signals": []} | VERIFIED | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"candidate_origin": "registry_website", "final_url": "https://www.abameme.com", "identity_level": "VERIFIED", "other_orgnrs": [], "points": 0, "proof_page_url": "https://www.abameme.com/", "proof_type": "orgnr_on_page", "relationship_note": null, "signals": []} | VERIFIED | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://www.abameme.com/
 
@@ -15046,9 +15046,9 @@ a">&nbsp;</span>Organisasjonsnummer: NO 889 320 222 MVA </p>
 
 ## 62. social - 889320222 - SCANDINAVIAN NAILS BY ABAMEME AS (seed 20261114)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"company_name": "SCANDINAVIAN NAILS BY ABAMEME AS", "platform": "youtube.com", "proof_tier": "own_header_footer_exact_name_v1", "url": "https://www.youtube.com/@scandinaviannailsbyabameme"} | own_header_footer_exact_name_v1 | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"company_name": "SCANDINAVIAN NAILS BY ABAMEME AS", "platform": "youtube.com", "proof_tier": "own_header_footer_exact_name_v1", "url": "https://www.youtube.com/@scandinaviannailsbyabameme"} | own_header_footer_exact_name_v1 | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://www.abameme.com/
 
@@ -15086,9 +15086,9 @@ a">&nbsp;</span>Organisasjonsnummer: NO 889 320 222 MVA </p>
 
 ## 63. LEI - 928603229 - ADLER KONSULT II AS (seed 20261114)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"entity_status": "ACTIVE", "initial_registration_date": "2024-02-19T07:56:00Z", "legal_form": "YI42", "lei": "636700ESLI0JXVKW5228", "next_renewal_date": "2027-02-19T07:56:00Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"entity_status": "ACTIVE", "initial_registration_date": "2024-02-19T07:56:00Z", "legal_form": "YI42", "lei": "636700ESLI0JXVKW5228", "next_renewal_date": "2027-02-19T07:56:00Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=920629148%2C920+629+148%2C920951783%2C920+951+783%2C921441835%2C921+441+835%2C921483597%2C921+483+597%2C921764766%2C921+764+766%2C922337195%2C922+337+195%2C922590117%2C922+590+117%2C922699836%2C922+699+836%2C924379197%2C924+379+197%2C924691379%2C924+691+379%2C925246883%2C925+246+883%2C925719641%2C925+719+641%2C927123851%2C927+123+851%2C927572338%2C927+572+338%2C927636166%2C927+636+166%2C928603229%2C928+603+229%2C928723240%2C928+723+240%2C928746828%2C928+746+828%2C928978575%2C928+978+575%2C929032861%2C929+032+861%2C929209850%2C929+209+850%2C929545338%2C929+545+338%2C929674006%2C929+674+006%2C930309664%2C930+309+664%2C930517259%2C930+517+259&filter%5Bentity.registeredAt%5D=RA000472&page%5Bsize%5D=100
 
@@ -15192,9 +15192,9 @@ Exact excerpt:
 
 ## 64. LEI - 979993609 - WESTERN BULK CARRIERS AS (seed 20261114)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"entity_status": "ACTIVE", "initial_registration_date": "2017-01-12T00:00:00Z", "legal_form": "YI42", "lei": "2138005PJF45W3JZDV59", "next_renewal_date": "2027-01-19T00:00:00Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"entity_status": "ACTIVE", "initial_registration_date": "2017-01-12T00:00:00Z", "legal_form": "YI42", "lei": "2138005PJF45W3JZDV59", "next_renewal_date": "2027-01-19T00:00:00Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=958507739%2C958+507+739%2C975590291%2C975+590+291%2C979814666%2C979+814+666%2C979993609%2C979+993+609%2C980584224%2C980+584+224%2C981304772%2C981+304+772%2C981500253%2C981+500+253%2C984360312%2C984+360+312%2C985216630%2C985+216+630%2C986128662%2C986+128+662%2C986250875%2C986+250+875%2C986464492%2C986+464+492%2C988217867%2C988+217+867%2C988330116%2C988+330+116%2C989244779%2C989+244+779%2C990455341%2C990+455+341%2C990623376%2C990+623+376%2C994808540%2C994+808+540%2C994882597%2C994+882+597%2C995636468%2C995+636+468%2C997963903%2C997+963+903%2C998081831%2C998+081+831%2C998543118%2C998+543+118%2C998989493%2C998+989+493%2C999630480%2C999+630+480&filter%5Bentity.registeredAt%5D=RA000472&page%5Bsize%5D=100
 
@@ -15298,9 +15298,9 @@ Exact excerpt:
 
 ## 65. parent - 979993609 - WESTERN BULK CARRIERS AS (seed 20261114)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"child_lei": "2138005PJF45W3JZDV59", "parent_lei": "2138005JUC8BMOEGIG97", "relationship_status": "ACTIVE", "relationship_type": "IS_DIRECTLY_CONSOLIDATED_BY"} | exact_child_LEI_ACTIVE_relationship | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"child_lei": "2138005PJF45W3JZDV59", "parent_lei": "2138005JUC8BMOEGIG97", "relationship_status": "ACTIVE", "relationship_type": "IS_DIRECTLY_CONSOLIDATED_BY"} | exact_child_LEI_ACTIVE_relationship | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://api.gleif.org/api/v1/lei-records/2138005PJF45W3JZDV59/direct-parent-relationship
 
@@ -15444,9 +15444,9 @@ Exact excerpt:
 
 ## 66. parent - 979993609 - WESTERN BULK CARRIERS AS (seed 20261114)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"child_lei": "2138005PJF45W3JZDV59", "parent_lei": "25490002IUDAHWFRBY95", "relationship_status": "ACTIVE", "relationship_type": "IS_ULTIMATELY_CONSOLIDATED_BY"} | exact_child_LEI_ACTIVE_relationship | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"child_lei": "2138005PJF45W3JZDV59", "parent_lei": "25490002IUDAHWFRBY95", "relationship_status": "ACTIVE", "relationship_type": "IS_ULTIMATELY_CONSOLIDATED_BY"} | exact_child_LEI_ACTIVE_relationship | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://api.gleif.org/api/v1/lei-records/2138005PJF45W3JZDV59/ultimate-parent-relationship
 
@@ -15590,9 +15590,9 @@ Exact excerpt:
 
 ## 67. LEI - 917468788 - SUPERFLY HOLDING AS (seed 20261114)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"entity_status": "ACTIVE", "initial_registration_date": "2025-05-06T06:37:16Z", "legal_form": "YI42", "lei": "6488X27N6F0DED606B88", "next_renewal_date": "2027-05-05T22:00:00Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"entity_status": "ACTIVE", "initial_registration_date": "2025-05-06T06:37:16Z", "legal_form": "YI42", "lei": "6488X27N6F0DED606B88", "next_renewal_date": "2027-05-05T22:00:00Z", "registration_status": "ISSUED"} | exact_NO_RA000472 | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=827012122%2C827+012+122%2C827869082%2C827+869+082%2C889320222%2C889+320+222%2C892442762%2C892+442+762%2C911697688%2C911+697+688%2C914556139%2C914+556+139%2C915324258%2C915+324+258%2C915448666%2C915+448+666%2C915682448%2C915+682+448%2C916522770%2C916+522+770%2C916580371%2C916+580+371%2C917071209%2C917+071+209%2C917124426%2C917+124+426%2C917148627%2C917+148+627%2C917208417%2C917+208+417%2C917222975%2C917+222+975%2C917438986%2C917+438+986%2C917468788%2C917+468+788%2C918842527%2C918+842+527%2C918912746%2C918+912+746%2C919002271%2C919+002+271%2C919083603%2C919+083+603%2C919301538%2C919+301+538%2C919370424%2C919+370+424%2C919909676%2C919+909+676&filter%5Bentity.registeredAt%5D=RA000472&page%5Bsize%5D=100
 
@@ -15696,9 +15696,9 @@ Exact excerpt:
 
 ## 68. website - 915324258 - MUSIKKPLASSEN AS (seed 20261114)
 
-| Value / URL | Proof tier | Verdict | Review reason |
-|---|---|---|---|
-| {"candidate_origin": "registry_website", "final_url": "https://musikkplassen.no", "identity_level": "VERIFIED", "other_orgnrs": [], "points": 0, "proof_page_url": "https://musikkplassen.no/", "proof_type": "orgnr_on_page", "registry_contact_matches": {"email_domain": "musikkplassen.no"}, "relationship_note": null, "signals": []} | VERIFIED | **correct** | All saved-evidence checks passed |
+| Value / URL | Proof tier | Automated verdict | Human review | Review reason |
+|---|---|---|---|---|
+| {"candidate_origin": "registry_website", "final_url": "https://musikkplassen.no", "identity_level": "VERIFIED", "other_orgnrs": [], "points": 0, "proof_page_url": "https://musikkplassen.no/", "proof_type": "orgnr_on_page", "registry_contact_matches": {"email_domain": "musikkplassen.no"}, "relationship_note": null, "signals": []} | VERIFIED | **correct** | Not reviewed | All saved-evidence checks passed |
 
 Source: https://musikkplassen.no/
 

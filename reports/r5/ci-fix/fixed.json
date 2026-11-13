@@ -1,0 +1,29 @@
+{
+  "argv": [
+    "uv",
+    "run",
+    "--project",
+    "C:\\Users\\<USER>\\signal-nethra",
+    "signalpost",
+    "run",
+    "--organisations",
+    "C:\\Users\\<USER>\\signal-nethra\\tests\\fixtures\\ci20.jsonl",
+    "--bulk",
+    "C:\\Users\\<USER>\\signal-nethra\\tests\\fixtures\\ci20.csv",
+    "--output",
+    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\ci-fixed-seven\\envelopes.jsonl",
+    "--profiles-output",
+    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\ci-fixed-seven\\profiles.jsonl",
+    "--report",
+    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\ci-fixed-seven\\report.json",
+    "--run-id",
+    "ci-fixed-seven-local",
+    "--expected-count",
+    "20"
+  ],
+  "cwd": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\ci-fixed-seven",
+  "exit_code": 0,
+  "wall_seconds": 103.37318789999699,
+  "exact_seven_flags": true,
+  "platform": "Local Windows reproduction of workflow CLI/verification, not a Linux cloud execution"
+}

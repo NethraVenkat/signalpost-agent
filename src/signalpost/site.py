@@ -436,7 +436,7 @@ def explorer_cells(c, records):
             e.get('content_sha256', '') if e else '', span]
 
 
-def profile(row, title):
+def profile(row, title, explorer_rows=EXPLORER_VISIBLE_ROWS):
     claims = row['claims']
     claim_map = {c['id']: c for c in claims}
     records = {e['id']: e for e in row['evidence']}
@@ -745,14 +745,14 @@ def profile(row, title):
     body += '<p class="muted">Audit trail of verified company facts with complete supporting provenance, exact source locators, cryptographic SHA-256 receipts, and verbatim source excerpts.</p>'
     body += '<div class="table-responsive"><table class="evidence-explorer-table" aria-label="Evidence Explorer audit trail">'
     body += '<thead><tr><th scope="col">Fact / Claim</th><th scope="col">Status</th><th scope="col">Value</th><th scope="col">Source Class</th><th scope="col">Locator</th><th scope="col">SHA-256</th><th scope="col">Verbatim Excerpt</th></tr></thead><tbody>'
-    for c in claims[:EXPLORER_VISIBLE_ROWS]:
+    for c in claims[:explorer_rows]:
         lbl, avail, v_str, s_class, loc, sha, span = explorer_cells(c, records)
         sha_disp = f'<code title="{esc(sha)}">{esc(sha[:12])}…</code>' if sha else '—'
         body += f'<tr><th scope="row"><a href="#{esc(anchor(c))}">{esc(lbl)}</a></th><td>{chip(avail)}</td><td>{esc(v_str)}</td><td>{esc(s_class)}</td><td><code>{esc(loc)}</code></td><td>{sha_disp}</td><td><blockquote class="table-excerpt">{esc(span)}</blockquote></td></tr>'
     body += '</tbody></table></div>'
-    hidden = len(claims) - EXPLORER_VISIBLE_ROWS
+    hidden = len(claims) - explorer_rows
     if hidden > 0:
-        body += (f'<p class="muted" id="explorer-more-note">Showing {EXPLORER_VISIBLE_ROWS} of {len(claims)} claims; every claim stays in the exports and the company data file.</p>'
+        body += (f'<p class="muted" id="explorer-more-note">Showing {explorer_rows} of {len(claims)} claims; every claim stays in the exports and the company data file.</p>'
                  f'<button type="button" id="explorer-show-all" data-hidden="{hidden}">Show the remaining {hidden} claims</button>')
     body += '</section>'
 
@@ -760,7 +760,7 @@ def profile(row, title):
     return page(str(name) + ' · ' + title, body, '../', company_data=org+'.data.js')
 
 
-def company_payload(row):
+def company_payload(row,explorer_rows=EXPLORER_VISIBLE_ROWS):
     evidence={e['id']:e for e in row['evidence']}
     referenced=set()
     facts=[]
@@ -804,8 +804,8 @@ def company_payload(row):
     payload = {'orgnr': row['organisation_number'], 'name': name,
                'source_fields':source_fields,'sources':sources,'evidence_fields':evidence_fields,
                'records':records,'facts':facts,'registry_details':details}
-    if len(row['claims']) > EXPLORER_VISIBLE_ROWS:
-        payload['explorer_rows'] = [(*explorer_cells(c, all_records), anchor(c)) for c in row['claims'][EXPLORER_VISIBLE_ROWS:]]
+    if len(row['claims']) > explorer_rows:
+        payload['explorer_rows'] = [(*explorer_cells(c, all_records), anchor(c)) for c in row['claims'][explorer_rows:]]
     return payload
 
 
@@ -1090,8 +1090,16 @@ def generate_site(input_path, out, title='Signalpost'):
              'data/index.json': payload + '\n', 'data/index.js': 'window.SIGNALPOST_INDEX = ' + js_payload + ';\n'}
     for row in rows:
         org=row['organisation_number']
-        files['c/' + org + '.html'] = profile(row, title)
-        data=json.dumps(company_payload(row),ensure_ascii=False,sort_keys=True,separators=(',',':'),allow_nan=False)
+        visible=EXPLORER_VISIBLE_ROWS
+        rendered=profile(row,title,visible)
+        # Audit rows repeat facts already present above. Defer only those
+        # duplicates to the existing local Show remaining loader, preserving
+        # every fact, anchor and receipt under the unchanged HTML size gate.
+        while len(rendered.encode('utf8'))>=250_000 and visible:
+            visible//=2
+            rendered=profile(row,title,visible)
+        files['c/' + org + '.html'] = rendered
+        data=json.dumps(company_payload(row,visible),ensure_ascii=False,sort_keys=True,separators=(',',':'),allow_nan=False)
         data=data.replace('</','<\\/').replace('\u2028','\\u2028').replace('\u2029','\\u2029')
         files['c/'+org+'.data.js']='window.SIGNALPOST_EVIDENCE = '+data+';\n'
     for filename in ('site.css', 'site.js'): files['assets/' + filename] = (ASSETS / filename).read_text(encoding='utf8')

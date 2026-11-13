@@ -1,0 +1,45 @@
+{
+  "reviews": [
+    {
+      "sample": "daily",
+      "organisation_number": "922718059",
+      "field": "gleif.record",
+      "value_sha256": "e36ed1b6000723a4ca3a73297ee4b83a38f4c874761a4b5576fe1d746a358215",
+      "verdict": "correct",
+      "reviewer": "User confirmation in conversation",
+      "review_date": "2026-11-13",
+      "note": "Explicit user hand-check confirmation; original automated verdict and proof tier retained."
+    },
+    {
+      "sample": "mock",
+      "organisation_number": "988217867",
+      "field": "official_website",
+      "value_sha256": "bd239d0a1f4cb78bfcf8fb3ce83ecbe26b7fdc1769fd856e398c917b927f6c09",
+      "verdict": "correct",
+      "reviewer": "User confirmation in conversation",
+      "review_date": "2026-11-13",
+      "note": "Explicit user hand-check confirmation; original automated verdict and proof tier retained."
+    },
+    {
+      "sample": "mock",
+      "organisation_number": "988217867",
+      "field": "social_profile.64365f4ba0c4877f8bd6",
+      "value_sha256": "31559928541faf9dfce1e99efd6ffdd8784be388d32d8979e864511065a9ecc0",
+      "verdict": "correct",
+      "reviewer": "User confirmation in conversation",
+      "review_date": "2026-11-13",
+      "note": "Explicit user hand-check confirmation; original automated verdict and proof tier retained."
+    },
+    {
+      "sample": "daily",
+      "organisation_number": "995194163",
+      "field": "official_website",
+      "value_sha256": "1922b8a6574e9c75b88f8be34b434dd1ca13fa03412bf73675bea045e7364812",
+      "verdict": "correct",
+      "reviewer": "User confirmation in conversation",
+      "review_date": "2026-11-13",
+      "note": "Explicit user reply Correct for organisation 995194163 website; original automated verdict and HIGH tier retained."
+    }
+  ],
+  "pending": []
+}

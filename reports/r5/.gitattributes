@@ -6,3 +6,6 @@
 # Preserve new-source and precision-ledger verbatim proof excerpts.
 stageT/items.md -text
 precision/LEDGER.md -text
+
+stageH/doubtful_items.md -text
+stageH/precision/LEDGER.md -text

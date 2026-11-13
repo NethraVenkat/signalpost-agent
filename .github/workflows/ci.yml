@@ -14,11 +14,45 @@ jobs:
       - run: uv run pytest -q
   live-20:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      LIVE_WORK: ${{ runner.temp }}/signalpost-live20-${{ github.run_id }}-${{ github.run_attempt }}
+      SIGNALPOST_SEARCH_PROVIDER: disabled
+      SIGNALPOST_SEARCH_MOCK: '0'
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v6
         with:
           python-version: '3.12'
       - run: uv sync --frozen
-      - run: uv run signalpost run --organisations tests/fixtures/ci20.jsonl --bulk tests/fixtures/ci20.csv --output out/ci20.jsonl --report out/ci20-report.json --expected-count 20 --time-budget-seconds 180
-      - run: uv run python scripts/verify_output.py --first out/ci20.jsonl --organisations tests/fixtures/ci20.jsonl --count 20 --state-dir state --report out/ci20-report.json --require-clean
+      - name: Run official seven-flag smoke in fresh state
+        shell: bash
+        run: |
+          mkdir "$LIVE_WORK"
+          cd "$LIVE_WORK"
+          uv run --project "$GITHUB_WORKSPACE" signalpost run \
+            --organisations "$GITHUB_WORKSPACE/tests/fixtures/ci20.jsonl" \
+            --bulk "$GITHUB_WORKSPACE/tests/fixtures/ci20.csv" \
+            --output "$LIVE_WORK/envelopes.jsonl" \
+            --profiles-output "$LIVE_WORK/profiles.jsonl" \
+            --report "$LIVE_WORK/report.json" \
+            --run-id "ci20-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}" \
+            --expected-count 20 | tee "$LIVE_WORK/process.txt"
+      - name: Verify facts, membership, briefing and generated site
+        shell: bash
+        run: |
+          uv run python scripts/check_live_run.py \
+            --output "$LIVE_WORK/envelopes.jsonl" \
+            --organisations tests/fixtures/ci20.jsonl --count 20 \
+            --state "$LIVE_WORK/state" --report "$LIVE_WORK/report.json" \
+            --site "$LIVE_WORK/site" | tee "$LIVE_WORK/verification.json"
+      - name: Upload live smoke report and verification
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: live-20-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            ${{ env.LIVE_WORK }}/report.json
+            ${{ env.LIVE_WORK }}/verification.json
+            ${{ env.LIVE_WORK }}/process.txt
+          if-no-files-found: warn
