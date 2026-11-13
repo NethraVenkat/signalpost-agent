@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "uv",
+    "sync",
+    "--frozen"
+  ],
+  "cwd": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageH-clean\\repo",
+  "exit_code": 0,
+  "wall_seconds": 0.052586000005248934,
+  "completed_at_utc": "2026-11-13T17:39:54.526154+00:00",
+  "environment_overrides": {
+    "SIGNALPOST_SEARCH_PROVIDER": "disabled",
+    "SIGNALPOST_SEARCH_MOCK": "0",
+    "PYTHONUTF8": "1"
+  },
+  "PYTHONPATH": "unset"
+}

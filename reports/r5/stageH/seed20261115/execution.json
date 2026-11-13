@@ -1,0 +1,32 @@
+{
+  "argv": [
+    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageH-clean\\repo\\.venv\\Scripts\\python.exe",
+    "-m",
+    "signalpost.cli",
+    "run",
+    "--organisations",
+    "C:\\Users\\<USER>\\signal-nethra\\reports\\r5\\stageH\\seed20261115\\companies100.jsonl",
+    "--bulk",
+    "C:\\Users\\<USER>\\signal-nethra\\reports\\r5\\stageH\\seed20261115\\registry100.csv",
+    "--output",
+    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageH-clean\\repo\\.data\\stageH-20261115-first\\envelopes.jsonl",
+    "--profiles-output",
+    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageH-clean\\repo\\.data\\stageH-20261115-first\\profiles.jsonl",
+    "--report",
+    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageH-clean\\repo\\.data\\stageH-20261115-first\\report.json",
+    "--run-id",
+    "stageH-20261115-first",
+    "--expected-count",
+    "100"
+  ],
+  "cwd": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageH-clean\\repo\\.data\\stageH-20261115-first",
+  "exit_code": 0,
+  "wall_seconds": 365.28307909998694,
+  "completed_at_utc": "2026-11-13T17:47:13.636145+00:00",
+  "environment_overrides": {
+    "SIGNALPOST_SEARCH_PROVIDER": "disabled",
+    "SIGNALPOST_SEARCH_MOCK": "0",
+    "PYTHONUTF8": "1"
+  },
+  "PYTHONPATH": "unset"
+}

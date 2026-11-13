@@ -1,0 +1,21 @@
+{
+  "argv": [
+    "git",
+    "clone",
+    "--no-hardlinks",
+    "--branch",
+    "revision/r5",
+    "C:\\Users\\<USER>\\signal-nethra",
+    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageH-clean\\repo"
+  ],
+  "cwd": "C:\\Users\\<USER>\\signal-nethra",
+  "exit_code": 0,
+  "wall_seconds": 30.840612600004533,
+  "completed_at_utc": "2026-11-13T17:29:45.125993+00:00",
+  "environment_overrides": {
+    "SIGNALPOST_SEARCH_PROVIDER": "disabled",
+    "SIGNALPOST_SEARCH_MOCK": "0",
+    "PYTHONUTF8": "1"
+  },
+  "PYTHONPATH": "unset"
+}

@@ -1,0 +1,58 @@
+{"command": ["C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageH-clean\\repo\\.venv\\Scripts\\python.exe", "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageH-clean\\repo\\reports\\r5\\stage4_7\\run_tests.py", "-q", "-p", "no:cacheprovider"], "priority": "above_normal", "mutates_test_assertions_or_timeouts": false}
+........................................................................ [  7%]
+........................................................................ [ 15%]
+........................................................................ [ 22%]
+........................................................................ [ 30%]
+........................................................................ [ 37%]
+........................................................................ [ 45%]
+........................................................................ [ 52%]
+........................................................................ [ 60%]
+........................................................................ [ 68%]
+........................................................................ [ 75%]
+........................................................................ [ 83%]
+..FF.................................................................... [ 90%]
+........................................................................ [ 98%]
+................                                                         [100%]
+================================== FAILURES ===================================
+_____ test_search_candidate_only_publishes_with_fetched_exact_orgnr[True] _____
+
+tmp_path = WindowsPath('C:/Users/<USER>/AppData/Local/Temp/pytest-of-<USER>/pytest-1670/test_search_candidate_only_pub0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001937E0171A0>
+proven = True
+
+    @pytest.mark.parametrize('proven',[True,False])
+    def test_search_candidate_only_publishes_with_fetched_exact_orgnr(tmp_path,monkeypatch,proven):
+        from tests.test_websites import execute_web,html
+        monkeypatch.setenv('BRAVE_SEARCH_API_KEY','synthetic-test-only')
+        monkeypatch.setattr('signalpost.web.search.Brave',lambda *args:Fake())
+        monkeypatch.setattr('signalpost.web.collector.generate',lambda context:[])
+        report,row,requests,cfg=execute_web(tmp_path,monkeypatch,body=html('Org nr '+ORG if proven else ''),website=None)
+        published=[c for c in row['claims'] if c['field']=='official_website' and c['availability']=='available']
+>       assert bool(published)==proven
+E       assert False == True
+E        +  where False = bool([])
+
+tests\test_search.py:72: AssertionError
+____ test_search_candidate_only_publishes_with_fetched_exact_orgnr[False] _____
+
+tmp_path = WindowsPath('C:/Users/<USER>/AppData/Local/Temp/pytest-of-<USER>/pytest-1670/test_search_candidate_only_pub1')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000019300267560>
+proven = False
+
+    @pytest.mark.parametrize('proven',[True,False])
+    def test_search_candidate_only_publishes_with_fetched_exact_orgnr(tmp_path,monkeypatch,proven):
+        from tests.test_websites import execute_web,html
+        monkeypatch.setenv('BRAVE_SEARCH_API_KEY','synthetic-test-only')
+        monkeypatch.setattr('signalpost.web.search.Brave',lambda *args:Fake())
+        monkeypatch.setattr('signalpost.web.collector.generate',lambda context:[])
+        report,row,requests,cfg=execute_web(tmp_path,monkeypatch,body=html('Org nr '+ORG if proven else ''),website=None)
+        published=[c for c in row['claims'] if c['field']=='official_website' and c['availability']=='available']
+        assert bool(published)==proven
+>       assert report['search']['queries']==1
+E       assert 0 == 1
+
+tests\test_search.py:73: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_search.py::test_search_candidate_only_publishes_with_fetched_exact_orgnr[True]
+FAILED tests/test_search.py::test_search_candidate_only_publishes_with_fetched_exact_orgnr[False]
+2 failed, 950 passed in 193.06s (0:03:13)

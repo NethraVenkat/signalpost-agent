@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageH-clean\\repo\\.venv\\Scripts\\python.exe",
+    "reports/r5/stage4_7/run_tests.py",
+    "-q",
+    "-p",
+    "no:cacheprovider"
+  ],
+  "cwd": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageH-clean\\repo",
+  "exit_code": 1,
+  "wall_seconds": 197.8139416000049,
+  "completed_at_utc": "2026-11-13T17:33:22.651341+00:00",
+  "environment_overrides": {
+    "SIGNALPOST_SEARCH_PROVIDER": "disabled",
+    "SIGNALPOST_SEARCH_MOCK": "0",
+    "PYTHONUTF8": "1"
+  },
+  "PYTHONPATH": "unset"
+}

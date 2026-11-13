@@ -1,0 +1,58 @@
+{
+  "metrics": {
+    "verified_websites": 7,
+    "social_profile_companies": 3,
+    "job_ad_companies": 1,
+    "job_claims": 2,
+    "activity_companies": 100,
+    "activity_claims": 1084,
+    "total_facts": 13873,
+    "http_requests": 753,
+    "runtime_seconds": 335.906,
+    "process_wall_seconds": 342.92780410000705,
+    "cost_usd": 0
+  },
+  "section_states": {
+    "identity": {
+      "available": 100
+    },
+    "roles": {
+      "available": 100
+    },
+    "subunits": {
+      "available": 76,
+      "not_available": 24
+    },
+    "accounts": {
+      "available": 100
+    },
+    "website": {
+      "available": 7,
+      "not_available": 69,
+      "failed": 17,
+      "ambiguous": 6,
+      "blocked": 1
+    },
+    "hiring": {
+      "not_available": 99,
+      "available": 1
+    },
+    "activity": {
+      "failed": 28,
+      "available": 72
+    },
+    "gleif": {
+      "not_available": 86,
+      "available": 14
+    },
+    "procurement": {
+      "not_available": 99,
+      "blocked": 1
+    }
+  },
+  "artifacts": {
+    "envelopes.jsonl": "ec1f1fb4687350de1fad1367bf0e1eb8ac1d45726400398ed6a6b8137a8772da",
+    "profiles.jsonl": "10c1b6a913d79867957001ac39b1db818704947c4d21f06f5524557d18620f34",
+    "report.json": "1057365268e2baa62915623659d5566d0be18e29d104915a96bb666b2145d11d"
+  }
+}

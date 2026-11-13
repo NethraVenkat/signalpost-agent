@@ -1,0 +1,1 @@
+After clean-clone pytest passed 952 tests, the sample-preparation wrapper used unsupported encoding alias utf8-sig while reading prior input files. Correct alias is utf-8-sig. No sample or live batch was started. Fix the wrapper literal; resume only after verifying the unchanged clone HEAD, clean tracked state and recorded exit-0 full test receipt.
