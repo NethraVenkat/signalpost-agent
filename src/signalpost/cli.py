@@ -37,8 +37,8 @@ def main():
     command.add_argument('--registry-changes', action=argparse.BooleanOptionalAction, default=True,
                          help='Publish narrowly verified registry changes (default on; disable with --no-registry-changes)')
     command.add_argument('--registry-declared', action='store_true', help='Enable the default-off weak registry-declared website path')
-    command.add_argument("--website-request-cap", type=int, default=6)
-    command.add_argument('--website-total-request-cap',type=int,default=9)
+    command.add_argument("--website-request-cap", type=int, default=8)
+    command.add_argument('--website-total-request-cap',type=int,default=13)
     command.add_argument('--hiring',action='store_true')
     command.add_argument('--nav-index-path',type=Path)
     command.add_argument('--nav-index-max-age-days',type=float,default=21)

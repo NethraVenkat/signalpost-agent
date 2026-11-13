@@ -117,3 +117,11 @@
 - Extract at most one older entity statement already present in the same official response; no extra HTTP call. Historical units are never inferred from the latest-statement calibration. Wrong-company, consolidated and malformed history is withheld. New historical field coverage is not a business-change event.
 - Compare the registry accounts year against the figures year for a newer-filing flag; same-year refilings are outside this check. Independent saved-output verification checks raw source pointers, ownership, reporting metadata, arithmetic, complete topics and scorer mirrors. Optional model output that loses the contract falls back to the verified template.
 - Preserve identity proof, robots/terms, DNS and HTTP ceilings, source receipts and $0 provider execution. No publication, push or Stage A. Live-run measurements and browser evidence are recorded in stageS/SUMMARY.md.
+
+
+## Evaluator defaults - 8/13
+
+- Follow the queued user request in a separate commit after Stage S: make the measured 8 proof-page / 13 total website request limits both CLI and library defaults. Both are enforced upper bounds; lower caps remain supported. No identity, veto, DNS, robots, politeness or evidence rule is relaxed.
+- Test the exact seven-flag evaluator command at the CLI/Config boundary, alongside the existing real runner/site integration test. It resolves 8/13 and the default site path without adding enrichment flags.
+- Preserve opt-in website/hiring/public-website activity behavior. The requested exact seven-flag fresh run therefore has narrower coverage than final 4.7's full-feature run; report that difference explicitly rather than silently changing feature defaults. Registry changes remain enabled by default.
+- The new measurement harness uses exactly seven CLI flags, no cap flags, a fresh working directory to isolate default state/, hash-checked frozen inputs and a new run ID. Paid search is disabled and the default total provider budget remains $0. Its final measurement is recorded in OVERNIGHT2_SUMMARY.md.
