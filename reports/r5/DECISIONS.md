@@ -346,3 +346,11 @@
 - Install/run the user-requested uvx --from actionlint-py actionlint locally. actionlint-py 1.7.12.25 supplies actionlint 1.7.12; version and workflow validation both exit 0. Clean workflow invocation has empty stdout/stderr. Retain validation command/version/workflow hash in ci-runner-temp/validation.json. Initial install log contains package-build/version-specifier warnings from uv, not actionlint workflow errors. No GitHub dispatch or push; remote success is not claimed. Full pytest must pass before the exact requested commit message.
 
 - Final gate: actionlint 1.7.12 exit 0 with no diagnostics; full pytest 954 passed in 224.33s. Commit exactly Fix CI workflow runner.temp usage; never push.
+
+## Stage W0: saved rejection, DNS, homepage and NAV audits
+
+- Audit six latest saved samples without editing source behavior or saved publications. Keep full legal-name locations distinct from suffixless mentions and preserve exact candidate rule codes, titles, page hashes and signal regions. Recorded candidate-level outcomes cannot honestly become per-page decisions retrospectively.
+- Generic dns_unavailable also represents a nomination cutoff. Do not invent an authoritative historical NXDOMAIN/SERVFAIL split. Re-query each of seven unique non-name-not-found hosts once using the documented Google Public DNS API; all seven return SERVFAIL, zero A-positive results. Record these diagnostic requests separately from evaluator HTTP.
+- Homepage baseline is 13 published declared domains / 72 registry declarations across 600 inputs (29 published sites overall). It is declaration recall, not independent ownership precision. No new proof tier.
+- NAV parent/universe expected rate remains unknown: 6,012 indexed workplace IDs, zero direct universe matches, three parents proven by saved subunit evidence, three measured job companies / 600. A full official underenheter bulk download cannot start because both robots checks disconnect; retain failure, do not bypass it or fabricate parent joins. Report the known-parent lower bound separately from the unavailable complete estimate.
+- W0 is reports-only; pytest gate 954 green in 215.36s. Full receipts and limitations in stageW/W0_REPORT.md. No push and $0 paid cost.

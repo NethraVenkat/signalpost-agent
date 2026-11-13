@@ -1,0 +1,87 @@
+{
+  "provider": "Google Public DNS",
+  "documentation": "https://developers.google.com/speed/public-dns/docs/doh/json",
+  "terms": "https://developers.google.com/speed/public-dns/terms",
+  "privacy": "https://developers.google.com/speed/public-dns/privacy",
+  "input_audit_sha256": "bd4cd91827ccd0d71ef810c41ff3e5f4968858a59258f272ee7cc6974b90d4da",
+  "unique_names": 7,
+  "completed": 7,
+  "http_requests": 7,
+  "cost_usd": 0,
+  "counts": {
+    "SERVFAIL": 7
+  },
+  "results": [
+    {
+      "host": "mcl-holding.com",
+      "retrieved_at": "2026-11-13T18:59:20.583910+00:00",
+      "url": "https://dns.google/resolve?name=mcl-holding.com&type=A&edns_client_subnet=0.0.0.0%2F0",
+      "http_status": 200,
+      "body": "{\"Status\":2,\"TC\":false,\"RD\":true,\"RA\":true,\"AD\":false,\"CD\":false,\"Question\":[{\"name\":\"mcl-holding.com.\",\"type\":1}],\"edns_client_subnet\":\"0.0.0.0/0\",\"Comment\":\"Name servers refused query (lame delegation?) [45.158.164.135].\",\"extended_dns_errors\":[{\"info_code\":23,\"extra_text\":\"[45.158.164.135] rcode=REFUSED for mcl-holding.com/a\"},{\"info_code\":22,\"extra_text\":\"At delegation mcl-holding.com for mcl-holding.com/a\"}]}",
+      "content_sha256": "3b7d88e007a1898f4e2c1d98941bb201c8775d59ee13a31e9c6b4c038635c716",
+      "rcode": 2,
+      "state": "SERVFAIL"
+    },
+    {
+      "host": "rcon.no",
+      "retrieved_at": "2026-11-13T18:59:21.498102+00:00",
+      "url": "https://dns.google/resolve?name=rcon.no&type=A&edns_client_subnet=0.0.0.0%2F0",
+      "http_status": 200,
+      "body": "{\"Status\":2,\"TC\":false,\"RD\":true,\"RA\":true,\"AD\":false,\"CD\":false,\"Question\":[{\"name\":\"rcon.no.\",\"type\":1}],\"edns_client_subnet\":\"0.0.0.0/0\",\"Comment\":\"Name servers refused query (lame delegation?) [195.206.121.12, 185.10.11.12].\",\"extended_dns_errors\":[{\"info_code\":23,\"extra_text\":\"[195.206.121.12] rcode=REFUSED for rcon.no/a\"},{\"info_code\":23,\"extra_text\":\"[185.10.11.12] rcode=REFUSED for rcon.no/a\"},{\"info_code\":22,\"extra_text\":\"At delegation rcon.no for rcon.no/a\"}]}",
+      "content_sha256": "c565b89432c92d92d0db368aa106c673b4c1fab9e3a87aee5c821ca231f7e2e5",
+      "rcode": 2,
+      "state": "SERVFAIL"
+    },
+    {
+      "host": "studio-living.com",
+      "retrieved_at": "2026-11-13T18:59:22.582173+00:00",
+      "url": "https://dns.google/resolve?name=studio-living.com&type=A&edns_client_subnet=0.0.0.0%2F0",
+      "http_status": 200,
+      "body": "{\"Status\":2,\"TC\":false,\"RD\":true,\"RA\":true,\"AD\":false,\"CD\":false,\"Question\":[{\"name\":\"studio-living.com.\",\"type\":1}],\"edns_client_subnet\":\"0.0.0.0/0\",\"Comment\":\"Name servers did not respond [216.146.38.111, 216.146.38.112].\",\"extended_dns_errors\":[{\"info_code\":22,\"extra_text\":\"At delegation studio-living.com for studio-living.com/a\"}]}",
+      "content_sha256": "aaf10a0191f7a78f0f03b7fbaaff1cee5b2aa62549f038d69308c9e3c7930edd",
+      "rcode": 2,
+      "state": "SERVFAIL"
+    },
+    {
+      "host": "vesteraalen.com",
+      "retrieved_at": "2026-11-13T18:59:25.031720+00:00",
+      "url": "https://dns.google/resolve?name=vesteraalen.com&type=A&edns_client_subnet=0.0.0.0%2F0",
+      "http_status": 200,
+      "body": "{\"Status\":2,\"TC\":false,\"RD\":true,\"RA\":true,\"AD\":false,\"CD\":false,\"Question\":[{\"name\":\"vesteraalen.com.\",\"type\":1}],\"edns_client_subnet\":\"0.0.0.0/0\",\"Comment\":\"Name servers refused query (lame delegation?) [149.248.38.58, 199.247.16.62].\",\"extended_dns_errors\":[{\"info_code\":23,\"extra_text\":\"[149.248.38.58] rcode=REFUSED for vesteraalen.com/a\"},{\"info_code\":23,\"extra_text\":\"[199.247.16.62] rcode=REFUSED for vesteraalen.com/a\"},{\"info_code\":22,\"extra_text\":\"At delegation vesteraalen.com for vesteraalen.com/a\"}]}",
+      "content_sha256": "b48e287e8ecf61471b681a11a2d9c609370406708e09b521a8c5ca4ff65a2622",
+      "rcode": 2,
+      "state": "SERVFAIL"
+    },
+    {
+      "host": "wattar.com",
+      "retrieved_at": "2026-11-13T18:59:26.411408+00:00",
+      "url": "https://dns.google/resolve?name=wattar.com&type=A&edns_client_subnet=0.0.0.0%2F0",
+      "http_status": 200,
+      "body": "{\"Status\":2,\"TC\":false,\"RD\":true,\"RA\":true,\"AD\":false,\"CD\":false,\"Question\":[{\"name\":\"wattar.com.\",\"type\":1}],\"edns_client_subnet\":\"0.0.0.0/0\",\"Comment\":\"Name servers refused query (lame delegation?) [212.1.215.66, 31.220.23.1].\",\"extended_dns_errors\":[{\"info_code\":23,\"extra_text\":\"[212.1.215.66] rcode=REFUSED for wattar.com/a\"},{\"info_code\":23,\"extra_text\":\"[31.220.23.1] rcode=REFUSED for wattar.com/a\"},{\"info_code\":22,\"extra_text\":\"At delegation wattar.com for wattar.com/a\"}]}",
+      "content_sha256": "4038ce06414e8d425250ea06c75a7bbe1446f8a190c68c9766c1bfa201c1b66e",
+      "rcode": 2,
+      "state": "SERVFAIL"
+    },
+    {
+      "host": "xn--hg-lka.com",
+      "retrieved_at": "2026-11-13T18:59:27.480053+00:00",
+      "url": "https://dns.google/resolve?name=xn--hg-lka.com&type=A&edns_client_subnet=0.0.0.0%2F0",
+      "http_status": 200,
+      "body": "{\"Status\":2,\"TC\":false,\"RD\":true,\"RA\":true,\"AD\":false,\"CD\":false,\"Question\":[{\"name\":\"xn--hg-lka.com.\",\"type\":1}],\"edns_client_subnet\":\"0.0.0.0/0\",\"Comment\":\"Name servers refused query (lame delegation?) [194.245.103.13, 192.95.37.184, 23.88.49.189].\",\"extended_dns_errors\":[{\"info_code\":23,\"extra_text\":\"[194.245.103.13] rcode=REFUSED for xn--hg-lka.com/a\"},{\"info_code\":23,\"extra_text\":\"[192.95.37.184] rcode=REFUSED for xn--hg-lka.com/a\"},{\"info_code\":23,\"extra_text\":\"[23.88.49.189] rcode=REFUSED for xn--hg-lka.com/a\"},{\"info_code\":22,\"extra_text\":\"At delegation xn--hg-lka.com for xn--hg-lka.com/a\"}]}",
+      "content_sha256": "ebce486848b201b7da3c3af822a37e1d45cdc923faec2bcd532c581182c648e7",
+      "rcode": 2,
+      "state": "SERVFAIL"
+    },
+    {
+      "host": "yugen.com",
+      "retrieved_at": "2026-11-13T18:59:29.222251+00:00",
+      "url": "https://dns.google/resolve?name=yugen.com&type=A&edns_client_subnet=0.0.0.0%2F0",
+      "http_status": 200,
+      "body": "{\"Status\":2,\"TC\":false,\"RD\":true,\"RA\":true,\"AD\":false,\"CD\":false,\"Question\":[{\"name\":\"yugen.com.\",\"type\":1}],\"edns_client_subnet\":\"0.0.0.0/0\",\"Comment\":\"Name servers refused query (lame delegation?) [205.251.194.76, 205.251.197.12, 205.251.199.158, 205.251.192.184].\",\"extended_dns_errors\":[{\"info_code\":23,\"extra_text\":\"[205.251.194.76] rcode=REFUSED for yugen.com/a\"},{\"info_code\":23,\"extra_text\":\"[205.251.197.12] rcode=REFUSED for yugen.com/a\"},{\"info_code\":23,\"extra_text\":\"[205.251.199.158] rcode=REFUSED for yugen.com/a\"},{\"info_code\":23,\"extra_text\":\"[205.251.192.184] rcode=REFUSED for yugen.com/a\"},{\"info_code\":22,\"extra_text\":\"At delegation yugen.com for yugen.com/a\"}]}",
+      "content_sha256": "53022b45f0f0cacb552b7791a3b50fff5cfe67c232d0d956fcdd67f1d3d74d3a",
+      "rcode": 2,
+      "state": "SERVFAIL"
+    }
+  ],
+  "limits": "A query only: NOERROR without A does not prove nonexistence. Generic historical errors include nomination cutoffs. Diagnostic results never publish identity claims."
+}

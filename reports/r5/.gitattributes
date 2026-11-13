@@ -9,3 +9,5 @@ precision/LEDGER.md -text
 
 stageH/doubtful_items.md -text
 stageH/precision/LEDGER.md -text
+stageW/*.json -text
+stageW/rejections.md -text
