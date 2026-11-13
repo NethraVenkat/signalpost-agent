@@ -57,6 +57,16 @@ def main():
     verified = subprocess.run(verify, env=env, capture_output=True, text=True, check=True)
     verification = {'command': verify, 'exit_code': 0, **json.loads(verified.stdout)}
     (dest/'verification.json').write_text(json.dumps(verification, indent=2)+'\n', encoding='utf8')
+    summarize()
+
+
+def summarize():
+    project=Path(__file__).resolve().parents[3]
+    dest=project/'reports/r5/stageDefaults'
+    saved=json.loads((dest/'settings.json').read_text(encoding='utf8'))
+    config=saved['resolved_config'];out=Path(saved['working_directory']);stage='Defaults'
+    execution=json.loads((dest/'execution.json').read_text(encoding='utf8'))
+    verification=json.loads((dest/'verification.json').read_text(encoding='utf8'))
     # Use exactly the baseline counting definitions, not aggregate section success.
     rows = [json.loads(x) for x in Path(config['output']).read_text(encoding='utf8').splitlines()]
     report = json.loads(Path(config['report']).read_text(encoding='utf8'))
@@ -82,8 +92,10 @@ def main():
                'http_requests':report['requests'], 'runtime_seconds':report['runtime_ms']/1000,
                'process_wall_seconds':execution['wall_seconds']}
     baseline = json.loads((project/'reports/r5/stage4_7/stepreuse/counts.json').read_text(encoding='utf8'))
-    states = {s:{v:sum(c['section_states'][s]==v for c in per) for v in values}
+    states = {s:{v:sum(c['section_states'].get(s,'not_recorded')==v for c in per)
+                    for v in sorted(set(values)|{'not_recorded'})}
               for s,values in baseline['counts_by_section_state'].items()}
+    assert all(sum(values.values())==len(per) for values in states.values())
     counts = {'metrics':metrics,'counts_by_section_state':states,'per_company':per,
               'metric_definitions':baseline['metric_definitions'],
               'artifacts':{name:sha(out/name) for name in ('envelopes.jsonl','profiles.jsonl','report.json')}}
@@ -96,11 +108,13 @@ def main():
     table += '\n| Section / state | Best 4.7 | Stage '+str(stage)+' | Delta |\n|---|---:|---:|---:|\n'
     for section,values in states.items():
         for state,val in values.items():
-            before = baseline['counts_by_section_state'][section][state]
+            before = baseline['counts_by_section_state'][section].get(state,0)
             table += f'| {section} / {state} | {before} | {val} | {val-before:+} |\n'
     (dest/'table.md').write_text(table,encoding='utf8')
     print(json.dumps({'stage':stage,'metrics':metrics,'verification':verification,'section_states':states}))
 
 
-if __name__ == '__main__': main()
+if __name__ == '__main__':
+    if sys.argv[1:]==['--summarize-only']: summarize()
+    else: main()
 

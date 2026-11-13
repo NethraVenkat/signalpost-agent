@@ -125,3 +125,14 @@
 - Test the exact seven-flag evaluator command at the CLI/Config boundary, alongside the existing real runner/site integration test. It resolves 8/13 and the default site path without adding enrichment flags.
 - Preserve opt-in website/hiring/public-website activity behavior. The requested exact seven-flag fresh run therefore has narrower coverage than final 4.7's full-feature run; report that difference explicitly rather than silently changing feature defaults. Registry changes remain enabled by default.
 - The new measurement harness uses exactly seven CLI flags, no cap flags, a fresh working directory to isolate default state/, hash-checked frozen inputs and a new run ID. Paid search is disabled and the default total provider budget remains $0. Its final measurement is recorded in OVERNIGHT2_SUMMARY.md.
+
+
+## Overnight 2 final measurement
+
+- Stage S commit 74cd0ad is green at 805 tests; separate defaults commit a9b3670 is green at 811. U remains cbc5697.
+- Fresh full-feature S run: six sites, 18 website failures, 25 activity failures, 9,381 source facts, 887 HTTP, 255.094s runner time, $0. BIEN accounts HTTP 500 is retained. Both S and evaluator-default runs verify all five topics for 100 companies, 4,208 financial values and 153 ratios, with zero unsupported values. No live comparable YoY or newer-year flag is claimed.
+- Exact seven-flag fresh run: 9,323 facts, 304 HTTP, 13.015s runner / 16.893s wall, $0, available 100-company site. Website/hiring/public website activity are disabled by existing opt-in defaults; zero websites is explicit, not a failed proof or a cap regression.
+- Correct the comparison harness after its post-run KeyError on absent disabled-section keys. Keep raw output/verification intact, preserve the original trace, classify absent keys as not_recorded and rebuild only saved tables. No application change or extra crawl.
+- Keep docs/demo as the Stage S full-feature snapshot. Retain 34 screenshots across U, S and the evaluator-default site; all desktop/mobile checks pass. Final hand-check limitations and scoring caveats are in OVERNIGHT2_SUMMARY.md. Stop without Stage A or push.
+
+- Final report-commit pytest gate: 811 passed in 137.41s; full log in overnight2-tests.txt.
