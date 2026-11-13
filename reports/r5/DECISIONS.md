@@ -106,3 +106,14 @@
 - Source links stay bound to evidence IDs. Full hashes, expandable verification hint, direct publisher links, explorer-to-fact anchors and mobile labelled rows make receipts inspectable. No source data or proof rule is changed.
 - Authored Playwright at 1280/360 px passes 12 checks, with 44 px controls, no page overflow or JS errors and external requests blocked. Ten screenshots are retained. Only an installed Playwright library/browser is used; no other application's code is copied.
 - docs/demo is generated locally with a file/hash manifest and Pages instructions. No publication or push. Full pytest: 771 passed in 131.00s. Fresh frozen-100 fact metrics equal best 4.7; independent verification finds zero unsupported values and an available 100-company site. HTTP/runtime variation is not a claimed causal speedup.
+
+
+## Stage S - Synthesis
+
+- Resume the intact uncommitted Stage S work after the disconnected session; Stage U remains cbc5697. The resumed full suite passes 805 tests.
+- Use a closed, deterministic five-topic briefing contract in both scorer mirrors and the site: activity, change, unknowns, financial context and a supported partner-screening takeaway. Sparse profiles cite honest coverage observations rather than inventing facts to fill a quota.
+- Separate typed, deterministically checked run-status citations from publisher facts. Failed checks have a recorded state/reason and run timestamp, never a fabricated publisher excerpt or hash. First runs explicitly say first run; refresh notices qualify the compared source scope.
+- Derive operating margin and equity ratio only from matching supported entity periods/currency/units, citing both inputs; omit non-finite inputs and non-positive denominators. Revenue YoY requires consecutive comparable annual periods and positive prior revenue. No forecast or suitability claim is generated.
+- Extract at most one older entity statement already present in the same official response; no extra HTTP call. Historical units are never inferred from the latest-statement calibration. Wrong-company, consolidated and malformed history is withheld. New historical field coverage is not a business-change event.
+- Compare the registry accounts year against the figures year for a newer-filing flag; same-year refilings are outside this check. Independent saved-output verification checks raw source pointers, ownership, reporting metadata, arithmetic, complete topics and scorer mirrors. Optional model output that loses the contract falls back to the verified template.
+- Preserve identity proof, robots/terms, DNS and HTTP ceilings, source receipts and $0 provider execution. No publication, push or Stage A. Live-run measurements and browser evidence are recorded in stageS/SUMMARY.md.

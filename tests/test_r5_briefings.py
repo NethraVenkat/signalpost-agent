@@ -38,9 +38,9 @@ def test_four_to_six_cited_sentences_cover_all_topics_and_new_depth(tmp_path):
     assert 'accounts.revenue' in fields
     assert any(f.startswith('roles.role.') for f in fields)
     assert any(f.startswith('registry_change.') for f in fields)
-    assert any(s.text == LIMITATION for s in result.briefing)
-    assert 'identity.foreign_register_name' in fields
-    assert any(s.text == 'Foreign registration authority as reported: Reported Register.' for s in result.briefing)
+    assert {'activity','change','unknown','financial','takeaway'} <= {s.topic for s in result.briefing}
+    assert any('Year-on-year' in s.text and s.observation_ids for s in result.briefing)
+    assert any(s.text == 'Foreign registration authority as reported: Reported Register.' for s in result.sections.scale)
     assert select(result.model_dump(mode='json'), [c.model_dump(mode='json') for c in row.claims]) == [s.model_dump(mode='json') for s in result.briefing]
 
 
@@ -66,15 +66,17 @@ def test_no_sentence_can_lack_a_citation(tmp_path):
     sentences = [s for key in ('what_it_does','scale','leadership','changes') for s in getattr(result.sections,key)] + result.briefing
     assert sentences and all(s.claim_ids for s in sentences)
     for sentence in sentences:
-        assert sentence_error(sentence.model_copy(update={'claim_ids': []}), row) == 'uncited_sentence'
+        assert sentence_error(sentence.model_copy(update={'claim_ids': [],'observation_ids': []}), row) == 'uncited_sentence'
 
 
 def test_sparse_companies_are_not_padded(tmp_path):
     row, _ = envelope(tmp_path)
     row.claims = [c for c in row.claims if c.field=='identity.legal_name']
     result = generate(row)
-    assert len(result.briefing) < 4
-    assert any(u.family=='briefing' and 'no unsupported padding' in u.reason for u in result.sections.unknowns)
+    assert len(result.briefing) == 5
+    assert {'activity','change','unknown','financial','takeaway'} == {s.topic for s in result.briefing}
+    assert result.briefing[0].observation_ids and 'unknown' in result.briefing[0].text
+    assert not any('revenue: ' in s.text.casefold() for s in result.briefing)
     assert all(s.claim_ids and sentence_error(s,row) is None for s in result.briefing)
 
 

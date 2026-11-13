@@ -35,7 +35,7 @@ def input_hash(envelope):
     events=[{'field':e.field,'type':e.type,'old_value':e.old_value,'new_value':e.new_value,
              'old_evidence_ids':sorted(e.old_evidence_ids),'new_evidence_ids':sorted(e.new_evidence_ids)} for e in envelope.changes]
     from ..registry_activity import recent
-    return digest({'claims':sorted(claims,key=lambda c:c['id']),'changes':events,
+    return digest({'briefing_contract':'r5-S','claims':sorted(claims,key=lambda c:c['id']),'changes':events,
         'recent_registry_events':[(day,label,c.id) for day,label,c in recent(envelope)],
         'sections':envelope.run.sections,'baseline':envelope.run.refresh.get('mode')=='baseline',
         'errors':sorted({(e.section,e.code) for e in envelope.errors if e.section in envelope.run.sections and e.code!='website_candidates'})})

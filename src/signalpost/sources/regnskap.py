@@ -1,6 +1,8 @@
 from ..workers import offload
 from ..budget import SourceFailure
 import asyncio
+import math
+from datetime import date
 from ..models.envelope import Error
 from .extract import Section, add, finish, decode, response_source, get
 from . import financial_units
@@ -52,6 +54,7 @@ def extract(org,response,blobs):
     if not data:
         add(section, response_source(response), org, "accounts", "accounts.latest", None, "/")
         return finish(section)
+    if any(not isinstance(row,dict) for row in data): raise SourceFailure('malformed_accounts')
     indexed = [(index, row) for index, row in enumerate(data) if row.get("regnskapstype") == "SELSKAP"]
     if not indexed:
         add(section, response_source(response), org, "accounts", "accounts.latest", None, "/")
@@ -63,12 +66,36 @@ def extract(org,response,blobs):
     reported_org = entity.get("organisasjonsnummer") if isinstance(entity, dict) else None
     if str(reported_org) != org:
         raise SourceFailure("wrong_company", "Accounts do not explicitly match the requested orgnr")
+    emit_record(org,response,blobs,section,index,record,'accounts.',True)
+    try: latest_end=date.fromisoformat(record['regnskapsperiode']['tilDato'])
+    except (KeyError,TypeError,ValueError): latest_end=None
+    for old_index,old in indexed[1:] if latest_end else []:
+        try:
+            old_end=date.fromisoformat(old['regnskapsperiode']['tilDato'])
+            old_start=date.fromisoformat(old['regnskapsperiode']['fraDato'])
+            if old_end>=latest_end or old_start>old_end: continue
+        except (KeyError,TypeError,ValueError): continue
+        owner=old.get('virksomhet') or {}
+        if not isinstance(owner,dict) or str(owner.get('organisasjonsnummer'))!=org:
+            section.errors.append(Error(section='accounts',code='history_wrong_company',message='Historical statement does not match this organisation; withheld'))
+            continue
+        before_claims,before_evidence=len(section.claims),len(section.evidence)
+        try:
+            emit_record(org,response,blobs,section,old_index,old,'accounts.history.'+old_end.isoformat()+'.',False)
+        except SourceFailure:
+            del section.claims[before_claims:]; del section.evidence[before_evidence:]
+            section.errors.append(Error(section='accounts',code='history_malformed',message='Malformed historical statement withheld'))
+        break  # At most one earlier entity statement; no extra requests.
+    return finish(section)
+
+
+def emit_record(org,response,blobs,section,index,record,prefix,allow_calibration):
     period = record.get("regnskapsperiode") or {}
     end = period.get("tilDato")
     reporting = {"fiscal_year": str(end)[:4] if end else None, "period_start": period.get("fraDato"), "period_end": end,
                  "currency": record.get("valuta"), "unit": record.get("enhet"), "account_type": record.get("regnskapstype")}
     reported_identity=dict(reporting)
-    confirmed=reporting['unit'] is None and reporting['currency']=='NOK'
+    confirmed=allow_calibration and reporting['unit'] is None and reporting['currency']=='NOK'
     calibration=[]
     if confirmed:
         reporting.update({'unit':'NOK','source_unit':None,'unit_basis':'four_exact_parent_2025_ratios_within_0.995_1.005'})
@@ -78,9 +105,9 @@ def extract(org,response,blobs):
         value = get(record, path)
         if value is None and name not in {'revenue','operating_result','result_before_tax','net_result','equity','total_assets','total_liabilities'}:
             continue
-        if value is not None and (isinstance(value, bool) or not isinstance(value, (int, float))):
+        if value is not None and (isinstance(value, bool) or not isinstance(value, (int, float)) or (isinstance(value,float) and not math.isfinite(value))):
             raise SourceFailure("malformed_financial_value", name)
-        add(section, response_source(response), org, "accounts", "accounts." + name, value,
+        add(section, response_source(response), org, "accounts", prefix + name, value,
             f"/{index}/" + "/".join(path), reporting=reporting, effective=end,id_reporting=reported_identity)
         if confirmed:
             section.claims[-1].evidence_ids.extend(e.id for e in calibration)
@@ -88,4 +115,4 @@ def extract(org,response,blobs):
         if reporting["unit"] is None:
             section.claims[-1].reasons["unit"] = "scale_not_declared_by_source_or_reviewed_openapi"
             section.claims[-1].reasons["unit_crosscheck"] = "NOK_calibration_not_applied_to_other_or_missing_currencies"
-    return finish(section)
+            if not allow_calibration: section.claims[-1].reasons['unit_crosscheck']='historical_unit_not_inferred_from_latest_calibration'

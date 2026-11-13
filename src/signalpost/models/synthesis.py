@@ -10,6 +10,26 @@ class Sentence(Model):
     value_kind: Literal['reported','derived'] = 'reported'
     count: StrictInt | None = None
     record_type: Literal['workplaces','board_members','active_ads'] | None = None
+    observation_ids: list[str] = Field(default_factory=list)
+    topic: Literal['activity','change','unknown','financial','takeaway'] | None = None
+    formula: Literal['operating_margin','equity_ratio','revenue_yoy'] | None = None
+
+
+class RunObservation(Model):
+    id: str
+    kind: str
+    section: str
+    data: dict
+
+
+class FinancialMetric(Model):
+    formula: Literal['operating_margin','equity_ratio','revenue_yoy']
+    value: str
+    unit: Literal['percent'] = 'percent'
+    input_claim_ids: list[str]
+    reporting_period: dict
+    previous_period: dict | None = None
+    carried_forward: bool = False
 
 
 class Unknown(Model):
@@ -26,6 +46,8 @@ class Sections(Model):
     leadership: list[Sentence] = Field(default_factory=list)
     changes: list[Sentence] = Field(default_factory=list)
     unknowns: list[Unknown] = Field(default_factory=list)
+    limitations: list[Sentence] = Field(default_factory=list)
+    takeaway: list[Sentence] = Field(default_factory=list)
 
 
 class Checks(Model):
@@ -61,3 +83,7 @@ class Synthesis(Model):
     checks: Checks = Field(default_factory=Checks)
     generator: Generator
     change_claims: list[ChangeClaim] = Field(default_factory=list)
+    contract_version: Literal['r5-S'] | None = None
+    observations: list[RunObservation] = Field(default_factory=list)
+    financial_metrics: list[FinancialMetric] = Field(default_factory=list)
+    financial_year_check: dict | None = None

@@ -2,18 +2,98 @@
 import argparse
 import hashlib
 import json
+import csv,io
 from functools import lru_cache
 from pathlib import Path
 from signalpost.models.shapes import validate
 from signalpost.io.input_adapter import read
 from signalpost.models.claim import Claim
 from signalpost.models.evidence import Evidence
-from signalpost.models.envelope import Change
+from signalpost.models.envelope import Change,Error
 from signalpost.models.synthesis import Synthesis
 from signalpost.synthesis.validate import sentence_error,SECTIONS
 from signalpost.synthesis.catalog import change_claims
 from types import SimpleNamespace
 from signalpost.sources.text import decode_body
+from decimal import Decimal, ROUND_HALF_UP, localcontext
+from datetime import date
+
+
+def verify_financial_sources(row, data, evidence, stored_body):
+    raw=(row.get('run',{}).get('synthesis') or data.get('synthesis') or {})
+    if raw.get('contract_version')!='r5-S': return 0,0
+    claims={c['id']:c for c in data['claims']}
+    documents={};checked=0
+    for c in data['claims']:
+        if c['family']!='accounts' or c['availability']!='available':continue
+        source=next((evidence[eid] for eid in c['evidence_ids'] if
+                     evidence[eid]['source_url'].startswith('https://data.brreg.no/regnskapsregisteret/regnskap/')
+                     and evidence[eid]['locator'].startswith('/')),None)
+        if source is None: continue  # Synthetic unit-test sources are checked by their own receipts.
+        sha=source['content_sha256']
+        if sha not in documents: documents[sha]=json.loads(stored_body(sha))
+        document=documents[sha];parts=source['locator'].strip('/').split('/')
+        value=document
+        for part in parts:value=value[int(part)] if isinstance(value,list) else value[part.replace('~1','/').replace('~0','~')]
+        assert not isinstance(value,bool) and value==c['value'], 'Financial value differs from source JSON pointer'
+        record=document[int(parts[0])]
+        assert str(record['virksomhet']['organisasjonsnummer'])==row['organisation_number'], 'Financial source has wrong entity'
+        assert record['regnskapstype']=='SELSKAP', 'Consolidated values presented as entity figures'
+        p=c['reporting_period'];dates=record['regnskapsperiode']
+        assert p['period_start']==dates.get('fraDato') and p['period_end']==dates.get('tilDato'), 'Financial period differs from source'
+        assert p['fiscal_year']==str(dates.get('tilDato'))[:4] and p['account_type']=='SELSKAP'
+        assert p['currency']==record.get('valuta'), 'Financial currency differs from source'
+        if record.get('enhet') is None and p.get('unit')=='NOK':
+            assert not c['field'].startswith('accounts.history.') and p['currency']=='NOK'
+            assert p.get('unit_basis')=='four_exact_parent_2025_ratios_within_0.995_1.005'
+            assert any(evidence[eid]['source_class']=='company_report' for eid in c['evidence_ids']), 'Missing unit calibration evidence'
+        else: assert p.get('unit')==record.get('enhet'), 'Unsupported financial unit'
+        checked+=1
+    for m in raw.get('financial_metrics',[]):
+        a,b=[claims[cid] for cid in m['input_claim_ids']]
+        pa,pb=a['reporting_period'],b['reporting_period']
+        assert a['availability']==b['availability']=='available'
+        assert pa['account_type']==pb['account_type']=='SELSKAP'
+        assert pa.get('currency') and pa.get('unit') and all(pa.get(k)==pb.get(k) for k in ('currency','unit','account_type'))
+        top,bottom=Decimal(str(a['value'])),Decimal(str(b['value']))
+        assert top.is_finite() and bottom.is_finite() and bottom>0
+        if m['formula']=='revenue_yoy':
+            assert a['field']=='accounts.revenue' and b['field'].startswith('accounts.history.') and b['field'].endswith('.revenue')
+            sa,ea,sb,eb=[date.fromisoformat(p[k]) for p,k in [(pa,'period_start'),(pa,'period_end'),(pb,'period_start'),(pb,'period_end')]]
+            assert ea.year==eb.year+1 and sa.year==sb.year+1 and eb<sa
+            assert (sa.month,sa.day,ea.month,ea.day)==(sb.month,sb.day,eb.month,eb.day)
+            assert 350 <= (ea-sa).days+1 <=366 and 350 <= (eb-sb).days+1 <=366
+            top-=bottom
+        else:
+            assert all(pa.get(k)==pb.get(k) for k in ('fiscal_year','period_start','period_end'))
+            fields={'operating_margin':('accounts.operating_result','accounts.revenue'), 'equity_ratio':('accounts.equity','accounts.total_assets')}
+            assert (a['field'],b['field'])==fields[m['formula']]
+        with localcontext() as ctx:
+            ctx.prec=80
+            expected=format((top/bottom*100).quantize(Decimal('.01'),rounding=ROUND_HALF_UP),'f')
+        assert m['value']==expected and m['unit']=='percent', 'Unsupported derived financial value'
+    year=raw.get('financial_year_check')
+    if year:
+        registered=claims[year['claim_ids'][0]]
+        assert registered['field']=='identity.latest_submitted_accounts'
+        source=next((evidence[eid] for eid in registered['evidence_ids'] if
+                     evidence[eid]['source_url'].startswith('https://data.brreg.no/enhetsregisteret/')),None)
+        if source:
+            body=stored_body(source['content_sha256']);locator=source['locator']
+            if '/column:' in locator:
+                column=locator.rsplit('/column:',1)[1]
+                assert column.casefold().replace(' ','').replace('å','aa')=='sisteinnsendteaarsregnskap'
+                dialect=csv.Sniffer().sniff(body,delimiters=';,\t')
+                records=list(csv.DictReader(io.StringIO(body),dialect=dialect))
+                record=next(r for r in records if next((v for k,v in r.items() if k.casefold().lstrip('\ufeff')=='organisasjonsnummer'),None)==row['organisation_number'])
+                actual=record[column]
+            else:
+                assert locator=='/sisteInnsendteAarsregnskap'
+                record=json.loads(body)
+                assert str(record['organisasjonsnummer'])==row['organisation_number']
+                actual=record['sisteInnsendteAarsregnskap']
+            assert str(actual)==year['registry_year'], 'Registry filing year differs from source'
+    return checked,len(raw.get('financial_metrics',[]))
 
 
 def verify_synthesis(row):
@@ -23,12 +103,17 @@ def verify_synthesis(row):
     synthesis=Synthesis.model_validate(raw)
     envelope=SimpleNamespace(organisation_number=row['organisation_number'], claims=[Claim.model_validate(c) for c in data['claims']],
         evidence=[Evidence.model_validate(e) for e in data['evidence']],changes=[Change.model_validate(c) for c in data['changes']],
+        errors=[Error.model_validate(e) for e in data.get('errors',[])],
         run=SimpleNamespace(refresh=row['run']['refresh'] if 'run' in row else data['refresh'],
+                            sections=row['run']['sections'] if 'run' in row else data['sections'],
                             completed_at=row['run']['completed_at'] if 'run' in row else row['completed_at']))
     sentences=[s for key in SECTIONS for s in getattr(synthesis.sections,key)]
     assert all(sentence_error(s,envelope) is None for s in sentences),'Unverified synthesis sentence'
     assert len(synthesis.briefing) <= 6, 'Briefing exceeds six sentences'
-    assert all(s.claim_ids and sentence_error(s,envelope) is None for s in synthesis.briefing), 'Unverified briefing sentence'
+    assert all((s.claim_ids or s.observation_ids) and sentence_error(s,envelope) is None for s in synthesis.briefing), 'Unverified briefing sentence'
+    if synthesis.contract_version == 'r5-S':
+        from signalpost.synthesis.overview import contract_errors
+        assert not contract_errors(synthesis,envelope), 'Incomplete or tampered synthesis contract'
     assert synthesis.summary==' '.join(s.text for s in sentences),'Summary differs from checked sentences'
     assert synthesis.checks.sentences==synthesis.checks.cited==len(sentences) and synthesis.checks.values_verified
     assert synthesis.change_claims==change_claims(envelope),'Change citations differ from source events'
@@ -67,6 +152,7 @@ def verify(first, state_dir, count, organisations=None, report=None, require_cle
     def stored_body(sha):
         return decode_body((state_dir/'blobs'/sha).read_bytes())
     synthesis_companies=synthesis_sentences=0
+    financial_inputs=derived_metrics=0
     for row in rows:
         companies,sentences=verify_synthesis(row)
         synthesis_companies+=companies;synthesis_sentences+=sentences
@@ -87,13 +173,20 @@ def verify(first, state_dir, count, organisations=None, report=None, require_cle
                     seen.add(sha)
                 body = stored_body(sha)
                 assert len(e['claim_span']) <= 300 and e['claim_span'] in body, 'Non-verbatim evidence span'
+        inputs_checked,metrics_checked=verify_financial_sources(row,data,evidence,stored_body)
+        financial_inputs+=inputs_checked; derived_metrics+=metrics_checked
     result = {"lines": len(rows), "schema_valid": True, "published_claims": published, "source_blobs_verified": len(seen)}
     result.update(synthesis_companies=synthesis_companies,synthesis_sentences=synthesis_sentences,synthesis_unverified_values=0)
+    result.update(financial_inputs_verified=financial_inputs,derived_financial_metrics_verified=derived_metrics)
     briefings = [(row['run'].get('synthesis') if 'run' in row else row['profile'].get('synthesis')) or {} for row in rows]
     result.update(briefing_companies=sum(bool(s.get('briefing')) for s in briefings),
                   briefing_sentences=sum(len(s.get('briefing', [])) for s in briefings),
                   briefing_short_companies=sum(len(s.get('briefing', [])) < 4 for s in briefings),
                   briefing_unverified_values=0)
+    topics=('activity','change','unknown','financial','takeaway')
+    result['briefing_topic_coverage']={t:sum(any(s.get('topic')==t for s in b.get('briefing',[])) for b in briefings) for t in topics}
+    result['complete_briefing_contracts']=sum(b.get('contract_version')=='r5-S' and all(any(s.get('topic')==t for s in b.get('briefing',[])) for t in topics) for b in briefings)
+    result['newer_filing_flags']=sum(bool((b.get('financial_year_check') or {}).get('newer_filing_exists')) for b in briefings)
     if report is not None:
         metrics = json.loads(report.read_text(encoding='utf8'))
         assert metrics['emitted_envelopes'] == len(rows)

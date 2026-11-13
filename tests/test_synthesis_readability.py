@@ -110,7 +110,8 @@ def test_unknowns_preserve_reasons_and_unspecified_industry(tmp_path):
     row.run.refresh['mode'] = 'refresh'
     current = generate(row)
     assert 'Uoppgitt' not in current.summary and 'NACE 00.000' not in current.summary
-    assert current.sections.changes[0].text == 'No changes since the previous run.'
+    assert current.sections.changes[0].text.startswith('No verified changes were detected in the compared source scope')
+    assert current.sections.changes[0].observation_ids
     assert any(u.text == 'Industry code not specified.' for u in current.sections.unknowns)
     for old in prior.sections.unknowns:
         new = next(u for u in current.sections.unknowns if (u.family, u.field) == (old.family, old.field))

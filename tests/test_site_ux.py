@@ -71,6 +71,12 @@ def test_g3_unknowns_show_state_reason_and_link_to_source_status(tmp_path):
     unknowns = data['run']['synthesis']['sections']['unknowns']
     assert unknowns
     markup = profile(data, 'Signalpost')
+    if data['run']['synthesis'].get('contract_version')=='r5-S':
+        sentence=next(s for s in data['run']['synthesis']['briefing'] if s.get('topic')=='unknown')
+        assert escape(sentence['text'],quote=True) in markup
+        assert 'Run-status citations and report scope' in markup
+        for oid in sentence['observation_ids']: assert 'id="observation-'+oid+'"' in markup
+        return
     assert 'id="unknowns-heading">What remains unknown' in markup
     for item in unknowns:
         assert escape(item.get('text') or item['reason'], quote=True) in markup

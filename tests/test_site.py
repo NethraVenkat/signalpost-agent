@@ -510,7 +510,9 @@ def test_hiring_explorer_watchlist_and_financial_trend(tmp_path):
     profile_html = (out / f'c/{row.organisation_number}.html').read_text(encoding='utf8')
     assert 'btn-watchlist' in profile_html
     assert 'class="financial-trend-banner"' in profile_html
-    assert 'Multi-year filing trend' in profile_html
+    assert 'Reported periods' in profile_html
+    assert 'Comparability must be checked' in profile_html
+    assert 'Unknown currency' in profile_html
 
 
 

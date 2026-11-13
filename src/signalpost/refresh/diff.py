@@ -8,7 +8,7 @@ def newly_supported_field(field):
     from ..sources.registry_fields import EXTRA,GROUPS,ADDITIONAL
     from ..sources.regnskap import PATHS
     legacy={'revenue','operating_result','result_before_tax','net_result','equity','total_assets','total_liabilities'}
-    return (field.startswith(('roles.detail.','subunits.detail.','identity.location.')) or
+    return (field.startswith(('roles.detail.','subunits.detail.','identity.location.','accounts.history.')) or
             field in {'identity.'+k for k in (*EXTRA,*GROUPS,*ADDITIONAL,'founding_date','vat_registration_date')} or
             field in {'accounts.'+k for k in PATHS.keys()-legacy})
 

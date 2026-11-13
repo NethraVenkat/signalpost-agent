@@ -7,7 +7,7 @@ from ..models.synthesis import Sentence,Unknown
 from .readability import headline,nace_sentence,dual_role,normalised_description,money,workplaces_sentence
 from .nace import unspecified
 
-SECTIONS=('what_it_does','scale','leadership','changes')
+SECTIONS=('what_it_does','scale','leadership','changes','limitations','takeaway')
 LEVELS={'VERIFIED','HIGH','REGISTRY_DECLARED'}
 FIXED_WORDS=set('Registered activity purpose NACE Website Self description Employees Reported revenue Annual result Fiscal year Municipality Workplaces Board members Verified active ads found Official website Social profile CEO Chair Auditor First observation no earlier run to compare Previous Current Change From To Bankruptcy Liquidation Deletion Registration date Previously supported As registered NOK FY English CEO'.casefold().split())
 DATE=re.compile(r'\b(?:\d{4}[-/]\d{2}[-/]\d{2}|\d{1,2}[/.]\d{1,2}[/.]\d{4})\b')
@@ -66,6 +66,20 @@ def permitted(claim,envelope):
 
 def sentence_error(sentence,envelope):
     available=catalog(envelope)
+    if sentence.topic is not None or sentence.formula is not None or sentence.observation_ids:
+        if not sentence.claim_ids and not sentence.observation_ids:return 'uncited_sentence'
+        if any(key not in available for key in sentence.claim_ids):return 'missing_or_unavailable_claim'
+        claims=[available[key] for key in sentence.claim_ids]
+        evidence={e.id for e in envelope.evidence}
+        if any(not c.evidence_ids or set(c.evidence_ids)-evidence for c in claims):return 'missing_evidence'
+        if any(not permitted(c,envelope) for c in claims):return 'identity_below_threshold'
+        if sentence.topic:
+            from .overview import required
+            return None if sentence == required(envelope)[sentence.topic] else 'unverified_required_topic'
+        if sentence.formula:
+            from .financial import analyze,metric_sentence
+            return None if sentence in [metric_sentence(m) for m in analyze(envelope)[0]] else 'unverified_financial_derivation'
+        return 'unbound_run_observation'
     if not sentence.claim_ids:return 'uncited_sentence'
     if any(key not in available for key in sentence.claim_ids):return 'missing_or_unavailable_claim'
     claims=[available[key] for key in sentence.claim_ids]

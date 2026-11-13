@@ -15,12 +15,17 @@ class Service:
         self.metrics={'calls':0,'cache_hits':0,'input_tokens':0,'output_tokens':0,'estimated_usd':0,'fallbacks':0}
 
     async def summarize(self,envelope):
-        try:base=await offload(generate,envelope)
+        try:
+            base=await offload(generate,envelope)
+            from .overview import contract_errors
+            if contract_errors(base,envelope):raise ValueError('incomplete_template_contract')
         except Exception:
             result=Synthesis(generator=Generator(input_sha256=digest([envelope.organisation_number,'template_error'])))
             result.checks.fallback_used=True
             result.checks.rejections=[{'section':'synthesis','reason':'template_generation_error'}]
             result.sections.unknowns=[Unknown(family='synthesis',state='failed',reason='Summary generation could not be completed; source results remain available.')]
+            from .overview import install
+            result=validate_synthesis(install(result,envelope),envelope)
             self.metrics['fallbacks']+=1
             return result
         if self.config.synthesis=='template':return base
@@ -61,7 +66,10 @@ class Service:
                 cache.write_text(json.dumps({'text':reply.text}),encoding='utf8')
             result.mode='llm';result.generator.name=self.provider.name
             result.generator.model=model;result.generator.prompt_version=PROMPT_VERSION
-            return validate_synthesis(result,envelope)
+            result=validate_synthesis(result,envelope)
+            from .overview import contract_errors
+            if contract_errors(result,envelope):return self.fallback(base,'required_briefing_contract')
+            return result
         except Exception as exc:
             reason=str(exc) if isinstance(exc,ValueError) and str(exc) in {'input_cap','price_not_configured','call_cap','cost_cap','invalid_usage','token_cap','invalid_model_json','too_many_sentences','invalid_model_sentence','unapproved_frame_or_raw_value','missing_or_misbound_claim','duplicate_model_sentence','empty_model_summary'} else type(exc).__name__
             if cache is not None and envelope.organisation_number in self.called:

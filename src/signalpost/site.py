@@ -288,6 +288,8 @@ def fact(claim, records):
     local_id = claim['id'][:16]
     available = claim['availability'] == 'available'
     label = claim['field'].replace('identity.', '').replace('accounts.', '').replace('_', ' ')
+    if claim['field'].startswith('accounts.history.'):
+        label='Prior-period '+claim['field'].rsplit('.',1)[-1].replace('_',' ')
     if claim['field'].startswith('identity.location.'):
         label = 'Registry ' + claim['field'].rsplit('.',1)[-1] + ' location'
     if claim['field'].startswith('subunits.detail.'):
@@ -334,13 +336,16 @@ def fact(claim, records):
     return f'<article class="fact" id="{esc(anchor(claim))}"><h3>{esc(label)} {chip(claim["availability"])}</h3>{content}</article>'
 
 
-def sentence_html(sentence, claim_map, change_ids):
+def sentence_html(sentence, claim_map, change_ids, observation_ids=()):
     cites = []
     for n, cid in enumerate(sentence.get('claim_ids', []), 1):
         target = anchor(claim_map[cid]) if cid in claim_map else 'change-' + cid if cid in change_ids else None
         if target is None:
             raise ValueError('Unresolved synthesis citation')
         cites.append(f'<a href="#{esc(target)}" aria-label="Source fact {n}">[{n}]</a>')
+    for n, oid in enumerate(sentence.get('observation_ids', []),1):
+        if oid not in observation_ids: raise ValueError('Unresolved run-status citation')
+        cites.append(f'<a href="#observation-{esc(oid)}" aria-label="Run-status citation {n}">[Run {n}]</a>')
     return '<p>' + esc(sentence['text']) + ' ' + ' '.join(cites) + '</p>'
 
 
@@ -424,6 +429,8 @@ def profile(row, title):
     synthesis = row['run'].get('synthesis') or {}
     support = synthesis.get('change_claims') or []
     change_ids = {c['id'] for c in support}
+    observations=synthesis.get('observations', [])
+    observation_ids={c['id'] for c in observations}
     name = by_field.get('identity.legal_name', org)
     body = f'<header class="profile-header"><p class="eyebrow">Company profile</p><h1>{esc(name)}</h1><p>Organisation number: <code>{esc(org)}</code> <button type="button" data-copy="{esc(org)}">Copy organisation number</button> <button type="button" class="btn-watchlist" data-watchlist="{esc(org)}">⭐ Watchlist</button></p>'
     for field in ('identity.organisation_form', 'identity.legal_form', 'identity.municipality'):
@@ -436,16 +443,16 @@ def profile(row, title):
     body += ('<details class="verification-hint"><summary id="verify-hint">How to verify a fact</summary>'
              '<p>Choose <strong>Check the evidence</strong> beside a fact to see its exact excerpt, publisher URL, retrieval date and full SHA-256 hash. '
              'Use <strong>Original source</strong> to visit the publisher. The hash identifies the stored response at the shown retrieval time; a later live page may differ.</p></details>')
-    sentences = [s for key in ('what_it_does', 'scale', 'leadership', 'changes') for s in synthesis.get('sections', {}).get(key, [])]
+    sentences = [s for key in ('what_it_does', 'scale', 'leadership', 'changes','limitations','takeaway') for s in synthesis.get('sections', {}).get(key, [])]
     from .synthesis.brief import select
     overview = select(synthesis, claims, limit=6)
     body += '<section class="summary"><h2>Cited summary</h2>'
-    body += ''.join(sentence_html(s, claim_map, change_ids) for s in overview)
+    body += ''.join(sentence_html(s, claim_map, change_ids, observation_ids) for s in overview)
     remaining = [s for s in sentences if s not in overview]
     if remaining:
         body += '<button type="button" aria-expanded="false" aria-controls="full-summary" data-toggle="full-summary">Show full cited summary</button><div id="full-summary" hidden>'
-        body += ''.join(sentence_html(s, claim_map, change_ids) for s in remaining) + '</div>'
-    unknowns = synthesis.get('sections', {}).get('unknowns', [])
+        body += ''.join(sentence_html(s, claim_map, change_ids, observation_ids) for s in remaining) + '</div>'
+    unknowns = synthesis.get('sections', {}).get('unknowns', []) if synthesis.get('contract_version')!='r5-S' else []
     if unknowns:
         targets = {'identity': 'what-it-does', 'what_it_does': 'what-it-does',
                    'scale': 'financials', 'accounts': 'financials',
@@ -467,6 +474,11 @@ def profile(row, title):
             body += '<a href="#' + esc(target) + '">Review source status</a></li>'
         body += '</ul></div>'
     body += '</section>'
+    if observations:
+        body += '<details class="run-observations"><summary>Run-status citations and report scope</summary><p>These are execution and coverage records, not publisher assertions or business-change events. A failed check has no fabricated publisher excerpt or hash.</p>'
+        for item in observations:
+            body += '<article id="observation-'+esc(item['id'])+'"><h3>'+esc(item['section']+' / '+item['kind'])+'</h3><p>Recorded by this run: '+esc(row['run']['completed_at'])+'</p><pre>'+esc(json.dumps(item['data'],ensure_ascii=False,indent=2))+'</pre></article>'
+        body += '</details>'
     buckets = {key: [] for key, _, _ in GROUPS}
     for c in claims:
         f = c['field']; family = c['family']
@@ -502,12 +514,20 @@ def profile(row, title):
             if state == 'not_available' and not dated_registry:
                 body += '<p>No dated changes found in sources checked.</p>'
         if key == 'financials':
-            body += '<p>Reported values from Regnskapsregisteret; no figures or growth ratios are calculated.</p>'
+            if synthesis.get('contract_version')=='r5-S':
+                body += '<p>Reported values are shown below; explicitly labelled derived calculations cite their inputs and are not forecasts.</p>'
+                from .synthesis.financial import metric_sentence
+                from .models.synthesis import FinancialMetric
+                for metric in synthesis.get('financial_metrics',[]):
+                    body += sentence_html(metric_sentence(FinancialMetric.model_validate(metric)).model_dump(mode='json'),claim_map,change_ids,observation_ids)
+                financial=next((s for s in overview if s.get('topic')=='financial'),None)
+                if financial: body += '<div class="financial-context">'+sentence_html(financial,claim_map,change_ids,observation_ids)+'</div>'
+            else:body += '<p>Reported values from Regnskapsregisteret; no figures or growth ratios are calculated.</p>'
             years = sorted({(c.get('reporting_period') or {}).get('fiscal_year') for c in items if (c.get('reporting_period') or {}).get('fiscal_year')}, reverse=True)
             currencies = sorted({(c.get('reporting_period') or {}).get('currency') for c in items if (c.get('reporting_period') or {}).get('currency')})
-            curr_str = ", ".join(currencies) if currencies else "NOK"
+            curr_str = ", ".join(currencies) if currencies else "Unknown currency"
             if len(years) > 1:
-                body += f'<div class="financial-trend-banner"><p><strong>Multi-year filing trend:</strong> Accounts filed across {len(years)} fiscal years ({", ".join(str(y) for y in years)}). Reporting currency: {esc(curr_str)}. No derived growth ratios are calculated.</p></div>'
+                body += f'<div class="financial-trend-banner"><p><strong>Reported periods:</strong> {len(years)} fiscal years ({", ".join(str(y) for y in years)}). Reporting currency: {esc(curr_str)}. Comparability must be checked before interpreting direction.</p></div>'
             elif len(years) == 1:
                 body += f'<div class="financial-trend-banner"><p><strong>Reporting period:</strong> Fiscal year {years[0]} filed in Regnskapsregisteret ({esc(curr_str)}). Single-year reported values.</p></div>'
         if key == 'online': body += '<p>Website proof types: orgnr = exact registered number; registry_declared = registered site with corroboration; signals = accepted identity signals.</p>'

@@ -72,7 +72,7 @@ NAV detail retries count toward the cap. Header names discover candidates; detai
 - The identity firewall checks exact company/parent identifiers. Guessed websites require exact organisation-number proof; registered domains have stricter documented corroboration rules. Same-name companies and group navigation do not alone establish ownership.
 - Every published fact links a source URL/identifier, UTC retrieval time, stored-body SHA-256, locator, extractor version and a verbatim span of at most 300 characters. Unknown/failure placeholders never invent evidence.
 - Availability is explicit: available, not_available, blocked, not_applicable, ambiguous or failed. Missing values are null; numeric zero is retained only when reported.
-- Financial claims are reported exact-company values with fiscal period/currency/unit. Whole-NOK metadata has a documented four-ratio calibration; no financial multiplier or derived metric is published.
+- Financial claims are reported exact-company values with fiscal period/currency/unit. Whole-NOK metadata has a documented four-ratio calibration; no financial multiplier is applied. Derived operating margin and equity ratio cite both inputs and require matching entity periods, currency and declared/reviewed units. Revenue year-on-year change additionally requires consecutive comparable annual periods and positive prior revenue; unscaled history is not used. At most one older entity statement is extracted from the same response, without an extra HTTP request.
 - URL allowlists, DNS pinning, robots, redirect checks and per-source/global budgets constrain requests. Source bodies stay local; tokens are never stored in blobs or logs.
 - Summary sentences cite supported claims. Numbers, dates, names, URLs and verbatim quotes are checked against those citations. Workplace, board and ad counts cite distinct underlying records and remain derived summary metadata, outside the source-fact claims list. Invalid sentences are dropped with recorded reasons.
 
@@ -160,10 +160,16 @@ For GitHub Pages, select GitHub Actions as the publishing source and upload **th
 Rebuild locally from a retained frozen run:
 
 ```powershell
-uv run signalpost site --input .data/r5/stageU-run/envelopes.jsonl --out docs/demo
+uv run signalpost site --input .data/r5/stageS-run/envelopes.jsonl --out docs/demo
 python -m http.server 8000 --directory docs/demo
 ```
 
 This is a saved research sample, not a live directory: 100 companies, seed 20261017; registry identity uses the frozen 13 October 2026 snapshot. Check each receipt's retrieval date, exact excerpt and hash. Registry data attribution: Bronnoysundregistrene, NLOD 2.0; other source content retains its original rights.
 
 Headless QA is authored in `reports/r5/stageU/browser_check.cjs`. It checks 1280 px and 360 px, name/number search, profiles, two-company comparison, source receipts, 44 px targets, expanded tables and page overflow. Screenshots and results are in `reports/r5/stageU/`. To run with your own Playwright installation, set `PLAYWRIGHT_MODULE` to the installed `playwright` package path and run `node reports/r5/stageU/browser_check.cjs docs/demo reports/r5/stageU` (Chromium must already be installed). The recorded QA used preinstalled Playwright-core 1.64.1 and Chromium 156; no application code was copied from other projects.
+
+### Cited briefing contract (Stage S)
+
+Every template briefing contains activity, change, unknowns, financial context and a partner-screening takeaway. Each sentence cites supported publisher facts, typed run-status observations, or both. On a first run the change sentence says so and cites the latest supported dated registry observation; refresh comparisons describe only the checked scope. Run-status citations explain source states and report limits, separately from publisher receipts. They never invent a publisher excerpt or hash for a failed check. Both `run.synthesis` and `profile.synthesis` carry the same contract, checked again by `scripts/verify_output.py`. Optional model output that loses a required element falls back to the verified template.
+
+The newer-filing flag compares the registry accounts year with the figures year; it does not claim to detect same-year refilings. Financial calculations are explicitly labelled derived and are descriptive, not forecasts or suitability assessments. Missing comparable inputs produce a cited limitation. Verification checks source JSON pointers, exact entity ownership, periods, units and arithmetic independently of sentence generation. Stage S measurements and browser evidence are in `reports/r5/stageS/`.

@@ -19,7 +19,7 @@ def test_template_citations_unknowns_and_all_shapes(tmp_path):
     row,cfg=envelope(tmp_path)
     summary=row.run.synthesis
     assert summary.checks.sentences==summary.checks.cited>0 and summary.checks.values_verified
-    assert 'First observation' in summary.summary
+    assert 'First run' in summary.summary
     assert any(item.family=='accounts' for item in summary.sections.unknowns)
     for shape in ('union','contract','reference'):
         result=serialize(row,shape);validate(result,shape)

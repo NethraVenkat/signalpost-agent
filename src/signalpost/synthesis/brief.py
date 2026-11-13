@@ -72,7 +72,11 @@ def build(synthesis, claims, limit=6):
 def select(synthesis, claims, limit=8):
     if synthesis.get('briefing'):
         allowed = {c['id'] for c in claims if c['availability'] == 'available'}
-        return [s for s in synthesis['briefing'] if s.get('claim_ids') and all(cid in allowed for cid in s['claim_ids'])][:min(limit, 6)]
+        allowed.update(c['id'] for c in synthesis.get('change_claims', []))
+        observations={c['id'] for c in synthesis.get('observations', [])}
+        return [s for s in synthesis['briefing'] if (s.get('claim_ids') or s.get('observation_ids'))
+                and all(cid in allowed for cid in s['claim_ids'])
+                and all(oid in observations for oid in s.get('observation_ids',[]))][:min(limit, 6)]
     sections = synthesis.get('sections', {})
     sentences = [s for key in ('what_it_does', 'scale', 'leadership', 'changes')
                  for s in sections.get(key, [])]
