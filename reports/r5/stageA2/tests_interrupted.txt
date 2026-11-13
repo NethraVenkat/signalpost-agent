@@ -1,0 +1,38 @@
+{"command": ["C:\\Users\\<USER>\\signal-nethra\\.venv\\Scripts\\python.exe", "C:\\Users\\<USER>\\signal-nethra\\reports\\r5\\stage4_7\\run_tests.py", "-q", "-p", "no:cacheprovider", "--basetemp=.data/r5/pytest-A2"], "priority": "above_normal", "mutates_test_assertions_or_timeouts": false}
+........................................................................ [  8%]
+........................................................................ [ 16%]
+.....F.................................................................. [ 25%]
+........................................................................ [ 33%]
+........................................................................ [ 42%]
+........................................................................ [ 50%]
+........................................................................ [ 59%]
+........................................................................ [ 67%]
+........................................................................ [ 76%]
+........................................................................ [ 84%]
+........................................................................ [ 93%]
+........................................................                 [100%]
+================================== FAILURES ===================================
+________________ test_bulk_verification_and_attribution[False] ________________
+
+tmp_path = WindowsPath('C:/Users/<USER>/signal-nethra/.data/r5/pytest-A2/test_bulk_verification_and_att0')
+verify = False
+
+    @pytest.mark.parametrize('verify', [False, True])
+    def test_bulk_verification_and_attribution(tmp_path, verify):
+        org = numbers(1)[0]
+        cfg = config(tmp_path, [org], bulk=bulk_file(tmp_path, [org]), verify_bulk=verify)
+        report, rows = execute(cfg)
+        name = next(c for c in rows[0]['claims'] if c['field'] == 'identity.legal_name')
+        assert (name['value'] == 'CSV Old Name') is (not verify)
+        provenance = report['registry_provenance']
+        record = next(c for c in provenance['claims'] if c['field'] == 'identity.legal_name')
+        assert record['source_types'] == ['live_verified' if verify else 'csv_cache']
+        assert provenance['requests_by_family'].get('identity', 0) == int(verify)
+>       assert provenance['requests_by_family']['roles'] == 1
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'roles'
+
+tests\test_hybrid_registry.py:118: KeyError
+=========================== short test summary info ===========================
+FAILED tests/test_hybrid_registry.py::test_bulk_verification_and_attribution[False]
+1 failed, 847 passed in 1233.57s (0:20:33)

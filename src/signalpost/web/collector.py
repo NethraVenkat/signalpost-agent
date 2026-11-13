@@ -14,6 +14,7 @@ from .html import Page
 from .policy import domain, normalize_url, SOCIAL, DIRECTORIES, FREE_MAIL
 from .proof import score, phone, extract_entity_cards, find_containing_card, registry_contacts
 from .social import discover, discover_strict, profile_url, numeric_linkedin
+from .fetcher import TRANSIENT
 
 
 def extract_sitemap_domains(xml_body, legal_nm, brand_nm):
@@ -223,6 +224,7 @@ async def fetch(org, envelope, bulk, http, previous=None, *, resume=False, candi
     checked = saved['checked'] if saved else set()
     attempted = saved['attempted'] if saved else set()
     vetoed = saved['vetoed'] if saved else set()
+    failures = saved.get('transient_failures',{}) if saved else {}
     if saved:section.errors.extend(saved['access_errors'])
     async def nominations():
         for candidate in candidates:yield candidate
@@ -244,6 +246,7 @@ async def fetch(org, envelope, bulk, http, previous=None, *, resume=False, candi
             if not 200 <= response.status < 300:
                 if response.status >= 500:
                     source_unavailable = True
+                    failures[key]={'candidate':candidate,'reason':'website_http_5xx'}
                 attempts.append({"domain": candidate.domain, "level": "LOW", "reason": f"http_{response.status}"})
                 continue
             page = await offload(Page,response.body,response.url)
@@ -265,9 +268,10 @@ async def fetch(org, envelope, bulk, http, previous=None, *, resume=False, candi
                             best = (checked_proof, checked_response, checked_page)
                             proof, response, page = best
                 except SourceFailure as exc:
+                    if exc.code in TRANSIENT:failures[key]={'candidate':candidate,'reason':exc.code}
                     attempts.append({'domain': candidate.domain, 'origin': candidate.origin,
                                      'reason': exc.code, 'page': refresh_proof})
-            if proof.level == "HIGH" and len(pages) == 1 and http.counts.get(org, 0) + 1 <= http.config.website_request_cap:
+            if proof.level == "HIGH" and len(pages) == 1 and http.counts.get(org, 0) + 1 <= http.company_cap(org):
                 links = followup_links(page)
                 for target in links[:1]:
                     target = normalize_url(target)
@@ -279,10 +283,14 @@ async def fetch(org, envelope, bulk, http, previous=None, *, resume=False, candi
                                 extra_proof = await offload(candidate_proof, extra_page, org, context, candidate, leaders)
                                 if extra_proof.level == 'REJECT':
                                     best = (extra_proof, extra, extra_page)
+                                elif extra_proof.level == 'VERIFIED':
+                                    pages.append((extra,extra_page))
+                                    best = (extra_proof,extra,extra_page)
                                 elif extra_proof.level != 'BLOCKED':
                                     pages.append((extra, extra_page))
-                        except SourceFailure:
-                            pass
+                            elif extra.status>=500:failures[key]={'candidate':candidate,'reason':'website_http_5xx'}
+                        except SourceFailure as exc:
+                            if exc.code in TRANSIENT:failures[key]={'candidate':candidate,'reason':exc.code}
             elif proof.level not in {"VERIFIED", "REJECT"}:
                 seen = {response.url}
                 for target in proof_page_targets(page, response.url):
@@ -292,12 +300,14 @@ async def fetch(org, envelope, bulk, http, previous=None, *, resume=False, candi
                     try:
                         extra = await http.get(target, org, candidate.domain, proved)
                     except SourceFailure as exc:
+                        if exc.code in TRANSIENT:failures[key]={'candidate':candidate,'reason':exc.code}
                         attempts.append({"domain": candidate.domain, "level": "LOW", "reason": exc.code, "page": target})
                         if exc.code in {"website_budget_exhausted", "budget_exhausted", "deadline"}:
                             budget_hit = exc.code
                             break
                         continue
                     if extra.status != 200:
+                        if extra.status>=500:failures[key]={'candidate':candidate,'reason':'website_http_5xx'}
                         continue
                     extra_page = await offload(Page,extra.body,extra.url)
                     extra_proof = await offload(candidate_proof,extra_page,org,context,candidate,leaders)
@@ -318,7 +328,8 @@ async def fetch(org, envelope, bulk, http, previous=None, *, resume=False, candi
                             pages = [(extra, extra_page)]
                         break
             proof, response, page = best
-            if proof.level in {'REJECT','BLOCKED'}:vetoed.add(candidate.domain)
+            if proof.level in {'REJECT','BLOCKED'}:
+                vetoed.add(candidate.domain);failures.pop(key,None)
             attempts.append({"domain": candidate.domain, "level": proof.level, "points": proof.points, "signals": proof.signals, "origin": candidate.origin, "reason": proof.reason})
             if candidate is refresh_candidate and proof.level != 'VERIFIED':
                 continue  # Previous metadata nominates; only fresh exact proof publishes.
@@ -332,6 +343,7 @@ async def fetch(org, envelope, bulk, http, previous=None, *, resume=False, candi
             elif proof.level in {"MEDIUM", 'REGISTRY_DECLARED'}:
                 ambiguous = True
         except SourceFailure as exc:
+            if exc.code in TRANSIENT:failures[key]={'candidate':candidate,'reason':exc.code}
             if exc.code in {'robots','robots_unavailable','http_blocked','block_page','ssrf','url_refused'}:vetoed.add(candidate.domain)
             if exc.code in {'website_timeout','website_connect_error','website_http_5xx','dns_timeout','dns_error','dns_unavailable'}:
                 source_unavailable = True
@@ -348,7 +360,7 @@ async def fetch(org, envelope, bulk, http, previous=None, *, resume=False, candi
     http.discovery_sessions[org] = dict(context=context, proved=proved, successes=successes,
         attempts=attempts, blocked=blocked, ambiguous=ambiguous, source_unavailable=source_unavailable,
         registry_failed=registry_failed, fetchable_failures=fetchable_failures, checked=checked,
-        attempted=attempted, vetoed=vetoed, access_errors=list(section.errors))
+        attempted=attempted, vetoed=vetoed, transient_failures=failures, access_errors=list(section.errors))
     unique = {}
     for result in successes:
         root = domain(result[2].url)

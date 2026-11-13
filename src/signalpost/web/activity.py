@@ -120,7 +120,7 @@ async def fetch(org, envelope, http, pages):
     urls = sorted(set(feeds))[:1] or sorted(set(maps))[:1] or fallback_maps[:1]
     section = Section(state='not_available')
     checked=set()
-    maximum = http.config.website_request_cap + 1
+    maximum = min(13, http.config.website_request_cap + 1 + getattr(http,'extra_http',lambda org:0)(org))
     http.activity_extra.add(org)
     try:
         for level in range(2):

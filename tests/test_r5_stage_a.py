@@ -16,10 +16,10 @@ UUID='00000000-0000-4000-8000-000000000001'
 
 
 def exercise(tmp_path, monkeypatch, *, first='missing', cap=8, global_cap=None, deadline=False,
-             public_activity=False, registry=False):
+             public_activity=False, registry=False, extra_budget=False):
     cfg=config(tmp_path,[OUR],websites=True,hiring=True,adaptive_websites=True,
                website_request_cap=cap,max_requests=global_cap,
-               public_activity=public_activity,registry_changes=registry)
+               public_activity=public_activity,registry_changes=registry,adaptive_extra_budget=extra_budget)
     cfg=cfg.model_copy(update={'website_politeness_seconds':0})
     calls=[];pass1_done=asyncio.Event();original=collector.fetch
     async def collect(*args,**kwargs):

@@ -172,3 +172,12 @@
 - Correct only the release checker's initial site-count assumption: filename-safe checksum-invalid IDs retain failed pages; no application behavior changed and saved edge output was verified again without recrawling.
 - After smokes, bump pyproject/README/local project lock entry to 1.2.0, add the Revision 5 section, and correct stale source-policy docs. Frozen reinstall succeeds; all third-party dependency pins and application source bytes remain unchanged. Full clone-installed 1.2.0 pytest: 838 passed in 149.49s.
 - urls.md includes all published semantic website/social claims, separating 21 registry assertions from ownership proof and preserving exact/supporting excerpts. RELEASE_REPORT.md records the exact measured source commit, commands, checks, source licences, APIs/models, expected/measured $0 and hand checks. One release metadata/evidence commit and local annotated v1.2.0 tag; never push or publish.
+
+
+## Stage A2 - useful bounded pass 2
+
+- Working tree was clean at 8a907844 after prior release inventory/data-ignore commits; preserve those commits and local v1.2.0 tag. No release cleanup/rewrite needed.
+- Authorize +5 HTTP/+4 DNS only in pass 2 for unfinished companies, shared across candidates and taken only from remaining global capacity. Preserve pass-1 8/13 and all global/time safety ceilings. Absolute cumulative maxima are 13 website HTTP, 18 overall company slots and 12 DNS nominations. No counter resets or proof/veto/robots relaxation.
+- Retry strong transient candidates once in pass 2, evicting only cached timeout/connect/5xx failures. Never refresh permanent NXDOMAIN/refusal/success caches. A shared candidate gets at most one fresh retry across companies. Retain --no-adaptive-extra-budget for controlled earlier behavior.
+- Frozen/daily exact seven-flag runs verify zero unsupported values at $0. Frozen: six accepted sites, 29 pass-2 HTTP, no pass-2 exact gain. Daily: five accepted sites, 61 pass-2 HTTP, one exact gain/one successful strong retry. Full retry outcomes and URL delta proof are retained in stageA2/.
+- Host/tool stalls inflated run times and expired shared NAV coverage; all hiring states are incomplete. Record those limitations, not zero-job absence or a causal speedup. Both runs still finish within 2100 seconds. Preserve the interrupted test gate and rerun without weakening any assertion.

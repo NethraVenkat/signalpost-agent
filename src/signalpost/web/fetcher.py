@@ -10,6 +10,11 @@ from ..models.evidence import utc_now
 from ..sources.http import Response
 from . import policy
 
+TRANSIENT = {'website_timeout', 'website_connect_error', 'website_http_5xx',
+             'dns_timeout', 'dns_error', 'dns_unavailable'}
+STRONG = {'registry_website', 'registry_email', 'subunit_registry_website',
+          'subunit_registry_email', 'nav_employer_homepage'}
+
 
 @dataclass
 class DomainGate:
@@ -39,7 +44,41 @@ class WebsiteHttp:
         self.activity_extra = set()
         self.accepted_pages = {}
         self.discovery_sessions = {}
+        self.pass2_allowances = {}
+        self.pass2_retried_candidates = set()
         self.dns_metrics = dns_metrics
+
+    def extra_http(self, org):
+        return self.pass2_allowances.get(org, {}).get('http', 0) if self.budget.phase=='pass2' else 0
+
+    def dns_limit(self, org):
+        return 8 + (self.pass2_allowances.get(org, {}).get('dns', 0) if self.budget.phase=='pass2' else 0)
+
+    def company_cap(self, org):
+        nonweb=sum(e['organisation_number']==org and e.get('section')!='website' for e in self.budget.events)
+        extra=self.extra_http(org)
+        return max(0,min(8+extra,self.config.website_request_cap+int(org in self.activity_extra)+extra,
+                         self.config.website_total_request_cap+extra-nonweb))
+
+    def prepare_retry(self, candidate, org, proven=()):
+        """Evict only transient failures once; retain success, NXDOMAIN and veto caches."""
+        if self.budget.phase!='pass2' or candidate.origin not in STRONG:return 'not_allowed'
+        policy.validate_url(candidate.url,{candidate.domain,*proven})
+        p=urlsplit(candidate.url)
+        key=(p.hostname.removeprefix('www.'),p.path or '/',candidate.domain,tuple(sorted(proven)))
+        if key in self.pass2_retried_candidates:return 'shared_retry_reused'
+        self.pass2_retried_candidates.add(key)
+        cached=self.candidate_results.get(key)
+        if isinstance(cached,SourceFailure) and cached.code in TRANSIENT:self.candidate_results.pop(key)
+        hosts={p.hostname,p.hostname[4:] if p.hostname.startswith('www.') else 'www.'+p.hostname}
+        for host in hosts:
+            if isinstance(self.dns_cache.get(host),str) and self.dns_cache[host] in {'dns_unavailable','dns_timeout','dns_error'}:
+                self.dns_cache.pop(host)
+        for page_key,result in list(self.page_cache.items()):
+            if urlsplit(page_key[0]).hostname not in hosts:continue
+            if (isinstance(result,SourceFailure) and result.code in TRANSIENT) or getattr(result,'status',0)>=500:
+                self.page_cache.pop(page_key)
+        return 'retried'
 
     async def resolve(self, host, port, org):
         if self.dns_metrics is not None:
@@ -57,7 +96,7 @@ class WebsiteHttp:
             if host not in self.dns_cache:
                 nomination = (org, host.removeprefix('www.'))
                 if nomination not in self.dns_nominations:
-                    if self.dns_counts.get(org, 0) >= 8:
+                    if self.dns_counts.get(org, 0) >= self.dns_limit(org):
                         raise SourceFailure('dns_unavailable')
                     self.dns_counts[org] = self.dns_counts.get(org, 0) + 1
                     self.dns_nominations.add(nomination)
@@ -90,8 +129,7 @@ class WebsiteHttp:
                         await asyncio.sleep(delay)
                     self.budget.check()
                     gate.next_start = time.monotonic() + self.config.website_politeness_seconds
-                registry_requests = sum(e['organisation_number']==org and e.get('section')!='website' for e in self.budget.events)
-                company_cap = min(8, self.config.website_request_cap + int(org in self.activity_extra),max(0,self.config.website_total_request_cap-registry_requests))
+                company_cap = self.company_cap(org)
                 if self.counts.get(org, 0) >= company_cap:
                     raise SourceFailure("website_budget_exhausted")
                 event = self.budget.reserve(url, parts.hostname, org)
@@ -269,7 +307,7 @@ class WebsiteHttp:
                         raise
                     if exc.code == 'website_connect_error':
                         connect_hosts.append(urlsplit(target).hostname)
-                    if exc.code in {'website_timeout','dns_timeout'} and candidate.origin == 'registry_website' and not retried and self.counts.get(org,0) < self.config.website_request_cap:
+                    if exc.code in {'website_timeout','dns_timeout'} and candidate.origin == 'registry_website' and self.budget.phase!='pass2' and not retried and self.counts.get(org,0) < self.config.website_request_cap:
                         retried = True
                         self.page_cache.pop((target, False, tuple(sorted({candidate.domain, *proven}))), None)
                         continue

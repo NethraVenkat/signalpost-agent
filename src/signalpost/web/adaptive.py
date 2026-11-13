@@ -11,6 +11,7 @@ from ..models.envelope import Error
 from . import collector
 from .candidates import generate, candidate_key
 from .policy import normalize_url
+from .fetcher import STRONG
 
 ORIGIN_SCORE = {'registry_website':100, 'registry_email':95,
     'subunit_registry_website':90, 'subunit_registry_email':88,
@@ -70,6 +71,7 @@ def nav_homepages(envelope, index, blobs):
 
 
 def room(http, org):
+    if hasattr(http,'company_cap'):return max(0,http.company_cap(org)-http.counts.get(org,0))
     nonweb=sum(e['organisation_number']==org and e.get('section')!='website' for e in http.budget.events)
     return max(0,min(8,http.config.website_request_cap,http.config.website_total_request_cap-nonweb)-http.counts.get(org,0))
 
@@ -78,7 +80,7 @@ def dns_room(http, org, candidate):
     host=urlsplit(candidate.url).hostname
     return (candidate.origin=='registry_website' or not http.config.dns_precheck
             or host in http.dns_cache or (org,host.removeprefix('www.')) in http.dns_nominations
-            or http.dns_counts.get(org,0)<8)
+            or http.dns_counts.get(org,0)<(http.dns_limit(org) if hasattr(http,'dns_limit') else 8))
 
 
 async def run(envelopes, http, index, bulk, previous, update, refresh_activity):
@@ -92,25 +94,29 @@ async def run(envelopes, http, index, bulk, previous, update, refresh_activity):
     records={}; heap=[]; queued=set()
     for org,envelope in sorted(envelopes.items()):
         record=records[org]={'state':'already_verified' if exact(envelope) else 'no_pending_candidates',
-                            'candidates':0,'attempts':0,'requests':0,'websites_gained':0}
+                            'candidates':0,'attempts':0,'requests':0,'websites_gained':0,'retry_outcomes':[],'extra_allowance':{'http':0,'dns':0}}
         if exact(envelope): continue
         session=http.discovery_sessions.get(org)
         if not session:
             record['state']='pass1_not_prepared'; continue
         context=dict(session['context'])
         context['nav_homepages']=nav_homepages(envelope,index,http.blobs)
-        for candidate in generate(context,limit=32):
+        retry_candidates=[]
+        if http.config.adaptive_extra_budget:
+            retry_candidates=[(item['candidate'],item['reason']) for item in session.get('transient_failures',{}).values()
+                              if item['candidate'].origin in STRONG]
+        for candidate,retry_reason in retry_candidates+[(c,None) for c in generate(context,limit=32)]:
             key=candidate_key(candidate)
-            if key in session['attempted'] or candidate.domain in session['vetoed']: continue
+            if (key in session['attempted'] and not retry_reason) or candidate.domain in session['vetoed']: continue
             if (org,key) in queued: continue
             queued.add((org,key)); record['candidates']+=1
-            heapq.heappush(heap,(-priority(candidate),org,candidate.url,candidate))
+            heapq.heappush(heap,(-priority(candidate)-int(bool(retry_reason))*10,org,candidate.url,candidate,retry_reason))
         if record['candidates']:record['state']='queued'
     budget.phase='pass2'
     stop=None
     try:
         while heap:
-            _,org,_,candidate=heapq.heappop(heap)
+            _,org,_,candidate,retry_reason=heapq.heappop(heap)
             envelope=envelopes[org];record=records[org]
             if exact(envelope):continue
             if candidate.domain in http.discovery_sessions[org]['vetoed']:continue
@@ -119,14 +125,26 @@ async def run(envelopes, http, index, bulk, previous, update, refresh_activity):
             if len(budget.events)>=budget.cap:stop='budget_exhausted'
             if stop:
                 record['state']=stop
-                for _,other,_,_ in heap:
+                for _,other,_,_,_ in heap:
                     if not exact(envelopes[other]):records[other]['state']=stop
                 break
+            if http.config.adaptive_extra_budget and org not in http.pass2_allowances:
+                grant={'http':min(5,max(0,budget.cap-len(budget.events))),'dns':4}
+                http.pass2_allowances[org]=grant
+                record['extra_allowance']=dict(grant)
             if room(http,org)<=0:
                 record['state']='website_budget_exhausted';continue
             if not dns_room(http,org,candidate):
                 record['state']='dns_budget_exhausted';continue
             before=len(budget.events)
+            retry=None
+            if retry_reason:
+                cache_action=http.prepare_retry(candidate,org,http.discovery_sessions[org].get('proved',()))
+                if cache_action=='not_allowed':continue
+                http.discovery_sessions[org]['attempted'].discard(candidate_key(candidate))
+                http.discovery_sessions[org].get('transient_failures',{}).pop(candidate_key(candidate),None)
+                retry={'url':candidate.url,'origin':candidate.origin,'pass1_reason':retry_reason,'cache_action':cache_action}
+                record['retry_outcomes'].append(retry)
             record['attempts']+=1
             try:
                 section=await collector.fetch(org,envelope,bulk.get(org),http,previous.get(org),
@@ -139,6 +157,10 @@ async def run(envelopes, http, index, bulk, previous, update, refresh_activity):
             except SourceFailure as exc:
                 record['state']=exc.code
             record['requests']+=len(budget.events)-before
+            if retry is not None:
+                failure=http.discovery_sessions[org].get('transient_failures',{}).get(candidate_key(candidate))
+                outcome='verified' if exact(envelope) else failure['reason'] if failure else envelope.run.sections.get('website')
+                retry.update(outcome=outcome,requests=len(budget.events)-before)
         for org,record in records.items():
             if record['state'] in {'deadline','budget_exhausted','website_budget_exhausted','dns_budget_exhausted'}:
                 envelope=envelopes[org]
@@ -154,6 +176,9 @@ async def run(envelopes, http, index, bulk, previous, update, refresh_activity):
                      'website_requests':sum(e.get('section')=='website' for e in budget.events[start:]),
                      'websites_gained':sum(exact(e) for e in envelopes.values())-pass1_websites,
                      'runtime_seconds':round(time.monotonic()-began,3),
-                     'states':dict(Counter(r['state'] for r in records.values())), 'per_company':records},
-            'policy':'same cumulative 8/13 HTTP and eight DNS nominations; no reset; unchanged proof/robots/politeness'}
+                     'states':dict(Counter(r['state'] for r in records.values())),
+                     'retry_attempts':sum(t['cache_action']=='retried' for r in records.values() for t in r['retry_outcomes']),
+                     'retry_outcomes':dict(Counter(t['outcome'] for r in records.values() for t in r['retry_outcomes'])),
+                     'per_company':records},
+            'policy':'Pass 1 8/13 HTTP and 8 DNS; pass 2 up to +5 HTTP/+4 DNS from remaining global budget; no counter reset; unchanged proof/robots/politeness'}
     finally:budget.phase='pass1'
