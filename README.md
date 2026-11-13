@@ -10,20 +10,30 @@ Signalpost researches Norwegian companies from official registries and bounded c
 - The fresh bundled official NAV index is discovery only; published jobs require current exact employer/proven-subunit proof. Owned careers links use strict current-posting checks.
 - Website fixes preserve one DNS nomination per www/non-www pair, source-first candidate order, veto/cache reuse, bounded proof-only sitemap discovery and honest challenge blocking. Default 8/13 ceilings, the existing adaptive allowance and shared 1,850 HTTP / 35-minute limits per 100 unique inputs remain enforced. Sitemaps never supply news.
 
-Measured results below are observational source checks, not an official score or causal recall comparison. All three runs use exactly the seven flags and fresh state; provider cost is $0. The new seed-20261114 mock is disjoint from both earlier samples.
+Current revision/r5 follow-up (Stages T/G, not a new version tag) enables free exact-ID GLEIF and TED by default with the seven flags; separate source states preserve failures. Parent relationships require ACTIVE records; procurement requires structured Norwegian buyer/winner lot proof. [Source terms and limits](docs/SOURCES.md#stage-t-exact-id-gleif-and-ted-checked-2026-11-13).
 
-| Metric | Frozen 20261017 (C) | Seed 20261113 (C) | New mock 20261114 |
+Latest measured results are observational, not an official score or causal recall comparison. All three Stage T runs use exactly seven flags and fresh state, with the unchanged scaled 1850 HTTP / 35-minute hard limits and $0 provider cost. The seed-20261114 sample is disjoint from both earlier samples.
+
+| Metric | Frozen 20261017 (T) | Seed 20261113 (T) | Seed 20261114 (T) |
 |---|---:|---:|---:|
 | Websites | 5 | 4 | 3 |
 | Social companies | 3 | 1 | 2 |
 | Job companies | 0 | 1 | 0 |
 | Contacts | 11 | 8 | 4 |
-| Activity claims | 1202 | 1137 | 1093 |
-| Facts | 13325 | 13751 | 13248 |
-| HTTP | 689 | 773 | 718 |
-| Wall seconds | 359.686 | 379.164 | 387.864 |
+| Activity companies | 100 | 100 | 100 |
+| Activity claims (registry/site) | 1202 | 1137 | 1093 |
+| Facts | 13344 | 13763 | 13260 |
+| LEI companies | 19 | 12 | 10 |
+| Parent companies | 0 | 0 | 1 |
+| Procurement award companies | 0 | 0 | 0 |
+| HTTP | 700 | 792 | 736 |
+| Reported seconds | 357.609 | 404.109 | 345.094 |
+| Wall seconds | 370.777 | 412.763 | 354.648 |
 | Derived ratios | 153 | 169 | 164 |
-| YoY metrics | 50 | 63 | 60 |
+| Comparable YoY metrics | 50 | 63 | 60 |
+| Unsupported values | 0 | 0 | 0 |
+| Provider cost | $0 | $0 | $0 |
+| Site / ordered terminal envelopes | 100 / 100 | 100 / 100 | 100 / 100 |
 
 [v1.3.0 clean-clone release evidence, commands, URL/job hand checks and limitations](reports/r5/release-v4b/RELEASE_REPORT.md). The release is local; nothing is published or pushed. [Historical v1.2.0 check](reports/r5/release-v4/RELEASE_REPORT.md).
 
@@ -98,9 +108,10 @@ Useful defaults and controls:
 | Batch | `--workers 64`, `--host-concurrency 10`, `--request-timeout 10`; hard ceiling floor(1850 * unique inputs / 100) HTTP requests, including shared feed/robots/retries; `--max-requests` may only lower it. `--time-budget-seconds 2100`; effective time is min(requested, 35 minutes * unique inputs / 100), with crawl deadline/reserve for mandatory outputs and the site. Duplicate rows cannot inflate safety limits. |
 | Output | `--state-dir state`, `--envelope-shape union`, `--max-output-mb 256`, optional `--expected-count` |
 | Websites | `--website-request-cap 8`, `--website-total-request-cap 13` are the CLI and library defaults and upper bounds, measured in [Stage 4.7](reports/r5/stage4_7/SUMMARY.md). Website discovery, hiring and public website activity are ON in CLI/library defaults, including with only the seven evaluator flags. Opt out with `--no-websites`, `--no-hiring`, `--no-public-activity`; positive flags remain compatible. Eight DNS nominations (a www/non-www pair is one), 3-second prechecks, 8-second HTTP bounds, 1-second domain politeness, 2 in flight/domain |
+| GLEIF / TED | ON with the seven flags; exact IDs only, batch 25 IDs, pages up to 100 records/notices, max 10 pages; separate explicit states, 1-second per-host politeness or longer Crawl-delay, shared hard budgets. No API keys or paid calls. |
 | NAV | `--nav-max-pages 512`, `--nav-max-details` defaults to min(candidate ads, max(300, 2 × unique companies)), `--nav-time-cap-seconds` defaults to min(900, 40% of run time), `--nav-lookback-days 185`, `--nav-concurrency 4`, `--nav-request-timeout 30`; independent connection pool |
 
-Hiring uses a declared compact index of the official NAV feed (`src/signalpost/data/nav_index.json.gz`), built from saved official feed/detail bodies and permitted fresh official requests. The current baseline was read at 2026-10-14T04:26:40.758720Z: 9,015 active ads, 5,769 employer numbers, zero failed details, 403,768 compressed bytes. It contains identifiers/status/dates only: no ad text or contact persons. Of the exported ads, 6,791 were seeded from disk and 2,224 fetched freshly during the build. The index nominates candidates; every published ad is fetched live and checked against the exact company or its listed subunit. Runtime follows the stored feed cursor and removes inactive entries. Missing, invalid, incomplete or older-than-21-day indexes trigger the full-feed fallback, explicitly reported. Configure `--nav-index-path` and `--nav-index-max-age-days` when needed.
+Hiring uses a declared compact index of the official NAV feed (`src/signalpost/data/nav_index.json.gz`), built from saved official feed/detail bodies and permitted fresh official requests. The current bundled index was built at 2026-11-13T08:23:53.796625Z: 9,511 ad records and 6,012 employer numbers (index nav-20261113T082353.796625Z-v1). It contains identifiers/status/dates only: no ad text or contact persons. All 9,511 exported records were freshly fetched in that build; the index stores discovery metadata only. The index nominates candidates; every published ad is fetched live and checked against the exact company or its listed subunit. Runtime follows the stored feed cursor and removes inactive entries. Missing, invalid, incomplete or older-than-21-day indexes trigger the full-feed fallback, explicitly reported. Configure `--nav-index-path` and `--nav-index-max-age-days` when needed.
 
 Development-only rebuild (not part of evaluator startup; resumes checkpoints and seeds existing local official bodies):
 
@@ -149,9 +160,53 @@ uv run signalpost site --input out/envelopes.jsonl --out site/ --title "Signalpo
 
 Open `site/index.html` directly or serve the directory with a static server. Search names or organisation numbers, filter coverage and municipality/industry, and compare two or three companies. Profiles include cited summaries, section states, financials, people, locations, hiring, public activity and changes. Source buttons show exact excerpts, hashes, retrieval dates and extraction provenance; all supporting records load from local per-company data files. Previously supported facts are marked explicitly.
 
-`signalpost run` generates profiles in `<output directory>/site/` by default, including with only the seven evaluator flags. Use `--site-dir site/` to choose another directory or `--no-site` to disable it. The report records `site.state` as available, skipped, failed or disabled; deadlines can skip the site while preserving required JSON outputs. Site errors are recorded under `site` in the run report and preserve run output and exit behavior. Generation accepts contract/reference/union shapes, isolates malformed identifiers (no page; a notice lists them) and merges identical duplicate envelopes into one profile. Large companies render the first 50 Evidence Explorer rows and reveal the rest from the local data file, which keeps every profile page under the 250 KB gate without dropping a claim, and uses no network or extra dependency. Static CSS/JavaScript, a safely escaped local index script and `c/<orgnr>.data.js` evidence tables work under `file://`; untrusted text is escaped and only HTTP(S) fact links are clickable. Identical envelopes produce identical files. Use a new empty output directory for a different company population; generation does not delete older files.
+`signalpost run` generates profiles in `<output directory>/site/` by default, including with only the seven evaluator flags. Use `--site-dir site/` to choose another directory or `--no-site` to disable it. The report records `site.state` as available, skipped, failed or disabled; deadlines can skip the site while preserving required JSON outputs. Site errors are recorded under `site` in the run report and preserve run output and exit behavior. Generation accepts contract/reference/union shapes, isolates malformed identifiers (no page; a notice lists them) and merges identical duplicate envelopes into one profile. Large companies render the first 48 Evidence Explorer rows and reveal the rest from the local data file, which keeps every profile page under the 250 KB gate without dropping a claim, and uses no network or extra dependency. Static CSS/JavaScript, a safely escaped local index script and `c/<orgnr>.data.js` evidence tables work under `file://`; untrusted text is escaped and only HTTP(S) fact links are clickable. Identical envelopes produce identical files. Use a new empty output directory for a different company population; generation does not delete older files.
 
 ## Measured results
+
+Latest three-sample Stage T results (the earlier release samples remain in linked historical reports):
+
+| Metric | Frozen 20261017 (T) | Seed 20261113 (T) | Seed 20261114 (T) |
+|---|---:|---:|---:|
+| Websites | 5 | 4 | 3 |
+| Social companies | 3 | 1 | 2 |
+| Job companies | 0 | 1 | 0 |
+| Contacts | 11 | 8 | 4 |
+| Activity companies | 100 | 100 | 100 |
+| Activity claims (registry/site) | 1202 | 1137 | 1093 |
+| Facts | 13344 | 13763 | 13260 |
+| LEI companies | 19 | 12 | 10 |
+| Parent companies | 0 | 0 | 1 |
+| Procurement award companies | 0 | 0 | 0 |
+| HTTP | 700 | 792 | 736 |
+| Reported seconds | 357.609 | 404.109 | 345.094 |
+| Wall seconds | 370.777 | 412.763 | 354.648 |
+| Derived ratios | 153 | 169 | 164 |
+| Comparable YoY metrics | 50 | 63 | 60 |
+| Unsupported values | 0 | 0 | 0 |
+| Provider cost | $0 | $0 | $0 |
+| Site / ordered terminal envelopes | 100 / 100 | 100 / 100 | 100 / 100 |
+
+Refresh correctness (Stage E scope, before GLEIF/TED): 7/7 planted source interventions detected, 40 supported field events and zero unexpected events; unchanged/repeated false-change rate 0; 112 prior claims retained with stale markers on transient failures. Exact saved 100-company timestamp-format regression and final live frozen refresh both emitted 0 company changes and 0 coverage observations. This does not validate new-source refresh coverage. [Measured refresh correctness](docs/REFRESH.md#measured-refresh-correctness).
+
+## Measured precision
+
+Automated re-check of every published website, social profile, job, LEI, parent and procurement award in the latest three Stage T samples (300 company inputs). Counts are published items per sample, not unique companies across types. [Complete verdict ledger](reports/r5/precision/LEDGER.md) preserves every value, proof tier, exact excerpt, URL, retrieval time, hash and review reason; no item was silently removed.
+
+| Type | Checked | Correct | Doubtful | Wrong |
+|---|---:|---:|---:|---:|
+| website | 12 | 10 | 2 | 0 |
+| social | 12 | 11 | 1 | 0 |
+| job | 1 | 1 | 0 | 0 |
+| LEI | 41 | 40 | 1 | 0 |
+| parent | 2 | 2 | 0 | 0 |
+| award | 0 | 0 | 0 | 0 |
+
+Method: saved body hashes and verbatim spans; exact company ID, registry spelling, owner identifiers and group-site flags; strict own header/footer social links with founder/agency exclusions; current-at-retrieval exact NAV employer/proven subunit or owned careers chain; GLEIF exact NO/RA000472 and ACTIVE child-parent link; TED exact Norwegian buyer/selected tenderer through lot/contract award links. A legitimate foreign parent or notice counterparty is not a foreign attribution to the target. Doubtful/wrong items require hand review and remain in outputs.
+
+These are automated rule-verification verdicts, not independently human-labelled precision or a population accuracy claim. Saved samples are small, live sources can change, and a correct saved receipt does not establish current internet truth. Zero published items for a type is zero measured precision coverage for that type, not 100% precision. Source absence, blocking and incomplete pagination stay explicit. No notice amount is published without proven sole-winner lot attribution; this implementation abstains from all amounts.
+
+### Historical scale measurements
 
 All live checks below used a 2,400-second budget and template synthesis. Coverage describes these samples, not a universal recall estimate.
 
@@ -181,7 +236,7 @@ GitHub Actions runs Ubuntu tests and the live 20-company registry smoke job. [Ev
 
 ## Models, APIs, licences and cost
 
-Official Bronnoysund registry/accounts APIs, bounded company-site requests and the official NAV feed supply facts. No source-site browser renderer or model API is used. Without optional search, provider cost is **$0 per batch**, per 100 companies and per configured 1,100-company batch, excluding compute/storage/network.
+Official Bronnoysund registry/accounts APIs, bounded company-site requests, the official NAV feed, GLEIF (CC0) and TED public procurement notices (EU reuse policy) supply facts. New-source terms, robots receipts and attribution limits are documented in docs/SOURCES.md. No source-site browser renderer or model API is used. Without optional search, provider cost is **$0 per batch**, per 100 companies and per configured 1,100-company batch, excluding compute/storage/network.
 
 Optional website search is off without `BRAVE_SEARCH_API_KEY`, the same variable used by the starter kit's Brave connector. `SIGNALPOST_SEARCH_PROVIDER=brave` selects the shipped implementation; the provider interface also supports injected test adapters. Only companies lacking a proven site after registry/email/subunit/slug candidates are eligible. One logical query per company, up to five filtered result domains; results stay in memory and never become evidence. Existing fetch, robots, SSRF, politeness and exact-orgnr proof rules apply. Social, directory and known marketplace domains are excluded.
 

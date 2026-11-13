@@ -1,0 +1,38 @@
+"""Render measured docs from ledger.json; no network or output editing."""
+import json,re
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[3]
+
+def main():
+    r=json.loads((ROOT/'reports/r5/precision/ledger.json').read_text(encoding='utf8'))
+    samples=('frozen','daily','mock');m=r['measurements']
+    table='| Metric | Frozen 20261017 (T) | Seed 20261113 (T) | Seed 20261114 (T) |\n|---|---:|---:|---:|\n'
+    for label,key in [('Websites','verified_websites'),('Social companies','social_profile_companies'),('Job companies','job_ad_companies'),('Contacts','contacts'),('Activity companies','activity_companies'),('Activity claims (registry/site)','activity_claims'),('Facts','total_facts'),('LEI companies','lei_companies'),('Parent companies','parent_companies'),('Procurement award companies','award_companies'),('HTTP','http_requests'),('Reported seconds','runtime_seconds'),('Wall seconds','process_wall_seconds'),('Derived ratios','ratios'),('Comparable YoY metrics','yoy')]:
+        values=[f"{m[s][key]:.3f}" if isinstance(m[s][key],float) else str(m[s][key]) for s in samples]
+        table+='| '+label+' | '+' | '.join(values)+' |\n'
+    table+='| Unsupported values | 0 | 0 | 0 |\n| Provider cost | $0 | $0 | $0 |\n| Site / ordered terminal envelopes | 100 / 100 | 100 / 100 | 100 / 100 |\n'
+    precision='## Measured precision\n\nAutomated re-check of every published website, social profile, job, LEI, parent and procurement award in the latest three Stage T samples (300 company inputs). Counts are published items per sample, not unique companies across types. [Complete verdict ledger](reports/r5/precision/LEDGER.md) preserves every value, proof tier, exact excerpt, URL, retrieval time, hash and review reason; no item was silently removed.\n\n'
+    precision+='| Type | Checked | Correct | Doubtful | Wrong |\n|---|---:|---:|---:|---:|\n'
+    for typ,c in r['counts'].items():precision+=f"| {typ} | {sum(c.values())} | {c['correct']} | {c['doubtful']} | {c['wrong']} |\n"
+    precision+='\nMethod: saved body hashes and verbatim spans; exact company ID, registry spelling, owner identifiers and group-site flags; strict own header/footer social links with founder/agency exclusions; current-at-retrieval exact NAV employer/proven subunit or owned careers chain; GLEIF exact NO/RA000472 and ACTIVE child-parent link; TED exact Norwegian buyer/selected tenderer through lot/contract award links. A legitimate foreign parent or notice counterparty is not a foreign attribution to the target. Doubtful/wrong items require hand review and remain in outputs.\n\nThese are automated rule-verification verdicts, not independently human-labelled precision or a population accuracy claim. Saved samples are small, live sources can change, and a correct saved receipt does not establish current internet truth. Zero published items for a type is zero measured precision coverage for that type, not 100% precision. Source absence, blocking and incomplete pagination stay explicit. No notice amount is published without proven sole-winner lot attribution; this implementation abstains from all amounts.\n'
+    refresh='Refresh correctness (Stage E scope, before GLEIF/TED): 7/7 planted source interventions detected, 40 supported field events and zero unexpected events; unchanged/repeated false-change rate 0; 112 prior claims retained with stale markers on transient failures. Exact saved 100-company timestamp-format regression and final live frozen refresh both emitted 0 company changes and 0 coverage observations. This does not validate new-source refresh coverage. [Measured refresh correctness](docs/REFRESH.md#measured-refresh-correctness).\n'
+    p=ROOT/'README.md';s=p.read_text(encoding='utf8')
+    start=s.index('Current revision/r5 follow-up (Stages T/G') if 'Current revision/r5 follow-up (Stages T/G' in s else s.index('Measured results below are observational');end=s.index('[v1.3.0 clean-clone release evidence',start)
+    intro='Current revision/r5 follow-up (Stages T/G, not a new version tag) enables free exact-ID GLEIF and TED by default with the seven flags; separate source states preserve failures. Parent relationships require ACTIVE records; procurement requires structured Norwegian buyer/winner lot proof. [Source terms and limits](docs/SOURCES.md#stage-t-exact-id-gleif-and-ted-checked-2026-11-13).\n\nLatest measured results are observational, not an official score or causal recall comparison. All three Stage T runs use exactly seven flags and fresh state, with the unchanged scaled 1850 HTTP / 35-minute hard limits and $0 provider cost. The seed-20261114 sample is disjoint from both earlier samples.\n\n'+table+'\n'
+    s=s[:start]+intro+s[end:]
+    if '### Historical scale measurements\n\n' in s:
+        a=s.index('## Measured results\n\n')+len('## Measured results\n\n');b=s.index('### Historical scale measurements\n\n',a)+len('### Historical scale measurements\n\n');s=s[:a]+s[b:]
+    marker='## Measured results\n\n';s=s.replace(marker,marker+'Latest three-sample Stage T results (the earlier release samples remain in linked historical reports):\n\n'+table+'\n'+refresh+'\n'+precision+'\n### Historical scale measurements\n\n',1)
+    s=s.replace('render the first 50 Evidence Explorer rows','render the first 48 Evidence Explorer rows')
+    if '| GLEIF / TED |' not in s:s=s.replace('| NAV |', '| GLEIF / TED | ON with the seven flags; exact IDs only, batch 25 IDs, pages up to 100 records/notices, max 10 pages; separate explicit states, 1-second per-host politeness or longer Crawl-delay, shared hard budgets. No API keys or paid calls. |\n| NAV |',1)
+    s=s.replace('Official Bronnoysund registry/accounts APIs, bounded company-site requests and the official NAV feed supply facts.', 'Official Bronnoysund registry/accounts APIs, bounded company-site requests, the official NAV feed, GLEIF (CC0) and TED public procurement notices (EU reuse policy) supply facts. New-source terms, robots receipts and attribution limits are documented in docs/SOURCES.md.')
+    s=s.replace('The current baseline was read at 2026-10-14T04:26:40.758720Z: 9,015 active ads, 5,769 employer numbers, zero failed details, 403,768 compressed bytes.', 'The current bundled index was built at 2026-11-13T08:23:53.796625Z: 9,511 ad records and 6,012 employer numbers (index nav-20261113T082353.796625Z-v1).')
+    s=s.replace('Of the exported ads, 6,791 were seeded from disk and 2,224 fetched freshly during the build.', 'All 9,511 exported records were freshly fetched in that build; the index stores discovery metadata only.')
+    p.write_text(s,encoding='utf8')
+    p=ROOT/'docs/EVAL.md';s=p.read_text(encoding='utf8').split('\n\n## Measured precision\n\n')[0]
+    s+='\n\n'+precision.replace('(reports/r5/precision/LEDGER.md)','(../reports/r5/precision/LEDGER.md)')+'\n### Current three-sample measured results\n\n'+table+'\n'+refresh.replace('(docs/REFRESH.md#','(REFRESH.md#')
+    s+='\nEach item is present in the machine-readable ledger with its verdict checks and original run/output SHA-256. Reproduce with `python scripts/precision_ledger.py`; this performs no HTTP requests, uses the latest Stage T settings paths and never rewrites envelopes. Three offline ledger tests cover broken bytes/URL substitution, retained doubtful group-site attribution and strict social header/footer context. Full pytest gate: reports/r5/precision/pytest.txt. No independent human hand-check is claimed.\n'
+    p.write_text(s,encoding='utf8')
+    print(json.dumps({'counts':r['counts'],'table':table}))
+
+if __name__=='__main__':main()

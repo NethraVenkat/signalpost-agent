@@ -115,3 +115,48 @@ The final contract release check preserved 1,000 ordered valid envelopes without
 ## Wednesday cold release measurements
 
 The current [cold 1,000-company gate](../reports/release-1000.md) and [cold 100 smoke](../reports/smoke-100.md) supersede historical warm-cache estimates above. Default union plus separate raw profiles parse in the supplied proxy; canonical envelope evidence stays a list. All three envelope shapes verify. Final cold 1,000: 268.875 seconds, 5,074 HTTP, 6,809 DNS, 0 exceptions/deadline hits/reductions, feed complete, hiring failed 0%. Union 140.000 MB / contract123.854 MB (1.130363 ratio). NAV 2 forward pages /2.547feed seconds /0.279161decoded MB /141.312total seconds, above the120-second target; retain as open performance risk. Total time headroom88.80% meets the50% condition for retaining900-second NAV cap. Optional search is not configured, cost$0. Official evaluator acceptance remains unverified.
+
+
+## Measured precision
+
+Automated re-check of every published website, social profile, job, LEI, parent and procurement award in the latest three Stage T samples (300 company inputs). Counts are published items per sample, not unique companies across types. [Complete verdict ledger](../reports/r5/precision/LEDGER.md) preserves every value, proof tier, exact excerpt, URL, retrieval time, hash and review reason; no item was silently removed.
+
+| Type | Checked | Correct | Doubtful | Wrong |
+|---|---:|---:|---:|---:|
+| website | 12 | 10 | 2 | 0 |
+| social | 12 | 11 | 1 | 0 |
+| job | 1 | 1 | 0 | 0 |
+| LEI | 41 | 40 | 1 | 0 |
+| parent | 2 | 2 | 0 | 0 |
+| award | 0 | 0 | 0 | 0 |
+
+Method: saved body hashes and verbatim spans; exact company ID, registry spelling, owner identifiers and group-site flags; strict own header/footer social links with founder/agency exclusions; current-at-retrieval exact NAV employer/proven subunit or owned careers chain; GLEIF exact NO/RA000472 and ACTIVE child-parent link; TED exact Norwegian buyer/selected tenderer through lot/contract award links. A legitimate foreign parent or notice counterparty is not a foreign attribution to the target. Doubtful/wrong items require hand review and remain in outputs.
+
+These are automated rule-verification verdicts, not independently human-labelled precision or a population accuracy claim. Saved samples are small, live sources can change, and a correct saved receipt does not establish current internet truth. Zero published items for a type is zero measured precision coverage for that type, not 100% precision. Source absence, blocking and incomplete pagination stay explicit. No notice amount is published without proven sole-winner lot attribution; this implementation abstains from all amounts.
+
+### Current three-sample measured results
+
+| Metric | Frozen 20261017 (T) | Seed 20261113 (T) | Seed 20261114 (T) |
+|---|---:|---:|---:|
+| Websites | 5 | 4 | 3 |
+| Social companies | 3 | 1 | 2 |
+| Job companies | 0 | 1 | 0 |
+| Contacts | 11 | 8 | 4 |
+| Activity companies | 100 | 100 | 100 |
+| Activity claims (registry/site) | 1202 | 1137 | 1093 |
+| Facts | 13344 | 13763 | 13260 |
+| LEI companies | 19 | 12 | 10 |
+| Parent companies | 0 | 0 | 1 |
+| Procurement award companies | 0 | 0 | 0 |
+| HTTP | 700 | 792 | 736 |
+| Reported seconds | 357.609 | 404.109 | 345.094 |
+| Wall seconds | 370.777 | 412.763 | 354.648 |
+| Derived ratios | 153 | 169 | 164 |
+| Comparable YoY metrics | 50 | 63 | 60 |
+| Unsupported values | 0 | 0 | 0 |
+| Provider cost | $0 | $0 | $0 |
+| Site / ordered terminal envelopes | 100 / 100 | 100 / 100 | 100 / 100 |
+
+Refresh correctness (Stage E scope, before GLEIF/TED): 7/7 planted source interventions detected, 40 supported field events and zero unexpected events; unchanged/repeated false-change rate 0; 112 prior claims retained with stale markers on transient failures. Exact saved 100-company timestamp-format regression and final live frozen refresh both emitted 0 company changes and 0 coverage observations. This does not validate new-source refresh coverage. [Measured refresh correctness](REFRESH.md#measured-refresh-correctness).
+
+Each item is present in the machine-readable ledger with its verdict checks and original run/output SHA-256. Reproduce with `python scripts/precision_ledger.py`; this performs no HTTP requests, uses the latest Stage T settings paths and never rewrites envelopes. Three offline ledger tests cover broken bytes/URL substitution, retained doubtful group-site attribution and strict social header/footer context. Full pytest gate: reports/r5/precision/pytest.txt. No independent human hand-check is claimed.
