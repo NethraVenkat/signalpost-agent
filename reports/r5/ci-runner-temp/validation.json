@@ -1,0 +1,31 @@
+{
+  "workflow_sha256": "aab9e106f623d40ae4258d9dd47db575aa7615be16508033e7c7cee3cd9d73d6",
+  "checks": [
+    {
+      "argv": [
+        "uvx",
+        "--from",
+        "actionlint-py",
+        "actionlint",
+        "-version"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.572701999975834,
+      "stdout": "1.7.12\ninstalled by downloading from release page\nbuilt with go1.26.1 compiler for windows/amd64\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "uvx",
+        "--from",
+        "actionlint-py",
+        "actionlint",
+        ".github/workflows/ci.yml"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.08188389998394996,
+      "stdout": "",
+      "stderr": ""
+    }
+  ]
+}

@@ -337,3 +337,12 @@
 - Keep automated 75 correct / 3 doubtful / 0 wrong across 78 H items, HIGH site tier, LEI status and job employer/subunit proof unchanged. Original excerpts, retrieval dates, hashes and published envelopes remain byte-identical. No website/social/job/source rule change, no live requests or paid calls. Full pytest must be green before this review-only commit; no push.
 
 - Review-only final validation: full pytest 954 passed in 254.48s, no warnings; retained in stageH/pytest-human-review.txt. Verified all three human entries match their original sample/field/value hash; all automated item fields/evidence and original run artifact hashes unchanged.
+
+
+## CI runner.temp context repair
+
+- GitHub rejected job-level env.LIVE_WORK because runner.temp is unavailable in that expression context. Remove that job-level definition entirely. In the smoke bash run step, compose LIVE_WORK from shell RUNNER_TEMP, GITHUB_RUN_ID and GITHUB_RUN_ATTEMPT, then append the assignment to GITHUB_ENV for subsequent verifier/artifact steps. Artifact paths use env.LIVE_WORK only in step-level with; no runner.temp expression remains.
+- Preserve exactly seven evaluator flags, a new mkdir/cd working directory, default scaled budget, 10-minute timeout, strict evidence/site verifier and always-uploaded report/process/verification. No production source, proof rule or data behavior changes. Workflow regression test checks the shell assignment, GITHUB_ENV export and artifact path as well as the existing seven-flag/fresh-state behavior.
+- Install/run the user-requested uvx --from actionlint-py actionlint locally. actionlint-py 1.7.12.25 supplies actionlint 1.7.12; version and workflow validation both exit 0. Clean workflow invocation has empty stdout/stderr. Retain validation command/version/workflow hash in ci-runner-temp/validation.json. Initial install log contains package-build/version-specifier warnings from uv, not actionlint workflow errors. No GitHub dispatch or push; remote success is not claimed. Full pytest must pass before the exact requested commit message.
+
+- Final gate: actionlint 1.7.12 exit 0 with no diagnostics; full pytest 954 passed in 224.33s. Commit exactly Fix CI workflow runner.temp usage; never push.

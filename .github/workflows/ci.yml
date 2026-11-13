@@ -16,7 +16,6 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     env:
-      LIVE_WORK: ${{ runner.temp }}/signalpost-live20-${{ github.run_id }}-${{ github.run_attempt }}
       SIGNALPOST_SEARCH_PROVIDER: disabled
       SIGNALPOST_SEARCH_MOCK: '0'
     steps:
@@ -28,6 +27,8 @@ jobs:
       - name: Run official seven-flag smoke in fresh state
         shell: bash
         run: |
+          LIVE_WORK="$RUNNER_TEMP/signalpost-live20-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          printf '%s\n' "LIVE_WORK=$LIVE_WORK" >> "$GITHUB_ENV"
           mkdir "$LIVE_WORK"
           cd "$LIVE_WORK"
           uv run --project "$GITHUB_WORKSPACE" signalpost run \

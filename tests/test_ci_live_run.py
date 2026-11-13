@@ -50,6 +50,10 @@ def test_workflow_runs_exact_seven_flags_fresh_default_budget_and_uploads():
     import re
     assert re.findall(r'--[a-z-]+',run)==['--organisations','--bulk','--output','--profiles-output','--report','--run-id','--expected-count']
     assert 'mkdir "$LIVE_WORK"' in source and 'cd "$LIVE_WORK"' in source
+    assert '${{ runner.temp }}' not in source
+    assert 'LIVE_WORK="$RUNNER_TEMP/signalpost-live20-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"' in source
+    assert '"LIVE_WORK=$LIVE_WORK" >> "$GITHUB_ENV"' in source
+    assert '${{ env.LIVE_WORK }}/report.json' in source
     assert '--require-clean' not in source and '--time-budget-seconds' not in run
     assert 'timeout-minutes: 10' in source and 'actions/upload-artifact@v4' in source and 'if: always()' in source
 
