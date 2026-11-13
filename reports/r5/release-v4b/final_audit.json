@@ -1,0 +1,25 @@
+{
+  "daily": {
+    "profiles_output_order_verified": true,
+    "envelope_synthesis_mirrored": true,
+    "website_http_max": 13,
+    "site_largest_bytes": 216288,
+    "nav_source_mode": "declared_index",
+    "nav_index_built_at": "2026-11-13T08:23:53.796625Z",
+    "nav_index_ads": 9511,
+    "website_tiers": {
+      "HIGH": 1,
+      "VERIFIED": 2
+    }
+  },
+  "edge": {
+    "profiles_output_order_verified": true,
+    "envelope_synthesis_mirrored": true,
+    "website_http_max": 8,
+    "site_largest_bytes": 215969,
+    "nav_source_mode": "declared_index",
+    "nav_index_built_at": "2026-11-13T08:23:53.796625Z",
+    "nav_index_ads": 9511,
+    "website_tiers": {}
+  }
+}

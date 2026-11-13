@@ -1,0 +1,57 @@
+{"command": ["C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\release-v4b-20261113-183129\\repo\\.venv\\Scripts\\python.exe", "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\release-v4b-20261113-183129\\repo\\reports\\r5\\stage4_7\\run_tests.py", "-q"], "priority": "above_normal", "mutates_test_assertions_or_timeouts": false}
+........................................................................ [  7%]
+........................................................................ [ 15%]
+........................................................................ [ 23%]
+........................................................................ [ 31%]
+........................................................................ [ 39%]
+........................................................................ [ 47%]
+........................................................................ [ 55%]
+........................................................................ [ 63%]
+........................................................................ [ 71%]
+........................................................................ [ 78%]
+..................................FF.................................... [ 86%]
+........................................................................ [ 94%]
+................................................                         [100%]
+================================== FAILURES ===================================
+_____ test_search_candidate_only_publishes_with_fetched_exact_orgnr[True] _____
+
+tmp_path = WindowsPath('C:/Users/<USER>/AppData/Local/Temp/pytest-of-<USER>/pytest-1627/test_search_candidate_only_pub0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000015B2CA5FD10>
+proven = True
+
+    @pytest.mark.parametrize('proven',[True,False])
+    def test_search_candidate_only_publishes_with_fetched_exact_orgnr(tmp_path,monkeypatch,proven):
+        from tests.test_websites import execute_web,html
+        monkeypatch.setenv('BRAVE_SEARCH_API_KEY','synthetic-test-only')
+        monkeypatch.setattr('signalpost.web.search.Brave',lambda *args:Fake())
+        monkeypatch.setattr('signalpost.web.collector.generate',lambda context:[])
+        report,row,requests,cfg=execute_web(tmp_path,monkeypatch,body=html('Org nr '+ORG if proven else ''),website=None)
+        published=[c for c in row['claims'] if c['field']=='official_website' and c['availability']=='available']
+>       assert bool(published)==proven
+E       assert False == True
+E        +  where False = bool([])
+
+tests\test_search.py:72: AssertionError
+____ test_search_candidate_only_publishes_with_fetched_exact_orgnr[False] _____
+
+tmp_path = WindowsPath('C:/Users/<USER>/AppData/Local/Temp/pytest-of-<USER>/pytest-1627/test_search_candidate_only_pub1')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000015B2D3027B0>
+proven = False
+
+    @pytest.mark.parametrize('proven',[True,False])
+    def test_search_candidate_only_publishes_with_fetched_exact_orgnr(tmp_path,monkeypatch,proven):
+        from tests.test_websites import execute_web,html
+        monkeypatch.setenv('BRAVE_SEARCH_API_KEY','synthetic-test-only')
+        monkeypatch.setattr('signalpost.web.search.Brave',lambda *args:Fake())
+        monkeypatch.setattr('signalpost.web.collector.generate',lambda context:[])
+        report,row,requests,cfg=execute_web(tmp_path,monkeypatch,body=html('Org nr '+ORG if proven else ''),website=None)
+        published=[c for c in row['claims'] if c['field']=='official_website' and c['availability']=='available']
+        assert bool(published)==proven
+>       assert report['search']['queries']==1
+E       assert 0 == 1
+
+tests\test_search.py:73: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_search.py::test_search_candidate_only_publishes_with_fetched_exact_orgnr[True]
+FAILED tests/test_search.py::test_search_candidate_only_publishes_with_fetched_exact_orgnr[False]
+2 failed, 910 passed in 218.92s (0:03:38)

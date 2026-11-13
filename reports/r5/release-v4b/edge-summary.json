@@ -1,0 +1,104 @@
+{
+  "input_rows": 10,
+  "unique_inputs": 9,
+  "terminal_envelopes": 10,
+  "ordered": true,
+  "exit_code": 0,
+  "invalid_inputs": [
+    "123456789",
+    "923609017"
+  ],
+  "duplicates": 1,
+  "http_requests": 50,
+  "http_cap": 166,
+  "wall_seconds": 33.22470990000875,
+  "runtime_seconds": 29.813,
+  "total_cost_usd": 0.0,
+  "websites": 0,
+  "social_urls": 0,
+  "social_companies": 0,
+  "jobs": 0,
+  "job_companies": 0,
+  "contacts": 0,
+  "facts": 1071,
+  "activity_claims": 114,
+  "accounts_facts": 570,
+  "formulas": {
+    "operating_margin": 4,
+    "equity_ratio": 8,
+    "revenue_yoy": 4
+  },
+  "site": {
+    "state": "available",
+    "companies": 9,
+    "input_records": 10,
+    "pages": 11,
+    "skipped_invalid_identifiers": 0,
+    "total_bytes": 2818246,
+    "largest_profile_data_bytes": 425705,
+    "largest_profile_bytes": 215969
+  },
+  "section_states": {
+    "accounts": {
+      "available": 8,
+      "failed": 2
+    },
+    "activity": {
+      "available": 6,
+      "failed": 4
+    },
+    "hiring": {
+      "not_available": 8,
+      "failed": 2
+    },
+    "identity": {
+      "available": 8,
+      "failed": 2
+    },
+    "roles": {
+      "available": 8,
+      "failed": 2
+    },
+    "subunits": {
+      "available": 5,
+      "failed": 2,
+      "not_available": 3
+    },
+    "website": {
+      "not_available": 6,
+      "failed": 2,
+      "ambiguous": 2
+    }
+  },
+  "verification": {
+    "lines": 10,
+    "schema_valid": true,
+    "published_claims": 1071,
+    "source_blobs_verified": 33,
+    "synthesis_companies": 10,
+    "synthesis_sentences": 154,
+    "synthesis_unverified_values": 0,
+    "financial_inputs_verified": 496,
+    "derived_financial_metrics_verified": 16,
+    "registry_events_verified": 114,
+    "filing_year_facts_verified": 74,
+    "briefing_companies": 10,
+    "briefing_sentences": 58,
+    "briefing_short_companies": 0,
+    "briefing_unverified_values": 0,
+    "briefing_topic_coverage": {
+      "activity": 10,
+      "change": 10,
+      "unknown": 10,
+      "financial": 10,
+      "takeaway": 10
+    },
+    "complete_briefing_contracts": 10,
+    "newer_filing_flags": 0
+  },
+  "artifacts": {
+    "envelopes.jsonl": "1ff22b08ec4232cc706415852279a8b6dccfb344b49c0032ac8b9691d167c3b4",
+    "profiles.jsonl": "9031fd363605b3209e26aa95fc0f214a199de5536a544c851442e6c77654dec0",
+    "report.json": "c07ebe732617f0bf30487792860385b404d844c53fb42e2d72135e2a5af27d30"
+  }
+}

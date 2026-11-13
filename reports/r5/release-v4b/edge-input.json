@@ -1,0 +1,8 @@
+{
+  "input_matches_previous_edge": true,
+  "input_sha256": "4cd86e1e843ca17f593c5c45f3357e0b5319fe672069c1f67934ae6e72c3de1f",
+  "prior_input": "reports/r5/release-v4/companies10.jsonl",
+  "bulk": "reports/r5/release-v4/registry100.csv",
+  "fresh_state": ".data/release-v4b/edge-repeat/state",
+  "note": "Exact previous ten-row edge batch is the accepted release check. The earlier same-pattern new-cohort trial is retained separately."
+}

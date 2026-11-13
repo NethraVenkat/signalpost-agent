@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\release-v4b-20261113-183129\\repo\\.venv\\Scripts\\python.exe",
+    "reports/r5/stage4_7/run_tests.py",
+    "-q"
+  ],
+  "cwd": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\release-v4b-20261113-183129\\repo",
+  "exit_code": 0,
+  "wall_seconds": 197.2206695000059,
+  "completed_at_utc": "2026-11-13T13:15:55.522152+00:00"
+}

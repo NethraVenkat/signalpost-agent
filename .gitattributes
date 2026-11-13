@@ -12,3 +12,8 @@ reports/r5/stageI/jobs.md -text
 reports/r5/stageD/new_websites.md -text
 reports/r5/stageI/new_websites.md -text
 reports/r5/stageC/new_websites.md -text
+
+# Keep release-v4b input hashes and verbatim URL/job proof excerpts exact.
+reports/r5/release-v4b/*.jsonl -text whitespace=cr-at-eol
+reports/r5/release-v4b/*.csv -text whitespace=cr-at-eol
+reports/r5/release-v4b/urls.md -text

@@ -1,0 +1,26 @@
+{
+  "argv": [
+    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\release-v4b-20261113-183129\\repo\\.venv\\Scripts\\python.exe",
+    "-m",
+    "signalpost.cli",
+    "run",
+    "--organisations",
+    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\release-v4b-20261113-183129\\repo\\reports\\r5\\release-v4b\\companies100.jsonl",
+    "--bulk",
+    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\release-v4b-20261113-183129\\repo\\reports\\r5\\release-v4b\\registry100.csv",
+    "--output",
+    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\release-v4b-20261113-183129\\repo\\.data\\release-v4b\\daily\\envelopes.jsonl",
+    "--profiles-output",
+    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\release-v4b-20261113-183129\\repo\\.data\\release-v4b\\daily\\profiles.jsonl",
+    "--report",
+    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\release-v4b-20261113-183129\\repo\\.data\\release-v4b\\daily\\report.json",
+    "--run-id",
+    "release-v4b-daily-seed20261114",
+    "--expected-count",
+    "100"
+  ],
+  "cwd": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\release-v4b-20261113-183129\\repo\\.data\\release-v4b\\daily",
+  "exit_code": 0,
+  "wall_seconds": 387.86368680000305,
+  "completed_at_utc": "2026-11-13T13:14:56.459586+00:00"
+}

@@ -1,0 +1,26 @@
+{
+  "argv": [
+    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\release-v4b-20261113-183129\\repo\\.venv\\Scripts\\python.exe",
+    "-m",
+    "signalpost.cli",
+    "run",
+    "--organisations",
+    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\release-v4b-20261113-183129\\repo\\reports\\r5\\release-v4b\\companies10.jsonl",
+    "--bulk",
+    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\release-v4b-20261113-183129\\repo\\reports\\r5\\release-v4b\\registry100.csv",
+    "--output",
+    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\release-v4b-20261113-183129\\repo\\.data\\release-v4b\\edge\\envelopes.jsonl",
+    "--profiles-output",
+    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\release-v4b-20261113-183129\\repo\\.data\\release-v4b\\edge\\profiles.jsonl",
+    "--report",
+    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\release-v4b-20261113-183129\\repo\\.data\\release-v4b\\edge\\report.json",
+    "--run-id",
+    "release-v4b-edge-seed20261114",
+    "--expected-count",
+    "10"
+  ],
+  "cwd": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\release-v4b-20261113-183129\\repo\\.data\\release-v4b\\edge",
+  "exit_code": 0,
+  "wall_seconds": 43.08392560001812,
+  "completed_at_utc": "2026-11-13T13:16:48.892619+00:00"
+}

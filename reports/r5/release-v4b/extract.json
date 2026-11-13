@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\release-v4b-20261113-183129\\repo\\.venv\\Scripts\\python.exe",
+    "scripts/extract_bulk.py",
+    "--bulk",
+    "C:/Users/<USER>/Downloads/Signalpost/state/downloads/registry.csv",
+    "--batch",
+    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\release-v4b-20261113-183129\\repo\\reports\\r5\\release-v4b\\companies100.jsonl",
+    "--output",
+    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\release-v4b-20261113-183129\\repo\\reports\\r5\\release-v4b\\registry100.csv"
+  ],
+  "cwd": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\release-v4b-20261113-183129\\repo",
+  "exit_code": 0,
+  "wall_seconds": 29.57495629999903,
+  "completed_at_utc": "2026-11-13T13:07:23.349253+00:00"
+}

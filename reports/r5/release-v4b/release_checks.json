@@ -1,0 +1,15 @@
+{
+  "tested_source_commit": "7ff7c031508036d5fd65737c1a6d93915cebe9fe",
+  "tested_git_source_tree": "aeab38688a4bd83d684a4b234d1abbd050fe61a5",
+  "release_version": "1.3.0",
+  "application_source_unchanged": true,
+  "third_party_dependency_versions_unchanged": true,
+  "all_daily_gates_passed": true,
+  "all_edge_gates_passed": true,
+  "daily_http_under_1850": true,
+  "daily_wall_under_45_min": true,
+  "zero_unsupported_values": true,
+  "all_five_briefing_topics": true,
+  "cost_usd": 0,
+  "sample_overlap_zero": true
+}

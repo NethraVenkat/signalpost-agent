@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\release-v4b-20261113-183129\\repo\\.venv\\Scripts\\python.exe",
+    "scripts/verify_output.py",
+    "--first",
+    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\release-v4b-20261113-183129\\repo\\.data\\release-v4b\\daily\\envelopes.jsonl",
+    "--organisations",
+    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\release-v4b-20261113-183129\\repo\\reports\\r5\\release-v4b\\companies100.jsonl",
+    "--count",
+    "100",
+    "--state-dir",
+    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\release-v4b-20261113-183129\\repo\\.data\\release-v4b\\daily\\state",
+    "--report",
+    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\release-v4b-20261113-183129\\repo\\.data\\release-v4b\\daily\\report.json"
+  ],
+  "cwd": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\release-v4b-20261113-183129\\repo",
+  "exit_code": 0,
+  "wall_seconds": 10.477935500006424,
+  "completed_at_utc": "2026-11-13T13:16:30.292325+00:00"
+}

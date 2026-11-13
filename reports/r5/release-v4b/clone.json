@@ -1,0 +1,17 @@
+{
+  "command": [
+    "git",
+    "clone",
+    "--no-hardlinks",
+    "--single-branch",
+    "--branch",
+    "revision/r5",
+    "C:/Users/<USER>/signal-nethra",
+    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\release-v4b-20261113-183129\\repo"
+  ],
+  "tested_source_commit": "7ff7c031508036d5fd65737c1a6d93915cebe9fe",
+  "initial_status_clean": true,
+  "no_copied_runtime_state": true,
+  "no_push": true,
+  "sync_exit": 0
+}
