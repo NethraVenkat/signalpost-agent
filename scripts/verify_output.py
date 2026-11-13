@@ -67,13 +67,33 @@ def verify_careers(row,data,evidence,stored_body):
             expected=next_url
 
 
+def verify_filing_years(row,data,evidence,stored_body):
+    from signalpost.sources.accounts_years import YEARS
+    checked=0
+    for claim in data['claims']:
+        if claim['availability']!='available' or not claim['field'].startswith(('accounts.filed_years','accounts.filed_year.')):continue
+        source=next(evidence[eid] for eid in claim['evidence_ids'] if evidence[eid]['extraction_method']=='signalpost.accounts_years.v1')
+        assert source['source_url']==YEARS.format(org=row['organisation_number']),'Wrong entity filing-years endpoint'
+        values=json.loads(stored_body(source['content_sha256']))
+        assert isinstance(values,list) and all(isinstance(y,str) and len(y)==4 and y.isascii() and y.isdigit() for y in values)
+        if claim['field']=='accounts.filed_years':
+            assert claim['value']==sorted(set(values),reverse=True),'Filing year list differs from official source'
+        else:
+            assert source['locator'].startswith('/')
+            actual=values[int(source['locator'][1:])]
+            assert claim['value']==actual and claim['field']=='accounts.filed_year.'+actual,'Unsupported filed year'
+        assert claim.get('reporting_period') is None
+        checked+=1
+    return checked
+
+
 def verify_financial_sources(row, data, evidence, stored_body):
     raw=(row.get('run',{}).get('synthesis') or data.get('synthesis') or {})
     if raw.get('contract_version')!='r5-S': return 0,0
     claims={c['id']:c for c in data['claims']}
     documents={};checked=0
     for c in data['claims']:
-        if c['family']!='accounts' or c['availability']!='available':continue
+        if c['family']!='accounts' or c['availability']!='available' or c['field'].startswith(('accounts.filed_years','accounts.filed_year.')):continue
         source=next((evidence[eid] for eid in c['evidence_ids'] if
                      evidence[eid]['source_url'].startswith('https://data.brreg.no/regnskapsregisteret/regnskap/')
                      and evidence[eid]['locator'].startswith('/')),None)
@@ -91,11 +111,7 @@ def verify_financial_sources(row, data, evidence, stored_body):
         assert p['period_start']==dates.get('fraDato') and p['period_end']==dates.get('tilDato'), 'Financial period differs from source'
         assert p['fiscal_year']==str(dates.get('tilDato'))[:4] and p['account_type']=='SELSKAP'
         assert p['currency']==record.get('valuta'), 'Financial currency differs from source'
-        if record.get('enhet') is None and p.get('unit')=='NOK':
-            assert not c['field'].startswith('accounts.history.') and p['currency']=='NOK'
-            assert p.get('unit_basis')=='four_exact_parent_2025_ratios_within_0.995_1.005'
-            assert any(evidence[eid]['source_class']=='company_report' for eid in c['evidence_ids']), 'Missing unit calibration evidence'
-        else: assert p.get('unit')==record.get('enhet'), 'Unsupported financial unit'
+        assert p.get('unit')==record.get('enhet'), 'Unsupported financial unit'
         checked+=1
     for m in raw.get('financial_metrics',[]):
         a,b=[claims[cid] for cid in m['input_claim_ids']]
@@ -123,7 +139,10 @@ def verify_financial_sources(row, data, evidence, stored_body):
     year=raw.get('financial_year_check')
     if year:
         registered=claims[year['claim_ids'][0]]
-        assert registered['field']=='identity.latest_submitted_accounts'
+        assert registered['field'] in {'identity.latest_submitted_accounts','accounts.filed_years'}
+        if registered['field']=='accounts.filed_years':
+            verify_filing_years(row,data,evidence,stored_body)
+            assert max(registered['value'])==year['registry_year'],'Filing-year comparison differs from source'
         source=next((evidence[eid] for eid in registered['evidence_ids'] if
                      evidence[eid]['source_url'].startswith('https://data.brreg.no/enhetsregisteret/')),None)
         if source:
@@ -249,7 +268,7 @@ def verify(first, state_dir, count, organisations=None, report=None, require_cle
     def stored_body(sha):
         return decode_body((state_dir/'blobs'/sha).read_bytes())
     synthesis_companies=synthesis_sentences=0
-    financial_inputs=derived_metrics=registry_events=0
+    financial_inputs=derived_metrics=registry_events=filing_year_facts=0
     registry_documents={}
     for row in rows:
         companies,sentences=verify_synthesis(row)
@@ -275,10 +294,12 @@ def verify(first, state_dir, count, organisations=None, report=None, require_cle
         financial_inputs+=inputs_checked; derived_metrics+=metrics_checked
         registry_events+=verify_registry_events(row,data,evidence,stored_body,registry_documents)
         verify_careers(row,data,evidence,stored_body)
+        filing_year_facts+=verify_filing_years(row,data,evidence,stored_body)
     result = {"lines": len(rows), "schema_valid": True, "published_claims": published, "source_blobs_verified": len(seen)}
     result.update(synthesis_companies=synthesis_companies,synthesis_sentences=synthesis_sentences,synthesis_unverified_values=0)
     result.update(financial_inputs_verified=financial_inputs,derived_financial_metrics_verified=derived_metrics)
     result['registry_events_verified']=registry_events
+    result['filing_year_facts_verified']=filing_year_facts
     briefings = [(row['run'].get('synthesis') if 'run' in row else row['profile'].get('synthesis')) or {} for row in rows]
     result.update(briefing_companies=sum(bool(s.get('briefing')) for s in briefings),
                   briefing_sentences=sum(len(s.get('briefing', [])) for s in briefings),

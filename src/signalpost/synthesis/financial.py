@@ -71,10 +71,16 @@ def analyze(envelope):
         else: metrics.append(FinancialMetric(formula='revenue_yoy',value=value,input_claim_ids=[revenue.id,prior.id],
                  reporting_period=period(revenue),previous_period=period(prior),carried_forward=revenue.carried_forward or prior.carried_forward))
     registered=next((c for c in envelope.claims if c.field=='identity.latest_submitted_accounts' and c.availability=='available'),None)
+    filed=next((c for c in claims if c.field=='accounts.filed_years' and isinstance(c.value,list) and c.value
+                and all(isinstance(y,str) and re.fullmatch(r'\d{4}',y) for y in c.value)),None)
+    candidates=[]
+    if registered and not isinstance(registered.value,bool) and re.fullmatch(r'\d{4}',str(registered.value)):
+        candidates.append((str(registered.value),registered))
+    if filed:candidates.append((max(filed.value),filed))
     figure=next((c for c in sorted(current.values(),key=lambda c:c.field) if period(c,False)),None)
     year_check=None
-    if registered and not isinstance(registered.value,bool) and re.fullmatch(r'\d{4}',str(registered.value)) and figure:
-        registered_year=str(registered.value); figures_year=period(figure,False)['fiscal_year']
+    if candidates and figure:
+        registered_year,registered=max(candidates,key=lambda pair:pair[0]); figures_year=period(figure,False)['fiscal_year']
         year_check={'newer_filing_exists':int(registered_year)>int(figures_year),'registry_year':registered_year,
                     'figures_year':figures_year,'claim_ids':[registered.id,figure.id],
                     'scope':'Registry year comparison only; same-year refilings are not checked.'}

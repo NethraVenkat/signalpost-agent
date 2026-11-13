@@ -111,7 +111,7 @@ def test_second_pass_never_resets_company_or_global_counters(tmp_path,monkeypatc
     assert report['adaptive_websites']['pass2']['per_company'][OUR]['state']==state
     assert any(e['code']==state for e in row['errors'])
     assert not any('good.no' in url for url in calls)
-    assert report['requests']<=6
+    assert report['requests']<=kwargs.get('global_cap',7)
 
 
 @pytest.mark.parametrize('mutation',['owner','expired','inactive','missing_body'])

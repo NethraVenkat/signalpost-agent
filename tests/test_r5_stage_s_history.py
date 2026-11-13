@@ -12,6 +12,7 @@ OTHER='993578843'
 
 def response_factory(kind='valid'):
     def response(request):
+        if '/aarsregnskap/kopi/' in str(request.url):return httpx.Response(200,json=['2024','2025','2026'])
         if '/regnskapsregisteret/' in str(request.url):
             current={'regnskapstype':'SELSKAP','virksomhet':{'organisasjonsnummer':ORG},'valuta':'NOK','enhet':'NOK',
                      'regnskapsperiode':{'fraDato':'2025-01-01','tilDato':'2025-12-31'},
@@ -37,7 +38,7 @@ def test_history_and_ratios_use_one_response_and_all_values_verify(tmp_path):
     assert any(c['field']=='accounts.history.2024-12-31.revenue' and c['value']==1000 for c in row['claims'])
     assert {m['formula']:m['value'] for m in s['financial_metrics']}=={'operating_margin':'10.00','equity_ratio':'30.00','revenue_yoy':'20.00'}
     assert s['financial_year_check']['newer_filing_exists']
-    assert sum('/regnskapsregisteret/' in e['url'] for e in report['request_log'])==1
+    assert sum('/regnskapsregisteret/' in e['url'] for e in report['request_log'])==2
     result=verify(cfg.output,cfg.state_dir,1,cfg.organisations,cfg.report)
     assert result['financial_inputs_verified']>7 and result['derived_financial_metrics_verified']==3
 

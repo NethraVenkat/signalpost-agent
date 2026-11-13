@@ -1,0 +1,54 @@
+{
+  "D frozen": {
+    "requests": 583,
+    "year_http_statuses": {},
+    "year_request_count": 0,
+    "year_rate_limits": 0,
+    "website_request_maximum": 13,
+    "largest_profile_bytes": 223085,
+    "available_year_lists": 0,
+    "complete": 100,
+    "cost_usd": 0,
+    "output_sha256": "269b9ef71b8d56de82ad0006654d9a504e66436035fa2da9a2148f62ce2c5782"
+  },
+  "D daily": {
+    "requests": 633,
+    "year_http_statuses": {},
+    "year_request_count": 0,
+    "year_rate_limits": 0,
+    "website_request_maximum": 13,
+    "largest_profile_bytes": 197799,
+    "available_year_lists": 0,
+    "complete": 100,
+    "cost_usd": 0,
+    "output_sha256": "7869045488b68394296d6f61060452705ffecb4af8478735ee1e64d6b10074ed"
+  },
+  "I frozen": {
+    "requests": 685,
+    "year_http_statuses": {
+      "200": 100
+    },
+    "year_request_count": 100,
+    "year_rate_limits": 0,
+    "website_request_maximum": 13,
+    "largest_profile_bytes": 248114,
+    "available_year_lists": 100,
+    "complete": 100,
+    "cost_usd": 0,
+    "output_sha256": "d267e2553d5530dc4009e899c8dfd6f5763aa4a959b40b925e53b27ee0bfb3f5"
+  },
+  "I daily": {
+    "requests": 770,
+    "year_http_statuses": {
+      "200": 100
+    },
+    "year_request_count": 100,
+    "year_rate_limits": 0,
+    "website_request_maximum": 13,
+    "largest_profile_bytes": 222972,
+    "available_year_lists": 100,
+    "complete": 100,
+    "cost_usd": 0,
+    "output_sha256": "3e6102845b743cd495abd17bf412274a7019842f8cedb27ff90f9c48b3583f2b"
+  }
+}

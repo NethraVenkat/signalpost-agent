@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "description": "Self-contained declared integration fixture bundle for tests/fixtures/integration_declared_batch.csv",
+  "description": "Self-contained declared integration fixture bundle for tests/fixtures/integration_declared_batch.csv; Stage I filing-years routes are explicitly SYNTHETIC 404 availability failures, not recorded historical filing facts.",
   "fixtures": [
     {
       "url": "https://data.brreg.no/enhetsregisteret/api/enheter/999592236/roller",
@@ -71,6 +71,30 @@
       },
       "content_sha256": "5532fdca11301e14e6d88c1fa93d12cb7fdcfabbc387114c2d2dbec52f2a6ca9",
       "blob_file": "5532fdca11301e14e6d88c1fa93d12cb7fdcfabbc387114c2d2dbec52f2a6ca9",
+      "metadata_complete": true,
+      "repeatable": true
+    },
+    {
+      "url": "https://data.brreg.no/regnskapsregisteret/regnskap/aarsregnskap/kopi/823884362/aar",
+      "method": "GET",
+      "status_code": 404,
+      "headers": {
+        "content-type": "application/json"
+      },
+      "content_sha256": "76ac8db3992dc63b6760e938254e31559c58f49b6eea9c0747318b5d80eb5b35",
+      "blob_file": "76ac8db3992dc63b6760e938254e31559c58f49b6eea9c0747318b5d80eb5b35",
+      "metadata_complete": true,
+      "repeatable": true
+    },
+    {
+      "url": "https://data.brreg.no/regnskapsregisteret/regnskap/aarsregnskap/kopi/999592236/aar",
+      "method": "GET",
+      "status_code": 404,
+      "headers": {
+        "content-type": "application/json"
+      },
+      "content_sha256": "76ac8db3992dc63b6760e938254e31559c58f49b6eea9c0747318b5d80eb5b35",
+      "blob_file": "76ac8db3992dc63b6760e938254e31559c58f49b6eea9c0747318b5d80eb5b35",
       "metadata_complete": true,
       "repeatable": true
     }

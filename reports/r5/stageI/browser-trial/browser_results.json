@@ -1,0 +1,103 @@
+{
+  "browser": "156.0.8078.4",
+  "basePath": "/signalpost-agent/",
+  "results": [
+    {
+      "label": "desktop dashboard",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "badTargets": []
+    },
+    {
+      "label": "desktop search by name and number",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "badTargets": []
+    },
+    {
+      "label": "desktop profile",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "badTargets": []
+    },
+    {
+      "label": "desktop all retained registry events and source receipt",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "badTargets": []
+    },
+    {
+      "label": "desktop cited run observation",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "badTargets": []
+    },
+    {
+      "label": "desktop source panel",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "badTargets": []
+    },
+    {
+      "label": "desktop all evidence rows",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "badTargets": []
+    },
+    {
+      "label": "desktop two-company comparison",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "badTargets": []
+    },
+    {
+      "label": "mobile dashboard",
+      "width": 360,
+      "scrollWidth": 360,
+      "badTargets": []
+    },
+    {
+      "label": "mobile search by name and number",
+      "width": 360,
+      "scrollWidth": 360,
+      "badTargets": []
+    },
+    {
+      "label": "mobile profile",
+      "width": 360,
+      "scrollWidth": 360,
+      "badTargets": []
+    },
+    {
+      "label": "mobile all retained registry events and source receipt",
+      "width": 360,
+      "scrollWidth": 360,
+      "badTargets": []
+    },
+    {
+      "label": "mobile cited run observation",
+      "width": 360,
+      "scrollWidth": 360,
+      "badTargets": []
+    },
+    {
+      "label": "mobile source panel",
+      "width": 360,
+      "scrollWidth": 360,
+      "badTargets": []
+    },
+    {
+      "label": "mobile all evidence rows",
+      "width": 360,
+      "scrollWidth": 360,
+      "badTargets": []
+    },
+    {
+      "label": "mobile two-company comparison",
+      "width": 360,
+      "scrollWidth": 360,
+      "badTargets": []
+    }
+  ],
+  "externalRequestsAllowed": false
+}

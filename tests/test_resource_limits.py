@@ -21,7 +21,7 @@ def test_previous_without_blobs(tmp_path):
     report, rows = execute(second)
     assert report["changes"] == 0
     assert [c["id"] for c in rows[0]["claims"]] == [c["id"] for c in original[0]["claims"]]
-    assert report["requests"] == 4
+    assert report["requests"] == 5
 
 
 def test_output_cap_preserves_membership(tmp_path):

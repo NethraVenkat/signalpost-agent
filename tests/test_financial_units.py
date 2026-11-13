@@ -5,12 +5,12 @@ from signalpost.runner import run
 from tests.test_registry import config,handler
 
 
-def test_empirical_nok_unit_preserves_reported_values(tmp_path):
-    for currency,expected_unit in [('NOK','NOK'),('EUR',None)]:
+def test_missing_unit_never_inferred_from_currency(tmp_path):
+    for currency,expected_unit in [('NOK',None),('EUR',None)]:
         cfg=config(tmp_path/currency,['923609016'])
         def response(request):
             result=handler(missing_accounts=False)(request)
-            if '/regnskapsregisteret/' in request.url.path:
+            if '/regnskapsregisteret/' in request.url.path and '/aarsregnskap/kopi/' not in request.url.path:
                 body=json.loads(result.content)
                 body[0]['valuta']=currency
                 body[0]['resultatregnskapResultat']['aarsresultat']=1234567
@@ -26,6 +26,6 @@ def test_empirical_nok_unit_preserves_reported_values(tmp_path):
         assert claim['reporting_period']['unit']==expected_unit
         evidence={e['id']:e for e in row['evidence']}
         calibration=[evidence[key] for key in claim['evidence_ids'] if evidence[key]['source_class']=='company_report']
-        assert len(calibration)==(2 if currency=='NOK' else 0)
+        assert not calibration
         for item in calibration:
             assert item['claim_span'].encode() in (cfg.state_dir/'blobs'/item['content_sha256']).read_bytes()

@@ -1,0 +1,21 @@
+{
+  "checked_at": "2026-11-13T08:32:56.746068+00:00",
+  "requests": [
+    {
+      "url": "https://data.brreg.no/regnskapsregisteret/regnskap/v3/api-docs",
+      "status": 200,
+      "sha256": "c6b99a196249d22b494a26341a9b7f84d15388ebbb989bce63dcbcb55c59dac5",
+      "body": ".data\\r5\\stageI-docs\\0.body"
+    },
+    {
+      "url": "https://data.brreg.no/regnskapsregisteret/regnskap/aarsregnskap/kopi/923609016/aar",
+      "status": 200,
+      "sha256": "b7bcd20d8a4607bc9ca49fbdfebf5e51cb31e39858edb985dc98a82e8d2b7cd1",
+      "body": ".data\\r5\\stageI-docs\\1.body"
+    },
+    {
+      "url": "https://data.brreg.no/robots.txt",
+      "error": "RemoteProtocolError"
+    }
+  ]
+}

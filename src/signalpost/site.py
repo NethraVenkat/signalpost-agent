@@ -284,12 +284,22 @@ def evidence_panel(claim, records, shared=False):
     return ''.join(parts)
 
 
-def fact(claim, records):
+def fact(claim, records, filing_list=None):
     local_id = claim['id'][:16]
     available = claim['availability'] == 'available'
+    if (available and claim['field'].startswith('accounts.filed_year.') and filing_list
+            and not claim.get('carried_forward') and not filing_list.get('carried_forward')):
+        # Each year retains its own claim/receipt in the local data. The list's
+        # source panel verifies the same small official year array; link there
+        # rather than repeat the full controls/URL for every scalar year.
+        return (f'<tr id="{esc(anchor(claim))}"><th scope="row">Available copy: {esc(claim["value"])}</th>'
+                f'<td><a href="#{esc(anchor(filing_list))}">Year-list evidence</a></td></tr>')
     label = claim['field'].replace('identity.', '').replace('accounts.', '').replace('_', ' ')
     if claim['field'].startswith('accounts.history.'):
         label='Prior-period '+claim['field'].rsplit('.',1)[-1].replace('_',' ')
+    if claim['field']=='accounts.filed_years':label='Filed accounting years (copies available)'
+    elif claim['field'].startswith('accounts.filed_year.'):
+        label='Available annual-accounts copy: '+claim['field'].rsplit('.',1)[-1]
     if claim['field'].startswith('identity.location.'):
         label = 'Registry ' + claim['field'].rsplit('.',1)[-1] + ' location'
     if claim['field'].startswith('subunits.detail.'):
@@ -323,7 +333,7 @@ def fact(claim, records):
         if period.get('fiscal_year'): parts.append(f"Fiscal year: {period['fiscal_year']}")
         if period.get('period_start') and period.get('period_end'): parts.append(f"Accounting period: {period['period_start']} to {period['period_end']}")
         parts.append(f"Currency: {period.get('currency') or 'Unknown'}")
-        if period.get('unit'): parts.append(f"Unit: {period['unit']}")
+        parts.append(f"Unit: {period['unit']}" if period.get('unit') else 'Unit: unknown (not declared by source)')
         content += '<p class="financial-meta muted">' + esc(' · '.join(parts)) + '</p>'
     panel = bool(claim.get('evidence_ids') or available)
     if panel:
@@ -540,7 +550,7 @@ def profile(row, title):
         for i, c in enumerate(items):
             if key == 'locations' and i == 10:
                 body += '<button type="button" aria-expanded="false" aria-controls="more-locations" data-toggle="more-locations">Show remaining workplaces</button><div id="more-locations" hidden>'
-            body += fact(c, records)
+            body += fact(c, records,fields_map.get('accounts.filed_years'))
         if key == 'locations' and len(items) > 10: body += '</div>'
         if key == 'financials' and items: body += '</tbody></table>'
         if details:

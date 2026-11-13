@@ -11,6 +11,7 @@ Official HTTPS `data.brreg.no:443` endpoints:
 - `/enhetsregisteret/api/enheter/{orgnr}` and `/roller`.
 - `/enhetsregisteret/api/underenheter?overordnetEnhet={orgnr}&size=1000&page=N`.
 - `/regnskapsregisteret/regnskap/{orgnr}`.
+- `/regnskapsregisteret/regnskap/aarsregnskap/kopi/{orgnr}/aar` (available-copy years only).
 - Bulk `/enhetsregisteret/api/enheter/lastned/csv`; responses can be gzip even with a CSV filename.
 
 Redirects, URL credentials, unapproved hosts and ports are refused. Registry requests share a bounded async client, host semaphore and global budgets. Accounts allow two retries; other registry requests allow one on eligible failures, respecting Retry-After and remaining deadline. Bodies are hashed and stored.
@@ -79,16 +80,40 @@ Email- and name-derived domains use a per-run cached DNS pre-check with a three-
 
 Dated website activity is enabled by default; use `--no-public-activity` to opt out. Only current VERIFIED/HIGH/REGISTRY_DECLARED websites qualify. Use a feed linked in the already fetched homepage head, a same-domain robots Sitemap line, or `/sitemap.xml`; do not fetch pages linked by the feed or sitemap. One sitemap index level may be followed within the cap. Activity shares the cumulative eight-request website ceiling, thirteen overall company slots and the global budget; it cannot grant capacity above those ceilings. XML is limited to two MiB; DTD/entity declarations are refused. Keep at most ten dated news/press/blog paths, with dates from 2000 through two days after retrieval. Cross-domain, undated, transformed or overly long evidence combinations are abstentions. Sitemap titles are explicitly derived from URL slugs. Feeds/sitemaps retain company-owned provenance and their content terms; no licence is inferred.
 
-## Financial unit calibration
+## Accounts history and units (Stage I)
 
-The accounts schema does not give a normative scaling statement. Four exact-parent 2025 comparisons support whole NOK within tolerance 0.995 to 1.005:
+The current [official OpenAPI](https://data.brreg.no/regnskapsregisteret/regnskap/v3/api-docs)
+lists `/regnskapsregisteret/regnskap/aarsregnskap/kopi/{orgnr}/aar` as the
+available-copy years endpoint. It returned HTTP 200 without authentication in
+the development access check. The [official dataset catalogue](https://data.norge.no/en/datasets/8132460c-91ab-3950-a54b-a54ee20c62e9/regnskapsregisteret)
+identifies the open-data distribution under [NLOD 2.0](https://data.norge.no/nlod/no/2.0).
+Attribute Bronnoysundregistrene; no paid subscription, credentials or PDFs are
+requested. Review receipts/schema are in `reports/r5/stageI/source_review/`.
+The robots lookup disconnected; this is documented direct use of an expressly
+published machine API under the existing approved-registry policy, not a
+website crawl or a claim that a robots error permits website access.
 
-| Publication | Revenue ratio API / published NOK | Annual-result ratio |
-|---|---:|---:|
-| [TOMRA annual report](https://www.tomra.com/-/media/project/tomra/tomra/investor-relations/annual-reports/2025/tomra-annual-report-2025.pdf), parent p145, org 927124238 |0.999915405|0.999216301|
-| [Aker Solutions annual report](https://www.akersolutions.com/globalassets/investors/agm/2026/aker-solutions-annual-report-2025.pdf), parent p176, org 913748174 |1.000000000|1.000246124|
+One additional years lookup per company shares registry concurrency and the hard
+global meter. A single shared gate spaces new lookups by at least 2.1 seconds; other transient failures retain bounded registry retries inside that gate. A 429
+response is returned as blocked coverage without an immediate retry; all queued
+lookups then wait at least 60 seconds or a longer Retry-After. Waiting checks the
+original deadline and never grants request/time capacity.
+Years mean copies available from this endpoint, not guaranteed complete lifetime
+filing history. Each year and the list retain source pointers and hashed bodies.
+Failures/denials/budget stops publish explicit unavailable year coverage, preserve
+supported figures and never imply a filing deletion in refresh comparisons.
 
-For explicit NOK currency and absent source unit, annotate whole NOK without multiplying any reported amount. Other/missing currencies stay unknown unless reported. Short factual calibration records are stored separately; source identifiers carry the original PDF SHA-256 and page locator. These records are extracted facts, not the original PDF body. This is empirical calibration, not universal API documentation.
+All earlier exact-entity SELSKAP statements already returned in the existing
+response are retained with their own period, raw amount, currency and unit;
+duplicate period ends are suppressed, wrong-owner and malformed rows withheld.
+No year-by-year request probing, PDF extraction or multiplier is performed.
+Source-declared units alone authorize ratios/comparable-period YoY. Previous
+four-ratio whole-NOK calibration is historical evidence only and no longer
+supplies metadata for any current or prior statement. Undeclared units stay
+unknown; missing comparable inputs produce an explicit unknown, not a trend.
+The newer-filing comparison uses the greatest supported year from the registry
+identity field or the available-copy years list, citing the selected year claim
+and the claim that supplies the period of the figures.
 
 ## Models, dependencies and cost
 

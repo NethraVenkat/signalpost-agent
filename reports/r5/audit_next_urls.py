@@ -69,7 +69,7 @@ def main():
                             'records':list(info['records'].values())} for stage,info in data.items()},
             'comparisons':comparisons}
     (DEST/'url_inventory.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
-    (DEST/'new_websites.md').write_text(text,encoding='utf8',newline='')
+    (DEST/'new_websites.md').write_text(text.rstrip()+'\n',encoding='utf8',newline='')
     print(json.dumps({k:{action:len(items) for action,items in value.items()} for k,value in comparisons.items()}))
 
 if __name__=='__main__':main()

@@ -51,5 +51,6 @@ def test_contact_about_privacy_priority_fits_original_cap(tmp_path,monkeypatch):
     report,row,urls,_=execute_web(tmp_path,monkeypatch,response=response)
     claim=next(c for c in row['claims'] if c['field']=='official_website')
     assert claim['value']['proof_page_url'].endswith('/personvern')
-    assert report['max_requests_per_company']<=9
+    # One additional metered filing-year lookup; proof HTTP cap is unchanged.
+    assert report['max_requests_per_company']<=10
     assert not any('sitemap' in u for u in urls)

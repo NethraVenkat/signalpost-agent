@@ -35,7 +35,7 @@ def test_every_input_row_is_reserved_in_order_and_all_shapes_verify(tmp_path,pay
 
 def test_duplicate_rows_do_not_repeat_research(tmp_path):
     report,rows=execute(config(tmp_path,[ORG,ORG,ORG]))
-    assert len(rows)==3 and report['requests']==4
+    assert len(rows)==3 and report['requests']==5
     assert rows[0]==rows[1]==rows[2]
 
 

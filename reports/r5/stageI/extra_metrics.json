@@ -1,0 +1,43 @@
+{
+  "frozen": {
+    "job_claims": 0,
+    "job_ad_companies": 0,
+    "accounts_facts": 7045,
+    "companies_with_two_figure_periods": 92,
+    "yoy_sentences": 0,
+    "companies_with_two_filed_years": 93,
+    "filed_year_facts": 929,
+    "figures_with_undeclared_unit": 6116,
+    "newer_filing_flags": 0,
+    "hiring_states": {
+      "not_available": 100
+    },
+    "careers_reasons": {
+      "no_current_exact_verified_website": 94,
+      "no_supported_current_posting": 6
+    },
+    "http_requests": 685,
+    "runtime_seconds": 332.36
+  },
+  "daily": {
+    "job_claims": 1,
+    "job_ad_companies": 1,
+    "accounts_facts": 7394,
+    "companies_with_two_figure_periods": 92,
+    "yoy_sentences": 0,
+    "companies_with_two_filed_years": 92,
+    "filed_year_facts": 1040,
+    "figures_with_undeclared_unit": 6354,
+    "newer_filing_flags": 0,
+    "hiring_states": {
+      "not_available": 99,
+      "available": 1
+    },
+    "careers_reasons": {
+      "no_current_exact_verified_website": 97,
+      "no_supported_current_posting": 3
+    },
+    "http_requests": 770,
+    "runtime_seconds": 374.109
+  }
+}

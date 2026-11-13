@@ -117,7 +117,7 @@ def test_exact_org_and_shared_requests(tmp_path,monkeypatch):
     claim=next(c for c in row['claims'] if c['family']=='hiring' and c['availability']=='available')
     assert claim['value']['employer_orgnr']==ORG and claim['value']['matched_via']=='organisation '+ORG
     assert row['run']['sections']['hiring']=='available' and report['hiring_prefetch']['complete']
-    assert report['shared_requests']==3 and report['requests_per_company']==4
+    assert report['shared_requests']==3 and report['requests_per_company']==5
     assert TOKEN not in json.dumps(report) and TOKEN not in cfg.output.read_text()
     assert not any(TOKEN.encode() in p.read_bytes() for p in (cfg.state_dir/'blobs').iterdir())
     assert not any('arbeidsplassen.nav.no' in url for url in calls)

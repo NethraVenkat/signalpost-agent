@@ -8,7 +8,7 @@ def newly_supported_field(field):
     from ..sources.registry_fields import EXTRA,GROUPS,ADDITIONAL
     from ..sources.regnskap import PATHS
     legacy={'revenue','operating_result','result_before_tax','net_result','equity','total_assets','total_liabilities'}
-    return (field.startswith(('roles.detail.','subunits.detail.','identity.location.','accounts.history.')) or
+    return (field.startswith(('roles.detail.','subunits.detail.','identity.location.','accounts.history.','accounts.filed_year')) or
             field in {'identity.'+k for k in (*EXTRA,*GROUPS,*ADDITIONAL,'founding_date','vat_registration_date')} or
             field in {'accounts.'+k for k in PATHS.keys()-legacy})
 
@@ -44,6 +44,15 @@ def apply(envelope, previous, blobs):
     envelope.run.refresh['observed_claim_ids'] = sorted(known_ids | {
         c.id for c in envelope.claims if c.availability == 'available'})
     old_evidence = {x["id"]: Evidence.model_validate(x) for x in old.get("evidence", [])}
+    for claim in old_claims.values():
+        period=claim.reporting_period or {}
+        if claim.family=='accounts' and period.get('unit_basis')=='four_exact_parent_2025_ratios_within_0.995_1.005':
+            # Older revisions supplied empirical metadata. A source outage
+            # must not carry that inference back into source-only history.
+            period=dict(period);period['unit']=period.pop('source_unit',None);period.pop('unit_basis',None)
+            claim.reporting_period=period
+            claim.reasons['unit']='legacy_calibration_removed; source_unit_not_declared'
+            claim.evidence_ids=[eid for eid in claim.evidence_ids if old_evidence[eid].source_class!='company_report']
     for item in old_evidence.values():
         if item.snapshot_body_base64:
             import base64
@@ -98,6 +107,15 @@ def apply(envelope, previous, blobs):
         family = (after or before).family
         if family not in envelope.run.sections or family in failed:
             continue
+        if field.startswith('accounts.filed_year'):
+            old_years=old_claims.get('accounts.filed_years');new_years=new_claims.get('accounts.filed_years')
+            if not old_years or not new_years or old_years.availability!='available' or new_years.availability!='available':
+                if meaning(before)!=meaning(after):
+                    envelope.run.refresh['observation_changes'].append({'section':'accounts','field':field,
+                        'previous_state':before.availability if before else 'unchecked_field',
+                        'current_state':after.availability if after else 'unchecked_field',
+                        'reason':'filing_year_list_not_supported_in_both_runs'})
+                continue
         if field.startswith('social_profile.') and before and isinstance(before.value,dict) and before.value.get('proof_tier') not in {'own_header_footer_exact_name_v1', 'own_header_footer_numeric_linkedin_v1'}:
             envelope.run.refresh['observation_changes'].append({'section':'website','field':field,
                 'previous_state':before.availability,'current_state':after.availability if after else 'not_published',
@@ -149,6 +167,10 @@ def apply(envelope, previous, blobs):
             continue
         old_ids = before.evidence_ids if before else []
         new_ids = after.evidence_ids if after else []
+        if field.startswith('accounts.filed_year.') and before and after is None:
+            # A complete current copy-year list is the negative receipt; no
+            # individual absent-year endpoint is guessed or requested.
+            new_ids=new_claims['accounts.filed_years'].evidence_ids
         if family=='hiring' and before and meaning(after) is None:
             new_ids=envelope.run.refresh.get('hiring',{}).get('closure_evidence',{}).get(before.value.get('uuid'),new_ids)
         newest = new_evidence.get(new_ids[0]) if new_ids else None

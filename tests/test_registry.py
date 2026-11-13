@@ -47,11 +47,13 @@ def entity(org):
 def handler(role_name="Person One", missing_accounts=True):
     def response(request):
         url = str(request.url)
-        org = request.url.params.get("overordnetEnhet") or re.search(r"/(\d{9})(?:/roller)?$", request.url.path)[1]
+        org = request.url.params.get("overordnetEnhet") or re.search(r"/(\d{9})(?:/|$)", request.url.path)[1]
         if "/roller" in url:
             body = {"organisasjonsnummer": org, "rollegrupper": [{"roller": [{"type": {"kode": "DAGL"}, "person": {"navn": {"fornavn": role_name}}}]}]}
         elif "/underenheter?" in url:
             body = {"_embedded": {"underenheter": []}, "page": {"totalPages": 1}}
+        elif '/aarsregnskap/kopi/' in url and request.url.path.endswith('/aar'):
+            body=[] if missing_accounts else ['2025']
         elif "/regnskapsregisteret/" in url:
             body = [] if missing_accounts else [{"regnskapstype": "SELSKAP", "virksomhet": {"organisasjonsnummer": org},
                                                 "regnskapsperiode": {"fraDato": "2025-01-01", "tilDato": "2025-12-31"}, "valuta": "NOK",
@@ -153,7 +155,7 @@ def test_no_zero_provenance_and_report(tmp_path):
         assert e["source_url"] and e["retrieved_at"].endswith("Z") and e["locator"] and e["extraction_method"]
     evidence_ids = {e["id"] for e in rows[0]["evidence"]}
     assert all(set(c["evidence_ids"]) <= evidence_ids for c in rows[0]["claims"])
-    assert report["total_cost_usd"] == 0 and report["requests_by_host"] == {"data.brreg.no": 4}
+    assert report["total_cost_usd"] == 0 and report["requests_by_host"] == {"data.brreg.no": 5}
 
 
 @pytest.mark.parametrize("shape", ["union", "contract", "reference"])
@@ -219,7 +221,7 @@ def test_bulk_streaming_and_live_fallback(tmp_path):
         writer.writeheader()
         writer.writerow({"organisasjonsnummer": "923609016", "navn": "Bulk Company", "organisasjonsform.kode": "AS", "antallAnsatte": ""})
     report, rows = execute(cfg)
-    assert report["requests"] == 7
+    assert report["requests"] == 9
     evidence = next(e for e in rows[0]["evidence"] if e["source_identifier"])
     assert evidence["source_identifier"].endswith(hashlib.sha256(cfg.bulk.read_bytes()).hexdigest())
     assert "snapshot_body_base64" not in evidence
@@ -268,7 +270,7 @@ def test_retry_and_redirect(tmp_path):
                 return httpx.Response(429, headers={"Retry-After": "0"}, content=b"busy")
         return handler()(request)
     report, rows = execute(config(tmp_path / "retry", ["923609016"]), retry)
-    assert report["requests"] == 5 and rows[0]["modules"]["roles"]["retry_count"] == 1
+    assert report["requests"] == 6 and rows[0]["modules"]["roles"]["retry_count"] == 1
     def redirect(request):
         return httpx.Response(302, headers={"Location": "https://evil.test/"})
     report, rows = execute(config(tmp_path / "redirect", ["923609016"]), redirect)
@@ -313,7 +315,7 @@ def test_actual_http_timeout_and_five_hundred_retry(tmp_path):
                 return httpx.Response(503, content=b"busy")
         return handler()(request)
     report, rows = execute(config(tmp_path, ["923609016"]), transport)
-    assert report["requests"] == 6
+    assert report["requests"] == 7
     assert rows[0]["run"]["sections"]["roles"] == "failed"
     assert any(e["code"] == "timeout" for e in rows[0]["errors"])
     assert rows[0]["modules"]["roles"]["retry_count"] == 1
@@ -326,7 +328,7 @@ def test_multiple_subunit_pages_and_parent_verification(tmp_path):
             return httpx.Response(200, json={"_embedded": {"underenheter": [{"organisasjonsnummer": str(100 + page), "overordnetEnhet": "923609016", "navn": "Place"}]}, "page": {"totalPages": 2}})
         return handler()(request)
     report, rows = execute(config(tmp_path, ["923609016"]), pages)
-    assert report["requests"] == 5
+    assert report["requests"] == 6
     assert len([c for c in rows[0]["claims"] if c["family"] == "subunits"]) == 2
     def wrong_parent(request):
         if "/underenheter?" in str(request.url):

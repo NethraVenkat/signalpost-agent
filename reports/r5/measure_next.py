@@ -58,7 +58,7 @@ def main():
                      if p.is_file() and '__pycache__' not in p.parts}
     (dest/'source_manifest.json').write_text(json.dumps(source_manifest,indent=2)+'\n',encoding='utf8')
     metadata = {'stage': stage, 'parent_commit': subprocess.check_output(['git','rev-parse','HEAD'], text=True).strip(),
-                'source_diff_sha256': hashlib.sha256(subprocess.check_output(['git','diff','HEAD','--','src','tests','docs'])).hexdigest(),
+                'source_diff_sha256': hashlib.sha256(subprocess.check_output(['git','diff','HEAD','--','src','tests','docs'],stderr=subprocess.PIPE)).hexdigest(),
                 'working_directory':out.as_posix(),'effective_state_dir':(out/'state').as_posix(),
                 'command_argv':args,'exact_seven_flags':True,'resolved_config': config, 'environment_overrides': settings['environment_overrides'],
                 'input_sha256': sha(companies), 'registry_sha256': sha(base/'registry100.csv'),
