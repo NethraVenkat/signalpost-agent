@@ -354,3 +354,8 @@
 - Homepage baseline is 13 published declared domains / 72 registry declarations across 600 inputs (29 published sites overall). It is declaration recall, not independent ownership precision. No new proof tier.
 - NAV parent/universe expected rate remains unknown: 6,012 indexed workplace IDs, zero direct universe matches, three parents proven by saved subunit evidence, three measured job companies / 600. A full official underenheter bulk download cannot start because both robots checks disconnect; retain failure, do not bypass it or fabricate parent joins. Report the known-parent lower bound separately from the unavailable complete estimate.
 - W0 is reports-only; pytest gate 954 green in 215.36s. Full receipts and limitations in stageW/W0_REPORT.md. No push and $0 paid cost.
+
+## Stage R1: independent publisher context
+
+- Add local extraction of labelled own title/site name/header/logo/footer/copyright and bounded contact/imprint blocks. Exclude hidden/script/article/news/client/partner/reference contexts and agency credits, including split-node credits. A contact-page URL alone does not make its full body publisher context.
+- Extractor does not alter the existing scorer or publish anything in R1; R4 will consume it only as a veto. Raw receipts remain the evidence, not normalized fragments. Seven focused tests and full pytest 961 passed in 255.15s (stageW/pytest-R1.txt). Stage R2/R4 working files are excluded from this commit.
