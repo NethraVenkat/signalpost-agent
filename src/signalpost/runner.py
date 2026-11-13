@@ -434,10 +434,8 @@ async def _run(config, client=None,synthesis_provider=None):
         # of subunit requests. Use the same live identity extractor and budget.
         urgent = []
         if bulk and not config.verify_bulk:
-            if valid_orgs - bulk.keys():
-                # Start the missing-row opportunity when network work can
-                # actually begin, after selected-row extraction and setup.
-                budget.deadline = max(budget.deadline, time.monotonic() + min(3.0, config.time_budget_seconds))
+            # Missing-row lookups share the original deadline; slow preparation
+            # must never grant a fresh network window beyond the hard stop.
             urgent = [asyncio.create_task(isolate(envelopes[org], 'identity',
                       lambda org=org: brreg_enhet.fetch(org, http)))
                       for org in inputs.unique if valid(org) and org not in bulk]
@@ -534,7 +532,11 @@ async def _run(config, client=None,synthesis_provider=None):
     size, output_limited, minimum_exceeded = await offload(write,config.output,result,config.envelope_shape,blobs,config.max_output_mb)
     report = await offload(build,result,inputs,budget,config,warnings,time.monotonic() - budget.start)
     report['limits']['max_requests']=budget.cap
-    report['request_budget_basis']='20 per unique normalized input' if config.max_requests is None else 'explicit override'
+    report['request_budget_basis']='1850 per 100 unique normalized inputs; explicit overrides only lower the ceiling'
+    report['limits'].update(effective_time_budget_seconds=budget.total_seconds,
+                            scaled_hard_request_cap=budget.hard_request_cap,
+                            scaled_hard_time_seconds=budget.hard_seconds)
+    report['enrichment']={name:getattr(config,name) for name in ('websites','hiring','public_activity')}
     report['measured_request_projection']={'baseline':'1000-company retained-features run',
         'baseline_mean_http':5.975,'projected_http':round(5.975*len(inputs.unique)),
         'note':'Projection from a measured sample; source pagination/retries and feed changes can differ.'}
@@ -625,4 +627,9 @@ async def _run(config, client=None,synthesis_provider=None):
     progress.log_event("Pipeline complete")
     progress.set_cost(total)
     await progress.stop(budget)
+    elapsed = time.monotonic() - budget.start
+    report['completion'] = {'wall_seconds': round(elapsed, 3),
+        'within_requested_time_budget': elapsed <= config.time_budget_seconds,
+        'within_effective_time_budget': elapsed <= budget.total_seconds,
+        'note': 'Includes preparation, crawl, mandatory outputs and site; final report flush adds filesystem latency.'}
     return report

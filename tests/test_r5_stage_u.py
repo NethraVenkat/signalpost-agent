@@ -23,8 +23,16 @@ def test_evaluator_seven_flags_build_site_by_default_or_explicitly_disable(tmp_p
             '--report', str(report), '--run-id', 'evaluator-seven-flags', '--expected-count', '1']
     if disabled: args.append('--no-site')
     monkeypatch.setattr(sys, 'argv', args)
+    from signalpost.web.fetcher import WebsiteHttp
+    from signalpost.budget import SourceFailure
+    async def no_dns(self, host, port, org):
+        raise SourceFailure('no_such_domain')
+    monkeypatch.setattr(WebsiteHttp, 'resolve', no_dns)
+    registry = handler()
+    def sources(request):
+        return registry(request) if request.url.host == 'data.brreg.no' else httpx.Response(404)
     with respx.mock(assert_all_called=False) as router:
-        router.route().mock(side_effect=handler())
+        router.route().mock(side_effect=sources)
         assert cli.main() == 0
     data = json.loads(report.read_text())
     assert data['site']['state'] == ('disabled' if disabled else 'available')

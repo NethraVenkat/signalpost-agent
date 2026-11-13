@@ -4,7 +4,7 @@ from tests.test_registry import config
 
 def test_nav_time_cap_follows_budget_and_can_be_overridden(tmp_path):
     assert time_cap(config(tmp_path / 'small', [], time_budget_seconds=900)) == 360
-    assert time_cap(config(tmp_path / 'default', [])) == 900
+    assert time_cap(config(tmp_path / 'default', [])) == 840
     assert time_cap(config(tmp_path / 'override', [], nav_time_cap_seconds=240)) == 240
 
 

@@ -65,7 +65,7 @@ def test_bulk_preparation_does_not_consume_crawl_deadline(tmp_path, monkeypatch)
     assert any(c['field'] == 'identity.legal_name' and c['value'] == 'CSV Old Name' for c in rows[0]['claims'])
 
 
-def test_missing_csv_identity_window_starts_after_selected_row_extraction(tmp_path, monkeypatch):
+def test_slow_preparation_cannot_extend_missing_csv_identity_deadline(tmp_path, monkeypatch):
     import time
     orgs = numbers(2)
     original = bulk_registry.extract
@@ -77,7 +77,9 @@ def test_missing_csv_identity_window_starts_after_selected_row_extraction(tmp_pa
     monkeypatch.setattr(bulk_registry, 'extract', slow_extract)
     cfg = config(tmp_path, orgs, bulk=bulk_file(tmp_path, orgs[:1]), time_budget_seconds=0.2)
     _, rows = execute(cfg)
-    assert all(row['run']['sections']['identity'] == 'available' for row in rows)
+    assert rows[0]['run']['sections']['identity'] == 'available'
+    assert rows[1]['run']['sections']['identity'] == 'failed'
+    assert any(e['code']=='deadline' for e in rows[1]['errors'])
 
 
 @pytest.mark.parametrize('headers', ['organisasjonsnummer,organisasjonsnummer,navn',

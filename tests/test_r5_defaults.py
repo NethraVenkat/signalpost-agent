@@ -28,7 +28,7 @@ def test_seven_flag_evaluator_command_uses_tested_caps(tmp_path, monkeypatch):
     config = seen[0]
     assert (config.website_request_cap, config.website_total_request_cap) == (8, 13)
     assert config.site_dir == tmp_path/'out/site'
-    assert not config.websites and not config.hiring and not config.public_activity
+    assert config.websites and config.hiring and config.public_activity
 
 
 @pytest.mark.parametrize('overrides', [

@@ -29,17 +29,18 @@ def main():
     command.add_argument("--envelope-shape", choices=("union", "contract", "reference"), default="union")
     command.add_argument("--emit-duplicates", action="store_true", default=True)
     command.add_argument('--deduplicate', dest='emit_duplicates', action='store_false')
-    command.add_argument("--websites", action="store_true")
+    command.add_argument('--websites', action=argparse.BooleanOptionalAction, default=True,
+                         help='Discover verified websites by default; --no-websites disables discovery')
     command.add_argument('--no-dns-precheck', dest='dns_precheck', action='store_false')
     command.add_argument('--no-website-stop-after-verified', dest='website_stop_after_verified', action='store_false')
     command.add_argument('--no-nav-rank-candidates', dest='nav_rank_candidates', action='store_false')
-    command.add_argument('--public-activity', action='store_true')
+    command.add_argument('--public-activity', action=argparse.BooleanOptionalAction, default=True)
     command.add_argument('--registry-changes', action=argparse.BooleanOptionalAction, default=True,
                          help='Publish narrowly verified registry changes (default on; disable with --no-registry-changes)')
     command.add_argument('--registry-declared', action='store_true', help='Enable the default-off weak registry-declared website path')
     command.add_argument("--website-request-cap", type=int, default=8)
     command.add_argument('--website-total-request-cap',type=int,default=13)
-    command.add_argument('--hiring',action='store_true')
+    command.add_argument('--hiring',action=argparse.BooleanOptionalAction,default=True)
     command.add_argument('--nav-index-path',type=Path)
     command.add_argument('--nav-index-max-age-days',type=float,default=21)
     command.add_argument('--allow-system-sleep',dest='prevent_system_sleep',action='store_false',default=True)
@@ -54,7 +55,7 @@ def main():
     command.add_argument("--website-user-agent", default="SignalpostAgent/1.0 (+https://github.com/NethraVenkat/signalpost-agent)")
     command.add_argument("--expected-count", type=int)
     command.add_argument("--run-id", default="")
-    for flag, kind, default in (("max-requests", int, None), ("time-budget-seconds", float, 2400),
+    for flag, kind, default in (("max-requests", int, None), ("time-budget-seconds", float, 2100),
                                ("deadline-fraction", float, .85), ("max-cost-usd", float, 0),
                                ("host-concurrency", int, 10), ("workers", int, 64), ("request-timeout", float, 10),
                                ("official-batch-size", int, 1100), ("max-output-mb", float, 256)):

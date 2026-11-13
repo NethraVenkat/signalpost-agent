@@ -136,3 +136,15 @@
 - Keep docs/demo as the Stage S full-feature snapshot. Retain 34 screenshots across U, S and the evaluator-default site; all desktop/mobile checks pass. Final hand-check limitations and scoring caveats are in OVERNIGHT2_SUMMARY.md. Stop without Stage A or push.
 
 - Final report-commit pytest gate: 811 passed in 137.41s; full log in overnight2-tests.txt.
+
+
+## Stage A0 - Default enrichment
+
+- Enable websites, hiring and public website activity in CLI and library defaults, including the exact seven evaluator flags. Add explicit negative opt-outs while retaining positive compatibility flags. Keep 8/13 per-company website caps and all proof, veto, robots, TLS/SSRF and politeness rules. Registry-only legacy source fixtures now opt out explicitly; separate real evaluator-command tests exercise the production defaults.
+- Enforce floor(1,850 ? unique normalized inputs / 100) HTTP attempts across all sources/shared feed/robots/redirects/retries. An explicit max-requests flag can lower but never raise it. Duplicate inputs do not inflate the ceiling.
+- Default time is 2,100 seconds. Effective total time is min(requested, 21 seconds ? unique inputs), with the existing crawl/output/site reserve. Remove the old post-preparation extension for missing-row lookups: those requests must respect the original hard deadline. Record effective limits, feature states and end-to-end completion explicitly.
+- Input scanning and filesystem writes are not interruptible guarantees: adversarially tiny budgets or stalled storage can overrun. Keep honest completion/optional-site states rather than fabricate success. The daily frozen-100 run has a complete site and finishes well inside both requested and scaled limits.
+- Fresh seven-flag run: 6 websites, 3 social companies, 12 contacts, no job-ad companies, 31 activity companies / 90 activity claims, 9,381 facts, 904 HTTP, 299.625s runner time, 325.795s process wall, $0. Independent verification: all 100 complete briefing contracts and zero unsupported values. Exact commands, hashes, comparisons, full tests and browser evidence are in stageA0/.
+- Retain the first outdated NAV-time expectation failure and the second unchanged HTML-localization timeout log. The HTML case passes alone in 1.01s; no timing threshold is changed. Final full-suite gate is recorded in stageA0/tests.txt.
+
+- A0 final full pytest gate: 822 passed in 198.07s; 14 headless browser checks pass.

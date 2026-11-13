@@ -1,4 +1,5 @@
 import time
+import math
 from collections import Counter
 
 
@@ -19,6 +20,8 @@ MIN_RESERVE_FRACTION = 0.10
 MIN_WORK_FRACTION = 0.25
 # Never reserve more than this share without the site; small budgets must still crawl.
 MAX_RESERVE_FRACTION = 0.6
+HTTP_PER_100 = 1850
+SECONDS_PER_100 = 35 * 60
 
 
 def finalisation_estimates(companies, site):
@@ -28,13 +31,16 @@ def finalisation_estimates(companies, site):
 class Budget:
     def __init__(self, config):
         self.start = time.monotonic()
-        self.total_seconds = config.time_budget_seconds
         companies = 0
         try:
             from .io.input_adapter import read
             companies = len(read(config.organisations).unique)
         except (OSError, ValueError):
             pass
+        self.companies = companies
+        self.hard_request_cap = math.floor(HTTP_PER_100 * companies / 100)
+        self.hard_seconds = SECONDS_PER_100 * companies / 100
+        self.total_seconds = min(config.time_budget_seconds, self.hard_seconds) if companies else config.time_budget_seconds
         self.finalise_estimate, self.site_estimate = finalisation_estimates(companies, config.site_dir is not None)
         # Crawl until budget - max(finalisation + site, 10%). If that leaves too
         # little time to crawl, drop the optional site reserve first, then cap
@@ -49,7 +55,8 @@ class Budget:
             reserve = min(max(self.finalise_estimate, MIN_RESERVE_FRACTION * total), MAX_RESERVE_FRACTION * total)
         crawl_seconds = max(0.0, min(total - reserve, total * config.deadline_fraction))
         self.deadline = self.start + crawl_seconds
-        self.cap = config.max_requests if config.max_requests is not None else 20 * companies
+        self.crawl_limit = self.deadline  # No later phase may extend this deadline.
+        self.cap = min(config.max_requests, self.hard_request_cap) if config.max_requests is not None else self.hard_request_cap
         self.events = []
         self.by_host = Counter()
 
