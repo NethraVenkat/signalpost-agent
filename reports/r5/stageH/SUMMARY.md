@@ -49,6 +49,8 @@ Full per-item value/proof tier/exact excerpts/source URL/retrieval/hash/verdict:
 
 ## Validation and limits
 
+Human-review follow-up, 2026-11-13: the user confirmed all three automated-doubtful items above as correct. SOLLIA's å/a spelling is transliteration with exact orgnr; VALAKER's job has exact NAV employer orgnr through the proven subunit with a spelling variant. SISSENER's recorded website is `https://www.sissener.no`, so the user's sissener.no-only approval applies; the user cites own fund documents naming Sissener AS at www.sissener.no. No other domain is approved. The separate human-review column in precision/LEDGER.md and scoped entries in ../precision/human_reviews.json record the verdicts. Automated flags, original proof tiers and published evidence/outputs are unchanged.
+
 Clean-clone full pytest: 952 passed (pytest.txt/pytest.json). Parent checkout final full pytest including both wrapper environment/extraction regression tests: 954 passed (pytest-parent-commit.txt). CI source gates: 952 passing tests and 33 focused site/gate tests before commit; all proof/access/robots/politeness/global/time rules unchanged. Stage H clone package remains version 1.3.0; lockfile frozen, no new dependency. GLEIF CC0, TED EU reuse policy, official registry/NAV and verified site terms remain in docs/SOURCES.md. Some live APIs may block cloud runners; current published claims must still pass the same saved-evidence validation. Local Windows qualification is not a GitHub Linux execution or official score.
 
 Decisions: [DECISIONS.md](../DECISIONS.md), CI and H entries. Historical reports remain historical. Stopped after H summary commit; nothing pushed.

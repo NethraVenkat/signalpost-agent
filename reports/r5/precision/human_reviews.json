@@ -39,6 +39,36 @@
       "reviewer": "User confirmation in conversation",
       "review_date": "2026-11-13",
       "note": "Explicit user reply Correct for organisation 995194163 website; original automated verdict and HIGH tier retained."
+    },
+    {
+      "sample": "seed20261115",
+      "organisation_number": "917455104",
+      "field": "gleif.record",
+      "value_sha256": "2b4188bb57d752eddbc6475063500312f9fadef395833271e29db9bbd15cd75a",
+      "verdict": "correct",
+      "reviewer": "User confirmation in conversation",
+      "review_date": "2026-11-13",
+      "note": "User confirms correct: å transliterated as a in GLEIF; exact organisation number."
+    },
+    {
+      "sample": "seed20261117",
+      "organisation_number": "948039958",
+      "field": "hiring.job.16133169-0d32-4d95-9374-5e6e941851e2",
+      "value_sha256": "e47f2d5d4da9b987991390451440bb00639b2f532ff8af351ec227865a3ed3ca",
+      "verdict": "correct",
+      "reviewer": "User confirmation in conversation",
+      "review_date": "2026-11-13",
+      "note": "User confirms correct: exact NAV employer organisation number through proven subunit; spelling variant only."
+    },
+    {
+      "sample": "seed20261116",
+      "organisation_number": "991658807",
+      "field": "official_website",
+      "value_sha256": "2c00ca35fba9634b3b91e52ddac12c832a2c410ff0cf4e1225384ddacca0e1d2",
+      "verdict": "correct",
+      "reviewer": "User confirmation in conversation",
+      "review_date": "2026-11-13",
+      "note": "User condition satisfied: saved final URL https://www.sissener.no has exact sissener.no/www.sissener.no hostname. User reports own fund documents name Sissener AS at www.sissener.no; this records the user hand-check, not an independent document fetch."
     }
   ],
   "pending": []

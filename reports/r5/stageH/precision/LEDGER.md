@@ -1196,7 +1196,7 @@ Exact excerpt:
 
 | Value / URL | Proof tier | Automated verdict | Human review | Review reason |
 |---|---|---|---|---|
-| {"entity_status": "ACTIVE", "initial_registration_date": "2018-09-28T13:15:02Z", "legal_form": "YI42", "lei": "254900SVGFTK1611FV36", "next_renewal_date": "2019-09-28T13:15:02Z", "registration_status": "LAPSED"} | exact_NO_RA000472 | **doubtful** | Not reviewed | Exact-ID GLEIF legal name differs from registry spelling; saved GLEIF name: SOLLIA GJESTEGARD AS; review source recency |
+| {"entity_status": "ACTIVE", "initial_registration_date": "2018-09-28T13:15:02Z", "legal_form": "YI42", "lei": "254900SVGFTK1611FV36", "next_renewal_date": "2019-09-28T13:15:02Z", "registration_status": "LAPSED"} | exact_NO_RA000472 | **doubtful** | correct - User confirmation in conversation (2026-11-13) | Exact-ID GLEIF legal name differs from registry spelling; saved GLEIF name: SOLLIA GJESTEGARD AS; review source recency |
 
 Source: https://api.gleif.org/api/v1/lei-records?filter%5Bentity.registeredAs%5D=812172492%2C812+172+492%2C817390412%2C817+390+412%2C825754032%2C825+754+032%2C827310662%2C827+310+662%2C831514892%2C831+514+892%2C835547132%2C835+547+132%2C836656342%2C836+656+342%2C912041867%2C912+041+867%2C912637719%2C912+637+719%2C913210409%2C913+210+409%2C913243978%2C913+243+978%2C913305116%2C913+305+116%2C914541719%2C914+541+719%2C914566371%2C914+566+371%2C915356559%2C915+356+559%2C916020821%2C916+020+821%2C916391528%2C916+391+528%2C917197105%2C917+197+105%2C917216320%2C917+216+320%2C917455104%2C917+455+104%2C917483396%2C917+483+396%2C917791155%2C917+791+155%2C917975965%2C917+975+965%2C918819193%2C918+819+193%2C918912185%2C918+912+185&filter%5Bentity.registeredAt%5D=RA000472&page%5Bsize%5D=100
 
@@ -1620,7 +1620,7 @@ Exact excerpt:
 
 | Value / URL | Proof tier | Automated verdict | Human review | Review reason |
 |---|---|---|---|---|
-| {"candidate_origin": "registry_website", "final_url": "https://www.sissener.no", "identity_level": "HIGH", "other_orgnrs": [], "points": 9, "proof_page_url": "https://www.sissener.no/", "proof_type": "signals", "registry_contact_matches": {"email_domain": "sissener.no", "phone": "+4723115260"}, "relationship_note": null, "signals": ["legal_name", "address", "phone", "registry_website", "municipality"]} | HIGH | **doubtful** | Not reviewed | No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review; Published identity tier is below exact-number VERIFIED; Saved page proof needs review: corroboration |
+| {"candidate_origin": "registry_website", "final_url": "https://www.sissener.no", "identity_level": "HIGH", "other_orgnrs": [], "points": 9, "proof_page_url": "https://www.sissener.no/", "proof_type": "signals", "registry_contact_matches": {"email_domain": "sissener.no", "phone": "+4723115260"}, "relationship_note": null, "signals": ["legal_name", "address", "phone", "registry_website", "municipality"]} | HIGH | **doubtful** | correct - User confirmation in conversation (2026-11-13) | No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review; Published identity tier is below exact-number VERIFIED; Saved page proof needs review: corroboration |
 
 Source: https://www.sissener.no/
 
@@ -11066,7 +11066,7 @@ Exact excerpt:
 
 | Value / URL | Proof tier | Automated verdict | Human review | Review reason |
 |---|---|---|---|---|
-| {"availability": {"location": "available", "occupation_categories": "available"}, "employer_orgnr": "988666726", "expires": "2026-11-30T00:00:00+01:00", "location": [{"city": "ULSTEINVIK", "municipality": "ULSTEIN"}], "matched_via": "subunit 988666726", "occupation_categories": [{"level1": "Salg og service", "level2": "Salg, butikk- og varehandel"}], "published": "2026-11-09T07:44:32+01:00", "title": "SELGER BRAUD ULSTEINVIK -VINNER AV ÅRETS BAKERII 2025!l", "url": "https://arbeidsplassen.nav.no/stillinger/stilling/16133169-0d32-4d95-9374-5e6e941851e2", "uuid": "16133169-0d32-4d95-9374-5e6e941851e2"} | current_live_exact_employer_or_proven_subunit | **doubtful** | Not reviewed | NAV employer spelling differs; exact employer/subunit proof passes, hand-check spelling |
+| {"availability": {"location": "available", "occupation_categories": "available"}, "employer_orgnr": "988666726", "expires": "2026-11-30T00:00:00+01:00", "location": [{"city": "ULSTEINVIK", "municipality": "ULSTEIN"}], "matched_via": "subunit 988666726", "occupation_categories": [{"level1": "Salg og service", "level2": "Salg, butikk- og varehandel"}], "published": "2026-11-09T07:44:32+01:00", "title": "SELGER BRAUD ULSTEINVIK -VINNER AV ÅRETS BAKERII 2025!l", "url": "https://arbeidsplassen.nav.no/stillinger/stilling/16133169-0d32-4d95-9374-5e6e941851e2", "uuid": "16133169-0d32-4d95-9374-5e6e941851e2"} | current_live_exact_employer_or_proven_subunit | **doubtful** | correct - User confirmation in conversation (2026-11-13) | NAV employer spelling differs; exact employer/subunit proof passes, hand-check spelling |
 
 Source: https://pam-stilling-feed.nav.no/api/v1/feedentry/16133169-0d32-4d95-9374-5e6e941851e2
 

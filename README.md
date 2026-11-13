@@ -208,6 +208,8 @@ These are automated rule-verification verdicts, not independently human-labelled
 
 Human hand review (explicit user confirmation, 2026-11-13): 4 original Stage T items confirmed correct: GLÅMDAL MASKIN AS 995194163 website, CONCEDO AS 988217867 website and LinkedIn, and BØNES BØNES AS 922718059 LEI. All four automated-doubtful items are human-confirmed; automated counts and original proof tiers remain unchanged. This is a reviewed subset, not a broader precision estimate. See the separate ledger human-review column and human_reviews.json.
 
+Stage H human hand review (explicit user confirmation, 2026-11-13): all three automated-doubtful items are confirmed **correct**: SOLLIA GJESTEGÅRD AS 917455104 LEI (å transliterated as a in GLEIF, exact orgnr); VALAKER BAKERI OG KONDITORI AS 948039958 job (exact NAV employer orgnr through proven subunit, spelling variant only); and SISSENER AS 991658807 website. SISSENER's saved URL is `https://www.sissener.no`, satisfying the user's exact-domain condition; the user cites the company's own fund documents naming Sissener AS at www.sissener.no. No other domain is approved by this verdict. The [Stage H human-review column](reports/r5/stageH/precision/LEDGER.md) records these exact sample/value-scoped confirmations separately from the unchanged automated results (75 correct, 3 doubtful, 0 wrong across 78 items). Original proof tiers, source excerpts and published outputs remain unchanged; these three hand checks are not a population precision estimate.
+
 ### Historical scale measurements
 
 All live checks below used a 2,400-second budget and template synthesis. Coverage describes these samples, not a universal recall estimate.
