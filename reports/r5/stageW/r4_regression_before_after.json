@@ -1,0 +1,37 @@
+{
+  "method": "One authored synthetic fixture, actual retained before-fix extractor code versus current extractor. No network, output editing, new proof tier or threshold change.",
+  "fixture": "tests/test_publisher_veto.py::test_biography_group_name_outside_real_header_does_not_veto",
+  "results": [
+    {
+      "extractor": "overbroad_header",
+      "sha256": "8b64431bbcac6e4bd33bb76d76542774ae3decad2a0e05b9b9c262bda9fa2f98",
+      "test_failed_as_expected": true,
+      "level": "REJECT",
+      "reason": "publisher_group_without_exact_orgnr",
+      "points": 0
+    },
+    {
+      "extractor": "short_contact_wrapper",
+      "sha256": "f9c9c264f5595f9fd19b2a4e618b46a79b267169f364e014a5d67c1f5719551d",
+      "test_failed_as_expected": true,
+      "level": "REJECT",
+      "reason": "publisher_group_without_exact_orgnr",
+      "points": 0
+    },
+    {
+      "extractor": "copyright_wrapper",
+      "sha256": "d17089ce7cc9a6de2fc61f891c836808883e27d475b084de639ebff531f2a0b8",
+      "test_failed_as_expected": true,
+      "level": "REJECT",
+      "reason": "publisher_group_without_exact_orgnr",
+      "points": 0
+    },
+    {
+      "extractor": "accepted",
+      "test_passed": true,
+      "level": "HIGH",
+      "reason": "corroboration",
+      "points": 8
+    }
+  ]
+}

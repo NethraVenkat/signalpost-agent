@@ -259,6 +259,10 @@ def score(page, org, context, origin, leaders):
     from .challenge import detected
     if detected(page):
         return Proof("BLOCKED", reason="block_page")
+    from .publisher_veto import conflict
+    veto, foreign = conflict(page, org, context)
+    if veto:
+        return Proof('REJECT', other_orgnrs=foreign, reason=veto)
     if any(x in raw for x in ("this domain is for sale", "domenet er til salgs", "domain is parked", "buy this domain", "sedo.com/search")):
         return Proof("REJECT", reason="parked")
     if len(page.visible.strip()) < 300:

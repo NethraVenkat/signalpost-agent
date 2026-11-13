@@ -1,0 +1,22 @@
+{
+  "seed": 20261114,
+  "websites_before": 3,
+  "websites_after": 3,
+  "http_before": 736,
+  "http_after": 726,
+  "runtime_seconds": 318.0780000000086,
+  "cost_usd": 0.0,
+  "website_states": {
+    "available": 463,
+    "failed": 46,
+    "not_available": 383,
+    "ambiguous": 8
+  },
+  "changes": {
+    "added": {},
+    "removed": {},
+    "url_changed": {}
+  },
+  "envelopes_sha256": "9abe7be5c082691ed810e3b6115b8cd0fd0c57d2ac9e5838960fffff3b1a70ea",
+  "profiles_sha256": "0aba287a4de3a34459ae6001baa7688c170db1d1d30f40380f379f6ee7f38c70"
+}

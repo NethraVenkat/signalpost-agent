@@ -405,6 +405,12 @@ async def run_production_replay(
     with ExitStack() as stack:
         stack.enter_context(patch("signalpost.web.policy.resolve_public", fixture_dns))
         if observation_time:
+            # These source modules are normally imported lazily. Load them
+            # before collecting clock patch targets so the first replay uses
+            # the same observation time as the second replay (not live expiry).
+            import signalpost.sources.nav_stream
+            import signalpost.sources.nav_cached
+            import signalpost.web.careers
             at = datetime.fromisoformat(observation_time.replace("Z", "+00:00"))
             if at.tzinfo is None:
                 raise ValueError("observation_time requires a timezone")

@@ -18,6 +18,8 @@ Redirects, URL credentials, unapproved hosts and ports are refused. Registry req
 
 Enhetsregisteret data uses NLOD 2.0: attribute Bronnoysundregistrene. Primary references: [dataset licensing](https://www.brreg.no/en/use-of-data-from-the-bronnoysund-register-centre/datasets-and-api/), [registry API](https://data.brreg.no/enhetsregisteret/api/dokumentasjon/en/index.html), [accounts schema](https://raw.githubusercontent.com/brreg/regnskapsregister-api/master/src/main/resources/specification/regnskapsregister.json). Restricted authenticated role data is not requested.
 
+R2's bundled identity-frequency table is built only from the project's existing official bulk snapshot. `scripts/build_rarity_table.py` embeds source SHA-256, local file timestamp (not an asserted effective date), build UTC, source URLs and Brønnøysundregistrene / NLOD 2.0 attribution. It supports an optional official underenheter CSV but does not claim one is included when unavailable. Runtime lookup reads the local gzip file with schema/size checks and has no network fallback. Frequency never authorizes ownership in R4. Build distributions and exact bundle hash are retained in reports/r5/stageW/rarity.json.
+
 ## Websites
 
 Candidates use parent registry website/email, listed-subunit website/email, then legal-name slugs, within unchanged candidate/request/DNS caps. Optional configured search may nominate further candidates only if there is budget for proof fetching. Public Suffix List boundaries come from the installed tldextract snapshot without network updates. Social/directory/search hosts are refused as company sources. Only HTML/XHTML/plain responses are used; scripts, images and third-party resources are not fetched. There is no browser renderer.

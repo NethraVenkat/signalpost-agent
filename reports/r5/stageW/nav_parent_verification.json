@@ -1,0 +1,41 @@
+{
+  "hashes_and_exact_record_pairings_valid": true,
+  "unsupported_parent_values": 0,
+  "mapped_employers": 6009,
+  "parent_companies_in_universe": 2133,
+  "unique_expected_companies": 2133,
+  "expected_rate_per_1000": null,
+  "complete_expected_rate_proven": false,
+  "measured_job_companies": 3,
+  "measured_rate_per_1000": 5.0,
+  "classified_employers": 6012,
+  "deleted_units_without_parent": [
+    "881521032",
+    "983036961",
+    "988083895"
+  ],
+  "confirmed_rate_per_1000": 5.187761455394494,
+  "possible_upper_rate_per_1000": 5.19505788500827,
+  "http_requests": 34,
+  "cost_usd": 0,
+  "sample_index_matched_companies": [
+    {
+      "seed": 20261113,
+      "orgnr": "918266917",
+      "name": "DIGITALIQ AS",
+      "job_published": true
+    },
+    {
+      "seed": 20261116,
+      "orgnr": "919543604",
+      "name": "HIGHLAND LODGE AS",
+      "job_published": true
+    },
+    {
+      "seed": 20261117,
+      "orgnr": "948039958",
+      "name": "VALAKER BAKERI OG KONDITORI AS",
+      "job_published": true
+    }
+  ]
+}

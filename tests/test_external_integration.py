@@ -23,18 +23,20 @@ def test_external_sources_strict_replay(tmp_path):
     def published(row):
         return {c['field']:c['value'] for c in row['claims'] if c['availability']=='available'}
     claims = published(first[0])
-    assert claims['official_website']['identity_level']=='VERIFIED'
-    assert claims['official_website']['relationship_note']=='group_site'
-    assert any(key.startswith('contact.email.') for key in claims)
+    # The retained synthetic group fixture has an unrelated publisher orgnr.
+    # R4 withholds it before exact-number scoring, including dependent facts.
+    assert 'official_website' not in claims
+    assert not any(key.startswith('contact.email.') for key in claims)
     # A shared group-site footer cannot establish this exact entity's account.
     assert not any(key.startswith('social_profile.') for key in claims)
     assert 'sibling@zephyrsynthetic.no' not in claims.values()
     assert not any(isinstance(value,dict) and 'sibling-synthetic' in str(value.get('url','')) for value in claims.values())
-    assert any(key.startswith('website_description.') for key in claims)
+    assert not any(key.startswith('website_description.') for key in claims)
     jobs = [value for key,value in claims.items() if key.startswith('hiring.job.')]
+    # Exact NAV employer/subunit jobs remain independent of website rejection.
     assert {job['employer_orgnr'] for job in jobs} == {'923609016','993578843'}
     activity = [value for key,value in claims.items() if key.startswith('dated_item.')]
-    assert len(activity)==1 and activity[0]['date_source']=='pubDate'
+    assert not activity
     assert 'official_website' not in published(first[1])
     assert first[2]['run']['sections']['accounts']=='failed'
     assert not published(first[-1])

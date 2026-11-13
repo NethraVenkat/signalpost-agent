@@ -1,0 +1,44 @@
+{
+  "unique_inputs_across_six": 600,
+  "samples": [
+    {
+      "seed": 20261017,
+      "rows": 100,
+      "unique_ids": 100,
+      "missing_bulk_ids": []
+    },
+    {
+      "seed": 20261113,
+      "rows": 100,
+      "unique_ids": 100,
+      "missing_bulk_ids": []
+    },
+    {
+      "seed": 20261114,
+      "rows": 100,
+      "unique_ids": 100,
+      "missing_bulk_ids": []
+    },
+    {
+      "seed": 20261115,
+      "rows": 100,
+      "unique_ids": 100,
+      "missing_bulk_ids": [
+        "926078135"
+      ]
+    },
+    {
+      "seed": 20261116,
+      "rows": 100,
+      "unique_ids": 100,
+      "missing_bulk_ids": []
+    },
+    {
+      "seed": 20261117,
+      "rows": 100,
+      "unique_ids": 100,
+      "missing_bulk_ids": []
+    }
+  ],
+  "all_terminal": true
+}

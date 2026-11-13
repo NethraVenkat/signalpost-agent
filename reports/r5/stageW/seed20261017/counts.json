@@ -1,0 +1,29 @@
+{
+  "seed": 20261017,
+  "websites_before": 5,
+  "websites_after": 5,
+  "http_before": 700,
+  "http_after": 696,
+  "runtime_seconds": 349.625,
+  "cost_usd": 0.0,
+  "website_states": {
+    "failed": 16,
+    "not_available": 73,
+    "ambiguous": 6,
+    "available": 5
+  },
+  "section_availability_counts": {
+    "available": 468,
+    "failed": 43,
+    "not_available": 383,
+    "ambiguous": 6
+  },
+  "changes": {
+    "added": {},
+    "removed": {},
+    "url_changed": {}
+  },
+  "envelopes_sha256": "f921fadbad1d18375c0d929b681ed0623fd626405921a101bda907216f486295",
+  "profiles_sha256": "ad8c38384fc9bfb7f42c1ce422e4058f675c910553dc383f81082ba8dce0ca11",
+  "counts_note": "Website states recomputed from envelopes; global availability counts retained separately. Raw execution logs unchanged."
+}

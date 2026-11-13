@@ -1,0 +1,13 @@
+{
+  "orgnr": "991658807",
+  "name": "SISSENER AS",
+  "source_url": "https://www.sissener.no/om-oss",
+  "content_sha256": "3d7d01d8fb55e32be5685d30f458e2894829c08de225993269dd15d401173d7c",
+  "exact_excerpt": "nkludert Legg Mason Capital Management, Franklin Financial Group, Royal Bank of Canada Wealth Management og Capital Synergy Partners.</p></div> \n</div> \n</div> \n</li> \n</ul> \n</div> \n</div> \n <div class=\"u_1609962981 dmRespCol small-12 medium-4 large-4\" id=\"1609962981\"> <div class=\"u_1565649672 imag",
+  "old_rule": "publisher_group_without_exact_orgnr",
+  "corrected_rule": null,
+  "false_header_wrapper_classes": "header-over-content dmPageBody",
+  "reason": "Whole-page layout modifiers were mistaken for a header region. The Group words belong to employee biographies about former employers, not publisher/group branding.",
+  "trial_raw_outputs_preserved": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageR4-20261116-final",
+  "changes_to_proof_thresholds": false
+}

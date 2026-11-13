@@ -1,0 +1,15 @@
+{
+  "commit": "81a76b8dcb48b9891f605cd515f3d1197938f274",
+  "working_directory": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageR2-commit-check",
+  "module": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageR2-commit-check\\src\\signalpost\\__init__.py",
+  "command_argv": [
+    "C:\\Users\\<USER>\\signal-nethra\\.venv\\Scripts\\python.exe",
+    "reports/r5/stage4_7/run_tests.py",
+    "-q",
+    "-p",
+    "no:cacheprovider"
+  ],
+  "exit_code": 0,
+  "wall_seconds": 163.34400000001187,
+  "dependencies": "Existing local environment; PYTHONPATH and module receipt prove this exact worktree supplies application code. No network install or paid service."
+}

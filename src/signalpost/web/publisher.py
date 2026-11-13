@@ -103,6 +103,22 @@ def _text(node):
     return _CREDIT.split(text, maxsplit=1)[0].strip()
 
 
+def _region(node):
+    if node.tag == 'title':
+        return 'title'
+    for region, role in (('header', 'banner'), ('footer', 'contentinfo')):
+        if node.tag == region or node.attrs.get('role') == role:
+            return region
+        markers = ((node.attrs.get('class') or '') + ' ' + (node.attrs.get('id') or '')).split()
+        for marker in markers:
+            # Match an actual region component, not layout modifiers such as
+            # header-over-content/hasStickyHeader on a whole-page wrapper.
+            if (re.fullmatch(r'(?:[a-z0-9]+[-_])?' + region + r'(?:[-_](?:container|wrapper|inner|content|row|main|top|bottom|desktop|mobile))?', marker, re.I)
+                    or marker.casefold() in {'dm' + region, 'f' + region, 'dm' + region + 'container'}):
+                return region
+    return None
+
+
 def extract_publisher(page):
     """Extract visible own branding/contact blocks, excluding third-party lists.
 
@@ -129,26 +145,25 @@ def extract_publisher(page):
             return
         a = node.attrs
         marker = ((a.get('class') or '') + ' ' + (a.get('id') or '')).lower()
-        location = ('title' if node.tag == 'title' else
-                    'header' if node.tag == 'header' or a.get('role') == 'banner' or re.search(r'\bheader\b', marker) else
-                    'footer' if node.tag == 'footer' or a.get('role') == 'contentinfo' or re.search(r'\bfooter\b', marker) else None)
+        block_children = any(isinstance(c, _Node) and c.tag in {'div', 'p', 'address', 'header', 'footer', 'main', 'section', 'aside', 'article', 'nav', 'ul', 'li', 'table'} for c in node.children)
+        location = _region(node)
         if node.tag == 'meta' and (a.get('property') or a.get('name')) == 'og:site_name':
             add('og:site_name', a.get('content') or '')
         if location:
             add(location, _text(node))
         if re.search(r'(?:^|[ _-])logo(?:$|[ _-])', marker):
             add('logo', _text(node))
-        if 'copyright' in marker:
+        if 'copyright' in marker and not block_children:
             add('copyright', _text(node))
         if not inherited and node.tag in {'p', 'address', 'small', 'div'}:
             text = _text(node)
-            if len(text) <= 1200 and re.search(r'©|copyright', text, re.I):
+            if not block_children and len(text) <= 1200 and re.search(r'©|copyright', text, re.I):
                 add('copyright', text)
             is_contact = contact_page or node.tag == 'address' or bool(re.search(r'contact|kontakt|imprint', marker))
             if is_contact and len(text) <= 2000 and _CONTACT_SIGNAL.search(text):
                 # Prefer the smallest complete block: parent blocks containing
                 # the same signals are redundant and can include unrelated copy.
-                smaller = any(isinstance(c, _Node) and c.tag in {'div', 'p', 'address'} and _CONTACT_SIGNAL.search(_text(c)) for c in node.children)
+                smaller = any(isinstance(c, _Node) and c.tag in {'div', 'p', 'address', 'header', 'footer', 'main', 'section', 'aside', 'ul', 'li', 'table'} and _CONTACT_SIGNAL.search(_text(c)) for c in node.children)
                 if not smaller:
                     add('imprint-kontakt', text)
         for child in node.children:

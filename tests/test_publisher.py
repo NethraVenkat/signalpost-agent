@@ -52,3 +52,23 @@ def test_news_and_hidden_logo_are_not_publisher():
 def test_text_logo_and_copyright_outside_semantic_footer():
     p = publisher('<a class="site-logo">Example AS</a><span class="copyright">© Example AS</span>')
     assert {'logo', 'copyright'} <= {f.location for f in p.fragments}
+
+
+def test_header_layout_modifier_does_not_turn_biographies_into_publisher():
+    p = publisher('<div class="header-over-content dmPageBody hasStickyHeader">'
+                  '<div class="d-header-wrapper">Example AS</div>'
+                  '<main><h2>Team</h2><p>Our employee formerly worked at Foreign Financial Group.</p></main>'
+                  '<footer>Example AS</footer></div>')
+    assert 'Example AS' in p.text
+    assert 'Foreign Financial Group' not in p.text
+
+
+def test_underscore_region_component_is_supported():
+    p = publisher('<div class="site_header">Example AS</div><div id="site_footer">Org.nr 923609016</div>')
+    assert {'header', 'footer'} <= {f.location for f in p.fragments}
+
+
+def test_footer_copyright_does_not_turn_body_into_copyright_publisher():
+    p = publisher('<div><main><p>Employee formerly worked at Foreign Financial Group.</p></main>'
+                  '<footer>© Example AS</footer></div>', '/about')
+    assert 'Example AS' in p.text and 'Foreign Financial Group' not in p.text

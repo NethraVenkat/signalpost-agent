@@ -25,7 +25,12 @@ def test_ledger_correct_then_wrong_bytes_and_wrong_url_are_retained(tmp_path,mon
 
 
 def test_ledger_flags_group_without_silently_removing_the_published_item(tmp_path,monkeypatch):
-    _,row,_,cfg=execute_web(tmp_path,monkeypatch,html('Org.nr 923609016; parent org.nr 993578843'))
+    # Produce a pre-R4 historical publication, then audit it under today's
+    # stricter rules. Current production is separately tested to withhold it.
+    from signalpost.web import publisher_veto
+    with monkeypatch.context() as historical:
+        historical.setattr(publisher_veto,'conflict',lambda *args:(None,[]))
+        _,row,_,cfg=execute_web(tmp_path,monkeypatch,html('Org.nr 923609016; parent org.nr 993578843'))
     claim=website(row);original=copy.deepcopy(row)
     verdict,reasons,checks=recheck(row,claim,lambda sha:(cfg.state_dir/'blobs'/sha).read_bytes())
     assert verdict=='doubtful' and any('Group' in r or 'Other valid' in r for r in reasons)

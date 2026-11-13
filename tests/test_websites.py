@@ -72,8 +72,8 @@ def test_foreign_owner_and_group(tmp_path, monkeypatch):
     _, row, _, _ = execute_web(tmp_path / "foreign", monkeypatch, html("Org nr " + OTHER))
     assert not any(c["field"] == "official_website" for c in row["claims"])
     _, row, _, _ = execute_web(tmp_path / "group", monkeypatch, html("Org nr " + OUR + "; Parent org nr " + OTHER))
-    value = next(c["value"] for c in row["claims"] if c["field"] == "official_website")
-    assert value["relationship_note"] == "group_site" and value["other_orgnrs"] == [OTHER]
+    assert not any(c['field'] == 'official_website' for c in row['claims'])
+    assert any('publisher_foreign_orgnr' in e['message'] for e in row['errors'])
 
 
 def test_same_name_different_company():

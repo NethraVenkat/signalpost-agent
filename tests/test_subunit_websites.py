@@ -19,7 +19,7 @@ def test_candidate_order_full_name_before_subunits_and_remaining_slugs():
 def test_subunit_candidate_requires_exact_parent_or_that_subunit(owner,accepted,origin):
     candidate=Candidate('https://workplace.no/','workplace.no',origin,OTHER)
     page=Page(html('Org nr '+owner).encode(),candidate.url)
-    proof=candidate_proof(page,OUR,{'name':'Example AS'},candidate,[])
+    proof=candidate_proof(page,OUR,{'name':'Example AS','subunits':[{'orgnr':OTHER}]},candidate,[])
     assert (proof.level=='VERIFIED')==accepted
     if accepted:assert proof.token==owner
 
@@ -42,7 +42,7 @@ def test_published_subunit_relationship_preserves_claim_identity_and_evidence(mo
     candidate=Candidate('https://workplace.no/','workplace.no','subunit_registry_website',OTHER)
     raw=html('Org nr '+owner).encode()
     page=Page(raw,candidate.url)
-    proof=candidate_proof(page,OUR,{'name':'Example AS'},candidate,[])
+    proof=candidate_proof(page,OUR,{'name':'Example AS','subunits':[{'orgnr':OTHER}]},candidate,[])
     now='2026-10-17T00:00:00Z'
     response=SimpleNamespace(url=candidate.url,body=raw,sha=hashlib.sha256(raw).hexdigest(),retrieved_at=now)
     registry=Section()

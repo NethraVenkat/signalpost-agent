@@ -1,0 +1,34 @@
+{
+  "pre_R4_commit": "81a76b8dcb48b9891f605cd515f3d1197938f274",
+  "application_module": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageR2-commit-check\\src\\signalpost\\__init__.py",
+  "network_requests": 0,
+  "method": "Unmodified pre-R4 score and localization functions from the isolated committed R2 worktree, applied to the exact new saved response bytes.",
+  "cases": [
+    {
+      "seed": 20261115,
+      "orgnr": "933519708",
+      "name": "LOOPYTY AS",
+      "url": "https://loopyty.com",
+      "proof_page": "https://loopyty.com/nb",
+      "content_sha256": "4915bf8556d3bfed8b94f52960438f14ca16c3434a0f319f8571fe4508942dd4",
+      "exact_excerpt": "mui-ln603f\">© 2026 Loopyty AS · Org.nr. 933 519 708 · Oslo</p></div></div></footer></div></div></div></div><script src=\"/_next/static/chunks/0w05wc0hf",
+      "retrieved_at": "2026-11-13T21:05:21.058600Z",
+      "pre_R4_level": "VERIFIED",
+      "pre_R4_proof_type": "orgnr_on_page",
+      "pre_R4_token": "933519708",
+      "historical_errors": [
+        {
+          "section": "website",
+          "code": "website_source_unavailable",
+          "message": "A candidate source could not be checked"
+        },
+        {
+          "section": "website",
+          "code": "website_candidates",
+          "message": "[{\"domain\": \"loopyty.no\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"url_refused\"}, {\"domain\": \"loopyty.com\", \"origin\": \"legal_name_slug\", \"level\": \"LOW\", \"reason\": \"website_timeout\"}, {\"domain\": \"loopyty.no\", \"origin\": \"legal_name_slug\", \"url\": \"https://loopyty.no/\", \"reason\": \"url_refused\"}, {\"domain\": \"loopyty.com\", \"origin\": \"legal_name_slug\", \"url\": \"https://loopyty.com/\", \"reason\": \"website_timeout\"}]"
+        }
+      ],
+      "classification": "Existing exact-number policy also publishes this saved response; historical candidate was already attempted but timed out. Live source recovery, not a new positive proof rule."
+    }
+  ]
+}

@@ -39,7 +39,7 @@ def test_full_literal_unicode_company_handle_can_match():
 def test_group_footer_does_not_publish_even_matching_handle(tmp_path,monkeypatch):
     _,row,_,_=execute_web(tmp_path,monkeypatch,body=html('Org.nr '+OUR+' Parent '+OTHER,
                         extra='<footer><a href="https://facebook.com/example">Example</a></footer>'))
-    assert any(c['field']=='official_website' for c in row['claims'])
+    assert not any(c['field']=='official_website' for c in row['claims'])
     assert not any(c['field'].startswith('social_profile.') for c in row['claims'])
 
 

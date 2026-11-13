@@ -2,7 +2,7 @@
 
 Build input: the existing official enheter snapshot, SHA-256 5b0df27c5567a655320b8dfb8975049b76c46ba93d748a8a763f8db7050b7862. It contains 1,177,860 distinct valid entity identifiers; the evaluation universe is a smaller 411,160-company subset. No data from another repository or entry is used. Brønnøysundregistrene / Enhetsregisteret, NLOD 2.0 attribution and source URL/hash, local file modification date and actual UTC build time are embedded in the bundle and rarity.json. File modification time is not claimed to be the registry's effective date.
 
-The deterministic gzip payload is 10,853,314 bytes; SHA-256 900882536a574656025214e5163174812d4d4234e4922b9e452e86882b530d07. The builder accepts an optional official underenheter snapshot. None is available locally; the failed robots checks and explicit missing-parent limitation are documented in W0_REPORT.md. Counts do not pretend to include missing subunit data.
+The gzip bundle (wrapper mtime fixed at zero) is 10,853,314 bytes; SHA-256 900882536a574656025214e5163174812d4d4234e4922b9e452e86882b530d07. The builder accepts an optional official underenheter snapshot. None is available locally; the failed robots checks and explicit missing-parent limitation are documented in W0_REPORT.md. Counts do not pretend to include missing subunit data.
 
 | Key | Shared by 1 entity | 2 | 3–4 | ≥5 |
 |---|---:|---:|---:|---:|
@@ -16,3 +16,5 @@ Phone/mobile collapse to eight Norwegian digits, with +47/0047 normalization and
 Rebuild: `.venv/Scripts/python.exe scripts/build_rarity_table.py --enheter C:/Users/<USER>/Downloads/Signalpost/state/downloads/registry.csv --report reports/r5/stageW/rarity.json`. Use `--underenheter PATH` only for an available official snapshot. Runtime `signalpost.web.rarity.count` lazily loads the local bundled table; it never fetches, performs DNS, calls a model, or supplies a fallback on missing/corrupt data. No runtime proof rule consumes the counts in these foundation stages. This preserves the instruction not to add a proof tier.
 
 Tests cover normalization, free-mail exclusion, phone/mobile and cross-snapshot entity deduplication, shared-domain/name counts, missing keys, local reload and corrupt/missing bundle failure. Full-suite gates and trial failures are retained separately; only a green full gate authorizes the stage commit. Paid cost $0; no push.
+
+Exact committed-tree verification: isolated local worktree at 81a76b8d, application import proven to use that worktree, full pytest 964 passed in 162.05 seconds. Main working-tree full 979-test gate also passed before commit; its extra tests covered pending R4. Receipt: r2_committed_tree_check.json; log: pytest-R2-committed-tree.txt. No network dependency install.

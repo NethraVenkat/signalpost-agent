@@ -10,4 +10,6 @@ precision/LEDGER.md -text
 stageH/doubtful_items.md -text
 stageH/precision/LEDGER.md -text
 stageW/*.json -text
+stageW/**/*.json -text whitespace=cr-at-eol
 stageW/rejections.md -text
+stageW/new_websites.md -text

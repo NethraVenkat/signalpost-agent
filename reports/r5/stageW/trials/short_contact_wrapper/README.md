@@ -1,0 +1,5 @@
+# Superseded short-contact-wrapper trial
+
+The header-class correction was measured on four samples. A stronger no-orgnr HIGH regression exposed a separate issue: a short page wrapper could aggregate its footer contacts and biography into an imprint block. Contact containers now defer to descendant footer/main/section blocks rather than absorbing their content. The synthetic fixture also supplies a proper HTML head/title, matching the real page and exercising the existing HIGH path. No positive proof threshold changed.
+
+The driver was intentionally stopped before more superseded batches; its current CLI child completed all mandatory outputs and site. That child exit code was not captured and is not invented. Its outputs independently verify 100 terminal envelopes, five cited topics and zero unsupported values. Other completed execution receipts retain their original exit codes. All raw output directories remain intact. No file from these runs is substituted for an accepted measurement. Before-contact-fix source bytes and the original source manifest are preserved.

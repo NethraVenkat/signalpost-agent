@@ -1,0 +1,1088 @@
+{
+  "method": "New conflict guard applied to exact historically published proof-page receipts; no re-fetch or output edits",
+  "published_sites_checked": 29,
+  "vetoes": 0,
+  "items": [
+    {
+      "seed": 20261017,
+      "orgnr": "926818317",
+      "name": "SPEDIFY AS",
+      "website": "https://spedify.no",
+      "tier": "VERIFIED",
+      "proof_page": "https://spedify.no/",
+      "sha256": "52ab413b475db6341975f9892d087395e9ac54286f4b9a571b53edd30a2b25e2",
+      "rule": null,
+      "foreign_orgnrs": [],
+      "publisher": [
+        {
+          "location": "title",
+          "text": "3PL Norge, fulfillment og lager for nettbutikk | Spedify"
+        },
+        {
+          "location": "og:site_name",
+          "text": "Spedify"
+        },
+        {
+          "location": "header",
+          "text": "Nyheter Ledige stillinger Login kunde Frakt og returportal WMS Rjukan WMS Askim Spedify Logo Tjenester Integrasjoner Lokasjoner Vår modell Kundereferanser Om Spedify Kontakt oss Norsk – Norge English Nyheter Ledige stillinger Login kunde Frakt og returportal WMS Rjukan WMS Askim"
+        },
+        {
+          "location": "header",
+          "text": "Spedify Logo Tjenester Integrasjoner Lokasjoner Vår modell Kundereferanser Om Spedify Kontakt oss Norsk – Norge English Nyheter Ledige stillinger Login kunde Frakt og returportal WMS Rjukan WMS Askim"
+        },
+        {
+          "location": "logo",
+          "text": "Spedify Logo"
+        },
+        {
+          "location": "footer",
+          "text": "Spedify Logo_T Kontakt Spedify AS Sagveien 25 1814 Askim Org.nr. 926 818 317 Følg oss Selskapet Om Spedify Kundereferanser Nyheter 3PL-ressurser Lokasjoner Ledige stillinger Tjenester 3PL og fulfillment Markedsplasser og retail Retur og reparasjon Integrasjoner Praktisk Kontakt Tlf. 35 90 15 50 post@spedify.no Personvernerklæring Informasjonskapsler Spedify AS Copyright ©2026. Alle rettigheter forbeholdt."
+        }
+      ]
+    },
+    {
+      "seed": 20261017,
+      "orgnr": "991853995",
+      "name": "BIEN SPAREBANK ASA",
+      "website": "https://www.bien.no",
+      "tier": "VERIFIED",
+      "proof_page": "https://www.bien.no/",
+      "sha256": "0d0ae1d5dfadcd7a4bb69f55dffa5c2a5fe02eb14aaba4986f46cc5c67cd7a8d",
+      "rule": null,
+      "foreign_orgnrs": [],
+      "publisher": [
+        {
+          "location": "title",
+          "text": "Bien Sparebank"
+        },
+        {
+          "location": "og:site_name",
+          "text": "Bien Sparebank"
+        },
+        {
+          "location": "header",
+          "text": "Hopp til innholdet Hjem Søk Bytt til bedrift Logg inn Meny"
+        },
+        {
+          "location": "logo",
+          "text": "Hjem"
+        },
+        {
+          "location": "footer",
+          "text": "Hjelp og kontakt Kontakt oss! Book møte post@bien.no 91 50 24 36 Telefontid Mandag–fredag: 07:00–21:00 Lørdag–søndag: 09:00–21:00 Forsikring: Våre forsikringsrådgivere er tilgjengelige mandag–fredag: 08:00–16:00. Ved skade, kontakt Fremtind på tlf. 91 50 98 01 (mandag–fredag: 08:00–16:00). Ved akutte hendelser kan du ringe døgnet rundt, alle dager. Sperre kort? Kortet kan sperres i nett- eller mobilbanken. Du kan også ringe oss på 915 02 436 i åpningstiden, eller +47 915 03 850 døgnet rundt, hele året. Her finner du oss Besøksadresse Dronning Mauds gate 11, 0250 Oslo Postadresse Postboks 6790 St. Olavs plass, 0130 Oslo Åpningstider Mandag - Fredag: 09:00 - 16:00 Om Bien Sparebank Org.nr: 991853995 Om oss Klagehåndtering Priser Sammenlign våre priser med andre selskaper på Finansportalen.no Våre priser Personvern og informasjonskapsler Sikkerhet og antihvitvask En lokalbank i Eika"
+        },
+        {
+          "location": "copyright",
+          "text": "En lokalbank i Eika"
+        },
+        {
+          "location": "logo",
+          "text": "En lokalbank i Eika"
+        }
+      ]
+    },
+    {
+      "seed": 20261017,
+      "orgnr": "927094266",
+      "name": "SPORTLET.NO AS",
+      "website": "https://www.sportlet.no",
+      "tier": "VERIFIED",
+      "proof_page": "https://www.sportlet.no/",
+      "sha256": "93bbf69940b6358aca6c856ed988f0c96a40ba9fc51a86ed7f33e854d1875025",
+      "rule": null,
+      "foreign_orgnrs": [],
+      "publisher": [
+        {
+          "location": "title",
+          "text": "Sportlet.no - Alltid 30-60% rabatt på joggesko, løpesko, klær og treningsutstyr"
+        },
+        {
+          "location": "og:site_name",
+          "text": "Sportlet.no"
+        },
+        {
+          "location": "header",
+          "text": "Sportlet.no logo Søk Kundeservice Min konto Handlekurv Sportlet logo Min konto Handlekurv Hjem Salgsras DEVOLD Mizuno Opptil 40% Opptil 50% Opptil 60% Final Sale Barn/Junior Dame Herre Craft Gavekort Indoor Tilbud Lorem ipsum Søk Fri frakt over 1500- | Norsk nettbutikk | Kjente merkevarer"
+        },
+        {
+          "location": "logo",
+          "text": "Sportlet.no logo"
+        },
+        {
+          "location": "logo",
+          "text": "Sportlet logo"
+        },
+        {
+          "location": "footer",
+          "text": "Vi sender over hele landet! OM OSS Sportlet.no as Holmsildgata 14 6090 Fosnavåg Org. nr. 927 094 266 Tlf: 40406847 post@sportlet.no MENY Personvern Om oss Kontakt oss Logg på Salgsbetingelser Frakt og Retur Spor din ordre HJELP Personvern Om oss Kontakt oss Logg på Salgsbetingelser Frakt og Retur Spor din ordre NYHETSBREV Registrer deg for å motta nyheter og tilbud! E-post Registrer deg"
+        }
+      ]
+    },
+    {
+      "seed": 20261017,
+      "orgnr": "964398003",
+      "name": "FOLKSOM AS",
+      "website": "https://folksom.no",
+      "tier": "VERIFIED",
+      "proof_page": "https://folksom.no/kontakt",
+      "sha256": "5c8d0c4669590fdba8578ddd5d55377b258e4864effc153cddeeeeb962441c84",
+      "rule": null,
+      "foreign_orgnrs": [],
+      "publisher": [
+        {
+          "location": "title",
+          "text": "Kontakt"
+        },
+        {
+          "location": "header",
+          "text": "Eiendommer Om oss Bærekraft Lokalt engasjement Organisasjon Kontakt Friends at work Nyheter Storgaten 24, 26 & 28 Tolvsrød torg Ledige Lokaler Eiendommer Om oss Kontakt Friends at work Nyheter Storgaten 24, 26 & 28 Tolvsrød torg Ledige Lokaler"
+        },
+        {
+          "location": "imprint-kontakt",
+          "text": "Besøksadresse : Storgaten 30-32, 3126 Tønsberg Friends at Work"
+        },
+        {
+          "location": "imprint-kontakt",
+          "text": "Postadresse: Storgaten 32, 3126 Tønsberg"
+        },
+        {
+          "location": "imprint-kontakt",
+          "text": "Fakturaadresse : Fakturaer mottas fortrinnsvis på EHF. Du må da oppgi Folksom sitt org.nr. 964 398 003. Alternativt kan faktura sendes i PDF format til faktura@folksom.no"
+        },
+        {
+          "location": "imprint-kontakt",
+          "text": "Epost : hei@folksom.no"
+        },
+        {
+          "location": "footer",
+          "text": "hero-footer logo-white Informasjonskapsler EIENDOM OG STEDSUTVIKLING Kontakt oss Epost: hei@folksom.no facebook-1 instagram-1 linkedin-1 Miljofyrtarn_Sertifisert-virksomhet__Liten"
+        }
+      ]
+    },
+    {
+      "seed": 20261017,
+      "orgnr": "987769386",
+      "name": "INNLANDET REVISJON IKS",
+      "website": "https://irev.no",
+      "tier": "VERIFIED",
+      "proof_page": "https://irev.no/",
+      "sha256": "840d61326f4cf259ee426941a183633d82885e9087efbf753a8010e6a678f42f",
+      "rule": null,
+      "foreign_orgnrs": [],
+      "publisher": [
+        {
+          "location": "title",
+          "text": "Innlandet Revisjon IKS | Revisjon for kommunal sektor"
+        },
+        {
+          "location": "logo",
+          "text": "Hjem Våre tjenester Regnskapsrevisjon Kommuner Selskap og interkommunale samarbeid Kirkelig fellesråd Stiftelser og legat Forvaltningsrevisjon Eierskapskontroll Andre tjenester Organisasjonen Ansatte Representantskapet Styret Styringsdokumenter Kontakt Rapporter Innlandet Revisjon IKS Org. nr.: 987 769 386 Personvernerklæring Tilgjengelighetserklæring E-post: Postmottak@irev.no Telefon: 61 22 25 68 Hovedkontor: Kirkegata 72, 2609 Lillehammer Gjøvik: Studievegen 7, 2815 Gjøvik Otta: Ola Dahlsgate 3A, 2670 Otta Denne nettsiden er Krible."
+        },
+        {
+          "location": "header",
+          "text": "Hjem Våre tjenester Regnskapsrevisjon Kommuner Selskap og interkommunale samarbeid Kirkelig fellesråd Stiftelser og legat Forvaltningsrevisjon Eierskapskontroll Andre tjenester Organisasjonen Ansatte Representantskapet Styret Styringsdokumenter Kontakt Rapporter"
+        },
+        {
+          "location": "logo",
+          "text": "Hjem Våre tjenester Regnskapsrevisjon Kommuner Selskap og interkommunale samarbeid Kirkelig fellesråd Stiftelser og legat Forvaltningsrevisjon Eierskapskontroll Andre tjenester Organisasjonen Ansatte Representantskapet Styret Styringsdokumenter Kontakt Rapporter"
+        },
+        {
+          "location": "footer",
+          "text": "Innlandet Revisjon IKS Org. nr.: 987 769 386 Personvernerklæring Tilgjengelighetserklæring E-post: Postmottak@irev.no Telefon: 61 22 25 68 Hovedkontor: Kirkegata 72, 2609 Lillehammer Gjøvik: Studievegen 7, 2815 Gjøvik Otta: Ola Dahlsgate 3A, 2670 Otta Denne nettsiden er Krible."
+        }
+      ]
+    },
+    {
+      "seed": 20261113,
+      "orgnr": "918266917",
+      "name": "DIGITALIQ AS",
+      "website": "https://digitaliq.no",
+      "tier": "VERIFIED",
+      "proof_page": "https://digitaliq.no/",
+      "sha256": "1e81b3c7b4ab4157552ccbdfddadc22bec4d6938a661fdc6b482a616e7b50ceb",
+      "rule": null,
+      "foreign_orgnrs": [],
+      "publisher": [
+        {
+          "location": "title",
+          "text": "DIGITALIQ / MittVarsel / TransparencyGate"
+        },
+        {
+          "location": "header",
+          "text": "Digitaliq Løsninger MittVarsel TransparencyGate Digitaliq Survey AnniQ Peoplefy Digitaliq ARP Artikler Ressurser MittVarsel MittVarsel, Logg inn (åpnes i nytt vindu) MittVarsel, Pris MittVarsel, Kundehistorier MittVarsel, Ofte stilte spørsmål Varslingslovgivning i Europa TransparencyGate TransparencyGate, Logg inn (åpnes i nytt vindu) TransparencyGate, Logg inn for leverandør (åpnes i nytt vindu) TransparencyGate, Pris TransparencyGate, LiveWatch TransparencyGate, CSRD & ESG TransparencyGate, Ofte stilte spørsmål Hva er åpenhetsloven? Åpenhetsloven, Retningslinjer forklart CSDDD, Corporate Sustainability Due Diligence Directive Om oss IT & sikkerhet Samarbeidspartnere Noen av våre kunder Personvern Redegjørelse for TransparencyGate AS Kontakt oss Logg inn (åpnes i nytt vindu) Norsk English Book en demo"
+        },
+        {
+          "location": "logo",
+          "text": "Norges Idrettsforbund Hurtigruten TV 2 Lerøy Seafood Redd Barna Bergen kommune"
+        },
+        {
+          "location": "logo",
+          "text": "Norges Fotballforbund Hurtigruten TV 2 Lerøy Seafood Borregaard Rockwool Redd Barna Den norske kirke Bergen kommune Fellesforbundet Statens Kartverk IMDi Mestergruppen Framo Tide Infinitum Norsk elbilforening NIF Ymber Agenda Risk Smir NYK Saga AS Havtil Elkraft Grønneviken Hammerfest Energi Antec Biogas Arendals Fossekompani My Car Abakus Baruda Keystone Alver kommune Adventure Tech Alta Kraftlag Insula Steen-Hansen BCC Norge Ford Harstad Heras HD Hyundai Island Drilling K. Lerøy Mustad Eiendom Norges Sjakkforbund Norges Ungdomslag Musikkorpsforbundet Hent AS"
+        },
+        {
+          "location": "footer",
+          "text": "Digitaliq Skybaserte løsninger for varsling, aktsomhetsvurderinger og etterlevelse. Org.nr: 918 266 917 MVA Torgallmenningen 3b 5014 Bergen Løsninger MittVarsel TransparencyGate Digitaliq Survey AnniQ Peoplefy Digitaliq ARP Selskap Om oss Kunder Samarbeidspartnere Kontakt Ressurser Artikler IT & Sikkerhet Personvern Åpenhetsloven © 2026 Digitaliq AS. ISO/IEC 27001:2022-sertifisert."
+        }
+      ]
+    },
+    {
+      "seed": 20261113,
+      "orgnr": "995194163",
+      "name": "GLÅMDAL MASKIN AS",
+      "website": "https://www.glomdalmaskin.no",
+      "tier": "HIGH",
+      "proof_page": "https://www.glomdalmaskin.no/",
+      "sha256": "5d81b2afa9b183ec29933434372d417e4efbffad175891b885ae7c059195e69c",
+      "rule": null,
+      "foreign_orgnrs": [],
+      "publisher": [
+        {
+          "location": "title",
+          "text": "Glåmdal Maskin AS"
+        },
+        {
+          "location": "logo",
+          "text": "Skip to content Glåmdal Maskin Glåmdal Maskin … der detaljene teller! Meny Forside Produkter Humus henger Humus 8CT Humus 10CT Humus 13CT Humus 16CT Humus 26CT Humus 30CT Baselier Drillformfreser Tajfun Vedmaskiner RCA 330 JOY RCA 380 RCA 380E RCA 400 JOY RCA 480 Joy RCA 480 Joy pluss Tajfun Skogvinsjer Stegmater Baselier LKB risknuser Annet utstyr Nedsenkbar oljevarmer Flishugger Kantklipper Vedkløyver GM Lettgrinde Kellfri skjær Diagonalskjær 2,5 m SE Pallegaffel 2.5t Kellfri Traktormontert sandspreder Kellfri ATV Strøkasse S230 SE Rundballeklo Kellfri tilhenger TV100 Kellfri 5T BM hyd gaffel Referanser Leverandører Kontakt oss Besøk oss i butikken Om oss Finn.no HUMUS 10CT HUMUS 10CT Baselier Drillformfreser Baselier Drillformfreser Produktoversikt Vær ikke redd for å ta kontakt om det er noe du er på leit etter, vi er behjelpelige med og fremskaffe det meste til landbruket. Her kan du se vår produktoversikt. Produkter Besøk oss i butikken Besøk oss i butikken Glåmdal Maskin AS holder til i Industriveien 21 på Kirkenær. Våre åpningstider er mandag til fredag 07:30 til 16:00. Siden vi er mye på farten anbefaler vi at du ringer og avtaler tid, slik at du er sikker på at Les mer Bredt utvalg Bredt utvalg Glåmdal Maskin AS forhandler en rekke kvalitetsprodukter. Blant de fremste er TAJFUN vedmaskiner og vinsjer. Vi fører hele V-matic serien, herunder rensetrommel T-101 og transportbånd i alle lengder til vedproduksjonsanlegg. Vår stegmater fra Ingvar Persson i Sverige kompletterer et fullverdig Les mer Om oss Om oss Glåmdal Maskin AS ble etablert i 2010 av Ole Anton Næss, Kongsvinger, og har siden oppstarten vært spesielt fokusert på vedproduksjons utstyr. Som forhandler av f.eks Tajfun vedmaskiner og med engene produkter sånn som V-Matic rensetrommel og stegmatere. I August Les mer Adresse Glåmdal Maskin AS Industriveien 21 2260 KIRKENÆR Kontaktinfo Tlf: 46 95 30 01 E-post: post@glomdalmaskin.no Kontakt: Anders Baardseth Her finner du oss Meny Besøk oss i butikken Finn.no Kontakt oss Om oss Produkter Referanser Copyright © 2026 Glåmdal Maskin . WordPress . Theme: Spacious by ThemeGrill ."
+        },
+        {
+          "location": "header",
+          "text": "Glåmdal Maskin Glåmdal Maskin … der detaljene teller! Meny Forside Produkter Humus henger Humus 8CT Humus 10CT Humus 13CT Humus 16CT Humus 26CT Humus 30CT Baselier Drillformfreser Tajfun Vedmaskiner RCA 330 JOY RCA 380 RCA 380E RCA 400 JOY RCA 480 Joy RCA 480 Joy pluss Tajfun Skogvinsjer Stegmater Baselier LKB risknuser Annet utstyr Nedsenkbar oljevarmer Flishugger Kantklipper Vedkløyver GM Lettgrinde Kellfri skjær Diagonalskjær 2,5 m SE Pallegaffel 2.5t Kellfri Traktormontert sandspreder Kellfri ATV Strøkasse S230 SE Rundballeklo Kellfri tilhenger TV100 Kellfri 5T BM hyd gaffel Referanser Leverandører Kontakt oss Besøk oss i butikken Om oss Finn.no HUMUS 10CT HUMUS 10CT Baselier Drillformfreser Baselier Drillformfreser"
+        },
+        {
+          "location": "logo",
+          "text": "Glåmdal Maskin"
+        },
+        {
+          "location": "footer",
+          "text": "Adresse Glåmdal Maskin AS Industriveien 21 2260 KIRKENÆR Kontaktinfo Tlf: 46 95 30 01 E-post: post@glomdalmaskin.no Kontakt: Anders Baardseth Her finner du oss Meny Besøk oss i butikken Finn.no Kontakt oss Om oss Produkter Referanser Copyright © 2026 Glåmdal Maskin . WordPress . Theme: Spacious by ThemeGrill ."
+        },
+        {
+          "location": "footer",
+          "text": "Besøk oss i butikken Finn.no Kontakt oss Om oss Produkter Referanser"
+        },
+        {
+          "location": "copyright",
+          "text": "Copyright © 2026 Glåmdal Maskin . WordPress . Theme: Spacious by ThemeGrill ."
+        }
+      ]
+    },
+    {
+      "seed": 20261113,
+      "orgnr": "931575678",
+      "name": "SOLID ØKONOMI AS",
+      "website": "https://solidokonomi.no",
+      "tier": "VERIFIED",
+      "proof_page": "https://solidokonomi.no/",
+      "sha256": "7aab3c32b66390b905677332159d1da8c167196477986c9f93aca9642c5fd2f4",
+      "rule": null,
+      "foreign_orgnrs": [],
+      "publisher": [
+        {
+          "location": "title",
+          "text": "Solid Økonomi AS – Autorisert regnskapsførerselskap"
+        },
+        {
+          "location": "header",
+          "text": "Solid Økonomi AS Autorisert regnskapsførerselskap Menu Close Om Solid Økonomi AS Tjenester Kontakt"
+        },
+        {
+          "location": "footer",
+          "text": "Solid Økonomi AS Vestvangvegen 105, 2080 Eidsvoll Tlf: 93 43 28 21 gurid@solidokonomi.no Foretaksregistrert 931575678 MVA Regnskap Norge Kredittrating fra MyScore AS"
+        },
+        {
+          "location": "footer",
+          "text": "Solid Økonomi AS Proudly WordPress ."
+        }
+      ]
+    },
+    {
+      "seed": 20261113,
+      "orgnr": "918031502",
+      "name": "SUNNCOM AS",
+      "website": "https://www.sunncom.no",
+      "tier": "VERIFIED",
+      "proof_page": "https://www.sunncom.no/",
+      "sha256": "ff2e91e7d4b67546faa8c6e742f0a0e4828af26cc9769b859c199de370f3d1bf",
+      "rule": null,
+      "foreign_orgnrs": [],
+      "publisher": [
+        {
+          "location": "title",
+          "text": "Home | Sunncom"
+        },
+        {
+          "location": "og:site_name",
+          "text": "Sunncom"
+        },
+        {
+          "location": "header",
+          "text": "logo-heading.jpg ABOUT PROJECTS SERVICES PARTNERS CONTACT More Facebook LinkedIn"
+        },
+        {
+          "location": "footer",
+          "text": "© 2020 - Sunncom AS •Clear-Com +47 70 10 71 10 support@sunncom.no Sjømannsveien 9, 6008 Ålesund Facebook LinkedIn Org. nr: 918 031 502"
+        }
+      ]
+    },
+    {
+      "seed": 20261114,
+      "orgnr": "988217867",
+      "name": "CONCEDO AS",
+      "website": "https://www.concedo.no",
+      "tier": "HIGH",
+      "proof_page": "https://www.concedo.no/contact",
+      "sha256": "f6a7ba7fa789becb8622a75ee93e1f8be8b14029707bfc7fcaa9f7feca982dee",
+      "rule": null,
+      "foreign_orgnrs": [],
+      "publisher": [
+        {
+          "location": "title",
+          "text": "Contact | Concedo"
+        },
+        {
+          "location": "og:site_name",
+          "text": "Concedo"
+        },
+        {
+          "location": "header",
+          "text": "Concedo logo Search"
+        },
+        {
+          "location": "imprint-kontakt",
+          "text": "Address"
+        },
+        {
+          "location": "imprint-kontakt",
+          "text": "1383 Asker"
+        },
+        {
+          "location": "imprint-kontakt",
+          "text": "Email post@concedo.no"
+        },
+        {
+          "location": "footer",
+          "text": "Concedo logo Norwegian oil company focusing on exploration on the Norwegian Continental Shelf. About us The company Responsibilty Transparency act Policies Procurement Procedures Portfolio License portfolio News & Reports News & Reports News archive Annual reports archive Who we are The people Board of directors Management The team Contact Contact Follow us"
+        }
+      ]
+    },
+    {
+      "seed": 20261114,
+      "orgnr": "889320222",
+      "name": "SCANDINAVIAN NAILS BY ABAMEME AS",
+      "website": "https://www.abameme.com",
+      "tier": "VERIFIED",
+      "proof_page": "https://www.abameme.com/",
+      "sha256": "61643a356f54c79308ae49dad774c70ba0b87f6a46ecfc7e671138a85e33b3fb",
+      "rule": null,
+      "foreign_orgnrs": [],
+      "publisher": [
+        {
+          "location": "title",
+          "text": "Negledesignerskole og neglesalong i Oslo | Scandinavian nails by abameme"
+        },
+        {
+          "location": "og:site_name",
+          "text": "Scandinavian nails by abameme"
+        },
+        {
+          "location": "header",
+          "text": "Scandinavian nails by abameme® Snba icon"
+        },
+        {
+          "location": "footer",
+          "text": "facebook Instagram Youtube Copyright 1987 - 2026 © Scandinavian nails by a bameme ® Prinsensgate 2, 2. etasje, 0152 Oslo. Organisasjonsnummer: NO 889 320 222 MVA"
+        },
+        {
+          "location": "copyright",
+          "text": "©"
+        }
+      ]
+    },
+    {
+      "seed": 20261114,
+      "orgnr": "915324258",
+      "name": "MUSIKKPLASSEN AS",
+      "website": "https://musikkplassen.no",
+      "tier": "VERIFIED",
+      "proof_page": "https://musikkplassen.no/",
+      "sha256": "3fcab93f4d439681f60489fbfd22d7a88d7a2ef48ae22c7a6fe2d373c9fdd682",
+      "rule": null,
+      "foreign_orgnrs": [],
+      "publisher": [
+        {
+          "location": "title",
+          "text": "Artistprofiler og markedsplass | Musikkplassen"
+        },
+        {
+          "location": "og:site_name",
+          "text": "Musikkplassen.no"
+        },
+        {
+          "location": "header",
+          "text": "clear"
+        },
+        {
+          "location": "logo",
+          "text": "MUSIKKPLASSEN.no"
+        },
+        {
+          "location": "header",
+          "text": "På jakt etter en artist?"
+        },
+        {
+          "location": "header",
+          "text": "Ønsker du å være listet på Musikkplassen?"
+        },
+        {
+          "location": "header",
+          "text": "Et bredt - og økende - artistregister!"
+        },
+        {
+          "location": "header",
+          "text": "Oversikt over tilbydere i norsk musikkbransje!"
+        },
+        {
+          "location": "header",
+          "text": "Har du noen synspunkter?"
+        },
+        {
+          "location": "copyright",
+          "text": "copyright"
+        }
+      ]
+    },
+    {
+      "seed": 20261115,
+      "orgnr": "935794242",
+      "name": "BUSSIN AS",
+      "website": "https://www.bussin.no",
+      "tier": "VERIFIED",
+      "proof_page": "https://www.bussin.no/",
+      "sha256": "b9a318b0bf7735fd3faa1136eb01d941da18c293d27497ab98908eb53fa872d7",
+      "rule": null,
+      "foreign_orgnrs": [],
+      "publisher": [
+        {
+          "location": "og:site_name",
+          "text": "Bussin - Alle fortjener en bra nettside"
+        },
+        {
+          "location": "title",
+          "text": "Bussin - Alle fortjener en bra nettside"
+        },
+        {
+          "location": "header",
+          "text": "Logo for Bussin Priser og tjenester Nettside på 1-2-3 Sidemaler Kontakt Logg inn Logo for Bussin Priser og tjenester Nettside på 1-2-3 Sidemaler Kontakt Logg inn"
+        },
+        {
+          "location": "footer",
+          "text": "Bussin AS Org.nr. 935 794 242 Telefon: +47 40 84 70 74 E post: post@bussin.no Sideinnhold Forside Priser og tjenester Nettside på 1-2-3 Bestilling Om oss Kontakt Vilkår Personvernpolicy Cookiepolicy"
+        }
+      ]
+    },
+    {
+      "seed": 20261115,
+      "orgnr": "928882624",
+      "name": "TRAVL AS",
+      "website": "https://travl.no",
+      "tier": "VERIFIED",
+      "proof_page": "https://travl.no/en/privacy",
+      "sha256": "c722bc1fdd01baf42649b4c60be24800d52df2154071add469945971aa82e8ec",
+      "rule": null,
+      "foreign_orgnrs": [],
+      "publisher": [
+        {
+          "location": "title",
+          "text": "Privacy Policy — Travl"
+        },
+        {
+          "location": "og:site_name",
+          "text": "Travl"
+        },
+        {
+          "location": "logo",
+          "text": "Travl"
+        },
+        {
+          "location": "imprint-kontakt",
+          "text": "TRAVL AS (organisation number 928 882 624, Storgata 117, 3182 Horten, Norway) is the data controller for the personal data Travl processes. Questions and requests about your data: support@travl.no ."
+        },
+        {
+          "location": "imprint-kontakt",
+          "text": "Amadeus Receives: Your searches (places, dates, number of travellers). When you book: each traveller's name, date of birth and any email given; gender and passport details when the airline requires them; the booker's email address, phone number and address. Why: Flight and hotel search and booking. Amadeus passes the booking on to the airline and the hotel."
+        },
+        {
+          "location": "imprint-kontakt",
+          "text": "Receives: Your searches (places, dates, number of travellers). When you book: each traveller's name, date of birth and any email given; gender and passport details when the airline requires them; the booker's email address, phone number and address."
+        },
+        {
+          "location": "imprint-kontakt",
+          "text": "The hotel Receives: The hotel booking, through Amadeus: the guests' names (with Mr/Ms when the gender is known), the booker's email address and phone number, and any bed request. Why: To reserve your room."
+        },
+        {
+          "location": "imprint-kontakt",
+          "text": "Receives: The hotel booking, through Amadeus: the guests' names (with Mr/Ms when the gender is known), the booker's email address and phone number, and any bed request."
+        },
+        {
+          "location": "imprint-kontakt",
+          "text": "Resend Receives: Your name, email address and booking details in the emails we send you (booking confirmation, receipt, travel reminders, price alerts, password reset). Co-travellers who gave an email get the booking confirmation. Why: Sending email."
+        },
+        {
+          "location": "imprint-kontakt",
+          "text": "Receives: Your name, email address and booking details in the emails we send you (booking confirmation, receipt, travel reminders, price alerts, password reset). Co-travellers who gave an email get the booking confirmation."
+        },
+        {
+          "location": "imprint-kontakt",
+          "text": "Google Receives: Only if you sign in with Google: Google confirms who you are and gives us your name and email address. Why: Signing in."
+        },
+        {
+          "location": "imprint-kontakt",
+          "text": "Receives: Only if you sign in with Google: Google confirms who you are and gives us your name and email address."
+        },
+        {
+          "location": "imprint-kontakt",
+          "text": "Vercel Receives: Every request to Travl, including your IP address. Why: Hosting: runs the Travl website and servers. Our server functions run in the EU, in Ireland, next to the database; Vercel's network delivers the pages from the location nearest you."
+        },
+        {
+          "location": "imprint-kontakt",
+          "text": "Receives: Every request to Travl, including your IP address."
+        },
+        {
+          "location": "imprint-kontakt",
+          "text": "Some content loads in your browser directly from other services — photos (Unsplash), logos (logo.dev, Kiwi.com), maps (OpenStreetMap, unpkg.com), weather (Open-Meteo) and the card field (Stripe) — so these services see your IP address, as with any website. Our cookie policy says where each one is used."
+        },
+        {
+          "location": "imprint-kontakt",
+          "text": "Requests about your data — any of the above, or anything else — can also be sent to support@travl.no or through our contact page . We answer within one month."
+        },
+        {
+          "location": "imprint-kontakt",
+          "text": "Contact: support@travl.no"
+        },
+        {
+          "location": "footer",
+          "text": "travl. AI planner for flights and hotels. Fast, real and transparent. 🔒 Card payments via Stripe · Your data: who stores what, and for how long · 9% service fee Product How it works About FAQ Contact Account Sign up Log in My account Legal Terms Privacy Cookies Refunds AI Disclaimer Language English Norsk Svenska Dansk Deutsch Español Italiano Français Português Currency EUR · Euro NOK · Norwegian kroner SEK · Swedish kronor DKK · Danish kroner GBP · British pounds CHF · Swiss francs PLN · Polish złoty CZK · Czech koruna HUF · Hungarian forint RON · Romanian leu ISK · Icelandic króna USD · US dollars CAD · Canadian dollars MXN · Mexican peso BRL · Brazilian real JPY · Japanese yen CNY · Chinese yuan HKD · Hong Kong dollars SGD · Singapore dollars KRW · South Korean won INR · Indian rupee AUD · Australian dollars NZD · New Zealand dollars AED · UAE dirham SAR · Saudi riyal ILS · Israeli shekel ZAR · South African rand TRY · Turkish lira THB · Thai baht MYR · Malaysian ringgit IDR · Indonesian rupiah PHP · Philippine peso Charged in NOK, SEK, DKK or EUR © 2026 Travl — TRAVL AS support@travl.no"
+        }
+      ]
+    },
+    {
+      "seed": 20261115,
+      "orgnr": "932849429",
+      "name": "JAASTAD SIDERI AS",
+      "website": "https://www.jaastadsideri.no",
+      "tier": "VERIFIED",
+      "proof_page": "https://www.jaastadsideri.no/",
+      "sha256": "6a0e09aa5ab7827b96c378988b44df897fb6e285334f9fbb376c8e0caed379e8",
+      "rule": null,
+      "foreign_orgnrs": [],
+      "publisher": [
+        {
+          "location": "title",
+          "text": "JAASTAD Sideri"
+        },
+        {
+          "location": "og:site_name",
+          "text": "JAASTAD Sideri"
+        }
+      ]
+    },
+    {
+      "seed": 20261115,
+      "orgnr": "982326125",
+      "name": "ORKDAL BLOMSTER AS",
+      "website": "https://www.orkdalblomster.no",
+      "tier": "VERIFIED",
+      "proof_page": "https://www.orkdalblomster.no/",
+      "sha256": "99918d8827be42991b28bcf4e378472f6c8228675a2b6e90811f144c547d47dc",
+      "rule": null,
+      "foreign_orgnrs": [],
+      "publisher": [
+        {
+          "location": "title",
+          "text": "Hjem - Orkdal Blomster AS"
+        },
+        {
+          "location": "header",
+          "text": "Interflora Bestill blomster her Bryllupsbinderi Sorgbinderi Kontakt oss Profil Handlekurv Meny Meny"
+        },
+        {
+          "location": "footer",
+          "text": "Kontaktinfo Orkdal Blomster AS Orkdalsvn. 42 7300 ORKANGER Org. nr.: 982 326 125 Tlf: 72 48 10 20 E-post: Kjøpsinfo Kjøpsbetingelser Følg oss på Facebook Interflora logo Medlem av Interflora Norge SA Web"
+        },
+        {
+          "location": "logo",
+          "text": "Interflora logo"
+        }
+      ]
+    },
+    {
+      "seed": 20261115,
+      "orgnr": "926705261",
+      "name": "LEV AKTIVT AS",
+      "website": "https://levaktivt.no",
+      "tier": "VERIFIED",
+      "proof_page": "https://levaktivt.no/",
+      "sha256": "40329f9e97ab101470abef043e6d3d7b5ec983c69d2f475c9edfd5d7185aaafd",
+      "rule": null,
+      "foreign_orgnrs": [],
+      "publisher": [
+        {
+          "location": "title",
+          "text": "Lev Aktivt – Ta vare på deg selv"
+        },
+        {
+          "location": "header",
+          "text": "Lev Aktivt default-logo Meny MENY SAMARBEIDSPARTNERE REFLEKSOLOGKLINIKKEN SANDEFJORD BLOGG 16 UKERS GLEDE BLI MED! Gå til bestilling Home Ditt community for god helse! Kondisjon styrke HELSEGEVINST Trykk her for å logge inn i webutgaven av Lev Aktivt Appen Onlinetrening med oss som din coach Trening som varer.. Hos Lev Aktivt tror vi ikke på skippertak. Vi tror på mennesker – og på fremgang som varer. Vår metode bygger på faglig trygghet, struktur og støtte, og handler om å skape en aktiv livsstil som passer inn i virkeligheten. Vi hjelper deg å finne balansen mellom styrke, kondisjon, helse og hode – slik at du får mer energi, overskudd og bevegelsesglede i hverdagen. Vi ser hele mennesket. Muskulatur, skjelett, organer og psykologi henger tett sammen – og når alt fungerer i samspill, kommer de virkelige resultatene. Derfor kombinerer vi trening, restitusjon og mental støtte, slik at du bygger en kropp og et hode som samarbeider. Kondisjon og Energi – for bedre helse og overskudd Fokus på hverdagshelse, bevegelsesglede og varig fremgang. Lev Aktivt-metoden hjelper deg å bygge en sterkere kondisjon – uten tøffe økter eller kompliserte treningsplaner. Gjennom smarte, effektive økter og personlig oppfølging får du mer energi, bedre helse og et hjerte som tåler livet. Dette får du: Enkle, effektive kondisjonsøkter du kan gjøre ute, hjemme eller på senter Intervalløkter og lett styrke som bygger kapasitet og utholdenhet Ukentlige mål, refleksjoner og støtte for å holde deg motivert Verktøy for restitusjon og søvn Fellesskap og utfordringer i appen som gjør det gøy å holde seg aktiv 24/7 chat med din PT for veiledning og tilpasning Målet: Å gi deg målbart bedre kondisjon, energi og hjertehelse – slik at du yter bedre, lever bedre og føler deg bedre. Styrke og Mestring – bygg trygghet og progresjon Fokus på styrke, struktur og trygg fremgang. Vi hjelper deg å bygge en sterk, funksjonell og atletisk kropp – med realistiske mål, tett oppfølging og faglig trygghet. Hos Lev Aktivt får du en plan, et fellesskap og et team som heier deg frem. Dette får du: Strukturert styrkeprogram tilpasset ditt nivå Tilgang til treningsbibliotek og øvelsesvideoer Mulighet for styrketester og statusmålinger Aktivt digitalt fellesskap med ansvarlighet og støtte Coaching, live support og kontinuerlig oppfølging Fokus på styrke, holdning og en kropp du trives i Målet: At du blir sterkere – og føler deg sterk . Vi bygger ikke bare muskler, men trygghet, mestring og selvtillit som varer. Helsegevinst og Livsstil – små endringer som varer Fokus på hverdagshelse, vaner og enkelhet. Dette er for deg som ønsker mer overskudd og bevegelsesglede – uten stress, press eller perfeksjon. Med Lev Aktivt-metoden blir trening en naturlig del av livet, ikke en plikt. Dette får du: Effektive videoøkter på 20–30 minutter med erfaren PT Ukentlige tips og inspirasjon for en sunn livsstil Fellesskap og utfordringer i appen som holder deg engasjert Chat med din PT for støtte, veiledning og motivasjon Målet: At du faktisk blir mer aktiv – på en enkel, gøyal og bærekraftig måte. Et fellesskap somløfter deg Når du trener med oss, trener du ikke alene. Du blir en del av et inspirerende community der vi deler fremgang, støtter hverandre og feirer små seire. Gjennom året arrangerer vi kontinuerlige aktivitetsutfordringer som gir motivasjon, fellesskap og litt ekstra drivkraft i hverdagen. Her handler det ikke om perfeksjon, men om progresjon. Vi er med deg hele veien – for å gi deg struktur, støtte og mestringsfølelse som varer. Lev Aktivt – mer enn trening Dette er mer enn et treningsprogram. Det er et partnerskap mellom deg og oss – et løfte om at du skal få de verktøyene, rutinene og støtten du trenger for å lykkes. Hos Lev Aktivt får du faglig trygghet, menneskelig støtte og en metodikk som ser hele deg. Målet er enkelt: At du skal leve mer aktivt, med energi, mestring og overskudd – hver dag LES MER! 16 Ukers Glede - digitalt livsstilskurs Vi samarbeider med bedriftsidretten i Buskerud og Vestfold! Er du klar for å trene 3-5 ganger per uke? Leve med et balansert kosthold og jobbe med positiv selvutvikling de neste 16 ukene? Hybridløsning: ✔ Delta på kurset online i Lev Aktivt appen ✔ Delta på Bedriftsidrettens gruppetreninger Les mer her Lev Aktivt PT Studio Sandefjord Book tid og tren på PT-gymmet. Det er maks 2 personer på gymmet samtidig, så her skal du slippe kø, unødvendig støy og kødannelse. Du booker enkelt tid gjennom Lev Aktivt appen når du selv ønsker å trene. Åpningstider: Mandag – fredag 07.00 – 22.00 Lørdag: 10.00 – 18.00 Søndag og helligdager: Stengt Du får tilgang til Lev Aktiv Appen med spesialdesignede treningsprogrammer optimalisert for infrastrukturen i PT studioet, samt har du chatfunskjon til en PT dersom du trenger hjelp eller inspirasjon. Ordinærpris: kr 1798,- per måned Tilbud: kr 899,- per måned* DROP-IN: Kr 100/time/kunde – betaling per vipps, Åpent: Man-fredag fra kl 08.00-16.00). (PS. Drop-in er bare for PT kunder som er under oppfølging). Tilbudet har maksbegrensning på 40 personer. 100% fornøyd garanti. Abonnementet løper inntil du selv velger å avslutte det, uten noe form for bindingstid eller oppsigelsestid. Start nå! Anmeldelser faq Spørsmål & Svar Hva får jeg hos Lev Aktivt? Hva får du hos Lev Aktivt? Hos oss handler det ikke om dietter, konkurranser eller prestasjon – men om deg. Vi er her for å hjelpe deg med å bli mer aktiv, trygg og helhetlig sterk , på dine premisser. Vi gir deg ikke et opplegg du skal passe inn i – vi tilpasser oss ditt liv . Godt kosthold Lær hvordan du kan bygge en god relasjon til mat. Vi gir deg konkrete, enkle grep for å håndtere kostholdet i hverdagen – med mål om varig endring , ikke kortsiktige kurer. Fysisk aktivitet Hos oss skal trening være lystbetont og lavterskel. Vi hjelper deg å finne din flyt og glede , enten du trener hjemme, i naturen eller i vårt private PT-studio. Bærekraftige vaner Vi gir deg verktøyene som gjør at du faktisk får det til – og holder det ved like. Gjennom refleksjon, ukentlig oppfølging og støtte , bygger vi sammen vaner som varer. Stress- og søvnmestring Vi lærer deg å forstå hva som påvirker deg – og hvordan du kan ta kontroll. Få tilgang til teknikker og støtte som hjelper deg å sove bedre, stresse mindre og prestere jevnere i hverdagen. Community Du er aldri alene. Delta i vårt inkluderende fellesskap i Lev Aktivt-appen , få støtte, del erfaringer og bli med på utfordringer som inspirerer og engasjerer. Personlig coaching Din PT har 100 % fokus på deg . Vi lytter, tilpasser og følger deg opp med både kunnskap og medmenneskelighet. Her er det rom for hele deg – og vi står i det sammen. Hva er visjonen til Lev Aktivt? Levaktivt.no har som visjon å inspirere og veilede enkeltpersoner, grupper og bedrifter til å leve et liv i harmoni med kroppen og sinnet. Gjennom skreddersydde løsninger innen trening, ernæring og livsstilsoptimalisering ønsker vi å bli en ledende ressurs for helhetlig helse, hvor bærekraftige vaner og personlig utvikling står i sentrum. Vi tror på styrken i små, varige endringer som skaper store resultater over tid. Vår plattform bygger på faglig forankret kunnskap, tett oppfølging og en lidenskap for å hjelpe mennesker i alle livsfaser med å oppnå sitt fulle potensial – fysisk, mentalt og sosialt. «Sammen skaper vi varige endringer for en bedre fremtid.» Hvem står bak Lev Aktivt AS? Benjamin Alexander Smith Vangen og Arne Kraabøl grunnla Lev Aktivt AS i 2021. Tanken var et PT fellesskap for å kunne inspirere flere mennesker til å leve aktivt. Benjamin Styrer vår avdeling i Sandefjord, Arne i Fredrikstad. Hvor kan jeg trene med en Lev Aktivt Trener? Benjamin Alexander Smith Vangen er vår PT i Sandefjord. Der kan du trene som gruppe, bedrift og enkeltindivid i vårt private PT Studio. Arne Kraabøl er vår PT i Fredrikstad, Der kan du trene som gruppe, bedrift, enkeltindivid i Friskis & Svettis sine lokaler. Julie Firing er vår PT i Tønsberg. Hun tilbyr online coaching, gruppe og bedriftstrening. Hvordan fungerer Appen? Lev Aktivt Appen – Din Personlige Helsepartner Med Lev Aktivt Appen får du et skreddersydd verktøy som hjelper deg med å ta kontroll over din egen helse, trening og velvære. Appen er utviklet for å gjøre hverdagen enklere, samtidig som den sørger for at du holder deg motivert, organisert og på rett vei mot dine mål. Appen er bygget på plattformen Trainarize , som gir en sømløs brukeropplevelse med funksjoner designet for å støtte deg i din aktive livsstil. Her er hvordan Lev Aktivt Appen fungerer for deg som bruker: 1. Skreddersydde Treningsplaner Lev Aktivt Appen lar deg følge spesialtilpassede treningsprogrammer direkte fra din helsecoach eller personlig trener. Programmene er tilpasset ditt nivå, dine mål og eventuelle begrensninger du måtte ha. Se treningsøktene dine med detaljerte beskrivelser og instruksjoner. Følg øvelsene steg for steg med videoer som viser korrekt utførelse. Hold oversikt over progresjonen din med registrering av vekt, repetisjoner og sett. 2. Næringsveiledning og Kostplaner Appen gir deg tilgang til kostplaner som er laget for å støtte din trening og helse. Du får: Oversiktlige måltidsforslag tilpasset dine behov. Mulighet til å loggføre måltider og holde oversikt over makro- og mikronæringsstoffer. Støtte for å holde deg på sporet med sunne matvalg. 3. Kommunikasjon med Din Coach Med Lev Aktivt Appen kan du ha direkte kommunikasjon med din coach, som gir deg personlig oppfølging: Send og motta meldinger for å få svar på spørsmål eller tilbakemelding på økter. Få motivasjon og oppmuntring gjennom tilpassede meldinger og påminnelser. 4. Målsetting og Progressjon Appen gjør det enkelt å sette mål og følge din utvikling: Sett SMART-mål som holder deg fokusert og motivert. Følg fremgangen din med grafer og statistikk som viser hvordan du utvikler deg over tid. Oppdater treningsmålene dine regelmessig i samarbeid med din coach. 5. Fleksibel og Brukervennlig Lev Aktivt Appen er enkel å bruke og tilpasset en aktiv hverdag: Fungerer sømløst på både mobil og nettbrett. Gir deg tilgang til treningsplaner, kosthold og kommunikasjon uansett hvor du er. Hvorfor Velge Lev Aktivt Appen? Individuell tilpasning: Alt fra trening til kosthold er laget for dine behov. Helhetlig helse: Fokus på både fysisk aktivitet, ernæring og mental velvære. Motivasjon og ansvar: Regelmessig oppfølging fra din coach hjelper deg å holde deg på sporet. Enkel bruk: En plattform som gjør det enkelt å kombinere helse og hverdag. Hva koster tjenestene? Lev Aktivt+ : kr 499/mnd 16 Ukers glede – A: Medlem av Bedriftsidretten: kr 2700/mnd – B: Ikke medlem av Bedriftsidretten: kr 3000/mnd Personlig trening – PT 25min: kr 920,- /time – PT 50min: kr 1435,- /time – PT 90min: kr 1900,-/time – DUO 50min: kr 1855,-/time – Hjemmetrening 50min inkl kjøring i Sandefjord, – Fredrikstad: kr 2200,-/time – Gruppetrening fra 4-8 pers: kr 2300/time – Bedriftstrening/stor gruppe: fra kr 2500/time – Foredrag med tilpasset tema etter deres ønske: kr 5000,- Nevrorefleksologi v/Avd Sandefjord: voksen/barn-honnør – 30min: 825,-/725,- – 45min: 1235/1085,- Salgsvilkår Trykk på teksten for å komme til våre salgsvilkår Personvernerklæringen PERSONVERNERKLÆRING FOR KLIENTER – LEV AKTIVT AS Organisasjonsnummer: 926 705 261 Denne personvernerklæringen gir informasjon om hvordan og hvorfor Lev Aktivt AS samler inn og behandler dine personopplysninger. Lev Aktivt AS er behandlingsansvarlig for opplysninger som samles inn og behandles. Personvernerklæringen som følger gir den informasjonen personvernregelverket krever at vi gir i forbindelse med vår behandling av dine personopplysninger. Lev Aktivt AS behandler personopplysninger i samsvar med gjeldende personvernregelverk. Grunnlag for behandling av personopplysninger Behandling av personopplysninger er tillatt når det foreligger et gyldig behandlingsgrunnlag. Vårt behandlingsgrunnlag er i all hovedsak et medlemskap og administrering av de ulike prosessene i sammenheng med dette. Det kreves samtykke fra foresatte for å behandle personopplysninger til barn under 16 år. Bruk av personopplysninger Vi samler inn og behandler personopplysninger for å kunne ivareta avtaler med ansatte og innleid personell. Videre behandler vi opplysninger for å administrere kundeforhold/medlemskap, samt for å kunne informere om våre aktiviteter, produkter og tjenester via Lev Aktivt-appen . Bruk av opplysninger i forbindelse med markedsaktiviteter er basert på samtykke, som du selv kan administrere i appen. Opplysninger vi registrerer: Navn Fødselsdato Telefonnummer E-postadresse Type medlemskap Betalingsinformasjon Disse opplysningene registreres via Lev Aktivt-appen når du oppretter en bruker. Når du besøker våre lokaler eller har avtaler med Lev Aktivt AS, registreres besøket ditt. Det samme gjelder booking av gruppeaktiviteter og deltakelse i aktivitetskampanjer. Våre digitale tjenester, inkludert nettsider og app, krever behandling av personopplysninger da registrering og innlogging skjer med navn og mobilnummer. (Ved registrering i appen samtykker du til dette). Treningsrom og sikkerhet Det er montert videokameraer som gjør opptak når senteret er ubetjent. Dette gjøres for å: Dokumentere eventuelle personskader, tyveri eller hærverk Hindre at uvedkommende slipper inn på senteret Øke sikkerheten for våre medlemmer Utlevering av personopplysninger – bruk av tredjepart Registrerte personopplysninger behandles konfidensielt hos oss, og kun de med tjenstlig behov vil ha tilgang til våre systemer. Noen prosesser i medlemskapet krever bruk av eksterne databehandlere. I slike tilfeller har vi inngått avtaler for å ivareta sikkerheten rundt personopplysningene. Databehandlere inkluderer: Lev Aktivt AS (926 705 261) Informasjonskapsler Vi benytter informasjonskapsler (cookies) på vår nettside. En informasjonskapsel er en liten tekstfil som lagres på enheten din for å: Huske dine handlinger og preferanser Analysere bruksmønstre Gi en bedre brukeropplevelse Det finnes to typer informasjonskapsler: Vedvarende kapsler , som lagres over tid Sesjonskapsler , som slettes når du lukker nettleseren Du kan når som helst slette informasjonskapsler via nettleserens innstillinger. Lagring og sletting av personopplysninger Vi gir ikke personopplysningene dine videre til andre med mindre det foreligger et lovlig grunnlag for dette, slik som avtale eller lovpålegg. Lev Aktivt AS sletter dine personopplysninger senest 12 måneder etter endt medlemskap , eller når de ikke lenger er nødvendige. Unntak: Regnskapsdata lagres i henhold til bokføringsloven i 5 år Videoopptak fra treningsrom slettes automatisk etter 7 dager Dersom du trekker tilbake samtykke til behandling av personopplysninger, vil behandlingen opphøre. Dette påvirker imidlertid ikke lovligheten av behandling som fant sted før samtykket ble trukket. Dine rettigheter Du har rett til å: Be om innsyn i dine personopplysninger Få rettet eller slettet opplysninger Be om begrensning av behandlingen Få utlevert dine opplysninger (dataportabilitet) Trekke tilbake samtykke Vi besvarer slike forespørsler innen én måned. Henvendelser rettes til: benjamin.vangen@gmail.com Dersom du mener vi har brutt personvernregelverket, kan du klage til Datatilsynet . Ta gjerne kontakt dersom du har spørsmål eller ønsker mer informasjon om vår behandling av personopplysninger. Våre Konsulenter: Arne Kraabøl Daglig leder - PT - Kostveileder Avdeling Fredrikstad Kontakt meg Benjamin A. S. Vangen Daglig leder - PT - Kostveileder Nevrorefleksolog Avdeling Sandefjord Kontakt meg Kontakt oss post@levaktivt.no Besøksadresse : Landstadsgate 27, 3210 Sandefjord Orgnr: 926 705 261 Facebook Youtube Instagram Lev Aktivt logosort Copyright ©2024 All rights reserved"
+        },
+        {
+          "location": "logo",
+          "text": "Lev Aktivt default-logo Meny MENY SAMARBEIDSPARTNERE REFLEKSOLOGKLINIKKEN SANDEFJORD BLOGG 16 UKERS GLEDE BLI MED! Gå til bestilling Home Ditt community for god helse! Kondisjon styrke HELSEGEVINST Trykk her for å logge inn i webutgaven av Lev Aktivt Appen Onlinetrening med oss som din coach Trening som varer.. Hos Lev Aktivt tror vi ikke på skippertak. Vi tror på mennesker – og på fremgang som varer. Vår metode bygger på faglig trygghet, struktur og støtte, og handler om å skape en aktiv livsstil som passer inn i virkeligheten. Vi hjelper deg å finne balansen mellom styrke, kondisjon, helse og hode – slik at du får mer energi, overskudd og bevegelsesglede i hverdagen. Vi ser hele mennesket. Muskulatur, skjelett, organer og psykologi henger tett sammen – og når alt fungerer i samspill, kommer de virkelige resultatene. Derfor kombinerer vi trening, restitusjon og mental støtte, slik at du bygger en kropp og et hode som samarbeider. Kondisjon og Energi – for bedre helse og overskudd Fokus på hverdagshelse, bevegelsesglede og varig fremgang. Lev Aktivt-metoden hjelper deg å bygge en sterkere kondisjon – uten tøffe økter eller kompliserte treningsplaner. Gjennom smarte, effektive økter og personlig oppfølging får du mer energi, bedre helse og et hjerte som tåler livet. Dette får du: Enkle, effektive kondisjonsøkter du kan gjøre ute, hjemme eller på senter Intervalløkter og lett styrke som bygger kapasitet og utholdenhet Ukentlige mål, refleksjoner og støtte for å holde deg motivert Verktøy for restitusjon og søvn Fellesskap og utfordringer i appen som gjør det gøy å holde seg aktiv 24/7 chat med din PT for veiledning og tilpasning Målet: Å gi deg målbart bedre kondisjon, energi og hjertehelse – slik at du yter bedre, lever bedre og føler deg bedre. Styrke og Mestring – bygg trygghet og progresjon Fokus på styrke, struktur og trygg fremgang. Vi hjelper deg å bygge en sterk, funksjonell og atletisk kropp – med realistiske mål, tett oppfølging og faglig trygghet. Hos Lev Aktivt får du en plan, et fellesskap og et team som heier deg frem. Dette får du: Strukturert styrkeprogram tilpasset ditt nivå Tilgang til treningsbibliotek og øvelsesvideoer Mulighet for styrketester og statusmålinger Aktivt digitalt fellesskap med ansvarlighet og støtte Coaching, live support og kontinuerlig oppfølging Fokus på styrke, holdning og en kropp du trives i Målet: At du blir sterkere – og føler deg sterk . Vi bygger ikke bare muskler, men trygghet, mestring og selvtillit som varer. Helsegevinst og Livsstil – små endringer som varer Fokus på hverdagshelse, vaner og enkelhet. Dette er for deg som ønsker mer overskudd og bevegelsesglede – uten stress, press eller perfeksjon. Med Lev Aktivt-metoden blir trening en naturlig del av livet, ikke en plikt. Dette får du: Effektive videoøkter på 20–30 minutter med erfaren PT Ukentlige tips og inspirasjon for en sunn livsstil Fellesskap og utfordringer i appen som holder deg engasjert Chat med din PT for støtte, veiledning og motivasjon Målet: At du faktisk blir mer aktiv – på en enkel, gøyal og bærekraftig måte. Et fellesskap somløfter deg Når du trener med oss, trener du ikke alene. Du blir en del av et inspirerende community der vi deler fremgang, støtter hverandre og feirer små seire. Gjennom året arrangerer vi kontinuerlige aktivitetsutfordringer som gir motivasjon, fellesskap og litt ekstra drivkraft i hverdagen. Her handler det ikke om perfeksjon, men om progresjon. Vi er med deg hele veien – for å gi deg struktur, støtte og mestringsfølelse som varer. Lev Aktivt – mer enn trening Dette er mer enn et treningsprogram. Det er et partnerskap mellom deg og oss – et løfte om at du skal få de verktøyene, rutinene og støtten du trenger for å lykkes. Hos Lev Aktivt får du faglig trygghet, menneskelig støtte og en metodikk som ser hele deg. Målet er enkelt: At du skal leve mer aktivt, med energi, mestring og overskudd – hver dag LES MER! 16 Ukers Glede - digitalt livsstilskurs Vi samarbeider med bedriftsidretten i Buskerud og Vestfold! Er du klar for å trene 3-5 ganger per uke? Leve med et balansert kosthold og jobbe med positiv selvutvikling de neste 16 ukene? Hybridløsning: ✔ Delta på kurset online i Lev Aktivt appen ✔ Delta på Bedriftsidrettens gruppetreninger Les mer her Lev Aktivt PT Studio Sandefjord Book tid og tren på PT-gymmet. Det er maks 2 personer på gymmet samtidig, så her skal du slippe kø, unødvendig støy og kødannelse. Du booker enkelt tid gjennom Lev Aktivt appen når du selv ønsker å trene. Åpningstider: Mandag – fredag 07.00 – 22.00 Lørdag: 10.00 – 18.00 Søndag og helligdager: Stengt Du får tilgang til Lev Aktiv Appen med spesialdesignede treningsprogrammer optimalisert for infrastrukturen i PT studioet, samt har du chatfunskjon til en PT dersom du trenger hjelp eller inspirasjon. Ordinærpris: kr 1798,- per måned Tilbud: kr 899,- per måned* DROP-IN: Kr 100/time/kunde – betaling per vipps, Åpent: Man-fredag fra kl 08.00-16.00). (PS. Drop-in er bare for PT kunder som er under oppfølging). Tilbudet har maksbegrensning på 40 personer. 100% fornøyd garanti. Abonnementet løper inntil du selv velger å avslutte det, uten noe form for bindingstid eller oppsigelsestid. Start nå! Anmeldelser faq Spørsmål & Svar Hva får jeg hos Lev Aktivt? Hva får du hos Lev Aktivt? Hos oss handler det ikke om dietter, konkurranser eller prestasjon – men om deg. Vi er her for å hjelpe deg med å bli mer aktiv, trygg og helhetlig sterk , på dine premisser. Vi gir deg ikke et opplegg du skal passe inn i – vi tilpasser oss ditt liv . Godt kosthold Lær hvordan du kan bygge en god relasjon til mat. Vi gir deg konkrete, enkle grep for å håndtere kostholdet i hverdagen – med mål om varig endring , ikke kortsiktige kurer. Fysisk aktivitet Hos oss skal trening være lystbetont og lavterskel. Vi hjelper deg å finne din flyt og glede , enten du trener hjemme, i naturen eller i vårt private PT-studio. Bærekraftige vaner Vi gir deg verktøyene som gjør at du faktisk får det til – og holder det ved like. Gjennom refleksjon, ukentlig oppfølging og støtte , bygger vi sammen vaner som varer. Stress- og søvnmestring Vi lærer deg å forstå hva som påvirker deg – og hvordan du kan ta kontroll. Få tilgang til teknikker og støtte som hjelper deg å sove bedre, stresse mindre og prestere jevnere i hverdagen. Community Du er aldri alene. Delta i vårt inkluderende fellesskap i Lev Aktivt-appen , få støtte, del erfaringer og bli med på utfordringer som inspirerer og engasjerer. Personlig coaching Din PT har 100 % fokus på deg . Vi lytter, tilpasser og følger deg opp med både kunnskap og medmenneskelighet. Her er det rom for hele deg – og vi står i det sammen. Hva er visjonen til Lev Aktivt? Levaktivt.no har som visjon å inspirere og veilede enkeltpersoner, grupper og bedrifter til å leve et liv i harmoni med kroppen og sinnet. Gjennom skreddersydde løsninger innen trening, ernæring og livsstilsoptimalisering ønsker vi å bli en ledende ressurs for helhetlig helse, hvor bærekraftige vaner og personlig utvikling står i sentrum. Vi tror på styrken i små, varige endringer som skaper store resultater over tid. Vår plattform bygger på faglig forankret kunnskap, tett oppfølging og en lidenskap for å hjelpe mennesker i alle livsfaser med å oppnå sitt fulle potensial – fysisk, mentalt og sosialt. «Sammen skaper vi varige endringer for en bedre fremtid.» Hvem står bak Lev Aktivt AS? Benjamin Alexander Smith Vangen og Arne Kraabøl grunnla Lev Aktivt AS i 2021. Tanken var et PT fellesskap for å kunne inspirere flere mennesker til å leve aktivt. Benjamin Styrer vår avdeling i Sandefjord, Arne i Fredrikstad. Hvor kan jeg trene med en Lev Aktivt Trener? Benjamin Alexander Smith Vangen er vår PT i Sandefjord. Der kan du trene som gruppe, bedrift og enkeltindivid i vårt private PT Studio. Arne Kraabøl er vår PT i Fredrikstad, Der kan du trene som gruppe, bedrift, enkeltindivid i Friskis & Svettis sine lokaler. Julie Firing er vår PT i Tønsberg. Hun tilbyr online coaching, gruppe og bedriftstrening. Hvordan fungerer Appen? Lev Aktivt Appen – Din Personlige Helsepartner Med Lev Aktivt Appen får du et skreddersydd verktøy som hjelper deg med å ta kontroll over din egen helse, trening og velvære. Appen er utviklet for å gjøre hverdagen enklere, samtidig som den sørger for at du holder deg motivert, organisert og på rett vei mot dine mål. Appen er bygget på plattformen Trainarize , som gir en sømløs brukeropplevelse med funksjoner designet for å støtte deg i din aktive livsstil. Her er hvordan Lev Aktivt Appen fungerer for deg som bruker: 1. Skreddersydde Treningsplaner Lev Aktivt Appen lar deg følge spesialtilpassede treningsprogrammer direkte fra din helsecoach eller personlig trener. Programmene er tilpasset ditt nivå, dine mål og eventuelle begrensninger du måtte ha. Se treningsøktene dine med detaljerte beskrivelser og instruksjoner. Følg øvelsene steg for steg med videoer som viser korrekt utførelse. Hold oversikt over progresjonen din med registrering av vekt, repetisjoner og sett. 2. Næringsveiledning og Kostplaner Appen gir deg tilgang til kostplaner som er laget for å støtte din trening og helse. Du får: Oversiktlige måltidsforslag tilpasset dine behov. Mulighet til å loggføre måltider og holde oversikt over makro- og mikronæringsstoffer. Støtte for å holde deg på sporet med sunne matvalg. 3. Kommunikasjon med Din Coach Med Lev Aktivt Appen kan du ha direkte kommunikasjon med din coach, som gir deg personlig oppfølging: Send og motta meldinger for å få svar på spørsmål eller tilbakemelding på økter. Få motivasjon og oppmuntring gjennom tilpassede meldinger og påminnelser. 4. Målsetting og Progressjon Appen gjør det enkelt å sette mål og følge din utvikling: Sett SMART-mål som holder deg fokusert og motivert. Følg fremgangen din med grafer og statistikk som viser hvordan du utvikler deg over tid. Oppdater treningsmålene dine regelmessig i samarbeid med din coach. 5. Fleksibel og Brukervennlig Lev Aktivt Appen er enkel å bruke og tilpasset en aktiv hverdag: Fungerer sømløst på både mobil og nettbrett. Gir deg tilgang til treningsplaner, kosthold og kommunikasjon uansett hvor du er. Hvorfor Velge Lev Aktivt Appen? Individuell tilpasning: Alt fra trening til kosthold er laget for dine behov. Helhetlig helse: Fokus på både fysisk aktivitet, ernæring og mental velvære. Motivasjon og ansvar: Regelmessig oppfølging fra din coach hjelper deg å holde deg på sporet. Enkel bruk: En plattform som gjør det enkelt å kombinere helse og hverdag. Hva koster tjenestene? Lev Aktivt+ : kr 499/mnd 16 Ukers glede – A: Medlem av Bedriftsidretten: kr 2700/mnd – B: Ikke medlem av Bedriftsidretten: kr 3000/mnd Personlig trening – PT 25min: kr 920,- /time – PT 50min: kr 1435,- /time – PT 90min: kr 1900,-/time – DUO 50min: kr 1855,-/time – Hjemmetrening 50min inkl kjøring i Sandefjord, – Fredrikstad: kr 2200,-/time – Gruppetrening fra 4-8 pers: kr 2300/time – Bedriftstrening/stor gruppe: fra kr 2500/time – Foredrag med tilpasset tema etter deres ønske: kr 5000,- Nevrorefleksologi v/Avd Sandefjord: voksen/barn-honnør – 30min: 825,-/725,- – 45min: 1235/1085,- Salgsvilkår Trykk på teksten for å komme til våre salgsvilkår Personvernerklæringen PERSONVERNERKLÆRING FOR KLIENTER – LEV AKTIVT AS Organisasjonsnummer: 926 705 261 Denne personvernerklæringen gir informasjon om hvordan og hvorfor Lev Aktivt AS samler inn og behandler dine personopplysninger. Lev Aktivt AS er behandlingsansvarlig for opplysninger som samles inn og behandles. Personvernerklæringen som følger gir den informasjonen personvernregelverket krever at vi gir i forbindelse med vår behandling av dine personopplysninger. Lev Aktivt AS behandler personopplysninger i samsvar med gjeldende personvernregelverk. Grunnlag for behandling av personopplysninger Behandling av personopplysninger er tillatt når det foreligger et gyldig behandlingsgrunnlag. Vårt behandlingsgrunnlag er i all hovedsak et medlemskap og administrering av de ulike prosessene i sammenheng med dette. Det kreves samtykke fra foresatte for å behandle personopplysninger til barn under 16 år. Bruk av personopplysninger Vi samler inn og behandler personopplysninger for å kunne ivareta avtaler med ansatte og innleid personell. Videre behandler vi opplysninger for å administrere kundeforhold/medlemskap, samt for å kunne informere om våre aktiviteter, produkter og tjenester via Lev Aktivt-appen . Bruk av opplysninger i forbindelse med markedsaktiviteter er basert på samtykke, som du selv kan administrere i appen. Opplysninger vi registrerer: Navn Fødselsdato Telefonnummer E-postadresse Type medlemskap Betalingsinformasjon Disse opplysningene registreres via Lev Aktivt-appen når du oppretter en bruker. Når du besøker våre lokaler eller har avtaler med Lev Aktivt AS, registreres besøket ditt. Det samme gjelder booking av gruppeaktiviteter og deltakelse i aktivitetskampanjer. Våre digitale tjenester, inkludert nettsider og app, krever behandling av personopplysninger da registrering og innlogging skjer med navn og mobilnummer. (Ved registrering i appen samtykker du til dette). Treningsrom og sikkerhet Det er montert videokameraer som gjør opptak når senteret er ubetjent. Dette gjøres for å: Dokumentere eventuelle personskader, tyveri eller hærverk Hindre at uvedkommende slipper inn på senteret Øke sikkerheten for våre medlemmer Utlevering av personopplysninger – bruk av tredjepart Registrerte personopplysninger behandles konfidensielt hos oss, og kun de med tjenstlig behov vil ha tilgang til våre systemer. Noen prosesser i medlemskapet krever bruk av eksterne databehandlere. I slike tilfeller har vi inngått avtaler for å ivareta sikkerheten rundt personopplysningene. Databehandlere inkluderer: Lev Aktivt AS (926 705 261) Informasjonskapsler Vi benytter informasjonskapsler (cookies) på vår nettside. En informasjonskapsel er en liten tekstfil som lagres på enheten din for å: Huske dine handlinger og preferanser Analysere bruksmønstre Gi en bedre brukeropplevelse Det finnes to typer informasjonskapsler: Vedvarende kapsler , som lagres over tid Sesjonskapsler , som slettes når du lukker nettleseren Du kan når som helst slette informasjonskapsler via nettleserens innstillinger. Lagring og sletting av personopplysninger Vi gir ikke personopplysningene dine videre til andre med mindre det foreligger et lovlig grunnlag for dette, slik som avtale eller lovpålegg. Lev Aktivt AS sletter dine personopplysninger senest 12 måneder etter endt medlemskap , eller når de ikke lenger er nødvendige. Unntak: Regnskapsdata lagres i henhold til bokføringsloven i 5 år Videoopptak fra treningsrom slettes automatisk etter 7 dager Dersom du trekker tilbake samtykke til behandling av personopplysninger, vil behandlingen opphøre. Dette påvirker imidlertid ikke lovligheten av behandling som fant sted før samtykket ble trukket. Dine rettigheter Du har rett til å: Be om innsyn i dine personopplysninger Få rettet eller slettet opplysninger Be om begrensning av behandlingen Få utlevert dine opplysninger (dataportabilitet) Trekke tilbake samtykke Vi besvarer slike forespørsler innen én måned. Henvendelser rettes til: benjamin.vangen@gmail.com Dersom du mener vi har brutt personvernregelverket, kan du klage til Datatilsynet . Ta gjerne kontakt dersom du har spørsmål eller ønsker mer informasjon om vår behandling av personopplysninger. Våre Konsulenter: Arne Kraabøl Daglig leder - PT - Kostveileder Avdeling Fredrikstad Kontakt meg Benjamin A. S. Vangen Daglig leder - PT - Kostveileder Nevrorefleksolog Avdeling Sandefjord Kontakt meg Kontakt oss post@levaktivt.no Besøksadresse : Landstadsgate 27, 3210 Sandefjord Orgnr: 926 705 261 Facebook Youtube Instagram Lev Aktivt logosort Copyright ©2024 All rights reserved"
+        },
+        {
+          "location": "header",
+          "text": "Lev Aktivt default-logo Meny MENY SAMARBEIDSPARTNERE REFLEKSOLOGKLINIKKEN SANDEFJORD BLOGG 16 UKERS GLEDE BLI MED! Gå til bestilling"
+        },
+        {
+          "location": "logo",
+          "text": "default-logo"
+        },
+        {
+          "location": "header",
+          "text": "Home"
+        },
+        {
+          "location": "footer",
+          "text": "Kontakt oss post@levaktivt.no Besøksadresse : Landstadsgate 27, 3210 Sandefjord Orgnr: 926 705 261 Facebook Youtube Instagram Lev Aktivt logosort Copyright ©2024 All rights reserved"
+        }
+      ]
+    },
+    {
+      "seed": 20261116,
+      "orgnr": "991658807",
+      "name": "SISSENER AS",
+      "website": "https://www.sissener.no",
+      "tier": "HIGH",
+      "proof_page": "https://www.sissener.no/",
+      "sha256": "1fef9e92174a78bf6c105c6b7f14b8e488a231a8b0833d2f72325efcfdaf2702",
+      "rule": null,
+      "foreign_orgnrs": [],
+      "publisher": [
+        {
+          "location": "title",
+          "text": "Sissener AS | Kapitalforvaltning siden 2009"
+        },
+        {
+          "location": "header",
+          "text": "BLI KUNDE LOGG INN norsk norsk nb Svenska Svenska sv English English en OM OSS VÅRE FOND Sissener Canopus Sissener Corporate Bond Fund KJØP FOND VIDEOPRESENTASJONER ESG RETNINGSLINJER Alminnelige forretningsvilkår Klagebehandling Personvernerklæring Instruks om bærekraft Investorrettigheter Sissener AS’ godtgjørelsesordning Håndtering av interessekonflikter Retningslinjer for beste utførelse Informasjonskapsler Sissener SICAV Åpenhetsloven Aktivt eierskap NYHETER KONTAKT"
+        },
+        {
+          "location": "footer",
+          "text": "Kontakt oss Har du spørsmål eller ønsker du bli kontaktet av oss? Send oss gjerne en melding! Kontaktskjema i footer Fullt navn E-post Telefon Hvordan kan vi hjelpe deg? Nyhetsbrev Ja, takk, jeg vil motta nyhetsbrev* * ved å huke av denne boksen godtar du våre vilkår KONTAKT OSS +47 23 11 52 60 post@sissener.no Filipstad Brygge 2, 2. etasje 0252 Oslo, Norge Postboks 1849 Vika 0123 Oslo MOTTA NYHETSBREV MELD DEG PÅ Sissener AS © 2023 | Laget av Oase Personvernerklæring"
+        }
+      ]
+    },
+    {
+      "seed": 20261116,
+      "orgnr": "813911442",
+      "name": "CALIFORNIA INVEST AS",
+      "website": "https://californiainvest.no",
+      "tier": "VERIFIED",
+      "proof_page": "https://californiainvest.no/Kontakt",
+      "sha256": "345451c8eeaae88bdfc928cc388bf17bbe8c564471833f7cdacd12a5e73e9486",
+      "rule": null,
+      "foreign_orgnrs": [],
+      "publisher": [
+        {
+          "location": "title",
+          "text": "Kontakt | californiainvest.no"
+        },
+        {
+          "location": "og:site_name",
+          "text": "californiainvest.no"
+        },
+        {
+          "location": "header",
+          "text": "Kontakt"
+        },
+        {
+          "location": "header",
+          "text": "CALIFORNIA INVEST AS California Invest Shipping Eiendom Kontakt California Invest AS Telefon: 41 27 34 33 Fageråsen 11 E-mail: Post@CaliforniaInvest.no 5093 Bergen Web: www.CaliforniaInvest.no Org.nr: 813 911 442"
+        }
+      ]
+    },
+    {
+      "seed": 20261116,
+      "orgnr": "925700398",
+      "name": "AURSJOKRAFT AS",
+      "website": "https://aursjokraft.no",
+      "tier": "VERIFIED",
+      "proof_page": "https://aursjokraft.no/",
+      "sha256": "c938f985412301776c48cc242184538e2cbd14f8402a76925b30d2c6361cd193",
+      "rule": null,
+      "foreign_orgnrs": [],
+      "publisher": [
+        {
+          "location": "title",
+          "text": "Velkommen til Aursjokraft AS | Aursjokraft"
+        },
+        {
+          "location": "og:site_name",
+          "text": "Aursjokraft"
+        },
+        {
+          "location": "header",
+          "text": "Hopp til hovedinnhold Aursjokraft Søk Tilbake til selskapsoversikten Mi side Avtalevilkår Avtalevilkår Tilbake Avtalevilkår TimeSpot Avtalevilkår Fastpris 2026 Avtalevilkår - Privat avtaler før 15.11.2025 Avtalevilkår TimeSpot Bedrift Avtalevilkår Fastpris Bedrift 2026 Bestill kraft Bestill kraft Tilbake TimeSpot Prisliste Bestill kraft - Bedrift Bestill kraft - Bedrift Tilbake TimeSpot - Bedrift Kundeservice Kundeservice Tilbake Kontakt oss Angreskjema (PDF) Faktura og betaling Personvern Flytte? Klage Kraftmarknaden Kraftmarknaden Tilbake Kraftleverandør og nettselskap Nord Pool og Statnett Nordisk Balanseavrekning (NBS) Eksterne Lenker Eksterne Lenker Tilbake eFaktura Elhub Elklagenemnda Elsertifikat Nordpool NVE Spotpris - Strømpris.no Samanlikne kraftavtaler - strømpris.no ㅤ Mi side Leter du etter noe spesielt? Send inn søk"
+        },
+        {
+          "location": "logo",
+          "text": "Aursjokraft"
+        },
+        {
+          "location": "header",
+          "text": "Velkommen til Aursjokraft AS Aursjokraft AS driv med sal av kraft i Skjåk og syrgjar for strøm til ca. 2000 abonnentar. Aursjokraft AS er eit av dotterselskapa til Skjåk Energi AS. Mi side"
+        },
+        {
+          "location": "footer",
+          "text": "Aursjokraft Mi side Bestill kraft Kontaktinformasjon Telefon: +47 612 13 800 (10-14 mandag, tirsdag og torsdag) E-post: post@aursjokraft.no Adresse: Moavegen 28A, 2690 Skjåk Organisasjonsnummer: 925 700 398 Mi side Prisliste Personvern Bestill kraft Cookies-innstillinger Mi side Bestill kraft Aursjokraft Logo Aursjokraft horisontal AS"
+        },
+        {
+          "location": "footer",
+          "text": "Mi side Prisliste"
+        },
+        {
+          "location": "footer",
+          "text": "Personvern Bestill kraft Cookies-innstillinger"
+        }
+      ]
+    },
+    {
+      "seed": 20261116,
+      "orgnr": "983089887",
+      "name": "MELDAL MILJØANLEGG AS",
+      "website": "https://www.meldalmiljoanlegg.no",
+      "tier": "VERIFIED",
+      "proof_page": "https://www.meldalmiljoanlegg.no/",
+      "sha256": "f7c7fb20861c9bddfbd09ba6e06bd67b03122aee99a4204bc0536adaf75e0f75",
+      "rule": null,
+      "foreign_orgnrs": [],
+      "publisher": [
+        {
+          "location": "title",
+          "text": "Hjem | Meldal Miljoanlegg"
+        },
+        {
+          "location": "og:site_name",
+          "text": "Meldal Miljoanlegg"
+        },
+        {
+          "location": "header",
+          "text": "Hjem Våre tjenester Om oss Blogg Kontakt More"
+        },
+        {
+          "location": "footer",
+          "text": "© 2035 by Happy Farm Sanctuary. Powered and secured by Wix"
+        }
+      ]
+    },
+    {
+      "seed": 20261116,
+      "orgnr": "936065651",
+      "name": "HUSHOLDNINGEN AS",
+      "website": "https://husholdningen.no",
+      "tier": "VERIFIED",
+      "proof_page": "https://husholdningen.no/pages/contact",
+      "sha256": "4f07d549a15a4fb77d768d7f507b3af36e224049ff0f6ed775517deba011c21a",
+      "rule": null,
+      "foreign_orgnrs": [],
+      "publisher": [
+        {
+          "location": "title",
+          "text": "Kontakt oss – Husholdningen.no"
+        },
+        {
+          "location": "og:site_name",
+          "text": "Husholdningen.no"
+        },
+        {
+          "location": "header",
+          "text": "Hjem Katalog Kontakt Logg inn Facebook Instagram Husholdningen.no Hjem Katalog Kontakt Søk Søk Logg inn Handlekurv Meny Vare lagt i handlekurven Vis handlekurv Kasse Fortsett å handle"
+        },
+        {
+          "location": "header",
+          "text": "Hjem Katalog Kontakt Logg inn Facebook Instagram Husholdningen.no Hjem Katalog Kontakt Søk Søk Logg inn Handlekurv Meny"
+        },
+        {
+          "location": "logo",
+          "text": "Husholdningen.no"
+        },
+        {
+          "location": "imprint-kontakt",
+          "text": "Firmanavn: Husholdningen AS E-post: post@husholdningen.no Organisasjonsnummer: 936 065 651"
+        },
+        {
+          "location": "footer",
+          "text": "Kundeservice Personvernerklæring Spørsmål og svar Retur Angrerett Retningslinjer for frakt Informasjon Om oss Kontakt oss Våre merkevarer Vilkår for bruk Juridisk merknad Kundeklubb Om kundeklubb Blogg Facebook Instagram Betalingsmåter American Express Apple Pay Google Pay Klarna Maestro Mastercard Visa © 2026, Husholdningen.no"
+        },
+        {
+          "location": "title",
+          "text": "American Express"
+        },
+        {
+          "location": "title",
+          "text": "Apple Pay"
+        },
+        {
+          "location": "title",
+          "text": "Google Pay"
+        },
+        {
+          "location": "title",
+          "text": "Klarna"
+        },
+        {
+          "location": "title",
+          "text": "Maestro"
+        },
+        {
+          "location": "title",
+          "text": "Mastercard"
+        },
+        {
+          "location": "title",
+          "text": "Visa"
+        },
+        {
+          "location": "copyright",
+          "text": "© 2026, Husholdningen.no"
+        }
+      ]
+    },
+    {
+      "seed": 20261117,
+      "orgnr": "916875657",
+      "name": "KAAPE AS",
+      "website": "https://www.kaape.no",
+      "tier": "VERIFIED",
+      "proof_page": "https://www.kaape.no/betingelser",
+      "sha256": "cc7524d883fc95b0de5a65139cf41e8dda82efb1cbc2bf6bd1dac02099a086bf",
+      "rule": null,
+      "foreign_orgnrs": [],
+      "publisher": [
+        {
+          "location": "title",
+          "text": "Betingelser | KAAPE"
+        },
+        {
+          "location": "og:site_name",
+          "text": "KAAPE"
+        },
+        {
+          "location": "header",
+          "text": "HJEM PÅ BESTILLING FERDIGE PRODUKTER OM OSS AKTUELT BOOK AVTALE More"
+        },
+        {
+          "location": "footer",
+          "text": "Abonner for å få eksklusive oppdateringer E-post Abonner Takk for at du abonnerte! Om oss I butikk Betingelser Størrelseguide Kontakt oss Leveringsinformasjon Bytte og returnering Personvern og c ookies ©2026 by iema.no"
+        }
+      ]
+    },
+    {
+      "seed": 20261117,
+      "orgnr": "926148931",
+      "name": "ATLO AS",
+      "website": "https://atlo.no",
+      "tier": "VERIFIED",
+      "proof_page": "https://atlo.no/",
+      "sha256": "a73c228f818f35cf2de0cf834554ec218581b054655fb2a92b88cfcde8527725",
+      "rule": null,
+      "foreign_orgnrs": [],
+      "publisher": [
+        {
+          "location": "title",
+          "text": "atlo.no - Boligalarm for alle"
+        },
+        {
+          "location": "title",
+          "text": "menu"
+        }
+      ]
+    },
+    {
+      "seed": 20261117,
+      "orgnr": "925392731",
+      "name": "MEKAN AS",
+      "website": "https://mekan.no",
+      "tier": "VERIFIED",
+      "proof_page": "https://mekan.no/pages/contact",
+      "sha256": "ef8ae6aeb1082036779cf710c1550337403e1f202626ff5c8df22145c49fc00f",
+      "rule": null,
+      "foreign_orgnrs": [],
+      "publisher": [
+        {
+          "location": "title",
+          "text": "Kontakt – MEKAN AS"
+        },
+        {
+          "location": "og:site_name",
+          "text": "MEKAN AS"
+        },
+        {
+          "location": "header",
+          "text": "Hjem Produkter Kontakt Om oss Logg inn MEKAN AS Hjem Produkter Kontakt Om oss Søk Logg inn Handlekurv"
+        },
+        {
+          "location": "logo",
+          "text": "MEKAN AS"
+        },
+        {
+          "location": "imprint-kontakt",
+          "text": "Adresse: Storgata 97, 3880 Dalen"
+        },
+        {
+          "location": "imprint-kontakt",
+          "text": "E-post: post@mekan-as.no"
+        },
+        {
+          "location": "imprint-kontakt",
+          "text": "Org.nr: 925 392 731"
+        },
+        {
+          "location": "footer",
+          "text": "© 2026, MEKAN AS Drevet av Shopify"
+        },
+        {
+          "location": "copyright",
+          "text": "© 2026, MEKAN AS Drevet av Shopify"
+        },
+        {
+          "location": "copyright",
+          "text": "© 2026, MEKAN AS"
+        },
+        {
+          "location": "copyright",
+          "text": "Drevet av Shopify"
+        }
+      ]
+    },
+    {
+      "seed": 20261117,
+      "orgnr": "918638628",
+      "name": "VESTFJORDEN ELEKTRO AS",
+      "website": "https://vestfjordenelektro.no",
+      "tier": "VERIFIED",
+      "proof_page": "https://vestfjordenelektro.no/",
+      "sha256": "75845e36b0bc2bd1e86472a01a7ed574d536c05fa7d674b6bd8eda8365f8018b",
+      "rule": null,
+      "foreign_orgnrs": [],
+      "publisher": [
+        {
+          "location": "title",
+          "text": "Vestfjorden Elektro"
+        },
+        {
+          "location": "header",
+          "text": "logo img"
+        },
+        {
+          "location": "logo",
+          "text": "logo img"
+        },
+        {
+          "location": "footer",
+          "text": "Alle rettigheter © Vestfjorden Elektro AS"
+        }
+      ]
+    },
+    {
+      "seed": 20261117,
+      "orgnr": "936758819",
+      "name": "HELSEFIX AS",
+      "website": "https://helsefix.no",
+      "tier": "VERIFIED",
+      "proof_page": "https://helsefix.no/om-oss",
+      "sha256": "7aa44caa8ce0649c150f2af6c289706a1a60524c407f4c9a9e57edc828c85ab7",
+      "rule": null,
+      "foreign_orgnrs": [],
+      "publisher": [
+        {
+          "location": "title",
+          "text": "Om oss — helseFix"
+        },
+        {
+          "location": "og:site_name",
+          "text": "helseFix"
+        },
+        {
+          "location": "imprint-kontakt",
+          "text": "post@minhelsefix.no"
+        },
+        {
+          "location": "imprint-kontakt",
+          "text": "Telefon"
+        },
+        {
+          "location": "imprint-kontakt",
+          "text": "Adresse"
+        },
+        {
+          "location": "imprint-kontakt",
+          "text": "Naprapat & Helse AS Skiringssalveien 20, 3208 Sandefjord Org.nr 936 758 819"
+        },
+        {
+          "location": "footer",
+          "text": "Forside Akilles Svimmelhet Historier Personvern Betingelser helseFix · Online rehabilitering med personlig omsorg"
+        }
+      ]
+    },
+    {
+      "seed": 20261117,
+      "orgnr": "948039958",
+      "name": "VALAKER BAKERI OG KONDITORI AS",
+      "website": "https://www.valakerbakeri.no",
+      "tier": "VERIFIED",
+      "proof_page": "https://www.valakerbakeri.no/",
+      "sha256": "e880c1af265963483ef24178d0805dc7dfbe91ab57c7eb107a9e9351ad46d739",
+      "rule": null,
+      "foreign_orgnrs": [],
+      "publisher": [
+        {
+          "location": "title",
+          "text": "Valaker Bakeri & Konditori - Bestill kaker og bakervarer på Sunnmøre"
+        },
+        {
+          "location": "og:site_name",
+          "text": "Valaker Bakeri"
+        },
+        {
+          "location": "header",
+          "text": "OM OSS VÅRE BUTIKKER KAKEGALLERI KONTAKT OSS 0 Gå til kasse NETTBUTIKK"
+        },
+        {
+          "location": "footer",
+          "text": "Kontakt oss Hovedbakeri Søvikvegen 31 6280 Søvik Postadresse Søvikvegen 31 6280 Søvik Kundeservice 70 21 65 90 post@valaker.as Man-fre: 07:00 - 15:00 Vi følger åpenhetsloven. Les mer om den her . payment methods Brukerbetingelser"
+        }
+      ]
+    },
+    {
+      "seed": 20261117,
+      "orgnr": "997584112",
+      "name": "TECNOVAP AS",
+      "website": "https://www.tecnovap.no",
+      "tier": "VERIFIED",
+      "proof_page": "https://www.tecnovap.no/",
+      "sha256": "0d63f11a5a184117e345f2a8eef7d77fbf55eefe288b6c723ba700d5c59f0e11",
+      "rule": null,
+      "foreign_orgnrs": [],
+      "publisher": [
+        {
+          "location": "title",
+          "text": "Tecnovap | Profesjonelle Dampvaskere"
+        },
+        {
+          "location": "logo",
+          "text": "Wetobo logo"
+        }
+      ]
+    }
+  ]
+}

@@ -10,16 +10,20 @@ Live identity and accounts must explicitly identify the requested company. Roles
 
 ## Websites
 
-At most four registrable-domain candidates come from the registered website, registry email or legal-name slugs. Registry website claims remain registry assertions until website identity is independently established. Social/directory domains are excluded from candidate fetching.
+Candidates come from registry homepages/emails, proven subunits, NAV employer homepages and bounded legal-name variants, within the README's cumulative website/DNS and global limits. Registry website claims remain registry assertions until website identity is independently established. Social/directory domains are excluded from candidate fetching.
 
 | Level | Publication rule |
 |---|---|
-| VERIFIED | A checksum-valid exact organisation number appears in owner/footer content, appropriate metadata, or explicit non-person JSON-LD identifiers. A group page listing the company is labeled `group_site`. |
+| VERIFIED | A checksum-valid exact organisation number appears in owner/footer content, appropriate metadata, or explicit non-person JSON-LD identifiers, after every conflict veto. Under R4, another publisher identifier requires proven subunit membership; an unrelated group company's number vetoes even an exact target mention. Historical `group_site` claims remain inspectable but do not authorize new publication. |
 | HIGH | Registry-origin domain, full legal-name match, matching site title/brand, strong address/phone/leader corroboration and at least five proof points. Navigation-only matches do not qualify. |
 | REGISTRY_DECLARED | Registry-origin domain stays on its registrable domain; live content is neither parked, blocked nor a shell; no foreign owner number appears; two independent signal types among distinctive legal-name branding, registered address and registry phone support it. |
 | MEDIUM / LOW | Abstain. Several qualifying domains remain ambiguous unless the policy selects a unique exact-verified domain. |
 
 Guessed slug and email domains require exact organisation-number proof. Hidden text, arbitrary scripts, foreign numbers and page instructions cannot establish ownership. A matching phone alone cannot qualify a registry-declared website.
+
+R4 checks publisher conflicts before positive scoring. Its local publisher block includes title, og:site_name, header/logo, footer/copyright and bounded contact/imprint blocks; customer/partner/reference lists, news/articles, hidden/scripts and agency credits are excluded from this block. A foreign valid publisher orgnr without proven subunit membership, the same name stem with an incompatible legal form (AS/ASA excepted), explicit group branding without the target number, default/parked/placeholder hosting, or a different service-provider publisher vetoes the candidate. An accountant's own correctly branded site is not rejected merely for being an accountant. Subunit fallback cannot override a publisher veto. All older independent vetoes remain active.
+
+The bundled R2 frequency table counts distinct registry entities per phone/full email/corporate email domain/name key. It has source hashes, dates and NLOD 2.0 attribution and loads locally only. These foundation stages do not use rarity as positive proof, change a threshold, or add a tier.
 
 Contacts and social-profile links are extracted only from accepted company sites. Social platforms are never fetched. Company profile links are restricted to accepted-site navigation/footer/header or non-person `sameAs`; sharing, article, platform-root and personal links are excluded.
 

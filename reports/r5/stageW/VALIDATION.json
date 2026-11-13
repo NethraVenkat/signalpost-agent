@@ -1,0 +1,33 @@
+{
+  "accepted_runs": 6,
+  "unique_companies": 600,
+  "all_exact_seven_flags": true,
+  "all_fresh_run_ids": true,
+  "ordered_terminal_envelopes": 600,
+  "available_sites": 6,
+  "five_part_briefings": 600,
+  "unsupported_values": 0,
+  "production_manifest_files_unchanged": 92,
+  "published_website_tiers": {
+    "VERIFIED": 27,
+    "HIGH": 3
+  },
+  "prior_website_urls_retained": 29,
+  "removed_website_social_urls": 0,
+  "source_recovery_urls": 1,
+  "literal_zero_historical_additions_met": false,
+  "new_positive_proof_rule_or_tier": false,
+  "source_recovery": "LOOPYTY exact footer also verifies under unmodified pre-R4 code; historical attempt timed out.",
+  "resource_totals": {
+    "accepted_http": 4465,
+    "accepted_wall_seconds": 2075.25,
+    "superseded_runs": 14,
+    "superseded_http": 10353,
+    "superseded_reported_wall_seconds": 4902.514
+  },
+  "dns_audit_http": 7,
+  "failed_bulk_preflight_attempts": 2,
+  "nav_parent_audit_http": 34,
+  "all_provider_cost_usd": 0,
+  "limits": "Rejected runs are included in resource totals, never substituted for accepted samples. Two stopped-driver child exit codes/import windows remain unknown in their trial receipts."
+}

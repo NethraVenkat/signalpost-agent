@@ -1,0 +1,45 @@
+{
+  "seed": 20261116,
+  "websites_before": 5,
+  "websites_after": 4,
+  "http_before": 795,
+  "http_after": 781,
+  "runtime_seconds": 355.85999999998603,
+  "cost_usd": 0.0,
+  "website_states": {
+    "available": 460,
+    "not_available": 384,
+    "failed": 42,
+    "blocked": 5,
+    "ambiguous": 9
+  },
+  "changes": {
+    "added": {},
+    "removed": {
+      "991658807": {
+        "final_url": "https://www.sissener.no",
+        "identity_level": "HIGH",
+        "proof_type": "signals",
+        "proof_page_url": "https://www.sissener.no/",
+        "signals": [
+          "legal_name",
+          "address",
+          "phone",
+          "registry_website",
+          "municipality"
+        ],
+        "points": 9,
+        "candidate_origin": "registry_website",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "registry_contact_matches": {
+          "phone": "+4723115260",
+          "email_domain": "sissener.no"
+        }
+      }
+    },
+    "url_changed": {}
+  },
+  "envelopes_sha256": "8dcaaa3acce3b02ea881c4b2f16d91304f01ed4bdcd0104e264b36c89bbff9b6",
+  "profiles_sha256": "5979b723b7bf085f3e2bf7d8364da46ddfcd0094e26a0b57b13abadf80bbac30"
+}

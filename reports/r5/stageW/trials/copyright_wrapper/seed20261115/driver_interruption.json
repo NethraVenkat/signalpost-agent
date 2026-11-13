@@ -1,0 +1,9 @@
+{
+  "driver_intentionally_stopped": true,
+  "stop_scope": "Only processes whose CommandLine matched this repository reports/r5/stageW/measure.py, verified through Cim.",
+  "cli_child_allowed_to_finish": true,
+  "cli_exit_code": null,
+  "source_import_window": "In-flight child import timing is not captured; final source versus pre-fix source is not asserted for this rejected trial.",
+  "exit_code_note": "Not captured after driver stop; never asserted exit 0. All mandatory outputs independently verified.",
+  "accepted_measurement": false
+}

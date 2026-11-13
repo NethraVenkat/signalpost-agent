@@ -1,0 +1,30 @@
+{
+  "seed": 20261114,
+  "working_directory": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageR4-20261114-corrected",
+  "command_argv": [
+    "C:\\Users\\<USER>\\signal-nethra\\.venv\\Scripts\\python.exe",
+    "-m",
+    "signalpost.cli",
+    "run",
+    "--organisations",
+    "C:\\Users\\<USER>\\signal-nethra\\reports\\r5\\release-v4b\\companies100.jsonl",
+    "--bulk",
+    "C:\\Users\\<USER>\\signal-nethra\\reports\\r5\\release-v4b\\registry100.csv",
+    "--output",
+    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageR4-20261114-corrected\\envelopes.jsonl",
+    "--profiles-output",
+    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageR4-20261114-corrected\\profiles.jsonl",
+    "--report",
+    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageR4-20261114-corrected\\report.json",
+    "--run-id",
+    "r5-stageR4-seed20261114-corrected",
+    "--expected-count",
+    "100"
+  ],
+  "exact_seven_flags": true,
+  "input_sha256": "0bd18780b153a1deee92ad206a03f9a1843a16b2ebb4a26b2bba6b4b2ea1bc60",
+  "bulk_sha256": "e19cf6e47d266b6a605b0b3dd14f1cbf08b31a78fb32820182fbb91753d96b4f",
+  "source_manifest_sha256": "da1efaa4ea35ecd055e9e34d8e612c3922ec5a47b8179f7f6595e9899b044211",
+  "parent_commit": "81a76b8dcb48b9891f605cd515f3d1197938f274",
+  "previous_working_directory": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageT-mock-run-final"
+}

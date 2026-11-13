@@ -1,0 +1,12 @@
+{
+  "orgnr": "991658807",
+  "name": "SISSENER AS",
+  "source_url": "https://www.sissener.no/",
+  "content_sha256": "1fef9e92174a78bf6c105c6b7f14b8e488a231a8b0833d2f72325efcfdaf2702",
+  "exact_excerpt": "res grundig p&aring; forh&aring;nd. Som en del av utvelgelsen av selskaper vurderes ogs&aring; de etiske aspektene ved selskapet og at selskapet har en god corporate governance.</span></p></div> <div class=\"u_1940785459 widget-832a29 dmCustomWidget\" data-lazy-load=\"\" data-title=\"\" id=\"1940785459\" dm",
+  "obsolete_match": "en del av",
+  "initial_trial_rule": "publisher_group_without_exact_orgnr",
+  "current_conflict_rule": null,
+  "reason": "The phrase concerns the fund selection process, not parent/group ownership. Bare part-of phrases were removed; explicit group/parent markers remain.",
+  "method": "Retrospective reproduction of discarded broad matcher on the original saved proof; not an accepted live result or new identity evidence."
+}

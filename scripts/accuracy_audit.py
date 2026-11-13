@@ -593,6 +593,7 @@ def audit_website_claim(
     origin = val.get("candidate_origin")
     signals = val.get("signals") or []
     identity_level = val.get("identity_level")
+    publisher_company = org
     branch = val.get('matched_via_subunit')
     if branch:
         if not subunit_map or branch not in subunit_map.get(org, set()):
@@ -610,7 +611,13 @@ def audit_website_claim(
         if cand_host in DIRECTORY_DOMAINS or any(cand_host.endswith("." + d) or cand_host == d for d in DIRECTORY_DOMAINS):
             return "INCORRECT", f"Directory/aggregator domain '{cand_host}' cannot serve as company official website", None
 
-    page = Page(body.encode("utf-8", errors="replace"), val.get("proof_page_url") or url or "")
+    page = Page(body.encode("utf-8", errors="replace"), val.get("proof_page_url") or ev.get('source_url') or url or "")
+    from signalpost.web.publisher_veto import conflict
+    publisher_context = {**(context or {}), 'publisher_company_orgnr': publisher_company,
+                         'subunits': [{'orgnr': unit} for unit in (subunit_map or {}).get(publisher_company, set())]}
+    veto, foreign = conflict(page, org, publisher_context)
+    if veto:
+        return 'INCORRECT', 'Publisher conflict: ' + veto, None
     orgnr_pat = re.compile(r'\b' + org[0:3] + r'[\s.]?' + org[3:6] + r'[\s.]?' + org[6:9] + r'\b')
 
     # Extract all organization numbers from page

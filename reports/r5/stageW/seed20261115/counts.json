@@ -1,0 +1,43 @@
+{
+  "seed": 20261115,
+  "websites_before": 5,
+  "websites_after": 6,
+  "http_before": 749,
+  "http_after": 748,
+  "runtime_seconds": 361.14000000001397,
+  "cost_usd": 0.0,
+  "website_states": {
+    "failed": 15,
+    "not_available": 71,
+    "ambiguous": 5,
+    "blocked": 3,
+    "available": 6
+  },
+  "section_availability_counts": {
+    "available": 463,
+    "not_available": 381,
+    "failed": 48,
+    "ambiguous": 5,
+    "blocked": 3
+  },
+  "changes": {
+    "added": {
+      "933519708": {
+        "final_url": "https://loopyty.com",
+        "identity_level": "VERIFIED",
+        "proof_type": "orgnr_on_page",
+        "proof_page_url": "https://loopyty.com/nb",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": []
+      }
+    },
+    "removed": {},
+    "url_changed": {}
+  },
+  "envelopes_sha256": "3db45092d6566edd9baf3fdb780cbcf56fc503c7d5422ca2e8597f0562e8e1e6",
+  "profiles_sha256": "ae5ec1f994bb7eb5f9af2303ab825007d1c2187c324751dc9d2dae11d40c3b22",
+  "counts_note": "Website states recomputed from envelopes; global availability counts retained separately. Raw execution logs unchanged."
+}

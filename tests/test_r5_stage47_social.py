@@ -39,7 +39,7 @@ def test_numeric_exception_does_not_bypass_context_or_platform_rules(extra):
 def test_numeric_linkedin_from_shared_group_site_is_withheld(tmp_path, monkeypatch, footer, title):
     _, row, _, _ = execute_web(tmp_path, monkeypatch, body=html(footer, title=title,
                         extra=f'<footer><a href="{URL}">LinkedIn</a></footer>'))
-    assert any(c['field'] == 'official_website' for c in row['claims'])
+    assert any(c['field'] == 'official_website' for c in row['claims']) == (OTHER not in footer)
     assert not any(c['field'].startswith('social_profile.') for c in row['claims'])
 
 

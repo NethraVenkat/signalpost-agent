@@ -1,0 +1,9 @@
+{
+  "driver_intentionally_stopped": true,
+  "driver_pid": 563524,
+  "reason": "Avoid further superseded live runs after focused test exposed contact-container aggregation bug.",
+  "cli_child_allowed_to_finish": true,
+  "cli_exit_code": null,
+  "exit_code_note": "Not captured after driver stop; never reported as exit 0. All 100 mandatory envelopes and site independently verified.",
+  "accepted_measurement": false
+}

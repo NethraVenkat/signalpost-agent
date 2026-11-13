@@ -1,0 +1,666 @@
+{
+  "method": "All saved fetched pages on the 29 historically published website candidates, including follow-up contact/about pages, not just selected proof pages.",
+  "pages_checked": 73,
+  "rules": {
+    "no_new_veto": 73
+  },
+  "checks": [
+    {
+      "seed": 20261017,
+      "orgnr": "926818317",
+      "name": "SPEDIFY AS",
+      "url": "https://spedify.no/",
+      "sha256": "52ab413b475db6341975f9892d087395e9ac54286f4b9a571b53edd30a2b25e2",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261017,
+      "orgnr": "926818317",
+      "name": "SPEDIFY AS",
+      "url": "https://spedify.no/spedify-3pl-blogg",
+      "sha256": "bec94d63f57ad95f533c902dc0041a75fcf9cc5a6a8cd278312483e08347514f",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261017,
+      "orgnr": "926818317",
+      "name": "SPEDIFY AS",
+      "url": "https://spedify.no/spedify-3pl-blogg/spedify-lanserer-reparasjonstjenester",
+      "sha256": "c03993a2117c305b72354093cb41ea7f9c86f3c1621e3bcc6b51eeb59ae983a8",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261017,
+      "orgnr": "926818317",
+      "name": "SPEDIFY AS",
+      "url": "https://spedify.no/jobb-i-spedify",
+      "sha256": "361fdc077c585cece1940c10ccb5c868ee1373c3283fba2fc2147dbf89235a36",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261017,
+      "orgnr": "926818317",
+      "name": "SPEDIFY AS",
+      "url": "https://spedify.no/en/jobb-i-spedify",
+      "sha256": "f825ea6af3829e1dc3f5c9a0899f67326707da34f8d47828c1a0db77c3cf83bc",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261017,
+      "orgnr": "926818317",
+      "name": "SPEDIFY AS",
+      "url": "https://spedify.no/jobb-i-spedify/apen-soknad",
+      "sha256": "4382df6b965ce832be22aff96a896295694fa299e1d30ffb5b88f983957274f6",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261017,
+      "orgnr": "991853995",
+      "name": "BIEN SPAREBANK ASA",
+      "url": "https://www.bien.no/",
+      "sha256": "0d0ae1d5dfadcd7a4bb69f55dffa5c2a5fe02eb14aaba4986f46cc5c67cd7a8d",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261017,
+      "orgnr": "991853995",
+      "name": "BIEN SPAREBANK ASA",
+      "url": "https://www.bien.no/ombanken/Presse",
+      "sha256": "7bd842b7223d7b264bc7d42ab1e0fa648a00e0d815006ca86338a209a65eb31a",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261017,
+      "orgnr": "991853995",
+      "name": "BIEN SPAREBANK ASA",
+      "url": "https://www.bien.no/nyheter/innskytervalg-2026",
+      "sha256": "dfe5031bccccbffa35bc45525151c3a1cca438ff9a1f1ab16ead2bcb1a125c5c",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261017,
+      "orgnr": "927094266",
+      "name": "SPORTLET.NO AS",
+      "url": "https://www.sportlet.no/",
+      "sha256": "93bbf69940b6358aca6c856ed988f0c96a40ba9fc51a86ed7f33e854d1875025",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261017,
+      "orgnr": "964398003",
+      "name": "FOLKSOM AS",
+      "url": "https://folksom.no/",
+      "sha256": "531faa54187b05780303bc835f6bc6d738dffdb12ac848ff031fad55e4e812cb",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261017,
+      "orgnr": "964398003",
+      "name": "FOLKSOM AS",
+      "url": "https://folksom.no/kontakt",
+      "sha256": "5c8d0c4669590fdba8578ddd5d55377b258e4864effc153cddeeeeb962441c84",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261017,
+      "orgnr": "964398003",
+      "name": "FOLKSOM AS",
+      "url": "https://folksom.no/nyheter",
+      "sha256": "5a1166c0734928f57e8e7a2ef0bc3adb4302f1faad675f968f1d2ddbb1e979ba",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261017,
+      "orgnr": "987769386",
+      "name": "INNLANDET REVISJON IKS",
+      "url": "https://irev.no/",
+      "sha256": "840d61326f4cf259ee426941a183633d82885e9087efbf753a8010e6a678f42f",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261017,
+      "orgnr": "987769386",
+      "name": "INNLANDET REVISJON IKS",
+      "url": "https://irev.no/comments/feed/",
+      "sha256": "b696e2cde08a0265091f6e7989451182fc81b17a13c9177a5fb4ff730c2b0b53",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261017,
+      "orgnr": "987769386",
+      "name": "INNLANDET REVISJON IKS",
+      "url": "https://irev.no/category/nyheter/",
+      "sha256": "24e5486bd131c149a55f533b6538c94cb6d4f26f36d6c81cabea101fe50a46e4",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261017,
+      "orgnr": "987769386",
+      "name": "INNLANDET REVISJON IKS",
+      "url": "https://irev.no/nyhetsarkiv/",
+      "sha256": "5d489c565f7a1f791cae38bd8a23f21ca99d274a54ac79a39533d76338deea60",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261113,
+      "orgnr": "918266917",
+      "name": "DIGITALIQ AS",
+      "url": "https://digitaliq.no/",
+      "sha256": "1e81b3c7b4ab4157552ccbdfddadc22bec4d6938a661fdc6b482a616e7b50ceb",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261113,
+      "orgnr": "918266917",
+      "name": "DIGITALIQ AS",
+      "url": "https://digitaliq.no/no/artikler",
+      "sha256": "362a3bbcec36be5cb789032e19a6bdfa03f81cc7a79aa94ee6eac03b072385a1",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261113,
+      "orgnr": "995194163",
+      "name": "GLÅMDAL MASKIN AS",
+      "url": "https://www.glomdalmaskin.no/",
+      "sha256": "5d81b2afa9b183ec29933434372d417e4efbffad175891b885ae7c059195e69c",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261113,
+      "orgnr": "995194163",
+      "name": "GLÅMDAL MASKIN AS",
+      "url": "https://www.glomdalmaskin.no/kontakt-oss/",
+      "sha256": "af4a602d0f99e88a39f585aa5e6a3ac08881b24b13bf3cc55bc5888b2ab08415",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261113,
+      "orgnr": "995194163",
+      "name": "GLÅMDAL MASKIN AS",
+      "url": "https://www.glomdalmaskin.no/om-oss/",
+      "sha256": "d257bf9e271abd39f3569f54aa31528970d50732361cc5beafb530ed932cffe8",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261113,
+      "orgnr": "931575678",
+      "name": "SOLID ØKONOMI AS",
+      "url": "https://solidokonomi.no/",
+      "sha256": "7aab3c32b66390b905677332159d1da8c167196477986c9f93aca9642c5fd2f4",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261113,
+      "orgnr": "931575678",
+      "name": "SOLID ØKONOMI AS",
+      "url": "https://solidokonomi.no/comments/feed",
+      "sha256": "17d9e02dd2f0e1f799a7eb8f83009cef1887ca77a02819959c3c841f492f376b",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261113,
+      "orgnr": "918031502",
+      "name": "SUNNCOM AS",
+      "url": "https://www.sunncom.no/",
+      "sha256": "ff2e91e7d4b67546faa8c6e742f0a0e4828af26cc9769b859c199de370f3d1bf",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261114,
+      "orgnr": "988217867",
+      "name": "CONCEDO AS",
+      "url": "https://www.concedo.no/",
+      "sha256": "68d923e0c1697fc2c21fa2b3d0ecf2bb7e4375abe1c5f66d73f6b29be7bae67f",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261114,
+      "orgnr": "988217867",
+      "name": "CONCEDO AS",
+      "url": "https://www.concedo.no/contact",
+      "sha256": "f6a7ba7fa789becb8622a75ee93e1f8be8b14029707bfc7fcaa9f7feca982dee",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261114,
+      "orgnr": "988217867",
+      "name": "CONCEDO AS",
+      "url": "https://www.concedo.no/about-us",
+      "sha256": "4299f25812e7f6899c72c62bb92d43fb76346af8a6b471d51193aa5a28a90ec1",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261114,
+      "orgnr": "988217867",
+      "name": "CONCEDO AS",
+      "url": "https://www.concedo.no/about-us/how-we-work",
+      "sha256": "cd51613023a89ae1deb5fe44beb467908dba9a2a6958e5065be5875582c4414e",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261114,
+      "orgnr": "988217867",
+      "name": "CONCEDO AS",
+      "url": "https://www.concedo.no/about-us/strategy-vision-and-values",
+      "sha256": "a8d6aa994e2aee6143ae736ac5b643fd0d217f1e5bb7e4cf2848518000ee2cb2",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261114,
+      "orgnr": "988217867",
+      "name": "CONCEDO AS",
+      "url": "https://www.concedo.no/about-us/our-history",
+      "sha256": "0798cb3fbce9cd07a4e7e82e13a8dd34a89273f33a922bc9c11b80c1d2cebdec",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261114,
+      "orgnr": "988217867",
+      "name": "CONCEDO AS",
+      "url": "https://www.concedo.no/about-us/transparency-act",
+      "sha256": "7f23f68b62881a0a5e6ed3cc4da4ae2410d810cf9978602d3be5e761120f376d",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261114,
+      "orgnr": "889320222",
+      "name": "SCANDINAVIAN NAILS BY ABAMEME AS",
+      "url": "https://www.abameme.com/",
+      "sha256": "61643a356f54c79308ae49dad774c70ba0b87f6a46ecfc7e671138a85e33b3fb",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261114,
+      "orgnr": "915324258",
+      "name": "MUSIKKPLASSEN AS",
+      "url": "https://musikkplassen.no/",
+      "sha256": "3fcab93f4d439681f60489fbfd22d7a88d7a2ef48ae22c7a6fe2d373c9fdd682",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261115,
+      "orgnr": "935794242",
+      "name": "BUSSIN AS",
+      "url": "https://www.bussin.no/",
+      "sha256": "b9a318b0bf7735fd3faa1136eb01d941da18c293d27497ab98908eb53fa872d7",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261115,
+      "orgnr": "928882624",
+      "name": "TRAVL AS",
+      "url": "https://travl.no/en",
+      "sha256": "37790f7c847e3e1e530294f2274438ed0f57e4251e6e4841a7bdd8794a535739",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261115,
+      "orgnr": "928882624",
+      "name": "TRAVL AS",
+      "url": "https://travl.no/en/contact",
+      "sha256": "85b19446c2cc797faeef51fffd0f2209ca9ccf497ac85b0115b05b5db8de6dfa",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261115,
+      "orgnr": "928882624",
+      "name": "TRAVL AS",
+      "url": "https://travl.no/en/about",
+      "sha256": "c75b39b9c5e376fbdde4194ad64ac2cc3e1d083c94910e6a8168da5aafefb985",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261115,
+      "orgnr": "928882624",
+      "name": "TRAVL AS",
+      "url": "https://travl.no/en/privacy",
+      "sha256": "c722bc1fdd01baf42649b4c60be24800d52df2154071add469945971aa82e8ec",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261115,
+      "orgnr": "932849429",
+      "name": "JAASTAD SIDERI AS",
+      "url": "https://www.jaastadsideri.no/",
+      "sha256": "6a0e09aa5ab7827b96c378988b44df897fb6e285334f9fbb376c8e0caed379e8",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261115,
+      "orgnr": "982326125",
+      "name": "ORKDAL BLOMSTER AS",
+      "url": "https://www.orkdalblomster.no/",
+      "sha256": "99918d8827be42991b28bcf4e378472f6c8228675a2b6e90811f144c547d47dc",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261115,
+      "orgnr": "982326125",
+      "name": "ORKDAL BLOMSTER AS",
+      "url": "https://www.orkdalblomster.no/rss.php/cat/336856",
+      "sha256": "e74d836b94885bac42deb63260e1815adce30d20e201957a7b7a8c27a723ad0f",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261115,
+      "orgnr": "926705261",
+      "name": "LEV AKTIVT AS",
+      "url": "https://levaktivt.no/",
+      "sha256": "40329f9e97ab101470abef043e6d3d7b5ec983c69d2f475c9edfd5d7185aaafd",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261115,
+      "orgnr": "926705261",
+      "name": "LEV AKTIVT AS",
+      "url": "https://levaktivt.no/comments/feed/",
+      "sha256": "d551282f6d3ecc05aed84f1d148d81303581d4d7faf6e544ba3c0699695904ee",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261116,
+      "orgnr": "991658807",
+      "name": "SISSENER AS",
+      "url": "https://www.sissener.no/",
+      "sha256": "1fef9e92174a78bf6c105c6b7f14b8e488a231a8b0833d2f72325efcfdaf2702",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261116,
+      "orgnr": "991658807",
+      "name": "SISSENER AS",
+      "url": "https://www.sissener.no/kontakt",
+      "sha256": "93e10b42affcac6a07f2dbe9d09257341b5e8291fc09ecf03172348c3bf9c0d2",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261116,
+      "orgnr": "991658807",
+      "name": "SISSENER AS",
+      "url": "https://www.sissener.no/om-oss",
+      "sha256": "3d7d01d8fb55e32be5685d30f458e2894829c08de225993269dd15d401173d7c",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261116,
+      "orgnr": "991658807",
+      "name": "SISSENER AS",
+      "url": "https://www.sissener.no/alminnelige-forretningsvilkar",
+      "sha256": "b801a3ca67198dfc086cff793f3ddb5863aa6db50642619d84bc7ac0a962c805",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261116,
+      "orgnr": "991658807",
+      "name": "SISSENER AS",
+      "url": "https://www.sissener.no/personvern",
+      "sha256": "ab2cddd35e949e18418a696cc4fa69dcd1476d5538fc0a105e745e6fcaafd342",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261116,
+      "orgnr": "813911442",
+      "name": "CALIFORNIA INVEST AS",
+      "url": "https://www.californiainvest.no/",
+      "sha256": "76277f321dc34f6eb1f035419a16bb6fdbc1fd5a6a06f06bbe673812626683d6",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261116,
+      "orgnr": "813911442",
+      "name": "CALIFORNIA INVEST AS",
+      "url": "https://californiainvest.no/Kontakt",
+      "sha256": "345451c8eeaae88bdfc928cc388bf17bbe8c564471833f7cdacd12a5e73e9486",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261116,
+      "orgnr": "925700398",
+      "name": "AURSJOKRAFT AS",
+      "url": "https://aursjokraft.no/",
+      "sha256": "c938f985412301776c48cc242184538e2cbd14f8402a76925b30d2c6361cd193",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261116,
+      "orgnr": "983089887",
+      "name": "MELDAL MILJØANLEGG AS",
+      "url": "https://www.meldalmiljoanlegg.no/",
+      "sha256": "f7c7fb20861c9bddfbd09ba6e06bd67b03122aee99a4204bc0536adaf75e0f75",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261116,
+      "orgnr": "983089887",
+      "name": "MELDAL MILJØANLEGG AS",
+      "url": "https://www.meldalmiljoanlegg.no/blog",
+      "sha256": "f7e71fc7071285fb015e3ded939aa8021840da83be4621a3547465622e2ed3ff",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261116,
+      "orgnr": "936065651",
+      "name": "HUSHOLDNINGEN AS",
+      "url": "https://husholdningen.no/",
+      "sha256": "c2ca57004826247d07bac3ce9fda1c90e175a5ffc20003cfa023bde25a233225",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261116,
+      "orgnr": "936065651",
+      "name": "HUSHOLDNINGEN AS",
+      "url": "https://husholdningen.no/pages/contact",
+      "sha256": "4f07d549a15a4fb77d768d7f507b3af36e224049ff0f6ed775517deba011c21a",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261116,
+      "orgnr": "936065651",
+      "name": "HUSHOLDNINGEN AS",
+      "url": "https://husholdningen.no/collections/nyheter",
+      "sha256": "97a942c83837788f622fa220454d624aa3b398cde000acad21f8a4b465979964",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261116,
+      "orgnr": "936065651",
+      "name": "HUSHOLDNINGEN AS",
+      "url": "https://husholdningen.no/blogs/news",
+      "sha256": "5753dbc60f00af1ea47b96aea654e8d375ad35ead819149ec1e7bd0d8c86599a",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261117,
+      "orgnr": "916875657",
+      "name": "KAAPE AS",
+      "url": "https://www.kaape.no/",
+      "sha256": "e637590876dfcc5ebd07ca6a6ff3d1dc60f64b5f46d66758ec726b42672d47de",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261117,
+      "orgnr": "916875657",
+      "name": "KAAPE AS",
+      "url": "https://www.kaape.no/kontakt-oss",
+      "sha256": "525bd528d23c88906bc690a0f75d76de1def2b963dfaad4ece8b6b4297b1af41",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261117,
+      "orgnr": "916875657",
+      "name": "KAAPE AS",
+      "url": "https://www.kaape.no/omoss",
+      "sha256": "5e37a22eb1534e3f0a06d92750ea547c64a1adb99aca8b80704d86cfea0ac861",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261117,
+      "orgnr": "916875657",
+      "name": "KAAPE AS",
+      "url": "https://www.kaape.no/betingelser",
+      "sha256": "cc7524d883fc95b0de5a65139cf41e8dda82efb1cbc2bf6bd1dac02099a086bf",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261117,
+      "orgnr": "926148931",
+      "name": "ATLO AS",
+      "url": "https://atlo.no/",
+      "sha256": "a73c228f818f35cf2de0cf834554ec218581b054655fb2a92b88cfcde8527725",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261117,
+      "orgnr": "926148931",
+      "name": "ATLO AS",
+      "url": "https://atlo.no/comments/feed/",
+      "sha256": "a59faccc36d1992b5043e5b9bfc802784a3edf0bea918b708364c7b8c6a411ca",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261117,
+      "orgnr": "925392731",
+      "name": "MEKAN AS",
+      "url": "https://mekan.no/",
+      "sha256": "dea1d5a5b57f49961a02bc4fd6a96fd0e6be5c24dd4f8ac003dbee4592747074",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261117,
+      "orgnr": "925392731",
+      "name": "MEKAN AS",
+      "url": "https://mekan.no/pages/contact",
+      "sha256": "ef8ae6aeb1082036779cf710c1550337403e1f202626ff5c8df22145c49fc00f",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261117,
+      "orgnr": "918638628",
+      "name": "VESTFJORDEN ELEKTRO AS",
+      "url": "https://vestfjordenelektro.no/",
+      "sha256": "75845e36b0bc2bd1e86472a01a7ed574d536c05fa7d674b6bd8eda8365f8018b",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261117,
+      "orgnr": "936758819",
+      "name": "HELSEFIX AS",
+      "url": "https://helsefix.no/",
+      "sha256": "6b661f706ee348cfd3d498b5b8bd8bfd53446bd978e448a9c3491cf3e57ea930",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261117,
+      "orgnr": "936758819",
+      "name": "HELSEFIX AS",
+      "url": "https://helsefix.no/om-oss",
+      "sha256": "7aa44caa8ce0649c150f2af6c289706a1a60524c407f4c9a9e57edc828c85ab7",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261117,
+      "orgnr": "948039958",
+      "name": "VALAKER BAKERI OG KONDITORI AS",
+      "url": "https://www.valakerbakeri.no/",
+      "sha256": "e880c1af265963483ef24178d0805dc7dfbe91ab57c7eb107a9e9351ad46d739",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261117,
+      "orgnr": "997584112",
+      "name": "TECNOVAP AS",
+      "url": "https://www.tecnovap.no/",
+      "sha256": "0d63f11a5a184117e345f2a8eef7d77fbf55eefe288b6c723ba700d5c59f0e11",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261117,
+      "orgnr": "997584112",
+      "name": "TECNOVAP AS",
+      "url": "https://www.tecnovap.no/nyhetsblogg/om-teknovap-historen-bak-tecnovap",
+      "sha256": "d98189247a969c98d59cf8d78ea4bb8e7b954a1383698e141a1d25b349a36f3e",
+      "rule": null,
+      "foreign_orgnrs": []
+    },
+    {
+      "seed": 20261117,
+      "orgnr": "997584112",
+      "name": "TECNOVAP AS",
+      "url": "https://www.tecnovap.no/nyhetsblogg",
+      "sha256": "138bc4d51ae1a0f207893c14c668b8f567885c3a092f550d7e2c265c55108d8e",
+      "rule": null,
+      "foreign_orgnrs": []
+    }
+  ]
+}

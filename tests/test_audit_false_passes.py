@@ -503,7 +503,7 @@ def test_website_registry_declaration_accepted():
 # -----------------------------------------------------------------------------
 # 21. Multi-entity group site: Legitimate multi-entity contact page accepted
 # -----------------------------------------------------------------------------
-def test_website_legitimate_multi_entity_group_contact_page_accepted():
+def test_website_multi_entity_contact_cards_without_subunit_proof_rejected():
     from signalpost.web.proof import score
     from signalpost.web.html import Page
 
@@ -539,7 +539,10 @@ def test_website_legitimate_multi_entity_group_contact_page_accepted():
     page = Page(body.encode("utf-8"), "https://www.simployer.com/contact-us")
     context = {"name": "SIMPLOYER SOLUTIONS AS", "website": "www.simployer.com"}
     proof = score(page, simployer_org, context, "registry_website", [])
-    assert proof.level == "VERIFIED"
+    # R4: other group legal entities are not proven subunits. A dedicated
+    # invoice card no longer overrides a conflicting publisher number.
+    assert proof.level == "REJECT"
+    assert proof.reason == 'publisher_foreign_orgnr'
     assert proof.other_orgnrs == ["937475918", "986419454"]
 
     # 2. Test accuracy auditor
@@ -553,12 +556,11 @@ def test_website_legitimate_multi_entity_group_contact_page_accepted():
             "other_orgnrs": ["937475918", "986419454"]
         }
     }
-    ev = {"locator": "identity-proof:921407025"}
+    ev = {"locator": "identity-proof:921407025", "source_url": "https://www.simployer.com/contact-us"}
     status, reason, val = audit_website_claim(
         simployer_org, claim, ev, body, context=context
     )
-    assert status == "CORRECT", f"Auditor rejected legitimate group contact page: {reason}"
-    assert val == "https://www.simployer.com"
+    assert status == "INCORRECT", f"Auditor accepted conflicting publisher context: {reason}"
 
 
 # -----------------------------------------------------------------------------
@@ -592,7 +594,7 @@ def test_website_incorrectly_attributed_group_site_rejected():
     context = {"name": "AUTONEXT AS", "website": "autonext.no"}
     proof = score(page, ORG, context, "legal_name_slug", [])
     assert proof.level == "REJECT", f"Production verifier accepted unverified multi-entity page: {proof.level}"
-    assert proof.reason == "unverified_multi_entity_site"
+    assert proof.reason == "publisher_group_without_exact_orgnr"
 
     # 2. Auditor must reject claim missing relationship_note
     claim_no_note = {

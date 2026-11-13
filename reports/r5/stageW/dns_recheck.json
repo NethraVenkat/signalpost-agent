@@ -3,7 +3,7 @@
   "documentation": "https://developers.google.com/speed/public-dns/docs/doh/json",
   "terms": "https://developers.google.com/speed/public-dns/terms",
   "privacy": "https://developers.google.com/speed/public-dns/privacy",
-  "input_audit_sha256": "bd4cd91827ccd0d71ef810c41ff3e5f4968858a59258f272ee7cc6974b90d4da",
+  "input_audit_sha256": "d8097a4a5abe54c6d2a8e677042b5d686a38f68df0e72e36de5ea6b9d900c822",
   "unique_names": 7,
   "completed": 7,
   "http_requests": 7,
@@ -83,5 +83,7 @@
       "state": "SERVFAIL"
     }
   ],
-  "limits": "A query only: NOERROR without A does not prove nonexistence. Generic historical errors include nomination cutoffs. Diagnostic results never publish identity claims."
+  "limits": "A query only: NOERROR without A does not prove nonexistence. Generic historical errors include nomination cutoffs. Diagnostic results never publish identity claims.",
+  "original_input_audit_sha256": "bd4cd91827ccd0d71ef810c41ff3e5f4968858a59258f272ee7cc6974b90d4da",
+  "input_correction": "Final report-only corrections and verified NAV-parent audit merged. Original DNS candidate records unchanged; no resolver query repeated."
 }

@@ -1,0 +1,28 @@
+{
+  "seed": 20261114,
+  "websites_before": 3,
+  "websites_after": 3,
+  "http_before": 736,
+  "http_after": 730,
+  "runtime_seconds": 317.89099999997416,
+  "cost_usd": 0.0,
+  "website_states": {
+    "failed": 18,
+    "not_available": 71,
+    "ambiguous": 8,
+    "available": 3
+  },
+  "section_availability_counts": {
+    "available": 462,
+    "failed": 48,
+    "not_available": 382,
+    "ambiguous": 8
+  },
+  "changes": {
+    "added": {},
+    "removed": {},
+    "url_changed": {}
+  },
+  "envelopes_sha256": "6ba3d72caf0cffbe31dec243de1648a87b3b11c96b60556f0f37def3f26def0a",
+  "profiles_sha256": "d02a37f2e9b42b9b67d8cfbd3a3e5eab6e2d86edcc5bd8277dffc13bbb795d99"
+}

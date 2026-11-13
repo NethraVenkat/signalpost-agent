@@ -464,7 +464,10 @@ def extract_contacts_and_social(section, org, web_claim, pages, context=None, en
 
 
 def candidate_proof(page,org,context,candidate,leaders):
+    context = {**context, 'publisher_company_orgnr': org}
     proof=score(page,org,context,candidate.origin,leaders)
+    if proof.reason.startswith('publisher_'):
+        return proof
     if candidate.subunit_orgnr and proof.level not in {'VERIFIED','BLOCKED'}:
         unit=score(page,candidate.subunit_orgnr,context,candidate.origin,leaders)
         if unit.level=='VERIFIED':return unit

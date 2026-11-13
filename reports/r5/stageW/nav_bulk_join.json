@@ -1,0 +1,10 @@
+{
+  "source_file": "registry.csv",
+  "source_sha256": "5b0df27c5567a655320b8dfb8975049b76c46ba93d748a8a763f8db7050b7862",
+  "rows_scanned": 1177860,
+  "index_employers": 6012,
+  "employers_found_in_main_entity_snapshot": 0,
+  "employers_with_parent_field": 0,
+  "matches": [],
+  "method": "Exact orgnr lookup only; no company-name matching; existing official bulk only; zero network requests."
+}
