@@ -180,4 +180,4 @@ def test_legacy_inferred_unit_cannot_return_on_source_outage(tmp_path):
     current=next(c for c in rows[0]['claims'] if c['field']=='accounts.revenue')
     assert current['carried_forward'] and current['reporting_period']['unit'] is None
     assert 'unit_basis' not in current['reporting_period']
-    assert verify(second.output,second.state_dir,1,second.organisations,second.report)['derived_financial_metrics_verified']==0
+    assert verify(second.output,second.state_dir,1,second.organisations,second.report)['derived_financial_metrics_verified']==3

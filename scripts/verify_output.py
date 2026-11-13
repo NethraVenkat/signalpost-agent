@@ -118,10 +118,17 @@ def verify_financial_sources(row, data, evidence, stored_body):
         pa,pb=a['reporting_period'],b['reporting_period']
         assert a['availability']==b['availability']=='available'
         assert pa['account_type']==pb['account_type']=='SELSKAP'
-        assert pa.get('currency') and pa.get('unit') and all(pa.get(k)==pb.get(k) for k in ('currency','unit','account_type'))
+        assert pa.get('currency') and all(pa.get(k)==pb.get(k) for k in ('currency','unit','account_type'))
+        def refs(c):
+            import re
+            return {(evidence[eid]['source_url'],evidence[eid]['content_sha256'],evidence[eid]['locator'].split('/')[1])
+                    for eid in c['evidence_ids'] if re.match(r'^/[0-9]+/',evidence[eid]['locator'])
+                    and evidence[eid]['source_url']=='https://data.brreg.no/regnskapsregisteret/regnskap/'+row['organisation_number']
+                    and evidence[eid]['extraction_method']=='signalpost.registry.v1'}
         top,bottom=Decimal(str(a['value'])),Decimal(str(b['value']))
         assert top.is_finite() and bottom.is_finite() and bottom>0
         if m['formula']=='revenue_yoy':
+            if pa.get('unit') is None:assert {x[0] for x in refs(a)} & {x[0] for x in refs(b)},'Missing units from incompatible source schemas'
             assert a['field']=='accounts.revenue' and b['field'].startswith('accounts.history.') and b['field'].endswith('.revenue')
             sa,ea,sb,eb=[date.fromisoformat(p[k]) for p,k in [(pa,'period_start'),(pa,'period_end'),(pb,'period_start'),(pb,'period_end')]]
             assert ea.year==eb.year+1 and sa.year==sb.year+1 and eb<sa
@@ -129,6 +136,7 @@ def verify_financial_sources(row, data, evidence, stored_body):
             assert 350 <= (ea-sa).days+1 <=366 and 350 <= (eb-sb).days+1 <=366
             top-=bottom
         else:
+            assert refs(a)&refs(b),'Ratio inputs are not from the same statement'
             assert all(pa.get(k)==pb.get(k) for k in ('fiscal_year','period_start','period_end'))
             fields={'operating_margin':('accounts.operating_result','accounts.revenue'), 'equity_ratio':('accounts.equity','accounts.total_assets')}
             assert (a['field'],b['field'])==fields[m['formula']]

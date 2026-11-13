@@ -174,6 +174,7 @@ def sentence_error(sentence,envelope):
         rendered=match.group(2).strip().rstrip('.')
         if not any(c.field.startswith('accounts.') and isinstance(c.value,(int,float)) and
                    (getattr(c,'reporting_period',None) or {}).get('currency')==match.group(1) and
+                   (getattr(c,'reporting_period',None) or {}).get('unit')==match.group(1) and
                    number(rendered)==number(str(c.value)) and
                    re.sub(r'\D','',rendered)==re.sub(r'\D','',money(c.value)) for c in claims):return 'unverified_number'
     derived=None

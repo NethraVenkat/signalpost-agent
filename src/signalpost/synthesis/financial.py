@@ -20,15 +20,35 @@ def period(claim, require_unit=True):
         start, end = date.fromisoformat(p['period_start']), date.fromisoformat(p['period_end'])
         if start > end or str(end.year) != str(p.get('fiscal_year')) or p.get('account_type') != 'SELSKAP': return None
     except (KeyError, TypeError, ValueError): return None
-    if require_unit and (not isinstance(p.get('unit'),str) or not p['unit'] or not re.fullmatch(r'[A-Z]{3}',str(p.get('currency','')))):
+    if require_unit and (not re.fullmatch(r'[A-Z]{3}',str(p.get('currency',''))) or
+                         (p.get('unit') is not None and (not isinstance(p['unit'],str) or not p['unit']))):
         return None
     return {k:p.get(k) for k in ('fiscal_year','period_start','period_end','currency','unit','account_type')}
 
 
-def comparable(current, previous):
+def source_refs(envelope,claim):
+    """The approved entity schema and exact statement, from primary receipts."""
+    evidence={e.id:e for e in envelope.evidence}
+    refs=set()
+    for eid in claim.evidence_ids:
+        e=evidence.get(eid)
+        if not e:continue
+        match=re.match(r'^/([0-9]+)/',e.locator)
+        if (match and e.source_url=='https://data.brreg.no/regnskapsregisteret/regnskap/'+envelope.organisation_number
+                and e.extraction_method=='signalpost.registry.v1'):
+            refs.add((e.source_url,e.content_sha256,match[1]))
+    return refs
+
+
+def comparable(current, previous,envelope=None):
     a,b = period(current), period(previous)
     if not a or not b: return False
     if any(a[k] != b[k] for k in ('currency','unit','account_type')): return False
+    if a['unit'] is None:
+        if envelope is None:return False
+        # This adapter reads the same enhet field from the same approved
+        # entity schema. Missing units do not acquire an absolute scale.
+        if not ({r[0] for r in source_refs(envelope,current)} & {r[0] for r in source_refs(envelope,previous)}):return False
     sa,ea,sb,eb = [date.fromisoformat(p[k]) for p,k in [(a,'period_start'),(a,'period_end'),(b,'period_start'),(b,'period_end')]]
     return (ea.year == eb.year+1 and sa.year == sb.year+1
             and (sa.month,sa.day,ea.month,ea.day)==(sb.month,sb.day,eb.month,eb.day)
@@ -54,7 +74,8 @@ def analyze(envelope):
         a,b = current.get('accounts.'+top),current.get('accounts.'+bottom)
         if a is None or b is None: gaps[formula]='missing supported inputs'; continue
         pa,pb = period(a),period(b)
-        if not pa or pa != pb: gaps[formula]='unverified or mismatched period, currency, unit or entity scope'; continue
+        if not pa or pa != pb or not (source_refs(envelope,a)&source_refs(envelope,b)):
+            gaps[formula]='unverified or mismatched statement, period, currency, unit field or entity scope'; continue
         value=percentage(amount(a),amount(b))
         if value is None: gaps[formula]='non-finite inputs or non-positive denominator'; continue
         metrics.append(FinancialMetric(formula=formula,value=value,input_claim_ids=[a.id,b.id],reporting_period=pa,
@@ -62,7 +83,7 @@ def analyze(envelope):
     revenue=current.get('accounts.revenue')
     previous=sorted((c for c in claims if c.field.startswith('accounts.history.') and c.field.endswith('.revenue')),
                     key=lambda c:str((c.reporting_period or {}).get('period_end','')),reverse=True)
-    prior=next((c for c in previous if revenue and comparable(revenue,c)),None)
+    prior=next((c for c in previous if revenue and comparable(revenue,c,envelope)),None)
     if not revenue or not prior: gaps['revenue_yoy']='two comparable annual entity periods are not supported'
     else:
         now,old=amount(revenue),amount(prior)

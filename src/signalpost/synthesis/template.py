@@ -24,6 +24,8 @@ def projected(claim):
     if field.startswith('accounts.') and getattr(claim,'reporting_period',None):
         period=claim.reporting_period
         amount=money(value) if period.get('currency') else text(value)
+        if period.get('unit')!=period.get('currency') or not period.get('unit'):
+            return amount+' (reported raw value; unit/scale '+str(period.get('unit') or 'not declared')+'; currency '+str(period.get('currency') or 'unknown')+'; fiscal year '+str(period.get('fiscal_year') or 'unknown')+')'
         return ' '.join(x for x in [period.get('currency'),amount] if x)+' (fiscal year '+str(period.get('fiscal_year'))+')' if period.get('fiscal_year') else amount
     if field.startswith('accounts.') and isinstance(value,(int,float)) and not isinstance(value,bool):return money(value)
     if field.startswith('subunits.unit.'):

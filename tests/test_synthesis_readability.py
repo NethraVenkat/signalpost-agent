@@ -45,7 +45,7 @@ def test_klass_saved_sources_and_all_subclass_parents():
 def test_headline_has_every_clause_cited_and_exact_amount(tmp_path):
     row, _ = envelope(tmp_path)
     staff = available(row, 'identity.employees', 55)
-    revenue = available(row, 'accounts.revenue', 424327000, reporting_period={'currency': 'NOK', 'fiscal_year': '2025'})
+    revenue = available(row, 'accounts.revenue', 424327000, reporting_period={'currency': 'NOK', 'unit':'NOK', 'fiscal_year': '2025'})
     nace = next(c for c in row.claims if c.field == 'identity.nace1')
     nace.value = {'kode': '46.640', 'beskrivelse': 'Engroshandel med maskiner og utstyr ellers'}
     result = generate(row)
@@ -66,7 +66,7 @@ def test_headline_has_every_clause_cited_and_exact_amount(tmp_path):
 def test_revenue_is_first_optional_headline_clause_without_employees(tmp_path):
     row, _ = envelope(tmp_path)
     row.claims = [c for c in row.claims if c.field != 'identity.employees']
-    available(row, 'accounts.revenue', 3720407, reporting_period={'currency': 'NOK', 'fiscal_year': '2025'})
+    available(row, 'accounts.revenue', 3720407, reporting_period={'currency': 'NOK', 'unit':'NOK', 'fiscal_year': '2025'})
     result = generate(row)
     opening = result.sections.what_it_does[0]
     assert '), with NOK 3,720,407 in revenue' in opening.text
@@ -79,7 +79,7 @@ def test_revenue_is_first_optional_headline_clause_without_employees(tmp_path):
 def test_exact_money(value, expected, tmp_path):
     assert money(value) == expected
     row, _ = envelope(tmp_path)
-    claim = available(row, 'accounts.net_result', value, reporting_period={'currency': 'NOK', 'fiscal_year': '2025'})
+    claim = available(row, 'accounts.net_result', value, reporting_period={'currency': 'NOK', 'unit':'NOK', 'fiscal_year': '2025'})
     assert sentence_error(Sentence(text='Annual result: NOK ' + expected + ' (fiscal year 2025).', claim_ids=[claim.id]), row) is None
     assert sentence_error(Sentence(text='Annual result: NOK 2025 (fiscal year 2025).', claim_ids=[claim.id]), row)
 

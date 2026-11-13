@@ -23,6 +23,15 @@ def financial_row(tmp_path):
         available(row,'accounts.'+field,value,reporting_period=period())
     available(row,'accounts.history.2024-12-31.revenue',1000,reporting_period=period(2024))
     available(row,'identity.latest_submitted_accounts','2026')
+    original=row.evidence[0]
+    for c in row.claims:
+        if c.family!='accounts' or not c.reporting_period:continue
+        receipt=original.model_copy(update={'id':c.id,'source_url':'https://data.brreg.no/regnskapsregisteret/regnskap/'+row.organisation_number,
+            'content_sha256':'d'*64,'locator':('/1/' if c.field.startswith('accounts.history.') else '/0/')+c.field,
+            'extraction_method':'signalpost.registry.v1'})
+        from signalpost.models.evidence import digest
+        receipt.id=digest([receipt.source_url,receipt.content_sha256,receipt.locator,receipt.extraction_method])
+        c.evidence_ids=[receipt.id];row.evidence.append(receipt)
     return row
 
 
