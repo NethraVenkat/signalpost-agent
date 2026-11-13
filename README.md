@@ -20,6 +20,12 @@ The [R2 release report](reports/r2/MORNING_REPORT.md) preserves earlier validati
 
 Historical submitted verification (version 1.0.0): the [Phase 1 gate](reports/phase1-gate.md) — 463 tests pass; on a uniform 1,000-company sample (seed 20261017, public bulk subset) the final code produced 1,000 ordered `complete` envelopes with exit 0 in a normal run (248.7 s, 5,380 HTTP attempts, $0 provider fees) and under forced 30 s, 120 s, 600 s and 3,000-request limits (finishing at 29.3 s, 103.1 s, 270.9 s and 164.0 s), with all 28,726 baseline identity claim IDs preserved. The earlier [revision improvements](reports/revision-improvements.md), [remediation release](reports/remediation-release.md) and evaluations are historical evidence; their measurements are not relabeled as current performance or an official score.
 
+Stage C uses only own-site sitemaps to nominate contact/about/privacy/impressum
+proof pages absent from navigation, at most two extra pages per company inside
+the existing counters. Sitemaps never supply news. Dated activity uses linked
+RSS/Atom or bounded dated own-site HTML. Bot/challenge pages are blocked access,
+not weak identity evidence; proof walks stop when they reach a challenge.
+
 ## How it works
 
 Hiring uses the bundled, org-number-keyed official NAV index for discovery,
@@ -100,7 +106,7 @@ NAV detail retries count toward the cap. Header names discover candidates; detai
 - The identity firewall checks exact company/parent identifiers. Guessed websites require exact organisation-number proof; registered domains have stricter documented corroboration rules. Same-name companies and group navigation do not alone establish ownership.
 - Every published fact links a source URL/identifier, UTC retrieval time, stored-body SHA-256, locator, extractor version and a verbatim span of at most 300 characters. Unknown/failure placeholders never invent evidence.
 - Availability is explicit: available, not_available, blocked, not_applicable, ambiguous or failed. Missing values are null; numeric zero is retained only when reported.
-- Financial claims preserve the exact entity period, currency and unit reported by the source. No unit or scale is inferred. All earlier entity statements returned by the existing API response are retained; one additional official request lists years with available annual-accounts copies. That list is evidence-linked and feeds the newer-filing flag. Derived ratios and YoY require source-declared compatible units; YoY additionally requires comparable consecutive annual periods and positive prior revenue. Missing units stay visibly unknown.
+- Financial claims preserve the exact entity period, currency and unit reported by the source. No unit or scale is inferred. All earlier entity statements returned by the existing API response are retained; one additional official request lists years with available annual-accounts copies. That list is evidence-linked and feeds the newer-filing flag. Dimensionless ratios require the same statement and matching period, declared currency and unit-field value; matching absent units cancel without assigning scale. YoY additionally requires comparable consecutive annual periods, positive prior revenue, and matching units (or both absent from the same approved source schema). Absolute missing units stay visibly unknown.
 - URL allowlists, DNS pinning, robots, redirect checks and per-source/global budgets constrain requests. Source bodies stay local; tokens are never stored in blobs or logs.
 - Summary sentences cite supported claims. Numbers, dates, names, URLs and verbatim quotes are checked against those citations. Workplace, board and ad counts cite distinct underlying records and remain derived summary metadata, outside the source-fact claims list. Invalid sentences are dropped with recorded reasons.
 

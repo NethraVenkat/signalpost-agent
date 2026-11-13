@@ -112,7 +112,7 @@ def test_activity_xml_fallbacks_and_malformed():
     </sitemapindex>"""
     items, children = parse(sitemap_index_xml, base_url, now)
     assert items == []
-    assert children == ["https://example.no/news-sitemap.xml"]
+    assert children == []  # Sitemaps never nominate activity/news.
 
     # 3. Empty feed/sitemap
     empty_xml = b"""<?xml version="1.0" encoding="UTF-8"?>

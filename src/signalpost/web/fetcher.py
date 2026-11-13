@@ -159,6 +159,11 @@ class WebsiteHttp:
                             event["content_sha256"] = sha
                             response = Response(body, stream.status_code, url, utc_now(), sha)
                             content_type = stream.headers.get("content-type", "").split(";", 1)[0].strip().lower()
+                            if not stream.is_redirect and content_type in {'text/html','application/xhtml+xml','text/plain'}:
+                                from .html import Page
+                                from .challenge import detected
+                                if await offload(lambda:detected(Page(body,url))):
+                                    raise SourceFailure('block_page')
                             if stream.is_redirect:
                                 if hop == 3:
                                     raise SourceFailure("redirect_limit")

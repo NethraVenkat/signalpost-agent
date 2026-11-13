@@ -1,0 +1,12 @@
+{
+  "source_url": "https://digitaliq.no/",
+  "saved_body_sha256": "4eec82455388f08fedbdc2196b21d07de0a2f7ab2ae06d362c79b8a053c0aedc",
+  "classification": "usable HTML with passive JSD; no active/visible gate",
+  "identity_level": "VERIFIED",
+  "orgnr": "918266917",
+  "exact_excerpt": "class=\"mt-4 text-sm text-muted\">Org.nr: 918 266 917 MVA</p><p class=\"mt-1 text-sm text-muted\">Torgallmenningen 3b<br/>5014 Bergen</p></div><nav aria-l",
+  "vendor_documentation": "https://developers.cloudflare.com/cloudflare-challenges/challenge-types/javascript-detections/",
+  "documentation_checked_on": "2026-11-13",
+  "live_refetch": false,
+  "note": "Replay of retained false-block trial body; publication still requires each run own fresh proof."
+}

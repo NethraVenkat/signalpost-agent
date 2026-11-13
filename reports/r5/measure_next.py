@@ -134,7 +134,7 @@ def summarize():
             job_ad_companies=sum(any(c['field'].startswith('hiring.job.') for c in cs) for cs in oldclaims))
     
     states = {s:{v:sum(c['section_states'].get(s,'not_recorded')==v for c in per)
-                    for v in sorted(set(values)|{'not_recorded'})}
+                    for v in sorted(set(values)|{'not_recorded'}|{c['section_states'].get(s,'not_recorded') for c in per})}
               for s,values in baseline['counts_by_section_state'].items()}
     assert all(sum(values.values())==len(per) for values in states.values())
     counts = {'metrics':metrics,'counts_by_section_state':states,'per_company':per,

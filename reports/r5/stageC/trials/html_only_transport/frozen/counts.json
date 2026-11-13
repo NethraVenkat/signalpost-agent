@@ -1,0 +1,52 @@
+{
+  "note": "Superseded HTML-only transport trial. Postprocessing collided with the newer fixed report directory; these counts are reconstructed from its own retained output/report, not the newer run.",
+  "lines": 100,
+  "output_sha256": "a1d6bb24fb7982cd8f147870d01628fad5f0bfe498de8a811383ae051dc8eeff",
+  "requests": 687,
+  "site": {
+    "state": "available",
+    "companies": 100,
+    "input_records": 100,
+    "pages": 102,
+    "skipped_invalid_identifiers": 0,
+    "total_bytes": 36245703,
+    "largest_profile_data_bytes": 576013,
+    "largest_profile_bytes": 249341
+  },
+  "completion": {
+    "wall_seconds": 889.922,
+    "within_requested_time_budget": true,
+    "within_effective_time_budget": true,
+    "note": "Includes preparation, crawl, mandatory outputs and site; final report flush adds filesystem latency."
+  },
+  "states": {
+    "identity": {
+      "available": 100
+    },
+    "roles": {
+      "available": 100
+    },
+    "subunits": {
+      "not_available": 29,
+      "available": 71
+    },
+    "accounts": {
+      "failed": 1,
+      "available": 99
+    },
+    "website": {
+      "blocked": 3,
+      "failed": 15,
+      "ambiguous": 6,
+      "available": 6,
+      "not_available": 70
+    },
+    "hiring": {
+      "not_available": 100
+    },
+    "activity": {
+      "available": 71,
+      "failed": 29
+    }
+  }
+}

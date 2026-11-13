@@ -93,7 +93,6 @@ def test_ranked_cap_order_and_incomplete_companies(tmp_path):
 
 
 @pytest.mark.parametrize('xml', [
-    '<urlset><url><loc>https://example.no/news/update</loc><lastmod>2026-10-10</lastmod></url></urlset>',
     '<rss><channel><item><title>Update</title><link>https://example.no/news/update</link><pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate></item></channel></rss>',
     '<feed xmlns="http://www.w3.org/2005/Atom"><entry><title>Update</title><link href="https://example.no/news/update"/><updated>2026-10-10</updated></entry></feed>'
 ])
@@ -119,7 +118,7 @@ def test_non_article_paths_are_not_updates(path):
 
 def test_sitemap_index_depth_and_domain():
     xml='<sitemapindex><sitemap><loc>https://example.no/news.xml</loc></sitemap><sitemap><loc>https://other.no/map.xml</loc></sitemap></sitemapindex>'
-    assert parse(xml.encode(),'https://example.no/sitemap.xml',NOW)==([],['https://example.no/news.xml'])
+    assert parse(xml.encode(),'https://example.no/sitemap.xml',NOW)==([],[])
     with pytest.raises(ValueError): parse(b'<!DOCTYPE x [<!ENTITY x "unsafe">]><urlset/>','https://example.no/sitemap.xml',NOW)
 
 
@@ -127,11 +126,11 @@ def test_activity_live_pipeline_synthesis_and_refresh(tmp_path,monkeypatch):
     from signalpost.models.envelope import Envelope
     from signalpost.synthesis.validate import sentence_error
     now=datetime.now(timezone.utc).date().isoformat()
-    xml=f'<urlset><url><loc>https://example.no/news/update</loc><lastmod>{now}</lastmod></url></urlset>'
+    xml=f'<rss><channel><item><title>Update</title><link>https://example.no/news/update</link><pubDate>{now}</pubDate></item></channel></rss>'
     def response(request):
         if request.url.path=='/robots.txt': return httpx.Response(200,text='User-agent: *\nAllow: /')
-        if request.url.path=='/sitemap.xml': return httpx.Response(200,text=xml,headers={'content-type':'application/xml'})
-        return httpx.Response(200,text=html())
+        if request.url.path=='/feed.xml': return httpx.Response(200,text=xml,headers={'content-type':'application/rss+xml'})
+        return httpx.Response(200,text=html().replace('</head>','<link rel="alternate" type="application/rss+xml" href="/feed.xml"></head>'))
     report,row,requests,cfg=execute_web(tmp_path/'first',monkeypatch,response=response,public_activity=True)
     assert row['run']['sections']['activity']=='available'
     assert len([u for u in requests if 'data.brreg.no' not in u])==3
@@ -142,12 +141,12 @@ def test_activity_live_pipeline_synthesis_and_refresh(tmp_path,monkeypatch):
     report,rerun,_,_=execute_web(tmp_path/'rerun',monkeypatch,response=response,public_activity=True,previous=cfg.output)
     assert report['changes']==0 and report['observation_changes']==0
     def missing(request):
-        if request.url.path=='/sitemap.xml':return httpx.Response(404)
+        if request.url.path=='/feed.xml':return httpx.Response(404)
         return response(request)
     report,removed,_,_=execute_web(tmp_path/'removed',monkeypatch,response=missing,public_activity=True,previous=cfg.output)
     assert any(c['type']=='removed' and c['materiality']=='minor' for c in removed['changes'])
     def failed(request):
-        if request.url.path=='/sitemap.xml':return httpx.Response(500)
+        if request.url.path=='/feed.xml':return httpx.Response(500)
         return response(request)
     report,failed_row,_,_=execute_web(tmp_path/'failed',monkeypatch,response=failed,public_activity=True,previous=cfg.output)
     assert report['changes']==0 and report['observation_changes']==1
@@ -174,11 +173,11 @@ def test_uncertain_website_is_not_an_activity_removal(tmp_path,monkeypatch):
 
 def test_activity_robots_and_budget(tmp_path,monkeypatch):
     def response(request):
-        if request.url.path=='/robots.txt': return httpx.Response(200,text='User-agent: *\nDisallow: /sitemap.xml')
-        return httpx.Response(200,text=html())
+        if request.url.path=='/robots.txt': return httpx.Response(200,text='User-agent: *\nDisallow: /feed.xml')
+        return httpx.Response(200,text=html().replace('</head>','<link rel="alternate" type="application/rss+xml" href="/feed.xml"></head>'))
     _,row,requests,_=execute_web(tmp_path/'robots',monkeypatch,response=response,public_activity=True)
     assert row['run']['sections']['activity']=='blocked'
-    assert not any('/sitemap.xml' in u for u in requests)
+    assert not any('/feed.xml' in u or '/sitemap.xml' in u for u in requests)
     _,row,requests,_=execute_web(tmp_path/'budget',monkeypatch,public_activity=True,website_request_cap=2)
     assert row['run']['sections']['activity']=='failed' # Allowed extra fetch is HTML, not sitemap XML.
     assert len([u for u in requests if 'data.brreg.no' not in u])<=3

@@ -139,7 +139,7 @@ async def fetch(org,envelope,http,pages):
                         queue.append((next_url,chain+[(response,link)]))
         if queue:state.update(reason='careers_page_limit',remaining_candidates=len(queue))
     except SourceFailure as exc:
-        state.update(state='failed',reason=exc.code)
+        state.update(state='blocked' if exc.code in {'robots','robots_unavailable','http_blocked','block_page'} else 'failed',reason=exc.code)
     return section
 
 

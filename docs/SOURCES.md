@@ -78,7 +78,7 @@ Terms require updates and removal of inactive/deleted ads. Known inactive/expire
 
 Email- and name-derived domains use a per-run cached DNS pre-check with a three-second bound and eight candidate checks/company. NXDOMAIN/no addresses produce `no_such_domain` without HTTP; timeout/SERVFAIL produce `dns_unavailable`, preserving incomplete source states. Public-IP preflight and connection-time pinning still apply. Reports count DNS resolver invocations separately, including guessed-domain checks, website preflight and pinned transport resolutions.
 
-Dated website activity is enabled by default; use `--no-public-activity` to opt out. Only current VERIFIED/HIGH/REGISTRY_DECLARED websites qualify. Use a feed linked in the already fetched homepage head, a same-domain robots Sitemap line, or `/sitemap.xml`; do not fetch pages linked by the feed or sitemap. One sitemap index level may be followed within the cap. Activity shares the cumulative eight-request website ceiling, thirteen overall company slots and the global budget; it cannot grant capacity above those ceilings. XML is limited to two MiB; DTD/entity declarations are refused. Keep at most ten dated news/press/blog paths, with dates from 2000 through two days after retrieval. Cross-domain, undated, transformed or overly long evidence combinations are abstentions. Sitemap titles are explicitly derived from URL slugs. Feeds/sitemaps retain company-owned provenance and their content terms; no licence is inferred.
+Dated website activity is enabled by default; use `--no-public-activity` to opt out. It uses explicitly linked same-domain RSS/Atom feeds and bounded dated own-site HTML. Sitemaps never supply news or update dates. No feed/sitemap publication licence is inferred. Dates, exact excerpts, same-company identity, robots/politeness and cumulative company/global budgets remain mandatory. XML is limited to two MiB and DTD/entity declarations are refused.
 
 ## Accounts history and units (Stage I)
 
@@ -107,7 +107,11 @@ All earlier exact-entity SELSKAP statements already returned in the existing
 response are retained with their own period, raw amount, currency and unit;
 duplicate period ends are suppressed, wrong-owner and malformed rows withheld.
 No year-by-year request probing, PDF extraction or multiplier is performed.
-Source-declared units alone authorize ratios/comparable-period YoY. Previous
+F1 ratios use two values from the same exact-company statement, period, declared
+currency and unit-field value; matching absent units cancel. YoY requires
+consecutive comparable annual periods, positive prior revenue, declared matching
+currency and the same unit field (or both absent from the same approved schema).
+Absolute values never acquire scale from that cancellation. Previous
 four-ratio whole-NOK calibration is historical evidence only and no longer
 supplies metadata for any current or prior statement. Undeclared units stay
 unknown; missing comparable inputs produce an explicit unknown, not a trend.
@@ -153,3 +157,28 @@ All Wednesday gates from the W2 streaming rerun onward use a new, empty `--state
 The revised default `min(900 seconds, 40% of the run budget)` is retained after the final cold 1,000-company run finished in 268.875 seconds, below the 1,200-second headroom gate against 2,400 seconds. It read two forward pages in 2.547 seconds (0.279161 decoded MB); total NAV was 141.312 seconds, feed complete and hiring failed 0%. The separate 120-second NAV target was missed and remains an open performance risk. Overrides remain explicit and the global watchdog is unchanged.
 
 The [official feed documentation](https://navikt.github.io/pam-stilling-feed/) and [controller](https://github.com/navikt/pam-stilling-feed/blob/main/src/main/kotlin/no/nav/pam/stilling/feed/FeedController.kt), checked again on 2026-10-14, expose no field-selection or compact-header projection. The controller accepts `pageSize` (default 1,000, ceiling 10,000), which changes batching rather than omitting ad header fields. Reducing it adds page overhead; increasing it does not remove per-ad payload, and the saved 10,000-item probe timed out. Keep the 1,000-item default and relative `next_url`; no undocumented parameters are sent. No payload reduction is claimed (0 MB saved by projection).
+
+
+## Stage C proof-page sitemap discovery and challenges
+
+Own navigation links precede bounded same-site sitemap nominations, then legacy
+fixed proof paths. Read one own sitemap or a non-news page sitemap named by its
+index, at most one child level. Accept only contact/about/privacy/impressum paths;
+reject cross-domain, query-dependent, news/blog and binary URLs. At most
+two sitemap-nominated HTML pages per company across both passes; no extra HTTP,
+DNS or time allowance. XML only nominates a URL: the fetched HTML must pass the
+same exact-number/identity proof and veto rules. A map/robots failure stays
+explicit; no candidate already vetoed is retried. Common privacy aliases precede
+redundant bare /om guesses; a late blind alias may remain unchecked at the cap.
+
+Challenge classification checks Cloudflare challenge markers, branded access
+security gates (Imperva/DataDome/etc.) and challenge titles. Ordinary recaptcha
+contact forms and passive Cloudflare JSD on usable pages are not challenge pages;
+visible access gates still block when JSD is present. Challenges on home, proof, historical
+proof or sitemap responses stop the walk and record blocked access; they are
+never no-proof or an invitation to bypass protections. Source receipts and
+attempt/cutoff diagnostics remain available in run.refresh.proof_sitemaps and
+website_candidates. The diagnosis distinguishes external DNS/access failures
+from actionable discovery/ordering gaps; no proof or robots rule is loosened.
+
+The passive-JSD distinction was checked against [Cloudflare documentation](https://developers.cloudflare.com/cloudflare-challenges/challenge-types/javascript-detections/) on 2026-11-13: JSD is injected into HTML and is separate from an enforced interstitial. We do not execute it, solve challenges, or change access policy; visible/active gates remain blocked.

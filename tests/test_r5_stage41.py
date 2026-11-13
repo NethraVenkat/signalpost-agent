@@ -54,6 +54,7 @@ def test_proof_pages_do_not_spend_html_budget_on_pdf():
     assert not any('.pdf' in u for u in proof_page_targets(page,page.url))
 
 
-def test_collector_does_not_fetch_sitemap_or_rss_candidates(tmp_path,monkeypatch):
+def test_collector_may_check_one_own_proof_map_but_never_rss_candidates(tmp_path,monkeypatch):
     _,_,urls,_=execute_web(tmp_path,monkeypatch,body=html('No identifier here',title='Unrelated'))
-    assert not any(p in url for url in urls for p in ('sitemap.xml','feed.xml','rss.xml','/feed/'))
+    assert sum(url.endswith('/sitemap.xml') for url in urls)==1
+    assert not any(p in url for url in urls for p in ('feed.xml','rss.xml','/feed/'))

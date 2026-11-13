@@ -150,7 +150,7 @@ def followup_links(page):
 
 # Pages where Norwegian companies state their organisation number. They are tried
 # after the links found on the home page; proof rules apply to them unchanged.
-FALLBACK_PROOF_PATHS = ('/kontakt', '/om-oss', '/personvern', '/kontakt-oss', '/om', '/personvernerklaering')
+FALLBACK_PROOF_PATHS = ('/kontakt', '/om-oss', '/personvern', '/personvernerklaering', '/kontakt-oss', '/om')
 FOLLOWUP_PAGES = len(FALLBACK_PROOF_PATHS)
 
 
@@ -163,6 +163,20 @@ def proof_page_targets(page, base_url, limit=FOLLOWUP_PAGES):
         if target and not re.search(r'\.(?:pdf|docx?|xlsx?|zip|jpe?g|png)(?:$|/)', urlsplit(target).path, re.I) and target not in targets:
             targets.append(target)
     return targets[:limit]
+
+
+async def ordered_proof_targets(org,http,page,seen):
+    """Real own links, then bounded sitemap nominations, then legacy guesses."""
+    linked=[url for url in proof_page_targets(page,page.url,limit=100)
+            if url in {normalize_url(link) for link in followup_links(page)} and domain(url)==domain(page.url)]
+    for url in linked:yield url
+    from .proof_sitemaps import discover
+    # Leave capacity for at least the map and one proof page. No allowance is
+    # added and all robots/redirect requests still consume the shared counters.
+    if http.company_cap(org)-http.counts.get(org,0)>=2:
+        for url in await discover(org,http,page.url,seen):yield url
+    for url in proof_page_targets(page,page.url):
+        if url not in linked:yield url
 
 
 def previous_nomination(previous, context, units):
@@ -263,43 +277,26 @@ async def fetch(org, envelope, bulk, http, previous=None, *, resume=False, candi
                     if checked_response.status == 200:
                         checked_page = await offload(Page, checked_response.body, checked_response.url)
                         checked_proof = await offload(candidate_proof, checked_page, org, context, candidate, leaders)
+                        if checked_proof.level=='BLOCKED':raise SourceFailure('block_page')
                         if checked_proof.level == 'VERIFIED':
                             pages.append((checked_response, checked_page))
                             best = (checked_proof, checked_response, checked_page)
                             proof, response, page = best
                 except SourceFailure as exc:
+                    if exc.code in {'block_page','http_blocked','robots','robots_unavailable'}:raise
                     if exc.code in TRANSIENT:failures[key]={'candidate':candidate,'reason':exc.code}
                     attempts.append({'domain': candidate.domain, 'origin': candidate.origin,
                                      'reason': exc.code, 'page': refresh_proof})
-            if proof.level == "HIGH" and len(pages) == 1 and http.counts.get(org, 0) + 1 <= http.company_cap(org):
-                links = followup_links(page)
-                for target in links[:1]:
-                    target = normalize_url(target)
-                    if target and domain(target) == domain(response.url):
-                        try:
-                            extra = await http.get(target, org, candidate.domain, proved)
-                            if extra.status == 200:
-                                extra_page = await offload(Page, extra.body, extra.url)
-                                extra_proof = await offload(candidate_proof, extra_page, org, context, candidate, leaders)
-                                if extra_proof.level == 'REJECT':
-                                    best = (extra_proof, extra, extra_page)
-                                elif extra_proof.level == 'VERIFIED':
-                                    pages.append((extra,extra_page))
-                                    best = (extra_proof,extra,extra_page)
-                                elif extra_proof.level != 'BLOCKED':
-                                    pages.append((extra, extra_page))
-                            elif extra.status>=500:failures[key]={'candidate':candidate,'reason':'website_http_5xx'}
-                        except SourceFailure as exc:
-                            if exc.code in TRANSIENT:failures[key]={'candidate':candidate,'reason':exc.code}
-            elif proof.level not in {"VERIFIED", "REJECT"}:
+            if proof.level not in {"VERIFIED", "REJECT"}:
                 seen = {response.url}
-                for target in proof_page_targets(page, response.url):
+                async for target in ordered_proof_targets(org,http,page,seen):
                     if not target or target in seen or domain(target) != domain(response.url):
                         continue
                     seen.add(target)
                     try:
                         extra = await http.get(target, org, candidate.domain, proved)
                     except SourceFailure as exc:
+                        if exc.code in {'block_page','http_blocked','robots','robots_unavailable'}:raise
                         if exc.code in TRANSIENT:failures[key]={'candidate':candidate,'reason':exc.code}
                         attempts.append({"domain": candidate.domain, "level": "LOW", "reason": exc.code, "page": target})
                         if exc.code in {"website_budget_exhausted", "budget_exhausted", "deadline"}:
@@ -307,13 +304,14 @@ async def fetch(org, envelope, bulk, http, previous=None, *, resume=False, candi
                             break
                         continue
                     if extra.status != 200:
+                        if extra.status in {401,403,429}:raise SourceFailure('http_blocked')
                         if extra.status>=500:failures[key]={'candidate':candidate,'reason':'website_http_5xx'}
                         continue
                     extra_page = await offload(Page,extra.body,extra.url)
                     extra_proof = await offload(candidate_proof,extra_page,org,context,candidate,leaders)
                     if extra_proof.level == 'BLOCKED':
                         attempts.append({'domain':candidate.domain,'origin':candidate.origin,'reason':'block_page','page':target})
-                        continue
+                        raise SourceFailure('block_page')
                     pages.append((extra, extra_page))
                     if extra_proof.level == "REJECT":
                         best = (extra_proof, extra, extra_page)
@@ -351,7 +349,7 @@ async def fetch(org, envelope, bulk, http, previous=None, *, resume=False, candi
                 if candidate.origin == 'registry_website': registry_failed=True
             attempts.append({"domain": candidate.domain,'origin':candidate.origin, "level": "BLOCKED" if exc.code in {"robots", "robots_unavailable", "http_blocked", "block_page"} else "LOW", "reason": exc.code})
             if exc.code in {"robots", "robots_unavailable", "http_blocked", "block_page"}:
-                blocked = blocked or candidate.origin == 'registry_website'
+                blocked = blocked or candidate.origin == 'registry_website' or exc.code=='block_page'
                 section.errors.append(Error(section="website", code=exc.code, message=f"{candidate.domain}: access refused"))
             if exc.code in {"website_budget_exhausted", "budget_exhausted", "deadline"}:
                 budget_hit = exc.code
@@ -361,6 +359,8 @@ async def fetch(org, envelope, bulk, http, previous=None, *, resume=False, candi
         attempts=attempts, blocked=blocked, ambiguous=ambiguous, source_unavailable=source_unavailable,
         registry_failed=registry_failed, fetchable_failures=fetchable_failures, checked=checked,
         attempted=attempted, vetoed=vetoed, transient_failures=failures, access_errors=list(section.errors))
+    envelope.run.refresh['proof_sitemaps']={'attempts':getattr(http,'proof_sitemap_attempts',{}).get(org,[]),
+        'scope':'same-site proof-page nomination only; max two sitemap-nominated pages; no news; unchanged cumulative limits'}
     unique = {}
     for result in successes:
         root = domain(result[2].url)

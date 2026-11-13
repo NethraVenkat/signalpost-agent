@@ -256,7 +256,8 @@ class Proof:
 
 def score(page, org, context, origin, leaders):
     raw = page.raw.lower()
-    if any(x in raw for x in ("cf-chl-", "verify you are human", "checking your browser")) or ('captcha' in raw and (len(page.visible.strip())<1000 or re.search('captcha|challenge',page.title,re.I))):
+    from .challenge import detected
+    if detected(page):
         return Proof("BLOCKED", reason="block_page")
     if any(x in raw for x in ("this domain is for sale", "domenet er til salgs", "domain is parked", "buy this domain", "sedo.com/search")):
         return Proof("REJECT", reason="parked")

@@ -39,40 +39,32 @@ def parse(body, source_url, now):
         raise ValueError('XML declarations refused')
     root = ET.fromstring(raw)
     kind = local(root.tag)
-    if kind not in {'urlset', 'sitemapindex', 'rss', 'feed'}: raise ValueError('Unknown activity XML')
-    items, children = [], []
-    if kind == 'sitemapindex':
-        for child in root:
-            url = next((e.text for e in child if local(e.tag) == 'loc'), None)
-            url = normalize_url(urljoin(source_url, url or '')) if url else None
-            if url and domain(url) == domain(source_url): children.append(url)
-        return [], sorted(set(children))
-    tag = 'url' if kind == 'urlset' else 'item' if kind == 'rss' else 'entry'
+    if kind in {'urlset','sitemapindex'}:return [],[]  # Proof discovery only; never news.
+    if kind not in {'rss', 'feed'}: raise ValueError('Unknown activity XML')
+    items = []
+    tag = 'item' if kind == 'rss' else 'entry'
     blocks = re.findall(r'<(?:[\w.-]+:)?' + tag + r'\b[^>]*>.*?</(?:[\w.-]+:)?' + tag + r'\s*>', raw, re.S)
     elements = [e for e in root.iter() if local(e.tag) == tag]
     # Unknown namespace/layout cannot invent a locator or snippet.
     if len(blocks) != len(elements): return [], []
     for n, (entry, block) in enumerate(zip(elements, blocks)):
         values = {local(e.tag): (e.text or '').strip() for e in entry}
-        url = values.get('loc') if tag == 'url' else values.get('link')
+        url = values.get('link')
         if tag == 'entry':
             url = next((e.get('href') for e in entry if local(e.tag) == 'link' and e.get('rel', 'alternate') == 'alternate'), None)
         url = normalize_url(urljoin(source_url, url or '')) if url else None
         if not url or domain(url) != domain(source_url) or not NEWS.search(urlsplit(url).path) or NON_ITEM.search(urlsplit(url).path): continue
         if re.fullmatch(r'/(?:[a-z]{2}/)?(?:nyheter|news|aktuelt|presse|blogg|blog|artikler|artikkel|arkiv)/?', urlsplit(url).path, re.I): continue
-        field = next((f for f in ('lastmod', 'pubDate', 'published', 'updated') if values.get(f)), None)
+        field = next((f for f in ('pubDate', 'published', 'updated') if values.get(f)), None)
         date = dated(values.get(field), now) if field else None
         if date is None: continue
         title = values.get('title')
         origin = 'feed title'
-        if tag == 'url':
-            title = re.sub(r'[-_]+', ' ', unquote(urlsplit(url).path.rstrip('/').rsplit('/', 1)[-1]))
-            origin = 'title from URL'
         if not title or len(title) > 200: continue
         # Conservatively require one bounded verbatim span containing every
         # reported item token. Long or transformed values are abstentions.
         needles = [html.escape(url, quote=False), values[field]]
-        if tag != 'url': needles.append(html.escape(title, quote=False))
+        needles.append(html.escape(title, quote=False))
         ranges = []
         for token in needles:
             position = block.find(token)
@@ -107,17 +99,7 @@ async def fetch(org, envelope, http, pages):
             if attrs.get('type', '').lower() in {'application/rss+xml', 'application/atom+xml'} and 'alternate' in attrs.get('rel', '').lower():
                 url = normalize_url(urljoin(response.url, attrs.get('href', '')))
                 if url and domain(url) == root: feeds.append(url)
-    maps = []
-    for origin, parser in sorted(http.robots.items()):
-        if domain(origin) == root:
-            maps.extend(url for url in parser.site_maps() or [] if domain(url) == root)
-    fallback_maps = [
-        homepage.rstrip('/') + '/sitemap.xml',
-        homepage.rstrip('/') + '/sitemap_index.xml',
-        homepage.rstrip('/') + '/news-sitemap.xml',
-        homepage.rstrip('/') + '/feed/'
-    ]
-    urls = sorted(set(feeds))[:1] or sorted(set(maps))[:1] or fallback_maps[:1]
+    urls = sorted(set(feeds))[:1]  # Only an explicitly linked RSS/Atom feed.
     section = Section(state='not_available')
     checked=set()
     maximum = min(13, http.config.website_request_cap + 1 + getattr(http,'extra_http',lambda org:0)(org))
@@ -148,7 +130,7 @@ async def fetch(org, envelope, http, pages):
             return await fetch_html(org, proof, http, pages, checked)
         return section
     except SourceFailure as exc:
-        return missing('activity', exc.code, state='blocked' if exc.code in {'robots', 'robots_unavailable', 'http_blocked'} else 'failed')
+        return missing('activity', exc.code, state='blocked' if exc.code in {'robots', 'robots_unavailable', 'http_blocked','block_page'} else 'failed')
     except (ValueError, ET.ParseError):
         return await fetch_html(org, proof, http, pages, checked)
     finally:
@@ -219,4 +201,4 @@ async def fetch_html(org, proof, http, pages, checked):
                 break
         return section
     except SourceFailure as exc:
-        return missing('activity', exc.code, state='blocked' if exc.code in {'robots', 'robots_unavailable', 'http_blocked'} else 'failed')
+        return missing('activity', exc.code, state='blocked' if exc.code in {'robots', 'robots_unavailable', 'http_blocked','block_page'} else 'failed')

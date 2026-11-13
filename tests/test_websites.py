@@ -310,8 +310,14 @@ def test_unlinked_standard_pages_are_checked_for_the_org_number(tmp_path, monkey
         if request.url.path in {"", "/"}:
             return httpx.Response(200, text=html(""))
         return httpx.Response(404, text="not found")
-    # The tested default caps reach all six standard proof paths.
+    # Stage C spends one of the same eight slots on own-sitemap discovery.
+    # A final blind alias can remain unchecked; never silently raise the cap.
     _, row, requests, _ = execute_web(tmp_path, monkeypatch, response=site, website_request_cap=8, website_total_request_cap=13)
+    if path=='/om':
+        assert not any(c['field']=='official_website' for c in row['claims'])
+        assert any(e['code']=='website_budget_exhausted' for e in row['errors'])
+        assert len([u for u in requests if 'data.brreg.no' not in u])==8
+        return
     claim = next(c for c in row["claims"] if c["field"] == "official_website")
     assert claim["value"]["identity_level"] == "VERIFIED"
     assert any(url.endswith(path) for url in requests)

@@ -63,7 +63,8 @@ def test_proof_page_veto_stops_remaining_requests(tmp_path, monkeypatch):
         return httpx.Response(200, text=html('Org nr '+OTHER, title='Unrelated'))
     _, row, urls, _ = execute_web(tmp_path, monkeypatch, response=response)
     assert not any(c['field'] == 'official_website' for c in row['claims'])
-    assert sum(url.startswith('https://example.no/') for url in urls) == 3
+    assert sum(url.startswith('https://example.no/') for url in urls) == 4  # robots, home, map, vetoing proof page
+    assert not any('/personvern' in url or '/om-oss' in url for url in urls)
 
 
 def test_cached_dns_does_not_charge_another_company_at_its_nomination_limit(tmp_path):
