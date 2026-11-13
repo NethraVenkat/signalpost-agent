@@ -1817,3 +1817,7 @@ pre { white-space: pre-wrap; overflow-wrap: anywhere; max-width: 100%; }
   .observation-table td:nth-child(3)::before { content: 'Current state'; }
   .observation-table td:nth-child(4)::before { content: 'Reason'; }
 }
+
+/* Registry JSON-pointer paths can be longer than a mobile timeline card. */
+.timeline-body { min-width: 0; overflow-wrap: anywhere; }
+.timeline-detail { overflow-wrap: anywhere; }

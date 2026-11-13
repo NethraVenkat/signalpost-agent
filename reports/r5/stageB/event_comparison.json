@@ -1,0 +1,32 @@
+{
+  "frozen": {
+    "sample": "frozen",
+    "events_published": 1203,
+    "companies_with_registry_events": 100,
+    "event_types": {
+      "('enheter', 'Endring')": 741,
+      "('enheter', 'Ukjent')": 100,
+      "('underenheter', 'Ny')": 22,
+      "('underenheter', 'Endring')": 327,
+      "('enheter', 'Ny')": 13
+    },
+    "previous_extractor_claims_on_the_same_retained_events": 65,
+    "shared_registry_http_requests": 2,
+    "companies_truncated": 3
+  },
+  "daily": {
+    "sample": "daily",
+    "events_published": 1137,
+    "companies_with_registry_events": 100,
+    "event_types": {
+      "('enheter', 'Endring')": 707,
+      "('enheter', 'Ukjent')": 100,
+      "('underenheter', 'Endring')": 301,
+      "('underenheter', 'Ny')": 14,
+      "('enheter', 'Ny')": 15
+    },
+    "previous_extractor_claims_on_the_same_retained_events": 87,
+    "shared_registry_http_requests": 2,
+    "companies_truncated": 2
+  }
+}

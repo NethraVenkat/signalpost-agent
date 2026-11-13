@@ -1,0 +1,22 @@
+........F..............................................                  [100%]
+================================== FAILURES ===================================
+________ test_cap_newest_order_no_extra_requests_full_raw_verification ________
+
+tmp_path = WindowsPath('C:/Users/<USER>/AppData/Local/Temp/pytest-of-<USER>/pytest-1575/test_cap_newest_order_no_extra0')
+
+    def test_cap_newest_order_no_extra_requests_full_raw_verification(tmp_path):
+        cfg,report,row,requests=execute_events(tmp_path,subunit=True)
+        events=[c for c in row['claims'] if c['field'].startswith(rc.PREFIX)]
+        assert len(events)==50
+        assert [c['value']['date'] for c in events]==sorted((c['value']['date'] for c in events),reverse=True)
+        assert row['run']['refresh']['registry_activity']['events_returned']==66
+        assert row['run']['refresh']['registry_activity']['truncated']
+        assert sum('/oppdateringer/' in u for u in requests)==2
+>       assert any(c['value'].get('subunit_orgnr')==OTHER for c in events)
+E       assert False
+E        +  where False = any(<generator object test_cap_newest_order_no_extra_requests_full_raw_verification.<locals>.<genexpr> at 0x00000138A917DE50>)
+
+tests\test_r5_stage_b.py:79: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_r5_stage_b.py::test_cap_newest_order_no_extra_requests_full_raw_verification
+1 failed, 54 passed in 4.48s

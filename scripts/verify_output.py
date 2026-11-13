@@ -96,6 +96,55 @@ def verify_financial_sources(row, data, evidence, stored_body):
     return checked,len(raw.get('financial_metrics',[]))
 
 
+def verify_registry_events(row,data,evidence,stored_body,cache=None):
+    cache={} if cache is None else cache
+    def document(sha):
+        key=('json',sha)
+        if key not in cache:cache[key]=json.loads(stored_body(sha))
+        return cache[key]
+    events=[c for c in data['claims'] if c['availability']=='available' and c['field'].startswith('registry_change.')
+            and any(evidence[eid]['extraction_method']=='signalpost.registry_changes.v3' for eid in c['evidence_ids'])]
+    assert len(events)<=50,'Registry event cap exceeded'
+    from signalpost.sources.registry_changes import timestamp
+    order=[(timestamp(c['value']['date']),c['value']['event_id'],c['field']) for c in events]
+    assert order==sorted(order,reverse=True),'Registry events are not newest first'
+    assert len({c['field'] for c in events})==len(events)
+    for c in events:
+        v=c['value'];source=next(evidence[eid] for eid in c['evidence_ids'] if evidence[eid]['extraction_method']=='signalpost.registry_changes.v3')
+        raw=document(source['content_sha256'])
+        for key in source['locator'].strip('/').split('/'):
+            raw=raw[int(key)] if isinstance(raw,list) else raw[key.replace('~1','/').replace('~0','~')]
+        assert raw['dato']==v['date'] and raw['oppdateringsid']==v['event_id'] and raw['endringstype']==v['event_type'],'Registry event differs from source'
+        assert raw['organisasjonsnummer']==v['record_orgnr']
+        assert v['company_orgnr']==row['organisation_number']
+        assert v['changed_fields']==[{'path':x['path'],'operation':x['op']} for x in raw.get('endringer') or []]
+        if 'new_value' in v:
+            assert any(x.get('path')==v['changed_field'] and x.get('op')==v['operation'] and x.get('value')==v['new_value'] for x in raw.get('endringer') or [])
+        if v.get('subunit_orgnr'):
+            unit=v['subunit_orgnr'];assert unit==raw['organisasjonsnummer']
+            proofs=[evidence[eid] for eid in c['evidence_ids'] if evidence[eid]['source_url'].startswith('https://data.brreg.no/enhetsregisteret/api/underenheter?')]
+            assert any(any(u.get('organisasjonsnummer')==unit and u.get('overordnetEnhet')==row['organisation_number']
+                           for u in document(e['content_sha256']).get('_embedded',{}).get('underenheter',[])) for e in proofs),'Subunit event lacks exact parent source proof'
+        else:assert raw['organisasjonsnummer']==row['organisation_number']
+        # Reconstruct the complete closed event frame, including labels and
+        # optional values, from the raw event and independently verified scope.
+        from signalpost.sources import registry_changes as rc
+        from signalpost.sources.http import Response
+        scope={}
+        if v.get('subunit_orgnr'):
+            for e in proofs:
+                for unitrow in document(e['content_sha256']).get('_embedded',{}).get('underenheter',[]):
+                    if unitrow.get('organisasjonsnummer')==v['subunit_orgnr'] and unitrow.get('overordnetEnhet')==row['organisation_number']:
+                        scope[v['subunit_orgnr']]=(unitrow,Evidence.model_validate(e))
+        key=('response',source['content_sha256'],source['source_url'])
+        if key not in cache:cache[key]=Response(stored_body(source['content_sha256']).encode('utf8'),200,source['source_url'],source['retrieved_at'],source['content_sha256'])
+        response=cache[key]
+        endpoint='underenheter' if '/oppdateringer/underenheter?' in source['source_url'] else 'enheter'
+        expected=rc.extract(raw,response,source['locator'],row['organisation_number'],endpoint,scope)
+        assert len(expected.claims)==1 and expected.claims[0].value==v,'Unsupported registry event frame'
+    return len(events)
+
+
 def verify_synthesis(row):
     data=row if 'claims' in row else row['profile']
     raw=row['run'].get('synthesis') if 'run' in row else row['profile'].get('synthesis')
@@ -152,7 +201,8 @@ def verify(first, state_dir, count, organisations=None, report=None, require_cle
     def stored_body(sha):
         return decode_body((state_dir/'blobs'/sha).read_bytes())
     synthesis_companies=synthesis_sentences=0
-    financial_inputs=derived_metrics=0
+    financial_inputs=derived_metrics=registry_events=0
+    registry_documents={}
     for row in rows:
         companies,sentences=verify_synthesis(row)
         synthesis_companies+=companies;synthesis_sentences+=sentences
@@ -175,9 +225,11 @@ def verify(first, state_dir, count, organisations=None, report=None, require_cle
                 assert len(e['claim_span']) <= 300 and e['claim_span'] in body, 'Non-verbatim evidence span'
         inputs_checked,metrics_checked=verify_financial_sources(row,data,evidence,stored_body)
         financial_inputs+=inputs_checked; derived_metrics+=metrics_checked
+        registry_events+=verify_registry_events(row,data,evidence,stored_body,registry_documents)
     result = {"lines": len(rows), "schema_valid": True, "published_claims": published, "source_blobs_verified": len(seen)}
     result.update(synthesis_companies=synthesis_companies,synthesis_sentences=synthesis_sentences,synthesis_unverified_values=0)
     result.update(financial_inputs_verified=financial_inputs,derived_financial_metrics_verified=derived_metrics)
+    result['registry_events_verified']=registry_events
     briefings = [(row['run'].get('synthesis') if 'run' in row else row['profile'].get('synthesis')) or {} for row in rows]
     result.update(briefing_companies=sum(bool(s.get('briefing')) for s in briefings),
                   briefing_sentences=sum(len(s.get('briefing', [])) for s in briefings),

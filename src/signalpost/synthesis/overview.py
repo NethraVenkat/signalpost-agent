@@ -91,12 +91,14 @@ def required(envelope):
         result['change']=make('change',text+'.',obs=obs)
     else:
         from ..registry_activity import recent
-        from ..sources.registry_changes import sentence as registry_sentence
-        events=[(c.value['date'],registry_sentence(c.value),c) for c in claims if c.field.startswith('registry_change.') and not c.carried_forward]
+        from ..sources.registry_changes import sentence as registry_sentence, significant_recent
+        formal=significant_recent([c for c in claims if c.field.startswith('registry_change.') and not c.carried_forward])
+        events=[(formal.value['date'],registry_sentence(formal.value),formal)] if formal else []
         events += [(day,label+': '+day+'.',c) for day,label,c in recent(envelope)]
         if events:
-            day,text,item=max(events,key=lambda item:(item[0],item[2].id))
-            result['change']=make('change','First run for this company; most recent dated registry observation: '+text,[item.id],[refresh.id])
+            day,text,item=events[0] if formal else max(events,key=lambda item:(item[0],item[2].id))
+            wording='significant recent registry event: ' if formal else 'most recent dated registry observation: '
+            result['change']=make('change','First run for this company; '+wording+text,[item.id],[refresh.id])
         else:
             registry_status=lookup['source_status','activity']
             result['change']=make('change','First run for this company; no supported dated registry event is available in this report (activity state: '+registry_status.data['state']+').',obs=[refresh.id,registry_status.id])

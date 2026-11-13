@@ -95,6 +95,8 @@ def finalize(envelope, old, blobs, budget, began, verify_identity=False):
         envelope.errors.append(Error(section="refresh", code="previous_invalid", message=type(exc).__name__))
         envelope.changes = []
         envelope.run.refresh = {"mode": "baseline", "previous_rejected": True}
+    from .sources.registry_changes import cap_envelope
+    cap_envelope(envelope)
     envelope.completed_at = utc_now()
     envelope.run.completed_at = envelope.completed_at
     envelope.run.legal_identity = {c.field.removeprefix("identity."): c.value for c in envelope.claims if c.family == "identity"}

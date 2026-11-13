@@ -329,7 +329,10 @@ def fact(claim, records):
     if panel:
         content += f'<button type="button" aria-expanded="false" aria-controls="source-{esc(local_id)}" data-toggle="source-{esc(local_id)}">Check the evidence</button><div id="source-{esc(local_id)}" data-source="{esc(local_id)}" class="evidence" hidden></div>'
         primary = next((records[eid] for eid in claim.get('evidence_ids', []) if eid in records), None)
-        if primary:
+        # Registry-event content already links its bounded publisher event URL.
+        # The full shared-batch request URL stays in the expandable receipt;
+        # repeating that long URL on every card can exceed the HTML size gate.
+        if primary and not claim['field'].startswith('registry_change.'):
             content += '<span class="fact-source">' + link(primary['source_url'], 'Original source') + '</span>'
     if claim['family'] == 'accounts':
         return f'<tr id="{esc(anchor(claim))}"><th scope="row">{esc(label)} {chip(claim["availability"])}</th><td>{content}</td></tr>'
@@ -607,6 +610,13 @@ def profile(row, title):
                     'anchor': anchor(c)
                 })
 
+    from .sources.registry_changes import sentence as registry_sentence
+    for c in claims:
+        if c['field'].startswith('registry_change.') and c['availability']=='available':
+            v=c['value']
+            timeline_events.append({'date':v['date'],'label':v['title'],
+                'detail':registry_sentence(v),'type_class':'available',
+                'type_label':'Registry update','anchor':anchor(c)})
     dated_reg = registry_events(row)
     for day, lbl, c in dated_reg:
         c_anchor = f'fact-{c.id[:16]}' if hasattr(c, 'id') else anchor(c)

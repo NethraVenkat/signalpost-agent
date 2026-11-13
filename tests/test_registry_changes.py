@@ -63,8 +63,11 @@ def test_named_fields_have_exact_values_and_publication_evidence(path):
 @pytest.mark.parametrize('changes', [[], [{'op': 'replace', 'path': '/sisteInnsendteAarsregnskap', 'value': '2025'}],
     [{'op': 'replace', 'path': '/antallAnsatte', 'value': 40}], [{'op': 'replace', 'path': '/naeringskode1', 'value': {}}],
     [{'op': 'replace', 'path': '/kapital/innfortDato', 'value': '2026-01-01'}]])
-def test_bare_or_excluded_update_never_publishes(changes):
-    assert not extract(event(endringer=changes)).claims
+def test_generic_or_other_named_updates_publish_without_invented_values(changes):
+    claims=extract(event(endringer=changes)).claims
+    assert len(claims)==1 and claims[0].value['title']=='Registry record updated'
+    assert 'new_value' not in claims[0].value
+    assert claims[0].value['changed_fields']==[{'path':c['path'],'operation':c['op']} for c in changes]
 
 
 def test_removal_does_not_invent_new_or_old_value():

@@ -11,7 +11,8 @@ from ..workers import offload
 from .extract import Section, add, missing, response_source
 
 BASE = 'https://data.brreg.no/enhetsregisteret/api/'
-METHOD = 'signalpost.registry_changes.v2'
+METHOD = 'signalpost.registry_changes.v3'
+MAX_EVENTS = 50
 PREFIX = 'registry_change.'
 DATE_LABEL = 'registry publication time (not effective date)'
 CHUNK = 200
@@ -31,7 +32,7 @@ def coverage(since, until):
             'unavailable_types': {'formal_announcements': {
                 'state': 'not_available',
                 'reason': 'The public Enhetsregisteret update APIs do not supply formal announcement text/types; kunngjoringer HTML is not fetched because robots.txt blocks it.'}},
-            'scope': 'Named name/address/capital changes and currently registry-proven workplace additions/removals; not all formal announcements.'}
+            'scope': 'All returned registry update events for this company and current exact-parent proven subunits, newest 50; not formal announcements or unproven historical subunits.'}
 
 
 def timestamp(value):
@@ -59,10 +60,12 @@ def sentence(value):
             detail += ': ' + json.dumps(value['new_value'], ensure_ascii=False, sort_keys=True)
         else:
             detail += ': field removed'
-    else:
+    elif value.get('subunit_orgnr'):
         detail += ': ' + value['subunit_orgnr']
         if value.get('start_date'):
             detail += '; registered start date ' + value['start_date']
+    if value.get('changed_fields') and 'changed_field' not in value:
+        detail += '; changed fields: '+', '.join(item['path'] for item in value['changed_fields'])
     return detail + '. Registry publication time: ' + value['date'] + ' (not effective date).'
 
 
@@ -72,7 +75,7 @@ def permitted(claim, envelope):
         return False
     evidence = {e.id: e for e in envelope.evidence}
     return bool(claim.evidence_ids and all(eid in evidence for eid in claim.evidence_ids)
-                and any(evidence[eid].extraction_method == METHOD
+                and any(evidence[eid].extraction_method in {METHOD,'signalpost.registry_changes.v2'}
                         and evidence[eid].source_url.startswith(BASE + 'oppdateringer/')
                         for eid in claim.evidence_ids))
 
@@ -121,41 +124,65 @@ def extract(event, response, locator, org, endpoint, scope=None):
               'date_source': DATE_LABEL,
               'url': BASE + 'oppdateringer/' + endpoint + '?' + urlencode(
                   {'oppdateringsid': event_id, 'size': 1, 'includeChanges': 'true'})}
-    if endpoint == 'enheter':
-        if event.get('organisasjonsnummer') != org:
-            raise SourceFailure('registry_change_wrong_company')
-        if event.get('endringstype') != 'Endring': return section
-        changes = event.get('endringer', [])
-        if not isinstance(changes, list): raise SourceFailure('registry_change_invalid_payload')
-        for index, change in enumerate(changes):
-            path = change.get('path', '')
-            label = field_label(path)
-            if not label or change.get('op') not in {'add', 'replace', 'remove'}: continue
-            if change['op'] != 'remove' and 'value' not in change:
-                raise SourceFailure('registry_change_missing_value')
-            value = {**common, 'title': label, 'changed_field': path, 'operation': change['op']}
-            if change['op'] != 'remove': value['new_value'] = change['value']
-            add(section, source, org, 'activity', PREFIX + digest(['entity', event_id, index])[:24],
-                value, locator + '/endringer/' + str(index), method=METHOD)
-    elif event.get('endringstype') in {'Ny', 'Sletting'}:
-        unit = event['organisasjonsnummer']
-        if not scope or unit not in scope:
-            return missing('activity', 'registry_change_parent_not_proven', state='not_available')
-        item, proof = scope[unit]
-        if item.get('overordnetEnhet') != org:
-            raise SourceFailure('registry_change_wrong_parent')
-        value = {**common, 'title': 'New registered workplace' if event['endringstype'] == 'Ny' else 'Workplace removed',
-                 'subunit_orgnr': unit, 'event_type': event['endringstype']}
-        if event['endringstype'] == 'Ny' and item.get('oppstartsdato'):
-            # This is the separately reported start date, never the event date.
-            datetime.strptime(item['oppstartsdato'], '%Y-%m-%d')
-            value['start_date'] = item['oppstartsdato']
-        add(section, source, org, 'activity', PREFIX + digest(['subunit', event_id])[:24],
-            value, locator, method=METHOD)
-        section.evidence.append(proof)
-        section.claims[-1].evidence_ids.append(proof.id)
+    kind=event.get('endringstype')
+    if not isinstance(kind,str) or not kind:raise SourceFailure('registry_change_invalid_type')
+    changes=event.get('endringer',[])
+    if changes is None:changes=[]
+    if not isinstance(changes,list):raise SourceFailure('registry_change_invalid_payload')
+    fields=[]
+    for change in changes:
+        if not isinstance(change,dict) or not isinstance(change.get('path'),str):
+            raise SourceFailure('registry_change_invalid_payload')
+        op=change.get('op')
+        if not isinstance(op,str):raise SourceFailure('registry_change_invalid_payload')
+        if op in {'add','replace'} and 'value' not in change:raise SourceFailure('registry_change_missing_value')
+        fields.append({'path':change['path'],'operation':op})
+    value={**common,'event_type':kind,'changed_fields':fields,'record_orgnr':event['organisasjonsnummer'],
+           'title':{'Ny':'Registry record created','Sletting':'Registry record deleted'}.get(kind,'Registry record updated')}
+    proof=None
+    if endpoint=='enheter':
+        if event.get('organisasjonsnummer')!=org:raise SourceFailure('registry_change_wrong_company')
+        if kind=='Endring':
+            named=next((c for c in changes if field_label(c['path']) and c.get('op') in {'add','replace','remove'}),None)
+            if named:
+                value.update(title=field_label(named['path']),changed_field=named['path'],operation=named['op'])
+                if named['op']!='remove':value['new_value']=named['value']
+    else:
+        unit=event['organisasjonsnummer']
+        if not scope or unit not in scope:return missing('activity','registry_change_parent_not_proven',state='not_available')
+        item,proof=scope[unit]
+        if item.get('overordnetEnhet')!=org:raise SourceFailure('registry_change_wrong_parent')
+        value.update(subunit_orgnr=unit,title={'Ny':'New registered workplace','Sletting':'Workplace removed'}.get(kind,'Workplace registry record updated'))
+        if kind=='Ny' and item.get('oppstartsdato'):
+            datetime.strptime(item['oppstartsdato'],'%Y-%m-%d');value['start_date']=item['oppstartsdato']
+    # One claim per event, with distinct localized receipts for its header and
+    # every supplied changed-field descriptor. No unsupported change is inferred.
+    field=PREFIX+digest([endpoint,event_id])[:24]
+    add(section,source,org,'activity',field,value,locator,method=METHOD)
+    for attr in ['organisasjonsnummer','oppdateringsid','dato','endringstype']:
+        receipt=Section();add(receipt,source,org,'activity','receipt',event[attr],locator+'/'+attr,method=METHOD)
+        section.evidence.extend(receipt.evidence);section.claims[-1].evidence_ids.extend(e.id for e in receipt.evidence)
+    for i,change in enumerate(changes):
+        for attr in ['path','op']:
+            receipt=Section();add(receipt,source,org,'activity','receipt',change[attr],locator+'/endringer/'+str(i)+'/'+attr,method=METHOD)
+            section.evidence.extend(receipt.evidence);section.claims[-1].evidence_ids.extend(e.id for e in receipt.evidence)
+    if proof:
+        section.evidence.append(proof);section.claims[-1].evidence_ids.append(proof.id)
     if section.claims: section.state = 'available'
     return section
+
+
+def significant_recent(claims):
+    """Prioritize substantive events in the newest 90-day cluster; dates stay honest."""
+    if not claims:return None
+    newest=max(timestamp(c.value['date']) for c in claims)
+    recent=[c for c in claims if (newest-timestamp(c.value['date'])).days<=90]
+    def significance(c):
+        v=c.value
+        return (4 if v.get('event_type')=='Sletting' else
+                3 if v.get('changed_field') in {'/navn','/kapital/belop'} else
+                2 if v.get('event_type')=='Ny' or v.get('changed_field') else 1)
+    return max(recent,key=lambda c:(significance(c),c.value['date'],c.value['event_id']))
 
 
 async def pages(http, endpoint, numbers, since, until):
@@ -242,9 +269,31 @@ async def fetch_batch(envelopes, http, blobs, until):
                     result[org].state = 'failed'
                     result[org].errors.extend(missing('activity', code).errors)
     for org, section in result.items():
+        unique={c.field:c for c in section.claims}
+        ordered=sorted(unique.values(),key=lambda c:(timestamp(c.value['date']),c.value['event_id'],c.field),reverse=True)
+        section.claims=ordered[:MAX_EVENTS]
+        refs={eid for c in section.claims for eid in c.evidence_ids}
+        section.evidence=list({e.id:e for e in section.evidence if e.id in refs}.values())
+        envelopes[org].run.refresh['registry_activity'].update(events_returned=len(ordered),
+            events_published=len(section.claims),event_cap=MAX_EVENTS,truncated=len(ordered)>MAX_EVENTS)
         envelopes[org].run.refresh['registry_activity'].update(
             state=section.state, errors=sorted({e.code for e in section.errors}))
     return result
+
+
+def cap_envelope(envelope):
+    """Apply the same presentation cap after partial-refresh carry-forward."""
+    claims=[c for c in envelope.claims if c.field.startswith(PREFIX) and c.availability=='available']
+    unique={}
+    for c in claims:
+        v=c.value
+        key=(v.get('record_orgnr') or v.get('subunit_orgnr') or v['company_orgnr'],v['event_id'])
+        rank=(not c.carried_forward,'changed_fields' in v)
+        if key not in unique or rank>unique[key][0]:unique[key]=(rank,c)
+    ordered=sorted((pair[1] for pair in unique.values()),key=lambda c:(timestamp(c.value['date']),c.value['event_id'],c.field),reverse=True)
+    keep={c.field for c in ordered[:MAX_EVENTS]}
+    envelope.claims=[c for c in envelope.claims if not c.field.startswith(PREFIX)]+ordered[:MAX_EVENTS]
+    envelope.changes=[c for c in envelope.changes if not c.field.startswith(PREFIX) or c.field in keep]
 
 
 def merge(envelope, section, website_enabled):

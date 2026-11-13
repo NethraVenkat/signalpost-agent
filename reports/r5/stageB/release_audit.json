@@ -1,0 +1,58 @@
+{
+  "frozen": {
+    "final_source_manifest_matches": true,
+    "exactly_seven_flags": true,
+    "requests": 943,
+    "phase_requests": {
+      "pass1": 903,
+      "pass2": 40
+    },
+    "max_website_http_per_company": 13,
+    "max_dns_nominations": 12,
+    "site": {
+      "state": "available",
+      "companies": 100,
+      "input_records": 100,
+      "pages": 102,
+      "skipped_invalid_identifiers": 0,
+      "total_bytes": 31760504,
+      "largest_profile_data_bytes": 539382,
+      "largest_profile_bytes": 223410
+    },
+    "completion": {
+      "wall_seconds": 339.61,
+      "within_requested_time_budget": true,
+      "within_effective_time_budget": true,
+      "note": "Includes preparation, crawl, mandatory outputs and site; final report flush adds filesystem latency."
+    },
+    "registry_events_verified": 1203
+  },
+  "daily": {
+    "final_source_manifest_matches": true,
+    "exactly_seven_flags": true,
+    "requests": 1026,
+    "phase_requests": {
+      "pass1": 976,
+      "pass2": 50
+    },
+    "max_website_http_per_company": 13,
+    "max_dns_nominations": 12,
+    "site": {
+      "state": "available",
+      "companies": 100,
+      "input_records": 100,
+      "pages": 102,
+      "skipped_invalid_identifiers": 0,
+      "total_bytes": 31999518,
+      "largest_profile_data_bytes": 455215,
+      "largest_profile_bytes": 197799
+    },
+    "completion": {
+      "wall_seconds": 382.781,
+      "within_requested_time_budget": true,
+      "within_effective_time_budget": true,
+      "note": "Includes preparation, crawl, mandatory outputs and site; final report flush adds filesystem latency."
+    },
+    "registry_events_verified": 1137
+  }
+}

@@ -4,3 +4,6 @@ reports/r2/OVERNIGHT_PROMPT.md -text
 # Preserve the byte hashes of release smoke inputs across platforms.
 reports/r5/release-v4/*.jsonl -text
 reports/r5/release-v4/*.csv -text
+# Keep verbatim HTML proof snippets intact across Windows checkouts.
+reports/r5/stageA2/new_websites.md -text
+reports/r5/stageB/new_websites.md -text
