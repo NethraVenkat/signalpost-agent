@@ -5,7 +5,7 @@ import json
 from urllib.parse import urlsplit, urlunsplit
 
 from signalpost.web.html import Page
-from signalpost.web.publisher_identity import DECLARED, declared_receipt
+from signalpost.web.publisher_identity import DECLARED, RARE, declared_receipt, rare_receipt
 from signalpost.web.publisher_veto import conflict
 
 
@@ -43,7 +43,8 @@ def verify(org,data,evidence,stored_body):
     for claim in data['claims']:
         if claim['field']!='official_website' or claim['availability']!='available':continue
         value=claim['value']
-        if value.get('proof_type')!=DECLARED:continue
+        tier=value.get('proof_type')
+        if tier not in {DECLARED,RARE}:continue
         context,refs=registry_context(org,data,evidence,stored_body)
         assert refs<=set(claim['evidence_ids']),'Missing registry proof dependencies'
         receipt=value['publisher_identity'];context['candidate_url']=receipt['candidate_url']
@@ -55,7 +56,7 @@ def verify(org,data,evidence,stored_body):
             parts=urlsplit(page.url)
             assert value['final_url']==urlunsplit((parts.scheme,parts.netloc,'','','')),'Published URL differs from proven publisher authority'
             assert not conflict(page,org,context)[0],'Publisher conflict'
-            expected=declared_receipt(page,org,context)
+            expected=(declared_receipt if tier==DECLARED else rare_receipt)(page,org,context)
             from signalpost.web.proof import score
             checked=score(page,org,context,value.get('candidate_origin'),[])
             matched |= bool(expected and expected==receipt and checked.level=='HIGH')

@@ -25,7 +25,7 @@ def inventory(stage,seed):
             value=c['value'];url=value['final_url'] if kind=='website' else value['url']
             receipts=[evidence[ref] for ref in c['evidence_ids']]
             own=[e for e in receipts if e['source_class']=='company_owned' and e['extraction_method']=='signalpost.website.v1'
-                 and (kind!='website' or e['source_url']==value['proof_page_url'])]
+                 and (e['source_url']==value['proof_page_url'] if kind=='website' else e['locator']=='company-link:'+url)]
             checks=[]
             for e in own:
                 body=(work/'state/blobs'/e['content_sha256']).read_bytes()

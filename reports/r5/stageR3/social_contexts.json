@@ -1,0 +1,119 @@
+[
+  {
+    "orgnr": "986128662",
+    "legal_name": "MASKINKURS AS",
+    "url": "https://www.facebook.com/maskinkurs",
+    "source_url": "https://maskinkurs.no/",
+    "sha256": "ab612600fe44500ea955478ca21481559e3848684efb61ad803137e56ddcf9e1",
+    "links": [
+      {
+        "href": "https://www.facebook.com/maskinkurs/?locale=nb_NO",
+        "text": "  ",
+        "header_footer": true,
+        "own": true,
+        "span": "<a class=\"\" href=\"https://www.facebook.com/maskinkurs/?locale=nb_NO\" target=\"_blank\" rel=\"noopener\" data-track-event=\"click\" data-track-action=\"social_link\">"
+      }
+    ]
+  },
+  {
+    "orgnr": "986464492",
+    "legal_name": "OPTIMAL REGNSKAP AS",
+    "url": "https://www.facebook.com/optimalregnskap",
+    "source_url": "https://www.optimal-regnskap.no/",
+    "sha256": "876a8b707878e0afb23735b2accd765a63b6b5c762731c76ad1f1b66e6923050",
+    "links": [
+      {
+        "href": "https://www.facebook.com/optimalregnskap/",
+        "text": "",
+        "header_footer": false,
+        "own": true,
+        "span": "<a href=\"https://www.facebook.com/optimalregnskap/\" target=\"_blank\" title=\"Facebook\">"
+      },
+      {
+        "href": "https://www.facebook.com/optimalregnskap/",
+        "text": "Facebook",
+        "header_footer": true,
+        "own": true,
+        "span": "<a href=\"https://www.facebook.com/optimalregnskap/\" target=\"_blank\">"
+      }
+    ]
+  },
+  {
+    "orgnr": "948039958",
+    "legal_name": "VALAKER BAKERI OG KONDITORI AS",
+    "url": "https://www.facebook.com/valakerbakeriogkonditori",
+    "source_url": "https://www.valakerbakeri.no/",
+    "sha256": "546e8a71f5fb688e05ecfd84b0b8ce3567a6604357c1c1cd51a8a156e5015a14",
+    "links": [
+      {
+        "href": "https://www.facebook.com/valakerbakeriogkonditori/",
+        "text": "",
+        "header_footer": false,
+        "own": false,
+        "span": "<a class=\"rounded-circle cursor-pointer border border-2 fs-3 d-flex justify-content-center align-items-center social-icon\" style=\"undefined\" target=\"_blank\" href=\"https://www.facebook.com/valakerbakeriogkonditori/\">"
+      },
+      {
+        "href": "https://www.facebook.com/valakerbakeriogkonditori/",
+        "text": "",
+        "header_footer": true,
+        "own": true,
+        "span": "  \" target=\"_blank\" href=\"https://www.facebook.com/valakerbakeriogkonditori/\">"
+      }
+    ]
+  },
+  {
+    "orgnr": "948039958",
+    "legal_name": "VALAKER BAKERI OG KONDITORI AS",
+    "url": "https://www.instagram.com/valakerbakeriogkonditori",
+    "source_url": "https://www.valakerbakeri.no/",
+    "sha256": "546e8a71f5fb688e05ecfd84b0b8ce3567a6604357c1c1cd51a8a156e5015a14",
+    "links": [
+      {
+        "href": "https://www.instagram.com/valakerbakeriogkonditori/",
+        "text": "",
+        "header_footer": false,
+        "own": false,
+        "span": "<a class=\"rounded-circle cursor-pointer border border-2 fs-3 d-flex justify-content-center align-items-center social-icon\" style=\"undefined\" target=\"_blank\" href=\"https://www.instagram.com/valakerbakeriogkonditori/\">"
+      },
+      {
+        "href": "https://www.instagram.com/valakerbakeriogkonditori/",
+        "text": "",
+        "header_footer": true,
+        "own": true,
+        "span": "  \" target=\"_blank\" href=\"https://www.instagram.com/valakerbakeriogkonditori/\">"
+      }
+    ]
+  },
+  {
+    "orgnr": "980616622",
+    "legal_name": "BAGGES AS",
+    "url": "https://www.facebook.com/BAGGES.AS",
+    "source_url": "https://www.bagges.no/",
+    "sha256": "c9a5c43c17ac6d471209edc8a3a18f6948219b46e104f5b600119bd3d87c37c8",
+    "links": [
+      {
+        "href": "https://www.facebook.com/BAGGES.AS/",
+        "text": "",
+        "header_footer": true,
+        "own": true,
+        "span": "<a href=\"https://www.facebook.com/BAGGES.AS/\" target=\"_blank\" title=\"Facebook\" class=\"u-margin-bottom-5px\" rel=\"noopener\">"
+      }
+    ]
+  },
+  {
+    "orgnr": "980616622",
+    "legal_name": "BAGGES AS",
+    "url": "https://www.linkedin.com/company/bagges-as",
+    "source_url": "https://www.bagges.no/",
+    "sha256": "c9a5c43c17ac6d471209edc8a3a18f6948219b46e104f5b600119bd3d87c37c8",
+    "links": [
+      {
+        "href": "https://www.linkedin.com/company/bagges-as/",
+        "text": "",
+        "header_footer": true,
+        "own": true,
+        "span": "<a href=\"https://www.linkedin.com/company/bagges-as/\" target=\"_blank\" title=\"LinkedIn\" class=\"u-margin-bottom-5px\" rel=\"noopener\">"
+      }
+    ]
+  }
+]

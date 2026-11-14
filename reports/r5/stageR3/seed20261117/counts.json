@@ -1,0 +1,133 @@
+{
+  "seed": 20261117,
+  "websites_before": 7,
+  "websites_after": 8,
+  "declared_homepages": 11,
+  "declared_recall_before": 0,
+  "declared_recall_after": 0,
+  "tier_counts": {
+    "orgnr_on_page": 7,
+    "publisher_name_rare_contact": 1
+  },
+  "http_before": 749,
+  "http_after": 738,
+  "runtime_seconds": 317.6559999999881,
+  "cost_usd": 0.0,
+  "changes": {
+    "added": {
+      "980616622": {
+        "final_url": "https://www.bagges.no",
+        "identity_level": "HIGH",
+        "proof_type": "publisher_name_rare_contact",
+        "proof_page_url": "https://www.bagges.no/",
+        "signals": [
+          "publisher_full_legal_name",
+          "rare_registry_contact"
+        ],
+        "points": 0,
+        "candidate_origin": "registry_email",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publisher_identity": {
+          "tier": "publisher_name_rare_contact",
+          "legal_name": "BAGGES AS",
+          "publisher_location": "title",
+          "publisher_excerpt": "BAGGES AS - Ventiler, pakninger og tekniske løsninger",
+          "candidate_url": "https://bagges.no/",
+          "proof_page_url": "https://www.bagges.no/",
+          "contact": {
+            "registry_field": "phone",
+            "registry_value": "64 83 50 00",
+            "kind": "phone",
+            "normalized_value": "64835000",
+            "publisher_location": "footer",
+            "publisher_excerpt": "Kontakt BAGGES AS Industriveien 15, 2020 Skedsmokorset Tlf : 64 83 50 00 Email : post@bagges.no Salgs- og leveringsbetingelser Personvernerklæring Kvalitetspolitikk ESG politikk Bærekraftsrapport Etiske Retningslinjer for Leverandører Å penhetsloven Sosiale medier",
+            "matched_text": " 64 83 50 00",
+            "rarity_count": 2
+          },
+          "rarity_table": {
+            "bundle_sha256": "900882536a574656025214e5163174812d4d4234e4922b9e452e86882b530d07",
+            "built_at": "2026-11-13T19:05:51.310268+00:00",
+            "entity_count": 1177860,
+            "sources": [
+              {
+                "kind": "enheter",
+                "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+                "file": "registry.csv",
+                "sha256": "5b0df27c5567a655320b8dfb8975049b76c46ba93d748a8a763f8db7050b7862",
+                "valid_rows": 1177860,
+                "local_file_modified_at": "2026-10-13T06:48:09.113086+00:00"
+              }
+            ],
+            "attribution": "Brønnøysundregistrene / Enhetsregisteret; NLOD 2.0",
+            "licence_url": "https://data.norge.no/nlod/no/2.0"
+          }
+        },
+        "registry_contact_matches": {
+          "email_domain": "bagges.no",
+          "phone": "+4764835000"
+        }
+      }
+    },
+    "removed": {},
+    "url_changed": {
+      "918638628": {
+        "before": {
+          "final_url": "https://www.vestfjordenelektro.no",
+          "identity_level": "VERIFIED",
+          "proof_type": "orgnr_on_page",
+          "proof_page_url": "https://www.vestfjordenelektro.no/",
+          "signals": [],
+          "points": 0,
+          "candidate_origin": "legal_name_slug",
+          "relationship_note": null,
+          "other_orgnrs": []
+        },
+        "after": {
+          "final_url": "https://vestfjordenelektro.no",
+          "identity_level": "VERIFIED",
+          "proof_type": "orgnr_on_page",
+          "proof_page_url": "https://vestfjordenelektro.no/",
+          "signals": [],
+          "points": 0,
+          "candidate_origin": "legal_name_slug",
+          "relationship_note": null,
+          "other_orgnrs": []
+        }
+      },
+      "948039958": {
+        "before": {
+          "final_url": "https://www.braudbakeri.no",
+          "identity_level": "VERIFIED",
+          "proof_type": "orgnr_on_page",
+          "proof_page_url": "https://www.braudbakeri.no/",
+          "signals": [],
+          "points": 0,
+          "candidate_origin": "nav_employer_homepage",
+          "relationship_note": null,
+          "other_orgnrs": [],
+          "registry_contact_matches": {
+            "phone": "+4770216590"
+          }
+        },
+        "after": {
+          "final_url": "https://www.valakerbakeri.no",
+          "identity_level": "VERIFIED",
+          "proof_type": "orgnr_on_page",
+          "proof_page_url": "https://www.valakerbakeri.no/",
+          "signals": [],
+          "points": 0,
+          "candidate_origin": "nav_employer_homepage",
+          "relationship_note": null,
+          "other_orgnrs": [],
+          "registry_contact_matches": {
+            "phone": "+4770216590",
+            "email_domain": "valaker.as"
+          }
+        }
+      }
+    }
+  },
+  "envelopes_sha256": "c211924918645b9bb54c22e56350569a3c65c19062b7a500e89801c02d0f3eee",
+  "profiles_sha256": "21be796200ebf15dd5792e6473f1b04cfe1e124f104a7fc79a265d3b8306f282"
+}

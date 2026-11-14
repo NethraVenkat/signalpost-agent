@@ -1,0 +1,37 @@
+[
+  {
+    "orgnr": "986128662",
+    "legal_name": "MASKINKURS AS",
+    "url": "https://www.facebook.com/maskinkurs",
+    "links": [
+      {
+        "href": "https://www.facebook.com/maskinkurs/?locale=nb_NO",
+        "text": "  ",
+        "header_footer": true,
+        "own": true,
+        "exact_span": "<a class=\"\" href=\"https://www.facebook.com/maskinkurs/?locale=nb_NO\" target=\"_blank\" rel=\"noopener\" data-track-event=\"click\" data-track-action=\"social_link\">"
+      }
+    ]
+  },
+  {
+    "orgnr": "986464492",
+    "legal_name": "OPTIMAL REGNSKAP AS",
+    "url": "https://www.facebook.com/optimalregnskap",
+    "links": [
+      {
+        "href": "https://www.facebook.com/optimalregnskap/",
+        "text": "",
+        "header_footer": false,
+        "own": true,
+        "exact_span": "<a href=\"https://www.facebook.com/optimalregnskap/\" target=\"_blank\" title=\"Facebook\">"
+      },
+      {
+        "href": "https://www.facebook.com/optimalregnskap/",
+        "text": "Facebook",
+        "header_footer": true,
+        "own": true,
+        "exact_span": "<a href=\"https://www.facebook.com/optimalregnskap/\" target=\"_blank\">"
+      }
+    ]
+  }
+]

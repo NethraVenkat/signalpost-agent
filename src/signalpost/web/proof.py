@@ -340,6 +340,10 @@ def score(page, org, context, origin, leaders):
     if receipt := declared_receipt(page, org, context):
         return Proof('HIGH', DECLARED, ['publisher_full_legal_name','registry_declared_domain'],
                      reason=DECLARED, token=context['name'], publisher_receipt=receipt)
+    from .publisher_identity import rare_receipt, RARE
+    if receipt := rare_receipt(page,org,context):
+        return Proof('HIGH',RARE,['publisher_full_legal_name','rare_registry_contact'],
+                     reason=RARE,token=context['name'],publisher_receipt=receipt)
     if origin == 'registry_website':
         branded = legal_name(page.title+' '+page.meta.get('og:site_name','')+' '+' '.join(page.brand_parts))
         generic = GENERIC | {'norsk','norske','norge','stiftelsen','selskap','gruppen','group','nasjonalt','ressurssenter','foreningen'}

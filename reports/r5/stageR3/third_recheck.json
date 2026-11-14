@@ -1,0 +1,504 @@
+[
+  {
+    "seed": 20261114,
+    "orgnr": "986128662",
+    "legal_name": "MASKINKURS AS",
+    "kind": "social",
+    "url": "https://www.facebook.com/maskinkurs",
+    "tier": "own_header_footer_exact_name_v1",
+    "value": {
+      "url": "https://www.facebook.com/maskinkurs",
+      "platform": "facebook.com",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "company_name": "MASKINKURS AS"
+    },
+    "own_receipts": [
+      {
+        "id": "0d40831631ff572c487412072fd420de8f9fe471a3b79a731d17011950bf0c4d",
+        "source_url": "https://maskinkurs.no/",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-14T01:16:20.185024Z",
+        "content_sha256": "ab612600fe44500ea955478ca21481559e3848684efb61ad803137e56ddcf9e1",
+        "claim_span": "<a class=\"\" href=\"https://www.facebook.com/maskinkurs/?locale=nb_NO\" target=\"_blank\" rel=\"noopener\" data-track-event=\"click\" data-track-action=\"social_link\">",
+        "locator": "company-link:https://www.facebook.com/maskinkurs",
+        "extraction_method": "signalpost.website.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ],
+    "registry_receipts": {
+      "identity.legal_name": {
+        "value": "MASKINKURS AS",
+        "evidence": [
+          {
+            "id": "591e6b1c70453a8a3aea6de751823d9d70f4e392774ca29863cf8d67e082312d",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T01:13:47.416647Z",
+            "content_sha256": "2518ad3157f54919a56aebe772719739c624dcecdb4093f050421ad1abcb6cd5",
+            "claim_span": "986128662,MASKINKURS AS,AS,Aksjeselskap,85.597,Annen undervisning ellers,,,,,,,true,,2025-09-13,2025-09-10,,dane@kristoffersenkompe.no,55 32 32 94,45044433,,,,,,,,Spelhaugen 15,FYLLINGSDALEN,5147,BERGEN,4601,Norge,NO,2100,Private aksjeselskaper mv.,2025,2003-10-10,2003-09-24,false,,,,,false,,true,20",
+            "locator": "row:986128662/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:e19cf6e47d266b6a605b0b3dd14f1cbf08b31a78fb32820182fbb91753d96b4f",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      "identity.registered_email": {
+        "value": "dane@kristoffersenkompe.no",
+        "evidence": [
+          {
+            "id": "17d531b9f782b957b5dafb1a8897e1466aaa395429b5367dd229ed54dcb9ec7d",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T01:13:47.416647Z",
+            "content_sha256": "2518ad3157f54919a56aebe772719739c624dcecdb4093f050421ad1abcb6cd5",
+            "claim_span": "nnen undervisning ellers,,,,,,,true,,2025-09-13,2025-09-10,,dane@kristoffersenkompe.no,55 32 32 94,45044433,,,,,,,,Spelhaugen 15,FYLLINGSDALEN,5147,BERGEN,4601,Norge,NO,2100,Private aksjeselskaper mv.,2025,2003-10-10,2003-09-24,false,,,,,false,,true,2003-10-10,false,false,,false,,false,,false,,,,,,,",
+            "locator": "row:986128662/column:epostadresse",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:e19cf6e47d266b6a605b0b3dd14f1cbf08b31a78fb32820182fbb91753d96b4f",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      "identity.registered_phone": {
+        "value": "55 32 32 94",
+        "evidence": [
+          {
+            "id": "3a0b6fed1ae911dd7b26affcec5da8d6061f8d5052479f940a18aa2135fa51cf",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T01:13:47.416647Z",
+            "content_sha256": "2518ad3157f54919a56aebe772719739c624dcecdb4093f050421ad1abcb6cd5",
+            "claim_span": ",,,,true,,2025-09-13,2025-09-10,,dane@kristoffersenkompe.no,55 32 32 94,45044433,,,,,,,,Spelhaugen 15,FYLLINGSDALEN,5147,BERGEN,4601,Norge,NO,2100,Private aksjeselskaper mv.,2025,2003-10-10,2003-09-24,false,,,,,false,,true,2003-10-10,false,false,,false,,false,,false,,,,,,,Bokmål,2015-12-13,\"Sikkerhe",
+            "locator": "row:986128662/column:telefon",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:e19cf6e47d266b6a605b0b3dd14f1cbf08b31a78fb32820182fbb91753d96b4f",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      "identity.registered_mobile": {
+        "value": "45044433",
+        "evidence": [
+          {
+            "id": "27f33380b09b27049ea70823487abe204c1370c14397ea1ee7ff03fead927216",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T01:13:47.416647Z",
+            "content_sha256": "2518ad3157f54919a56aebe772719739c624dcecdb4093f050421ad1abcb6cd5",
+            "claim_span": "25-09-13,2025-09-10,,dane@kristoffersenkompe.no,55 32 32 94,45044433,,,,,,,,Spelhaugen 15,FYLLINGSDALEN,5147,BERGEN,4601,Norge,NO,2100,Private aksjeselskaper mv.,2025,2003-10-10,2003-09-24,false,,,,,false,,true,2003-10-10,false,false,,false,,false,,false,,,,,,,Bokmål,2015-12-13,\"Sikkerhetsopplæring,",
+            "locator": "row:986128662/column:mobil",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:e19cf6e47d266b6a605b0b3dd14f1cbf08b31a78fb32820182fbb91753d96b4f",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      }
+    },
+    "automated_verdict": "correct",
+    "checks": [
+      {
+        "status": "CORRECT",
+        "reason": "Verified company-owned social link (facebook.com) in page body",
+        "source_url": "https://maskinkurs.no/",
+        "content_sha256": "ab612600fe44500ea955478ca21481559e3848684efb61ad803137e56ddcf9e1"
+      }
+    ]
+  },
+  {
+    "seed": 20261114,
+    "orgnr": "986464492",
+    "legal_name": "OPTIMAL REGNSKAP AS",
+    "kind": "website",
+    "url": "https://www.optimal-regnskap.no",
+    "tier": "publisher_name_rare_contact",
+    "value": {
+      "final_url": "https://www.optimal-regnskap.no",
+      "identity_level": "HIGH",
+      "proof_type": "publisher_name_rare_contact",
+      "proof_page_url": "https://www.optimal-regnskap.no/",
+      "signals": [
+        "publisher_full_legal_name",
+        "rare_registry_contact"
+      ],
+      "points": 0,
+      "candidate_origin": "registry_email",
+      "relationship_note": null,
+      "other_orgnrs": [],
+      "publisher_identity": {
+        "tier": "publisher_name_rare_contact",
+        "legal_name": "OPTIMAL REGNSKAP AS",
+        "publisher_location": "og:site_name",
+        "publisher_excerpt": "Optimal Regnskap AS",
+        "candidate_url": "https://optimal-regnskap.no/",
+        "proof_page_url": "https://www.optimal-regnskap.no/",
+        "contact": {
+          "registry_field": "phone",
+          "registry_value": "72 48 36 30",
+          "kind": "phone",
+          "normalized_value": "72483630",
+          "publisher_location": "footer",
+          "publisher_excerpt": "Kontaktinfo Telefon 72 48 36 30 post@optimal-regnskap.no Adresse Orkdalsveien 67 7300 Orkanger Åpningstid Kontoret er åpent 10.00 - 14.00 og etter avtale Følg oss Facebook Linker Skatteetaten / Altinn / Brreg / Lovdata / Fjernhjelp på PC",
+          "matched_text": "72 48 36 30",
+          "rarity_count": 1
+        },
+        "rarity_table": {
+          "bundle_sha256": "900882536a574656025214e5163174812d4d4234e4922b9e452e86882b530d07",
+          "built_at": "2026-11-13T19:05:51.310268+00:00",
+          "entity_count": 1177860,
+          "sources": [
+            {
+              "kind": "enheter",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "file": "registry.csv",
+              "sha256": "5b0df27c5567a655320b8dfb8975049b76c46ba93d748a8a763f8db7050b7862",
+              "valid_rows": 1177860,
+              "local_file_modified_at": "2026-10-13T06:48:09.113086+00:00"
+            }
+          ],
+          "attribution": "Brønnøysundregistrene / Enhetsregisteret; NLOD 2.0",
+          "licence_url": "https://data.norge.no/nlod/no/2.0"
+        }
+      },
+      "registry_contact_matches": {
+        "email_domain": "optimal-regnskap.no",
+        "phone": "+4772483630"
+      }
+    },
+    "own_receipts": [
+      {
+        "id": "18f7909cd846b0c664241b492bbd44b103831b6b6ad86f5dec3cda3ca850157c",
+        "source_url": "https://www.optimal-regnskap.no/",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-14T01:15:53.639703Z",
+        "content_sha256": "876a8b707878e0afb23735b2accd765a63b6b5c762731c76ad1f1b66e6923050",
+        "claim_span": "ale\" content=\"nb_NO\" />\n\n        <title>Optimal Regnskap AS -   Hjem</title>\n        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"https://fonts.googleapis.com/css?fa",
+        "locator": "identity-proof:986464492",
+        "extraction_method": "signalpost.website.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ],
+    "registry_receipts": {
+      "identity.legal_name": {
+        "value": "OPTIMAL REGNSKAP AS",
+        "evidence": [
+          {
+            "id": "3aaee106413b96801a9cdeea3db871bb35fb516e86f7c496289d5f510ba17235",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T01:13:47.417647Z",
+            "content_sha256": "f550604aa659cbf8b8aecad46575a500bd97a248aa2dea07d912f2e512a59371",
+            "claim_span": "986464492,OPTIMAL REGNSKAP AS,AS,Aksjeselskap,69.202,Regnskapsføring og bokføring,,,,,,,true,9,2026-07-15,2026-07-10,,post@optimal-regnskap.no,72 48 36 30,,,,,,,,,Orkdalsveien 67,ORKANGER,7300,ORKLAND,5059,Norge,NO,2100,Private aksjeselskaper mv.,2025,2004-01-24,2004-01-01,true,2004-01-01,2004-02-23",
+            "locator": "row:986464492/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:e19cf6e47d266b6a605b0b3dd14f1cbf08b31a78fb32820182fbb91753d96b4f",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      "identity.registered_email": {
+        "value": "post@optimal-regnskap.no",
+        "evidence": [
+          {
+            "id": "162f071fd6b8d3100e6b013f6fae333fdbff8579c48417cdbd53999b736c870b",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T01:13:47.417647Z",
+            "content_sha256": "f550604aa659cbf8b8aecad46575a500bd97a248aa2dea07d912f2e512a59371",
+            "claim_span": "kapsføring og bokføring,,,,,,,true,9,2026-07-15,2026-07-10,,post@optimal-regnskap.no,72 48 36 30,,,,,,,,,Orkdalsveien 67,ORKANGER,7300,ORKLAND,5059,Norge,NO,2100,Private aksjeselskaper mv.,2025,2004-01-24,2004-01-01,true,2004-01-01,2004-02-23,Utleier av bygg eller anlegg,2014-01-28,false,,true,2004-",
+            "locator": "row:986464492/column:epostadresse",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:e19cf6e47d266b6a605b0b3dd14f1cbf08b31a78fb32820182fbb91753d96b4f",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      "identity.registered_phone": {
+        "value": "72 48 36 30",
+        "evidence": [
+          {
+            "id": "b1e0d193236f31ea8d8e2ddb274f6233fcaeadac8418dcb92dea05e6bbad4ee9",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T01:13:47.417647Z",
+            "content_sha256": "f550604aa659cbf8b8aecad46575a500bd97a248aa2dea07d912f2e512a59371",
+            "claim_span": ",,,,,true,9,2026-07-15,2026-07-10,,post@optimal-regnskap.no,72 48 36 30,,,,,,,,,Orkdalsveien 67,ORKANGER,7300,ORKLAND,5059,Norge,NO,2100,Private aksjeselskaper mv.,2025,2004-01-24,2004-01-01,true,2004-01-01,2004-02-23,Utleier av bygg eller anlegg,2014-01-28,false,,true,2004-01-24,false,false,,false,",
+            "locator": "row:986464492/column:telefon",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:e19cf6e47d266b6a605b0b3dd14f1cbf08b31a78fb32820182fbb91753d96b4f",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      }
+    },
+    "automated_verdict": "correct",
+    "checks": [
+      {
+        "status": "CORRECT",
+        "reason": "Exact full publisher legal name and rare exact registry contact",
+        "source_url": "https://www.optimal-regnskap.no/",
+        "content_sha256": "876a8b707878e0afb23735b2accd765a63b6b5c762731c76ad1f1b66e6923050"
+      }
+    ]
+  },
+  {
+    "seed": 20261114,
+    "orgnr": "986128662",
+    "legal_name": "MASKINKURS AS",
+    "kind": "website",
+    "url": "https://maskinkurs.no",
+    "tier": "publisher_name_rare_contact",
+    "value": {
+      "final_url": "https://maskinkurs.no",
+      "identity_level": "HIGH",
+      "proof_type": "publisher_name_rare_contact",
+      "proof_page_url": "https://maskinkurs.no/",
+      "signals": [
+        "publisher_full_legal_name",
+        "rare_registry_contact"
+      ],
+      "points": 0,
+      "candidate_origin": "legal_name_slug",
+      "relationship_note": null,
+      "other_orgnrs": [],
+      "publisher_identity": {
+        "tier": "publisher_name_rare_contact",
+        "legal_name": "MASKINKURS AS",
+        "publisher_location": "title",
+        "publisher_excerpt": "Kurs og Sertifisering i Bergen | Maskinkurs AS",
+        "candidate_url": "https://maskinkurs.no/",
+        "proof_page_url": "https://maskinkurs.no/",
+        "contact": {
+          "registry_field": "mobile",
+          "registry_value": "45044433",
+          "kind": "phone",
+          "normalized_value": "45044433",
+          "publisher_location": "footer",
+          "publisher_excerpt": "Maskinkurs AS Spelhaugen 15 5147 Fyllingsdalen Personvern Telefon +4745044433 E-post kurs@maskinkurs.no",
+          "matched_text": "+4745044433",
+          "rarity_count": 2
+        },
+        "rarity_table": {
+          "bundle_sha256": "900882536a574656025214e5163174812d4d4234e4922b9e452e86882b530d07",
+          "built_at": "2026-11-13T19:05:51.310268+00:00",
+          "entity_count": 1177860,
+          "sources": [
+            {
+              "kind": "enheter",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "file": "registry.csv",
+              "sha256": "5b0df27c5567a655320b8dfb8975049b76c46ba93d748a8a763f8db7050b7862",
+              "valid_rows": 1177860,
+              "local_file_modified_at": "2026-10-13T06:48:09.113086+00:00"
+            }
+          ],
+          "attribution": "Brønnøysundregistrene / Enhetsregisteret; NLOD 2.0",
+          "licence_url": "https://data.norge.no/nlod/no/2.0"
+        }
+      }
+    },
+    "own_receipts": [
+      {
+        "id": "99dbb75c0cca1f0536e5d4a606e13a1dd4ccea40aa4ebbbe4a6a2846cc1971b6",
+        "source_url": "https://maskinkurs.no/",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-14T01:16:20.185024Z",
+        "content_sha256": "ab612600fe44500ea955478ca21481559e3848684efb61ad803137e56ddcf9e1",
+        "claim_span": "<title>Kurs og Sertifisering i Bergen | Maskinkurs AS</title><meta name=\"keywords\" content=\"kurs\"><meta name=\"description\" content=\"Maskinkurs AS tilbyr et bredt utvalg av sertifiserte kurs innen truck, anleggsmaskiner, kran, fallsikring og sikkerhet. Se alle våre kurs og kommende datoer i Bergen.\">",
+        "locator": "identity-proof:986128662",
+        "extraction_method": "signalpost.website.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ],
+    "registry_receipts": {
+      "identity.legal_name": {
+        "value": "MASKINKURS AS",
+        "evidence": [
+          {
+            "id": "591e6b1c70453a8a3aea6de751823d9d70f4e392774ca29863cf8d67e082312d",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T01:13:47.416647Z",
+            "content_sha256": "2518ad3157f54919a56aebe772719739c624dcecdb4093f050421ad1abcb6cd5",
+            "claim_span": "986128662,MASKINKURS AS,AS,Aksjeselskap,85.597,Annen undervisning ellers,,,,,,,true,,2025-09-13,2025-09-10,,dane@kristoffersenkompe.no,55 32 32 94,45044433,,,,,,,,Spelhaugen 15,FYLLINGSDALEN,5147,BERGEN,4601,Norge,NO,2100,Private aksjeselskaper mv.,2025,2003-10-10,2003-09-24,false,,,,,false,,true,20",
+            "locator": "row:986128662/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:e19cf6e47d266b6a605b0b3dd14f1cbf08b31a78fb32820182fbb91753d96b4f",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      "identity.registered_email": {
+        "value": "dane@kristoffersenkompe.no",
+        "evidence": [
+          {
+            "id": "17d531b9f782b957b5dafb1a8897e1466aaa395429b5367dd229ed54dcb9ec7d",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T01:13:47.416647Z",
+            "content_sha256": "2518ad3157f54919a56aebe772719739c624dcecdb4093f050421ad1abcb6cd5",
+            "claim_span": "nnen undervisning ellers,,,,,,,true,,2025-09-13,2025-09-10,,dane@kristoffersenkompe.no,55 32 32 94,45044433,,,,,,,,Spelhaugen 15,FYLLINGSDALEN,5147,BERGEN,4601,Norge,NO,2100,Private aksjeselskaper mv.,2025,2003-10-10,2003-09-24,false,,,,,false,,true,2003-10-10,false,false,,false,,false,,false,,,,,,,",
+            "locator": "row:986128662/column:epostadresse",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:e19cf6e47d266b6a605b0b3dd14f1cbf08b31a78fb32820182fbb91753d96b4f",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      "identity.registered_phone": {
+        "value": "55 32 32 94",
+        "evidence": [
+          {
+            "id": "3a0b6fed1ae911dd7b26affcec5da8d6061f8d5052479f940a18aa2135fa51cf",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T01:13:47.416647Z",
+            "content_sha256": "2518ad3157f54919a56aebe772719739c624dcecdb4093f050421ad1abcb6cd5",
+            "claim_span": ",,,,true,,2025-09-13,2025-09-10,,dane@kristoffersenkompe.no,55 32 32 94,45044433,,,,,,,,Spelhaugen 15,FYLLINGSDALEN,5147,BERGEN,4601,Norge,NO,2100,Private aksjeselskaper mv.,2025,2003-10-10,2003-09-24,false,,,,,false,,true,2003-10-10,false,false,,false,,false,,false,,,,,,,Bokmål,2015-12-13,\"Sikkerhe",
+            "locator": "row:986128662/column:telefon",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:e19cf6e47d266b6a605b0b3dd14f1cbf08b31a78fb32820182fbb91753d96b4f",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      "identity.registered_mobile": {
+        "value": "45044433",
+        "evidence": [
+          {
+            "id": "27f33380b09b27049ea70823487abe204c1370c14397ea1ee7ff03fead927216",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T01:13:47.416647Z",
+            "content_sha256": "2518ad3157f54919a56aebe772719739c624dcecdb4093f050421ad1abcb6cd5",
+            "claim_span": "25-09-13,2025-09-10,,dane@kristoffersenkompe.no,55 32 32 94,45044433,,,,,,,,Spelhaugen 15,FYLLINGSDALEN,5147,BERGEN,4601,Norge,NO,2100,Private aksjeselskaper mv.,2025,2003-10-10,2003-09-24,false,,,,,false,,true,2003-10-10,false,false,,false,,false,,false,,,,,,,Bokmål,2015-12-13,\"Sikkerhetsopplæring,",
+            "locator": "row:986128662/column:mobil",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:e19cf6e47d266b6a605b0b3dd14f1cbf08b31a78fb32820182fbb91753d96b4f",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      }
+    },
+    "automated_verdict": "correct",
+    "checks": [
+      {
+        "status": "CORRECT",
+        "reason": "Exact full publisher legal name and rare exact registry contact",
+        "source_url": "https://maskinkurs.no/",
+        "content_sha256": "ab612600fe44500ea955478ca21481559e3848684efb61ad803137e56ddcf9e1"
+      }
+    ]
+  },
+  {
+    "seed": 20261114,
+    "orgnr": "986464492",
+    "legal_name": "OPTIMAL REGNSKAP AS",
+    "kind": "social",
+    "url": "https://www.facebook.com/optimalregnskap",
+    "tier": "own_header_footer_exact_name_v1",
+    "value": {
+      "url": "https://www.facebook.com/optimalregnskap",
+      "platform": "facebook.com",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "company_name": "OPTIMAL REGNSKAP AS"
+    },
+    "own_receipts": [
+      {
+        "id": "d75013ca0809c5e3144c339e70679246ad93c60af117edcf66effdc2c32c4281",
+        "source_url": "https://www.optimal-regnskap.no/",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-14T01:15:53.639703Z",
+        "content_sha256": "876a8b707878e0afb23735b2accd765a63b6b5c762731c76ad1f1b66e6923050",
+        "claim_span": "<a href=\"https://www.facebook.com/optimalregnskap/\" target=\"_blank\">",
+        "locator": "company-link:https://www.facebook.com/optimalregnskap",
+        "extraction_method": "signalpost.website.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ],
+    "registry_receipts": {
+      "identity.legal_name": {
+        "value": "OPTIMAL REGNSKAP AS",
+        "evidence": [
+          {
+            "id": "3aaee106413b96801a9cdeea3db871bb35fb516e86f7c496289d5f510ba17235",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T01:13:47.417647Z",
+            "content_sha256": "f550604aa659cbf8b8aecad46575a500bd97a248aa2dea07d912f2e512a59371",
+            "claim_span": "986464492,OPTIMAL REGNSKAP AS,AS,Aksjeselskap,69.202,Regnskapsføring og bokføring,,,,,,,true,9,2026-07-15,2026-07-10,,post@optimal-regnskap.no,72 48 36 30,,,,,,,,,Orkdalsveien 67,ORKANGER,7300,ORKLAND,5059,Norge,NO,2100,Private aksjeselskaper mv.,2025,2004-01-24,2004-01-01,true,2004-01-01,2004-02-23",
+            "locator": "row:986464492/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:e19cf6e47d266b6a605b0b3dd14f1cbf08b31a78fb32820182fbb91753d96b4f",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      "identity.registered_email": {
+        "value": "post@optimal-regnskap.no",
+        "evidence": [
+          {
+            "id": "162f071fd6b8d3100e6b013f6fae333fdbff8579c48417cdbd53999b736c870b",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T01:13:47.417647Z",
+            "content_sha256": "f550604aa659cbf8b8aecad46575a500bd97a248aa2dea07d912f2e512a59371",
+            "claim_span": "kapsføring og bokføring,,,,,,,true,9,2026-07-15,2026-07-10,,post@optimal-regnskap.no,72 48 36 30,,,,,,,,,Orkdalsveien 67,ORKANGER,7300,ORKLAND,5059,Norge,NO,2100,Private aksjeselskaper mv.,2025,2004-01-24,2004-01-01,true,2004-01-01,2004-02-23,Utleier av bygg eller anlegg,2014-01-28,false,,true,2004-",
+            "locator": "row:986464492/column:epostadresse",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:e19cf6e47d266b6a605b0b3dd14f1cbf08b31a78fb32820182fbb91753d96b4f",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      "identity.registered_phone": {
+        "value": "72 48 36 30",
+        "evidence": [
+          {
+            "id": "b1e0d193236f31ea8d8e2ddb274f6233fcaeadac8418dcb92dea05e6bbad4ee9",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T01:13:47.417647Z",
+            "content_sha256": "f550604aa659cbf8b8aecad46575a500bd97a248aa2dea07d912f2e512a59371",
+            "claim_span": ",,,,,true,9,2026-07-15,2026-07-10,,post@optimal-regnskap.no,72 48 36 30,,,,,,,,,Orkdalsveien 67,ORKANGER,7300,ORKLAND,5059,Norge,NO,2100,Private aksjeselskaper mv.,2025,2004-01-24,2004-01-01,true,2004-01-01,2004-02-23,Utleier av bygg eller anlegg,2014-01-28,false,,true,2004-01-24,false,false,,false,",
+            "locator": "row:986464492/column:telefon",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:e19cf6e47d266b6a605b0b3dd14f1cbf08b31a78fb32820182fbb91753d96b4f",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      }
+    },
+    "automated_verdict": "correct",
+    "checks": [
+      {
+        "status": "CORRECT",
+        "reason": "Verified company-owned social link (facebook.com) in page body",
+        "source_url": "https://www.optimal-regnskap.no/",
+        "content_sha256": "876a8b707878e0afb23735b2accd765a63b6b5c762731c76ad1f1b66e6923050"
+      }
+    ]
+  }
+]

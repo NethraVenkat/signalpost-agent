@@ -1,0 +1,24 @@
+{
+  "seed": 20261116,
+  "websites_before": 6,
+  "websites_after": 6,
+  "declared_homepages": 17,
+  "declared_recall_before": 3,
+  "declared_recall_after": 3,
+  "tier_counts": {
+    "signals": 1,
+    "orgnr_on_page": 4,
+    "registry_declared_publisher_name": 1
+  },
+  "http_before": 787,
+  "http_after": 784,
+  "runtime_seconds": 348.2809999999881,
+  "cost_usd": 0.0,
+  "changes": {
+    "added": {},
+    "removed": {},
+    "url_changed": {}
+  },
+  "envelopes_sha256": "1e463546b0d20af941e13640b726d07fabdb3fc8281ec84713bf59ec81e3dbf4",
+  "profiles_sha256": "ab4afbcf1c7aeab3a0e024de2b80544678d256482725f4af0865eaf519fca85b"
+}

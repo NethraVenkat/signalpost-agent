@@ -1,0 +1,128 @@
+{
+  "seed": 20261114,
+  "websites_before": 4,
+  "websites_after": 6,
+  "declared_homepages": 8,
+  "declared_recall_before": 4,
+  "declared_recall_after": 4,
+  "tier_counts": {
+    "signals": 1,
+    "publisher_name_rare_contact": 2,
+    "registry_declared_publisher_name": 1,
+    "orgnr_on_page": 2
+  },
+  "http_before": 726,
+  "http_after": 730,
+  "runtime_seconds": 310.2970000000205,
+  "cost_usd": 0.0,
+  "changes": {
+    "added": {
+      "986128662": {
+        "final_url": "https://maskinkurs.no",
+        "identity_level": "HIGH",
+        "proof_type": "publisher_name_rare_contact",
+        "proof_page_url": "https://maskinkurs.no/",
+        "signals": [
+          "publisher_full_legal_name",
+          "rare_registry_contact"
+        ],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publisher_identity": {
+          "tier": "publisher_name_rare_contact",
+          "legal_name": "MASKINKURS AS",
+          "publisher_location": "title",
+          "publisher_excerpt": "Kurs og Sertifisering i Bergen | Maskinkurs AS",
+          "candidate_url": "https://maskinkurs.no/",
+          "proof_page_url": "https://maskinkurs.no/",
+          "contact": {
+            "registry_field": "mobile",
+            "registry_value": "45044433",
+            "kind": "phone",
+            "normalized_value": "45044433",
+            "publisher_location": "footer",
+            "publisher_excerpt": "Maskinkurs AS Spelhaugen 15 5147 Fyllingsdalen Personvern Telefon +4745044433 E-post kurs@maskinkurs.no",
+            "matched_text": "+4745044433",
+            "rarity_count": 2
+          },
+          "rarity_table": {
+            "bundle_sha256": "900882536a574656025214e5163174812d4d4234e4922b9e452e86882b530d07",
+            "built_at": "2026-11-13T19:05:51.310268+00:00",
+            "entity_count": 1177860,
+            "sources": [
+              {
+                "kind": "enheter",
+                "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+                "file": "registry.csv",
+                "sha256": "5b0df27c5567a655320b8dfb8975049b76c46ba93d748a8a763f8db7050b7862",
+                "valid_rows": 1177860,
+                "local_file_modified_at": "2026-10-13T06:48:09.113086+00:00"
+              }
+            ],
+            "attribution": "Brønnøysundregistrene / Enhetsregisteret; NLOD 2.0",
+            "licence_url": "https://data.norge.no/nlod/no/2.0"
+          }
+        }
+      },
+      "986464492": {
+        "final_url": "https://www.optimal-regnskap.no",
+        "identity_level": "HIGH",
+        "proof_type": "publisher_name_rare_contact",
+        "proof_page_url": "https://www.optimal-regnskap.no/",
+        "signals": [
+          "publisher_full_legal_name",
+          "rare_registry_contact"
+        ],
+        "points": 0,
+        "candidate_origin": "registry_email",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publisher_identity": {
+          "tier": "publisher_name_rare_contact",
+          "legal_name": "OPTIMAL REGNSKAP AS",
+          "publisher_location": "og:site_name",
+          "publisher_excerpt": "Optimal Regnskap AS",
+          "candidate_url": "https://optimal-regnskap.no/",
+          "proof_page_url": "https://www.optimal-regnskap.no/",
+          "contact": {
+            "registry_field": "phone",
+            "registry_value": "72 48 36 30",
+            "kind": "phone",
+            "normalized_value": "72483630",
+            "publisher_location": "footer",
+            "publisher_excerpt": "Kontaktinfo Telefon 72 48 36 30 post@optimal-regnskap.no Adresse Orkdalsveien 67 7300 Orkanger Åpningstid Kontoret er åpent 10.00 - 14.00 og etter avtale Følg oss Facebook Linker Skatteetaten / Altinn / Brreg / Lovdata / Fjernhjelp på PC",
+            "matched_text": "72 48 36 30",
+            "rarity_count": 1
+          },
+          "rarity_table": {
+            "bundle_sha256": "900882536a574656025214e5163174812d4d4234e4922b9e452e86882b530d07",
+            "built_at": "2026-11-13T19:05:51.310268+00:00",
+            "entity_count": 1177860,
+            "sources": [
+              {
+                "kind": "enheter",
+                "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+                "file": "registry.csv",
+                "sha256": "5b0df27c5567a655320b8dfb8975049b76c46ba93d748a8a763f8db7050b7862",
+                "valid_rows": 1177860,
+                "local_file_modified_at": "2026-10-13T06:48:09.113086+00:00"
+              }
+            ],
+            "attribution": "Brønnøysundregistrene / Enhetsregisteret; NLOD 2.0",
+            "licence_url": "https://data.norge.no/nlod/no/2.0"
+          }
+        },
+        "registry_contact_matches": {
+          "email_domain": "optimal-regnskap.no",
+          "phone": "+4772483630"
+        }
+      }
+    },
+    "removed": {},
+    "url_changed": {}
+  },
+  "envelopes_sha256": "3419b1057318948ebda7460fd8ae649b631649cad5ff01cafb675eeb2b05abdf",
+  "profiles_sha256": "46eec9ac2f3be85d5d7bca3b7a294d474711140f1537f2c7c446850450156dd0"
+}

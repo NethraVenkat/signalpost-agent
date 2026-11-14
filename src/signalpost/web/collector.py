@@ -126,7 +126,7 @@ def registry_context(envelope, bulk, blobs):
     data = json.loads(body)
     address = data.get("forretningsadresse") or {}
     context = {"name": data.get("navn"), "website": data.get("hjemmeside"), "email": data.get("epostadresse"),
-               "phone": data.get("telefon"), "municipality": address.get("kommune"), "street": address.get("adresse"),
+               "phone": data.get("telefon"), "mobile":data.get('mobil'), "municipality": address.get("kommune"), "street": address.get("adresse"),
                "postcode": address.get("postnummer"), "city": address.get("poststed")}
     return context, Source(reference.source_url, body, reference.content_sha256, reference.retrieved_at), "/hjemmeside"
 
@@ -483,6 +483,10 @@ def candidate_proof(page,org,context,candidate,leaders):
         if receipt := declared_receipt(page,org,context):
             return Proof('HIGH',DECLARED,['publisher_full_legal_name','registry_declared_domain'],
                          reason=DECLARED,token=context['name'],publisher_receipt=receipt)
+        from .publisher_identity import rare_receipt, RARE
+        if receipt := rare_receipt(page,org,context):
+            return Proof('HIGH',RARE,['publisher_full_legal_name','rare_registry_contact'],
+                         reason=RARE,token=context['name'],publisher_receipt=receipt)
         if not matches:
             return Proof('MEDIUM', signals=proof.signals, points=proof.points, reason='registry_contact_missing')
     # A shared registry phone/domain is corroboration, never a replacement for

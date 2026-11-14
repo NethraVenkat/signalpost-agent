@@ -4,7 +4,7 @@ from dataclasses import dataclass, field
 from html.parser import HTMLParser
 from urllib.parse import urlsplit
 
-_EXCLUDED = re.compile(r'\b(?:clients?|customers?|partners?|references?|kunder|kundeliste|partnere|referanser|news|nyheter|articles?|blog|credits?|agency)\b', re.I)
+_EXCLUDED = re.compile(r'\b(?:clients?|customers?|partners?|references?|kunder|kundeliste|partnere|referanser|news|nyheter|articles?|blog|credits?|agency|staff|team|employees|personnel|ansatte|medarbeidere|menneskene)\b', re.I)
 _CREDIT = re.compile(r'\b(?:design(?:et)?|levert|utviklet|powered|developed|website|webdesign)\s+(?:av|by)\b', re.I)
 _CONTACT_PATH = re.compile(r'(?:kontakt|contact|impressum|personvern|privacy|om[-_]oss|about)', re.I)
 _CONTACT_SIGNAL = re.compile(r'(?:\b(?:org\.?\s*(?:nr|nummer)|organisasjonsnummer|telefon|phone|tlf|adresse|address)\b|\b\d{4}\s+[A-ZÆØÅ][\wÆØÅæøå -]+|@)', re.I)

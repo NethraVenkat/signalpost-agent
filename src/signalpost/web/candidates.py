@@ -53,7 +53,7 @@ def legal_name_slugs(name):
 
 def context_from_bulk(row):
     return {"name": column(row, "navn")[0], "website": column(row, "hjemmeside")[0],
-            "email": column(row, "epostadresse")[0], "phone": column(row, "telefon")[0],
+            "email": column(row, "epostadresse")[0], "phone": column(row, "telefon")[0], "mobile":column(row,'mobil')[0],
             "municipality": column(row, "forretningsadresse.kommune")[0],
             "street": column(row, "forretningsadresse.adresse")[0],
             "postcode": column(row, "forretningsadresse.postnummer")[0], "city": column(row, "forretningsadresse.poststed")[0]}
