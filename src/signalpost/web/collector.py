@@ -488,6 +488,10 @@ def candidate_proof(page,org,context,candidate,leaders):
             return Proof('HIGH',RARE,['publisher_full_legal_name','rare_registry_contact'],
                          reason=RARE,token=context['name'],publisher_receipt=receipt)
         if not matches:
+            from .publisher_identity import core_receipt,CORE
+            if receipt := core_receipt(page,org,context):
+                return Proof('HIGH',CORE,['registry_declared_domain','distinctive_rare_publisher_core'],
+                             reason=CORE,token=receipt['core_name'],publisher_receipt=receipt)
             return Proof('MEDIUM', signals=proof.signals, points=proof.points, reason='registry_contact_missing')
     # A shared registry phone/domain is corroboration, never a replacement for
     # exact-entity proof or an override of parked/foreign/group/source vetoes.
