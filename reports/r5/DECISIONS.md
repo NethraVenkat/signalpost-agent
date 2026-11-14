@@ -592,3 +592,9 @@
 ### L3 — conditional builder extraction withheld after zero-hit audit
 - L0 saved-script audit found0exact target orgnr hits for Wix warmup/viewer, Squarespace context,Nextdata andNuxt in all six unproved-page scopes. Condition for implementing a component extractor is not met. No runtime parsing/acceptance change. builder_audit.md records scope and limitations; no claim about all future builder pages.
 - Report-only sub-step; runtime remains exactly greenL2. The full pytest result in pytest-L2.txt gates this unchanged runtime checkpoint; no redundant rerun or implementation-mirroring test added. L4 follows.
+
+### L4 — unused legal-page capacity before new domain guesses
+- Pass2queues legal resumes on candidates that this company already fetched without proof, before new domain guesses. It reuses the cached homepage/robots and visits only legal pages/PDFs not already checked; previously attempted404pages and vetoed candidates stay excluded. Published HIGH/VERIFIED sites do not enter this legal-resume queue.
+- Existing extra pass2allowance and global/time ceilings unchanged, no counter/reset/once-only cache clearing. Existing strong-candidate transient retry jobs retain their own retry path and are not consumed by a legal-resume job. Failed budget targets remain eligible if actually unvisited.
+- Report pass2.legal_priority records resumes, actual company website requests consumed by legal work before downstream refresh, and exact websites gained. Discovery nominations are not proof; L1exact-number/L2raw-PDFchain/R4/robots rules still apply.
+-46focused scheduler/PDF/adaptive tests passed, including pending PDF, no extra/global room, foreign veto, once-only404, and proof/evidence replay. The PDFtest initially omitted enabling the adaptive test fixture and was corrected; no runtime safety change. Full pytest gates final L implementation; then ONE six-sample measurement and every new publisher review.

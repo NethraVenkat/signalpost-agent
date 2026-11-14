@@ -167,10 +167,12 @@ def proof_page_targets(page, base_url, limit=FOLLOWUP_PAGES):
     return targets[:limit]
 
 
-async def ordered_proof_targets(org,http,page,seen):
+async def ordered_proof_targets(org,http,page,seen,legal_only=False):
     """Real own links, then bounded sitemap nominations, then legacy guesses."""
     linked=[url for url in proof_page_targets(page,page.url,limit=100)
             if url in {normalize_url(link) for link in followup_links(page)} and domain(url)==domain(page.url)]
+    from .legal_pages import legal_links,is_legal
+    if legal_only:linked=[url for url in linked if url in legal_links(page)]
     yielded=set()
     async def queued_pdfs():
         for pdf_url in list(getattr(http,'legal_pdf_links',{}).get(org,{})):
@@ -187,7 +189,12 @@ async def ordered_proof_targets(org,http,page,seen):
         for url in await discover(org,http,page.url,seen):
             yielded.add(url);yield url
             async for pdf_url in queued_pdfs():yield pdf_url
-    for url in proof_page_targets(page,page.url):
+    fixed=proof_page_targets(page,page.url)
+    if legal_only:
+        base=urlsplit(page.url)
+        fixed=[url for url in getattr(http,'proof_sitemap_targets',{}).get(org,set()) if is_legal(url)]
+        fixed += [urlunsplit((base.scheme,base.netloc,path,'','')) for path in LEGAL_PROOF_PATHS]
+    for url in fixed:
         if url not in yielded:
             yielded.add(url);yield url
             async for pdf_url in queued_pdfs():yield pdf_url
@@ -215,7 +222,7 @@ def previous_nomination(previous, context, units):
     return Candidate(url, domain(url), value['candidate_origin'], branch), proof_url
 
 
-async def fetch(org, envelope, bulk, http, previous=None, *, resume=False, candidates_override=None, nav_homepages=()):
+async def fetch(org, envelope, bulk, http, previous=None, *, resume=False, candidates_override=None, nav_homepages=(), legal_resume=False):
     context, registry_source, registry_locator = await offload(registry_context,envelope,bulk,http.blobs)
     units={c.value['organisation_number']:{'name': c.value.get('name')} for c in envelope.claims
            if c.field.startswith('subunits.unit.') and c.availability=='available' and isinstance(c.value,dict)}
@@ -233,6 +240,10 @@ async def fetch(org, envelope, bulk, http, previous=None, *, resume=False, candi
         old = previous if 'claims' in previous else previous.get('profile', {})
         context['brands'] = [c['value'] for c in old.get('claims', []) if c.get('field') == 'public_brand'
                              and c.get('availability') == 'available' and isinstance(c.get('value'), str)]
+    http.legal_resumable=getattr(http,'legal_resumable',{})
+    http.legal_resumable.setdefault(org,{})
+    http.proof_checked_urls=getattr(http,'proof_checked_urls',{})
+    http.proof_checked_urls.setdefault(org,set())
     section = Section(state="not_available")
     if registry_source and (social := profile_url(normalize_url(context.get("website")) or "")):
         add(section, registry_source, org, "website", "registry_social." + digest(social)[:20],
@@ -267,7 +278,8 @@ async def fetch(org, envelope, bulk, http, previous=None, *, resume=False, candi
                 if candidate.domain not in existing:yield candidate
     async for candidate in nominations():
         key = candidate_key(candidate)
-        if key in attempted or candidate.domain in vetoed: continue
+        can_resume=legal_resume and key in http.legal_resumable[org]
+        if (key in attempted and not can_resume) or candidate.domain in vetoed:continue
         attempted.add(key)
         pages = []
         best = None
@@ -284,6 +296,8 @@ async def fetch(org, envelope, bulk, http, previous=None, *, resume=False, candi
             page = await offload(Page,response.body,response.url)
             checked.add(candidate.domain)
             proof = await offload(candidate_proof,page,org,context,candidate,leaders)
+            if proof.level not in {'REJECT','BLOCKED','VERIFIED'}:
+                http.legal_resumable[org][key]=candidate
             pages.append((response, page))
             best = (proof, response, page)
             if proof.level == "BLOCKED":
@@ -306,11 +320,11 @@ async def fetch(org, envelope, bulk, http, previous=None, *, resume=False, candi
                     attempts.append({'domain': candidate.domain, 'origin': candidate.origin,
                                      'reason': exc.code, 'page': refresh_proof})
             if proof.level not in {"VERIFIED", "REJECT"}:
-                seen = {response.url}
+                seen = {response.url}|http.proof_checked_urls[org]
                 from .legal_pages import pdf_receipts
                 http.legal_pdf_links=getattr(http,'legal_pdf_links',{})
                 http.legal_pdf_links.setdefault(org,{}).update(pdf_receipts(response,page))
-                async for target in ordered_proof_targets(org,http,page,seen):
+                async for target in ordered_proof_targets(org,http,page,seen,legal_only=legal_resume):
                     if not target or target in seen or domain(target) != domain(response.url):
                         continue
                     seen.add(target)
@@ -325,6 +339,7 @@ async def fetch(org, envelope, bulk, http, previous=None, *, resume=False, candi
                             budget_hit = exc.code
                             break
                         continue
+                    http.proof_checked_urls[org].add(target)
                     if extra.status != 200:
                         if extra.status in {401,403,429}:raise SourceFailure('http_blocked')
                         if extra.status>=500:failures[key]={'candidate':candidate,'reason':'website_http_5xx'}
@@ -372,6 +387,7 @@ async def fetch(org, envelope, bulk, http, previous=None, *, resume=False, candi
             proof, response, page = best
             if proof.level in {'REJECT','BLOCKED'}:
                 vetoed.add(candidate.domain);failures.pop(key,None)
+                http.legal_resumable[org].pop(key,None)
             attempts.append({"domain": candidate.domain, "level": proof.level, "points": proof.points, "signals": proof.signals, "origin": candidate.origin, "reason": proof.reason})
             if candidate is refresh_candidate and proof.level != 'VERIFIED':
                 continue  # Previous metadata nominates; only fresh exact proof publishes.

@@ -94,7 +94,7 @@ async def run(envelopes, http, index, bulk, previous, update, refresh_activity):
     records={}; heap=[]; queued=set()
     for org,envelope in sorted(envelopes.items()):
         record=records[org]={'state':'already_verified' if exact(envelope) else 'no_pending_candidates',
-                            'candidates':0,'attempts':0,'requests':0,'websites_gained':0,'retry_outcomes':[],'extra_allowance':{'http':0,'dns':0}}
+                            'candidates':0,'attempts':0,'requests':0,'websites_gained':0,'retry_outcomes':[],'legal_page_resumes':0,'legal_requests':0,'legal_websites_gained':0,'extra_allowance':{'http':0,'dns':0}}
         if exact(envelope): continue
         session=http.discovery_sessions.get(org)
         if not session:
@@ -105,12 +105,15 @@ async def run(envelopes, http, index, bulk, previous, update, refresh_activity):
         if http.config.adaptive_extra_budget:
             retry_candidates=[(item['candidate'],item['reason']) for item in session.get('transient_failures',{}).values()
                               if item['candidate'].origin in STRONG]
-        for candidate,retry_reason in retry_candidates+[(c,None) for c in generate(context,limit=32)]:
+        current_site=any(c.field=='official_website' and c.availability=='available' and not c.carried_forward for c in envelope.claims)
+        retry_keys={candidate_key(c) for c,_ in retry_candidates}
+        legal_candidates=[] if current_site else [(c,'legal_pages') for key,c in getattr(http,'legal_resumable',{}).get(org,{}).items() if key not in retry_keys]
+        for candidate,retry_reason in legal_candidates+retry_candidates+[(c,None) for c in generate(context,limit=32)]:
             key=candidate_key(candidate)
             if (key in session['attempted'] and not retry_reason) or candidate.domain in session['vetoed']: continue
             if (org,key) in queued: continue
             queued.add((org,key)); record['candidates']+=1
-            heapq.heappush(heap,(-priority(candidate)-int(bool(retry_reason))*10,org,candidate.url,candidate,retry_reason))
+            heapq.heappush(heap,(-1000 if retry_reason=='legal_pages' else -priority(candidate)-int(bool(retry_reason))*10,org,candidate.url,candidate,retry_reason))
         if record['candidates']:record['state']='queued'
     budget.phase='pass2'
     stop=None
@@ -138,7 +141,9 @@ async def run(envelopes, http, index, bulk, previous, update, refresh_activity):
                 record['state']='dns_budget_exhausted';continue
             before=len(budget.events)
             retry=None
-            if retry_reason:
+            legal_resume=retry_reason=='legal_pages'
+            if legal_resume:record['legal_page_resumes']+=1
+            if retry_reason and not legal_resume:
                 cache_action=http.prepare_retry(candidate,org,http.discovery_sessions[org].get('proved',()))
                 if cache_action=='not_allowed':continue
                 http.discovery_sessions[org]['attempted'].discard(candidate_key(candidate))
@@ -146,9 +151,11 @@ async def run(envelopes, http, index, bulk, previous, update, refresh_activity):
                 retry={'url':candidate.url,'origin':candidate.origin,'pass1_reason':retry_reason,'cache_action':cache_action}
                 record['retry_outcomes'].append(retry)
             record['attempts']+=1
+            legal_request_delta=None
             try:
                 section=await collector.fetch(org,envelope,bulk.get(org),http,previous.get(org),
-                                              resume=True,candidates_override=[candidate])
+                                              resume=True,candidates_override=[candidate],**({'legal_resume':True} if legal_resume else {}))
+                if legal_resume:legal_request_delta=sum(e.get('section')=='website' and e['organisation_number']==org for e in budget.events[before:])
                 update(envelope,'website',section)
                 record['state']='verified' if exact(envelope) else 'checked_no_gain'
                 if exact(envelope):
@@ -161,6 +168,9 @@ async def run(envelopes, http, index, bulk, previous, update, refresh_activity):
             except SourceFailure as exc:
                 record['state']=exc.code
             record['requests']+=len(budget.events)-before
+            if legal_resume:
+                record['legal_requests']+=legal_request_delta if legal_request_delta is not None else sum(e.get('section')=='website' and e['organisation_number']==org for e in budget.events[before:])
+                if exact(envelope):record['legal_websites_gained']=1
             if retry is not None:
                 failure=http.discovery_sessions[org].get('transient_failures',{}).get(candidate_key(candidate))
                 outcome='verified' if exact(envelope) else failure['reason'] if failure else envelope.run.sections.get('website')
@@ -183,6 +193,7 @@ async def run(envelopes, http, index, bulk, previous, update, refresh_activity):
                      'states':dict(Counter(r['state'] for r in records.values())),
                      'retry_attempts':sum(t['cache_action']=='retried' for r in records.values() for t in r['retry_outcomes']),
                      'retry_outcomes':dict(Counter(t['outcome'] for r in records.values() for t in r['retry_outcomes'])),
+                     'legal_priority':{'resumes':sum(r['legal_page_resumes'] for r in records.values()),'requests':sum(r['legal_requests'] for r in records.values()),'websites_gained':sum(r['legal_websites_gained'] for r in records.values())},
                      'per_company':records},
-            'policy':'Pass 1 8/13 HTTP and 8 DNS; pass 2 up to +5 HTTP/+4 DNS from remaining global budget; no counter reset; unchanged proof/robots/politeness'}
+            'policy':'Pass 1 8/13 HTTP and 8 DNS; pass 2 up to +5 HTTP/+4 DNS from remaining global budget; no counter reset; unchanged proof/robots/politeness; unvisited legal pages on unproved fetched sites precede new guesses'}
     finally:budget.phase='pass1'
