@@ -521,3 +521,8 @@
 - Reviewer's stricter guardrails applied: declared/final deep paths abstain; directory/portal/municipality/marketplace markers or own site-name/logo/copyright identifying another publisher abstain. Explicit other legal publishers reject even if contacts match. Staff/person-title contacts never qualify; contact-page phones need company-name/switchboard context; email needs company mailbox or non-person footer context. These are conservative extra exclusions, not ownership inference.
 - Receipts retain exact publisher/registry/rarity provenance. Independent saved-output and accuracy audit rebuild the tier from raw page and exact registry inputs. Forged owner-signal receipt fails.
 - Focused checks: 61 existing/R7 safety tests passed, then 26 R7a tests including publication/tampering passed. Full pytest gates commit. No live gains claimed until the single R7 six-sample measurement after a–g.
+
+### R7b — unique registered company phone
+- HIGH `unique_registry_phone`: exact normalized registry phone/mobile in company footer/contact/imprint; R2 count exactly one, positive bundled provenance; R4, challenge and conflicting publisher/portal branding veto first. Accountant, agency and property-manager publisher role text abstains.
+- Same company-contact safeguards as R7a: person/title/staff-card contacts do not count; non-footer phones need switchboard/company context. Root-only restriction belongs to R7a; R7b may use an own contact page, never a conflicting portal publisher.
+- 37 focused R7a/b tests passed. Full pytest gates commit; live gains remain unmeasured until the single whole-stage six-sample qualification.
