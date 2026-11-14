@@ -56,6 +56,6 @@ Live-source changes are not X4 identity-policy gains: one existing-rule website 
 
 X5 is explicitly dropped and will not be retried. Runtime contains no X5 feature; its earlier attempts remain preserved as historical evidence. Current order: R6a-f, R7a-f, then X2 if time allows. X3/X6 are dropped.
 
-R6a is committed as01c5f49d with1,082 tests green. R6b is implemented at this checkpoint with a separate explicit redirect proof label; its full test gate/commit receipt is in stageR6. R6c-f and all R7/X2 work remain pending. No R6 or R7 gains are claimed before their full-stage measurements.
+R6a is committed as01c5f49d with1,082 tests green. R6b committed72e1a1aa after1,092tests. R6c single longer-timeout retry is in this commit after1,095tests; no cap increase. R6d-f and all R7/X2 work remain pending. No R6 or R7 gains are claimed before their full-stage measurements.
 
 R6/R7 plan: one greenpytest commit per sub-step; ONE six-sample measurement per complete stage, gains attributed by proof type. Measurements are foreground commands, one sample at a time, exactly seven flags, fresh state/newIDs. A dead/host-suspended sample is discarded and rerun once, with attempts retained. Revert only the sub-step causing any doubtful site and remeasure once. Never push; stop only at committed checkpoints.

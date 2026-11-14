@@ -1,5 +1,6 @@
 from ..workers import offload
 import asyncio
+from contextvars import ContextVar
 import time
 from dataclasses import dataclass, replace
 from urllib.parse import urlsplit, urljoin, urlunsplit
@@ -14,6 +15,7 @@ TRANSIENT = {'website_timeout', 'website_connect_error', 'website_http_5xx',
              'dns_timeout', 'dns_error', 'dns_unavailable'}
 STRONG = {'registry_website', 'registry_email', 'subunit_registry_website',
           'subunit_registry_email', 'nav_employer_homepage'}
+REQUEST_SECONDS = ContextVar('website_request_seconds',default=8)
 
 
 @dataclass
@@ -141,8 +143,10 @@ class WebsiteHttp:
                 chunks = []
                 try:
                     remaining = self.budget.deadline - time.monotonic()
-                    async with asyncio.timeout(min(8, max(.001, remaining))):
-                        async with self.client.stream("GET", url, headers={"User-Agent": self.config.website_user_agent, "Accept": "application/xml,text/xml,application/rss+xml,application/atom+xml" if xml else "text/html,application/xhtml+xml,text/plain"}, timeout=min(8, max(.001, remaining)), follow_redirects=False) as stream:
+                    seconds=min(REQUEST_SECONDS.get(),max(.001,remaining))
+                    event['timeout_seconds']=seconds
+                    async with asyncio.timeout(seconds):
+                        async with self.client.stream("GET", url, headers={"User-Agent": self.config.website_user_agent, "Accept": "application/xml,text/xml,application/rss+xml,application/atom+xml" if xml else "text/html,application/xhtml+xml,text/plain"}, timeout=seconds, follow_redirects=False) as stream:
                             chunks = []
                             size = 0
                             event["status"] = stream.status_code
@@ -298,10 +302,14 @@ class WebsiteHttp:
         last = None
         connect_hosts = []
         retried = False
+        retry_seconds=8
         for target in trials:
             while True:
                 try:
-                    response = await self.get(target, org, candidate.domain, proven,registry_redirect=candidate.origin=='registry_website')
+                    token=REQUEST_SECONDS.set(retry_seconds)
+                    try:
+                        response = await self.get(target, org, candidate.domain, proven,registry_redirect=candidate.origin=='registry_website')
+                    finally:REQUEST_SECONDS.reset(token)
                     notes.append({'domain':candidate.domain,'origin':candidate.origin,'url':target,'status':response.status})
                     if 200 <= response.status < 300 or response.status in {401,403,429}:
                         return response
@@ -321,6 +329,8 @@ class WebsiteHttp:
                         connect_hosts.append(urlsplit(target).hostname)
                     if exc.code in {'website_timeout','dns_timeout'} and candidate.origin == 'registry_website' and self.budget.phase!='pass2' and not retried and self.counts.get(org,0) < self.config.website_request_cap:
                         retried = True
+                        retry_seconds=16 if exc.code=='website_timeout' else 8
+                        notes.append({'domain':candidate.domain,'origin':candidate.origin,'url':target,'reason':'declared_timeout_retry','timeout_seconds':retry_seconds})
                         self.page_cache.pop((target, False, tuple(sorted({candidate.domain, *proven})),candidate.origin=='registry_website'), None)
                         continue
                     if exc.code in {'website_timeout', 'dns_timeout'}:
