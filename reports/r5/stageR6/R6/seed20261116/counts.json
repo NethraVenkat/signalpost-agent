@@ -1,0 +1,236 @@
+{
+  "stage": "R6",
+  "seed": 20261116,
+  "before": {
+    "websites": 5,
+    "declared_homepage_recall": 3,
+    "declared_homepages": 17,
+    "social_companies": 0,
+    "social_claims": 0,
+    "activity_companies": 100,
+    "activity_claims": 1475,
+    "brand_companies": 8,
+    "brand_claims": 12,
+    "role_change_claims": 253,
+    "facts": 13777,
+    "families": {
+      "identity": 2983,
+      "subunits": 897,
+      "roles": 1255,
+      "accounts": 7122,
+      "activity": 1475,
+      "gleif": 19,
+      "website": 25,
+      "hiring": 1
+    }
+  },
+  "after": {
+    "websites": 5,
+    "declared_homepage_recall": 3,
+    "declared_homepages": 17,
+    "social_companies": 0,
+    "social_claims": 0,
+    "activity_companies": 100,
+    "activity_claims": 1475,
+    "brand_companies": 9,
+    "brand_claims": 12,
+    "role_change_claims": 253,
+    "facts": 13776,
+    "families": {
+      "identity": 2983,
+      "subunits": 897,
+      "roles": 1255,
+      "accounts": 7122,
+      "activity": 1475,
+      "gleif": 19,
+      "website": 24,
+      "hiring": 1
+    }
+  },
+  "HTTP": 783,
+  "runtime_seconds": 560.8129999999946,
+  "CLI_runtime_seconds": 504.4070000000065,
+  "cost_usd": 0.0,
+  "site": {
+    "state": "available",
+    "companies": 100,
+    "input_records": 100,
+    "pages": 102,
+    "skipped_invalid_identifiers": 0,
+    "total_bytes": 38821591,
+    "largest_profile_data_bytes": 534435,
+    "largest_profile_bytes": 229166
+  },
+  "changes": {
+    "added": [
+      {
+        "orgnr": "925700398",
+        "legal_name": "AURSJOKRAFT AS",
+        "kind": "website",
+        "identity": "https://aursjokraft.no",
+        "field": "official_website",
+        "value": {
+          "final_url": "https://aursjokraft.no",
+          "identity_level": "VERIFIED",
+          "proof_type": "orgnr_on_page",
+          "proof_page_url": "https://aursjokraft.no/",
+          "signals": [],
+          "points": 0,
+          "candidate_origin": "legal_name_slug",
+          "relationship_note": null,
+          "other_orgnrs": []
+        },
+        "evidence": [
+          {
+            "id": "12d8cbbf070926e755b531ce2b641d88685eba25d42de3eddb2b802750b713a4",
+            "source_url": "https://aursjokraft.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-14T16:22:26.704639Z",
+            "content_sha256": "c938f985412301776c48cc242184538e2cbd14f8402a76925b30d2c6361cd193",
+            "claim_span": "o/enhet/sok/detalj.jsp?orgnr=925700398\">925 700 398</a></p>\n                                    </div>\n                                               ",
+            "locator": "identity-proof:925700398",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "orgnr": "925700398",
+        "legal_name": "AURSJOKRAFT AS",
+        "kind": "brand",
+        "identity": "Aursjokraft",
+        "field": "public_brand",
+        "value": "Aursjokraft",
+        "evidence": [
+          {
+            "id": "6bc80afa78225a6d745ca91cbb16c6cd5574a896b1123ac01c1bc0c2339130dd",
+            "source_url": "https://aursjokraft.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-14T16:22:26.704639Z",
+            "content_sha256": "c938f985412301776c48cc242184538e2cbd14f8402a76925b30d2c6361cd193",
+            "claim_span": "nt=\"Aursjokraft\">\n\n<title>Velkommen til Aursjokraft AS | Aursjokraft</title>\n\n<link rel=\"icon\" href=\"https://aursjokraft.no/uploads/AursjokraftLogo_mobil.png\">\n\n\n        \n        \n<meta property=\"og:title\" content=\"Velkommen til Aursjokraft AS\" />\n<meta property=\"og:site_name\" content=\"Aursjokraft\" ",
+            "locator": "publisher-public-name",
+            "extraction_method": "signalpost.public_names.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "12d8cbbf070926e755b531ce2b641d88685eba25d42de3eddb2b802750b713a4",
+            "source_url": "https://aursjokraft.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-14T16:22:26.704639Z",
+            "content_sha256": "c938f985412301776c48cc242184538e2cbd14f8402a76925b30d2c6361cd193",
+            "claim_span": "o/enhet/sok/detalj.jsp?orgnr=925700398\">925 700 398</a></p>\n                                    </div>\n                                               ",
+            "locator": "identity-proof:925700398",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "0d62ff4e6480218d83afcc93a61e6aad07a0d6f3078cbae2c0473038aea13d11",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T16:18:16.748007Z",
+            "content_sha256": "f03936c6895b227b36e3952c68a2639a95defc4794ec1bf2fa0621b45e1236fe",
+            "claim_span": "925700398,AURSJOKRAFT AS,AS,Aksjeselskap,35.150,Handel med elektrisitet,,,,,,,false,,,,,,,,,,,,,,,Moavegen 28A,SKJÅK,2690,SKJÅK,3433,Norge,NO,1520,Kommunalt eide aksjeselskaper mv.,2025,2020-09-25,2020-08-17,true,2021-01-01,2020-11-26,,,false,,true,2020-09-25,false,false,,false,,false,,false,,,,,,,N",
+            "locator": "row:925700398/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:aef414072567eda80df4802df2d6054f07c8f9749dbc4bfacd1c09906a2fb8d9",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      }
+    ],
+    "removed": [
+      {
+        "orgnr": "983089887",
+        "legal_name": "MELDAL MILJØANLEGG AS",
+        "kind": "website",
+        "identity": "https://www.meldalmiljoanlegg.no",
+        "field": "official_website",
+        "value": {
+          "final_url": "https://www.meldalmiljoanlegg.no",
+          "identity_level": "VERIFIED",
+          "proof_type": "orgnr_on_page",
+          "proof_page_url": "https://www.meldalmiljoanlegg.no/",
+          "signals": [],
+          "points": 0,
+          "candidate_origin": "legal_name_slug",
+          "relationship_note": null,
+          "other_orgnrs": []
+        },
+        "evidence": [
+          {
+            "id": "33af77bde95b3627ab3fa4e73d42894c089bab8956149a68b1e5a73ad1f8b6ef",
+            "source_url": "https://www.meldalmiljoanlegg.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-14T07:10:46.454770Z",
+            "content_sha256": "f7c7fb20861c9bddfbd09ba6e06bd67b03122aee99a4204bc0536adaf75e0f75",
+            "claim_span": "lass=\"wixui-rich-text__text\">Orgnummer: 983 089 887</span></span></span></span></span></span></span></span></span></span></span></span></span></span><",
+            "locator": "identity-proof:983089887",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "orgnr": "983089887",
+        "legal_name": "MELDAL MILJØANLEGG AS",
+        "kind": "brand",
+        "identity": "Meldal Miljoanlegg",
+        "field": "public_brand",
+        "value": "Meldal Miljoanlegg",
+        "evidence": [
+          {
+            "id": "c3e821fc44a903341299a6482964a8f37645569d27d09134acc4abf74684c074",
+            "source_url": "https://www.meldalmiljoanlegg.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-14T07:10:46.454770Z",
+            "content_sha256": "f7c7fb20861c9bddfbd09ba6e06bd67b03122aee99a4204bc0536adaf75e0f75",
+            "claim_span": "unk.min.css.map*/</style>\n<title>Hjem | Meldal Miljoanlegg</title>\n  <link rel=\"canonical\" href=\"https://www.meldalmiljoanlegg.no\"/>\n  <meta name=\"robots\" content=\"noindex\"/>\n  <meta property=\"og:title\" content=\"Hjem | Meldal Miljoanlegg\"/>\n  <meta property=\"og:url\" content=\"https://www.meldalmiljoa",
+            "locator": "publisher-public-name",
+            "extraction_method": "signalpost.public_names.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "33af77bde95b3627ab3fa4e73d42894c089bab8956149a68b1e5a73ad1f8b6ef",
+            "source_url": "https://www.meldalmiljoanlegg.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-14T07:10:46.454770Z",
+            "content_sha256": "f7c7fb20861c9bddfbd09ba6e06bd67b03122aee99a4204bc0536adaf75e0f75",
+            "claim_span": "lass=\"wixui-rich-text__text\">Orgnummer: 983 089 887</span></span></span></span></span></span></span></span></span></span></span></span></span></span><",
+            "locator": "identity-proof:983089887",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "341ebb8d7cffaae2e40231ec337d01108efd9d80b1b506a6462ddfb8e363f66b",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:06:51.740327Z",
+            "content_sha256": "f7767a3d5c7c1d0e28d4b445d77fe67a83b0b4b4832da8d8e744ae451ab9ee9b",
+            "claim_span": "983089887,MELDAL MILJØANLEGG AS,AS,Aksjeselskap,38.320,Drift av deponi og permanent lagring av avfall,,,,,,,false,,,,,,72 48 37 00,476 07 215,Postboks 94,ORKANGER,7301,ORKLAND,5059,Norge,NO,,MELDAL,7336,ORKLAND,5059,Norge,NO,1520,Kommunalt eide aksjeselskaper mv.,2025,2001-03-09,2001-01-22,true,2001",
+            "locator": "row:983089887/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:aef414072567eda80df4802df2d6054f07c8f9749dbc4bfacd1c09906a2fb8d9",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      }
+    ]
+  },
+  "envelopes_sha256": "2847df81f3beaef8b43dfe4444fbb6e8d8634f450faa943aa465ddd8e997887e",
+  "profiles_sha256": "b9ae732c549e7c6e563c4b0c7736e2a0588e8970f4adf8113c11aebd44ac4766"
+}

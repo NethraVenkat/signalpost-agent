@@ -52,10 +52,10 @@ Saved-evidence recheck: 65 added brand claims and one added website all correct;
 
 Live-source changes are not X4 identity-policy gains: one existing-rule website recovered, while LOOPYTY933519708 and AURSJ?KRAFT925700398 timed out. Two older brand aliases were withdrawn by the stricter publisher-name extractor. No social URL changes. An incomplete seed20261115 attempt had no final report/exit receipt and its process disappeared; cause/finalHTTP/runtime unknown. Its raw state and trial settings are retained under X4/trials/interrupted_seed20261115. A new-ID fresh-state recovery passed, then seeds20261116/17 completed with the same runtime source. No interrupted output is counted as an accepted run.
 
-## Current queue - X5 dropped
+## R6 measured checkpoint and current queue
 
-X5 is explicitly dropped and will not be retried. Runtime contains no X5 feature; its earlier attempts remain preserved as historical evidence. Current order: R6a-f, R7a-f, then X2 if time allows. X3/X6 are dropped.
+X5 remains dropped. R6a/d/e were implemented with green gates then individually reverted after doubtful publisher attribution; all rejected receipts are retained. R6b/c/f remain. See [R6 measured table and decisions](../stageR6/SUMMARY.md) and [every added/removed/withheld URL](../stageR6/new_websites.md).
 
-R6a is committed as01c5f49d with1,082 tests green. R6b committed72e1a1aa after1,092tests. R6c single longer-timeout retry is in this commit after1,095tests; no cap increase. R6d-f and all R7/X2 work remain pending. No R6 or R7 gains are claimed before their full-stage measurements.
+R6 accepted result: 37 websites / 600, declared-homepage recall 19/72; 4,424 requests and 2,781.080 summed process seconds, $0. Zero unsupported values; all six site/order/five-topic gates pass. One old exact-number site recovered and two old sites withdrew with live source failures. No retained new-tier website gain.
 
-R6/R7 plan: one greenpytest commit per sub-step; ONE six-sample measurement per complete stage, gains attributed by proof type. Measurements are foreground commands, one sample at a time, exactly seven flags, fresh state/newIDs. A dead/host-suspended sample is discarded and rerun once, with attempts retained. Revert only the sub-step causing any doubtful site and remeasure once. Never push; stop only at committed checkpoints.
+Remaining authorized order: R7a?g (including root-only, own branding and company-contact guardrails), Stage L0?L4 legal-disclosure proof, X2 owner-declared social, P0 official-source outage resilience, P2 new non-overlapping 500-company clean-clone scale test. X3/X5/X6 remain dropped. One full six-sample measurement per R7 and L stage; green pytest commit per sub-step. Foreground one sample at a time, exactly seven flags, fresh state/new IDs, strict proof/robots/global limits; never push. Review every new saved publisher context and revert only the responsible doubtful rule.

@@ -6911,3 +6911,196 @@ a = window._wca || [];</script>
 <link rel='dns-prefetch' href='//www.googletagmanager.com' />
 <link rel=
 ```
+
+## R6 / 20261017 / removed / 998340888 / NAPOLITANA AS
+
+Type: website; identity: https://napolitana.no; saved-evidence verdict: correct.
+
+```json
+{
+  "final_url": "https://napolitana.no",
+  "identity_level": "VERIFIED",
+  "proof_type": "orgnr_on_page",
+  "proof_page_url": "https://napolitana.no/",
+  "signals": [],
+  "points": 0,
+  "candidate_origin": "legal_name_slug",
+  "relationship_note": null,
+  "other_orgnrs": []
+}
+```
+
+Source: https://napolitana.no/ / retrieved 2026-11-14T06:29:11.015865Z / SHA-256 `ec86b13980a11c8171d6eeaffcbbc4ba6a446d1b17de23acfe9d8f74cb8f294a` / locator `identity-proof:998340888`
+
+Exact excerpt:
+
+```
+]/60"><p>© 2026 Napolitana AS • Org.nr: 998 340 888</p><p>Laget med 🍕 og ☕ i Saksvik av <a href="https://digital1.no" target="_blank" rel="noopener no
+```
+
+## R6 / 20261017 / removed / 998340888 / NAPOLITANA AS
+
+Type: brand; identity: Napolitana Restaurant; saved-evidence verdict: correct.
+
+```json
+"Napolitana Restaurant"
+```
+
+Source: https://napolitana.no/ / retrieved 2026-11-14T06:29:11.015865Z / SHA-256 `ec86b13980a11c8171d6eeaffcbbc4ba6a446d1b17de23acfe9d8f74cb8f294a` / locator `publisher-public-name`
+
+Exact excerpt:
+
+```
+="theme-color" content="#9b3c2d"><title>Napolitana Restaurant | Pizza, Kebab &amp; Grill i Saksvik</title><meta name="description" content="Napolitana Restaurant i Saksvik serverer autentisk pizza, kebab, pasta og grillretter siden 2006. Bestill på 73 97 13 00. Åpent man-lør 14-23, søn 13-23. Malvik
+```
+
+Source: https://napolitana.no/ / retrieved 2026-11-14T06:29:11.015865Z / SHA-256 `ec86b13980a11c8171d6eeaffcbbc4ba6a446d1b17de23acfe9d8f74cb8f294a` / locator `identity-proof:998340888`
+
+Exact excerpt:
+
+```
+]/60"><p>© 2026 Napolitana AS • Org.nr: 998 340 888</p><p>Laget med 🍕 og ☕ i Saksvik av <a href="https://digital1.no" target="_blank" rel="noopener no
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:25:23.413728Z / SHA-256 `5ee548e1df1dbe925b8344534008377d51d1137f4f845c7f521e844e1e900f51` / locator `row:998340888/column:navn`
+
+Exact excerpt:
+
+```
+998340888,NAPOLITANA AS,AS,Aksjeselskap,56.110,Drift av restauranter,,,,,,,true,7,2026-06-13,2026-06-10,,,,,,,,,,,,Malvikvegen 88,SAKSVIK,7562,MALVIK,5031,Norge,NO,2100,Private aksjeselskaper mv.,2025,2012-05-07,2012-03-16,true,2012-01-01,2012-10-24,,,false,,true,2012-05-07,false,false,,false,,false
+```
+
+## R6 / 20261116 / added / 925700398 / AURSJOKRAFT AS
+
+Type: website; identity: https://aursjokraft.no; saved-evidence verdict: correct.
+
+```json
+{
+  "final_url": "https://aursjokraft.no",
+  "identity_level": "VERIFIED",
+  "proof_type": "orgnr_on_page",
+  "proof_page_url": "https://aursjokraft.no/",
+  "signals": [],
+  "points": 0,
+  "candidate_origin": "legal_name_slug",
+  "relationship_note": null,
+  "other_orgnrs": []
+}
+```
+
+Source: https://aursjokraft.no/ / retrieved 2026-11-14T16:22:26.704639Z / SHA-256 `c938f985412301776c48cc242184538e2cbd14f8402a76925b30d2c6361cd193` / locator `identity-proof:925700398`
+
+Exact excerpt:
+
+```
+o/enhet/sok/detalj.jsp?orgnr=925700398">925 700 398</a></p>
+                                    </div>
+                                               
+```
+
+## R6 / 20261116 / added / 925700398 / AURSJOKRAFT AS
+
+Type: brand; identity: Aursjokraft; saved-evidence verdict: correct.
+
+```json
+"Aursjokraft"
+```
+
+Source: https://aursjokraft.no/ / retrieved 2026-11-14T16:22:26.704639Z / SHA-256 `c938f985412301776c48cc242184538e2cbd14f8402a76925b30d2c6361cd193` / locator `publisher-public-name`
+
+Exact excerpt:
+
+```
+nt="Aursjokraft">
+
+<title>Velkommen til Aursjokraft AS | Aursjokraft</title>
+
+<link rel="icon" href="https://aursjokraft.no/uploads/AursjokraftLogo_mobil.png">
+
+
+        
+        
+<meta property="og:title" content="Velkommen til Aursjokraft AS" />
+<meta property="og:site_name" content="Aursjokraft" 
+```
+
+Source: https://aursjokraft.no/ / retrieved 2026-11-14T16:22:26.704639Z / SHA-256 `c938f985412301776c48cc242184538e2cbd14f8402a76925b30d2c6361cd193` / locator `identity-proof:925700398`
+
+Exact excerpt:
+
+```
+o/enhet/sok/detalj.jsp?orgnr=925700398">925 700 398</a></p>
+                                    </div>
+                                               
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T16:18:16.748007Z / SHA-256 `f03936c6895b227b36e3952c68a2639a95defc4794ec1bf2fa0621b45e1236fe` / locator `row:925700398/column:navn`
+
+Exact excerpt:
+
+```
+925700398,AURSJOKRAFT AS,AS,Aksjeselskap,35.150,Handel med elektrisitet,,,,,,,false,,,,,,,,,,,,,,,Moavegen 28A,SKJÅK,2690,SKJÅK,3433,Norge,NO,1520,Kommunalt eide aksjeselskaper mv.,2025,2020-09-25,2020-08-17,true,2021-01-01,2020-11-26,,,false,,true,2020-09-25,false,false,,false,,false,,false,,,,,,,N
+```
+
+## R6 / 20261116 / removed / 983089887 / MELDAL MILJØANLEGG AS
+
+Type: website; identity: https://www.meldalmiljoanlegg.no; saved-evidence verdict: correct.
+
+```json
+{
+  "final_url": "https://www.meldalmiljoanlegg.no",
+  "identity_level": "VERIFIED",
+  "proof_type": "orgnr_on_page",
+  "proof_page_url": "https://www.meldalmiljoanlegg.no/",
+  "signals": [],
+  "points": 0,
+  "candidate_origin": "legal_name_slug",
+  "relationship_note": null,
+  "other_orgnrs": []
+}
+```
+
+Source: https://www.meldalmiljoanlegg.no/ / retrieved 2026-11-14T07:10:46.454770Z / SHA-256 `f7c7fb20861c9bddfbd09ba6e06bd67b03122aee99a4204bc0536adaf75e0f75` / locator `identity-proof:983089887`
+
+Exact excerpt:
+
+```
+lass="wixui-rich-text__text">Orgnummer: 983 089 887</span></span></span></span></span></span></span></span></span></span></span></span></span></span><
+```
+
+## R6 / 20261116 / removed / 983089887 / MELDAL MILJØANLEGG AS
+
+Type: brand; identity: Meldal Miljoanlegg; saved-evidence verdict: correct.
+
+```json
+"Meldal Miljoanlegg"
+```
+
+Source: https://www.meldalmiljoanlegg.no/ / retrieved 2026-11-14T07:10:46.454770Z / SHA-256 `f7c7fb20861c9bddfbd09ba6e06bd67b03122aee99a4204bc0536adaf75e0f75` / locator `publisher-public-name`
+
+Exact excerpt:
+
+```
+unk.min.css.map*/</style>
+<title>Hjem | Meldal Miljoanlegg</title>
+  <link rel="canonical" href="https://www.meldalmiljoanlegg.no"/>
+  <meta name="robots" content="noindex"/>
+  <meta property="og:title" content="Hjem | Meldal Miljoanlegg"/>
+  <meta property="og:url" content="https://www.meldalmiljoa
+```
+
+Source: https://www.meldalmiljoanlegg.no/ / retrieved 2026-11-14T07:10:46.454770Z / SHA-256 `f7c7fb20861c9bddfbd09ba6e06bd67b03122aee99a4204bc0536adaf75e0f75` / locator `identity-proof:983089887`
+
+Exact excerpt:
+
+```
+lass="wixui-rich-text__text">Orgnummer: 983 089 887</span></span></span></span></span></span></span></span></span></span></span></span></span></span><
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T07:06:51.740327Z / SHA-256 `f7767a3d5c7c1d0e28d4b445d77fe67a83b0b4b4832da8d8e744ae451ab9ee9b` / locator `row:983089887/column:navn`
+
+Exact excerpt:
+
+```
+983089887,MELDAL MILJØANLEGG AS,AS,Aksjeselskap,38.320,Drift av deponi og permanent lagring av avfall,,,,,,,false,,,,,,72 48 37 00,476 07 215,Postboks 94,ORKANGER,7301,ORKLAND,5059,Norge,NO,,MELDAL,7336,ORKLAND,5059,Norge,NO,1520,Kommunalt eide aksjeselskaper mv.,2025,2001-03-09,2001-01-22,true,2001
+```

@@ -1,0 +1,151 @@
+{
+  "stage": "R6",
+  "seed": 20261017,
+  "before": {
+    "websites": 6,
+    "declared_homepage_recall": 4,
+    "declared_homepages": 11,
+    "social_companies": 3,
+    "social_claims": 8,
+    "activity_companies": 100,
+    "activity_claims": 1398,
+    "brand_companies": 6,
+    "brand_claims": 8,
+    "role_change_claims": 232,
+    "facts": 13552,
+    "families": {
+      "identity": 2941,
+      "subunits": 851,
+      "roles": 1260,
+      "accounts": 7045,
+      "gleif": 19,
+      "activity": 1398,
+      "website": 38
+    }
+  },
+  "after": {
+    "websites": 5,
+    "declared_homepage_recall": 4,
+    "declared_homepages": 11,
+    "social_companies": 3,
+    "social_claims": 8,
+    "activity_companies": 100,
+    "activity_claims": 1398,
+    "brand_companies": 5,
+    "brand_claims": 7,
+    "role_change_claims": 232,
+    "facts": 13547,
+    "families": {
+      "identity": 2941,
+      "subunits": 851,
+      "roles": 1260,
+      "accounts": 7045,
+      "gleif": 19,
+      "activity": 1398,
+      "website": 33
+    }
+  },
+  "HTTP": 688,
+  "runtime_seconds": 461.0,
+  "CLI_runtime_seconds": 422.76499999998487,
+  "cost_usd": 0.0,
+  "site": {
+    "state": "available",
+    "companies": 100,
+    "input_records": 100,
+    "pages": 102,
+    "skipped_invalid_identifiers": 0,
+    "total_bytes": 37760233,
+    "largest_profile_data_bytes": 605069,
+    "largest_profile_bytes": 240762
+  },
+  "changes": {
+    "added": [],
+    "removed": [
+      {
+        "orgnr": "998340888",
+        "legal_name": "NAPOLITANA AS",
+        "kind": "website",
+        "identity": "https://napolitana.no",
+        "field": "official_website",
+        "value": {
+          "final_url": "https://napolitana.no",
+          "identity_level": "VERIFIED",
+          "proof_type": "orgnr_on_page",
+          "proof_page_url": "https://napolitana.no/",
+          "signals": [],
+          "points": 0,
+          "candidate_origin": "legal_name_slug",
+          "relationship_note": null,
+          "other_orgnrs": []
+        },
+        "evidence": [
+          {
+            "id": "da9a671a8b8ddb0c8a9a00bf164c12cda6af92bc9cec9b14da5487690021ce3d",
+            "source_url": "https://napolitana.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-14T06:29:11.015865Z",
+            "content_sha256": "ec86b13980a11c8171d6eeaffcbbc4ba6a446d1b17de23acfe9d8f74cb8f294a",
+            "claim_span": "]/60\"><p>© 2026 Napolitana AS • Org.nr: 998 340 888</p><p>Laget med 🍕 og ☕ i Saksvik av <a href=\"https://digital1.no\" target=\"_blank\" rel=\"noopener no",
+            "locator": "identity-proof:998340888",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "orgnr": "998340888",
+        "legal_name": "NAPOLITANA AS",
+        "kind": "brand",
+        "identity": "Napolitana Restaurant",
+        "field": "public_brand",
+        "value": "Napolitana Restaurant",
+        "evidence": [
+          {
+            "id": "3106f575a6c4c4859c4d8be8eb9e2aa4d007f3338edd72d04f8b312b28f2d6fa",
+            "source_url": "https://napolitana.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-14T06:29:11.015865Z",
+            "content_sha256": "ec86b13980a11c8171d6eeaffcbbc4ba6a446d1b17de23acfe9d8f74cb8f294a",
+            "claim_span": "=\"theme-color\" content=\"#9b3c2d\"><title>Napolitana Restaurant | Pizza, Kebab &amp; Grill i Saksvik</title><meta name=\"description\" content=\"Napolitana Restaurant i Saksvik serverer autentisk pizza, kebab, pasta og grillretter siden 2006. Bestill på 73 97 13 00. Åpent man-lør 14-23, søn 13-23. Malvik",
+            "locator": "publisher-public-name",
+            "extraction_method": "signalpost.public_names.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "da9a671a8b8ddb0c8a9a00bf164c12cda6af92bc9cec9b14da5487690021ce3d",
+            "source_url": "https://napolitana.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-14T06:29:11.015865Z",
+            "content_sha256": "ec86b13980a11c8171d6eeaffcbbc4ba6a446d1b17de23acfe9d8f74cb8f294a",
+            "claim_span": "]/60\"><p>© 2026 Napolitana AS • Org.nr: 998 340 888</p><p>Laget med 🍕 og ☕ i Saksvik av <a href=\"https://digital1.no\" target=\"_blank\" rel=\"noopener no",
+            "locator": "identity-proof:998340888",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "05c08b9efc9d5abadabf6ace2d6a43294d89f8818fbe214972e2ffacf7f21476",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T06:25:23.413728Z",
+            "content_sha256": "5ee548e1df1dbe925b8344534008377d51d1137f4f845c7f521e844e1e900f51",
+            "claim_span": "998340888,NAPOLITANA AS,AS,Aksjeselskap,56.110,Drift av restauranter,,,,,,,true,7,2026-06-13,2026-06-10,,,,,,,,,,,,Malvikvegen 88,SAKSVIK,7562,MALVIK,5031,Norge,NO,2100,Private aksjeselskaper mv.,2025,2012-05-07,2012-03-16,true,2012-01-01,2012-10-24,,,false,,true,2012-05-07,false,false,,false,,false",
+            "locator": "row:998340888/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:bd244f0fe6ad92bfcadcbce9ba545863c0ca0afa8b9b5b4c5e3425830a63186d",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      }
+    ]
+  },
+  "envelopes_sha256": "85e83aec347f9be2da910fac20ae4d78220f2b30b9bedb6e5e1608427673cb06",
+  "profiles_sha256": "7190d6cb5ae3c815b603fca047af5bffa634e4d7aff22e812cf3758e4c50e194"
+}
