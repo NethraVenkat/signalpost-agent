@@ -542,3 +542,8 @@
 - HIGH `exact_name_unique_domain`: candidate registrable domain label equals the entire folded legal name without suffix (both Norwegian folding schemes, joined/hyphenated), current exact full legal name including suffix in R1, R2 name-key frequency exactly one, explicit Norway tie (+47 visible phone, .no email, no/nb/nn html language or exact registered postcode), and every conflict/portal/group/franchise veto intact.
 - Domain and Norway tie only corroborate the exact publisher legal name; neither proves identity alone. A shorter distinctive token/domain never qualifies. Other publisher-branding safeguards apply to this tier too.
 - 33 combined focused checks passed; 11 exact-domain tests passed after adding both Norwegian folding schemes. Full pytest gates this separate higher-risk sub-step; every live addition will be reviewed from saved full publisher context before accepting the R7 stage.
+
+### R7f — broader bounded name nominations
+- Existing joined/hyphenated Norwegian folding schemes remain; add variants without holding/eiendom/invest/gruppen/norge. Preserve strongest original spellings and sort .no before .com. Former/workplace names use the same local folding function.
+- Pure nominations, never identity proof. Registry homepage/email priority, domain deduplication, once-only attempted/vetoed caches, existing DNS precheck and cumulative per-company/global caps remain. DNS precheck spends no HTTP request but still counts against the unchanged DNS nomination limit; no uncapped resolver work or public fallback.
+- 57 focused candidate/subunit/recall regressions passed. Full pytest gates commit; one final six-sample measurement after R7g.

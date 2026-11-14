@@ -48,7 +48,20 @@ def legal_name_slugs(name):
                 continue
             if len(label) >= 4:
                 slugs.extend(label + '.' + suffix for suffix in ('no', 'com'))
-    return list(dict.fromkeys(slugs))
+    # Additional reported-name spellings nominate only. Keep the original
+    # strongest joined/hyphenated spellings first, then filler-free variants.
+    fillers={'holding','eiendom','invest','gruppen','norge'}
+    reduced=[t for t in tokens if t not in fillers]
+    if reduced and reduced!=tokens and not all(t in GENERIC for t in reduced):
+        for ae,oe,aa in [('ae','oe','aa'),('a','o','a')]:
+            converted=' '.join(reduced).replace(chr(230),ae).replace(chr(248),oe).replace(chr(229),aa)
+            words=re.findall(r'[a-z0-9]+',converted)
+            for separator in ('','-'):
+                label=separator.join(words)
+                if len(label)>=4:slugs.extend(label+'.'+suffix for suffix in ('no','com'))
+    # All .no nominations precede .com; existing DNS prechecks and nomination
+    # caps still apply. A DNS lookup does not spend an HTTP request.
+    return sorted(dict.fromkeys(slugs),key=lambda value:not value.endswith('.no'))
 
 
 def context_from_bulk(row):
