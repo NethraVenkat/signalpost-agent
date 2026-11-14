@@ -11,6 +11,18 @@ from .publisher import extract_publisher
 DECLARED = 'registry_declared_publisher_name'
 RARE = 'publisher_name_rare_contact'
 CORE = 'registry_declared_publisher_core_name'
+REDIRECT = 'registry_declared_redirect_publisher_name'
+
+
+def redirect_receipt(page,org,context):
+    declared=context.get('website');candidate=context.get('candidate_url')
+    if not host(declared) or host(candidate)!=host(declared) or domain(page.url)==domain(declared):return None
+    from .publisher_veto import conflict
+    if conflict(page,org,context)[0]:return None
+    fragment=name_fragment(page,context.get('name'))
+    if not fragment:return None
+    return {'tier':REDIRECT,'legal_name':context['name'],'publisher_location':fragment.location,
+        'publisher_excerpt':fragment.text,'registry_homepage':declared,'candidate_url':candidate,'proof_page_url':page.url}
 
 
 def core_receipt(page,org,context):

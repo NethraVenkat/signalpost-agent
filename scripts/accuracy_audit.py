@@ -620,22 +620,23 @@ def audit_website_claim(
     veto, foreign = conflict(page, org, publisher_context)
     if veto:
         return 'INCORRECT', 'Publisher conflict: ' + veto, None
-    from signalpost.web.publisher_identity import DECLARED, RARE, CORE, declared_receipt, rare_receipt,core_receipt
-    if ptype in {DECLARED,RARE,CORE}:
+    from signalpost.web.publisher_identity import DECLARED, RARE, CORE, REDIRECT, declared_receipt, rare_receipt,core_receipt,redirect_receipt
+    if ptype in {DECLARED,RARE,CORE,REDIRECT}:
         receipt = val.get('publisher_identity') or {}
         from urllib.parse import urlsplit,urlunsplit
         parts=urlsplit(page.url)
         if url != urlunsplit((parts.scheme,parts.netloc,'','','')):
             return 'INCORRECT','Published URL differs from publisher proof authority',None
         checked_context = {**publisher_context, 'candidate_url':receipt.get('candidate_url')}
-        expected = {DECLARED:declared_receipt,RARE:rare_receipt,CORE:core_receipt}[ptype](page, org, checked_context)
+        expected = {DECLARED:declared_receipt,RARE:rare_receipt,CORE:core_receipt,REDIRECT:redirect_receipt}[ptype](page, org, checked_context)
         from signalpost.web.proof import score
         checked=score(page,org,checked_context,origin,leaders or [])
         if not expected or expected != receipt or identity_level != 'HIGH' or checked.level not in {'HIGH','VERIFIED'}:
             return 'INCORRECT', 'Declared publisher name/domain not supported by saved publisher and registry facts', None
         description={DECLARED:'Exact full publisher legal name and registry-declared domain',
                      RARE:'Exact full publisher legal name and rare exact registry contact',
-                     CORE:'Registry-declared domain and distinctive rare publisher legal-name core'}
+                     CORE:'Registry-declared domain and distinctive rare publisher legal-name core',
+                     REDIRECT:'Registry-declared redirect target and exact full publisher legal name'}
         return 'CORRECT', description[ptype], url
     orgnr_pat = re.compile(r'\b' + org[0:3] + r'[\s.]?' + org[3:6] + r'[\s.]?' + org[6:9] + r'\b')
 

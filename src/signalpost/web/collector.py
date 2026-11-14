@@ -469,8 +469,8 @@ def candidate_proof(page,org,context,candidate,leaders):
     if proof.reason.startswith('publisher_'):
         return proof
     if candidate.origin=='registry_website' and domain(page.url)!=candidate.domain:
-        from .publisher_identity import declared_match
-        if not declared_match(page,org,context):
+        from .publisher_identity import declared_match,redirect_receipt
+        if not declared_match(page,org,context) and not redirect_receipt(page,org,context):
             from .proof import Proof
             return Proof('REJECT',reason='registry_redirect_identity_missing')
     if candidate.subunit_orgnr and proof.level not in {'VERIFIED','BLOCKED'}:
@@ -488,6 +488,10 @@ def candidate_proof(page,org,context,candidate,leaders):
             return Proof('HIGH',RARE,['publisher_full_legal_name','rare_registry_contact'],
                          reason=RARE,token=context['name'],publisher_receipt=receipt)
         if not matches:
+            from .publisher_identity import redirect_receipt,REDIRECT
+            if receipt := redirect_receipt(page,org,context):
+                return Proof('HIGH',REDIRECT,['registry_declared_redirect','publisher_full_legal_name'],
+                             reason=REDIRECT,token=context['name'],publisher_receipt=receipt)
             from .publisher_identity import core_receipt,CORE
             if receipt := core_receipt(page,org,context):
                 return Proof('HIGH',CORE,['registry_declared_domain','distinctive_rare_publisher_core'],

@@ -345,6 +345,10 @@ def score(page, org, context, origin, leaders):
         return Proof('HIGH',RARE,['publisher_full_legal_name','rare_registry_contact'],
                      reason=RARE,token=context['name'],publisher_receipt=receipt)
     from .publisher_identity import core_receipt,CORE
+    from .publisher_identity import redirect_receipt,REDIRECT
+    if receipt := redirect_receipt(page,org,context):
+        return Proof('HIGH',REDIRECT,['registry_declared_redirect','publisher_full_legal_name'],
+                     reason=REDIRECT,token=context['name'],publisher_receipt=receipt)
     if receipt := core_receipt(page,org,context):
         return Proof('HIGH',CORE,['registry_declared_domain','distinctive_rare_publisher_core'],
                      reason=CORE,token=receipt['core_name'],publisher_receipt=receipt)

@@ -52,18 +52,10 @@ Saved-evidence recheck: 65 added brand claims and one added website all correct;
 
 Live-source changes are not X4 identity-policy gains: one existing-rule website recovered, while LOOPYTY933519708 and AURSJ?KRAFT925700398 timed out. Two older brand aliases were withdrawn by the stricter publisher-name extractor. No social URL changes. An incomplete seed20261115 attempt had no final report/exit receipt and its process disappeared; cause/finalHTTP/runtime unknown. Its raw state and trial settings are retained under X4/trials/interrupted_seed20261115. A new-ID fresh-state recovery passed, then seeds20261116/17 completed with the same runtime source. No interrupted output is counted as an accepted run.
 
-## X5 attempt - reverted at committed checkpoint
+## Current queue - X5 dropped
 
-X5 is **not completed**. Its uncommitted runtime/test changes were restored to the X4 feature checkpoint after repeated interrupted measurements and a hard-time/site validation failure exceeded the inherited approximately90-minute stage allowance. All trial outputs and implementation snapshots remain in [X5 REPORT.md](X5/REPORT.md) and [REVERTED.json](X5/REVERTED.json). Earlier green tests and three partial verified samples are not represented as a completed six-sample stage. No dated filing or renewal is invented to fill source gaps.
+X5 is explicitly dropped and will not be retried. Runtime contains no X5 feature; its earlier attempts remain preserved as historical evidence. Current order: R6a-f, R7a-f, then X2 if time allows. X3/X6 are dropped.
 
-## Remaining queue and current measurement plan
+R6a is committed as01c5f49d with1,082 tests green. R6b is implemented at this checkpoint with a separate explicit redirect proof label; its full test gate/commit receipt is in stageR6. R6c-f and all R7/X2 work remain pending. No R6 or R7 gains are claimed before their full-stage measurements.
 
-Resume X5 before R6a-f, R7a-f and X2. These items are unfinished; no R6/R7/X2 gains or tables are claimed. X3 and X6 are dropped. R6 and R7 each retain one green pytest commit per sub-step, followed by ONE six-sample stage measurement. Gains are attributed by proof type; a doubtful site requires reversal of its responsible sub-step and one stage remeasurement. R1/R2/R4 evidence, robot and budget safeguards remain. Never push. Only committed checkpoints may be used to pause.
-
-Restored checkpoint full pytest: **1,067 passed in 183.47s (restored X4 runtime)**. Runtime source is restored; the reports-only checkpoint does not claim X5 completion.
-
-## Unattended continuation result
-
-A newly authorized X5 attempt exhausted its single fresh-state retry: initial time-validation failure, then structurally valid output under run-wide source outage (only2941 local facts, no site identities/activity). X5 runtime changes reverted; attempts retained in [UNATTENDED_RESULT.json](X5/UNATTENDED_RESULT.json). No further retries or feature-completion claims. Disk stayed above20GB, so nothing was deleted. R6/R7/X2 remain queued and incomplete; X3/X6 stay dropped.
-
-Unattended retry-exhausted checkpoint: restored runtime full pytest **1,067 passed in166.86seconds**. No X5 feature committed; provider cost$0.
+R6/R7 plan: one greenpytest commit per sub-step; ONE six-sample measurement per complete stage, gains attributed by proof type. Measurements are foreground commands, one sample at a time, exactly seven flags, fresh state/newIDs. A dead/host-suspended sample is discarded and rerun once, with attempts retained. Revert only the sub-step causing any doubtful site and remeasure once. Never push; stop only at committed checkpoints.

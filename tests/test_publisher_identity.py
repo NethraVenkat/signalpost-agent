@@ -108,7 +108,9 @@ def test_registry_redirect_obeys_destination_robots_and_exact_publisher_requirem
             return httpx.Response(200,text=html(f'Example AS {ORG}' if kind=='publisher_number' else 'Example AS',extra=f'<p>{ORG}</p>' if kind=='body_number' else ''))
         _,row,requests,cfg=execute_web(tmp_path/kind,monkeypatch,response=respond)
         sites=[c for c in row['claims'] if c['field']=='official_website']
-        assert bool(sites)==(kind=='publisher_number')
+        # R6b explicitly authorizes the full publisher legal name on a
+        # declared redirect destination; destination robots still veto first.
+        assert bool(sites)==(kind!='blocked')
         if kind=='blocked':assert 'https://other.no/' not in requests
         assert len([u for u in requests if 'data.brreg.no' not in u])<=13
 
