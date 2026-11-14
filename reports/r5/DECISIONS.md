@@ -481,3 +481,9 @@
 - Give one strongest former/workplace guess a position before weaker current-name spelling variants, after existing strongest current candidates, registry subunit contacts, NAV and known-brand nominations. Remaining variants stay available in the capped pass-two queue. Domain deduplication and all request/DNS ceilings are unchanged.
 - Candidate names do not replace the current legal identity in proof. Focused tests: 24 passed. Full pytest gates this commit.
 - The R6 measurement baseline is accepted X4, because X5 was dropped. Six fresh foreground samples will run once after this commit; no unmeasured gains claimed.
+
+### R6d safety rollback — staff contact attributed to a different publisher
+- Initial qualification seed20261017 exposed AS ELVELY 932525070 -> svill.no under `registry_email_on_own_domain`. Saved page says `Svill Eiendom AS Henrik Ibsens gate 90 0255 Oslo`; matched email is in its staff contact list. This is doubtful and is withheld, not reported as a gain.
+- Revert the R6d acceptance/helper/verifier route and its positive tests. Preserve the R6e proof-token helper dependency, R6e/R6f and every other sub-step. Added a regression: an exact own-domain email on another publisher's staff page cannot alone establish ownership.
+- Stop initial qualification after two completed trial samples instead of spending four more samples on a known unsafe rule. Preserve both trial commands, counts, full reports, verification, hashes and rejection receipts in `stageR6/R6/trials/rejected_R6d`; raw trial state remains untouched. Trial HTTP: 690 + 751; process seconds: 344.235 + 398.141. Cost $0. These are excluded from accepted stage totals.
+- One fresh six-sample R6 qualification follows this rollback. Focused regression tests: 46 passed; full pytest gates the rollback commit. No R7/X2 work has started.
