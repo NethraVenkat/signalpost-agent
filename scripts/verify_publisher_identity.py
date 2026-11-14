@@ -55,12 +55,13 @@ def registry_context(org,data,evidence,stored_body):
 
 
 def verify(org,data,evidence,stored_body):
+    from signalpost.web.reach_identity import RULES
     total=0
     for claim in data['claims']:
         if claim['field']!='official_website' or claim['availability']!='available':continue
         value=claim['value']
         tier=value.get('proof_type')
-        if tier not in {DECLARED,RARE,REDIRECT}:continue
+        if tier not in {DECLARED,RARE,REDIRECT}|RULES.keys():continue
         context,refs=registry_context(org,data,evidence,stored_body)
         assert refs<=set(claim['evidence_ids']),'Missing registry proof dependencies'
         receipt=value['publisher_identity'];context['candidate_url']=receipt['candidate_url']
@@ -72,7 +73,7 @@ def verify(org,data,evidence,stored_body):
             parts=urlsplit(page.url)
             assert value['final_url']==urlunsplit((parts.scheme,parts.netloc,'','','')),'Published URL differs from proven publisher authority'
             assert not conflict(page,org,context)[0],'Publisher conflict'
-            expected={DECLARED:declared_receipt,RARE:rare_receipt,REDIRECT:redirect_receipt}[tier](page,org,context)
+            expected={DECLARED:declared_receipt,RARE:rare_receipt,REDIRECT:redirect_receipt,**RULES}[tier](page,org,context)
             from signalpost.web.proof import score
             checked=score(page,org,context,value.get('candidate_origin'),[])
             matched |= bool(expected and expected==receipt and checked.level=='HIGH')

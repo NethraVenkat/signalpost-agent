@@ -348,6 +348,11 @@ def score(page, org, context, origin, leaders):
     if receipt := redirect_receipt(page,org,context):
         return Proof('HIGH',REDIRECT,['registry_declared_redirect','publisher_full_legal_name'],
                      reason=REDIRECT,token=context['name'],publisher_receipt=receipt)
+    from .reach_identity import RULES
+    for tier,build in RULES.items():
+        if receipt := build(page,org,context):
+            return Proof('HIGH',tier,['publisher_owner_receipt'],reason=tier,
+                         token=receipt['proof_token'],publisher_receipt=receipt)
     if origin == 'registry_website':
         branded = legal_name(page.title+' '+page.meta.get('og:site_name','')+' '+' '.join(page.brand_parts))
         generic = GENERIC | {'norsk','norske','norge','stiftelsen','selskap','gruppen','group','nasjonalt','ressurssenter','foreningen'}
