@@ -521,6 +521,8 @@ async def _run(config, client=None,synthesis_provider=None):
                     for family in ('gleif','procurement'):
                         if envelope.run.sections.get(family)=='failed':
                             update(envelope,family,missing(family,'public_enrichment_incomplete'))
+            from .public_names import enrich as enrich_public_names
+            await offload(enrich_public_names,envelopes,blobs,website_http.accepted_pages)
             return pending
         finally:
             dns_metrics.update({'dns_precheck_lookups': website_http.dns_lookups, 'dns_candidates_by_company': website_http.dns_counts,

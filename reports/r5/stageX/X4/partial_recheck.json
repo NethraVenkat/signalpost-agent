@@ -1,0 +1,422 @@
+[
+  {
+    "seed": 20261017,
+    "orgnr": "926818317",
+    "kind": "brand",
+    "identity": "SPEDIFY AS AVD ASKIM",
+    "review": {
+      "verdict": "correct",
+      "checks": [
+        {
+          "verdict": "CORRECT",
+          "reason": "Exact parent/name registry or verified publisher public-name receipt replay"
+        }
+      ]
+    }
+  },
+  {
+    "seed": 20261017,
+    "orgnr": "934843355",
+    "kind": "brand",
+    "identity": "AS WDM THRANESGT 8 V/H R ADV ODD SEIM-HAUGEN",
+    "review": {
+      "verdict": "correct",
+      "checks": [
+        {
+          "verdict": "CORRECT",
+          "reason": "Exact parent/name registry or verified publisher public-name receipt replay"
+        }
+      ]
+    }
+  },
+  {
+    "seed": 20261017,
+    "orgnr": "926818317",
+    "kind": "brand",
+    "identity": "SPEDIFY AS AVD RJUKAN",
+    "review": {
+      "verdict": "correct",
+      "checks": [
+        {
+          "verdict": "CORRECT",
+          "reason": "Exact parent/name registry or verified publisher public-name receipt replay"
+        }
+      ]
+    }
+  },
+  {
+    "seed": 20261017,
+    "orgnr": "998340888",
+    "kind": "brand",
+    "identity": "Napolitana Restaurant",
+    "review": {
+      "verdict": "correct",
+      "checks": [
+        {
+          "verdict": "CORRECT",
+          "reason": "Exact parent/name registry or verified publisher public-name receipt replay"
+        }
+      ]
+    }
+  },
+  {
+    "seed": 20261017,
+    "orgnr": "926818317",
+    "kind": "brand",
+    "identity": "Spedify",
+    "review": {
+      "verdict": "correct",
+      "checks": [
+        {
+          "verdict": "CORRECT",
+          "reason": "Exact parent/name registry or verified publisher public-name receipt replay"
+        }
+      ]
+    }
+  },
+  {
+    "seed": 20261017,
+    "orgnr": "991853995",
+    "kind": "brand",
+    "identity": "Bien Sparebank",
+    "review": {
+      "verdict": "correct",
+      "checks": [
+        {
+          "verdict": "CORRECT",
+          "reason": "Exact parent/name registry or verified publisher public-name receipt replay"
+        }
+      ]
+    }
+  },
+  {
+    "seed": 20261017,
+    "orgnr": "929603176",
+    "kind": "brand",
+    "identity": "PAC BYGG AS AVD FETSUND",
+    "review": {
+      "verdict": "correct",
+      "checks": [
+        {
+          "verdict": "CORRECT",
+          "reason": "Exact parent/name registry or verified publisher public-name receipt replay"
+        }
+      ]
+    }
+  },
+  {
+    "seed": 20261017,
+    "orgnr": "998340888",
+    "kind": "website",
+    "identity": "https://napolitana.no",
+    "review": {
+      "verdict": "correct",
+      "checks": [
+        {
+          "verdict": "CORRECT",
+          "reason": "Exact orgnr 998340888 verified in company ownership context"
+        }
+      ]
+    }
+  },
+  {
+    "seed": 20261017,
+    "orgnr": "927094266",
+    "kind": "brand",
+    "identity": "Sportlet.no",
+    "review": {
+      "verdict": "correct",
+      "checks": [
+        {
+          "verdict": "CORRECT",
+          "reason": "Exact parent/name registry or verified publisher public-name receipt replay"
+        }
+      ]
+    }
+  },
+  {
+    "seed": 20261113,
+    "orgnr": "926364715",
+    "kind": "brand",
+    "identity": "ST1 SOGNDAL",
+    "review": {
+      "verdict": "correct",
+      "checks": [
+        {
+          "verdict": "CORRECT",
+          "reason": "Exact parent/name registry or verified publisher public-name receipt replay"
+        }
+      ]
+    }
+  },
+  {
+    "seed": 20261113,
+    "orgnr": "925496251",
+    "kind": "brand",
+    "identity": "WEDEB'S RESTAURANT FOOD FROM HORN OF AFRICA",
+    "review": {
+      "verdict": "correct",
+      "checks": [
+        {
+          "verdict": "CORRECT",
+          "reason": "Exact parent/name registry or verified publisher public-name receipt replay"
+        }
+      ]
+    }
+  },
+  {
+    "seed": 20261113,
+    "orgnr": "997887476",
+    "kind": "brand",
+    "identity": "NDV",
+    "review": {
+      "verdict": "correct",
+      "checks": [
+        {
+          "verdict": "CORRECT",
+          "reason": "Exact parent/name registry or verified publisher public-name receipt replay"
+        }
+      ]
+    }
+  },
+  {
+    "seed": 20261113,
+    "orgnr": "926364715",
+    "kind": "brand",
+    "identity": "GODE RETAIL",
+    "review": {
+      "verdict": "correct",
+      "checks": [
+        {
+          "verdict": "CORRECT",
+          "reason": "Exact parent/name registry or verified publisher public-name receipt replay"
+        }
+      ]
+    }
+  },
+  {
+    "seed": 20261113,
+    "orgnr": "918031502",
+    "kind": "brand",
+    "identity": "Sunncom",
+    "review": {
+      "verdict": "correct",
+      "checks": [
+        {
+          "verdict": "CORRECT",
+          "reason": "Exact parent/name registry or verified publisher public-name receipt replay"
+        }
+      ]
+    }
+  },
+  {
+    "seed": 20261113,
+    "orgnr": "930090077",
+    "kind": "brand",
+    "identity": "SOLO AS",
+    "review": {
+      "verdict": "correct",
+      "checks": [
+        {
+          "verdict": "CORRECT",
+          "reason": "Exact parent/name registry or verified publisher public-name receipt replay"
+        }
+      ]
+    }
+  },
+  {
+    "seed": 20261113,
+    "orgnr": "994900544",
+    "kind": "brand",
+    "identity": "FORBERG MIXER TECHNOLOGY AS",
+    "review": {
+      "verdict": "correct",
+      "checks": [
+        {
+          "verdict": "CORRECT",
+          "reason": "Exact parent/name registry or verified publisher public-name receipt replay"
+        }
+      ]
+    }
+  },
+  {
+    "seed": 20261113,
+    "orgnr": "934626176",
+    "kind": "brand",
+    "identity": "Advokatfirmaet Tashakori",
+    "review": {
+      "verdict": "correct",
+      "checks": [
+        {
+          "verdict": "CORRECT",
+          "reason": "Exact parent/name registry or verified publisher public-name receipt replay"
+        }
+      ]
+    }
+  },
+  {
+    "seed": 20261113,
+    "orgnr": "993821403",
+    "kind": "brand",
+    "identity": "ZETTA.IO TECHNOLOGY",
+    "review": {
+      "verdict": "correct",
+      "checks": [
+        {
+          "verdict": "CORRECT",
+          "reason": "Exact parent/name registry or verified publisher public-name receipt replay"
+        }
+      ]
+    }
+  },
+  {
+    "seed": 20261113,
+    "orgnr": "985689377",
+    "kind": "brand",
+    "identity": "SOLSTREIF RUDOLF STEINER BARNEHAGE",
+    "review": {
+      "verdict": "correct",
+      "checks": [
+        {
+          "verdict": "CORRECT",
+          "reason": "Exact parent/name registry or verified publisher public-name receipt replay"
+        }
+      ]
+    }
+  },
+  {
+    "seed": 20261114,
+    "orgnr": "958507739",
+    "kind": "brand",
+    "identity": "OVERAAE STØREN A/S",
+    "review": {
+      "verdict": "correct",
+      "checks": [
+        {
+          "verdict": "CORRECT",
+          "reason": "Exact parent/name registry or verified publisher public-name receipt replay"
+        }
+      ]
+    }
+  },
+  {
+    "seed": 20261114,
+    "orgnr": "988217867",
+    "kind": "brand",
+    "identity": "CONCEDO AS PL1292",
+    "review": {
+      "verdict": "correct",
+      "checks": [
+        {
+          "verdict": "CORRECT",
+          "reason": "Exact parent/name registry or verified publisher public-name receipt replay"
+        }
+      ]
+    }
+  },
+  {
+    "seed": 20261114,
+    "orgnr": "927123851",
+    "kind": "brand",
+    "identity": "S.O. HEGGHEIM MULTITJENESTER AS",
+    "review": {
+      "verdict": "correct",
+      "checks": [
+        {
+          "verdict": "CORRECT",
+          "reason": "Exact parent/name registry or verified publisher public-name receipt replay"
+        }
+      ]
+    }
+  },
+  {
+    "seed": 20261114,
+    "orgnr": "986464492",
+    "kind": "brand",
+    "identity": "OPTIMAL REGNSKAP AS AVD DRAMMEN",
+    "review": {
+      "verdict": "correct",
+      "checks": [
+        {
+          "verdict": "CORRECT",
+          "reason": "Exact parent/name registry or verified publisher public-name receipt replay"
+        }
+      ]
+    }
+  },
+  {
+    "seed": 20261114,
+    "orgnr": "936195296",
+    "kind": "brand",
+    "identity": "SØLVERNES HOLDING AS",
+    "review": {
+      "verdict": "correct",
+      "checks": [
+        {
+          "verdict": "CORRECT",
+          "reason": "Exact parent/name registry or verified publisher public-name receipt replay"
+        }
+      ]
+    }
+  },
+  {
+    "seed": 20261114,
+    "orgnr": "917071209",
+    "kind": "brand",
+    "identity": "MIX GJØVIK",
+    "review": {
+      "verdict": "correct",
+      "checks": [
+        {
+          "verdict": "CORRECT",
+          "reason": "Exact parent/name registry or verified publisher public-name receipt replay"
+        }
+      ]
+    }
+  },
+  {
+    "seed": 20261114,
+    "orgnr": "986464492",
+    "kind": "brand",
+    "identity": "OPTIMAL REGNSKAP AS AVD ORKANGER",
+    "review": {
+      "verdict": "correct",
+      "checks": [
+        {
+          "verdict": "CORRECT",
+          "reason": "Exact parent/name registry or verified publisher public-name receipt replay"
+        }
+      ]
+    }
+  },
+  {
+    "seed": 20261114,
+    "orgnr": "988217867",
+    "kind": "brand",
+    "identity": "Concedo",
+    "review": {
+      "verdict": "correct",
+      "checks": [
+        {
+          "verdict": "CORRECT",
+          "reason": "Exact parent/name registry or verified publisher public-name receipt replay"
+        }
+      ]
+    }
+  },
+  {
+    "seed": 20261114,
+    "orgnr": "889320222",
+    "kind": "brand",
+    "identity": "Scandinavian nails by abameme",
+    "review": {
+      "verdict": "correct",
+      "checks": [
+        {
+          "verdict": "CORRECT",
+          "reason": "Exact parent/name registry or verified publisher public-name receipt replay"
+        }
+      ]
+    }
+  }
+]

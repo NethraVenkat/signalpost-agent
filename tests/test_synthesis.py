@@ -52,7 +52,8 @@ def test_counts_cite_distinct_records_and_never_create_claims(tmp_path):
                 {'organisasjonsnummer':'988258229','overordnetEnhet':'923609016','navn':'Branch Two'}]},'page':{'totalPages':1}})
         return handler()(request)
     _,rows=execute(cfg,response)
-    row=Envelope.model_validate(rows[0]);units=[c for c in row.claims if c.family=='subunits' and c.availability=='available']
+    row=Envelope.model_validate(rows[0]);units=[c for c in row.claims if c.field.startswith('subunits.unit.') and c.availability=='available']
+    assert len([c for c in row.claims if c.field.startswith('brand.') and c.availability=='available'])==2
     count=next(s for s in row.run.synthesis.sections.scale if s.value_kind=='derived')
     assert count.count==2 and set(count.claim_ids)=={c.id for c in units}
     assert not any(c.field.startswith('synthesis_support') for c in row.claims)

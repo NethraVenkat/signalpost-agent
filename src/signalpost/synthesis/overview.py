@@ -75,6 +75,15 @@ def required(envelope):
             result['activity']=make('activity',nace_sentence(industry),[industry.id])
         else:
             result['activity']=make('activity','What the company does is unknown in this report: no supported activity, purpose, industry or website description is present.',obs=[lookup['coverage','description'].id])
+    names=sorted((c for c in claims if c.field=='public_brand' or c.field.startswith('brand.')),
+                 key=lambda c:(c.field!='public_brand',c.field))
+    if names:
+        alias=names[0];value=alias.value if isinstance(alias.value,str) else alias.value['name']
+        label='Site-declared public name: ' if alias.field=='public_brand' else 'Registered workplace name: '
+        if alias.carried_forward:label='Previously supported '+label.lower()
+        sentence=result['activity']
+        result['activity']=sentence.model_copy(update={'text':sentence.text+' '+label+'«'+value+'».',
+            'claim_ids':list(dict.fromkeys([*sentence.claim_ids,alias.id]))})
     refresh=lookup['comparison','refresh']
     if not refresh.data['first_run'] and envelope.changes:
         event=sorted(envelope.changes,key=lambda e:(e.last_observed_at,e.field),reverse=True)[0]

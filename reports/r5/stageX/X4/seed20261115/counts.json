@@ -1,0 +1,409 @@
+{
+  "stage": "X4",
+  "seed": 20261115,
+  "before": {
+    "websites": 8,
+    "declared_homepage_recall": 3,
+    "declared_homepages": 14,
+    "social_companies": 4,
+    "social_claims": 4,
+    "activity_companies": 100,
+    "activity_claims": 1153,
+    "brand_companies": 1,
+    "brand_claims": 1,
+    "role_change_claims": 183,
+    "facts": 13267,
+    "families": {
+      "identity": 2963,
+      "roles": 1029,
+      "accounts": 7190,
+      "activity": 1153,
+      "subunits": 890,
+      "gleif": 10,
+      "website": 32
+    }
+  },
+  "after": {
+    "websites": 7,
+    "declared_homepage_recall": 3,
+    "declared_homepages": 14,
+    "social_companies": 4,
+    "social_claims": 4,
+    "activity_companies": 100,
+    "activity_claims": 1153,
+    "brand_companies": 5,
+    "brand_claims": 7,
+    "role_change_claims": 183,
+    "facts": 13270,
+    "families": {
+      "identity": 2963,
+      "roles": 1029,
+      "accounts": 7190,
+      "activity": 1153,
+      "subunits": 893,
+      "gleif": 10,
+      "website": 32
+    }
+  },
+  "HTTP": 740,
+  "runtime_seconds": 405.0460000000021,
+  "CLI_runtime_seconds": 384.2809999999881,
+  "cost_usd": 0.0,
+  "site": {
+    "state": "available",
+    "companies": 100,
+    "input_records": 100,
+    "pages": 102,
+    "skipped_invalid_identifiers": 0,
+    "total_bytes": 36102774,
+    "largest_profile_data_bytes": 484384,
+    "largest_profile_bytes": 222056
+  },
+  "changes": {
+    "added": [
+      {
+        "orgnr": "926705261",
+        "legal_name": "LEV AKTIVT AS",
+        "kind": "brand",
+        "identity": "Lev Aktivt",
+        "field": "public_brand",
+        "value": "Lev Aktivt",
+        "evidence": [
+          {
+            "id": "a4b43b6f4c810f0d7ec4263e71e1bda8899467612329122a9dea0c47cfea8b27",
+            "source_url": "https://levaktivt.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-14T07:03:41.034162Z",
+            "content_sha256": "40329f9e97ab101470abef043e6d3d7b5ec983c69d2f475c9edfd5d7185aaafd",
+            "claim_span": "s://levaktivt.no/xmlrpc.php\" />\n\t<title>Lev Aktivt &#8211; Ta vare på deg selv</title>\n<meta name='robots' content='max-image-preview:large' />\n<link rel=\"alternate\" type=\"application/rss+xml\" title=\"Lev Aktivt &raquo; strøm\" href=\"https://levaktivt.no/feed/\" />\n<link rel=\"alternate\" type=\"applicati",
+            "locator": "publisher-public-name",
+            "extraction_method": "signalpost.public_names.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "31114399148dfbe4ee305e0b72541372b4aa92c6acb7608fd0055a557fde8a9b",
+            "source_url": "https://levaktivt.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-14T07:03:41.034162Z",
+            "content_sha256": "40329f9e97ab101470abef043e6d3d7b5ec983c69d2f475c9edfd5d7185aaafd",
+            "claim_span": "19\" data-end=\"155\">Organisasjonsnummer: 926 705 261</strong></p><p data-start=\"159\" data-end=\"287\">Denne personvernerklæringen gir informasjon om hvor",
+            "locator": "identity-proof:926705261",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "8d733663c38404a88ed879da875991d57303fbf66e8cdadf7cb0d80d3fea341d",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:00:05.634597Z",
+            "content_sha256": "15b80192aa51e0961cbc3a670cc67448e180ed533880048d77d19bd2f6dbc5b0",
+            "claim_span": "926705261,LEV AKTIVT AS,AS,Aksjeselskap,62.100,Dataprogrammeringstjenester,,,,,,,false,,,,,,,,,,,,,,,Gårdsveien 4A,SANDEFJORD,3230,SANDEFJORD,3907,Norge,NO,2100,Private aksjeselskaper mv.,2025,2021-03-30,2020-12-28,false,,,,,false,,true,2021-03-30,false,false,,false,,true,2026-09-02,false,,,,,,,Bokm",
+            "locator": "row:926705261/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:bd3598aeae1b5c6b107e61ba1ffdb4d2a92af86edeef91f9b0dbfe65e0d418d3",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "orgnr": "928882624",
+        "legal_name": "TRAVL AS",
+        "kind": "brand",
+        "identity": "Travl",
+        "field": "public_brand",
+        "value": "Travl",
+        "evidence": [
+          {
+            "id": "b8b5d6e70259197b27ea37040fe7df1325d9a7e57055bb66312651b9e9df6b5d",
+            "source_url": "https://travl.no/en/privacy",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-14T07:02:09.245207Z",
+            "content_sha256": "c722bc1fdd01baf42649b4c60be24800d52df2154071add469945971aa82e8ec",
+            "claim_span": "tent=\"#000000\"/><title>Privacy Policy — Travl</title><meta name=\"description\" content=\"Where travel meets AI.\"/><meta name=\"application-name\" content=\"Travl\"/><meta property=\"og:title\" content=\"Privacy Policy — Travl\"/><meta property=\"og:description\" content=\"Where travel meets AI.\"/><meta property=",
+            "locator": "publisher-public-name",
+            "extraction_method": "signalpost.public_names.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "88575b565b484f71fe507c1539e01ae6cccd97d583eb989d0e29670ac0e87dae",
+            "source_url": "https://travl.no/en/privacy",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-14T07:02:09.245207Z",
+            "content_sha256": "c722bc1fdd01baf42649b4c60be24800d52df2154071add469945971aa82e8ec",
+            "claim_span": "le</h2><p>TRAVL AS (organisation number 928 882 624, Storgata 117, 3182 Horten, Norway) is the data controller for the personal data Travl processes. ",
+            "locator": "identity-proof:928882624",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "fe35df8238131ef5a075b77442d48ef1640ca3332fbe3adde9694bec32b70339",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:00:05.639597Z",
+            "content_sha256": "267d2dad5da807f042c626a9a97b798508886a850491dbe441224b122b6c2483",
+            "claim_span": "928882624,TRAVL AS,AS,Aksjeselskap,62.100,Dataprogrammeringstjenester,,,,,,,true,,2024-11-16,2024-11-10,,,,,,,,,,,,Storgata 117,HORTEN,3182,HORTEN,3901,Norge,NO,2100,Private aksjeselskaper mv.,2025,2022-03-07,2022-01-17,true,2022-08-13,2022-08-15,,,false,,true,2022-03-07,false,false,,false,,false,,f",
+            "locator": "row:928882624/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:bd3598aeae1b5c6b107e61ba1ffdb4d2a92af86edeef91f9b0dbfe65e0d418d3",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "orgnr": "932849429",
+        "legal_name": "JAASTAD SIDERI AS",
+        "kind": "brand",
+        "identity": "JAASTAD Sideri",
+        "field": "public_brand",
+        "value": "JAASTAD Sideri",
+        "evidence": [
+          {
+            "id": "97b7b357448604ead76f903a1351ed6ff56bcda904b2941ac52d0f7fdd89d7e3",
+            "source_url": "https://www.jaastadsideri.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-14T07:02:54.350177Z",
+            "content_sha256": "590e0761197ec34bdb6f6a51dae535e49579dfb29923c1c64895b22b969239ab",
+            "claim_span": "ref=\"\">\n<meta charset=\"utf-8\" />\n<title>JAASTAD Sideri</title>\n<meta http-equiv=\"Accept-CH\" content=\"Sec-CH-UA-Platform-Version, Sec-CH-UA-Model\" /><link rel=\"icon\" type=\"image/x-icon\" media=\"(prefers-color-scheme: light)\" href=\"https://images.squarespace-cdn.com/content/v1/661649e3d2940d02173756a3/",
+            "locator": "publisher-public-name",
+            "extraction_method": "signalpost.public_names.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "8e36af3626954a5fa60c4cafc0f6c1c359145b6b38f4eb7cecb7b4b839f0db63",
+            "source_url": "https://www.jaastadsideri.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-14T07:02:54.350177Z",
+            "content_sha256": "590e0761197ec34bdb6f6a51dae535e49579dfb29923c1c64895b22b969239ab",
+            "claim_span": "\" style=\"white-space:pre-wrap;\">Org.nr: 932 849 429</p></div>\n\n\n  \n<style id=\"container-styles\">#block-aea1cdc2ac29526ff6f0 {\n    \n    --stroke-style:",
+            "locator": "identity-proof:932849429",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "0e1fec66e255829680624587fb5a206b99c55e14057eed8377ef4e003f383765",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:00:05.644019Z",
+            "content_sha256": "5efb4e6a040fb875f513a6c57d17169002f27860c3bcb2471a9bf575496999cd",
+            "claim_span": "932849429,JAASTAD SIDERI AS,AS,Aksjeselskap,11.030,Produksjon av sider og andre gjærede fruktdrikker,,,,,,,false,,,,,,,,,,,,,,,Gamlevegen 46,GRIMO,5777,ULLENSVANG,4618,Norge,NO,2100,Private aksjeselskaper mv.,2025,2024-01-18,2024-01-05,true,2024-06-14,2024-07-09,,,false,,true,2024-01-18,false,false,",
+            "locator": "row:932849429/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:bd3598aeae1b5c6b107e61ba1ffdb4d2a92af86edeef91f9b0dbfe65e0d418d3",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "orgnr": "991126627",
+        "legal_name": "ESPIRA DVERGSNES AS",
+        "kind": "brand",
+        "identity": "ESPIRA DVERGSNES BARNEHAGE",
+        "field": "brand.registered_subunit.85a04ef4e695a48f9f2f",
+        "value": {
+          "name": "ESPIRA DVERGSNES BARNEHAGE",
+          "origin": "registered_subunit",
+          "subunit_orgnr": "991190880"
+        },
+        "evidence": [
+          {
+            "id": "c4393b116ed440ccc2159735f8e3beddd8651b4899e92b385dfcb559765d40d4",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=991126627&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:00:07.845543Z",
+            "content_sha256": "45f6c00b3e0a09787e8b1f6dad32605b68d00db5055ecad9bbac0b460b3a79a6",
+            "claim_span": "g og drift av barnehager\",\"kode\":\"85.100\"},\"navn\":\"ESPIRA DVERGSNES BARNEHAGE\",\"oppstartsdato\":\"2007-04-26\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR\"}},\"beskrivelse\":\"Underenhet til næringsdrivende og offentlig forvaltning\",\"k",
+            "locator": "/_embedded/underenheter/0/navn",
+            "extraction_method": "signalpost.public_names.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "1b11a401f558a0f4180abf2eecb2d274a43e37595037e190b3bdfdcfe2d58552",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=991126627&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:00:07.845543Z",
+            "content_sha256": "45f6c00b3e0a09787e8b1f6dad32605b68d00db5055ecad9bbac0b460b3a79a6",
+            "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/991190880\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/991126627\"}},\"antallAnsatte\":38,\"beliggenhetsadresse\":{\"adresse\":[\"Valsvigveien 11\"],\"kommune\":\"KRISTIANSAND\",\"kommunenummer\":\"",
+            "locator": "/_embedded/underenheter/0",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "a262db614e0d172f77df294536c5cf9ac0c6c31c516b515f77f31f5a4c8b3191",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:00:05.662020Z",
+            "content_sha256": "0cb5ae681295d1c3c0f2b35a39fa3b94e21e10cfcf4901febae71901c2559830",
+            "claim_span": "991126627,ESPIRA DVERGSNES AS,AS,Aksjeselskap,85.100,Førskoleundervisning og drift av barnehager,,,,,,,true,35,2026-09-14,2026-09-10,www.espira.no,post@espira.no,52 84 50 20,,Postboks 353,KOPERVIK,4291,KARMØY,1149,Norge,NO,Helganesvegen 47,AVALDSNES,4262,KARMØY,1149,Norge,NO,2100,Private aksjeselska",
+            "locator": "row:991126627/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:bd3598aeae1b5c6b107e61ba1ffdb4d2a92af86edeef91f9b0dbfe65e0d418d3",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "orgnr": "935794242",
+        "legal_name": "BUSSIN AS",
+        "kind": "brand",
+        "identity": "BUSSIN MARKEDSFØRINGSBYRÅ AS",
+        "field": "brand.registered_subunit.9dc66107493f1a9b670c",
+        "value": {
+          "name": "BUSSIN MARKEDSFØRINGSBYRÅ AS",
+          "origin": "registered_subunit",
+          "subunit_orgnr": "836188942"
+        },
+        "evidence": [
+          {
+            "id": "20c37caff383c7496ecb8b072fcc0c00af7c326aea0fb89fe5f94f6106ced68a",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=935794242&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:00:08.147827Z",
+            "content_sha256": "b1138b6b556962aed89f5bdc7c9ad14f34d7c80cd872235237b98322dbbce263",
+            "claim_span": "\":\"Reklamebyråvirksomhet\",\"kode\":\"73.110\"},\"navn\":\"BUSSIN MARKEDSFØRINGSBYRÅ AS\",\"oppstartsdato\":\"2025-06-20\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR\"}},\"beskrivelse\":\"Underenhet til næringsdrivende og offentlig forvaltning\",",
+            "locator": "/_embedded/underenheter/0/navn",
+            "extraction_method": "signalpost.public_names.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "22dda714a26f4b791b14f804e2ed5a1d8c76da63f75100507c2e0bc893f2c1db",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=935794242&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:00:08.147827Z",
+            "content_sha256": "b1138b6b556962aed89f5bdc7c9ad14f34d7c80cd872235237b98322dbbce263",
+            "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/836188942\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/935794242\"}},\"beliggenhetsadresse\":{\"adresse\":[\"Vetlandsveien 63B\"],\"kommune\":\"OSLO\",\"kommunenummer\":\"0301\",\"land\":\"Norge\",\"lan",
+            "locator": "/_embedded/underenheter/0",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "522a701e891ac2415e4fdaca036e6e0490b95d5f74136e3e96c071a37ffb07ae",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:00:05.648020Z",
+            "content_sha256": "3310e96317bab78620d81b47eacd3bd6f90d23312b0a84a5db69ccacb21bdd5e",
+            "claim_span": "935794242,BUSSIN AS,AS,Aksjeselskap,73.110,Reklamebyråvirksomhet,,,,,,,false,,,,www.bussin.no,post@bussin.no,,,Postboks 155 Sentrum,OSLO,0102,OSLO,0301,Norge,NO,Vetlandsveien 63B,OSLO,0685,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2025-07-02,2025-06-20,false,,,,,false,,true,2025-07-02,",
+            "locator": "row:935794242/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:bd3598aeae1b5c6b107e61ba1ffdb4d2a92af86edeef91f9b0dbfe65e0d418d3",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "orgnr": "926705261",
+        "legal_name": "LEV AKTIVT AS",
+        "kind": "brand",
+        "identity": "JOGGESKO MED PELS AS",
+        "field": "brand.registered_subunit.83657df0aeb967f45808",
+        "value": {
+          "name": "JOGGESKO MED PELS AS",
+          "origin": "registered_subunit",
+          "subunit_orgnr": "938826846"
+        },
+        "evidence": [
+          {
+            "id": "9d0bc2580242a13c45b91283a5faf89f99fd64e974cc86778f03414ab11452b0",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=926705261&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:00:09.662586Z",
+            "content_sha256": "f92816084ad609858b26208a290a4b1972c8de903a68f455c05550b0440194a3",
+            "claim_span": " kommunikasjonstjenester\",\"kode\":\"73.300\"},\"navn\":\"JOGGESKO MED PELS AS\",\"oppstartsdato\":\"2026-10-09\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR\"}},\"beskrivelse\":\"Underenhet til næringsdrivende og offentlig forvaltning\",\"kode\":\"",
+            "locator": "/_embedded/underenheter/0/navn",
+            "extraction_method": "signalpost.public_names.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "ce879cbe17a4ad854eb960242096797c06649c37a93562b42f6e2b2036f704fb",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=926705261&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:00:09.662586Z",
+            "content_sha256": "f92816084ad609858b26208a290a4b1972c8de903a68f455c05550b0440194a3",
+            "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/938826846\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/926705261\"}},\"beliggenhetsadresse\":{\"adresse\":[\"Gårdsveien 4A\"],\"kommune\":\"SANDEFJORD\",\"kommunenummer\":\"3907\",\"land\":\"Norge\",\"l",
+            "locator": "/_embedded/underenheter/0",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "8d733663c38404a88ed879da875991d57303fbf66e8cdadf7cb0d80d3fea341d",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:00:05.634597Z",
+            "content_sha256": "15b80192aa51e0961cbc3a670cc67448e180ed533880048d77d19bd2f6dbc5b0",
+            "claim_span": "926705261,LEV AKTIVT AS,AS,Aksjeselskap,62.100,Dataprogrammeringstjenester,,,,,,,false,,,,,,,,,,,,,,,Gårdsveien 4A,SANDEFJORD,3230,SANDEFJORD,3907,Norge,NO,2100,Private aksjeselskaper mv.,2025,2021-03-30,2020-12-28,false,,,,,false,,true,2021-03-30,false,false,,false,,true,2026-09-02,false,,,,,,,Bokm",
+            "locator": "row:926705261/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:bd3598aeae1b5c6b107e61ba1ffdb4d2a92af86edeef91f9b0dbfe65e0d418d3",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      }
+    ],
+    "removed": [
+      {
+        "orgnr": "933519708",
+        "legal_name": "LOOPYTY AS",
+        "kind": "website",
+        "identity": "https://loopyty.com",
+        "field": "official_website",
+        "value": {
+          "final_url": "https://loopyty.com",
+          "identity_level": "VERIFIED",
+          "proof_type": "orgnr_on_page",
+          "proof_page_url": "https://loopyty.com/nb",
+          "signals": [],
+          "points": 0,
+          "candidate_origin": "legal_name_slug",
+          "relationship_note": null,
+          "other_orgnrs": []
+        },
+        "evidence": [
+          {
+            "id": "093147545fd59ef0b868e47579377e9477c72d00a97580340ed397c8cd19e660",
+            "source_url": "https://loopyty.com/nb",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-14T05:29:51.084623Z",
+            "content_sha256": "4915bf8556d3bfed8b94f52960438f14ca16c3434a0f319f8571fe4508942dd4",
+            "claim_span": "mui-ln603f\">© 2026 Loopyty AS · Org.nr. 933 519 708 · Oslo</p></div></div></footer></div></div></div></div><script src=\"/_next/static/chunks/0w05wc0hf",
+            "locator": "identity-proof:933519708",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      }
+    ]
+  },
+  "envelopes_sha256": "fa25324f07ac2ae5361603b8b9f8ae47b6ae31d2c1d8674d352db6ba30861b4f",
+  "profiles_sha256": "23fab8626e7ff510b3e61b8fea479fdaed71164e7a2c807ab03325f96a53dd4d"
+}

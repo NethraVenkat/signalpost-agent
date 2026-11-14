@@ -355,6 +355,8 @@ def verify(first, state_dir, count, organisations=None, report=None, require_cle
         registry_events+=verify_registry_events(row,data,evidence,stored_body,registry_documents)
         verify_careers(row,data,evidence,stored_body)
         exact_public+=verify_exact_public(row,data,evidence,stored_body)
+        from signalpost.public_names import verify as verify_public_names
+        verify_public_names(row['organisation_number'],data,evidence,stored_body)
         from scripts.verify_publisher_identity import verify as verify_publisher
         verify_publisher(row['organisation_number'],data,evidence,stored_body)
         filing_year_facts+=verify_filing_years(row,data,evidence,stored_body)

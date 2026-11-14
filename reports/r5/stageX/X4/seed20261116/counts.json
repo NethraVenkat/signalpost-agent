@@ -1,0 +1,582 @@
+{
+  "stage": "X4",
+  "seed": 20261116,
+  "before": {
+    "websites": 6,
+    "declared_homepage_recall": 3,
+    "declared_homepages": 17,
+    "social_companies": 0,
+    "social_claims": 0,
+    "activity_companies": 100,
+    "activity_claims": 1475,
+    "brand_companies": 3,
+    "brand_claims": 3,
+    "role_change_claims": 253,
+    "facts": 13771,
+    "families": {
+      "identity": 2983,
+      "subunits": 888,
+      "roles": 1255,
+      "accounts": 7122,
+      "activity": 1475,
+      "gleif": 19,
+      "website": 28,
+      "hiring": 1
+    }
+  },
+  "after": {
+    "websites": 5,
+    "declared_homepage_recall": 3,
+    "declared_homepages": 17,
+    "social_companies": 0,
+    "social_claims": 0,
+    "activity_companies": 100,
+    "activity_claims": 1475,
+    "brand_companies": 8,
+    "brand_claims": 12,
+    "role_change_claims": 253,
+    "facts": 13777,
+    "families": {
+      "identity": 2983,
+      "subunits": 897,
+      "roles": 1255,
+      "accounts": 7122,
+      "activity": 1475,
+      "gleif": 19,
+      "website": 25,
+      "hiring": 1
+    }
+  },
+  "HTTP": 785,
+  "runtime_seconds": 421.2970000000205,
+  "CLI_runtime_seconds": 395.35900000002584,
+  "cost_usd": 0.0,
+  "site": {
+    "state": "available",
+    "companies": 100,
+    "input_records": 100,
+    "pages": 102,
+    "skipped_invalid_identifiers": 0,
+    "total_bytes": 38823735,
+    "largest_profile_data_bytes": 534437,
+    "largest_profile_bytes": 229166
+  },
+  "changes": {
+    "added": [
+      {
+        "orgnr": "987401729",
+        "legal_name": "LS HOLST - NK LARSENS BUREAU KULTURELL REISEVIRKSOMHET AS",
+        "kind": "brand",
+        "identity": "NILS KRISTER LARSEN REISELEDEROPPDRAG AS",
+        "field": "brand.registered_subunit.c0742a959bd51f518a36",
+        "value": {
+          "name": "NILS KRISTER LARSEN REISELEDEROPPDRAG AS",
+          "origin": "registered_subunit",
+          "subunit_orgnr": "987538007"
+        },
+        "evidence": [
+          {
+            "id": "3cfff2e6ba65697b3836f8ddfdc09e4a31beb153d55af716d59912dc6327d690",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=987401729&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:06:52.926653Z",
+            "content_sha256": "a8b29db0f9c88d656c1d3493385873159a6d4f1e4c9d2ff027bdef99ac4c2833",
+            "claim_span": "rrangørvirksomhet ellers\",\"kode\":\"79.122\"},\"navn\":\"NILS KRISTER LARSEN REISELEDEROPPDRAG AS\",\"oppstartsdato\":\"2004-10-14\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR\"}},\"beskrivelse\":\"Underenhet til næringsdrivende og offentlig f",
+            "locator": "/_embedded/underenheter/0/navn",
+            "extraction_method": "signalpost.public_names.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "9cbd177371eafc1f804d1a530584deb1759ae3a1b88f6796ffb3db7485cc616b",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=987401729&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:06:52.926653Z",
+            "content_sha256": "a8b29db0f9c88d656c1d3493385873159a6d4f1e4c9d2ff027bdef99ac4c2833",
+            "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/987538007\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/987401729\"}},\"beliggenhetsadresse\":{\"adresse\":[\"Halsnesvegen 1577\"],\"kommune\":\"AURE\",\"kommunenummer\":\"1576\",\"land\":\"Norge\",\"lan",
+            "locator": "/_embedded/underenheter/0",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "a141d2dff3b00cd576813122d8002984dea4efe5065afec3264f16507be6aaa5",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:06:51.744328Z",
+            "content_sha256": "999894842abcab355fe980fc9683d0b08aeea7f4fc03e63dcd06e31769937940",
+            "claim_span": "987401729,LS HOLST - NK LARSENS BUREAU KULTURELL REISEVIRKSOMHET AS,AS,Aksjeselskap,79.122,Reisearrangørvirksomhet ellers,,,,,,,true,,2026-05-12,2026-05-10,www.nklarsen.no,nils@nklarsen.no,71 52 13 45,92250345,Jernbanegata 14,KONGSVINGER,2211,KONGSVINGER,3401,Norge,NO,Halsnesvegen 1577,TUSTNA,6590,A",
+            "locator": "row:987401729/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:aef414072567eda80df4802df2d6054f07c8f9749dbc4bfacd1c09906a2fb8d9",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "orgnr": "983803075",
+        "legal_name": "MELTWATER NEWS AS",
+        "kind": "brand",
+        "identity": "MELTWATER NEWS AS AVD OSLO SUPPORT",
+        "field": "brand.registered_subunit.5a507874e331cc372971",
+        "value": {
+          "name": "MELTWATER NEWS AS AVD OSLO SUPPORT",
+          "origin": "registered_subunit",
+          "subunit_orgnr": "986920951"
+        },
+        "evidence": [
+          {
+            "id": "00ff4773a75fc1e02463dd0fff2bea71bb5e38ba309ffa2572c10257b842de0d",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=983803075&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:06:54.761421Z",
+            "content_sha256": "01239d19797c3db127ae14ca2f2acb32d4240d3e55743bbe3f54bfecf1731f42",
+            "claim_span": "aprogrammeringstjenester\",\"kode\":\"62.100\"},\"navn\":\"MELTWATER NEWS AS AVD OSLO SUPPORT\",\"oppstartsdato\":\"2004-04-27\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR\"}},\"beskrivelse\":\"Underenhet til næringsdrivende og offentlig forvalt",
+            "locator": "/_embedded/underenheter/1/navn",
+            "extraction_method": "signalpost.public_names.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "571fd8bcc4fae087e18fa41e24664198b36e7de0fdbee61dfd07eb51eb2e8661",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=983803075&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:06:54.761421Z",
+            "content_sha256": "01239d19797c3db127ae14ca2f2acb32d4240d3e55743bbe3f54bfecf1731f42",
+            "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/986920951\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/983803075\"}},\"beliggenhetsadresse\":{\"adresse\":[\"Bryggegata 9\"],\"kommune\":\"OSLO\",\"kommunenummer\":\"0301\",\"land\":\"Norge\",\"landkode",
+            "locator": "/_embedded/underenheter/1",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "0b8090f35be0d75033a2ab481f4a8fb37a58b2947cf03f113e176db3bdd47033",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:06:51.741328Z",
+            "content_sha256": "680d76d98bd52ec4384bd2e210d633d049c81cd91683dfc2b0c9aaa3ae595b9e",
+            "claim_span": "983803075,MELTWATER NEWS AS,AS,Aksjeselskap,63.920,Andre informasjonstjenester,62.100,Dataprogrammeringstjenester,,,,,true,,2026-09-14,2026-09-10,www.meltwater.com,martin.hansen@meltwater.com,21 42 04 00,93247538,,,,,,,,Nedre Vollgate 3,OSLO,0158,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,20",
+            "locator": "row:983803075/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:aef414072567eda80df4802df2d6054f07c8f9749dbc4bfacd1c09906a2fb8d9",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "orgnr": "945103663",
+        "legal_name": "BJØRNAR BRØNDBO AS",
+        "kind": "brand",
+        "identity": "BRØNDBO BJØRNAR AS",
+        "field": "brand.registered_subunit.b4de1fdd0fee7bcc510d",
+        "value": {
+          "name": "BRØNDBO BJØRNAR AS",
+          "origin": "registered_subunit",
+          "subunit_orgnr": "971997214"
+        },
+        "evidence": [
+          {
+            "id": "cb157d2ae99074b87a30ad46f89793f93ffeada678e67398d09722465170ccc7",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=945103663&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:06:54.270289Z",
+            "content_sha256": "370e99353b6c16619446e567a321c6c2b20092d2f1244e26b166d67d2201c3e6",
+            "claim_span": "e\":\"Godstransport på vei\",\"kode\":\"49.410\"},\"navn\":\"BRØNDBO BJØRNAR AS\",\"oppstartsdato\":\"1983-10-10\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR\"}},\"beskrivelse\":\"Underenhet til næringsdrivende og offentlig forvaltning\",\"kode\":\"BE",
+            "locator": "/_embedded/underenheter/0/navn",
+            "extraction_method": "signalpost.public_names.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "d0aba7d2c4cae215150548bf8b6562d6c87e5be4e6cc11cfa7d485872a65eeba",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=945103663&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:06:54.270289Z",
+            "content_sha256": "370e99353b6c16619446e567a321c6c2b20092d2f1244e26b166d67d2201c3e6",
+            "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/971997214\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/945103663\"}},\"beliggenhetsadresse\":{\"adresse\":[\"Abelværvegen 1749B\"],\"kommune\":\"NÆRØYSUND\",\"kommunenummer\":\"5060\",\"land\":\"Norge",
+            "locator": "/_embedded/underenheter/0",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "44f00290ad80f1555301aa56928888f29e02eef44e7076381c21ca0344f698ef",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:06:51.733171Z",
+            "content_sha256": "bedf1af1b816da5241cfbfb24bdfee17fb335c18a22baf9e4eadc92cc1cfcbf4",
+            "claim_span": "945103663,BJØRNAR BRØNDBO AS,AS,Aksjeselskap,49.410,Godstransport på vei,,,,,,,true,,2018-09-12,2018-09-10,,brondbo@online.no,74 27 61 20,91171300,,,,,,,,Abelværvegen 1749B,ABELVÆR,7950,NÆRØYSUND,5060,Norge,NO,2100,Private aksjeselskaper mv.,2025,1995-02-19,1987-07-01,true,1987-09-01,1995-02-19,Utle",
+            "locator": "row:945103663/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:aef414072567eda80df4802df2d6054f07c8f9749dbc4bfacd1c09906a2fb8d9",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "orgnr": "983803075",
+        "legal_name": "MELTWATER NEWS AS",
+        "kind": "brand",
+        "identity": "MELTWATER NEWS AS AVD OSLO",
+        "field": "brand.registered_subunit.bac6d48bee1636ec5312",
+        "value": {
+          "name": "MELTWATER NEWS AS AVD OSLO",
+          "origin": "registered_subunit",
+          "subunit_orgnr": "986640495"
+        },
+        "evidence": [
+          {
+            "id": "0803bc77cc91bd89b58fcd1714a61a59279de4337ef3070a4448189d88e9a92c",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=983803075&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:06:54.761421Z",
+            "content_sha256": "01239d19797c3db127ae14ca2f2acb32d4240d3e55743bbe3f54bfecf1731f42",
+            "claim_span": "re informasjonstjenester\",\"kode\":\"63.920\"},\"navn\":\"MELTWATER NEWS AS AVD OSLO\",\"oppstartsdato\":\"2004-02-05\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR\"}},\"beskrivelse\":\"Underenhet til næringsdrivende og offentlig forvaltning\",\"k",
+            "locator": "/_embedded/underenheter/0/navn",
+            "extraction_method": "signalpost.public_names.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "eddd71d3ce06f14caa31fb67ccf85fe23090c5f547c5a20ce17503b7fff6fa6f",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=983803075&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:06:54.761421Z",
+            "content_sha256": "01239d19797c3db127ae14ca2f2acb32d4240d3e55743bbe3f54bfecf1731f42",
+            "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/986640495\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/983803075\"}},\"beliggenhetsadresse\":{\"adresse\":[\"Nedre Vollgate 3\"],\"kommune\":\"OSLO\",\"kommunenummer\":\"0301\",\"land\":\"Norge\",\"land",
+            "locator": "/_embedded/underenheter/0",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "0b8090f35be0d75033a2ab481f4a8fb37a58b2947cf03f113e176db3bdd47033",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:06:51.741328Z",
+            "content_sha256": "680d76d98bd52ec4384bd2e210d633d049c81cd91683dfc2b0c9aaa3ae595b9e",
+            "claim_span": "983803075,MELTWATER NEWS AS,AS,Aksjeselskap,63.920,Andre informasjonstjenester,62.100,Dataprogrammeringstjenester,,,,,true,,2026-09-14,2026-09-10,www.meltwater.com,martin.hansen@meltwater.com,21 42 04 00,93247538,,,,,,,,Nedre Vollgate 3,OSLO,0158,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,20",
+            "locator": "row:983803075/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:aef414072567eda80df4802df2d6054f07c8f9749dbc4bfacd1c09906a2fb8d9",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "orgnr": "983089887",
+        "legal_name": "MELDAL MILJØANLEGG AS",
+        "kind": "brand",
+        "identity": "MELDAL MILJØANLEGG AS AVD MELHUS",
+        "field": "brand.registered_subunit.d9eca77a11737a2893bc",
+        "value": {
+          "name": "MELDAL MILJØANLEGG AS AVD MELHUS",
+          "origin": "registered_subunit",
+          "subunit_orgnr": "826316802"
+        },
+        "evidence": [
+          {
+            "id": "038bedc327b7e671a30ff8d63ad6decadff50009f7e38344ed2d5c78afa9834b",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=983089887&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:06:55.194826Z",
+            "content_sha256": "1be3fe017075ebc167fda14af4ca10460b07c1658e0a2aee5c6d3e9c308f14f2",
+            "claim_span": "manent lagring av avfall\",\"kode\":\"38.320\"},\"navn\":\"MELDAL MILJØANLEGG AS AVD MELHUS\",\"oppstartsdato\":\"2021-01-01\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR\"}},\"beskrivelse\":\"Underenhet til næringsdrivende og offentlig forvaltni",
+            "locator": "/_embedded/underenheter/1/navn",
+            "extraction_method": "signalpost.public_names.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "e62aeef6b89005940bc6221737c8b24a2f95cb9ceb87f52350e68a45a7ca0a6b",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=983089887&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:06:55.194826Z",
+            "content_sha256": "1be3fe017075ebc167fda14af4ca10460b07c1658e0a2aee5c6d3e9c308f14f2",
+            "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/826316802\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/983089887\"}},\"beliggenhetsadresse\":{\"adresse\":[\"Hofstadvegen 98\"],\"kommune\":\"MELHUS\",\"kommunenummer\":\"5028\",\"land\":\"Norge\",\"lan",
+            "locator": "/_embedded/underenheter/1",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "341ebb8d7cffaae2e40231ec337d01108efd9d80b1b506a6462ddfb8e363f66b",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:06:51.740327Z",
+            "content_sha256": "f7767a3d5c7c1d0e28d4b445d77fe67a83b0b4b4832da8d8e744ae451ab9ee9b",
+            "claim_span": "983089887,MELDAL MILJØANLEGG AS,AS,Aksjeselskap,38.320,Drift av deponi og permanent lagring av avfall,,,,,,,false,,,,,,72 48 37 00,476 07 215,Postboks 94,ORKANGER,7301,ORKLAND,5059,Norge,NO,,MELDAL,7336,ORKLAND,5059,Norge,NO,1520,Kommunalt eide aksjeselskaper mv.,2025,2001-03-09,2001-01-22,true,2001",
+            "locator": "row:983089887/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:aef414072567eda80df4802df2d6054f07c8f9749dbc4bfacd1c09906a2fb8d9",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "orgnr": "983089887",
+        "legal_name": "MELDAL MILJØANLEGG AS",
+        "kind": "brand",
+        "identity": "MELDAL MILJØANLEGG AS AVD MELDAL",
+        "field": "brand.registered_subunit.0a2d2797a3d52215fa8e",
+        "value": {
+          "name": "MELDAL MILJØANLEGG AS AVD MELDAL",
+          "origin": "registered_subunit",
+          "subunit_orgnr": "983105378"
+        },
+        "evidence": [
+          {
+            "id": "5daf5b34e512905189fddc4d189695f51ec2c4e0b51af09ba0dfb33b966484e6",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=983089887&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:06:55.194826Z",
+            "content_sha256": "1be3fe017075ebc167fda14af4ca10460b07c1658e0a2aee5c6d3e9c308f14f2",
+            "claim_span": "manent lagring av avfall\",\"kode\":\"38.320\"},\"navn\":\"MELDAL MILJØANLEGG AS AVD MELDAL\",\"oppstartsdato\":\"2001-01-22\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR\"}},\"beskrivelse\":\"Underenhet til næringsdrivende og offentlig forvaltni",
+            "locator": "/_embedded/underenheter/0/navn",
+            "extraction_method": "signalpost.public_names.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "ffc7e4ebede5ab88cb3786ab92b72f454c1db824569d44d57fbd60a4346b3ca5",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=983089887&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:06:55.194826Z",
+            "content_sha256": "1be3fe017075ebc167fda14af4ca10460b07c1658e0a2aee5c6d3e9c308f14f2",
+            "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/983105378\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/983089887\"}},\"beliggenhetsadresse\":{\"adresse\":[],\"kommune\":\"ORKLAND\",\"kommunenummer\":\"5059\",\"land\":\"Norge\",\"landkode\":\"NO\",\"pos",
+            "locator": "/_embedded/underenheter/0",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "341ebb8d7cffaae2e40231ec337d01108efd9d80b1b506a6462ddfb8e363f66b",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:06:51.740327Z",
+            "content_sha256": "f7767a3d5c7c1d0e28d4b445d77fe67a83b0b4b4832da8d8e744ae451ab9ee9b",
+            "claim_span": "983089887,MELDAL MILJØANLEGG AS,AS,Aksjeselskap,38.320,Drift av deponi og permanent lagring av avfall,,,,,,,false,,,,,,72 48 37 00,476 07 215,Postboks 94,ORKANGER,7301,ORKLAND,5059,Norge,NO,,MELDAL,7336,ORKLAND,5059,Norge,NO,1520,Kommunalt eide aksjeselskaper mv.,2025,2001-03-09,2001-01-22,true,2001",
+            "locator": "row:983089887/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:aef414072567eda80df4802df2d6054f07c8f9749dbc4bfacd1c09906a2fb8d9",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "orgnr": "815714512",
+        "legal_name": "CARDINOR AS",
+        "kind": "brand",
+        "identity": "CARDINOR AS AVD OSLO",
+        "field": "brand.registered_subunit.c07b986ef9bb846024f6",
+        "value": {
+          "name": "CARDINOR AS AVD OSLO",
+          "origin": "registered_subunit",
+          "subunit_orgnr": "915735088"
+        },
+        "evidence": [
+          {
+            "id": "76b3423b3941af5169897c008418e3d775a9079c07f1ae04ffd312c54b19ed3d",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=815714512&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:06:53.837240Z",
+            "content_sha256": "8ad5dde749c761dfb079509b6e6fdce1fcd03d58d46783e71d50e9a8aa0a5b71",
+            "claim_span": "nisk konsulentvirksomhet\",\"kode\":\"71.129\"},\"navn\":\"CARDINOR AS AVD OSLO\",\"oppstartsdato\":\"2015-06-25\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR\"}},\"beskrivelse\":\"Underenhet til næringsdrivende og offentlig forvaltning\",\"kode\":\"",
+            "locator": "/_embedded/underenheter/1/navn",
+            "extraction_method": "signalpost.public_names.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "9a19c68b64c75283c62fed73a583986808081c046ac5b9335ca2babcd755d8db",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=815714512&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:06:53.837240Z",
+            "content_sha256": "8ad5dde749c761dfb079509b6e6fdce1fcd03d58d46783e71d50e9a8aa0a5b71",
+            "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/915735088\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/815714512\"}},\"antallAnsatte\":5,\"beliggenhetsadresse\":{\"adresse\":[\"Lørenveien 73A\"],\"kommune\":\"OSLO\",\"kommunenummer\":\"0301\",\"lan",
+            "locator": "/_embedded/underenheter/1",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "a689f42d52f52e8796f224858c174be1d677372a792db0103abd708a75c08526",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:06:51.697407Z",
+            "content_sha256": "e0ae7ec1d619a31685246dfbdb0fe45eec2d71077671b608c4a715eea9c64c8b",
+            "claim_span": "815714512,CARDINOR AS,AS,Aksjeselskap,71.129,Annen teknisk konsulentvirksomhet,72.100,Forskning og eksperimentell utvikling innenfor naturvitenskap og teknikk,,,,,true,,2026-03-12,2026-03-10,www.cardinor.com,,,,,,,,,,,Lørenveien 73A,OSLO,0585,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2",
+            "locator": "row:815714512/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:aef414072567eda80df4802df2d6054f07c8f9749dbc4bfacd1c09906a2fb8d9",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "orgnr": "930453692",
+        "legal_name": "SKIERS LODGE HEMSEDAL AS",
+        "kind": "brand",
+        "identity": "HEMSEDAL CAFE SKIERSLODGE",
+        "field": "brand.registered_subunit.e8bf0321331d4d1188db",
+        "value": {
+          "name": "HEMSEDAL CAFE SKIERSLODGE",
+          "origin": "registered_subunit",
+          "subunit_orgnr": "972758175"
+        },
+        "evidence": [
+          {
+            "id": "b87496ab565cd44b5d27216b09e0f096cbbebf7924f312ee6ba3671229d5584a",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=930453692&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:06:54.282613Z",
+            "content_sha256": "b3bddc936d9b62fb5d88fd22c3586361540d78a2e418050804e4ae54b7e6b57b",
+            "claim_span": "hjem og ferieleiligheter\",\"kode\":\"55.200\"},\"navn\":\"HEMSEDAL CAFE SKIERSLODGE\",\"oppstartsdato\":\"1989-01-01\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR\"}},\"beskrivelse\":\"Underenhet til næringsdrivende og offentlig forvaltning\",\"ko",
+            "locator": "/_embedded/underenheter/0/navn",
+            "extraction_method": "signalpost.public_names.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "9a27f7ad453f8ed332633cb374323bf43bd9b89149e17acdc2f954455991bd71",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=930453692&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:06:54.282613Z",
+            "content_sha256": "b3bddc936d9b62fb5d88fd22c3586361540d78a2e418050804e4ae54b7e6b57b",
+            "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/972758175\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/930453692\"}},\"antallAnsatte\":12,\"beliggenhetsadresse\":{\"adresse\":[\"Hemsedalsvegen 2949\"],\"kommune\":\"HEMSEDAL\",\"kommunenummer\":\"",
+            "locator": "/_embedded/underenheter/0",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "0fccd94fa6ba9f71e4e21e0c2dcd92cd45bc8f0865a956126ee049a7c9176c5a",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:06:51.720994Z",
+            "content_sha256": "6205e2f7f95ded105e9fcc1750ebcdaed0c96f7fa17d6cfaa47aaf8fb7fc88d2",
+            "claim_span": "930453692,SKIERS LODGE HEMSEDAL AS,AS,Aksjeselskap,56.110,Drift av restauranter,55.200,Drift av vandrerhjem og ferieleiligheter,,,,,true,13,2026-09-14,2026-09-10,,,,,Postboks 104,HEMSEDAL,3561,HEMSEDAL,3326,Norge,NO,Hemsedalsvegen 2949,HEMSEDAL,3560,HEMSEDAL,3326,Norge,NO,2100,Private aksjeselskaper",
+            "locator": "row:930453692/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:aef414072567eda80df4802df2d6054f07c8f9749dbc4bfacd1c09906a2fb8d9",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "orgnr": "815714512",
+        "legal_name": "CARDINOR AS",
+        "kind": "brand",
+        "identity": "CARDINOR AS AVD BODØ",
+        "field": "brand.registered_subunit.605c2c33d3e857e9f178",
+        "value": {
+          "name": "CARDINOR AS AVD BODØ",
+          "origin": "registered_subunit",
+          "subunit_orgnr": "927804751"
+        },
+        "evidence": [
+          {
+            "id": "b1a685cbf813c9b06bcaa4f993e8340c5cf74fabb300a1b47b1cbd9689233a61",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=815714512&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:06:53.837240Z",
+            "content_sha256": "8ad5dde749c761dfb079509b6e6fdce1fcd03d58d46783e71d50e9a8aa0a5b71",
+            "claim_span": "aturvitenskap og teknikk\",\"kode\":\"72.100\"},\"navn\":\"CARDINOR AS AVD BODØ\",\"oppstartsdato\":\"2019-01-01\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR\"}},\"beskrivelse\":\"Underenhet til næringsdrivende og offentlig forvaltning\",\"kode\":\"",
+            "locator": "/_embedded/underenheter/0/navn",
+            "extraction_method": "signalpost.public_names.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "2de66fdf5a71669c9e4328d5f542f1ea3e78d51151c65fb7d344165ed0e77493",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=815714512&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:06:53.837240Z",
+            "content_sha256": "8ad5dde749c761dfb079509b6e6fdce1fcd03d58d46783e71d50e9a8aa0a5b71",
+            "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/927804751\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/815714512\"}},\"beliggenhetsadresse\":{\"adresse\":[\"Styrhuset\",\"Mørkvedbukta 30\"],\"kommune\":\"BODØ\",\"kommunenummer\":\"1804\",\"land\":\"N",
+            "locator": "/_embedded/underenheter/0",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "a689f42d52f52e8796f224858c174be1d677372a792db0103abd708a75c08526",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:06:51.697407Z",
+            "content_sha256": "e0ae7ec1d619a31685246dfbdb0fe45eec2d71077671b608c4a715eea9c64c8b",
+            "claim_span": "815714512,CARDINOR AS,AS,Aksjeselskap,71.129,Annen teknisk konsulentvirksomhet,72.100,Forskning og eksperimentell utvikling innenfor naturvitenskap og teknikk,,,,,true,,2026-03-12,2026-03-10,www.cardinor.com,,,,,,,,,,,Lørenveien 73A,OSLO,0585,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2",
+            "locator": "row:815714512/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:aef414072567eda80df4802df2d6054f07c8f9749dbc4bfacd1c09906a2fb8d9",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      }
+    ],
+    "removed": [
+      {
+        "orgnr": "925700398",
+        "legal_name": "AURSJOKRAFT AS",
+        "kind": "website",
+        "identity": "https://aursjokraft.no",
+        "field": "official_website",
+        "value": {
+          "final_url": "https://aursjokraft.no",
+          "identity_level": "VERIFIED",
+          "proof_type": "orgnr_on_page",
+          "proof_page_url": "https://aursjokraft.no/",
+          "signals": [],
+          "points": 0,
+          "candidate_origin": "legal_name_slug",
+          "relationship_note": null,
+          "other_orgnrs": []
+        },
+        "evidence": [
+          {
+            "id": "12d8cbbf070926e755b531ce2b641d88685eba25d42de3eddb2b802750b713a4",
+            "source_url": "https://aursjokraft.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-14T05:38:03.366142Z",
+            "content_sha256": "c938f985412301776c48cc242184538e2cbd14f8402a76925b30d2c6361cd193",
+            "claim_span": "o/enhet/sok/detalj.jsp?orgnr=925700398\">925 700 398</a></p>\n                                    </div>\n                                               ",
+            "locator": "identity-proof:925700398",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      }
+    ]
+  },
+  "envelopes_sha256": "f77e1332bc33494195dcbe47508b0661b495940d970b649194ad46e9321b3d71",
+  "profiles_sha256": "d3cd0091633bf48b20dddbae2f66d4b7b29e0d2c02994ab7f43b40343aae2c70"
+}

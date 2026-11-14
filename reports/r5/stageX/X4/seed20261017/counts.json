@@ -1,0 +1,536 @@
+{
+  "stage": "X4",
+  "seed": 20261017,
+  "before": {
+    "websites": 5,
+    "declared_homepage_recall": 4,
+    "declared_homepages": 11,
+    "social_companies": 3,
+    "social_claims": 8,
+    "activity_companies": 100,
+    "activity_claims": 1398,
+    "brand_companies": 0,
+    "brand_claims": 0,
+    "role_change_claims": 232,
+    "facts": 13540,
+    "families": {
+      "identity": 2941,
+      "subunits": 847,
+      "roles": 1260,
+      "accounts": 7045,
+      "gleif": 19,
+      "activity": 1398,
+      "website": 30
+    }
+  },
+  "after": {
+    "websites": 6,
+    "declared_homepage_recall": 4,
+    "declared_homepages": 11,
+    "social_companies": 3,
+    "social_claims": 8,
+    "activity_companies": 100,
+    "activity_claims": 1398,
+    "brand_companies": 6,
+    "brand_claims": 8,
+    "role_change_claims": 232,
+    "facts": 13552,
+    "families": {
+      "identity": 2941,
+      "subunits": 851,
+      "roles": 1260,
+      "accounts": 7045,
+      "gleif": 19,
+      "activity": 1398,
+      "website": 38
+    }
+  },
+  "HTTP": 703,
+  "runtime_seconds": 400.01599999997416,
+  "CLI_runtime_seconds": 374.5779999999795,
+  "cost_usd": 0.0,
+  "site": {
+    "state": "available",
+    "companies": 100,
+    "input_records": 100,
+    "pages": 102,
+    "skipped_invalid_identifiers": 0,
+    "total_bytes": 37791799,
+    "largest_profile_data_bytes": 605224,
+    "largest_profile_bytes": 241093
+  },
+  "changes": {
+    "added": [
+      {
+        "orgnr": "926818317",
+        "legal_name": "SPEDIFY AS",
+        "kind": "brand",
+        "identity": "SPEDIFY AS AVD ASKIM",
+        "field": "brand.registered_subunit.16c6d47403c9547a144c",
+        "value": {
+          "name": "SPEDIFY AS AVD ASKIM",
+          "origin": "registered_subunit",
+          "subunit_orgnr": "926935321"
+        },
+        "evidence": [
+          {
+            "id": "8aebe3f74169128348a3a72b29159c6952fd4288c98c209a75809f8a54e15856",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=926818317&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T06:25:25.674200Z",
+            "content_sha256": "d9ee0c38214db740a25d52294c0242e28fc2f35b928d5f7aa410f6fd366bf482",
+            "claim_span": ":{\"beskrivelse\":\"Lagring\",\"kode\":\"52.100\"},\"navn\":\"SPEDIFY AS AVD ASKIM\",\"oppstartsdato\":\"2021-04-01\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR\"}},\"beskrivelse\":\"Underenhet til næringsdrivende og offentlig forvaltning\",\"kode\":\"",
+            "locator": "/_embedded/underenheter/0/navn",
+            "extraction_method": "signalpost.public_names.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "0145da71fa27d41b8b985dff4822d8dc193c755a21d412872c99b7c220a74d53",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=926818317&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T06:25:25.674200Z",
+            "content_sha256": "d9ee0c38214db740a25d52294c0242e28fc2f35b928d5f7aa410f6fd366bf482",
+            "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/926935321\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/926818317\"}},\"antallAnsatte\":76,\"beliggenhetsadresse\":{\"adresse\":[\"Sagveien 25\"],\"kommune\":\"INDRE ØSTFOLD\",\"kommunenummer\":\"311",
+            "locator": "/_embedded/underenheter/0",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "845bdfe95e1e0129e44d6a7f282fef53965fa39f3781764b53d8a74931d8c566",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T06:25:23.356362Z",
+            "content_sha256": "6a296a4898f7a215fafd9a94433c851034b6ef5af9d8692449ec89b7b210f04e",
+            "claim_span": "926818317,SPEDIFY AS,AS,Aksjeselskap,52.100,Lagring,,,,,,,true,77,2026-09-14,2026-09-10,,,,,,,,,,,,\"c/o AssistCo AS\nSvaddevegen 125\",RJUKAN,3660,TINN,4026,Norge,NO,2100,Private aksjeselskaper mv.,2025,2021-03-23,2021-02-27,true,2024-03-22,2024-04-22,,,false,,true,2021-03-23,false,false,,false,,false",
+            "locator": "row:926818317/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:bd244f0fe6ad92bfcadcbce9ba545863c0ca0afa8b9b5b4c5e3425830a63186d",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "orgnr": "934843355",
+        "legal_name": "AS WDM THRANESGT 8",
+        "kind": "brand",
+        "identity": "AS WDM THRANESGT 8 V/H R ADV ODD SEIM-HAUGEN",
+        "field": "brand.registered_subunit.aa0ba7b5c0db507fb62d",
+        "value": {
+          "name": "AS WDM THRANESGT 8 V/H R ADV ODD SEIM-HAUGEN",
+          "origin": "registered_subunit",
+          "subunit_orgnr": "973619632"
+        },
+        "evidence": [
+          {
+            "id": "e3e8e41051a07257d949dcfeea1d7314da56669b6ba2591cfc012322878f5619",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=934843355&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T06:25:27.078085Z",
+            "content_sha256": "84f12ff66ceddcda4a0e217d0ce2d5c9914bcf6a24593b79ed3c14ce3da81b4e",
+            "claim_span": "rettslag og boligsameier\",\"kode\":\"97.001\"},\"navn\":\"AS WDM THRANESGT 8 V/H R ADV ODD SEIM-HAUGEN\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR\"}},\"beskrivelse\":\"Underenhet til næringsdrivende og offentlig forvaltning\",\"kode\":\"BEDR\"",
+            "locator": "/_embedded/underenheter/0/navn",
+            "extraction_method": "signalpost.public_names.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "98c77cf29bc787744c195dc07a01ac55f5422b388b6078c5414ec4ad1846232a",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=934843355&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T06:25:27.078085Z",
+            "content_sha256": "84f12ff66ceddcda4a0e217d0ce2d5c9914bcf6a24593b79ed3c14ce3da81b4e",
+            "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/973619632\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/934843355\"}},\"beliggenhetsadresse\":{\"adresse\":[\"v/OBOS Eiendomsforvaltning AS\",\"Hammersborg torg 1\"],\"kommune\":\"OSLO\",\"kommunen",
+            "locator": "/_embedded/underenheter/0",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "8dfa61cbc5510d60becef05f97ae17b663247d7f4275a9b679318ff8240f58f4",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T06:25:23.388700Z",
+            "content_sha256": "24dd1154534f909d0796f4d10e14ec33e5ef8c35704ffe851926d848dc974713",
+            "claim_span": "934843355,AS WDM THRANESGT 8,AS,Aksjeselskap,97.001,Aktiviteter i borettslag og boligsameier,,,,,,,false,,,,,wdmthranesgt8@styrerommet.no,,,\"v/OBOS Eiendomsforvaltning AS\nPostboks 6666 St. Olavs plass\",OSLO,0129,OSLO,0301,Norge,NO,\"v/OBOS Eiendomsforvaltning AS\nHammersborg torg 1\",OSLO,0179,OSLO,030",
+            "locator": "row:934843355/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:bd244f0fe6ad92bfcadcbce9ba545863c0ca0afa8b9b5b4c5e3425830a63186d",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "orgnr": "926818317",
+        "legal_name": "SPEDIFY AS",
+        "kind": "brand",
+        "identity": "SPEDIFY AS AVD RJUKAN",
+        "field": "brand.registered_subunit.5b6083162f53a3964486",
+        "value": {
+          "name": "SPEDIFY AS AVD RJUKAN",
+          "origin": "registered_subunit",
+          "subunit_orgnr": "936603564"
+        },
+        "evidence": [
+          {
+            "id": "d1caa0cd25833b7d76ad046f23ff9f2bda00bbee10360af5e7b2a17604554949",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=926818317&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T06:25:25.674200Z",
+            "content_sha256": "d9ee0c38214db740a25d52294c0242e28fc2f35b928d5f7aa410f6fd366bf482",
+            "claim_span": ":{\"beskrivelse\":\"Lagring\",\"kode\":\"52.100\"},\"navn\":\"SPEDIFY AS AVD RJUKAN\",\"oppstartsdato\":\"2025-11-01\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR\"}},\"beskrivelse\":\"Underenhet til næringsdrivende og offentlig forvaltning\",\"kode\":",
+            "locator": "/_embedded/underenheter/1/navn",
+            "extraction_method": "signalpost.public_names.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "f2e3f72b21425e663a91b8ee44721ba9cd99564715264379f40bdcff88d074ef",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=926818317&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T06:25:25.674200Z",
+            "content_sha256": "d9ee0c38214db740a25d52294c0242e28fc2f35b928d5f7aa410f6fd366bf482",
+            "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/936603564\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/926818317\"}},\"beliggenhetsadresse\":{\"adresse\":[\"Svaddevegen 125\"],\"kommune\":\"TINN\",\"kommunenummer\":\"4026\",\"land\":\"Norge\",\"landk",
+            "locator": "/_embedded/underenheter/1",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "845bdfe95e1e0129e44d6a7f282fef53965fa39f3781764b53d8a74931d8c566",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T06:25:23.356362Z",
+            "content_sha256": "6a296a4898f7a215fafd9a94433c851034b6ef5af9d8692449ec89b7b210f04e",
+            "claim_span": "926818317,SPEDIFY AS,AS,Aksjeselskap,52.100,Lagring,,,,,,,true,77,2026-09-14,2026-09-10,,,,,,,,,,,,\"c/o AssistCo AS\nSvaddevegen 125\",RJUKAN,3660,TINN,4026,Norge,NO,2100,Private aksjeselskaper mv.,2025,2021-03-23,2021-02-27,true,2024-03-22,2024-04-22,,,false,,true,2021-03-23,false,false,,false,,false",
+            "locator": "row:926818317/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:bd244f0fe6ad92bfcadcbce9ba545863c0ca0afa8b9b5b4c5e3425830a63186d",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "orgnr": "998340888",
+        "legal_name": "NAPOLITANA AS",
+        "kind": "brand",
+        "identity": "Napolitana Restaurant",
+        "field": "public_brand",
+        "value": "Napolitana Restaurant",
+        "evidence": [
+          {
+            "id": "3106f575a6c4c4859c4d8be8eb9e2aa4d007f3338edd72d04f8b312b28f2d6fa",
+            "source_url": "https://napolitana.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-14T06:29:11.015865Z",
+            "content_sha256": "ec86b13980a11c8171d6eeaffcbbc4ba6a446d1b17de23acfe9d8f74cb8f294a",
+            "claim_span": "=\"theme-color\" content=\"#9b3c2d\"><title>Napolitana Restaurant | Pizza, Kebab &amp; Grill i Saksvik</title><meta name=\"description\" content=\"Napolitana Restaurant i Saksvik serverer autentisk pizza, kebab, pasta og grillretter siden 2006. Bestill på 73 97 13 00. Åpent man-lør 14-23, søn 13-23. Malvik",
+            "locator": "publisher-public-name",
+            "extraction_method": "signalpost.public_names.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "da9a671a8b8ddb0c8a9a00bf164c12cda6af92bc9cec9b14da5487690021ce3d",
+            "source_url": "https://napolitana.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-14T06:29:11.015865Z",
+            "content_sha256": "ec86b13980a11c8171d6eeaffcbbc4ba6a446d1b17de23acfe9d8f74cb8f294a",
+            "claim_span": "]/60\"><p>© 2026 Napolitana AS • Org.nr: 998 340 888</p><p>Laget med 🍕 og ☕ i Saksvik av <a href=\"https://digital1.no\" target=\"_blank\" rel=\"noopener no",
+            "locator": "identity-proof:998340888",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "05c08b9efc9d5abadabf6ace2d6a43294d89f8818fbe214972e2ffacf7f21476",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T06:25:23.413728Z",
+            "content_sha256": "5ee548e1df1dbe925b8344534008377d51d1137f4f845c7f521e844e1e900f51",
+            "claim_span": "998340888,NAPOLITANA AS,AS,Aksjeselskap,56.110,Drift av restauranter,,,,,,,true,7,2026-06-13,2026-06-10,,,,,,,,,,,,Malvikvegen 88,SAKSVIK,7562,MALVIK,5031,Norge,NO,2100,Private aksjeselskaper mv.,2025,2012-05-07,2012-03-16,true,2012-01-01,2012-10-24,,,false,,true,2012-05-07,false,false,,false,,false",
+            "locator": "row:998340888/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:bd244f0fe6ad92bfcadcbce9ba545863c0ca0afa8b9b5b4c5e3425830a63186d",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "orgnr": "926818317",
+        "legal_name": "SPEDIFY AS",
+        "kind": "brand",
+        "identity": "Spedify",
+        "field": "public_brand",
+        "value": "Spedify",
+        "evidence": [
+          {
+            "id": "9152eb89e3ecbf34dd52d8a62481c7ff59d63cbd48ce88e67a360e47ba96fb66",
+            "source_url": "https://spedify.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-14T06:26:39.110758Z",
+            "content_sha256": "52ab413b475db6341975f9892d087395e9ac54286f4b9a571b53edd30a2b25e2",
+            "claim_span": ", fulfillment og lager for nettbutikk | Spedify</title>\n    <link rel=\"icon\" type=\"image/png\" sizes=\"64x64\" href=\"https://spedify.no/hubfs/raw_assets/public/Spedify-Theme-2024/images/favicon.png\">\n    <link rel=\"icon\" type=\"image/png\" sizes=\"256x256\" href=\"https://spedify.no/hubfs/raw_assets/public/",
+            "locator": "publisher-public-name",
+            "extraction_method": "signalpost.public_names.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "4f9e3c2c0100ea4c947342055839969dbeeaeb69303016b3357803eec53cce96",
+            "source_url": "https://spedify.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-14T06:26:39.110758Z",
+            "content_sha256": "52ab413b475db6341975f9892d087395e9ac54286f4b9a571b53edd30a2b25e2",
+            "claim_span": " footer-item\" role=\"none\"><span>Org.nr. 926 818 317</span></li>\n        </ul>\n        <div class=\"footer-social\" aria-label=\"Spedify i sosiale medier\"",
+            "locator": "identity-proof:926818317",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "845bdfe95e1e0129e44d6a7f282fef53965fa39f3781764b53d8a74931d8c566",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T06:25:23.356362Z",
+            "content_sha256": "6a296a4898f7a215fafd9a94433c851034b6ef5af9d8692449ec89b7b210f04e",
+            "claim_span": "926818317,SPEDIFY AS,AS,Aksjeselskap,52.100,Lagring,,,,,,,true,77,2026-09-14,2026-09-10,,,,,,,,,,,,\"c/o AssistCo AS\nSvaddevegen 125\",RJUKAN,3660,TINN,4026,Norge,NO,2100,Private aksjeselskaper mv.,2025,2021-03-23,2021-02-27,true,2024-03-22,2024-04-22,,,false,,true,2021-03-23,false,false,,false,,false",
+            "locator": "row:926818317/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:bd244f0fe6ad92bfcadcbce9ba545863c0ca0afa8b9b5b4c5e3425830a63186d",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "orgnr": "991853995",
+        "legal_name": "BIEN SPAREBANK ASA",
+        "kind": "brand",
+        "identity": "Bien Sparebank",
+        "field": "public_brand",
+        "value": "Bien Sparebank",
+        "evidence": [
+          {
+            "id": "f769ccd1bb1238215ee09cae1f1819326d77aec94f41d45657b0419aa9e57e1d",
+            "source_url": "https://www.bien.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-14T06:28:08.035403Z",
+            "content_sha256": "0d0ae1d5dfadcd7a4bb69f55dffa5c2a5fe02eb14aaba4986f46cc5c67cd7a8d",
+            "claim_span": "ml lang=\"nb-NO\" >\n\n<head>\n    \n\n\n<title>Bien Sparebank</title>\n\n<meta charset=\"utf-8\">\n<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<meta name=\"description\" content=\"Bien Sparebank\">\n<!--Meta open graph rendering-->\n    ",
+            "locator": "publisher-public-name",
+            "extraction_method": "signalpost.public_names.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "9043f67365662cecd799053f4b5b23580ea320d002ffa0349f309b09f93c0fdd",
+            "source_url": "https://www.bien.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-14T06:28:08.035403Z",
+            "content_sha256": "0d0ae1d5dfadcd7a4bb69f55dffa5c2a5fe02eb14aaba4986f46cc5c67cd7a8d",
+            "claim_span": " <div class=\"footer-list__text\">Org.nr: 991853995</div>\n                            </li>\n                                                    <li clas",
+            "locator": "identity-proof:991853995",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "b26e64b43b1aa49f8b5c0be3bbaa646bb7e0f23010436a9ff017cc6d53aba8ec",
+            "source_url": "https://www.bien.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-14T06:28:08.035403Z",
+            "content_sha256": "0d0ae1d5dfadcd7a4bb69f55dffa5c2a5fe02eb14aaba4986f46cc5c67cd7a8d",
+            "claim_span": "<a class=\"sgw-link sgw-button-common link button--link button--size-standard\" href=\"mailto:post@bien.no\" data-track-id=\"sitecore-footer\" data-track-linkname=\"postbienno\">",
+            "locator": "registry-contact:email_domain",
+            "extraction_method": "signalpost.registry_contact.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "cb45d2ca4a3932618caeed57402877aaaa1044164c7af94316371e8f28c144d3",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T06:25:23.405140Z",
+            "content_sha256": "ea02b2b6d59ff2248a7caa75e570734ffda7081217da0340e98e7a2736606061",
+            "claim_span": "dittforetak,,,,,,,true,45,2026-09-14,2026-09-10,www.bien.no,post@bien.no,,91502436,Postboks 6790 St Olavs Plass,OSLO,0130,OSLO,0301,Norge,NO,Dronning Mauds gate 11,OSLO,0250,OSLO,0301,Norge,NO,3200,Banker,2025,2007-11-08,2007-09-18,false,,,,,false,,true,2007-11-08,false,false,,false,,false,,false,,,",
+            "locator": "row:991853995/column:epostadresse",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:bd244f0fe6ad92bfcadcbce9ba545863c0ca0afa8b9b5b4c5e3425830a63186d",
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "155e2afbc464ff3cc4b17c4ee67e11237967ccaf06795eb6ad13682f46331091",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T06:25:23.405140Z",
+            "content_sha256": "ea02b2b6d59ff2248a7caa75e570734ffda7081217da0340e98e7a2736606061",
+            "claim_span": "991853995,BIEN SPAREBANK ASA,ASA,Allmennaksjeselskap,64.190,Banker og kredittforetak,,,,,,,true,45,2026-09-14,2026-09-10,www.bien.no,post@bien.no,,91502436,Postboks 6790 St Olavs Plass,OSLO,0130,OSLO,0301,Norge,NO,Dronning Mauds gate 11,OSLO,0250,OSLO,0301,Norge,NO,3200,Banker,2025,2007-11-08,2007-0",
+            "locator": "row:991853995/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:bd244f0fe6ad92bfcadcbce9ba545863c0ca0afa8b9b5b4c5e3425830a63186d",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "orgnr": "929603176",
+        "legal_name": "PAC BYGG AS",
+        "kind": "brand",
+        "identity": "PAC BYGG AS AVD FETSUND",
+        "field": "brand.registered_subunit.3f3c9779adc346dbe3f3",
+        "value": {
+          "name": "PAC BYGG AS AVD FETSUND",
+          "origin": "registered_subunit",
+          "subunit_orgnr": "920050670"
+        },
+        "evidence": [
+          {
+            "id": "fe931ec3bc0d2154d340400bc3b23156c059f0c92ce733fd4bc9b54b19d5f908",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=929603176&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T06:25:26.638925Z",
+            "content_sha256": "52dea210dcbe5073f59abca45f691b1d3834e0b13457a1713280915707ba6bf0",
+            "claim_span": ":\"Oppføring av bygninger\",\"kode\":\"41.000\"},\"navn\":\"PAC BYGG AS AVD FETSUND\",\"oppstartsdato\":\"2017-12-01\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR\"}},\"beskrivelse\":\"Underenhet til næringsdrivende og offentlig forvaltning\",\"kode",
+            "locator": "/_embedded/underenheter/1/navn",
+            "extraction_method": "signalpost.public_names.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "18ac571f3e3aeab59a625eda58d6434b5bce035a05752b78d21d9ac208e9192b",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=929603176&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T06:25:26.638925Z",
+            "content_sha256": "52dea210dcbe5073f59abca45f691b1d3834e0b13457a1713280915707ba6bf0",
+            "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/920050670\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/929603176\"}},\"beliggenhetsadresse\":{\"adresse\":[\"Garderbakken 24\"],\"kommune\":\"LILLESTRØM\",\"kommunenummer\":\"3205\",\"land\":\"Norge\",",
+            "locator": "/_embedded/underenheter/1",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "832b0193b0fb4161b1565faebb1b01dce968cfeb4acdc22d517c5958b9f48410",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T06:25:23.372454Z",
+            "content_sha256": "0f1f8eba96b1c9e3b7a4a917ca055688eabf9f5daa40835c2c220c40358e47cb",
+            "claim_span": "929603176,PAC BYGG AS,AS,Aksjeselskap,41.000,Oppføring av bygninger,,,,,,,true,18,2026-09-14,2026-09-10,,,,925 13 467,Vardepynten 31,SKEDSMOKORSET,2020,LILLESTRØM,3205,Norge,NO,Tordenskiolds gate 2,OSLO,0160,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2022-08-05,2022-07-13,true,2022-09-2",
+            "locator": "row:929603176/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:bd244f0fe6ad92bfcadcbce9ba545863c0ca0afa8b9b5b4c5e3425830a63186d",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "orgnr": "998340888",
+        "legal_name": "NAPOLITANA AS",
+        "kind": "website",
+        "identity": "https://napolitana.no",
+        "field": "official_website",
+        "value": {
+          "final_url": "https://napolitana.no",
+          "identity_level": "VERIFIED",
+          "proof_type": "orgnr_on_page",
+          "proof_page_url": "https://napolitana.no/",
+          "signals": [],
+          "points": 0,
+          "candidate_origin": "legal_name_slug",
+          "relationship_note": null,
+          "other_orgnrs": []
+        },
+        "evidence": [
+          {
+            "id": "da9a671a8b8ddb0c8a9a00bf164c12cda6af92bc9cec9b14da5487690021ce3d",
+            "source_url": "https://napolitana.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-14T06:29:11.015865Z",
+            "content_sha256": "ec86b13980a11c8171d6eeaffcbbc4ba6a446d1b17de23acfe9d8f74cb8f294a",
+            "claim_span": "]/60\"><p>© 2026 Napolitana AS • Org.nr: 998 340 888</p><p>Laget med 🍕 og ☕ i Saksvik av <a href=\"https://digital1.no\" target=\"_blank\" rel=\"noopener no",
+            "locator": "identity-proof:998340888",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "orgnr": "927094266",
+        "legal_name": "SPORTLET.NO AS",
+        "kind": "brand",
+        "identity": "Sportlet.no",
+        "field": "public_brand",
+        "value": "Sportlet.no",
+        "evidence": [
+          {
+            "id": "2868c4c534b3412623c10242cb7724143418c23b166456c6e8b129945e58b9d9",
+            "source_url": "https://www.sportlet.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-14T06:27:44.594223Z",
+            "content_sha256": "d55993cfc87baa09c9d9751ce3fd8bb5bf7b20d2f599b63db34cf5fd12961466",
+            "claim_span": "    <title>\n                            Sportlet.no - Alltid 30-60% rabatt på joggesko, løpesko, klær og treningsutstyr\n                    </title>\n                 \n        <style>\n            [x-cloak] {\n                display: none !important;\n            }\n        </style>\n        <style>\n    ",
+            "locator": "publisher-public-name",
+            "extraction_method": "signalpost.public_names.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "0c73de53a808ae354e5ef330c663091a417f072f5f6a3f2435ad6b8185c732ea",
+            "source_url": "https://www.sportlet.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-14T06:27:44.594223Z",
+            "content_sha256": "d55993cfc87baa09c9d9751ce3fd8bb5bf7b20d2f599b63db34cf5fd12961466",
+            "claim_span": "      <li class=\"no-list py-2\">Org. nr. 927 094 266</li>\n                                                    <li class=\"no-list py-2\"><i class=\"icon-p",
+            "locator": "identity-proof:927094266",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "62e4f9633a18501128ec5665637e218e556bfb33b26d77fbca5351e3a8934c54",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T06:25:23.364407Z",
+            "content_sha256": "2e05dc8c8ac0533725fa8b33bd6d3a527708c211ccdd407769fe5f33968ef5f7",
+            "claim_span": "927094266,SPORTLET.NO AS,AS,Aksjeselskap,47.710,Detaljhandel med klær,,,,,,,false,,,,sportlet.no,,,,,,,,,,,Holmsildgata 14,FOSNAVÅG,6090,HERØY,1515,Norge,NO,2100,Private aksjeselskaper mv.,2025,2021-05-10,2021-03-22,true,2021-07-01,2021-10-09,,,false,,true,2021-05-10,false,false,,false,,false,,false",
+            "locator": "row:927094266/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:bd244f0fe6ad92bfcadcbce9ba545863c0ca0afa8b9b5b4c5e3425830a63186d",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      }
+    ],
+    "removed": []
+  },
+  "envelopes_sha256": "c0b9590a7cd466763feff692f3dfc779ddb0ec202d1985e78e5a5d6060389087",
+  "profiles_sha256": "8bc448c01c57b8be691b3b94badfbeacaa08de44bee574c3fc128f58a2e9ee44"
+}

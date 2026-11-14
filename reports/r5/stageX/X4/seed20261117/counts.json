@@ -1,0 +1,1302 @@
+{
+  "stage": "X4",
+  "seed": 20261117,
+  "before": {
+    "websites": 8,
+    "declared_homepage_recall": 0,
+    "declared_homepages": 11,
+    "social_companies": 4,
+    "social_claims": 7,
+    "activity_companies": 100,
+    "activity_claims": 1248,
+    "brand_companies": 2,
+    "brand_claims": 2,
+    "role_change_claims": 172,
+    "facts": 14052,
+    "families": {
+      "identity": 3020,
+      "subunits": 1143,
+      "roles": 1062,
+      "accounts": 7505,
+      "website": 52,
+      "activity": 1248,
+      "gleif": 20,
+      "hiring": 2
+    }
+  },
+  "after": {
+    "websites": 8,
+    "declared_homepage_recall": 0,
+    "declared_homepages": 11,
+    "social_companies": 4,
+    "social_claims": 7,
+    "activity_companies": 100,
+    "activity_claims": 1248,
+    "brand_companies": 6,
+    "brand_claims": 24,
+    "role_change_claims": 172,
+    "facts": 14074,
+    "families": {
+      "identity": 3020,
+      "subunits": 1163,
+      "roles": 1062,
+      "accounts": 7505,
+      "website": 54,
+      "activity": 1248,
+      "gleif": 20,
+      "hiring": 2
+    }
+  },
+  "HTTP": 723,
+  "runtime_seconds": 362.5,
+  "CLI_runtime_seconds": 329.01600000000326,
+  "cost_usd": 0.0,
+  "site": {
+    "state": "available",
+    "companies": 100,
+    "input_records": 100,
+    "pages": 102,
+    "skipped_invalid_identifiers": 0,
+    "total_bytes": 38237218,
+    "largest_profile_data_bytes": 936733,
+    "largest_profile_bytes": 249152
+  },
+  "changes": {
+    "added": [
+      {
+        "orgnr": "914983169",
+        "legal_name": "GEIR-JONNY AS",
+        "kind": "brand",
+        "identity": "GEIR JONNY NOREKVÅL",
+        "field": "brand.registered_subunit.22c9cfb57859790cdfc0",
+        "value": {
+          "name": "GEIR JONNY NOREKVÅL",
+          "origin": "registered_subunit",
+          "subunit_orgnr": "973763326"
+        },
+        "evidence": [
+          {
+            "id": "7a981252bb68ad4ed5a6301858ca5d8a46e821261c601c222ffd09f905480de6",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=914983169&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:56.564567Z",
+            "content_sha256": "f3868125e76323c1f691a6d1bfc8183b79482641bcf20043e7244e6c02967f2f",
+            "claim_span": ":\"Oppføring av bygninger\",\"kode\":\"41.000\"},\"navn\":\"GEIR JONNY NOREKVÅL\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR\"}},\"beskrivelse\":\"Underenhet til næringsdrivende og offentlig forvaltning\",\"kode\":\"BEDR\"},\"organisasjonsnummer\":\"",
+            "locator": "/_embedded/underenheter/0/navn",
+            "extraction_method": "signalpost.public_names.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "bc48a70fa4463b88fd1493f5d50c076d505644b89eecbcf87fbb954d7a602423",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=914983169&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:56.564567Z",
+            "content_sha256": "f3868125e76323c1f691a6d1bfc8183b79482641bcf20043e7244e6c02967f2f",
+            "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/973763326\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/914983169\"}},\"beliggenhetsadresse\":{\"adresse\":[\"MØRKVE\"],\"kommune\":\"VOSS\",\"kommunenummer\":\"4621\",\"land\":\"Norge\",\"landkode\":\"NO\"",
+            "locator": "/_embedded/underenheter/0",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "445ef52aa9954f02e721f0f83d8e72b1f03c86257899af2203dfe178c297a52f",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:54.238478Z",
+            "content_sha256": "ba3958a68fa21f88b7c8b1625c6896fcc0c5d4dad402079575b6ad9dc52ed818",
+            "claim_span": "914983169,GEIR-JONNY AS,AS,Aksjeselskap,41.000,Oppføring av bygninger,,,,,,,true,,2015-06-06,2015-04-13,,geirjn@hotmail.com,,915 75 612,,,,,,,,Myrkdalsvegen 682,VOSSESTRAND,5713,VOSS,4621,Norge,NO,2100,Private aksjeselskaper mv.,2025,2015-02-20,2015-02-03,true,2015-01-01,2015-03-11,,,false,,true,201",
+            "locator": "row:914983169/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:eb6e3ca98ca658c77edca3a8558a03e3faaaa78c49a8c8baaf194abfc189fbec",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "orgnr": "948039958",
+        "legal_name": "VALAKER BAKERI OG KONDITORI AS",
+        "kind": "brand",
+        "identity": "VALAKER BAKERI OG KONDITORI AS AVD BRAUD DIGERNES",
+        "field": "brand.registered_subunit.a7df8b9c43f9445a7c32",
+        "value": {
+          "name": "VALAKER BAKERI OG KONDITORI AS AVD BRAUD DIGERNES",
+          "origin": "registered_subunit",
+          "subunit_orgnr": "925602906"
+        },
+        "evidence": [
+          {
+            "id": "576448c4a7bfa19983e40a4fb6f1b2b31e62072c6dd7fac3e8a03f0206463822",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:57.453323Z",
+            "content_sha256": "c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34",
+            "claim_span": "itorvarer og sukkervarer\",\"kode\":\"47.240\"},\"navn\":\"VALAKER BAKERI OG KONDITORI AS AVD BRAUD DIGERNES\",\"oppstartsdato\":\"2020-06-08\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR\"}},\"beskrivelse\":\"Underenhet til næringsdrivende og of",
+            "locator": "/_embedded/underenheter/1/navn",
+            "extraction_method": "signalpost.public_names.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "18205557da3d62c0d6af9729afe41f32d150c1677f8bc22cfb86308e935d397f",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:57.453323Z",
+            "content_sha256": "c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34",
+            "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/925602906\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/948039958\"}},\"antallAnsatte\":16,\"beliggenhetsadresse\":{\"adresse\":[\"Digernes næringsområde 9\"],\"kommune\":\"ÅLESUND\",\"kommunenumme",
+            "locator": "/_embedded/underenheter/1",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "1746c0a9f9ebb7f55717d3f79a3407b1049508597d8df7224ebe6773c4e6a79d",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:54.273829Z",
+            "content_sha256": "a6554e27e2618cd6f7e517d93b8c66b08a85a445ad7edb3108db533bd6689466",
+            "claim_span": "948039958,VALAKER BAKERI OG KONDITORI AS,AS,Aksjeselskap,10.710,Produksjon av brød og ferske konditorvarer,47.240,\"Detaljhandel med bakervarer, konditorvarer og sukkervarer\",,,,,true,166,2026-09-14,2026-09-10,,post@valaker.as,70 21 65 90,91595160,,,,,,,,Søvikvegen 31,SØVIK,6280,HARAM,1580,Norge,NO,2",
+            "locator": "row:948039958/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:eb6e3ca98ca658c77edca3a8558a03e3faaaa78c49a8c8baaf194abfc189fbec",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "orgnr": "915515940",
+        "legal_name": "LISELAKK AS",
+        "kind": "brand",
+        "identity": "LISELAKK AS BEAUTYBAR JEKTA",
+        "field": "brand.registered_subunit.fef54c530ba2954b3247",
+        "value": {
+          "name": "LISELAKK AS BEAUTYBAR JEKTA",
+          "origin": "registered_subunit",
+          "subunit_orgnr": "923872574"
+        },
+        "evidence": [
+          {
+            "id": "c56540e029f31cf71fff221a5002c5d0087d27ba93b0e8a13fae2779b021172a",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=915515940&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:56.568523Z",
+            "content_sha256": "fe57f4a96eaf0360f68c05fab1ea5e3242bd69e5e20df3eaf5feb6d4ad302c69",
+            "claim_span": "ivelse\":\"Skjønnhetspleie\",\"kode\":\"96.220\"},\"navn\":\"LISELAKK AS BEAUTYBAR JEKTA\",\"oppstartsdato\":\"2017-03-23\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR\"}},\"beskrivelse\":\"Underenhet til næringsdrivende og offentlig forvaltning\",\"",
+            "locator": "/_embedded/underenheter/1/navn",
+            "extraction_method": "signalpost.public_names.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "d55fd0f171d6ace5d07e0102d17b7a4309ecd6551e7b505c544d13a503e46751",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=915515940&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:56.568523Z",
+            "content_sha256": "fe57f4a96eaf0360f68c05fab1ea5e3242bd69e5e20df3eaf5feb6d4ad302c69",
+            "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/923872574\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/915515940\"}},\"beliggenhetsadresse\":{\"adresse\":[\"Karlsøyvegen 12\"],\"kommune\":\"TROMSØ\",\"kommunenummer\":\"5501\",\"land\":\"Norge\",\"lan",
+            "locator": "/_embedded/underenheter/1",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "1ebd5408006d16f047e8341cf523e242ab3f02de7da86d0af726db5d0d820bf1",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:54.239431Z",
+            "content_sha256": "2d91f8ad15fe8faf75a2933328b572c7a7fec75dab523df4f4ad7daf470172e1",
+            "claim_span": "915515940,LISELAKK AS,AS,Aksjeselskap,96.220,Skjønnhetspleie,,,,,,,true,17,2026-09-14,2026-09-10,,lise.foereland@gmail.com,,957 50 208,,,,,,,,Henrik Ibsens veg 18,TROMSØ,9007,TROMSØ,5501,Norge,NO,2100,Private aksjeselskaper mv.,2025,2015-06-17,2015-06-03,true,2015-09-01,2015-11-04,,,false,,true,2015",
+            "locator": "row:915515940/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:eb6e3ca98ca658c77edca3a8558a03e3faaaa78c49a8c8baaf194abfc189fbec",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "orgnr": "948039958",
+        "legal_name": "VALAKER BAKERI OG KONDITORI AS",
+        "kind": "brand",
+        "identity": "VALAKER BAKERI OG KONDITORI AS AVD BRAUD GJØSUND",
+        "field": "brand.registered_subunit.64858762bc8b25a990de",
+        "value": {
+          "name": "VALAKER BAKERI OG KONDITORI AS AVD BRAUD GJØSUND",
+          "origin": "registered_subunit",
+          "subunit_orgnr": "931719009"
+        },
+        "evidence": [
+          {
+            "id": "7880d990fc2c8693391f3a41f1af0483633459c7a35997c58f549f620637ca79",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:57.453323Z",
+            "content_sha256": "c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34",
+            "claim_span": "itorvarer og sukkervarer\",\"kode\":\"47.240\"},\"navn\":\"VALAKER BAKERI OG KONDITORI AS AVD BRAUD GJØSUND\",\"oppstartsdato\":\"2023-06-07\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR\"}},\"beskrivelse\":\"Underenhet til næringsdrivende og off",
+            "locator": "/_embedded/underenheter/2/navn",
+            "extraction_method": "signalpost.public_names.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "a6b3bddc1525efb719644e01ff6d3794f80e0edd36a81acf004c424e7c7858e0",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:57.453323Z",
+            "content_sha256": "c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34",
+            "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/931719009\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/948039958\"}},\"antallAnsatte\":9,\"beliggenhetsadresse\":{\"adresse\":[\"Valderøyvegen 1166\"],\"kommune\":\"GISKE\",\"kommunenummer\":\"1532\"",
+            "locator": "/_embedded/underenheter/2",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "1746c0a9f9ebb7f55717d3f79a3407b1049508597d8df7224ebe6773c4e6a79d",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:54.273829Z",
+            "content_sha256": "a6554e27e2618cd6f7e517d93b8c66b08a85a445ad7edb3108db533bd6689466",
+            "claim_span": "948039958,VALAKER BAKERI OG KONDITORI AS,AS,Aksjeselskap,10.710,Produksjon av brød og ferske konditorvarer,47.240,\"Detaljhandel med bakervarer, konditorvarer og sukkervarer\",,,,,true,166,2026-09-14,2026-09-10,,post@valaker.as,70 21 65 90,91595160,,,,,,,,Søvikvegen 31,SØVIK,6280,HARAM,1580,Norge,NO,2",
+            "locator": "row:948039958/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:eb6e3ca98ca658c77edca3a8558a03e3faaaa78c49a8c8baaf194abfc189fbec",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "orgnr": "948039958",
+        "legal_name": "VALAKER BAKERI OG KONDITORI AS",
+        "kind": "brand",
+        "identity": "VALAKER BAKERI OG KONDITORI AS AVD BRAUD MOLDE",
+        "field": "brand.registered_subunit.7de48a5cd80b5a899bbb",
+        "value": {
+          "name": "VALAKER BAKERI OG KONDITORI AS AVD BRAUD MOLDE",
+          "origin": "registered_subunit",
+          "subunit_orgnr": "931718967"
+        },
+        "evidence": [
+          {
+            "id": "dca990f9aa65d060cc06764c85fe06753a16c9f5fea7fa9af3e56207147c7a7a",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:57.453323Z",
+            "content_sha256": "c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34",
+            "claim_span": "itorvarer og sukkervarer\",\"kode\":\"47.240\"},\"navn\":\"VALAKER BAKERI OG KONDITORI AS AVD BRAUD MOLDE\",\"oppstartsdato\":\"2023-06-07\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR\"}},\"beskrivelse\":\"Underenhet til næringsdrivende og offen",
+            "locator": "/_embedded/underenheter/4/navn",
+            "extraction_method": "signalpost.public_names.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "90dc445ce29cf8288ae2877de2664eabe697b784131cf3050a4c6256ca310229",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:57.453323Z",
+            "content_sha256": "c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34",
+            "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/931718967\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/948039958\"}},\"antallAnsatte\":16,\"beliggenhetsadresse\":{\"adresse\":[\"Amfi Roseby\",\"Lingedalsvegen 6-10\"],\"kommune\":\"MOLDE\",\"kommu",
+            "locator": "/_embedded/underenheter/4",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "1746c0a9f9ebb7f55717d3f79a3407b1049508597d8df7224ebe6773c4e6a79d",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:54.273829Z",
+            "content_sha256": "a6554e27e2618cd6f7e517d93b8c66b08a85a445ad7edb3108db533bd6689466",
+            "claim_span": "948039958,VALAKER BAKERI OG KONDITORI AS,AS,Aksjeselskap,10.710,Produksjon av brød og ferske konditorvarer,47.240,\"Detaljhandel med bakervarer, konditorvarer og sukkervarer\",,,,,true,166,2026-09-14,2026-09-10,,post@valaker.as,70 21 65 90,91595160,,,,,,,,Søvikvegen 31,SØVIK,6280,HARAM,1580,Norge,NO,2",
+            "locator": "row:948039958/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:eb6e3ca98ca658c77edca3a8558a03e3faaaa78c49a8c8baaf194abfc189fbec",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "orgnr": "948039958",
+        "legal_name": "VALAKER BAKERI OG KONDITORI AS",
+        "kind": "brand",
+        "identity": "VALAKER BAKERI OG KONDITORI AS AVD BRAUD MOA",
+        "field": "brand.registered_subunit.e80552cefa0c1fe1df67",
+        "value": {
+          "name": "VALAKER BAKERI OG KONDITORI AS AVD BRAUD MOA",
+          "origin": "registered_subunit",
+          "subunit_orgnr": "987194286"
+        },
+        "evidence": [
+          {
+            "id": "12d2ae2927007415d55e983d4b3f7b17b50401b2f4df019a29109bce5d94bea1",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:57.453323Z",
+            "content_sha256": "c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34",
+            "claim_span": "itorvarer og sukkervarer\",\"kode\":\"47.240\"},\"navn\":\"VALAKER BAKERI OG KONDITORI AS AVD BRAUD MOA\",\"oppstartsdato\":\"2004-08-30\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR\"}},\"beskrivelse\":\"Underenhet til næringsdrivende og offentl",
+            "locator": "/_embedded/underenheter/3/navn",
+            "extraction_method": "signalpost.public_names.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "440692cf3de53f198dd765405df928e2e0c65751bc1edde7709b5863dfc0e539",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:57.453323Z",
+            "content_sha256": "c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34",
+            "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/987194286\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/948039958\"}},\"antallAnsatte\":15,\"beliggenhetsadresse\":{\"adresse\":[\"Langelandsvegen 25\"],\"kommune\":\"ÅLESUND\",\"kommunenummer\":\"15",
+            "locator": "/_embedded/underenheter/3",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "1746c0a9f9ebb7f55717d3f79a3407b1049508597d8df7224ebe6773c4e6a79d",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:54.273829Z",
+            "content_sha256": "a6554e27e2618cd6f7e517d93b8c66b08a85a445ad7edb3108db533bd6689466",
+            "claim_span": "948039958,VALAKER BAKERI OG KONDITORI AS,AS,Aksjeselskap,10.710,Produksjon av brød og ferske konditorvarer,47.240,\"Detaljhandel med bakervarer, konditorvarer og sukkervarer\",,,,,true,166,2026-09-14,2026-09-10,,post@valaker.as,70 21 65 90,91595160,,,,,,,,Søvikvegen 31,SØVIK,6280,HARAM,1580,Norge,NO,2",
+            "locator": "row:948039958/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:eb6e3ca98ca658c77edca3a8558a03e3faaaa78c49a8c8baaf194abfc189fbec",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "orgnr": "948039958",
+        "legal_name": "VALAKER BAKERI OG KONDITORI AS",
+        "kind": "brand",
+        "identity": "VALAKER BAKERI OG KONDITORI AS AVD B B ULSTEINVIK",
+        "field": "brand.registered_subunit.c2a28b47104de87fc098",
+        "value": {
+          "name": "VALAKER BAKERI OG KONDITORI AS AVD B B ULSTEINVIK",
+          "origin": "registered_subunit",
+          "subunit_orgnr": "988666726"
+        },
+        "evidence": [
+          {
+            "id": "85ff77be048fe8e29e238095a7d079a6e5040de100f24d464eca46d4b33310af",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:57.453323Z",
+            "content_sha256": "c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34",
+            "claim_span": "itorvarer og sukkervarer\",\"kode\":\"47.240\"},\"navn\":\"VALAKER BAKERI OG KONDITORI AS AVD B B ULSTEINVIK\",\"oppstartsdato\":\"2005-09-16\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR\"}},\"beskrivelse\":\"Underenhet til næringsdrivende og of",
+            "locator": "/_embedded/underenheter/0/navn",
+            "extraction_method": "signalpost.public_names.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "67b7e47be39d5d40daf1fe73c1302c76d965bd8835e1f820a15233f427044c5a",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:57.453323Z",
+            "content_sha256": "c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34",
+            "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/988666726\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/948039958\"}},\"antallAnsatte\":12,\"beliggenhetsadresse\":{\"adresse\":[\"Saunesvegen\"],\"kommune\":\"ULSTEIN\",\"kommunenummer\":\"1516\",\"la",
+            "locator": "/_embedded/underenheter/0",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "1746c0a9f9ebb7f55717d3f79a3407b1049508597d8df7224ebe6773c4e6a79d",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:54.273829Z",
+            "content_sha256": "a6554e27e2618cd6f7e517d93b8c66b08a85a445ad7edb3108db533bd6689466",
+            "claim_span": "948039958,VALAKER BAKERI OG KONDITORI AS,AS,Aksjeselskap,10.710,Produksjon av brød og ferske konditorvarer,47.240,\"Detaljhandel med bakervarer, konditorvarer og sukkervarer\",,,,,true,166,2026-09-14,2026-09-10,,post@valaker.as,70 21 65 90,91595160,,,,,,,,Søvikvegen 31,SØVIK,6280,HARAM,1580,Norge,NO,2",
+            "locator": "row:948039958/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:eb6e3ca98ca658c77edca3a8558a03e3faaaa78c49a8c8baaf194abfc189fbec",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "orgnr": "948039958",
+        "legal_name": "VALAKER BAKERI OG KONDITORI AS",
+        "kind": "brand",
+        "identity": "VALAKER BAKERI OG KONDITORI AS AVD VESTNES",
+        "field": "brand.registered_subunit.a0a828104b52a1d77eee",
+        "value": {
+          "name": "VALAKER BAKERI OG KONDITORI AS AVD VESTNES",
+          "origin": "registered_subunit",
+          "subunit_orgnr": "990953643"
+        },
+        "evidence": [
+          {
+            "id": "87547fec26fc60cb1c5499a1cb96987dd480a3eea224ad02bafe587e4b04b0b9",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:57.453323Z",
+            "content_sha256": "c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34",
+            "claim_span": "itorvarer og sukkervarer\",\"kode\":\"47.240\"},\"navn\":\"VALAKER BAKERI OG KONDITORI AS AVD VESTNES\",\"oppstartsdato\":\"2007-01-01\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR\"}},\"beskrivelse\":\"Underenhet til næringsdrivende og offentlig",
+            "locator": "/_embedded/underenheter/12/navn",
+            "extraction_method": "signalpost.public_names.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "e628398131ec8d21140608750f67fdc34cb9dc2f67ef69437fe54546c89f1816",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:57.453323Z",
+            "content_sha256": "c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34",
+            "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/990953643\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/948039958\"}},\"antallAnsatte\":8,\"beliggenhetsadresse\":{\"adresse\":[\"Vestnes Brygge\"],\"kommune\":\"VESTNES\",\"kommunenummer\":\"1535\",\"",
+            "locator": "/_embedded/underenheter/12",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "1746c0a9f9ebb7f55717d3f79a3407b1049508597d8df7224ebe6773c4e6a79d",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:54.273829Z",
+            "content_sha256": "a6554e27e2618cd6f7e517d93b8c66b08a85a445ad7edb3108db533bd6689466",
+            "claim_span": "948039958,VALAKER BAKERI OG KONDITORI AS,AS,Aksjeselskap,10.710,Produksjon av brød og ferske konditorvarer,47.240,\"Detaljhandel med bakervarer, konditorvarer og sukkervarer\",,,,,true,166,2026-09-14,2026-09-10,,post@valaker.as,70 21 65 90,91595160,,,,,,,,Søvikvegen 31,SØVIK,6280,HARAM,1580,Norge,NO,2",
+            "locator": "row:948039958/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:eb6e3ca98ca658c77edca3a8558a03e3faaaa78c49a8c8baaf194abfc189fbec",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "orgnr": "948039958",
+        "legal_name": "VALAKER BAKERI OG KONDITORI AS",
+        "kind": "brand",
+        "identity": "VALAKER BAKERI OG KONDITORI AS AVD STORMOA NORD",
+        "field": "brand.registered_subunit.ffaefea2ec2546ef24c7",
+        "value": {
+          "name": "VALAKER BAKERI OG KONDITORI AS AVD STORMOA NORD",
+          "origin": "registered_subunit",
+          "subunit_orgnr": "990953872"
+        },
+        "evidence": [
+          {
+            "id": "4d0597b0dffb94ee33139c9bcb18533ca7b0de54ded952e9aae78c24eb63e087",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:57.453323Z",
+            "content_sha256": "c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34",
+            "claim_span": "itorvarer og sukkervarer\",\"kode\":\"47.240\"},\"navn\":\"VALAKER BAKERI OG KONDITORI AS AVD STORMOA NORD\",\"oppstartsdato\":\"2007-01-01\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR\"}},\"beskrivelse\":\"Underenhet til næringsdrivende og offe",
+            "locator": "/_embedded/underenheter/9/navn",
+            "extraction_method": "signalpost.public_names.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "52e99de2c513d567de86e143a4b1bc257adcaf0d1a32c30938aefc7ff5511db3",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:57.453323Z",
+            "content_sha256": "c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34",
+            "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/990953872\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/948039958\"}},\"beliggenhetsadresse\":{\"adresse\":[\"Moavegen 3\"],\"kommune\":\"ÅLESUND\",\"kommunenummer\":\"1508\",\"land\":\"Norge\",\"landkod",
+            "locator": "/_embedded/underenheter/9",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "1746c0a9f9ebb7f55717d3f79a3407b1049508597d8df7224ebe6773c4e6a79d",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:54.273829Z",
+            "content_sha256": "a6554e27e2618cd6f7e517d93b8c66b08a85a445ad7edb3108db533bd6689466",
+            "claim_span": "948039958,VALAKER BAKERI OG KONDITORI AS,AS,Aksjeselskap,10.710,Produksjon av brød og ferske konditorvarer,47.240,\"Detaljhandel med bakervarer, konditorvarer og sukkervarer\",,,,,true,166,2026-09-14,2026-09-10,,post@valaker.as,70 21 65 90,91595160,,,,,,,,Søvikvegen 31,SØVIK,6280,HARAM,1580,Norge,NO,2",
+            "locator": "row:948039958/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:eb6e3ca98ca658c77edca3a8558a03e3faaaa78c49a8c8baaf194abfc189fbec",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "orgnr": "948039958",
+        "legal_name": "VALAKER BAKERI OG KONDITORI AS",
+        "kind": "brand",
+        "identity": "VALAKER BAKERI OG KONDITORI AS AVD SØVIK PRODUKSJON",
+        "field": "brand.registered_subunit.6be1689eb767b2bb4e72",
+        "value": {
+          "name": "VALAKER BAKERI OG KONDITORI AS AVD SØVIK PRODUKSJON",
+          "origin": "registered_subunit",
+          "subunit_orgnr": "992232080"
+        },
+        "evidence": [
+          {
+            "id": "9eccb6554764302b144d78e28f5671a1f476ab8a653b2a29771ba7c544f01975",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:57.453323Z",
+            "content_sha256": "c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34",
+            "claim_span": " og ferske konditorvarer\",\"kode\":\"10.710\"},\"navn\":\"VALAKER BAKERI OG KONDITORI AS AVD SØVIK PRODUKSJON\",\"oppstartsdato\":\"2008-01-01\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR\"}},\"beskrivelse\":\"Underenhet til næringsdrivende og ",
+            "locator": "/_embedded/underenheter/10/navn",
+            "extraction_method": "signalpost.public_names.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "a941a17d304187cb612ff0b699ffa704d22b908ea96954ca5d0ca07d3e0d9209",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:57.453323Z",
+            "content_sha256": "c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34",
+            "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/992232080\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/948039958\"}},\"antallAnsatte\":26,\"beliggenhetsadresse\":{\"adresse\":[\"Søvikvegen 31\"],\"kommune\":\"HARAM\",\"kommunenummer\":\"1580\",\"la",
+            "locator": "/_embedded/underenheter/10",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "1746c0a9f9ebb7f55717d3f79a3407b1049508597d8df7224ebe6773c4e6a79d",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:54.273829Z",
+            "content_sha256": "a6554e27e2618cd6f7e517d93b8c66b08a85a445ad7edb3108db533bd6689466",
+            "claim_span": "948039958,VALAKER BAKERI OG KONDITORI AS,AS,Aksjeselskap,10.710,Produksjon av brød og ferske konditorvarer,47.240,\"Detaljhandel med bakervarer, konditorvarer og sukkervarer\",,,,,true,166,2026-09-14,2026-09-10,,post@valaker.as,70 21 65 90,91595160,,,,,,,,Søvikvegen 31,SØVIK,6280,HARAM,1580,Norge,NO,2",
+            "locator": "row:948039958/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:eb6e3ca98ca658c77edca3a8558a03e3faaaa78c49a8c8baaf194abfc189fbec",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "orgnr": "916875657",
+        "legal_name": "KAAPE AS",
+        "kind": "brand",
+        "identity": "KAAPE",
+        "field": "public_brand",
+        "value": "KAAPE",
+        "evidence": [
+          {
+            "id": "443b9bf9622d00e48ad9fe612de44723f9b118732dab16b11729d2e4d0c9a01d",
+            "source_url": "https://www.kaape.no/betingelser",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-14T07:14:10.071217Z",
+            "content_sha256": "cc7524d883fc95b0de5a65139cf41e8dda82efb1cbc2bf6bd1dac02099a086bf",
+            "claim_span": ".css.map*/</style>\n<title>Betingelser | KAAPE</title>\n  <meta name=\"description\" content=\"Personopplysninger og personvernpolicy\nKaape behandler persondata ifølge Lov og Personopplysninger. Opplysninger som kan knyttes til deg som person vil aldri bli gjort tilgjengelig for andre virksomheter eller ",
+            "locator": "publisher-public-name",
+            "extraction_method": "signalpost.public_names.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "bc24e1828e11cbfc94553755335c8d8c0266c73c76208c10ff259548719557a4",
+            "source_url": "https://www.kaape.no/betingelser",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-14T07:14:10.071217Z",
+            "content_sha256": "cc7524d883fc95b0de5a65139cf41e8dda82efb1cbc2bf6bd1dac02099a086bf",
+            "claim_span": "\" class=\"wixui-rich-text__text\">Org.nr: 916 875 657</span></span></p>\n\n<p class=\"font_8 wixui-rich-text__text\" style=\"font-size:15px;\"><span style=\"le",
+            "locator": "identity-proof:916875657",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "64b493777127677d27475ba02c2fb7d54f7104056b7f9d7898eade3c4e18bd0c",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:54.242329Z",
+            "content_sha256": "c2fb0f975a50dc8d7959a8ac4ab2cfe3e88df61526c7a631a4799e6e11e42c04",
+            "claim_span": "916875657,KAAPE AS,AS,Aksjeselskap,74.110,\"Industri-, produkt- og motedesignvirksomhet\",,,,,,,true,,2025-04-12,2025-04-10,,,,,,,,,,,,Fjordvegen 363,TOMREFJORD,6393,VESTNES,1535,Norge,NO,2100,Private aksjeselskaper mv.,2025,2016-03-21,2016-02-01,true,2018-05-01,2018-06-25,,,false,,true,2016-03-21,fal",
+            "locator": "row:916875657/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:eb6e3ca98ca658c77edca3a8558a03e3faaaa78c49a8c8baaf194abfc189fbec",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "orgnr": "948039958",
+        "legal_name": "VALAKER BAKERI OG KONDITORI AS",
+        "kind": "brand",
+        "identity": "VALAKER BAKERI OG KONDITORI AS AVD MOA SYD",
+        "field": "brand.registered_subunit.3d5ea6a1360dbc6e2196",
+        "value": {
+          "name": "VALAKER BAKERI OG KONDITORI AS AVD MOA SYD",
+          "origin": "registered_subunit",
+          "subunit_orgnr": "990953910"
+        },
+        "evidence": [
+          {
+            "id": "aa84a9cf95502dd46b61732524bc3c6e9683d84cbc6709c6c098ae89682d337f",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:57.453323Z",
+            "content_sha256": "c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34",
+            "claim_span": "itorvarer og sukkervarer\",\"kode\":\"47.240\"},\"navn\":\"VALAKER BAKERI OG KONDITORI AS AVD MOA SYD\",\"oppstartsdato\":\"2007-01-01\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR\"}},\"beskrivelse\":\"Underenhet til næringsdrivende og offentlig",
+            "locator": "/_embedded/underenheter/6/navn",
+            "extraction_method": "signalpost.public_names.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "465412747d455f1143a833bb88ce5b46a88094b4ac04a1dc7af0eda49e787f6d",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:57.453323Z",
+            "content_sha256": "c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34",
+            "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/990953910\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/948039958\"}},\"antallAnsatte\":14,\"beliggenhetsadresse\":{\"adresse\":[\"Moa Syd\"],\"kommune\":\"ÅLESUND\",\"kommunenummer\":\"1508\",\"land\":",
+            "locator": "/_embedded/underenheter/6",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "1746c0a9f9ebb7f55717d3f79a3407b1049508597d8df7224ebe6773c4e6a79d",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:54.273829Z",
+            "content_sha256": "a6554e27e2618cd6f7e517d93b8c66b08a85a445ad7edb3108db533bd6689466",
+            "claim_span": "948039958,VALAKER BAKERI OG KONDITORI AS,AS,Aksjeselskap,10.710,Produksjon av brød og ferske konditorvarer,47.240,\"Detaljhandel med bakervarer, konditorvarer og sukkervarer\",,,,,true,166,2026-09-14,2026-09-10,,post@valaker.as,70 21 65 90,91595160,,,,,,,,Søvikvegen 31,SØVIK,6280,HARAM,1580,Norge,NO,2",
+            "locator": "row:948039958/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:eb6e3ca98ca658c77edca3a8558a03e3faaaa78c49a8c8baaf194abfc189fbec",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "orgnr": "948039958",
+        "legal_name": "VALAKER BAKERI OG KONDITORI AS",
+        "kind": "brand",
+        "identity": "VALAKER BAKERI OG KONDITORI AS AVD ULSTEINVIK",
+        "field": "brand.registered_subunit.a26016aeb36953598d22",
+        "value": {
+          "name": "VALAKER BAKERI OG KONDITORI AS AVD ULSTEINVIK",
+          "origin": "registered_subunit",
+          "subunit_orgnr": "992232749"
+        },
+        "evidence": [
+          {
+            "id": "21c0509239e1502e61a069542a24e31af14a4047847d888ce512d6cd0d75bcbf",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:57.453323Z",
+            "content_sha256": "c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34",
+            "claim_span": "itorvarer og sukkervarer\",\"kode\":\"47.240\"},\"navn\":\"VALAKER BAKERI OG KONDITORI AS AVD ULSTEINVIK\",\"oppstartsdato\":\"2008-01-01\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR\"}},\"beskrivelse\":\"Underenhet til næringsdrivende og offent",
+            "locator": "/_embedded/underenheter/11/navn",
+            "extraction_method": "signalpost.public_names.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "e5c1ebe664c5c208c5869c6937aa842176e056ff80682db58415f8ee0015e5bf",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:57.453323Z",
+            "content_sha256": "c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34",
+            "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/992232749\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/948039958\"}},\"antallAnsatte\":5,\"beliggenhetsadresse\":{\"adresse\":[],\"kommune\":\"ULSTEIN\",\"kommunenummer\":\"1516\",\"land\":\"Norge\",\"l",
+            "locator": "/_embedded/underenheter/11",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "1746c0a9f9ebb7f55717d3f79a3407b1049508597d8df7224ebe6773c4e6a79d",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:54.273829Z",
+            "content_sha256": "a6554e27e2618cd6f7e517d93b8c66b08a85a445ad7edb3108db533bd6689466",
+            "claim_span": "948039958,VALAKER BAKERI OG KONDITORI AS,AS,Aksjeselskap,10.710,Produksjon av brød og ferske konditorvarer,47.240,\"Detaljhandel med bakervarer, konditorvarer og sukkervarer\",,,,,true,166,2026-09-14,2026-09-10,,post@valaker.as,70 21 65 90,91595160,,,,,,,,Søvikvegen 31,SØVIK,6280,HARAM,1580,Norge,NO,2",
+            "locator": "row:948039958/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:eb6e3ca98ca658c77edca3a8558a03e3faaaa78c49a8c8baaf194abfc189fbec",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "orgnr": "948039958",
+        "legal_name": "VALAKER BAKERI OG KONDITORI AS",
+        "kind": "brand",
+        "identity": "VALAKER BAKERI OG KONDITORI AS AVD FOSNVÅG",
+        "field": "brand.registered_subunit.c6ae3c1b9eac6e6d817b",
+        "value": {
+          "name": "VALAKER BAKERI OG KONDITORI AS AVD FOSNVÅG",
+          "origin": "registered_subunit",
+          "subunit_orgnr": "992232110"
+        },
+        "evidence": [
+          {
+            "id": "02b448e79520c62dcf0ba1cb1eb48c437d00e0fb87f0ca5bda6a3566832c06ef",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:57.453323Z",
+            "content_sha256": "c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34",
+            "claim_span": "itorvarer og sukkervarer\",\"kode\":\"47.240\"},\"navn\":\"VALAKER BAKERI OG KONDITORI AS AVD FOSNVÅG\",\"oppstartsdato\":\"2008-01-01\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR\"}},\"beskrivelse\":\"Underenhet til næringsdrivende og offentlig",
+            "locator": "/_embedded/underenheter/5/navn",
+            "extraction_method": "signalpost.public_names.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "0c6872b9255eca95db2f609c344b2c9646c8230c81c29a165c43e62f5bfadfbd",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:57.453323Z",
+            "content_sha256": "c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34",
+            "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/992232110\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/948039958\"}},\"beliggenhetsadresse\":{\"adresse\":[],\"kommune\":\"HERØY\",\"kommunenummer\":\"1515\",\"land\":\"Norge\",\"landkode\":\"NO\",\"postn",
+            "locator": "/_embedded/underenheter/5",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "1746c0a9f9ebb7f55717d3f79a3407b1049508597d8df7224ebe6773c4e6a79d",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:54.273829Z",
+            "content_sha256": "a6554e27e2618cd6f7e517d93b8c66b08a85a445ad7edb3108db533bd6689466",
+            "claim_span": "948039958,VALAKER BAKERI OG KONDITORI AS,AS,Aksjeselskap,10.710,Produksjon av brød og ferske konditorvarer,47.240,\"Detaljhandel med bakervarer, konditorvarer og sukkervarer\",,,,,true,166,2026-09-14,2026-09-10,,post@valaker.as,70 21 65 90,91595160,,,,,,,,Søvikvegen 31,SØVIK,6280,HARAM,1580,Norge,NO,2",
+            "locator": "row:948039958/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:eb6e3ca98ca658c77edca3a8558a03e3faaaa78c49a8c8baaf194abfc189fbec",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "orgnr": "915515940",
+        "legal_name": "LISELAKK AS",
+        "kind": "brand",
+        "identity": "LISELAKK AS BEAUTYBAR AMUNDSPLASS",
+        "field": "brand.registered_subunit.8e93e3dfc394d1efbc04",
+        "value": {
+          "name": "LISELAKK AS BEAUTYBAR AMUNDSPLASS",
+          "origin": "registered_subunit",
+          "subunit_orgnr": "923872558"
+        },
+        "evidence": [
+          {
+            "id": "078297c6319b48bc11c1f119345691891bcf52e3c5a6dca6ab73690c35f42605",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=915515940&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:56.568523Z",
+            "content_sha256": "fe57f4a96eaf0360f68c05fab1ea5e3242bd69e5e20df3eaf5feb6d4ad302c69",
+            "claim_span": "ivelse\":\"Skjønnhetspleie\",\"kode\":\"96.220\"},\"navn\":\"LISELAKK AS BEAUTYBAR AMUNDSPLASS\",\"oppstartsdato\":\"2018-05-29\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR\"}},\"beskrivelse\":\"Underenhet til næringsdrivende og offentlig forvaltn",
+            "locator": "/_embedded/underenheter/0/navn",
+            "extraction_method": "signalpost.public_names.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "8132bbfca9f08cd15907b01a36430838e880f007f2aa18bebba37c4c0019029a",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=915515940&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:56.568523Z",
+            "content_sha256": "fe57f4a96eaf0360f68c05fab1ea5e3242bd69e5e20df3eaf5feb6d4ad302c69",
+            "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/923872558\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/915515940\"}},\"antallAnsatte\":6,\"beliggenhetsadresse\":{\"adresse\":[\"Kirkegata 4\"],\"kommune\":\"TROMSØ\",\"kommunenummer\":\"5501\",\"land",
+            "locator": "/_embedded/underenheter/0",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "1ebd5408006d16f047e8341cf523e242ab3f02de7da86d0af726db5d0d820bf1",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:54.239431Z",
+            "content_sha256": "2d91f8ad15fe8faf75a2933328b572c7a7fec75dab523df4f4ad7daf470172e1",
+            "claim_span": "915515940,LISELAKK AS,AS,Aksjeselskap,96.220,Skjønnhetspleie,,,,,,,true,17,2026-09-14,2026-09-10,,lise.foereland@gmail.com,,957 50 208,,,,,,,,Henrik Ibsens veg 18,TROMSØ,9007,TROMSØ,5501,Norge,NO,2100,Private aksjeselskaper mv.,2025,2015-06-17,2015-06-03,true,2015-09-01,2015-11-04,,,false,,true,2015",
+            "locator": "row:915515940/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:eb6e3ca98ca658c77edca3a8558a03e3faaaa78c49a8c8baaf194abfc189fbec",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "orgnr": "915515940",
+        "legal_name": "LISELAKK AS",
+        "kind": "brand",
+        "identity": "LISELAKK AS HENRIK IBSENS VEG TROMSØ",
+        "field": "brand.registered_subunit.6c843b2590f229a8ff77",
+        "value": {
+          "name": "LISELAKK AS HENRIK IBSENS VEG TROMSØ",
+          "origin": "registered_subunit",
+          "subunit_orgnr": "915590020"
+        },
+        "evidence": [
+          {
+            "id": "c70a379095c43f288590ea6c444eab5b6891fc08a742646f38dcd68e396d189c",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=915515940&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:56.568523Z",
+            "content_sha256": "fe57f4a96eaf0360f68c05fab1ea5e3242bd69e5e20df3eaf5feb6d4ad302c69",
+            "claim_span": "ivelse\":\"Skjønnhetspleie\",\"kode\":\"96.220\"},\"navn\":\"LISELAKK AS HENRIK IBSENS VEG TROMSØ\",\"oppstartsdato\":\"2015-08-15\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR\"}},\"beskrivelse\":\"Underenhet til næringsdrivende og offentlig forva",
+            "locator": "/_embedded/underenheter/3/navn",
+            "extraction_method": "signalpost.public_names.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "1e009064457e6b0b5df5b5182d181e2c2347b6551e4ac9c9914ad0cbbcfff581",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=915515940&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:56.568523Z",
+            "content_sha256": "fe57f4a96eaf0360f68c05fab1ea5e3242bd69e5e20df3eaf5feb6d4ad302c69",
+            "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/915590020\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/915515940\"}},\"antallAnsatte\":6,\"beliggenhetsadresse\":{\"adresse\":[\"Henrik Ibsens veg 18\"],\"kommune\":\"TROMSØ\",\"kommunenummer\":\"55",
+            "locator": "/_embedded/underenheter/3",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "1ebd5408006d16f047e8341cf523e242ab3f02de7da86d0af726db5d0d820bf1",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:54.239431Z",
+            "content_sha256": "2d91f8ad15fe8faf75a2933328b572c7a7fec75dab523df4f4ad7daf470172e1",
+            "claim_span": "915515940,LISELAKK AS,AS,Aksjeselskap,96.220,Skjønnhetspleie,,,,,,,true,17,2026-09-14,2026-09-10,,lise.foereland@gmail.com,,957 50 208,,,,,,,,Henrik Ibsens veg 18,TROMSØ,9007,TROMSØ,5501,Norge,NO,2100,Private aksjeselskaper mv.,2025,2015-06-17,2015-06-03,true,2015-09-01,2015-11-04,,,false,,true,2015",
+            "locator": "row:915515940/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:eb6e3ca98ca658c77edca3a8558a03e3faaaa78c49a8c8baaf194abfc189fbec",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "orgnr": "948039958",
+        "legal_name": "VALAKER BAKERI OG KONDITORI AS",
+        "kind": "brand",
+        "identity": "VALAKER BAKERI OG KONDITORI AS AVD RÅDHUSET",
+        "field": "brand.registered_subunit.7b66a4686b5b454d2b71",
+        "value": {
+          "name": "VALAKER BAKERI OG KONDITORI AS AVD RÅDHUSET",
+          "origin": "registered_subunit",
+          "subunit_orgnr": "990953791"
+        },
+        "evidence": [
+          {
+            "id": "0ef0890187d4751fe0bfa7216fb187b545b11baab38cf61870b217e7ee356ebe",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:57.453323Z",
+            "content_sha256": "c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34",
+            "claim_span": "itorvarer og sukkervarer\",\"kode\":\"47.240\"},\"navn\":\"VALAKER BAKERI OG KONDITORI AS AVD RÅDHUSET\",\"oppstartsdato\":\"2007-01-01\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR\"}},\"beskrivelse\":\"Underenhet til næringsdrivende og offentli",
+            "locator": "/_embedded/underenheter/8/navn",
+            "extraction_method": "signalpost.public_names.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "efba32b169be1c80c3c1ac99dce49498db453e615b344fc2b5beb6a2856a554f",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:57.453323Z",
+            "content_sha256": "c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34",
+            "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/990953791\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/948039958\"}},\"beliggenhetsadresse\":{\"adresse\":[\"Rasmuss Rønnebergsgate\"],\"kommune\":\"ÅLESUND\",\"kommunenummer\":\"1508\",\"land\":\"Nor",
+            "locator": "/_embedded/underenheter/8",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "1746c0a9f9ebb7f55717d3f79a3407b1049508597d8df7224ebe6773c4e6a79d",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:54.273829Z",
+            "content_sha256": "a6554e27e2618cd6f7e517d93b8c66b08a85a445ad7edb3108db533bd6689466",
+            "claim_span": "948039958,VALAKER BAKERI OG KONDITORI AS,AS,Aksjeselskap,10.710,Produksjon av brød og ferske konditorvarer,47.240,\"Detaljhandel med bakervarer, konditorvarer og sukkervarer\",,,,,true,166,2026-09-14,2026-09-10,,post@valaker.as,70 21 65 90,91595160,,,,,,,,Søvikvegen 31,SØVIK,6280,HARAM,1580,Norge,NO,2",
+            "locator": "row:948039958/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:eb6e3ca98ca658c77edca3a8558a03e3faaaa78c49a8c8baaf194abfc189fbec",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "orgnr": "948039958",
+        "legal_name": "VALAKER BAKERI OG KONDITORI AS",
+        "kind": "brand",
+        "identity": "VALAKER BAKERI OG KONDITORI AS AVD ÅLESUND",
+        "field": "brand.registered_subunit.6b7301371eb0c958166d",
+        "value": {
+          "name": "VALAKER BAKERI OG KONDITORI AS AVD ÅLESUND",
+          "origin": "registered_subunit",
+          "subunit_orgnr": "990953694"
+        },
+        "evidence": [
+          {
+            "id": "3340f9ff60b979ed0fe5038521fcf33671e60b9737c0fe846decf04879fd902c",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:57.453323Z",
+            "content_sha256": "c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34",
+            "claim_span": "itorvarer og sukkervarer\",\"kode\":\"47.240\"},\"navn\":\"VALAKER BAKERI OG KONDITORI AS AVD ÅLESUND\",\"oppstartsdato\":\"2007-01-01\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR\"}},\"beskrivelse\":\"Underenhet til næringsdrivende og offentlig",
+            "locator": "/_embedded/underenheter/13/navn",
+            "extraction_method": "signalpost.public_names.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "876c1319729b692168826cb10bea4016074fae0a6dec9e4d3ecc03562348c4e2",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:57.453323Z",
+            "content_sha256": "c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34",
+            "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/990953694\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/948039958\"}},\"antallAnsatte\":10,\"beliggenhetsadresse\":{\"adresse\":[\"Ålesund Storsenter\"],\"kommune\":\"ÅLESUND\",\"kommunenummer\":\"15",
+            "locator": "/_embedded/underenheter/13",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "1746c0a9f9ebb7f55717d3f79a3407b1049508597d8df7224ebe6773c4e6a79d",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:54.273829Z",
+            "content_sha256": "a6554e27e2618cd6f7e517d93b8c66b08a85a445ad7edb3108db533bd6689466",
+            "claim_span": "948039958,VALAKER BAKERI OG KONDITORI AS,AS,Aksjeselskap,10.710,Produksjon av brød og ferske konditorvarer,47.240,\"Detaljhandel med bakervarer, konditorvarer og sukkervarer\",,,,,true,166,2026-09-14,2026-09-10,,post@valaker.as,70 21 65 90,91595160,,,,,,,,Søvikvegen 31,SØVIK,6280,HARAM,1580,Norge,NO,2",
+            "locator": "row:948039958/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:eb6e3ca98ca658c77edca3a8558a03e3faaaa78c49a8c8baaf194abfc189fbec",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "orgnr": "948039958",
+        "legal_name": "VALAKER BAKERI OG KONDITORI AS",
+        "kind": "brand",
+        "identity": "VALAKER BAKERI OG KONDITORI AS BRAUD OSLO",
+        "field": "brand.registered_subunit.51b185a63bf3d52e617d",
+        "value": {
+          "name": "VALAKER BAKERI OG KONDITORI AS BRAUD OSLO",
+          "origin": "registered_subunit",
+          "subunit_orgnr": "934998308"
+        },
+        "evidence": [
+          {
+            "id": "371ec009308e895f485b91fd9285026caf020b0cd9b773b83b44e1e17fc834a6",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:57.453323Z",
+            "content_sha256": "c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34",
+            "claim_span": " og ferske konditorvarer\",\"kode\":\"10.710\"},\"navn\":\"VALAKER BAKERI OG KONDITORI AS BRAUD OSLO\",\"oppstartsdato\":\"2025-01-13\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR\"}},\"beskrivelse\":\"Underenhet til næringsdrivende og offentlig ",
+            "locator": "/_embedded/underenheter/14/navn",
+            "extraction_method": "signalpost.public_names.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "d727296490f5bcb187d59ff18a2724d7dbd47399c94a88c4eef804dc2b630937",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:57.453323Z",
+            "content_sha256": "c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34",
+            "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/934998308\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/948039958\"}},\"antallAnsatte\":21,\"beliggenhetsadresse\":{\"adresse\":[\"Middelthuns gate 17A\"],\"kommune\":\"OSLO\",\"kommunenummer\":\"030",
+            "locator": "/_embedded/underenheter/14",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "1746c0a9f9ebb7f55717d3f79a3407b1049508597d8df7224ebe6773c4e6a79d",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:54.273829Z",
+            "content_sha256": "a6554e27e2618cd6f7e517d93b8c66b08a85a445ad7edb3108db533bd6689466",
+            "claim_span": "948039958,VALAKER BAKERI OG KONDITORI AS,AS,Aksjeselskap,10.710,Produksjon av brød og ferske konditorvarer,47.240,\"Detaljhandel med bakervarer, konditorvarer og sukkervarer\",,,,,true,166,2026-09-14,2026-09-10,,post@valaker.as,70 21 65 90,91595160,,,,,,,,Søvikvegen 31,SØVIK,6280,HARAM,1580,Norge,NO,2",
+            "locator": "row:948039958/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:eb6e3ca98ca658c77edca3a8558a03e3faaaa78c49a8c8baaf194abfc189fbec",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "orgnr": "918638628",
+        "legal_name": "VESTFJORDEN ELEKTRO AS",
+        "kind": "brand",
+        "identity": "Vestfjorden Elektro",
+        "field": "public_brand",
+        "value": "Vestfjorden Elektro",
+        "evidence": [
+          {
+            "id": "cac9550b234f52be6fc9941aef8a871d2aa98207d33544e26067b380c201aa60",
+            "source_url": "https://vestfjordenelektro.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-14T07:14:55.736897Z",
+            "content_sha256": "75845e36b0bc2bd1e86472a01a7ed574d536c05fa7d674b6bd8eda8365f8018b",
+            "claim_span": "\n<head>\n\t<meta charset=\"utf-8\">\n\t<title>Vestfjorden Elektro</title>\n\t<meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\">\n\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n\t<meta name=\"keywords\" content=\"\">\n\t<meta name=\"description\" content=\"\">\n\t<link rel=\"apple-touch-icon\" size",
+            "locator": "publisher-public-name",
+            "extraction_method": "signalpost.public_names.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "c9e43c96c72c2ca0c5c7630c253efda19900b1d90c9214f0dcd8fbcd01cd7b11",
+            "source_url": "https://vestfjordenelektro.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-14T07:14:55.736897Z",
+            "content_sha256": "75845e36b0bc2bd1e86472a01a7ed574d536c05fa7d674b6bd8eda8365f8018b",
+            "claim_span": ": Kristoffer Mørch<br />\n\t\t\t\t\tOrg. nr.: 918 638 628<br />\n\t\t\t\t\tBesøksadresse: Åsveien 4, 3475 Sætre\n\t\t\t\t</p>\n\t\t\t\t<!-- Nav tabs -->\n\t\t\t\t<ul class=\"nav ",
+            "locator": "identity-proof:918638628",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "64d3812761e509d66f0f1775e0570dc65c3393ae295a6a7791eca477194818da",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:54.247330Z",
+            "content_sha256": "89cc603f9905b3d036194ca216d821405069c1649f6af9ac898b6341a943bca7",
+            "claim_span": "918638628,VESTFJORDEN ELEKTRO AS,AS,Aksjeselskap,43.210,Elektrisk installasjonsarbeid,,,,,,,true,,2024-02-13,2024-02-10,,,,,,,,,,,,Klokkeveien 2,TOFTE,3482,ASKER,3203,Norge,NO,2100,Private aksjeselskaper mv.,2025,2017-03-01,2017-01-10,true,2017-03-01,2017-05-08,,,false,,true,2017-03-01,false,false,,",
+            "locator": "row:918638628/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:eb6e3ca98ca658c77edca3a8558a03e3faaaa78c49a8c8baaf194abfc189fbec",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "orgnr": "915515940",
+        "legal_name": "LISELAKK AS",
+        "kind": "brand",
+        "identity": "LISELAKK AS BEAUTYBAR PYRAMIDEN",
+        "field": "brand.registered_subunit.c88a750ba67afb61d571",
+        "value": {
+          "name": "LISELAKK AS BEAUTYBAR PYRAMIDEN",
+          "origin": "registered_subunit",
+          "subunit_orgnr": "923872582"
+        },
+        "evidence": [
+          {
+            "id": "c00f96a57afcafb1029d0883f9be63c457b285490540a3839014fb139d02fcf3",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=915515940&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:56.568523Z",
+            "content_sha256": "fe57f4a96eaf0360f68c05fab1ea5e3242bd69e5e20df3eaf5feb6d4ad302c69",
+            "claim_span": "ivelse\":\"Skjønnhetspleie\",\"kode\":\"96.220\"},\"navn\":\"LISELAKK AS BEAUTYBAR PYRAMIDEN\",\"oppstartsdato\":\"2018-10-18\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR\"}},\"beskrivelse\":\"Underenhet til næringsdrivende og offentlig forvaltnin",
+            "locator": "/_embedded/underenheter/2/navn",
+            "extraction_method": "signalpost.public_names.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "4837b131a7d87ed200333de95b632437cbe135c2c8c7dcd5b2c7eb307e92409d",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=915515940&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:56.568523Z",
+            "content_sha256": "fe57f4a96eaf0360f68c05fab1ea5e3242bd69e5e20df3eaf5feb6d4ad302c69",
+            "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/923872582\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/915515940\"}},\"beliggenhetsadresse\":{\"adresse\":[\"Solstrandvegen 47\"],\"kommune\":\"TROMSØ\",\"kommunenummer\":\"5501\",\"land\":\"Norge\",\"l",
+            "locator": "/_embedded/underenheter/2",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "1ebd5408006d16f047e8341cf523e242ab3f02de7da86d0af726db5d0d820bf1",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:54.239431Z",
+            "content_sha256": "2d91f8ad15fe8faf75a2933328b572c7a7fec75dab523df4f4ad7daf470172e1",
+            "claim_span": "915515940,LISELAKK AS,AS,Aksjeselskap,96.220,Skjønnhetspleie,,,,,,,true,17,2026-09-14,2026-09-10,,lise.foereland@gmail.com,,957 50 208,,,,,,,,Henrik Ibsens veg 18,TROMSØ,9007,TROMSØ,5501,Norge,NO,2100,Private aksjeselskaper mv.,2025,2015-06-17,2015-06-03,true,2015-09-01,2015-11-04,,,false,,true,2015",
+            "locator": "row:915515940/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:eb6e3ca98ca658c77edca3a8558a03e3faaaa78c49a8c8baaf194abfc189fbec",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "orgnr": "936758819",
+        "legal_name": "HELSEFIX AS",
+        "kind": "brand",
+        "identity": "helseFix",
+        "field": "public_brand",
+        "value": "helseFix",
+        "evidence": [
+          {
+            "id": "11a8dbe64225efc564f033288f72f669a0af1d128fe6f28275960f209b952f33",
+            "source_url": "https://helsefix.no/om-oss",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-14T07:15:12.192644Z",
+            "content_sha256": "7aa44caa8ce0649c150f2af6c289706a1a60524c407f4c9a9e57edc828c85ab7",
+            "claim_span": "idth, initial-scale=1\">\n<title>Om oss — helseFix</title>\n<meta name=\"description\" content=\"helseFix er grunnlagt av naprapatene Per Thomas Mørk og Aleksander Treidene — nesten 50 års kombinert klinisk erfaring, satt i system for rehabilitering hjemmefra.\">\n<link rel=\"canonical\" href=\"https://helsefi",
+            "locator": "publisher-public-name",
+            "extraction_method": "signalpost.public_names.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "30bc0d3ca5a5e45a97cda6f23d60b71afaae65943c9bc73ef83075a679193d3f",
+            "source_url": "https://helsefix.no/om-oss",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-14T07:15:12.192644Z",
+            "content_sha256": "7aa44caa8ce0649c150f2af6c289706a1a60524c407f4c9a9e57edc828c85ab7",
+            "claim_span": "ssalveien 20, 3208 Sandefjord<br>Org.nr 936 758 819</p>\n    </div>\n  </div>\n</section>\n\n<footer>\n  <nav aria-label=\"Bunnmeny\">\n    <a href=\"/\">Forside",
+            "locator": "identity-proof:936758819",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "be3a6a027e704099477a4c73efa7ff53cd37d61e725d355e8bbfb5bd1df07179",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:54.272825Z",
+            "content_sha256": "34dd628ade3801f2cb28968d26aa7229191cceae5bb4b87cf292d4f9d5357835",
+            "claim_span": "936758819,HELSEFIX AS,AS,Aksjeselskap,86.993,Andre helsetjenester ellers,,,,,,,false,,,,,,,,,,,,,,,Skiringssalveien 20,SANDEFJORD,3208,SANDEFJORD,3907,Norge,NO,2100,Private aksjeselskaper mv.,2025,2025-12-12,2025-09-20,false,,,,,false,,true,2025-12-12,false,false,,false,,false,,false,,,,,,,Bokmål,20",
+            "locator": "row:936758819/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:eb6e3ca98ca658c77edca3a8558a03e3faaaa78c49a8c8baaf194abfc189fbec",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "orgnr": "948039958",
+        "legal_name": "VALAKER BAKERI OG KONDITORI AS",
+        "kind": "brand",
+        "identity": "VALAKER BAKERI OG KONDITORI AS AVD MOA ØST",
+        "field": "brand.registered_subunit.23f4c228eec44478e64d",
+        "value": {
+          "name": "VALAKER BAKERI OG KONDITORI AS AVD MOA ØST",
+          "origin": "registered_subunit",
+          "subunit_orgnr": "925923842"
+        },
+        "evidence": [
+          {
+            "id": "bdf905d5a7e6c3f60aeaa87d97e4419a4524e9688d94a40ced43b78d9902f4d1",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:57.453323Z",
+            "content_sha256": "c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34",
+            "claim_span": "itorvarer og sukkervarer\",\"kode\":\"47.240\"},\"navn\":\"VALAKER BAKERI OG KONDITORI AS AVD MOA ØST\",\"oppstartsdato\":\"2020-11-12\",\"organisasjonsform\":{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR\"}},\"beskrivelse\":\"Underenhet til næringsdrivende og offentlig",
+            "locator": "/_embedded/underenheter/7/navn",
+            "extraction_method": "signalpost.public_names.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "cf29f0327a113ed35b6e76b4a75991a1ef750bd66d96d803626d4a7a7f5038d4",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:57.453323Z",
+            "content_sha256": "c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34",
+            "claim_span": "{\"_links\":{\"self\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/underenheter/925923842\"},\"overordnetEnhet\":{\"href\":\"https://data.brreg.no/enhetsregisteret/api/enheter/948039958\"}},\"beliggenhetsadresse\":{\"adresse\":[\"Langelandsvegen 51\"],\"kommune\":\"ÅLESUND\",\"kommunenummer\":\"1508\",\"land\":\"Norge\",",
+            "locator": "/_embedded/underenheter/7",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "1746c0a9f9ebb7f55717d3f79a3407b1049508597d8df7224ebe6773c4e6a79d",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T07:13:54.273829Z",
+            "content_sha256": "a6554e27e2618cd6f7e517d93b8c66b08a85a445ad7edb3108db533bd6689466",
+            "claim_span": "948039958,VALAKER BAKERI OG KONDITORI AS,AS,Aksjeselskap,10.710,Produksjon av brød og ferske konditorvarer,47.240,\"Detaljhandel med bakervarer, konditorvarer og sukkervarer\",,,,,true,166,2026-09-14,2026-09-10,,post@valaker.as,70 21 65 90,91595160,,,,,,,,Søvikvegen 31,SØVIK,6280,HARAM,1580,Norge,NO,2",
+            "locator": "row:948039958/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:eb6e3ca98ca658c77edca3a8558a03e3faaaa78c49a8c8baaf194abfc189fbec",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      }
+    ],
+    "removed": [
+      {
+        "orgnr": "926148931",
+        "legal_name": "ATLO AS",
+        "kind": "brand",
+        "identity": "atlo.no",
+        "field": "public_brand",
+        "value": "atlo.no",
+        "evidence": [
+          {
+            "id": "961cf8436fe754a046347c89fd9f00eef5026a194007a32bdd68c91fad4fb1b4",
+            "source_url": "https://atlo.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-14T05:41:38.136550Z",
+            "content_sha256": "cbb412abb99eebc5e3ae800ae77579d173a8902de37e558c9bf8f0629b703998",
+            "claim_span": "a = window._wca || [];</script>\r\n<title>atlo.no - Boligalarm for alle</title>\n<link rel='dns-prefetch' href='//www.googletagmanager.com' />\n<link rel=",
+            "locator": "meta:brand",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      }
+    ]
+  },
+  "envelopes_sha256": "cb34cb09ee122c565c34fdbe5b9a42ff41849f69bc4d362e5190e87883841c4d",
+  "profiles_sha256": "0e946d137a01a6e39ffe205b1ce9feea5f3689bc979375a5f67c560bdbf8a503"
+}

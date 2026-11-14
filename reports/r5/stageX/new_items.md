@@ -2,4 +2,6912 @@
 
 Every new website, social profile and brand claim is retained with organisation number, legal name, value, original proof context and exact evidence. Removed URLs/brands are explicit. Saved-evidence verdicts do not replace independent human verification.
 
-No new or removed website/social/brand item in the completed measured stages.
+## X4 / 20261017 / added / 926818317 / SPEDIFY AS
+
+Type: brand; identity: SPEDIFY AS AVD ASKIM; saved-evidence verdict: correct.
+
+```json
+{
+  "name": "SPEDIFY AS AVD ASKIM",
+  "origin": "registered_subunit",
+  "subunit_orgnr": "926935321"
+}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=926818317&size=1000&page=0 / retrieved 2026-11-14T06:25:25.674200Z / SHA-256 `d9ee0c38214db740a25d52294c0242e28fc2f35b928d5f7aa410f6fd366bf482` / locator `/_embedded/underenheter/0/navn`
+
+Exact excerpt:
+
+```
+:{"beskrivelse":"Lagring","kode":"52.100"},"navn":"SPEDIFY AS AVD ASKIM","oppstartsdato":"2021-04-01","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og offentlig forvaltning","kode":"
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=926818317&size=1000&page=0 / retrieved 2026-11-14T06:25:25.674200Z / SHA-256 `d9ee0c38214db740a25d52294c0242e28fc2f35b928d5f7aa410f6fd366bf482` / locator `/_embedded/underenheter/0`
+
+Exact excerpt:
+
+```
+{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/926935321"},"overordnetEnhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/926818317"}},"antallAnsatte":76,"beliggenhetsadresse":{"adresse":["Sagveien 25"],"kommune":"INDRE ØSTFOLD","kommunenummer":"311
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:25:23.356362Z / SHA-256 `6a296a4898f7a215fafd9a94433c851034b6ef5af9d8692449ec89b7b210f04e` / locator `row:926818317/column:navn`
+
+Exact excerpt:
+
+```
+926818317,SPEDIFY AS,AS,Aksjeselskap,52.100,Lagring,,,,,,,true,77,2026-09-14,2026-09-10,,,,,,,,,,,,"c/o AssistCo AS
+Svaddevegen 125",RJUKAN,3660,TINN,4026,Norge,NO,2100,Private aksjeselskaper mv.,2025,2021-03-23,2021-02-27,true,2024-03-22,2024-04-22,,,false,,true,2021-03-23,false,false,,false,,false
+```
+
+## X4 / 20261017 / added / 934843355 / AS WDM THRANESGT 8
+
+Type: brand; identity: AS WDM THRANESGT 8 V/H R ADV ODD SEIM-HAUGEN; saved-evidence verdict: correct.
+
+```json
+{
+  "name": "AS WDM THRANESGT 8 V/H R ADV ODD SEIM-HAUGEN",
+  "origin": "registered_subunit",
+  "subunit_orgnr": "973619632"
+}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=934843355&size=1000&page=0 / retrieved 2026-11-14T06:25:27.078085Z / SHA-256 `84f12ff66ceddcda4a0e217d0ce2d5c9914bcf6a24593b79ed3c14ce3da81b4e` / locator `/_embedded/underenheter/0/navn`
+
+Exact excerpt:
+
+```
+rettslag og boligsameier","kode":"97.001"},"navn":"AS WDM THRANESGT 8 V/H R ADV ODD SEIM-HAUGEN","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og offentlig forvaltning","kode":"BEDR"
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=934843355&size=1000&page=0 / retrieved 2026-11-14T06:25:27.078085Z / SHA-256 `84f12ff66ceddcda4a0e217d0ce2d5c9914bcf6a24593b79ed3c14ce3da81b4e` / locator `/_embedded/underenheter/0`
+
+Exact excerpt:
+
+```
+{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/973619632"},"overordnetEnhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/934843355"}},"beliggenhetsadresse":{"adresse":["v/OBOS Eiendomsforvaltning AS","Hammersborg torg 1"],"kommune":"OSLO","kommunen
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:25:23.388700Z / SHA-256 `24dd1154534f909d0796f4d10e14ec33e5ef8c35704ffe851926d848dc974713` / locator `row:934843355/column:navn`
+
+Exact excerpt:
+
+```
+934843355,AS WDM THRANESGT 8,AS,Aksjeselskap,97.001,Aktiviteter i borettslag og boligsameier,,,,,,,false,,,,,wdmthranesgt8@styrerommet.no,,,"v/OBOS Eiendomsforvaltning AS
+Postboks 6666 St. Olavs plass",OSLO,0129,OSLO,0301,Norge,NO,"v/OBOS Eiendomsforvaltning AS
+Hammersborg torg 1",OSLO,0179,OSLO,030
+```
+
+## X4 / 20261017 / added / 926818317 / SPEDIFY AS
+
+Type: brand; identity: SPEDIFY AS AVD RJUKAN; saved-evidence verdict: correct.
+
+```json
+{
+  "name": "SPEDIFY AS AVD RJUKAN",
+  "origin": "registered_subunit",
+  "subunit_orgnr": "936603564"
+}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=926818317&size=1000&page=0 / retrieved 2026-11-14T06:25:25.674200Z / SHA-256 `d9ee0c38214db740a25d52294c0242e28fc2f35b928d5f7aa410f6fd366bf482` / locator `/_embedded/underenheter/1/navn`
+
+Exact excerpt:
+
+```
+:{"beskrivelse":"Lagring","kode":"52.100"},"navn":"SPEDIFY AS AVD RJUKAN","oppstartsdato":"2025-11-01","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og offentlig forvaltning","kode":
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=926818317&size=1000&page=0 / retrieved 2026-11-14T06:25:25.674200Z / SHA-256 `d9ee0c38214db740a25d52294c0242e28fc2f35b928d5f7aa410f6fd366bf482` / locator `/_embedded/underenheter/1`
+
+Exact excerpt:
+
+```
+{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/936603564"},"overordnetEnhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/926818317"}},"beliggenhetsadresse":{"adresse":["Svaddevegen 125"],"kommune":"TINN","kommunenummer":"4026","land":"Norge","landk
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:25:23.356362Z / SHA-256 `6a296a4898f7a215fafd9a94433c851034b6ef5af9d8692449ec89b7b210f04e` / locator `row:926818317/column:navn`
+
+Exact excerpt:
+
+```
+926818317,SPEDIFY AS,AS,Aksjeselskap,52.100,Lagring,,,,,,,true,77,2026-09-14,2026-09-10,,,,,,,,,,,,"c/o AssistCo AS
+Svaddevegen 125",RJUKAN,3660,TINN,4026,Norge,NO,2100,Private aksjeselskaper mv.,2025,2021-03-23,2021-02-27,true,2024-03-22,2024-04-22,,,false,,true,2021-03-23,false,false,,false,,false
+```
+
+## X4 / 20261017 / added / 998340888 / NAPOLITANA AS
+
+Type: brand; identity: Napolitana Restaurant; saved-evidence verdict: correct.
+
+```json
+"Napolitana Restaurant"
+```
+
+Source: https://napolitana.no/ / retrieved 2026-11-14T06:29:11.015865Z / SHA-256 `ec86b13980a11c8171d6eeaffcbbc4ba6a446d1b17de23acfe9d8f74cb8f294a` / locator `publisher-public-name`
+
+Exact excerpt:
+
+```
+="theme-color" content="#9b3c2d"><title>Napolitana Restaurant | Pizza, Kebab &amp; Grill i Saksvik</title><meta name="description" content="Napolitana Restaurant i Saksvik serverer autentisk pizza, kebab, pasta og grillretter siden 2006. Bestill på 73 97 13 00. Åpent man-lør 14-23, søn 13-23. Malvik
+```
+
+Source: https://napolitana.no/ / retrieved 2026-11-14T06:29:11.015865Z / SHA-256 `ec86b13980a11c8171d6eeaffcbbc4ba6a446d1b17de23acfe9d8f74cb8f294a` / locator `identity-proof:998340888`
+
+Exact excerpt:
+
+```
+]/60"><p>© 2026 Napolitana AS • Org.nr: 998 340 888</p><p>Laget med 🍕 og ☕ i Saksvik av <a href="https://digital1.no" target="_blank" rel="noopener no
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:25:23.413728Z / SHA-256 `5ee548e1df1dbe925b8344534008377d51d1137f4f845c7f521e844e1e900f51` / locator `row:998340888/column:navn`
+
+Exact excerpt:
+
+```
+998340888,NAPOLITANA AS,AS,Aksjeselskap,56.110,Drift av restauranter,,,,,,,true,7,2026-06-13,2026-06-10,,,,,,,,,,,,Malvikvegen 88,SAKSVIK,7562,MALVIK,5031,Norge,NO,2100,Private aksjeselskaper mv.,2025,2012-05-07,2012-03-16,true,2012-01-01,2012-10-24,,,false,,true,2012-05-07,false,false,,false,,false
+```
+
+## X4 / 20261017 / added / 926818317 / SPEDIFY AS
+
+Type: brand; identity: Spedify; saved-evidence verdict: correct.
+
+```json
+"Spedify"
+```
+
+Source: https://spedify.no/ / retrieved 2026-11-14T06:26:39.110758Z / SHA-256 `52ab413b475db6341975f9892d087395e9ac54286f4b9a571b53edd30a2b25e2` / locator `publisher-public-name`
+
+Exact excerpt:
+
+```
+, fulfillment og lager for nettbutikk | Spedify</title>
+    <link rel="icon" type="image/png" sizes="64x64" href="https://spedify.no/hubfs/raw_assets/public/Spedify-Theme-2024/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="256x256" href="https://spedify.no/hubfs/raw_assets/public/
+```
+
+Source: https://spedify.no/ / retrieved 2026-11-14T06:26:39.110758Z / SHA-256 `52ab413b475db6341975f9892d087395e9ac54286f4b9a571b53edd30a2b25e2` / locator `identity-proof:926818317`
+
+Exact excerpt:
+
+```
+ footer-item" role="none"><span>Org.nr. 926 818 317</span></li>
+        </ul>
+        <div class="footer-social" aria-label="Spedify i sosiale medier"
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:25:23.356362Z / SHA-256 `6a296a4898f7a215fafd9a94433c851034b6ef5af9d8692449ec89b7b210f04e` / locator `row:926818317/column:navn`
+
+Exact excerpt:
+
+```
+926818317,SPEDIFY AS,AS,Aksjeselskap,52.100,Lagring,,,,,,,true,77,2026-09-14,2026-09-10,,,,,,,,,,,,"c/o AssistCo AS
+Svaddevegen 125",RJUKAN,3660,TINN,4026,Norge,NO,2100,Private aksjeselskaper mv.,2025,2021-03-23,2021-02-27,true,2024-03-22,2024-04-22,,,false,,true,2021-03-23,false,false,,false,,false
+```
+
+## X4 / 20261017 / added / 991853995 / BIEN SPAREBANK ASA
+
+Type: brand; identity: Bien Sparebank; saved-evidence verdict: correct.
+
+```json
+"Bien Sparebank"
+```
+
+Source: https://www.bien.no/ / retrieved 2026-11-14T06:28:08.035403Z / SHA-256 `0d0ae1d5dfadcd7a4bb69f55dffa5c2a5fe02eb14aaba4986f46cc5c67cd7a8d` / locator `publisher-public-name`
+
+Exact excerpt:
+
+```
+ml lang="nb-NO" >
+
+<head>
+    
+
+
+<title>Bien Sparebank</title>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Bien Sparebank">
+<!--Meta open graph rendering-->
+    
+```
+
+Source: https://www.bien.no/ / retrieved 2026-11-14T06:28:08.035403Z / SHA-256 `0d0ae1d5dfadcd7a4bb69f55dffa5c2a5fe02eb14aaba4986f46cc5c67cd7a8d` / locator `identity-proof:991853995`
+
+Exact excerpt:
+
+```
+ <div class="footer-list__text">Org.nr: 991853995</div>
+                            </li>
+                                                    <li clas
+```
+
+Source: https://www.bien.no/ / retrieved 2026-11-14T06:28:08.035403Z / SHA-256 `0d0ae1d5dfadcd7a4bb69f55dffa5c2a5fe02eb14aaba4986f46cc5c67cd7a8d` / locator `registry-contact:email_domain`
+
+Exact excerpt:
+
+```
+<a class="sgw-link sgw-button-common link button--link button--size-standard" href="mailto:post@bien.no" data-track-id="sitecore-footer" data-track-linkname="postbienno">
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:25:23.405140Z / SHA-256 `ea02b2b6d59ff2248a7caa75e570734ffda7081217da0340e98e7a2736606061` / locator `row:991853995/column:epostadresse`
+
+Exact excerpt:
+
+```
+dittforetak,,,,,,,true,45,2026-09-14,2026-09-10,www.bien.no,post@bien.no,,91502436,Postboks 6790 St Olavs Plass,OSLO,0130,OSLO,0301,Norge,NO,Dronning Mauds gate 11,OSLO,0250,OSLO,0301,Norge,NO,3200,Banker,2025,2007-11-08,2007-09-18,false,,,,,false,,true,2007-11-08,false,false,,false,,false,,false,,,
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:25:23.405140Z / SHA-256 `ea02b2b6d59ff2248a7caa75e570734ffda7081217da0340e98e7a2736606061` / locator `row:991853995/column:navn`
+
+Exact excerpt:
+
+```
+991853995,BIEN SPAREBANK ASA,ASA,Allmennaksjeselskap,64.190,Banker og kredittforetak,,,,,,,true,45,2026-09-14,2026-09-10,www.bien.no,post@bien.no,,91502436,Postboks 6790 St Olavs Plass,OSLO,0130,OSLO,0301,Norge,NO,Dronning Mauds gate 11,OSLO,0250,OSLO,0301,Norge,NO,3200,Banker,2025,2007-11-08,2007-0
+```
+
+## X4 / 20261017 / added / 929603176 / PAC BYGG AS
+
+Type: brand; identity: PAC BYGG AS AVD FETSUND; saved-evidence verdict: correct.
+
+```json
+{
+  "name": "PAC BYGG AS AVD FETSUND",
+  "origin": "registered_subunit",
+  "subunit_orgnr": "920050670"
+}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=929603176&size=1000&page=0 / retrieved 2026-11-14T06:25:26.638925Z / SHA-256 `52dea210dcbe5073f59abca45f691b1d3834e0b13457a1713280915707ba6bf0` / locator `/_embedded/underenheter/1/navn`
+
+Exact excerpt:
+
+```
+:"Oppføring av bygninger","kode":"41.000"},"navn":"PAC BYGG AS AVD FETSUND","oppstartsdato":"2017-12-01","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og offentlig forvaltning","kode
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=929603176&size=1000&page=0 / retrieved 2026-11-14T06:25:26.638925Z / SHA-256 `52dea210dcbe5073f59abca45f691b1d3834e0b13457a1713280915707ba6bf0` / locator `/_embedded/underenheter/1`
+
+Exact excerpt:
+
+```
+{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/920050670"},"overordnetEnhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/929603176"}},"beliggenhetsadresse":{"adresse":["Garderbakken 24"],"kommune":"LILLESTRØM","kommunenummer":"3205","land":"Norge",
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:25:23.372454Z / SHA-256 `0f1f8eba96b1c9e3b7a4a917ca055688eabf9f5daa40835c2c220c40358e47cb` / locator `row:929603176/column:navn`
+
+Exact excerpt:
+
+```
+929603176,PAC BYGG AS,AS,Aksjeselskap,41.000,Oppføring av bygninger,,,,,,,true,18,2026-09-14,2026-09-10,,,,925 13 467,Vardepynten 31,SKEDSMOKORSET,2020,LILLESTRØM,3205,Norge,NO,Tordenskiolds gate 2,OSLO,0160,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2022-08-05,2022-07-13,true,2022-09-2
+```
+
+## X4 / 20261017 / added / 998340888 / NAPOLITANA AS
+
+Type: website; identity: https://napolitana.no; saved-evidence verdict: correct.
+
+```json
+{
+  "final_url": "https://napolitana.no",
+  "identity_level": "VERIFIED",
+  "proof_type": "orgnr_on_page",
+  "proof_page_url": "https://napolitana.no/",
+  "signals": [],
+  "points": 0,
+  "candidate_origin": "legal_name_slug",
+  "relationship_note": null,
+  "other_orgnrs": []
+}
+```
+
+Source: https://napolitana.no/ / retrieved 2026-11-14T06:29:11.015865Z / SHA-256 `ec86b13980a11c8171d6eeaffcbbc4ba6a446d1b17de23acfe9d8f74cb8f294a` / locator `identity-proof:998340888`
+
+Exact excerpt:
+
+```
+]/60"><p>© 2026 Napolitana AS • Org.nr: 998 340 888</p><p>Laget med 🍕 og ☕ i Saksvik av <a href="https://digital1.no" target="_blank" rel="noopener no
+```
+
+## X4 / 20261017 / added / 927094266 / SPORTLET.NO AS
+
+Type: brand; identity: Sportlet.no; saved-evidence verdict: correct.
+
+```json
+"Sportlet.no"
+```
+
+Source: https://www.sportlet.no/ / retrieved 2026-11-14T06:27:44.594223Z / SHA-256 `d55993cfc87baa09c9d9751ce3fd8bb5bf7b20d2f599b63db34cf5fd12961466` / locator `publisher-public-name`
+
+Exact excerpt:
+
+```
+    <title>
+                            Sportlet.no - Alltid 30-60% rabatt på joggesko, løpesko, klær og treningsutstyr
+                    </title>
+                 
+        <style>
+            [x-cloak] {
+                display: none !important;
+            }
+        </style>
+        <style>
+    
+```
+
+Source: https://www.sportlet.no/ / retrieved 2026-11-14T06:27:44.594223Z / SHA-256 `d55993cfc87baa09c9d9751ce3fd8bb5bf7b20d2f599b63db34cf5fd12961466` / locator `identity-proof:927094266`
+
+Exact excerpt:
+
+```
+      <li class="no-list py-2">Org. nr. 927 094 266</li>
+                                                    <li class="no-list py-2"><i class="icon-p
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:25:23.364407Z / SHA-256 `2e05dc8c8ac0533725fa8b33bd6d3a527708c211ccdd407769fe5f33968ef5f7` / locator `row:927094266/column:navn`
+
+Exact excerpt:
+
+```
+927094266,SPORTLET.NO AS,AS,Aksjeselskap,47.710,Detaljhandel med klær,,,,,,,false,,,,sportlet.no,,,,,,,,,,,Holmsildgata 14,FOSNAVÅG,6090,HERØY,1515,Norge,NO,2100,Private aksjeselskaper mv.,2025,2021-05-10,2021-03-22,true,2021-07-01,2021-10-09,,,false,,true,2021-05-10,false,false,,false,,false,,false
+```
+
+## X4 / 20261113 / added / 926364715 / GODE RETAIL AS
+
+Type: brand; identity: ST1 SOGNDAL; saved-evidence verdict: correct.
+
+```json
+{
+  "name": "ST1 SOGNDAL",
+  "origin": "registered_subunit",
+  "subunit_orgnr": "971810521"
+}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=926364715&size=1000&page=0 / retrieved 2026-11-14T06:32:07.598394Z / SHA-256 `bfcfddddc57a98a9a2ce79ad5b84432109854be21ece46c4333bb9a3301d80fd` / locator `/_embedded/underenheter/1/navn`
+
+Exact excerpt:
+
+```
+rivstoff til motorvogner","kode":"47.300"},"navn":"ST1 SOGNDAL","oppstartsdato":"1967-07-01","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og offentlig forvaltning","kode":"BEDR"},"o
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=926364715&size=1000&page=0 / retrieved 2026-11-14T06:32:07.598394Z / SHA-256 `bfcfddddc57a98a9a2ce79ad5b84432109854be21ece46c4333bb9a3301d80fd` / locator `/_embedded/underenheter/1`
+
+Exact excerpt:
+
+```
+{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/971810521"},"overordnetEnhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/926364715"}},"antallAnsatte":7,"beliggenhetsadresse":{"adresse":["Stedjevegen 37"],"kommune":"SOGNDAL","kommunenummer":"4640","
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:32:05.169253Z / SHA-256 `38e293413218d759ec2e84513299d90ffff1ae23340d96735f87703ec9bfb5b7` / locator `row:926364715/column:navn`
+
+Exact excerpt:
+
+```
+926364715,GODE RETAIL AS,AS,Aksjeselskap,47.300,Detaljhandel med drivstoff til motorvogner,,,,,,,true,10,2026-09-14,2026-09-10,,,,,"c/o Christoffer Gode
+Liljedahlvegen 15",ÅLESUND,6010,ÅLESUND,1508,Norge,NO,Raknesvegen 140,MIDSUND,6475,MOLDE,1506,Norge,NO,2100,Private aksjeselskaper mv.,2025,2021-01
+```
+
+## X4 / 20261113 / added / 925496251 / HORN OF AFRICA TROMSØ AS
+
+Type: brand; identity: WEDEB'S RESTAURANT FOOD FROM HORN OF AFRICA; saved-evidence verdict: correct.
+
+```json
+{
+  "name": "WEDEB'S RESTAURANT FOOD FROM HORN OF AFRICA",
+  "origin": "registered_subunit",
+  "subunit_orgnr": "825531912"
+}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=925496251&size=1000&page=0 / retrieved 2026-11-14T06:32:08.674487Z / SHA-256 `f76e85b97c752a04d3308cc48983aaf07d62aa5339e313b6dfd8fbeb5ffc9b47` / locator `/_embedded/underenheter/0/navn`
+
+Exact excerpt:
+
+```
+":"Drift av restauranter","kode":"56.110"},"navn":"WEDEB'S RESTAURANT FOOD FROM HORN OF AFRICA","oppstartsdato":"2020-08-15","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og offentli
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=925496251&size=1000&page=0 / retrieved 2026-11-14T06:32:08.674487Z / SHA-256 `f76e85b97c752a04d3308cc48983aaf07d62aa5339e313b6dfd8fbeb5ffc9b47` / locator `/_embedded/underenheter/0`
+
+Exact excerpt:
+
+```
+{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/825531912"},"overordnetEnhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/925496251"}},"beliggenhetsadresse":{"adresse":["Skippergata 27"],"kommune":"TROMSØ","kommunenummer":"5501","land":"Norge","land
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:32:05.169253Z / SHA-256 `44d6768e5ecef04eacc9b0d5802dd1ea2796338d67f65263e4d239389563f86a` / locator `row:925496251/column:navn`
+
+Exact excerpt:
+
+```
+925496251,HORN OF AFRICA TROMSØ AS,AS,Aksjeselskap,56.110,Drift av restauranter,,,,,,,true,5,2026-04-13,2026-04-10,,,,,,,,,,,,Skippergata 27,TROMSØ,9008,TROMSØ,5501,Norge,NO,2100,Private aksjeselskaper mv.,2025,2020-08-17,2020-06-03,true,2020-11-01,2020-12-19,,,false,,true,2020-08-17,false,false,,fa
+```
+
+## X4 / 20261113 / added / 997887476 / NORSK DRIFT OG VEDLIKEHOLD AS
+
+Type: brand; identity: NDV; saved-evidence verdict: correct.
+
+```json
+{
+  "name": "NDV",
+  "origin": "registered_subunit",
+  "subunit_orgnr": "997959442"
+}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=997887476&size=1000&page=0 / retrieved 2026-11-14T06:32:08.059663Z / SHA-256 `6297436b9d032940522482c30c8b6c92e240766997a47ff6ad426be677a6ea0b` / locator `/_embedded/underenheter/0/navn`
+
+Exact excerpt:
+
+```
+ivelse":"Rørleggerarbeid","kode":"43.221"},"navn":"NDV","oppstartsdato":"2012-03-01","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og offentlig forvaltning","kode":"BEDR"},"organisas
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=997887476&size=1000&page=0 / retrieved 2026-11-14T06:32:08.059663Z / SHA-256 `6297436b9d032940522482c30c8b6c92e240766997a47ff6ad426be677a6ea0b` / locator `/_embedded/underenheter/0`
+
+Exact excerpt:
+
+```
+{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/997959442"},"overordnetEnhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/997887476"}},"beliggenhetsadresse":{"adresse":["Florvågvegen 109"],"kommune":"ASKØY","kommunenummer":"4627","land":"Norge","lan
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:32:05.251431Z / SHA-256 `526066954a6db981d13cf178954670db79c5f7efeeca040f58e671552869c31f` / locator `row:997887476/column:navn`
+
+Exact excerpt:
+
+```
+997887476,NORSK DRIFT OG VEDLIKEHOLD AS,AS,Aksjeselskap,43.221,Rørleggerarbeid,,,,,,,true,,2025-12-13,2025-12-10,,ole_m.m@hotmail.com,,986 84 802,,,,,,,,Florvågvegen 109,FLORVÅG,5305,ASKØY,4627,Norge,NO,2100,Private aksjeselskaper mv.,2025,2012-02-08,2012-01-07,true,2012-05-01,2012-08-18,,,false,,tr
+```
+
+## X4 / 20261113 / added / 926364715 / GODE RETAIL AS
+
+Type: brand; identity: GODE RETAIL; saved-evidence verdict: correct.
+
+```json
+{
+  "name": "GODE RETAIL",
+  "origin": "registered_subunit",
+  "subunit_orgnr": "926394363"
+}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=926364715&size=1000&page=0 / retrieved 2026-11-14T06:32:07.598394Z / SHA-256 `bfcfddddc57a98a9a2ce79ad5b84432109854be21ece46c4333bb9a3301d80fd` / locator `/_embedded/underenheter/0/navn`
+
+Exact excerpt:
+
+```
+rivstoff til motorvogner","kode":"47.300"},"navn":"GODE RETAIL","oppstartsdato":"2020-02-01","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og offentlig forvaltning","kode":"BEDR"},"o
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=926364715&size=1000&page=0 / retrieved 2026-11-14T06:32:07.598394Z / SHA-256 `bfcfddddc57a98a9a2ce79ad5b84432109854be21ece46c4333bb9a3301d80fd` / locator `/_embedded/underenheter/0`
+
+Exact excerpt:
+
+```
+{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/926394363"},"overordnetEnhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/926364715"}},"beliggenhetsadresse":{"adresse":["Fjelltun 15"],"kommune":"ÅLESUND","kommunenummer":"1508","land":"Norge","landko
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:32:05.169253Z / SHA-256 `38e293413218d759ec2e84513299d90ffff1ae23340d96735f87703ec9bfb5b7` / locator `row:926364715/column:navn`
+
+Exact excerpt:
+
+```
+926364715,GODE RETAIL AS,AS,Aksjeselskap,47.300,Detaljhandel med drivstoff til motorvogner,,,,,,,true,10,2026-09-14,2026-09-10,,,,,"c/o Christoffer Gode
+Liljedahlvegen 15",ÅLESUND,6010,ÅLESUND,1508,Norge,NO,Raknesvegen 140,MIDSUND,6475,MOLDE,1506,Norge,NO,2100,Private aksjeselskaper mv.,2025,2021-01
+```
+
+## X4 / 20261113 / added / 918031502 / SUNNCOM AS
+
+Type: brand; identity: Sunncom; saved-evidence verdict: correct.
+
+```json
+"Sunncom"
+```
+
+Source: https://www.sunncom.no/ / retrieved 2026-11-14T06:34:53.810993Z / SHA-256 `ff2e91e7d4b67546faa8c6e742f0a0e4828af26cc9769b859c199de370f3d1bf` / locator `publisher-public-name`
+
+Exact excerpt:
+
+```
+unk.min.css.map*/</style>
+<title>Home | Sunncom</title>
+  <link rel="canonical" href="https://www.sunncom.no"/>
+  <meta property="og:title" content="Home | Sunncom"/>
+  <meta property="og:url" content="https://www.sunncom.no"/>
+  <meta property="og:site_name" content="Sunncom"/>
+  <meta property="og
+```
+
+Source: https://www.sunncom.no/ / retrieved 2026-11-14T06:34:53.810993Z / SHA-256 `ff2e91e7d4b67546faa8c6e742f0a0e4828af26cc9769b859c199de370f3d1bf` / locator `identity-proof:918031502`
+
+Exact excerpt:
+
+```
+ class="wixui-rich-text__text">Org. nr: 918 031 502</span></h1></div></div></div></div></div></div></div></div></footer></div></div><div id="SCROLL_TO
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:32:05.155510Z / SHA-256 `451538514767e63d44c6f658cd01a3a2746b792ec933abf0dfae90b6bc14a712` / locator `row:918031502/column:navn`
+
+Exact excerpt:
+
+```
+918031502,SUNNCOM AS,AS,Aksjeselskap,46.500,Engroshandel med informasjons- og kommunikasjonsteknologiutstyr,,,,,,,true,,2023-05-11,2023-05-10,,,,,Postboks 5093 Larsgården,ÅLESUND,6021,ÅLESUND,1508,Norge,NO,Sjømannsvegen 9,ÅLESUND,6008,ÅLESUND,1508,Norge,NO,2100,Private aksjeselskaper mv.,2025,2016-1
+```
+
+## X4 / 20261113 / added / 930090077 / AS SOLO
+
+Type: brand; identity: SOLO AS; saved-evidence verdict: correct.
+
+```json
+{
+  "name": "SOLO AS",
+  "origin": "registered_subunit",
+  "subunit_orgnr": "971810564"
+}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=930090077&size=1000&page=0 / retrieved 2026-11-14T06:32:09.090482Z / SHA-256 `aa5f17a2c94900031d2b4b98e59a09c2e0dd436468a71006eed3919be110bd22` / locator `/_embedded/underenheter/0/navn`
+
+Exact excerpt:
+
+```
+skedrikker og flaskevann","kode":"11.070"},"navn":"SOLO AS","oppstartsdato":"1965-12-31","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og offentlig forvaltning","kode":"BEDR"},"organ
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=930090077&size=1000&page=0 / retrieved 2026-11-14T06:32:09.090482Z / SHA-256 `aa5f17a2c94900031d2b4b98e59a09c2e0dd436468a71006eed3919be110bd22` / locator `/_embedded/underenheter/0`
+
+Exact excerpt:
+
+```
+{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/971810564"},"overordnetEnhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/930090077"}},"beliggenhetsadresse":{"adresse":["Thorvald Meyers gate 2A"],"kommune":"OSLO","kommunenummer":"0301","land":"Norge
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:32:05.185283Z / SHA-256 `2aa45b96556d047fcaa6eadf04bde92aaafaa34aa3a5e83857a056931ae700f2` / locator `row:930090077/column:navn`
+
+Exact excerpt:
+
+```
+930090077,AS SOLO,AS,Aksjeselskap,11.070,Produksjon av leskedrikker og flaskevann,,,,,,,false,,,,,,22 71 61 00,,Pb. 7152 Majorstuen,OSLO,0307,OSLO,0301,Norge,NO,Thorvald Meyers gate 2A,OSLO,0555,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,1995-03-12,1965-02-23,true,1980-07-01,1996-01-25,
+```
+
+## X4 / 20261113 / added / 994900544 / FORBERG INTERNATIONAL AS
+
+Type: brand; identity: FORBERG MIXER TECHNOLOGY AS; saved-evidence verdict: correct.
+
+```json
+{
+  "name": "FORBERG MIXER TECHNOLOGY AS",
+  "origin": "registered_subunit",
+  "subunit_orgnr": "994941321"
+}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=994900544&size=1000&page=0 / retrieved 2026-11-14T06:32:09.549887Z / SHA-256 `ac76b0c1dc091a06c660c6df49ca25c10d6e538e6718d96727298a10ff28ab6a` / locator `/_embedded/underenheter/0/navn`
+
+Exact excerpt:
+
+```
+nisk konsulentvirksomhet","kode":"71.129"},"navn":"FORBERG MIXER TECHNOLOGY AS","oppstartsdato":"2009-12-29","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og offentlig forvaltning","
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=994900544&size=1000&page=0 / retrieved 2026-11-14T06:32:09.549887Z / SHA-256 `ac76b0c1dc091a06c660c6df49ca25c10d6e538e6718d96727298a10ff28ab6a` / locator `/_embedded/underenheter/0`
+
+Exact excerpt:
+
+```
+{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/994941321"},"overordnetEnhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/994900544"}},"beliggenhetsadresse":{"adresse":["Lørenveien 73A"],"kommune":"OSLO","kommunenummer":"0301","land":"Norge","landko
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:32:05.243194Z / SHA-256 `812f608e6ac0e1185ba2793ebc00518b4fa5e7ec291ab540f7e8810fb52cc29f` / locator `row:994900544/column:navn`
+
+Exact excerpt:
+
+```
+994900544,FORBERG INTERNATIONAL AS,AS,Aksjeselskap,71.129,Annen teknisk konsulentvirksomhet,,,,,,,true,,2026-06-13,2026-06-10,forberg.no,sales@forberg.no,,942 38 989,,,,,,,,Lørenveien 73A,OSLO,0585,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2009-12-29,2009-12-14,true,2010-01-01,2011-03-
+```
+
+## X4 / 20261113 / added / 934626176 / ADVOKATFIRMAET TASHAKORI AS
+
+Type: brand; identity: Advokatfirmaet Tashakori; saved-evidence verdict: correct.
+
+```json
+"Advokatfirmaet Tashakori"
+```
+
+Source: https://tashakori.no/nb / retrieved 2026-11-14T06:33:41.681227Z / SHA-256 `6e249158873fd837e088f6a83afdcc84d6f3baba0972384a500b098426c71375` / locator `publisher-public-name`
+
+Exact excerpt:
+
+```
+7MS7KE3K" as="script"/><title>Forside | Advokatfirmaet Tashakori</title><meta name="description" content="Din sak, vår styrke. Vi tilbyr juridisk rådgivning og advokathjelp for dine juridiske behov."/><meta name="keywords" content="advokat,juridisk rådgivning,advokathjelp"/><link rel="icon" href="/f
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:32:05.201531Z / SHA-256 `3fe6aaf862cd3d2ba2f6faa638a21c5fa517fbbce3e7d5ed45ea1d602fdeeaf0` / locator `row:934626176/column:registreringsdatoMerverdiavgiftsregisteretEnhetsregisteret`
+
+Exact excerpt:
+
+```
+,Private aksjeselskaper mv.,2025,2024-12-10,2024-11-27,true,2025-01-06,2025-01-06,,,false,,true,2024-12-10,false,false,,false,,false,,false,,,,,,,Bokmål,2024-11-27,Advokatvirksomhet og virksomhet som står i tilknytning til dette.,Advokat.,false,,,,,false,30000.00,100,Aksjekapital,,NOK,,,2024-12-10,,
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/934626176/roller / retrieved 2026-11-14T06:32:10.285871Z / SHA-256 `60bbb6e83bf940b71331974c6692b5f526b68d7ed0d2ec9bd5bf4fe4961bfcb0` / locator `/rollegrupper/3/roller/1/rekkefolge`
+
+Exact excerpt:
+
+```
+},"organisasjonsnummer":"932550210"},"rekkefolge":1,"type":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/REGN"}},"beskrivelse":"Regnskapsfører","kode":"REGN"}}],"sistEndret":"2026-11-05","type":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregistere
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/934626176 / retrieved 2026-11-14T06:32:11.814571Z / SHA-256 `44e8988c889cd819edf718834fb008db3bf44de12514c9279f85ff46e2cd1227` / locator `/0/resultatregnskapResultat/driftsresultat/driftskostnad/sumDriftskostnad`
+
+Exact excerpt:
+
+```
+tnad":{"loennskostnad":7000.00,"sumDriftskostnad":57246.00}}}},{"id":6513593,"journalnr":"2026415577","regnskapstype":"SELSKAP","virksomhet":{"organisasjonsnummer":"934626176","organisasjonsform":"AS","morselskap":false},"regnskapsperiode":{"fraDato":"2025-01-01","tilDato":"2025-12-31"},"valuta":"NO
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:32:05.201531Z / SHA-256 `3fe6aaf862cd3d2ba2f6faa638a21c5fa517fbbce3e7d5ed45ea1d602fdeeaf0` / locator `row:934626176/column:sisteInnsendteAarsregnskap`
+
+Exact excerpt:
+
+```
+SLO,0164,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2024-12-10,2024-11-27,true,2025-01-06,2025-01-06,,,false,,true,2024-12-10,false,false,,false,,false,,false,,,,,,,Bokmål,2024-11-27,Advokatvirksomhet og virksomhet som står i tilknytning til dette.,Advokat.,false,,,,,false,30000.00,100,
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/934626176/roller / retrieved 2026-11-14T06:32:10.285871Z / SHA-256 `60bbb6e83bf940b71331974c6692b5f526b68d7ed0d2ec9bd5bf4fe4961bfcb0` / locator `/rollegrupper/3/roller/1/enhet/erSlettet`
+
+Exact excerpt:
+
+```
+tsregisteret/api/enheter/932550210"}},"erSlettet":false,"godkjenningsstatus":"Ikke godkjent regnskapsforetak","navn":["ATLAS REGNSKAP AS"],"organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/AS"}},"beskrivelse":"Aksjeselskap","kode":"AS"},"or
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/934626176 / retrieved 2026-11-14T06:32:11.814571Z / SHA-256 `44e8988c889cd819edf718834fb008db3bf44de12514c9279f85ff46e2cd1227` / locator `/1/egenkapitalGjeld/gjeldOversikt/kortsiktigGjeld/sumKortsiktigGjeld`
+
+Exact excerpt:
+
+```
+907350.00,"kortsiktigGjeld":{"sumKortsiktigGjeld":1903257.00},"langsiktigGjeld":{"sumLangsiktigGjeld":4093.00}}},"eiendeler":{"sumFordringer":1655961.00,"sumBankinnskuddOgKontanter":2354060.00,"sumEiendeler":4103047.00,"omloepsmidler":{"sumOmloepsmidler":4010021.00},"anleggsmidler":{"sumAnleggsmidle
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:32:05.201531Z / SHA-256 `3fe6aaf862cd3d2ba2f6faa638a21c5fa517fbbce3e7d5ed45ea1d602fdeeaf0` / locator `row:934626176/columns:institusjonellSektorkode.*`
+
+Exact excerpt:
+
+```
+Norge,NO,C. J. Hambros plass 2,OSLO,0164,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2024-12-10,2024-11-27,true,2025-01-06,2025-01-06,,,false,,true,2024-12-10,false,false,,false,,false,,false,,,,,,,Bokmål,2024-11-27,Advokatvirksomhet og virksomhet som står i tilknytning til dette.,Advoka
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:32:05.201531Z / SHA-256 `3fe6aaf862cd3d2ba2f6faa638a21c5fa517fbbce3e7d5ed45ea1d602fdeeaf0` / locator `row:934626176/column:vedtektsdato`
+
+Exact excerpt:
+
+```
+01,Norge,NO,2100,Private aksjeselskaper mv.,2025,2024-12-10,2024-11-27,true,2025-01-06,2025-01-06,,,false,,true,2024-12-10,false,false,,false,,false,,false,,,,,,,Bokmål,2024-11-27,Advokatvirksomhet og virksomhet som står i tilknytning til dette.,Advokat.,false,,,,,false,30000.00,100,Aksjekapital,,NO
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:32:05.201531Z / SHA-256 `3fe6aaf862cd3d2ba2f6faa638a21c5fa517fbbce3e7d5ed45ea1d602fdeeaf0` / locator `row:934626176/columns:forretningsadresse.*`
+
+Exact excerpt:
+
+```
+268,Postboks 8832 Youngstorget,OSLO,0028,OSLO,0301,Norge,NO,C. J. Hambros plass 2,OSLO,0164,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2024-12-10,2024-11-27,true,2025-01-06,2025-01-06,,,false,,true,2024-12-10,false,false,,false,,false,,false,,,,,,,Bokmål,2024-11-27,Advokatvirksomhet og 
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=934626176&size=1000&page=0 / retrieved 2026-11-14T06:32:08.043286Z / SHA-256 `02c5097c255ba46f91191f1cba5975da407471814ab75c777783c881d5211e22` / locator `/_embedded/underenheter/0/organisasjonsform`
+
+Exact excerpt:
+
+```
+,"oppstartsdato":"2025-01-01","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og offentlig forvaltning","kode":"BEDR"},"organisasjonsnummer":"934661141","overordnetEnhet":"934626176","
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/aarsregnskap/kopi/934626176/aar / retrieved 2026-11-14T06:33:32.511279Z / SHA-256 `f3058a1afdebedda3802652b2e8c662edf4e41f056e3cddf2d075e66183b2a58` / locator `/1`
+
+Exact excerpt:
+
+```
+["2024","2025"]
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:32:05.201531Z / SHA-256 `3fe6aaf862cd3d2ba2f6faa638a21c5fa517fbbce3e7d5ed45ea1d602fdeeaf0` / locator `row:934626176/column:underAvvikling`
+
+Exact excerpt:
+
+```
+mv.,2025,2024-12-10,2024-11-27,true,2025-01-06,2025-01-06,,,false,,true,2024-12-10,false,false,,false,,false,,false,,,,,,,Bokmål,2024-11-27,Advokatvirksomhet og virksomhet som står i tilknytning til dette.,Advokat.,false,,,,,false,30000.00,100,Aksjekapital,,NOK,,,2024-12-10,,,,,,,,,,
+
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/934626176/roller / retrieved 2026-11-14T06:32:10.285871Z / SHA-256 `60bbb6e83bf940b71331974c6692b5f526b68d7ed0d2ec9bd5bf4fe4961bfcb0` / locator `/rollegrupper/1/roller/0`
+
+Exact excerpt:
+
+```
+,{"roller":[{"avregistrert":false,"person":{"erDoed":false,"fodselsdato":"1992-09-27","navn":{"etternavn":"Tashakori","fornavn":"Omar"}},"rekkefolge":0,"type":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/LEDE"}},"beskrivelse":"Styrets leder","kode":"LEDE"}}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=934626176&size=1000&page=0 / retrieved 2026-11-14T06:32:08.043286Z / SHA-256 `02c5097c255ba46f91191f1cba5975da407471814ab75c777783c881d5211e22` / locator `/_embedded/underenheter/0/registrertIMvaregisteret`
+
+Exact excerpt:
+
+```
+gisteret":"2024-12-16","registrertIMvaregisteret":false,"respons_klasse":"Underenhet"}]},"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=934626176&size=1000&page=0"}},"page":{"number":0,"size":1000,"totalElements":1,"totalPages":1}}
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/934626176 / retrieved 2026-11-14T06:32:11.814571Z / SHA-256 `44e8988c889cd819edf718834fb008db3bf44de12514c9279f85ff46e2cd1227` / locator `/1/resultatregnskapResultat/finansresultat/finanskostnad/annenRentekostnad`
+
+Exact excerpt:
+
+```
+ter":171.00},"finanskostnad":{"annenRentekostnad":140.00,"sumFinanskostnad":140.00}},"driftsresultat":{"driftsresultat":2769066.00,"driftsinntekter":{"salgsinntekter":5207109.00,"sumDriftsinntekter":5207109.00},"driftskostnad":{"loennskostnad":1529005.00,"sumDriftskostnad":2438043.00}}}}]
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/934626176 / retrieved 2026-11-14T06:32:11.814571Z / SHA-256 `44e8988c889cd819edf718834fb008db3bf44de12514c9279f85ff46e2cd1227` / locator `/0/resultatregnskapResultat/driftsresultat/driftsresultat`
+
+Exact excerpt:
+
+```
+nskostnad":{}},"driftsresultat":{"driftsresultat":30851.00,"driftsinntekter":{"salgsinntekter":88097.00,"sumDriftsinntekter":88097.00},"driftskostnad":{"loennskostnad":7000.00,"sumDriftskostnad":57246.00}}}},{"id":6513593,"journalnr":"2026415577","regnskapstype":"SELSKAP","virksomhet":{"organisasjon
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:32:05.201531Z / SHA-256 `3fe6aaf862cd3d2ba2f6faa638a21c5fa517fbbce3e7d5ed45ea1d602fdeeaf0` / locator `row:934626176/column:registreringsdatoForetaksregisteret`
+
+Exact excerpt:
+
+```
+164,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2024-12-10,2024-11-27,true,2025-01-06,2025-01-06,,,false,,true,2024-12-10,false,false,,false,,false,,false,,,,,,,Bokmål,2024-11-27,Advokatvirksomhet og virksomhet som står i tilknytning til dette.,Advokat.,false,,,,,false,30000.00,100,Aksje
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=934626176&size=1000&page=0 / retrieved 2026-11-14T06:32:08.043286Z / SHA-256 `02c5097c255ba46f91191f1cba5975da407471814ab75c777783c881d5211e22` / locator `/_embedded/underenheter/0`
+
+Exact excerpt:
+
+```
+{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/934661141"},"overordnetEnhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/934626176"}},"antallAnsatte":6,"beliggenhetsadresse":{"adresse":["C. J. Hambros plass 2"],"kommune":"OSLO","kommunenummer":"030
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:32:05.201531Z / SHA-256 `3fe6aaf862cd3d2ba2f6faa638a21c5fa517fbbce3e7d5ed45ea1d602fdeeaf0` / locator `row:934626176/column:utenlandskRegisterNavn`
+
+Exact excerpt:
+
+```
+fortDato,registreringsnummerIHjemlandet,utenlandskRegisterNavn,utenlandskRegisterAdresse.land,utenlandskRegisterAdresse.poststed,utenlandskRegisterAdresse.adresse,underlagtLovgivningLand,underlagtLovgivningLandKode,foretaksformIHjemlandet.kode,foretaksformIHjemlandet.beskrivelse,foretaksformIHjemlan
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:32:05.201531Z / SHA-256 `3fe6aaf862cd3d2ba2f6faa638a21c5fa517fbbce3e7d5ed45ea1d602fdeeaf0` / locator `row:934626176/column:underlagtLovgivningLand`
+
+Exact excerpt:
+
+```
+tsted,utenlandskRegisterAdresse.adresse,underlagtLovgivningLand,underlagtLovgivningLandKode,foretaksformIHjemlandet.kode,foretaksformIHjemlandet.beskrivelse,foretaksformIHjemlandet.beskrivelseBokmaal
+934626176,ADVOKATFIRMAET TASHAKORI AS,AS,Aksjeselskap,69.100,Juridisk tjenesteyting,,,,,,,true,6,20
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:32:05.201531Z / SHA-256 `3fe6aaf862cd3d2ba2f6faa638a21c5fa517fbbce3e7d5ed45ea1d602fdeeaf0` / locator `row:934626176/column:mobil`
+
+Exact excerpt:
+
+```
+26-09-14,2026-09-10,www.tashakori.no,tashakori.o@gmail.com,,482 19 268,Postboks 8832 Youngstorget,OSLO,0028,OSLO,0301,Norge,NO,C. J. Hambros plass 2,OSLO,0164,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2024-12-10,2024-11-27,true,2025-01-06,2025-01-06,,,false,,true,2024-12-10,false,false
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/934626176 / retrieved 2026-11-14T06:32:11.814571Z / SHA-256 `44e8988c889cd819edf718834fb008db3bf44de12514c9279f85ff46e2cd1227` / locator `/1/resultatregnskapResultat/driftsresultat/driftsinntekter/sumDriftsinntekter`
+
+Exact excerpt:
+
+```
+{"salgsinntekter":5207109.00,"sumDriftsinntekter":5207109.00},"driftskostnad":{"loennskostnad":1529005.00,"sumDriftskostnad":2438043.00}}}}]
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:32:05.201531Z / SHA-256 `3fe6aaf862cd3d2ba2f6faa638a21c5fa517fbbce3e7d5ed45ea1d602fdeeaf0` / locator `row:934626176/column:registrertIMvaRegisteret`
+
+Exact excerpt:
+
+```
+KORI AS,AS,Aksjeselskap,69.100,Juridisk tjenesteyting,,,,,,,true,6,2026-09-14,2026-09-10,www.tashakori.no,tashakori.o@gmail.com,,482 19 268,Postboks 8832 Youngstorget,OSLO,0028,OSLO,0301,Norge,NO,C. J. Hambros plass 2,OSLO,0164,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2024-12-10,2024-
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/934626176 / retrieved 2026-11-14T06:32:11.814571Z / SHA-256 `44e8988c889cd819edf718834fb008db3bf44de12514c9279f85ff46e2cd1227` / locator `/0/resultatregnskapResultat/ordinaertResultatFoerSkattekostnad`
+
+Exact excerpt:
+
+```
+apResultat":{"ordinaertResultatFoerSkattekostnad":30851.00,"ordinaertResultatSkattekostnad":6787.00,"aarsresultat":24064.00,"finansresultat":{"finansinntekt":{},"finanskostnad":{}},"driftsresultat":{"driftsresultat":30851.00,"driftsinntekter":{"salgsinntekter":88097.00,"sumDriftsinntekter":88097.00}
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/934626176 / retrieved 2026-11-14T06:32:11.814571Z / SHA-256 `44e8988c889cd819edf718834fb008db3bf44de12514c9279f85ff46e2cd1227` / locator `/1/resultatregnskapResultat/driftsresultat/driftskostnad/sumDriftskostnad`
+
+Exact excerpt:
+
+```
+d":{"loennskostnad":1529005.00,"sumDriftskostnad":2438043.00}}}}]
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=934626176&size=1000&page=0 / retrieved 2026-11-14T06:32:08.043286Z / SHA-256 `02c5097c255ba46f91191f1cba5975da407471814ab75c777783c881d5211e22` / locator `/_embedded/underenheter/0/hjemmeside`
+
+Exact excerpt:
+
+```
+allAnsatte":true,"historiskeNavn":[],"hjemmeside":"www.tashakori.no","mobil":"482 19 268","naeringskode1":{"beskrivelse":"Juridisk tjenesteyting","kode":"69.100"},"navn":"ADVOKATFIRMAET TASHAKORI AS","oppstartsdato":"2025-01-01","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/en
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=934626176&size=1000&page=0 / retrieved 2026-11-14T06:32:08.043286Z / SHA-256 `02c5097c255ba46f91191f1cba5975da407471814ab75c777783c881d5211e22` / locator `/_embedded/underenheter/0/mobil`
+
+Exact excerpt:
+
+```
+eNavn":[],"hjemmeside":"www.tashakori.no","mobil":"482 19 268","naeringskode1":{"beskrivelse":"Juridisk tjenesteyting","kode":"69.100"},"navn":"ADVOKATFIRMAET TASHAKORI AS","oppstartsdato":"2025-01-01","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisa
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/934626176 / retrieved 2026-11-14T06:32:11.814571Z / SHA-256 `44e8988c889cd819edf718834fb008db3bf44de12514c9279f85ff46e2cd1227` / locator `/0/resultatregnskapResultat/driftsresultat/driftskostnad/loennskostnad`
+
+Exact excerpt:
+
+```
+ekter":88097.00},"driftskostnad":{"loennskostnad":7000.00,"sumDriftskostnad":57246.00}}}},{"id":6513593,"journalnr":"2026415577","regnskapstype":"SELSKAP","virksomhet":{"organisasjonsnummer":"934626176","organisasjonsform":"AS","morselskap":false},"regnskapsperiode":{"fraDato":"2025-01-01","tilDato"
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/934626176 / retrieved 2026-11-14T06:32:11.814571Z / SHA-256 `44e8988c889cd819edf718834fb008db3bf44de12514c9279f85ff46e2cd1227` / locator `/0/eiendeler/sumFordringer`
+
+Exact excerpt:
+
+```
+siktigGjeld":0.00}}},"eiendeler":{"sumFordringer":105607.00,"sumBankinnskuddOgKontanter":30000.00,"sumEiendeler":135607.00,"omloepsmidler":{"sumOmloepsmidler":135607.00},"anleggsmidler":{"sumAnleggsmidler":0.00}},"resultatregnskapResultat":{"ordinaertResultatFoerSkattekostnad":30851.00,"ordinaertRes
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/934626176 / retrieved 2026-11-14T06:32:11.814571Z / SHA-256 `44e8988c889cd819edf718834fb008db3bf44de12514c9279f85ff46e2cd1227` / locator `/1/resultatregnskapResultat/aarsresultat`
+
+Exact excerpt:
+
+```
+rtResultatSkattekostnad":621681.00,"aarsresultat":2147416.00,"finansresultat":{"nettoFinans":31.00,"finansinntekt":{"sumFinansinntekter":171.00},"finanskostnad":{"annenRentekostnad":140.00,"sumFinanskostnad":140.00}},"driftsresultat":{"driftsresultat":2769066.00,"driftsinntekter":{"salgsinntekter":5
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/934626176 / retrieved 2026-11-14T06:32:11.814571Z / SHA-256 `44e8988c889cd819edf718834fb008db3bf44de12514c9279f85ff46e2cd1227` / locator `/1/egenkapitalGjeld/gjeldOversikt/langsiktigGjeld/sumLangsiktigGjeld`
+
+Exact excerpt:
+
+```
+03257.00},"langsiktigGjeld":{"sumLangsiktigGjeld":4093.00}}},"eiendeler":{"sumFordringer":1655961.00,"sumBankinnskuddOgKontanter":2354060.00,"sumEiendeler":4103047.00,"omloepsmidler":{"sumOmloepsmidler":4010021.00},"anleggsmidler":{"sumAnleggsmidler":93025.00}},"resultatregnskapResultat":{"ordinaert
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/934626176 / retrieved 2026-11-14T06:32:11.814571Z / SHA-256 `44e8988c889cd819edf718834fb008db3bf44de12514c9279f85ff46e2cd1227` / locator `/0/egenkapitalGjeld/gjeldOversikt/langsiktigGjeld/sumLangsiktigGjeld`
+
+Exact excerpt:
+
+```
+87327.00},"langsiktigGjeld":{"sumLangsiktigGjeld":0.00}}},"eiendeler":{"sumFordringer":105607.00,"sumBankinnskuddOgKontanter":30000.00,"sumEiendeler":135607.00,"omloepsmidler":{"sumOmloepsmidler":135607.00},"anleggsmidler":{"sumAnleggsmidler":0.00}},"resultatregnskapResultat":{"ordinaertResultatFoer
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/934626176/roller / retrieved 2026-11-14T06:32:10.285871Z / SHA-256 `60bbb6e83bf940b71331974c6692b5f526b68d7ed0d2ec9bd5bf4fe4961bfcb0` / locator `/rollegrupper/1/roller/0/rekkefolge`
+
+Exact excerpt:
+
+```
+navn":"Tashakori","fornavn":"Omar"}},"rekkefolge":0,"type":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/LEDE"}},"beskrivelse":"Styrets leder","kode":"LEDE"}}],"sistEndret":"2024-12-10","type":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:32:05.201531Z / SHA-256 `3fe6aaf862cd3d2ba2f6faa638a21c5fa517fbbce3e7d5ed45ea1d602fdeeaf0` / locator `row:934626176/column:frivilligMvaRegistrertBeskrivelser`
+
+Exact excerpt:
+
+```
+rverdiavgiftsregisteretEnhetsregisteret,frivilligMvaRegistrertBeskrivelser,registreringsdatoFrivilligMerverdiavgiftsregisteret,registrertIFrivillighetsregisteret,registreringsdatoFrivillighetsregisteret,registrertIForetaksregisteret,registreringsdatoForetaksregisteret,registrertIStiftelsesregisteret
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:32:05.201531Z / SHA-256 `3fe6aaf862cd3d2ba2f6faa638a21c5fa517fbbce3e7d5ed45ea1d602fdeeaf0` / locator `row:934626176/column:vedtektsfestetFormaal`
+
+Exact excerpt:
+
+```
+10,false,false,,false,,false,,false,,,,,,,Bokmål,2024-11-27,Advokatvirksomhet og virksomhet som står i tilknytning til dette.,Advokat.,false,,,,,false,30000.00,100,Aksjekapital,,NOK,,,2024-12-10,,,,,,,,,,
+
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/934626176 / retrieved 2026-11-14T06:32:11.814571Z / SHA-256 `44e8988c889cd819edf718834fb008db3bf44de12514c9279f85ff46e2cd1227` / locator `/1/egenkapitalGjeld/sumEgenkapitalGjeld`
+
+Exact excerpt:
+
+```
+egler"},"egenkapitalGjeld":{"sumEgenkapitalGjeld":4103047.00,"egenkapital":{"sumEgenkapital":2195697.00,"opptjentEgenkapital":{"sumOpptjentEgenkapital":2171481.00},"innskuttEgenkapital":{"sumInnskuttEgenkaptial":24216.00}},"gjeldOversikt":{"sumGjeld":1907350.00,"kortsiktigGjeld":{"sumKortsiktigGjeld
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/934626176/roller / retrieved 2026-11-14T06:32:10.285871Z / SHA-256 `60bbb6e83bf940b71331974c6692b5f526b68d7ed0d2ec9bd5bf4fe4961bfcb0` / locator `/rollegrupper/2/roller/0/rekkefolge`
+
+Exact excerpt:
+
+```
+},"organisasjonsnummer":"936434975"},"rekkefolge":0,"type":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/REVI"}},"beskrivelse":"Revisor","kode":"REVI"}}],"sistEndret":"2025-12-09","type":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/r
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=934626176&size=1000&page=0 / retrieved 2026-11-14T06:32:08.043286Z / SHA-256 `02c5097c255ba46f91191f1cba5975da407471814ab75c777783c881d5211e22` / locator `/_embedded/underenheter/0/postadresse`
+
+Exact excerpt:
+
+```
+1141","overordnetEnhet":"934626176","postadresse":{"adresse":["Postboks 8832 Youngstorget"],"kommune":"OSLO","kommunenummer":"0301","land":"Norge","landkode":"NO","postnummer":"0028","poststed":"OSLO"},"registreringsdatoAntallAnsatteEnhetsregisteret":"2026-09-12","registreringsdatoAntallAnsatteNAVAa
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/934626176 / retrieved 2026-11-14T06:32:11.814571Z / SHA-256 `44e8988c889cd819edf718834fb008db3bf44de12514c9279f85ff46e2cd1227` / locator `/0/resultatregnskapResultat/driftsresultat/driftsinntekter/sumDriftsinntekter`
+
+Exact excerpt:
+
+```
+":{"salgsinntekter":88097.00,"sumDriftsinntekter":88097.00},"driftskostnad":{"loennskostnad":7000.00,"sumDriftskostnad":57246.00}}}},{"id":6513593,"journalnr":"2026415577","regnskapstype":"SELSKAP","virksomhet":{"organisasjonsnummer":"934626176","organisasjonsform":"AS","morselskap":false},"regnskap
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/aarsregnskap/kopi/934626176/aar / retrieved 2026-11-14T06:33:32.511279Z / SHA-256 `f3058a1afdebedda3802652b2e8c662edf4e41f056e3cddf2d075e66183b2a58` / locator `/`
+
+Exact excerpt:
+
+```
+["2024","2025"]
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:32:05.201531Z / SHA-256 `3fe6aaf862cd3d2ba2f6faa638a21c5fa517fbbce3e7d5ed45ea1d602fdeeaf0` / locator `row:934626176/column:maalform`
+
+Exact excerpt:
+
+```
+lse,,true,2024-12-10,false,false,,false,,false,,false,,,,,,,Bokmål,2024-11-27,Advokatvirksomhet og virksomhet som står i tilknytning til dette.,Advokat.,false,,,,,false,30000.00,100,Aksjekapital,,NOK,,,2024-12-10,,,,,,,,,,
+
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=934626176&size=1000&page=0 / retrieved 2026-11-14T06:32:08.043286Z / SHA-256 `02c5097c255ba46f91191f1cba5975da407471814ab75c777783c881d5211e22` / locator `/_embedded/underenheter/0/postadresse`
+
+Exact excerpt:
+
+```
+1141","overordnetEnhet":"934626176","postadresse":{"adresse":["Postboks 8832 Youngstorget"],"kommune":"OSLO","kommunenummer":"0301","land":"Norge","landkode":"NO","postnummer":"0028","poststed":"OSLO"},"registreringsdatoAntallAnsatteEnhetsregisteret":"2026-09-12","registreringsdatoAntallAnsatteNAVAa
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:32:05.201531Z / SHA-256 `3fe6aaf862cd3d2ba2f6faa638a21c5fa517fbbce3e7d5ed45ea1d602fdeeaf0` / locator `row:934626176/column:registreringsdatoAntallAnsatteEnhetsregisteret`
+
+Exact excerpt:
+
+```
+,AS,Aksjeselskap,69.100,Juridisk tjenesteyting,,,,,,,true,6,2026-09-14,2026-09-10,www.tashakori.no,tashakori.o@gmail.com,,482 19 268,Postboks 8832 Youngstorget,OSLO,0028,OSLO,0301,Norge,NO,C. J. Hambros plass 2,OSLO,0164,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2024-12-10,2024-11-27,t
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/934626176 / retrieved 2026-11-14T06:32:11.814571Z / SHA-256 `44e8988c889cd819edf718834fb008db3bf44de12514c9279f85ff46e2cd1227` / locator `/1/resultatregnskapResultat/ordinaertResultatSkattekostnad`
+
+Exact excerpt:
+
+```
+tnad":2769097.00,"ordinaertResultatSkattekostnad":621681.00,"aarsresultat":2147416.00,"finansresultat":{"nettoFinans":31.00,"finansinntekt":{"sumFinansinntekter":171.00},"finanskostnad":{"annenRentekostnad":140.00,"sumFinanskostnad":140.00}},"driftsresultat":{"driftsresultat":2769066.00,"driftsinnte
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=934626176&size=1000&page=0 / retrieved 2026-11-14T06:32:08.043286Z / SHA-256 `02c5097c255ba46f91191f1cba5975da407471814ab75c777783c881d5211e22` / locator `/_embedded/underenheter/0/registreringsdatoAntallAnsatteNAVAaregisteret`
+
+Exact excerpt:
+
+```
+","registreringsdatoAntallAnsatteNAVAaregisteret":"2026-09-10","registreringsdatoEnhetsregisteret":"2024-12-16","registrertIMvaregisteret":false,"respons_klasse":"Underenhet"}]},"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=934626176&size=1000&page
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:32:05.201531Z / SHA-256 `3fe6aaf862cd3d2ba2f6faa638a21c5fa517fbbce3e7d5ed45ea1d602fdeeaf0` / locator `row:934626176/columns:naeringskode1.*`
+
+Exact excerpt:
+
+```
+934626176,ADVOKATFIRMAET TASHAKORI AS,AS,Aksjeselskap,69.100,Juridisk tjenesteyting,,,,,,,true,6,2026-09-14,2026-09-10,www.tashakori.no,tashakori.o@gmail.com,,482 19 268,Postboks 8832 Youngstorget,OSLO,0028,OSLO,0301,Norge,NO,C. J. Hambros plass 2,OSLO,0164,OSLO,0301,Norge,NO,2100,Private aksjeselsk
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/934626176 / retrieved 2026-11-14T06:32:11.814571Z / SHA-256 `44e8988c889cd819edf718834fb008db3bf44de12514c9279f85ff46e2cd1227` / locator `/0/resultatregnskapResultat/driftsresultat/driftsinntekter/salgsinntekter`
+
+Exact excerpt:
+
+```
+tat":30851.00,"driftsinntekter":{"salgsinntekter":88097.00,"sumDriftsinntekter":88097.00},"driftskostnad":{"loennskostnad":7000.00,"sumDriftskostnad":57246.00}}}},{"id":6513593,"journalnr":"2026415577","regnskapstype":"SELSKAP","virksomhet":{"organisasjonsnummer":"934626176","organisasjonsform":"AS"
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=934626176&size=1000&page=0 / retrieved 2026-11-14T06:32:08.043286Z / SHA-256 `02c5097c255ba46f91191f1cba5975da407471814ab75c777783c881d5211e22` / locator `/_embedded/underenheter/0/epostadresse`
+
+Exact excerpt:
+
+```
+tnummer":"0164","poststed":"OSLO"},"epostadresse":"tashakori.o@gmail.com","harRegistrertAntallAnsatte":true,"historiskeNavn":[],"hjemmeside":"www.tashakori.no","mobil":"482 19 268","naeringskode1":{"beskrivelse":"Juridisk tjenesteyting","kode":"69.100"},"navn":"ADVOKATFIRMAET TASHAKORI AS","oppstart
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=934626176&size=1000&page=0 / retrieved 2026-11-14T06:32:08.043286Z / SHA-256 `02c5097c255ba46f91191f1cba5975da407471814ab75c777783c881d5211e22` / locator `/_embedded/underenheter/0/harRegistrertAntallAnsatte`
+
+Exact excerpt:
+
+```
+shakori.o@gmail.com","harRegistrertAntallAnsatte":true,"historiskeNavn":[],"hjemmeside":"www.tashakori.no","mobil":"482 19 268","naeringskode1":{"beskrivelse":"Juridisk tjenesteyting","kode":"69.100"},"navn":"ADVOKATFIRMAET TASHAKORI AS","oppstartsdato":"2025-01-01","organisasjonsform":{"_links":{"s
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:32:05.201531Z / SHA-256 `3fe6aaf862cd3d2ba2f6faa638a21c5fa517fbbce3e7d5ed45ea1d602fdeeaf0` / locator `row:934626176/column:registreringsdatoenhetsregisteret`
+
+Exact excerpt:
+
+```
+164,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2024-12-10,2024-11-27,true,2025-01-06,2025-01-06,,,false,,true,2024-12-10,false,false,,false,,false,,false,,,,,,,Bokmål,2024-11-27,Advokatvirksomhet og virksomhet som står i tilknytning til dette.,Advokat.,false,,,,,false,30000.00,100,Aksje
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:32:05.201531Z / SHA-256 `3fe6aaf862cd3d2ba2f6faa638a21c5fa517fbbce3e7d5ed45ea1d602fdeeaf0` / locator `row:934626176/column:tvangsavvikletPgaManglendeSlettingDato`
+
+Exact excerpt:
+
+```
+to,tvangsopplostPgaMangelfulltStyreDato,tvangsavvikletPgaManglendeSlettingDato,overordnetEnhet,maalform,vedtektsdato,vedtektsfestetFormaal,aktivitet,paategninger,underUtenlandskInsolvensbehandlingDato,underRekonstruksjonsforhandlingDato,fravalgRevisjonDato,fravalgRevisjonBeslutningsDato,erIKonsern,k
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/934626176/roller / retrieved 2026-11-14T06:32:10.285871Z / SHA-256 `60bbb6e83bf940b71331974c6692b5f526b68d7ed0d2ec9bd5bf4fe4961bfcb0` / locator `/rollegrupper/2/roller/0/enhet/organisasjonsform`
+
+Exact excerpt:
+
+```
+SORDAMENE AVD. ROSENHOLM AS"],"organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/AS"}},"beskrivelse":"Aksjeselskap","kode":"AS"},"organisasjonsnummer":"936434975"},"rekkefolge":0,"type":{"_links":{"self":{"href":"https://data.brreg.no/enhets
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/934626176/roller / retrieved 2026-11-14T06:32:10.285871Z / SHA-256 `60bbb6e83bf940b71331974c6692b5f526b68d7ed0d2ec9bd5bf4fe4961bfcb0` / locator `/rollegrupper/2/roller/0`
+
+Exact excerpt:
+
+```
+{"avregistrert":false,"enhet":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/936434975"}},"erSlettet":false,"godkjenningsstatus":"Godkjent revisjonsforetak","navn":["REVISORDAMENE AVD. ROSENHOLM AS"],"organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:32:05.201531Z / SHA-256 `3fe6aaf862cd3d2ba2f6faa638a21c5fa517fbbce3e7d5ed45ea1d602fdeeaf0` / locator `row:934626176/column:epostadresse`
+
+Exact excerpt:
+
+```
+teyting,,,,,,,true,6,2026-09-14,2026-09-10,www.tashakori.no,tashakori.o@gmail.com,,482 19 268,Postboks 8832 Youngstorget,OSLO,0028,OSLO,0301,Norge,NO,C. J. Hambros plass 2,OSLO,0164,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2024-12-10,2024-11-27,true,2025-01-06,2025-01-06,,,false,,true
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/934626176 / retrieved 2026-11-14T06:32:11.814571Z / SHA-256 `44e8988c889cd819edf718834fb008db3bf44de12514c9279f85ff46e2cd1227` / locator `/1/egenkapitalGjeld/egenkapital/opptjentEgenkapital/sumOpptjentEgenkapital`
+
+Exact excerpt:
+
+```
+0,"opptjentEgenkapital":{"sumOpptjentEgenkapital":2171481.00},"innskuttEgenkapital":{"sumInnskuttEgenkaptial":24216.00}},"gjeldOversikt":{"sumGjeld":1907350.00,"kortsiktigGjeld":{"sumKortsiktigGjeld":1903257.00},"langsiktigGjeld":{"sumLangsiktigGjeld":4093.00}}},"eiendeler":{"sumFordringer":1655961.
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/934626176 / retrieved 2026-11-14T06:32:11.814571Z / SHA-256 `44e8988c889cd819edf718834fb008db3bf44de12514c9279f85ff46e2cd1227` / locator `/0/eiendeler/omloepsmidler/sumOmloepsmidler`
+
+Exact excerpt:
+
+```
+er":135607.00,"omloepsmidler":{"sumOmloepsmidler":135607.00},"anleggsmidler":{"sumAnleggsmidler":0.00}},"resultatregnskapResultat":{"ordinaertResultatFoerSkattekostnad":30851.00,"ordinaertResultatSkattekostnad":6787.00,"aarsresultat":24064.00,"finansresultat":{"finansinntekt":{},"finanskostnad":{}},
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/934626176 / retrieved 2026-11-14T06:32:11.814571Z / SHA-256 `44e8988c889cd819edf718834fb008db3bf44de12514c9279f85ff46e2cd1227` / locator `/1/eiendeler/omloepsmidler/sumOmloepsmidler`
+
+Exact excerpt:
+
+```
+r":4103047.00,"omloepsmidler":{"sumOmloepsmidler":4010021.00},"anleggsmidler":{"sumAnleggsmidler":93025.00}},"resultatregnskapResultat":{"ordinaertResultatFoerSkattekostnad":2769097.00,"ordinaertResultatSkattekostnad":621681.00,"aarsresultat":2147416.00,"finansresultat":{"nettoFinans":31.00,"finansi
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:32:05.201531Z / SHA-256 `3fe6aaf862cd3d2ba2f6faa638a21c5fa517fbbce3e7d5ed45ea1d602fdeeaf0` / locator `row:934626176/column:hjemmeside`
+
+Exact excerpt:
+
+```
+0,Juridisk tjenesteyting,,,,,,,true,6,2026-09-14,2026-09-10,www.tashakori.no,tashakori.o@gmail.com,,482 19 268,Postboks 8832 Youngstorget,OSLO,0028,OSLO,0301,Norge,NO,C. J. Hambros plass 2,OSLO,0164,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2024-12-10,2024-11-27,true,2025-01-06,2025-01
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/934626176 / retrieved 2026-11-14T06:32:11.814571Z / SHA-256 `44e8988c889cd819edf718834fb008db3bf44de12514c9279f85ff46e2cd1227` / locator `/1/egenkapitalGjeld/egenkapital/innskuttEgenkapital/sumInnskuttEgenkaptial`
+
+Exact excerpt:
+
+```
+},"innskuttEgenkapital":{"sumInnskuttEgenkaptial":24216.00}},"gjeldOversikt":{"sumGjeld":1907350.00,"kortsiktigGjeld":{"sumKortsiktigGjeld":1903257.00},"langsiktigGjeld":{"sumLangsiktigGjeld":4093.00}}},"eiendeler":{"sumFordringer":1655961.00,"sumBankinnskuddOgKontanter":2354060.00,"sumEiendeler":41
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/934626176/roller / retrieved 2026-11-14T06:32:10.285871Z / SHA-256 `60bbb6e83bf940b71331974c6692b5f526b68d7ed0d2ec9bd5bf4fe4961bfcb0` / locator `/rollegrupper/2/roller/0/enhet/erSlettet`
+
+Exact excerpt:
+
+```
+tsregisteret/api/enheter/936434975"}},"erSlettet":false,"godkjenningsstatus":"Godkjent revisjonsforetak","navn":["REVISORDAMENE AVD. ROSENHOLM AS"],"organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/AS"}},"beskrivelse":"Aksjeselskap","kode":
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=934626176&size=1000&page=0 / retrieved 2026-11-14T06:32:08.043286Z / SHA-256 `02c5097c255ba46f91191f1cba5975da407471814ab75c777783c881d5211e22` / locator `/_embedded/underenheter/0/historiskeNavn`
+
+Exact excerpt:
+
+```
+harRegistrertAntallAnsatte":true,"historiskeNavn":[],"hjemmeside":"www.tashakori.no","mobil":"482 19 268","naeringskode1":{"beskrivelse":"Juridisk tjenesteyting","kode":"69.100"},"navn":"ADVOKATFIRMAET TASHAKORI AS","oppstartsdato":"2025-01-01","organisasjonsform":{"_links":{"self":{"href":"https://
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:32:05.201531Z / SHA-256 `3fe6aaf862cd3d2ba2f6faa638a21c5fa517fbbce3e7d5ed45ea1d602fdeeaf0` / locator `row:934626176/column:navn`
+
+Exact excerpt:
+
+```
+934626176,ADVOKATFIRMAET TASHAKORI AS,AS,Aksjeselskap,69.100,Juridisk tjenesteyting,,,,,,,true,6,2026-09-14,2026-09-10,www.tashakori.no,tashakori.o@gmail.com,,482 19 268,Postboks 8832 Youngstorget,OSLO,0028,OSLO,0301,Norge,NO,C. J. Hambros plass 2,OSLO,0164,OSLO,0301,Norge,NO,2100,Private aksjeselsk
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=934626176&size=1000&page=0 / retrieved 2026-11-14T06:32:08.043286Z / SHA-256 `02c5097c255ba46f91191f1cba5975da407471814ab75c777783c881d5211e22` / locator `/_embedded/underenheter/0/oppstartsdato`
+
+Exact excerpt:
+
+```
+vn":"ADVOKATFIRMAET TASHAKORI AS","oppstartsdato":"2025-01-01","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og offentlig forvaltning","kode":"BEDR"},"organisasjonsnummer":"934661141
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/934626176 / retrieved 2026-11-14T06:32:11.814571Z / SHA-256 `44e8988c889cd819edf718834fb008db3bf44de12514c9279f85ff46e2cd1227` / locator `/1/resultatregnskapResultat/driftsresultat/driftskostnad/loennskostnad`
+
+Exact excerpt:
+
+```
+ter":5207109.00},"driftskostnad":{"loennskostnad":1529005.00,"sumDriftskostnad":2438043.00}}}}]
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:32:05.201531Z / SHA-256 `3fe6aaf862cd3d2ba2f6faa638a21c5fa517fbbce3e7d5ed45ea1d602fdeeaf0` / locator `row:934626176/column:registreringsnummerIHjemlandet`
+
+Exact excerpt:
+
+```
+ital.fulltInnbetalt,kapital.innfortDato,registreringsnummerIHjemlandet,utenlandskRegisterNavn,utenlandskRegisterAdresse.land,utenlandskRegisterAdresse.poststed,utenlandskRegisterAdresse.adresse,underlagtLovgivningLand,underlagtLovgivningLandKode,foretaksformIHjemlandet.kode,foretaksformIHjemlandet.b
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=934626176&size=1000&page=0 / retrieved 2026-11-14T06:32:08.043286Z / SHA-256 `02c5097c255ba46f91191f1cba5975da407471814ab75c777783c881d5211e22` / locator `/_embedded/underenheter/0/registreringsdatoAntallAnsatteEnhetsregisteret`
+
+Exact excerpt:
+
+```
+,"registreringsdatoAntallAnsatteEnhetsregisteret":"2026-09-12","registreringsdatoAntallAnsatteNAVAaregisteret":"2026-09-10","registreringsdatoEnhetsregisteret":"2024-12-16","registrertIMvaregisteret":false,"respons_klasse":"Underenhet"}]},"_links":{"self":{"href":"https://data.brreg.no/enhetsregiste
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/934626176 / retrieved 2026-11-14T06:32:11.814571Z / SHA-256 `44e8988c889cd819edf718834fb008db3bf44de12514c9279f85ff46e2cd1227` / locator `/0/egenkapitalGjeld/egenkapital/opptjentEgenkapital/sumOpptjentEgenkapital`
+
+Exact excerpt:
+
+```
+0,"opptjentEgenkapital":{"sumOpptjentEgenkapital":24064.00},"innskuttEgenkapital":{"sumInnskuttEgenkaptial":24216.00}},"gjeldOversikt":{"sumGjeld":87327.00,"kortsiktigGjeld":{"sumKortsiktigGjeld":87327.00},"langsiktigGjeld":{"sumLangsiktigGjeld":0.00}}},"eiendeler":{"sumFordringer":105607.00,"sumBan
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:32:05.201531Z / SHA-256 `3fe6aaf862cd3d2ba2f6faa638a21c5fa517fbbce3e7d5ed45ea1d602fdeeaf0` / locator `row:934626176/column:forretningsadresse.kommune`
+
+Exact excerpt:
+
+```
+ashakori.o@gmail.com,,482 19 268,Postboks 8832 Youngstorget,OSLO,0028,OSLO,0301,Norge,NO,C. J. Hambros plass 2,OSLO,0164,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2024-12-10,2024-11-27,true,2025-01-06,2025-01-06,,,false,,true,2024-12-10,false,false,,false,,false,,false,,,,,,,Bokmål,202
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:32:05.201531Z / SHA-256 `3fe6aaf862cd3d2ba2f6faa638a21c5fa517fbbce3e7d5ed45ea1d602fdeeaf0` / locator `row:934626176/columns:postadresse.*`
+
+Exact excerpt:
+
+```
+26-09-10,www.tashakori.no,tashakori.o@gmail.com,,482 19 268,Postboks 8832 Youngstorget,OSLO,0028,OSLO,0301,Norge,NO,C. J. Hambros plass 2,OSLO,0164,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2024-12-10,2024-11-27,true,2025-01-06,2025-01-06,,,false,,true,2024-12-10,false,false,,false,,fa
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/934626176 / retrieved 2026-11-14T06:32:11.814571Z / SHA-256 `44e8988c889cd819edf718834fb008db3bf44de12514c9279f85ff46e2cd1227` / locator `/1/resultatregnskapResultat/driftsresultat/driftsresultat`
+
+Exact excerpt:
+
+```
+tnad":140.00}},"driftsresultat":{"driftsresultat":2769066.00,"driftsinntekter":{"salgsinntekter":5207109.00,"sumDriftsinntekter":5207109.00},"driftskostnad":{"loennskostnad":1529005.00,"sumDriftskostnad":2438043.00}}}}]
+```
+
+Source: https://tashakori.no/nb / retrieved 2026-11-14T06:33:41.681227Z / SHA-256 `6e249158873fd837e088f6a83afdcc84d6f3baba0972384a500b098426c71375` / locator `identity-proof:934626176`
+
+Exact excerpt:
+
+```
+5 tracking-wide">© <!-- -->2026<!-- --> Advokatfirmaet Tashakori AS. Alle rettigheter forbeholdt.</p><div class="flex items-center gap-1"><a class="text-[11px] text-foreground/25 hover:text-foreground/60 transition-colors duration-200 px-2" href="/nb/personvern">Personvern</a><span class="text-foreg
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=934626176&size=1000&page=0 / retrieved 2026-11-14T06:32:08.043286Z / SHA-256 `02c5097c255ba46f91191f1cba5975da407471814ab75c777783c881d5211e22` / locator `/_embedded/underenheter/0/naeringskode1`
+
+Exact excerpt:
+
+```
+ashakori.no","mobil":"482 19 268","naeringskode1":{"beskrivelse":"Juridisk tjenesteyting","kode":"69.100"},"navn":"ADVOKATFIRMAET TASHAKORI AS","oppstartsdato":"2025-01-01","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrive
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/934626176 / retrieved 2026-11-14T06:32:11.814571Z / SHA-256 `44e8988c889cd819edf718834fb008db3bf44de12514c9279f85ff46e2cd1227` / locator `/0/eiendeler/sumEiendeler`
+
+Exact excerpt:
+
+```
+mBankinnskuddOgKontanter":30000.00,"sumEiendeler":135607.00,"omloepsmidler":{"sumOmloepsmidler":135607.00},"anleggsmidler":{"sumAnleggsmidler":0.00}},"resultatregnskapResultat":{"ordinaertResultatFoerSkattekostnad":30851.00,"ordinaertResultatSkattekostnad":6787.00,"aarsresultat":24064.00,"finansresu
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:32:05.201531Z / SHA-256 `3fe6aaf862cd3d2ba2f6faa638a21c5fa517fbbce3e7d5ed45ea1d602fdeeaf0` / locator `row:934626176/column:slettedato`
+
+Exact excerpt:
+
+```
+organisasjonsnummer,navn,organisasjonsform.kode,organisasjonsform.beskrivelse,naeringskode1.kode,naeringskode1.beskrivelse,naeringskode2.kode,naeringskode2.beskrivelse,naeringskode3.kode,naeringskode3.beskrivelse,hjelpeenhetskode.kode,hjelpeenhetskode.beskrivelse,harRegistrertAntallAnsatte,antallAns
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/934626176 / retrieved 2026-11-14T06:32:11.814571Z / SHA-256 `44e8988c889cd819edf718834fb008db3bf44de12514c9279f85ff46e2cd1227` / locator `/1/egenkapitalGjeld/gjeldOversikt/sumGjeld`
+
+Exact excerpt:
+
+```
+enkaptial":24216.00}},"gjeldOversikt":{"sumGjeld":1907350.00,"kortsiktigGjeld":{"sumKortsiktigGjeld":1903257.00},"langsiktigGjeld":{"sumLangsiktigGjeld":4093.00}}},"eiendeler":{"sumFordringer":1655961.00,"sumBankinnskuddOgKontanter":2354060.00,"sumEiendeler":4103047.00,"omloepsmidler":{"sumOmloepsmi
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:32:05.201531Z / SHA-256 `3fe6aaf862cd3d2ba2f6faa638a21c5fa517fbbce3e7d5ed45ea1d602fdeeaf0` / locator `row:934626176/column:registrertIFrivillighetsregisteret`
+
+Exact excerpt:
+
+```
+mv.,2025,2024-12-10,2024-11-27,true,2025-01-06,2025-01-06,,,false,,true,2024-12-10,false,false,,false,,false,,false,,,,,,,Bokmål,2024-11-27,Advokatvirksomhet og virksomhet som står i tilknytning til dette.,Advokat.,false,,,,,false,30000.00,100,Aksjekapital,,NOK,,,2024-12-10,,,,,,,,,,
+
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:32:05.201531Z / SHA-256 `3fe6aaf862cd3d2ba2f6faa638a21c5fa517fbbce3e7d5ed45ea1d602fdeeaf0` / locator `row:934626176/columns:naeringskode2.*`
+
+Exact excerpt:
+
+```
+organisasjonsnummer,navn,organisasjonsform.kode,organisasjonsform.beskrivelse,naeringskode1.kode,naeringskode1.beskrivelse,naeringskode2.kode,naeringskode2.beskrivelse,naeringskode3.kode,naeringskode3.beskrivelse,hjelpeenhetskode.kode,hjelpeenhetskode.beskrivelse,harRegistrertAntallAnsatte,antallAns
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/934626176 / retrieved 2026-11-14T06:32:11.814571Z / SHA-256 `44e8988c889cd819edf718834fb008db3bf44de12514c9279f85ff46e2cd1227` / locator `/1/resultatregnskapResultat/driftsresultat/driftsinntekter/salgsinntekter`
+
+Exact excerpt:
+
+```
+t":2769066.00,"driftsinntekter":{"salgsinntekter":5207109.00,"sumDriftsinntekter":5207109.00},"driftskostnad":{"loennskostnad":1529005.00,"sumDriftskostnad":2438043.00}}}}]
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:32:05.201531Z / SHA-256 `3fe6aaf862cd3d2ba2f6faa638a21c5fa517fbbce3e7d5ed45ea1d602fdeeaf0` / locator `row:934626176/column:registreringsdatoMerverdiavgiftsregisteret`
+
+Exact excerpt:
+
+```
+,Private aksjeselskaper mv.,2025,2024-12-10,2024-11-27,true,2025-01-06,2025-01-06,,,false,,true,2024-12-10,false,false,,false,,false,,false,,,,,,,Bokmål,2024-11-27,Advokatvirksomhet og virksomhet som står i tilknytning til dette.,Advokat.,false,,,,,false,30000.00,100,Aksjekapital,,NOK,,,2024-12-10,,
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/934626176 / retrieved 2026-11-14T06:32:11.814571Z / SHA-256 `44e8988c889cd819edf718834fb008db3bf44de12514c9279f85ff46e2cd1227` / locator `/0/eiendeler/sumBankinnskuddOgKontanter`
+
+Exact excerpt:
+
+```
+ordringer":105607.00,"sumBankinnskuddOgKontanter":30000.00,"sumEiendeler":135607.00,"omloepsmidler":{"sumOmloepsmidler":135607.00},"anleggsmidler":{"sumAnleggsmidler":0.00}},"resultatregnskapResultat":{"ordinaertResultatFoerSkattekostnad":30851.00,"ordinaertResultatSkattekostnad":6787.00,"aarsresult
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/aarsregnskap/kopi/934626176/aar / retrieved 2026-11-14T06:33:32.511279Z / SHA-256 `f3058a1afdebedda3802652b2e8c662edf4e41f056e3cddf2d075e66183b2a58` / locator `/0`
+
+Exact excerpt:
+
+```
+["2024","2025"]
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/934626176/roller / retrieved 2026-11-14T06:32:10.285871Z / SHA-256 `60bbb6e83bf940b71331974c6692b5f526b68d7ed0d2ec9bd5bf4fe4961bfcb0` / locator `/rollegrupper/3/roller/0/enhet/godkjenningsstatus`
+
+Exact excerpt:
+
+```
+5635474"}},"erSlettet":false,"godkjenningsstatus":"Godkjent regnskapsforetak","navn":["ØKONOMIAVDELINGEN ØST AS"],"organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/AS"}},"beskrivelse":"Aksjeselskap","kode":"AS"},"organisasjonsnummer":"91563
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/934626176/roller / retrieved 2026-11-14T06:32:10.285871Z / SHA-256 `60bbb6e83bf940b71331974c6692b5f526b68d7ed0d2ec9bd5bf4fe4961bfcb0` / locator `/rollegrupper/0/roller/0/rekkefolge`
+
+Exact excerpt:
+
+```
+navn":"Tashakori","fornavn":"Omar"}},"rekkefolge":0,"type":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/DAGL"}},"beskrivelse":"Daglig leder","kode":"DAGL"}}],"sistEndret":"2024-12-10","type":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:32:05.201531Z / SHA-256 `3fe6aaf862cd3d2ba2f6faa638a21c5fa517fbbce3e7d5ed45ea1d602fdeeaf0` / locator `row:934626176/column:stiftelsesdato`
+
+Exact excerpt:
+
+```
+01,Norge,NO,2100,Private aksjeselskaper mv.,2025,2024-12-10,2024-11-27,true,2025-01-06,2025-01-06,,,false,,true,2024-12-10,false,false,,false,,false,,false,,,,,,,Bokmål,2024-11-27,Advokatvirksomhet og virksomhet som står i tilknytning til dette.,Advokat.,false,,,,,false,30000.00,100,Aksjekapital,,NO
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:32:05.201531Z / SHA-256 `3fe6aaf862cd3d2ba2f6faa638a21c5fa517fbbce3e7d5ed45ea1d602fdeeaf0` / locator `row:934626176/columns:kapital.*`
+
+Exact excerpt:
+
+```
+ som står i tilknytning til dette.,Advokat.,false,,,,,false,30000.00,100,Aksjekapital,,NOK,,,2024-12-10,,,,,,,,,,
+
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:32:05.201531Z / SHA-256 `3fe6aaf862cd3d2ba2f6faa638a21c5fa517fbbce3e7d5ed45ea1d602fdeeaf0` / locator `row:934626176/column:aktivitet`
+
+Exact excerpt:
+
+```
+tvirksomhet og virksomhet som står i tilknytning til dette.,Advokat.,false,,,,,false,30000.00,100,Aksjekapital,,NOK,,,2024-12-10,,,,,,,,,,
+
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/934626176/roller / retrieved 2026-11-14T06:32:10.285871Z / SHA-256 `60bbb6e83bf940b71331974c6692b5f526b68d7ed0d2ec9bd5bf4fe4961bfcb0` / locator `/rollegrupper/0/roller/0`
+
+Exact excerpt:
+
+```
+:[{"roller":[{"avregistrert":false,"person":{"erDoed":false,"fodselsdato":"1992-09-27","navn":{"etternavn":"Tashakori","fornavn":"Omar"}},"rekkefolge":0,"type":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/DAGL"}},"beskrivelse":"Daglig leder","kode":"DAGL"}}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:32:05.201531Z / SHA-256 `3fe6aaf862cd3d2ba2f6faa638a21c5fa517fbbce3e7d5ed45ea1d602fdeeaf0` / locator `row:934626176/columns:postadresse.*`
+
+Exact excerpt:
+
+```
+26-09-10,www.tashakori.no,tashakori.o@gmail.com,,482 19 268,Postboks 8832 Youngstorget,OSLO,0028,OSLO,0301,Norge,NO,C. J. Hambros plass 2,OSLO,0164,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2024-12-10,2024-11-27,true,2025-01-06,2025-01-06,,,false,,true,2024-12-10,false,false,,false,,fa
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=934626176&size=1000&page=0 / retrieved 2026-11-14T06:32:08.043286Z / SHA-256 `02c5097c255ba46f91191f1cba5975da407471814ab75c777783c881d5211e22` / locator `/_embedded/underenheter/0/beliggenhetsadresse`
+
+Exact excerpt:
+
+```
+626176"}},"antallAnsatte":6,"beliggenhetsadresse":{"adresse":["C. J. Hambros plass 2"],"kommune":"OSLO","kommunenummer":"0301","land":"Norge","landkode":"NO","postnummer":"0164","poststed":"OSLO"},"epostadresse":"tashakori.o@gmail.com","harRegistrertAntallAnsatte":true,"historiskeNavn":[],"hjemmesid
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=934626176&size=1000&page=0 / retrieved 2026-11-14T06:32:08.043286Z / SHA-256 `02c5097c255ba46f91191f1cba5975da407471814ab75c777783c881d5211e22` / locator `/_embedded/underenheter/0/antallAnsatte`
+
+Exact excerpt:
+
+```
+gisteret/api/enheter/934626176"}},"antallAnsatte":6,"beliggenhetsadresse":{"adresse":["C. J. Hambros plass 2"],"kommune":"OSLO","kommunenummer":"0301","land":"Norge","landkode":"NO","postnummer":"0164","poststed":"OSLO"},"epostadresse":"tashakori.o@gmail.com","harRegistrertAntallAnsatte":true,"histo
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/934626176 / retrieved 2026-11-14T06:32:11.814571Z / SHA-256 `44e8988c889cd819edf718834fb008db3bf44de12514c9279f85ff46e2cd1227` / locator `/0/egenkapitalGjeld/sumEgenkapitalGjeld`
+
+Exact excerpt:
+
+```
+egler"},"egenkapitalGjeld":{"sumEgenkapitalGjeld":135607.00,"egenkapital":{"sumEgenkapital":48280.00,"opptjentEgenkapital":{"sumOpptjentEgenkapital":24064.00},"innskuttEgenkapital":{"sumInnskuttEgenkaptial":24216.00}},"gjeldOversikt":{"sumGjeld":87327.00,"kortsiktigGjeld":{"sumKortsiktigGjeld":87327
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/934626176 / retrieved 2026-11-14T06:32:11.814571Z / SHA-256 `44e8988c889cd819edf718834fb008db3bf44de12514c9279f85ff46e2cd1227` / locator `/0/egenkapitalGjeld/egenkapital/innskuttEgenkapital/sumInnskuttEgenkaptial`
+
+Exact excerpt:
+
+```
+},"innskuttEgenkapital":{"sumInnskuttEgenkaptial":24216.00}},"gjeldOversikt":{"sumGjeld":87327.00,"kortsiktigGjeld":{"sumKortsiktigGjeld":87327.00},"langsiktigGjeld":{"sumLangsiktigGjeld":0.00}}},"eiendeler":{"sumFordringer":105607.00,"sumBankinnskuddOgKontanter":30000.00,"sumEiendeler":135607.00,"o
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/934626176/roller / retrieved 2026-11-14T06:32:10.285871Z / SHA-256 `60bbb6e83bf940b71331974c6692b5f526b68d7ed0d2ec9bd5bf4fe4961bfcb0` / locator `/rollegrupper/3/roller/0/enhet/organisasjonsform`
+
+Exact excerpt:
+
+```
+:["ØKONOMIAVDELINGEN ØST AS"],"organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/AS"}},"beskrivelse":"Aksjeselskap","kode":"AS"},"organisasjonsnummer":"915635474"},"rekkefolge":0,"type":{"_links":{"self":{"href":"https://data.brreg.no/enhets
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:32:05.201531Z / SHA-256 `3fe6aaf862cd3d2ba2f6faa638a21c5fa517fbbce3e7d5ed45ea1d602fdeeaf0` / locator `row:934626176/column:harRegistrertAntallAnsatte`
+
+Exact excerpt:
+
+```
+KORI AS,AS,Aksjeselskap,69.100,Juridisk tjenesteyting,,,,,,,true,6,2026-09-14,2026-09-10,www.tashakori.no,tashakori.o@gmail.com,,482 19 268,Postboks 8832 Youngstorget,OSLO,0028,OSLO,0301,Norge,NO,C. J. Hambros plass 2,OSLO,0164,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2024-12-10,2024-
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/934626176 / retrieved 2026-11-14T06:32:11.814571Z / SHA-256 `44e8988c889cd819edf718834fb008db3bf44de12514c9279f85ff46e2cd1227` / locator `/0/egenkapitalGjeld/gjeldOversikt/kortsiktigGjeld/sumKortsiktigGjeld`
+
+Exact excerpt:
+
+```
+:87327.00,"kortsiktigGjeld":{"sumKortsiktigGjeld":87327.00},"langsiktigGjeld":{"sumLangsiktigGjeld":0.00}}},"eiendeler":{"sumFordringer":105607.00,"sumBankinnskuddOgKontanter":30000.00,"sumEiendeler":135607.00,"omloepsmidler":{"sumOmloepsmidler":135607.00},"anleggsmidler":{"sumAnleggsmidler":0.00}},
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/934626176 / retrieved 2026-11-14T06:32:11.814571Z / SHA-256 `44e8988c889cd819edf718834fb008db3bf44de12514c9279f85ff46e2cd1227` / locator `/1/eiendeler/sumEiendeler`
+
+Exact excerpt:
+
+```
+ankinnskuddOgKontanter":2354060.00,"sumEiendeler":4103047.00,"omloepsmidler":{"sumOmloepsmidler":4010021.00},"anleggsmidler":{"sumAnleggsmidler":93025.00}},"resultatregnskapResultat":{"ordinaertResultatFoerSkattekostnad":2769097.00,"ordinaertResultatSkattekostnad":621681.00,"aarsresultat":2147416.00
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:32:05.201531Z / SHA-256 `3fe6aaf862cd3d2ba2f6faa638a21c5fa517fbbce3e7d5ed45ea1d602fdeeaf0` / locator `row:934626176/columns:forretningsadresse.*`
+
+Exact excerpt:
+
+```
+268,Postboks 8832 Youngstorget,OSLO,0028,OSLO,0301,Norge,NO,C. J. Hambros plass 2,OSLO,0164,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2024-12-10,2024-11-27,true,2025-01-06,2025-01-06,,,false,,true,2024-12-10,false,false,,false,,false,,false,,,,,,,Bokmål,2024-11-27,Advokatvirksomhet og 
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/934626176/roller / retrieved 2026-11-14T06:32:10.285871Z / SHA-256 `60bbb6e83bf940b71331974c6692b5f526b68d7ed0d2ec9bd5bf4fe4961bfcb0` / locator `/rollegrupper/3/roller/1/enhet/organisasjonsform`
+
+Exact excerpt:
+
+```
+,"navn":["ATLAS REGNSKAP AS"],"organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/AS"}},"beskrivelse":"Aksjeselskap","kode":"AS"},"organisasjonsnummer":"932550210"},"rekkefolge":1,"type":{"_links":{"self":{"href":"https://data.brreg.no/enhets
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:32:05.201531Z / SHA-256 `3fe6aaf862cd3d2ba2f6faa638a21c5fa517fbbce3e7d5ed45ea1d602fdeeaf0` / locator `row:934626176/columns:organisasjonsform.*`
+
+Exact excerpt:
+
+```
+934626176,ADVOKATFIRMAET TASHAKORI AS,AS,Aksjeselskap,69.100,Juridisk tjenesteyting,,,,,,,true,6,2026-09-14,2026-09-10,www.tashakori.no,tashakori.o@gmail.com,,482 19 268,Postboks 8832 Youngstorget,OSLO,0028,OSLO,0301,Norge,NO,C. J. Hambros plass 2,OSLO,0164,OSLO,0301,Norge,NO,2100,Private aksjeselsk
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/934626176 / retrieved 2026-11-14T06:32:11.814571Z / SHA-256 `44e8988c889cd819edf718834fb008db3bf44de12514c9279f85ff46e2cd1227` / locator `/0/egenkapitalGjeld/gjeldOversikt/sumGjeld`
+
+Exact excerpt:
+
+```
+enkaptial":24216.00}},"gjeldOversikt":{"sumGjeld":87327.00,"kortsiktigGjeld":{"sumKortsiktigGjeld":87327.00},"langsiktigGjeld":{"sumLangsiktigGjeld":0.00}}},"eiendeler":{"sumFordringer":105607.00,"sumBankinnskuddOgKontanter":30000.00,"sumEiendeler":135607.00,"omloepsmidler":{"sumOmloepsmidler":13560
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/934626176/roller / retrieved 2026-11-14T06:32:10.285871Z / SHA-256 `60bbb6e83bf940b71331974c6692b5f526b68d7ed0d2ec9bd5bf4fe4961bfcb0` / locator `/rollegrupper/3/roller/0/enhet/erSlettet`
+
+Exact excerpt:
+
+```
+tsregisteret/api/enheter/915635474"}},"erSlettet":false,"godkjenningsstatus":"Godkjent regnskapsforetak","navn":["ØKONOMIAVDELINGEN ØST AS"],"organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/AS"}},"beskrivelse":"Aksjeselskap","kode":"AS"},"
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/934626176 / retrieved 2026-11-14T06:32:11.814571Z / SHA-256 `44e8988c889cd819edf718834fb008db3bf44de12514c9279f85ff46e2cd1227` / locator `/1/resultatregnskapResultat/ordinaertResultatFoerSkattekostnad`
+
+Exact excerpt:
+
+```
+apResultat":{"ordinaertResultatFoerSkattekostnad":2769097.00,"ordinaertResultatSkattekostnad":621681.00,"aarsresultat":2147416.00,"finansresultat":{"nettoFinans":31.00,"finansinntekt":{"sumFinansinntekter":171.00},"finanskostnad":{"annenRentekostnad":140.00,"sumFinanskostnad":140.00}},"driftsresulta
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/934626176 / retrieved 2026-11-14T06:32:11.814571Z / SHA-256 `44e8988c889cd819edf718834fb008db3bf44de12514c9279f85ff46e2cd1227` / locator `/0/resultatregnskapResultat/aarsresultat`
+
+Exact excerpt:
+
+```
+aertResultatSkattekostnad":6787.00,"aarsresultat":24064.00,"finansresultat":{"finansinntekt":{},"finanskostnad":{}},"driftsresultat":{"driftsresultat":30851.00,"driftsinntekter":{"salgsinntekter":88097.00,"sumDriftsinntekter":88097.00},"driftskostnad":{"loennskostnad":7000.00,"sumDriftskostnad":5724
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:32:05.201531Z / SHA-256 `3fe6aaf862cd3d2ba2f6faa638a21c5fa517fbbce3e7d5ed45ea1d602fdeeaf0` / locator `row:934626176/columns:naeringskode3.*`
+
+Exact excerpt:
+
+```
+organisasjonsnummer,navn,organisasjonsform.kode,organisasjonsform.beskrivelse,naeringskode1.kode,naeringskode1.beskrivelse,naeringskode2.kode,naeringskode2.beskrivelse,naeringskode3.kode,naeringskode3.beskrivelse,hjelpeenhetskode.kode,hjelpeenhetskode.beskrivelse,harRegistrertAntallAnsatte,antallAns
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/934626176/roller / retrieved 2026-11-14T06:32:10.285871Z / SHA-256 `60bbb6e83bf940b71331974c6692b5f526b68d7ed0d2ec9bd5bf4fe4961bfcb0` / locator `/rollegrupper/3/roller/0/rekkefolge`
+
+Exact excerpt:
+
+```
+},"organisasjonsnummer":"915635474"},"rekkefolge":0,"type":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/REGN"}},"beskrivelse":"Regnskapsfører","kode":"REGN"}},{"avregistrert":true,"enhet":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=934626176&size=1000&page=0 / retrieved 2026-11-14T06:32:08.043286Z / SHA-256 `02c5097c255ba46f91191f1cba5975da407471814ab75c777783c881d5211e22` / locator `/_embedded/underenheter/0/registreringsdatoEnhetsregisteret`
+
+Exact excerpt:
+
+```
+:"2026-09-10","registreringsdatoEnhetsregisteret":"2024-12-16","registrertIMvaregisteret":false,"respons_klasse":"Underenhet"}]},"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=934626176&size=1000&page=0"}},"page":{"number":0,"size":1000,"totalElemen
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=934626176&size=1000&page=0 / retrieved 2026-11-14T06:32:08.043286Z / SHA-256 `02c5097c255ba46f91191f1cba5975da407471814ab75c777783c881d5211e22` / locator `/_embedded/underenheter/0/beliggenhetsadresse`
+
+Exact excerpt:
+
+```
+626176"}},"antallAnsatte":6,"beliggenhetsadresse":{"adresse":["C. J. Hambros plass 2"],"kommune":"OSLO","kommunenummer":"0301","land":"Norge","landkode":"NO","postnummer":"0164","poststed":"OSLO"},"epostadresse":"tashakori.o@gmail.com","harRegistrertAntallAnsatte":true,"historiskeNavn":[],"hjemmesid
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/934626176 / retrieved 2026-11-14T06:32:11.814571Z / SHA-256 `44e8988c889cd819edf718834fb008db3bf44de12514c9279f85ff46e2cd1227` / locator `/1/eiendeler/anleggsmidler/sumAnleggsmidler`
+
+Exact excerpt:
+
+```
+":4010021.00},"anleggsmidler":{"sumAnleggsmidler":93025.00}},"resultatregnskapResultat":{"ordinaertResultatFoerSkattekostnad":2769097.00,"ordinaertResultatSkattekostnad":621681.00,"aarsresultat":2147416.00,"finansresultat":{"nettoFinans":31.00,"finansinntekt":{"sumFinansinntekter":171.00},"finanskos
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:32:05.201531Z / SHA-256 `3fe6aaf862cd3d2ba2f6faa638a21c5fa517fbbce3e7d5ed45ea1d602fdeeaf0` / locator `row:934626176/column:registrertIStiftelsesregisteret`
+
+Exact excerpt:
+
+```
+mv.,2025,2024-12-10,2024-11-27,true,2025-01-06,2025-01-06,,,false,,true,2024-12-10,false,false,,false,,false,,false,,,,,,,Bokmål,2024-11-27,Advokatvirksomhet og virksomhet som står i tilknytning til dette.,Advokat.,false,,,,,false,30000.00,100,Aksjekapital,,NOK,,,2024-12-10,,,,,,,,,,
+
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/934626176/roller / retrieved 2026-11-14T06:32:10.285871Z / SHA-256 `60bbb6e83bf940b71331974c6692b5f526b68d7ed0d2ec9bd5bf4fe4961bfcb0` / locator `/rollegrupper/3/roller/1`
+
+Exact excerpt:
+
+```
+{"avregistrert":true,"enhet":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/932550210"}},"erSlettet":false,"godkjenningsstatus":"Ikke godkjent regnskapsforetak","navn":["ATLAS REGNSKAP AS"],"organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregi
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:32:05.201531Z / SHA-256 `3fe6aaf862cd3d2ba2f6faa638a21c5fa517fbbce3e7d5ed45ea1d602fdeeaf0` / locator `row:934626176/column:underTvangsavviklingEllerTvangsopplosning`
+
+Exact excerpt:
+
+```
+mv.,2025,2024-12-10,2024-11-27,true,2025-01-06,2025-01-06,,,false,,true,2024-12-10,false,false,,false,,false,,false,,,,,,,Bokmål,2024-11-27,Advokatvirksomhet og virksomhet som står i tilknytning til dette.,Advokat.,false,,,,,false,30000.00,100,Aksjekapital,,NOK,,,2024-12-10,,,,,,,,,,
+
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/934626176/roller / retrieved 2026-11-14T06:32:10.285871Z / SHA-256 `60bbb6e83bf940b71331974c6692b5f526b68d7ed0d2ec9bd5bf4fe4961bfcb0` / locator `/rollegrupper/2/roller/0/enhet/godkjenningsstatus`
+
+Exact excerpt:
+
+```
+6434975"}},"erSlettet":false,"godkjenningsstatus":"Godkjent revisjonsforetak","navn":["REVISORDAMENE AVD. ROSENHOLM AS"],"organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/AS"}},"beskrivelse":"Aksjeselskap","kode":"AS"},"organisasjonsnummer"
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:32:05.201531Z / SHA-256 `3fe6aaf862cd3d2ba2f6faa638a21c5fa517fbbce3e7d5ed45ea1d602fdeeaf0` / locator `row:934626176/column:underlagtLovgivningLandKode`
+
+Exact excerpt:
+
+```
+Adresse.adresse,underlagtLovgivningLand,underlagtLovgivningLandKode,foretaksformIHjemlandet.kode,foretaksformIHjemlandet.beskrivelse,foretaksformIHjemlandet.beskrivelseBokmaal
+934626176,ADVOKATFIRMAET TASHAKORI AS,AS,Aksjeselskap,69.100,Juridisk tjenesteyting,,,,,,,true,6,2026-09-14,2026-09-10,www.
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:32:05.201531Z / SHA-256 `3fe6aaf862cd3d2ba2f6faa638a21c5fa517fbbce3e7d5ed45ea1d602fdeeaf0` / locator `row:934626176/column:erIKonsern`
+
+Exact excerpt:
+
+```
+mv.,2025,2024-12-10,2024-11-27,true,2025-01-06,2025-01-06,,,false,,true,2024-12-10,false,false,,false,,false,,false,,,,,,,Bokmål,2024-11-27,Advokatvirksomhet og virksomhet som står i tilknytning til dette.,Advokat.,false,,,,,false,30000.00,100,Aksjekapital,,NOK,,,2024-12-10,,,,,,,,,,
+
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/934626176 / retrieved 2026-11-14T06:32:11.814571Z / SHA-256 `44e8988c889cd819edf718834fb008db3bf44de12514c9279f85ff46e2cd1227` / locator `/0/eiendeler/anleggsmidler/sumAnleggsmidler`
+
+Exact excerpt:
+
+```
+r":135607.00},"anleggsmidler":{"sumAnleggsmidler":0.00}},"resultatregnskapResultat":{"ordinaertResultatFoerSkattekostnad":30851.00,"ordinaertResultatSkattekostnad":6787.00,"aarsresultat":24064.00,"finansresultat":{"finansinntekt":{},"finanskostnad":{}},"driftsresultat":{"driftsresultat":30851.00,"dr
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:32:05.201531Z / SHA-256 `3fe6aaf862cd3d2ba2f6faa638a21c5fa517fbbce3e7d5ed45ea1d602fdeeaf0` / locator `row:934626176/column:registrertIPartiregisteret`
+
+Exact excerpt:
+
+```
+mv.,2025,2024-12-10,2024-11-27,true,2025-01-06,2025-01-06,,,false,,true,2024-12-10,false,false,,false,,false,,false,,,,,,,Bokmål,2024-11-27,Advokatvirksomhet og virksomhet som står i tilknytning til dette.,Advokat.,false,,,,,false,30000.00,100,Aksjekapital,,NOK,,,2024-12-10,,,,,,,,,,
+
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/934626176 / retrieved 2026-11-14T06:32:11.814571Z / SHA-256 `44e8988c889cd819edf718834fb008db3bf44de12514c9279f85ff46e2cd1227` / locator `/1/eiendeler/sumFordringer`
+
+Exact excerpt:
+
+```
+tigGjeld":4093.00}}},"eiendeler":{"sumFordringer":1655961.00,"sumBankinnskuddOgKontanter":2354060.00,"sumEiendeler":4103047.00,"omloepsmidler":{"sumOmloepsmidler":4010021.00},"anleggsmidler":{"sumAnleggsmidler":93025.00}},"resultatregnskapResultat":{"ordinaertResultatFoerSkattekostnad":2769097.00,"o
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:32:05.201531Z / SHA-256 `3fe6aaf862cd3d2ba2f6faa638a21c5fa517fbbce3e7d5ed45ea1d602fdeeaf0` / locator `row:934626176/column:konkurs`
+
+Exact excerpt:
+
+```
+mv.,2025,2024-12-10,2024-11-27,true,2025-01-06,2025-01-06,,,false,,true,2024-12-10,false,false,,false,,false,,false,,,,,,,Bokmål,2024-11-27,Advokatvirksomhet og virksomhet som står i tilknytning til dette.,Advokat.,false,,,,,false,30000.00,100,Aksjekapital,,NOK,,,2024-12-10,,,,,,,,,,
+
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/934626176 / retrieved 2026-11-14T06:32:11.814571Z / SHA-256 `44e8988c889cd819edf718834fb008db3bf44de12514c9279f85ff46e2cd1227` / locator `/1/eiendeler/sumBankinnskuddOgKontanter`
+
+Exact excerpt:
+
+```
+rdringer":1655961.00,"sumBankinnskuddOgKontanter":2354060.00,"sumEiendeler":4103047.00,"omloepsmidler":{"sumOmloepsmidler":4010021.00},"anleggsmidler":{"sumAnleggsmidler":93025.00}},"resultatregnskapResultat":{"ordinaertResultatFoerSkattekostnad":2769097.00,"ordinaertResultatSkattekostnad":621681.00
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/934626176/roller / retrieved 2026-11-14T06:32:10.285871Z / SHA-256 `60bbb6e83bf940b71331974c6692b5f526b68d7ed0d2ec9bd5bf4fe4961bfcb0` / locator `/rollegrupper/3/roller/0`
+
+Exact excerpt:
+
+```
+{"avregistrert":false,"enhet":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/915635474"}},"erSlettet":false,"godkjenningsstatus":"Godkjent regnskapsforetak","navn":["ØKONOMIAVDELINGEN ØST AS"],"organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsr
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:32:05.201531Z / SHA-256 `3fe6aaf862cd3d2ba2f6faa638a21c5fa517fbbce3e7d5ed45ea1d602fdeeaf0` / locator `row:934626176/column:registreringsdatoantallansatteNAVAaregisteret`
+
+Exact excerpt:
+
+```
+lskap,69.100,Juridisk tjenesteyting,,,,,,,true,6,2026-09-14,2026-09-10,www.tashakori.no,tashakori.o@gmail.com,,482 19 268,Postboks 8832 Youngstorget,OSLO,0028,OSLO,0301,Norge,NO,C. J. Hambros plass 2,OSLO,0164,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2024-12-10,2024-11-27,true,2025-01
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/934626176/roller / retrieved 2026-11-14T06:32:10.285871Z / SHA-256 `60bbb6e83bf940b71331974c6692b5f526b68d7ed0d2ec9bd5bf4fe4961bfcb0` / locator `/rollegrupper/3/roller/1/enhet/godkjenningsstatus`
+
+Exact excerpt:
+
+```
+2550210"}},"erSlettet":false,"godkjenningsstatus":"Ikke godkjent regnskapsforetak","navn":["ATLAS REGNSKAP AS"],"organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/AS"}},"beskrivelse":"Aksjeselskap","kode":"AS"},"organisasjonsnummer":"9325502
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:32:05.201531Z / SHA-256 `3fe6aaf862cd3d2ba2f6faa638a21c5fa517fbbce3e7d5ed45ea1d602fdeeaf0` / locator `row:934626176/column:antallAnsatte`
+
+Exact excerpt:
+
+```
+934626176,ADVOKATFIRMAET TASHAKORI AS,AS,Aksjeselskap,69.100,Juridisk tjenesteyting,,,,,,,true,6,2026-09-14,2026-09-10,www.tashakori.no,tashakori.o@gmail.com,,482 19 268,Postboks 8832 Youngstorget,OSLO,0028,OSLO,0301,Norge,NO,C. J. Hambros plass 2,OSLO,0164,OSLO,0301,Norge,NO,2100,Private aksjeselsk
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/934626176 / retrieved 2026-11-14T06:32:11.814571Z / SHA-256 `44e8988c889cd819edf718834fb008db3bf44de12514c9279f85ff46e2cd1227` / locator `/1/egenkapitalGjeld/egenkapital/sumEgenkapital`
+
+Exact excerpt:
+
+```
+Gjeld":4103047.00,"egenkapital":{"sumEgenkapital":2195697.00,"opptjentEgenkapital":{"sumOpptjentEgenkapital":2171481.00},"innskuttEgenkapital":{"sumInnskuttEgenkaptial":24216.00}},"gjeldOversikt":{"sumGjeld":1907350.00,"kortsiktigGjeld":{"sumKortsiktigGjeld":1903257.00},"langsiktigGjeld":{"sumLangsi
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/934626176 / retrieved 2026-11-14T06:32:11.814571Z / SHA-256 `44e8988c889cd819edf718834fb008db3bf44de12514c9279f85ff46e2cd1227` / locator `/0/egenkapitalGjeld/egenkapital/sumEgenkapital`
+
+Exact excerpt:
+
+```
+lGjeld":135607.00,"egenkapital":{"sumEgenkapital":48280.00,"opptjentEgenkapital":{"sumOpptjentEgenkapital":24064.00},"innskuttEgenkapital":{"sumInnskuttEgenkaptial":24216.00}},"gjeldOversikt":{"sumGjeld":87327.00,"kortsiktigGjeld":{"sumKortsiktigGjeld":87327.00},"langsiktigGjeld":{"sumLangsiktigGjel
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/934626176 / retrieved 2026-11-14T06:32:11.814571Z / SHA-256 `44e8988c889cd819edf718834fb008db3bf44de12514c9279f85ff46e2cd1227` / locator `/0/resultatregnskapResultat/ordinaertResultatSkattekostnad`
+
+Exact excerpt:
+
+```
+ostnad":30851.00,"ordinaertResultatSkattekostnad":6787.00,"aarsresultat":24064.00,"finansresultat":{"finansinntekt":{},"finanskostnad":{}},"driftsresultat":{"driftsresultat":30851.00,"driftsinntekter":{"salgsinntekter":88097.00,"sumDriftsinntekter":88097.00},"driftskostnad":{"loennskostnad":7000.00,
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:32:05.201531Z / SHA-256 `3fe6aaf862cd3d2ba2f6faa638a21c5fa517fbbce3e7d5ed45ea1d602fdeeaf0` / locator `row:934626176/column:registrertIForetaksregisteret`
+
+Exact excerpt:
+
+```
+KORI AS,AS,Aksjeselskap,69.100,Juridisk tjenesteyting,,,,,,,true,6,2026-09-14,2026-09-10,www.tashakori.no,tashakori.o@gmail.com,,482 19 268,Postboks 8832 Youngstorget,OSLO,0028,OSLO,0301,Norge,NO,C. J. Hambros plass 2,OSLO,0164,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2024-12-10,2024-
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/934626176 / retrieved 2026-11-14T06:32:11.814571Z / SHA-256 `44e8988c889cd819edf718834fb008db3bf44de12514c9279f85ff46e2cd1227` / locator `/1/resultatregnskapResultat/finansresultat/finansinntekt/sumFinansinntekter`
+
+Exact excerpt:
+
+```
+nans":31.00,"finansinntekt":{"sumFinansinntekter":171.00},"finanskostnad":{"annenRentekostnad":140.00,"sumFinanskostnad":140.00}},"driftsresultat":{"driftsresultat":2769066.00,"driftsinntekter":{"salgsinntekter":5207109.00,"sumDriftsinntekter":5207109.00},"driftskostnad":{"loennskostnad":1529005.00,
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/934626176 / retrieved 2026-11-14T06:32:11.814571Z / SHA-256 `44e8988c889cd819edf718834fb008db3bf44de12514c9279f85ff46e2cd1227` / locator `/1/resultatregnskapResultat/finansresultat/nettoFinans`
+
+Exact excerpt:
+
+```
+ultat":2147416.00,"finansresultat":{"nettoFinans":31.00,"finansinntekt":{"sumFinansinntekter":171.00},"finanskostnad":{"annenRentekostnad":140.00,"sumFinanskostnad":140.00}},"driftsresultat":{"driftsresultat":2769066.00,"driftsinntekter":{"salgsinntekter":5207109.00,"sumDriftsinntekter":5207109.00},
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/934626176 / retrieved 2026-11-14T06:32:11.814571Z / SHA-256 `44e8988c889cd819edf718834fb008db3bf44de12514c9279f85ff46e2cd1227` / locator `/1/resultatregnskapResultat/finansresultat/finanskostnad/sumFinanskostnad`
+
+Exact excerpt:
+
+```
+d":{"annenRentekostnad":140.00,"sumFinanskostnad":140.00}},"driftsresultat":{"driftsresultat":2769066.00,"driftsinntekter":{"salgsinntekter":5207109.00,"sumDriftsinntekter":5207109.00},"driftskostnad":{"loennskostnad":1529005.00,"sumDriftskostnad":2438043.00}}}}]
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:32:05.201531Z / SHA-256 `3fe6aaf862cd3d2ba2f6faa638a21c5fa517fbbce3e7d5ed45ea1d602fdeeaf0` / locator `row:934626176/column:paategninger`
+
+Exact excerpt:
+
+```
+ktsdato,vedtektsfestetFormaal,aktivitet,paategninger,underUtenlandskInsolvensbehandlingDato,underRekonstruksjonsforhandlingDato,fravalgRevisjonDato,fravalgRevisjonBeslutningsDato,erIKonsern,kapital.belop,kapital.antallAksjer,kapital.type,kapital.bundet,kapital.valuta,kapital.innbetalt,kapital.fulltI
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:32:05.201531Z / SHA-256 `3fe6aaf862cd3d2ba2f6faa638a21c5fa517fbbce3e7d5ed45ea1d602fdeeaf0` / locator `row:934626176/column:navn`
+
+Exact excerpt:
+
+```
+934626176,ADVOKATFIRMAET TASHAKORI AS,AS,Aksjeselskap,69.100,Juridisk tjenesteyting,,,,,,,true,6,2026-09-14,2026-09-10,www.tashakori.no,tashakori.o@gmail.com,,482 19 268,Postboks 8832 Youngstorget,OSLO,0028,OSLO,0301,Norge,NO,C. J. Hambros plass 2,OSLO,0164,OSLO,0301,Norge,NO,2100,Private aksjeselsk
+```
+
+## X4 / 20261113 / added / 993821403 / NEXTHOP AS
+
+Type: brand; identity: ZETTA.IO TECHNOLOGY; saved-evidence verdict: correct.
+
+```json
+{
+  "name": "ZETTA.IO TECHNOLOGY",
+  "origin": "registered_subunit",
+  "subunit_orgnr": "912562204"
+}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=993821403&size=1000&page=0 / retrieved 2026-11-14T06:32:08.176262Z / SHA-256 `d0ffb773299f272ac625404126a685e9cf724da63e4ac3dc430e9df0df37e7ad` / locator `/_embedded/underenheter/1/navn`
+
+Exact excerpt:
+
+```
+ og drift av it-systemer","kode":"62.200"},"navn":"ZETTA.IO TECHNOLOGY","oppstartsdato":"2013-10-01","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og offentlig forvaltning","kode":"B
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=993821403&size=1000&page=0 / retrieved 2026-11-14T06:32:08.176262Z / SHA-256 `d0ffb773299f272ac625404126a685e9cf724da63e4ac3dc430e9df0df37e7ad` / locator `/_embedded/underenheter/1`
+
+Exact excerpt:
+
+```
+{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/912562204"},"overordnetEnhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/993821403"}},"beliggenhetsadresse":{"adresse":["Linneaveien 17A"],"kommune":"OSLO","kommunenummer":"0301","land":"Norge","landk
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:32:05.243194Z / SHA-256 `f8461ea500c7652f4e1da1946bc5e7e3ea829833753a8923e65f11e374eb7fad` / locator `row:993821403/column:navn`
+
+Exact excerpt:
+
+```
+993821403,NEXTHOP AS,AS,Aksjeselskap,62.200,Konsulentvirksomhet tilknyttet informasjonsteknologi og forvaltning og drift av it-systemer,,,,,,,true,8,2026-07-15,2026-07-10,,,,,,,,,,,,Drammensveien 288,OSLO,0283,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2009-03-05,2009-02-17,true,2009-03
+```
+
+## X4 / 20261113 / added / 985689377 / STIFTELSEN MALLINGGATA 1
+
+Type: brand; identity: SOLSTREIF RUDOLF STEINER BARNEHAGE; saved-evidence verdict: correct.
+
+```json
+{
+  "name": "SOLSTREIF RUDOLF STEINER BARNEHAGE",
+  "origin": "registered_subunit",
+  "subunit_orgnr": "973469789"
+}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=985689377&size=1000&page=0 / retrieved 2026-11-14T06:32:07.309880Z / SHA-256 `5dba064b26167a5a2a7bdd73a597c9f132bb02d55d125042349aacb6851a5cd0` / locator `/_embedded/underenheter/0/navn`
+
+Exact excerpt:
+
+```
+g og drift av barnehager","kode":"85.100"},"navn":"SOLSTREIF RUDOLF STEINER BARNEHAGE","oppstartsdato":"1989-01-01","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og offentlig forvalt
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=985689377&size=1000&page=0 / retrieved 2026-11-14T06:32:07.309880Z / SHA-256 `5dba064b26167a5a2a7bdd73a597c9f132bb02d55d125042349aacb6851a5cd0` / locator `/_embedded/underenheter/0`
+
+Exact excerpt:
+
+```
+{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/973469789"},"overordnetEnhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/985689377"}},"antallAnsatte":18,"beliggenhetsadresse":{"adresse":["Mallinggata 1"],"kommune":"DRAMMEN","kommunenummer":"3301","
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:32:05.226735Z / SHA-256 `b043606953fa601f0b14b7ae34db4bb6b7b8184319cd38999f7c00bb8b4a3d94` / locator `row:985689377/column:navn`
+
+Exact excerpt:
+
+```
+985689377,STIFTELSEN MALLINGGATA 1,STI,Stiftelse,85.100,Førskoleundervisning og drift av barnehager,,,,,,,true,17,2026-07-15,2026-07-10,,solstreif@steinerbarnehage.no,90 61 60 36,905 84 188,,,,,,,,Mallinggata 1,DRAMMEN,3044,DRAMMEN,3301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2003-05-17,2002-1
+```
+
+## X4 / 20261113 / removed / 918266917 / DIGITALIQ AS
+
+Type: brand; identity: DIGITALIQ / MittVarsel / TransparencyGate; saved-evidence verdict: correct.
+
+```json
+"DIGITALIQ / MittVarsel / TransparencyGate"
+```
+
+Source: https://digitaliq.no/ / retrieved 2026-11-14T05:20:13.790884Z / SHA-256 `d23b749c5bc799d096762f4e597d62551d76b5e208cdbca275752872de58a5e6` / locator `meta:brand`
+
+Exact excerpt:
+
+```
+s.com/143186225.js" as="script"/><title>DIGITALIQ / MittVarsel / TransparencyGate</title><meta name="description" content="Digitaliq AS leverer skybas
+```
+
+## X4 / 20261114 / added / 958507739 / STØREN DEKKSERVICE AS
+
+Type: brand; identity: OVERAAE STØREN A/S; saved-evidence verdict: correct.
+
+```json
+{
+  "name": "OVERAAE STØREN A/S",
+  "origin": "registered_subunit",
+  "subunit_orgnr": "974196867"
+}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=958507739&size=1000&page=0 / retrieved 2026-11-14T06:39:04.380116Z / SHA-256 `4ad4b3f4042ae6a3d329bb3114b53f203b0ea7d52d069a4eb93a737c832611c8` / locator `/_embedded/underenheter/0/navn`
+
+Exact excerpt:
+
+```
+g utstyr til motorvogner","kode":"47.820"},"navn":"OVERAAE STØREN A/S","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og offentlig forvaltning","kode":"BEDR"},"organisasjonsnummer":"9
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=958507739&size=1000&page=0 / retrieved 2026-11-14T06:39:04.380116Z / SHA-256 `4ad4b3f4042ae6a3d329bb3114b53f203b0ea7d52d069a4eb93a737c832611c8` / locator `/_embedded/underenheter/0`
+
+Exact excerpt:
+
+```
+{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/974196867"},"overordnetEnhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/958507739"}},"antallAnsatte":10,"beliggenhetsadresse":{"adresse":["Soknesøra"],"kommune":"MIDTRE GAULDAL","kommunenummer":"5027
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:39:02.342899Z / SHA-256 `01ded21a19fe725cde2e60d18e611d234d6993212e2910078be63844e90455c2` / locator `row:958507739/column:navn`
+
+Exact excerpt:
+
+```
+958507739,STØREN DEKKSERVICE AS,AS,Aksjeselskap,47.820,Detaljhandel med deler og utstyr til motorvogner,,,,,,,true,10,2026-09-14,2026-09-10,,,72 43 30 70,,Postboks 53,STØREN,7291,MIDTRE GAULDAL,5027,Norge,NO,Soknesøra,STØREN,7290,MIDTRE GAULDAL,5027,Norge,NO,2100,Private aksjeselskaper mv.,2025,1995
+```
+
+## X4 / 20261114 / added / 988217867 / CONCEDO AS
+
+Type: brand; identity: CONCEDO AS PL1292; saved-evidence verdict: correct.
+
+```json
+{
+  "name": "CONCEDO AS PL1292",
+  "origin": "registered_subunit",
+  "subunit_orgnr": "937339372"
+}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988217867&size=1000&page=0 / retrieved 2026-11-14T06:39:04.132414Z / SHA-256 `a136633f16c0f03790dfaf7fe6f76de109af42b05d0cf692f320c4c4b2bda2aa` / locator `/_embedded/underenheter/1/navn`
+
+Exact excerpt:
+
+```
+se":"Utvinning av råolje","kode":"06.100"},"navn":"CONCEDO AS PL1292","oppstartsdato":"2026-03-01","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og offentlig forvaltning","kode":"BED
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988217867&size=1000&page=0 / retrieved 2026-11-14T06:39:04.132414Z / SHA-256 `a136633f16c0f03790dfaf7fe6f76de109af42b05d0cf692f320c4c4b2bda2aa` / locator `/_embedded/underenheter/1`
+
+Exact excerpt:
+
+```
+{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/937339372"},"overordnetEnhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/988217867"}},"harRegistrertAntallAnsatte":false,"historiskeNavn":[],"naeringskode1":{"beskrivelse":"Utvinning av råolje","kode"
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:39:02.350154Z / SHA-256 `d21e507d79e91866ffe5a753d309055ca8ab25b324a8fc0e6795f6d46d93e7d1` / locator `row:988217867/column:navn`
+
+Exact excerpt:
+
+```
+988217867,CONCEDO AS,AS,Aksjeselskap,06.100,Utvinning av råolje,,,,,,,true,19,2026-08-12,2026-08-10,www.concedo.no,post@concedo.no,,91346553,,,,,,,,"c/o Torvgården
+Torvveien 1",ASKER,1383,ASKER,3203,Norge,NO,2100,Private aksjeselskaper mv.,2025,2005-06-02,2005-04-01,true,2005-07-01,2005-07-07,,,fals
+```
+
+## X4 / 20261114 / added / 927123851 / HEGGHEIM MULTITJENESTER AS
+
+Type: brand; identity: S.O. HEGGHEIM MULTITJENESTER AS; saved-evidence verdict: correct.
+
+```json
+{
+  "name": "S.O. HEGGHEIM MULTITJENESTER AS",
+  "origin": "registered_subunit",
+  "subunit_orgnr": "986302719"
+}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=927123851&size=1000&page=0 / retrieved 2026-11-14T06:39:05.883165Z / SHA-256 `045faacc2fb20baa41c09bdb8844b37d0b5205e46110ccbb88f7512e531e92ee` / locator `/_embedded/underenheter/0/navn`
+
+Exact excerpt:
+
+```
+er tilknyttet husdyrhold","kode":"01.620"},"navn":"S.O. HEGGHEIM MULTITJENESTER AS","oppstartsdato":"2001-03-01","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og offentlig forvaltnin
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=927123851&size=1000&page=0 / retrieved 2026-11-14T06:39:05.883165Z / SHA-256 `045faacc2fb20baa41c09bdb8844b37d0b5205e46110ccbb88f7512e531e92ee` / locator `/_embedded/underenheter/0`
+
+Exact excerpt:
+
+```
+{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/986302719"},"overordnetEnhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/927123851"}},"beliggenhetsadresse":{"adresse":["c/o Svein Olav Heggheim","Landarvikveien 10"],"kommune":"HERØY","kommunenummer"
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:39:02.317901Z / SHA-256 `ab24ee85d7997d6c8d9dba829d546ae0542ad4c246a6379c3c6223fa88f430bd` / locator `row:927123851/column:navn`
+
+Exact excerpt:
+
+```
+927123851,HEGGHEIM MULTITJENESTER AS,AS,Aksjeselskap,01.620,Tjenester tilknyttet husdyrhold,,,,,,,true,,2023-08-14,2023-08-10,,,,,,,,,,,,"c/o Svein Olav Heggheim
+Landarvikveien 10",HERØY,8850,HERØY,1818,Norge,NO,2100,Private aksjeselskaper mv.,2025,2021-05-19,2021-04-21,true,2021-05-01,2021-05-25,,,
+```
+
+## X4 / 20261114 / added / 986464492 / OPTIMAL REGNSKAP AS
+
+Type: brand; identity: OPTIMAL REGNSKAP AS AVD DRAMMEN; saved-evidence verdict: correct.
+
+```json
+{
+  "name": "OPTIMAL REGNSKAP AS AVD DRAMMEN",
+  "origin": "registered_subunit",
+  "subunit_orgnr": "824202362"
+}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=986464492&size=1000&page=0 / retrieved 2026-11-14T06:39:04.800751Z / SHA-256 `45f276fd88c503f164b6318a349588fdc9d42d891322a5d24738d9175553dbf1` / locator `/_embedded/underenheter/0/navn`
+
+Exact excerpt:
+
+```
+skapsføring og bokføring","kode":"69.202"},"navn":"OPTIMAL REGNSKAP AS AVD DRAMMEN","oppstartsdato":"2019-06-01","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og offentlig forvaltnin
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=986464492&size=1000&page=0 / retrieved 2026-11-14T06:39:04.800751Z / SHA-256 `45f276fd88c503f164b6318a349588fdc9d42d891322a5d24738d9175553dbf1` / locator `/_embedded/underenheter/0`
+
+Exact excerpt:
+
+```
+{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/824202362"},"overordnetEnhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/986464492"}},"beliggenhetsadresse":{"adresse":["Kontorhuset","Nedre Storgate 37"],"kommune":"DRAMMEN","kommunenummer":"3301","l
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:39:02.350154Z / SHA-256 `f550604aa659cbf8b8aecad46575a500bd97a248aa2dea07d912f2e512a59371` / locator `row:986464492/column:navn`
+
+Exact excerpt:
+
+```
+986464492,OPTIMAL REGNSKAP AS,AS,Aksjeselskap,69.202,Regnskapsføring og bokføring,,,,,,,true,9,2026-07-15,2026-07-10,,post@optimal-regnskap.no,72 48 36 30,,,,,,,,,Orkdalsveien 67,ORKANGER,7300,ORKLAND,5059,Norge,NO,2100,Private aksjeselskaper mv.,2025,2004-01-24,2004-01-01,true,2004-01-01,2004-02-23
+```
+
+## X4 / 20261114 / added / 936195296 / SINDRE SØLVERNES HOLDING AS
+
+Type: brand; identity: SØLVERNES HOLDING AS; saved-evidence verdict: correct.
+
+```json
+{
+  "name": "SØLVERNES HOLDING AS",
+  "origin": "registered_subunit",
+  "subunit_orgnr": "936251625"
+}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=936195296&size=1000&page=0 / retrieved 2026-11-14T06:39:05.691222Z / SHA-256 `5b3a3cf6c886ae2ab4ccf694822301c97f3b744b83a158f2fa0a53b422f3ff83` / locator `/_embedded/underenheter/0/navn`
+
+Exact excerpt:
+
+```
+{"beskrivelse":"Uoppgitt","kode":"00.000"},"navn":"SØLVERNES HOLDING AS","oppstartsdato":"2025-08-22","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og offentlig forvaltning","kode":"
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=936195296&size=1000&page=0 / retrieved 2026-11-14T06:39:05.691222Z / SHA-256 `5b3a3cf6c886ae2ab4ccf694822301c97f3b744b83a158f2fa0a53b422f3ff83` / locator `/_embedded/underenheter/0`
+
+Exact excerpt:
+
+```
+{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/936251625"},"overordnetEnhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/936195296"}},"beliggenhetsadresse":{"adresse":["Stokkåsen 65"],"kommune":"TRONDHEIM","kommunenummer":"5001","land":"Norge","lan
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:39:02.339899Z / SHA-256 `c84f4a30a6d92efaa9a2f92b9f5e90a4f2e09412e553f4bf689a50f7a4b40e50` / locator `row:936195296/column:navn`
+
+Exact excerpt:
+
+```
+936195296,SINDRE SØLVERNES HOLDING AS,AS,Aksjeselskap,00.000,Uoppgitt,,,,,,,false,,,,,,,,,,,,,,,Stokkåsen 65,JAKOBSLI,7059,TRONDHEIM,5001,Norge,NO,2100,Private aksjeselskaper mv.,2025,2025-09-25,2025-08-22,false,,,,,false,,true,2025-09-25,false,false,,false,,false,,false,,,,,,,Bokmål,2025-08-22,"Erv
+```
+
+## X4 / 20261114 / added / 917071209 / SESAM OPPLAND AS
+
+Type: brand; identity: MIX GJØVIK; saved-evidence verdict: correct.
+
+```json
+{
+  "name": "MIX GJØVIK",
+  "origin": "registered_subunit",
+  "subunit_orgnr": "973232002"
+}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=917071209&size=1000&page=0 / retrieved 2026-11-14T06:39:05.262415Z / SHA-256 `0f4da528910d6cf882f8dbf417a0aa4d671188ff482ca65d04d4d12ef83b9b27` / locator `/_embedded/underenheter/0/navn`
+
+Exact excerpt:
+
+```
+rings- og nytelsesmidler","kode":"47.110"},"navn":"MIX GJØVIK","oppstartsdato":"1965-12-31","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og offentlig forvaltning","kode":"BEDR"},"or
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=917071209&size=1000&page=0 / retrieved 2026-11-14T06:39:05.262415Z / SHA-256 `0f4da528910d6cf882f8dbf417a0aa4d671188ff482ca65d04d4d12ef83b9b27` / locator `/_embedded/underenheter/0`
+
+Exact excerpt:
+
+```
+{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/973232002"},"overordnetEnhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/917071209"}},"beliggenhetsadresse":{"adresse":["Ludvig Skattums gate 5"],"kommune":"GJØVIK","kommunenummer":"3407","land":"Norg
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:39:02.301716Z / SHA-256 `42f8d86f27cfcd31a2051c98798df96ed4deae21c3efa9846b5203fd23f24957` / locator `row:917071209/column:navn`
+
+Exact excerpt:
+
+```
+917071209,SESAM OPPLAND AS,AS,Aksjeselskap,47.110,Detaljhandel med bredt vareutvalg med hovedvekt på nærings- og nytelsesmidler,,,,,,,false,,,,,sesam2819@gmail.com,,408 99 139,,,,,,,,Chr.Michelsens gate 12,GJØVIK,2815,GJØVIK,3407,Norge,NO,2100,Private aksjeselskaper mv.,2025,2016-04-26,2016-04-10,tr
+```
+
+## X4 / 20261114 / added / 986464492 / OPTIMAL REGNSKAP AS
+
+Type: brand; identity: OPTIMAL REGNSKAP AS AVD ORKANGER; saved-evidence verdict: correct.
+
+```json
+{
+  "name": "OPTIMAL REGNSKAP AS AVD ORKANGER",
+  "origin": "registered_subunit",
+  "subunit_orgnr": "986498125"
+}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=986464492&size=1000&page=0 / retrieved 2026-11-14T06:39:04.800751Z / SHA-256 `45f276fd88c503f164b6318a349588fdc9d42d891322a5d24738d9175553dbf1` / locator `/_embedded/underenheter/1/navn`
+
+Exact excerpt:
+
+```
+skapsføring og bokføring","kode":"69.202"},"navn":"OPTIMAL REGNSKAP AS AVD ORKANGER","oppstartsdato":"2004-01-15","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og offentlig forvaltni
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=986464492&size=1000&page=0 / retrieved 2026-11-14T06:39:04.800751Z / SHA-256 `45f276fd88c503f164b6318a349588fdc9d42d891322a5d24738d9175553dbf1` / locator `/_embedded/underenheter/1`
+
+Exact excerpt:
+
+```
+{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/986498125"},"overordnetEnhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/986464492"}},"antallAnsatte":9,"beliggenhetsadresse":{"adresse":["Orkdalsveien 67"],"kommune":"ORKLAND","kommunenummer":"5059",
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:39:02.350154Z / SHA-256 `f550604aa659cbf8b8aecad46575a500bd97a248aa2dea07d912f2e512a59371` / locator `row:986464492/column:navn`
+
+Exact excerpt:
+
+```
+986464492,OPTIMAL REGNSKAP AS,AS,Aksjeselskap,69.202,Regnskapsføring og bokføring,,,,,,,true,9,2026-07-15,2026-07-10,,post@optimal-regnskap.no,72 48 36 30,,,,,,,,,Orkdalsveien 67,ORKANGER,7300,ORKLAND,5059,Norge,NO,2100,Private aksjeselskaper mv.,2025,2004-01-24,2004-01-01,true,2004-01-01,2004-02-23
+```
+
+## X4 / 20261114 / added / 988217867 / CONCEDO AS
+
+Type: brand; identity: Concedo; saved-evidence verdict: correct.
+
+```json
+"Concedo"
+```
+
+Source: https://www.concedo.no/contact / retrieved 2026-11-14T06:39:55.098428Z / SHA-256 `a935b30975e7c01bffb403e328a8e0ee6b566e639629a0b9175655f150c3c600` / locator `publisher-public-name`
+
+Exact excerpt:
+
+```
+mage/svg+xml">
+        <title>Contact | Concedo</title>
+        <link rel="preload" as="style" href="https://www.concedo.no/build/assets/site-B2ovJrdf.css" /><link rel="modulepreload" as="script" href="https://www.concedo.no/build/assets/site-l0sNRNKZ.js" /><link rel="stylesheet" href="https://www.c
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/138/oppdateringsid`
+
+Exact excerpt:
+
+```
+8.691Z","endringstype":"Endring","oppdateringsid":19567370,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/929643984"}},"dato":"2025-02-10T10:10:14.545Z","endringstype":"Ny","oppdateringsid":19602652,"organisasjonsnummer":"9
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/aarsregnskap/kopi/988217867/aar / retrieved 2026-11-14T06:39:48.255853Z / SHA-256 `b7bcd20d8a4607bc9ca49fbdfebf5e51cb31e39858edb985dc98a82e8d2b7cd1` / locator `/9`
+
+Exact excerpt:
+
+```
+,"2013","2014","2015","2016","2017","2018","2019","2020","2021","2022","2023","2024","2025"]
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/67/dato`
+
+Exact excerpt:
+
+```
+tsregisteret/api/underenheter/988294888"}},"dato":"2024-04-11T19:58:50.772Z","endringstype":"Endring","oppdateringsid":18760129,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/993331325"}},"dato":"2024-04-11T19:58:59.926Z","
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/0/egenkapitalGjeld/gjeldOversikt/kortsiktigGjeld/sumKortsiktigGjeld`
+
+Exact excerpt:
+
+```
+133297.00,"kortsiktigGjeld":{"sumKortsiktigGjeld":283031412.00},"langsiktigGjeld":{"sumLangsiktigGjeld":63101885.00}}},"eiendeler":{"sumFordringer":273483736.00,"sumBankinnskuddOgKontanter":177141967.00,"sumEiendeler":564097527.00,"omloepsmidler":{"sumOmloepsmidler":450625703.00},"anleggsmidler":{"s
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/742/endringer/1/op`
+
+Exact excerpt:
+
+```
+path":"/vedtektsdato","value":"2026-06-22"},{"op":"replace","path":"/kapital/antallAksjer","value":75482909},{"op":"replace","path":"/kapital/innfortDato","value":"2026-07-27"},{"op":"replace","path":"/kapital/belop","value":1.565237235E7}],"endringstype":"Endring","oppdateringsid":24954831,"organis
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/107/organisasjonsnummer`
+
+Exact excerpt:
+
+```
+","oppdateringsid":19130618,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/917438986"}},"dato":"2024-05-25T15:05:39.915+02:00","endringstype":"Endring","oppdateringsid":19134123,"organisasjonsnummer":"917438986"},{"_links":{"enhet":{
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:39:02.350154Z / SHA-256 `d21e507d79e91866ffe5a753d309055ca8ab25b324a8fc0e6795f6d46d93e7d1` / locator `row:988217867/column:registreringsdatoForetaksregisteret`
+
+Exact excerpt:
+
+```
+83,ASKER,3203,Norge,NO,2100,Private aksjeselskaper mv.,2025,2005-06-02,2005-04-01,true,2005-07-01,2005-07-07,,,false,,true,2005-06-02,false,false,,false,,false,,false,,,,,,,Bokmål,2026-06-22,Leting etter og utvinning av olje og gass på norsk kontinentalsokkel.,Leting etter og utvinning av olje og ga
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988217867&size=1000&page=0 / retrieved 2026-11-14T06:39:04.132414Z / SHA-256 `a136633f16c0f03790dfaf7fe6f76de109af42b05d0cf692f320c4c4b2bda2aa` / locator `/_embedded/underenheter/0/naeringskode1`
+
+Exact excerpt:
+
+```
+ww.concedo.no","mobil":"91346553","naeringskode1":{"beskrivelse":"Utvinning av råolje","kode":"06.100"},"navn":"CONCEDO AS","oppstartsdato":"2005-06-02","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:39:02.350154Z / SHA-256 `d21e507d79e91866ffe5a753d309055ca8ab25b324a8fc0e6795f6d46d93e7d1` / locator `row:988217867/column:konkurs`
+
+Exact excerpt:
+
+```
+mv.,2025,2005-06-02,2005-04-01,true,2005-07-01,2005-07-07,,,false,,true,2005-06-02,false,false,,false,,false,,false,,,,,,,Bokmål,2026-06-22,Leting etter og utvinning av olje og gass på norsk kontinentalsokkel.,Leting etter og utvinning av olje og gass på norsk kontinentalsokkel.,false,,,,,true,15652
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/758`
+
+Exact excerpt:
+
+```
+{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/988217867"}},"dato":"2026-08-13T00:05:58.821+02:00","endringer":[{"op":"replace","path":"/registreringsdatoAntallAnsatteEnhetsregisteret","value":"2026-08-12"},{"op":"replace","path":"/antallAnsatte","value":19},{"op":"re
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:39:02.350154Z / SHA-256 `d21e507d79e91866ffe5a753d309055ca8ab25b324a8fc0e6795f6d46d93e7d1` / locator `row:988217867/columns:naeringskode2.*`
+
+Exact excerpt:
+
+```
+organisasjonsnummer,navn,organisasjonsform.kode,organisasjonsform.beskrivelse,naeringskode1.kode,naeringskode1.beskrivelse,naeringskode2.kode,naeringskode2.beskrivelse,naeringskode3.kode,naeringskode3.beskrivelse,hjelpeenhetskode.kode,hjelpeenhetskode.beskrivelse,harRegistrertAntallAnsatte,antallAns
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/988217867/roller / retrieved 2026-11-14T06:39:06.322752Z / SHA-256 `503dbeda876a9266f8e8964d1ae8b6e37d00ba3700becccd5278e47e072a70b7` / locator `/rollegrupper/2/roller/0/enhet/erSlettet`
+
+Exact excerpt:
+
+```
+tsregisteret/api/enheter/980211282"}},"erSlettet":false,"godkjenningsstatus":"Godkjent revisjonsforetak","navn":["DELOITTE AS"],"organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/AS"}},"beskrivelse":"Aksjeselskap","kode":"AS"},"organisasjons
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/742/endringer/2/path`
+
+Exact excerpt:
+
+```
+lAksjer","value":75482909},{"op":"replace","path":"/kapital/innfortDato","value":"2026-07-27"},{"op":"replace","path":"/kapital/belop","value":1.565237235E7}],"endringstype":"Endring","oppdateringsid":24954831,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhet
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/742/oppdateringsid`
+
+Exact excerpt:
+
+```
+235E7}],"endringstype":"Endring","oppdateringsid":24954831,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/986464492"}},"dato":"2026-07-27T20:01:21.797+02:00","endringer":[{"op":"replace","path":"/sisteInnsendteAarsregnskap","value":"
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:39:02.350154Z / SHA-256 `d21e507d79e91866ffe5a753d309055ca8ab25b324a8fc0e6795f6d46d93e7d1` / locator `row:988217867/columns:forretningsadresse.*`
+
+Exact excerpt:
+
+```
+2026-08-10,www.concedo.no,post@concedo.no,,91346553,,,,,,,,"c/o Torvgården
+Torvveien 1",ASKER,1383,ASKER,3203,Norge,NO,2100,Private aksjeselskaper mv.,2025,2005-06-02,2005-04-01,true,2005-07-01,2005-07-07,,,false,,true,2005-06-02,false,false,,false,,false,,false,,,,,,,Bokmål,2026-06-22,Leting etter 
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/47/dato`
+
+Exact excerpt:
+
+```
+/enhetsregisteret/api/enheter/988217867"}},"dato":"2024-01-15T17:15:13.729+01:00","endringstype":"Endring","oppdateringsid":18731048,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/915682448"}},"dato":"2024-01-22T13:20:12.516+01:00","
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/278/endringer/0/op`
+
+Exact excerpt:
+
+```
+to":"2026-07-14T22:11:08.264Z","endringer":[{"op":"replace","path":"/registreringsdatoAntallAnsatteEnhetsregisteret","value":"2026-07-14"},{"op":"replace","path":"/antallAnsatte","value":22},{"op":"replace","path":"/registreringsdatoAntallAnsatteNAVAaregisteret","value":"2026-07-10"}],"endringstype"
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/138/endringstype`
+
+Exact excerpt:
+
+```
+,"dato":"2025-01-14T23:01:38.691Z","endringstype":"Endring","oppdateringsid":19567370,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/929643984"}},"dato":"2025-02-10T10:10:14.545Z","endringstype":"Ny","oppdateringsid":196026
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/2/egenkapitalGjeld/gjeldOversikt/kortsiktigGjeld/sumKortsiktigGjeld`
+
+Exact excerpt:
+
+```
+042000.00,"kortsiktigGjeld":{"sumKortsiktigGjeld":672375000.00},"langsiktigGjeld":{"sumLangsiktigGjeld":525667000.00}}},"eiendeler":{"goodwill":64061000.00,"sumVarer":11368000.00,"sumFordringer":345705000.00,"sumBankinnskuddOgKontanter":76204000.00,"sumEiendeler":1226255000.00,"omloepsmidler":{"sumO
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/562/organisasjonsnummer`
+
+Exact excerpt:
+
+```
+","oppdateringsid":23220857,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/988330116"}},"dato":"2025-11-13T11:53:06.172+01:00","endringstype":"Ukjent","oppdateringsid":23222225,"organisasjonsnummer":"988330116"},{"_links":{"enhet":{"
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:39:02.350154Z / SHA-256 `d21e507d79e91866ffe5a753d309055ca8ab25b324a8fc0e6795f6d46d93e7d1` / locator `row:988217867/column:registreringsdatoMerverdiavgiftsregisteret`
+
+Exact excerpt:
+
+```
+,Private aksjeselskaper mv.,2025,2005-06-02,2005-04-01,true,2005-07-01,2005-07-07,,,false,,true,2005-06-02,false,false,,false,,false,,false,,,,,,,Bokmål,2026-06-22,Leting etter og utvinning av olje og gass på norsk kontinentalsokkel.,Leting etter og utvinning av olje og gass på norsk kontinentalsokk
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988217867&size=1000&page=0 / retrieved 2026-11-14T06:39:04.132414Z / SHA-256 `a136633f16c0f03790dfaf7fe6f76de109af42b05d0cf692f320c4c4b2bda2aa` / locator `/_embedded/underenheter/0/beliggenhetsadresse`
+
+Exact excerpt:
+
+```
+17867"}},"antallAnsatte":19,"beliggenhetsadresse":{"adresse":["c/o Torvgården","Torvveien 1"],"kommune":"ASKER","kommunenummer":"3203","land":"Norge","landkode":"NO","postnummer":"1383","poststed":"ASKER"},"epostadresse":"post@concedo.no","harRegistrertAntallAnsatte":true,"historiskeNavn":[{"fraDato
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:39:02.350154Z / SHA-256 `d21e507d79e91866ffe5a753d309055ca8ab25b324a8fc0e6795f6d46d93e7d1` / locator `row:988217867/column:registrertIMvaRegisteret`
+
+Exact excerpt:
+
+```
+CONCEDO AS,AS,Aksjeselskap,06.100,Utvinning av råolje,,,,,,,true,19,2026-08-12,2026-08-10,www.concedo.no,post@concedo.no,,91346553,,,,,,,,"c/o Torvgården
+Torvveien 1",ASKER,1383,ASKER,3203,Norge,NO,2100,Private aksjeselskaper mv.,2025,2005-06-02,2005-04-01,true,2005-07-01,2005-07-07,,,false,,true,20
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988217867&size=1000&page=0 / retrieved 2026-11-14T06:39:04.132414Z / SHA-256 `a136633f16c0f03790dfaf7fe6f76de109af42b05d0cf692f320c4c4b2bda2aa` / locator `/_embedded/underenheter/1`
+
+Exact excerpt:
+
+```
+{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/937339372"},"overordnetEnhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/988217867"}},"harRegistrertAntallAnsatte":false,"historiskeNavn":[],"naeringskode1":{"beskrivelse":"Utvinning av råolje","kode"
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/144/oppdateringsid`
+
+Exact excerpt:
+
+```
+0.038Z","endringstype":"Endring","oppdateringsid":19649872,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/829036312"}},"dato":"2025-02-12T01:14:10.726Z","endringstype":"Endring","oppdateringsid":19658789,"organisasjonsnumme
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/1/resultatregnskapResultat/driftsresultat/driftskostnad/loennskostnad`
+
+Exact excerpt:
+
+```
+ter":5464000.00},"driftskostnad":{"loennskostnad":31516000.00,"sumDriftskostnad":155164000.00}}}},{"id":6884148,"journalnr":"2026530758","regnskapstype":"SELSKAP","virksomhet":{"organisasjonsnummer":"988217867","organisasjonsform":"AS","morselskap":false},"regnskapsperiode":{"fraDato":"2025-01-01","
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:39:02.350154Z / SHA-256 `d21e507d79e91866ffe5a753d309055ca8ab25b324a8fc0e6795f6d46d93e7d1` / locator `row:988217867/column:forretningsadresse.kommune`
+
+Exact excerpt:
+
+```
+st@concedo.no,,91346553,,,,,,,,"c/o Torvgården
+Torvveien 1",ASKER,1383,ASKER,3203,Norge,NO,2100,Private aksjeselskaper mv.,2025,2005-06-02,2005-04-01,true,2005-07-01,2005-07-07,,,false,,true,2005-06-02,false,false,,false,,false,,false,,,,,,,Bokmål,2026-06-22,Leting etter og utvinning av olje og gass
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/113`
+
+Exact excerpt:
+
+```
+gsid":19230610,"organisasjonsnummer":"915456154"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/988294888"}},"dato":"2024-10-12T14:08:13.315Z","endringstype":"Endring","oppdateringsid":19271012,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"hr
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/138`
+
+Exact excerpt:
+
+```
+gsid":19544906,"organisasjonsnummer":"974196867"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/988294888"}},"dato":"2025-01-14T23:01:38.691Z","endringstype":"Endring","oppdateringsid":19567370,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"hr
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:39:02.350154Z / SHA-256 `d21e507d79e91866ffe5a753d309055ca8ab25b324a8fc0e6795f6d46d93e7d1` / locator `row:988217867/columns:organisasjonsform.*`
+
+Exact excerpt:
+
+```
+988217867,CONCEDO AS,AS,Aksjeselskap,06.100,Utvinning av råolje,,,,,,,true,19,2026-08-12,2026-08-10,www.concedo.no,post@concedo.no,,91346553,,,,,,,,"c/o Torvgården
+Torvveien 1",ASKER,1383,ASKER,3203,Norge,NO,2100,Private aksjeselskaper mv.,2025,2005-06-02,2005-04-01,true,2005-07-01,2005-07-07,,,fals
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/562/oppdateringsid`
+
+Exact excerpt:
+
+```
+8+01:00","endringstype":"Ukjent","oppdateringsid":23220857,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/988330116"}},"dato":"2025-11-13T11:53:06.172+01:00","endringstype":"Ukjent","oppdateringsid":23222225,"organisasjonsnummer":"98
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/1/egenkapitalGjeld/gjeldOversikt/kortsiktigGjeld/sumKortsiktigGjeld`
+
+Exact excerpt:
+
+```
+479000.00,"kortsiktigGjeld":{"sumKortsiktigGjeld":116391000.00},"langsiktigGjeld":{"sumLangsiktigGjeld":622088000.00}}},"eiendeler":{"goodwill":179980000.00,"sumVarer":99477000.00,"sumFordringer":41330000.00,"sumBankinnskuddOgKontanter":221756000.00,"sumEiendeler":915485000.00,"omloepsmidler":{"sumO
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988217867&size=1000&page=0 / retrieved 2026-11-14T06:39:04.132414Z / SHA-256 `a136633f16c0f03790dfaf7fe6f76de109af42b05d0cf692f320c4c4b2bda2aa` / locator `/_embedded/underenheter/1/historiskeNavn`
+
+Exact excerpt:
+
+```
+arRegistrertAntallAnsatte":false,"historiskeNavn":[],"naeringskode1":{"beskrivelse":"Utvinning av råolje","kode":"06.100"},"navn":"CONCEDO AS PL1292","oppstartsdato":"2026-03-01","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"be
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/2/eiendeler/omloepsmidler/sumOmloepsmidler`
+
+Exact excerpt:
+
+```
+1226255000.00,"omloepsmidler":{"sumOmloepsmidler":433277000.00},"anleggsmidler":{"sumAnleggsmidler":792978000.00}},"resultatregnskapResultat":{"ordinaertResultatFoerSkattekostnad":-174007000.00,"ordinaertResultatSkattekostnad":-25215000.00,"aarsresultat":-148792000.00,"totalresultat":-148792000.00,"
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/193/endringer/0/op`
+
+Exact excerpt:
+
+```
+to":"2025-09-12T09:46:38.515Z","endringer":[{"op":"replace","path":"/registreringsdatoAntallAnsatteEnhetsregisteret","value":"2025-09-11"},{"op":"replace","path":"/antallAnsatte","value":20},{"op":"replace","path":"/registreringsdatoAntallAnsatteNAVAaregisteret","value":"2025-09-10"}],"endringstype"
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/aarsregnskap/kopi/988217867/aar / retrieved 2026-11-14T06:39:48.255853Z / SHA-256 `b7bcd20d8a4607bc9ca49fbdfebf5e51cb31e39858edb985dc98a82e8d2b7cd1` / locator `/1`
+
+Exact excerpt:
+
+```
+["2011","2012","2013","2014","2015","2016","2017","2018","2019","2020","2021","2022","2023","2024","2025"]
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/719/endringer/0/op`
+
+Exact excerpt:
+
+```
+2026-07-04T14:20:44.304+02:00","endringer":[{"op":"replace","path":"/sisteInnsendteAarsregnskap","value":"2025"}],"endringstype":"Endring","oppdateringsid":24770609,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/979993609"}},"dato":"
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/roller?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&size=1000&afterTime=2023-11-14T06%3A39%3A02.256Z / retrieved 2026-11-14T06:43:15.761297Z / SHA-256 `cab0ccff9b23449b59f32958dda08d47746743338575b17f4e8222b6899856b7` / locator `/158/id`
+
+Exact excerpt:
+
+```
+,{"data":{"organisasjonsnummer":"988217867"},"id":"4494771","source":"https://data.brreg.no/enhetsregisteret/api/enheter/988217867/roller","specversion":"1.0","time":"2026-06-11T10:25:12.693Z","type":"no.brreg.enhetsregisteret.rolle.oppdatert"},{"data":{"organisasjonsnummer":"929209850"},"id":"45027
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/1/egenkapitalGjeld/gjeldOversikt/sumGjeld`
+
+Exact excerpt:
+
+```
+ptial":230974000.00}},"gjeldOversikt":{"sumGjeld":738479000.00,"kortsiktigGjeld":{"sumKortsiktigGjeld":116391000.00},"langsiktigGjeld":{"sumLangsiktigGjeld":622088000.00}}},"eiendeler":{"goodwill":179980000.00,"sumVarer":99477000.00,"sumFordringer":41330000.00,"sumBankinnskuddOgKontanter":221756000.
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/283/endringer/0/op`
+
+Exact excerpt:
+
+```
+to":"2026-08-11T22:13:30.125Z","endringer":[{"op":"replace","path":"/registreringsdatoAntallAnsatteEnhetsregisteret","value":"2026-08-11"},{"op":"replace","path":"/antallAnsatte","value":19},{"op":"replace","path":"/registreringsdatoAntallAnsatteNAVAaregisteret","value":"2026-08-10"}],"endringstype"
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/aarsregnskap/kopi/988217867/aar / retrieved 2026-11-14T06:39:48.255853Z / SHA-256 `b7bcd20d8a4607bc9ca49fbdfebf5e51cb31e39858edb985dc98a82e8d2b7cd1` / locator `/2`
+
+Exact excerpt:
+
+```
+["2011","2012","2013","2014","2015","2016","2017","2018","2019","2020","2021","2022","2023","2024","2025"]
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/283/endringer/2/path`
+
+Exact excerpt:
+
+```
+antallAnsatte","value":19},{"op":"replace","path":"/registreringsdatoAntallAnsatteNAVAaregisteret","value":"2026-08-10"}],"endringstype":"Endring","oppdateringsid":21260887,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/994
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/988217867/roller / retrieved 2026-11-14T06:39:06.322752Z / SHA-256 `503dbeda876a9266f8e8964d1ae8b6e37d00ba3700becccd5278e47e072a70b7` / locator `/rollegrupper/3/roller/0`
+
+Exact excerpt:
+
+```
+{"avregistrert":false,"enhet":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/989176013"}},"erSlettet":false,"godkjenningsstatus":"Godkjent regnskapsforetak","navn":["ADMENTO AS"],"organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/562/endringstype`
+
+Exact excerpt:
+
+```
+o":"2025-11-13T11:52:58.088+01:00","endringstype":"Ukjent","oppdateringsid":23220857,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/988330116"}},"dato":"2025-11-13T11:53:06.172+01:00","endringstype":"Ukjent","oppdateringsid":23222225
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/278/endringer/2/op`
+
+Exact excerpt:
+
+```
+eplace","path":"/antallAnsatte","value":22},{"op":"replace","path":"/registreringsdatoAntallAnsatteNAVAaregisteret","value":"2026-07-10"}],"endringstype":"Endring","oppdateringsid":21184682,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:39:02.350154Z / SHA-256 `d21e507d79e91866ffe5a753d309055ca8ab25b324a8fc0e6795f6d46d93e7d1` / locator `row:988217867/column:registrertIFrivillighetsregisteret`
+
+Exact excerpt:
+
+```
+mv.,2025,2005-06-02,2005-04-01,true,2005-07-01,2005-07-07,,,false,,true,2005-06-02,false,false,,false,,false,,false,,,,,,,Bokmål,2026-06-22,Leting etter og utvinning av olje og gass på norsk kontinentalsokkel.,Leting etter og utvinning av olje og gass på norsk kontinentalsokkel.,false,,,,,true,15652
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/78/dato`
+
+Exact excerpt:
+
+```
+tsregisteret/api/underenheter/988294888"}},"dato":"2024-05-13T20:00:14.749Z","endringstype":"Endring","oppdateringsid":18848036,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/933490505"}},"dato":"2024-05-23T19:14:25.871Z","
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/690`
+
+Exact excerpt:
+
+```
+217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/988217867"}},"dato":"2026-06-11T12:25:13.351+02:00","endringer":[{"op":"replace","path":"/vedtektsdato","value":"2026-04-22"}],"endringstype":"Endring","oppdateringsid":24575796,"organisasjonsnummer":"988217867"}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:39:02.350154Z / SHA-256 `d21e507d79e91866ffe5a753d309055ca8ab25b324a8fc0e6795f6d46d93e7d1` / locator `row:988217867/column:stiftelsesdato`
+
+Exact excerpt:
+
+```
+03,Norge,NO,2100,Private aksjeselskaper mv.,2025,2005-06-02,2005-04-01,true,2005-07-01,2005-07-07,,,false,,true,2005-06-02,false,false,,false,,false,,false,,,,,,,Bokmål,2026-06-22,Leting etter og utvinning av olje og gass på norsk kontinentalsokkel.,Leting etter og utvinning av olje og gass på norsk
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/33`
+
+Exact excerpt:
+
+```
+gsid":18576735,"organisasjonsnummer":"918842527"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/988217867"}},"dato":"2024-01-01T07:45:27.945+01:00","endringstype":"Endring","oppdateringsid":18583992,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/2/egenkapitalGjeld/gjeldOversikt/langsiktigGjeld/sumLangsiktigGjeld`
+
+Exact excerpt:
+
+```
+75000.00},"langsiktigGjeld":{"sumLangsiktigGjeld":525667000.00}}},"eiendeler":{"goodwill":64061000.00,"sumVarer":11368000.00,"sumFordringer":345705000.00,"sumBankinnskuddOgKontanter":76204000.00,"sumEiendeler":1226255000.00,"omloepsmidler":{"sumOmloepsmidler":433277000.00},"anleggsmidler":{"sumAnleg
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/35/oppdateringsid`
+
+Exact excerpt:
+
+```
+1.484Z","endringstype":"Endring","oppdateringsid":18311963,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/929218841"}},"dato":"2024-01-01T06:19:13.171Z","endringstype":"Endring","oppdateringsid":18315789,"organisasjonsnumme
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/562/dato`
+
+Exact excerpt:
+
+```
+/enhetsregisteret/api/enheter/988217867"}},"dato":"2025-11-13T11:52:58.088+01:00","endringstype":"Ukjent","oppdateringsid":23220857,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/988330116"}},"dato":"2025-11-13T11:53:06.172+01:00","e
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/419/endringstype`
+
+Exact excerpt:
+
+```
+o":"2025-07-15T00:04:42.546+02:00","endringstype":"Endring","oppdateringsid":21796962,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/997963903"}},"dato":"2025-07-15T00:05:27.131+02:00","endringstype":"Endring","oppdateringsid":218004
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/690/oppdateringsid`
+
+Exact excerpt:
+
+```
+4-22"}],"endringstype":"Endring","oppdateringsid":24575796,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/984360312"}},"dato":"2026-06-11T20:03:09.708+02:00","endringer":[{"op":"replace","path":"/sisteInnsendteAarsregnskap","value":"
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/736/organisasjonsnummer`
+
+Exact excerpt:
+
+```
+","oppdateringsid":24884988,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/981500253"}},"dato":"2026-07-17T08:55:10.668+02:00","endringer":[{"op":"replace","path":"/forretningsadresse/postnummer","value":"0786"},{"op":"replace","path
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/193/endringer/1/path`
+
+Exact excerpt:
+
+```
+ret","value":"2025-09-11"},{"op":"replace","path":"/antallAnsatte","value":20},{"op":"replace","path":"/registreringsdatoAntallAnsatteNAVAaregisteret","value":"2025-09-10"}],"endringstype":"Endring","oppdateringsid":20251111,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https:/
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/1/resultatregnskapResultat/finansresultat/finansinntekt/sumFinansinntekter`
+
+Exact excerpt:
+
+```
+10279000.00,"finansinntekt":{"sumFinansinntekter":11907000.00},"finanskostnad":{"sumFinanskostnad":22186000.00}},"driftsresultat":{"driftsresultat":-149700000.00,"driftsinntekter":{"salgsinntekter":5464000.00,"sumDriftsinntekter":5464000.00},"driftskostnad":{"loennskostnad":31516000.00,"sumDriftskos
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/47/organisasjonsnummer`
+
+Exact excerpt:
+
+```
+","oppdateringsid":18731048,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/915682448"}},"dato":"2024-01-22T13:20:12.516+01:00","endringstype":"Endring","oppdateringsid":18741135,"organisasjonsnummer":"915682448"},{"_links":{"enhet":{
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/213/organisasjonsnummer`
+
+Exact excerpt:
+
+```
+","oppdateringsid":19839153,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/922699836"}},"dato":"2024-10-14T21:52:44.299+02:00","endringstype":"Endring","oppdateringsid":19850117,"organisasjonsnummer":"922699836"},{"_links":{"enhet":{
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/278/dato`
+
+Exact excerpt:
+
+```
+tsregisteret/api/underenheter/988294888"}},"dato":"2026-07-14T22:11:08.264Z","endringer":[{"op":"replace","path":"/registreringsdatoAntallAnsatteEnhetsregisteret","value":"2026-07-14"},{"op":"replace","path":"/antallAnsatte","value":22},{"op":"replace","path":"/registreringsdatoAntallAnsatteNAVAareg
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/736`
+
+Exact excerpt:
+
+```
+{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/988217867"}},"dato":"2026-07-16T00:08:11.047+02:00","endringer":[{"op":"replace","path":"/registreringsdatoAntallAnsatteEnhetsregisteret","value":"2026-07-15"},{"op":"replace","path":"/antallAnsatte","value":22},{"op":"re
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/99/oppdateringsid`
+
+Exact excerpt:
+
+```
++02:00","endringstype":"Endring","oppdateringsid":19097401,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/921441835"}},"dato":"2024-05-14T21:43:12.050+02:00","endringstype":"Endring","oppdateringsid":19099035,"organisasjonsnummer":"9
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/47/oppdateringsid`
+
+Exact excerpt:
+
+```
++01:00","endringstype":"Endring","oppdateringsid":18731048,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/915682448"}},"dato":"2024-01-22T13:20:12.516+01:00","endringstype":"Endring","oppdateringsid":18741135,"organisasjonsnummer":"9
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/roller?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&size=1000&afterTime=2023-11-14T06%3A39%3A02.256Z / retrieved 2026-11-14T06:43:15.761297Z / SHA-256 `cab0ccff9b23449b59f32958dda08d47746743338575b17f4e8222b6899856b7` / locator `/3/data/organisasjonsnummer`
+
+Exact excerpt:
+
+```
+.rolle.oppdatert"},{"data":{"organisasjonsnummer":"988217867"},"id":"2341921","source":"https://data.brreg.no/enhetsregisteret/api/enheter/988217867/roller","specversion":"1.0","time":"2023-12-01T11:10:12.162Z","type":"no.brreg.enhetsregisteret.rolle.oppdatert"},{"data":{"organisasjonsnummer":"99898
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/758/organisasjonsnummer`
+
+Exact excerpt:
+
+```
+","oppdateringsid":25084727,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/919909676"}},"dato":"2026-08-13T20:01:03.577+02:00","endringer":[{"op":"replace","path":"/sisteInnsendteAarsregnskap","value":"2025"}],"endringstype":"Endring
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:39:02.350154Z / SHA-256 `d21e507d79e91866ffe5a753d309055ca8ab25b324a8fc0e6795f6d46d93e7d1` / locator `row:988217867/column:epostadresse`
+
+Exact excerpt:
+
+```
+v råolje,,,,,,,true,19,2026-08-12,2026-08-10,www.concedo.no,post@concedo.no,,91346553,,,,,,,,"c/o Torvgården
+Torvveien 1",ASKER,1383,ASKER,3203,Norge,NO,2100,Private aksjeselskaper mv.,2025,2005-06-02,2005-04-01,true,2005-07-01,2005-07-07,,,false,,true,2005-06-02,false,false,,false,,false,,false,,,,
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/113/endringstype`
+
+Exact excerpt:
+
+```
+,"dato":"2024-10-12T14:08:13.315Z","endringstype":"Endring","oppdateringsid":19271012,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/994980831"}},"dato":"2024-10-12T14:08:27.527Z","endringstype":"Endring","oppdateringsid":1
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/33/dato`
+
+Exact excerpt:
+
+```
+/enhetsregisteret/api/enheter/988217867"}},"dato":"2024-01-01T07:45:27.945+01:00","endringstype":"Endring","oppdateringsid":18583992,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/931694995"}},"dato":"2024-01-01T07:45:47.975+01:00","
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/742/endringer/3/op`
+
+Exact excerpt:
+
+```
+/kapital/innfortDato","value":"2026-07-27"},{"op":"replace","path":"/kapital/belop","value":1.565237235E7}],"endringstype":"Endring","oppdateringsid":24954831,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/986464492"}},"dato":"2026-0
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/449/endringer/1/path`
+
+Exact excerpt:
+
+```
+ret","value":"2025-09-13"},{"op":"replace","path":"/antallAnsatte","value":20},{"op":"replace","path":"/registreringsdatoAntallAnsatteNAVAaregisteret","value":"2025-09-10"}],"endringstype":"Endring","oppdateringsid":22057088,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/146/organisasjonsnummer`
+
+Exact excerpt:
+
+```
+","oppdateringsid":19327032,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/921441835"}},"dato":"2024-06-26T21:31:23.324+02:00","endringstype":"Endring","oppdateringsid":19329314,"organisasjonsnummer":"921441835"},{"_links":{"enhet":{
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/988217867/roller / retrieved 2026-11-14T06:39:06.322752Z / SHA-256 `503dbeda876a9266f8e8964d1ae8b6e37d00ba3700becccd5278e47e072a70b7` / locator `/rollegrupper/2/roller/0/rekkefolge`
+
+Exact excerpt:
+
+```
+},"organisasjonsnummer":"980211282"},"rekkefolge":0,"type":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/REVI"}},"beskrivelse":"Revisor","kode":"REVI"}}],"sistEndret":"2005-06-02","type":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/r
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/742/endringer/0/op`
+
+Exact excerpt:
+
+```
+2026-07-27T15:30:10.824+02:00","endringer":[{"op":"replace","path":"/vedtektsdato","value":"2026-06-22"},{"op":"replace","path":"/kapital/antallAksjer","value":75482909},{"op":"replace","path":"/kapital/innfortDato","value":"2026-07-27"},{"op":"replace","path":"/kapital/belop","value":1.565237235E7}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/177/endringstype`
+
+Exact excerpt:
+
+```
+,"dato":"2025-07-12T15:03:12.933Z","endringstype":"Endring","oppdateringsid":20050027,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/929643984"}},"dato":"2025-07-12T15:04:18.640Z","endringstype":"Endring","oppdateringsid":2
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/1/resultatregnskapResultat/driftsresultat/driftsinntekter/salgsinntekter`
+
+Exact excerpt:
+
+```
+-149700000.00,"driftsinntekter":{"salgsinntekter":5464000.00,"sumDriftsinntekter":5464000.00},"driftskostnad":{"loennskostnad":31516000.00,"sumDriftskostnad":155164000.00}}}},{"id":6884148,"journalnr":"2026530758","regnskapstype":"SELSKAP","virksomhet":{"organisasjonsnummer":"988217867","organisasjo
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988217867&size=1000&page=0 / retrieved 2026-11-14T06:39:04.132414Z / SHA-256 `a136633f16c0f03790dfaf7fe6f76de109af42b05d0cf692f320c4c4b2bda2aa` / locator `/_embedded/underenheter/0/beliggenhetsadresse`
+
+Exact excerpt:
+
+```
+17867"}},"antallAnsatte":19,"beliggenhetsadresse":{"adresse":["c/o Torvgården","Torvveien 1"],"kommune":"ASKER","kommunenummer":"3203","land":"Norge","landkode":"NO","postnummer":"1383","poststed":"ASKER"},"epostadresse":"post@concedo.no","harRegistrertAntallAnsatte":true,"historiskeNavn":[{"fraDato
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/689`
+
+Exact excerpt:
+
+```
+441835"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/988217867"}},"dato":"2026-06-11T12:25:13.351+02:00","endringer":[{"op":"replace","path":"/vedtektsdato","value":"2026-04-22"}],"endringstype":"Endring","oppdateringsid":24575795,"organisasjonsnummer":"988217867"}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:39:02.350154Z / SHA-256 `d21e507d79e91866ffe5a753d309055ca8ab25b324a8fc0e6795f6d46d93e7d1` / locator `row:988217867/column:underTvangsavviklingEllerTvangsopplosning`
+
+Exact excerpt:
+
+```
+mv.,2025,2005-06-02,2005-04-01,true,2005-07-01,2005-07-07,,,false,,true,2005-06-02,false,false,,false,,false,,false,,,,,,,Bokmål,2026-06-22,Leting etter og utvinning av olje og gass på norsk kontinentalsokkel.,Leting etter og utvinning av olje og gass på norsk kontinentalsokkel.,false,,,,,true,15652
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/233/dato`
+
+Exact excerpt:
+
+```
+/enhetsregisteret/api/enheter/988217867"}},"dato":"2025-01-14T01:33:05.417+01:00","endringstype":"Endring","oppdateringsid":20075576,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/999630480"}},"dato":"2025-01-15T00:01:16.093+01:00","
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/193/oppdateringsid`
+
+Exact excerpt:
+
+```
+9-10"}],"endringstype":"Endring","oppdateringsid":20251111,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/982987229"}},"dato":"2025-09-12T09:47:09.158Z","endringer":[{"op":"replace","path":"/registreringsdatoAntallAnsatteEn
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988217867&size=1000&page=0 / retrieved 2026-11-14T06:39:04.132414Z / SHA-256 `a136633f16c0f03790dfaf7fe6f76de109af42b05d0cf692f320c4c4b2bda2aa` / locator `/_embedded/underenheter/1/postadresse`
+
+Exact excerpt:
+
+```
+9372","overordnetEnhet":"988217867","postadresse":{"adresse":["Torvveien 1"],"kommune":"ASKER","kommunenummer":"3203","land":"Norge","landkode":"NO","postnummer":"1383","poststed":"ASKER"},"registreringsdatoEnhetsregisteret":"2026-03-11","registrertIMvaregisteret":false,"respons_klasse":"Underenhet"
+```
+
+Source: https://www.concedo.no/contact / retrieved 2026-11-14T06:39:55.098428Z / SHA-256 `a935b30975e7c01bffb403e328a8e0ee6b566e639629a0b9175655f150c3c600` / locator `registry-contact:email_domain`
+
+Exact excerpt:
+
+```
+<a href="mailto:post@concedo.no" class="text-[0.875rem]">
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/1/egenkapitalGjeld/egenkapital/sumEgenkapital`
+
+Exact excerpt:
+
+```
+eld":915484000.00,"egenkapital":{"sumEgenkapital":177005000.00,"opptjentEgenkapital":{"sumOpptjentEgenkapital":-53969000.00},"innskuttEgenkapital":{"sumInnskuttEgenkaptial":230974000.00}},"gjeldOversikt":{"sumGjeld":738479000.00,"kortsiktigGjeld":{"sumKortsiktigGjeld":116391000.00},"langsiktigGjeld"
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/283/endringer/1/op`
+
+Exact excerpt:
+
+```
+atteEnhetsregisteret","value":"2026-08-11"},{"op":"replace","path":"/antallAnsatte","value":19},{"op":"replace","path":"/registreringsdatoAntallAnsatteNAVAaregisteret","value":"2026-08-10"}],"endringstype":"Endring","oppdateringsid":21260887,"organisasjonsnummer":"988294888"},{"_links":{"underenhet"
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/144/organisasjonsnummer`
+
+Exact excerpt:
+
+```
+","oppdateringsid":19649872,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/829036312"}},"dato":"2025-02-12T01:14:10.726Z","endringstype":"Endring","oppdateringsid":19658789,"organisasjonsnummer":"829036312"},{"_links":{"und
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988217867&size=1000&page=0 / retrieved 2026-11-14T06:39:04.132414Z / SHA-256 `a136633f16c0f03790dfaf7fe6f76de109af42b05d0cf692f320c4c4b2bda2aa` / locator `/_embedded/underenheter/0/mobil`
+
+Exact excerpt:
+
+```
+21:12:32"}],"hjemmeside":"www.concedo.no","mobil":"91346553","naeringskode1":{"beskrivelse":"Utvinning av råolje","kode":"06.100"},"navn":"CONCEDO AS","oppstartsdato":"2005-06-02","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"b
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/742/endringstype`
+
+Exact excerpt:
+
+```
+tal/belop","value":1.565237235E7}],"endringstype":"Endring","oppdateringsid":24954831,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/986464492"}},"dato":"2026-07-27T20:01:21.797+02:00","endringer":[{"op":"replace","path":"/sisteInnse
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:39:02.350154Z / SHA-256 `d21e507d79e91866ffe5a753d309055ca8ab25b324a8fc0e6795f6d46d93e7d1` / locator `row:988217867/column:maalform`
+
+Exact excerpt:
+
+```
+lse,,true,2005-06-02,false,false,,false,,false,,false,,,,,,,Bokmål,2026-06-22,Leting etter og utvinning av olje og gass på norsk kontinentalsokkel.,Leting etter og utvinning av olje og gass på norsk kontinentalsokkel.,false,,,,,true,15652372.35,75482909,Aksjekapital,,NOK,,,2026-07-27,,,,,,,,,,
+
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/2/eiendeler/sumEiendeler`
+
+Exact excerpt:
+
+```
+nkinnskuddOgKontanter":76204000.00,"sumEiendeler":1226255000.00,"omloepsmidler":{"sumOmloepsmidler":433277000.00},"anleggsmidler":{"sumAnleggsmidler":792978000.00}},"resultatregnskapResultat":{"ordinaertResultatFoerSkattekostnad":-174007000.00,"ordinaertResultatSkattekostnad":-25215000.00,"aarsresul
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/690/endringer/0/path`
+
+Exact excerpt:
+
+```
+13.351+02:00","endringer":[{"op":"replace","path":"/vedtektsdato","value":"2026-04-22"}],"endringstype":"Endring","oppdateringsid":24575796,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/984360312"}},"dato":"2026-06-11T20:03:09.708+0
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/24/endringstype`
+
+Exact excerpt:
+
+```
+,"dato":"2023-12-31T23:06:29.620Z","endringstype":"Endring","oppdateringsid":18148058,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/990775338"}},"dato":"2023-12-31T23:06:29.630Z","endringstype":"Endring","oppdateringsid":1
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/0/resultatregnskapResultat/ordinaertResultatSkattekostnad`
+
+Exact excerpt:
+
+```
+d":-392785978.00,"ordinaertResultatSkattekostnad":-304346881.00,"aarsresultat":-88439097.00,"finansresultat":{"nettoFinans":-2993574.00,"finansinntekt":{"sumFinansinntekter":13357356.00},"finanskostnad":{"annenRentekostnad":11767517.00,"sumFinanskostnad":16350930.00}},"driftsresultat":{"driftsresult
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:39:02.350154Z / SHA-256 `d21e507d79e91866ffe5a753d309055ca8ab25b324a8fc0e6795f6d46d93e7d1` / locator `row:988217867/columns:kapital.*`
+
+Exact excerpt:
+
+```
+ av olje og gass på norsk kontinentalsokkel.,false,,,,,true,15652372.35,75482909,Aksjekapital,,NOK,,,2026-07-27,,,,,,,,,,
+
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/aarsregnskap/kopi/988217867/aar / retrieved 2026-11-14T06:39:48.255853Z / SHA-256 `b7bcd20d8a4607bc9ca49fbdfebf5e51cb31e39858edb985dc98a82e8d2b7cd1` / locator `/7`
+
+Exact excerpt:
+
+```
+["2011","2012","2013","2014","2015","2016","2017","2018","2019","2020","2021","2022","2023","2024","2025"]
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/aarsregnskap/kopi/988217867/aar / retrieved 2026-11-14T06:39:48.255853Z / SHA-256 `b7bcd20d8a4607bc9ca49fbdfebf5e51cb31e39858edb985dc98a82e8d2b7cd1` / locator `/12`
+
+Exact excerpt:
+
+```
+,"2016","2017","2018","2019","2020","2021","2022","2023","2024","2025"]
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/278/endringer/2/path`
+
+Exact excerpt:
+
+```
+antallAnsatte","value":22},{"op":"replace","path":"/registreringsdatoAntallAnsatteNAVAaregisteret","value":"2026-07-10"}],"endringstype":"Endring","oppdateringsid":21184682,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/993
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:39:02.350154Z / SHA-256 `d21e507d79e91866ffe5a753d309055ca8ab25b324a8fc0e6795f6d46d93e7d1` / locator `row:988217867/column:vedtektsdato`
+
+Exact excerpt:
+
+```
+ue,2005-06-02,false,false,,false,,false,,false,,,,,,,Bokmål,2026-06-22,Leting etter og utvinning av olje og gass på norsk kontinentalsokkel.,Leting etter og utvinning av olje og gass på norsk kontinentalsokkel.,false,,,,,true,15652372.35,75482909,Aksjekapital,,NOK,,,2026-07-27,,,,,,,,,,
+
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/562`
+
+Exact excerpt:
+
+```
+gsid":23199891,"organisasjonsnummer":"986464492"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/988217867"}},"dato":"2025-11-13T11:52:58.088+01:00","endringstype":"Ukjent","oppdateringsid":23220857,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https:
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/47/endringstype`
+
+Exact excerpt:
+
+```
+o":"2024-01-15T17:15:13.729+01:00","endringstype":"Endring","oppdateringsid":18731048,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/915682448"}},"dato":"2024-01-22T13:20:12.516+01:00","endringstype":"Endring","oppdateringsid":187411
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/177/oppdateringsid`
+
+Exact excerpt:
+
+```
+2.933Z","endringstype":"Endring","oppdateringsid":20050027,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/929643984"}},"dato":"2025-07-12T15:04:18.640Z","endringstype":"Endring","oppdateringsid":20065975,"organisasjonsnumme
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/146/dato`
+
+Exact excerpt:
+
+```
+/enhetsregisteret/api/enheter/988217867"}},"dato":"2024-06-26T21:31:11.470+02:00","endringstype":"Endring","oppdateringsid":19327032,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/921441835"}},"dato":"2024-06-26T21:31:23.324+02:00","
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:39:02.350154Z / SHA-256 `d21e507d79e91866ffe5a753d309055ca8ab25b324a8fc0e6795f6d46d93e7d1` / locator `row:988217867/column:registrertIStiftelsesregisteret`
+
+Exact excerpt:
+
+```
+mv.,2025,2005-06-02,2005-04-01,true,2005-07-01,2005-07-07,,,false,,true,2005-06-02,false,false,,false,,false,,false,,,,,,,Bokmål,2026-06-22,Leting etter og utvinning av olje og gass på norsk kontinentalsokkel.,Leting etter og utvinning av olje og gass på norsk kontinentalsokkel.,false,,,,,true,15652
+```
+
+Source: https://www.concedo.no/contact / retrieved 2026-11-14T06:39:55.098428Z / SHA-256 `a935b30975e7c01bffb403e328a8e0ee6b566e639629a0b9175655f150c3c600` / locator `identity-proof:988217867`
+
+Exact excerpt:
+
+```
+mage/svg+xml">
+        <title>Contact | Concedo</title>
+        <link rel="preload" as="style" href="https://www.concedo.no/build/assets/site-B2ovJrdf.css" /><link rel="modulepreload" as="script" href="https://www.concedo.no/build/assets/site-l0sNRNKZ.js" /><link rel="stylesheet" href="https://www.c
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/1/egenkapitalGjeld/sumEgenkapitalGjeld`
+
+Exact excerpt:
+
+```
+eIFRS"},"egenkapitalGjeld":{"sumEgenkapitalGjeld":915484000.00,"egenkapital":{"sumEgenkapital":177005000.00,"opptjentEgenkapital":{"sumOpptjentEgenkapital":-53969000.00},"innskuttEgenkapital":{"sumInnskuttEgenkaptial":230974000.00}},"gjeldOversikt":{"sumGjeld":738479000.00,"kortsiktigGjeld":{"sumKor
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/24/oppdateringsid`
+
+Exact excerpt:
+
+```
+9.620Z","endringstype":"Endring","oppdateringsid":18148058,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/990775338"}},"dato":"2023-12-31T23:06:29.630Z","endringstype":"Endring","oppdateringsid":18153765,"organisasjonsnumme
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/0/egenkapitalGjeld/egenkapital/sumEgenkapital`
+
+Exact excerpt:
+
+```
+eld":564097527.00,"egenkapital":{"sumEgenkapital":217964230.00,"opptjentEgenkapital":{"sumOpptjentEgenkapital":-13010082.00},"innskuttEgenkapital":{"sumInnskuttEgenkaptial":230974312.00}},"gjeldOversikt":{"sumGjeld":346133297.00,"kortsiktigGjeld":{"sumKortsiktigGjeld":283031412.00},"langsiktigGjeld"
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:39:02.350154Z / SHA-256 `d21e507d79e91866ffe5a753d309055ca8ab25b324a8fc0e6795f6d46d93e7d1` / locator `row:988217867/columns:forretningsadresse.*`
+
+Exact excerpt:
+
+```
+2026-08-10,www.concedo.no,post@concedo.no,,91346553,,,,,,,,"c/o Torvgården
+Torvveien 1",ASKER,1383,ASKER,3203,Norge,NO,2100,Private aksjeselskaper mv.,2025,2005-06-02,2005-04-01,true,2005-07-01,2005-07-07,,,false,,true,2005-06-02,false,false,,false,,false,,false,,,,,,,Bokmål,2026-06-22,Leting etter 
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/146/endringstype`
+
+Exact excerpt:
+
+```
+o":"2024-06-26T21:31:11.470+02:00","endringstype":"Endring","oppdateringsid":19327032,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/921441835"}},"dato":"2024-06-26T21:31:23.324+02:00","endringstype":"Endring","oppdateringsid":193293
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/129/dato`
+
+Exact excerpt:
+
+```
+tsregisteret/api/underenheter/988294888"}},"dato":"2024-12-11T23:07:21.326Z","endringstype":"Endring","oppdateringsid":19443018,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/928765679"}},"dato":"2024-12-19T23:52:20.165Z","
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/2/resultatregnskapResultat/totalresultat`
+
+Exact excerpt:
+
+```
+0.00,"aarsresultat":-148792000.00,"totalresultat":-148792000.00,"finansresultat":{"nettoFinans":-46425000.00,"finansinntekt":{"sumFinansinntekter":5389000.00},"finanskostnad":{"sumFinanskostnad":51814000.00}},"driftsresultat":{"driftsresultat":-127582000.00,"driftsinntekter":{"salgsinntekter":416240
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/47`
+
+Exact excerpt:
+
+```
+gsid":18714085,"organisasjonsnummer":"922699836"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/988217867"}},"dato":"2024-01-15T17:15:13.729+01:00","endringstype":"Endring","oppdateringsid":18731048,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/988217867/roller / retrieved 2026-11-14T06:39:06.322752Z / SHA-256 `503dbeda876a9266f8e8964d1ae8b6e37d00ba3700becccd5278e47e072a70b7` / locator `/rollegrupper/1/roller/1`
+
+Exact excerpt:
+
+```
+:"LEDE"}},{"avregistrert":false,"person":{"erDoed":false,"fodselsdato":"1972-03-26","navn":{"etternavn":"Rydell","fornavn":"Jonas Ulrik"}},"rekkefolge":1,"type":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/MEDL"}},"beskrivelse":"Styremedlem","kode":"MEDL"}}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988217867&size=1000&page=0 / retrieved 2026-11-14T06:39:04.132414Z / SHA-256 `a136633f16c0f03790dfaf7fe6f76de109af42b05d0cf692f320c4c4b2bda2aa` / locator `/_embedded/underenheter/0/hjemmeside`
+
+Exact excerpt:
+
+```
+A","tilDato":"2020-09-29 21:12:32"}],"hjemmeside":"www.concedo.no","mobil":"91346553","naeringskode1":{"beskrivelse":"Utvinning av råolje","kode":"06.100"},"navn":"CONCEDO AS","oppstartsdato":"2005-06-02","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organ
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/0/resultatregnskapResultat/driftsresultat/driftsinntekter/sumDriftsinntekter`
+
+Exact excerpt:
+
+```
+nntekter":{"salgsinntekter":5464000.00,"sumDriftsinntekter":5464000.00},"driftskostnad":{"loennskostnad":31516000.00,"sumDriftskostnad":155164000.00}}}},{"id":6884148,"journalnr":"2026530758","regnskapstype":"SELSKAP","virksomhet":{"organisasjonsnummer":"988217867","organisasjonsform":"AS","morselsk
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/193/endringer/0/path`
+
+Exact excerpt:
+
+```
+9:46:38.515Z","endringer":[{"op":"replace","path":"/registreringsdatoAntallAnsatteEnhetsregisteret","value":"2025-09-11"},{"op":"replace","path":"/antallAnsatte","value":20},{"op":"replace","path":"/registreringsdatoAntallAnsatteNAVAaregisteret","value":"2025-09-10"}],"endringstype":"Endring","oppda
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/988217867/roller / retrieved 2026-11-14T06:39:06.322752Z / SHA-256 `503dbeda876a9266f8e8964d1ae8b6e37d00ba3700becccd5278e47e072a70b7` / locator `/rollegrupper/3/roller/0/enhet/organisasjonsform`
+
+Exact excerpt:
+
+```
+oretak","navn":["ADMENTO AS"],"organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/AS"}},"beskrivelse":"Aksjeselskap","kode":"AS"},"organisasjonsnummer":"989176013"},"rekkefolge":0,"type":{"_links":{"self":{"href":"https://data.brreg.no/enhets
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/719/organisasjonsnummer`
+
+Exact excerpt:
+
+```
+","oppdateringsid":24770609,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/979993609"}},"dato":"2026-07-04T14:21:03.831+02:00","endringer":[{"op":"replace","path":"/sisteInnsendteAarsregnskap","value":"2025"}],"endringstype":"Endring
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/278/oppdateringsid`
+
+Exact excerpt:
+
+```
+7-10"}],"endringstype":"Endring","oppdateringsid":21184682,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/993331325"}},"dato":"2026-07-14T22:11:49.560Z","endringer":[{"op":"add","path":"/antallAnsatte","value":5},{"op":"rep
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/107`
+
+Exact excerpt:
+
+```
+gsid":19129211,"organisasjonsnummer":"956960673"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/988217867"}},"dato":"2024-05-25T14:36:56.724+02:00","endringstype":"Endring","oppdateringsid":19130618,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/1/egenkapitalGjeld/egenkapital/innskuttEgenkapital/sumInnskuttEgenkaptial`
+
+Exact excerpt:
+
+```
+},"innskuttEgenkapital":{"sumInnskuttEgenkaptial":230974000.00}},"gjeldOversikt":{"sumGjeld":738479000.00,"kortsiktigGjeld":{"sumKortsiktigGjeld":116391000.00},"langsiktigGjeld":{"sumLangsiktigGjeld":622088000.00}}},"eiendeler":{"goodwill":179980000.00,"sumVarer":99477000.00,"sumFordringer":41330000
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/758/endringer/2/op`
+
+Exact excerpt:
+
+```
+eplace","path":"/antallAnsatte","value":19},{"op":"replace","path":"/registreringsdatoAntallAnsatteNAVAaregisteret","value":"2026-08-10"}],"endringstype":"Endring","oppdateringsid":25084727,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enhe
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988217867&size=1000&page=0 / retrieved 2026-11-14T06:39:04.132414Z / SHA-256 `a136633f16c0f03790dfaf7fe6f76de109af42b05d0cf692f320c4c4b2bda2aa` / locator `/_embedded/underenheter/0/registreringsdatoAntallAnsatteEnhetsregisteret`
+
+Exact excerpt:
+
+```
+,"registreringsdatoAntallAnsatteEnhetsregisteret":"2026-08-11","registreringsdatoAntallAnsatteNAVAaregisteret":"2026-08-10","registreringsdatoEnhetsregisteret":"2005-06-04","registrertIMvaregisteret":false,"respons_klasse":"Underenhet"},{"_links":{"self":{"href":"https://data.brreg.no/enhetsregister
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/0/egenkapitalGjeld/egenkapital/innskuttEgenkapital/sumInnskuttEgenkaptial`
+
+Exact excerpt:
+
+```
+},"innskuttEgenkapital":{"sumInnskuttEgenkaptial":230974312.00}},"gjeldOversikt":{"sumGjeld":346133297.00,"kortsiktigGjeld":{"sumKortsiktigGjeld":283031412.00},"langsiktigGjeld":{"sumLangsiktigGjeld":63101885.00}}},"eiendeler":{"sumFordringer":273483736.00,"sumBankinnskuddOgKontanter":177141967.00,"
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/113/organisasjonsnummer`
+
+Exact excerpt:
+
+```
+","oppdateringsid":19271012,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/994980831"}},"dato":"2024-10-12T14:08:27.527Z","endringstype":"Endring","oppdateringsid":19275874,"organisasjonsnummer":"994980831"},{"_links":{"und
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/690/endringer/0/op`
+
+Exact excerpt:
+
+```
+2026-06-11T12:25:13.351+02:00","endringer":[{"op":"replace","path":"/vedtektsdato","value":"2026-04-22"}],"endringstype":"Endring","oppdateringsid":24575796,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/984360312"}},"dato":"2026-06-
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/roller?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&size=1000&afterTime=2023-11-14T06%3A39%3A02.256Z / retrieved 2026-11-14T06:43:15.761297Z / SHA-256 `cab0ccff9b23449b59f32958dda08d47746743338575b17f4e8222b6899856b7` / locator `/3/time`
+
+Exact excerpt:
+
+```
+eter/988217867/roller","specversion":"1.0","time":"2023-12-01T11:10:12.162Z","type":"no.brreg.enhetsregisteret.rolle.oppdatert"},{"data":{"organisasjonsnummer":"998989493"},"id":"2353460","source":"https://data.brreg.no/enhetsregisteret/api/enheter/998989493/roller","specversion":"1.0","time":"2023-
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/aarsregnskap/kopi/988217867/aar / retrieved 2026-11-14T06:39:48.255853Z / SHA-256 `b7bcd20d8a4607bc9ca49fbdfebf5e51cb31e39858edb985dc98a82e8d2b7cd1` / locator `/`
+
+Exact excerpt:
+
+```
+6","2017","2018","2019","2020","2021","2022","2023","2024","2025"]
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/419/dato`
+
+Exact excerpt:
+
+```
+/enhetsregisteret/api/enheter/988217867"}},"dato":"2025-07-15T00:04:42.546+02:00","endringstype":"Endring","oppdateringsid":21796962,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/997963903"}},"dato":"2025-07-15T00:05:27.131+02:00","
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/0/eiendeler/sumBankinnskuddOgKontanter`
+
+Exact excerpt:
+
+```
+ringer":273483736.00,"sumBankinnskuddOgKontanter":177141967.00,"sumEiendeler":564097527.00,"omloepsmidler":{"sumOmloepsmidler":450625703.00},"anleggsmidler":{"sumAnleggsmidler":113471824.00}},"resultatregnskapResultat":{"ordinaertResultatFoerSkattekostnad":-392785978.00,"ordinaertResultatSkattekostn
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/2/resultatregnskapResultat/driftsresultat/driftsinntekter/salgsinntekter`
+
+Exact excerpt:
+
+```
+-127582000.00,"driftsinntekter":{"salgsinntekter":416240000.00,"sumDriftsinntekter":416240000.00},"driftskostnad":{"loennskostnad":55342000.00,"sumDriftskostnad":543822000.00}}}}]
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/278/organisasjonsnummer`
+
+Exact excerpt:
+
+```
+","oppdateringsid":21184682,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/993331325"}},"dato":"2026-07-14T22:11:49.560Z","endringer":[{"op":"add","path":"/antallAnsatte","value":5},{"op":"replace","path":"/registreringsdat
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/988217867/roller / retrieved 2026-11-14T06:39:06.322752Z / SHA-256 `503dbeda876a9266f8e8964d1ae8b6e37d00ba3700becccd5278e47e072a70b7` / locator `/rollegrupper/3/roller/0/rekkefolge`
+
+Exact excerpt:
+
+```
+},"organisasjonsnummer":"989176013"},"rekkefolge":0,"type":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/REGN"}},"beskrivelse":"Regnskapsfører","kode":"REGN"}}],"sistEndret":"2026-06-11","type":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregistere
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:39:02.350154Z / SHA-256 `d21e507d79e91866ffe5a753d309055ca8ab25b324a8fc0e6795f6d46d93e7d1` / locator `row:988217867/column:underlagtLovgivningLand`
+
+Exact excerpt:
+
+```
+tsted,utenlandskRegisterAdresse.adresse,underlagtLovgivningLand,underlagtLovgivningLandKode,foretaksformIHjemlandet.kode,foretaksformIHjemlandet.beskrivelse,foretaksformIHjemlandet.beskrivelseBokmaal
+988217867,CONCEDO AS,AS,Aksjeselskap,06.100,Utvinning av råolje,,,,,,,true,19,2026-08-12,2026-08-10
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/138/organisasjonsnummer`
+
+Exact excerpt:
+
+```
+","oppdateringsid":19567370,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/929643984"}},"dato":"2025-02-10T10:10:14.545Z","endringstype":"Ny","oppdateringsid":19602652,"organisasjonsnummer":"929643984"},{"_links":{"underenh
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/278/endringer/1/op`
+
+Exact excerpt:
+
+```
+atteEnhetsregisteret","value":"2026-07-14"},{"op":"replace","path":"/antallAnsatte","value":22},{"op":"replace","path":"/registreringsdatoAntallAnsatteNAVAaregisteret","value":"2026-07-10"}],"endringstype":"Endring","oppdateringsid":21184682,"organisasjonsnummer":"988294888"},{"_links":{"underenhet"
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/213/oppdateringsid`
+
+Exact excerpt:
+
+```
++02:00","endringstype":"Endring","oppdateringsid":19839153,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/922699836"}},"dato":"2024-10-14T21:52:44.299+02:00","endringstype":"Endring","oppdateringsid":19850117,"organisasjonsnummer":"9
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/2/resultatregnskapResultat/driftsresultat/driftsresultat`
+
+Exact excerpt:
+
+```
+:51814000.00}},"driftsresultat":{"driftsresultat":-127582000.00,"driftsinntekter":{"salgsinntekter":416240000.00,"sumDriftsinntekter":416240000.00},"driftskostnad":{"loennskostnad":55342000.00,"sumDriftskostnad":543822000.00}}}}]
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/1/eiendeler/omloepsmidler/sumOmloepsmidler`
+
+Exact excerpt:
+
+```
+:915485000.00,"omloepsmidler":{"sumOmloepsmidler":362563000.00},"anleggsmidler":{"sumAnleggsmidler":552922000.00}},"resultatregnskapResultat":{"ordinaertResultatFoerSkattekostnad":-159979000.00,"ordinaertResultatSkattekostnad":-119046000.00,"aarsresultat":-40933000.00,"finansresultat":{"nettoFinans"
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/33/endringstype`
+
+Exact excerpt:
+
+```
+o":"2024-01-01T07:45:27.945+01:00","endringstype":"Endring","oppdateringsid":18583992,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/931694995"}},"dato":"2024-01-01T07:45:47.975+01:00","endringstype":"Endring","oppdateringsid":185890
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:39:02.350154Z / SHA-256 `d21e507d79e91866ffe5a753d309055ca8ab25b324a8fc0e6795f6d46d93e7d1` / locator `row:988217867/column:utenlandskRegisterNavn`
+
+Exact excerpt:
+
+```
+fortDato,registreringsnummerIHjemlandet,utenlandskRegisterNavn,utenlandskRegisterAdresse.land,utenlandskRegisterAdresse.poststed,utenlandskRegisterAdresse.adresse,underlagtLovgivningLand,underlagtLovgivningLandKode,foretaksformIHjemlandet.kode,foretaksformIHjemlandet.beskrivelse,foretaksformIHjemlan
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:39:02.350154Z / SHA-256 `d21e507d79e91866ffe5a753d309055ca8ab25b324a8fc0e6795f6d46d93e7d1` / locator `row:988217867/column:registreringsdatoenhetsregisteret`
+
+Exact excerpt:
+
+```
+83,ASKER,3203,Norge,NO,2100,Private aksjeselskaper mv.,2025,2005-06-02,2005-04-01,true,2005-07-01,2005-07-07,,,false,,true,2005-06-02,false,false,,false,,false,,false,,,,,,,Bokmål,2026-06-22,Leting etter og utvinning av olje og gass på norsk kontinentalsokkel.,Leting etter og utvinning av olje og ga
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/417/dato`
+
+Exact excerpt:
+
+```
+/enhetsregisteret/api/enheter/988217867"}},"dato":"2025-07-08T20:02:46.961+02:00","endringstype":"Endring","oppdateringsid":21756202,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/980584224"}},"dato":"2025-07-09T20:06:06.539+02:00","
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/233/endringstype`
+
+Exact excerpt:
+
+```
+o":"2025-01-14T01:33:05.417+01:00","endringstype":"Endring","oppdateringsid":20075576,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/999630480"}},"dato":"2025-01-15T00:01:16.093+01:00","endringstype":"Endring","oppdateringsid":201159
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/roller?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&size=1000&afterTime=2023-11-14T06%3A39%3A02.256Z / retrieved 2026-11-14T06:43:15.761297Z / SHA-256 `cab0ccff9b23449b59f32958dda08d47746743338575b17f4e8222b6899856b7` / locator `/3/type`
+
+Exact excerpt:
+
+```
+n":"1.0","time":"2023-12-01T11:10:12.162Z","type":"no.brreg.enhetsregisteret.rolle.oppdatert"},{"data":{"organisasjonsnummer":"998989493"},"id":"2353460","source":"https://data.brreg.no/enhetsregisteret/api/enheter/998989493/roller","specversion":"1.0","time":"2023-12-07T10:30:40.621Z","type":"no.br
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/163/dato`
+
+Exact excerpt:
+
+```
+/enhetsregisteret/api/enheter/988217867"}},"dato":"2024-07-13T15:13:26.013+02:00","endringstype":"Endring","oppdateringsid":19455590,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/921441835"}},"dato":"2024-07-13T15:13:35.278+02:00","
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/78/organisasjonsnummer`
+
+Exact excerpt:
+
+```
+","oppdateringsid":18848036,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/933490505"}},"dato":"2024-05-23T19:14:25.871Z","endringstype":"Ny","oppdateringsid":18854265,"organisasjonsnummer":"933490505"},{"_links":{"underenh
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/2/resultatregnskapResultat/finansresultat/nettoFinans`
+
+Exact excerpt:
+
+```
+at":-148792000.00,"finansresultat":{"nettoFinans":-46425000.00,"finansinntekt":{"sumFinansinntekter":5389000.00},"finanskostnad":{"sumFinanskostnad":51814000.00}},"driftsresultat":{"driftsresultat":-127582000.00,"driftsinntekter":{"salgsinntekter":416240000.00,"sumDriftsinntekter":416240000.00},"dri
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/0/resultatregnskapResultat/driftsresultat/driftsresultat`
+
+Exact excerpt:
+
+```
+:16350930.00}},"driftsresultat":{"driftsresultat":-389792404.00,"driftsinntekter":{},"driftskostnad":{"loennskostnad":26995691.00,"sumDriftskostnad":389792404.00}}}},{"id":6095491,"journalnr":"2025644655","regnskapstype":"SELSKAP","virksomhet":{"organisasjonsnummer":"988217867","organisasjonsform":"
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:39:02.350154Z / SHA-256 `d21e507d79e91866ffe5a753d309055ca8ab25b324a8fc0e6795f6d46d93e7d1` / locator `row:988217867/columns:naeringskode3.*`
+
+Exact excerpt:
+
+```
+organisasjonsnummer,navn,organisasjonsform.kode,organisasjonsform.beskrivelse,naeringskode1.kode,naeringskode1.beskrivelse,naeringskode2.kode,naeringskode2.beskrivelse,naeringskode3.kode,naeringskode3.beskrivelse,hjelpeenhetskode.kode,hjelpeenhetskode.beskrivelse,harRegistrertAntallAnsatte,antallAns
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988217867&size=1000&page=0 / retrieved 2026-11-14T06:39:04.132414Z / SHA-256 `a136633f16c0f03790dfaf7fe6f76de109af42b05d0cf692f320c4c4b2bda2aa` / locator `/_embedded/underenheter/0/organisasjonsform`
+
+Exact excerpt:
+
+```
+,"oppstartsdato":"2005-06-02","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og offentlig forvaltning","kode":"BEDR"},"organisasjonsnummer":"988294888","overordnetEnhet":"988217867","
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/144`
+
+Exact excerpt:
+
+```
+gsid":19633643,"organisasjonsnummer":"973232002"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/988294888"}},"dato":"2025-02-12T01:13:40.038Z","endringstype":"Endring","oppdateringsid":19649872,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"hr
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/0/resultatregnskapResultat/finansresultat/finanskostnad/sumFinanskostnad`
+
+Exact excerpt:
+
+```
+annenRentekostnad":11767517.00,"sumFinanskostnad":16350930.00}},"driftsresultat":{"driftsresultat":-389792404.00,"driftsinntekter":{},"driftskostnad":{"loennskostnad":26995691.00,"sumDriftskostnad":389792404.00}}}},{"id":6095491,"journalnr":"2025644655","regnskapstype":"SELSKAP","virksomhet":{"organ
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/742/dato`
+
+Exact excerpt:
+
+```
+/enhetsregisteret/api/enheter/988217867"}},"dato":"2026-07-27T15:30:10.824+02:00","endringer":[{"op":"replace","path":"/vedtektsdato","value":"2026-06-22"},{"op":"replace","path":"/kapital/antallAksjer","value":75482909},{"op":"replace","path":"/kapital/innfortDato","value":"2026-07-27"},{"op":"repl
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:39:02.350154Z / SHA-256 `d21e507d79e91866ffe5a753d309055ca8ab25b324a8fc0e6795f6d46d93e7d1` / locator `row:988217867/columns:naeringskode1.*`
+
+Exact excerpt:
+
+```
+988217867,CONCEDO AS,AS,Aksjeselskap,06.100,Utvinning av råolje,,,,,,,true,19,2026-08-12,2026-08-10,www.concedo.no,post@concedo.no,,91346553,,,,,,,,"c/o Torvgården
+Torvveien 1",ASKER,1383,ASKER,3203,Norge,NO,2100,Private aksjeselskaper mv.,2025,2005-06-02,2005-04-01,true,2005-07-01,2005-07-07,,,fals
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/1/eiendeler/sumEiendeler`
+
+Exact excerpt:
+
+```
+kinnskuddOgKontanter":221756000.00,"sumEiendeler":915485000.00,"omloepsmidler":{"sumOmloepsmidler":362563000.00},"anleggsmidler":{"sumAnleggsmidler":552922000.00}},"resultatregnskapResultat":{"ordinaertResultatFoerSkattekostnad":-159979000.00,"ordinaertResultatSkattekostnad":-119046000.00,"aarsresul
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/2/egenkapitalGjeld/egenkapital/innskuttEgenkapital/sumInnskuttEgenkaptial`
+
+Exact excerpt:
+
+```
+},"innskuttEgenkapital":{"sumInnskuttEgenkaptial":230974000.00}},"gjeldOversikt":{"sumGjeld":1198042000.00,"kortsiktigGjeld":{"sumKortsiktigGjeld":672375000.00},"langsiktigGjeld":{"sumLangsiktigGjeld":525667000.00}}},"eiendeler":{"goodwill":64061000.00,"sumVarer":11368000.00,"sumFordringer":34570500
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/24`
+
+Exact excerpt:
+
+```
+gsid":18129592,"organisasjonsnummer":"980310728"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/988294888"}},"dato":"2023-12-31T23:06:29.620Z","endringstype":"Endring","oppdateringsid":18148058,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"hr
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/449/endringer/1/op`
+
+Exact excerpt:
+
+```
+atteEnhetsregisteret","value":"2025-09-13"},{"op":"replace","path":"/antallAnsatte","value":20},{"op":"replace","path":"/registreringsdatoAntallAnsatteNAVAaregisteret","value":"2025-09-10"}],"endringstype":"Endring","oppdateringsid":22057088,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"hr
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/67/oppdateringsid`
+
+Exact excerpt:
+
+```
+0.772Z","endringstype":"Endring","oppdateringsid":18760129,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/993331325"}},"dato":"2024-04-11T19:58:59.926Z","endringstype":"Endring","oppdateringsid":18763432,"organisasjonsnumme
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/278/endringstype`
+
+Exact excerpt:
+
+```
+registeret","value":"2026-07-10"}],"endringstype":"Endring","oppdateringsid":21184682,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/993331325"}},"dato":"2026-07-14T22:11:49.560Z","endringer":[{"op":"add","path":"/antallAns
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/163`
+
+Exact excerpt:
+
+```
+gsid":19449959,"organisasjonsnummer":"958507739"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/988217867"}},"dato":"2024-07-13T15:13:26.013+02:00","endringstype":"Endring","oppdateringsid":19455590,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/689/oppdateringsid`
+
+Exact excerpt:
+
+```
+4-22"}],"endringstype":"Endring","oppdateringsid":24575795,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/988217867"}},"dato":"2026-06-11T12:25:13.351+02:00","endringer":[{"op":"replace","path":"/vedtektsdato","value":"2026-04-22"}],
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/719/endringer/0/path`
+
+Exact excerpt:
+
+```
+44.304+02:00","endringer":[{"op":"replace","path":"/sisteInnsendteAarsregnskap","value":"2025"}],"endringstype":"Endring","oppdateringsid":24770609,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/979993609"}},"dato":"2026-07-04T14:21:
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/417/organisasjonsnummer`
+
+Exact excerpt:
+
+```
+","oppdateringsid":21756202,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/980584224"}},"dato":"2025-07-09T20:06:06.539+02:00","endringstype":"Endring","oppdateringsid":21766583,"organisasjonsnummer":"980584224"},{"_links":{"enhet":{
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/742`
+
+Exact excerpt:
+
+```
+{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/988217867"}},"dato":"2026-07-27T15:30:10.824+02:00","endringer":[{"op":"replace","path":"/vedtektsdato","value":"2026-06-22"},{"op":"replace","path":"/kapital/antallAksjer","value":75482909},{"op":"replace","path":"/kapit
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/113/dato`
+
+Exact excerpt:
+
+```
+tsregisteret/api/underenheter/988294888"}},"dato":"2024-10-12T14:08:13.315Z","endringstype":"Endring","oppdateringsid":19271012,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/994980831"}},"dato":"2024-10-12T14:08:27.527Z","
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/278/endringer/1/path`
+
+Exact excerpt:
+
+```
+ret","value":"2026-07-14"},{"op":"replace","path":"/antallAnsatte","value":22},{"op":"replace","path":"/registreringsdatoAntallAnsatteNAVAaregisteret","value":"2026-07-10"}],"endringstype":"Endring","oppdateringsid":21184682,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https:/
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/aarsregnskap/kopi/988217867/aar / retrieved 2026-11-14T06:39:48.255853Z / SHA-256 `b7bcd20d8a4607bc9ca49fbdfebf5e51cb31e39858edb985dc98a82e8d2b7cd1` / locator `/4`
+
+Exact excerpt:
+
+```
+["2011","2012","2013","2014","2015","2016","2017","2018","2019","2020","2021","2022","2023","2024","2025"]
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/2/egenkapitalGjeld/sumEgenkapitalGjeld`
+
+Exact excerpt:
+
+```
+eIFRS"},"egenkapitalGjeld":{"sumEgenkapitalGjeld":1226255000.00,"egenkapital":{"sumEgenkapital":28213000.00,"opptjentEgenkapital":{"sumOpptjentEgenkapital":-202761000.00},"innskuttEgenkapital":{"sumInnskuttEgenkaptial":230974000.00}},"gjeldOversikt":{"sumGjeld":1198042000.00,"kortsiktigGjeld":{"sumK
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/92`
+
+Exact excerpt:
+
+```
+gsid":18995951,"organisasjonsnummer":"986498125"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/988294888"}},"dato":"2024-07-11T20:31:11.995Z","endringstype":"Endring","oppdateringsid":18998251,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"hr
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/2/egenkapitalGjeld/egenkapital/opptjentEgenkapital/sumOpptjentEgenkapital`
+
+Exact excerpt:
+
+```
+0,"opptjentEgenkapital":{"sumOpptjentEgenkapital":-202761000.00},"innskuttEgenkapital":{"sumInnskuttEgenkaptial":230974000.00}},"gjeldOversikt":{"sumGjeld":1198042000.00,"kortsiktigGjeld":{"sumKortsiktigGjeld":672375000.00},"langsiktigGjeld":{"sumLangsiktigGjeld":525667000.00}}},"eiendeler":{"goodwi
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/419/organisasjonsnummer`
+
+Exact excerpt:
+
+```
+","oppdateringsid":21796962,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/997963903"}},"dato":"2025-07-15T00:05:27.131+02:00","endringstype":"Endring","oppdateringsid":21800475,"organisasjonsnummer":"997963903"},{"_links":{"enhet":{
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/278`
+
+Exact excerpt:
+
+```
+{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/988294888"}},"dato":"2026-07-14T22:11:08.264Z","endringer":[{"op":"replace","path":"/registreringsdatoAntallAnsatteEnhetsregisteret","value":"2026-07-14"},{"op":"replace","path":"/antallAnsatte","value":22},{"op
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/67/organisasjonsnummer`
+
+Exact excerpt:
+
+```
+","oppdateringsid":18760129,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/993331325"}},"dato":"2024-04-11T19:58:59.926Z","endringstype":"Endring","oppdateringsid":18763432,"organisasjonsnummer":"993331325"},{"_links":{"und
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988217867&size=1000&page=0 / retrieved 2026-11-14T06:39:04.132414Z / SHA-256 `a136633f16c0f03790dfaf7fe6f76de109af42b05d0cf692f320c4c4b2bda2aa` / locator `/_embedded/underenheter/0`
+
+Exact excerpt:
+
+```
+{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/988294888"},"overordnetEnhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/988217867"}},"antallAnsatte":19,"beliggenhetsadresse":{"adresse":["c/o Torvgården","Torvveien 1"],"kommune":"ASKER","kommunenum
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/35/organisasjonsnummer`
+
+Exact excerpt:
+
+```
+","oppdateringsid":18311963,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/929218841"}},"dato":"2024-01-01T06:19:13.171Z","endringstype":"Endring","oppdateringsid":18315789,"organisasjonsnummer":"929218841"},{"_links":{"und
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/2/resultatregnskapResultat/finansresultat/finansinntekt/sumFinansinntekter`
+
+Exact excerpt:
+
+```
+46425000.00,"finansinntekt":{"sumFinansinntekter":5389000.00},"finanskostnad":{"sumFinanskostnad":51814000.00}},"driftsresultat":{"driftsresultat":-127582000.00,"driftsinntekter":{"salgsinntekter":416240000.00,"sumDriftsinntekter":416240000.00},"driftskostnad":{"loennskostnad":55342000.00,"sumDrifts
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/449/endringer/2/op`
+
+Exact excerpt:
+
+```
+eplace","path":"/antallAnsatte","value":20},{"op":"replace","path":"/registreringsdatoAntallAnsatteNAVAaregisteret","value":"2025-09-10"}],"endringstype":"Endring","oppdateringsid":22057088,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enhe
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/78/oppdateringsid`
+
+Exact excerpt:
+
+```
+4.749Z","endringstype":"Endring","oppdateringsid":18848036,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/933490505"}},"dato":"2024-05-23T19:14:25.871Z","endringstype":"Ny","oppdateringsid":18854265,"organisasjonsnummer":"9
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/419/oppdateringsid`
+
+Exact excerpt:
+
+```
++02:00","endringstype":"Endring","oppdateringsid":21796962,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/997963903"}},"dato":"2025-07-15T00:05:27.131+02:00","endringstype":"Endring","oppdateringsid":21800475,"organisasjonsnummer":"9
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/35`
+
+Exact excerpt:
+
+```
+gsid":18291563,"organisasjonsnummer":"928765679"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/988294888"}},"dato":"2024-01-01T06:19:01.484Z","endringstype":"Endring","oppdateringsid":18311963,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"hr
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/1/resultatregnskapResultat/driftsresultat/driftsinntekter/sumDriftsinntekter`
+
+Exact excerpt:
+
+```
+{"salgsinntekter":5464000.00,"sumDriftsinntekter":5464000.00},"driftskostnad":{"loennskostnad":31516000.00,"sumDriftskostnad":155164000.00}}}},{"id":6884148,"journalnr":"2026530758","regnskapstype":"SELSKAP","virksomhet":{"organisasjonsnummer":"988217867","organisasjonsform":"AS","morselskap":false}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/449/endringstype`
+
+Exact excerpt:
+
+```
+registeret","value":"2025-09-10"}],"endringstype":"Endring","oppdateringsid":22057088,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/922699836"}},"dato":"2025-09-13T17:20:44.718+02:00","endringer":[{"op":"replace","path":"/registreri
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/roller?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&size=1000&afterTime=2023-11-14T06%3A39%3A02.256Z / retrieved 2026-11-14T06:43:15.761297Z / SHA-256 `cab0ccff9b23449b59f32958dda08d47746743338575b17f4e8222b6899856b7` / locator `/3`
+
+Exact excerpt:
+
+```
+ype":"no.brreg.enhetsregisteret.rolle.oppdatert"},{"data":{"organisasjonsnummer":"988217867"},"id":"2341921","source":"https://data.brreg.no/enhetsregisteret/api/enheter/988217867/roller","specversion":"1.0","time":"2023-12-01T11:10:12.162Z","type":"no.brreg.enhetsregisteret.rolle.oppdatert"},{"data
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/988217867/roller / retrieved 2026-11-14T06:39:06.322752Z / SHA-256 `503dbeda876a9266f8e8964d1ae8b6e37d00ba3700becccd5278e47e072a70b7` / locator `/rollegrupper/0/roller/0`
+
+Exact excerpt:
+
+```
+per":[{"roller":[{"avregistrert":false,"person":{"erDoed":false,"fodselsdato":"1954-06-07","navn":{"etternavn":"Lunde","fornavn":"Geir"}},"rekkefolge":0,"type":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/DAGL"}},"beskrivelse":"Daglig leder","kode":"DAGL"}}
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/1/egenkapitalGjeld/gjeldOversikt/langsiktigGjeld/sumLangsiktigGjeld`
+
+Exact excerpt:
+
+```
+91000.00},"langsiktigGjeld":{"sumLangsiktigGjeld":622088000.00}}},"eiendeler":{"goodwill":179980000.00,"sumVarer":99477000.00,"sumFordringer":41330000.00,"sumBankinnskuddOgKontanter":221756000.00,"sumEiendeler":915485000.00,"omloepsmidler":{"sumOmloepsmidler":362563000.00},"anleggsmidler":{"sumAnleg
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/1/eiendeler/sumFordringer`
+
+Exact excerpt:
+
+```
+9980000.00,"sumVarer":99477000.00,"sumFordringer":41330000.00,"sumBankinnskuddOgKontanter":221756000.00,"sumEiendeler":915485000.00,"omloepsmidler":{"sumOmloepsmidler":362563000.00},"anleggsmidler":{"sumAnleggsmidler":552922000.00}},"resultatregnskapResultat":{"ordinaertResultatFoerSkattekostnad":-1
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/2/resultatregnskapResultat/ordinaertResultatSkattekostnad`
+
+Exact excerpt:
+
+```
+d":-174007000.00,"ordinaertResultatSkattekostnad":-25215000.00,"aarsresultat":-148792000.00,"totalresultat":-148792000.00,"finansresultat":{"nettoFinans":-46425000.00,"finansinntekt":{"sumFinansinntekter":5389000.00},"finanskostnad":{"sumFinanskostnad":51814000.00}},"driftsresultat":{"driftsresultat
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/78`
+
+Exact excerpt:
+
+```
+gsid":18845900,"organisasjonsnummer":"919191465"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/988294888"}},"dato":"2024-05-13T20:00:14.749Z","endringstype":"Endring","oppdateringsid":18848036,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"hr
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/81/endringstype`
+
+Exact excerpt:
+
+```
+o":"2024-04-13T15:10:45.770+02:00","endringstype":"Endring","oppdateringsid":18987774,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/995636468"}},"dato":"2024-04-13T15:11:26.221+02:00","endringstype":"Endring","oppdateringsid":189944
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/193/endringer/1/op`
+
+Exact excerpt:
+
+```
+atteEnhetsregisteret","value":"2025-09-11"},{"op":"replace","path":"/antallAnsatte","value":20},{"op":"replace","path":"/registreringsdatoAntallAnsatteNAVAaregisteret","value":"2025-09-10"}],"endringstype":"Endring","oppdateringsid":20251111,"organisasjonsnummer":"988294888"},{"_links":{"underenhet"
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/177`
+
+Exact excerpt:
+
+```
+gsid":20022282,"organisasjonsnummer":"935719518"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/988294888"}},"dato":"2025-07-12T15:03:12.933Z","endringstype":"Endring","oppdateringsid":20050027,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"hr
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/aarsregnskap/kopi/988217867/aar / retrieved 2026-11-14T06:39:48.255853Z / SHA-256 `b7bcd20d8a4607bc9ca49fbdfebf5e51cb31e39858edb985dc98a82e8d2b7cd1` / locator `/11`
+
+Exact excerpt:
+
+```
+,"2015","2016","2017","2018","2019","2020","2021","2022","2023","2024","2025"]
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/248/oppdateringsid`
+
+Exact excerpt:
+
+```
++01:00","endringstype":"Endring","oppdateringsid":20217225,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/935033381"}},"dato":"2025-02-13T12:25:12.736+01:00","endringstype":"Ny","oppdateringsid":20230893,"organisasjonsnummer":"935033
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/193/dato`
+
+Exact excerpt:
+
+```
+tsregisteret/api/underenheter/988294888"}},"dato":"2025-09-12T09:46:38.515Z","endringer":[{"op":"replace","path":"/registreringsdatoAntallAnsatteEnhetsregisteret","value":"2025-09-11"},{"op":"replace","path":"/antallAnsatte","value":20},{"op":"replace","path":"/registreringsdatoAntallAnsatteNAVAareg
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/449/oppdateringsid`
+
+Exact excerpt:
+
+```
+9-10"}],"endringstype":"Endring","oppdateringsid":22057088,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/922699836"}},"dato":"2025-09-13T17:20:44.718+02:00","endringer":[{"op":"replace","path":"/registreringsdatoAntallAnsatteEnhetsr
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/736/endringer/2/path`
+
+Exact excerpt:
+
+```
+antallAnsatte","value":22},{"op":"replace","path":"/registreringsdatoAntallAnsatteNAVAaregisteret","value":"2026-07-10"}],"endringstype":"Endring","oppdateringsid":24884988,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/981500253"}},
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988217867&size=1000&page=0 / retrieved 2026-11-14T06:39:04.132414Z / SHA-256 `a136633f16c0f03790dfaf7fe6f76de109af42b05d0cf692f320c4c4b2bda2aa` / locator `/_embedded/underenheter/1/harRegistrertAntallAnsatte`
+
+Exact excerpt:
+
+```
+enheter/988217867"}},"harRegistrertAntallAnsatte":false,"historiskeNavn":[],"naeringskode1":{"beskrivelse":"Utvinning av råolje","kode":"06.100"},"navn":"CONCEDO AS PL1292","oppstartsdato":"2026-03-01","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisa
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/0/egenkapitalGjeld/gjeldOversikt/langsiktigGjeld/sumLangsiktigGjeld`
+
+Exact excerpt:
+
+```
+31412.00},"langsiktigGjeld":{"sumLangsiktigGjeld":63101885.00}}},"eiendeler":{"sumFordringer":273483736.00,"sumBankinnskuddOgKontanter":177141967.00,"sumEiendeler":564097527.00,"omloepsmidler":{"sumOmloepsmidler":450625703.00},"anleggsmidler":{"sumAnleggsmidler":113471824.00}},"resultatregnskapResul
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/roller?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&size=1000&afterTime=2023-11-14T06%3A39%3A02.256Z / retrieved 2026-11-14T06:43:15.761297Z / SHA-256 `cab0ccff9b23449b59f32958dda08d47746743338575b17f4e8222b6899856b7` / locator `/3/id`
+
+Exact excerpt:
+
+```
+,{"data":{"organisasjonsnummer":"988217867"},"id":"2341921","source":"https://data.brreg.no/enhetsregisteret/api/enheter/988217867/roller","specversion":"1.0","time":"2023-12-01T11:10:12.162Z","type":"no.brreg.enhetsregisteret.rolle.oppdatert"},{"data":{"organisasjonsnummer":"998989493"},"id":"23534
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/233`
+
+Exact excerpt:
+
+```
+gsid":20071735,"organisasjonsnummer":"958507739"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/988217867"}},"dato":"2025-01-14T01:33:05.417+01:00","endringstype":"Endring","oppdateringsid":20075576,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/0/resultatregnskapResultat/finansresultat/finanskostnad/annenRentekostnad`
+
+Exact excerpt:
+
+```
+13357356.00},"finanskostnad":{"annenRentekostnad":11767517.00,"sumFinanskostnad":16350930.00}},"driftsresultat":{"driftsresultat":-389792404.00,"driftsinntekter":{},"driftskostnad":{"loennskostnad":26995691.00,"sumDriftskostnad":389792404.00}}}},{"id":6095491,"journalnr":"2025644655","regnskapstype"
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988217867&size=1000&page=0 / retrieved 2026-11-14T06:39:04.132414Z / SHA-256 `a136633f16c0f03790dfaf7fe6f76de109af42b05d0cf692f320c4c4b2bda2aa` / locator `/_embedded/underenheter/1/organisasjonsform`
+
+Exact excerpt:
+
+```
+,"oppstartsdato":"2026-03-01","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og offentlig forvaltning","kode":"BEDR"},"organisasjonsnummer":"937339372","overordnetEnhet":"988217867","
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/689/endringer/0/path`
+
+Exact excerpt:
+
+```
+13.351+02:00","endringer":[{"op":"replace","path":"/vedtektsdato","value":"2026-04-22"}],"endringstype":"Endring","oppdateringsid":24575795,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/988217867"}},"dato":"2026-06-11T12:25:13.351+0
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:39:02.350154Z / SHA-256 `d21e507d79e91866ffe5a753d309055ca8ab25b324a8fc0e6795f6d46d93e7d1` / locator `row:988217867/column:registreringsdatoantallansatteNAVAaregisteret`
+
+Exact excerpt:
+
+```
+selskap,06.100,Utvinning av råolje,,,,,,,true,19,2026-08-12,2026-08-10,www.concedo.no,post@concedo.no,,91346553,,,,,,,,"c/o Torvgården
+Torvveien 1",ASKER,1383,ASKER,3203,Norge,NO,2100,Private aksjeselskaper mv.,2025,2005-06-02,2005-04-01,true,2005-07-01,2005-07-07,,,false,,true,2005-06-02,false,fals
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/146`
+
+Exact excerpt:
+
+```
+gsid":19324107,"organisasjonsnummer":"915448666"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/988217867"}},"dato":"2024-06-26T21:31:11.470+02:00","endringstype":"Endring","oppdateringsid":19327032,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/99/organisasjonsnummer`
+
+Exact excerpt:
+
+```
+","oppdateringsid":19097401,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/921441835"}},"dato":"2024-05-14T21:43:12.050+02:00","endringstype":"Endring","oppdateringsid":19099035,"organisasjonsnummer":"921441835"},{"_links":{"enhet":{
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/35/dato`
+
+Exact excerpt:
+
+```
+tsregisteret/api/underenheter/988294888"}},"dato":"2024-01-01T06:19:01.484Z","endringstype":"Endring","oppdateringsid":18311963,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/929218841"}},"dato":"2024-01-01T06:19:13.171Z","
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988217867&size=1000&page=0 / retrieved 2026-11-14T06:39:04.132414Z / SHA-256 `a136633f16c0f03790dfaf7fe6f76de109af42b05d0cf692f320c4c4b2bda2aa` / locator `/_embedded/underenheter/1/registrertIMvaregisteret`
+
+Exact excerpt:
+
+```
+gisteret":"2026-03-11","registrertIMvaregisteret":false,"respons_klasse":"Underenhet"}]},"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988217867&size=1000&page=0"}},"page":{"number":0,"size":1000,"totalElements":2,"totalPages":1}}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:39:02.350154Z / SHA-256 `d21e507d79e91866ffe5a753d309055ca8ab25b324a8fc0e6795f6d46d93e7d1` / locator `row:988217867/column:registreringsdatoAntallAnsatteEnhetsregisteret`
+
+Exact excerpt:
+
+```
+AS,AS,Aksjeselskap,06.100,Utvinning av råolje,,,,,,,true,19,2026-08-12,2026-08-10,www.concedo.no,post@concedo.no,,91346553,,,,,,,,"c/o Torvgården
+Torvveien 1",ASKER,1383,ASKER,3203,Norge,NO,2100,Private aksjeselskaper mv.,2025,2005-06-02,2005-04-01,true,2005-07-01,2005-07-07,,,false,,true,2005-06-02
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/2/egenkapitalGjeld/gjeldOversikt/sumGjeld`
+
+Exact excerpt:
+
+```
+ptial":230974000.00}},"gjeldOversikt":{"sumGjeld":1198042000.00,"kortsiktigGjeld":{"sumKortsiktigGjeld":672375000.00},"langsiktigGjeld":{"sumLangsiktigGjeld":525667000.00}}},"eiendeler":{"goodwill":64061000.00,"sumVarer":11368000.00,"sumFordringer":345705000.00,"sumBankinnskuddOgKontanter":76204000.
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/aarsregnskap/kopi/988217867/aar / retrieved 2026-11-14T06:39:48.255853Z / SHA-256 `b7bcd20d8a4607bc9ca49fbdfebf5e51cb31e39858edb985dc98a82e8d2b7cd1` / locator `/0`
+
+Exact excerpt:
+
+```
+["2011","2012","2013","2014","2015","2016","2017","2018","2019","2020","2021","2022","2023","2024","2025"]
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/roller?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&size=1000&afterTime=2023-11-14T06%3A39%3A02.256Z / retrieved 2026-11-14T06:43:15.761297Z / SHA-256 `cab0ccff9b23449b59f32958dda08d47746743338575b17f4e8222b6899856b7` / locator `/158/time`
+
+Exact excerpt:
+
+```
+eter/988217867/roller","specversion":"1.0","time":"2026-06-11T10:25:12.693Z","type":"no.brreg.enhetsregisteret.rolle.oppdatert"},{"data":{"organisasjonsnummer":"929209850"},"id":"4502798","source":"https://data.brreg.no/enhetsregisteret/api/enheter/929209850/roller","specversion":"1.0","time":"2026-
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/2/egenkapitalGjeld/egenkapital/sumEgenkapital`
+
+Exact excerpt:
+
+```
+ld":1226255000.00,"egenkapital":{"sumEgenkapital":28213000.00,"opptjentEgenkapital":{"sumOpptjentEgenkapital":-202761000.00},"innskuttEgenkapital":{"sumInnskuttEgenkaptial":230974000.00}},"gjeldOversikt":{"sumGjeld":1198042000.00,"kortsiktigGjeld":{"sumKortsiktigGjeld":672375000.00},"langsiktigGjeld
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/129`
+
+Exact excerpt:
+
+```
+gsid":19412484,"organisasjonsnummer":"921093403"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/988294888"}},"dato":"2024-12-11T23:07:21.326Z","endringstype":"Endring","oppdateringsid":19443018,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"hr
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/419`
+
+Exact excerpt:
+
+```
+gsid":21766583,"organisasjonsnummer":"980584224"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/988217867"}},"dato":"2025-07-15T00:04:42.546+02:00","endringstype":"Endring","oppdateringsid":21796962,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/988217867/roller / retrieved 2026-11-14T06:39:06.322752Z / SHA-256 `503dbeda876a9266f8e8964d1ae8b6e37d00ba3700becccd5278e47e072a70b7` / locator `/rollegrupper/3/roller/0/enhet/godkjenningsstatus`
+
+Exact excerpt:
+
+```
+9176013"}},"erSlettet":false,"godkjenningsstatus":"Godkjent regnskapsforetak","navn":["ADMENTO AS"],"organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/AS"}},"beskrivelse":"Aksjeselskap","kode":"AS"},"organisasjonsnummer":"989176013"},"rekkef
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/736/endringer/2/op`
+
+Exact excerpt:
+
+```
+eplace","path":"/antallAnsatte","value":22},{"op":"replace","path":"/registreringsdatoAntallAnsatteNAVAaregisteret","value":"2026-07-10"}],"endringstype":"Endring","oppdateringsid":24884988,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enhe
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/78/endringstype`
+
+Exact excerpt:
+
+```
+,"dato":"2024-05-13T20:00:14.749Z","endringstype":"Endring","oppdateringsid":18848036,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/933490505"}},"dato":"2024-05-23T19:14:25.871Z","endringstype":"Ny","oppdateringsid":188542
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/81`
+
+Exact excerpt:
+
+```
+gsid":18986973,"organisasjonsnummer":"921441835"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/988217867"}},"dato":"2024-04-13T15:10:45.770+02:00","endringstype":"Endring","oppdateringsid":18987774,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/1/resultatregnskapResultat/finansresultat/nettoFinans`
+
+Exact excerpt:
+
+```
+tat":-40933000.00,"finansresultat":{"nettoFinans":-10279000.00,"finansinntekt":{"sumFinansinntekter":11907000.00},"finanskostnad":{"sumFinanskostnad":22186000.00}},"driftsresultat":{"driftsresultat":-149700000.00,"driftsinntekter":{"salgsinntekter":5464000.00,"sumDriftsinntekter":5464000.00},"drifts
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/107/endringstype`
+
+Exact excerpt:
+
+```
+o":"2024-05-25T14:36:56.724+02:00","endringstype":"Endring","oppdateringsid":19130618,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/917438986"}},"dato":"2024-05-25T15:05:39.915+02:00","endringstype":"Endring","oppdateringsid":191341
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/roller?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&size=1000&afterTime=2023-11-14T06%3A39%3A02.256Z / retrieved 2026-11-14T06:43:15.761297Z / SHA-256 `cab0ccff9b23449b59f32958dda08d47746743338575b17f4e8222b6899856b7` / locator `/158/source`
+
+Exact excerpt:
+
+```
+sjonsnummer":"988217867"},"id":"4494771","source":"https://data.brreg.no/enhetsregisteret/api/enheter/988217867/roller","specversion":"1.0","time":"2026-06-11T10:25:12.693Z","type":"no.brreg.enhetsregisteret.rolle.oppdatert"},{"data":{"organisasjonsnummer":"929209850"},"id":"4502798","source":"https
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/177/dato`
+
+Exact excerpt:
+
+```
+tsregisteret/api/underenheter/988294888"}},"dato":"2025-07-12T15:03:12.933Z","endringstype":"Endring","oppdateringsid":20050027,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/929643984"}},"dato":"2025-07-12T15:04:18.640Z","
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/aarsregnskap/kopi/988217867/aar / retrieved 2026-11-14T06:39:48.255853Z / SHA-256 `b7bcd20d8a4607bc9ca49fbdfebf5e51cb31e39858edb985dc98a82e8d2b7cd1` / locator `/13`
+
+Exact excerpt:
+
+```
+,"2017","2018","2019","2020","2021","2022","2023","2024","2025"]
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/246`
+
+Exact excerpt:
+
+```
+gsid":20759311,"organisasjonsnummer":"937163320"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/937339372"}},"dato":"2026-03-11T23:17:17.191Z","endringstype":"Ny","oppdateringsid":20786961,"organisasjonsnummer":"937339372"},{"_links":{"underenhet":{"href":"
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/2/resultatregnskapResultat/driftsresultat/driftskostnad/sumDriftskostnad`
+
+Exact excerpt:
+
+```
+":{"loennskostnad":55342000.00,"sumDriftskostnad":543822000.00}}}}]
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/988217867/roller / retrieved 2026-11-14T06:39:06.322752Z / SHA-256 `503dbeda876a9266f8e8964d1ae8b6e37d00ba3700becccd5278e47e072a70b7` / locator `/rollegrupper/1/roller/0`
+
+Exact excerpt:
+
+```
+"roller":[{"avregistrert":false,"person":{"erDoed":false,"fodselsdato":"1947-08-18","navn":{"etternavn":"Sanness","fornavn":"Torstein"}},"rekkefolge":0,"type":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/LEDE"}},"beskrivelse":"Styrets leder","kode":"LEDE"}}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/736/dato`
+
+Exact excerpt:
+
+```
+/enhetsregisteret/api/enheter/988217867"}},"dato":"2026-07-16T00:08:11.047+02:00","endringer":[{"op":"replace","path":"/registreringsdatoAntallAnsatteEnhetsregisteret","value":"2026-07-15"},{"op":"replace","path":"/antallAnsatte","value":22},{"op":"replace","path":"/registreringsdatoAntallAnsatteNAV
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/283/organisasjonsnummer`
+
+Exact excerpt:
+
+```
+","oppdateringsid":21260887,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/994980831"}},"dato":"2026-08-11T22:14:24.668Z","endringer":[{"op":"replace","path":"/registreringsdatoAntallAnsatteEnhetsregisteret","value":"2026-0
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/283`
+
+Exact excerpt:
+
+```
+{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/988294888"}},"dato":"2026-08-11T22:13:30.125Z","endringer":[{"op":"replace","path":"/registreringsdatoAntallAnsatteEnhetsregisteret","value":"2026-08-11"},{"op":"replace","path":"/antallAnsatte","value":19},{"op
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/719`
+
+Exact excerpt:
+
+```
+,{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/988217867"}},"dato":"2026-07-04T14:20:44.304+02:00","endringer":[{"op":"replace","path":"/sisteInnsendteAarsregnskap","value":"2025"}],"endringstype":"Endring","oppdateringsid":24770609,"organisasjonsnummer":"988217867"}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/719/dato`
+
+Exact excerpt:
+
+```
+/enhetsregisteret/api/enheter/988217867"}},"dato":"2026-07-04T14:20:44.304+02:00","endringer":[{"op":"replace","path":"/sisteInnsendteAarsregnskap","value":"2025"}],"endringstype":"Endring","oppdateringsid":24770609,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/742/endringer/0/path`
+
+Exact excerpt:
+
+```
+10.824+02:00","endringer":[{"op":"replace","path":"/vedtektsdato","value":"2026-06-22"},{"op":"replace","path":"/kapital/antallAksjer","value":75482909},{"op":"replace","path":"/kapital/innfortDato","value":"2026-07-27"},{"op":"replace","path":"/kapital/belop","value":1.565237235E7}],"endringstype":
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/129/endringstype`
+
+Exact excerpt:
+
+```
+,"dato":"2024-12-11T23:07:21.326Z","endringstype":"Endring","oppdateringsid":19443018,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/928765679"}},"dato":"2024-12-19T23:52:20.165Z","endringstype":"Sletting","oppdateringsid":
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/1/eiendeler/sumBankinnskuddOgKontanter`
+
+Exact excerpt:
+
+```
+dringer":41330000.00,"sumBankinnskuddOgKontanter":221756000.00,"sumEiendeler":915485000.00,"omloepsmidler":{"sumOmloepsmidler":362563000.00},"anleggsmidler":{"sumAnleggsmidler":552922000.00}},"resultatregnskapResultat":{"ordinaertResultatFoerSkattekostnad":-159979000.00,"ordinaertResultatSkattekostn
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/2/eiendeler/sumVarer`
+
+Exact excerpt:
+
+```
+}},"eiendeler":{"goodwill":64061000.00,"sumVarer":11368000.00,"sumFordringer":345705000.00,"sumBankinnskuddOgKontanter":76204000.00,"sumEiendeler":1226255000.00,"omloepsmidler":{"sumOmloepsmidler":433277000.00},"anleggsmidler":{"sumAnleggsmidler":792978000.00}},"resultatregnskapResultat":{"ordinaert
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:39:02.350154Z / SHA-256 `d21e507d79e91866ffe5a753d309055ca8ab25b324a8fc0e6795f6d46d93e7d1` / locator `row:988217867/column:harRegistrertAntallAnsatte`
+
+Exact excerpt:
+
+```
+CONCEDO AS,AS,Aksjeselskap,06.100,Utvinning av råolje,,,,,,,true,19,2026-08-12,2026-08-10,www.concedo.no,post@concedo.no,,91346553,,,,,,,,"c/o Torvgården
+Torvveien 1",ASKER,1383,ASKER,3203,Norge,NO,2100,Private aksjeselskaper mv.,2025,2005-06-02,2005-04-01,true,2005-07-01,2005-07-07,,,false,,true,20
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/146/oppdateringsid`
+
+Exact excerpt:
+
+```
++02:00","endringstype":"Endring","oppdateringsid":19327032,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/921441835"}},"dato":"2024-06-26T21:31:23.324+02:00","endringstype":"Endring","oppdateringsid":19329314,"organisasjonsnummer":"9
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/0/egenkapitalGjeld/egenkapital/opptjentEgenkapital/sumOpptjentEgenkapital`
+
+Exact excerpt:
+
+```
+0,"opptjentEgenkapital":{"sumOpptjentEgenkapital":-13010082.00},"innskuttEgenkapital":{"sumInnskuttEgenkaptial":230974312.00}},"gjeldOversikt":{"sumGjeld":346133297.00,"kortsiktigGjeld":{"sumKortsiktigGjeld":283031412.00},"langsiktigGjeld":{"sumLangsiktigGjeld":63101885.00}}},"eiendeler":{"sumFordri
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/417`
+
+Exact excerpt:
+
+```
+gsid":21754806,"organisasjonsnummer":"995636468"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/988217867"}},"dato":"2025-07-08T20:02:46.961+02:00","endringstype":"Endring","oppdateringsid":21756202,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/689/endringstype`
+
+Exact excerpt:
+
+```
+dtektsdato","value":"2026-04-22"}],"endringstype":"Endring","oppdateringsid":24575795,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/988217867"}},"dato":"2026-06-11T12:25:13.351+02:00","endringer":[{"op":"replace","path":"/vedtektsda
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/758/endringer/1/op`
+
+Exact excerpt:
+
+```
+atteEnhetsregisteret","value":"2026-08-12"},{"op":"replace","path":"/antallAnsatte","value":19},{"op":"replace","path":"/registreringsdatoAntallAnsatteNAVAaregisteret","value":"2026-08-10"}],"endringstype":"Endring","oppdateringsid":25084727,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"hr
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/193/endringstype`
+
+Exact excerpt:
+
+```
+registeret","value":"2025-09-10"}],"endringstype":"Endring","oppdateringsid":20251111,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/982987229"}},"dato":"2025-09-12T09:47:09.158Z","endringer":[{"op":"replace","path":"/regis
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/449/endringer/0/path`
+
+Exact excerpt:
+
+```
+27.947+02:00","endringer":[{"op":"replace","path":"/registreringsdatoAntallAnsatteEnhetsregisteret","value":"2025-09-13"},{"op":"replace","path":"/antallAnsatte","value":20},{"op":"replace","path":"/registreringsdatoAntallAnsatteNAVAaregisteret","value":"2025-09-10"}],"endringstype":"Endring","oppda
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/213/dato`
+
+Exact excerpt:
+
+```
+/enhetsregisteret/api/enheter/988217867"}},"dato":"2024-10-14T21:51:43.771+02:00","endringstype":"Endring","oppdateringsid":19839153,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/922699836"}},"dato":"2024-10-14T21:52:44.299+02:00","
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/aarsregnskap/kopi/988217867/aar / retrieved 2026-11-14T06:39:48.255853Z / SHA-256 `b7bcd20d8a4607bc9ca49fbdfebf5e51cb31e39858edb985dc98a82e8d2b7cd1` / locator `/5`
+
+Exact excerpt:
+
+```
+["2011","2012","2013","2014","2015","2016","2017","2018","2019","2020","2021","2022","2023","2024","2025"]
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:39:02.350154Z / SHA-256 `d21e507d79e91866ffe5a753d309055ca8ab25b324a8fc0e6795f6d46d93e7d1` / locator `row:988217867/column:registreringsnummerIHjemlandet`
+
+Exact excerpt:
+
+```
+ital.fulltInnbetalt,kapital.innfortDato,registreringsnummerIHjemlandet,utenlandskRegisterNavn,utenlandskRegisterAdresse.land,utenlandskRegisterAdresse.poststed,utenlandskRegisterAdresse.adresse,underlagtLovgivningLand,underlagtLovgivningLandKode,foretaksformIHjemlandet.kode,foretaksformIHjemlandet.b
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/0/resultatregnskapResultat/driftsresultat/driftskostnad/loennskostnad`
+
+Exact excerpt:
+
+```
+ftsinntekter":{},"driftskostnad":{"loennskostnad":26995691.00,"sumDriftskostnad":389792404.00}}}},{"id":6095491,"journalnr":"2025644655","regnskapstype":"SELSKAP","virksomhet":{"organisasjonsnummer":"988217867","organisasjonsform":"AS","morselskap":false},"regnskapsperiode":{"fraDato":"2024-01-01","
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/758/endringer/0/op`
+
+Exact excerpt:
+
+```
+2026-08-13T00:05:58.821+02:00","endringer":[{"op":"replace","path":"/registreringsdatoAntallAnsatteEnhetsregisteret","value":"2026-08-12"},{"op":"replace","path":"/antallAnsatte","value":19},{"op":"replace","path":"/registreringsdatoAntallAnsatteNAVAaregisteret","value":"2026-08-10"}],"endringstype"
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/2/eiendeler/goodwill`
+
+Exact excerpt:
+
+```
+tigGjeld":525667000.00}}},"eiendeler":{"goodwill":64061000.00,"sumVarer":11368000.00,"sumFordringer":345705000.00,"sumBankinnskuddOgKontanter":76204000.00,"sumEiendeler":1226255000.00,"omloepsmidler":{"sumOmloepsmidler":433277000.00},"anleggsmidler":{"sumAnleggsmidler":792978000.00}},"resultatregnsk
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/758/endringstype`
+
+Exact excerpt:
+
+```
+registeret","value":"2026-08-10"}],"endringstype":"Endring","oppdateringsid":25084727,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/919909676"}},"dato":"2026-08-13T20:01:03.577+02:00","endringer":[{"op":"replace","path":"/sisteInnse
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/2/resultatregnskapResultat/ordinaertResultatFoerSkattekostnad`
+
+Exact excerpt:
+
+```
+apResultat":{"ordinaertResultatFoerSkattekostnad":-174007000.00,"ordinaertResultatSkattekostnad":-25215000.00,"aarsresultat":-148792000.00,"totalresultat":-148792000.00,"finansresultat":{"nettoFinans":-46425000.00,"finansinntekt":{"sumFinansinntekter":5389000.00},"finanskostnad":{"sumFinanskostnad":
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/0/resultatregnskapResultat/finansresultat/finansinntekt/sumFinansinntekter`
+
+Exact excerpt:
+
+```
+-2993574.00,"finansinntekt":{"sumFinansinntekter":13357356.00},"finanskostnad":{"annenRentekostnad":11767517.00,"sumFinanskostnad":16350930.00}},"driftsresultat":{"driftsresultat":-389792404.00,"driftsinntekter":{},"driftskostnad":{"loennskostnad":26995691.00,"sumDriftskostnad":389792404.00}}}},{"id
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/449/endringer/2/path`
+
+Exact excerpt:
+
+```
+antallAnsatte","value":20},{"op":"replace","path":"/registreringsdatoAntallAnsatteNAVAaregisteret","value":"2025-09-10"}],"endringstype":"Endring","oppdateringsid":22057088,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/922699836"}},
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/99`
+
+Exact excerpt:
+
+```
+gsid":19093174,"organisasjonsnummer":"958507739"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/988217867"}},"dato":"2024-05-14T21:43:04.158+02:00","endringstype":"Endring","oppdateringsid":19097401,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/1/resultatregnskapResultat/finansresultat/finanskostnad/sumFinanskostnad`
+
+Exact excerpt:
+
+```
+:11907000.00},"finanskostnad":{"sumFinanskostnad":22186000.00}},"driftsresultat":{"driftsresultat":-149700000.00,"driftsinntekter":{"salgsinntekter":5464000.00,"sumDriftsinntekter":5464000.00},"driftskostnad":{"loennskostnad":31516000.00,"sumDriftskostnad":155164000.00}}}},{"id":6884148,"journalnr":
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:39:02.350154Z / SHA-256 `d21e507d79e91866ffe5a753d309055ca8ab25b324a8fc0e6795f6d46d93e7d1` / locator `row:988217867/column:tvangsavvikletPgaManglendeSlettingDato`
+
+Exact excerpt:
+
+```
+to,tvangsopplostPgaMangelfulltStyreDato,tvangsavvikletPgaManglendeSlettingDato,overordnetEnhet,maalform,vedtektsdato,vedtektsfestetFormaal,aktivitet,paategninger,underUtenlandskInsolvensbehandlingDato,underRekonstruksjonsforhandlingDato,fravalgRevisjonDato,fravalgRevisjonBeslutningsDato,erIKonsern,k
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/736/endringstype`
+
+Exact excerpt:
+
+```
+registeret","value":"2026-07-10"}],"endringstype":"Endring","oppdateringsid":24884988,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/981500253"}},"dato":"2026-07-17T08:55:10.668+02:00","endringer":[{"op":"replace","path":"/forretning
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/742/endringer/1/path`
+
+Exact excerpt:
+
+```
+ato","value":"2026-06-22"},{"op":"replace","path":"/kapital/antallAksjer","value":75482909},{"op":"replace","path":"/kapital/innfortDato","value":"2026-07-27"},{"op":"replace","path":"/kapital/belop","value":1.565237235E7}],"endringstype":"Endring","oppdateringsid":24954831,"organisasjonsnummer":"98
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/0/eiendeler/omloepsmidler/sumOmloepsmidler`
+
+Exact excerpt:
+
+```
+:564097527.00,"omloepsmidler":{"sumOmloepsmidler":450625703.00},"anleggsmidler":{"sumAnleggsmidler":113471824.00}},"resultatregnskapResultat":{"ordinaertResultatFoerSkattekostnad":-392785978.00,"ordinaertResultatSkattekostnad":-304346881.00,"aarsresultat":-88439097.00,"finansresultat":{"nettoFinans"
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/2/resultatregnskapResultat/driftsresultat/driftsinntekter/sumDriftsinntekter`
+
+Exact excerpt:
+
+```
+salgsinntekter":416240000.00,"sumDriftsinntekter":416240000.00},"driftskostnad":{"loennskostnad":55342000.00,"sumDriftskostnad":543822000.00}}}}]
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/758/endringer/2/path`
+
+Exact excerpt:
+
+```
+antallAnsatte","value":19},{"op":"replace","path":"/registreringsdatoAntallAnsatteNAVAaregisteret","value":"2026-08-10"}],"endringstype":"Endring","oppdateringsid":25084727,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/919909676"}},
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/736/endringer/1/op`
+
+Exact excerpt:
+
+```
+atteEnhetsregisteret","value":"2026-07-15"},{"op":"replace","path":"/antallAnsatte","value":22},{"op":"replace","path":"/registreringsdatoAntallAnsatteNAVAaregisteret","value":"2026-07-10"}],"endringstype":"Endring","oppdateringsid":24884988,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"hr
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/138/dato`
+
+Exact excerpt:
+
+```
+tsregisteret/api/underenheter/988294888"}},"dato":"2025-01-14T23:01:38.691Z","endringstype":"Endring","oppdateringsid":19567370,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/929643984"}},"dato":"2025-02-10T10:10:14.545Z","
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/283/endringer/2/op`
+
+Exact excerpt:
+
+```
+eplace","path":"/antallAnsatte","value":19},{"op":"replace","path":"/registreringsdatoAntallAnsatteNAVAaregisteret","value":"2026-08-10"}],"endringstype":"Endring","oppdateringsid":21260887,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/2/resultatregnskapResultat/aarsresultat`
+
+Exact excerpt:
+
+```
+esultatSkattekostnad":-25215000.00,"aarsresultat":-148792000.00,"totalresultat":-148792000.00,"finansresultat":{"nettoFinans":-46425000.00,"finansinntekt":{"sumFinansinntekter":5389000.00},"finanskostnad":{"sumFinanskostnad":51814000.00}},"driftsresultat":{"driftsresultat":-127582000.00,"driftsinnte
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/0/eiendeler/anleggsmidler/sumAnleggsmidler`
+
+Exact excerpt:
+
+```
+450625703.00},"anleggsmidler":{"sumAnleggsmidler":113471824.00}},"resultatregnskapResultat":{"ordinaertResultatFoerSkattekostnad":-392785978.00,"ordinaertResultatSkattekostnad":-304346881.00,"aarsresultat":-88439097.00,"finansresultat":{"nettoFinans":-2993574.00,"finansinntekt":{"sumFinansinntekter"
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/92/organisasjonsnummer`
+
+Exact excerpt:
+
+```
+","oppdateringsid":18998251,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/993331325"}},"dato":"2024-07-11T20:31:33.370Z","endringstype":"Endring","oppdateringsid":19002054,"organisasjonsnummer":"993331325"},{"_links":{"und
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/246/oppdateringsid`
+
+Exact excerpt:
+
+```
+:17:17.191Z","endringstype":"Ny","oppdateringsid":20786961,"organisasjonsnummer":"937339372"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/929643984"}},"dato":"2026-03-11T23:19:20.680Z","endringer":[{"op":"replace","path":"/registreringsdatoAntallAnsatteEn
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/113/oppdateringsid`
+
+Exact excerpt:
+
+```
+3.315Z","endringstype":"Endring","oppdateringsid":19271012,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/994980831"}},"dato":"2024-10-12T14:08:27.527Z","endringstype":"Endring","oppdateringsid":19275874,"organisasjonsnumme
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/229/organisasjonsnummer`
+
+Exact excerpt:
+
+```
+","oppdateringsid":20018981,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/986250875"}},"dato":"2024-12-13T12:25:13.992+01:00","endringstype":"Endring","oppdateringsid":20030918,"organisasjonsnummer":"986250875"},{"_links":{"enhet":{
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988217867&size=1000&page=0 / retrieved 2026-11-14T06:39:04.132414Z / SHA-256 `a136633f16c0f03790dfaf7fe6f76de109af42b05d0cf692f320c4c4b2bda2aa` / locator `/_embedded/underenheter/0/registreringsdatoEnhetsregisteret`
+
+Exact excerpt:
+
+```
+:"2026-08-10","registreringsdatoEnhetsregisteret":"2005-06-04","registrertIMvaregisteret":false,"respons_klasse":"Underenhet"},{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/937339372"},"overordnetEnhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/229/endringstype`
+
+Exact excerpt:
+
+```
+o":"2024-12-13T00:04:49.256+01:00","endringstype":"Endring","oppdateringsid":20018981,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/986250875"}},"dato":"2024-12-13T12:25:13.992+01:00","endringstype":"Endring","oppdateringsid":200309
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/163/oppdateringsid`
+
+Exact excerpt:
+
+```
++02:00","endringstype":"Endring","oppdateringsid":19455590,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/921441835"}},"dato":"2024-07-13T15:13:35.278+02:00","endringstype":"Endring","oppdateringsid":19457591,"organisasjonsnummer":"9
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/92/dato`
+
+Exact excerpt:
+
+```
+tsregisteret/api/underenheter/988294888"}},"dato":"2024-07-11T20:31:11.995Z","endringstype":"Endring","oppdateringsid":18998251,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/993331325"}},"dato":"2024-07-11T20:31:33.370Z","
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/283/endringer/1/path`
+
+Exact excerpt:
+
+```
+ret","value":"2026-08-11"},{"op":"replace","path":"/antallAnsatte","value":19},{"op":"replace","path":"/registreringsdatoAntallAnsatteNAVAaregisteret","value":"2026-08-10"}],"endringstype":"Endring","oppdateringsid":21260887,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https:/
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/2/eiendeler/sumFordringer`
+
+Exact excerpt:
+
+```
+4061000.00,"sumVarer":11368000.00,"sumFordringer":345705000.00,"sumBankinnskuddOgKontanter":76204000.00,"sumEiendeler":1226255000.00,"omloepsmidler":{"sumOmloepsmidler":433277000.00},"anleggsmidler":{"sumAnleggsmidler":792978000.00}},"resultatregnskapResultat":{"ordinaertResultatFoerSkattekostnad":-
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988217867&size=1000&page=0 / retrieved 2026-11-14T06:39:04.132414Z / SHA-256 `a136633f16c0f03790dfaf7fe6f76de109af42b05d0cf692f320c4c4b2bda2aa` / locator `/_embedded/underenheter/0/historiskeNavn`
+
+Exact excerpt:
+
+```
+"historiskeNavn":[{"fraDato":"2005-06-04 14:39:18","navn":"VIENCO HYDROCARBONS SUBSURFACE AS","tilDato":"2006-07-11 20:07:29"},{"fraDato":"2006-07-11 20:07:29","navn":"CONCEDO AS","tilDato":"2006-12-09 14:45:52"},{"fraDato":"2006-12-09 14:45:52","navn":"CONCEDO ASA","tilDato":"2020-09-29 21:12:32"}]
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:39:02.350154Z / SHA-256 `d21e507d79e91866ffe5a753d309055ca8ab25b324a8fc0e6795f6d46d93e7d1` / locator `row:988217867/column:antallAnsatte`
+
+Exact excerpt:
+
+```
+DO AS,AS,Aksjeselskap,06.100,Utvinning av råolje,,,,,,,true,19,2026-08-12,2026-08-10,www.concedo.no,post@concedo.no,,91346553,,,,,,,,"c/o Torvgården
+Torvveien 1",ASKER,1383,ASKER,3203,Norge,NO,2100,Private aksjeselskaper mv.,2025,2005-06-02,2005-04-01,true,2005-07-01,2005-07-07,,,false,,true,2005-06
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/144/endringstype`
+
+Exact excerpt:
+
+```
+,"dato":"2025-02-12T01:13:40.038Z","endringstype":"Endring","oppdateringsid":19649872,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/829036312"}},"dato":"2025-02-12T01:14:10.726Z","endringstype":"Endring","oppdateringsid":1
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/33/oppdateringsid`
+
+Exact excerpt:
+
+```
++01:00","endringstype":"Endring","oppdateringsid":18583992,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/931694995"}},"dato":"2024-01-01T07:45:47.975+01:00","endringstype":"Endring","oppdateringsid":18589084,"organisasjonsnummer":"9
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/758/dato`
+
+Exact excerpt:
+
+```
+/enhetsregisteret/api/enheter/988217867"}},"dato":"2026-08-13T00:05:58.821+02:00","endringer":[{"op":"replace","path":"/registreringsdatoAntallAnsatteEnhetsregisteret","value":"2026-08-12"},{"op":"replace","path":"/antallAnsatte","value":19},{"op":"replace","path":"/registreringsdatoAntallAnsatteNAV
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/1/resultatregnskapResultat/ordinaertResultatSkattekostnad`
+
+Exact excerpt:
+
+```
+d":-159979000.00,"ordinaertResultatSkattekostnad":-119046000.00,"aarsresultat":-40933000.00,"finansresultat":{"nettoFinans":-10279000.00,"finansinntekt":{"sumFinansinntekter":11907000.00},"finanskostnad":{"sumFinanskostnad":22186000.00}},"driftsresultat":{"driftsresultat":-149700000.00,"driftsinntek
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/283/endringstype`
+
+Exact excerpt:
+
+```
+registeret","value":"2026-08-10"}],"endringstype":"Endring","oppdateringsid":21260887,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/994980831"}},"dato":"2026-08-11T22:14:24.668Z","endringer":[{"op":"replace","path":"/regis
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/81/oppdateringsid`
+
+Exact excerpt:
+
+```
++02:00","endringstype":"Endring","oppdateringsid":18987774,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/995636468"}},"dato":"2024-04-13T15:11:26.221+02:00","endringstype":"Endring","oppdateringsid":18994482,"organisasjonsnummer":"9
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/246/endringstype`
+
+Exact excerpt:
+
+```
+,"dato":"2026-03-11T23:17:17.191Z","endringstype":"Ny","oppdateringsid":20786961,"organisasjonsnummer":"937339372"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/929643984"}},"dato":"2026-03-11T23:19:20.680Z","endringer":[{"op":"replace","path":"/registreri
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/92/endringstype`
+
+Exact excerpt:
+
+```
+,"dato":"2024-07-11T20:31:11.995Z","endringstype":"Endring","oppdateringsid":18998251,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/993331325"}},"dato":"2024-07-11T20:31:33.370Z","endringstype":"Endring","oppdateringsid":1
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:39:02.350154Z / SHA-256 `d21e507d79e91866ffe5a753d309055ca8ab25b324a8fc0e6795f6d46d93e7d1` / locator `row:988217867/column:hjemmeside`
+
+Exact excerpt:
+
+```
+100,Utvinning av råolje,,,,,,,true,19,2026-08-12,2026-08-10,www.concedo.no,post@concedo.no,,91346553,,,,,,,,"c/o Torvgården
+Torvveien 1",ASKER,1383,ASKER,3203,Norge,NO,2100,Private aksjeselskaper mv.,2025,2005-06-02,2005-04-01,true,2005-07-01,2005-07-07,,,false,,true,2005-06-02,false,false,,false,,f
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:39:02.350154Z / SHA-256 `d21e507d79e91866ffe5a753d309055ca8ab25b324a8fc0e6795f6d46d93e7d1` / locator `row:988217867/column:aktivitet`
+
+Exact excerpt:
+
+```
+02,false,false,,false,,false,,false,,,,,,,Bokmål,2026-06-22,Leting etter og utvinning av olje og gass på norsk kontinentalsokkel.,Leting etter og utvinning av olje og gass på norsk kontinentalsokkel.,false,,,,,true,15652372.35,75482909,Aksjekapital,,NOK,,,2026-07-27,,,,,,,,,,
+
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/690/organisasjonsnummer`
+
+Exact excerpt:
+
+```
+","oppdateringsid":24575796,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/984360312"}},"dato":"2026-06-11T20:03:09.708+02:00","endringer":[{"op":"replace","path":"/sisteInnsendteAarsregnskap","value":"2025"}],"endringstype":"Endring
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/193/endringer/2/path`
+
+Exact excerpt:
+
+```
+antallAnsatte","value":20},{"op":"replace","path":"/registreringsdatoAntallAnsatteNAVAaregisteret","value":"2025-09-10"}],"endringstype":"Endring","oppdateringsid":20251111,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/982
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/24/organisasjonsnummer`
+
+Exact excerpt:
+
+```
+","oppdateringsid":18148058,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/990775338"}},"dato":"2023-12-31T23:06:29.630Z","endringstype":"Endring","oppdateringsid":18153765,"organisasjonsnummer":"990775338"},{"_links":{"und
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/1/eiendeler/goodwill`
+
+Exact excerpt:
+
+```
+tigGjeld":622088000.00}}},"eiendeler":{"goodwill":179980000.00,"sumVarer":99477000.00,"sumFordringer":41330000.00,"sumBankinnskuddOgKontanter":221756000.00,"sumEiendeler":915485000.00,"omloepsmidler":{"sumOmloepsmidler":362563000.00},"anleggsmidler":{"sumAnleggsmidler":552922000.00}},"resultatregnsk
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/35/endringstype`
+
+Exact excerpt:
+
+```
+,"dato":"2024-01-01T06:19:01.484Z","endringstype":"Endring","oppdateringsid":18311963,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/929218841"}},"dato":"2024-01-01T06:19:13.171Z","endringstype":"Endring","oppdateringsid":1
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/742/endringer/2/op`
+
+Exact excerpt:
+
+```
+":"/kapital/antallAksjer","value":75482909},{"op":"replace","path":"/kapital/innfortDato","value":"2026-07-27"},{"op":"replace","path":"/kapital/belop","value":1.565237235E7}],"endringstype":"Endring","oppdateringsid":24954831,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://da
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/229`
+
+Exact excerpt:
+
+```
+gsid":20009597,"organisasjonsnummer":"915682448"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/988217867"}},"dato":"2024-12-13T00:04:49.256+01:00","endringstype":"Endring","oppdateringsid":20018981,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/690/dato`
+
+Exact excerpt:
+
+```
+/enhetsregisteret/api/enheter/988217867"}},"dato":"2026-06-11T12:25:13.351+02:00","endringer":[{"op":"replace","path":"/vedtektsdato","value":"2026-04-22"}],"endringstype":"Endring","oppdateringsid":24575796,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsr
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/988217867/roller / retrieved 2026-11-14T06:39:06.322752Z / SHA-256 `503dbeda876a9266f8e8964d1ae8b6e37d00ba3700becccd5278e47e072a70b7` / locator `/rollegrupper/0/roller/0/rekkefolge`
+
+Exact excerpt:
+
+```
+tternavn":"Lunde","fornavn":"Geir"}},"rekkefolge":0,"type":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/DAGL"}},"beskrivelse":"Daglig leder","kode":"DAGL"}}],"sistEndret":"2005-06-02","type":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:39:02.350154Z / SHA-256 `d21e507d79e91866ffe5a753d309055ca8ab25b324a8fc0e6795f6d46d93e7d1` / locator `row:988217867/columns:postadresse.*`
+
+Exact excerpt:
+
+```
+organisasjonsnummer,navn,organisasjonsform.kode,organisasjonsform.beskrivelse,naeringskode1.kode,naeringskode1.beskrivelse,naeringskode2.kode,naeringskode2.beskrivelse,naeringskode3.kode,naeringskode3.beskrivelse,hjelpeenhetskode.kode,hjelpeenhetskode.beskrivelse,harRegistrertAntallAnsatte,antallAns
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/81/organisasjonsnummer`
+
+Exact excerpt:
+
+```
+","oppdateringsid":18987774,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/995636468"}},"dato":"2024-04-13T15:11:26.221+02:00","endringstype":"Endring","oppdateringsid":18994482,"organisasjonsnummer":"995636468"},{"_links":{"enhet":{
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:39:02.350154Z / SHA-256 `d21e507d79e91866ffe5a753d309055ca8ab25b324a8fc0e6795f6d46d93e7d1` / locator `row:988217867/column:registrertIPartiregisteret`
+
+Exact excerpt:
+
+```
+mv.,2025,2005-06-02,2005-04-01,true,2005-07-01,2005-07-07,,,false,,true,2005-06-02,false,false,,false,,false,,false,,,,,,,Bokmål,2026-06-22,Leting etter og utvinning av olje og gass på norsk kontinentalsokkel.,Leting etter og utvinning av olje og gass på norsk kontinentalsokkel.,false,,,,,true,15652
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/81/dato`
+
+Exact excerpt:
+
+```
+/enhetsregisteret/api/enheter/988217867"}},"dato":"2024-04-13T15:10:45.770+02:00","endringstype":"Endring","oppdateringsid":18987774,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/995636468"}},"dato":"2024-04-13T15:11:26.221+02:00","
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/67`
+
+Exact excerpt:
+
+```
+gsid":18738136,"organisasjonsnummer":"921093403"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/988294888"}},"dato":"2024-04-11T19:58:50.772Z","endringstype":"Endring","oppdateringsid":18760129,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"hr
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/aarsregnskap/kopi/988217867/aar / retrieved 2026-11-14T06:39:48.255853Z / SHA-256 `b7bcd20d8a4607bc9ca49fbdfebf5e51cb31e39858edb985dc98a82e8d2b7cd1` / locator `/6`
+
+Exact excerpt:
+
+```
+["2011","2012","2013","2014","2015","2016","2017","2018","2019","2020","2021","2022","2023","2024","2025"]
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/689/endringer/0/op`
+
+Exact excerpt:
+
+```
+2026-06-11T12:25:13.351+02:00","endringer":[{"op":"replace","path":"/vedtektsdato","value":"2026-04-22"}],"endringstype":"Endring","oppdateringsid":24575795,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/988217867"}},"dato":"2026-06-
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:39:02.350154Z / SHA-256 `d21e507d79e91866ffe5a753d309055ca8ab25b324a8fc0e6795f6d46d93e7d1` / locator `row:988217867/column:underlagtLovgivningLandKode`
+
+Exact excerpt:
+
+```
+Adresse.adresse,underlagtLovgivningLand,underlagtLovgivningLandKode,foretaksformIHjemlandet.kode,foretaksformIHjemlandet.beskrivelse,foretaksformIHjemlandet.beskrivelseBokmaal
+988217867,CONCEDO AS,AS,Aksjeselskap,06.100,Utvinning av råolje,,,,,,,true,19,2026-08-12,2026-08-10,www.concedo.no,post@con
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/129/oppdateringsid`
+
+Exact excerpt:
+
+```
+1.326Z","endringstype":"Endring","oppdateringsid":19443018,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/928765679"}},"dato":"2024-12-19T23:52:20.165Z","endringstype":"Sletting","oppdateringsid":19474581,"organisasjonsnumm
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/988217867/roller / retrieved 2026-11-14T06:39:06.322752Z / SHA-256 `503dbeda876a9266f8e8964d1ae8b6e37d00ba3700becccd5278e47e072a70b7` / locator `/rollegrupper/2/roller/0/enhet/organisasjonsform`
+
+Exact excerpt:
+
+```
+retak","navn":["DELOITTE AS"],"organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/AS"}},"beskrivelse":"Aksjeselskap","kode":"AS"},"organisasjonsnummer":"980211282"},"rekkefolge":0,"type":{"_links":{"self":{"href":"https://data.brreg.no/enhets
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/736/oppdateringsid`
+
+Exact excerpt:
+
+```
+7-10"}],"endringstype":"Endring","oppdateringsid":24884988,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/981500253"}},"dato":"2026-07-17T08:55:10.668+02:00","endringer":[{"op":"replace","path":"/forretningsadresse/postnummer","value
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/177/organisasjonsnummer`
+
+Exact excerpt:
+
+```
+","oppdateringsid":20050027,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/929643984"}},"dato":"2025-07-12T15:04:18.640Z","endringstype":"Endring","oppdateringsid":20065975,"organisasjonsnummer":"929643984"},{"_links":{"und
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/0/resultatregnskapResultat/driftsresultat/driftskostnad/sumDriftskostnad`
+
+Exact excerpt:
+
+```
+":{"loennskostnad":26995691.00,"sumDriftskostnad":389792404.00}}}},{"id":6095491,"journalnr":"2025644655","regnskapstype":"SELSKAP","virksomhet":{"organisasjonsnummer":"988217867","organisasjonsform":"AS","morselskap":false},"regnskapsperiode":{"fraDato":"2024-01-01","tilDato":"2024-12-31"},"valuta"
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/33/organisasjonsnummer`
+
+Exact excerpt:
+
+```
+","oppdateringsid":18583992,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/931694995"}},"dato":"2024-01-01T07:45:47.975+01:00","endringstype":"Endring","oppdateringsid":18589084,"organisasjonsnummer":"931694995"},{"_links":{"enhet":{
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/736/endringer/0/op`
+
+Exact excerpt:
+
+```
+2026-07-16T00:08:11.047+02:00","endringer":[{"op":"replace","path":"/registreringsdatoAntallAnsatteEnhetsregisteret","value":"2026-07-15"},{"op":"replace","path":"/antallAnsatte","value":22},{"op":"replace","path":"/registreringsdatoAntallAnsatteNAVAaregisteret","value":"2026-07-10"}],"endringstype"
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/roller?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&size=1000&afterTime=2023-11-14T06%3A39%3A02.256Z / retrieved 2026-11-14T06:43:15.761297Z / SHA-256 `cab0ccff9b23449b59f32958dda08d47746743338575b17f4e8222b6899856b7` / locator `/158/type`
+
+Exact excerpt:
+
+```
+n":"1.0","time":"2026-06-11T10:25:12.693Z","type":"no.brreg.enhetsregisteret.rolle.oppdatert"},{"data":{"organisasjonsnummer":"929209850"},"id":"4502798","source":"https://data.brreg.no/enhetsregisteret/api/enheter/929209850/roller","specversion":"1.0","time":"2026-06-16T13:35:10.149Z","type":"no.br
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/719/endringstype`
+
+Exact excerpt:
+
+```
+ndteAarsregnskap","value":"2025"}],"endringstype":"Endring","oppdateringsid":24770609,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/979993609"}},"dato":"2026-07-04T14:21:03.831+02:00","endringer":[{"op":"replace","path":"/sisteInnse
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/742/endringer/3/path`
+
+Exact excerpt:
+
+```
+ato","value":"2026-07-27"},{"op":"replace","path":"/kapital/belop","value":1.565237235E7}],"endringstype":"Endring","oppdateringsid":24954831,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/986464492"}},"dato":"2026-07-27T20:01:21.797
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/417/endringstype`
+
+Exact excerpt:
+
+```
+o":"2025-07-08T20:02:46.961+02:00","endringstype":"Endring","oppdateringsid":21756202,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/980584224"}},"dato":"2025-07-09T20:06:06.539+02:00","endringstype":"Endring","oppdateringsid":217665
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/1/resultatregnskapResultat/driftsresultat/driftsresultat`
+
+Exact excerpt:
+
+```
+:22186000.00}},"driftsresultat":{"driftsresultat":-149700000.00,"driftsinntekter":{"salgsinntekter":5464000.00,"sumDriftsinntekter":5464000.00},"driftskostnad":{"loennskostnad":31516000.00,"sumDriftskostnad":155164000.00}}}},{"id":6884148,"journalnr":"2026530758","regnskapstype":"SELSKAP","virksomhe
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/roller?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&size=1000&afterTime=2023-11-14T06%3A39%3A02.256Z / retrieved 2026-11-14T06:43:15.761297Z / SHA-256 `cab0ccff9b23449b59f32958dda08d47746743338575b17f4e8222b6899856b7` / locator `/158`
+
+Exact excerpt:
+
+```
+ype":"no.brreg.enhetsregisteret.rolle.oppdatert"},{"data":{"organisasjonsnummer":"988217867"},"id":"4494771","source":"https://data.brreg.no/enhetsregisteret/api/enheter/988217867/roller","specversion":"1.0","time":"2026-06-11T10:25:12.693Z","type":"no.brreg.enhetsregisteret.rolle.oppdatert"},{"data
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:39:02.350154Z / SHA-256 `d21e507d79e91866ffe5a753d309055ca8ab25b324a8fc0e6795f6d46d93e7d1` / locator `row:988217867/column:underAvvikling`
+
+Exact excerpt:
+
+```
+mv.,2025,2005-06-02,2005-04-01,true,2005-07-01,2005-07-07,,,false,,true,2005-06-02,false,false,,false,,false,,false,,,,,,,Bokmål,2026-06-22,Leting etter og utvinning av olje og gass på norsk kontinentalsokkel.,Leting etter og utvinning av olje og gass på norsk kontinentalsokkel.,false,,,,,true,15652
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988217867&size=1000&page=0 / retrieved 2026-11-14T06:39:04.132414Z / SHA-256 `a136633f16c0f03790dfaf7fe6f76de109af42b05d0cf692f320c4c4b2bda2aa` / locator `/_embedded/underenheter/0/antallAnsatte`
+
+Exact excerpt:
+
+```
+gisteret/api/enheter/988217867"}},"antallAnsatte":19,"beliggenhetsadresse":{"adresse":["c/o Torvgården","Torvveien 1"],"kommune":"ASKER","kommunenummer":"3203","land":"Norge","landkode":"NO","postnummer":"1383","poststed":"ASKER"},"epostadresse":"post@concedo.no","harRegistrertAntallAnsatte":true,"h
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988217867&size=1000&page=0 / retrieved 2026-11-14T06:39:04.132414Z / SHA-256 `a136633f16c0f03790dfaf7fe6f76de109af42b05d0cf692f320c4c4b2bda2aa` / locator `/_embedded/underenheter/1/postadresse`
+
+Exact excerpt:
+
+```
+9372","overordnetEnhet":"988217867","postadresse":{"adresse":["Torvveien 1"],"kommune":"ASKER","kommunenummer":"3203","land":"Norge","landkode":"NO","postnummer":"1383","poststed":"ASKER"},"registreringsdatoEnhetsregisteret":"2026-03-11","registrertIMvaregisteret":false,"respons_klasse":"Underenhet"
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:39:02.350154Z / SHA-256 `d21e507d79e91866ffe5a753d309055ca8ab25b324a8fc0e6795f6d46d93e7d1` / locator `row:988217867/columns:institusjonellSektorkode.*`
+
+Exact excerpt:
+
+```
+"c/o Torvgården
+Torvveien 1",ASKER,1383,ASKER,3203,Norge,NO,2100,Private aksjeselskaper mv.,2025,2005-06-02,2005-04-01,true,2005-07-01,2005-07-07,,,false,,true,2005-06-02,false,false,,false,,false,,false,,,,,,,Bokmål,2026-06-22,Leting etter og utvinning av olje og gass på norsk kontinentalsokkel.,Le
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/213`
+
+Exact excerpt:
+
+```
+gsid":19818838,"organisasjonsnummer":"915448666"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/988217867"}},"dato":"2024-10-14T21:51:43.771+02:00","endringstype":"Endring","oppdateringsid":19839153,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/163/organisasjonsnummer`
+
+Exact excerpt:
+
+```
+","oppdateringsid":19455590,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/921441835"}},"dato":"2024-07-13T15:13:35.278+02:00","endringstype":"Endring","oppdateringsid":19457591,"organisasjonsnummer":"921441835"},{"_links":{"enhet":{
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/2/eiendeler/anleggsmidler/sumAnleggsmidler`
+
+Exact excerpt:
+
+```
+433277000.00},"anleggsmidler":{"sumAnleggsmidler":792978000.00}},"resultatregnskapResultat":{"ordinaertResultatFoerSkattekostnad":-174007000.00,"ordinaertResultatSkattekostnad":-25215000.00,"aarsresultat":-148792000.00,"totalresultat":-148792000.00,"finansresultat":{"nettoFinans":-46425000.00,"finan
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/248/endringstype`
+
+Exact excerpt:
+
+```
+o":"2025-02-13T00:06:06.824+01:00","endringstype":"Endring","oppdateringsid":20217225,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/935033381"}},"dato":"2025-02-13T12:25:12.736+01:00","endringstype":"Ny","oppdateringsid":20230893,"o
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/690/endringstype`
+
+Exact excerpt:
+
+```
+dtektsdato","value":"2026-04-22"}],"endringstype":"Endring","oppdateringsid":24575796,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/984360312"}},"dato":"2026-06-11T20:03:09.708+02:00","endringer":[{"op":"replace","path":"/sisteInnse
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/988217867/roller / retrieved 2026-11-14T06:39:06.322752Z / SHA-256 `503dbeda876a9266f8e8964d1ae8b6e37d00ba3700becccd5278e47e072a70b7` / locator `/rollegrupper/2/roller/0`
+
+Exact excerpt:
+
+```
+{"avregistrert":false,"enhet":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/980211282"}},"erSlettet":false,"godkjenningsstatus":"Godkjent revisjonsforetak","navn":["DELOITTE AS"],"organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:39:02.350154Z / SHA-256 `d21e507d79e91866ffe5a753d309055ca8ab25b324a8fc0e6795f6d46d93e7d1` / locator `row:988217867/column:paategninger`
+
+Exact excerpt:
+
+```
+ktsdato,vedtektsfestetFormaal,aktivitet,paategninger,underUtenlandskInsolvensbehandlingDato,underRekonstruksjonsforhandlingDato,fravalgRevisjonDato,fravalgRevisjonBeslutningsDato,erIKonsern,kapital.belop,kapital.antallAksjer,kapital.type,kapital.bundet,kapital.valuta,kapital.innbetalt,kapital.fulltI
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/689/dato`
+
+Exact excerpt:
+
+```
+/enhetsregisteret/api/enheter/988217867"}},"dato":"2026-06-11T12:25:13.351+02:00","endringer":[{"op":"replace","path":"/vedtektsdato","value":"2026-04-22"}],"endringstype":"Endring","oppdateringsid":24575795,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsr
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:39:02.350154Z / SHA-256 `d21e507d79e91866ffe5a753d309055ca8ab25b324a8fc0e6795f6d46d93e7d1` / locator `row:988217867/column:slettedato`
+
+Exact excerpt:
+
+```
+organisasjonsnummer,navn,organisasjonsform.kode,organisasjonsform.beskrivelse,naeringskode1.kode,naeringskode1.beskrivelse,naeringskode2.kode,naeringskode2.beskrivelse,naeringskode3.kode,naeringskode3.beskrivelse,hjelpeenhetskode.kode,hjelpeenhetskode.beskrivelse,harRegistrertAntallAnsatte,antallAns
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/233/oppdateringsid`
+
+Exact excerpt:
+
+```
++01:00","endringstype":"Endring","oppdateringsid":20075576,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/999630480"}},"dato":"2025-01-15T00:01:16.093+01:00","endringstype":"Endring","oppdateringsid":20115956,"organisasjonsnummer":"9
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/246/organisasjonsnummer`
+
+Exact excerpt:
+
+```
+","oppdateringsid":20786961,"organisasjonsnummer":"937339372"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/929643984"}},"dato":"2026-03-11T23:19:20.680Z","endringer":[{"op":"replace","path":"/registreringsdatoAntallAnsatteEnhetsregisteret","value":"2026-0
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/283/endringer/0/path`
+
+Exact excerpt:
+
+```
+2:13:30.125Z","endringer":[{"op":"replace","path":"/registreringsdatoAntallAnsatteEnhetsregisteret","value":"2026-08-11"},{"op":"replace","path":"/antallAnsatte","value":19},{"op":"replace","path":"/registreringsdatoAntallAnsatteNAVAaregisteret","value":"2026-08-10"}],"endringstype":"Endring","oppda
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/283/oppdateringsid`
+
+Exact excerpt:
+
+```
+8-10"}],"endringstype":"Endring","oppdateringsid":21260887,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/994980831"}},"dato":"2026-08-11T22:14:24.668Z","endringer":[{"op":"replace","path":"/registreringsdatoAntallAnsatteEn
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/229/oppdateringsid`
+
+Exact excerpt:
+
+```
++01:00","endringstype":"Endring","oppdateringsid":20018981,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/986250875"}},"dato":"2024-12-13T12:25:13.992+01:00","endringstype":"Endring","oppdateringsid":20030918,"organisasjonsnummer":"9
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:39:02.350154Z / SHA-256 `d21e507d79e91866ffe5a753d309055ca8ab25b324a8fc0e6795f6d46d93e7d1` / locator `row:988217867/column:registreringsdatoMerverdiavgiftsregisteretEnhetsregisteret`
+
+Exact excerpt:
+
+```
+sjeselskaper mv.,2025,2005-06-02,2005-04-01,true,2005-07-01,2005-07-07,,,false,,true,2005-06-02,false,false,,false,,false,,false,,,,,,,Bokmål,2026-06-22,Leting etter og utvinning av olje og gass på norsk kontinentalsokkel.,Leting etter og utvinning av olje og gass på norsk kontinentalsokkel.,false,,
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/758/endringer/1/path`
+
+Exact excerpt:
+
+```
+ret","value":"2026-08-12"},{"op":"replace","path":"/antallAnsatte","value":19},{"op":"replace","path":"/registreringsdatoAntallAnsatteNAVAaregisteret","value":"2026-08-10"}],"endringstype":"Endring","oppdateringsid":25084727,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/248`
+
+Exact excerpt:
+
+```
+gsid":20211796,"organisasjonsnummer":"917071209"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/988217867"}},"dato":"2025-02-13T00:06:06.824+01:00","endringstype":"Endring","oppdateringsid":20217225,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/736/endringer/1/path`
+
+Exact excerpt:
+
+```
+ret","value":"2026-07-15"},{"op":"replace","path":"/antallAnsatte","value":22},{"op":"replace","path":"/registreringsdatoAntallAnsatteNAVAaregisteret","value":"2026-07-10"}],"endringstype":"Endring","oppdateringsid":24884988,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/1/eiendeler/anleggsmidler/sumAnleggsmidler`
+
+Exact excerpt:
+
+```
+362563000.00},"anleggsmidler":{"sumAnleggsmidler":552922000.00}},"resultatregnskapResultat":{"ordinaertResultatFoerSkattekostnad":-159979000.00,"ordinaertResultatSkattekostnad":-119046000.00,"aarsresultat":-40933000.00,"finansresultat":{"nettoFinans":-10279000.00,"finansinntekt":{"sumFinansinntekter
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/758/endringer/0/path`
+
+Exact excerpt:
+
+```
+58.821+02:00","endringer":[{"op":"replace","path":"/registreringsdatoAntallAnsatteEnhetsregisteret","value":"2026-08-12"},{"op":"replace","path":"/antallAnsatte","value":19},{"op":"replace","path":"/registreringsdatoAntallAnsatteNAVAaregisteret","value":"2026-08-10"}],"endringstype":"Endring","oppda
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/417/oppdateringsid`
+
+Exact excerpt:
+
+```
++02:00","endringstype":"Endring","oppdateringsid":21756202,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/980584224"}},"dato":"2025-07-09T20:06:06.539+02:00","endringstype":"Endring","oppdateringsid":21766583,"organisasjonsnummer":"9
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/1/resultatregnskapResultat/ordinaertResultatFoerSkattekostnad`
+
+Exact excerpt:
+
+```
+apResultat":{"ordinaertResultatFoerSkattekostnad":-159979000.00,"ordinaertResultatSkattekostnad":-119046000.00,"aarsresultat":-40933000.00,"finansresultat":{"nettoFinans":-10279000.00,"finansinntekt":{"sumFinansinntekter":11907000.00},"finanskostnad":{"sumFinanskostnad":22186000.00}},"driftsresultat
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/aarsregnskap/kopi/988217867/aar / retrieved 2026-11-14T06:39:48.255853Z / SHA-256 `b7bcd20d8a4607bc9ca49fbdfebf5e51cb31e39858edb985dc98a82e8d2b7cd1` / locator `/3`
+
+Exact excerpt:
+
+```
+["2011","2012","2013","2014","2015","2016","2017","2018","2019","2020","2021","2022","2023","2024","2025"]
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/449`
+
+Exact excerpt:
+
+```
+{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/988217867"}},"dato":"2025-09-13T17:20:27.947+02:00","endringer":[{"op":"replace","path":"/registreringsdatoAntallAnsatteEnhetsregisteret","value":"2025-09-13"},{"op":"replace","path":"/antallAnsatte","value":20},{"op":"re
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/193/endringer/2/op`
+
+Exact excerpt:
+
+```
+eplace","path":"/antallAnsatte","value":20},{"op":"replace","path":"/registreringsdatoAntallAnsatteNAVAaregisteret","value":"2025-09-10"}],"endringstype":"Endring","oppdateringsid":20251111,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/246/dato`
+
+Exact excerpt:
+
+```
+tsregisteret/api/underenheter/937339372"}},"dato":"2026-03-11T23:17:17.191Z","endringstype":"Ny","oppdateringsid":20786961,"organisasjonsnummer":"937339372"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/929643984"}},"dato":"2026-03-11T23:19:20.680Z","endri
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/24/dato`
+
+Exact excerpt:
+
+```
+tsregisteret/api/underenheter/988294888"}},"dato":"2023-12-31T23:06:29.620Z","endringstype":"Endring","oppdateringsid":18148058,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/990775338"}},"dato":"2023-12-31T23:06:29.630Z","
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:39:02.350154Z / SHA-256 `d21e507d79e91866ffe5a753d309055ca8ab25b324a8fc0e6795f6d46d93e7d1` / locator `row:988217867/column:registrertIForetaksregisteret`
+
+Exact excerpt:
+
+```
+CONCEDO AS,AS,Aksjeselskap,06.100,Utvinning av råolje,,,,,,,true,19,2026-08-12,2026-08-10,www.concedo.no,post@concedo.no,,91346553,,,,,,,,"c/o Torvgården
+Torvveien 1",ASKER,1383,ASKER,3203,Norge,NO,2100,Private aksjeselskaper mv.,2025,2005-06-02,2005-04-01,true,2005-07-01,2005-07-07,,,false,,true,20
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/aarsregnskap/kopi/988217867/aar / retrieved 2026-11-14T06:39:48.255853Z / SHA-256 `b7bcd20d8a4607bc9ca49fbdfebf5e51cb31e39858edb985dc98a82e8d2b7cd1` / locator `/10`
+
+Exact excerpt:
+
+```
+,"2014","2015","2016","2017","2018","2019","2020","2021","2022","2023","2024","2025"]
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:39:02.350154Z / SHA-256 `d21e507d79e91866ffe5a753d309055ca8ab25b324a8fc0e6795f6d46d93e7d1` / locator `row:988217867/column:sisteInnsendteAarsregnskap`
+
+Exact excerpt:
+
+```
+ER,1383,ASKER,3203,Norge,NO,2100,Private aksjeselskaper mv.,2025,2005-06-02,2005-04-01,true,2005-07-01,2005-07-07,,,false,,true,2005-06-02,false,false,,false,,false,,false,,,,,,,Bokmål,2026-06-22,Leting etter og utvinning av olje og gass på norsk kontinentalsokkel.,Leting etter og utvinning av olje 
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/99/dato`
+
+Exact excerpt:
+
+```
+/enhetsregisteret/api/enheter/988217867"}},"dato":"2024-05-14T21:43:04.158+02:00","endringstype":"Endring","oppdateringsid":19097401,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/921441835"}},"dato":"2024-05-14T21:43:12.050+02:00","
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/roller?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&size=1000&afterTime=2023-11-14T06%3A39%3A02.256Z / retrieved 2026-11-14T06:43:15.761297Z / SHA-256 `cab0ccff9b23449b59f32958dda08d47746743338575b17f4e8222b6899856b7` / locator `/3/source`
+
+Exact excerpt:
+
+```
+sjonsnummer":"988217867"},"id":"2341921","source":"https://data.brreg.no/enhetsregisteret/api/enheter/988217867/roller","specversion":"1.0","time":"2023-12-01T11:10:12.162Z","type":"no.brreg.enhetsregisteret.rolle.oppdatert"},{"data":{"organisasjonsnummer":"998989493"},"id":"2353460","source":"https
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/0/resultatregnskapResultat/finansresultat/nettoFinans`
+
+Exact excerpt:
+
+```
+tat":-88439097.00,"finansresultat":{"nettoFinans":-2993574.00,"finansinntekt":{"sumFinansinntekter":13357356.00},"finanskostnad":{"annenRentekostnad":11767517.00,"sumFinanskostnad":16350930.00}},"driftsresultat":{"driftsresultat":-389792404.00,"driftsinntekter":{},"driftskostnad":{"loennskostnad":26
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988217867&size=1000&page=0 / retrieved 2026-11-14T06:39:04.132414Z / SHA-256 `a136633f16c0f03790dfaf7fe6f76de109af42b05d0cf692f320c4c4b2bda2aa` / locator `/_embedded/underenheter/0/epostadresse`
+
+Exact excerpt:
+
+```
+nummer":"1383","poststed":"ASKER"},"epostadresse":"post@concedo.no","harRegistrertAntallAnsatte":true,"historiskeNavn":[{"fraDato":"2005-06-04 14:39:18","navn":"VIENCO HYDROCARBONS SUBSURFACE AS","tilDato":"2006-07-11 20:07:29"},{"fraDato":"2006-07-11 20:07:29","navn":"CONCEDO AS","tilDato":"2006-12
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988217867&size=1000&page=0 / retrieved 2026-11-14T06:39:04.132414Z / SHA-256 `a136633f16c0f03790dfaf7fe6f76de109af42b05d0cf692f320c4c4b2bda2aa` / locator `/_embedded/underenheter/0/registreringsdatoAntallAnsatteNAVAaregisteret`
+
+Exact excerpt:
+
+```
+","registreringsdatoAntallAnsatteNAVAaregisteret":"2026-08-10","registreringsdatoEnhetsregisteret":"2005-06-04","registrertIMvaregisteret":false,"respons_klasse":"Underenhet"},{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/937339372"},"overordnetEnhet":{"href":"ht
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/roller?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&size=1000&afterTime=2023-11-14T06%3A39%3A02.256Z / retrieved 2026-11-14T06:43:15.761297Z / SHA-256 `cab0ccff9b23449b59f32958dda08d47746743338575b17f4e8222b6899856b7` / locator `/158/data/organisasjonsnummer`
+
+Exact excerpt:
+
+```
+.rolle.oppdatert"},{"data":{"organisasjonsnummer":"988217867"},"id":"4494771","source":"https://data.brreg.no/enhetsregisteret/api/enheter/988217867/roller","specversion":"1.0","time":"2026-06-11T10:25:12.693Z","type":"no.brreg.enhetsregisteret.rolle.oppdatert"},{"data":{"organisasjonsnummer":"92920
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/742/organisasjonsnummer`
+
+Exact excerpt:
+
+```
+","oppdateringsid":24954831,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/986464492"}},"dato":"2026-07-27T20:01:21.797+02:00","endringer":[{"op":"replace","path":"/sisteInnsendteAarsregnskap","value":"2025"}],"endringstype":"Endring
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988217867&size=1000&page=0 / retrieved 2026-11-14T06:39:04.132414Z / SHA-256 `a136633f16c0f03790dfaf7fe6f76de109af42b05d0cf692f320c4c4b2bda2aa` / locator `/_embedded/underenheter/0/oppstartsdato`
+
+Exact excerpt:
+
+```
+de":"06.100"},"navn":"CONCEDO AS","oppstartsdato":"2005-06-02","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og offentlig forvaltning","kode":"BEDR"},"organisasjonsnummer":"988294888
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/449/endringer/0/op`
+
+Exact excerpt:
+
+```
+2025-09-13T17:20:27.947+02:00","endringer":[{"op":"replace","path":"/registreringsdatoAntallAnsatteEnhetsregisteret","value":"2025-09-13"},{"op":"replace","path":"/antallAnsatte","value":20},{"op":"replace","path":"/registreringsdatoAntallAnsatteNAVAaregisteret","value":"2025-09-10"}],"endringstype"
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/67/endringstype`
+
+Exact excerpt:
+
+```
+,"dato":"2024-04-11T19:58:50.772Z","endringstype":"Endring","oppdateringsid":18760129,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/993331325"}},"dato":"2024-04-11T19:58:59.926Z","endringstype":"Endring","oppdateringsid":1
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:39:02.350154Z / SHA-256 `d21e507d79e91866ffe5a753d309055ca8ab25b324a8fc0e6795f6d46d93e7d1` / locator `row:988217867/column:vedtektsfestetFormaal`
+
+Exact excerpt:
+
+```
+02,false,false,,false,,false,,false,,,,,,,Bokmål,2026-06-22,Leting etter og utvinning av olje og gass på norsk kontinentalsokkel.,Leting etter og utvinning av olje og gass på norsk kontinentalsokkel.,false,,,,,true,15652372.35,75482909,Aksjekapital,,NOK,,,2026-07-27,,,,,,,,,,
+
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/229/dato`
+
+Exact excerpt:
+
+```
+/enhetsregisteret/api/enheter/988217867"}},"dato":"2024-12-13T00:04:49.256+01:00","endringstype":"Endring","oppdateringsid":20018981,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/986250875"}},"dato":"2024-12-13T12:25:13.992+01:00","
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/107/dato`
+
+Exact excerpt:
+
+```
+/enhetsregisteret/api/enheter/988217867"}},"dato":"2024-05-25T14:36:56.724+02:00","endringstype":"Endring","oppdateringsid":19130618,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/917438986"}},"dato":"2024-05-25T15:05:39.915+02:00","
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:39:02.350154Z / SHA-256 `d21e507d79e91866ffe5a753d309055ca8ab25b324a8fc0e6795f6d46d93e7d1` / locator `row:988217867/column:frivilligMvaRegistrertBeskrivelser`
+
+Exact excerpt:
+
+```
+rverdiavgiftsregisteretEnhetsregisteret,frivilligMvaRegistrertBeskrivelser,registreringsdatoFrivilligMerverdiavgiftsregisteret,registrertIFrivillighetsregisteret,registreringsdatoFrivillighetsregisteret,registrertIForetaksregisteret,registreringsdatoForetaksregisteret,registrertIStiftelsesregisteret
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/193/organisasjonsnummer`
+
+Exact excerpt:
+
+```
+","oppdateringsid":20251111,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/982987229"}},"dato":"2025-09-12T09:47:09.158Z","endringer":[{"op":"replace","path":"/registreringsdatoAntallAnsatteEnhetsregisteret","value":"2025-0
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988217867&size=1000&page=0 / retrieved 2026-11-14T06:39:04.132414Z / SHA-256 `a136633f16c0f03790dfaf7fe6f76de109af42b05d0cf692f320c4c4b2bda2aa` / locator `/_embedded/underenheter/0/harRegistrertAntallAnsatte`
+
+Exact excerpt:
+
+```
+e":"post@concedo.no","harRegistrertAntallAnsatte":true,"historiskeNavn":[{"fraDato":"2005-06-04 14:39:18","navn":"VIENCO HYDROCARBONS SUBSURFACE AS","tilDato":"2006-07-11 20:07:29"},{"fraDato":"2006-07-11 20:07:29","navn":"CONCEDO AS","tilDato":"2006-12-09 14:45:52"},{"fraDato":"2006-12-09 14:45:52"
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/92/oppdateringsid`
+
+Exact excerpt:
+
+```
+1.995Z","endringstype":"Endring","oppdateringsid":18998251,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/993331325"}},"dato":"2024-07-11T20:31:33.370Z","endringstype":"Endring","oppdateringsid":19002054,"organisasjonsnumme
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/193`
+
+Exact excerpt:
+
+```
+{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/988294888"}},"dato":"2025-09-12T09:46:38.515Z","endringer":[{"op":"replace","path":"/registreringsdatoAntallAnsatteEnhetsregisteret","value":"2025-09-11"},{"op":"replace","path":"/antallAnsatte","value":20},{"op
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/988217867/roller / retrieved 2026-11-14T06:39:06.322752Z / SHA-256 `503dbeda876a9266f8e8964d1ae8b6e37d00ba3700becccd5278e47e072a70b7` / locator `/rollegrupper/3/roller/0/enhet/erSlettet`
+
+Exact excerpt:
+
+```
+tsregisteret/api/enheter/989176013"}},"erSlettet":false,"godkjenningsstatus":"Godkjent regnskapsforetak","navn":["ADMENTO AS"],"organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/AS"}},"beskrivelse":"Aksjeselskap","kode":"AS"},"organisasjonsn
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/689/organisasjonsnummer`
+
+Exact excerpt:
+
+```
+","oppdateringsid":24575795,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/988217867"}},"dato":"2026-06-11T12:25:13.351+02:00","endringer":[{"op":"replace","path":"/vedtektsdato","value":"2026-04-22"}],"endringstype":"Endring","oppda
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/988217867/roller / retrieved 2026-11-14T06:39:06.322752Z / SHA-256 `503dbeda876a9266f8e8964d1ae8b6e37d00ba3700becccd5278e47e072a70b7` / locator `/rollegrupper/1/roller/0/rekkefolge`
+
+Exact excerpt:
+
+```
+vn":"Sanness","fornavn":"Torstein"}},"rekkefolge":0,"type":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/LEDE"}},"beskrivelse":"Styrets leder","kode":"LEDE"}},{"avregistrert":false,"person":{"erDoed":false,"fodselsdato":"1972-03-26","navn":{"etternavn":"Ryde
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/213/endringstype`
+
+Exact excerpt:
+
+```
+o":"2024-10-14T21:51:43.771+02:00","endringstype":"Endring","oppdateringsid":19839153,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/922699836"}},"dato":"2024-10-14T21:52:44.299+02:00","endringstype":"Endring","oppdateringsid":198501
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/719/oppdateringsid`
+
+Exact excerpt:
+
+```
+2025"}],"endringstype":"Endring","oppdateringsid":24770609,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/979993609"}},"dato":"2026-07-04T14:21:03.831+02:00","endringer":[{"op":"replace","path":"/sisteInnsendteAarsregnskap","value":"
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/1/eiendeler/sumVarer`
+
+Exact excerpt:
+
+```
+},"eiendeler":{"goodwill":179980000.00,"sumVarer":99477000.00,"sumFordringer":41330000.00,"sumBankinnskuddOgKontanter":221756000.00,"sumEiendeler":915485000.00,"omloepsmidler":{"sumOmloepsmidler":362563000.00},"anleggsmidler":{"sumAnleggsmidler":552922000.00}},"resultatregnskapResultat":{"ordinaertR
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/736/endringer/0/path`
+
+Exact excerpt:
+
+```
+11.047+02:00","endringer":[{"op":"replace","path":"/registreringsdatoAntallAnsatteEnhetsregisteret","value":"2026-07-15"},{"op":"replace","path":"/antallAnsatte","value":22},{"op":"replace","path":"/registreringsdatoAntallAnsatteNAVAaregisteret","value":"2026-07-10"}],"endringstype":"Endring","oppda
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/248/organisasjonsnummer`
+
+Exact excerpt:
+
+```
+","oppdateringsid":20217225,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/935033381"}},"dato":"2025-02-13T12:25:12.736+01:00","endringstype":"Ny","oppdateringsid":20230893,"organisasjonsnummer":"935033381"},{"_links":{"enhet":{"href
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/aarsregnskap/kopi/988217867/aar / retrieved 2026-11-14T06:39:48.255853Z / SHA-256 `b7bcd20d8a4607bc9ca49fbdfebf5e51cb31e39858edb985dc98a82e8d2b7cd1` / locator `/8`
+
+Exact excerpt:
+
+```
+,"2012","2013","2014","2015","2016","2017","2018","2019","2020","2021","2022","2023","2024","2025"]
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:39:02.350154Z / SHA-256 `d21e507d79e91866ffe5a753d309055ca8ab25b324a8fc0e6795f6d46d93e7d1` / locator `row:988217867/column:navn`
+
+Exact excerpt:
+
+```
+988217867,CONCEDO AS,AS,Aksjeselskap,06.100,Utvinning av råolje,,,,,,,true,19,2026-08-12,2026-08-10,www.concedo.no,post@concedo.no,,91346553,,,,,,,,"c/o Torvgården
+Torvveien 1",ASKER,1383,ASKER,3203,Norge,NO,2100,Private aksjeselskaper mv.,2025,2005-06-02,2005-04-01,true,2005-07-01,2005-07-07,,,fals
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/1/resultatregnskapResultat/driftsresultat/driftskostnad/sumDriftskostnad`
+
+Exact excerpt:
+
+```
+":{"loennskostnad":31516000.00,"sumDriftskostnad":155164000.00}}}},{"id":6884148,"journalnr":"2026530758","regnskapstype":"SELSKAP","virksomhet":{"organisasjonsnummer":"988217867","organisasjonsform":"AS","morselskap":false},"regnskapsperiode":{"fraDato":"2025-01-01","tilDato":"2025-12-31"},"valuta"
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/2/resultatregnskapResultat/finansresultat/finanskostnad/sumFinanskostnad`
+
+Exact excerpt:
+
+```
+":5389000.00},"finanskostnad":{"sumFinanskostnad":51814000.00}},"driftsresultat":{"driftsresultat":-127582000.00,"driftsinntekter":{"salgsinntekter":416240000.00,"sumDriftsinntekter":416240000.00},"driftskostnad":{"loennskostnad":55342000.00,"sumDriftskostnad":543822000.00}}}}]
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/0/eiendeler/sumEiendeler`
+
+Exact excerpt:
+
+```
+kinnskuddOgKontanter":177141967.00,"sumEiendeler":564097527.00,"omloepsmidler":{"sumOmloepsmidler":450625703.00},"anleggsmidler":{"sumAnleggsmidler":113471824.00}},"resultatregnskapResultat":{"ordinaertResultatFoerSkattekostnad":-392785978.00,"ordinaertResultatSkattekostnad":-304346881.00,"aarsresul
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/aarsregnskap/kopi/988217867/aar / retrieved 2026-11-14T06:39:48.255853Z / SHA-256 `b7bcd20d8a4607bc9ca49fbdfebf5e51cb31e39858edb985dc98a82e8d2b7cd1` / locator `/14`
+
+Exact excerpt:
+
+```
+,"2018","2019","2020","2021","2022","2023","2024","2025"]
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/0/egenkapitalGjeld/gjeldOversikt/sumGjeld`
+
+Exact excerpt:
+
+```
+ptial":230974312.00}},"gjeldOversikt":{"sumGjeld":346133297.00,"kortsiktigGjeld":{"sumKortsiktigGjeld":283031412.00},"langsiktigGjeld":{"sumLangsiktigGjeld":63101885.00}}},"eiendeler":{"sumFordringer":273483736.00,"sumBankinnskuddOgKontanter":177141967.00,"sumEiendeler":564097527.00,"omloepsmidler":
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988217867&size=1000&page=0 / retrieved 2026-11-14T06:39:04.132414Z / SHA-256 `a136633f16c0f03790dfaf7fe6f76de109af42b05d0cf692f320c4c4b2bda2aa` / locator `/_embedded/underenheter/0/registrertIMvaregisteret`
+
+Exact excerpt:
+
+```
+gisteret":"2005-06-04","registrertIMvaregisteret":false,"respons_klasse":"Underenhet"},{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/937339372"},"overordnetEnhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/988217867"}},"harRegistrertAntallAnsatte
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/283/dato`
+
+Exact excerpt:
+
+```
+tsregisteret/api/underenheter/988294888"}},"dato":"2026-08-11T22:13:30.125Z","endringer":[{"op":"replace","path":"/registreringsdatoAntallAnsatteEnhetsregisteret","value":"2026-08-11"},{"op":"replace","path":"/antallAnsatte","value":19},{"op":"replace","path":"/registreringsdatoAntallAnsatteNAVAareg
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/1/resultatregnskapResultat/aarsresultat`
+
+Exact excerpt:
+
+```
+sultatSkattekostnad":-119046000.00,"aarsresultat":-40933000.00,"finansresultat":{"nettoFinans":-10279000.00,"finansinntekt":{"sumFinansinntekter":11907000.00},"finanskostnad":{"sumFinanskostnad":22186000.00}},"driftsresultat":{"driftsresultat":-149700000.00,"driftsinntekter":{"salgsinntekter":546400
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:39:02.350154Z / SHA-256 `d21e507d79e91866ffe5a753d309055ca8ab25b324a8fc0e6795f6d46d93e7d1` / locator `row:988217867/column:erIKonsern`
+
+Exact excerpt:
+
+```
+CONCEDO AS,AS,Aksjeselskap,06.100,Utvinning av råolje,,,,,,,true,19,2026-08-12,2026-08-10,www.concedo.no,post@concedo.no,,91346553,,,,,,,,"c/o Torvgården
+Torvveien 1",ASKER,1383,ASKER,3203,Norge,NO,2100,Private aksjeselskaper mv.,2025,2005-06-02,2005-04-01,true,2005-07-01,2005-07-07,,,false,,true,20
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/2/eiendeler/sumBankinnskuddOgKontanter`
+
+Exact excerpt:
+
+```
+ringer":345705000.00,"sumBankinnskuddOgKontanter":76204000.00,"sumEiendeler":1226255000.00,"omloepsmidler":{"sumOmloepsmidler":433277000.00},"anleggsmidler":{"sumAnleggsmidler":792978000.00}},"resultatregnskapResultat":{"ordinaertResultatFoerSkattekostnad":-174007000.00,"ordinaertResultatSkattekostn
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/1/egenkapitalGjeld/egenkapital/opptjentEgenkapital/sumOpptjentEgenkapital`
+
+Exact excerpt:
+
+```
+0,"opptjentEgenkapital":{"sumOpptjentEgenkapital":-53969000.00},"innskuttEgenkapital":{"sumInnskuttEgenkaptial":230974000.00}},"gjeldOversikt":{"sumGjeld":738479000.00,"kortsiktigGjeld":{"sumKortsiktigGjeld":116391000.00},"langsiktigGjeld":{"sumLangsiktigGjeld":622088000.00}}},"eiendeler":{"goodwill
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:39:02.350154Z / SHA-256 `d21e507d79e91866ffe5a753d309055ca8ab25b324a8fc0e6795f6d46d93e7d1` / locator `row:988217867/column:mobil`
+
+Exact excerpt:
+
+```
+ue,19,2026-08-12,2026-08-10,www.concedo.no,post@concedo.no,,91346553,,,,,,,,"c/o Torvgården
+Torvveien 1",ASKER,1383,ASKER,3203,Norge,NO,2100,Private aksjeselskaper mv.,2025,2005-06-02,2005-04-01,true,2005-07-01,2005-07-07,,,false,,true,2005-06-02,false,false,,false,,false,,false,,,,,,,Bokmål,2026-06
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/2/resultatregnskapResultat/driftsresultat/driftskostnad/loennskostnad`
+
+Exact excerpt:
+
+```
+r":416240000.00},"driftskostnad":{"loennskostnad":55342000.00,"sumDriftskostnad":543822000.00}}}}]
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/144/dato`
+
+Exact excerpt:
+
+```
+tsregisteret/api/underenheter/988294888"}},"dato":"2025-02-12T01:13:40.038Z","endringstype":"Endring","oppdateringsid":19649872,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/829036312"}},"dato":"2025-02-12T01:14:10.726Z","
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/758/oppdateringsid`
+
+Exact excerpt:
+
+```
+8-10"}],"endringstype":"Endring","oppdateringsid":25084727,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/919909676"}},"dato":"2026-08-13T20:01:03.577+02:00","endringer":[{"op":"replace","path":"/sisteInnsendteAarsregnskap","value":"
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/129/organisasjonsnummer`
+
+Exact excerpt:
+
+```
+","oppdateringsid":19443018,"organisasjonsnummer":"988294888"},{"_links":{"underenhet":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/928765679"}},"dato":"2024-12-19T23:52:20.165Z","endringstype":"Sletting","oppdateringsid":19474581,"organisasjonsnummer":"928765679"},{"_links":{"un
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/0/resultatregnskapResultat/aarsresultat`
+
+Exact excerpt:
+
+```
+sultatSkattekostnad":-304346881.00,"aarsresultat":-88439097.00,"finansresultat":{"nettoFinans":-2993574.00,"finansinntekt":{"sumFinansinntekter":13357356.00},"finanskostnad":{"annenRentekostnad":11767517.00,"sumFinanskostnad":16350930.00}},"driftsresultat":{"driftsresultat":-389792404.00,"driftsinnt
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/248/dato`
+
+Exact excerpt:
+
+```
+/enhetsregisteret/api/enheter/988217867"}},"dato":"2025-02-13T00:06:06.824+01:00","endringstype":"Endring","oppdateringsid":20217225,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/935033381"}},"dato":"2025-02-13T12:25:12.736+01:00","
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/988217867/roller / retrieved 2026-11-14T06:39:06.322752Z / SHA-256 `503dbeda876a9266f8e8964d1ae8b6e37d00ba3700becccd5278e47e072a70b7` / locator `/rollegrupper/2/roller/0/enhet/godkjenningsstatus`
+
+Exact excerpt:
+
+```
+0211282"}},"erSlettet":false,"godkjenningsstatus":"Godkjent revisjonsforetak","navn":["DELOITTE AS"],"organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/AS"}},"beskrivelse":"Aksjeselskap","kode":"AS"},"organisasjonsnummer":"980211282"},"rekke
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/988217867/roller / retrieved 2026-11-14T06:39:06.322752Z / SHA-256 `503dbeda876a9266f8e8964d1ae8b6e37d00ba3700becccd5278e47e072a70b7` / locator `/rollegrupper/1/roller/1/rekkefolge`
+
+Exact excerpt:
+
+```
+":"Rydell","fornavn":"Jonas Ulrik"}},"rekkefolge":1,"type":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/roller/rolletyper/MEDL"}},"beskrivelse":"Styremedlem","kode":"MEDL"}}],"sistEndret":"2026-06-11","type":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/a
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/0/egenkapitalGjeld/sumEgenkapitalGjeld`
+
+Exact excerpt:
+
+```
+egler"},"egenkapitalGjeld":{"sumEgenkapitalGjeld":564097527.00,"egenkapital":{"sumEgenkapital":217964230.00,"opptjentEgenkapital":{"sumOpptjentEgenkapital":-13010082.00},"innskuttEgenkapital":{"sumInnskuttEgenkaptial":230974312.00}},"gjeldOversikt":{"sumGjeld":346133297.00,"kortsiktigGjeld":{"sumKor
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/449/dato`
+
+Exact excerpt:
+
+```
+/enhetsregisteret/api/enheter/988217867"}},"dato":"2025-09-13T17:20:27.947+02:00","endringer":[{"op":"replace","path":"/registreringsdatoAntallAnsatteEnhetsregisteret","value":"2025-09-13"},{"op":"replace","path":"/antallAnsatte","value":20},{"op":"replace","path":"/registreringsdatoAntallAnsatteNAV
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/0/resultatregnskapResultat/ordinaertResultatFoerSkattekostnad`
+
+Exact excerpt:
+
+```
+apResultat":{"ordinaertResultatFoerSkattekostnad":-392785978.00,"ordinaertResultatSkattekostnad":-304346881.00,"aarsresultat":-88439097.00,"finansresultat":{"nettoFinans":-2993574.00,"finansinntekt":{"sumFinansinntekter":13357356.00},"finanskostnad":{"annenRentekostnad":11767517.00,"sumFinanskostnad
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988217867&size=1000&page=0 / retrieved 2026-11-14T06:39:04.132414Z / SHA-256 `a136633f16c0f03790dfaf7fe6f76de109af42b05d0cf692f320c4c4b2bda2aa` / locator `/_embedded/underenheter/1/registreringsdatoEnhetsregisteret`
+
+Exact excerpt:
+
+```
+ted":"ASKER"},"registreringsdatoEnhetsregisteret":"2026-03-11","registrertIMvaregisteret":false,"respons_klasse":"Underenhet"}]},"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988217867&size=1000&page=0"}},"page":{"number":0,"size":1000,"totalElemen
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/underenheter?organisasjonsnummer=817277012%2C820472292%2C820708172%2C824202362%2C829036312%2C835349942%2C880495852%2C892466912%2C911714159%2C914354862%2C914562139%2C915456154%2C916637519%2C916885458%2C917176418%2C917209561%2C919069147%2C919191465%2C919460237%2C920191851%2C921093403%2C921552815%2C922764735%2C923648755%2C924144041%2C924178884%2C924228407%2C924983396%2C928765679%2C929218841%2C929643984%2C930438332%2C930571504%2C931718207%2C931791168%2C932528703%2C932532751%2C932869438%2C933354849%2C933490505%2C934350391%2C934398378%2C934493044%2C934505654%2C934795865%2C935034191%2C935396034%2C935398568%2C935719518%2C936035884%2C936222749%2C936251625%2C936816517%2C937163320%2C937339372%2C937708378%2C972997870%2C973232002%2C974105322%2C974196867%2C980310728%2C982149029%2C982987229%2C983306756%2C986302719%2C986498125%2C988294888%2C988337900%2C990636672%2C990775338%2C993331325%2C994917692%2C994980831%2C995632616%2C995644711%2C997975642%2C998573807%2C998748003%2C998997356%2C999086616%2C999406483&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:15.279497Z / SHA-256 `4a3177fdfbd94f19bba93d3863a6b1d72316ecb412d08a4f82c4d214b31a864f` / locator `/_embedded/oppdaterteUnderenheter/278/endringer/0/path`
+
+Exact excerpt:
+
+```
+2:11:08.264Z","endringer":[{"op":"replace","path":"/registreringsdatoAntallAnsatteEnhetsregisteret","value":"2026-07-14"},{"op":"replace","path":"/antallAnsatte","value":22},{"op":"replace","path":"/registreringsdatoAntallAnsatteNAVAaregisteret","value":"2026-07-10"}],"endringstype":"Endring","oppda
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/233/organisasjonsnummer`
+
+Exact excerpt:
+
+```
+","oppdateringsid":20075576,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/999630480"}},"dato":"2025-01-15T00:01:16.093+01:00","endringstype":"Endring","oppdateringsid":20115956,"organisasjonsnummer":"999630480"},{"_links":{"enhet":{
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/449/organisasjonsnummer`
+
+Exact excerpt:
+
+```
+","oppdateringsid":22057088,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/922699836"}},"dato":"2025-09-13T17:20:44.718+02:00","endringer":[{"op":"replace","path":"/registreringsdatoAntallAnsatteEnhetsregisteret","value":"2025-09-13"
+```
+
+Source: https://data.brreg.no/regnskapsregisteret/regnskap/988217867 / retrieved 2026-11-14T06:39:07.644083Z / SHA-256 `2ccb8188514e24c3f9b8d5c31bfbca0d17d4d4f29f7a932c376e99f42aa19402` / locator `/0/eiendeler/sumFordringer`
+
+Exact excerpt:
+
+```
+jeld":63101885.00}}},"eiendeler":{"sumFordringer":273483736.00,"sumBankinnskuddOgKontanter":177141967.00,"sumEiendeler":564097527.00,"omloepsmidler":{"sumOmloepsmidler":450625703.00},"anleggsmidler":{"sumAnleggsmidler":113471824.00}},"resultatregnskapResultat":{"ordinaertResultatFoerSkattekostnad":-
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988217867&size=1000&page=0 / retrieved 2026-11-14T06:39:04.132414Z / SHA-256 `a136633f16c0f03790dfaf7fe6f76de109af42b05d0cf692f320c4c4b2bda2aa` / locator `/_embedded/underenheter/1/oppstartsdato`
+
+Exact excerpt:
+
+```
+.100"},"navn":"CONCEDO AS PL1292","oppstartsdato":"2026-03-01","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og offentlig forvaltning","kode":"BEDR"},"organisasjonsnummer":"937339372
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/107/oppdateringsid`
+
+Exact excerpt:
+
+```
++02:00","endringstype":"Endring","oppdateringsid":19130618,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/917438986"}},"dato":"2024-05-25T15:05:39.915+02:00","endringstype":"Endring","oppdateringsid":19134123,"organisasjonsnummer":"9
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=988217867&size=1000&page=0 / retrieved 2026-11-14T06:39:04.132414Z / SHA-256 `a136633f16c0f03790dfaf7fe6f76de109af42b05d0cf692f320c4c4b2bda2aa` / locator `/_embedded/underenheter/1/naeringskode1`
+
+Exact excerpt:
+
+```
+nsatte":false,"historiskeNavn":[],"naeringskode1":{"beskrivelse":"Utvinning av råolje","kode":"06.100"},"navn":"CONCEDO AS PL1292","oppstartsdato":"2026-03-01","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underen
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/163/endringstype`
+
+Exact excerpt:
+
+```
+o":"2024-07-13T15:13:26.013+02:00","endringstype":"Endring","oppdateringsid":19455590,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/921441835"}},"dato":"2024-07-13T15:13:35.278+02:00","endringstype":"Endring","oppdateringsid":194575
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=827012122%2C827869082%2C889320222%2C892442762%2C911697688%2C914556139%2C915324258%2C915448666%2C915682448%2C916522770%2C916580371%2C917071209%2C917124426%2C917148627%2C917208417%2C917222975%2C917438986%2C917468788%2C918842527%2C918912746%2C919002271%2C919083603%2C919301538%2C919370424%2C919909676%2C920629148%2C920951783%2C921441835%2C921483597%2C921764766%2C922337195%2C922590117%2C922699836%2C924379197%2C924691379%2C925246883%2C925719641%2C927123851%2C927572338%2C927636166%2C928603229%2C928723240%2C928746828%2C928978575%2C929032861%2C929209850%2C929545338%2C929674006%2C930309664%2C930517259%2C930644382%2C931694995%2C931717472%2C931788698%2C931891022%2C932156016%2C932522209%2C932527197%2C933252353%2C933368947%2C934216466%2C934358945%2C934490835%2C934609085%2C934903463%2C934920651%2C935033381%2C935341205%2C935352398%2C936011896%2C936187854%2C936195296%2C936874495%2C948783118%2C956960673%2C958507739%2C975590291%2C979814666%2C979993609%2C980584224%2C981304772%2C981500253%2C984360312%2C985216630%2C986128662%2C986250875%2C986464492%2C988217867%2C988330116%2C989244779%2C990455341%2C990623376%2C994808540%2C994882597%2C995636468%2C997963903%2C998081831%2C998543118%2C998989493%2C999630480&dato=2023-11-14T06%3A39%3A02.256Z&updatedBefore=2026-11-14T06%3A39%3A02.256Z&includeChanges=true&size=1000&sort=id%2CASC&page=0 / retrieved 2026-11-14T06:43:14.331278Z / SHA-256 `daad271b170806614b0c7ca1023c822b7ade46916d99d69df27c725cdda4c09e` / locator `/_embedded/oppdaterteEnheter/99/endringstype`
+
+Exact excerpt:
+
+```
+o":"2024-05-14T21:43:04.158+02:00","endringstype":"Endring","oppdateringsid":19097401,"organisasjonsnummer":"988217867"},{"_links":{"enhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/921441835"}},"dato":"2024-05-14T21:43:12.050+02:00","endringstype":"Endring","oppdateringsid":190990
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:39:02.350154Z / SHA-256 `d21e507d79e91866ffe5a753d309055ca8ab25b324a8fc0e6795f6d46d93e7d1` / locator `row:988217867/column:navn`
+
+Exact excerpt:
+
+```
+988217867,CONCEDO AS,AS,Aksjeselskap,06.100,Utvinning av råolje,,,,,,,true,19,2026-08-12,2026-08-10,www.concedo.no,post@concedo.no,,91346553,,,,,,,,"c/o Torvgården
+Torvveien 1",ASKER,1383,ASKER,3203,Norge,NO,2100,Private aksjeselskaper mv.,2025,2005-06-02,2005-04-01,true,2005-07-01,2005-07-07,,,fals
+```
+
+## X4 / 20261114 / added / 889320222 / SCANDINAVIAN NAILS BY ABAMEME AS
+
+Type: brand; identity: Scandinavian nails by abameme; saved-evidence verdict: correct.
+
+```json
+"Scandinavian nails by abameme"
+```
+
+Source: https://www.abameme.com/ / retrieved 2026-11-14T06:42:07.182760Z / SHA-256 `61643a356f54c79308ae49dad774c70ba0b87f6a46ecfc7e671138a85e33b3fb` / locator `publisher-public-name`
+
+Exact excerpt:
+
+```
+ledesignerskole og neglesalong i Oslo | Scandinavian nails by abameme</title>
+<meta name="description" content="Tynne, sterke kunstnegler med naturlig utseende – skånsomme mot naturneglen.">
+<meta name="author" content="Arild Røyne">
+<meta name="viewport" content="width=device-width, initial-scale=1
+```
+
+Source: https://www.abameme.com/ / retrieved 2026-11-14T06:42:07.182760Z / SHA-256 `61643a356f54c79308ae49dad774c70ba0b87f6a46ecfc7e671138a85e33b3fb` / locator `identity-proof:889320222`
+
+Exact excerpt:
+
+```
+a">&nbsp;</span>Organisasjonsnummer: NO 889 320 222 MVA </p>
+	<div>&nbsp;</div>
+</footer>
+	</body>
+</html>
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T06:39:02.296716Z / SHA-256 `ad5ecfa28efcc10e6a5470f2a574ed17551a0046ac2de509e86224f03717d389` / locator `row:889320222/column:navn`
+
+Exact excerpt:
+
+```
+889320222,SCANDINAVIAN NAILS BY ABAMEME AS,AS,Aksjeselskap,96.220,Skjønnhetspleie,,,,,,,true,,2006-04-03,2006-02-21,www.abameme.com,info@abameme.com,22 33 33 89,,,,,,,,,Prinsens gate 2,OSLO,0152,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2006-02-08,2006-01-03,true,2006-01-01,2006-04-05,
+```
+
+## X4 / 20261115 / added / 926705261 / LEV AKTIVT AS
+
+Type: brand; identity: Lev Aktivt; saved-evidence verdict: correct.
+
+```json
+"Lev Aktivt"
+```
+
+Source: https://levaktivt.no/ / retrieved 2026-11-14T07:03:41.034162Z / SHA-256 `40329f9e97ab101470abef043e6d3d7b5ec983c69d2f475c9edfd5d7185aaafd` / locator `publisher-public-name`
+
+Exact excerpt:
+
+```
+s://levaktivt.no/xmlrpc.php" />
+	<title>Lev Aktivt &#8211; Ta vare på deg selv</title>
+<meta name='robots' content='max-image-preview:large' />
+<link rel="alternate" type="application/rss+xml" title="Lev Aktivt &raquo; strøm" href="https://levaktivt.no/feed/" />
+<link rel="alternate" type="applicati
+```
+
+Source: https://levaktivt.no/ / retrieved 2026-11-14T07:03:41.034162Z / SHA-256 `40329f9e97ab101470abef043e6d3d7b5ec983c69d2f475c9edfd5d7185aaafd` / locator `identity-proof:926705261`
+
+Exact excerpt:
+
+```
+19" data-end="155">Organisasjonsnummer: 926 705 261</strong></p><p data-start="159" data-end="287">Denne personvernerklæringen gir informasjon om hvor
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T07:00:05.634597Z / SHA-256 `15b80192aa51e0961cbc3a670cc67448e180ed533880048d77d19bd2f6dbc5b0` / locator `row:926705261/column:navn`
+
+Exact excerpt:
+
+```
+926705261,LEV AKTIVT AS,AS,Aksjeselskap,62.100,Dataprogrammeringstjenester,,,,,,,false,,,,,,,,,,,,,,,Gårdsveien 4A,SANDEFJORD,3230,SANDEFJORD,3907,Norge,NO,2100,Private aksjeselskaper mv.,2025,2021-03-30,2020-12-28,false,,,,,false,,true,2021-03-30,false,false,,false,,true,2026-09-02,false,,,,,,,Bokm
+```
+
+## X4 / 20261115 / added / 928882624 / TRAVL AS
+
+Type: brand; identity: Travl; saved-evidence verdict: correct.
+
+```json
+"Travl"
+```
+
+Source: https://travl.no/en/privacy / retrieved 2026-11-14T07:02:09.245207Z / SHA-256 `c722bc1fdd01baf42649b4c60be24800d52df2154071add469945971aa82e8ec` / locator `publisher-public-name`
+
+Exact excerpt:
+
+```
+tent="#000000"/><title>Privacy Policy — Travl</title><meta name="description" content="Where travel meets AI."/><meta name="application-name" content="Travl"/><meta property="og:title" content="Privacy Policy — Travl"/><meta property="og:description" content="Where travel meets AI."/><meta property=
+```
+
+Source: https://travl.no/en/privacy / retrieved 2026-11-14T07:02:09.245207Z / SHA-256 `c722bc1fdd01baf42649b4c60be24800d52df2154071add469945971aa82e8ec` / locator `identity-proof:928882624`
+
+Exact excerpt:
+
+```
+le</h2><p>TRAVL AS (organisation number 928 882 624, Storgata 117, 3182 Horten, Norway) is the data controller for the personal data Travl processes. 
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T07:00:05.639597Z / SHA-256 `267d2dad5da807f042c626a9a97b798508886a850491dbe441224b122b6c2483` / locator `row:928882624/column:navn`
+
+Exact excerpt:
+
+```
+928882624,TRAVL AS,AS,Aksjeselskap,62.100,Dataprogrammeringstjenester,,,,,,,true,,2024-11-16,2024-11-10,,,,,,,,,,,,Storgata 117,HORTEN,3182,HORTEN,3901,Norge,NO,2100,Private aksjeselskaper mv.,2025,2022-03-07,2022-01-17,true,2022-08-13,2022-08-15,,,false,,true,2022-03-07,false,false,,false,,false,,f
+```
+
+## X4 / 20261115 / added / 932849429 / JAASTAD SIDERI AS
+
+Type: brand; identity: JAASTAD Sideri; saved-evidence verdict: correct.
+
+```json
+"JAASTAD Sideri"
+```
+
+Source: https://www.jaastadsideri.no/ / retrieved 2026-11-14T07:02:54.350177Z / SHA-256 `590e0761197ec34bdb6f6a51dae535e49579dfb29923c1c64895b22b969239ab` / locator `publisher-public-name`
+
+Exact excerpt:
+
+```
+ref="">
+<meta charset="utf-8" />
+<title>JAASTAD Sideri</title>
+<meta http-equiv="Accept-CH" content="Sec-CH-UA-Platform-Version, Sec-CH-UA-Model" /><link rel="icon" type="image/x-icon" media="(prefers-color-scheme: light)" href="https://images.squarespace-cdn.com/content/v1/661649e3d2940d02173756a3/
+```
+
+Source: https://www.jaastadsideri.no/ / retrieved 2026-11-14T07:02:54.350177Z / SHA-256 `590e0761197ec34bdb6f6a51dae535e49579dfb29923c1c64895b22b969239ab` / locator `identity-proof:932849429`
+
+Exact excerpt:
+
+```
+" style="white-space:pre-wrap;">Org.nr: 932 849 429</p></div>
+
+
+  
+<style id="container-styles">#block-aea1cdc2ac29526ff6f0 {
+    
+    --stroke-style:
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T07:00:05.644019Z / SHA-256 `5efb4e6a040fb875f513a6c57d17169002f27860c3bcb2471a9bf575496999cd` / locator `row:932849429/column:navn`
+
+Exact excerpt:
+
+```
+932849429,JAASTAD SIDERI AS,AS,Aksjeselskap,11.030,Produksjon av sider og andre gjærede fruktdrikker,,,,,,,false,,,,,,,,,,,,,,,Gamlevegen 46,GRIMO,5777,ULLENSVANG,4618,Norge,NO,2100,Private aksjeselskaper mv.,2025,2024-01-18,2024-01-05,true,2024-06-14,2024-07-09,,,false,,true,2024-01-18,false,false,
+```
+
+## X4 / 20261115 / added / 991126627 / ESPIRA DVERGSNES AS
+
+Type: brand; identity: ESPIRA DVERGSNES BARNEHAGE; saved-evidence verdict: correct.
+
+```json
+{
+  "name": "ESPIRA DVERGSNES BARNEHAGE",
+  "origin": "registered_subunit",
+  "subunit_orgnr": "991190880"
+}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=991126627&size=1000&page=0 / retrieved 2026-11-14T07:00:07.845543Z / SHA-256 `45f6c00b3e0a09787e8b1f6dad32605b68d00db5055ecad9bbac0b460b3a79a6` / locator `/_embedded/underenheter/0/navn`
+
+Exact excerpt:
+
+```
+g og drift av barnehager","kode":"85.100"},"navn":"ESPIRA DVERGSNES BARNEHAGE","oppstartsdato":"2007-04-26","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og offentlig forvaltning","k
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=991126627&size=1000&page=0 / retrieved 2026-11-14T07:00:07.845543Z / SHA-256 `45f6c00b3e0a09787e8b1f6dad32605b68d00db5055ecad9bbac0b460b3a79a6` / locator `/_embedded/underenheter/0`
+
+Exact excerpt:
+
+```
+{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/991190880"},"overordnetEnhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/991126627"}},"antallAnsatte":38,"beliggenhetsadresse":{"adresse":["Valsvigveien 11"],"kommune":"KRISTIANSAND","kommunenummer":"
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T07:00:05.662020Z / SHA-256 `0cb5ae681295d1c3c0f2b35a39fa3b94e21e10cfcf4901febae71901c2559830` / locator `row:991126627/column:navn`
+
+Exact excerpt:
+
+```
+991126627,ESPIRA DVERGSNES AS,AS,Aksjeselskap,85.100,Førskoleundervisning og drift av barnehager,,,,,,,true,35,2026-09-14,2026-09-10,www.espira.no,post@espira.no,52 84 50 20,,Postboks 353,KOPERVIK,4291,KARMØY,1149,Norge,NO,Helganesvegen 47,AVALDSNES,4262,KARMØY,1149,Norge,NO,2100,Private aksjeselska
+```
+
+## X4 / 20261115 / added / 935794242 / BUSSIN AS
+
+Type: brand; identity: BUSSIN MARKEDSFØRINGSBYRÅ AS; saved-evidence verdict: correct.
+
+```json
+{
+  "name": "BUSSIN MARKEDSFØRINGSBYRÅ AS",
+  "origin": "registered_subunit",
+  "subunit_orgnr": "836188942"
+}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=935794242&size=1000&page=0 / retrieved 2026-11-14T07:00:08.147827Z / SHA-256 `b1138b6b556962aed89f5bdc7c9ad14f34d7c80cd872235237b98322dbbce263` / locator `/_embedded/underenheter/0/navn`
+
+Exact excerpt:
+
+```
+":"Reklamebyråvirksomhet","kode":"73.110"},"navn":"BUSSIN MARKEDSFØRINGSBYRÅ AS","oppstartsdato":"2025-06-20","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og offentlig forvaltning",
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=935794242&size=1000&page=0 / retrieved 2026-11-14T07:00:08.147827Z / SHA-256 `b1138b6b556962aed89f5bdc7c9ad14f34d7c80cd872235237b98322dbbce263` / locator `/_embedded/underenheter/0`
+
+Exact excerpt:
+
+```
+{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/836188942"},"overordnetEnhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/935794242"}},"beliggenhetsadresse":{"adresse":["Vetlandsveien 63B"],"kommune":"OSLO","kommunenummer":"0301","land":"Norge","lan
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T07:00:05.648020Z / SHA-256 `3310e96317bab78620d81b47eacd3bd6f90d23312b0a84a5db69ccacb21bdd5e` / locator `row:935794242/column:navn`
+
+Exact excerpt:
+
+```
+935794242,BUSSIN AS,AS,Aksjeselskap,73.110,Reklamebyråvirksomhet,,,,,,,false,,,,www.bussin.no,post@bussin.no,,,Postboks 155 Sentrum,OSLO,0102,OSLO,0301,Norge,NO,Vetlandsveien 63B,OSLO,0685,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2025-07-02,2025-06-20,false,,,,,false,,true,2025-07-02,
+```
+
+## X4 / 20261115 / added / 926705261 / LEV AKTIVT AS
+
+Type: brand; identity: JOGGESKO MED PELS AS; saved-evidence verdict: correct.
+
+```json
+{
+  "name": "JOGGESKO MED PELS AS",
+  "origin": "registered_subunit",
+  "subunit_orgnr": "938826846"
+}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=926705261&size=1000&page=0 / retrieved 2026-11-14T07:00:09.662586Z / SHA-256 `f92816084ad609858b26208a290a4b1972c8de903a68f455c05550b0440194a3` / locator `/_embedded/underenheter/0/navn`
+
+Exact excerpt:
+
+```
+ kommunikasjonstjenester","kode":"73.300"},"navn":"JOGGESKO MED PELS AS","oppstartsdato":"2026-10-09","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og offentlig forvaltning","kode":"
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=926705261&size=1000&page=0 / retrieved 2026-11-14T07:00:09.662586Z / SHA-256 `f92816084ad609858b26208a290a4b1972c8de903a68f455c05550b0440194a3` / locator `/_embedded/underenheter/0`
+
+Exact excerpt:
+
+```
+{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/938826846"},"overordnetEnhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/926705261"}},"beliggenhetsadresse":{"adresse":["Gårdsveien 4A"],"kommune":"SANDEFJORD","kommunenummer":"3907","land":"Norge","l
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T07:00:05.634597Z / SHA-256 `15b80192aa51e0961cbc3a670cc67448e180ed533880048d77d19bd2f6dbc5b0` / locator `row:926705261/column:navn`
+
+Exact excerpt:
+
+```
+926705261,LEV AKTIVT AS,AS,Aksjeselskap,62.100,Dataprogrammeringstjenester,,,,,,,false,,,,,,,,,,,,,,,Gårdsveien 4A,SANDEFJORD,3230,SANDEFJORD,3907,Norge,NO,2100,Private aksjeselskaper mv.,2025,2021-03-30,2020-12-28,false,,,,,false,,true,2021-03-30,false,false,,false,,true,2026-09-02,false,,,,,,,Bokm
+```
+
+## X4 / 20261115 / removed / 933519708 / LOOPYTY AS
+
+Type: website; identity: https://loopyty.com; saved-evidence verdict: correct.
+
+```json
+{
+  "final_url": "https://loopyty.com",
+  "identity_level": "VERIFIED",
+  "proof_type": "orgnr_on_page",
+  "proof_page_url": "https://loopyty.com/nb",
+  "signals": [],
+  "points": 0,
+  "candidate_origin": "legal_name_slug",
+  "relationship_note": null,
+  "other_orgnrs": []
+}
+```
+
+Source: https://loopyty.com/nb / retrieved 2026-11-14T05:29:51.084623Z / SHA-256 `4915bf8556d3bfed8b94f52960438f14ca16c3434a0f319f8571fe4508942dd4` / locator `identity-proof:933519708`
+
+Exact excerpt:
+
+```
+mui-ln603f">© 2026 Loopyty AS · Org.nr. 933 519 708 · Oslo</p></div></div></footer></div></div></div></div><script src="/_next/static/chunks/0w05wc0hf
+```
+
+## X4 / 20261116 / added / 987401729 / LS HOLST - NK LARSENS BUREAU KULTURELL REISEVIRKSOMHET AS
+
+Type: brand; identity: NILS KRISTER LARSEN REISELEDEROPPDRAG AS; saved-evidence verdict: correct.
+
+```json
+{
+  "name": "NILS KRISTER LARSEN REISELEDEROPPDRAG AS",
+  "origin": "registered_subunit",
+  "subunit_orgnr": "987538007"
+}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=987401729&size=1000&page=0 / retrieved 2026-11-14T07:06:52.926653Z / SHA-256 `a8b29db0f9c88d656c1d3493385873159a6d4f1e4c9d2ff027bdef99ac4c2833` / locator `/_embedded/underenheter/0/navn`
+
+Exact excerpt:
+
+```
+rrangørvirksomhet ellers","kode":"79.122"},"navn":"NILS KRISTER LARSEN REISELEDEROPPDRAG AS","oppstartsdato":"2004-10-14","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og offentlig f
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=987401729&size=1000&page=0 / retrieved 2026-11-14T07:06:52.926653Z / SHA-256 `a8b29db0f9c88d656c1d3493385873159a6d4f1e4c9d2ff027bdef99ac4c2833` / locator `/_embedded/underenheter/0`
+
+Exact excerpt:
+
+```
+{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/987538007"},"overordnetEnhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/987401729"}},"beliggenhetsadresse":{"adresse":["Halsnesvegen 1577"],"kommune":"AURE","kommunenummer":"1576","land":"Norge","lan
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T07:06:51.744328Z / SHA-256 `999894842abcab355fe980fc9683d0b08aeea7f4fc03e63dcd06e31769937940` / locator `row:987401729/column:navn`
+
+Exact excerpt:
+
+```
+987401729,LS HOLST - NK LARSENS BUREAU KULTURELL REISEVIRKSOMHET AS,AS,Aksjeselskap,79.122,Reisearrangørvirksomhet ellers,,,,,,,true,,2026-05-12,2026-05-10,www.nklarsen.no,nils@nklarsen.no,71 52 13 45,92250345,Jernbanegata 14,KONGSVINGER,2211,KONGSVINGER,3401,Norge,NO,Halsnesvegen 1577,TUSTNA,6590,A
+```
+
+## X4 / 20261116 / added / 983803075 / MELTWATER NEWS AS
+
+Type: brand; identity: MELTWATER NEWS AS AVD OSLO SUPPORT; saved-evidence verdict: correct.
+
+```json
+{
+  "name": "MELTWATER NEWS AS AVD OSLO SUPPORT",
+  "origin": "registered_subunit",
+  "subunit_orgnr": "986920951"
+}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=983803075&size=1000&page=0 / retrieved 2026-11-14T07:06:54.761421Z / SHA-256 `01239d19797c3db127ae14ca2f2acb32d4240d3e55743bbe3f54bfecf1731f42` / locator `/_embedded/underenheter/1/navn`
+
+Exact excerpt:
+
+```
+aprogrammeringstjenester","kode":"62.100"},"navn":"MELTWATER NEWS AS AVD OSLO SUPPORT","oppstartsdato":"2004-04-27","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og offentlig forvalt
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=983803075&size=1000&page=0 / retrieved 2026-11-14T07:06:54.761421Z / SHA-256 `01239d19797c3db127ae14ca2f2acb32d4240d3e55743bbe3f54bfecf1731f42` / locator `/_embedded/underenheter/1`
+
+Exact excerpt:
+
+```
+{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/986920951"},"overordnetEnhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/983803075"}},"beliggenhetsadresse":{"adresse":["Bryggegata 9"],"kommune":"OSLO","kommunenummer":"0301","land":"Norge","landkode
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T07:06:51.741328Z / SHA-256 `680d76d98bd52ec4384bd2e210d633d049c81cd91683dfc2b0c9aaa3ae595b9e` / locator `row:983803075/column:navn`
+
+Exact excerpt:
+
+```
+983803075,MELTWATER NEWS AS,AS,Aksjeselskap,63.920,Andre informasjonstjenester,62.100,Dataprogrammeringstjenester,,,,,true,,2026-09-14,2026-09-10,www.meltwater.com,martin.hansen@meltwater.com,21 42 04 00,93247538,,,,,,,,Nedre Vollgate 3,OSLO,0158,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,20
+```
+
+## X4 / 20261116 / added / 945103663 / BJØRNAR BRØNDBO AS
+
+Type: brand; identity: BRØNDBO BJØRNAR AS; saved-evidence verdict: correct.
+
+```json
+{
+  "name": "BRØNDBO BJØRNAR AS",
+  "origin": "registered_subunit",
+  "subunit_orgnr": "971997214"
+}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=945103663&size=1000&page=0 / retrieved 2026-11-14T07:06:54.270289Z / SHA-256 `370e99353b6c16619446e567a321c6c2b20092d2f1244e26b166d67d2201c3e6` / locator `/_embedded/underenheter/0/navn`
+
+Exact excerpt:
+
+```
+e":"Godstransport på vei","kode":"49.410"},"navn":"BRØNDBO BJØRNAR AS","oppstartsdato":"1983-10-10","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og offentlig forvaltning","kode":"BE
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=945103663&size=1000&page=0 / retrieved 2026-11-14T07:06:54.270289Z / SHA-256 `370e99353b6c16619446e567a321c6c2b20092d2f1244e26b166d67d2201c3e6` / locator `/_embedded/underenheter/0`
+
+Exact excerpt:
+
+```
+{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/971997214"},"overordnetEnhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/945103663"}},"beliggenhetsadresse":{"adresse":["Abelværvegen 1749B"],"kommune":"NÆRØYSUND","kommunenummer":"5060","land":"Norge
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T07:06:51.733171Z / SHA-256 `bedf1af1b816da5241cfbfb24bdfee17fb335c18a22baf9e4eadc92cc1cfcbf4` / locator `row:945103663/column:navn`
+
+Exact excerpt:
+
+```
+945103663,BJØRNAR BRØNDBO AS,AS,Aksjeselskap,49.410,Godstransport på vei,,,,,,,true,,2018-09-12,2018-09-10,,brondbo@online.no,74 27 61 20,91171300,,,,,,,,Abelværvegen 1749B,ABELVÆR,7950,NÆRØYSUND,5060,Norge,NO,2100,Private aksjeselskaper mv.,2025,1995-02-19,1987-07-01,true,1987-09-01,1995-02-19,Utle
+```
+
+## X4 / 20261116 / added / 983803075 / MELTWATER NEWS AS
+
+Type: brand; identity: MELTWATER NEWS AS AVD OSLO; saved-evidence verdict: correct.
+
+```json
+{
+  "name": "MELTWATER NEWS AS AVD OSLO",
+  "origin": "registered_subunit",
+  "subunit_orgnr": "986640495"
+}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=983803075&size=1000&page=0 / retrieved 2026-11-14T07:06:54.761421Z / SHA-256 `01239d19797c3db127ae14ca2f2acb32d4240d3e55743bbe3f54bfecf1731f42` / locator `/_embedded/underenheter/0/navn`
+
+Exact excerpt:
+
+```
+re informasjonstjenester","kode":"63.920"},"navn":"MELTWATER NEWS AS AVD OSLO","oppstartsdato":"2004-02-05","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og offentlig forvaltning","k
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=983803075&size=1000&page=0 / retrieved 2026-11-14T07:06:54.761421Z / SHA-256 `01239d19797c3db127ae14ca2f2acb32d4240d3e55743bbe3f54bfecf1731f42` / locator `/_embedded/underenheter/0`
+
+Exact excerpt:
+
+```
+{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/986640495"},"overordnetEnhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/983803075"}},"beliggenhetsadresse":{"adresse":["Nedre Vollgate 3"],"kommune":"OSLO","kommunenummer":"0301","land":"Norge","land
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T07:06:51.741328Z / SHA-256 `680d76d98bd52ec4384bd2e210d633d049c81cd91683dfc2b0c9aaa3ae595b9e` / locator `row:983803075/column:navn`
+
+Exact excerpt:
+
+```
+983803075,MELTWATER NEWS AS,AS,Aksjeselskap,63.920,Andre informasjonstjenester,62.100,Dataprogrammeringstjenester,,,,,true,,2026-09-14,2026-09-10,www.meltwater.com,martin.hansen@meltwater.com,21 42 04 00,93247538,,,,,,,,Nedre Vollgate 3,OSLO,0158,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,20
+```
+
+## X4 / 20261116 / added / 983089887 / MELDAL MILJØANLEGG AS
+
+Type: brand; identity: MELDAL MILJØANLEGG AS AVD MELHUS; saved-evidence verdict: correct.
+
+```json
+{
+  "name": "MELDAL MILJØANLEGG AS AVD MELHUS",
+  "origin": "registered_subunit",
+  "subunit_orgnr": "826316802"
+}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=983089887&size=1000&page=0 / retrieved 2026-11-14T07:06:55.194826Z / SHA-256 `1be3fe017075ebc167fda14af4ca10460b07c1658e0a2aee5c6d3e9c308f14f2` / locator `/_embedded/underenheter/1/navn`
+
+Exact excerpt:
+
+```
+manent lagring av avfall","kode":"38.320"},"navn":"MELDAL MILJØANLEGG AS AVD MELHUS","oppstartsdato":"2021-01-01","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og offentlig forvaltni
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=983089887&size=1000&page=0 / retrieved 2026-11-14T07:06:55.194826Z / SHA-256 `1be3fe017075ebc167fda14af4ca10460b07c1658e0a2aee5c6d3e9c308f14f2` / locator `/_embedded/underenheter/1`
+
+Exact excerpt:
+
+```
+{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/826316802"},"overordnetEnhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/983089887"}},"beliggenhetsadresse":{"adresse":["Hofstadvegen 98"],"kommune":"MELHUS","kommunenummer":"5028","land":"Norge","lan
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T07:06:51.740327Z / SHA-256 `f7767a3d5c7c1d0e28d4b445d77fe67a83b0b4b4832da8d8e744ae451ab9ee9b` / locator `row:983089887/column:navn`
+
+Exact excerpt:
+
+```
+983089887,MELDAL MILJØANLEGG AS,AS,Aksjeselskap,38.320,Drift av deponi og permanent lagring av avfall,,,,,,,false,,,,,,72 48 37 00,476 07 215,Postboks 94,ORKANGER,7301,ORKLAND,5059,Norge,NO,,MELDAL,7336,ORKLAND,5059,Norge,NO,1520,Kommunalt eide aksjeselskaper mv.,2025,2001-03-09,2001-01-22,true,2001
+```
+
+## X4 / 20261116 / added / 983089887 / MELDAL MILJØANLEGG AS
+
+Type: brand; identity: MELDAL MILJØANLEGG AS AVD MELDAL; saved-evidence verdict: correct.
+
+```json
+{
+  "name": "MELDAL MILJØANLEGG AS AVD MELDAL",
+  "origin": "registered_subunit",
+  "subunit_orgnr": "983105378"
+}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=983089887&size=1000&page=0 / retrieved 2026-11-14T07:06:55.194826Z / SHA-256 `1be3fe017075ebc167fda14af4ca10460b07c1658e0a2aee5c6d3e9c308f14f2` / locator `/_embedded/underenheter/0/navn`
+
+Exact excerpt:
+
+```
+manent lagring av avfall","kode":"38.320"},"navn":"MELDAL MILJØANLEGG AS AVD MELDAL","oppstartsdato":"2001-01-22","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og offentlig forvaltni
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=983089887&size=1000&page=0 / retrieved 2026-11-14T07:06:55.194826Z / SHA-256 `1be3fe017075ebc167fda14af4ca10460b07c1658e0a2aee5c6d3e9c308f14f2` / locator `/_embedded/underenheter/0`
+
+Exact excerpt:
+
+```
+{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/983105378"},"overordnetEnhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/983089887"}},"beliggenhetsadresse":{"adresse":[],"kommune":"ORKLAND","kommunenummer":"5059","land":"Norge","landkode":"NO","pos
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T07:06:51.740327Z / SHA-256 `f7767a3d5c7c1d0e28d4b445d77fe67a83b0b4b4832da8d8e744ae451ab9ee9b` / locator `row:983089887/column:navn`
+
+Exact excerpt:
+
+```
+983089887,MELDAL MILJØANLEGG AS,AS,Aksjeselskap,38.320,Drift av deponi og permanent lagring av avfall,,,,,,,false,,,,,,72 48 37 00,476 07 215,Postboks 94,ORKANGER,7301,ORKLAND,5059,Norge,NO,,MELDAL,7336,ORKLAND,5059,Norge,NO,1520,Kommunalt eide aksjeselskaper mv.,2025,2001-03-09,2001-01-22,true,2001
+```
+
+## X4 / 20261116 / added / 815714512 / CARDINOR AS
+
+Type: brand; identity: CARDINOR AS AVD OSLO; saved-evidence verdict: correct.
+
+```json
+{
+  "name": "CARDINOR AS AVD OSLO",
+  "origin": "registered_subunit",
+  "subunit_orgnr": "915735088"
+}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=815714512&size=1000&page=0 / retrieved 2026-11-14T07:06:53.837240Z / SHA-256 `8ad5dde749c761dfb079509b6e6fdce1fcd03d58d46783e71d50e9a8aa0a5b71` / locator `/_embedded/underenheter/1/navn`
+
+Exact excerpt:
+
+```
+nisk konsulentvirksomhet","kode":"71.129"},"navn":"CARDINOR AS AVD OSLO","oppstartsdato":"2015-06-25","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og offentlig forvaltning","kode":"
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=815714512&size=1000&page=0 / retrieved 2026-11-14T07:06:53.837240Z / SHA-256 `8ad5dde749c761dfb079509b6e6fdce1fcd03d58d46783e71d50e9a8aa0a5b71` / locator `/_embedded/underenheter/1`
+
+Exact excerpt:
+
+```
+{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/915735088"},"overordnetEnhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/815714512"}},"antallAnsatte":5,"beliggenhetsadresse":{"adresse":["Lørenveien 73A"],"kommune":"OSLO","kommunenummer":"0301","lan
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T07:06:51.697407Z / SHA-256 `e0ae7ec1d619a31685246dfbdb0fe45eec2d71077671b608c4a715eea9c64c8b` / locator `row:815714512/column:navn`
+
+Exact excerpt:
+
+```
+815714512,CARDINOR AS,AS,Aksjeselskap,71.129,Annen teknisk konsulentvirksomhet,72.100,Forskning og eksperimentell utvikling innenfor naturvitenskap og teknikk,,,,,true,,2026-03-12,2026-03-10,www.cardinor.com,,,,,,,,,,,Lørenveien 73A,OSLO,0585,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2
+```
+
+## X4 / 20261116 / added / 930453692 / SKIERS LODGE HEMSEDAL AS
+
+Type: brand; identity: HEMSEDAL CAFE SKIERSLODGE; saved-evidence verdict: correct.
+
+```json
+{
+  "name": "HEMSEDAL CAFE SKIERSLODGE",
+  "origin": "registered_subunit",
+  "subunit_orgnr": "972758175"
+}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=930453692&size=1000&page=0 / retrieved 2026-11-14T07:06:54.282613Z / SHA-256 `b3bddc936d9b62fb5d88fd22c3586361540d78a2e418050804e4ae54b7e6b57b` / locator `/_embedded/underenheter/0/navn`
+
+Exact excerpt:
+
+```
+hjem og ferieleiligheter","kode":"55.200"},"navn":"HEMSEDAL CAFE SKIERSLODGE","oppstartsdato":"1989-01-01","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og offentlig forvaltning","ko
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=930453692&size=1000&page=0 / retrieved 2026-11-14T07:06:54.282613Z / SHA-256 `b3bddc936d9b62fb5d88fd22c3586361540d78a2e418050804e4ae54b7e6b57b` / locator `/_embedded/underenheter/0`
+
+Exact excerpt:
+
+```
+{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/972758175"},"overordnetEnhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/930453692"}},"antallAnsatte":12,"beliggenhetsadresse":{"adresse":["Hemsedalsvegen 2949"],"kommune":"HEMSEDAL","kommunenummer":"
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T07:06:51.720994Z / SHA-256 `6205e2f7f95ded105e9fcc1750ebcdaed0c96f7fa17d6cfaa47aaf8fb7fc88d2` / locator `row:930453692/column:navn`
+
+Exact excerpt:
+
+```
+930453692,SKIERS LODGE HEMSEDAL AS,AS,Aksjeselskap,56.110,Drift av restauranter,55.200,Drift av vandrerhjem og ferieleiligheter,,,,,true,13,2026-09-14,2026-09-10,,,,,Postboks 104,HEMSEDAL,3561,HEMSEDAL,3326,Norge,NO,Hemsedalsvegen 2949,HEMSEDAL,3560,HEMSEDAL,3326,Norge,NO,2100,Private aksjeselskaper
+```
+
+## X4 / 20261116 / added / 815714512 / CARDINOR AS
+
+Type: brand; identity: CARDINOR AS AVD BODØ; saved-evidence verdict: correct.
+
+```json
+{
+  "name": "CARDINOR AS AVD BODØ",
+  "origin": "registered_subunit",
+  "subunit_orgnr": "927804751"
+}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=815714512&size=1000&page=0 / retrieved 2026-11-14T07:06:53.837240Z / SHA-256 `8ad5dde749c761dfb079509b6e6fdce1fcd03d58d46783e71d50e9a8aa0a5b71` / locator `/_embedded/underenheter/0/navn`
+
+Exact excerpt:
+
+```
+aturvitenskap og teknikk","kode":"72.100"},"navn":"CARDINOR AS AVD BODØ","oppstartsdato":"2019-01-01","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og offentlig forvaltning","kode":"
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=815714512&size=1000&page=0 / retrieved 2026-11-14T07:06:53.837240Z / SHA-256 `8ad5dde749c761dfb079509b6e6fdce1fcd03d58d46783e71d50e9a8aa0a5b71` / locator `/_embedded/underenheter/0`
+
+Exact excerpt:
+
+```
+{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/927804751"},"overordnetEnhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/815714512"}},"beliggenhetsadresse":{"adresse":["Styrhuset","Mørkvedbukta 30"],"kommune":"BODØ","kommunenummer":"1804","land":"N
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T07:06:51.697407Z / SHA-256 `e0ae7ec1d619a31685246dfbdb0fe45eec2d71077671b608c4a715eea9c64c8b` / locator `row:815714512/column:navn`
+
+Exact excerpt:
+
+```
+815714512,CARDINOR AS,AS,Aksjeselskap,71.129,Annen teknisk konsulentvirksomhet,72.100,Forskning og eksperimentell utvikling innenfor naturvitenskap og teknikk,,,,,true,,2026-03-12,2026-03-10,www.cardinor.com,,,,,,,,,,,Lørenveien 73A,OSLO,0585,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2
+```
+
+## X4 / 20261116 / removed / 925700398 / AURSJOKRAFT AS
+
+Type: website; identity: https://aursjokraft.no; saved-evidence verdict: correct.
+
+```json
+{
+  "final_url": "https://aursjokraft.no",
+  "identity_level": "VERIFIED",
+  "proof_type": "orgnr_on_page",
+  "proof_page_url": "https://aursjokraft.no/",
+  "signals": [],
+  "points": 0,
+  "candidate_origin": "legal_name_slug",
+  "relationship_note": null,
+  "other_orgnrs": []
+}
+```
+
+Source: https://aursjokraft.no/ / retrieved 2026-11-14T05:38:03.366142Z / SHA-256 `c938f985412301776c48cc242184538e2cbd14f8402a76925b30d2c6361cd193` / locator `identity-proof:925700398`
+
+Exact excerpt:
+
+```
+o/enhet/sok/detalj.jsp?orgnr=925700398">925 700 398</a></p>
+                                    </div>
+                                               
+```
+
+## X4 / 20261117 / added / 914983169 / GEIR-JONNY AS
+
+Type: brand; identity: GEIR JONNY NOREKVÅL; saved-evidence verdict: correct.
+
+```json
+{
+  "name": "GEIR JONNY NOREKVÅL",
+  "origin": "registered_subunit",
+  "subunit_orgnr": "973763326"
+}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=914983169&size=1000&page=0 / retrieved 2026-11-14T07:13:56.564567Z / SHA-256 `f3868125e76323c1f691a6d1bfc8183b79482641bcf20043e7244e6c02967f2f` / locator `/_embedded/underenheter/0/navn`
+
+Exact excerpt:
+
+```
+:"Oppføring av bygninger","kode":"41.000"},"navn":"GEIR JONNY NOREKVÅL","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og offentlig forvaltning","kode":"BEDR"},"organisasjonsnummer":"
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=914983169&size=1000&page=0 / retrieved 2026-11-14T07:13:56.564567Z / SHA-256 `f3868125e76323c1f691a6d1bfc8183b79482641bcf20043e7244e6c02967f2f` / locator `/_embedded/underenheter/0`
+
+Exact excerpt:
+
+```
+{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/973763326"},"overordnetEnhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/914983169"}},"beliggenhetsadresse":{"adresse":["MØRKVE"],"kommune":"VOSS","kommunenummer":"4621","land":"Norge","landkode":"NO"
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T07:13:54.238478Z / SHA-256 `ba3958a68fa21f88b7c8b1625c6896fcc0c5d4dad402079575b6ad9dc52ed818` / locator `row:914983169/column:navn`
+
+Exact excerpt:
+
+```
+914983169,GEIR-JONNY AS,AS,Aksjeselskap,41.000,Oppføring av bygninger,,,,,,,true,,2015-06-06,2015-04-13,,geirjn@hotmail.com,,915 75 612,,,,,,,,Myrkdalsvegen 682,VOSSESTRAND,5713,VOSS,4621,Norge,NO,2100,Private aksjeselskaper mv.,2025,2015-02-20,2015-02-03,true,2015-01-01,2015-03-11,,,false,,true,201
+```
+
+## X4 / 20261117 / added / 948039958 / VALAKER BAKERI OG KONDITORI AS
+
+Type: brand; identity: VALAKER BAKERI OG KONDITORI AS AVD BRAUD DIGERNES; saved-evidence verdict: correct.
+
+```json
+{
+  "name": "VALAKER BAKERI OG KONDITORI AS AVD BRAUD DIGERNES",
+  "origin": "registered_subunit",
+  "subunit_orgnr": "925602906"
+}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0 / retrieved 2026-11-14T07:13:57.453323Z / SHA-256 `c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34` / locator `/_embedded/underenheter/1/navn`
+
+Exact excerpt:
+
+```
+itorvarer og sukkervarer","kode":"47.240"},"navn":"VALAKER BAKERI OG KONDITORI AS AVD BRAUD DIGERNES","oppstartsdato":"2020-06-08","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og of
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0 / retrieved 2026-11-14T07:13:57.453323Z / SHA-256 `c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34` / locator `/_embedded/underenheter/1`
+
+Exact excerpt:
+
+```
+{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/925602906"},"overordnetEnhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/948039958"}},"antallAnsatte":16,"beliggenhetsadresse":{"adresse":["Digernes næringsområde 9"],"kommune":"ÅLESUND","kommunenumme
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T07:13:54.273829Z / SHA-256 `a6554e27e2618cd6f7e517d93b8c66b08a85a445ad7edb3108db533bd6689466` / locator `row:948039958/column:navn`
+
+Exact excerpt:
+
+```
+948039958,VALAKER BAKERI OG KONDITORI AS,AS,Aksjeselskap,10.710,Produksjon av brød og ferske konditorvarer,47.240,"Detaljhandel med bakervarer, konditorvarer og sukkervarer",,,,,true,166,2026-09-14,2026-09-10,,post@valaker.as,70 21 65 90,91595160,,,,,,,,Søvikvegen 31,SØVIK,6280,HARAM,1580,Norge,NO,2
+```
+
+## X4 / 20261117 / added / 915515940 / LISELAKK AS
+
+Type: brand; identity: LISELAKK AS BEAUTYBAR JEKTA; saved-evidence verdict: correct.
+
+```json
+{
+  "name": "LISELAKK AS BEAUTYBAR JEKTA",
+  "origin": "registered_subunit",
+  "subunit_orgnr": "923872574"
+}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=915515940&size=1000&page=0 / retrieved 2026-11-14T07:13:56.568523Z / SHA-256 `fe57f4a96eaf0360f68c05fab1ea5e3242bd69e5e20df3eaf5feb6d4ad302c69` / locator `/_embedded/underenheter/1/navn`
+
+Exact excerpt:
+
+```
+ivelse":"Skjønnhetspleie","kode":"96.220"},"navn":"LISELAKK AS BEAUTYBAR JEKTA","oppstartsdato":"2017-03-23","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og offentlig forvaltning","
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=915515940&size=1000&page=0 / retrieved 2026-11-14T07:13:56.568523Z / SHA-256 `fe57f4a96eaf0360f68c05fab1ea5e3242bd69e5e20df3eaf5feb6d4ad302c69` / locator `/_embedded/underenheter/1`
+
+Exact excerpt:
+
+```
+{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/923872574"},"overordnetEnhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/915515940"}},"beliggenhetsadresse":{"adresse":["Karlsøyvegen 12"],"kommune":"TROMSØ","kommunenummer":"5501","land":"Norge","lan
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T07:13:54.239431Z / SHA-256 `2d91f8ad15fe8faf75a2933328b572c7a7fec75dab523df4f4ad7daf470172e1` / locator `row:915515940/column:navn`
+
+Exact excerpt:
+
+```
+915515940,LISELAKK AS,AS,Aksjeselskap,96.220,Skjønnhetspleie,,,,,,,true,17,2026-09-14,2026-09-10,,lise.foereland@gmail.com,,957 50 208,,,,,,,,Henrik Ibsens veg 18,TROMSØ,9007,TROMSØ,5501,Norge,NO,2100,Private aksjeselskaper mv.,2025,2015-06-17,2015-06-03,true,2015-09-01,2015-11-04,,,false,,true,2015
+```
+
+## X4 / 20261117 / added / 948039958 / VALAKER BAKERI OG KONDITORI AS
+
+Type: brand; identity: VALAKER BAKERI OG KONDITORI AS AVD BRAUD GJØSUND; saved-evidence verdict: correct.
+
+```json
+{
+  "name": "VALAKER BAKERI OG KONDITORI AS AVD BRAUD GJØSUND",
+  "origin": "registered_subunit",
+  "subunit_orgnr": "931719009"
+}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0 / retrieved 2026-11-14T07:13:57.453323Z / SHA-256 `c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34` / locator `/_embedded/underenheter/2/navn`
+
+Exact excerpt:
+
+```
+itorvarer og sukkervarer","kode":"47.240"},"navn":"VALAKER BAKERI OG KONDITORI AS AVD BRAUD GJØSUND","oppstartsdato":"2023-06-07","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og off
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0 / retrieved 2026-11-14T07:13:57.453323Z / SHA-256 `c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34` / locator `/_embedded/underenheter/2`
+
+Exact excerpt:
+
+```
+{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/931719009"},"overordnetEnhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/948039958"}},"antallAnsatte":9,"beliggenhetsadresse":{"adresse":["Valderøyvegen 1166"],"kommune":"GISKE","kommunenummer":"1532"
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T07:13:54.273829Z / SHA-256 `a6554e27e2618cd6f7e517d93b8c66b08a85a445ad7edb3108db533bd6689466` / locator `row:948039958/column:navn`
+
+Exact excerpt:
+
+```
+948039958,VALAKER BAKERI OG KONDITORI AS,AS,Aksjeselskap,10.710,Produksjon av brød og ferske konditorvarer,47.240,"Detaljhandel med bakervarer, konditorvarer og sukkervarer",,,,,true,166,2026-09-14,2026-09-10,,post@valaker.as,70 21 65 90,91595160,,,,,,,,Søvikvegen 31,SØVIK,6280,HARAM,1580,Norge,NO,2
+```
+
+## X4 / 20261117 / added / 948039958 / VALAKER BAKERI OG KONDITORI AS
+
+Type: brand; identity: VALAKER BAKERI OG KONDITORI AS AVD BRAUD MOLDE; saved-evidence verdict: correct.
+
+```json
+{
+  "name": "VALAKER BAKERI OG KONDITORI AS AVD BRAUD MOLDE",
+  "origin": "registered_subunit",
+  "subunit_orgnr": "931718967"
+}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0 / retrieved 2026-11-14T07:13:57.453323Z / SHA-256 `c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34` / locator `/_embedded/underenheter/4/navn`
+
+Exact excerpt:
+
+```
+itorvarer og sukkervarer","kode":"47.240"},"navn":"VALAKER BAKERI OG KONDITORI AS AVD BRAUD MOLDE","oppstartsdato":"2023-06-07","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og offen
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0 / retrieved 2026-11-14T07:13:57.453323Z / SHA-256 `c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34` / locator `/_embedded/underenheter/4`
+
+Exact excerpt:
+
+```
+{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/931718967"},"overordnetEnhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/948039958"}},"antallAnsatte":16,"beliggenhetsadresse":{"adresse":["Amfi Roseby","Lingedalsvegen 6-10"],"kommune":"MOLDE","kommu
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T07:13:54.273829Z / SHA-256 `a6554e27e2618cd6f7e517d93b8c66b08a85a445ad7edb3108db533bd6689466` / locator `row:948039958/column:navn`
+
+Exact excerpt:
+
+```
+948039958,VALAKER BAKERI OG KONDITORI AS,AS,Aksjeselskap,10.710,Produksjon av brød og ferske konditorvarer,47.240,"Detaljhandel med bakervarer, konditorvarer og sukkervarer",,,,,true,166,2026-09-14,2026-09-10,,post@valaker.as,70 21 65 90,91595160,,,,,,,,Søvikvegen 31,SØVIK,6280,HARAM,1580,Norge,NO,2
+```
+
+## X4 / 20261117 / added / 948039958 / VALAKER BAKERI OG KONDITORI AS
+
+Type: brand; identity: VALAKER BAKERI OG KONDITORI AS AVD BRAUD MOA; saved-evidence verdict: correct.
+
+```json
+{
+  "name": "VALAKER BAKERI OG KONDITORI AS AVD BRAUD MOA",
+  "origin": "registered_subunit",
+  "subunit_orgnr": "987194286"
+}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0 / retrieved 2026-11-14T07:13:57.453323Z / SHA-256 `c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34` / locator `/_embedded/underenheter/3/navn`
+
+Exact excerpt:
+
+```
+itorvarer og sukkervarer","kode":"47.240"},"navn":"VALAKER BAKERI OG KONDITORI AS AVD BRAUD MOA","oppstartsdato":"2004-08-30","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og offentl
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0 / retrieved 2026-11-14T07:13:57.453323Z / SHA-256 `c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34` / locator `/_embedded/underenheter/3`
+
+Exact excerpt:
+
+```
+{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/987194286"},"overordnetEnhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/948039958"}},"antallAnsatte":15,"beliggenhetsadresse":{"adresse":["Langelandsvegen 25"],"kommune":"ÅLESUND","kommunenummer":"15
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T07:13:54.273829Z / SHA-256 `a6554e27e2618cd6f7e517d93b8c66b08a85a445ad7edb3108db533bd6689466` / locator `row:948039958/column:navn`
+
+Exact excerpt:
+
+```
+948039958,VALAKER BAKERI OG KONDITORI AS,AS,Aksjeselskap,10.710,Produksjon av brød og ferske konditorvarer,47.240,"Detaljhandel med bakervarer, konditorvarer og sukkervarer",,,,,true,166,2026-09-14,2026-09-10,,post@valaker.as,70 21 65 90,91595160,,,,,,,,Søvikvegen 31,SØVIK,6280,HARAM,1580,Norge,NO,2
+```
+
+## X4 / 20261117 / added / 948039958 / VALAKER BAKERI OG KONDITORI AS
+
+Type: brand; identity: VALAKER BAKERI OG KONDITORI AS AVD B B ULSTEINVIK; saved-evidence verdict: correct.
+
+```json
+{
+  "name": "VALAKER BAKERI OG KONDITORI AS AVD B B ULSTEINVIK",
+  "origin": "registered_subunit",
+  "subunit_orgnr": "988666726"
+}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0 / retrieved 2026-11-14T07:13:57.453323Z / SHA-256 `c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34` / locator `/_embedded/underenheter/0/navn`
+
+Exact excerpt:
+
+```
+itorvarer og sukkervarer","kode":"47.240"},"navn":"VALAKER BAKERI OG KONDITORI AS AVD B B ULSTEINVIK","oppstartsdato":"2005-09-16","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og of
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0 / retrieved 2026-11-14T07:13:57.453323Z / SHA-256 `c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34` / locator `/_embedded/underenheter/0`
+
+Exact excerpt:
+
+```
+{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/988666726"},"overordnetEnhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/948039958"}},"antallAnsatte":12,"beliggenhetsadresse":{"adresse":["Saunesvegen"],"kommune":"ULSTEIN","kommunenummer":"1516","la
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T07:13:54.273829Z / SHA-256 `a6554e27e2618cd6f7e517d93b8c66b08a85a445ad7edb3108db533bd6689466` / locator `row:948039958/column:navn`
+
+Exact excerpt:
+
+```
+948039958,VALAKER BAKERI OG KONDITORI AS,AS,Aksjeselskap,10.710,Produksjon av brød og ferske konditorvarer,47.240,"Detaljhandel med bakervarer, konditorvarer og sukkervarer",,,,,true,166,2026-09-14,2026-09-10,,post@valaker.as,70 21 65 90,91595160,,,,,,,,Søvikvegen 31,SØVIK,6280,HARAM,1580,Norge,NO,2
+```
+
+## X4 / 20261117 / added / 948039958 / VALAKER BAKERI OG KONDITORI AS
+
+Type: brand; identity: VALAKER BAKERI OG KONDITORI AS AVD VESTNES; saved-evidence verdict: correct.
+
+```json
+{
+  "name": "VALAKER BAKERI OG KONDITORI AS AVD VESTNES",
+  "origin": "registered_subunit",
+  "subunit_orgnr": "990953643"
+}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0 / retrieved 2026-11-14T07:13:57.453323Z / SHA-256 `c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34` / locator `/_embedded/underenheter/12/navn`
+
+Exact excerpt:
+
+```
+itorvarer og sukkervarer","kode":"47.240"},"navn":"VALAKER BAKERI OG KONDITORI AS AVD VESTNES","oppstartsdato":"2007-01-01","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og offentlig
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0 / retrieved 2026-11-14T07:13:57.453323Z / SHA-256 `c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34` / locator `/_embedded/underenheter/12`
+
+Exact excerpt:
+
+```
+{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/990953643"},"overordnetEnhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/948039958"}},"antallAnsatte":8,"beliggenhetsadresse":{"adresse":["Vestnes Brygge"],"kommune":"VESTNES","kommunenummer":"1535","
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T07:13:54.273829Z / SHA-256 `a6554e27e2618cd6f7e517d93b8c66b08a85a445ad7edb3108db533bd6689466` / locator `row:948039958/column:navn`
+
+Exact excerpt:
+
+```
+948039958,VALAKER BAKERI OG KONDITORI AS,AS,Aksjeselskap,10.710,Produksjon av brød og ferske konditorvarer,47.240,"Detaljhandel med bakervarer, konditorvarer og sukkervarer",,,,,true,166,2026-09-14,2026-09-10,,post@valaker.as,70 21 65 90,91595160,,,,,,,,Søvikvegen 31,SØVIK,6280,HARAM,1580,Norge,NO,2
+```
+
+## X4 / 20261117 / added / 948039958 / VALAKER BAKERI OG KONDITORI AS
+
+Type: brand; identity: VALAKER BAKERI OG KONDITORI AS AVD STORMOA NORD; saved-evidence verdict: correct.
+
+```json
+{
+  "name": "VALAKER BAKERI OG KONDITORI AS AVD STORMOA NORD",
+  "origin": "registered_subunit",
+  "subunit_orgnr": "990953872"
+}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0 / retrieved 2026-11-14T07:13:57.453323Z / SHA-256 `c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34` / locator `/_embedded/underenheter/9/navn`
+
+Exact excerpt:
+
+```
+itorvarer og sukkervarer","kode":"47.240"},"navn":"VALAKER BAKERI OG KONDITORI AS AVD STORMOA NORD","oppstartsdato":"2007-01-01","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og offe
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0 / retrieved 2026-11-14T07:13:57.453323Z / SHA-256 `c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34` / locator `/_embedded/underenheter/9`
+
+Exact excerpt:
+
+```
+{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/990953872"},"overordnetEnhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/948039958"}},"beliggenhetsadresse":{"adresse":["Moavegen 3"],"kommune":"ÅLESUND","kommunenummer":"1508","land":"Norge","landkod
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T07:13:54.273829Z / SHA-256 `a6554e27e2618cd6f7e517d93b8c66b08a85a445ad7edb3108db533bd6689466` / locator `row:948039958/column:navn`
+
+Exact excerpt:
+
+```
+948039958,VALAKER BAKERI OG KONDITORI AS,AS,Aksjeselskap,10.710,Produksjon av brød og ferske konditorvarer,47.240,"Detaljhandel med bakervarer, konditorvarer og sukkervarer",,,,,true,166,2026-09-14,2026-09-10,,post@valaker.as,70 21 65 90,91595160,,,,,,,,Søvikvegen 31,SØVIK,6280,HARAM,1580,Norge,NO,2
+```
+
+## X4 / 20261117 / added / 948039958 / VALAKER BAKERI OG KONDITORI AS
+
+Type: brand; identity: VALAKER BAKERI OG KONDITORI AS AVD SØVIK PRODUKSJON; saved-evidence verdict: correct.
+
+```json
+{
+  "name": "VALAKER BAKERI OG KONDITORI AS AVD SØVIK PRODUKSJON",
+  "origin": "registered_subunit",
+  "subunit_orgnr": "992232080"
+}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0 / retrieved 2026-11-14T07:13:57.453323Z / SHA-256 `c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34` / locator `/_embedded/underenheter/10/navn`
+
+Exact excerpt:
+
+```
+ og ferske konditorvarer","kode":"10.710"},"navn":"VALAKER BAKERI OG KONDITORI AS AVD SØVIK PRODUKSJON","oppstartsdato":"2008-01-01","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og 
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0 / retrieved 2026-11-14T07:13:57.453323Z / SHA-256 `c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34` / locator `/_embedded/underenheter/10`
+
+Exact excerpt:
+
+```
+{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/992232080"},"overordnetEnhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/948039958"}},"antallAnsatte":26,"beliggenhetsadresse":{"adresse":["Søvikvegen 31"],"kommune":"HARAM","kommunenummer":"1580","la
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T07:13:54.273829Z / SHA-256 `a6554e27e2618cd6f7e517d93b8c66b08a85a445ad7edb3108db533bd6689466` / locator `row:948039958/column:navn`
+
+Exact excerpt:
+
+```
+948039958,VALAKER BAKERI OG KONDITORI AS,AS,Aksjeselskap,10.710,Produksjon av brød og ferske konditorvarer,47.240,"Detaljhandel med bakervarer, konditorvarer og sukkervarer",,,,,true,166,2026-09-14,2026-09-10,,post@valaker.as,70 21 65 90,91595160,,,,,,,,Søvikvegen 31,SØVIK,6280,HARAM,1580,Norge,NO,2
+```
+
+## X4 / 20261117 / added / 916875657 / KAAPE AS
+
+Type: brand; identity: KAAPE; saved-evidence verdict: correct.
+
+```json
+"KAAPE"
+```
+
+Source: https://www.kaape.no/betingelser / retrieved 2026-11-14T07:14:10.071217Z / SHA-256 `cc7524d883fc95b0de5a65139cf41e8dda82efb1cbc2bf6bd1dac02099a086bf` / locator `publisher-public-name`
+
+Exact excerpt:
+
+```
+.css.map*/</style>
+<title>Betingelser | KAAPE</title>
+  <meta name="description" content="Personopplysninger og personvernpolicy
+Kaape behandler persondata ifølge Lov og Personopplysninger. Opplysninger som kan knyttes til deg som person vil aldri bli gjort tilgjengelig for andre virksomheter eller 
+```
+
+Source: https://www.kaape.no/betingelser / retrieved 2026-11-14T07:14:10.071217Z / SHA-256 `cc7524d883fc95b0de5a65139cf41e8dda82efb1cbc2bf6bd1dac02099a086bf` / locator `identity-proof:916875657`
+
+Exact excerpt:
+
+```
+" class="wixui-rich-text__text">Org.nr: 916 875 657</span></span></p>
+
+<p class="font_8 wixui-rich-text__text" style="font-size:15px;"><span style="le
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T07:13:54.242329Z / SHA-256 `c2fb0f975a50dc8d7959a8ac4ab2cfe3e88df61526c7a631a4799e6e11e42c04` / locator `row:916875657/column:navn`
+
+Exact excerpt:
+
+```
+916875657,KAAPE AS,AS,Aksjeselskap,74.110,"Industri-, produkt- og motedesignvirksomhet",,,,,,,true,,2025-04-12,2025-04-10,,,,,,,,,,,,Fjordvegen 363,TOMREFJORD,6393,VESTNES,1535,Norge,NO,2100,Private aksjeselskaper mv.,2025,2016-03-21,2016-02-01,true,2018-05-01,2018-06-25,,,false,,true,2016-03-21,fal
+```
+
+## X4 / 20261117 / added / 948039958 / VALAKER BAKERI OG KONDITORI AS
+
+Type: brand; identity: VALAKER BAKERI OG KONDITORI AS AVD MOA SYD; saved-evidence verdict: correct.
+
+```json
+{
+  "name": "VALAKER BAKERI OG KONDITORI AS AVD MOA SYD",
+  "origin": "registered_subunit",
+  "subunit_orgnr": "990953910"
+}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0 / retrieved 2026-11-14T07:13:57.453323Z / SHA-256 `c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34` / locator `/_embedded/underenheter/6/navn`
+
+Exact excerpt:
+
+```
+itorvarer og sukkervarer","kode":"47.240"},"navn":"VALAKER BAKERI OG KONDITORI AS AVD MOA SYD","oppstartsdato":"2007-01-01","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og offentlig
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0 / retrieved 2026-11-14T07:13:57.453323Z / SHA-256 `c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34` / locator `/_embedded/underenheter/6`
+
+Exact excerpt:
+
+```
+{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/990953910"},"overordnetEnhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/948039958"}},"antallAnsatte":14,"beliggenhetsadresse":{"adresse":["Moa Syd"],"kommune":"ÅLESUND","kommunenummer":"1508","land":
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T07:13:54.273829Z / SHA-256 `a6554e27e2618cd6f7e517d93b8c66b08a85a445ad7edb3108db533bd6689466` / locator `row:948039958/column:navn`
+
+Exact excerpt:
+
+```
+948039958,VALAKER BAKERI OG KONDITORI AS,AS,Aksjeselskap,10.710,Produksjon av brød og ferske konditorvarer,47.240,"Detaljhandel med bakervarer, konditorvarer og sukkervarer",,,,,true,166,2026-09-14,2026-09-10,,post@valaker.as,70 21 65 90,91595160,,,,,,,,Søvikvegen 31,SØVIK,6280,HARAM,1580,Norge,NO,2
+```
+
+## X4 / 20261117 / added / 948039958 / VALAKER BAKERI OG KONDITORI AS
+
+Type: brand; identity: VALAKER BAKERI OG KONDITORI AS AVD ULSTEINVIK; saved-evidence verdict: correct.
+
+```json
+{
+  "name": "VALAKER BAKERI OG KONDITORI AS AVD ULSTEINVIK",
+  "origin": "registered_subunit",
+  "subunit_orgnr": "992232749"
+}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0 / retrieved 2026-11-14T07:13:57.453323Z / SHA-256 `c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34` / locator `/_embedded/underenheter/11/navn`
+
+Exact excerpt:
+
+```
+itorvarer og sukkervarer","kode":"47.240"},"navn":"VALAKER BAKERI OG KONDITORI AS AVD ULSTEINVIK","oppstartsdato":"2008-01-01","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og offent
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0 / retrieved 2026-11-14T07:13:57.453323Z / SHA-256 `c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34` / locator `/_embedded/underenheter/11`
+
+Exact excerpt:
+
+```
+{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/992232749"},"overordnetEnhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/948039958"}},"antallAnsatte":5,"beliggenhetsadresse":{"adresse":[],"kommune":"ULSTEIN","kommunenummer":"1516","land":"Norge","l
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T07:13:54.273829Z / SHA-256 `a6554e27e2618cd6f7e517d93b8c66b08a85a445ad7edb3108db533bd6689466` / locator `row:948039958/column:navn`
+
+Exact excerpt:
+
+```
+948039958,VALAKER BAKERI OG KONDITORI AS,AS,Aksjeselskap,10.710,Produksjon av brød og ferske konditorvarer,47.240,"Detaljhandel med bakervarer, konditorvarer og sukkervarer",,,,,true,166,2026-09-14,2026-09-10,,post@valaker.as,70 21 65 90,91595160,,,,,,,,Søvikvegen 31,SØVIK,6280,HARAM,1580,Norge,NO,2
+```
+
+## X4 / 20261117 / added / 948039958 / VALAKER BAKERI OG KONDITORI AS
+
+Type: brand; identity: VALAKER BAKERI OG KONDITORI AS AVD FOSNVÅG; saved-evidence verdict: correct.
+
+```json
+{
+  "name": "VALAKER BAKERI OG KONDITORI AS AVD FOSNVÅG",
+  "origin": "registered_subunit",
+  "subunit_orgnr": "992232110"
+}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0 / retrieved 2026-11-14T07:13:57.453323Z / SHA-256 `c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34` / locator `/_embedded/underenheter/5/navn`
+
+Exact excerpt:
+
+```
+itorvarer og sukkervarer","kode":"47.240"},"navn":"VALAKER BAKERI OG KONDITORI AS AVD FOSNVÅG","oppstartsdato":"2008-01-01","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og offentlig
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0 / retrieved 2026-11-14T07:13:57.453323Z / SHA-256 `c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34` / locator `/_embedded/underenheter/5`
+
+Exact excerpt:
+
+```
+{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/992232110"},"overordnetEnhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/948039958"}},"beliggenhetsadresse":{"adresse":[],"kommune":"HERØY","kommunenummer":"1515","land":"Norge","landkode":"NO","postn
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T07:13:54.273829Z / SHA-256 `a6554e27e2618cd6f7e517d93b8c66b08a85a445ad7edb3108db533bd6689466` / locator `row:948039958/column:navn`
+
+Exact excerpt:
+
+```
+948039958,VALAKER BAKERI OG KONDITORI AS,AS,Aksjeselskap,10.710,Produksjon av brød og ferske konditorvarer,47.240,"Detaljhandel med bakervarer, konditorvarer og sukkervarer",,,,,true,166,2026-09-14,2026-09-10,,post@valaker.as,70 21 65 90,91595160,,,,,,,,Søvikvegen 31,SØVIK,6280,HARAM,1580,Norge,NO,2
+```
+
+## X4 / 20261117 / added / 915515940 / LISELAKK AS
+
+Type: brand; identity: LISELAKK AS BEAUTYBAR AMUNDSPLASS; saved-evidence verdict: correct.
+
+```json
+{
+  "name": "LISELAKK AS BEAUTYBAR AMUNDSPLASS",
+  "origin": "registered_subunit",
+  "subunit_orgnr": "923872558"
+}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=915515940&size=1000&page=0 / retrieved 2026-11-14T07:13:56.568523Z / SHA-256 `fe57f4a96eaf0360f68c05fab1ea5e3242bd69e5e20df3eaf5feb6d4ad302c69` / locator `/_embedded/underenheter/0/navn`
+
+Exact excerpt:
+
+```
+ivelse":"Skjønnhetspleie","kode":"96.220"},"navn":"LISELAKK AS BEAUTYBAR AMUNDSPLASS","oppstartsdato":"2018-05-29","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og offentlig forvaltn
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=915515940&size=1000&page=0 / retrieved 2026-11-14T07:13:56.568523Z / SHA-256 `fe57f4a96eaf0360f68c05fab1ea5e3242bd69e5e20df3eaf5feb6d4ad302c69` / locator `/_embedded/underenheter/0`
+
+Exact excerpt:
+
+```
+{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/923872558"},"overordnetEnhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/915515940"}},"antallAnsatte":6,"beliggenhetsadresse":{"adresse":["Kirkegata 4"],"kommune":"TROMSØ","kommunenummer":"5501","land
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T07:13:54.239431Z / SHA-256 `2d91f8ad15fe8faf75a2933328b572c7a7fec75dab523df4f4ad7daf470172e1` / locator `row:915515940/column:navn`
+
+Exact excerpt:
+
+```
+915515940,LISELAKK AS,AS,Aksjeselskap,96.220,Skjønnhetspleie,,,,,,,true,17,2026-09-14,2026-09-10,,lise.foereland@gmail.com,,957 50 208,,,,,,,,Henrik Ibsens veg 18,TROMSØ,9007,TROMSØ,5501,Norge,NO,2100,Private aksjeselskaper mv.,2025,2015-06-17,2015-06-03,true,2015-09-01,2015-11-04,,,false,,true,2015
+```
+
+## X4 / 20261117 / added / 915515940 / LISELAKK AS
+
+Type: brand; identity: LISELAKK AS HENRIK IBSENS VEG TROMSØ; saved-evidence verdict: correct.
+
+```json
+{
+  "name": "LISELAKK AS HENRIK IBSENS VEG TROMSØ",
+  "origin": "registered_subunit",
+  "subunit_orgnr": "915590020"
+}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=915515940&size=1000&page=0 / retrieved 2026-11-14T07:13:56.568523Z / SHA-256 `fe57f4a96eaf0360f68c05fab1ea5e3242bd69e5e20df3eaf5feb6d4ad302c69` / locator `/_embedded/underenheter/3/navn`
+
+Exact excerpt:
+
+```
+ivelse":"Skjønnhetspleie","kode":"96.220"},"navn":"LISELAKK AS HENRIK IBSENS VEG TROMSØ","oppstartsdato":"2015-08-15","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og offentlig forva
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=915515940&size=1000&page=0 / retrieved 2026-11-14T07:13:56.568523Z / SHA-256 `fe57f4a96eaf0360f68c05fab1ea5e3242bd69e5e20df3eaf5feb6d4ad302c69` / locator `/_embedded/underenheter/3`
+
+Exact excerpt:
+
+```
+{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/915590020"},"overordnetEnhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/915515940"}},"antallAnsatte":6,"beliggenhetsadresse":{"adresse":["Henrik Ibsens veg 18"],"kommune":"TROMSØ","kommunenummer":"55
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T07:13:54.239431Z / SHA-256 `2d91f8ad15fe8faf75a2933328b572c7a7fec75dab523df4f4ad7daf470172e1` / locator `row:915515940/column:navn`
+
+Exact excerpt:
+
+```
+915515940,LISELAKK AS,AS,Aksjeselskap,96.220,Skjønnhetspleie,,,,,,,true,17,2026-09-14,2026-09-10,,lise.foereland@gmail.com,,957 50 208,,,,,,,,Henrik Ibsens veg 18,TROMSØ,9007,TROMSØ,5501,Norge,NO,2100,Private aksjeselskaper mv.,2025,2015-06-17,2015-06-03,true,2015-09-01,2015-11-04,,,false,,true,2015
+```
+
+## X4 / 20261117 / added / 948039958 / VALAKER BAKERI OG KONDITORI AS
+
+Type: brand; identity: VALAKER BAKERI OG KONDITORI AS AVD RÅDHUSET; saved-evidence verdict: correct.
+
+```json
+{
+  "name": "VALAKER BAKERI OG KONDITORI AS AVD RÅDHUSET",
+  "origin": "registered_subunit",
+  "subunit_orgnr": "990953791"
+}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0 / retrieved 2026-11-14T07:13:57.453323Z / SHA-256 `c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34` / locator `/_embedded/underenheter/8/navn`
+
+Exact excerpt:
+
+```
+itorvarer og sukkervarer","kode":"47.240"},"navn":"VALAKER BAKERI OG KONDITORI AS AVD RÅDHUSET","oppstartsdato":"2007-01-01","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og offentli
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0 / retrieved 2026-11-14T07:13:57.453323Z / SHA-256 `c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34` / locator `/_embedded/underenheter/8`
+
+Exact excerpt:
+
+```
+{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/990953791"},"overordnetEnhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/948039958"}},"beliggenhetsadresse":{"adresse":["Rasmuss Rønnebergsgate"],"kommune":"ÅLESUND","kommunenummer":"1508","land":"Nor
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T07:13:54.273829Z / SHA-256 `a6554e27e2618cd6f7e517d93b8c66b08a85a445ad7edb3108db533bd6689466` / locator `row:948039958/column:navn`
+
+Exact excerpt:
+
+```
+948039958,VALAKER BAKERI OG KONDITORI AS,AS,Aksjeselskap,10.710,Produksjon av brød og ferske konditorvarer,47.240,"Detaljhandel med bakervarer, konditorvarer og sukkervarer",,,,,true,166,2026-09-14,2026-09-10,,post@valaker.as,70 21 65 90,91595160,,,,,,,,Søvikvegen 31,SØVIK,6280,HARAM,1580,Norge,NO,2
+```
+
+## X4 / 20261117 / added / 948039958 / VALAKER BAKERI OG KONDITORI AS
+
+Type: brand; identity: VALAKER BAKERI OG KONDITORI AS AVD ÅLESUND; saved-evidence verdict: correct.
+
+```json
+{
+  "name": "VALAKER BAKERI OG KONDITORI AS AVD ÅLESUND",
+  "origin": "registered_subunit",
+  "subunit_orgnr": "990953694"
+}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0 / retrieved 2026-11-14T07:13:57.453323Z / SHA-256 `c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34` / locator `/_embedded/underenheter/13/navn`
+
+Exact excerpt:
+
+```
+itorvarer og sukkervarer","kode":"47.240"},"navn":"VALAKER BAKERI OG KONDITORI AS AVD ÅLESUND","oppstartsdato":"2007-01-01","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og offentlig
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0 / retrieved 2026-11-14T07:13:57.453323Z / SHA-256 `c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34` / locator `/_embedded/underenheter/13`
+
+Exact excerpt:
+
+```
+{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/990953694"},"overordnetEnhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/948039958"}},"antallAnsatte":10,"beliggenhetsadresse":{"adresse":["Ålesund Storsenter"],"kommune":"ÅLESUND","kommunenummer":"15
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T07:13:54.273829Z / SHA-256 `a6554e27e2618cd6f7e517d93b8c66b08a85a445ad7edb3108db533bd6689466` / locator `row:948039958/column:navn`
+
+Exact excerpt:
+
+```
+948039958,VALAKER BAKERI OG KONDITORI AS,AS,Aksjeselskap,10.710,Produksjon av brød og ferske konditorvarer,47.240,"Detaljhandel med bakervarer, konditorvarer og sukkervarer",,,,,true,166,2026-09-14,2026-09-10,,post@valaker.as,70 21 65 90,91595160,,,,,,,,Søvikvegen 31,SØVIK,6280,HARAM,1580,Norge,NO,2
+```
+
+## X4 / 20261117 / added / 948039958 / VALAKER BAKERI OG KONDITORI AS
+
+Type: brand; identity: VALAKER BAKERI OG KONDITORI AS BRAUD OSLO; saved-evidence verdict: correct.
+
+```json
+{
+  "name": "VALAKER BAKERI OG KONDITORI AS BRAUD OSLO",
+  "origin": "registered_subunit",
+  "subunit_orgnr": "934998308"
+}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0 / retrieved 2026-11-14T07:13:57.453323Z / SHA-256 `c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34` / locator `/_embedded/underenheter/14/navn`
+
+Exact excerpt:
+
+```
+ og ferske konditorvarer","kode":"10.710"},"navn":"VALAKER BAKERI OG KONDITORI AS BRAUD OSLO","oppstartsdato":"2025-01-13","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og offentlig 
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0 / retrieved 2026-11-14T07:13:57.453323Z / SHA-256 `c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34` / locator `/_embedded/underenheter/14`
+
+Exact excerpt:
+
+```
+{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/934998308"},"overordnetEnhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/948039958"}},"antallAnsatte":21,"beliggenhetsadresse":{"adresse":["Middelthuns gate 17A"],"kommune":"OSLO","kommunenummer":"030
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T07:13:54.273829Z / SHA-256 `a6554e27e2618cd6f7e517d93b8c66b08a85a445ad7edb3108db533bd6689466` / locator `row:948039958/column:navn`
+
+Exact excerpt:
+
+```
+948039958,VALAKER BAKERI OG KONDITORI AS,AS,Aksjeselskap,10.710,Produksjon av brød og ferske konditorvarer,47.240,"Detaljhandel med bakervarer, konditorvarer og sukkervarer",,,,,true,166,2026-09-14,2026-09-10,,post@valaker.as,70 21 65 90,91595160,,,,,,,,Søvikvegen 31,SØVIK,6280,HARAM,1580,Norge,NO,2
+```
+
+## X4 / 20261117 / added / 918638628 / VESTFJORDEN ELEKTRO AS
+
+Type: brand; identity: Vestfjorden Elektro; saved-evidence verdict: correct.
+
+```json
+"Vestfjorden Elektro"
+```
+
+Source: https://vestfjordenelektro.no/ / retrieved 2026-11-14T07:14:55.736897Z / SHA-256 `75845e36b0bc2bd1e86472a01a7ed574d536c05fa7d674b6bd8eda8365f8018b` / locator `publisher-public-name`
+
+Exact excerpt:
+
+```
+
+<head>
+	<meta charset="utf-8">
+	<title>Vestfjorden Elektro</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<link rel="apple-touch-icon" size
+```
+
+Source: https://vestfjordenelektro.no/ / retrieved 2026-11-14T07:14:55.736897Z / SHA-256 `75845e36b0bc2bd1e86472a01a7ed574d536c05fa7d674b6bd8eda8365f8018b` / locator `identity-proof:918638628`
+
+Exact excerpt:
+
+```
+: Kristoffer Mørch<br />
+					Org. nr.: 918 638 628<br />
+					Besøksadresse: Åsveien 4, 3475 Sætre
+				</p>
+				<!-- Nav tabs -->
+				<ul class="nav 
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T07:13:54.247330Z / SHA-256 `89cc603f9905b3d036194ca216d821405069c1649f6af9ac898b6341a943bca7` / locator `row:918638628/column:navn`
+
+Exact excerpt:
+
+```
+918638628,VESTFJORDEN ELEKTRO AS,AS,Aksjeselskap,43.210,Elektrisk installasjonsarbeid,,,,,,,true,,2024-02-13,2024-02-10,,,,,,,,,,,,Klokkeveien 2,TOFTE,3482,ASKER,3203,Norge,NO,2100,Private aksjeselskaper mv.,2025,2017-03-01,2017-01-10,true,2017-03-01,2017-05-08,,,false,,true,2017-03-01,false,false,,
+```
+
+## X4 / 20261117 / added / 915515940 / LISELAKK AS
+
+Type: brand; identity: LISELAKK AS BEAUTYBAR PYRAMIDEN; saved-evidence verdict: correct.
+
+```json
+{
+  "name": "LISELAKK AS BEAUTYBAR PYRAMIDEN",
+  "origin": "registered_subunit",
+  "subunit_orgnr": "923872582"
+}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=915515940&size=1000&page=0 / retrieved 2026-11-14T07:13:56.568523Z / SHA-256 `fe57f4a96eaf0360f68c05fab1ea5e3242bd69e5e20df3eaf5feb6d4ad302c69` / locator `/_embedded/underenheter/2/navn`
+
+Exact excerpt:
+
+```
+ivelse":"Skjønnhetspleie","kode":"96.220"},"navn":"LISELAKK AS BEAUTYBAR PYRAMIDEN","oppstartsdato":"2018-10-18","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og offentlig forvaltnin
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=915515940&size=1000&page=0 / retrieved 2026-11-14T07:13:56.568523Z / SHA-256 `fe57f4a96eaf0360f68c05fab1ea5e3242bd69e5e20df3eaf5feb6d4ad302c69` / locator `/_embedded/underenheter/2`
+
+Exact excerpt:
+
+```
+{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/923872582"},"overordnetEnhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/915515940"}},"beliggenhetsadresse":{"adresse":["Solstrandvegen 47"],"kommune":"TROMSØ","kommunenummer":"5501","land":"Norge","l
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T07:13:54.239431Z / SHA-256 `2d91f8ad15fe8faf75a2933328b572c7a7fec75dab523df4f4ad7daf470172e1` / locator `row:915515940/column:navn`
+
+Exact excerpt:
+
+```
+915515940,LISELAKK AS,AS,Aksjeselskap,96.220,Skjønnhetspleie,,,,,,,true,17,2026-09-14,2026-09-10,,lise.foereland@gmail.com,,957 50 208,,,,,,,,Henrik Ibsens veg 18,TROMSØ,9007,TROMSØ,5501,Norge,NO,2100,Private aksjeselskaper mv.,2025,2015-06-17,2015-06-03,true,2015-09-01,2015-11-04,,,false,,true,2015
+```
+
+## X4 / 20261117 / added / 936758819 / HELSEFIX AS
+
+Type: brand; identity: helseFix; saved-evidence verdict: correct.
+
+```json
+"helseFix"
+```
+
+Source: https://helsefix.no/om-oss / retrieved 2026-11-14T07:15:12.192644Z / SHA-256 `7aa44caa8ce0649c150f2af6c289706a1a60524c407f4c9a9e57edc828c85ab7` / locator `publisher-public-name`
+
+Exact excerpt:
+
+```
+idth, initial-scale=1">
+<title>Om oss — helseFix</title>
+<meta name="description" content="helseFix er grunnlagt av naprapatene Per Thomas Mørk og Aleksander Treidene — nesten 50 års kombinert klinisk erfaring, satt i system for rehabilitering hjemmefra.">
+<link rel="canonical" href="https://helsefi
+```
+
+Source: https://helsefix.no/om-oss / retrieved 2026-11-14T07:15:12.192644Z / SHA-256 `7aa44caa8ce0649c150f2af6c289706a1a60524c407f4c9a9e57edc828c85ab7` / locator `identity-proof:936758819`
+
+Exact excerpt:
+
+```
+ssalveien 20, 3208 Sandefjord<br>Org.nr 936 758 819</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <nav aria-label="Bunnmeny">
+    <a href="/">Forside
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T07:13:54.272825Z / SHA-256 `34dd628ade3801f2cb28968d26aa7229191cceae5bb4b87cf292d4f9d5357835` / locator `row:936758819/column:navn`
+
+Exact excerpt:
+
+```
+936758819,HELSEFIX AS,AS,Aksjeselskap,86.993,Andre helsetjenester ellers,,,,,,,false,,,,,,,,,,,,,,,Skiringssalveien 20,SANDEFJORD,3208,SANDEFJORD,3907,Norge,NO,2100,Private aksjeselskaper mv.,2025,2025-12-12,2025-09-20,false,,,,,false,,true,2025-12-12,false,false,,false,,false,,false,,,,,,,Bokmål,20
+```
+
+## X4 / 20261117 / added / 948039958 / VALAKER BAKERI OG KONDITORI AS
+
+Type: brand; identity: VALAKER BAKERI OG KONDITORI AS AVD MOA ØST; saved-evidence verdict: correct.
+
+```json
+{
+  "name": "VALAKER BAKERI OG KONDITORI AS AVD MOA ØST",
+  "origin": "registered_subunit",
+  "subunit_orgnr": "925923842"
+}
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0 / retrieved 2026-11-14T07:13:57.453323Z / SHA-256 `c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34` / locator `/_embedded/underenheter/7/navn`
+
+Exact excerpt:
+
+```
+itorvarer og sukkervarer","kode":"47.240"},"navn":"VALAKER BAKERI OG KONDITORI AS AVD MOA ØST","oppstartsdato":"2020-11-12","organisasjonsform":{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/organisasjonsformer/BEDR"}},"beskrivelse":"Underenhet til næringsdrivende og offentlig
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=948039958&size=1000&page=0 / retrieved 2026-11-14T07:13:57.453323Z / SHA-256 `c381e39c4d6711dbf45e1f05eaf9269bcda87efe6ec7485b2bd03e5692dc1f34` / locator `/_embedded/underenheter/7`
+
+Exact excerpt:
+
+```
+{"_links":{"self":{"href":"https://data.brreg.no/enhetsregisteret/api/underenheter/925923842"},"overordnetEnhet":{"href":"https://data.brreg.no/enhetsregisteret/api/enheter/948039958"}},"beliggenhetsadresse":{"adresse":["Langelandsvegen 51"],"kommune":"ÅLESUND","kommunenummer":"1508","land":"Norge",
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-14T07:13:54.273829Z / SHA-256 `a6554e27e2618cd6f7e517d93b8c66b08a85a445ad7edb3108db533bd6689466` / locator `row:948039958/column:navn`
+
+Exact excerpt:
+
+```
+948039958,VALAKER BAKERI OG KONDITORI AS,AS,Aksjeselskap,10.710,Produksjon av brød og ferske konditorvarer,47.240,"Detaljhandel med bakervarer, konditorvarer og sukkervarer",,,,,true,166,2026-09-14,2026-09-10,,post@valaker.as,70 21 65 90,91595160,,,,,,,,Søvikvegen 31,SØVIK,6280,HARAM,1580,Norge,NO,2
+```
+
+## X4 / 20261117 / removed / 926148931 / ATLO AS
+
+Type: brand; identity: atlo.no; saved-evidence verdict: correct.
+
+```json
+"atlo.no"
+```
+
+Source: https://atlo.no/ / retrieved 2026-11-14T05:41:38.136550Z / SHA-256 `cbb412abb99eebc5e3ae800ae77579d173a8902de37e558c9bf8f0629b703998` / locator `meta:brand`
+
+Exact excerpt:
+
+```
+a = window._wca || [];</script>
+<title>atlo.no - Boligalarm for alle</title>
+<link rel='dns-prefetch' href='//www.googletagmanager.com' />
+<link rel=
+```

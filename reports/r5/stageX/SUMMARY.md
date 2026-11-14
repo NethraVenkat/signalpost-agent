@@ -31,6 +31,27 @@ Full pytest gate: 1,055 passed. Role-specific titles, changed appointees/departu
 
 [Every added/removed website, social URL and brand, with full exact receipts](new_items.md). X1 adds no identity item and therefore no doubtful new identity. The original role update diagnostic used2 separately counted free HTTP attempts (robots ReadError, API200). The outage trial used311 additional attempts, disclosed above. Neither is silently included in the normal-source accepted-run totals.
 
-## Queue
+## Completed X4 ? public names
 
-Next: X4 public brands, then X5 explicit dated filing/LEI activity, then R6a?f websites, then X2 owner-declared social, X3 site-builder audit first and X6 legal roles. None of these queued items is claimed implemented or measured by X1. User permits a clean stop after a completed priority item if time/budget becomes tight. No push.
+X1 commit c4f42860 precedes X4. X4 implementation, evidence ledger and summary are in this commit. Full pytest: **1,067 passed**. All six accepted fresh seven-flag runs passed terminal/order/schema/evidence/five-topic/site checks, with zero unsupported values and unchanged runtime source. Profile HTML remains below250000 bytes. No new source request or website identity tier was added.
+
+Registered workplace names differing from the legal name are published with exact parent/subunit/name registry evidence and labelled as workplace names, not assumed trademarks or legal renames. Current VERIFIED/HIGH sites may supply an own publisher og:site_name or title brand corroborated in publisher branding. Generic templates/page headings, legal-name-only, customer/article and domain-only guesses abstain. The older heuristic is replaced and any withdrawn alias remains in the ledger. Names appear in profile facts and the cited activity briefing. Name changes in coverage are observations, not invented dated company renames.
+
+| Seed | Websites | Declared recall / N | Brand companies / claims | Activity claims | Social companies | Facts | HTTP | Process seconds | Largest profile HTML |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| 20261017 | 6 | 4/11 | 6/8 | 1398 | 3 | 13552 | 703 | 374.578 | 241093 |
+| 20261113 | 6 | 5/11 | 9/10 | 1344 | 1 | 13997 | 770 | 402.781 | 224442 |
+| 20261114 | 6 | 4/8 | 8/10 | 1263 | 4 | 13471 | 741 | 354.782 | 221597 |
+| 20261115 | 7 | 3/14 | 5/7 | 1153 | 4 | 13270 | 740 | 384.281 | 222056 |
+| 20261116 | 5 | 3/17 | 8/12 | 1475 | 0 | 13777 | 785 | 395.359 | 229166 |
+| 20261117 | 8 | 0/11 | 6/24 | 1248 | 4 | 14074 | 723 | 329.016 | 249152 |
+
+Totals: 71 brand claims / 42 companies, 38 websites / 600 inputs, declared recall19/72, 7,881 activity claims, 82,141 supported facts. 4462 requests and 2240.797 summed process seconds; $0. Each run stays within its hard1850HTTP/35min limit.
+
+Saved-evidence recheck: 65 added brand claims and one added website all correct; zero doubtful additions. Full source excerpts, URLs, retrieval dates, hashes and exact registry dependencies in [new_items.md](new_items.md) and [X4 identity_items.json](X4/identity_items.json). This is source/rule replay, not an independent human verdict. Review site names as publisher self-description and workplace names as registry declarations. Withdrawals are explicit.
+
+Live-source changes are not X4 identity-policy gains: one existing-rule website recovered, while LOOPYTY933519708 and AURSJ?KRAFT925700398 timed out. Two older brand aliases were withdrawn by the stricter publisher-name extractor. No social URL changes. An incomplete seed20261115 attempt had no final report/exit receipt and its process disappeared; cause/finalHTTP/runtime unknown. Its raw state and trial settings are retained under X4/trials/interrupted_seed20261115. A new-ID fresh-state recovery passed, then seeds20261116/17 completed with the same runtime source. No interrupted output is counted as an accepted run.
+
+## Remaining queue and amended measurement plan
+
+Next is X5, then R6a?f, R7a?f, X2, X3 audit-first and X6. These remaining items are **not implemented or measured** in this report. R6/R7 each use one green pytest commit per sub-step, then one six-sample measurement after the complete stage; gains are attributed by proof labels. A doubtful site requires reverting the responsible sub-step and one stage remeasurement. X2 remains required. Skip X3/X6 if R7 is not committed by Sunday2026-11-15 06:00IST (00:30UTC). No push. User permits stopping cleanly after a completed item if time/budget is tight.

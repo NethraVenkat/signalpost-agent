@@ -116,6 +116,13 @@ def apply(envelope, previous, blobs):
     for field in sorted(set(old_claims) | set(new_claims)):
         before, after = old_claims.get(field), new_claims.get(field)
         family = (after or before).family
+        if field=='public_brand' or field.startswith('brand.'):
+            if before and after:after.first_observed_at=before.first_observed_at
+            if meaning(before)!=meaning(after):
+                envelope.run.refresh['observation_changes'].append({'section':family,'field':field,
+                    'previous_state':before.availability if before else 'not_observed','current_state':after.availability if after else 'not_observed',
+                    'reason':'public_name_observation_changed_not_a_dated_rename'})
+            continue
         if family not in envelope.run.sections or family in failed:
             continue
         if field.startswith('accounts.filed_year'):

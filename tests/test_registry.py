@@ -329,7 +329,8 @@ def test_multiple_subunit_pages_and_parent_verification(tmp_path):
         return handler()(request)
     report, rows = execute(config(tmp_path, ["923609016"]), pages)
     assert report["requests"] == 6
-    assert len([c for c in rows[0]["claims"] if c["family"] == "subunits"]) == 2
+    assert len([c for c in rows[0]["claims"] if c["field"].startswith('subunits.unit.')]) == 2
+    assert len([c for c in rows[0]["claims"] if c["field"].startswith('brand.registered_subunit.')]) == 1
     def wrong_parent(request):
         if "/underenheter?" in str(request.url):
             return httpx.Response(200, json={"_embedded": {"underenheter": [{"overordnetEnhet": "993578843"}]}})

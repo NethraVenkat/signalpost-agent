@@ -315,6 +315,10 @@ def fact(claim, records, filing_list=None):
     v = claim.get('value')
     title = english_title(v) if claim['field'].startswith('identity.nace') and isinstance(v, dict) else None
     content = value_html(v) if available else '<p>' + esc(UNKNOWN.get(claim['availability'], 'Unknown.')) + '</p>'
+    if available and (claim['field']=='public_brand' or claim['field'].startswith('brand.')):
+        label='Site-declared public name' if claim['field']=='public_brand' else 'Registered workplace name'
+        name=v if isinstance(v,str) else v['name']
+        content='<p>'+esc(name)+'</p><p class="muted">Reported name; not a trademark or a change to the legal identity.</p>'
     if available and claim['field'].startswith('registry_change.'):
         from .sources.registry_changes import sentence as registry_sentence
         label = v['title']

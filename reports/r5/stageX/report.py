@@ -19,6 +19,11 @@ def review(item,row,work):
     evidence={e['id']:e for e in row['evidence']};context,leaders=extract_org_context_and_leaders(row['claims'])
     site=next((c for c in row['claims'] if c['field']=='official_website' and c['availability']=='available'),None)
     proofs=[]
+    if item['kind']=='brand' and any(e.get('extraction_method')=='signalpost.public_names.v1' for e in item['evidence']):
+        from signalpost.public_names import verify as verify_names
+        checked=verify_names(row['organisation_number'],row,evidence,lambda sha:decode_body((work/'state/blobs'/sha).read_bytes()))
+        claim=next(c for c in row['claims'] if c['field']==item['field'] and c['value']==item['value'])
+        return {'verdict':'correct' if claim['id'] in checked else 'doubtful','checks':[{'verdict':'CORRECT' if claim['id'] in checked else 'DOUBTFUL','reason':'Exact parent/name registry or verified publisher public-name receipt replay'}]}
     for e in item['evidence']:
         path=work/'state/blobs'/e['content_sha256'];body=path.read_bytes()
         assert hashlib.sha256(body).hexdigest()==e['content_sha256'] and e['claim_span'] in decode_body(body)
