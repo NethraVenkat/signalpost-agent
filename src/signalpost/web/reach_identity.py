@@ -141,3 +141,15 @@ def unique_phone(page,org,context):
     return None
 
 RULES['unique_registry_phone']=unique_phone
+
+def unique_email(page,org,context):
+    from .rarity import load
+    if not eligible(page,org,context) or not single_company_root(page,context):return None
+    try:counts=load()['counts']['email']
+    except (OSError,ValueError,KeyError):return None
+    for f,field,kind,key,token in contacts(page,context,all_publisher=True):
+        if kind=='email' and counts.get(key)==1:
+            return receipt('unique_registry_email',page,context,f,token,{'kind':kind,'registry_field':field,'registry_value':context[field],'normalized_value':key,'rarity_count':1})
+    return None
+
+RULES['unique_registry_email']=unique_email

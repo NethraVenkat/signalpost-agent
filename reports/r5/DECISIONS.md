@@ -526,3 +526,8 @@
 - HIGH `unique_registry_phone`: exact normalized registry phone/mobile in company footer/contact/imprint; R2 count exactly one, positive bundled provenance; R4, challenge and conflicting publisher/portal branding veto first. Accountant, agency and property-manager publisher role text abstains.
 - Same company-contact safeguards as R7a: person/title/staff-card contacts do not count; non-footer phones need switchboard/company context. Root-only restriction belongs to R7a; R7b may use an own contact page, never a conflicting portal publisher.
 - 37 focused R7a/b tests passed. Full pytest gates commit; live gains remain unmeasured until the single whole-stage six-sample qualification.
+
+### R7c — unique registered company email
+- HIGH `unique_registry_email`: exact full registry email, R2 frequency exactly one (including free-mail), in R1 company publisher contact/footer; explicit staff/person, hidden/body/article, agency-credit and conflicting publisher/portal contexts reject first.
+- Full email matches are distinct from domain matches; a common or absent full-email key cannot pass. Non-footer mailboxes must be company-level (`post`, `firmapost`, `kontakt`, `info`, etc.). Free-mail is not used for candidate-domain guessing.
+- Independent verification/audit reconstruct through the R7 rule map, preserving exact registry and publisher receipts. 47 focused R7a/b/c tests passed. Full pytest gates this sub-step; six-sample gains/review remain pending until a–g complete.
