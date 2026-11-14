@@ -11,7 +11,7 @@ from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[3]
 SEEDS=(20261017,20261113,20261114,20261115,20261116,20261117)
-ORDER=('X1','X4','X5','R6','R7','X2')
+ORDER=('X1','X4','R6','R7','X2')
 
 
 def save(path,value):

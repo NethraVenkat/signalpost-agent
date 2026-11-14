@@ -475,3 +475,9 @@
 - Receipts preserve exact publisher fragments, registry values and bundled rarity provenance. Independent output verification now reconstructs the address from its exact registry CSV/JSON field before reconstructing the tier.
 - Focused tests: 23 passed. Full pytest is the commit gate; live gains await the single six-sample R6 measurement.
 - The first full gate found two Unicode regressions from a Windows-default encoding during editing (1,116 passed, 2 failed). Restored UTF-8; 50 focused regression tests passed. The required full suite is rerun before commit.
+
+### R6f — documented former and workplace candidate names
+- Current saved `identity.historical_names` records nominate their explicit `navn` values; no inferred history, new requests or stale historical claims. Proven registered subunit-name nominations already existed and are retained with exact subunit scope.
+- Give one strongest former/workplace guess a position before weaker current-name spelling variants, after existing strongest current candidates, registry subunit contacts, NAV and known-brand nominations. Remaining variants stay available in the capped pass-two queue. Domain deduplication and all request/DNS ceilings are unchanged.
+- Candidate names do not replace the current legal identity in proof. Focused tests: 24 passed. Full pytest gates this commit.
+- The R6 measurement baseline is accepted X4, because X5 was dropped. Six fresh foreground samples will run once after this commit; no unmeasured gains claimed.

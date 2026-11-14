@@ -211,6 +211,10 @@ async def fetch(org, envelope, bulk, http, previous=None, *, resume=False, candi
         if unit in units and field in {'registered_website','registered_email'}:
             units[unit]['website' if field=='registered_website' else 'email']=c.value
     context['subunits']=[{'orgnr':unit,**data} for unit,data in units.items()]
+    context['former_names']=list(dict.fromkeys(record['navn'] for c in envelope.claims
+        if c.field=='identity.historical_names' and c.availability=='available' and not c.carried_forward
+        and isinstance(c.value,list) for record in c.value
+        if isinstance(record,dict) and isinstance(record.get('navn'),str) and record['navn'].strip()))
     if previous:
         old = previous if 'claims' in previous else previous.get('profile', {})
         context['brands'] = [c['value'] for c in old.get('claims', []) if c.get('field') == 'public_brand'

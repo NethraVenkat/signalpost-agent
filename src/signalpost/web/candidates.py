@@ -93,11 +93,22 @@ def generate(context, limit=8):
     for brand in context.get('brands', []):
         for slug in legal_name_slugs(legal_name(brand)):
             add(slug, 'brand_variant')
+    # One strongest nomination from each documented former/workplace name
+    # precedes weaker spelling variants. Current registry contacts stay first.
+    for former in context.get('former_names', []):
+        slugs=legal_name_slugs(legal_name(former))
+        if slugs:add(slugs[0], 'former_registered_name')
+    for unit in context.get('subunits', []):
+        slugs=legal_name_slugs(legal_name(unit.get('name')))
+        if slugs:add(slugs[0], 'registry_subunit_name', unit['orgnr'])
     for slug in name_slugs:
         add(slug, "legal_name_slug")
     for unit in context.get('subunits', []):
         for slug in legal_name_slugs(legal_name(unit.get('name'))):
             add(slug, 'registry_subunit_name', unit['orgnr'])
+    for former in context.get('former_names', []):
+        for slug in legal_name_slugs(legal_name(former)):
+            add(slug, 'former_registered_name')
     return output[:min(32, limit)]
 
 
