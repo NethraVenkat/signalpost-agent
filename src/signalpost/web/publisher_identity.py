@@ -10,7 +10,6 @@ from .publisher import extract_publisher
 
 DECLARED = 'registry_declared_publisher_name'
 RARE = 'publisher_name_rare_contact'
-CORE = 'registry_declared_publisher_core_name'
 REDIRECT = 'registry_declared_redirect_publisher_name'
 
 
@@ -23,31 +22,6 @@ def redirect_receipt(page,org,context):
     if not fragment:return None
     return {'tier':REDIRECT,'legal_name':context['name'],'publisher_location':fragment.location,
         'publisher_excerpt':fragment.text,'registry_homepage':declared,'candidate_url':candidate,'proof_page_url':page.url}
-
-
-def core_receipt(page,org,context):
-    """R6a: declared hostname plus a distinctive, rare registered name core."""
-    if not host(context.get('website')) or host(context.get('candidate_url'))!=host(context.get('website')):
-        return None
-    if domain(page.url)!=domain(context['website']):return None
-    from .rarity import name_key,load,FORMS,FILLERS
-    from .candidates import GENERIC
-    from .publisher_veto import conflict
-    if conflict(page,org,context)[0]:return None
-    key=name_key(context.get('name'))
-    try:frequency=load()['counts']['name'].get(key,0)
-    except (OSError,ValueError,KeyError):return None
-    tokens=[t for t in re.findall(r'[a-z0-9]+',normalize_name(context.get('name'))) if t not in FORMS|FILLERS]
-    if not tokens or not 1<=frequency<=2:return None
-    if not any(len(t)>=4 and t.isalpha() and t not in GENERIC|{'norge','norsk','norske','gruppen','group','selskap','selskapet'} for t in tokens):return None
-    pattern=re.compile(r'(?<!\w)'+r'\s+'.join(re.escape(t) for t in tokens)+r'(?!\w)')
-    for fragment in extract_publisher(page).fragments:
-        if pattern.search(normalize_name(fragment.text)):
-            return {'tier':CORE,'legal_name':context['name'],'publisher_location':fragment.location,
-                'publisher_excerpt':fragment.text,'registry_homepage':context['website'],
-                'candidate_url':context['candidate_url'],'proof_page_url':page.url,
-                'name_key':key,'name_rarity_count':frequency,'core_name':' '.join(tokens),'rarity_table':rarity_provenance()}
-    return None
 
 
 def normalize_name(value):

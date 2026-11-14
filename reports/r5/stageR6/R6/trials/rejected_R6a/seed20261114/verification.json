@@ -1,0 +1,33 @@
+{
+  "lines": 100,
+  "schema_valid": true,
+  "published_claims": 13481,
+  "source_blobs_verified": 421,
+  "synthesis_companies": 100,
+  "synthesis_sentences": 1853,
+  "synthesis_unverified_values": 0,
+  "financial_inputs_verified": 6191,
+  "derived_financial_metrics_verified": 224,
+  "registry_events_verified": 1262,
+  "filing_year_facts_verified": 947,
+  "exact_public_items_verified": 12,
+  "briefing_companies": 100,
+  "briefing_sentences": 610,
+  "briefing_short_companies": 0,
+  "briefing_unverified_values": 0,
+  "briefing_topic_coverage": {
+    "activity": 100,
+    "change": 100,
+    "unknown": 100,
+    "financial": 100,
+    "takeaway": 100
+  },
+  "complete_briefing_contracts": 100,
+  "newer_filing_flags": 0,
+  "site_verified": true,
+  "terminal_envelopes": 100,
+  "source_failures_permitted": true,
+  "http_requests": 724,
+  "wall_seconds": 357.344,
+  "cost_usd": 0
+}

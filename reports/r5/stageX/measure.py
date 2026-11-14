@@ -66,7 +66,7 @@ def main():
     stage=sys.argv[1];assert stage in ORDER
     chosen=set(map(int,sys.argv[2:]))
     label=os.environ.get('SIGNALPOST_MEASUREMENT_LABEL','final')
-    assert label in {'final','source-recovery','resume-final','unattended','unattended-retry'}
+    assert label in {'final','source-recovery','resume-final','unattended','unattended-retry','outage-retry','qualification-final'}
     dest=folder(stage);dest.mkdir(parents=True,exist_ok=True)
     source=manifest();save(dest/'source_manifest.json',source)
     env=os.environ.copy();env.update(PYTHONUTF8='1',SIGNALPOST_SEARCH_PROVIDER='disabled',SIGNALPOST_SEARCH_MOCK='0')

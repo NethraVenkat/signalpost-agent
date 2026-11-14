@@ -1,0 +1,23 @@
+[
+  {
+    "host": "data.brreg.no",
+    "addresses": [
+      "195.43.63.68"
+    ],
+    "seconds": 0.01600000000325963
+  },
+  {
+    "host": "data.brreg.no",
+    "addresses": [
+      "195.43.63.68"
+    ],
+    "seconds": 0.0
+  },
+  {
+    "host": "api.gleif.org",
+    "addresses": [
+      "193.17.90.130"
+    ],
+    "seconds": 0.07800000000861473
+  }
+]

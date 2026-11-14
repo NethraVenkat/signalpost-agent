@@ -1,0 +1,6 @@
+{
+  "reason": "Widespread source DNS failure: 21 roles no_such_domain, 21 accounts no_such_domain and 29 filing_years_no_such_domain. Coverage sharply lower than X4. Exactly one fresh-state retry.",
+  "HTTP": 528,
+  "CLI_seconds": 335.641,
+  "cost_usd": 0
+}

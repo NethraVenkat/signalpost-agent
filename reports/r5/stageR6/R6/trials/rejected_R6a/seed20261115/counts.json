@@ -1,0 +1,151 @@
+{
+  "stage": "R6",
+  "seed": 20261115,
+  "before": {
+    "websites": 7,
+    "declared_homepage_recall": 3,
+    "declared_homepages": 14,
+    "social_companies": 4,
+    "social_claims": 4,
+    "activity_companies": 100,
+    "activity_claims": 1153,
+    "brand_companies": 5,
+    "brand_claims": 7,
+    "role_change_claims": 183,
+    "facts": 13270,
+    "families": {
+      "identity": 2963,
+      "roles": 1029,
+      "accounts": 7190,
+      "activity": 1153,
+      "subunits": 893,
+      "gleif": 10,
+      "website": 32
+    }
+  },
+  "after": {
+    "websites": 8,
+    "declared_homepage_recall": 3,
+    "declared_homepages": 14,
+    "social_companies": 4,
+    "social_claims": 4,
+    "activity_companies": 100,
+    "activity_claims": 1153,
+    "brand_companies": 6,
+    "brand_claims": 8,
+    "role_change_claims": 183,
+    "facts": 13274,
+    "families": {
+      "identity": 2963,
+      "roles": 1029,
+      "accounts": 7190,
+      "activity": 1153,
+      "subunits": 893,
+      "gleif": 10,
+      "website": 36
+    }
+  },
+  "HTTP": 748,
+  "runtime_seconds": 478.2820000000065,
+  "CLI_runtime_seconds": 440.9530000000086,
+  "cost_usd": 0.0,
+  "site": {
+    "state": "available",
+    "companies": 100,
+    "input_records": 100,
+    "pages": 102,
+    "skipped_invalid_identifiers": 0,
+    "total_bytes": 36093352,
+    "largest_profile_data_bytes": 484243,
+    "largest_profile_bytes": 221671
+  },
+  "changes": {
+    "added": [
+      {
+        "orgnr": "933519708",
+        "legal_name": "LOOPYTY AS",
+        "kind": "website",
+        "identity": "https://loopyty.com",
+        "field": "official_website",
+        "value": {
+          "final_url": "https://loopyty.com",
+          "identity_level": "VERIFIED",
+          "proof_type": "orgnr_on_page",
+          "proof_page_url": "https://loopyty.com/nb",
+          "signals": [],
+          "points": 0,
+          "candidate_origin": "legal_name_slug",
+          "relationship_note": null,
+          "other_orgnrs": []
+        },
+        "evidence": [
+          {
+            "id": "093147545fd59ef0b868e47579377e9477c72d00a97580340ed397c8cd19e660",
+            "source_url": "https://loopyty.com/nb",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-14T15:26:12.422488Z",
+            "content_sha256": "4915bf8556d3bfed8b94f52960438f14ca16c3434a0f319f8571fe4508942dd4",
+            "claim_span": "mui-ln603f\">© 2026 Loopyty AS · Org.nr. 933 519 708 · Oslo</p></div></div></footer></div></div></div></div><script src=\"/_next/static/chunks/0w05wc0hf",
+            "locator": "identity-proof:933519708",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "orgnr": "933519708",
+        "legal_name": "LOOPYTY AS",
+        "kind": "brand",
+        "identity": "Loopyty",
+        "field": "public_brand",
+        "value": "Loopyty",
+        "evidence": [
+          {
+            "id": "948516ce110e313cb2f5add3b7c40bee78f22dd67eaf5e88b7d609e80018d927",
+            "source_url": "https://loopyty.com/nb",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-14T15:26:12.422488Z",
+            "content_sha256": "4915bf8556d3bfed8b94f52960438f14ca16c3434a0f319f8571fe4508942dd4",
+            "claim_span": "qlsezdquj8.js\" async=\"\"></script><title>Loopyty – kjøp og selg brukte leker til barn</title><meta name=\"description\" content=\"Loopyty er markedsplassen for brukte leker til barn. Kjøp trygt, selg enkelt, og gi lekene et nytt eventyr – med sporet frakt og trygg betaling.\"/><link rel=\"canonical\" href=",
+            "locator": "publisher-public-name",
+            "extraction_method": "signalpost.public_names.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "093147545fd59ef0b868e47579377e9477c72d00a97580340ed397c8cd19e660",
+            "source_url": "https://loopyty.com/nb",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-14T15:26:12.422488Z",
+            "content_sha256": "4915bf8556d3bfed8b94f52960438f14ca16c3434a0f319f8571fe4508942dd4",
+            "claim_span": "mui-ln603f\">© 2026 Loopyty AS · Org.nr. 933 519 708 · Oslo</p></div></div></footer></div></div></div></div><script src=\"/_next/static/chunks/0w05wc0hf",
+            "locator": "identity-proof:933519708",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "1702db1ad54cedd4912bf896cc391dd5747b111d70a72049444e2228cb50f1f3",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T15:24:07.468953Z",
+            "content_sha256": "b063903d19c152348802d21fa82ce17fc1eb8a795241b1a7e947ca680f021719",
+            "claim_span": "933519708,LOOPYTY AS,AS,Aksjeselskap,60.390,Annen virksomhet for distribuering av innhold,,,,,,,false,,,,,,,,,,,,,,,\"c/o Berthilde Maud Schelstraete\nParkveien 15C\",OSLO,0350,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2024-05-29,2024-05-10,false,,,,,false,,true,2024-05-29,false,false,,fa",
+            "locator": "row:933519708/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:bd3598aeae1b5c6b107e61ba1ffdb4d2a92af86edeef91f9b0dbfe65e0d418d3",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      }
+    ],
+    "removed": []
+  },
+  "envelopes_sha256": "708157a8e0068bb32d3b9c5cb1dc5b7e475206e56833c65578292d31a82aa097",
+  "profiles_sha256": "cfd2af434c14c6379e8dbd60a5443a4e244cfb6529a8ffd7a895347e2e4f59c4"
+}
