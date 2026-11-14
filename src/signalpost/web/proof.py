@@ -356,6 +356,10 @@ def score(page, org, context, origin, leaders):
     if receipt := own_email_receipt(page,org,context):
         return Proof('HIGH',OWN_EMAIL,['rare_full_registry_email','own_email_domain'],
                      reason=OWN_EMAIL,token=receipt['proof_token'],publisher_receipt=receipt)
+    from .publisher_identity import two_contacts_receipt,TWO_CONTACTS
+    if receipt := two_contacts_receipt(page,org,context):
+        return Proof('HIGH',TWO_CONTACTS,['rare_registry_phone','exact_registry_street_postcode'],
+                     reason=TWO_CONTACTS,token=receipt['proof_token'],publisher_receipt=receipt)
     if origin == 'registry_website':
         branded = legal_name(page.title+' '+page.meta.get('og:site_name','')+' '+' '.join(page.brand_parts))
         generic = GENERIC | {'norsk','norske','norge','stiftelsen','selskap','gruppen','group','nasjonalt','ressurssenter','foreningen'}

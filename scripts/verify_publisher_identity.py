@@ -7,7 +7,7 @@ from urllib.parse import urlsplit, urlunsplit
 from signalpost.web.html import Page
 from signalpost.web.publisher_identity import DECLARED, RARE, CORE, REDIRECT, declared_receipt, rare_receipt,core_receipt,redirect_receipt
 from signalpost.web.publisher_veto import conflict
-from signalpost.web.publisher_identity import OWN_EMAIL,own_email_receipt
+from signalpost.web.publisher_identity import OWN_EMAIL,own_email_receipt,TWO_CONTACTS,two_contacts_receipt
 
 
 def registry_context(org,data,evidence,stored_body):
@@ -35,6 +35,22 @@ def registry_context(org,data,evidence,stored_body):
             if match:valid=True;refs.add(ref)
         assert valid,'Publisher identity registry input not supported by exact source field: '+key
         context[key]=claim['value']
+    address=next((c for c in data['claims'] if c['field']=='identity.registered_address' and c['availability']=='available' and not c.get('carried_forward')),None)
+    if address:
+        valid=False
+        for ref in address['evidence_ids']:
+            e=evidence[ref]
+            if e['source_class']!='official_registry':continue
+            body=stored_body(e['content_sha256'])
+            if e['locator']=='row:'+org+'/columns:forretningsadresse.*':
+                from signalpost.sources.bulk_registry import column as read_column
+                match=any(read_column(r,'organisasjonsnummer')[0]==org and all(read_column(r,'forretningsadresse.'+k)[0]==v for k,v in address['value'].items()) for r in csv.DictReader(io.StringIO(body)))
+            elif e['locator']=='/forretningsadresse':
+                doc=json.loads(body);match=str(doc.get('organisasjonsnummer'))==org and doc.get('forretningsadresse')==address['value']
+            else:match=False
+            if match:valid=True;refs.add(ref)
+        assert valid,'Unsupported registry publisher address'
+        context.update(street=address['value'].get('adresse'),postcode=address['value'].get('postnummer'),city=address['value'].get('poststed'))
     context['subunits']=[{'orgnr':c['value']['organisation_number']} for c in data['claims'] if c['field'].startswith('subunits.unit.') and c['availability']=='available']
     return context,refs
 
@@ -45,7 +61,7 @@ def verify(org,data,evidence,stored_body):
         if claim['field']!='official_website' or claim['availability']!='available':continue
         value=claim['value']
         tier=value.get('proof_type')
-        if tier not in {DECLARED,RARE,CORE,REDIRECT,OWN_EMAIL}:continue
+        if tier not in {DECLARED,RARE,CORE,REDIRECT,OWN_EMAIL,TWO_CONTACTS}:continue
         context,refs=registry_context(org,data,evidence,stored_body)
         assert refs<=set(claim['evidence_ids']),'Missing registry proof dependencies'
         receipt=value['publisher_identity'];context['candidate_url']=receipt['candidate_url']
@@ -57,7 +73,7 @@ def verify(org,data,evidence,stored_body):
             parts=urlsplit(page.url)
             assert value['final_url']==urlunsplit((parts.scheme,parts.netloc,'','','')),'Published URL differs from proven publisher authority'
             assert not conflict(page,org,context)[0],'Publisher conflict'
-            expected={DECLARED:declared_receipt,RARE:rare_receipt,CORE:core_receipt,REDIRECT:redirect_receipt,OWN_EMAIL:own_email_receipt}[tier](page,org,context)
+            expected={DECLARED:declared_receipt,RARE:rare_receipt,CORE:core_receipt,REDIRECT:redirect_receipt,OWN_EMAIL:own_email_receipt,TWO_CONTACTS:two_contacts_receipt}[tier](page,org,context)
             from signalpost.web.proof import score
             checked=score(page,org,context,value.get('candidate_origin'),[])
             matched |= bool(expected and expected==receipt and checked.level=='HIGH')

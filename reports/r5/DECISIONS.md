@@ -468,3 +468,10 @@
 - R6c fullgate1095passed in162.86s. Commit single longer-timeout retry sub-step, no budget cap increase. No live measurement/gains yet; R6d-f then single-stage foreground measurements remain.
 
 - R6d HIGH registry_email_on_own_domain: exact full registered email in R1 publisher context, email count1?2 in bundledR2, corporate email domain exactly the site registrable domain, noR4/earlier conflict. No name requirement and no free-mail/provider-domain substitution. Save email, publisher excerpt/location, candidate/proof URL and rarity provenance; independent registry-source/page replay verifies it. Focused11pass, fullpytest required before owncommit. No live gain claimed until completeR6measurement. User explicitly requires continuing entire queue without ending between sub-steps.
+
+### R6e — two exact registered contacts
+- Added HIGH `two_registry_contacts`: a registry phone/mobile with a positive R2 frequency of at most two, plus the complete registry street and four-digit postcode, in extracted footer/contact publisher context. Both address components must occur together; no name-only acceptance.
+- R4 runs first. Accountant, web/digital agency and property-manager publisher text abstains. Hidden/article/agency-credit text remains excluded by R1.
+- Receipts preserve exact publisher fragments, registry values and bundled rarity provenance. Independent output verification now reconstructs the address from its exact registry CSV/JSON field before reconstructing the tier.
+- Focused tests: 23 passed. Full pytest is the commit gate; live gains await the single six-sample R6 measurement.
+- The first full gate found two Unicode regressions from a Windows-default encoding during editing (1,116 passed, 2 failed). Restored UTF-8; 50 focused regression tests passed. The required full suite is rerun before commit.
