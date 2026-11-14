@@ -77,7 +77,14 @@ def single_company_root(page,context):
     fragments=extract_publisher(page).fragments
     # A different site-name/logo/footer owner is disqualifying, even when a
     # company appears in the page title or a portal profile heading.
+    expected=normalize_name(context.get('name'))
+    forms=r'AS|ASA|IKS|SA|ANS|DA|NUF|ENK|BA|KS|STI'
+    word=r'(?!(?:'+forms+r')\b)[A-Z\u00c6\u00d8\u00c5][\w&.-]*'
+    legal_publisher=re.compile(r'(?<!\w)'+word+r'\s+(?:(?:'+word+r'|og|&)\s+){0,6}(?:'+forms+r')\b')
     for f in fragments:
+        if f.location in {'og:site_name','logo','footer','copyright'}:
+            for match in legal_publisher.finditer(f.text):
+                if not expected or not normalize_name(match.group()).endswith(expected):return False
         text=normalize_name(f.text)
         if f.location=='og:site_name' and own not in text:return False
         if f.location in {'logo','copyright'} and text and own not in text and len(text)>3:
@@ -186,3 +193,29 @@ def unique_name_domain(page,org,context):
         'domain_label':label,'norway_tie':tie}
 
 RULES['exact_name_unique_domain']=unique_name_domain
+
+def registered_place(page,org,context):
+    if not eligible(page,org,context) or not single_company_root(page,context):return None
+    from .social import shared_group_context
+    if shared_group_context(page):return None
+    text=normalize_name(extract_publisher(page).text)
+    if re.search(r'regnskap|accountant|accounting|advokat|law firm|webbyra|digitalbyra|agency|eiendomsforvalt|property manag|forvaltning',text):return None
+    name=name_fragment(page,context.get('name'))
+    if not name:return None
+    # Full legal-form suffix must actually be in the exact registry name.
+    if not re.search(r'\b(?:AS|ASA|SA|ANS|DA|IKS|NUF|ENK|BA|KS|STI)\s*$',str(context.get('name') or ''),re.I):return None
+    postcode=str(context.get('postcode') or '');city=normalize_name(context.get('city'))
+    if not re.fullmatch(r'\d{4}',postcode):return None
+    street=context.get('street');streets=street if isinstance(street,list) else [street]
+    for f in contact_fragments(page):
+        folded=normalize_name(f.text)
+        if not re.search(r'(?<!\d)'+postcode+r'(?!\d)',folded):continue
+        street=next((s for s in streets if s and len(str(s))>=5 and re.search(r'(?<!\w)'+re.escape(normalize_name(s))+r'(?!\w)',folded)),None)
+        city_match=bool(city and re.search(r'(?<!\w)'+re.escape(city)+r'(?!\w)',folded))
+        if not street and not city_match:continue
+        return {**receipt('publisher_name_registered_place',page,context,name,context['name'],{'kind':'exact_full_legal_name_and_registered_place'}),
+            'place':{'publisher_location':f.location,'publisher_excerpt':f.text,'postcode':postcode,
+                     'street':street,'city':context.get('city') if city_match else None}}
+    return None
+
+RULES['publisher_name_registered_place']=registered_place
