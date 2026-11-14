@@ -12,6 +12,24 @@ DECLARED = 'registry_declared_publisher_name'
 RARE = 'publisher_name_rare_contact'
 CORE = 'registry_declared_publisher_core_name'
 REDIRECT = 'registry_declared_redirect_publisher_name'
+OWN_EMAIL = 'registry_email_on_own_domain'
+
+
+def own_email_receipt(page,org,context):
+    from .rarity import email_key,domain_key,load
+    from .publisher_veto import conflict
+    email=email_key(context.get('email'));email_domain=domain_key(context.get('email'))
+    if not email or not email_domain or email_domain!=domain(page.url) or conflict(page,org,context)[0]:return None
+    try:frequency=load()['counts']['email'].get(email,0)
+    except (OSError,ValueError,KeyError):return None
+    if not 1<=frequency<=2:return None
+    for fragment in extract_publisher(page).fragments:
+        found=re.findall(r'[^\s@<>;,():]+@[^\s@<>;,():]+\.[^\s@<>;,():]+',fragment.text)
+        if not any(email_key(value.rstrip('.!?'))==email for value in found):continue
+        return {'tier':OWN_EMAIL,'legal_name':context.get('name'),'publisher_location':fragment.location,
+            'publisher_excerpt':fragment.text,'candidate_url':context.get('candidate_url'),'proof_page_url':page.url,
+            'proof_token':email,'registry_email':context['email'],'email_rarity_count':frequency,'rarity_table':rarity_provenance()}
+    return None
 
 
 def redirect_receipt(page,org,context):
@@ -148,7 +166,7 @@ def localized_span(page, receipt):
     # The receipt stores the complete, independently reconstructed publisher
     # fragment. Evidence also retains the entire hashed response; a verbatim
     # raw span anchors it even when markup splits the full name across nodes.
-    span = page.name_span(receipt['legal_name'])
+    span = page.name_span(receipt.get('proof_token') or receipt['legal_name'])
     if span:
         return span
     for token in re.findall(r'\w+',receipt['publisher_excerpt']):
