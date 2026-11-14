@@ -5,6 +5,7 @@ from urllib.parse import urlsplit,urljoin,unquote
 from ..budget import SourceFailure
 from ..workers import offload
 from .policy import domain,normalize_url
+from .legal_pages import is_legal
 
 PROOF=re.compile(r'(?:^|/)(?:kontakt(?:[-_]oss)?|om(?:[-_]oss)?|personvern(?:erklaering)?|impressum|about(?:[-_]us)?|contact(?:[-_]us)?|privacy)(?:[/_.-]|$)',re.I)
 NEWS=re.compile(r'(?:^|/)(?:news|nyheter|aktuelt|presse|blog|blogg|artikler|posts?)(?:[/_.-]|$)',re.I)
@@ -24,9 +25,9 @@ def parse(body,source_url,homepage):
         if not url or domain(url)!=domain(homepage):continue
         path=unquote(urlsplit(url).path)
         if NEWS.search(path):continue
-        if kind=='urlset' and PROOF.search(path) and not re.search(r'\.(?:pdf|xml|docx?|zip|jpe?g|png)$',path,re.I):pages.append(url)
+        if kind=='urlset' and (PROOF.search(path) or is_legal(path)) and not re.search(r'\.(?:pdf|xml|docx?|zip|jpe?g|png)$',path,re.I):pages.append(url)
         elif kind=='sitemapindex' and re.search(r'(?:page|kontakt|contact|about|privacy|personvern)',path,re.I):children.append(url)
-    return list(dict.fromkeys(pages))[:2],list(dict.fromkeys(children))[:1]
+    return sorted(dict.fromkeys(pages),key=lambda url:not is_legal(urlsplit(url).path))[:2],list(dict.fromkeys(children))[:1]
 
 
 async def discover(org,http,homepage,seen):

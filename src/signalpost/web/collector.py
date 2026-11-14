@@ -145,13 +145,15 @@ def followup_links(page):
         text=urlsplit(link.href).path+' '+link.text
         priority=next((i for i,p in enumerate(patterns) if re.search(p,text,re.I)),None)
         if priority is not None: ranked.append((priority,link.href))
-    return list(dict.fromkeys(url for _,url in sorted(ranked,key=lambda x:x[0])))
+    from .legal_pages import legal_links
+    return list(dict.fromkeys(legal_links(page)+[url for _,url in sorted(ranked,key=lambda x:x[0])]))
 
 
 # Pages where Norwegian companies state their organisation number. They are tried
 # after the links found on the home page; proof rules apply to them unchanged.
-FALLBACK_PROOF_PATHS = ('/kontakt', '/om-oss', '/personvern', '/personvernerklaering', '/kontakt-oss', '/om')
-FOLLOWUP_PAGES = len(FALLBACK_PROOF_PATHS)
+from .legal_pages import FIXED as LEGAL_PROOF_PATHS
+FALLBACK_PROOF_PATHS = tuple(dict.fromkeys(('/personvern','/personvernerklaering','/kontakt','/om-oss','/kontakt-oss','/om')+LEGAL_PROOF_PATHS))
+FOLLOWUP_PAGES = len(FALLBACK_PROOF_PATHS)  # nominations only; HTTP ceilings are unchanged
 
 
 def proof_page_targets(page, base_url, limit=FOLLOWUP_PAGES):
@@ -313,6 +315,10 @@ async def fetch(org, envelope, bulk, http, previous=None, *, resume=False, candi
                         continue
                     extra_page = await offload(Page,extra.body,extra.url)
                     extra_proof = await offload(candidate_proof,extra_page,org,context,candidate,leaders)
+                    from .legal_pages import is_legal
+                    if is_legal(urlsplit(extra.url).path) and extra_proof.level in {'HIGH','REGISTRY_DECLARED'}:
+                        from .proof import Proof
+                        extra_proof=Proof('LOW',reason='legal_page_exact_number_missing')
                     if extra_proof.level == 'BLOCKED':
                         attempts.append({'domain':candidate.domain,'origin':candidate.origin,'reason':'block_page','page':target})
                         raise SourceFailure('block_page')

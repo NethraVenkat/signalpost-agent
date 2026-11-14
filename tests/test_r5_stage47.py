@@ -64,7 +64,9 @@ def test_proof_page_veto_stops_remaining_requests(tmp_path, monkeypatch):
     _, row, urls, _ = execute_web(tmp_path, monkeypatch, response=response)
     assert not any(c['field'] == 'official_website' for c in row['claims'])
     assert sum(url.startswith('https://example.no/') for url in urls) == 4  # robots, home, map, vetoing proof page
-    assert not any('/personvern' in url or '/om-oss' in url for url in urls)
+    proof_requests=[url for url in urls if url.startswith('https://example.no/') and not url.endswith(('/', '/robots.txt', '/sitemap.xml'))]
+    assert len(proof_requests)==1  # whichever fixed page is first, its veto stops all later pages
+    assert not any('/om-oss' in url for url in urls)
 
 
 def test_cached_dns_does_not_charge_another_company_at_its_nomination_limit(tmp_path):

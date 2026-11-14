@@ -7,7 +7,7 @@ from measure import ROOT,SEEDS,folder
 
 
 def main():
-    stage=sys.argv[1];assert stage in {'R6','R7'}
+    stage=sys.argv[1];assert stage in {'R6','R7','L'}
     dest=folder(stage)
     ledger=json.loads((dest/'identity_items.json').read_text(encoding='utf8'))
     assert not ledger['doubtful_added']
