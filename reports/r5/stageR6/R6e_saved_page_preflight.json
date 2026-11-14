@@ -1,0 +1,533 @@
+{
+  "method": "Offline safety preflight on older W0 pages with registry phone/address signals, not live measurement",
+  "matches": [
+    {
+      "orgnr": "994900544",
+      "name": "FORBERG INTERNATIONAL AS",
+      "page": "https://forberg-international.com/contact-us/",
+      "receipt": {
+        "tier": "two_registry_contacts",
+        "legal_name": "FORBERG INTERNATIONAL AS",
+        "publisher_location": "imprint-kontakt",
+        "publisher_excerpt": "(+47) 94 23 89 89 sales@forberg.no",
+        "candidate_url": null,
+        "proof_page_url": "https://forberg-international.com/contact-us/",
+        "proof_token": "+47) 94 23 89 89",
+        "phone": {
+          "registry_field": "mobile",
+          "registry_value": "942 38 989",
+          "normalized_value": "94238989",
+          "rarity_count": 1
+        },
+        "address": {
+          "street": "Lørenveien 73A",
+          "postcode": "0585",
+          "publisher_location": "imprint-kontakt",
+          "publisher_excerpt": "Lørenveien 73A, N-0585 Oslo Norway"
+        },
+        "rarity_table": {
+          "bundle_sha256": "900882536a574656025214e5163174812d4d4234e4922b9e452e86882b530d07",
+          "built_at": "2026-11-13T19:05:51.310268+00:00",
+          "entity_count": 1177860,
+          "sources": [
+            {
+              "kind": "enheter",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "file": "registry.csv",
+              "sha256": "5b0df27c5567a655320b8dfb8975049b76c46ba93d748a8a763f8db7050b7862",
+              "valid_rows": 1177860,
+              "local_file_modified_at": "2026-10-13T06:48:09.113086+00:00"
+            }
+          ],
+          "attribution": "Brønnøysundregistrene / Enhetsregisteret; NLOD 2.0",
+          "licence_url": "https://data.norge.no/nlod/no/2.0"
+        }
+      },
+      "full_proof": {
+        "level": "HIGH",
+        "type": "two_registry_contacts",
+        "reason": "two_registry_contacts"
+      }
+    },
+    {
+      "orgnr": "997831977",
+      "name": "LOSBYVEIEN LEGESENTER AS",
+      "page": "https://losbyveienlegesenter.no/kontakt/",
+      "receipt": {
+        "tier": "two_registry_contacts",
+        "legal_name": "LOSBYVEIEN LEGESENTER AS",
+        "publisher_location": "imprint-kontakt",
+        "publisher_excerpt": "LOSBYVEIEN LEGESENTER Losbyveien 34 1475 Finstadjordet Telefon: 67 90 68 48 Faks: 67 90 68 40",
+        "candidate_url": null,
+        "proof_page_url": "https://losbyveienlegesenter.no/kontakt/",
+        "proof_token": " 67 90 68 48",
+        "phone": {
+          "registry_field": "phone",
+          "registry_value": "67 90 68 48",
+          "normalized_value": "67906848",
+          "rarity_count": 1
+        },
+        "address": {
+          "street": "Losbyveien 34",
+          "postcode": "1475",
+          "publisher_location": "imprint-kontakt",
+          "publisher_excerpt": "LOSBYVEIEN LEGESENTER Losbyveien 34 1475 Finstadjordet Telefon: 67 90 68 48 Faks: 67 90 68 40"
+        },
+        "rarity_table": {
+          "bundle_sha256": "900882536a574656025214e5163174812d4d4234e4922b9e452e86882b530d07",
+          "built_at": "2026-11-13T19:05:51.310268+00:00",
+          "entity_count": 1177860,
+          "sources": [
+            {
+              "kind": "enheter",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "file": "registry.csv",
+              "sha256": "5b0df27c5567a655320b8dfb8975049b76c46ba93d748a8a763f8db7050b7862",
+              "valid_rows": 1177860,
+              "local_file_modified_at": "2026-10-13T06:48:09.113086+00:00"
+            }
+          ],
+          "attribution": "Brønnøysundregistrene / Enhetsregisteret; NLOD 2.0",
+          "licence_url": "https://data.norge.no/nlod/no/2.0"
+        }
+      },
+      "full_proof": {
+        "level": "HIGH",
+        "type": "two_registry_contacts",
+        "reason": "two_registry_contacts"
+      }
+    },
+    {
+      "orgnr": "985615691",
+      "name": "GIGAFIB HOLDING AS",
+      "page": "https://www.gigafib.no/",
+      "receipt": {
+        "tier": "two_registry_contacts",
+        "legal_name": "GIGAFIB HOLDING AS",
+        "publisher_location": "footer",
+        "publisher_excerpt": "Logo Miljøfyrtårn Kontakt oss Gigafib Bredbånd AS Wirgenes vei 8B 3157 Barkåker Telefon: 33 05 04 60 E-post: kundeservice@gigafib.no Meny Bredbånd for private Bredbånd for bedrifter Kontakt oss Webmail H-nett Sosiale medier Facebook Personvern og informasjonskapsler",
+        "candidate_url": null,
+        "proof_page_url": "https://www.gigafib.no/",
+        "proof_token": " 33 05 04 60",
+        "phone": {
+          "registry_field": "phone",
+          "registry_value": "33 05 04 60",
+          "normalized_value": "33050460",
+          "rarity_count": 2
+        },
+        "address": {
+          "street": "Wirgenes vei 8B",
+          "postcode": "3157",
+          "publisher_location": "footer",
+          "publisher_excerpt": "Logo Miljøfyrtårn Kontakt oss Gigafib Bredbånd AS Wirgenes vei 8B 3157 Barkåker Telefon: 33 05 04 60 E-post: kundeservice@gigafib.no Meny Bredbånd for private Bredbånd for bedrifter Kontakt oss Webmail H-nett Sosiale medier Facebook Personvern og informasjonskapsler"
+        },
+        "rarity_table": {
+          "bundle_sha256": "900882536a574656025214e5163174812d4d4234e4922b9e452e86882b530d07",
+          "built_at": "2026-11-13T19:05:51.310268+00:00",
+          "entity_count": 1177860,
+          "sources": [
+            {
+              "kind": "enheter",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "file": "registry.csv",
+              "sha256": "5b0df27c5567a655320b8dfb8975049b76c46ba93d748a8a763f8db7050b7862",
+              "valid_rows": 1177860,
+              "local_file_modified_at": "2026-10-13T06:48:09.113086+00:00"
+            }
+          ],
+          "attribution": "Brønnøysundregistrene / Enhetsregisteret; NLOD 2.0",
+          "licence_url": "https://data.norge.no/nlod/no/2.0"
+        }
+      },
+      "full_proof": {
+        "level": "HIGH",
+        "type": "two_registry_contacts",
+        "reason": "two_registry_contacts"
+      }
+    },
+    {
+      "orgnr": "985615691",
+      "name": "GIGAFIB HOLDING AS",
+      "page": "https://www.gigafib.no/kontakt-oss/",
+      "receipt": {
+        "tier": "two_registry_contacts",
+        "legal_name": "GIGAFIB HOLDING AS",
+        "publisher_location": "footer",
+        "publisher_excerpt": "Logo Miljøfyrtårn Kontakt oss Gigafib Bredbånd AS Wirgenes vei 8B 3157 Barkåker Telefon: 33 05 04 60 E-post: kundeservice@gigafib.no Meny Bredbånd for private Bredbånd for bedrifter Kontakt oss Webmail H-nett Sosiale medier Facebook Personvern og informasjonskapsler",
+        "candidate_url": null,
+        "proof_page_url": "https://www.gigafib.no/kontakt-oss/",
+        "proof_token": " 33 05 04 60",
+        "phone": {
+          "registry_field": "phone",
+          "registry_value": "33 05 04 60",
+          "normalized_value": "33050460",
+          "rarity_count": 2
+        },
+        "address": {
+          "street": "Wirgenes vei 8B",
+          "postcode": "3157",
+          "publisher_location": "footer",
+          "publisher_excerpt": "Logo Miljøfyrtårn Kontakt oss Gigafib Bredbånd AS Wirgenes vei 8B 3157 Barkåker Telefon: 33 05 04 60 E-post: kundeservice@gigafib.no Meny Bredbånd for private Bredbånd for bedrifter Kontakt oss Webmail H-nett Sosiale medier Facebook Personvern og informasjonskapsler"
+        },
+        "rarity_table": {
+          "bundle_sha256": "900882536a574656025214e5163174812d4d4234e4922b9e452e86882b530d07",
+          "built_at": "2026-11-13T19:05:51.310268+00:00",
+          "entity_count": 1177860,
+          "sources": [
+            {
+              "kind": "enheter",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "file": "registry.csv",
+              "sha256": "5b0df27c5567a655320b8dfb8975049b76c46ba93d748a8a763f8db7050b7862",
+              "valid_rows": 1177860,
+              "local_file_modified_at": "2026-10-13T06:48:09.113086+00:00"
+            }
+          ],
+          "attribution": "Brønnøysundregistrene / Enhetsregisteret; NLOD 2.0",
+          "licence_url": "https://data.norge.no/nlod/no/2.0"
+        }
+      },
+      "full_proof": {
+        "level": "HIGH",
+        "type": "two_registry_contacts",
+        "reason": "two_registry_contacts"
+      }
+    },
+    {
+      "orgnr": "985615691",
+      "name": "GIGAFIB HOLDING AS",
+      "page": "https://www.gigafib.no/personvern-og-informasjonskapsler/",
+      "receipt": {
+        "tier": "two_registry_contacts",
+        "legal_name": "GIGAFIB HOLDING AS",
+        "publisher_location": "footer",
+        "publisher_excerpt": "Logo Miljøfyrtårn Kontakt oss Gigafib Bredbånd AS Wirgenes vei 8B 3157 Barkåker Telefon: 33 05 04 60 E-post: kundeservice@gigafib.no Meny Bredbånd for private Bredbånd for bedrifter Kontakt oss Webmail H-nett Sosiale medier Facebook Personvern og informasjonskapsler",
+        "candidate_url": null,
+        "proof_page_url": "https://www.gigafib.no/personvern-og-informasjonskapsler/",
+        "proof_token": " 33 05 04 60",
+        "phone": {
+          "registry_field": "phone",
+          "registry_value": "33 05 04 60",
+          "normalized_value": "33050460",
+          "rarity_count": 2
+        },
+        "address": {
+          "street": "Wirgenes vei 8B",
+          "postcode": "3157",
+          "publisher_location": "footer",
+          "publisher_excerpt": "Logo Miljøfyrtårn Kontakt oss Gigafib Bredbånd AS Wirgenes vei 8B 3157 Barkåker Telefon: 33 05 04 60 E-post: kundeservice@gigafib.no Meny Bredbånd for private Bredbånd for bedrifter Kontakt oss Webmail H-nett Sosiale medier Facebook Personvern og informasjonskapsler"
+        },
+        "rarity_table": {
+          "bundle_sha256": "900882536a574656025214e5163174812d4d4234e4922b9e452e86882b530d07",
+          "built_at": "2026-11-13T19:05:51.310268+00:00",
+          "entity_count": 1177860,
+          "sources": [
+            {
+              "kind": "enheter",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "file": "registry.csv",
+              "sha256": "5b0df27c5567a655320b8dfb8975049b76c46ba93d748a8a763f8db7050b7862",
+              "valid_rows": 1177860,
+              "local_file_modified_at": "2026-10-13T06:48:09.113086+00:00"
+            }
+          ],
+          "attribution": "Brønnøysundregistrene / Enhetsregisteret; NLOD 2.0",
+          "licence_url": "https://data.norge.no/nlod/no/2.0"
+        }
+      },
+      "full_proof": {
+        "level": "HIGH",
+        "type": "two_registry_contacts",
+        "reason": "two_registry_contacts"
+      }
+    },
+    {
+      "orgnr": "985615691",
+      "name": "GIGAFIB HOLDING AS",
+      "page": "https://www.gigafib.no/kontakt-oss/",
+      "receipt": {
+        "tier": "two_registry_contacts",
+        "legal_name": "GIGAFIB HOLDING AS",
+        "publisher_location": "footer",
+        "publisher_excerpt": "Logo Miljøfyrtårn Kontakt oss Gigafib Bredbånd AS Wirgenes vei 8B 3157 Barkåker Telefon: 33 05 04 60 E-post: kundeservice@gigafib.no Meny Bredbånd for private Bredbånd for bedrifter Kontakt oss Webmail H-nett Sosiale medier Facebook Personvern og informasjonskapsler",
+        "candidate_url": null,
+        "proof_page_url": "https://www.gigafib.no/kontakt-oss/",
+        "proof_token": " 33 05 04 60",
+        "phone": {
+          "registry_field": "phone",
+          "registry_value": "33 05 04 60",
+          "normalized_value": "33050460",
+          "rarity_count": 2
+        },
+        "address": {
+          "street": "Wirgenes vei 8B",
+          "postcode": "3157",
+          "publisher_location": "footer",
+          "publisher_excerpt": "Logo Miljøfyrtårn Kontakt oss Gigafib Bredbånd AS Wirgenes vei 8B 3157 Barkåker Telefon: 33 05 04 60 E-post: kundeservice@gigafib.no Meny Bredbånd for private Bredbånd for bedrifter Kontakt oss Webmail H-nett Sosiale medier Facebook Personvern og informasjonskapsler"
+        },
+        "rarity_table": {
+          "bundle_sha256": "900882536a574656025214e5163174812d4d4234e4922b9e452e86882b530d07",
+          "built_at": "2026-11-13T19:05:51.310268+00:00",
+          "entity_count": 1177860,
+          "sources": [
+            {
+              "kind": "enheter",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "file": "registry.csv",
+              "sha256": "5b0df27c5567a655320b8dfb8975049b76c46ba93d748a8a763f8db7050b7862",
+              "valid_rows": 1177860,
+              "local_file_modified_at": "2026-10-13T06:48:09.113086+00:00"
+            }
+          ],
+          "attribution": "Brønnøysundregistrene / Enhetsregisteret; NLOD 2.0",
+          "licence_url": "https://data.norge.no/nlod/no/2.0"
+        }
+      },
+      "full_proof": {
+        "level": "HIGH",
+        "type": "two_registry_contacts",
+        "reason": "two_registry_contacts"
+      }
+    },
+    {
+      "orgnr": "980616622",
+      "name": "BAGGES AS",
+      "page": "https://www.bagges.no/",
+      "receipt": {
+        "tier": "two_registry_contacts",
+        "legal_name": "BAGGES AS",
+        "publisher_location": "footer",
+        "publisher_excerpt": "Kontakt BAGGES AS Industriveien 15, 2020 Skedsmokorset Tlf : 64 83 50 00 Email : post@bagges.no Salgs- og leveringsbetingelser Personvernerklæring Kvalitetspolitikk ESG politikk Bærekraftsrapport Etiske Retningslinjer for Leverandører Å penhetsloven Sosiale medier",
+        "candidate_url": null,
+        "proof_page_url": "https://www.bagges.no/",
+        "proof_token": " 64 83 50 00",
+        "phone": {
+          "registry_field": "phone",
+          "registry_value": "64 83 50 00",
+          "normalized_value": "64835000",
+          "rarity_count": 2
+        },
+        "address": {
+          "street": "Industriveien 15",
+          "postcode": "2020",
+          "publisher_location": "footer",
+          "publisher_excerpt": "Kontakt BAGGES AS Industriveien 15, 2020 Skedsmokorset Tlf : 64 83 50 00 Email : post@bagges.no Salgs- og leveringsbetingelser Personvernerklæring Kvalitetspolitikk ESG politikk Bærekraftsrapport Etiske Retningslinjer for Leverandører Å penhetsloven Sosiale medier"
+        },
+        "rarity_table": {
+          "bundle_sha256": "900882536a574656025214e5163174812d4d4234e4922b9e452e86882b530d07",
+          "built_at": "2026-11-13T19:05:51.310268+00:00",
+          "entity_count": 1177860,
+          "sources": [
+            {
+              "kind": "enheter",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "file": "registry.csv",
+              "sha256": "5b0df27c5567a655320b8dfb8975049b76c46ba93d748a8a763f8db7050b7862",
+              "valid_rows": 1177860,
+              "local_file_modified_at": "2026-10-13T06:48:09.113086+00:00"
+            }
+          ],
+          "attribution": "Brønnøysundregistrene / Enhetsregisteret; NLOD 2.0",
+          "licence_url": "https://data.norge.no/nlod/no/2.0"
+        }
+      },
+      "full_proof": {
+        "level": "HIGH",
+        "type": "publisher_name_rare_contact",
+        "reason": "publisher_name_rare_contact"
+      }
+    },
+    {
+      "orgnr": "980616622",
+      "name": "BAGGES AS",
+      "page": "https://www.bagges.no/kontakt",
+      "receipt": {
+        "tier": "two_registry_contacts",
+        "legal_name": "BAGGES AS",
+        "publisher_location": "imprint-kontakt",
+        "publisher_excerpt": "Telefon: 64 83 50 00 Åpningstid: Mandag - Fredag 08:00 - 16:00",
+        "candidate_url": null,
+        "proof_page_url": "https://www.bagges.no/kontakt",
+        "proof_token": " 64 83 50 00",
+        "phone": {
+          "registry_field": "phone",
+          "registry_value": "64 83 50 00",
+          "normalized_value": "64835000",
+          "rarity_count": 2
+        },
+        "address": {
+          "street": "Industriveien 15",
+          "postcode": "2020",
+          "publisher_location": "footer",
+          "publisher_excerpt": "Kontakt BAGGES AS Industriveien 15, 2020 Skedsmokorset Tlf : 64 83 50 00 Email : post@bagges.no Salgs- og leveringsbetingelser Personvernerklæring Kvalitetspolitikk ESG politikk Bærekraftsrapport Etiske Retningslinjer for Leverandører Å penhetsloven Sosiale medier"
+        },
+        "rarity_table": {
+          "bundle_sha256": "900882536a574656025214e5163174812d4d4234e4922b9e452e86882b530d07",
+          "built_at": "2026-11-13T19:05:51.310268+00:00",
+          "entity_count": 1177860,
+          "sources": [
+            {
+              "kind": "enheter",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "file": "registry.csv",
+              "sha256": "5b0df27c5567a655320b8dfb8975049b76c46ba93d748a8a763f8db7050b7862",
+              "valid_rows": 1177860,
+              "local_file_modified_at": "2026-10-13T06:48:09.113086+00:00"
+            }
+          ],
+          "attribution": "Brønnøysundregistrene / Enhetsregisteret; NLOD 2.0",
+          "licence_url": "https://data.norge.no/nlod/no/2.0"
+        }
+      },
+      "full_proof": {
+        "level": "HIGH",
+        "type": "publisher_name_rare_contact",
+        "reason": "publisher_name_rare_contact"
+      }
+    },
+    {
+      "orgnr": "980616622",
+      "name": "BAGGES AS",
+      "page": "https://www.bagges.no/om-oss",
+      "receipt": {
+        "tier": "two_registry_contacts",
+        "legal_name": "BAGGES AS",
+        "publisher_location": "footer",
+        "publisher_excerpt": "Kontakt BAGGES AS Industriveien 15, 2020 Skedsmokorset Tlf : 64 83 50 00 Email : post@bagges.no Salgs- og leveringsbetingelser Personvernerklæring Kvalitetspolitikk ESG politikk Bærekraftsrapport Etiske Retningslinjer for Leverandører Å penhetsloven Sosiale medier",
+        "candidate_url": null,
+        "proof_page_url": "https://www.bagges.no/om-oss",
+        "proof_token": " 64 83 50 00",
+        "phone": {
+          "registry_field": "phone",
+          "registry_value": "64 83 50 00",
+          "normalized_value": "64835000",
+          "rarity_count": 2
+        },
+        "address": {
+          "street": "Industriveien 15",
+          "postcode": "2020",
+          "publisher_location": "footer",
+          "publisher_excerpt": "Kontakt BAGGES AS Industriveien 15, 2020 Skedsmokorset Tlf : 64 83 50 00 Email : post@bagges.no Salgs- og leveringsbetingelser Personvernerklæring Kvalitetspolitikk ESG politikk Bærekraftsrapport Etiske Retningslinjer for Leverandører Å penhetsloven Sosiale medier"
+        },
+        "rarity_table": {
+          "bundle_sha256": "900882536a574656025214e5163174812d4d4234e4922b9e452e86882b530d07",
+          "built_at": "2026-11-13T19:05:51.310268+00:00",
+          "entity_count": 1177860,
+          "sources": [
+            {
+              "kind": "enheter",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "file": "registry.csv",
+              "sha256": "5b0df27c5567a655320b8dfb8975049b76c46ba93d748a8a763f8db7050b7862",
+              "valid_rows": 1177860,
+              "local_file_modified_at": "2026-10-13T06:48:09.113086+00:00"
+            }
+          ],
+          "attribution": "Brønnøysundregistrene / Enhetsregisteret; NLOD 2.0",
+          "licence_url": "https://data.norge.no/nlod/no/2.0"
+        }
+      },
+      "full_proof": {
+        "level": "HIGH",
+        "type": "publisher_name_rare_contact",
+        "reason": "publisher_name_rare_contact"
+      }
+    },
+    {
+      "orgnr": "980616622",
+      "name": "BAGGES AS",
+      "page": "https://www.bagges.no/om-oss/avdeling-for-ventiler-pakninger-og-pumper",
+      "receipt": {
+        "tier": "two_registry_contacts",
+        "legal_name": "BAGGES AS",
+        "publisher_location": "footer",
+        "publisher_excerpt": "Kontakt BAGGES AS Industriveien 15, 2020 Skedsmokorset Tlf : 64 83 50 00 Email : post@bagges.no Salgs- og leveringsbetingelser Personvernerklæring Kvalitetspolitikk ESG politikk Bærekraftsrapport Etiske Retningslinjer for Leverandører Å penhetsloven Sosiale medier",
+        "candidate_url": null,
+        "proof_page_url": "https://www.bagges.no/om-oss/avdeling-for-ventiler-pakninger-og-pumper",
+        "proof_token": " 64 83 50 00",
+        "phone": {
+          "registry_field": "phone",
+          "registry_value": "64 83 50 00",
+          "normalized_value": "64835000",
+          "rarity_count": 2
+        },
+        "address": {
+          "street": "Industriveien 15",
+          "postcode": "2020",
+          "publisher_location": "footer",
+          "publisher_excerpt": "Kontakt BAGGES AS Industriveien 15, 2020 Skedsmokorset Tlf : 64 83 50 00 Email : post@bagges.no Salgs- og leveringsbetingelser Personvernerklæring Kvalitetspolitikk ESG politikk Bærekraftsrapport Etiske Retningslinjer for Leverandører Å penhetsloven Sosiale medier"
+        },
+        "rarity_table": {
+          "bundle_sha256": "900882536a574656025214e5163174812d4d4234e4922b9e452e86882b530d07",
+          "built_at": "2026-11-13T19:05:51.310268+00:00",
+          "entity_count": 1177860,
+          "sources": [
+            {
+              "kind": "enheter",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "file": "registry.csv",
+              "sha256": "5b0df27c5567a655320b8dfb8975049b76c46ba93d748a8a763f8db7050b7862",
+              "valid_rows": 1177860,
+              "local_file_modified_at": "2026-10-13T06:48:09.113086+00:00"
+            }
+          ],
+          "attribution": "Brønnøysundregistrene / Enhetsregisteret; NLOD 2.0",
+          "licence_url": "https://data.norge.no/nlod/no/2.0"
+        }
+      },
+      "full_proof": {
+        "level": "HIGH",
+        "type": "publisher_name_rare_contact",
+        "reason": "publisher_name_rare_contact"
+      }
+    },
+    {
+      "orgnr": "980616622",
+      "name": "BAGGES AS",
+      "page": "https://www.bagges.no/om-oss/avdeling-for-isolasjon-og-filtrering",
+      "receipt": {
+        "tier": "two_registry_contacts",
+        "legal_name": "BAGGES AS",
+        "publisher_location": "footer",
+        "publisher_excerpt": "Kontakt BAGGES AS Industriveien 15, 2020 Skedsmokorset Tlf : 64 83 50 00 Email : post@bagges.no Salgs- og leveringsbetingelser Personvernerklæring Kvalitetspolitikk ESG politikk Bærekraftsrapport Etiske Retningslinjer for Leverandører Å penhetsloven Sosiale medier",
+        "candidate_url": null,
+        "proof_page_url": "https://www.bagges.no/om-oss/avdeling-for-isolasjon-og-filtrering",
+        "proof_token": " 64 83 50 00",
+        "phone": {
+          "registry_field": "phone",
+          "registry_value": "64 83 50 00",
+          "normalized_value": "64835000",
+          "rarity_count": 2
+        },
+        "address": {
+          "street": "Industriveien 15",
+          "postcode": "2020",
+          "publisher_location": "footer",
+          "publisher_excerpt": "Kontakt BAGGES AS Industriveien 15, 2020 Skedsmokorset Tlf : 64 83 50 00 Email : post@bagges.no Salgs- og leveringsbetingelser Personvernerklæring Kvalitetspolitikk ESG politikk Bærekraftsrapport Etiske Retningslinjer for Leverandører Å penhetsloven Sosiale medier"
+        },
+        "rarity_table": {
+          "bundle_sha256": "900882536a574656025214e5163174812d4d4234e4922b9e452e86882b530d07",
+          "built_at": "2026-11-13T19:05:51.310268+00:00",
+          "entity_count": 1177860,
+          "sources": [
+            {
+              "kind": "enheter",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "file": "registry.csv",
+              "sha256": "5b0df27c5567a655320b8dfb8975049b76c46ba93d748a8a763f8db7050b7862",
+              "valid_rows": 1177860,
+              "local_file_modified_at": "2026-10-13T06:48:09.113086+00:00"
+            }
+          ],
+          "attribution": "Brønnøysundregistrene / Enhetsregisteret; NLOD 2.0",
+          "licence_url": "https://data.norge.no/nlod/no/2.0"
+        }
+      },
+      "full_proof": {
+        "level": "HIGH",
+        "type": "publisher_name_rare_contact",
+        "reason": "publisher_name_rare_contact"
+      }
+    }
+  ]
+}

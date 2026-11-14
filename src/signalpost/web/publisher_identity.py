@@ -12,46 +12,6 @@ DECLARED = 'registry_declared_publisher_name'
 RARE = 'publisher_name_rare_contact'
 CORE = 'registry_declared_publisher_core_name'
 REDIRECT = 'registry_declared_redirect_publisher_name'
-TWO_CONTACTS = 'two_registry_contacts'
-
-
-def service_publisher(page):
-    text=normalize_name(extract_publisher(page).text)
-    return bool(re.search(r"regnskap|accountant|accounting|webbyra|digitalbyra|web agency|property manag|eiendomsforvalt|designbyra",text))
-
-
-def two_contacts_receipt(page,org,context):
-    from .rarity import phone_key,load
-    from .publisher_veto import conflict
-    if conflict(page,org,context)[0] or service_publisher(page):return None
-    street=context.get('street');streets=street if isinstance(street,list) else [street]
-    postcode=str(context.get('postcode') or '')
-    if not re.fullmatch(r'\d{4}',postcode):return None
-    fragments=[f for f in extract_publisher(page).fragments if f.location in {'footer','imprint-kontakt'}]
-    address=None
-    for f in fragments:
-        for street in streets:
-            if not street or len(str(street))<5:continue
-            if (re.search(r'(?<!\w)'+re.escape(normalize_name(street))+r'(?!\w)',normalize_name(f.text))
-                and re.search(r'(?<!\d)'+postcode+r'(?!\d)',f.text)):
-                address={'street':street,'postcode':postcode,'publisher_location':f.location,'publisher_excerpt':f.text}
-                break
-        if address:break
-    if not address:return None
-    try:counts=load()['counts']['phone']
-    except (OSError,ValueError,KeyError):return None
-    for field in ('phone','mobile'):
-        key=phone_key(context.get(field));frequency=counts.get(key,0)
-        if not key or not 1<=frequency<=2:continue
-        for f in fragments:
-            matches=re.finditer(r'(?<![\w+])(?:\+47|0047)?[ .()\d-]{8,24}(?!\w)',f.text)
-            token=next((m.group() for m in matches if phone_key(m.group())==key),None)
-            if token:
-                return {'tier':TWO_CONTACTS,'legal_name':context.get('name'),'publisher_location':f.location,
-                    'publisher_excerpt':f.text,'candidate_url':context.get('candidate_url'),'proof_page_url':page.url,
-                    'proof_token':token,'phone':{'registry_field':field,'registry_value':context[field],
-                    'normalized_value':key,'rarity_count':frequency},'address':address,'rarity_table':rarity_provenance()}
-    return None
 
 
 def redirect_receipt(page,org,context):
