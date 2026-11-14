@@ -1,0 +1,18 @@
+[
+  {
+    "seed": 20261017,
+    "attempt": 1,
+    "label": "unattended",
+    "exit_code": 1,
+    "wall_seconds": 8694.046999999991,
+    "source_outage": false
+  },
+  {
+    "seed": 20261017,
+    "attempt": 2,
+    "label": "unattended-retry",
+    "exit_code": 0,
+    "wall_seconds": 20.0,
+    "source_outage": true
+  }
+]

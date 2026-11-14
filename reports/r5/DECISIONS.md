@@ -442,3 +442,13 @@
 - X5 attempt reverted before feature commit under inherited approximately90-minute rule. Despite green1074 unit tests, six-sample measurement could not complete correctly: repeated processes disappeared without final receipts; detached retry later failed hardtime/site gates (saved report5122.563seconds,466requests, site skipped). Trial state and attempted code/tests preserved under stageX/X5/trials/reverted_stage; only three verified partial samples, no accepted full-stage result. Restore runtime to X4, run full pytest and commit reports-only checkpoint. R6/R7/X2 not started; X3/X6 dropped. No push; no feature-completion claim.
 
 - Restored X4 runtime full pytest:1067 passed in183.47s. Commit only reports/measurement helper changes and preserved trial snapshots; clean committed checkpoint, no X5 runtime feature or later-stage implementation.
+
+## 2026-11-14 ? Unattended continuation authorization
+
+- User unavailable until18:00IST; do not wait for input. If free disk drops below20GB, delete only verified superseded/trial folders under workspace .data/r5, preserving accepted final runs and every committed file; verify resolved paths before deletion. Current free space96.8GB, no deletion needed.
+- User authorizes one fresh-state rerun per dead run/source outage, preserving attempts. Resume from committed checkpoints after usage pauses. Restore own saved X5 implementation from committed reports snapshot, no external code/data; rerun full tests and all six samples with new unattended IDs, exactly seven flags. Hidden background wrapper preserves failed attempt receipts and makes at most one retry; a second failure stops the item rather than silently accepting it. Hard35min/1850HTTP and mandatorysite validation remain.
+- X5 previous revert remains historical fact; this is a new authorized continuation attempt, not a retroactive acceptance of incomplete prior samples. Later order remains R6a?f, R7a?f, X2; X3/X6 dropped.
+
+- Authorized unattended X5 continuation exhausted its one retry: initial hard-time validation failure, retry exit0 but run-wide DNS/source outage with only2941 local facts/no websites/activity. Wrapper marked outage and stopped; no second retry, no proof bypass. Restore own X5 changes to X4 runtime, preserve all receipts under X5/trials and UNATTENDED_RESULT.json, full pytest before reports-only checkpoint. Disk above20GB, zero deletions. R6/R7/X2 remain unstarted; do not claim completed queue.
+
+- Restored full gate1067 passed in166.86s after unattended retry exhausted. Commit reports/tooling only, clean tree, no push; no more live attempts without a resumed stage.

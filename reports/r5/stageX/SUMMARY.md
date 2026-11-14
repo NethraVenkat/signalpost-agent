@@ -61,3 +61,9 @@ X5 is **not completed**. Its uncommitted runtime/test changes were restored to t
 Resume X5 before R6a-f, R7a-f and X2. These items are unfinished; no R6/R7/X2 gains or tables are claimed. X3 and X6 are dropped. R6 and R7 each retain one green pytest commit per sub-step, followed by ONE six-sample stage measurement. Gains are attributed by proof type; a doubtful site requires reversal of its responsible sub-step and one stage remeasurement. R1/R2/R4 evidence, robot and budget safeguards remain. Never push. Only committed checkpoints may be used to pause.
 
 Restored checkpoint full pytest: **1,067 passed in 183.47s (restored X4 runtime)**. Runtime source is restored; the reports-only checkpoint does not claim X5 completion.
+
+## Unattended continuation result
+
+A newly authorized X5 attempt exhausted its single fresh-state retry: initial time-validation failure, then structurally valid output under run-wide source outage (only2941 local facts, no site identities/activity). X5 runtime changes reverted; attempts retained in [UNATTENDED_RESULT.json](X5/UNATTENDED_RESULT.json). No further retries or feature-completion claims. Disk stayed above20GB, so nothing was deleted. R6/R7/X2 remain queued and incomplete; X3/X6 stay dropped.
+
+Unattended retry-exhausted checkpoint: restored runtime full pytest **1,067 passed in166.86seconds**. No X5 feature committed; provider cost$0.

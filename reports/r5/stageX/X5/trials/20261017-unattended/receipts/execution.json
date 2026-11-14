@@ -1,0 +1,25 @@
+{
+  "exit_code": 0,
+  "wall_seconds": 8685.312999999995,
+  "argv": [
+    "C:\\Users\\<USER>\\signal-nethra\\.venv\\Scripts\\python.exe",
+    "-m",
+    "signalpost.cli",
+    "run",
+    "--organisations",
+    "C:\\Users\\<USER>\\signal-nethra\\reports\\r5\\baseline\\companies.jsonl",
+    "--bulk",
+    "C:\\Users\\<USER>\\signal-nethra\\reports\\r5\\baseline\\registry100.csv",
+    "--output",
+    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageX5-20261017-unattended\\envelopes.jsonl",
+    "--profiles-output",
+    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageX5-20261017-unattended\\profiles.jsonl",
+    "--report",
+    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageX5-20261017-unattended\\report.json",
+    "--run-id",
+    "r5-stageX5-seed20261017-unattended",
+    "--expected-count",
+    "100"
+  ],
+  "cwd": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageX5-20261017-unattended"
+}
