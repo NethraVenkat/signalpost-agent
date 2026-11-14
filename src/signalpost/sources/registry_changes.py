@@ -75,7 +75,7 @@ def permitted(claim, envelope):
         return False
     evidence = {e.id: e for e in envelope.evidence}
     return bool(claim.evidence_ids and all(eid in evidence for eid in claim.evidence_ids)
-                and any(evidence[eid].extraction_method in {METHOD,'signalpost.registry_changes.v2'}
+                and any(evidence[eid].extraction_method in {METHOD,'signalpost.registry_changes.v2','signalpost.role_changes.v1'}
                         and evidence[eid].source_url.startswith(BASE + 'oppdateringer/')
                         for eid in claim.evidence_ids))
 
@@ -268,6 +268,16 @@ async def fetch_batch(envelopes, http, blobs, until):
                 for org in affected:
                     result[org].state = 'failed'
                     result[org].errors.extend(missing('activity', code).errors)
+    from .role_changes import collect as collect_roles
+    role_sections=await collect_roles(envelopes,http,since,until)
+    for org,roles in role_sections.items():
+        result[org].claims.extend(roles.claims);result[org].evidence.extend(roles.evidence)
+        result[org].errors.extend(roles.errors)
+        if roles.state=='failed':result[org].state='failed'
+        elif roles.claims and result[org].state!='failed':result[org].state='available'
+        envelopes[org].run.refresh['registry_activity']['roles']={'state':roles.state,'events_returned':len(roles.claims),
+            'role_type_state':'not_supplied_by_public_feed','person_names_state':'not_supplied_by_public_feed',
+            'leadership_change_state':'cannot_infer_from_generic_update','errors':sorted({e.code for e in roles.errors})}
     for org, section in result.items():
         unique={c.field:c for c in section.claims}
         ordered=sorted(unique.values(),key=lambda c:(timestamp(c.value['date']),c.value['event_id'],c.field),reverse=True)
@@ -287,7 +297,7 @@ def cap_envelope(envelope):
     unique={}
     for c in claims:
         v=c.value
-        key=(v.get('record_orgnr') or v.get('subunit_orgnr') or v['company_orgnr'],v['event_id'])
+        key=(v.get('event_source'),v.get('record_orgnr') or v.get('subunit_orgnr') or v['company_orgnr'],v['event_id'])
         rank=(not c.carried_forward,'changed_fields' in v)
         if key not in unique or rank>unique[key][0]:unique[key]=(rank,c)
     ordered=sorted((pair[1] for pair in unique.values()),key=lambda c:(timestamp(c.value['date']),c.value['event_id'],c.field),reverse=True)

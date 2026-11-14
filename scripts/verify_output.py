@@ -213,6 +213,20 @@ def verify_registry_events(row,data,evidence,stored_body,cache=None):
         key=('json',sha)
         if key not in cache:cache[key]=json.loads(stored_body(sha))
         return cache[key]
+    all_events=[c for c in data['claims'] if c['availability']=='available' and c['field'].startswith('registry_change.')]
+    assert len(all_events)<=50,'Shared registry/role event cap exceeded'
+    from signalpost.sources import role_changes
+    from signalpost.sources.http import Response
+    for claim in all_events:
+        if not claim['field'].startswith('registry_change.roles.'):continue
+        source=next(evidence[eid] for eid in claim['evidence_ids'] if evidence[eid]['extraction_method']==role_changes.METHOD)
+        assert source['source_url'].startswith(role_changes.ENDPOINT+'?'),'Unapproved role-update source'
+        raw=document(source['content_sha256'])
+        for token in source['locator'].strip('/').split('/'):raw=raw[int(token)] if isinstance(raw,list) else raw[token]
+        response=Response(stored_body(source['content_sha256']).encode('utf8'),200,source['source_url'],source['retrieved_at'],source['content_sha256'])
+        expected=role_changes.extract(raw,response,source['locator'],row['organisation_number'])
+        assert expected.claims[0].value==claim['value'],'Unsupported role-change event frame'
+        assert claim['value']['role_type'] is None and claim['value']['person_name'] is None
     events=[c for c in data['claims'] if c['availability']=='available' and c['field'].startswith('registry_change.')
             and any(evidence[eid]['extraction_method']=='signalpost.registry_changes.v3' for eid in c['evidence_ids'])]
     assert len(events)<=50,'Registry event cap exceeded'
@@ -253,7 +267,7 @@ def verify_registry_events(row,data,evidence,stored_body,cache=None):
         endpoint='underenheter' if '/oppdateringer/underenheter?' in source['source_url'] else 'enheter'
         expected=rc.extract(raw,response,source['locator'],row['organisation_number'],endpoint,scope)
         assert len(expected.claims)==1 and expected.claims[0].value==v,'Unsupported registry event frame'
-    return len(events)
+    return len(all_events)
 
 
 def verify_synthesis(row):

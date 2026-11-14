@@ -21,6 +21,7 @@ def test_saved_source_refresh_precision_recall_and_stale_evidence(tmp_path):
         assert c['detected'] and c['idempotent_changes']==0 and not c['unexpected_changes']
         assert not c['repeat_execution']['coverage_observations']
         assert not c['execution']['unrecorded_urls']
+        assert any(a.get('unsupported_source') for a in c['execution']['batch_aliases'])
         assert c['execution']['verification']['synthesis_unverified_values']==0
         assert c['execution']['verification']['briefing_unverified_values']==0
         assert sum(a.startswith('--') for a in c['execution']['argv'])==7

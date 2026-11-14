@@ -97,6 +97,9 @@ def one(work,label,case,previous=None,fixture_path=FIXTURE):
         if p.hostname=='pam-stilling-feed.nav.no' and p.path.startswith('/api/v1/feed/'):
             aliases.append({'requested':url,'synthetic':'empty completed forward-tail scaffold; original forward bodies were not persisted; no ad fact derives from this response'})
             return httpx.Response(200,json={'items':[],'next_url':None})
+        if p.path.endswith('/oppdateringer/roller') and key not in routes:
+            aliases.append({'requested':url,'unsupported_source':'Role-update feed postdates this saved fixture; explicit unavailable state, no fabricated response or role event.'})
+            raise SourceFailure('offline_role_history_not_recorded')
         if key not in routes and '/oppdateringer/' in p.path:
             # A saved batch response already covers this subset's company.
             # Its bytes are unchanged; this explicit query alias supplies no

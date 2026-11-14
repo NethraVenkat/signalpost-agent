@@ -1,0 +1,68 @@
+{
+  "stage": "X1",
+  "seed": 20261114,
+  "before": {
+    "websites": 6,
+    "declared_homepage_recall": 4,
+    "declared_homepages": 8,
+    "social_companies": 4,
+    "social_claims": 4,
+    "activity_companies": 100,
+    "activity_claims": 1089,
+    "brand_companies": 1,
+    "brand_claims": 1,
+    "role_change_claims": 0,
+    "facts": 13288,
+    "families": {
+      "identity": 3005,
+      "subunits": 919,
+      "roles": 1064,
+      "accounts": 7138,
+      "activity": 1089,
+      "website": 61,
+      "gleif": 12
+    }
+  },
+  "after": {
+    "websites": 6,
+    "declared_homepage_recall": 4,
+    "declared_homepages": 8,
+    "social_companies": 4,
+    "social_claims": 4,
+    "activity_companies": 100,
+    "activity_claims": 1263,
+    "brand_companies": 1,
+    "brand_claims": 1,
+    "role_change_claims": 182,
+    "facts": 13462,
+    "families": {
+      "identity": 3005,
+      "subunits": 919,
+      "roles": 1064,
+      "accounts": 7138,
+      "activity": 1263,
+      "website": 61,
+      "gleif": 12
+    }
+  },
+  "HTTP": 745,
+  "runtime_seconds": 388.31200000000536,
+  "CLI_runtime_seconds": 357.85899999999674,
+  "cost_usd": 0.0,
+  "site": {
+    "state": "available",
+    "companies": 100,
+    "input_records": 100,
+    "pages": 102,
+    "skipped_invalid_identifiers": 0,
+    "total_bytes": 37819854,
+    "largest_profile_data_bytes": 891549,
+    "largest_profile_bytes": 219756
+  },
+  "changes": {
+    "added": [],
+    "removed": []
+  },
+  "envelopes_sha256": "d2eccc507d63f50c138b2934938c4e1adb6024c7157eb983197834588ea87642",
+  "profiles_sha256": "310018868774a608b9a77785a9675445578325f783d7aaae77110f701dda6700"
+}

@@ -24,6 +24,10 @@ R3 (after R5 commit 153465ff) uses this local table only as contact corroboratio
 
 ## Websites
 
+### X1 role-registry publication events (checked 2026-11-14)
+
+The existing NLOD public-registry REST policy covers the [documented open role-update endpoint](https://data.brreg.no/enhetsregisteret/api/dokumentasjon/no/index.html), `/api/oppdateringer/roller`. It supports exact company batches and CloudEvent cursors; no authenticated person endpoint is used. A current 237-event batch supplies only organisation number within event data, so the app publishes generic "Registry roles updated" events with exact event type and publication time, explicitly not effective date. Changed role/person/leadership details are unavailable and never inferred from current roles. Existing shared 50-event cap, evidence, budgets and failures remain. [Saved source review and diagnostic receipts](../reports/r5/stageX/sources/X1_SOURCE_REVIEW.md).
+
 Candidates use parent registry website/email, listed-subunit website/email, then legal-name slugs, within unchanged candidate/request/DNS caps. Optional configured search may nominate further candidates only if there is budget for proof fetching. Public Suffix List boundaries come from the installed tldextract snapshot without network updates. Social/directory/search hosts are refused as company sources. Only HTML/XHTML/plain responses are used; scripts, images and third-party resources are not fetched. There is no browser renderer.
 
 Every DNS answer and redirect must pass public-unicast and company-domain rules. Connection-time DNS pinning preserves TLS hostname checks and blocks rebinding to private, loopback, link-local, CGNAT, multicast or reserved addresses. HTTPS certificates remain verified; plaintext fallback is permitted only after TLS/connect failure.

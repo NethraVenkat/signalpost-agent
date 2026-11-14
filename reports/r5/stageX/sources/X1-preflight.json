@@ -1,0 +1,12 @@
+{
+  "events_validated": 237,
+  "types": [
+    "no.brreg.enhetsregisteret.rolle.enhet.oppdatert",
+    "no.brreg.enhetsregisteret.rolle.oppdatert"
+  ],
+  "role_fields": [
+    "organisasjonsnummer"
+  ],
+  "named_role_or_person_changes": 0,
+  "cost_usd": 0
+}

@@ -1,0 +1,13 @@
+{
+  "accepted": false,
+  "reason": "Run-wide DNS/source outage: Brreg, NAV and web requests failed; only local bulk facts available. Protocol outputs remain valid, not a representative source-coverage/runtime measurement.",
+  "HTTP": 311,
+  "completion": {
+    "wall_seconds": 11.891,
+    "within_requested_time_budget": true,
+    "within_effective_time_budget": true,
+    "note": "Includes preparation, crawl, mandatory outputs and site; final report flush adds filesystem latency."
+  },
+  "cost_usd": 0.0,
+  "retry_policy": "One new fresh-state seven-flag measurement after the six-sample pass, same final runtime source; no DNS fallback or proof changes."
+}

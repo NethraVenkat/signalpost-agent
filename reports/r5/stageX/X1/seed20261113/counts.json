@@ -1,0 +1,69 @@
+{
+  "stage": "X1",
+  "seed": 20261113,
+  "before": {
+    "websites": 6,
+    "declared_homepage_recall": 5,
+    "declared_homepages": 11,
+    "social_companies": 1,
+    "social_claims": 2,
+    "activity_companies": 100,
+    "activity_claims": 1134,
+    "brand_companies": 1,
+    "brand_claims": 1,
+    "role_change_claims": 0,
+    "facts": 13778,
+    "families": {
+      "identity": 3017,
+      "subunits": 951,
+      "roles": 1232,
+      "accounts": 7394,
+      "activity": 1134,
+      "gleif": 12,
+      "website": 37,
+      "hiring": 1
+    }
+  },
+  "after": {
+    "websites": 6,
+    "declared_homepage_recall": 5,
+    "declared_homepages": 11,
+    "social_companies": 1,
+    "social_claims": 2,
+    "activity_companies": 100,
+    "activity_claims": 1344,
+    "brand_companies": 1,
+    "brand_claims": 1,
+    "role_change_claims": 219,
+    "facts": 13976,
+    "families": {
+      "identity": 3017,
+      "subunits": 951,
+      "roles": 1232,
+      "accounts": 7394,
+      "activity": 1344,
+      "website": 37,
+      "hiring": 1
+    }
+  },
+  "HTTP": 775,
+  "runtime_seconds": 546.0,
+  "CLI_runtime_seconds": 485.5780000000086,
+  "cost_usd": 0.0,
+  "site": {
+    "state": "available",
+    "companies": 100,
+    "input_records": 100,
+    "pages": 102,
+    "skipped_invalid_identifiers": 0,
+    "total_bytes": 38416485,
+    "largest_profile_data_bytes": 497723,
+    "largest_profile_bytes": 223994
+  },
+  "changes": {
+    "added": [],
+    "removed": []
+  },
+  "envelopes_sha256": "356822a89a7ef8f208c3ac8f379585720c6446ed5ea93da079a6b8bd866eb344",
+  "profiles_sha256": "ef334183b1ea1d6e39e8ed0f2dc06510de63d6c8ae5a17a23455a5e9303cef50"
+}

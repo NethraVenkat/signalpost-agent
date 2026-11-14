@@ -49,6 +49,8 @@ def execute_events(tmp_path,total=65,previous=None,subunit=False):
     requests=[]
     def source(request):
         requests.append(str(request.url))
+        if request.url.path.endswith('/oppdateringer/roller'):
+            return httpx.Response(200,json=[])
         if '/oppdateringer/' in request.url.path:
             is_sub=request.url.path.endswith('/underenheter')
             records=([event(organisasjonsnummer=OTHER,oppdateringsid=100,dato='2026-10-01T12:30:00Z',endringstype='Endring',endringer=[])] if is_sub else
@@ -75,7 +77,8 @@ def test_cap_newest_order_no_extra_requests_full_raw_verification(tmp_path):
     assert [c['value']['date'] for c in events]==sorted((c['value']['date'] for c in events),reverse=True)
     assert row['run']['refresh']['registry_activity']['events_returned']==66
     assert row['run']['refresh']['registry_activity']['truncated']
-    assert sum('/oppdateringer/' in u for u in requests)==2
+    assert sum('/oppdateringer/' in u for u in requests)==3
+    assert sum('/oppdateringer/roller?' in u for u in requests)==1
     assert any(c['value'].get('subunit_orgnr')==OTHER for c in events)
     assert verify(cfg.output,cfg.state_dir,1,cfg.organisations,cfg.report)['registry_events_verified']==50
 

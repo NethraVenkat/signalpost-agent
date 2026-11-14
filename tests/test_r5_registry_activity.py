@@ -35,6 +35,9 @@ def test_unproven_historical_subunit_abstains():
 def test_window_and_registry_coverage_independent_of_website():
     class Http:
         async def get(self, url, org):
+            if '/oppdateringer/roller?' in url:
+                assert httpx.URL(url).params['afterTime']=='2023-10-18T07:00:00.000Z'
+                return response([],endpoint='roller')
             assert httpx.URL(url).params['dato'] == '2023-10-18T07:00:00.000Z'
             return response({'page': {'number': 0, 'size': 1000, 'totalElements': 0, 'totalPages': 0}})
     env = envelope()
