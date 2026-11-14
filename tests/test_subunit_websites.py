@@ -30,7 +30,8 @@ def test_isp_email_never_nominates_a_company_website(email):
 
 
 @pytest.mark.parametrize('owner', [OUR, OTHER])
-def test_published_subunit_relationship_preserves_claim_identity_and_evidence(monkeypatch, owner):
+@pytest.mark.parametrize('origin',['subunit_registry_website','legal_name_slug'])
+def test_published_subunit_relationship_preserves_claim_identity_and_evidence(monkeypatch, owner, origin):
     import hashlib
     from types import SimpleNamespace
     from signalpost.web import collector, descriptions
@@ -39,7 +40,7 @@ def test_published_subunit_relationship_preserves_claim_identity_and_evidence(mo
     from signalpost.models.evidence import canonical, digest
     from signalpost.site import fact
 
-    candidate=Candidate('https://workplace.no/','workplace.no','subunit_registry_website',OTHER)
+    candidate=Candidate('https://workplace.no/','workplace.no',origin,OTHER if origin=='subunit_registry_website' else None)
     raw=html('Org nr '+owner).encode()
     page=Page(raw,candidate.url)
     proof=candidate_proof(page,OUR,{'name':'Example AS','subunits':[{'orgnr':OTHER}]},candidate,[])
@@ -55,7 +56,7 @@ def test_published_subunit_relationship_preserves_claim_identity_and_evidence(mo
     monkeypatch.setattr(collector,'extract_contacts_and_social',lambda *args,**kwargs:None)
     monkeypatch.setattr(collector,'extract_public_brand',lambda *args:None)
     result=collector.publish_result(OUR,envelope,http,Section(),
-        [(candidate,proof,response,page,[(response,page)])],[],{'name':'Example AS'})
+        [(candidate,proof,response,page,[(response,page)])],[],{'name':'Example AS','subunits':[{'orgnr':OTHER}]})
     claim=result.claims[0]
     expected=digest([OUR,'official_website',canonical(claim.value),'available',None])
     assert claim.id==expected

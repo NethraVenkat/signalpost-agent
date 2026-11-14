@@ -470,6 +470,19 @@ def extract_contacts_and_social(section, org, web_claim, pages, context=None, en
 def candidate_proof(page,org,context,candidate,leaders):
     context = {**context, 'publisher_company_orgnr': org, 'candidate_url': candidate.url}
     proof=score(page,org,context,candidate.origin,leaders)
+    # A guessed parent candidate may actually be its proven registered branch.
+    # Only an exact number in R1 publisher context authorizes this fallback;
+    # each branch is rescored with every existing conflict/proof rule intact.
+    if proof.level not in {'VERIFIED','BLOCKED'} and (not proof.reason.startswith('publisher_') or proof.reason=='publisher_group_without_exact_orgnr'):
+        from .publisher import extract_publisher
+        from .proof import orgnrs
+        publisher_ids=orgnrs(extract_publisher(page).text)
+        proven={str(u['orgnr']) for u in context.get('subunits',[]) if u.get('orgnr')}
+        for branch in sorted(publisher_ids & proven):
+            unit=score(page,branch,context,candidate.origin,leaders)
+            if unit.level=='VERIFIED':
+                unit.signals.append('proven_subunit_publisher_number')
+                return unit
     if proof.reason.startswith('publisher_'):
         return proof
     if candidate.origin=='registry_website' and domain(page.url)!=candidate.domain:
@@ -519,8 +532,11 @@ def publish_result(org,envelope,http,section,choices,attempts,context):
              "other_orgnrs": proof.other_orgnrs}
     if getattr(proof,'publisher_receipt',None):
         value['publisher_identity'] = proof.publisher_receipt
-    if candidate.subunit_orgnr and matched==candidate.subunit_orgnr:
+    proven_units={str(u['orgnr']) for u in context.get('subunits',[]) if u.get('orgnr')}
+    if (candidate.subunit_orgnr and matched==candidate.subunit_orgnr) or matched in proven_units:
         value['matched_via_subunit']=matched
+        from .social import shared_group_context
+        if shared_group_context(page):value['relationship_note']='group_site'
     contact_matches = registry_contacts(page, context) if not proof.other_orgnrs else {}
     contact_refs = {}
     for kind in contact_matches:
