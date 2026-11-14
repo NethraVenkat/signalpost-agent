@@ -30,3 +30,6 @@ stageR6/new_websites.md -text whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
 stageR7/*.json -text
 stageR7/**/*.json -text whitespace=cr-at-eol
 stageR7/new_websites.md -text whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+stageL/*.json -text
+stageL/**/*.json -text whitespace=cr-at-eol
+stageL/*.md -text whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol

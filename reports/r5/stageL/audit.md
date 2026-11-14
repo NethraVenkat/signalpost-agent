@@ -1,0 +1,8742 @@
+# L0 offline legal-disclosure audit
+
+Zero network requests. Audit hits nominate pages or builder inspection; they do not establish identity.
+
+```json
+{
+  "linked_pdf_terms": 26,
+  "linked_legal_html": 613,
+  "fetched_without_proof_companies": 231,
+  "companies_with_legal_html_links": 65,
+  "companies_with_pdf_links": 10,
+  "builder_wix": 0,
+  "builder_squarespace": 0,
+  "builder_next": 0,
+  "builder_nuxt": 0,
+  "sitemap_legal_entries": 44,
+  "unique_legal_html_targets": 253,
+  "unique_linked_pdf_targets": 12
+}
+```
+
+## 20261017 / 925181536 / SESTANTE AS
+
+https://sestante.com/
+
+```json
+{
+  "seed": 20261017,
+  "orgnr": "925181536",
+  "name": "SESTANTE AS",
+  "page": "https://sestante.com/",
+  "page_sha256": "df1d3a5a9245d279d3e77f95a6e826ef37c31075d7568061d347ae0464af3741",
+  "links": [
+    {
+      "url": "https://sestante.com/wp-content/uploads/2025/06/Sestante-Wealth-Management-LLC-Annual-Privacy-Notice.pdf",
+      "text": "PRIVACY NOTICE",
+      "exact_anchor": "<a href=\"/wp-content/uploads/2025/06/Sestante-Wealth-Management-LLC-Annual-Privacy-Notice.pdf\" target=\"_blank\">",
+      "pdf": true,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://sestante.com/wp-content/uploads/2026/08/Sestante-Family-Office-Text-Message-Terms-and-Privacy-Policy.pdf",
+      "text": "TEXT MESSAGE AND PRIVACY POLICY",
+      "exact_anchor": "<a href=\"/wp-content/uploads/2026/08/Sestante-Family-Office-Text-Message-Terms-and-Privacy-Policy.pdf\" target=\"_blank\">",
+      "pdf": true,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261017 / 948639416 / SVERSTAD BORETTSLAG
+
+https://nbbo.no/
+
+```json
+{
+  "seed": 20261017,
+  "orgnr": "948639416",
+  "name": "SVERSTAD BORETTSLAG",
+  "page": "https://nbbo.no/",
+  "page_sha256": "bd30f0836533040f9c07b8fe0ed969eb798a7d8c5e15c595f9ee2ea099f9ef5d",
+  "links": [
+    {
+      "url": "https://nbbo.no/cookies/",
+      "text": "Bruk av cookies",
+      "exact_anchor": "<a href=\"https://nbbo.no/cookies/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://nbbo.no/personvernerklaering/",
+      "text": "Personvernerklæring",
+      "exact_anchor": "<a href=\"https://nbbo.no/personvernerklaering/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261017 / 930621927 / DENTAL HOLDING AS
+
+https://www.dental.no/
+
+```json
+{
+  "seed": 20261017,
+  "orgnr": "930621927",
+  "name": "DENTAL HOLDING AS",
+  "page": "https://www.dental.no/",
+  "page_sha256": "a597bc06cd3dbdbbeacfda5207faf0cde615f41847678d6bcde56d197b7bb593",
+  "links": [
+    {
+      "url": "https://www.dental.no/terms.php",
+      "text": "Vilkår for bruk",
+      "exact_anchor": "<a href=\"terms.php\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://www.dental.no/advert.php?id=8",
+      "text": "Personvern",
+      "exact_anchor": "<a href=\"advert.php?id=8\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://www.dental.no/terms.php",
+      "text": "Vilkår ",
+      "exact_anchor": "<a href=\"terms.php\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://www.dental.no/advert.php?id=8",
+      "text": "Personvern",
+      "exact_anchor": "<a href=\"advert.php?id=8\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261017 / 925181536 / SESTANTE AS
+
+https://sestante.com/contact/
+
+```json
+{
+  "seed": 20261017,
+  "orgnr": "925181536",
+  "name": "SESTANTE AS",
+  "page": "https://sestante.com/contact/",
+  "page_sha256": "388238c68e52e775456f91aa402229d878cfb92e560f12aa2c1a7e652e49e49f",
+  "links": [
+    {
+      "url": "https://sestante.com/wp-content/uploads/2025/06/Sestante-Wealth-Management-LLC-Annual-Privacy-Notice.pdf",
+      "text": "PRIVACY NOTICE",
+      "exact_anchor": "<a href=\"/wp-content/uploads/2025/06/Sestante-Wealth-Management-LLC-Annual-Privacy-Notice.pdf\" target=\"_blank\">",
+      "pdf": true,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://sestante.com/wp-content/uploads/2026/08/Sestante-Family-Office-Text-Message-Terms-and-Privacy-Policy.pdf",
+      "text": "TEXT MESSAGE AND PRIVACY POLICY",
+      "exact_anchor": "<a href=\"/wp-content/uploads/2026/08/Sestante-Family-Office-Text-Message-Terms-and-Privacy-Policy.pdf\" target=\"_blank\">",
+      "pdf": true,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261017 / 991835423 / H-2 EIENDOM AS
+
+https://ragde.no/
+
+```json
+{
+  "seed": 20261017,
+  "orgnr": "991835423",
+  "name": "H-2 EIENDOM AS",
+  "page": "https://ragde.no/",
+  "page_sha256": "b908ca16b06380da1d4b0969230ecc970c0621e1b9785335ab5047fb9dc8dfe9",
+  "links": [
+    {
+      "url": "https://ragde.no/Angrerettskjema.pdf",
+      "text": "Angrerettskjema",
+      "exact_anchor": "<a class=\"c-list-link\" itemprop=\"url\" href=\"/Angrerettskjema.pdf\">",
+      "pdf": true,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://ragde.no/personvernerklaering/",
+      "text": "Personvernerklæring",
+      "exact_anchor": "<a class=\"c-list-link\" itemprop=\"url\" href=\"https://ragde.no/personvernerklaering/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261017 / 991835423 / H-2 EIENDOM AS
+
+https://ragde.no/kontakt-oss/
+
+```json
+{
+  "seed": 20261017,
+  "orgnr": "991835423",
+  "name": "H-2 EIENDOM AS",
+  "page": "https://ragde.no/kontakt-oss/",
+  "page_sha256": "b974c0bf12011ef6cecbd646770680a1548c961b3e1dc6bf0454b9576ab430ec",
+  "links": [
+    {
+      "url": "https://ragde.no/Angrerettskjema.pdf",
+      "text": "Angrerettskjema",
+      "exact_anchor": "<a class=\"c-list-link\" itemprop=\"url\" href=\"/Angrerettskjema.pdf\">",
+      "pdf": true,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://ragde.no/personvernerklaering/",
+      "text": "Personvernerklæring",
+      "exact_anchor": "<a class=\"c-list-link\" itemprop=\"url\" href=\"https://ragde.no/personvernerklaering/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261017 / 991835423 / H-2 EIENDOM AS
+
+https://ragde.no/personvernerklaering/
+
+```json
+{
+  "seed": 20261017,
+  "orgnr": "991835423",
+  "name": "H-2 EIENDOM AS",
+  "page": "https://ragde.no/personvernerklaering/",
+  "page_sha256": "f7b7f99a22d76aa5228e4f51121baef7b8fce8eb495bf2ea65153493fa1f4ffc",
+  "links": [
+    {
+      "url": "https://ragde.no/personvernerklaering/#mobile-menu",
+      "text": "",
+      "exact_anchor": "<a href=\"#mobile-menu\" class=\"mobile-menu-trigger\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://ragde.no/Angrerettskjema.pdf",
+      "text": "Angrerettskjema",
+      "exact_anchor": "<a class=\"c-list-link\" itemprop=\"url\" href=\"/Angrerettskjema.pdf\">",
+      "pdf": true,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://ragde.no/personvernerklaering/",
+      "text": "Personvernerklæring",
+      "exact_anchor": "<a class=\"c-list-link\" itemprop=\"url\" href=\"https://ragde.no/personvernerklaering/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261017 / 991835423 / H-2 EIENDOM AS
+
+https://ragde.no/page-sitemap.xml
+
+```json
+{
+  "seed": 20261017,
+  "orgnr": "991835423",
+  "name": "H-2 EIENDOM AS",
+  "page": "https://ragde.no/page-sitemap.xml",
+  "page_sha256": "9e8f72367069a662f5fa3f89ef1ffa9ddec36fe71a8b1f12efab67f03a859c11",
+  "links": [],
+  "sitemap": [
+    "https://ragde.no/personvernerklaering/",
+    "https://ragde.no/personvernerklaering-2/",
+    "https://ragde.no/privacy-policy/"
+  ],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261017 / 998795621 / HURTIG-GUTTA HOLDING AS
+
+https://hurtig-gutta.no/
+
+```json
+{
+  "seed": 20261017,
+  "orgnr": "998795621",
+  "name": "HURTIG-GUTTA HOLDING AS",
+  "page": "https://hurtig-gutta.no/",
+  "page_sha256": "a090c6842621ad89904c32962f57abb3378e3dbd96273c557773f963b34f0726",
+  "links": [
+    {
+      "url": "https://hurtig-gutta.no/betingelser/",
+      "text": "Betingelser",
+      "exact_anchor": "<a href=\"/betingelser/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://hurtig-gutta.no/betingelser/",
+      "text": "Betingelser",
+      "exact_anchor": "<a href=\"/betingelser/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://hurtig-gutta.no/personvern",
+      "text": "Personvern",
+      "exact_anchor": "<a href=\"/personvern\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261017 / 930777102 / TRIVO EIENDOM AS
+
+https://trivo.no/personvern
+
+```json
+{
+  "seed": 20261017,
+  "orgnr": "930777102",
+  "name": "TRIVO EIENDOM AS",
+  "page": "https://trivo.no/personvern",
+  "page_sha256": "40c1d0ef900c58f458e828f622a8daeea78a0777be84220c67a9eae4004cd13b",
+  "links": [
+    {
+      "url": "https://trivo.no/personvern",
+      "text": "Reload",
+      "exact_anchor": "<a href=\"\" class=\"reload\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://trivo.no/personvern",
+      "text": "🗙",
+      "exact_anchor": "<a class=\"dismiss\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261017 / 930777102 / TRIVO EIENDOM AS
+
+https://trivo.no/personvernerklaering
+
+```json
+{
+  "seed": 20261017,
+  "orgnr": "930777102",
+  "name": "TRIVO EIENDOM AS",
+  "page": "https://trivo.no/personvernerklaering",
+  "page_sha256": "40c1d0ef900c58f458e828f622a8daeea78a0777be84220c67a9eae4004cd13b",
+  "links": [
+    {
+      "url": "https://trivo.no/personvernerklaering",
+      "text": "Reload",
+      "exact_anchor": "<a href=\"\" class=\"reload\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://trivo.no/personvernerklaering",
+      "text": "🗙",
+      "exact_anchor": "<a class=\"dismiss\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261017 / 899174682 / FANTOFT UTVIKLING AS
+
+https://paretosec.com/
+
+```json
+{
+  "seed": 20261017,
+  "orgnr": "899174682",
+  "name": "FANTOFT UTVIKLING AS",
+  "page": "https://paretosec.com/",
+  "page_sha256": "8b3a38f065e77425a7d27645b86a1ce5f0e8c3b90b6dee08ceaaa51645dc005a",
+  "links": [
+    {
+      "url": "https://paretosec.com/terms-of-use",
+      "text": "Terms of use",
+      "exact_anchor": "<a href=\"https://paretosec.com/terms-of-use\" class=\"withicon link\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://paretosec.com/privacydocuments/Global_Privacy_Notice_Pareto_Securities.pdf",
+      "text": "Global Privacy Information",
+      "exact_anchor": "<a href=\"https://paretosec.com/privacydocuments/Global_Privacy_Notice_Pareto_Securities.pdf\" class=\"withicon download\" target=\"_blank\">",
+      "pdf": true,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261017 / 899174682 / FANTOFT UTVIKLING AS
+
+https://paretosec.com/contact
+
+```json
+{
+  "seed": 20261017,
+  "orgnr": "899174682",
+  "name": "FANTOFT UTVIKLING AS",
+  "page": "https://paretosec.com/contact",
+  "page_sha256": "1e5261907e1641e28ab2f419dff0a1d9a5b1c92b28cf99a1ff16bed283fbd82a",
+  "links": [
+    {
+      "url": "https://paretosec.com/terms-of-use",
+      "text": "Terms of use",
+      "exact_anchor": "<a href=\"https://paretosec.com/terms-of-use\" class=\"withicon link\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://paretosec.com/privacydocuments/Global_Privacy_Notice_Pareto_Securities.pdf",
+      "text": "Global Privacy Information",
+      "exact_anchor": "<a href=\"https://paretosec.com/privacydocuments/Global_Privacy_Notice_Pareto_Securities.pdf\" class=\"withicon download\" target=\"_blank\">",
+      "pdf": true,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261017 / 899174682 / FANTOFT UTVIKLING AS
+
+https://paretosec.com/energy-conference
+
+```json
+{
+  "seed": 20261017,
+  "orgnr": "899174682",
+  "name": "FANTOFT UTVIKLING AS",
+  "page": "https://paretosec.com/energy-conference",
+  "page_sha256": "18a1c51a77da955ce1676a15846ce5e42c2654999f8a2bdd3e63028822eda724",
+  "links": [
+    {
+      "url": "https://paretosec.com/terms-of-use",
+      "text": "Terms of use",
+      "exact_anchor": "<a href=\"https://paretosec.com/terms-of-use\" class=\"withicon link\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://paretosec.com/privacydocuments/Global_Privacy_Notice_Pareto_Securities.pdf",
+      "text": "Global Privacy Information",
+      "exact_anchor": "<a href=\"https://paretosec.com/privacydocuments/Global_Privacy_Notice_Pareto_Securities.pdf\" class=\"withicon download\" target=\"_blank\">",
+      "pdf": true,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261017 / 899174682 / FANTOFT UTVIKLING AS
+
+https://paretosec.com/updates/events-and-conferences
+
+```json
+{
+  "seed": 20261017,
+  "orgnr": "899174682",
+  "name": "FANTOFT UTVIKLING AS",
+  "page": "https://paretosec.com/updates/events-and-conferences",
+  "page_sha256": "b838e062fb5983b04ef3e3cfdd6ba387dbdf3791c7a0a682a0332e33d06db152",
+  "links": [
+    {
+      "url": "https://paretosec.com/terms-of-use",
+      "text": "Terms of use",
+      "exact_anchor": "<a href=\"https://paretosec.com/terms-of-use\" class=\"withicon link\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://paretosec.com/privacydocuments/Global_Privacy_Notice_Pareto_Securities.pdf",
+      "text": "Global Privacy Information",
+      "exact_anchor": "<a href=\"https://paretosec.com/privacydocuments/Global_Privacy_Notice_Pareto_Securities.pdf\" class=\"withicon download\" target=\"_blank\">",
+      "pdf": true,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261017 / 899174682 / FANTOFT UTVIKLING AS
+
+https://paretosec.com/terms-of-use
+
+```json
+{
+  "seed": 20261017,
+  "orgnr": "899174682",
+  "name": "FANTOFT UTVIKLING AS",
+  "page": "https://paretosec.com/terms-of-use",
+  "page_sha256": "b5456e57af81bb881c50487e5783e4247f66d066044128443810da8d0a758910",
+  "links": [
+    {
+      "url": "https://paretosec.com/terms-of-use",
+      "text": "Terms of use",
+      "exact_anchor": "<a href=\"https://paretosec.com/terms-of-use\" class=\"withicon link\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://paretosec.com/privacydocuments/Global_Privacy_Notice_Pareto_Securities.pdf",
+      "text": "Global Privacy Information",
+      "exact_anchor": "<a href=\"https://paretosec.com/privacydocuments/Global_Privacy_Notice_Pareto_Securities.pdf\" class=\"withicon download\" target=\"_blank\">",
+      "pdf": true,
+      "footer_nav": true,
+      "from_legal_page": true
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261017 / 899174682 / FANTOFT UTVIKLING AS
+
+https://paretosec.com/sitemap.xml
+
+```json
+{
+  "seed": 20261017,
+  "orgnr": "899174682",
+  "name": "FANTOFT UTVIKLING AS",
+  "page": "https://paretosec.com/sitemap.xml",
+  "page_sha256": "3a308f766403d067fb8e3bf0781804cd27e66f8cd539b8e062289f8b465c8273",
+  "links": [],
+  "sitemap": [
+    "https://paretosec.com/our-firm/compliance/global-privacy-information",
+    "https://paretosec.com/updates/news/new-buyers-in-the-real-estate-transaction-market-a-challenging-market-generates-new-conditions"
+  ],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261017 / 998309530 / HÅRFOKUS AS
+
+https://xn--hrfokus-exa.no/
+
+```json
+{
+  "seed": 20261017,
+  "orgnr": "998309530",
+  "name": "HÅRFOKUS AS",
+  "page": "https://xn--hrfokus-exa.no/",
+  "page_sha256": "8589771265553d99982750c1f9f6a891b582f8016870c7126d48c89bb9aea751",
+  "links": [
+    {
+      "url": "https://xn--hrfokus-exa.no/personvern",
+      "text": "Personvern",
+      "exact_anchor": "<a href=\"/personvern\" data-astro-cid-sz7xmlte>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261017 / 998309530 / HÅRFOKUS AS
+
+https://xn--hrfokus-exa.no/kontakt/
+
+```json
+{
+  "seed": 20261017,
+  "orgnr": "998309530",
+  "name": "HÅRFOKUS AS",
+  "page": "https://xn--hrfokus-exa.no/kontakt/",
+  "page_sha256": "0bd78f86ed99099a9b06cb75f5b6cd4bf7362d05bd5d534e473401f9916eea8a",
+  "links": [
+    {
+      "url": "https://xn--hrfokus-exa.no/personvern",
+      "text": "Personvern",
+      "exact_anchor": "<a href=\"/personvern\" data-astro-cid-sz7xmlte>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261017 / 998309530 / HÅRFOKUS AS
+
+https://xn--hrfokus-exa.no/om-oss/
+
+```json
+{
+  "seed": 20261017,
+  "orgnr": "998309530",
+  "name": "HÅRFOKUS AS",
+  "page": "https://xn--hrfokus-exa.no/om-oss/",
+  "page_sha256": "d8a009015343bfa9676be4f929b0b1d017cb4e02a2d51e3e9b4980a829f73c8b",
+  "links": [
+    {
+      "url": "https://xn--hrfokus-exa.no/personvern",
+      "text": "Personvern",
+      "exact_anchor": "<a href=\"/personvern\" data-astro-cid-sz7xmlte>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261017 / 998309530 / HÅRFOKUS AS
+
+https://xn--hrfokus-exa.no/personvern/
+
+```json
+{
+  "seed": 20261017,
+  "orgnr": "998309530",
+  "name": "HÅRFOKUS AS",
+  "page": "https://xn--hrfokus-exa.no/personvern/",
+  "page_sha256": "f740a6a0fc6b3a781a99bb38665f304bac33d51f528a08dced9824d57844f152",
+  "links": [
+    {
+      "url": "https://xn--hrfokus-exa.no/personvern",
+      "text": "Personvern",
+      "exact_anchor": "<a href=\"/personvern\" data-astro-cid-sz7xmlte>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://xn--hrfokus-exa.no/personvern/",
+      "text": "",
+      "exact_anchor": "<a href=\"#\" aria-label=\"Instagram\" class=\"social-link\" data-astro-cid-sz7xmlte>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://xn--hrfokus-exa.no/personvern/",
+      "text": "",
+      "exact_anchor": "<a href=\"#\" aria-label=\"Facebook\" class=\"social-link\" data-astro-cid-sz7xmlte>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://xn--hrfokus-exa.no/personvern/",
+      "text": "",
+      "exact_anchor": "<a href=\"#\" aria-label=\"LinkedIn\" class=\"social-link\" data-astro-cid-sz7xmlte>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261017 / 915412262 / MOHEIA BORETTSLAG
+
+https://helgelandbbl.no/
+
+```json
+{
+  "seed": 20261017,
+  "orgnr": "915412262",
+  "name": "MOHEIA BORETTSLAG",
+  "page": "https://helgelandbbl.no/",
+  "page_sha256": "a3596319d88b5841dcb407ad3cf519bffe737b804936fc8da48ecc3a78c7098d",
+  "links": [
+    {
+      "url": "https://helgelandbbl.no/personvernerklaering-eu/",
+      "text": "Personvernerklæring",
+      "exact_anchor": "<a style=\"color: #000000\" href=\"https://helgelandbbl.no/personvernerklaering-eu/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261017 / 915412262 / MOHEIA BORETTSLAG
+
+https://helgelandbbl.no/kontakt/
+
+```json
+{
+  "seed": 20261017,
+  "orgnr": "915412262",
+  "name": "MOHEIA BORETTSLAG",
+  "page": "https://helgelandbbl.no/kontakt/",
+  "page_sha256": "41d4cde7038099318341495eb02f15e81cd692368cd1e40fe81da2b23899c67a",
+  "links": [
+    {
+      "url": "https://helgelandbbl.no/personvernerklaering-eu/",
+      "text": "Personvernerklæring",
+      "exact_anchor": "<a style=\"color: #000000\" href=\"https://helgelandbbl.no/personvernerklaering-eu/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261017 / 915412262 / MOHEIA BORETTSLAG
+
+https://helgelandbbl.no/kort-om-oss/
+
+```json
+{
+  "seed": 20261017,
+  "orgnr": "915412262",
+  "name": "MOHEIA BORETTSLAG",
+  "page": "https://helgelandbbl.no/kort-om-oss/",
+  "page_sha256": "a03a098d648df9bd11241143fbd61c040bf4af876d33183c6d8a8940003cd163",
+  "links": [
+    {
+      "url": "https://helgelandbbl.no/personvernerklaering-eu/",
+      "text": "Personvernerklæring",
+      "exact_anchor": "<a style=\"color: #000000\" href=\"https://helgelandbbl.no/personvernerklaering-eu/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261017 / 934616081 / DICKSON NAPRAPATI AS
+
+https://www.naprapatgruppen.no/
+
+```json
+{
+  "seed": 20261017,
+  "orgnr": "934616081",
+  "name": "DICKSON NAPRAPATI AS",
+  "page": "https://www.naprapatgruppen.no/",
+  "page_sha256": "c6eddf2ebe8c3aea2ce4de588bd9204a3baa68c794f90408b22c3640dbdc9a5d",
+  "links": [
+    {
+      "url": "https://www.naprapatgruppen.no/_files/ugd/bfc5ed_93cbb36f0c8c4b00a84419be3d66313d.pdf",
+      "text": "Personvernerklæring",
+      "exact_anchor": "<a data-testid=\"linkElement\" href=\"https://www.naprapatgruppen.no/_files/ugd/bfc5ed_93cbb36f0c8c4b00a84419be3d66313d.pdf\" target=\"_blank\" class=\"qMvpu5\">",
+      "pdf": true,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261017 / 915412262 / MOHEIA BORETTSLAG
+
+https://helgelandbbl.no/personvernerklaering-eu/
+
+```json
+{
+  "seed": 20261017,
+  "orgnr": "915412262",
+  "name": "MOHEIA BORETTSLAG",
+  "page": "https://helgelandbbl.no/personvernerklaering-eu/",
+  "page_sha256": "c3443d3a72baeb07df9f65a35c63fd47010cb0e481e1baa69cc32d5f0da4b5d8",
+  "links": [
+    {
+      "url": "https://helgelandbbl.no/personvernerklaering-eu/#content",
+      "text": "\n\t\tHopp rett til innholdet",
+      "exact_anchor": "<a\n\tclass=\"skip-link screen-reader-text\"\n\thref=\"#content\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://helgelandbbl.no/personvernerklaering-eu/",
+      "text": "\n                \n                MENY\n                \n                ",
+      "exact_anchor": "<a aria-expanded=\"false\" class=\"menu-link\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://helgelandbbl.no/personvernerklaering-eu/",
+      "text": "",
+      "exact_anchor": "<a class=\"full-screen astra-search-icon\" aria-label=\"Search icon link\" href=\"#\" role=\"button\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://helgelandbbl.no/personvernerklaering-eu/",
+      "text": "\n                \n                FORKJØPSRETT\n                \n                ",
+      "exact_anchor": "<a href=\"#\" aria-expanded=\"false\" class=\"menu-link\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://helgelandbbl.no/personvernerklaering-eu/",
+      "text": "\n                \n                FOR DEG\n                \n                ",
+      "exact_anchor": "<a href=\"#\" aria-expanded=\"false\" class=\"menu-link\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://helgelandbbl.no/personvernerklaering-eu/",
+      "text": "\n                \n                FOR BEBOERE\n                \n                ",
+      "exact_anchor": "<a href=\"#\" aria-expanded=\"false\" class=\"menu-link\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://helgelandbbl.no/personvernerklaering-eu/",
+      "text": "\n                \n                FOR STYRET\n                \n                ",
+      "exact_anchor": "<a href=\"#\" aria-expanded=\"false\" class=\"menu-link\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://helgelandbbl.no/personvernerklaering-eu/",
+      "text": "\n                \n                TJENESTER\n                \n                ",
+      "exact_anchor": "<a href=\"#\" aria-expanded=\"false\" class=\"menu-link\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://helgelandbbl.no/personvernerklaering-eu/",
+      "text": "\n                \n                OM HELGELAND BBL\n                \n                ",
+      "exact_anchor": "<a href=\"#\" aria-expanded=\"false\" class=\"menu-link\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://helgelandbbl.no/personvernerklaering-eu/",
+      "text": "\n                \n                FORKJØPSRETT\n                \n                ",
+      "exact_anchor": "<a href=\"#\" aria-expanded=\"false\" class=\"menu-link\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://helgelandbbl.no/personvernerklaering-eu/",
+      "text": "\n                \n                FOR DEG\n                \n                ",
+      "exact_anchor": "<a href=\"#\" aria-expanded=\"false\" class=\"menu-link\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://helgelandbbl.no/personvernerklaering-eu/",
+      "text": "\n                \n                FOR BEBOERE\n                \n                ",
+      "exact_anchor": "<a href=\"#\" aria-expanded=\"false\" class=\"menu-link\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://helgelandbbl.no/personvernerklaering-eu/",
+      "text": "\n                \n                FOR STYRET\n                \n                ",
+      "exact_anchor": "<a href=\"#\" aria-expanded=\"false\" class=\"menu-link\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://helgelandbbl.no/personvernerklaering-eu/",
+      "text": "\n                \n                TJENESTER\n                \n                ",
+      "exact_anchor": "<a href=\"#\" aria-expanded=\"false\" class=\"menu-link\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://helgelandbbl.no/personvernerklaering-eu/",
+      "text": "\n                \n                OM HELGELAND BBL\n                \n                ",
+      "exact_anchor": "<a href=\"#\" aria-expanded=\"false\" class=\"menu-link\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://helgelandbbl.no/personvernerklaering-eu/",
+      "text": "Personvernerklæring",
+      "exact_anchor": "<a style=\"color: #000000\" href=\"https://helgelandbbl.no/personvernerklaering-eu/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://helgelandbbl.no/personvernerklaering-eu/",
+      "text": "Administrer alternativer",
+      "exact_anchor": "<a class=\"cmplz-link cmplz-manage-options cookie-statement\" href=\"#\" data-relative_url=\"#cmplz-manage-consent-container\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://helgelandbbl.no/personvernerklaering-eu/",
+      "text": "Administrer tjenester",
+      "exact_anchor": "<a class=\"cmplz-link cmplz-manage-third-parties cookie-statement\" href=\"#\" data-relative_url=\"#cmplz-cookies-overview\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://helgelandbbl.no/personvernerklaering-eu/",
+      "text": "Administrer {vendor_count} leverandører",
+      "exact_anchor": "<a class=\"cmplz-link cmplz-manage-vendors tcf cookie-statement\" href=\"#\" data-relative_url=\"#cmplz-tcf-wrapper\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://helgelandbbl.no/personvernerklaering-eu/",
+      "text": "Se preferanser",
+      "exact_anchor": "<a class=\"cmplz-btn cmplz-manage-options tcf cookie-statement\" href=\"#\" data-relative_url=\"#cmplz-manage-consent-container\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://helgelandbbl.no/personvernerklaering-eu/",
+      "text": "{title}",
+      "exact_anchor": "<a class=\"cmplz-link cookie-statement\" href=\"#\" data-relative_url=\"\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://helgelandbbl.no/personvernerklaering-eu/",
+      "text": "{title}",
+      "exact_anchor": "<a class=\"cmplz-link privacy-statement\" href=\"#\" data-relative_url=\"\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://helgelandbbl.no/personvernerklaering-eu/",
+      "text": "{title}",
+      "exact_anchor": "<a class=\"cmplz-link impressum\" href=\"#\" data-relative_url=\"\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261017 / 934616081 / DICKSON NAPRAPATI AS
+
+https://www.naprapatgruppen.no/kontakt-oss
+
+```json
+{
+  "seed": 20261017,
+  "orgnr": "934616081",
+  "name": "DICKSON NAPRAPATI AS",
+  "page": "https://www.naprapatgruppen.no/kontakt-oss",
+  "page_sha256": "bee6afccb0ea7ff7dc5f54b35dc8653bc7b60007c3f9d59cda1d958fdc9e428d",
+  "links": [
+    {
+      "url": "https://www.naprapatgruppen.no/_files/ugd/bfc5ed_93cbb36f0c8c4b00a84419be3d66313d.pdf",
+      "text": "Personvernerklæring",
+      "exact_anchor": "<a data-testid=\"linkElement\" href=\"https://www.naprapatgruppen.no/_files/ugd/bfc5ed_93cbb36f0c8c4b00a84419be3d66313d.pdf\" target=\"_blank\" class=\"qMvpu5\">",
+      "pdf": true,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261017 / 930621927 / DENTAL HOLDING AS
+
+https://dental-holding.com/
+
+```json
+{
+  "seed": 20261017,
+  "orgnr": "930621927",
+  "name": "DENTAL HOLDING AS",
+  "page": "https://dental-holding.com/",
+  "page_sha256": "36b58ed1a0e1ee6e2a3fb09995a30ee265dc0bf7de1d7262cba9fd57408707da",
+  "links": [
+    {
+      "url": "https://dental-holding.com/privacy-policy/",
+      "text": "Privacy Policy",
+      "exact_anchor": "<a class=\"inline-block max-w-full break-words py-1 text-[12px] leading-4 text-surface/75 transition-colors duration-(--duration-fast) hover:text-brand md:text-[13px]\" href=\"/privacy-policy/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://dental-holding.com/terms-conditions/",
+      "text": "Terms & Conditions",
+      "exact_anchor": "<a class=\"inline-block max-w-full break-words py-1 text-[12px] leading-4 text-surface/75 transition-colors duration-(--duration-fast) hover:text-brand md:text-[13px]\" href=\"/terms-conditions/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261113 / 818330952 / B2 EIENDOMSUTVIKLING AS
+
+https://vikengartneri.no/
+
+```json
+{
+  "seed": 20261113,
+  "orgnr": "818330952",
+  "name": "B2 EIENDOMSUTVIKLING AS",
+  "page": "https://vikengartneri.no/",
+  "page_sha256": "511f5ea4bdad5e2be5b17cbfb6eb50eac9d32820034a166e28f8558f27204095",
+  "links": [
+    {
+      "url": "https://vikengartneri.no/personvern/",
+      "text": "Personvernerklæring",
+      "exact_anchor": "<a href=\"https://vikengartneri.no/personvern/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261113 / 818330952 / B2 EIENDOMSUTVIKLING AS
+
+https://vikengartneri.no/kontakt/
+
+```json
+{
+  "seed": 20261113,
+  "orgnr": "818330952",
+  "name": "B2 EIENDOMSUTVIKLING AS",
+  "page": "https://vikengartneri.no/kontakt/",
+  "page_sha256": "67627ba4802d8fb85ec6554eef484ab0ae6c67af0dc7b62bbb39444c50dd5265",
+  "links": [
+    {
+      "url": "https://vikengartneri.no/personvern/",
+      "text": "Personvernerklæring",
+      "exact_anchor": "<a href=\"https://vikengartneri.no/personvern/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261113 / 818330952 / B2 EIENDOMSUTVIKLING AS
+
+https://vikengartneri.no/om-oss/
+
+```json
+{
+  "seed": 20261113,
+  "orgnr": "818330952",
+  "name": "B2 EIENDOMSUTVIKLING AS",
+  "page": "https://vikengartneri.no/om-oss/",
+  "page_sha256": "39532b4eefdbdbf32c7793bafa2693e235b12c3b79fddb66b69e878d549c2b6a",
+  "links": [
+    {
+      "url": "https://vikengartneri.no/personvern/",
+      "text": "Personvernerklæring",
+      "exact_anchor": "<a href=\"https://vikengartneri.no/personvern/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261113 / 823569262 / MAGNA PROSJEKT SØR AS
+
+https://magnaprosjektsor.no/
+
+```json
+{
+  "seed": 20261113,
+  "orgnr": "823569262",
+  "name": "MAGNA PROSJEKT SØR AS",
+  "page": "https://magnaprosjektsor.no/",
+  "page_sha256": "ac36255b26e97c23d6c917a7670039174b1dda33063b9eed6c916c8e67beedbb",
+  "links": [
+    {
+      "url": "https://magnaprosjektsor.no/cookies/",
+      "text": "Les om vår bruk av cookies",
+      "exact_anchor": "<a href=\"https://magnaprosjektsor.no/cookies/\" id=\"CONSTANT_OPEN_URL\" target=\"_blank\" class=\"cli-plugin-main-link\" style=\"display:inline-block\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261113 / 823569262 / MAGNA PROSJEKT SØR AS
+
+https://magnaprosjektsor.no/kontakt-oss/
+
+```json
+{
+  "seed": 20261113,
+  "orgnr": "823569262",
+  "name": "MAGNA PROSJEKT SØR AS",
+  "page": "https://magnaprosjektsor.no/kontakt-oss/",
+  "page_sha256": "492f82b40881759541b6a4dc40dc712e84806c22c9ecb05b6aa5f66cfcd4b455",
+  "links": [
+    {
+      "url": "https://magnaprosjektsor.no/cookies/",
+      "text": "Les om vår bruk av cookies",
+      "exact_anchor": "<a href=\"https://magnaprosjektsor.no/cookies/\" id=\"CONSTANT_OPEN_URL\" target=\"_blank\" class=\"cli-plugin-main-link\" style=\"display:inline-block\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261113 / 818330952 / B2 EIENDOMSUTVIKLING AS
+
+https://vikengartneri.no/personvern/
+
+```json
+{
+  "seed": 20261113,
+  "orgnr": "818330952",
+  "name": "B2 EIENDOMSUTVIKLING AS",
+  "page": "https://vikengartneri.no/personvern/",
+  "page_sha256": "6f4fd2b02d997b3c7934efb28f131015b46773c53cc895d8d4880881f815374b",
+  "links": [
+    {
+      "url": "https://vikengartneri.no/personvern/",
+      "text": "Personvernerklæring",
+      "exact_anchor": "<a href=\"https://vikengartneri.no/personvern/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261113 / 823569262 / MAGNA PROSJEKT SØR AS
+
+https://magnaprosjektsor.no/om-oss/
+
+```json
+{
+  "seed": 20261113,
+  "orgnr": "823569262",
+  "name": "MAGNA PROSJEKT SØR AS",
+  "page": "https://magnaprosjektsor.no/om-oss/",
+  "page_sha256": "a6d265c84245528b4b8b464f2f2656fcb4d2f2c24a33b8dba711b821254c8c92",
+  "links": [
+    {
+      "url": "https://magnaprosjektsor.no/cookies/",
+      "text": "Les om vår bruk av cookies",
+      "exact_anchor": "<a href=\"https://magnaprosjektsor.no/cookies/\" id=\"CONSTANT_OPEN_URL\" target=\"_blank\" class=\"cli-plugin-main-link\" style=\"display:inline-block\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261113 / 823569262 / MAGNA PROSJEKT SØR AS
+
+https://magnaprosjektsor.no/page-sitemap.xml
+
+```json
+{
+  "seed": 20261113,
+  "orgnr": "823569262",
+  "name": "MAGNA PROSJEKT SØR AS",
+  "page": "https://magnaprosjektsor.no/page-sitemap.xml",
+  "page_sha256": "2f91fdd3a26111f3514e6a082452f5acf2d8020f61505f635101ce785b44789e",
+  "links": [],
+  "sitemap": [
+    "https://magnaprosjektsor.no/cookies/"
+  ],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261113 / 818330952 / B2 EIENDOMSUTVIKLING AS
+
+https://vikengartneri.no/page-sitemap.xml
+
+```json
+{
+  "seed": 20261113,
+  "orgnr": "818330952",
+  "name": "B2 EIENDOMSUTVIKLING AS",
+  "page": "https://vikengartneri.no/page-sitemap.xml",
+  "page_sha256": "ea8eb73602794a018c6c79f10a5206cde33e61386ced27aa90542431112e663a",
+  "links": [],
+  "sitemap": [
+    "https://vikengartneri.no/personvern/"
+  ],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261113 / 830009612 / VEKSTPARTNER AS
+
+https://www.vekstpartner.no/
+
+```json
+{
+  "seed": 20261113,
+  "orgnr": "830009612",
+  "name": "VEKSTPARTNER AS",
+  "page": "https://www.vekstpartner.no/",
+  "page_sha256": "aeb4dbc38c09221334397f96ca986299cd542d69abe5d53c555a7a3c42c4c471",
+  "links": [
+    {
+      "url": "https://www.vekstpartner.no/personvern",
+      "text": "Personvern",
+      "exact_anchor": "<a href=\"/personvern\" class=\"footer3_legal-link\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261113 / 830009612 / VEKSTPARTNER AS
+
+https://www.vekstpartner.no/kontakt-oss
+
+```json
+{
+  "seed": 20261113,
+  "orgnr": "830009612",
+  "name": "VEKSTPARTNER AS",
+  "page": "https://www.vekstpartner.no/kontakt-oss",
+  "page_sha256": "576d8e7c5d52a53e89c8b56e9fe352abb6c91d06bd18d7bb2957550ce2224920",
+  "links": [
+    {
+      "url": "https://www.vekstpartner.no/personvern",
+      "text": "Personvern",
+      "exact_anchor": "<a href=\"/personvern\" class=\"footer3_legal-link\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261113 / 830009612 / VEKSTPARTNER AS
+
+https://www.vekstpartner.no/personvern
+
+```json
+{
+  "seed": 20261113,
+  "orgnr": "830009612",
+  "name": "VEKSTPARTNER AS",
+  "page": "https://www.vekstpartner.no/personvern",
+  "page_sha256": "f69b66236c6e1472fb04512ae5d15bdde2683502b20f5ffc975b8b49cba93302",
+  "links": [
+    {
+      "url": "https://www.vekstpartner.no/personvern",
+      "text": "",
+      "exact_anchor": "<a href=\"#\" class=\"footer3_logo-link w-nav-brand\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.vekstpartner.no/personvern",
+      "text": "Personvern",
+      "exact_anchor": "<a href=\"/personvern\" aria-current=\"page\" class=\"footer3_legal-link w--current\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261113 / 830009612 / VEKSTPARTNER AS
+
+https://www.vekstpartner.no/sitemap.xml
+
+```json
+{
+  "seed": 20261113,
+  "orgnr": "830009612",
+  "name": "VEKSTPARTNER AS",
+  "page": "https://www.vekstpartner.no/sitemap.xml",
+  "page_sha256": "bd2892b963cbaec0f0a7020b54d3d5dfb2fdf8072f84c90023097ace05e21824",
+  "links": [],
+  "sitemap": [
+    "https://www.vekstpartner.no/personvern"
+  ],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261113 / 989704516 / GYSTADMYR UTBYGGING AS
+
+https://kamperhaug.no/
+
+```json
+{
+  "seed": 20261113,
+  "orgnr": "989704516",
+  "name": "GYSTADMYR UTBYGGING AS",
+  "page": "https://kamperhaug.no/",
+  "page_sha256": "43a71aec7a85cfce1d795b4d84b4f7c0aa9031737f0bda3d785ba5ee4b5e6e65",
+  "links": [
+    {
+      "url": "https://app.kamperhaug.no/legal/Personvernerklaering.pdf",
+      "text": "Personvernerklæring",
+      "exact_anchor": "<a href=\"https://app.kamperhaug.no/legal/Personvernerklaering.pdf\" target=\"_blank\">",
+      "pdf": true,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261113 / 993821403 / NEXTHOP AS
+
+https://nexthop.no/
+
+```json
+{
+  "seed": 20261113,
+  "orgnr": "993821403",
+  "name": "NEXTHOP AS",
+  "page": "https://nexthop.no/",
+  "page_sha256": "e0ce4c16ca058d2af8429690fb34b014c99826f589eda7acb14cf571a6e7f1a4",
+  "links": [
+    {
+      "url": "https://nexthop.no/",
+      "text": "\n\t\t\t\t\t\tTerms and conditions\n\t\t\t\t\t",
+      "exact_anchor": "<a href=\"#\" target=\"_blank\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://nexthop.no/",
+      "text": "\n\t\t\t\t\t\tTerms and conditions\n\t\t\t\t\t",
+      "exact_anchor": "<a href=\"#\" target=\"_blank\" class=\"text-colored\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261113 / 927550563 / ZILLA CAPITAL AS
+
+https://www.zillacapital.com/
+
+```json
+{
+  "seed": 20261113,
+  "orgnr": "927550563",
+  "name": "ZILLA CAPITAL AS",
+  "page": "https://www.zillacapital.com/",
+  "page_sha256": "3b5437f34756df734c1eef066d567121188a79c3468aca3fab04c8ff6f384a16",
+  "links": [
+    {
+      "url": "https://www.zillacapital.com/privacy-policy/",
+      "text": "Privacy",
+      "exact_anchor": "<a href=\"/privacy-policy/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://www.zillacapital.com/privacy-policy/",
+      "text": "Privacy Policy",
+      "exact_anchor": "<a href=\"https://www.zillacapital.com/privacy-policy/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261113 / 927550563 / ZILLA CAPITAL AS
+
+https://www.zillacapital.com/contact-us/
+
+```json
+{
+  "seed": 20261113,
+  "orgnr": "927550563",
+  "name": "ZILLA CAPITAL AS",
+  "page": "https://www.zillacapital.com/contact-us/",
+  "page_sha256": "340dea408d2bb72835eed5acb95089230b035d0dce46b726a4f4b32788cff6dc",
+  "links": [
+    {
+      "url": "https://www.zillacapital.com/privacy-policy/",
+      "text": "Privacy",
+      "exact_anchor": "<a href=\"/privacy-policy/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://www.zillacapital.com/privacy-policy/",
+      "text": "Privacy Policy",
+      "exact_anchor": "<a href=\"https://www.zillacapital.com/privacy-policy/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261113 / 927550563 / ZILLA CAPITAL AS
+
+https://www.zillacapital.com/about-zilla-capital/
+
+```json
+{
+  "seed": 20261113,
+  "orgnr": "927550563",
+  "name": "ZILLA CAPITAL AS",
+  "page": "https://www.zillacapital.com/about-zilla-capital/",
+  "page_sha256": "e3abafbf6a751594037741ac60e31d571e590ca189b97a4a15f95877cd9c5750",
+  "links": [
+    {
+      "url": "https://www.zillacapital.com/privacy-policy/",
+      "text": "Privacy",
+      "exact_anchor": "<a href=\"/privacy-policy/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://www.zillacapital.com/privacy-policy/",
+      "text": "Privacy Policy",
+      "exact_anchor": "<a href=\"https://www.zillacapital.com/privacy-policy/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261113 / 927550563 / ZILLA CAPITAL AS
+
+https://www.zillacapital.com/privacy-policy/
+
+```json
+{
+  "seed": 20261113,
+  "orgnr": "927550563",
+  "name": "ZILLA CAPITAL AS",
+  "page": "https://www.zillacapital.com/privacy-policy/",
+  "page_sha256": "7818e949ac07a0bec4e1f51b2b6205c7b8fdfa8933f6d8c200dda2c603b6651b",
+  "links": [
+    {
+      "url": "https://www.zillacapital.com/privacy-policy/#content",
+      "text": "\n\t\t\t\tSkip to content\n\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\n\t\t\t",
+      "exact_anchor": "<a class=\"ea11y-skip-to-content-link\"\n\t\t\t\thref=\"#content\"\n\t\t\t\ttabindex=\"-1\"\n\t\t\t\tonclick=\"onSkipLinkClick()\"\n\t\t\t>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.zillacapital.com/privacy-policy/",
+      "text": "About Zilla",
+      "exact_anchor": "<a href=\"#\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.zillacapital.com/privacy-policy/",
+      "text": "About Zilla",
+      "exact_anchor": "<a href=\"#\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.zillacapital.com/privacy-policy/",
+      "text": "\n\t\t\t\t\t\t\tAbu Dhabi Office: Al Sarab Tower, ADGM Square, Abu Dhabi, United Arab Emirates\t\t\t\t\t\t",
+      "exact_anchor": "<a href=\"#\" class=\"address\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.zillacapital.com/privacy-policy/",
+      "text": "Privacy",
+      "exact_anchor": "<a href=\"/privacy-policy/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.zillacapital.com/privacy-policy/",
+      "text": "Privacy Policy",
+      "exact_anchor": "<a href=\"https://www.zillacapital.com/privacy-policy/\" aria-current=\"page\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261113 / 930532223 / SAMEIET SJØKANTEN PARK
+
+https://agioforvaltning.no/
+
+```json
+{
+  "seed": 20261113,
+  "orgnr": "930532223",
+  "name": "SAMEIET SJØKANTEN PARK",
+  "page": "https://agioforvaltning.no/",
+  "page_sha256": "a72b38984efb85863d4c922d020052b79e2c349dbf340a8a1f3f498815d564a2",
+  "links": [
+    {
+      "url": "https://agioforvaltning.no/personvern",
+      "text": "Personvern",
+      "exact_anchor": "<a href=\"/personvern\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261113 / 924592753 / KIBU HOLDING AS
+
+https://kibu.com/
+
+```json
+{
+  "seed": 20261113,
+  "orgnr": "924592753",
+  "name": "KIBU HOLDING AS",
+  "page": "https://kibu.com/",
+  "page_sha256": "2ea8e7628944a135cfa440a1e51dec74310dc1ab917b2a7b5986d3722e8cb47b",
+  "links": [
+    {
+      "url": "https://kibu.com/privacy",
+      "text": "Privacy Policy",
+      "exact_anchor": "<a class=\"text-sm text-kibu-muted transition-colors hover:text-black\" href=\"/privacy\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://kibu.com/terms-of-service",
+      "text": "Terms of Service",
+      "exact_anchor": "<a class=\"text-sm text-kibu-muted transition-colors hover:text-black\" href=\"/terms-of-service\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://kibu.com/membership-terms",
+      "text": "Membership Terms",
+      "exact_anchor": "<a class=\"text-sm text-kibu-muted transition-colors hover:text-black\" href=\"/membership-terms\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261113 / 936106374 / KO&CO AS
+
+https://www.koco.com/
+
+```json
+{
+  "seed": 20261113,
+  "orgnr": "936106374",
+  "name": "KO&CO AS",
+  "page": "https://www.koco.com/",
+  "page_sha256": "3548298a4b576a92a0b08c344e002cf9f28730a5c2c68b63860cda7855bdbcdf",
+  "links": [
+    {
+      "url": "https://www.koco.com/privacy-notice",
+      "text": "Privacy Notice",
+      "exact_anchor": "<a href=\"/privacy-notice\" tabindex=\"0\" aria-label=\"Navigate to Privacy Notice\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://www.koco.com/terms-of-use",
+      "text": "Terms of Use",
+      "exact_anchor": "<a href=\"/terms-of-use\" tabindex=\"0\" aria-label=\"Navigate to Terms of Use\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://www.koco.com/privacy-notice",
+      "text": "Privacy Notice",
+      "exact_anchor": "<a href=\"/privacy-notice\" target=\"_top\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://www.koco.com/privacy-notice#e",
+      "text": "DAA Industry Opt Out",
+      "exact_anchor": "<a href=\"/privacy-notice#e\" target=\"_top\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://www.koco.com/terms-of-use",
+      "text": "Terms of Use",
+      "exact_anchor": "<a href=\"/terms-of-use\" target=\"_top\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://www.koco.com/yourdata",
+      "text": "Your Privacy Choices/(Opt-Out of Sale/Targeted Ads)",
+      "exact_anchor": "<a href=\"/yourdata\" target=\"_top\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261113 / 936106374 / KO&CO AS
+
+https://www.koco.com/article/contact-us/3616874
+
+```json
+{
+  "seed": 20261113,
+  "orgnr": "936106374",
+  "name": "KO&CO AS",
+  "page": "https://www.koco.com/article/contact-us/3616874",
+  "page_sha256": "1e7d404381e6425410d5fae44f94f5e31e32c609c49d8cac07e945bb2cce74ef",
+  "links": [
+    {
+      "url": "https://www.koco.com/privacy-notice",
+      "text": "Privacy Notice",
+      "exact_anchor": "<a href=\"/privacy-notice\" tabindex=\"0\" aria-label=\"Navigate to Privacy Notice\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://www.koco.com/terms-of-use",
+      "text": "Terms of Use",
+      "exact_anchor": "<a href=\"/terms-of-use\" tabindex=\"0\" aria-label=\"Navigate to Terms of Use\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://www.koco.com/privacy-notice",
+      "text": "Privacy Notice",
+      "exact_anchor": "<a href=\"/privacy-notice\" target=\"_top\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://www.koco.com/privacy-notice#e",
+      "text": "DAA Industry Opt Out",
+      "exact_anchor": "<a href=\"/privacy-notice#e\" target=\"_top\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://www.koco.com/terms-of-use",
+      "text": "Terms of Use",
+      "exact_anchor": "<a href=\"/terms-of-use\" target=\"_top\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://www.koco.com/yourdata",
+      "text": "Your Privacy Choices/(Opt-Out of Sale/Targeted Ads)",
+      "exact_anchor": "<a href=\"/yourdata\" target=\"_top\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261113 / 924592753 / KIBU HOLDING AS
+
+https://kibu.com/contact
+
+```json
+{
+  "seed": 20261113,
+  "orgnr": "924592753",
+  "name": "KIBU HOLDING AS",
+  "page": "https://kibu.com/contact",
+  "page_sha256": "24dbf1bc0ceaa788ff46676f8984745200faf88154580b1e79d84f0529f7b414",
+  "links": [
+    {
+      "url": "https://kibu.com/privacy",
+      "text": "Privacy Policy",
+      "exact_anchor": "<a class=\"text-sm text-kibu-muted transition-colors hover:text-black\" href=\"/privacy\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://kibu.com/terms-of-service",
+      "text": "Terms of Service",
+      "exact_anchor": "<a class=\"text-sm text-kibu-muted transition-colors hover:text-black\" href=\"/terms-of-service\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://kibu.com/membership-terms",
+      "text": "Membership Terms",
+      "exact_anchor": "<a class=\"text-sm text-kibu-muted transition-colors hover:text-black\" href=\"/membership-terms\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261113 / 924592753 / KIBU HOLDING AS
+
+https://kibu.com/about
+
+```json
+{
+  "seed": 20261113,
+  "orgnr": "924592753",
+  "name": "KIBU HOLDING AS",
+  "page": "https://kibu.com/about",
+  "page_sha256": "c3660d4fdec625509205d1b4a02c4549897ae874b588e2990c95922909a2d9f8",
+  "links": [
+    {
+      "url": "https://kibu.com/privacy",
+      "text": "Privacy Policy",
+      "exact_anchor": "<a class=\"text-sm text-kibu-muted transition-colors hover:text-black\" href=\"/privacy\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://kibu.com/terms-of-service",
+      "text": "Terms of Service",
+      "exact_anchor": "<a class=\"text-sm text-kibu-muted transition-colors hover:text-black\" href=\"/terms-of-service\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://kibu.com/membership-terms",
+      "text": "Membership Terms",
+      "exact_anchor": "<a class=\"text-sm text-kibu-muted transition-colors hover:text-black\" href=\"/membership-terms\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261113 / 924592753 / KIBU HOLDING AS
+
+https://kibu.com/privacy
+
+```json
+{
+  "seed": 20261113,
+  "orgnr": "924592753",
+  "name": "KIBU HOLDING AS",
+  "page": "https://kibu.com/privacy",
+  "page_sha256": "3df225b04a2f19cb72cee972cdd139bac0ebd18e36c502c936aecc03c664b942",
+  "links": [
+    {
+      "url": "https://kibu.com/privacy",
+      "text": "Privacy Policy",
+      "exact_anchor": "<a class=\"text-sm text-kibu-muted transition-colors hover:text-black\" href=\"/privacy\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://kibu.com/terms-of-service",
+      "text": "Terms of Service",
+      "exact_anchor": "<a class=\"text-sm text-kibu-muted transition-colors hover:text-black\" href=\"/terms-of-service\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://kibu.com/membership-terms",
+      "text": "Membership Terms",
+      "exact_anchor": "<a class=\"text-sm text-kibu-muted transition-colors hover:text-black\" href=\"/membership-terms\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261113 / 924592753 / KIBU HOLDING AS
+
+https://kibu.com/terms-of-service
+
+```json
+{
+  "seed": 20261113,
+  "orgnr": "924592753",
+  "name": "KIBU HOLDING AS",
+  "page": "https://kibu.com/terms-of-service",
+  "page_sha256": "23b8546e1d21d9562847bcaf6b176d7e03c3abfd0722138ab369b3c7a2342a07",
+  "links": [
+    {
+      "url": "https://kibu.com/privacy",
+      "text": "Privacy Policy",
+      "exact_anchor": "<a class=\"text-sm text-kibu-muted transition-colors hover:text-black\" href=\"/privacy\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://kibu.com/terms-of-service",
+      "text": "Terms of Service",
+      "exact_anchor": "<a class=\"text-sm text-kibu-muted transition-colors hover:text-black\" href=\"/terms-of-service\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://kibu.com/membership-terms",
+      "text": "Membership Terms",
+      "exact_anchor": "<a class=\"text-sm text-kibu-muted transition-colors hover:text-black\" href=\"/membership-terms\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261113 / 924592753 / KIBU HOLDING AS
+
+https://kibu.com/membership-terms
+
+```json
+{
+  "seed": 20261113,
+  "orgnr": "924592753",
+  "name": "KIBU HOLDING AS",
+  "page": "https://kibu.com/membership-terms",
+  "page_sha256": "6cfbba78a1c1922835bc232effcce8a89fc4ebd52868e06841d6885723ae954a",
+  "links": [
+    {
+      "url": "https://kibu.com/privacy",
+      "text": "Privacy Policy",
+      "exact_anchor": "<a class=\"text-sm text-kibu-muted transition-colors hover:text-black\" href=\"/privacy\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://kibu.com/terms-of-service",
+      "text": "Terms of Service",
+      "exact_anchor": "<a class=\"text-sm text-kibu-muted transition-colors hover:text-black\" href=\"/terms-of-service\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://kibu.com/membership-terms",
+      "text": "Membership Terms",
+      "exact_anchor": "<a class=\"text-sm text-kibu-muted transition-colors hover:text-black\" href=\"/membership-terms\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261113 / 995744562 / GRORUD ELEKTRO SERVICE AS
+
+https://www.ghs.no/
+
+```json
+{
+  "seed": 20261113,
+  "orgnr": "995744562",
+  "name": "GRORUD ELEKTRO SERVICE AS",
+  "page": "https://www.ghs.no/",
+  "page_sha256": "7bf79b09b93b5b52e84e9992ed09f449f1344e957ef624d833ed24c8b18fc080",
+  "links": [
+    {
+      "url": "https://www.ghs.no/privacy-policy/",
+      "text": "Privacy Policy",
+      "exact_anchor": "<a href=\"https://www.ghs.no/privacy-policy/\" class = \"uael-menu-item\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://www.ghs.no/terms-condition/",
+      "text": "Vikår & Betingelser",
+      "exact_anchor": "<a href=\"https://www.ghs.no/terms-condition/\" class = \"uael-menu-item\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261113 / 915469132 / ARCHWAY AS
+
+https://www.archway.no/
+
+```json
+{
+  "seed": 20261113,
+  "orgnr": "915469132",
+  "name": "ARCHWAY AS",
+  "page": "https://www.archway.no/",
+  "page_sha256": "62c0dfbc76aedd2e16defb3796d75458118a365574091240b24a1a23904ec7dc",
+  "links": [
+    {
+      "url": "https://www.archway.no/#hero",
+      "text": "Personvern",
+      "exact_anchor": "<a href=\"#hero\" class=\"hover:text-foreground transition-colors\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://www.archway.no/#hero",
+      "text": "Vilkår",
+      "exact_anchor": "<a href=\"#hero\" class=\"hover:text-foreground transition-colors\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261113 / 929376935 / HAUKJEM INVEST AS
+
+https://haukjem.no/
+
+```json
+{
+  "seed": 20261113,
+  "orgnr": "929376935",
+  "name": "HAUKJEM INVEST AS",
+  "page": "https://haukjem.no/",
+  "page_sha256": "867690cce46630c0d323daea9f1dab75639864bfaa385890b0099b2f030fd38f",
+  "links": [
+    {
+      "url": "https://haukjem.no/personvernserklaering",
+      "text": "\n\n                    \n\n                        Personvern\n                    \n\n                ",
+      "exact_anchor": "<a href=\"/personvernserklaering\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://haukjem.no/personvernserklaering",
+      "text": "\n\n                    \n\n                        Personvern\n                    \n\n                ",
+      "exact_anchor": "<a href=\"/personvernserklaering\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261113 / 929376935 / HAUKJEM INVEST AS
+
+https://haukjem.no/kontakt/haukjem-blikkenslager-drammen-og-kongsberg
+
+```json
+{
+  "seed": 20261113,
+  "orgnr": "929376935",
+  "name": "HAUKJEM INVEST AS",
+  "page": "https://haukjem.no/kontakt/haukjem-blikkenslager-drammen-og-kongsberg",
+  "page_sha256": "000ff7efc0b11b5b4221388c8cd99daea46806d20bb2a17ba70687351802a0fe",
+  "links": [
+    {
+      "url": "https://haukjem.no/personvernserklaering",
+      "text": "\n\n                    \n\n                        Personvern\n                    \n\n                ",
+      "exact_anchor": "<a href=\"/personvernserklaering\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://haukjem.no/personvernserklaering",
+      "text": "\n\n                    \n\n                        Personvern\n                    \n\n                ",
+      "exact_anchor": "<a href=\"/personvernserklaering\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261113 / 929376935 / HAUKJEM INVEST AS
+
+https://haukjem.no/om-oss-haukjem-blikkenslager-drammen
+
+```json
+{
+  "seed": 20261113,
+  "orgnr": "929376935",
+  "name": "HAUKJEM INVEST AS",
+  "page": "https://haukjem.no/om-oss-haukjem-blikkenslager-drammen",
+  "page_sha256": "54c0e4e4c30d02b20da079ed78f49cc6d54f85f33fbac35b5d49236a51504851",
+  "links": [
+    {
+      "url": "https://haukjem.no/personvernserklaering",
+      "text": "\n\n                    \n\n                        Personvern\n                    \n\n                ",
+      "exact_anchor": "<a href=\"/personvernserklaering\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://haukjem.no/personvernserklaering",
+      "text": "\n\n                    \n\n                        Personvern\n                    \n\n                ",
+      "exact_anchor": "<a href=\"/personvernserklaering\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261113 / 929376935 / HAUKJEM INVEST AS
+
+https://haukjem.no/personvernserklaering
+
+```json
+{
+  "seed": 20261113,
+  "orgnr": "929376935",
+  "name": "HAUKJEM INVEST AS",
+  "page": "https://haukjem.no/personvernserklaering",
+  "page_sha256": "48c2ee5737362adb512f2ab1f40cf1c9a5a11e4043ab9e98c2fa8fcf26da0b4f",
+  "links": [
+    {
+      "url": "https://haukjem.no/personvernserklaering",
+      "text": "\n                                                        \n                                    \n\t\t\t\t\t\t\t        Tjenester                                \n                            ",
+      "exact_anchor": "<a class=\"first-link\" href=\"\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://haukjem.no/personvernserklaering",
+      "text": "Tømmerkrana 15, 3048 Drammen",
+      "exact_anchor": "<a href=\"#\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://haukjem.no/personvernserklaering",
+      "text": "\n\n                    \n\n                        Personvern\n                    \n\n                ",
+      "exact_anchor": "<a href=\"/personvernserklaering\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://haukjem.no/personvernserklaering",
+      "text": "Ødegaardveien 3, 3610 Kongsberg",
+      "exact_anchor": "<a href=\"#\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://haukjem.no/personvernserklaering",
+      "text": "\n\n                    \n\n                        Personvern\n                    \n\n                ",
+      "exact_anchor": "<a href=\"/personvernserklaering\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261113 / 993821403 / NEXTHOP AS
+
+https://www.zetta.io/
+
+```json
+{
+  "seed": 20261113,
+  "orgnr": "993821403",
+  "name": "NEXTHOP AS",
+  "page": "https://www.zetta.io/",
+  "page_sha256": "8211afcbd6abf9a5ac9d809c244d3a8a6489c1bd90c5e4992a927536315aa31d",
+  "links": [
+    {
+      "url": "https://www.zetta.io/legal/",
+      "text": "Terms & Conditions",
+      "exact_anchor": "<a href=\"//www.zetta.io/legal/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261113 / 993821403 / NEXTHOP AS
+
+https://www.zetta.io/about/contact/
+
+```json
+{
+  "seed": 20261113,
+  "orgnr": "993821403",
+  "name": "NEXTHOP AS",
+  "page": "https://www.zetta.io/about/contact/",
+  "page_sha256": "7f00083d9e9d903e72b220b378b9a194e579862b713871cd4322e79a8085b969",
+  "links": [
+    {
+      "url": "https://www.zetta.io/legal/",
+      "text": "Terms & Conditions",
+      "exact_anchor": "<a href=\"//www.zetta.io/legal/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261113 / 929376935 / HAUKJEM INVEST AS
+
+https://www.haukjem.no/sitemap.php
+
+```json
+{
+  "seed": 20261113,
+  "orgnr": "929376935",
+  "name": "HAUKJEM INVEST AS",
+  "page": "https://www.haukjem.no/sitemap.php",
+  "page_sha256": "fec98ed2a49c85d6a6087e394b57f864c2034e9eed58e2d77518e26667177d0b",
+  "links": [],
+  "sitemap": [
+    "https://www.haukjem.no:443/personvernserklaering",
+    "https://www.haukjem.no:443/personvernserklaering",
+    "https://www.haukjem.no:443/personvernserklaering",
+    "https://www.haukjem.no:443/personvernserklaering"
+  ],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261113 / 929376935 / HAUKJEM INVEST AS
+
+https://www.haukjem.no/om-oss-haukjem-blikkenslager-drammen
+
+```json
+{
+  "seed": 20261113,
+  "orgnr": "929376935",
+  "name": "HAUKJEM INVEST AS",
+  "page": "https://www.haukjem.no/om-oss-haukjem-blikkenslager-drammen",
+  "page_sha256": "0ce7e82f1959efdc6b28db5e62301d8db978fb736570498b0d05289d3b6e03e6",
+  "links": [
+    {
+      "url": "https://www.haukjem.no/personvernserklaering",
+      "text": "\n\n                    \n\n                        Personvern\n                    \n\n                ",
+      "exact_anchor": "<a href=\"/personvernserklaering\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://www.haukjem.no/personvernserklaering",
+      "text": "\n\n                    \n\n                        Personvern\n                    \n\n                ",
+      "exact_anchor": "<a href=\"/personvernserklaering\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261113 / 929376935 / HAUKJEM INVEST AS
+
+https://www.haukjem.no/kontakt/haukjem-blikkenslager-drammen-og-kongsberg
+
+```json
+{
+  "seed": 20261113,
+  "orgnr": "929376935",
+  "name": "HAUKJEM INVEST AS",
+  "page": "https://www.haukjem.no/kontakt/haukjem-blikkenslager-drammen-og-kongsberg",
+  "page_sha256": "7757b92eec2ba3b8f93a9aa90294a046d20aa367c55cfa4a24faa298b51b38d6",
+  "links": [
+    {
+      "url": "https://www.haukjem.no/personvernserklaering",
+      "text": "\n\n                    \n\n                        Personvern\n                    \n\n                ",
+      "exact_anchor": "<a href=\"/personvernserklaering\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://www.haukjem.no/personvernserklaering",
+      "text": "\n\n                    \n\n                        Personvern\n                    \n\n                ",
+      "exact_anchor": "<a href=\"/personvernserklaering\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261113 / 936106374 / KO&CO AS
+
+https://ko-co.com/
+
+```json
+{
+  "seed": 20261113,
+  "orgnr": "936106374",
+  "name": "KO&CO AS",
+  "page": "https://ko-co.com/",
+  "page_sha256": "b2b08ab41157749837b32180d134aaad0b881bd760f03073777c6dd94d24e3f8",
+  "links": [
+    {
+      "url": "https://ko-co.com/privacy/",
+      "text": "Privacy",
+      "exact_anchor": "<a href=\"https://ko-co.com/privacy/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://ko-co.com/cookies/",
+      "text": "Cookies",
+      "exact_anchor": "<a href=\"https://ko-co.com/cookies/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261113 / 936106374 / KO&CO AS
+
+https://ko-co.com/contact/
+
+```json
+{
+  "seed": 20261113,
+  "orgnr": "936106374",
+  "name": "KO&CO AS",
+  "page": "https://ko-co.com/contact/",
+  "page_sha256": "fefb363679244bc251fd253e7c022dc51264f3cfa3b64fe3847fb5985f2471cb",
+  "links": [
+    {
+      "url": "https://ko-co.com/privacy/",
+      "text": "Privacy",
+      "exact_anchor": "<a href=\"https://ko-co.com/privacy/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://ko-co.com/cookies/",
+      "text": "Cookies",
+      "exact_anchor": "<a href=\"https://ko-co.com/cookies/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261113 / 936106374 / KO&CO AS
+
+https://ko-co.com/privacy/
+
+```json
+{
+  "seed": 20261113,
+  "orgnr": "936106374",
+  "name": "KO&CO AS",
+  "page": "https://ko-co.com/privacy/",
+  "page_sha256": "97ede42689686bd88d968d854e988603f2ed1618118cb2f35a3f28906546b5ef",
+  "links": [
+    {
+      "url": "https://ko-co.com/privacy/#main",
+      "text": "Ga naar de inhoud",
+      "exact_anchor": "<a class=\"skip-link screen-reader-text\" href=\"#main\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://ko-co.com/fr/privacy/",
+      "text": "FR",
+      "exact_anchor": "<a href=\"https://ko-co.com/fr/privacy/\" class=\"ct-menu-link\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://ko-co.com/privacy/",
+      "text": "NL",
+      "exact_anchor": "<a href=\"https://ko-co.com/privacy/\" class=\"ct-menu-link\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://ko-co.com/fr/privacy/",
+      "text": "FR",
+      "exact_anchor": "<a href=\"https://ko-co.com/fr/privacy/\" class=\"ct-menu-link\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://ko-co.com/fr/privacy/",
+      "text": "FR",
+      "exact_anchor": "<a href=\"https://ko-co.com/fr/privacy/\" class=\"ct-menu-link\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://ko-co.com/privacy/",
+      "text": "NL",
+      "exact_anchor": "<a href=\"https://ko-co.com/privacy/\" class=\"ct-menu-link\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://ko-co.com/fr/privacy/",
+      "text": "FR",
+      "exact_anchor": "<a href=\"https://ko-co.com/fr/privacy/\" class=\"ct-menu-link\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://ko-co.com/privacy/",
+      "text": "Privacy",
+      "exact_anchor": "<a href=\"https://ko-co.com/privacy/\" aria-current=\"page\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://ko-co.com/cookies/",
+      "text": "Cookies",
+      "exact_anchor": "<a href=\"https://ko-co.com/cookies/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261114 / 922699836 / LILLEHAMMER SPA AS
+
+https://www.lillehammerspa.no/
+
+```json
+{
+  "seed": 20261114,
+  "orgnr": "922699836",
+  "name": "LILLEHAMMER SPA AS",
+  "page": "https://www.lillehammerspa.no/",
+  "page_sha256": "12df99060c5a8f1890d6cc5b53895519417a2250aa649c5a911ba2e016af6cac",
+  "links": [
+    {
+      "url": "https://www.lillehammerspa.no/_files/ugd/e771cc_1cee4eff592d497682fe53600e4ea8c6.pdf",
+      "text": "Personvernerklæring",
+      "exact_anchor": "<a href=\"https://www.lillehammerspa.no/_files/ugd/e771cc_1cee4eff592d497682fe53600e4ea8c6.pdf\" target=\"_blank\" class=\"wixui-rich-text__text\">",
+      "pdf": true,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://www.lillehammerspa.no/_files/ugd/e771cc_2ab58ff27ff34db3a8623436097027c1.pdf",
+      "text": "Angrerettskjema",
+      "exact_anchor": "<a href=\"https://www.lillehammerspa.no/_files/ugd/e771cc_2ab58ff27ff34db3a8623436097027c1.pdf\" target=\"_blank\" class=\"wixui-rich-text__text\">",
+      "pdf": true,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261114 / 932156016 / FISHTECH HOLDING AS
+
+https://fishtech.no/
+
+```json
+{
+  "seed": 20261114,
+  "orgnr": "932156016",
+  "name": "FISHTECH HOLDING AS",
+  "page": "https://fishtech.no/",
+  "page_sha256": "99304805dc199ba669748f5219fe2919e38fc1b9a210e4496a8b48774347bb05",
+  "links": [
+    {
+      "url": "https://fishtech.no/salgsbetingelser/",
+      "text": "\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\tSalgsbetingelser\n\t\t\t\t\t\t\t\t\t\t\t",
+      "exact_anchor": "<a href=\"https://fishtech.no/salgsbetingelser/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://fishtech.no/personvernerklaering/",
+      "text": "\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\tPersonvernerklæring\n\t\t\t\t\t\t\t\t\t\t\t",
+      "exact_anchor": "<a href=\"https://fishtech.no/personvernerklaering/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261114 / 990623376 / H-2 HOTELL KRISTIANSUND AS
+
+https://ragde.no/
+
+```json
+{
+  "seed": 20261114,
+  "orgnr": "990623376",
+  "name": "H-2 HOTELL KRISTIANSUND AS",
+  "page": "https://ragde.no/",
+  "page_sha256": "b908ca16b06380da1d4b0969230ecc970c0621e1b9785335ab5047fb9dc8dfe9",
+  "links": [
+    {
+      "url": "https://ragde.no/Angrerettskjema.pdf",
+      "text": "Angrerettskjema",
+      "exact_anchor": "<a class=\"c-list-link\" itemprop=\"url\" href=\"/Angrerettskjema.pdf\">",
+      "pdf": true,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://ragde.no/personvernerklaering/",
+      "text": "Personvernerklæring",
+      "exact_anchor": "<a class=\"c-list-link\" itemprop=\"url\" href=\"https://ragde.no/personvernerklaering/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261114 / 990623376 / H-2 HOTELL KRISTIANSUND AS
+
+https://ragde.no/kontakt-oss/
+
+```json
+{
+  "seed": 20261114,
+  "orgnr": "990623376",
+  "name": "H-2 HOTELL KRISTIANSUND AS",
+  "page": "https://ragde.no/kontakt-oss/",
+  "page_sha256": "c8beb3ed79276e0f482b8a0953e6da02d4473bac9b9e3ed80ed2e4cb3b678718",
+  "links": [
+    {
+      "url": "https://ragde.no/Angrerettskjema.pdf",
+      "text": "Angrerettskjema",
+      "exact_anchor": "<a class=\"c-list-link\" itemprop=\"url\" href=\"/Angrerettskjema.pdf\">",
+      "pdf": true,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://ragde.no/personvernerklaering/",
+      "text": "Personvernerklæring",
+      "exact_anchor": "<a class=\"c-list-link\" itemprop=\"url\" href=\"https://ragde.no/personvernerklaering/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261114 / 990623376 / H-2 HOTELL KRISTIANSUND AS
+
+https://ragde.no/personvernerklaering/
+
+```json
+{
+  "seed": 20261114,
+  "orgnr": "990623376",
+  "name": "H-2 HOTELL KRISTIANSUND AS",
+  "page": "https://ragde.no/personvernerklaering/",
+  "page_sha256": "f7b7f99a22d76aa5228e4f51121baef7b8fce8eb495bf2ea65153493fa1f4ffc",
+  "links": [
+    {
+      "url": "https://ragde.no/personvernerklaering/#mobile-menu",
+      "text": "",
+      "exact_anchor": "<a href=\"#mobile-menu\" class=\"mobile-menu-trigger\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://ragde.no/Angrerettskjema.pdf",
+      "text": "Angrerettskjema",
+      "exact_anchor": "<a class=\"c-list-link\" itemprop=\"url\" href=\"/Angrerettskjema.pdf\">",
+      "pdf": true,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://ragde.no/personvernerklaering/",
+      "text": "Personvernerklæring",
+      "exact_anchor": "<a class=\"c-list-link\" itemprop=\"url\" href=\"https://ragde.no/personvernerklaering/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261114 / 990623376 / H-2 HOTELL KRISTIANSUND AS
+
+https://ragde.no/page-sitemap.xml
+
+```json
+{
+  "seed": 20261114,
+  "orgnr": "990623376",
+  "name": "H-2 HOTELL KRISTIANSUND AS",
+  "page": "https://ragde.no/page-sitemap.xml",
+  "page_sha256": "9e8f72367069a662f5fa3f89ef1ffa9ddec36fe71a8b1f12efab67f03a859c11",
+  "links": [],
+  "sitemap": [
+    "https://ragde.no/personvernerklaering/",
+    "https://ragde.no/personvernerklaering-2/",
+    "https://ragde.no/privacy-policy/"
+  ],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261114 / 988330116 / KONGEVEIEN 49 KOLBOTN AS
+
+https://www.fremtind.no/
+
+```json
+{
+  "seed": 20261114,
+  "orgnr": "988330116",
+  "name": "KONGEVEIEN 49 KOLBOTN AS",
+  "page": "https://www.fremtind.no/",
+  "page_sha256": "5f2eb98bd9bb69fcb08f099dc40c9ef2f6e8f62372c4ec2291776ecb566d9ec0",
+  "links": [
+    {
+      "url": "https://www.fremtind.no/personvern",
+      "text": "Personvern",
+      "exact_anchor": "<a class=\"_link_29rq0_1 jkl-link\" data-discover=\"true\" href=\"/personvern\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261114 / 998989493 / XO HELICOPTERS AS
+
+https://www.xohelicopters.com/
+
+```json
+{
+  "seed": 20261114,
+  "orgnr": "998989493",
+  "name": "XO HELICOPTERS AS",
+  "page": "https://www.xohelicopters.com/",
+  "page_sha256": "2bc6236f86c326afc7dd40acdc5019ce815f91f14a44d3d49321b807d168fb0c",
+  "links": [
+    {
+      "url": "https://www.xohelicopters.com/terms",
+      "text": "Terms & Conditions",
+      "exact_anchor": "<a href=\"https://www.xohelicopters.com/terms\" target=\"_self\" class=\"wixui-rich-text__text\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261114 / 994808540 / SMEDHAGEN SAMEIE
+
+https://www.bori.no/
+
+```json
+{
+  "seed": 20261114,
+  "orgnr": "994808540",
+  "name": "SMEDHAGEN SAMEIE",
+  "page": "https://www.bori.no/",
+  "page_sha256": "007eb753bc0c5bdf61921124bdd400aca0de4c303ac162291b5eac0fc16a6105",
+  "links": [
+    {
+      "url": "https://www.bori.no/personvernerklaering/",
+      "text": "Personvern",
+      "exact_anchor": "<a href=\"https://www.bori.no/personvernerklaering/\"\n                            target=\"\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://www.bori.no/medlem/vilkar-fordelsprogram/",
+      "text": "Vilkår fordelsprogram",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/vilkar-fordelsprogram/\"\n                            target=\"\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261114 / 998989493 / XO HELICOPTERS AS
+
+https://www.xohelicopters.com/contact-us
+
+```json
+{
+  "seed": 20261114,
+  "orgnr": "998989493",
+  "name": "XO HELICOPTERS AS",
+  "page": "https://www.xohelicopters.com/contact-us",
+  "page_sha256": "96c4a38fe4ebad6ca69a43ea6c67765d6b79eebfd252e802afa854ffb8089b47",
+  "links": [
+    {
+      "url": "https://www.xohelicopters.com/terms",
+      "text": "Terms & Conditions",
+      "exact_anchor": "<a href=\"https://www.xohelicopters.com/terms\" target=\"_self\" class=\"wixui-rich-text__text\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261114 / 998989493 / XO HELICOPTERS AS
+
+https://www.xohelicopters.com/terms
+
+```json
+{
+  "seed": 20261114,
+  "orgnr": "998989493",
+  "name": "XO HELICOPTERS AS",
+  "page": "https://www.xohelicopters.com/terms",
+  "page_sha256": "3b27c98afa80f7c754b770640b5950992afdb4c390481bfa1f7610c17e9dbae0",
+  "links": [
+    {
+      "url": "https://www.xohelicopters.com/terms",
+      "text": "Terms & Conditions",
+      "exact_anchor": "<a href=\"https://www.xohelicopters.com/terms\" target=\"_self\" class=\"wixui-rich-text__text\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261114 / 994808540 / SMEDHAGEN SAMEIE
+
+https://www.bori.no/om-bori/kontakt-oss/
+
+```json
+{
+  "seed": 20261114,
+  "orgnr": "994808540",
+  "name": "SMEDHAGEN SAMEIE",
+  "page": "https://www.bori.no/om-bori/kontakt-oss/",
+  "page_sha256": "c2f47753618f65db130bbf01baa870d17b5fed926e34e06e98da67d2920865e8",
+  "links": [
+    {
+      "url": "https://www.bori.no/personvernerklaering/",
+      "text": "Personvern",
+      "exact_anchor": "<a href=\"https://www.bori.no/personvernerklaering/\"\n                            target=\"\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://www.bori.no/medlem/vilkar-fordelsprogram/",
+      "text": "Vilkår fordelsprogram",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/vilkar-fordelsprogram/\"\n                            target=\"\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261114 / 994808540 / SMEDHAGEN SAMEIE
+
+https://www.bori.no/medlem/aktuelt/vilkarene-for-fordelsprogrammet-oppdateres/
+
+```json
+{
+  "seed": 20261114,
+  "orgnr": "994808540",
+  "name": "SMEDHAGEN SAMEIE",
+  "page": "https://www.bori.no/medlem/aktuelt/vilkarene-for-fordelsprogrammet-oppdateres/",
+  "page_sha256": "4b37289eaed823ba46d1758a06043337b6915f3dc5c9b5f86e48cae559c87139",
+  "links": [
+    {
+      "url": "https://www.bori.no/medlem/aktuelt/vilkarene-for-fordelsprogrammet-oppdateres/#main",
+      "text": "\n    Hopp til hovedinnhold\n",
+      "exact_anchor": "<a class=\"skip-to-content\" href=\"#main\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/aktuelt/vilkarene-for-fordelsprogrammet-oppdateres/#logg-inn",
+      "text": "\n                            Logg inn\n            ",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/aktuelt/vilkarene-for-fordelsprogrammet-oppdateres/#logg-inn\" class=\"button button--link-like button--sm\" target=''>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/aktuelt/vilkarene-for-fordelsprogrammet-oppdateres/?s=",
+      "text": "\n                    \n    \n\n                    ",
+      "exact_anchor": "<a href=\"?s=\" class=\"button button--light-green-ghost button--lg button--empty\" @click.prevent=\"\" aria-label=\"Søk\" data-modal-trigger=\"sok\"target='_self'>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/wp-content/uploads/2026/10/Vilkar-fordelsprogram-pr-01.desember.2026.pdf",
+      "text": "\n                    \n    \n\n                            Oppdaterte vilkår fra 1. desember 2026\n            ",
+      "exact_anchor": "<a href=\"https://www.bori.no/wp-content/uploads/2026/10/Vilkar-fordelsprogram-pr-01.desember.2026.pdf\" class=\"button button--primary-ghost button--icon-right\" target=''>",
+      "pdf": true,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/aktuelt/din-forste-bolig-starter-med-en-god-plan/",
+      "text": "\n                    \n                                                                                \n                                                                            \n                                                                    Medlem\n                                                            \n                                            \n                    \n                        \n                            Din første bolig starter med en god plan\n                                                            Som BORI-medlem får du tilgang til gode betingelser på boliglån i Romerike Sparebank. Kombinert med personlig rådgivning, høy BSU-rente og lokal tilstedeværelse kan det gjøre veien til egen bolig litt enklere.\n                            \n                            \n                                \n                    \n    \n\n                            Les mer\n            \n                            \n                        \n                    \n                ",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/aktuelt/din-forste-bolig-starter-med-en-god-plan/\" class=\"feed__item\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/aktuelt/vilkarene-for-fordelsprogrammet-oppdateres/#kontakt-bori-lillestrom",
+      "text": "\n                            Lillestrøm\n            ",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/aktuelt/vilkarene-for-fordelsprogrammet-oppdateres/#kontakt-bori-lillestrom\" class=\"button button--link-like button--xl\" target='_self'>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/aktuelt/vilkarene-for-fordelsprogrammet-oppdateres/#kontakt-bori-mysen",
+      "text": "\n                            Mysen\n            ",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/aktuelt/vilkarene-for-fordelsprogrammet-oppdateres/#kontakt-bori-mysen\" class=\"button button--link-like button--xl\" target='_self'>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/personvernerklaering/",
+      "text": "Personvern",
+      "exact_anchor": "<a href=\"https://www.bori.no/personvernerklaering/\"\n                            target=\"\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/vilkar-fordelsprogram/",
+      "text": "Vilkår fordelsprogram",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/vilkar-fordelsprogram/\"\n                            target=\"\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/styret/juridisk-veiviser-for-styret/",
+      "text": "\n                                            \n                                                Juridisk veiviser for styret\n                                            \n                                                                                    ",
+      "exact_anchor": "<a href=\"https://www.bori.no/styret/juridisk-veiviser-for-styret/\" target=\"\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/aktuelt/vilkarene-for-fordelsprogrammet-oppdateres/#book-uforpliktende-mote",
+      "text": "\n                                            \n                                                Book møte\n                                            \n                                                                                    ",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/aktuelt/vilkarene-for-fordelsprogrammet-oppdateres/#book-uforpliktende-mote\" target=\"\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261114 / 994808540 / SMEDHAGEN SAMEIE
+
+https://www.bori.no/personvernerklaering/
+
+```json
+{
+  "seed": 20261114,
+  "orgnr": "994808540",
+  "name": "SMEDHAGEN SAMEIE",
+  "page": "https://www.bori.no/personvernerklaering/",
+  "page_sha256": "8a7c921af6e24e8992a197278f213ffacc6463c8b4fd84a7654d7323d72b4ca5",
+  "links": [
+    {
+      "url": "https://www.bori.no/personvernerklaering/#main",
+      "text": "\n    Hopp til hovedinnhold\n",
+      "exact_anchor": "<a class=\"skip-to-content\" href=\"#main\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/personvernerklaering/#logg-inn",
+      "text": "\n                            Logg inn\n            ",
+      "exact_anchor": "<a href=\"https://www.bori.no/personvernerklaering/#logg-inn\" class=\"button button--link-like button--sm\" target=''>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/personvernerklaering/?s=",
+      "text": "\n                    \n    \n\n                    ",
+      "exact_anchor": "<a href=\"?s=\" class=\"button button--light-green-ghost button--lg button--empty\" @click.prevent=\"\" aria-label=\"Søk\" data-modal-trigger=\"sok\"target='_self'>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/personvern/personvern-cookies/",
+      "text": "Nærmere informasjon om informasjonskapsler/cookies",
+      "exact_anchor": "<a href=\"https://www.bori.no/personvern/personvern-cookies/\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/personvernerklaering/#kontakt-bori-lillestrom",
+      "text": "\n                            Lillestrøm\n            ",
+      "exact_anchor": "<a href=\"https://www.bori.no/personvernerklaering/#kontakt-bori-lillestrom\" class=\"button button--link-like button--xl\" target='_self'>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/personvernerklaering/#kontakt-bori-mysen",
+      "text": "\n                            Mysen\n            ",
+      "exact_anchor": "<a href=\"https://www.bori.no/personvernerklaering/#kontakt-bori-mysen\" class=\"button button--link-like button--xl\" target='_self'>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/personvernerklaering/",
+      "text": "Personvern",
+      "exact_anchor": "<a href=\"https://www.bori.no/personvernerklaering/\"\n                            target=\"\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/vilkar-fordelsprogram/",
+      "text": "Vilkår fordelsprogram",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/vilkar-fordelsprogram/\"\n                            target=\"\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/styret/juridisk-veiviser-for-styret/",
+      "text": "\n                                            \n                                                Juridisk veiviser for styret\n                                            \n                                                                                    ",
+      "exact_anchor": "<a href=\"https://www.bori.no/styret/juridisk-veiviser-for-styret/\" target=\"\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/personvernerklaering/#book-uforpliktende-mote",
+      "text": "\n                                            \n                                                Book møte\n                                            \n                                                                                    ",
+      "exact_anchor": "<a href=\"https://www.bori.no/personvernerklaering/#book-uforpliktende-mote\" target=\"\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261114 / 994808540 / SMEDHAGEN SAMEIE
+
+https://www.bori.no/medlem/vilkar-fordelsprogram/
+
+```json
+{
+  "seed": 20261114,
+  "orgnr": "994808540",
+  "name": "SMEDHAGEN SAMEIE",
+  "page": "https://www.bori.no/medlem/vilkar-fordelsprogram/",
+  "page_sha256": "cbbb8abdeabb99a6b35ff58eebf8ca94c2177812ad3f8030c1b2c6fbf730619e",
+  "links": [
+    {
+      "url": "https://www.bori.no/medlem/vilkar-fordelsprogram/#main",
+      "text": "\n    Hopp til hovedinnhold\n",
+      "exact_anchor": "<a class=\"skip-to-content\" href=\"#main\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/vilkar-fordelsprogram/#logg-inn",
+      "text": "\n                            Logg inn\n            ",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/vilkar-fordelsprogram/#logg-inn\" class=\"button button--link-like button--sm\" target=''>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/vilkar-fordelsprogram/?s=",
+      "text": "\n                    \n    \n\n                    ",
+      "exact_anchor": "<a href=\"?s=\" class=\"button button--light-green-ghost button--lg button--empty\" @click.prevent=\"\" aria-label=\"Søk\" data-modal-trigger=\"sok\"target='_self'>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/vilkar-fordelsprogram/#1-generelt",
+      "text": "\n                            \n                                \n    \n\n                            \n                            1. Generelt\n                        ",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/vilkar-fordelsprogram/#1-generelt\" :class=\"activeAnchor === 0 && 'active'\"\n                            x-on:click=\"goto($event, 0)\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/vilkar-fordelsprogram/#2-endring-av-vilkar",
+      "text": "\n                            \n                                \n    \n\n                            \n                            2. Endring av vilkår\n                        ",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/vilkar-fordelsprogram/#2-endring-av-vilkar\" :class=\"activeAnchor === 1 && 'active'\"\n                            x-on:click=\"goto($event, 1)\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/vilkar-fordelsprogram/#3-bonus",
+      "text": "\n                            \n                                \n    \n\n                            \n                            3. Bonus\n                        ",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/vilkar-fordelsprogram/#3-bonus\" :class=\"activeAnchor === 2 && 'active'\"\n                            x-on:click=\"goto($event, 2)\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/vilkar-fordelsprogram/#4-rabatt",
+      "text": "\n                            \n                                \n    \n\n                            \n                            4. Rabatt\n                        ",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/vilkar-fordelsprogram/#4-rabatt\" :class=\"activeAnchor === 3 && 'active'\"\n                            x-on:click=\"goto($event, 3)\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/vilkar-fordelsprogram/#5-personvern",
+      "text": "\n                            \n                                \n    \n\n                            \n                            5. Personvern\n                        ",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/vilkar-fordelsprogram/#5-personvern\" :class=\"activeAnchor === 4 && 'active'\"\n                            x-on:click=\"goto($event, 4)\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/vilkar-fordelsprogram/#6-var-kommunikasjon-med-deg",
+      "text": "\n                            \n                                \n    \n\n                            \n                            6. Vår kommunikasjon med deg\n                        ",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/vilkar-fordelsprogram/#6-var-kommunikasjon-med-deg\" :class=\"activeAnchor === 5 && 'active'\"\n                            x-on:click=\"goto($event, 5)\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/vilkar-fordelsprogram/#7-annet",
+      "text": "\n                            \n                                \n    \n\n                            \n                            7. Annet\n                        ",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/vilkar-fordelsprogram/#7-annet\" :class=\"activeAnchor === 6 && 'active'\"\n                            x-on:click=\"goto($event, 6)\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/personvern/personvernerklaering/",
+      "text": "personvernerklæring",
+      "exact_anchor": "<a href=\"https://www.bori.no/personvern/personvernerklaering/\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/wp-content/uploads/2026/10/Vilkar-fordelsprogram-pr-01.desember.2026.pdf",
+      "text": "\n    \n                    \n                \n                    Oppdaterte vilkår fra 01.12.2026\n                \n\n                \n            \n            \n                \n            \n    \n\n        \n    ",
+      "exact_anchor": "<a href=\"https://www.bori.no/wp-content/uploads/2026/10/Vilkar-fordelsprogram-pr-01.desember.2026.pdf\" target=\"_blank\" class=\"link-box-block\">",
+      "pdf": true,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/vilkar-fordelsprogram/#kontakt-bori-lillestrom",
+      "text": "\n                            Lillestrøm\n            ",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/vilkar-fordelsprogram/#kontakt-bori-lillestrom\" class=\"button button--link-like button--xl\" target='_self'>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/vilkar-fordelsprogram/#kontakt-bori-mysen",
+      "text": "\n                            Mysen\n            ",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/vilkar-fordelsprogram/#kontakt-bori-mysen\" class=\"button button--link-like button--xl\" target='_self'>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/personvernerklaering/",
+      "text": "Personvern",
+      "exact_anchor": "<a href=\"https://www.bori.no/personvernerklaering/\"\n                            target=\"\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/vilkar-fordelsprogram/",
+      "text": "Vilkår fordelsprogram",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/vilkar-fordelsprogram/\"\n                            target=\"\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/styret/juridisk-veiviser-for-styret/",
+      "text": "\n                                            \n                                                Juridisk veiviser for styret\n                                            \n                                                                                    ",
+      "exact_anchor": "<a href=\"https://www.bori.no/styret/juridisk-veiviser-for-styret/\" target=\"\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/vilkar-fordelsprogram/#book-uforpliktende-mote",
+      "text": "\n                                            \n                                                Book møte\n                                            \n                                                                                    ",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/vilkar-fordelsprogram/#book-uforpliktende-mote\" target=\"\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261114 / 933368947 / BO NEWCO AS
+
+https://bocoliving.no/personvern
+
+```json
+{
+  "seed": 20261114,
+  "orgnr": "933368947",
+  "name": "BO NEWCO AS",
+  "page": "https://bocoliving.no/personvern",
+  "page_sha256": "8b7858508a56230ef1ce81fcd8f1cc3f8f39798c3822028a8d874c5dafff2ce9",
+  "links": [
+    {
+      "url": "https://bocoliving.no/personvern#main-content",
+      "text": "Jump to content",
+      "exact_anchor": "<a href=\"#main-content\" class=\"h-[0px] focus:h-auto text-center focus:p-2 text-xl overflow-hidden bg-white fixed top-6 right-auto left-6 w-full max-w-xs rounded-full shadow-md z-50\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://bocoliving.no/cookies",
+      "text": "cookie-erklæring",
+      "exact_anchor": "<a href=\"/cookies\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://bocoliving.no/personvern",
+      "text": "Personvern ",
+      "exact_anchor": "<a href=\"/personvern\" class=\"transition-colors hover:cursor-pointer p-1 lg:p-0 md:mr-4\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://bocoliving.no/cookies",
+      "text": "Cookies",
+      "exact_anchor": "<a href=\"/cookies\" class=\"transition-colors hover:cursor-pointer p-1 lg:p-0 md:mr-4\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://bocoliving.no/personvern#managecookies",
+      "text": "Manage Cookies",
+      "exact_anchor": "<a href=\"#managecookies\" class=\"transition-colors hover:cursor-pointer p-1 lg:p-0 md:mr-4 font-medium\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://bocoliving.no/cookies#nobanner",
+      "text": "cookie-erklæring",
+      "exact_anchor": "<a href=\"/cookies#nobanner\" class=\"font-semibold text-indigo-600 hover:underline\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261114 / 936187854 / WAYMARK AS
+
+https://waymark.com/
+
+```json
+{
+  "seed": 20261114,
+  "orgnr": "936187854",
+  "name": "WAYMARK AS",
+  "page": "https://waymark.com/",
+  "page_sha256": "2d7f41ff075edae0d68aafcf88c41a8f99b2835829170049ece6258235d98cba",
+  "links": [
+    {
+      "url": "https://waymark.com/legal/site-privacy-policy",
+      "text": "Privacy Policy",
+      "exact_anchor": "<a href=\"/legal/site-privacy-policy\" class=\"footer_link\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://waymark.com/legal/site-terms-of-use",
+      "text": "Terms of Use",
+      "exact_anchor": "<a href=\"/legal/site-terms-of-use\" class=\"footer_link\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261114 / 936187854 / WAYMARK AS
+
+https://waymark.com/marketing/contact
+
+```json
+{
+  "seed": 20261114,
+  "orgnr": "936187854",
+  "name": "WAYMARK AS",
+  "page": "https://waymark.com/marketing/contact",
+  "page_sha256": "11c868bcf8dfb39e5298306ef2e6b2764c1fc42b9d7448ba78408fc1150b5040",
+  "links": [
+    {
+      "url": "https://waymark.com/legal/site-privacy-policy",
+      "text": "Privacy Policy",
+      "exact_anchor": "<a href=\"/legal/site-privacy-policy\" class=\"footer_link\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://waymark.com/legal/site-terms-of-use",
+      "text": "Terms of Use",
+      "exact_anchor": "<a href=\"/legal/site-terms-of-use\" class=\"footer_link\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261114 / 936187854 / WAYMARK AS
+
+https://waymark.com/about
+
+```json
+{
+  "seed": 20261114,
+  "orgnr": "936187854",
+  "name": "WAYMARK AS",
+  "page": "https://waymark.com/about",
+  "page_sha256": "885b033a0a19fb58bd67a25b1e410b9751c690001644d0952938457864ae96b0",
+  "links": [
+    {
+      "url": "https://waymark.com/legal/site-privacy-policy",
+      "text": "Privacy Policy",
+      "exact_anchor": "<a href=\"/legal/site-privacy-policy\" class=\"footer_link\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://waymark.com/legal/site-terms-of-use",
+      "text": "Terms of Use",
+      "exact_anchor": "<a href=\"/legal/site-terms-of-use\" class=\"footer_link\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261114 / 936187854 / WAYMARK AS
+
+https://waymark.com/legal/site-privacy-policy
+
+```json
+{
+  "seed": 20261114,
+  "orgnr": "936187854",
+  "name": "WAYMARK AS",
+  "page": "https://waymark.com/legal/site-privacy-policy",
+  "page_sha256": "ca25cb855a8a652d6759ef4abcccaa2db60a047dff0bdbace2a20da71359f112",
+  "links": [
+    {
+      "url": "mailto:privacy@waymark.com",
+      "text": "privacy@waymark.com",
+      "exact_anchor": "<a target=\"_blank\" href=\"mailto:privacy@waymark.com\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://waymark.com/legal/site-privacy-policy",
+      "text": "Privacy Policy",
+      "exact_anchor": "<a href=\"/legal/site-privacy-policy\" aria-current=\"page\" class=\"footer_link w--current\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://waymark.com/legal/site-terms-of-use",
+      "text": "Terms of Use",
+      "exact_anchor": "<a href=\"/legal/site-terms-of-use\" class=\"footer_link\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261114 / 989244779 / AUTOSALG INVEST AS
+
+https://autosalg.no/
+
+```json
+{
+  "seed": 20261114,
+  "orgnr": "989244779",
+  "name": "AUTOSALG INVEST AS",
+  "page": "https://autosalg.no/",
+  "page_sha256": "669b3e4e223e584174e2f6ac3c1e16e3cb43b27b55d7f2d9f0da2446e4b0961c",
+  "links": [
+    {
+      "url": "https://autosalg.no/personvernerklaering/",
+      "text": "Personvernerklæring",
+      "exact_anchor": "<a href=\"https://autosalg.no/personvernerklaering/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261114 / 936187854 / WAYMARK AS
+
+https://waymark.com/legal/site-terms-of-use
+
+```json
+{
+  "seed": 20261114,
+  "orgnr": "936187854",
+  "name": "WAYMARK AS",
+  "page": "https://waymark.com/legal/site-terms-of-use",
+  "page_sha256": "1585b36c5c146c6ae0da837615e26012f79fbfe5e1481a71129bacaf6abed445",
+  "links": [
+    {
+      "url": "http://www.waymark.com/marketing/privacy-policy",
+      "text": "Privacy Policy",
+      "exact_anchor": "<a href=\"http://www.waymark.com/marketing/privacy-policy\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://waymark.com/legal/site-privacy-policy",
+      "text": "Privacy Policy",
+      "exact_anchor": "<a href=\"/legal/site-privacy-policy\" class=\"footer_link\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://waymark.com/legal/site-terms-of-use",
+      "text": "Terms of Use",
+      "exact_anchor": "<a href=\"/legal/site-terms-of-use\" aria-current=\"page\" class=\"footer_link w--current\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261114 / 989244779 / AUTOSALG INVEST AS
+
+https://autosalg.no/kontakt/
+
+```json
+{
+  "seed": 20261114,
+  "orgnr": "989244779",
+  "name": "AUTOSALG INVEST AS",
+  "page": "https://autosalg.no/kontakt/",
+  "page_sha256": "46d88f19957857f46b22b3589976095cf10ce10c24668cb89eed47054e8cc09e",
+  "links": [
+    {
+      "url": "https://autosalg.no/personvernerklaering/",
+      "text": "Personvernerklæring",
+      "exact_anchor": "<a href=\"https://autosalg.no/personvernerklaering/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261114 / 989244779 / AUTOSALG INVEST AS
+
+https://autosalg.no/om-oss/
+
+```json
+{
+  "seed": 20261114,
+  "orgnr": "989244779",
+  "name": "AUTOSALG INVEST AS",
+  "page": "https://autosalg.no/om-oss/",
+  "page_sha256": "036dcbec04489eda2c656ef5725eb58a8919766fe6bde047e6dabc8db2b24724",
+  "links": [
+    {
+      "url": "https://autosalg.no/personvernerklaering/",
+      "text": "Personvernerklæring",
+      "exact_anchor": "<a href=\"https://autosalg.no/personvernerklaering/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261114 / 989244779 / AUTOSALG INVEST AS
+
+https://autosalg.no/personvernerklaering/
+
+```json
+{
+  "seed": 20261114,
+  "orgnr": "989244779",
+  "name": "AUTOSALG INVEST AS",
+  "page": "https://autosalg.no/personvernerklaering/",
+  "page_sha256": "c1b56b882090cf216b74d7ff3815b65b546e26fc05f501d27d45848b1f11a0c2",
+  "links": [
+    {
+      "url": "https://autosalg.no/personvernerklaering/",
+      "text": "",
+      "exact_anchor": "<a class=\"w-nav-control\" aria-label=\"Meny\" aria-expanded=\"false\" role=\"button\" href=\"#\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://autosalg.no/personvernerklaering/",
+      "text": "Kontakt",
+      "exact_anchor": "<a href=\"#\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://autosalg.no/personvernerklaering/",
+      "text": "Om oss",
+      "exact_anchor": "<a href=\"#\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://autosalg.no/personvernerklaering/",
+      "text": "Personvernerklæring",
+      "exact_anchor": "<a href=\"https://autosalg.no/personvernerklaering/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://autosalg.no/personvernerklaering/#page-top",
+      "text": "keyboard_arrow_up",
+      "exact_anchor": "<a class=\"w-toplink pos_right text_none icon_atleft\" href=\"#page-top\" title=\"Til toppen\" aria-label=\"Til toppen\" role=\"button\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261114 / 989244779 / AUTOSALG INVEST AS
+
+https://autosalg.no/page-sitemap.xml
+
+```json
+{
+  "seed": 20261114,
+  "orgnr": "989244779",
+  "name": "AUTOSALG INVEST AS",
+  "page": "https://autosalg.no/page-sitemap.xml",
+  "page_sha256": "6ca73ba2cd819b10f9cb9540893f0b4c0da155935d54d33eab7649ddd8907396",
+  "links": [],
+  "sitemap": [
+    "https://autosalg.no/personvernerklaering/"
+  ],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261114 / 979814666 / SVENDSENS EIENDOM AS
+
+http://svendsens.no/
+
+```json
+{
+  "seed": 20261114,
+  "orgnr": "979814666",
+  "name": "SVENDSENS EIENDOM AS",
+  "page": "http://svendsens.no/",
+  "page_sha256": "0a9b41bfb043aeaef27c5ad194fc8044ea1fea4dddaf0b5fce093bcb954fd5ed",
+  "links": [
+    {
+      "url": "http://svendsens.no/Personvernerklaering.html",
+      "text": " Personvernerklæring ",
+      "exact_anchor": "<a href=\"Personvernerklaering.html\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261114 / 979814666 / SVENDSENS EIENDOM AS
+
+http://svendsens.no/Personvernerklaering.html
+
+```json
+{
+  "seed": 20261114,
+  "orgnr": "979814666",
+  "name": "SVENDSENS EIENDOM AS",
+  "page": "http://svendsens.no/Personvernerklaering.html",
+  "page_sha256": "d84163ba5528e44c68a6d7c0956ee44a33746dbdd2016caa487cf5f92e04fb31",
+  "links": [
+    {
+      "url": "http://svendsens.no/Personvernerklaering.html",
+      "text": " ",
+      "exact_anchor": "<a href=\"#\" id=\"menu-icon\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "http://svendsens.no/Personvernerklaering.html",
+      "text": " Personvernerklæring ",
+      "exact_anchor": "<a href=\"Personvernerklaering.html\" class=\"current\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261114 / 920629148 / MARECO AS
+
+https://mareco.com/sitemap.xml
+
+```json
+{
+  "seed": 20261114,
+  "orgnr": "920629148",
+  "name": "MARECO AS",
+  "page": "https://mareco.com/sitemap.xml",
+  "page_sha256": "7f9169f3be1a2855905a743115f2b40d773a741835b18c647378a93203f640c4",
+  "links": [],
+  "sitemap": [
+    "https://mareco.com/c?cat=tech&sub=Security+%26+Privacy",
+    "https://mareco.com/c?cat=gifts&sub=Bars%2C+Cakes+%26+Cookies"
+  ],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261114 / 918912746 / EB GROUP AS
+
+https://eb-group.com/
+
+```json
+{
+  "seed": 20261114,
+  "orgnr": "918912746",
+  "name": "EB GROUP AS",
+  "page": "https://eb-group.com/",
+  "page_sha256": "03e194309c189d9733cb328329ebb63bd47d12d4854393bd30d02696dbbbcef8",
+  "links": [
+    {
+      "url": "https://eb-group.com/privacy-and-cookies-policy/",
+      "text": "Privacy and Cookies Policy",
+      "exact_anchor": "<a href=\"https://eb-group.com/privacy-and-cookies-policy/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261115 / 991126627 / ESPIRA DVERGSNES AS
+
+https://espira.no/personvernerklaering
+
+```json
+{
+  "seed": 20261115,
+  "orgnr": "991126627",
+  "name": "ESPIRA DVERGSNES AS",
+  "page": "https://espira.no/personvernerklaering",
+  "page_sha256": "075a931dd003d31dd927eb9719cdda5eaffe50af75edb8d20d64b4afcc19c5aa",
+  "links": [
+    {
+      "url": "https://espira.no/personvernerklaering",
+      "text": "Personvernerklæring",
+      "exact_anchor": "<a href=\"/personvernerklaering\" class=\"font-semibold text-[14px] md:text-[17px] text-black \n                truncate block overflow-hidden whitespace-nowrap min-w-0\n                opacity-65 hover:opacity-100 hover:underline\" aria-label=\"Breadcrumb\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "mailto:personvern@espira.no",
+      "text": "personvern@espira.no",
+      "exact_anchor": "<a rel=\"noreferrer noopener\" style=\"border-color:#82bc00\" class=\"text-[#111820] no-underline border-b-[3px] hover:border-b-[5px]\" href=\"mailto:personvern@espira.no\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "mailto:personvern@espira.no",
+      "text": "personvern@espira.no",
+      "exact_anchor": "<a rel=\"noreferrer noopener\" style=\"border-color:#82bc00\" class=\"text-[#111820] no-underline border-b-[3px] hover:border-b-[5px]\" href=\"mailto:personvern@espira.no\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "mailto:personvern@espira.no",
+      "text": "personvern@espira.no",
+      "exact_anchor": "<a rel=\"noreferrer noopener\" style=\"border-color:#82bc00\" class=\"text-[#111820] no-underline border-b-[3px] hover:border-b-[5px]\" href=\"mailto:personvern@espira.no\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://espira.no/personvernerklaering",
+      "text": "Personvernerklæring",
+      "exact_anchor": "<a class=\"md:text-lg font-medium underline underline-offset-[6px] decoration-2 decoration-[#82BC00] hover:decoration-4\" href=\"/personvernerklaering\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://espira.no/cookies",
+      "text": "Informasjonskapsler (cookies)",
+      "exact_anchor": "<a class=\"md:text-lg font-medium underline underline-offset-[6px] decoration-2 decoration-[#82BC00] hover:decoration-4\" href=\"/cookies\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261115 / 991126627 / ESPIRA DVERGSNES AS
+
+https://espira.no/sitemap.xml
+
+```json
+{
+  "seed": 20261115,
+  "orgnr": "991126627",
+  "name": "ESPIRA DVERGSNES AS",
+  "page": "https://espira.no/sitemap.xml",
+  "page_sha256": "eddf3b5eddbc2a5b312e9fdb631ac37d6c8e5132c63f3de54d81c9a97f5d108b",
+  "links": [],
+  "sitemap": [
+    "https://espira.no/personvernerklaering",
+    "https://espira.no/cookies",
+    "https://espira.no/om-espira/barnas-personvern"
+  ],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261115 / 934968352 / MAVTEK AS
+
+https://www.mavtek.com/
+
+```json
+{
+  "seed": 20261115,
+  "orgnr": "934968352",
+  "name": "MAVTEK AS",
+  "page": "https://www.mavtek.com/",
+  "page_sha256": "713e1fccec15ae0550733131798c686b101ac749038f234b0bebffe77b2fdefc",
+  "links": [
+    {
+      "url": "https://www.mavtek.com/copy-of-mavtek-candidate-notice",
+      "text": "Privacy Policy ",
+      "exact_anchor": "<a href=\"https://www.mavtek.com/copy-of-mavtek-candidate-notice\" target=\"_self\" class=\"wixui-rich-text__text\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261115 / 934968352 / MAVTEK AS
+
+https://www.mavtek.com/copy-of-mavtek-candidate-notice
+
+```json
+{
+  "seed": 20261115,
+  "orgnr": "934968352",
+  "name": "MAVTEK AS",
+  "page": "https://www.mavtek.com/copy-of-mavtek-candidate-notice",
+  "page_sha256": "cbd925b4bd3fb9cf275bd8e35dc1ec4f89bebdfc0e6a4db22b5035eadec22adf",
+  "links": [
+    {
+      "url": "https://www.mavtek.com/copy-of-mavtek-candidate-notice",
+      "text": "Privacy Policy ",
+      "exact_anchor": "<a href=\"https://www.mavtek.com/copy-of-mavtek-candidate-notice\" target=\"_self\" class=\"wixui-rich-text__text\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261115 / 917791155 / ECON INVEST AS
+
+https://econ.no/
+
+```json
+{
+  "seed": 20261115,
+  "orgnr": "917791155",
+  "name": "ECON INVEST AS",
+  "page": "https://econ.no/",
+  "page_sha256": "64611f95b349fd9f1a1836480cc4bfea1ff7d7a742b9dc80b831b96bf39c1855",
+  "links": [
+    {
+      "url": "https://econ.no/personvern",
+      "text": "Personvern",
+      "exact_anchor": "<a href=\"/personvern\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261115 / 998756308 / SAMEIET KRUMGATEN 4
+
+https://enqvist.no/
+
+```json
+{
+  "seed": 20261115,
+  "orgnr": "998756308",
+  "name": "SAMEIET KRUMGATEN 4",
+  "page": "https://enqvist.no/",
+  "page_sha256": "b3781e32cbdd5a3cda60bcf4f8427527b8d272a6f1f2c67ab8bedb6cbcfc76ff",
+  "links": [
+    {
+      "url": "https://enqvist.no/personvern/",
+      "text": "Personvern",
+      "exact_anchor": "<a id=\"brxe-5p9xcu\" class=\"brxe-text-link\" href=\"https://enqvist.no/personvern/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261115 / 927267527 / SUS OG DUS ODDA AS
+
+https://sablamoro.no/wp-sitemap-posts-page-1.xml
+
+```json
+{
+  "seed": 20261115,
+  "orgnr": "927267527",
+  "name": "SUS OG DUS ODDA AS",
+  "page": "https://sablamoro.no/wp-sitemap-posts-page-1.xml",
+  "page_sha256": "ec34fa7ec315905b85c140145badbe649cb166c636ef5e4d80d16f2477cb38fb",
+  "links": [],
+  "sitemap": [
+    "https://sablamoro.no/vilkar-for-deltagelse/"
+  ],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261115 / 986116982 / CHUBB EUROPEAN GROUP SE, NORSKREGISTRERT UTENLANDSK FORETAK NUF
+
+https://www.chubb.com/nordic-en/
+
+```json
+{
+  "seed": 20261115,
+  "orgnr": "986116982",
+  "name": "CHUBB EUROPEAN GROUP SE, NORSKREGISTRERT UTENLANDSK FORETAK NUF",
+  "page": "https://www.chubb.com/nordic-en/",
+  "page_sha256": "65c33fd68901dc93044206850d2ff8fb58bcf84cdfed1da12e5c032f50780c21",
+  "links": [
+    {
+      "url": "https://www.chubb.com/nordic-en/footer/terms-of-use.html",
+      "text": "\n        Terms of Use\n    ",
+      "exact_anchor": "<a href=\"/nordic-en/footer/terms-of-use.html\" data-cta=\"terms of use\" data-ec=\"navigation\" data-ea=\"click: footer\" data-linkurl=\"/nordic-en/footer/terms-of-use.html\" data-linktype=\"internal site page\" target=\"_self\" data-interactive>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://www.chubb.com/nordic-en/footer/privacy-policy.html",
+      "text": "\n        Privacy Policy\n    ",
+      "exact_anchor": "<a href=\"/nordic-en/footer/privacy-policy.html\" data-cta=\"privacy policy\" data-ec=\"navigation\" data-ea=\"click: footer\" data-linkurl=\"/nordic-en/footer/privacy-policy.html\" data-linktype=\"internal site page\" target=\"_self\" data-interactive>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://www.chubb.com/nordic-en/footer/cookies.html",
+      "text": "\n        Cookie Policy\n    ",
+      "exact_anchor": "<a href=\"/nordic-en/footer/cookies.html\" data-cta=\"cookie policy\" data-ec=\"navigation\" data-ea=\"click: footer\" data-linkurl=\"/nordic-en/footer/cookies.html\" data-linktype=\"internal site page\" target=\"_self\" data-interactive>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://www.chubb.com/nordic-en/footer/privacy-policy-norwegian.html",
+      "text": "\n        Employee Privacy - Norway\n    ",
+      "exact_anchor": "<a href=\"/nordic-en/footer/privacy-policy-norwegian.html\" data-cta=\"employee privacy - norway\" data-ec=\"navigation\" data-ea=\"click: footer\" data-linkurl=\"/nordic-en/footer/privacy-policy-norwegian.html\" data-linktype=\"internal site page\" target=\"_self\" data-interactive>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://www.chubb.com/nordic-en/footer/privacy-policy-danish.html",
+      "text": "\n        Employee Privacy - Denmark\n    ",
+      "exact_anchor": "<a href=\"/nordic-en/footer/privacy-policy-danish.html\" data-cta=\"employee privacy - denmark\" data-ec=\"navigation\" data-ea=\"click: footer\" data-linkurl=\"/nordic-en/footer/privacy-policy-danish.html\" data-linktype=\"internal site page\" target=\"_self\" data-interactive>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://www.chubb.com/nordic-en/footer/privacy-policy-finnish.html",
+      "text": "\n        Employee Privacy - Finland\n    ",
+      "exact_anchor": "<a href=\"/nordic-en/footer/privacy-policy-finnish.html\" data-cta=\"employee privacy - finland\" data-ec=\"navigation\" data-ea=\"click: footer\" data-linkurl=\"/nordic-en/footer/privacy-policy-finnish.html\" data-linktype=\"internal site page\" target=\"_self\" data-interactive>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://www.chubb.com/nordic-en/footer/privacy-policy-swedish.html",
+      "text": "\n        Employee Privacy - Sweden\n    ",
+      "exact_anchor": "<a href=\"/nordic-en/footer/privacy-policy-swedish.html\" data-cta=\"employee privacy - sweden\" data-ec=\"navigation\" data-ea=\"click: footer\" data-linkurl=\"/nordic-en/footer/privacy-policy-swedish.html\" data-linktype=\"internal site page\" target=\"_self\" data-interactive>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261115 / 986116982 / CHUBB EUROPEAN GROUP SE, NORSKREGISTRERT UTENLANDSK FORETAK NUF
+
+https://www.chubb.com/nordic-en/contact-us.html
+
+```json
+{
+  "seed": 20261115,
+  "orgnr": "986116982",
+  "name": "CHUBB EUROPEAN GROUP SE, NORSKREGISTRERT UTENLANDSK FORETAK NUF",
+  "page": "https://www.chubb.com/nordic-en/contact-us.html",
+  "page_sha256": "cb533bfd8d69caf5fae9a3d23874a1acad6277e4ba3c614fb1f5d3ec74464fc0",
+  "links": [
+    {
+      "url": "https://www.chubb.com/nordic-en/footer/terms-of-use.html",
+      "text": "\n        Terms of Use\n    ",
+      "exact_anchor": "<a href=\"/nordic-en/footer/terms-of-use.html\" data-cta=\"terms of use\" data-ec=\"navigation\" data-ea=\"click: footer\" data-linkurl=\"/nordic-en/footer/terms-of-use.html\" data-linktype=\"internal site page\" target=\"_self\" data-interactive>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://www.chubb.com/nordic-en/footer/privacy-policy.html",
+      "text": "\n        Privacy Policy\n    ",
+      "exact_anchor": "<a href=\"/nordic-en/footer/privacy-policy.html\" data-cta=\"privacy policy\" data-ec=\"navigation\" data-ea=\"click: footer\" data-linkurl=\"/nordic-en/footer/privacy-policy.html\" data-linktype=\"internal site page\" target=\"_self\" data-interactive>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://www.chubb.com/nordic-en/footer/cookies.html",
+      "text": "\n        Cookie Policy\n    ",
+      "exact_anchor": "<a href=\"/nordic-en/footer/cookies.html\" data-cta=\"cookie policy\" data-ec=\"navigation\" data-ea=\"click: footer\" data-linkurl=\"/nordic-en/footer/cookies.html\" data-linktype=\"internal site page\" target=\"_self\" data-interactive>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://www.chubb.com/nordic-en/footer/privacy-policy-norwegian.html",
+      "text": "\n        Employee Privacy - Norway\n    ",
+      "exact_anchor": "<a href=\"/nordic-en/footer/privacy-policy-norwegian.html\" data-cta=\"employee privacy - norway\" data-ec=\"navigation\" data-ea=\"click: footer\" data-linkurl=\"/nordic-en/footer/privacy-policy-norwegian.html\" data-linktype=\"internal site page\" target=\"_self\" data-interactive>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://www.chubb.com/nordic-en/footer/privacy-policy-danish.html",
+      "text": "\n        Employee Privacy - Denmark\n    ",
+      "exact_anchor": "<a href=\"/nordic-en/footer/privacy-policy-danish.html\" data-cta=\"employee privacy - denmark\" data-ec=\"navigation\" data-ea=\"click: footer\" data-linkurl=\"/nordic-en/footer/privacy-policy-danish.html\" data-linktype=\"internal site page\" target=\"_self\" data-interactive>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://www.chubb.com/nordic-en/footer/privacy-policy-finnish.html",
+      "text": "\n        Employee Privacy - Finland\n    ",
+      "exact_anchor": "<a href=\"/nordic-en/footer/privacy-policy-finnish.html\" data-cta=\"employee privacy - finland\" data-ec=\"navigation\" data-ea=\"click: footer\" data-linkurl=\"/nordic-en/footer/privacy-policy-finnish.html\" data-linktype=\"internal site page\" target=\"_self\" data-interactive>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://www.chubb.com/nordic-en/footer/privacy-policy-swedish.html",
+      "text": "\n        Employee Privacy - Sweden\n    ",
+      "exact_anchor": "<a href=\"/nordic-en/footer/privacy-policy-swedish.html\" data-cta=\"employee privacy - sweden\" data-ec=\"navigation\" data-ea=\"click: footer\" data-linkurl=\"/nordic-en/footer/privacy-policy-swedish.html\" data-linktype=\"internal site page\" target=\"_self\" data-interactive>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261115 / 986116982 / CHUBB EUROPEAN GROUP SE, NORSKREGISTRERT UTENLANDSK FORETAK NUF
+
+https://www.chubb.com/nordic-en/contact-us/denmark.html
+
+```json
+{
+  "seed": 20261115,
+  "orgnr": "986116982",
+  "name": "CHUBB EUROPEAN GROUP SE, NORSKREGISTRERT UTENLANDSK FORETAK NUF",
+  "page": "https://www.chubb.com/nordic-en/contact-us/denmark.html",
+  "page_sha256": "d9f8b8fed2ee1fd31b824a0c77434f51431b0e41bcc10077a5f823ca02a05ba8",
+  "links": [
+    {
+      "url": "https://www.chubb.com/nordic-en/footer/terms-of-use.html",
+      "text": "\n        Terms of Use\n    ",
+      "exact_anchor": "<a href=\"/nordic-en/footer/terms-of-use.html\" data-cta=\"terms of use\" data-ec=\"navigation\" data-ea=\"click: footer\" data-linkurl=\"/nordic-en/footer/terms-of-use.html\" data-linktype=\"internal site page\" target=\"_self\" data-interactive>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://www.chubb.com/nordic-en/footer/privacy-policy.html",
+      "text": "\n        Privacy Policy\n    ",
+      "exact_anchor": "<a href=\"/nordic-en/footer/privacy-policy.html\" data-cta=\"privacy policy\" data-ec=\"navigation\" data-ea=\"click: footer\" data-linkurl=\"/nordic-en/footer/privacy-policy.html\" data-linktype=\"internal site page\" target=\"_self\" data-interactive>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://www.chubb.com/nordic-en/footer/cookies.html",
+      "text": "\n        Cookie Policy\n    ",
+      "exact_anchor": "<a href=\"/nordic-en/footer/cookies.html\" data-cta=\"cookie policy\" data-ec=\"navigation\" data-ea=\"click: footer\" data-linkurl=\"/nordic-en/footer/cookies.html\" data-linktype=\"internal site page\" target=\"_self\" data-interactive>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://www.chubb.com/nordic-en/footer/privacy-policy-norwegian.html",
+      "text": "\n        Employee Privacy - Norway\n    ",
+      "exact_anchor": "<a href=\"/nordic-en/footer/privacy-policy-norwegian.html\" data-cta=\"employee privacy - norway\" data-ec=\"navigation\" data-ea=\"click: footer\" data-linkurl=\"/nordic-en/footer/privacy-policy-norwegian.html\" data-linktype=\"internal site page\" target=\"_self\" data-interactive>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://www.chubb.com/nordic-en/footer/privacy-policy-danish.html",
+      "text": "\n        Employee Privacy - Denmark\n    ",
+      "exact_anchor": "<a href=\"/nordic-en/footer/privacy-policy-danish.html\" data-cta=\"employee privacy - denmark\" data-ec=\"navigation\" data-ea=\"click: footer\" data-linkurl=\"/nordic-en/footer/privacy-policy-danish.html\" data-linktype=\"internal site page\" target=\"_self\" data-interactive>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://www.chubb.com/nordic-en/footer/privacy-policy-finnish.html",
+      "text": "\n        Employee Privacy - Finland\n    ",
+      "exact_anchor": "<a href=\"/nordic-en/footer/privacy-policy-finnish.html\" data-cta=\"employee privacy - finland\" data-ec=\"navigation\" data-ea=\"click: footer\" data-linkurl=\"/nordic-en/footer/privacy-policy-finnish.html\" data-linktype=\"internal site page\" target=\"_self\" data-interactive>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://www.chubb.com/nordic-en/footer/privacy-policy-swedish.html",
+      "text": "\n        Employee Privacy - Sweden\n    ",
+      "exact_anchor": "<a href=\"/nordic-en/footer/privacy-policy-swedish.html\" data-cta=\"employee privacy - sweden\" data-ec=\"navigation\" data-ea=\"click: footer\" data-linkurl=\"/nordic-en/footer/privacy-policy-swedish.html\" data-linktype=\"internal site page\" target=\"_self\" data-interactive>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261115 / 915356559 / KG MOTOR AS
+
+https://www.kgmotor.no/personvern/
+
+```json
+{
+  "seed": 20261115,
+  "orgnr": "915356559",
+  "name": "KG MOTOR AS",
+  "page": "https://www.kgmotor.no/personvern/",
+  "page_sha256": "cdfd0adb6c89c85dcdb09b5a14ad131f3241b6703ee8e34534959513d67d614d",
+  "links": [
+    {
+      "url": "https://www.kgmotor.no/personvern/",
+      "text": "Cookie Innstillinger",
+      "exact_anchor": "<a data-href=\"#moove_gdpr_cookie_modal\" id=\"cookie-settings\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.kgmotor.no/personvern",
+      "text": "Personvern",
+      "exact_anchor": "<a href=\"/personvern\" target=\"_blank\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261115 / 988427438 / ARVEN AS
+
+https://arven.no/
+
+```json
+{
+  "seed": 20261115,
+  "orgnr": "988427438",
+  "name": "ARVEN AS",
+  "page": "https://arven.no/",
+  "page_sha256": "9bfde3c726432b70adfef629c35028f483352fbd77b10222275cba14a6885267",
+  "links": [
+    {
+      "url": "https://arven.no/policies/terms-of-service",
+      "text": "\n              Salgsbetingelser\n            ",
+      "exact_anchor": "<a\n              href=\"/policies/terms-of-service\"\n              class=\"link-faded\"\n              \n            >",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://arven.no/pages/betingelser-service",
+      "text": "\n              Betingelser service\n            ",
+      "exact_anchor": "<a\n              href=\"/pages/betingelser-service\"\n              class=\"link-faded\"\n              \n            >",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://arven.no/policies/privacy-policy",
+      "text": "\n              Personvern\n            ",
+      "exact_anchor": "<a\n              href=\"/policies/privacy-policy\"\n              class=\"link-faded\"\n              \n            >",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261115 / 988427438 / ARVEN AS
+
+https://arven.no/pages/contact
+
+```json
+{
+  "seed": 20261115,
+  "orgnr": "988427438",
+  "name": "ARVEN AS",
+  "page": "https://arven.no/pages/contact",
+  "page_sha256": "e38bb8467fbc30c7507e51198cd24ad6189668d5c3f1c62a145da984c15c2224",
+  "links": [
+    {
+      "url": "https://arven.no/policies/terms-of-service",
+      "text": "\n              Salgsbetingelser\n            ",
+      "exact_anchor": "<a\n              href=\"/policies/terms-of-service\"\n              class=\"link-faded\"\n              \n            >",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://arven.no/pages/betingelser-service",
+      "text": "\n              Betingelser service\n            ",
+      "exact_anchor": "<a\n              href=\"/pages/betingelser-service\"\n              class=\"link-faded\"\n              \n            >",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://arven.no/policies/privacy-policy",
+      "text": "\n              Personvern\n            ",
+      "exact_anchor": "<a\n              href=\"/policies/privacy-policy\"\n              class=\"link-faded\"\n              \n            >",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261115 / 988427438 / ARVEN AS
+
+https://arven.no/policies/terms-of-service
+
+```json
+{
+  "seed": 20261115,
+  "orgnr": "988427438",
+  "name": "ARVEN AS",
+  "page": "https://arven.no/policies/terms-of-service",
+  "page_sha256": "748a019b119e84113621a258370fd9f7f382e57171a5be2f54906d80ffb49174",
+  "links": [
+    {
+      "url": "https://arven.no/policies/terms-of-service#main",
+      "text": "Hopp til innhold",
+      "exact_anchor": "<a href=\"#main\" allow-hash-change class=\"skip-to-content sr-only\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://arven.no/policies/terms-of-service",
+      "text": "\n              Salgsbetingelser\n            ",
+      "exact_anchor": "<a\n              href=\"/policies/terms-of-service\"\n              class=\"link-faded\"\n              \n            >",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://arven.no/pages/betingelser-service",
+      "text": "\n              Betingelser service\n            ",
+      "exact_anchor": "<a\n              href=\"/pages/betingelser-service\"\n              class=\"link-faded\"\n              \n            >",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://arven.no/policies/privacy-policy",
+      "text": "\n              Personvern\n            ",
+      "exact_anchor": "<a\n              href=\"/policies/privacy-policy\"\n              class=\"link-faded\"\n              \n            >",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261116 / 927835304 / PIRE AS
+
+https://pire.com/personvern
+
+```json
+{
+  "seed": 20261116,
+  "orgnr": "927835304",
+  "name": "PIRE AS",
+  "page": "https://pire.com/personvern",
+  "page_sha256": "a18ed5c7ea6183e29cefc7445d088578fad1745e34a3900bd403413293ccc183",
+  "links": [
+    {
+      "url": "https://pire.com/personvern",
+      "text": "Do Not Sell or Share My Personal Information",
+      "exact_anchor": "5px);\" id=\"dnslink\" href=\"#\" onclick=\"__cmp('showScreen'); return false\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261116 / 816273242 / TROMSØ SOSIALE ENTREPRENØRSKAP AS
+
+https://www.fontenehuset-tromso.no/
+
+```json
+{
+  "seed": 20261116,
+  "orgnr": "816273242",
+  "name": "TROMSØ SOSIALE ENTREPRENØRSKAP AS",
+  "page": "https://www.fontenehuset-tromso.no/",
+  "page_sha256": "e1519464d1e5a6f37c315641d7159f5208b7b00208d4fbe017e02b754d43517b",
+  "links": [
+    {
+      "url": "https://www.fontenehuset-tromso.no/personvern",
+      "text": "Personvernerklæring",
+      "exact_anchor": "<a href=\"/personvern\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261116 / 927835304 / PIRE AS
+
+https://pire.com/personvernerklaering
+
+```json
+{
+  "seed": 20261116,
+  "orgnr": "927835304",
+  "name": "PIRE AS",
+  "page": "https://pire.com/personvernerklaering",
+  "page_sha256": "9e40ce4ee29ab83c4fc447d96b82ce7467ae52c6fbe8e93bfc3a17c6721d0ef5",
+  "links": [
+    {
+      "url": "https://pire.com/personvernerklaering",
+      "text": "Do Not Sell or Share My Personal Information",
+      "exact_anchor": "5px);\" id=\"dnslink\" href=\"#\" onclick=\"__cmp('showScreen'); return false\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261116 / 989875655 / HAUGESUND EIENDOM AS
+
+https://haugesund.com/
+
+```json
+{
+  "seed": 20261116,
+  "orgnr": "989875655",
+  "name": "HAUGESUND EIENDOM AS",
+  "page": "https://haugesund.com/",
+  "page_sha256": "aa1397e8da62fdfeb4f57b532a6d16afee57418aec976dcbe2d1bdbb3cf2d8b0",
+  "links": [
+    {
+      "url": "https://haugesund.com/terms.html",
+      "text": "Terms of Service",
+      "exact_anchor": "<a href=\"/terms.html\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://haugesund.com/privacy.html",
+      "text": "Privacy Policy",
+      "exact_anchor": "<a href=\"/privacy.html\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261116 / 989875655 / HAUGESUND EIENDOM AS
+
+https://haugesund.com/sitemap.xml
+
+```json
+{
+  "seed": 20261116,
+  "orgnr": "989875655",
+  "name": "HAUGESUND EIENDOM AS",
+  "page": "https://haugesund.com/sitemap.xml",
+  "page_sha256": "aa1397e8da62fdfeb4f57b532a6d16afee57418aec976dcbe2d1bdbb3cf2d8b0",
+  "links": [
+    {
+      "url": "https://haugesund.com/terms.html",
+      "text": "Terms of Service",
+      "exact_anchor": "<a href=\"/terms.html\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://haugesund.com/privacy.html",
+      "text": "Privacy Policy",
+      "exact_anchor": "<a href=\"/privacy.html\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261116 / 989875655 / HAUGESUND EIENDOM AS
+
+https://haugesund.com/kontakt
+
+```json
+{
+  "seed": 20261116,
+  "orgnr": "989875655",
+  "name": "HAUGESUND EIENDOM AS",
+  "page": "https://haugesund.com/kontakt",
+  "page_sha256": "aa1397e8da62fdfeb4f57b532a6d16afee57418aec976dcbe2d1bdbb3cf2d8b0",
+  "links": [
+    {
+      "url": "https://haugesund.com/terms.html",
+      "text": "Terms of Service",
+      "exact_anchor": "<a href=\"/terms.html\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://haugesund.com/privacy.html",
+      "text": "Privacy Policy",
+      "exact_anchor": "<a href=\"/privacy.html\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261116 / 989875655 / HAUGESUND EIENDOM AS
+
+https://haugesund.com/om-oss
+
+```json
+{
+  "seed": 20261116,
+  "orgnr": "989875655",
+  "name": "HAUGESUND EIENDOM AS",
+  "page": "https://haugesund.com/om-oss",
+  "page_sha256": "aa1397e8da62fdfeb4f57b532a6d16afee57418aec976dcbe2d1bdbb3cf2d8b0",
+  "links": [
+    {
+      "url": "https://haugesund.com/terms.html",
+      "text": "Terms of Service",
+      "exact_anchor": "<a href=\"/terms.html\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://haugesund.com/privacy.html",
+      "text": "Privacy Policy",
+      "exact_anchor": "<a href=\"/privacy.html\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261116 / 989875655 / HAUGESUND EIENDOM AS
+
+https://haugesund.com/personvern
+
+```json
+{
+  "seed": 20261116,
+  "orgnr": "989875655",
+  "name": "HAUGESUND EIENDOM AS",
+  "page": "https://haugesund.com/personvern",
+  "page_sha256": "aa1397e8da62fdfeb4f57b532a6d16afee57418aec976dcbe2d1bdbb3cf2d8b0",
+  "links": [
+    {
+      "url": "https://haugesund.com/terms.html",
+      "text": "Terms of Service",
+      "exact_anchor": "<a href=\"/terms.html\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://haugesund.com/privacy.html",
+      "text": "Privacy Policy",
+      "exact_anchor": "<a href=\"/privacy.html\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261116 / 966636351 / SKÅRE BORETTSLAG I
+
+https://vestbo.no/
+
+```json
+{
+  "seed": 20261116,
+  "orgnr": "966636351",
+  "name": "SKÅRE BORETTSLAG I",
+  "page": "https://vestbo.no/",
+  "page_sha256": "33e34683a7e26c851624b81803c1ed8895d31f058d530ffa77a94505116d1f75",
+  "links": [
+    {
+      "url": "https://vestbo.no/vestbo-personvernerklaering/",
+      "text": "Personvern",
+      "exact_anchor": "<a href=\"https://vestbo.no/vestbo-personvernerklaering/\" target=\"_blank\" rel=\"noopener\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261116 / 927138581 / TITANGATA 11 AS
+
+https://andmork.no/
+
+```json
+{
+  "seed": 20261116,
+  "orgnr": "927138581",
+  "name": "TITANGATA 11 AS",
+  "page": "https://andmork.no/",
+  "page_sha256": "ff2ad878651e3c02889d89692a3ca062ede32b3c05290d0dff403cd4c1f8d5e1",
+  "links": [
+    {
+      "url": "https://andmork.no/privacy-policy/",
+      "text": "Personvernerklæring",
+      "exact_anchor": "<a href=\"https://andmork.no/privacy-policy/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://andmork.no/cookies/",
+      "text": "Cookies",
+      "exact_anchor": "<a href=\"https://andmork.no/cookies/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261116 / 927138581 / TITANGATA 11 AS
+
+https://andmork.no/kontakt-oss/
+
+```json
+{
+  "seed": 20261116,
+  "orgnr": "927138581",
+  "name": "TITANGATA 11 AS",
+  "page": "https://andmork.no/kontakt-oss/",
+  "page_sha256": "36c3c10d9bbbb7200db1900551a1e99b305ac9bf3c2599a907d75c667bb5a197",
+  "links": [
+    {
+      "url": "https://andmork.no/privacy-policy/",
+      "text": "Personvernerklæring",
+      "exact_anchor": "<a href=\"https://andmork.no/privacy-policy/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://andmork.no/cookies/",
+      "text": "Cookies",
+      "exact_anchor": "<a href=\"https://andmork.no/cookies/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261116 / 954687821 / GRAABEIN BORETTSLAG
+
+https://www.usbl.no/
+
+```json
+{
+  "seed": 20261116,
+  "orgnr": "954687821",
+  "name": "GRAABEIN BORETTSLAG",
+  "page": "https://www.usbl.no/",
+  "page_sha256": "e872611d1d8030c635034960eb20a491389f88a73bb72d8dedf1b6e0fed2bc16",
+  "links": [
+    {
+      "url": "https://www.usbl.no/om-oss/personvern",
+      "text": "Personvern",
+      "exact_anchor": "<a class=\"link link--animation-shrink link--color-yellow link--font-theme-regular\" href=\"/om-oss/personvern\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261116 / 927138581 / TITANGATA 11 AS
+
+https://andmork.no/om-oss/
+
+```json
+{
+  "seed": 20261116,
+  "orgnr": "927138581",
+  "name": "TITANGATA 11 AS",
+  "page": "https://andmork.no/om-oss/",
+  "page_sha256": "842c93c9691b9ade86dc0f6bb371900f790744d4d24058bb28e22bdbca166e4a",
+  "links": [
+    {
+      "url": "https://andmork.no/privacy-policy/",
+      "text": "Personvernerklæring",
+      "exact_anchor": "<a href=\"https://andmork.no/privacy-policy/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://andmork.no/cookies/",
+      "text": "Cookies",
+      "exact_anchor": "<a href=\"https://andmork.no/cookies/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261116 / 927138581 / TITANGATA 11 AS
+
+https://andmork.no/privacy-policy/
+
+```json
+{
+  "seed": 20261116,
+  "orgnr": "927138581",
+  "name": "TITANGATA 11 AS",
+  "page": "https://andmork.no/privacy-policy/",
+  "page_sha256": "6039c6ec5eff8e19f95accc7c1a5f76499b426f05dc6503eb79d4b2a94c17f54",
+  "links": [
+    {
+      "url": "https://andmork.no/privacy-policy/",
+      "text": "Personvernerklæring",
+      "exact_anchor": "<a href=\"https://andmork.no/privacy-policy/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://andmork.no/cookies/",
+      "text": "Cookies",
+      "exact_anchor": "<a href=\"https://andmork.no/cookies/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261116 / 927138581 / TITANGATA 11 AS
+
+https://andmork.no/page-sitemap.xml
+
+```json
+{
+  "seed": 20261116,
+  "orgnr": "927138581",
+  "name": "TITANGATA 11 AS",
+  "page": "https://andmork.no/page-sitemap.xml",
+  "page_sha256": "506961569d067422785c0256fb88c927d6f1f006d7912cda72be09418054e567",
+  "links": [],
+  "sitemap": [
+    "https://andmork.no/cookies/",
+    "https://andmork.no/en/cookies/",
+    "https://andmork.no/privacy-policy/"
+  ],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261116 / 930867306 / NELI1 AS
+
+https://neli1.com/
+
+```json
+{
+  "seed": 20261116,
+  "orgnr": "930867306",
+  "name": "NELI1 AS",
+  "page": "https://neli1.com/",
+  "page_sha256": "5c76418227234308b531ee6a333767c66724a229321aed86aaa36324bd24a7e6",
+  "links": [
+    {
+      "url": "https://neli1.com/pages/privacy",
+      "text": "Privacy",
+      "exact_anchor": "<a href=\"/pages/privacy\" class=\"link\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://neli1.com/pages/terms-of-use",
+      "text": "Terms of Use",
+      "exact_anchor": "<a href=\"/pages/terms-of-use\" class=\"link\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261116 / 965441441 / GRAFI-TEC AS
+
+https://grafitec.no/
+
+```json
+{
+  "seed": 20261116,
+  "orgnr": "965441441",
+  "name": "GRAFI-TEC AS",
+  "page": "https://grafitec.no/",
+  "page_sha256": "a81a80121cf765fe25c294963b655b641d65f5d47c3049475c5cec353786cc2f",
+  "links": [
+    {
+      "url": "https://grafitec.no/salgsbetingelser/",
+      "text": "Salgsbetingelser",
+      "exact_anchor": "<a href=\"https://grafitec.no/salgsbetingelser/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261116 / 930867306 / NELI1 AS
+
+https://neli1.com/pages/privacy
+
+```json
+{
+  "seed": 20261116,
+  "orgnr": "930867306",
+  "name": "NELI1 AS",
+  "page": "https://neli1.com/pages/privacy",
+  "page_sha256": "c0c6e631488593688591e288298c018dac751906ee67c537c81714382e816cd9",
+  "links": [
+    {
+      "url": "https://neli1.com/pages/privacy",
+      "text": "Privacy",
+      "exact_anchor": "<a href=\"/pages/privacy\" class=\"link\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://neli1.com/pages/terms-of-use",
+      "text": "Terms of Use",
+      "exact_anchor": "<a href=\"/pages/terms-of-use\" class=\"link\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261116 / 930867306 / NELI1 AS
+
+https://neli1.com/pages/terms-of-use
+
+```json
+{
+  "seed": 20261116,
+  "orgnr": "930867306",
+  "name": "NELI1 AS",
+  "page": "https://neli1.com/pages/terms-of-use",
+  "page_sha256": "88f86764ab1810eda6690ecd0a6915c9e1df1178d69fc2048c7db2b6ed646ecd",
+  "links": [
+    {
+      "url": "https://neli1.com/pages/privacy",
+      "text": "Privacy",
+      "exact_anchor": "<a href=\"/pages/privacy\" class=\"link\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://neli1.com/pages/terms-of-use",
+      "text": "Terms of Use",
+      "exact_anchor": "<a href=\"/pages/terms-of-use\" class=\"link\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261116 / 965441441 / GRAFI-TEC AS
+
+https://grafitec.no/wp-sitemap-posts-page-1.xml
+
+```json
+{
+  "seed": 20261116,
+  "orgnr": "965441441",
+  "name": "GRAFI-TEC AS",
+  "page": "https://grafitec.no/wp-sitemap-posts-page-1.xml",
+  "page_sha256": "2ba5fd497c816f9b99e856b8846d61c834ea938102af39697f1a5a344d324cc6",
+  "links": [],
+  "sitemap": [
+    "https://grafitec.no/salgsbetingelser/"
+  ],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261116 / 993459747 / NOVE INVEST AS
+
+https://nove.com/
+
+```json
+{
+  "seed": 20261116,
+  "orgnr": "993459747",
+  "name": "NOVE INVEST AS",
+  "page": "https://nove.com/",
+  "page_sha256": "ea59b2bda2a7f7aa3817d391b6c0a1f30d80c65caf1c60b5f3d4882e6efb6b26",
+  "links": [
+    {
+      "url": "https://nove.com/policies/privacy-policy",
+      "text": "Privacy Policy",
+      "exact_anchor": "<a href=\"/policies/privacy-policy\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://nove.com/policies/terms-of-service",
+      "text": "Terms of Use",
+      "exact_anchor": "<a href=\"/policies/terms-of-service\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261116 / 993459747 / NOVE INVEST AS
+
+https://nove.com/pages/contact-us
+
+```json
+{
+  "seed": 20261116,
+  "orgnr": "993459747",
+  "name": "NOVE INVEST AS",
+  "page": "https://nove.com/pages/contact-us",
+  "page_sha256": "b40f748b7d42b599dd11abd506d4615a828a2e741797792ab5674c253dbd7a25",
+  "links": [
+    {
+      "url": "https://nove.com/policies/privacy-policy",
+      "text": "Privacy Policy",
+      "exact_anchor": "<a href=\"/policies/privacy-policy\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://nove.com/policies/terms-of-service",
+      "text": "Terms of Use",
+      "exact_anchor": "<a href=\"/policies/terms-of-service\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261116 / 993459747 / NOVE INVEST AS
+
+https://nove.com/pages/nove-philosophy
+
+```json
+{
+  "seed": 20261116,
+  "orgnr": "993459747",
+  "name": "NOVE INVEST AS",
+  "page": "https://nove.com/pages/nove-philosophy",
+  "page_sha256": "98784290579c558de2449b7c842f2ef40b4e97e6c88670fc3d885d67c2083df1",
+  "links": [
+    {
+      "url": "https://nove.com/policies/privacy-policy",
+      "text": "Privacy Policy",
+      "exact_anchor": "<a href=\"/policies/privacy-policy\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://nove.com/policies/terms-of-service",
+      "text": "Terms of Use",
+      "exact_anchor": "<a href=\"/policies/terms-of-service\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261116 / 993459747 / NOVE INVEST AS
+
+https://nove.com/policies/privacy-policy
+
+```json
+{
+  "seed": 20261116,
+  "orgnr": "993459747",
+  "name": "NOVE INVEST AS",
+  "page": "https://nove.com/policies/privacy-policy",
+  "page_sha256": "c81a2108a466470347cded566cc715cc28ae15812b6d3b43e119104725108d0f",
+  "links": [
+    {
+      "url": "https://nove.com/policies/privacy-policy#main",
+      "text": "Skip to content",
+      "exact_anchor": "<a href=\"#main\" class=\"visually-hidden skip-to-content\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://nove.com/policies/privacy-policy",
+      "text": "Our Watches",
+      "exact_anchor": "<a class=\"header__linklist-link link--animated\" href=\"#\" aria-controls=\"desktop-menu-2\" aria-expanded=\"false\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://nove.com/policies/privacy-policy",
+      "text": "Shop For",
+      "exact_anchor": "<a class=\"header__linklist-link link--animated\" href=\"#\" aria-controls=\"desktop-menu-3\" aria-expanded=\"false\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://nove.com/policies/privacy-policy",
+      "text": "Discover",
+      "exact_anchor": "<a class=\"header__linklist-link link--animated\" href=\"#\" aria-controls=\"desktop-menu-4\" aria-expanded=\"false\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://nove.com/policies/privacy-policy",
+      "text": "https://advertise.bingads.microsoft.com/en-us/resources/policies/personalized-ads",
+      "exact_anchor": "<a class=\"cursor-pointer\" rel=\"noopener\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://nove.com/policies/privacy-policy",
+      "text": "mkt@nove.com",
+      "exact_anchor": "<a class=\"cursor-pointer\" rel=\"noopener\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://nove.com/policies/privacy-policy",
+      "text": "Privacy Policy",
+      "exact_anchor": "<a href=\"/policies/privacy-policy\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://nove.com/policies/terms-of-service",
+      "text": "Terms of Use",
+      "exact_anchor": "<a href=\"/policies/terms-of-service\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261116 / 993459747 / NOVE INVEST AS
+
+https://nove.com/policies/terms-of-service
+
+```json
+{
+  "seed": 20261116,
+  "orgnr": "993459747",
+  "name": "NOVE INVEST AS",
+  "page": "https://nove.com/policies/terms-of-service",
+  "page_sha256": "2b8573737047643daa29d126420b966865159ceaee64c105d15332ea54b6df60",
+  "links": [
+    {
+      "url": "https://nove.com/policies/terms-of-service#main",
+      "text": "Skip to content",
+      "exact_anchor": "<a href=\"#main\" class=\"visually-hidden skip-to-content\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://nove.com/policies/terms-of-service",
+      "text": "Our Watches",
+      "exact_anchor": "<a class=\"header__linklist-link link--animated\" href=\"#\" aria-controls=\"desktop-menu-2\" aria-expanded=\"false\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://nove.com/policies/terms-of-service",
+      "text": "Shop For",
+      "exact_anchor": "<a class=\"header__linklist-link link--animated\" href=\"#\" aria-controls=\"desktop-menu-3\" aria-expanded=\"false\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://nove.com/policies/terms-of-service",
+      "text": "Discover",
+      "exact_anchor": "<a class=\"header__linklist-link link--animated\" href=\"#\" aria-controls=\"desktop-menu-4\" aria-expanded=\"false\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://nove.com/policies/privacy-policy",
+      "text": "Privacy Policy",
+      "exact_anchor": "<a href=\"/policies/privacy-policy\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://nove.com/policies/terms-of-service",
+      "text": "Terms of Use",
+      "exact_anchor": "<a href=\"/policies/terms-of-service\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261116 / 936552889 / BOXXY AS
+
+https://boxxy.no/sitemap.xml
+
+```json
+{
+  "seed": 20261116,
+  "orgnr": "936552889",
+  "name": "BOXXY AS",
+  "page": "https://boxxy.no/sitemap.xml",
+  "page_sha256": "3eb9ea54b7e7d27f7c25767b4d456428e8de1c2e1b5c91d31d7c84b49d2c00bf",
+  "links": [],
+  "sitemap": [
+    "https://boxxy.no/personvern"
+  ],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261116 / 998784468 / FETSUND BRYGGE FELLESORGAN
+
+https://www.bori.no/
+
+```json
+{
+  "seed": 20261116,
+  "orgnr": "998784468",
+  "name": "FETSUND BRYGGE FELLESORGAN",
+  "page": "https://www.bori.no/",
+  "page_sha256": "007eb753bc0c5bdf61921124bdd400aca0de4c303ac162291b5eac0fc16a6105",
+  "links": [
+    {
+      "url": "https://www.bori.no/personvernerklaering/",
+      "text": "Personvern",
+      "exact_anchor": "<a href=\"https://www.bori.no/personvernerklaering/\"\n                            target=\"\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://www.bori.no/medlem/vilkar-fordelsprogram/",
+      "text": "Vilkår fordelsprogram",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/vilkar-fordelsprogram/\"\n                            target=\"\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261116 / 998784468 / FETSUND BRYGGE FELLESORGAN
+
+https://www.bori.no/om-bori/kontakt-oss/
+
+```json
+{
+  "seed": 20261116,
+  "orgnr": "998784468",
+  "name": "FETSUND BRYGGE FELLESORGAN",
+  "page": "https://www.bori.no/om-bori/kontakt-oss/",
+  "page_sha256": "c2f47753618f65db130bbf01baa870d17b5fed926e34e06e98da67d2920865e8",
+  "links": [
+    {
+      "url": "https://www.bori.no/personvernerklaering/",
+      "text": "Personvern",
+      "exact_anchor": "<a href=\"https://www.bori.no/personvernerklaering/\"\n                            target=\"\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://www.bori.no/medlem/vilkar-fordelsprogram/",
+      "text": "Vilkår fordelsprogram",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/vilkar-fordelsprogram/\"\n                            target=\"\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261116 / 998784468 / FETSUND BRYGGE FELLESORGAN
+
+https://www.bori.no/medlem/aktuelt/vilkarene-for-fordelsprogrammet-oppdateres/
+
+```json
+{
+  "seed": 20261116,
+  "orgnr": "998784468",
+  "name": "FETSUND BRYGGE FELLESORGAN",
+  "page": "https://www.bori.no/medlem/aktuelt/vilkarene-for-fordelsprogrammet-oppdateres/",
+  "page_sha256": "4b37289eaed823ba46d1758a06043337b6915f3dc5c9b5f86e48cae559c87139",
+  "links": [
+    {
+      "url": "https://www.bori.no/medlem/aktuelt/vilkarene-for-fordelsprogrammet-oppdateres/#main",
+      "text": "\n    Hopp til hovedinnhold\n",
+      "exact_anchor": "<a class=\"skip-to-content\" href=\"#main\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/aktuelt/vilkarene-for-fordelsprogrammet-oppdateres/#logg-inn",
+      "text": "\n                            Logg inn\n            ",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/aktuelt/vilkarene-for-fordelsprogrammet-oppdateres/#logg-inn\" class=\"button button--link-like button--sm\" target=''>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/aktuelt/vilkarene-for-fordelsprogrammet-oppdateres/?s=",
+      "text": "\n                    \n    \n\n                    ",
+      "exact_anchor": "<a href=\"?s=\" class=\"button button--light-green-ghost button--lg button--empty\" @click.prevent=\"\" aria-label=\"Søk\" data-modal-trigger=\"sok\"target='_self'>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/wp-content/uploads/2026/10/Vilkar-fordelsprogram-pr-01.desember.2026.pdf",
+      "text": "\n                    \n    \n\n                            Oppdaterte vilkår fra 1. desember 2026\n            ",
+      "exact_anchor": "<a href=\"https://www.bori.no/wp-content/uploads/2026/10/Vilkar-fordelsprogram-pr-01.desember.2026.pdf\" class=\"button button--primary-ghost button--icon-right\" target=''>",
+      "pdf": true,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/aktuelt/din-forste-bolig-starter-med-en-god-plan/",
+      "text": "\n                    \n                                                                                \n                                                                            \n                                                                    Medlem\n                                                            \n                                            \n                    \n                        \n                            Din første bolig starter med en god plan\n                                                            Som BORI-medlem får du tilgang til gode betingelser på boliglån i Romerike Sparebank. Kombinert med personlig rådgivning, høy BSU-rente og lokal tilstedeværelse kan det gjøre veien til egen bolig litt enklere.\n                            \n                            \n                                \n                    \n    \n\n                            Les mer\n            \n                            \n                        \n                    \n                ",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/aktuelt/din-forste-bolig-starter-med-en-god-plan/\" class=\"feed__item\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/aktuelt/vilkarene-for-fordelsprogrammet-oppdateres/#kontakt-bori-lillestrom",
+      "text": "\n                            Lillestrøm\n            ",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/aktuelt/vilkarene-for-fordelsprogrammet-oppdateres/#kontakt-bori-lillestrom\" class=\"button button--link-like button--xl\" target='_self'>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/aktuelt/vilkarene-for-fordelsprogrammet-oppdateres/#kontakt-bori-mysen",
+      "text": "\n                            Mysen\n            ",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/aktuelt/vilkarene-for-fordelsprogrammet-oppdateres/#kontakt-bori-mysen\" class=\"button button--link-like button--xl\" target='_self'>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/personvernerklaering/",
+      "text": "Personvern",
+      "exact_anchor": "<a href=\"https://www.bori.no/personvernerklaering/\"\n                            target=\"\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/vilkar-fordelsprogram/",
+      "text": "Vilkår fordelsprogram",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/vilkar-fordelsprogram/\"\n                            target=\"\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/styret/juridisk-veiviser-for-styret/",
+      "text": "\n                                            \n                                                Juridisk veiviser for styret\n                                            \n                                                                                    ",
+      "exact_anchor": "<a href=\"https://www.bori.no/styret/juridisk-veiviser-for-styret/\" target=\"\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/aktuelt/vilkarene-for-fordelsprogrammet-oppdateres/#book-uforpliktende-mote",
+      "text": "\n                                            \n                                                Book møte\n                                            \n                                                                                    ",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/aktuelt/vilkarene-for-fordelsprogrammet-oppdateres/#book-uforpliktende-mote\" target=\"\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261116 / 998784468 / FETSUND BRYGGE FELLESORGAN
+
+https://www.bori.no/personvernerklaering/
+
+```json
+{
+  "seed": 20261116,
+  "orgnr": "998784468",
+  "name": "FETSUND BRYGGE FELLESORGAN",
+  "page": "https://www.bori.no/personvernerklaering/",
+  "page_sha256": "8a7c921af6e24e8992a197278f213ffacc6463c8b4fd84a7654d7323d72b4ca5",
+  "links": [
+    {
+      "url": "https://www.bori.no/personvernerklaering/#main",
+      "text": "\n    Hopp til hovedinnhold\n",
+      "exact_anchor": "<a class=\"skip-to-content\" href=\"#main\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/personvernerklaering/#logg-inn",
+      "text": "\n                            Logg inn\n            ",
+      "exact_anchor": "<a href=\"https://www.bori.no/personvernerklaering/#logg-inn\" class=\"button button--link-like button--sm\" target=''>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/personvernerklaering/?s=",
+      "text": "\n                    \n    \n\n                    ",
+      "exact_anchor": "<a href=\"?s=\" class=\"button button--light-green-ghost button--lg button--empty\" @click.prevent=\"\" aria-label=\"Søk\" data-modal-trigger=\"sok\"target='_self'>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/personvern/personvern-cookies/",
+      "text": "Nærmere informasjon om informasjonskapsler/cookies",
+      "exact_anchor": "<a href=\"https://www.bori.no/personvern/personvern-cookies/\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/personvernerklaering/#kontakt-bori-lillestrom",
+      "text": "\n                            Lillestrøm\n            ",
+      "exact_anchor": "<a href=\"https://www.bori.no/personvernerklaering/#kontakt-bori-lillestrom\" class=\"button button--link-like button--xl\" target='_self'>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/personvernerklaering/#kontakt-bori-mysen",
+      "text": "\n                            Mysen\n            ",
+      "exact_anchor": "<a href=\"https://www.bori.no/personvernerklaering/#kontakt-bori-mysen\" class=\"button button--link-like button--xl\" target='_self'>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/personvernerklaering/",
+      "text": "Personvern",
+      "exact_anchor": "<a href=\"https://www.bori.no/personvernerklaering/\"\n                            target=\"\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/vilkar-fordelsprogram/",
+      "text": "Vilkår fordelsprogram",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/vilkar-fordelsprogram/\"\n                            target=\"\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/styret/juridisk-veiviser-for-styret/",
+      "text": "\n                                            \n                                                Juridisk veiviser for styret\n                                            \n                                                                                    ",
+      "exact_anchor": "<a href=\"https://www.bori.no/styret/juridisk-veiviser-for-styret/\" target=\"\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/personvernerklaering/#book-uforpliktende-mote",
+      "text": "\n                                            \n                                                Book møte\n                                            \n                                                                                    ",
+      "exact_anchor": "<a href=\"https://www.bori.no/personvernerklaering/#book-uforpliktende-mote\" target=\"\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261116 / 998784468 / FETSUND BRYGGE FELLESORGAN
+
+https://www.bori.no/medlem/vilkar-fordelsprogram/
+
+```json
+{
+  "seed": 20261116,
+  "orgnr": "998784468",
+  "name": "FETSUND BRYGGE FELLESORGAN",
+  "page": "https://www.bori.no/medlem/vilkar-fordelsprogram/",
+  "page_sha256": "cbbb8abdeabb99a6b35ff58eebf8ca94c2177812ad3f8030c1b2c6fbf730619e",
+  "links": [
+    {
+      "url": "https://www.bori.no/medlem/vilkar-fordelsprogram/#main",
+      "text": "\n    Hopp til hovedinnhold\n",
+      "exact_anchor": "<a class=\"skip-to-content\" href=\"#main\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/vilkar-fordelsprogram/#logg-inn",
+      "text": "\n                            Logg inn\n            ",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/vilkar-fordelsprogram/#logg-inn\" class=\"button button--link-like button--sm\" target=''>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/vilkar-fordelsprogram/?s=",
+      "text": "\n                    \n    \n\n                    ",
+      "exact_anchor": "<a href=\"?s=\" class=\"button button--light-green-ghost button--lg button--empty\" @click.prevent=\"\" aria-label=\"Søk\" data-modal-trigger=\"sok\"target='_self'>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/vilkar-fordelsprogram/#1-generelt",
+      "text": "\n                            \n                                \n    \n\n                            \n                            1. Generelt\n                        ",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/vilkar-fordelsprogram/#1-generelt\" :class=\"activeAnchor === 0 && 'active'\"\n                            x-on:click=\"goto($event, 0)\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/vilkar-fordelsprogram/#2-endring-av-vilkar",
+      "text": "\n                            \n                                \n    \n\n                            \n                            2. Endring av vilkår\n                        ",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/vilkar-fordelsprogram/#2-endring-av-vilkar\" :class=\"activeAnchor === 1 && 'active'\"\n                            x-on:click=\"goto($event, 1)\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/vilkar-fordelsprogram/#3-bonus",
+      "text": "\n                            \n                                \n    \n\n                            \n                            3. Bonus\n                        ",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/vilkar-fordelsprogram/#3-bonus\" :class=\"activeAnchor === 2 && 'active'\"\n                            x-on:click=\"goto($event, 2)\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/vilkar-fordelsprogram/#4-rabatt",
+      "text": "\n                            \n                                \n    \n\n                            \n                            4. Rabatt\n                        ",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/vilkar-fordelsprogram/#4-rabatt\" :class=\"activeAnchor === 3 && 'active'\"\n                            x-on:click=\"goto($event, 3)\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/vilkar-fordelsprogram/#5-personvern",
+      "text": "\n                            \n                                \n    \n\n                            \n                            5. Personvern\n                        ",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/vilkar-fordelsprogram/#5-personvern\" :class=\"activeAnchor === 4 && 'active'\"\n                            x-on:click=\"goto($event, 4)\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/vilkar-fordelsprogram/#6-var-kommunikasjon-med-deg",
+      "text": "\n                            \n                                \n    \n\n                            \n                            6. Vår kommunikasjon med deg\n                        ",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/vilkar-fordelsprogram/#6-var-kommunikasjon-med-deg\" :class=\"activeAnchor === 5 && 'active'\"\n                            x-on:click=\"goto($event, 5)\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/vilkar-fordelsprogram/#7-annet",
+      "text": "\n                            \n                                \n    \n\n                            \n                            7. Annet\n                        ",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/vilkar-fordelsprogram/#7-annet\" :class=\"activeAnchor === 6 && 'active'\"\n                            x-on:click=\"goto($event, 6)\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/personvern/personvernerklaering/",
+      "text": "personvernerklæring",
+      "exact_anchor": "<a href=\"https://www.bori.no/personvern/personvernerklaering/\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/wp-content/uploads/2026/10/Vilkar-fordelsprogram-pr-01.desember.2026.pdf",
+      "text": "\n    \n                    \n                \n                    Oppdaterte vilkår fra 01.12.2026\n                \n\n                \n            \n            \n                \n            \n    \n\n        \n    ",
+      "exact_anchor": "<a href=\"https://www.bori.no/wp-content/uploads/2026/10/Vilkar-fordelsprogram-pr-01.desember.2026.pdf\" target=\"_blank\" class=\"link-box-block\">",
+      "pdf": true,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/vilkar-fordelsprogram/#kontakt-bori-lillestrom",
+      "text": "\n                            Lillestrøm\n            ",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/vilkar-fordelsprogram/#kontakt-bori-lillestrom\" class=\"button button--link-like button--xl\" target='_self'>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/vilkar-fordelsprogram/#kontakt-bori-mysen",
+      "text": "\n                            Mysen\n            ",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/vilkar-fordelsprogram/#kontakt-bori-mysen\" class=\"button button--link-like button--xl\" target='_self'>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/personvernerklaering/",
+      "text": "Personvern",
+      "exact_anchor": "<a href=\"https://www.bori.no/personvernerklaering/\"\n                            target=\"\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/vilkar-fordelsprogram/",
+      "text": "Vilkår fordelsprogram",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/vilkar-fordelsprogram/\"\n                            target=\"\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/styret/juridisk-veiviser-for-styret/",
+      "text": "\n                                            \n                                                Juridisk veiviser for styret\n                                            \n                                                                                    ",
+      "exact_anchor": "<a href=\"https://www.bori.no/styret/juridisk-veiviser-for-styret/\" target=\"\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/vilkar-fordelsprogram/#book-uforpliktende-mote",
+      "text": "\n                                            \n                                                Book møte\n                                            \n                                                                                    ",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/vilkar-fordelsprogram/#book-uforpliktende-mote\" target=\"\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261116 / 998784468 / FETSUND BRYGGE FELLESORGAN
+
+https://www.bori.no/page-sitemap.xml
+
+```json
+{
+  "seed": 20261116,
+  "orgnr": "998784468",
+  "name": "FETSUND BRYGGE FELLESORGAN",
+  "page": "https://www.bori.no/page-sitemap.xml",
+  "page_sha256": "d4a2c38e3562390ccd737e6ffba1111f8ec3bc4a60f33dbb7e2be4314833da5e",
+  "links": [],
+  "sitemap": [
+    "https://www.bori.no/personvernerklaering/",
+    "https://www.bori.no/styret/juridisk-veiviser-for-styret/",
+    "https://www.bori.no/medlem/vilkar-fordelsprogram/",
+    "https://www.bori.no/medlem/fordeler/gode-lanebetingelser/"
+  ],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261116 / 919543604 / HIGHLAND LODGE AS
+
+https://highland.no/
+
+```json
+{
+  "seed": 20261116,
+  "orgnr": "919543604",
+  "name": "HIGHLAND LODGE AS",
+  "page": "https://highland.no/",
+  "page_sha256": "ad75da000e98401717ac2be78d77192dbcf9a961c6a2e3d9ffffa8d69b61d7ad",
+  "links": [
+    {
+      "url": "https://highland.no/personvernerklaering/",
+      "text": "Personvernerklæring",
+      "exact_anchor": "<a href=\"https://highland.no/personvernerklaering/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261116 / 919543604 / HIGHLAND LODGE AS
+
+https://highland.no/personvernerklaering/
+
+```json
+{
+  "seed": 20261116,
+  "orgnr": "919543604",
+  "name": "HIGHLAND LODGE AS",
+  "page": "https://highland.no/personvernerklaering/",
+  "page_sha256": "8d2398a84f64c973b8b27c76043291f3a826947fd3b91235b09430e68f6a15af",
+  "links": [
+    {
+      "url": "https://highland.no/personvernerklaering/#content",
+      "text": "Skip to content",
+      "exact_anchor": "<a class=\"skip-link screen-reader-text\" href=\"#content\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://highland.no/personvernerklaering/",
+      "text": "Book leilighet i Fjellandsbyen",
+      "exact_anchor": "<a  href=\"#\" class=\"awb-menu__main-a awb-menu__main-a_regular\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://highland.no/personvernerklaering/",
+      "text": "Restauranter på Geilo",
+      "exact_anchor": "<a  href=\"#\" class=\"awb-menu__sub-a\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://highland.no/personvernerklaering/",
+      "text": "Eventlokaler",
+      "exact_anchor": "<a  href=\"#\" class=\"awb-menu__main-a awb-menu__main-a_regular\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://highland.no/personvernerklaering/",
+      "text": "Personvernerklæring",
+      "exact_anchor": "<a href=\"https://highland.no/personvernerklaering/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://highland.no/personvernerklaering/",
+      "text": "Page load link",
+      "exact_anchor": "<a class=\"fusion-one-page-text-link fusion-page-load-link\" tabindex=\"-1\" href=\"#\" aria-hidden=\"true\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://highland.no/personvernerklaering/",
+      "text": "\n\t\t\t\t\t\tGo to Top\n\t\t\t\n\t\t\t\n\t\t\t\t\t",
+      "exact_anchor": "<a href=\"#\" id=\"toTop\" class=\"fusion-top-top-link\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261116 / 919543604 / HIGHLAND LODGE AS
+
+https://highland.no/page-sitemap.xml
+
+```json
+{
+  "seed": 20261116,
+  "orgnr": "919543604",
+  "name": "HIGHLAND LODGE AS",
+  "page": "https://highland.no/page-sitemap.xml",
+  "page_sha256": "41366a43f6644452fb0c0e210504daff90dfa24796d78b8f4fb7d249bef3377c",
+  "links": [],
+  "sitemap": [
+    "https://highland.no/personvernerklaering/",
+    "https://highland.no/privacy-policy/"
+  ],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261116 / 983803075 / MELTWATER NEWS AS
+
+https://www.meltwater.com/en
+
+```json
+{
+  "seed": 20261116,
+  "orgnr": "983803075",
+  "name": "MELTWATER NEWS AS",
+  "page": "https://www.meltwater.com/en",
+  "page_sha256": "9957b3262162aa342364d485539d989f462db16460dbd74f5ed138b3112771a8",
+  "links": [
+    {
+      "url": "https://www.meltwater.com/en/privacy",
+      "text": "Privacy",
+      "exact_anchor": "<a href=\"/en/privacy\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261116 / 983803075 / MELTWATER NEWS AS
+
+https://www.meltwater.com/en/about/contact-us
+
+```json
+{
+  "seed": 20261116,
+  "orgnr": "983803075",
+  "name": "MELTWATER NEWS AS",
+  "page": "https://www.meltwater.com/en/about/contact-us",
+  "page_sha256": "d76b27b49d1d7b4da1c95848ea0cb4acb5b92afd36be5b23404b1a62dd9f39c7",
+  "links": [
+    {
+      "url": "https://www.meltwater.com/en/privacy",
+      "text": "Privacy",
+      "exact_anchor": "<a href=\"/en/privacy\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261116 / 983803075 / MELTWATER NEWS AS
+
+https://www.meltwater.com/en/resources/own-brand-visibility-ai
+
+```json
+{
+  "seed": 20261116,
+  "orgnr": "983803075",
+  "name": "MELTWATER NEWS AS",
+  "page": "https://www.meltwater.com/en/resources/own-brand-visibility-ai",
+  "page_sha256": "f5d9eb1552d9e63f43a9c324d0f6df023dcd8a06e64f7b28207e315b87054284",
+  "links": [
+    {
+      "url": "https://www.meltwater.com/en/privacy",
+      "text": "Privacy",
+      "exact_anchor": "<a href=\"/en/privacy\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261116 / 983803075 / MELTWATER NEWS AS
+
+https://www.meltwater.com/en/privacy
+
+```json
+{
+  "seed": 20261116,
+  "orgnr": "983803075",
+  "name": "MELTWATER NEWS AS",
+  "page": "https://www.meltwater.com/en/privacy",
+  "page_sha256": "9461371c8d4f1061ea588a837b2fd247d3a017409087ebc409f66b9e277f6187",
+  "links": [
+    {
+      "url": "https://www.meltwater.com/en/privacy#main",
+      "text": "Skip to content",
+      "exact_anchor": "<a href=\"#main\" class=\"HeaderMainRebrand_skip__MNe6o\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.meltwater.com/en/privacy",
+      "text": "Privacy Policy",
+      "exact_anchor": "<a href=\"https://www.meltwater.com/en/privacy\" target=\"\" class=\"jsx-3557276124 custom-blog-link\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.meltwater.com/en/privacy/dpa",
+      "text": "DPA",
+      "exact_anchor": "<a href=\"https://www.meltwater.com/en/privacy/dpa\" target=\"\" class=\"jsx-3557276124 custom-blog-link\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.meltwater.com/en/privacy/subprocessors",
+      "text": "Subprocessors",
+      "exact_anchor": "<a href=\"https://www.meltwater.com/en/privacy/subprocessors\" target=\"\" class=\"jsx-3557276124 custom-blog-link\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.meltwater.com/en/privacy/dpa",
+      "text": "here",
+      "exact_anchor": "<a class=\"jsx-3638618991 custom-blog-link\" href=\"/en/privacy/dpa\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.meltwater.com/en/privacy/creators-influencers",
+      "text": "Privacy Notice for Influencers",
+      "exact_anchor": "<a class=\"jsx-3638618991 custom-blog-link\" href=\"/en/privacy/creators-influencers\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.meltwater.com/en/privacy/monitored-content",
+      "text": "here",
+      "exact_anchor": "<a class=\"jsx-3638618991 custom-blog-link\" href=\"/en/privacy/monitored-content\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.meltwater.com/en/privacy/consumerinsights-monitoredcontent",
+      "text": "here",
+      "exact_anchor": "<a class=\"jsx-3638618991 custom-blog-link\" href=\"/en/privacy/consumerinsights-monitoredcontent\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "mailto:privacy@meltwater.com",
+      "text": "privacy@meltwater.com",
+      "exact_anchor": "<a href=\"mailto:privacy@meltwater.com\" target=\"_blank\" class=\"jsx-3557276124 custom-blog-link\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "mailto:privacy@meltwater.com",
+      "text": "privacy@meltwater.com",
+      "exact_anchor": "<a href=\"mailto:privacy@meltwater.com\" target=\"_blank\" class=\"jsx-3557276124 custom-blog-link\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "mailto:privacy@meltwater.com",
+      "text": "privacy@meltwater.com",
+      "exact_anchor": "<a href=\"mailto:privacy@meltwater.com\" target=\"_blank\" class=\"jsx-3557276124 custom-blog-link\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "mailto:privacy@meltwater.com",
+      "text": "privacy@meltwater.com",
+      "exact_anchor": "<a href=\"mailto:privacy@meltwater.com\" target=\"_blank\" class=\"jsx-3557276124 custom-blog-link\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.meltwater.com/en/privacy/dpa-toms",
+      "text": "click here",
+      "exact_anchor": "<a class=\"jsx-3638618991 custom-blog-link\" href=\"/en/privacy/dpa-toms\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.meltwater.com/en/privacy/subprocessors",
+      "text": "https://www.meltwater.com/en/privacy/subprocessors",
+      "exact_anchor": "<a class=\"jsx-3638618991 custom-blog-link\" href=\"/en/privacy/subprocessors\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.meltwater.com/en/privacy",
+      "text": "Privacy",
+      "exact_anchor": "<a href=\"/en/privacy\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261116 / 985615691 / GIGAFIB HOLDING AS
+
+https://www.gigafib.no/
+
+```json
+{
+  "seed": 20261116,
+  "orgnr": "985615691",
+  "name": "GIGAFIB HOLDING AS",
+  "page": "https://www.gigafib.no/",
+  "page_sha256": "06ae675e3bd4ed93da6179c742a469c1f69ccb717a122fb1b03d19059af7a3de",
+  "links": [
+    {
+      "url": "https://www.gigafib.no/personvern-og-informasjonskapsler/",
+      "text": "Personvern og informasjonskapsler",
+      "exact_anchor": "<a class=\"privacy-policy-link\" href=\"https://www.gigafib.no/personvern-og-informasjonskapsler/\" rel=\"privacy-policy\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261116 / 985615691 / GIGAFIB HOLDING AS
+
+https://www.gigafib.no/kontakt-oss/
+
+```json
+{
+  "seed": 20261116,
+  "orgnr": "985615691",
+  "name": "GIGAFIB HOLDING AS",
+  "page": "https://www.gigafib.no/kontakt-oss/",
+  "page_sha256": "3d17e17f5e3b270e93e79e7b0a2b17d1c00cfd5e5309caaf99c7fde9a7d070bf",
+  "links": [
+    {
+      "url": "https://www.gigafib.no/personvern-og-informasjonskapsler/",
+      "text": "Personvern og informasjonskapsler",
+      "exact_anchor": "<a class=\"privacy-policy-link\" href=\"https://www.gigafib.no/personvern-og-informasjonskapsler/\" rel=\"privacy-policy\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261116 / 985615691 / GIGAFIB HOLDING AS
+
+https://www.gigafib.no/personvern-og-informasjonskapsler/
+
+```json
+{
+  "seed": 20261116,
+  "orgnr": "985615691",
+  "name": "GIGAFIB HOLDING AS",
+  "page": "https://www.gigafib.no/personvern-og-informasjonskapsler/",
+  "page_sha256": "3d38f4ab3f30af50290298a106840f538723ca7188f7d7f17f364619a0b0970a",
+  "links": [
+    {
+      "url": "https://www.gigafib.no/personvern-og-informasjonskapsler/#content",
+      "text": "Til innhold",
+      "exact_anchor": "<a class=\"skip-link screen-reader-text\" href=\"#content\" tabindex=\"1\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.gigafib.no/cookies/",
+      "text": "ytterligere informasjon om cookies",
+      "exact_anchor": "<a href=\"https://www.gigafib.no/cookies/\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.gigafib.no/personvern-og-informasjonskapsler/",
+      "text": "Personvern og informasjonskapsler",
+      "exact_anchor": "<a class=\"privacy-policy-link\" href=\"https://www.gigafib.no/personvern-og-informasjonskapsler/\" rel=\"privacy-policy\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261116 / 985615691 / GIGAFIB HOLDING AS
+
+https://www.gigafib.no/page-sitemap.xml
+
+```json
+{
+  "seed": 20261116,
+  "orgnr": "985615691",
+  "name": "GIGAFIB HOLDING AS",
+  "page": "https://www.gigafib.no/page-sitemap.xml",
+  "page_sha256": "98c70593b4d67d8aa06f5b706ee4d3e1614c3bd622caf476d9a6d5571d898143",
+  "links": [],
+  "sitemap": [
+    "https://www.gigafib.no/personvern-og-informasjonskapsler/",
+    "https://www.gigafib.no/cookies/"
+  ],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261116 / 930086533 / YUGEN AS
+
+https://www.yugen.no/
+
+```json
+{
+  "seed": 20261116,
+  "orgnr": "930086533",
+  "name": "YUGEN AS",
+  "page": "https://www.yugen.no/",
+  "page_sha256": "89b5c3b6c9ea904a54623c7193006a37506c33a3967aaeb9cf799d3d98cbb665",
+  "links": [
+    {
+      "url": "https://www.yugen.no/pages/salgsbetingelser-for-yugen-no",
+      "text": "Salgsbetingelser",
+      "exact_anchor": "<a href=\"/pages/salgsbetingelser-for-yugen-no\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://www.yugen.no/pages/personvernerklaering",
+      "text": "Personvern",
+      "exact_anchor": "<a href=\"/pages/personvernerklaering\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261116 / 926312537 / PROPR AS
+
+https://propr.no/vilk%C3%A5r/personvern
+
+```json
+{
+  "seed": 20261116,
+  "orgnr": "926312537",
+  "name": "PROPR AS",
+  "page": "https://propr.no/vilk%C3%A5r/personvern",
+  "page_sha256": "cb1c840d39c36fd89afd66c835b9679dec18233f15994cfb9b100aa651880b9b",
+  "links": [
+    {
+      "url": "https://propr.no/vilk%C3%A5r/personvern",
+      "text": "Personvern og cookies",
+      "exact_anchor": "<a class=\"text-blue-900 hover:underline hover:decoration-blue-900/50 md:text-xl\" href=\"/vilk%C3%A5r/personvern\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://propr.no/vilk%C3%A5r",
+      "text": "Vilkår",
+      "exact_anchor": "<a class=\"text-blue-900 hover:underline hover:decoration-blue-900/50 md:text-xl\" href=\"/vilk%C3%A5r\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261116 / 926312537 / PROPR AS
+
+https://propr.no/vilk%C3%A5r
+
+```json
+{
+  "seed": 20261116,
+  "orgnr": "926312537",
+  "name": "PROPR AS",
+  "page": "https://propr.no/vilk%C3%A5r",
+  "page_sha256": "ffa03b488fa8829e3a75d6292cca5cbd4820f253bab513ee5e858d7baed24fa5",
+  "links": [
+    {
+      "url": "https://propr.no/vilk%C3%A5r/tryg",
+      "text": "Betingelser for kjøp av Innboforsikring på Propr",
+      "exact_anchor": "<a class=\"block border-t border-gray-200 py-3 text-blue-900 underline decoration-blue-900/0 hover:underline hover:decoration-blue-900/50 sm:text-xl\" href=\"/vilk%C3%A5r/tryg\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://propr.no/vilk%C3%A5r/bruk",
+      "text": "Avtale om bruk av selvhjelpsverktøy for salg av egen bolig",
+      "exact_anchor": "<a class=\"block border-t border-gray-200 py-3 text-blue-900 underline decoration-blue-900/0 hover:underline hover:decoration-blue-900/50 sm:text-xl\" href=\"/vilk%C3%A5r/bruk\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://propr.no/vilk%C3%A5r/personvern",
+      "text": "Personvernerklæring",
+      "exact_anchor": "<a class=\"block border-t border-gray-200 py-3 text-blue-900 underline decoration-blue-900/0 hover:underline hover:decoration-blue-900/50 sm:text-xl\" href=\"/vilk%C3%A5r/personvern\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://propr.no/vilk%C3%A5r/oppgjor",
+      "text": "Oppdragsavtale, oppgjør",
+      "exact_anchor": "<a class=\"block border-t border-gray-200 py-3 text-blue-900 underline decoration-blue-900/0 hover:underline hover:decoration-blue-900/50 sm:text-xl\" href=\"/vilk%C3%A5r/oppgjor\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://propr.no/vilk%C3%A5r/personvern",
+      "text": "Personvern og cookies",
+      "exact_anchor": "<a class=\"text-blue-900 hover:underline hover:decoration-blue-900/50 md:text-xl\" href=\"/vilk%C3%A5r/personvern\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://propr.no/vilk%C3%A5r",
+      "text": "Vilkår",
+      "exact_anchor": "<a class=\"text-blue-900 hover:underline hover:decoration-blue-900/50 md:text-xl\" href=\"/vilk%C3%A5r\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261116 / 926312537 / PROPR AS
+
+https://propr.no/sitemap.xml
+
+```json
+{
+  "seed": 20261116,
+  "orgnr": "926312537",
+  "name": "PROPR AS",
+  "page": "https://propr.no/sitemap.xml",
+  "page_sha256": "2a0232e81b4b64b532eaafe824b143611a38e909e3e7d943a4f015f6f873e9cf",
+  "links": [],
+  "sitemap": [
+    "https://propr.no/vilkar",
+    "https://propr.no/personvern",
+    "https://propr.no/vilkår",
+    "https://propr.no/vilkår/bruk",
+    "https://propr.no/vilkår/oppgjør",
+    "https://propr.no/vilkår/personvern",
+    "https://propr.no/vilkår/tryg"
+  ],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261116 / 926312537 / PROPR AS
+
+https://propr.no/personvern
+
+```json
+{
+  "seed": 20261116,
+  "orgnr": "926312537",
+  "name": "PROPR AS",
+  "page": "https://propr.no/personvern",
+  "page_sha256": "7d08e59cd2d65885d5a469d32d5d20cbec691860cb7248f96daa06630aa8cacc",
+  "links": [
+    {
+      "url": "https://propr.no/vilk%C3%A5r/personvern",
+      "text": "Personvern og cookies",
+      "exact_anchor": "<a class=\"text-blue-900 hover:underline hover:decoration-blue-900/50 md:text-xl\" href=\"/vilk%C3%A5r/personvern\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://propr.no/vilk%C3%A5r",
+      "text": "Vilkår",
+      "exact_anchor": "<a class=\"text-blue-900 hover:underline hover:decoration-blue-900/50 md:text-xl\" href=\"/vilk%C3%A5r\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261117 / 920440045 / LAMELLA AS
+
+https://lamella.no/
+
+```json
+{
+  "seed": 20261117,
+  "orgnr": "920440045",
+  "name": "LAMELLA AS",
+  "page": "https://lamella.no/",
+  "page_sha256": "d57dc92cc9565323a071749e6527ada53c8046db616ca7b2c61f2da802184a04",
+  "links": [
+    {
+      "url": "https://lamella.no/personvern-og-cookies/",
+      "text": "PERSONVERN OG COOKIES",
+      "exact_anchor": "<a href=\"https://lamella.no/personvern-og-cookies/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261117 / 920440045 / LAMELLA AS
+
+https://lamella.no/kontakt/
+
+```json
+{
+  "seed": 20261117,
+  "orgnr": "920440045",
+  "name": "LAMELLA AS",
+  "page": "https://lamella.no/kontakt/",
+  "page_sha256": "3afc3ed7c913f39403328ca9d6004ecfd5a2287c4ecbf93ca263b111508ff72d",
+  "links": [
+    {
+      "url": "https://lamella.no/personvern-og-cookies/",
+      "text": "PERSONVERN OG COOKIES",
+      "exact_anchor": "<a href=\"https://lamella.no/personvern-og-cookies/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261117 / 920440045 / LAMELLA AS
+
+https://lamella.no/om-oss/
+
+```json
+{
+  "seed": 20261117,
+  "orgnr": "920440045",
+  "name": "LAMELLA AS",
+  "page": "https://lamella.no/om-oss/",
+  "page_sha256": "1f7be203d5ea6a0fb40e2585de52ac07a4b5cc55776bd735287edbe9df441a24",
+  "links": [
+    {
+      "url": "https://lamella.no/personvern-og-cookies/",
+      "text": "PERSONVERN OG COOKIES",
+      "exact_anchor": "<a href=\"https://lamella.no/personvern-og-cookies/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261117 / 920440045 / LAMELLA AS
+
+https://lamella.no/personvern-og-cookies/
+
+```json
+{
+  "seed": 20261117,
+  "orgnr": "920440045",
+  "name": "LAMELLA AS",
+  "page": "https://lamella.no/personvern-og-cookies/",
+  "page_sha256": "353ce020f62ce9c3b76f85def36468976c782ae214922eb17c55ca5136b014b8",
+  "links": [
+    {
+      "url": "https://lamella.no/personvern-og-cookies/",
+      "text": "PERSONVERN OG COOKIES",
+      "exact_anchor": "<a href=\"https://lamella.no/personvern-og-cookies/\" aria-current=\"page\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://lamella.no/personvern-og-cookies/",
+      "text": "Cookie innstillinger",
+      "exact_anchor": "<a role=\"button\" tabindex=\"0\" class=\"cli_settings_button\" style=\"margin:0px 10px 0px 5px\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://lamella.no/personvern-og-cookies/",
+      "text": "DET ER GREIT",
+      "exact_anchor": "<a role=\"button\" tabindex=\"0\" data-cli_action=\"accept\" id=\"cookie_action_close_header\" class=\"medium cli-plugin-button cli-plugin-main-button cookie_action_close_header cli_action_button wt-cli-accept-btn\" style=\"display:inline-block\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://lamella.no/personvern-og-cookies/",
+      "text": "",
+      "exact_anchor": "<a class=\"cli-privacy-readmore\" aria-label=\"Vis mer\" tabindex=\"0\" role=\"button\" data-readmore-text=\"Vis mer\" data-readless-text=\"Vis mindre\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://lamella.no/personvern-og-cookies/",
+      "text": "\n\t\t\t\t\t\t\t\tNecessary\t\t\t\t\t\t\t",
+      "exact_anchor": "<a role=\"button\" tabindex=\"0\" class=\"cli-nav-link cli-settings-mobile\" data-target=\"necessary\" data-toggle=\"cli-toggle-tab\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://lamella.no/personvern-og-cookies/",
+      "text": "\n\t\t\t\t\t\t\t\tFunctional\t\t\t\t\t\t\t",
+      "exact_anchor": "<a role=\"button\" tabindex=\"0\" class=\"cli-nav-link cli-settings-mobile\" data-target=\"functional\" data-toggle=\"cli-toggle-tab\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://lamella.no/personvern-og-cookies/",
+      "text": "\n\t\t\t\t\t\t\t\tPerformance\t\t\t\t\t\t\t",
+      "exact_anchor": "<a role=\"button\" tabindex=\"0\" class=\"cli-nav-link cli-settings-mobile\" data-target=\"performance\" data-toggle=\"cli-toggle-tab\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://lamella.no/personvern-og-cookies/",
+      "text": "\n\t\t\t\t\t\t\t\tAnalytics\t\t\t\t\t\t\t",
+      "exact_anchor": "<a role=\"button\" tabindex=\"0\" class=\"cli-nav-link cli-settings-mobile\" data-target=\"analytics\" data-toggle=\"cli-toggle-tab\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://lamella.no/personvern-og-cookies/",
+      "text": "\n\t\t\t\t\t\t\t\tAdvertisement\t\t\t\t\t\t\t",
+      "exact_anchor": "<a role=\"button\" tabindex=\"0\" class=\"cli-nav-link cli-settings-mobile\" data-target=\"advertisement\" data-toggle=\"cli-toggle-tab\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://lamella.no/personvern-og-cookies/",
+      "text": "\n\t\t\t\t\t\t\t\tOthers\t\t\t\t\t\t\t",
+      "exact_anchor": "<a role=\"button\" tabindex=\"0\" class=\"cli-nav-link cli-settings-mobile\" data-target=\"others\" data-toggle=\"cli-toggle-tab\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://lamella.no/personvern-og-cookies/",
+      "text": "LAGRE OG GODKJENN",
+      "exact_anchor": "<a id=\"wt-cli-privacy-save-btn\" role=\"button\" tabindex=\"0\" data-cli-action=\"accept\" class=\"wt-cli-privacy-btn cli_setting_save_button wt-cli-privacy-accept-btn cli-btn\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261117 / 920440045 / LAMELLA AS
+
+https://lamella.no/wp-sitemap-posts-page-1.xml
+
+```json
+{
+  "seed": 20261117,
+  "orgnr": "920440045",
+  "name": "LAMELLA AS",
+  "page": "https://lamella.no/wp-sitemap-posts-page-1.xml",
+  "page_sha256": "6d000071ac5ed6749df922eae4d34f0d20eedd47082b3598c0cafad7e9f3c1b0",
+  "links": [],
+  "sitemap": [
+    "https://lamella.no/personvern-og-cookies/"
+  ],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261117 / 928155501 / ARTIST AS
+
+https://artist.com/
+
+```json
+{
+  "seed": 20261117,
+  "orgnr": "928155501",
+  "name": "ARTIST AS",
+  "page": "https://artist.com/",
+  "page_sha256": "a1d42adb5f29e71cd388669e34c2d4e0630653a8e13761e8cec710e7ffa6058b",
+  "links": [
+    {
+      "url": "https://artist.com/privacy/",
+      "text": "Privacy Policy",
+      "exact_anchor": "<a title=\"Privacy Policy\" href=\"/privacy/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://artist.com/terms/",
+      "text": "Terms & Conditions ",
+      "exact_anchor": "<a title=\"Terms & Conditions\" href=\"/terms/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261117 / 928155501 / ARTIST AS
+
+https://artist.com/about/
+
+```json
+{
+  "seed": 20261117,
+  "orgnr": "928155501",
+  "name": "ARTIST AS",
+  "page": "https://artist.com/about/",
+  "page_sha256": "c8ff05dfb75e9023e264c7de9748a152b7bd313596eb005f19fb104608dbfba1",
+  "links": [
+    {
+      "url": "https://artist.com/privacy/",
+      "text": "Privacy Policy",
+      "exact_anchor": "<a title=\"Privacy Policy\" href=\"/privacy/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://artist.com/terms/",
+      "text": "Terms & Conditions ",
+      "exact_anchor": "<a title=\"Terms & Conditions\" href=\"/terms/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261117 / 928155501 / ARTIST AS
+
+https://artist.com/privacy/
+
+```json
+{
+  "seed": 20261117,
+  "orgnr": "928155501",
+  "name": "ARTIST AS",
+  "page": "https://artist.com/privacy/",
+  "page_sha256": "2e095500707dbdc4a83ee13931d86255b07af47b6b07d593d34430a5b7a2d3f2",
+  "links": [
+    {
+      "url": "https://artist.com/privacy/",
+      "text": "Privacy Policy",
+      "exact_anchor": "<a title=\"Privacy Policy\" href=\"/privacy/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://artist.com/privacy/",
+      "text": "Legal Disclaimer",
+      "exact_anchor": "<a title=\"Legal Disclaimer\" href=\"#\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://artist.com/terms/",
+      "text": "Terms & Conditions ",
+      "exact_anchor": "<a title=\"Terms & Conditions\" href=\"/terms/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261117 / 933709329 / RINO HANSEN AS
+
+https://rinohansen.no/
+
+```json
+{
+  "seed": 20261117,
+  "orgnr": "933709329",
+  "name": "RINO HANSEN AS",
+  "page": "https://rinohansen.no/",
+  "page_sha256": "dd2cb6c1006eb24ed4b48524a9186dcb4ee93bd443dc16fcb824283272f5fe39",
+  "links": [
+    {
+      "url": "https://rinohansen.no/personvern/",
+      "text": "Personvern",
+      "exact_anchor": "<a rel=\"privacy-policy\" href=\"https://rinohansen.no/personvern/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://rinohansen.no/vilkar-og-betingelser/",
+      "text": "Vilkår og Betingelser",
+      "exact_anchor": "<a href=\"https://rinohansen.no/vilkar-og-betingelser/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261117 / 933709329 / RINO HANSEN AS
+
+https://rinohansen.no/personvern/
+
+```json
+{
+  "seed": 20261117,
+  "orgnr": "933709329",
+  "name": "RINO HANSEN AS",
+  "page": "https://rinohansen.no/personvern/",
+  "page_sha256": "6cfc73af23ab5f157d6e4e293864b8e34764e5520aadc8f2935edbab26832617",
+  "links": [
+    {
+      "url": "https://rinohansen.no/personvern/#qodef-page-content",
+      "text": "Skip to the content",
+      "exact_anchor": "<a class=\"skip-link screen-reader-text\" href=\"#qodef-page-content\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/personvern/",
+      "text": "\n\t\t\t\t\t\t\t\t          \t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t          \t\tDame",
+      "exact_anchor": "<a href=\"#\" class=\"back-btn\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/personvern/",
+      "text": "Hurtiglenker",
+      "exact_anchor": "<a class=\"category-main\" href=\"\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/personvern/",
+      "text": "Klær",
+      "exact_anchor": "<a class=\"category-main\" href=\"#\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/personvern/",
+      "text": "Tilbehør",
+      "exact_anchor": "<a class=\"category-main\" href=\"\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/personvern/",
+      "text": "\n\t\t\t\t\t\t\t\t          \t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t          \t\tHerre",
+      "exact_anchor": "<a href=\"#\" class=\"back-btn\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/personvern/",
+      "text": "Hurtiglenker",
+      "exact_anchor": "<a class=\"category-main\" href=\"#\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/personvern/",
+      "text": "Klær",
+      "exact_anchor": "<a class=\"category-main\" href=\"#\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/personvern/",
+      "text": "Tilbehør",
+      "exact_anchor": "<a class=\"category-main\" href=\"#\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/personvern/",
+      "text": "\n                                        \n                                        Bli Medlem\n                                    ",
+      "exact_anchor": "<a href=\"#\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/personvern/",
+      "text": "\n                                        \n                                        Personlig serivce\n                                    ",
+      "exact_anchor": "<a href=\"#\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/personvern/",
+      "text": "\n                                        \n                                        Sporing\n                                    ",
+      "exact_anchor": "<a href=\"#\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/personvern/",
+      "text": "\n                                        \n                                        Rask levering\n                                    ",
+      "exact_anchor": "<a href=\"#\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/personvern/",
+      "text": "\n                                        \n                                        Fredrikstad | Norway\n                                    ",
+      "exact_anchor": "<a href=\"#\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/personvern/",
+      "text": "Hurtiglenker",
+      "exact_anchor": "<a class=\"mega-menu-link\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/personvern/",
+      "text": "Klær",
+      "exact_anchor": "<a class=\"mega-menu-link\" href=\"#\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/personvern/",
+      "text": "Tilbehør",
+      "exact_anchor": "<a class=\"mega-menu-link\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/personvern/",
+      "text": "Hurtiglenker",
+      "exact_anchor": "<a class=\"mega-menu-link\" href=\"#\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/personvern/",
+      "text": "Klær",
+      "exact_anchor": "<a class=\"mega-menu-link\" href=\"#\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/personvern/",
+      "text": "Tibehør",
+      "exact_anchor": "<a class=\"mega-menu-link\" href=\"#\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/personvern/",
+      "text": "Merker",
+      "exact_anchor": "<a class=\"mega-menu-link\" href=\"#\" aria-expanded=\"false\" tabindex=\"0\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/personvern/",
+      "text": "\n\t\t\n\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\n\t\t\n\t",
+      "exact_anchor": "<a class=\"header-icon search-opener\" href=\"#\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/personvern/",
+      "text": "X",
+      "exact_anchor": "<a class=\"search-opener\" href=\"#\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/personvern/#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjU2NDYxIiwidG9nZ2xlIjpmYWxzZX0%3D",
+      "text": "\n    \n        \n            \n            \n        \n    \n",
+      "exact_anchor": "<a class=\"header-icon\" href=\"#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjU2NDYxIiwidG9nZ2xlIjpmYWxzZX0%3D\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/personvern/#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjU2NDYxIiwidG9nZ2xlIjpmYWxzZX0%3D",
+      "text": "\n    \n",
+      "exact_anchor": "<a class=\"header-icon\" href=\"#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjU2NDYxIiwidG9nZ2xlIjpmYWxzZX0%3D\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/personvern/",
+      "text": "",
+      "exact_anchor": "<a class=\"mini-cart-opener\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/personvern/",
+      "text": "Personvern",
+      "exact_anchor": "<a rel=\"privacy-policy\" href=\"https://rinohansen.no/personvern/\" aria-current=\"page\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/vilkar-og-betingelser/",
+      "text": "Vilkår og Betingelser",
+      "exact_anchor": "<a href=\"https://rinohansen.no/vilkar-og-betingelser/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/personvern/",
+      "text": "\n\t\n\t\t\r\n\r\n\t\n",
+      "exact_anchor": "<a id=\"qodef-back-to-top\" href=\"#\" >",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/personvern/",
+      "text": "X",
+      "exact_anchor": "<a class=\"mini-cart-closer\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/personvern/",
+      "text": "\r\n                \r\n                    \r\n                \r\n            ",
+      "exact_anchor": "<a href=\"#\" class=\"filter-close\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/personvern/",
+      "text": "\n\tLogg inn med\n\t\t\n\t\t\n\t\t\t\t\t\t\t\t\n\t\n",
+      "exact_anchor": "<a class=\"qodef-shortcode qodef-m vipps-icon qodef-qi-button qodef-html--link qodef-layout--filled qodef-type--icon-boxed qodef-icon--right\" href=\"\" target=\"_self\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/personvern/#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjU5NzQ0IiwidG9nZ2xlIjpmYWxzZX0%3D",
+      "text": "\n\tLogg inn med e-post\n\t\t\n\t\t\n\t\t\t\t\t\t\t\t\n\t\n",
+      "exact_anchor": "<a class=\"qodef-shortcode qodef-m btn_login qodef-qi-button qodef-html--link qodef-layout--filled qodef-type--icon-boxed qodef-icon--right\" href=\"#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjU5NzQ0IiwidG9nZ2xlIjpmYWxzZX0%3D\" target=\"_self\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/personvern/#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjYwNTI5IiwidG9nZ2xlIjpmYWxzZX0%3D",
+      "text": "\n\tGlemt passord?\n\t",
+      "exact_anchor": "ef-underline--left\" href=\"#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjYwNTI5IiwidG9nZ2xlIjpmYWxzZX0%3D\" target=\"_self\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/personvern/#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjU2NDYxIiwidG9nZ2xlIjpmYWxzZX0%3D",
+      "text": "\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\tTilbake\n\t\t\t\t\t\n\t\t\t\t\t",
+      "exact_anchor": "<a class=\"elementor-button elementor-button-link elementor-size-xs\" href=\"#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjU2NDYxIiwidG9nZ2xlIjpmYWxzZX0%3D\" id=\"btn_back\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261117 / 933709329 / RINO HANSEN AS
+
+https://rinohansen.no/vilkar-og-betingelser/
+
+```json
+{
+  "seed": 20261117,
+  "orgnr": "933709329",
+  "name": "RINO HANSEN AS",
+  "page": "https://rinohansen.no/vilkar-og-betingelser/",
+  "page_sha256": "7f09ae5b60661342ce2a5368ea64add9626f7104445648e501313335f2c1abc6",
+  "links": [
+    {
+      "url": "https://rinohansen.no/vilkar-og-betingelser/#qodef-page-content",
+      "text": "Skip to the content",
+      "exact_anchor": "<a class=\"skip-link screen-reader-text\" href=\"#qodef-page-content\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/vilkar-og-betingelser/",
+      "text": "\n\t\t\t\t\t\t\t\t          \t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t          \t\tDame",
+      "exact_anchor": "<a href=\"#\" class=\"back-btn\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/vilkar-og-betingelser/",
+      "text": "Hurtiglenker",
+      "exact_anchor": "<a class=\"category-main\" href=\"\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/vilkar-og-betingelser/",
+      "text": "Klær",
+      "exact_anchor": "<a class=\"category-main\" href=\"#\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/vilkar-og-betingelser/",
+      "text": "Tilbehør",
+      "exact_anchor": "<a class=\"category-main\" href=\"\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/vilkar-og-betingelser/",
+      "text": "\n\t\t\t\t\t\t\t\t          \t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t          \t\tHerre",
+      "exact_anchor": "<a href=\"#\" class=\"back-btn\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/vilkar-og-betingelser/",
+      "text": "Hurtiglenker",
+      "exact_anchor": "<a class=\"category-main\" href=\"#\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/vilkar-og-betingelser/",
+      "text": "Klær",
+      "exact_anchor": "<a class=\"category-main\" href=\"#\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/vilkar-og-betingelser/",
+      "text": "Tilbehør",
+      "exact_anchor": "<a class=\"category-main\" href=\"#\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/vilkar-og-betingelser/",
+      "text": "\n                                        \n                                        Bli Medlem\n                                    ",
+      "exact_anchor": "<a href=\"#\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/vilkar-og-betingelser/",
+      "text": "\n                                        \n                                        Personlig serivce\n                                    ",
+      "exact_anchor": "<a href=\"#\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/vilkar-og-betingelser/",
+      "text": "\n                                        \n                                        Sporing\n                                    ",
+      "exact_anchor": "<a href=\"#\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/vilkar-og-betingelser/",
+      "text": "\n                                        \n                                        Rask levering\n                                    ",
+      "exact_anchor": "<a href=\"#\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/vilkar-og-betingelser/",
+      "text": "\n                                        \n                                        Fredrikstad | Norway\n                                    ",
+      "exact_anchor": "<a href=\"#\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/vilkar-og-betingelser/",
+      "text": "Hurtiglenker",
+      "exact_anchor": "<a class=\"mega-menu-link\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/vilkar-og-betingelser/",
+      "text": "Klær",
+      "exact_anchor": "<a class=\"mega-menu-link\" href=\"#\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/vilkar-og-betingelser/",
+      "text": "Tilbehør",
+      "exact_anchor": "<a class=\"mega-menu-link\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/vilkar-og-betingelser/",
+      "text": "Hurtiglenker",
+      "exact_anchor": "<a class=\"mega-menu-link\" href=\"#\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/vilkar-og-betingelser/",
+      "text": "Klær",
+      "exact_anchor": "<a class=\"mega-menu-link\" href=\"#\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/vilkar-og-betingelser/",
+      "text": "Tibehør",
+      "exact_anchor": "<a class=\"mega-menu-link\" href=\"#\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/vilkar-og-betingelser/",
+      "text": "Merker",
+      "exact_anchor": "<a class=\"mega-menu-link\" href=\"#\" aria-expanded=\"false\" tabindex=\"0\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/vilkar-og-betingelser/",
+      "text": "\n\t\t\n\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\n\t\t\n\t",
+      "exact_anchor": "<a class=\"header-icon search-opener\" href=\"#\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/vilkar-og-betingelser/",
+      "text": "X",
+      "exact_anchor": "<a class=\"search-opener\" href=\"#\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/vilkar-og-betingelser/#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjU2NDYxIiwidG9nZ2xlIjpmYWxzZX0%3D",
+      "text": "\n    \n        \n            \n            \n        \n    \n",
+      "exact_anchor": "<a class=\"header-icon\" href=\"#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjU2NDYxIiwidG9nZ2xlIjpmYWxzZX0%3D\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/vilkar-og-betingelser/#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjU2NDYxIiwidG9nZ2xlIjpmYWxzZX0%3D",
+      "text": "\n    \n",
+      "exact_anchor": "<a class=\"header-icon\" href=\"#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjU2NDYxIiwidG9nZ2xlIjpmYWxzZX0%3D\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/vilkar-og-betingelser/",
+      "text": "",
+      "exact_anchor": "<a class=\"mini-cart-opener\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/personvern/",
+      "text": "Personvern",
+      "exact_anchor": "<a rel=\"privacy-policy\" href=\"https://rinohansen.no/personvern/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/vilkar-og-betingelser/",
+      "text": "Vilkår og Betingelser",
+      "exact_anchor": "<a href=\"https://rinohansen.no/vilkar-og-betingelser/\" aria-current=\"page\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/vilkar-og-betingelser/",
+      "text": "\n\t\n\t\t\r\n\r\n\t\n",
+      "exact_anchor": "<a id=\"qodef-back-to-top\" href=\"#\" >",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/vilkar-og-betingelser/",
+      "text": "X",
+      "exact_anchor": "<a class=\"mini-cart-closer\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/vilkar-og-betingelser/",
+      "text": "\r\n                \r\n                    \r\n                \r\n            ",
+      "exact_anchor": "<a href=\"#\" class=\"filter-close\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/vilkar-og-betingelser/",
+      "text": "\n\tLogg inn med\n\t\t\n\t\t\n\t\t\t\t\t\t\t\t\n\t\n",
+      "exact_anchor": "<a class=\"qodef-shortcode qodef-m vipps-icon qodef-qi-button qodef-html--link qodef-layout--filled qodef-type--icon-boxed qodef-icon--right\" href=\"\" target=\"_self\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/vilkar-og-betingelser/#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjU5NzQ0IiwidG9nZ2xlIjpmYWxzZX0%3D",
+      "text": "\n\tLogg inn med e-post\n\t\t\n\t\t\n\t\t\t\t\t\t\t\t\n\t\n",
+      "exact_anchor": "<a class=\"qodef-shortcode qodef-m btn_login qodef-qi-button qodef-html--link qodef-layout--filled qodef-type--icon-boxed qodef-icon--right\" href=\"#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjU5NzQ0IiwidG9nZ2xlIjpmYWxzZX0%3D\" target=\"_self\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/vilkar-og-betingelser/#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjYwNTI5IiwidG9nZ2xlIjpmYWxzZX0%3D",
+      "text": "\n\tGlemt passord?\n\t",
+      "exact_anchor": "ef-underline--left\" href=\"#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjYwNTI5IiwidG9nZ2xlIjpmYWxzZX0%3D\" target=\"_self\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://rinohansen.no/vilkar-og-betingelser/#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjU2NDYxIiwidG9nZ2xlIjpmYWxzZX0%3D",
+      "text": "\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\tTilbake\n\t\t\t\t\t\n\t\t\t\t\t",
+      "exact_anchor": "<a class=\"elementor-button elementor-button-link elementor-size-xs\" href=\"#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjU2NDYxIiwidG9nZ2xlIjpmYWxzZX0%3D\" id=\"btn_back\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261117 / 934394747 / JAVI-GROUP AS
+
+https://www.javi-group.com/
+
+```json
+{
+  "seed": 20261117,
+  "orgnr": "934394747",
+  "name": "JAVI-GROUP AS",
+  "page": "https://www.javi-group.com/",
+  "page_sha256": "b1ed6c5c909fd7ac394575a03aa626e475580b75c7a73f53839353dc418b1497",
+  "links": [
+    {
+      "url": "https://www.javi-group.com/",
+      "text": "Privacy Policy",
+      "exact_anchor": "<a class=\"gb-button gb-button-acc1ae52 gb-button-text\" href=\"#\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://www.javi-group.com/",
+      "text": "Terms of Service",
+      "exact_anchor": "<a class=\"gb-button gb-button-1d0279eb gb-button-text\" href=\"#\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261117 / 952473786 / BORETTSLAGET NORDAHL BRUNSGT 4
+
+https://nbbo.no/
+
+```json
+{
+  "seed": 20261117,
+  "orgnr": "952473786",
+  "name": "BORETTSLAGET NORDAHL BRUNSGT 4",
+  "page": "https://nbbo.no/",
+  "page_sha256": "ccc57e62f25105cbbac34276684be8adb8c06b5519dfe8f05d0166699668dc3b",
+  "links": [
+    {
+      "url": "https://nbbo.no/cookies/",
+      "text": "Bruk av cookies",
+      "exact_anchor": "<a href=\"https://nbbo.no/cookies/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://nbbo.no/personvernerklaering/",
+      "text": "Personvernerklæring",
+      "exact_anchor": "<a href=\"https://nbbo.no/personvernerklaering/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261117 / 992568356 / SURVITEC FIRE SOLUTIONS NORWAY AS
+
+https://survitecgroup.com/
+
+```json
+{
+  "seed": 20261117,
+  "orgnr": "992568356",
+  "name": "SURVITEC FIRE SOLUTIONS NORWAY AS",
+  "page": "https://survitecgroup.com/",
+  "page_sha256": "7ececac81d55b84d377c3a7e513ab52a1d5e073b87a92912aad54420e1eb0112",
+  "links": [
+    {
+      "url": "https://survitecgroup.com/corporate/terms-conditions/",
+      "text": "Terms & Conditions",
+      "exact_anchor": "<a href=\"/corporate/terms-conditions/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://survitecgroup.com/corporate/privacy-policy/",
+      "text": "Privacy Policy",
+      "exact_anchor": "<a href=\"/corporate/privacy-policy/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261117 / 948866994 / C ANDERSENSGATE BORETTSLAG
+
+https://www.usbl.no/
+
+```json
+{
+  "seed": 20261117,
+  "orgnr": "948866994",
+  "name": "C ANDERSENSGATE BORETTSLAG",
+  "page": "https://www.usbl.no/",
+  "page_sha256": "1520fa83ae6f9a4cf212f1799b28f0ccef7ef00af71b3f1c6803feb85941e269",
+  "links": [
+    {
+      "url": "https://www.usbl.no/om-oss/personvern",
+      "text": "Personvern",
+      "exact_anchor": "<a class=\"link link--animation-shrink link--color-yellow link--font-theme-regular\" href=\"/om-oss/personvern\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261117 / 934608143 / NORWAY MARINE SUPPLY AS
+
+https://www.maritim.no/
+
+```json
+{
+  "seed": 20261117,
+  "orgnr": "934608143",
+  "name": "NORWAY MARINE SUPPLY AS",
+  "page": "https://www.maritim.no/",
+  "page_sha256": "2060466dcbecc8d9bd70c6a09de8bd634439902e2db0c3a2247595be9c849673",
+  "links": [
+    {
+      "url": "https://www.maritim.no/kjopsbetingelser",
+      "text": "Betingelser",
+      "exact_anchor": "<a href=\"https://www.maritim.no/kjopsbetingelser\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://www.maritim.no/personvern-gdpr",
+      "text": "Personvern / GDPR",
+      "exact_anchor": "<a href=\"https://www.maritim.no/personvern-gdpr\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261117 / 934608143 / NORWAY MARINE SUPPLY AS
+
+https://www.maritim.no/nettbutikk-kontakt
+
+```json
+{
+  "seed": 20261117,
+  "orgnr": "934608143",
+  "name": "NORWAY MARINE SUPPLY AS",
+  "page": "https://www.maritim.no/nettbutikk-kontakt",
+  "page_sha256": "b3d377c72d492c7623346249d027404410f3ba6909234131418c1c02827bcc9e",
+  "links": [
+    {
+      "url": "https://www.maritim.no/kjopsbetingelser",
+      "text": "Betingelser",
+      "exact_anchor": "<a href=\"https://www.maritim.no/kjopsbetingelser\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://www.maritim.no/personvern-gdpr",
+      "text": "Personvern / GDPR",
+      "exact_anchor": "<a href=\"https://www.maritim.no/personvern-gdpr\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261117 / 918317848 / DINGO AS
+
+https://www.dingo.com/
+
+```json
+{
+  "seed": 20261117,
+  "orgnr": "918317848",
+  "name": "DINGO AS",
+  "page": "https://www.dingo.com/",
+  "page_sha256": "ed8cfc072b7bea23a82e6d4e85eb4be56ca07578fe42d5da38b1b46b0a32caed",
+  "links": [
+    {
+      "url": "https://dingo.com/company/privacy-policy/",
+      "text": "Privacy Policy",
+      "exact_anchor": "<a href=\"https://dingo.com/company/privacy-policy/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261117 / 918317848 / DINGO AS
+
+https://www.dingo.com/contact/
+
+```json
+{
+  "seed": 20261117,
+  "orgnr": "918317848",
+  "name": "DINGO AS",
+  "page": "https://www.dingo.com/contact/",
+  "page_sha256": "df9682340eee42cbdab271398fccf3c3771a1a4e7d544df0cb54ab96557e8ba1",
+  "links": [
+    {
+      "url": "https://dingo.com/company/privacy-policy/",
+      "text": "Privacy Policy",
+      "exact_anchor": "<a href=\"https://dingo.com/company/privacy-policy/\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261117 / 926432826 / TELELYS AS
+
+https://telelys.com/
+
+```json
+{
+  "seed": 20261117,
+  "orgnr": "926432826",
+  "name": "TELELYS AS",
+  "page": "https://telelys.com/",
+  "page_sha256": "918fa2715029a5e7efbd296f2832b43194862f6379c5d86c529bc0b54ab41d47",
+  "links": [
+    {
+      "url": "https://telelys.com/vilkar",
+      "text": "Terms of sale",
+      "exact_anchor": "<a href=\"https://telelys.com/vilkar\" class=\"text-zinc-500 hover:text-zinc-200 transition-colors\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://telelys.com/personvern",
+      "text": "Privacy policy",
+      "exact_anchor": "<a href=\"https://telelys.com/personvern\" class=\"text-zinc-500 hover:text-zinc-200 transition-colors\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261117 / 934608143 / NORWAY MARINE SUPPLY AS
+
+https://www.maritim.no/personvern-gdpr
+
+```json
+{
+  "seed": 20261117,
+  "orgnr": "934608143",
+  "name": "NORWAY MARINE SUPPLY AS",
+  "page": "https://www.maritim.no/personvern-gdpr",
+  "page_sha256": "e574d87a6034236528a42882d09d4e80cf5e372011dead40abb929f9cfa14d7f",
+  "links": [
+    {
+      "url": "https://www.maritim.no/personvern-gdpr#columns",
+      "text": "Skip to main content",
+      "exact_anchor": "<a id=\"skip-main\" class=\"btn btn-primary visually-hidden-focusable\" href=\"#columns\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.maritim.no/kjopsbetingelser",
+      "text": "Betingelser",
+      "exact_anchor": "<a href=\"https://www.maritim.no/kjopsbetingelser\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.maritim.no/personvern-gdpr",
+      "text": "Personvern / GDPR",
+      "exact_anchor": "<a href=\"https://www.maritim.no/personvern-gdpr\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.maritim.no/personvern-gdpr",
+      "text": "\n                        \n                                                            \n                            \n                            Elektronikk\n                        \n\n                                            ",
+      "exact_anchor": "<a style=\"color:;\" class=\"category-link\" href=\"#\" onclick=\"gca.openSubCategoriesLevel(40100, 1)\" rel=\"nofollow\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.maritim.no/personvern-gdpr",
+      "text": "\n                        \n                                                            \n                            \n                            Elektrisk\n                        \n\n                                            ",
+      "exact_anchor": "<a style=\"color:;\" class=\"category-link\" href=\"#\" onclick=\"gca.openSubCategoriesLevel(40102, 1)\" rel=\"nofollow\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.maritim.no/personvern-gdpr",
+      "text": "\n                        \n                                                            \n                            \n                            Bygg/Innredning\n                        \n\n                                            ",
+      "exact_anchor": "<a style=\"color:;\" class=\"category-link\" href=\"#\" onclick=\"gca.openSubCategoriesLevel(40103, 1)\" rel=\"nofollow\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.maritim.no/personvern-gdpr",
+      "text": "\n                        \n                                                            \n                            \n                            Komfort \n                        \n\n                                            ",
+      "exact_anchor": "<a style=\"color:;\" class=\"category-link\" href=\"#\" onclick=\"gca.openSubCategoriesLevel(40108, 1)\" rel=\"nofollow\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.maritim.no/personvern-gdpr",
+      "text": "\n                        \n                                                            \n                            \n                            VVS\n                        \n\n                                            ",
+      "exact_anchor": "<a style=\"color:;\" class=\"category-link\" href=\"#\" onclick=\"gca.openSubCategoriesLevel(40172, 1)\" rel=\"nofollow\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.maritim.no/personvern-gdpr",
+      "text": "\n                        \n                                                            \n                            \n                            Motor/Styring\n                        \n\n                                            ",
+      "exact_anchor": "<a style=\"color:;\" class=\"category-link\" href=\"#\" onclick=\"gca.openSubCategoriesLevel(40173, 1)\" rel=\"nofollow\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.maritim.no/personvern-gdpr",
+      "text": "\n                        \n                                                            \n                            \n                            Fortøyning\n                        \n\n                                            ",
+      "exact_anchor": "<a style=\"color:;\" class=\"category-link\" href=\"#\" onclick=\"gca.openSubCategoriesLevel(40174, 1)\" rel=\"nofollow\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.maritim.no/personvern-gdpr",
+      "text": "\n                        \n                                                            \n                            \n                            Fritid/Sikkerhet\n                        \n\n                                            ",
+      "exact_anchor": "<a style=\"color:;\" class=\"category-link\" href=\"#\" onclick=\"gca.openSubCategoriesLevel(40175, 1)\" rel=\"nofollow\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.maritim.no/personvern-gdpr",
+      "text": "\n                        \n                                                            \n                            \n                            Båtpleie/Opplag\n                        \n\n                                            ",
+      "exact_anchor": "<a style=\"color:;\" class=\"category-link\" href=\"#\" onclick=\"gca.openSubCategoriesLevel(40111, 1)\" rel=\"nofollow\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.maritim.no/personvern-gdpr",
+      "text": "\n                        \n                                                            \n                            \n                            Seil\n                        \n\n                                            ",
+      "exact_anchor": "<a style=\"color:;\" class=\"category-link\" href=\"#\" onclick=\"gca.openSubCategoriesLevel(40721, 1)\" rel=\"nofollow\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.maritim.no/personvern-gdpr",
+      "text": "\n                        \n                                                            \n                            \n                            Outlet\n                        \n\n                                            ",
+      "exact_anchor": "<a style=\"color:rgb(248, 167, 60);\" class=\"category-link\" href=\"#\" onclick=\"gca.openSubCategoriesLevel(41856, 1)\" rel=\"nofollow\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.maritim.no/personvern-gdpr",
+      "text": "\n                        \n                                                            \n                            \n                            Kampanje\n                        \n\n                                            ",
+      "exact_anchor": "<a style=\"color:;\" class=\"category-link\" href=\"#\" onclick=\"gca.openSubCategoriesLevel(41276, 1)\" rel=\"nofollow\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261117 / 934656695 / TVINNA AS
+
+https://tvinna.com/personvern
+
+```json
+{
+  "seed": 20261117,
+  "orgnr": "934656695",
+  "name": "TVINNA AS",
+  "page": "https://tvinna.com/personvern",
+  "page_sha256": "304c8b5562ce3fc2eefb547bfd241aa8fd53fd45df26c86c49102dece3948f10",
+  "links": [
+    {
+      "url": "https://tvinna.com/personvern",
+      "text": " privacy policy",
+      "exact_anchor": "<a href=\"#\" class=\"fs-cc-banner_text-link\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://tvinna.com/personvern",
+      "text": "Preferences",
+      "exact_anchor": "<a fs-cc=\"open-preferences\" href=\"#\" class=\"fs-cc-banner_text-link\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://tvinna.com/personvern",
+      "text": "Agree",
+      "exact_anchor": "<a fs-cc=\"allow\" href=\"#\" class=\"fs-cc-banner_button button w-button\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://tvinna.com/personvern",
+      "text": "Agree",
+      "exact_anchor": "<a fs-cc=\"allow\" href=\"#\" class=\"fs-cc-prefs_button button w-button\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://tvinna.com/personvern",
+      "text": "Agree my settings and close",
+      "exact_anchor": "<a fs-cc=\"submit\" href=\"#\" class=\"fs-cc-prefs_button button w-button\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://tvinna.com/personvern#top",
+      "text": "",
+      "exact_anchor": "<a href=\"#top\" class=\"back-top w-inline-block\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://tvinna.com/personvern#we-are-tvinna",
+      "text": "We are Tvinna",
+      "exact_anchor": "<a href=\"#we-are-tvinna\" data-w-id=\"8c790d0f-12cb-9e2c-05cf-184a51a5c2cc\" style=\"-webkit-transform:translate3d(0, 20%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 20%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:tran",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://tvinna.com/personvern#one-in-the-dark",
+      "text": "One in the dark",
+      "exact_anchor": "<a href=\"#one-in-the-dark\" data-w-id=\"4b88bff1-f702-d8af-26bb-cf8e4764b221\" style=\"-webkit-transform:translate3d(0, 20%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 20%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:tr",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://tvinna.com/personvern#tour-section",
+      "text": "Tour",
+      "exact_anchor": "<a href=\"#tour-section\" data-w-id=\"1c57df54-c447-241a-bff9-8ea8dbed2a76\" style=\"-webkit-transform:translate3d(0, 20%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 20%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:trans",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://tvinna.com/personvern#about-tvinna",
+      "text": "About tvinna",
+      "exact_anchor": "<a href=\"#about-tvinna\" data-w-id=\"7dc28c8b-cdeb-0686-1aa1-947d91977272\" style=\"-webkit-transform:translate3d(0, 20%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 20%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:trans",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://tvinna.com/personvern#news-section",
+      "text": "News",
+      "exact_anchor": "<a href=\"#news-section\" data-w-id=\"0014fb77-3a85-5948-dde8-1dd097d910f8\" style=\"-webkit-transform:translate3d(0, 20%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 20%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:trans",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://tvinna.com/personvern#section-footer",
+      "text": "Contact",
+      "exact_anchor": "<a href=\"#section-footer\" data-w-id=\"8a49fa54-af3d-6ad4-7484-ea30f3177c5c\" style=\"opacity:0;-webkit-transform:translate3d(0, 20%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 20%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-tra",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://tvinna.com/personvern",
+      "text": "More Infos",
+      "exact_anchor": "<a href=\"#\" class=\"tourcontent-inner-wrap w-inline-block\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://tvinna.com/personvern",
+      "text": "More Infos",
+      "exact_anchor": "<a href=\"#\" class=\"tourcontent-inner-wrap w-inline-block\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://tvinna.com/personvern",
+      "text": "More Infos",
+      "exact_anchor": "<a href=\"#\" class=\"tourcontent-inner-wrap w-inline-block\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://tvinna.com/personvern",
+      "text": "More Infos",
+      "exact_anchor": "<a href=\"#\" class=\"tourcontent-inner-wrap w-inline-block\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://tvinna.com/personvern",
+      "text": "More Infos",
+      "exact_anchor": "<a href=\"#\" class=\"tourcontent-inner-wrap w-inline-block\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://tvinna.com/personvern",
+      "text": "More Infos",
+      "exact_anchor": "<a href=\"#\" class=\"tourcontent-inner-wrap w-inline-block\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261117 / 934656695 / TVINNA AS
+
+https://tvinna.com/personvernerklaering
+
+```json
+{
+  "seed": 20261117,
+  "orgnr": "934656695",
+  "name": "TVINNA AS",
+  "page": "https://tvinna.com/personvernerklaering",
+  "page_sha256": "1ac5a90b2a56fe34b509ea2a9af112bb7c08a63c216741a6f386a97117166d4e",
+  "links": [
+    {
+      "url": "https://tvinna.com/personvernerklaering",
+      "text": " privacy policy",
+      "exact_anchor": "<a href=\"#\" class=\"fs-cc-banner_text-link\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://tvinna.com/personvernerklaering",
+      "text": "Preferences",
+      "exact_anchor": "<a fs-cc=\"open-preferences\" href=\"#\" class=\"fs-cc-banner_text-link\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://tvinna.com/personvernerklaering",
+      "text": "Agree",
+      "exact_anchor": "<a fs-cc=\"allow\" href=\"#\" class=\"fs-cc-banner_button button w-button\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://tvinna.com/personvernerklaering",
+      "text": "Agree",
+      "exact_anchor": "<a fs-cc=\"allow\" href=\"#\" class=\"fs-cc-prefs_button button w-button\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://tvinna.com/personvernerklaering",
+      "text": "Agree my settings and close",
+      "exact_anchor": "<a fs-cc=\"submit\" href=\"#\" class=\"fs-cc-prefs_button button w-button\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://tvinna.com/personvernerklaering#top",
+      "text": "",
+      "exact_anchor": "<a href=\"#top\" class=\"back-top w-inline-block\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://tvinna.com/personvernerklaering#we-are-tvinna",
+      "text": "We are Tvinna",
+      "exact_anchor": "<a href=\"#we-are-tvinna\" data-w-id=\"8c790d0f-12cb-9e2c-05cf-184a51a5c2cc\" style=\"-webkit-transform:translate3d(0, 20%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 20%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:tran",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://tvinna.com/personvernerklaering#one-in-the-dark",
+      "text": "One in the dark",
+      "exact_anchor": "<a href=\"#one-in-the-dark\" data-w-id=\"4b88bff1-f702-d8af-26bb-cf8e4764b221\" style=\"-webkit-transform:translate3d(0, 20%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 20%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:tr",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://tvinna.com/personvernerklaering#tour-section",
+      "text": "Tour",
+      "exact_anchor": "<a href=\"#tour-section\" data-w-id=\"1c57df54-c447-241a-bff9-8ea8dbed2a76\" style=\"-webkit-transform:translate3d(0, 20%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 20%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:trans",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://tvinna.com/personvernerklaering#about-tvinna",
+      "text": "About tvinna",
+      "exact_anchor": "<a href=\"#about-tvinna\" data-w-id=\"7dc28c8b-cdeb-0686-1aa1-947d91977272\" style=\"-webkit-transform:translate3d(0, 20%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 20%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:trans",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://tvinna.com/personvernerklaering#news-section",
+      "text": "News",
+      "exact_anchor": "<a href=\"#news-section\" data-w-id=\"0014fb77-3a85-5948-dde8-1dd097d910f8\" style=\"-webkit-transform:translate3d(0, 20%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 20%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:trans",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://tvinna.com/personvernerklaering#section-footer",
+      "text": "Contact",
+      "exact_anchor": "<a href=\"#section-footer\" data-w-id=\"8a49fa54-af3d-6ad4-7484-ea30f3177c5c\" style=\"opacity:0;-webkit-transform:translate3d(0, 20%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 20%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-tra",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://tvinna.com/personvernerklaering",
+      "text": "More Infos",
+      "exact_anchor": "<a href=\"#\" class=\"tourcontent-inner-wrap w-inline-block\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://tvinna.com/personvernerklaering",
+      "text": "More Infos",
+      "exact_anchor": "<a href=\"#\" class=\"tourcontent-inner-wrap w-inline-block\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://tvinna.com/personvernerklaering",
+      "text": "More Infos",
+      "exact_anchor": "<a href=\"#\" class=\"tourcontent-inner-wrap w-inline-block\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://tvinna.com/personvernerklaering",
+      "text": "More Infos",
+      "exact_anchor": "<a href=\"#\" class=\"tourcontent-inner-wrap w-inline-block\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://tvinna.com/personvernerklaering",
+      "text": "More Infos",
+      "exact_anchor": "<a href=\"#\" class=\"tourcontent-inner-wrap w-inline-block\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://tvinna.com/personvernerklaering",
+      "text": "More Infos",
+      "exact_anchor": "<a href=\"#\" class=\"tourcontent-inner-wrap w-inline-block\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261117 / 989038583 / LØRENPARKEN BOLIGSAMEIE
+
+https://www.bori.no/
+
+```json
+{
+  "seed": 20261117,
+  "orgnr": "989038583",
+  "name": "LØRENPARKEN BOLIGSAMEIE",
+  "page": "https://www.bori.no/",
+  "page_sha256": "d7414677199d9baab1a5f30f854ca8460737d4e2d4e4c52ebbe3c9c2c800e9e0",
+  "links": [
+    {
+      "url": "https://www.bori.no/personvernerklaering/",
+      "text": "Personvern",
+      "exact_anchor": "<a href=\"https://www.bori.no/personvernerklaering/\"\n                            target=\"\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://www.bori.no/medlem/vilkar-fordelsprogram/",
+      "text": "Vilkår fordelsprogram",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/vilkar-fordelsprogram/\"\n                            target=\"\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261117 / 989038583 / LØRENPARKEN BOLIGSAMEIE
+
+https://www.bori.no/om-bori/kontakt-oss/
+
+```json
+{
+  "seed": 20261117,
+  "orgnr": "989038583",
+  "name": "LØRENPARKEN BOLIGSAMEIE",
+  "page": "https://www.bori.no/om-bori/kontakt-oss/",
+  "page_sha256": "06076277956b611f1d1cdd32c13a07348bbf420ddb3c7236c66a1ddc58764a5f",
+  "links": [
+    {
+      "url": "https://www.bori.no/personvernerklaering/",
+      "text": "Personvern",
+      "exact_anchor": "<a href=\"https://www.bori.no/personvernerklaering/\"\n                            target=\"\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    },
+    {
+      "url": "https://www.bori.no/medlem/vilkar-fordelsprogram/",
+      "text": "Vilkår fordelsprogram",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/vilkar-fordelsprogram/\"\n                            target=\"\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261117 / 989038583 / LØRENPARKEN BOLIGSAMEIE
+
+https://www.bori.no/medlem/aktuelt/vilkarene-for-fordelsprogrammet-oppdateres/
+
+```json
+{
+  "seed": 20261117,
+  "orgnr": "989038583",
+  "name": "LØRENPARKEN BOLIGSAMEIE",
+  "page": "https://www.bori.no/medlem/aktuelt/vilkarene-for-fordelsprogrammet-oppdateres/",
+  "page_sha256": "d01a7ce868b72e9fe3de2cdcf48540978acef3285ffd16099cfd8f6159c34324",
+  "links": [
+    {
+      "url": "https://www.bori.no/medlem/aktuelt/vilkarene-for-fordelsprogrammet-oppdateres/#main",
+      "text": "\n    Hopp til hovedinnhold\n",
+      "exact_anchor": "<a class=\"skip-to-content\" href=\"#main\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/aktuelt/vilkarene-for-fordelsprogrammet-oppdateres/#logg-inn",
+      "text": "\n                            Logg inn\n            ",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/aktuelt/vilkarene-for-fordelsprogrammet-oppdateres/#logg-inn\" class=\"button button--link-like button--sm\" target=''>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/aktuelt/vilkarene-for-fordelsprogrammet-oppdateres/?s=",
+      "text": "\n                    \n    \n\n                    ",
+      "exact_anchor": "<a href=\"?s=\" class=\"button button--light-green-ghost button--lg button--empty\" @click.prevent=\"\" aria-label=\"Søk\" data-modal-trigger=\"sok\"target='_self'>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/wp-content/uploads/2026/10/Vilkar-fordelsprogram-pr-01.desember.2026.pdf",
+      "text": "\n                    \n    \n\n                            Oppdaterte vilkår fra 1. desember 2026\n            ",
+      "exact_anchor": "<a href=\"https://www.bori.no/wp-content/uploads/2026/10/Vilkar-fordelsprogram-pr-01.desember.2026.pdf\" class=\"button button--primary-ghost button--icon-right\" target=''>",
+      "pdf": true,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/aktuelt/din-forste-bolig-starter-med-en-god-plan/",
+      "text": "\n                    \n                                                                                \n                                                                            \n                                                                    Medlem\n                                                            \n                                            \n                    \n                        \n                            Din første bolig starter med en god plan\n                                                            Som BORI-medlem får du tilgang til gode betingelser på boliglån i Romerike Sparebank. Kombinert med personlig rådgivning, høy BSU-rente og lokal tilstedeværelse kan det gjøre veien til egen bolig litt enklere.\n                            \n                            \n                                \n                    \n    \n\n                            Les mer\n            \n                            \n                        \n                    \n                ",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/aktuelt/din-forste-bolig-starter-med-en-god-plan/\" class=\"feed__item\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/aktuelt/vilkarene-for-fordelsprogrammet-oppdateres/#kontakt-bori-lillestrom",
+      "text": "\n                            Lillestrøm\n            ",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/aktuelt/vilkarene-for-fordelsprogrammet-oppdateres/#kontakt-bori-lillestrom\" class=\"button button--link-like button--xl\" target='_self'>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/aktuelt/vilkarene-for-fordelsprogrammet-oppdateres/#kontakt-bori-mysen",
+      "text": "\n                            Mysen\n            ",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/aktuelt/vilkarene-for-fordelsprogrammet-oppdateres/#kontakt-bori-mysen\" class=\"button button--link-like button--xl\" target='_self'>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/personvernerklaering/",
+      "text": "Personvern",
+      "exact_anchor": "<a href=\"https://www.bori.no/personvernerklaering/\"\n                            target=\"\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/vilkar-fordelsprogram/",
+      "text": "Vilkår fordelsprogram",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/vilkar-fordelsprogram/\"\n                            target=\"\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/styret/juridisk-veiviser-for-styret/",
+      "text": "\n                                            \n                                                Juridisk veiviser for styret\n                                            \n                                                                                    ",
+      "exact_anchor": "<a href=\"https://www.bori.no/styret/juridisk-veiviser-for-styret/\" target=\"\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/aktuelt/vilkarene-for-fordelsprogrammet-oppdateres/#book-uforpliktende-mote",
+      "text": "\n                                            \n                                                Book møte\n                                            \n                                                                                    ",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/aktuelt/vilkarene-for-fordelsprogrammet-oppdateres/#book-uforpliktende-mote\" target=\"\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261117 / 989038583 / LØRENPARKEN BOLIGSAMEIE
+
+https://www.bori.no/personvernerklaering/
+
+```json
+{
+  "seed": 20261117,
+  "orgnr": "989038583",
+  "name": "LØRENPARKEN BOLIGSAMEIE",
+  "page": "https://www.bori.no/personvernerklaering/",
+  "page_sha256": "1f67e77af6f3a50e0a7e4bcc5e7f73fe4caaa38d3106ce82bc8db0f44fb575fd",
+  "links": [
+    {
+      "url": "https://www.bori.no/personvernerklaering/#main",
+      "text": "\n    Hopp til hovedinnhold\n",
+      "exact_anchor": "<a class=\"skip-to-content\" href=\"#main\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/personvernerklaering/#logg-inn",
+      "text": "\n                            Logg inn\n            ",
+      "exact_anchor": "<a href=\"https://www.bori.no/personvernerklaering/#logg-inn\" class=\"button button--link-like button--sm\" target=''>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/personvernerklaering/?s=",
+      "text": "\n                    \n    \n\n                    ",
+      "exact_anchor": "<a href=\"?s=\" class=\"button button--light-green-ghost button--lg button--empty\" @click.prevent=\"\" aria-label=\"Søk\" data-modal-trigger=\"sok\"target='_self'>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/personvern/personvern-cookies/",
+      "text": "Nærmere informasjon om informasjonskapsler/cookies",
+      "exact_anchor": "<a href=\"https://www.bori.no/personvern/personvern-cookies/\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/personvernerklaering/#kontakt-bori-lillestrom",
+      "text": "\n                            Lillestrøm\n            ",
+      "exact_anchor": "<a href=\"https://www.bori.no/personvernerklaering/#kontakt-bori-lillestrom\" class=\"button button--link-like button--xl\" target='_self'>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/personvernerklaering/#kontakt-bori-mysen",
+      "text": "\n                            Mysen\n            ",
+      "exact_anchor": "<a href=\"https://www.bori.no/personvernerklaering/#kontakt-bori-mysen\" class=\"button button--link-like button--xl\" target='_self'>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/personvernerklaering/",
+      "text": "Personvern",
+      "exact_anchor": "<a href=\"https://www.bori.no/personvernerklaering/\"\n                            target=\"\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/vilkar-fordelsprogram/",
+      "text": "Vilkår fordelsprogram",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/vilkar-fordelsprogram/\"\n                            target=\"\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/styret/juridisk-veiviser-for-styret/",
+      "text": "\n                                            \n                                                Juridisk veiviser for styret\n                                            \n                                                                                    ",
+      "exact_anchor": "<a href=\"https://www.bori.no/styret/juridisk-veiviser-for-styret/\" target=\"\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/personvernerklaering/#book-uforpliktende-mote",
+      "text": "\n                                            \n                                                Book møte\n                                            \n                                                                                    ",
+      "exact_anchor": "<a href=\"https://www.bori.no/personvernerklaering/#book-uforpliktende-mote\" target=\"\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261117 / 989038583 / LØRENPARKEN BOLIGSAMEIE
+
+https://www.bori.no/medlem/vilkar-fordelsprogram/
+
+```json
+{
+  "seed": 20261117,
+  "orgnr": "989038583",
+  "name": "LØRENPARKEN BOLIGSAMEIE",
+  "page": "https://www.bori.no/medlem/vilkar-fordelsprogram/",
+  "page_sha256": "649bc28534e67a630515565edacdc84f0a82a3e94ac25042f9a2798e4403f880",
+  "links": [
+    {
+      "url": "https://www.bori.no/medlem/vilkar-fordelsprogram/#main",
+      "text": "\n    Hopp til hovedinnhold\n",
+      "exact_anchor": "<a class=\"skip-to-content\" href=\"#main\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/vilkar-fordelsprogram/#logg-inn",
+      "text": "\n                            Logg inn\n            ",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/vilkar-fordelsprogram/#logg-inn\" class=\"button button--link-like button--sm\" target=''>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/vilkar-fordelsprogram/?s=",
+      "text": "\n                    \n    \n\n                    ",
+      "exact_anchor": "<a href=\"?s=\" class=\"button button--light-green-ghost button--lg button--empty\" @click.prevent=\"\" aria-label=\"Søk\" data-modal-trigger=\"sok\"target='_self'>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/vilkar-fordelsprogram/#1-generelt",
+      "text": "\n                            \n                                \n    \n\n                            \n                            1. Generelt\n                        ",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/vilkar-fordelsprogram/#1-generelt\" :class=\"activeAnchor === 0 && 'active'\"\n                            x-on:click=\"goto($event, 0)\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/vilkar-fordelsprogram/#2-endring-av-vilkar",
+      "text": "\n                            \n                                \n    \n\n                            \n                            2. Endring av vilkår\n                        ",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/vilkar-fordelsprogram/#2-endring-av-vilkar\" :class=\"activeAnchor === 1 && 'active'\"\n                            x-on:click=\"goto($event, 1)\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/vilkar-fordelsprogram/#3-bonus",
+      "text": "\n                            \n                                \n    \n\n                            \n                            3. Bonus\n                        ",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/vilkar-fordelsprogram/#3-bonus\" :class=\"activeAnchor === 2 && 'active'\"\n                            x-on:click=\"goto($event, 2)\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/vilkar-fordelsprogram/#4-rabatt",
+      "text": "\n                            \n                                \n    \n\n                            \n                            4. Rabatt\n                        ",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/vilkar-fordelsprogram/#4-rabatt\" :class=\"activeAnchor === 3 && 'active'\"\n                            x-on:click=\"goto($event, 3)\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/vilkar-fordelsprogram/#5-personvern",
+      "text": "\n                            \n                                \n    \n\n                            \n                            5. Personvern\n                        ",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/vilkar-fordelsprogram/#5-personvern\" :class=\"activeAnchor === 4 && 'active'\"\n                            x-on:click=\"goto($event, 4)\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/vilkar-fordelsprogram/#6-var-kommunikasjon-med-deg",
+      "text": "\n                            \n                                \n    \n\n                            \n                            6. Vår kommunikasjon med deg\n                        ",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/vilkar-fordelsprogram/#6-var-kommunikasjon-med-deg\" :class=\"activeAnchor === 5 && 'active'\"\n                            x-on:click=\"goto($event, 5)\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/vilkar-fordelsprogram/#7-annet",
+      "text": "\n                            \n                                \n    \n\n                            \n                            7. Annet\n                        ",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/vilkar-fordelsprogram/#7-annet\" :class=\"activeAnchor === 6 && 'active'\"\n                            x-on:click=\"goto($event, 6)\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/personvern/personvernerklaering/",
+      "text": "personvernerklæring",
+      "exact_anchor": "<a href=\"https://www.bori.no/personvern/personvernerklaering/\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/wp-content/uploads/2026/10/Vilkar-fordelsprogram-pr-01.desember.2026.pdf",
+      "text": "\n    \n                    \n                \n                    Oppdaterte vilkår fra 01.12.2026\n                \n\n                \n            \n            \n                \n            \n    \n\n        \n    ",
+      "exact_anchor": "<a href=\"https://www.bori.no/wp-content/uploads/2026/10/Vilkar-fordelsprogram-pr-01.desember.2026.pdf\" target=\"_blank\" class=\"link-box-block\">",
+      "pdf": true,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/vilkar-fordelsprogram/#kontakt-bori-lillestrom",
+      "text": "\n                            Lillestrøm\n            ",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/vilkar-fordelsprogram/#kontakt-bori-lillestrom\" class=\"button button--link-like button--xl\" target='_self'>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/vilkar-fordelsprogram/#kontakt-bori-mysen",
+      "text": "\n                            Mysen\n            ",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/vilkar-fordelsprogram/#kontakt-bori-mysen\" class=\"button button--link-like button--xl\" target='_self'>",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/personvernerklaering/",
+      "text": "Personvern",
+      "exact_anchor": "<a href=\"https://www.bori.no/personvernerklaering/\"\n                            target=\"\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/vilkar-fordelsprogram/",
+      "text": "Vilkår fordelsprogram",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/vilkar-fordelsprogram/\"\n                            target=\"\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/styret/juridisk-veiviser-for-styret/",
+      "text": "\n                                            \n                                                Juridisk veiviser for styret\n                                            \n                                                                                    ",
+      "exact_anchor": "<a href=\"https://www.bori.no/styret/juridisk-veiviser-for-styret/\" target=\"\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.bori.no/medlem/vilkar-fordelsprogram/#book-uforpliktende-mote",
+      "text": "\n                                            \n                                                Book møte\n                                            \n                                                                                    ",
+      "exact_anchor": "<a href=\"https://www.bori.no/medlem/vilkar-fordelsprogram/#book-uforpliktende-mote\" target=\"\">",
+      "pdf": false,
+      "footer_nav": false,
+      "from_legal_page": true
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261117 / 911920603 / ISOBYGG SOGN AS
+
+https://www.sogn.no/
+
+```json
+{
+  "seed": 20261117,
+  "orgnr": "911920603",
+  "name": "ISOBYGG SOGN AS",
+  "page": "https://www.sogn.no/",
+  "page_sha256": "72265a7917d7044c27c9c5c20f029b38504612c75e5665405d8efe923edd777c",
+  "links": [
+    {
+      "url": "https://www.sogn.no/personvernerklaering",
+      "text": "Personvernerklæring",
+      "exact_anchor": "<a href=\"/personvernerklaering\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261117 / 911920603 / ISOBYGG SOGN AS
+
+https://www.sogn.no/kontakt-oss
+
+```json
+{
+  "seed": 20261117,
+  "orgnr": "911920603",
+  "name": "ISOBYGG SOGN AS",
+  "page": "https://www.sogn.no/kontakt-oss",
+  "page_sha256": "dd0e2703018f600639d1dd83fb3b0a5dc013bc302c48575cf0000117faafd983",
+  "links": [
+    {
+      "url": "https://www.sogn.no/personvernerklaering",
+      "text": "Personvernerklæring",
+      "exact_anchor": "<a href=\"/personvernerklaering\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261117 / 911920603 / ISOBYGG SOGN AS
+
+https://www.sogn.no/jobb-for-to
+
+```json
+{
+  "seed": 20261117,
+  "orgnr": "911920603",
+  "name": "ISOBYGG SOGN AS",
+  "page": "https://www.sogn.no/jobb-for-to",
+  "page_sha256": "b542925b56e3accba34be70f81b63b338def9f07f3aa1e7e8200e2a1a9c71215",
+  "links": [
+    {
+      "url": "https://www.sogn.no/personvernerklaering",
+      "text": "Personvernerklæring",
+      "exact_anchor": "<a href=\"/personvernerklaering\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261117 / 911920603 / ISOBYGG SOGN AS
+
+https://www.sogn.no/personvernerklaering
+
+```json
+{
+  "seed": 20261117,
+  "orgnr": "911920603",
+  "name": "ISOBYGG SOGN AS",
+  "page": "https://www.sogn.no/personvernerklaering",
+  "page_sha256": "2766f224a5f9318fc4553788908e3236cd3a62a329f64b4081d0433dfb5f7656",
+  "links": [
+    {
+      "url": "https://www.sogn.no/personvernerklaering#page",
+      "text": "\n        Hopp til innhold\n      ",
+      "exact_anchor": "<a\n        href=\"#page\"\n        class=\"header-skip-link sqs-button-element--primary\"\n      >",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    },
+    {
+      "url": "https://www.sogn.no/personvernerklaering",
+      "text": "Personvernerklæring",
+      "exact_anchor": "<a href=\"/personvernerklaering\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": true
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261117 / 911920603 / ISOBYGG SOGN AS
+
+https://www.sogn.no/sitemap.xml
+
+```json
+{
+  "seed": 20261117,
+  "orgnr": "911920603",
+  "name": "ISOBYGG SOGN AS",
+  "page": "https://www.sogn.no/sitemap.xml",
+  "page_sha256": "6760ef8b9bafe47894bc88ce834767d00979df31bbc130bf5bc553acf90b9fbb",
+  "links": [],
+  "sitemap": [
+    "https://www.sogn.no/personvernerklaering"
+  ],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261117 / 911920603 / ISOBYGG SOGN AS
+
+https://www.sogn.no/om-nettsida
+
+```json
+{
+  "seed": 20261117,
+  "orgnr": "911920603",
+  "name": "ISOBYGG SOGN AS",
+  "page": "https://www.sogn.no/om-nettsida",
+  "page_sha256": "43607b91a1d1d876e99facc36156820996d2efb449216afbbad42c748bd6ca0a",
+  "links": [
+    {
+      "url": "https://www.sogn.no/personvernerklaering",
+      "text": "Personvernerklæring",
+      "exact_anchor": "<a href=\"/personvernerklaering\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261117 / 926290126 / FALCO INVEST AS
+
+https://www.falco.com/
+
+```json
+{
+  "seed": 20261117,
+  "orgnr": "926290126",
+  "name": "FALCO INVEST AS",
+  "page": "https://www.falco.com/",
+  "page_sha256": "57af89da15affa0284485c5061a71354189c554b45cb5fad5bac0d9f4119763f",
+  "links": [
+    {
+      "url": "https://www.falco.com/privacy-policy",
+      "text": "\n                    Privacy Policy\n                ",
+      "exact_anchor": "<a href=\"/privacy-policy\" class=\"transition-colors duration-200 hover:text-falco-orange-hover\" onclick=\"window.scrollTo({ top: 0, left: 0, behavior: 'auto' });\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+## 20261117 / 926290126 / FALCO INVEST AS
+
+https://www.falco.com/contact
+
+```json
+{
+  "seed": 20261117,
+  "orgnr": "926290126",
+  "name": "FALCO INVEST AS",
+  "page": "https://www.falco.com/contact",
+  "page_sha256": "e0bec0bd845e2fc353e9313db93306b4e3ba829272651ba2111514f88234154f",
+  "links": [
+    {
+      "url": "https://www.falco.com/privacy-policy",
+      "text": "\n                    Privacy Policy\n                ",
+      "exact_anchor": "<a href=\"/privacy-policy\" class=\"transition-colors duration-200 hover:text-falco-orange-hover\" onclick=\"window.scrollTo({ top: 0, left: 0, behavior: 'auto' });\">",
+      "pdf": false,
+      "footer_nav": true,
+      "from_legal_page": false
+    }
+  ],
+  "sitemap": [],
+  "builder_orgnr_patterns": []
+}
+```
+
+Counts distinguish response/link occurrences from unique company+target URLs. Multiple company pages can repeat the same footer link. All six accepted R7 output hashes and response hashes remain in audit.json. No network or live gain measurement. Zero builder hits means L3 will not introduce a parser.
