@@ -1,0 +1,56 @@
+{
+  "reason": "Intentional stop after R7e produced a doubtful placeholder site. Not a source outage or host suspension. Full raw partial state retained. Never counted as accepted sample.",
+  "working_directory": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageR7-20261114-final",
+  "last_progress": {
+    "schema_version": 1,
+    "run_id": "r5-stageR7-seed20261114-final",
+    "status": "running",
+    "start_time": "2026-11-14T17:52:32.800926Z",
+    "heartbeat": "2026-11-14T17:54:57.843360Z",
+    "elapsed_seconds": 145.05,
+    "companies": {
+      "total": 100,
+      "queued": 0,
+      "in_flight": 68,
+      "successful": 32,
+      "failed": 0
+    },
+    "stages": [
+      {
+        "name": "Registry & Subunits",
+        "state": "running"
+      },
+      {
+        "name": "Website Verification",
+        "state": "queued"
+      },
+      {
+        "name": "NAV Hiring Matching",
+        "state": "queued"
+      },
+      {
+        "name": "Cited Synthesis",
+        "state": "queued"
+      },
+      {
+        "name": "Output & Site Publishing",
+        "state": "queued"
+      }
+    ],
+    "requests": {
+      "measured": 442,
+      "limit": 1850,
+      "estimated_cost_usd": 0.0
+    },
+    "activity_log": [
+      {
+        "timestamp": 0.0,
+        "message": "Pipeline started with 100 input rows, 100 unique companies"
+      }
+    ],
+    "input_rows": 100,
+    "duplicate_inputs": 0
+  },
+  "execution_receipt": "seed20261114/execution.json",
+  "HTTP_final": "unknown; only the partial measured lower bound in progress is available"
+}

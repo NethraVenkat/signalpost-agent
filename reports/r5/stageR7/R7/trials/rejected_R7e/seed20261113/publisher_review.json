@@ -1,0 +1,179 @@
+{
+  "seed": 20261113,
+  "items": [
+    {
+      "orgnr": "993821403",
+      "name": "NEXTHOP AS",
+      "kind": "website",
+      "url": "https://nexthop.no",
+      "value": {
+        "final_url": "https://nexthop.no",
+        "identity_level": "HIGH",
+        "proof_type": "exact_name_unique_domain",
+        "proof_page_url": "https://nexthop.no/",
+        "signals": [
+          "publisher_owner_receipt"
+        ],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publisher_identity": {
+          "tier": "exact_name_unique_domain",
+          "legal_name": "NEXTHOP AS",
+          "publisher_location": "title",
+          "publisher_excerpt": "Nexthop AS",
+          "candidate_url": "https://nexthop.no/",
+          "proof_page_url": "https://nexthop.no/",
+          "proof_token": "NEXTHOP AS",
+          "owner_signal": {
+            "kind": "exact_full_legal_name",
+            "name_key": "nexthop",
+            "rarity_count": 1
+          },
+          "rarity_table": {
+            "bundle_sha256": "900882536a574656025214e5163174812d4d4234e4922b9e452e86882b530d07",
+            "built_at": "2026-11-13T19:05:51.310268+00:00",
+            "entity_count": 1177860,
+            "sources": [
+              {
+                "kind": "enheter",
+                "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+                "file": "registry.csv",
+                "sha256": "5b0df27c5567a655320b8dfb8975049b76c46ba93d748a8a763f8db7050b7862",
+                "valid_rows": 1177860,
+                "local_file_modified_at": "2026-10-13T06:48:09.113086+00:00"
+              }
+            ],
+            "attribution": "Brønnøysundregistrene / Enhetsregisteret; NLOD 2.0",
+            "licence_url": "https://data.norge.no/nlod/no/2.0"
+          },
+          "domain_label": "nexthop",
+          "norway_tie": "international_phone"
+        }
+      },
+      "registry_context": {
+        "name": "NEXTHOP AS",
+        "website": null,
+        "phone": "24 20 00 24",
+        "email": null,
+        "mobile": null,
+        "municipality": "OSLO",
+        "street": "Drammensveien 288",
+        "postcode": "0283",
+        "city": "OSLO"
+      },
+      "pages": [
+        {
+          "url": "https://nexthop.no/",
+          "sha256": "e0ce4c16ca058d2af8429690fb34b014c99826f589eda7acb14cf571a6e7f1a4",
+          "title": "Nexthop AS",
+          "publisher": [
+            [
+              "title",
+              "Nexthop AS"
+            ],
+            [
+              "footer",
+              "Check coverage"
+            ],
+            [
+              "footer",
+              "Read more"
+            ],
+            [
+              "footer",
+              "Quality services since 2008. Specializing in data center, server management and infrastructure services. Fiber Cloud Servers UPDATED Colocation About Contact us Login Copyright 2018-2026 Nexthop AS - All rights reserved. All pricing without tax. Content and pricing may be changed without prior notice. Terms and conditions Terms and conditions"
+            ]
+          ],
+          "visible_context": "\n \n \n \n    \n \n\t \n\t\t \n     \n         \n             \n         \n     \n     \n         \n             \n         \n     \n     \n         \n             \n         \n     \n     \n         \n             \n         \n     \n     \n         \n             \n         \n     \n     \n         \n             \n         \n     \n     \n         \n             \n         \n     \n     \n         \n     \n \n \n\t \n\t \n\t\t \n \n \n \n \n \n \n\t \n\t \n\t\t Fiber Cloud servers UPDATED Colocation \n\t\t\t \n\t\t\t\t\t\tEnglish\n\t\t\t\t\t | \n\t\t\t\t\t\tNorsk\n\t\t\t\t\t \n\t\t\t \n\t\t\t \n\t\t\t\t Login \n\t\t\t \n\t\t \n\t \n \n\n\n\n \n\t \n\t\t \n\t\t\t \n\t\t\t\t \n     \n         \n             \n         \n     \n     \n         \n             \n         \n     \n     \n         \n             \n         \n     \n     \n         \n             \n         \n     \n     \n         \n             \n         \n     \n     \n         \n             \n         \n     \n     \n         \n             \n         \n     \n     \n         \n     \n \n \n\t\t\t \n\t\t \n\t\t \n\t\t\t Fiber Cloud servers UPDATED Colocation \n\t\t \n\t\t \n\t\t\t \n\t\t\t\t \n\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t\t\t\t \n \n \n \n\t\t\t\t\t\t \n\t\t\t\t\t \n\t\t\t\t\t \n\t\t\t\t\t\t \n \n \n \n \n\t\t\t\t\t \n\t\t\t\t \n\t\t\t \n\t\t \n\t \n \n \n\t \n\t\t \n\t\t\t \n\t\t\t\t \n\t\t\t\t\t Norwegian Cloud servers and Colocation services. Business class fiber. \n\t\t\t\t \n\t\t\t \n\t\t \n\t\t \n\t\t\t \n\t\t\t\t \n\t\t\t\t\t \n\t\t\t\t \n\t\t\t \n\t\t \n\t \n\t \n\t\t \n\t \n\t\t Fiber network \n\t\t Carrier grade internet access for business delivered on your premises. IP Transit, point to point links and custom solutions available. \n\t \n\t Check coverage \n \n\t\t\t \n\t \n\t\t Cloud Servers \n\t\t Multi-tenant environment with pay-as-you-grow scalability, ideal for heavy, unpredictable and even small workloads. \n\t \n\t Read more \n \n\t\t\t \n\t \n\t\t Colocation \n\t\t Colocation in one of our state-of-the-art data centers lowers cost and increases availability. 100% SLA offered. \n\t \n\t Read more \n \n\t\t \n\t \n \n \n\t \n\t\t \n\t\t\t \n\t\t\t\t \n\t\t\t \n\t\t\t \n\t\t\t\t \n\t\t\t\t Nexthop\nCloud Servers \n\t\t\t\t \n Self service via web and powerful APIs \n Spin up new servers in seconds \n Pay-as-you-go, no upfront cost \n Personal support available \n Local presence, close to your users \n Highly available with 24/7 monitoring \n \n \n\t\t\t\t \n\t\t\t\t\tRead more\n\t\t\t\t \n\t\t\t\t \n\t\t\t\t\tPricing \n \n \n \n\t\t\t\t \n\t\t\t \n\t\t \n\t \n \n \n \n\t \n\t\t \n\t\t\t \n\t\t\t\t \n\t\t\t\t\t \n\t\t\t\t \n\t\t\t \n\t\t\t \n\t\t\t\t \n\t\t\t\t Nexthop\nColocation \n\t\t\t\t \n State-of-the-art data center \n High efficiency = Lower cost \n 100% SLA \n Redundant high-capacity network connectivity \n 24/7 personal access \n Smart hands available \n \n \n\t\t\t\t \n\t\t\t\t\tRead more\n\t\t\t\t \n\t\t\t\t \n\t\t\t\t\tPricing \n \n \n \n\t\t\t\t \n\t\t\t \n\t\t \n\t \n \n \n\t \n\t\t \n\t\t\t \n\t\t\t \n\t\t\t \n\t\t\t\t \n\t\t\t\t We love\nopenstack! \n\t\t\t\t Openstack offers unprecedented interoperability between cloud providers. This is why we love openstack. It is the futureproof choice for tomorrow. \n\t\t\t\t \n The largest open cloud platform in the world \n Powerful hybrid integration with existing hardware \n Huge community offers access to a variety of tools and scripts \n No vendor lock-in through open standard APIs \n \n \n\t\t\t \n\t\t \n\t \n \n \n \n\t \n\t\t \n\t\t\t \n\t\t\t\t About Nexthop \n\t\t\t\t Established in 2008 to be a powerhouse in IT services and emerging technologies. Focusing on highly skilled employees and customized solutions at competetive pricing. \n\t\t\t \n\t\t \n\t\t \n\t\t\t \n\t \n\t\t \n\t\t\t Data centers in Norway \n\t\t\t \n \n \n \n \n\t\t \n\t\t \n\t\t\t We provide cloud and colocation services using only the best-of-breed data centers available in Norway. We primarily focus on delivery of colocation services and cloud in the Oslo area. Oslo is the heart of Norwegian infrastructure and even outperforms geographically closer alternatives due to national network topology that route most traffic through Oslo regardless. Thus Oslo offers the best combination of low cost, high quality and unsurpassed connectivity in the Norwegian market. \n\t\t\t \n\t\t \n\t \n \n\n\n\n\n \n\t \n\t\t \n\t\t\t ISO-certifications \n\t\t\t \n \n \n \n \n\t\t \n\t\t \n\t\t\t Our data centers are ISO-certified by well known authorities to ensures both quality and compliance. Among these are ISO9001, ISO14001 and ISO27001. \n\t\t\t \n\t\t \n\t \n \n\n\n\n\n \n\t \n\t\t \n\t\t\t Cloud infrastructure \n\t\t\t \n \n \n \n \n\t\t \n\t\t \n\t\t\t We produce our own Infrastructure-as-a-Service (IaaS) solutions based on our own network and data center services. This allows for unsurpassed flexibility and hybrid solutions to meet custom and transitional needs. \n\t\t\t \n\t\t \n\t \n \n\n\n\n\n \n\t \n\t\t \n\t\t\t No vendor lock-in \n\t\t\t \n \n \n \n \n\t\t \n\t\t \n\t\t\t We believe open standards is the future. Because of this we believe in helping our customers choose open solutions to avoid vendor lock-in situations. We believe that the customer should want to stay with our services because of our excellent quality and service, not vendor lock-ins. \n\t\t\t \n\t\t \n\t \n \n\n\n\n\n \n\t \n\t\t \n\t\t\t Redundant high-capacity network \n\t\t\t \n \n \n \n \n\t\t \n\t\t \n\t\t\t As a traditional ISP we operate our own regional fully redundant high-capacity fiberoptic network. This is a core asset enabling us to provide high grade services with end-to-end responsibility. \n\t\t\t \n\t\t \n\t \n \n\n\n\n\n\n\t\t\t \n\t\t\t \n\t\t\t\t \n\t \n\t\t \n\t\t\t Low latency \n\t\t\t \n \n \n \n \n\t\t \n\t\t \n\t\t\t Our network services are designed around the lowest latency we can achieve. As an ISP we are committed to use the best local and global network connections available and never to compromise on capacity and latency. \n\t\t\t \n\t\t \n\t \n \n\n\n\n\n \n\t \n\t\t \n\t\t\t 24/7 monitoring and on-call staff \n\t\t\t \n \n \n \n \n\t\t \n\t\t \n\t\t\t All services and systems are monitored 24/7 by our in-house staff who have intimate knowledge of our operations. Our 24/7 in-house on-call staff enables us to provide 24/7 on-call emergency services to our customers. \n\t\t\t \n\t\t \n\t \n \n\n\n\n\n \n\t \n\t\t \n\t\t\t Wide range of services \n\t\t\t \n \n \n \n \n\t\t \n\t\t \n\t\t\t We offer a wide range of services that is not detailed on our webpage, among these are managed hosting, hybrid cloud solutions, dualsite colocation, IP-transit, wavelengths, offsite backup, VPN service, robust anycasted DNS and more. \n\t\t\t \n\t\t \n\t \n \n\n\n\n\n \n\t \n\t\t \n\t\t\t Skilled people who know your company \n\t\t\t \n \n \n \n \n\t\t \n\t\t \n\t\t\t We believe in employing the best people we can get, who has a no nonsense attitude about quality and workmanship. We strive to have a dedicated and knowledgeable staff that can efficiently implement and solve any customer needs. \n\t\t\t \n\t\t \n\t \n \n\n\n\n\n \n\t\t \n\t \n \n \n \n\t \n\t\t \n\t\t\t \n\t\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t\t\t\t Book a meeting \n\t\t\t\t\t\t\t Feel free to contact us for a meeting or a chat about our services. \n\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t Excellent. We'll get in touch with you shortly \n\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t I consent to having Nexthop AS collect my email or mobile \n\t\t\t\t\t\t\t\t\t  \n\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t Something went wrong. Please try again, or contact us \n\t\t\t\t\t\t\t\t Please enter a valid email or mobile number \n\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t\t\t\t Contact us \n\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t Nexthop AS \n\t\t\t\t\t\t\t\tDrammensveien 288, 0283 Oslo \n\t\t\t\t\t\t\t\tPhone: +47 21 41 51 00 \n\t\t\t\t\t\t\t\tEmail:\n\t\t\t\t\t\t\t\t  info@nexthop.no \n\t\t\t\t\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t\t \n\t\t\t\t \n\t\t\t \n\t\t \n\t \n \n \n \n\t \n\t\t \n\t \n \n \n\t \n\t\t \n\t\t\t \n\t\t\t\t \n     \n         \n             \n         \n     \n     \n         \n             \n         \n     \n     \n         \n             \n         \n     \n     \n         \n             \n         \n     \n     \n         \n             \n         \n     \n     \n         \n             \n         \n     \n     \n         \n             \n         \n     \n     \n         \n     \n \n \n\t\t\t\t Quality services since 2008. Specializing in data center, server management and infrastructure services. \n\t\t\t \n\t\t\t Fiber Cloud Servers UPDATED Colocation \n\t\t\t About Contact us Login \n\t\t \n\t\t \n\t\t \n\t\t\t \n\t\t\t\t Copyright 2018-2026 Nexthop AS - All rights reserved. All pricing without tax. Content and pricing may be changed without prior notice. \n\t\t\t \n\t\t\t \n\t\t\t\t \n\t\t\t\t\t \n\t\t\t\t\t\tTerms and conditions\n\t\t\t\t\t \n\t\t\t\t \n\t\t\t\t \n\t\t\t\t\t \n\t\t\t\t\t\tTerms and conditions\n\t\t\t\t\t \n\t\t\t\t \n\t\t\t\t \n\t\t\t \n\t\t \n\t \n \n\n \n\n    \n \n \n",
+          "exact_receipt_excerpt": "-Compatible\" content=\"IE=edge\">\n\t<title>Nexthop AS</title><meta name=\"description\" content=\"Norwegian Cloud servers and Colocation\"><link href=\"https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700\" rel=\"stylesheet\"><link rel=\"shortcut icon\" href=\"./img/favicon.png\">\n\n\t<link rel=\"style"
+        }
+      ],
+      "review_status": "correct_context_but_withheld_by_whole_rule_revert",
+      "review_reason": "Nexthop AS title/copyright, own infrastructure service description, exact registered Drammensveien 288 / 0283 Oslo in contact body; no group/portal or foreign publisher. Nonetheless R7e rule must be reverted as a whole because it also accepts ETNE INVEST placeholder."
+    },
+    {
+      "orgnr": "982039177",
+      "name": "ETNE INVEST AS",
+      "kind": "website",
+      "url": "https://etne-invest.no",
+      "value": {
+        "final_url": "https://etne-invest.no",
+        "identity_level": "HIGH",
+        "proof_type": "exact_name_unique_domain",
+        "proof_page_url": "https://etne-invest.no/",
+        "signals": [
+          "publisher_owner_receipt"
+        ],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publisher_identity": {
+          "tier": "exact_name_unique_domain",
+          "legal_name": "ETNE INVEST AS",
+          "publisher_location": "title",
+          "publisher_excerpt": "Etne Invest AS – Info om Etne Invest AS",
+          "candidate_url": "https://etne-invest.no/",
+          "proof_page_url": "https://etne-invest.no/",
+          "proof_token": "ETNE INVEST AS",
+          "owner_signal": {
+            "kind": "exact_full_legal_name",
+            "name_key": "etne invest",
+            "rarity_count": 1
+          },
+          "rarity_table": {
+            "bundle_sha256": "900882536a574656025214e5163174812d4d4234e4922b9e452e86882b530d07",
+            "built_at": "2026-11-13T19:05:51.310268+00:00",
+            "entity_count": 1177860,
+            "sources": [
+              {
+                "kind": "enheter",
+                "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+                "file": "registry.csv",
+                "sha256": "5b0df27c5567a655320b8dfb8975049b76c46ba93d748a8a763f8db7050b7862",
+                "valid_rows": 1177860,
+                "local_file_modified_at": "2026-10-13T06:48:09.113086+00:00"
+              }
+            ],
+            "attribution": "Brønnøysundregistrene / Enhetsregisteret; NLOD 2.0",
+            "licence_url": "https://data.norge.no/nlod/no/2.0"
+          },
+          "domain_label": "etne-invest",
+          "norway_tie": "norwegian_language"
+        }
+      },
+      "registry_context": {
+        "name": "ETNE INVEST AS",
+        "website": null,
+        "phone": null,
+        "email": null,
+        "mobile": null,
+        "municipality": "ETNE",
+        "street": "Gjerdsvegen 40",
+        "postcode": "5590",
+        "city": "ETNE"
+      },
+      "pages": [
+        {
+          "url": "https://etne-invest.no/",
+          "sha256": "e89efeae3b18154e30e203045dd253f03a78dd4510185a9d45667f5a27f4db24",
+          "title": "Etne Invest AS – Info om Etne Invest AS",
+          "publisher": [
+            [
+              "title",
+              "Etne Invest AS – Info om Etne Invest AS"
+            ]
+          ],
+          "visible_context": "\r\n \r\n \r\n \r\n\t \r\n\t\t \r\n                     \r\n             \r\n                              \r\n                     \r\n                         \r\n                             Tel: 123456789                       \r\n                         \r\n                         \r\n                                                   \r\n                     \r\n                 \r\n                                 \r\n                 \r\n                     \r\n                         \r\n                                                \r\n                             \r\n                             \r\n                             \r\n                                                                                      \r\n                                 Etne Invest AS \r\n                                 Info om Etne Invest AS \r\n                             \r\n                             \r\n                         \r\n                        \r\n                         \r\n                             Toggle navigation \r\n                             \r\n                         \r\n                         \r\n                             \r\n\t\t\t\t\t\t\t\t\t\t  Home \r\n\t\t\t\t\t\t\t\t\t\t  Services \r\n\t\t\t\t\t\t\t\t\t\t  Gallery \r\n\t\t\t\t\t\t\t\t\t\t  Team \r\n\t\t\t\t\t\t\t\t\t\t  About \r\n\t\t\t\t\t\t\t\t\t\t  Testimonials \r\n\t\t\t\t\t\t\t\t\t\t  Contact                          \r\n                     \r\n                 \r\n                \r\n                        \r\n                 \r\n                     \r\n                         \r\n                                                     \r\n                            \r\n                                                   \r\n                                                        \r\n                                 Etne Invest AS \r\n                                 Info om Etne Invest AS \r\n                             \r\n                            \r\n                         \r\n                         \r\n                             Toggle navigation \r\n                             \r\n                         \r\n                         \r\n\r\n\r\n  \r\n\t\t\t\t\t\t\t\t\t\t  Home \r\n\t\t\t\t\t\t\t\t\t\t  Services \r\n\t\t\t\t\t\t\t\t\t\t  Gallery \r\n\t\t\t\t\t\t\t\t\t\t  Team \r\n\t\t\t\t\t\t\t\t\t\t  About \r\n\t\t\t\t\t\t\t\t\t\t  Testimonials \r\n\t\t\t\t\t\t\t\t\t\t  Contact                          \r\n                     \r\n                 \r\n                \r\n                          \r\n             \r\n                         \r\n         \r\n   \r\n     \r\n       \r\n         \r\n \r\n\t\t\t \r\n \r\n \r\n \r\n        \r\n        \r\n           \r\n                       POWERFUL ONE PAGE THEME \r\n           \r\n           BASED ON BOOTSTRAP FRAMEWORK AND SHORTCODES, QUICK SET AND EASY BUILD, SHINES ONE PAGE SMALL BUSINESS WEBSITE. \r\n           \r\n           \r\n            \r\n                         Click Me  \r\n                            \r\n                                              \r\n         \r\n       \r\n                    \r\n   \r\n  \r\n  \r\n    \r\n\t\t       \r\n\t\t   \r\n\t           \r\n                        \r\n        \r\n         \r\n \r\n           \r\n               \r\n                 Morbi rutrum, elit ac fermentum egestas, tortor ante vestibulum est, eget scelerisque nisl velit eget tellus.                \r\n               \r\n                             Click Me \r\n                             \r\n              \r\n             \r\n\r\n         \r\n       \r\n       \r\n                 \r\n                           \r\n         \r\n\t\t\t \r\n\t\t   \r\n\t\t\t \r\n\t\t\t FREE PSD TEMPLATE \r\n\t\t\t \r\n\t\t\t   Integer pulvinar elementum est, suscipit ornare ante finibus ac. Praesent vel ex dignissim, rhoncus eros luctus, dignissim arcu. \r\n\t\t\t   \r\n\t\t   \r\n\t\t \r\n\t\t\t \r\n\t\t   \r\n\t\t\t \r\n\t\t\t FREE PSD TEMPLATE \r\n\t\t\t \r\n\t\t\t   Integer pulvinar elementum est, suscipit ornare ante finibus ac. Praesent vel ex dignissim, rhoncus eros luctus, dignissim arcu. \r\n\t\t\t   \r\n\t\t   \r\n\t\t \r\n\t\t\t \r\n\t\t   \r\n\t\t\t \r\n\t\t\t FREE PSD TEMPLATE \r\n\t\t\t \r\n\t\t\t   Integer pulvinar elementum est, suscipit ornare ante finibus ac. Praesent vel ex dignissim, rhoncus eros luctus, dignissim arcu. \r\n\t\t\t   \r\n\t\t   \r\n\t\t \r\n\t\t\t \r\n\t\t   \r\n\t\t\t \r\n\t\t\t FREE PSD TEMPLATE \r\n\t\t\t \r\n\t\t\t   Integer pulvinar elementum est, suscipit ornare ante finibus ac. Praesent vel ex dignissim, rhoncus eros luctus, dignissim arcu. \r\n\t\t\t   \r\n\t\t   \r\n\t\t \r\n\t\t\t \r\n\t\t   \r\n\t\t\t \r\n\t\t\t FREE PSD TEMPLATE \r\n\t\t\t \r\n\t\t\t   Integer pulvinar elementum est, suscipit ornare ante finibus ac. Praesent vel ex dignissim, rhoncus eros luctus, dignissim arcu. \r\n\t\t\t   \r\n\t\t   \r\n\t\t \r\n\t\t\t \r\n\t\t   \r\n\t\t\t \r\n\t\t\t FREE PSD TEMPLATE \r\n\t\t\t \r\n\t\t\t   Integer pulvinar elementum est, suscipit ornare ante finibus ac. Praesent vel ex dignissim, rhoncus eros luctus, dignissim arcu. \r\n\t\t\t   \r\n\t\t   \r\n\t\t          \r\n                          \r\n                        GALLERY \r\n                         Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere c. Etiam ut dui eu nisi lobortis rhoncus ac quis nunc. \r\n                   \r\n\t\t  \r\n\t\t\t\t \r\n\t\t\t   \r\n\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t \r\n\t\t\t\t \r\n\t\t\t   \r\n\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t \r\n\t\t\t\t \r\n\t\t\t   \r\n\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t \r\n\t\t\t\t \r\n\t\t\t   \r\n\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t \r\n\t\t\t\t \r\n\t\t\t   \r\n\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t \r\n\t\t\t\t \r\n\t\t\t   \r\n\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t          \r\n              \r\n                   OUR TEAM \r\n                   Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere c. Etiam ut dui eu nisi lobortis rhoncus ac quis nunc. \r\n             \r\n       \r\n               \r\n           \r\n\t\t\t\t   \r\n\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t   \r\n\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t   \r\n\t\t\t\t\t\t\t\t\t   \r\n\t\t\t\t\t\t\t\t\t\t KEVIN PERRY \r\n\t\t\t\t\t\t\t\t\t\t SOFTWARE DEVELOPER \r\n\t\t\t\t\t\t\t\t\t\t Vivamus congue justo eget diam interdum scelerisque. In hac habitasse platea dictumst. \r\n\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t\t  \r\n\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t   \r\n\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t \r\n\t\t\t\t   \r\n\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t   \r\n\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t   \r\n\t\t\t\t\t\t\t\t\t   \r\n\t\t\t\t\t\t\t\t\t\t KEVIN PERRY \r\n\t\t\t\t\t\t\t\t\t\t SOFTWARE DEVELOPER \r\n\t\t\t\t\t\t\t\t\t\t Vivamus congue justo eget diam interdum scelerisque. In hac habitasse platea dictumst. \r\n\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t\t  \r\n\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t   \r\n\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t \r\n\t\t\t\t   \r\n\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t   \r\n\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t   \r\n\t\t\t\t\t\t\t\t\t   \r\n\t\t\t\t\t\t\t\t\t\t KEVIN PERRY \r\n\t\t\t\t\t\t\t\t\t\t SOFTWARE DEVELOPER \r\n\t\t\t\t\t\t\t\t\t\t Vivamus congue justo eget diam interdum scelerisque. In hac habitasse platea dictumst. \r\n\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t\t  \r\n\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t   \r\n\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t \r\n\t\t\t\t   \r\n\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t   \r\n\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t   \r\n\t\t\t\t\t\t\t\t\t   \r\n\t\t\t\t\t\t\t\t\t\t KEVIN PERRY \r\n\t\t\t\t\t\t\t\t\t\t SOFTWARE DEVELOPER \r\n\t\t\t\t\t\t\t\t\t\t Vivamus congue justo eget diam interdum scelerisque. In hac habitasse platea dictumst. \r\n\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t\t  \r\n\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t   \r\n\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t          \r\n       \r\n     \r\n     \r\n             \r\n                        ABOUT \r\n                          \r\n          \r\n          Biography \r\n Morbi rutrum, elit ac fermentum egestas, tortor ante vestibulum est, eget scelerisque nisl velit eget tellus. Fusce porta facilisis luctus. Integer neque dolor, rhoncus nec euismod eget, pharetra et tortor. Nulla id pulvinar nunc. Vestibulum auctor nisl vel lectus ullamcorper sed pellentesque dolor eleifend. Praesent lobortis magna vel diam mattis sagittis.Mauris porta odio eu risus scelerisque id facilisis ipsum dictum vitae volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar neque eu purus sollicitudin et sollicitudin dui ultricies. Maecenas cursus auctor tellus sit amet blandit. Maecenas a erat ac nibh molestie interdum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed lorem enim, ultricies sed sodales id, convallis molestie ipsum. Morbi eget dolor ligula. Vivamus accumsan rutrum nisi nec elementum. Pellentesque at nunc risus. Phasellus ullamcorper bibendum varius. Quisque quis ligula sit amet felis ornare porta. Aenean viverra lacus et mi elementum mollis. Praesent eu justo elit. \r\n          Personal Info \r\n   \r\n     \r\n          +1123 2456 689 \r\n     \r\n     \r\n          3301 Lorem Ipsum, Dolor Sit St \r\n     \r\n     \r\n          admin@domain.com . \r\n     \r\n     \r\n           Mageewp.com \r\n     \r\n   \r\n          \r\n           \r\n                    \r\n                           \r\n  \r\n   \r\n\t\t\t   \r\n\t\t\t\t 200 \r\n\t\t\t\t Themes \r\n\t\t\t   \r\n\t\t\t \r\n\t\t\t   \r\n\t\t\t\t 98 \r\n\t\t\t\t Supporters \r\n\t\t\t   \r\n\t\t\t \r\n\t\t\t   \r\n\t\t\t\t 1360 \r\n\t\t\t\t Projuects \r\n\t\t\t   \r\n\t\t\t \r\n\t\t\t   \r\n\t\t\t\t 8000 \r\n\t\t\t\t Customers \r\n\t\t\t   \r\n\t\t\t       \r\n \r\n             \r\n\r\n                           \r\n              \r\n\t\t\t   \r\n\t\t\t\t\t\t\t\t   \r\n\t\t\t \r\n\t\t\t   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris consequat non ex quis consectetur. Aliquam iaculis dolor erat, ut ornare dui vulputate nec. Cras a sem mattis, tincidunt urna nec, iaculis nisl. Nam congue ultricies dui.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris consequat non ex quis consectetur. Aliquam iaculis dolor erat, ut ornare dui vulputate nec. Cras a sem mattis, tincidunt urna nec, iaculis nisl. Nam congue ultricies dui. \r\n\t\t\t \r\n\t\t\t \r\n\t\t\t   \r\n\t\t\t   \r\n\t\t\t\t KEVIN PERRY \r\n\t\t\t\t Web Developer \r\n\t\t\t   \r\n\t\t\t \r\n\t\t   \r\n\t\t \r\n\t\t \r\n\t\t\t   \r\n\t\t\t\t\t\t\t\t   \r\n\t\t\t \r\n\t\t\t   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris consequat non ex quis consectetur. Aliquam iaculis dolor erat, ut ornare dui vulputate nec. Cras a sem mattis, tincidunt urna nec, iaculis nisl. Nam congue ultricies dui.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris consequat non ex quis consectetur. Aliquam iaculis dolor erat, ut ornare dui vulputate nec. Cras a sem mattis, tincidunt urna nec, iaculis nisl. Nam congue ultricies dui. \r\n\t\t\t \r\n\t\t\t \r\n\t\t\t   \r\n\t\t\t   \r\n\t\t\t\t KEVIN PERRY \r\n\t\t\t\t Web Developer \r\n\t\t\t   \r\n\t\t\t \r\n\t\t   \r\n\t\t \r\n\t\t \r\n\t\t\t   \r\n\t\t\t\t\t\t\t\t   \r\n\t\t\t \r\n\t\t\t   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris consequat non ex quis consectetur. Aliquam iaculis dolor erat, ut ornare dui vulputate nec. Cras a sem mattis, tincidunt urna nec, iaculis nisl. Nam congue ultricies dui.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris consequat non ex quis consectetur. Aliquam iaculis dolor erat, ut ornare dui vulputate nec. Cras a sem mattis, tincidunt urna nec, iaculis nisl. Nam congue ultricies dui. \r\n\t\t\t \r\n\t\t\t \r\n\t\t\t   \r\n\t\t\t   \r\n\t\t\t\t KEVIN PERRY \r\n\t\t\t\t Web Developer \r\n\t\t\t   \r\n\t\t\t \r\n\t\t   \r\n\t\t \r\n\t\t      \r\n         \r\n                        CONTACT \r\n                         Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere c. Etiam ut dui eu nisi lobortis rhoncus ac quis nunc. \r\n                   \r\n          \r\n          \r\n \r\n             \r\n             \r\n             \r\n             \r\n             \r\n             \r\n             \r\n            \r\n           \r\n                          \r\n           \r\n         \r\n       \r\n     \r\n   \r\n \r\n \r\n\r\n \r\n       \r\n     \r\n          Copyright      \r\n        \r\n        Designed by  MageeWP Themes . \r\n       \r\n               \r\n     \r\n   \r\n   \r\n \r\n \r\n        \t \r\n        \t\t \r\n            \t TOP \r\n        \t \r\n         \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n",
+          "exact_receipt_excerpt": "s://etne-invest.no/xmlrpc.php\">\r\n<title>Etne Invest AS &#8211; Info om Etne Invest AS</title>\n<link rel='dns-prefetch' href='//fonts.googleapis.com' />\n<link rel='dns-prefetch' href='//s.w.org' />\n<link rel=\"alternate\" type=\"application/rss+xml\" title=\"Etne Invest AS &raquo; strøm\" href=\"https://etn"
+        }
+      ],
+      "review_status": "doubtful_withheld_rule_revert_required",
+      "review_reason": "Uncustomized WordPress/MageeWP theme, not a substantive company page: Lorem ipsum, repeated KEVIN PERRY staff, dummy phone 123456789, admin@domain.com and generic FREE PSD TEMPLATE. Exact legal title/domain/lang is insufficient; revert R7e acceptance."
+    }
+  ],
+  "method": "Full saved publisher context for assistant inspection; no network or human-verdict claim",
+  "review_kind": "Assistant saved-source/context check; no independent human verdict"
+}

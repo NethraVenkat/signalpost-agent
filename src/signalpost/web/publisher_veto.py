@@ -40,7 +40,14 @@ def conflict(page, org, context):
         for other in re.findall(r'(?<!\w)' + re.escape(stem) + r'\s+(' + _FORMS + r')(?!\w)', folded):
             if other != form and {other, form} != {'as', 'asa'}:
                 return 'publisher_conflicting_legal_form', []
-    if _PLACEHOLDER.search(text):
+    # A stock theme can have the legal name in its title while its supposed
+    # business/contact content remains entirely dummy material. Require a
+    # combination, not isolated lorem ipsum in a testimonial or article.
+    visible=page.visible.casefold()
+    repeated_lorem=visible.count('lorem ipsum')>=2
+    dummy=bool(re.search(r'admin@domain\.com|123456789|kevin perry|free psd template|3301 lorem ipsum',visible))
+    stock_theme=repeated_lorem and dummy
+    if _PLACEHOLDER.search(text) or stock_theme:
         return 'publisher_placeholder', []
     if org not in ids and _GROUP.search(text):
         return 'publisher_group_without_exact_orgnr', []

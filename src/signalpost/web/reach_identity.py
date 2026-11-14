@@ -161,39 +161,6 @@ def unique_email(page,org,context):
 
 RULES['unique_registry_email']=unique_email
 
-def unique_name_domain(page,org,context):
-    from .rarity import name_key,load
-    from .candidates import legal_name
-    from urllib.parse import urlsplit
-    if not eligible(page,org,context) or not single_company_root(page,context):return None
-    fragment=name_fragment(page,context.get('name'))
-    if not fragment:return None
-    if re.search(r'\b(?:franchise|franchisor|franchisetaker|parent company|our companies|group companies|morselskap|konsern|gruppen|holding)\b',page.visible,re.I):return None
-    key=name_key(context.get('name'))
-    try:frequency=load()['counts']['name'].get(key,0)
-    except (OSError,ValueError,KeyError):return None
-    if frequency!=1:return None
-    candidate=context.get('candidate_url')
-    if not candidate or domain(candidate)!=domain(page.url):return None
-    label=domain(candidate).split('.')[0]
-    legal=legal_name(context.get('name'));labels=set()
-    for ae,oe,aa in [('ae','oe','aa'),('a','o','a')]:
-        folded=legal.replace(chr(230),ae).replace(chr(248),oe).replace(chr(229),aa)
-        words=re.findall(r'[a-z0-9]+',folded)
-        labels.update(separator.join(words) for separator in ('','-'))
-    if label not in labels or len(label.replace('-',''))<4:return None
-    visible=page.visible
-    postcode=str(context.get('postcode') or '')
-    tie=('international_phone' if re.search(r'\+47\s*\d',visible) else
-        'no_email' if re.search(r'[^\s@]+@[^\s@]+\.no\b',visible,re.I) else
-        'norwegian_language' if re.search(r'<html\b[^>]*\blang\s*=\s*[\"\x27](?:no|nb|nn)(?:-[a-z]+)?[\"\x27]',page.raw,re.I) else
-        'registered_postcode' if re.fullmatch(r'\d{4}',postcode) and re.search(r'(?<!\d)'+postcode+r'(?!\d)',visible) else None)
-    if not tie:return None
-    return {**receipt('exact_name_unique_domain',page,context,fragment,context['name'],{'kind':'exact_full_legal_name','name_key':key,'rarity_count':1}),
-        'domain_label':label,'norway_tie':tie}
-
-RULES['exact_name_unique_domain']=unique_name_domain
-
 def registered_place(page,org,context):
     if not eligible(page,org,context) or not single_company_root(page,context):return None
     from .social import shared_group_context
