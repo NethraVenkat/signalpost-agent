@@ -11,7 +11,7 @@ from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[3]
 SEEDS=(20261017,20261113,20261114,20261115,20261116,20261117)
-ORDER=('X1','X4','X5','R6a','R6b','R6c','R6d','R6e','R6f','X2','X3','X6')
+ORDER=('X1','X4','X5','R6','R7','X2')
 
 
 def save(path,value):
@@ -21,7 +21,7 @@ def save(path,value):
 def sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def folder(stage):return ROOT/'reports/r5'/('stageR6' if stage.startswith('R6') else 'stageX')/stage
+def folder(stage):return ROOT/'reports/r5'/('stage'+stage if stage in {'R6','R7'} else 'stageX')/stage
 
 
 def manifest():
@@ -66,7 +66,7 @@ def main():
     stage=sys.argv[1];assert stage in ORDER
     chosen=set(map(int,sys.argv[2:]))
     label=os.environ.get('SIGNALPOST_MEASUREMENT_LABEL','final')
-    assert label in {'final','source-recovery'}
+    assert label in {'final','source-recovery','resume-final'}
     dest=folder(stage);dest.mkdir(parents=True,exist_ok=True)
     source=manifest();save(dest/'source_manifest.json',source)
     env=os.environ.copy();env.update(PYTHONUTF8='1',SIGNALPOST_SEARCH_PROVIDER='disabled',SIGNALPOST_SEARCH_MOCK='0')
@@ -78,7 +78,7 @@ def main():
         orgs=Path(oldargv[oldargv.index('--organisations')+1]);bulk=Path(oldargv[oldargv.index('--bulk')+1])
         oldwork=Path(oldsettings['working_directory']);oldrows=[json.loads(s) for s in (oldwork/'envelopes.jsonl').read_text(encoding='utf8').splitlines()]
         work=ROOT/'.data/r5'/f'stage{stage}-{seed}-{label}';work.mkdir(exist_ok=False)
-        output=dest/f'seed{seed}';output.mkdir(exist_ok=label=='source-recovery')
+        output=dest/f'seed{seed}';output.mkdir(exist_ok=label!='final')
         argv=[sys.executable,'-m','signalpost.cli','run']
         for key,value in {'organisations':orgs,'bulk':bulk,'output':work/'envelopes.jsonl','profiles-output':work/'profiles.jsonl',
             'report':work/'report.json','run-id':f'r5-stage{stage}-seed{seed}-{label}','expected-count':100}.items():argv.extend(['--'+key,str(value)])

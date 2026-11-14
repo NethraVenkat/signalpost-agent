@@ -1,0 +1,49 @@
+{
+  "stage": "X5",
+  "state": "reverted_uncommitted_runtime_changes",
+  "last_feature_checkpoint": "82756316",
+  "reason": "Inherited approximately90-minute stage allowance exceeded with repeated process interruptions and hard wall-time/site validation failure. Green unit tests alone do not establish a valid stage measurement.",
+  "failed_validation": "Hard time budget exceeded; site skipped for time budget",
+  "saved_report_HTTP": 466,
+  "saved_report_completion": {
+    "wall_seconds": 5122.563,
+    "within_requested_time_budget": false,
+    "within_effective_time_budget": false,
+    "note": "Includes preparation, crawl, mandatory outputs and site; final report flush adds filesystem latency."
+  },
+  "saved_report_site": {
+    "state": "skipped",
+    "reason": "time_budget",
+    "seconds_left": -3022.33,
+    "estimated_seconds": 5.0
+  },
+  "execution": {
+    "exit_code": 0,
+    "wall_seconds": 6471.531000000017,
+    "argv": [
+      "C:\\Users\\<USER>\\signal-nethra\\.venv\\Scripts\\python.exe",
+      "-m",
+      "signalpost.cli",
+      "run",
+      "--organisations",
+      "C:\\Users\\<USER>\\signal-nethra\\reports\\r5\\stageH\\seed20261115\\companies100.jsonl",
+      "--bulk",
+      "C:\\Users\\<USER>\\signal-nethra\\reports\\r5\\stageH\\seed20261115\\registry100.csv",
+      "--output",
+      "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageX5-20261115-source-recovery\\envelopes.jsonl",
+      "--profiles-output",
+      "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageX5-20261115-source-recovery\\profiles.jsonl",
+      "--report",
+      "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageX5-20261115-source-recovery\\report.json",
+      "--run-id",
+      "r5-stageX5-seed20261115-source-recovery",
+      "--expected-count",
+      "100"
+    ],
+    "cwd": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageX5-20261115-source-recovery"
+  },
+  "runtime_code_preserved": "trials/reverted_stage/",
+  "provider_cost_usd": 0.0,
+  "measurement_state": "Only three of six samples completed independent verification before later failures; no six-sample X5 result accepted. No X5 feature committed.",
+  "restored_checkpoint_pytest": "1,067 passed in 183.47s (restored X4 runtime)"
+}

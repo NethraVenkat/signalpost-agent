@@ -1,0 +1,574 @@
+{
+  "method": "Offline X4 saved-response capability audit; includes dates outside X5 36-month publication window. No new requests.",
+  "explicit_dates": {
+    "initialRegistrationDate": 80
+  },
+  "receipts": [
+    {
+      "orgnr": "925181536",
+      "date": "2021-03-08T15:11:32Z",
+      "type": "initialRegistrationDate",
+      "sha256": "ab0a9ad323e8ec866c2e8f275c7a7c9a182855db75667180d540d7b792f72a13",
+      "locator": "/data/0/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "829577372",
+      "date": "2025-01-31T07:42:00Z",
+      "type": "initialRegistrationDate",
+      "sha256": "3ae5bfd70497a420e6310b6b1882161053a94b127b4d00f44a22d5972dff3835",
+      "locator": "/data/0/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "988963259",
+      "date": "2018-02-28T15:33:00Z",
+      "type": "initialRegistrationDate",
+      "sha256": "e9120355abe3b0a995defdadb429531cf84ebfe9caaaa8800a9f60356f5758a2",
+      "locator": "/data/3/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "927439794",
+      "date": "2023-03-15T08:55:06Z",
+      "type": "initialRegistrationDate",
+      "sha256": "ab0a9ad323e8ec866c2e8f275c7a7c9a182855db75667180d540d7b792f72a13",
+      "locator": "/data/5/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "946595845",
+      "date": "2023-12-07T10:32:05Z",
+      "type": "initialRegistrationDate",
+      "sha256": "e9120355abe3b0a995defdadb429531cf84ebfe9caaaa8800a9f60356f5758a2",
+      "locator": "/data/0/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "991835423",
+      "date": "2017-12-22T15:33:00Z",
+      "type": "initialRegistrationDate",
+      "sha256": "e9120355abe3b0a995defdadb429531cf84ebfe9caaaa8800a9f60356f5758a2",
+      "locator": "/data/2/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "919414944",
+      "date": "2026-03-20T10:54:00Z",
+      "type": "initialRegistrationDate",
+      "sha256": "ab0a9ad323e8ec866c2e8f275c7a7c9a182855db75667180d540d7b792f72a13",
+      "locator": "/data/1/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "918079327",
+      "date": "2017-11-28T21:31:00Z",
+      "type": "initialRegistrationDate",
+      "sha256": "3ae5bfd70497a420e6310b6b1882161053a94b127b4d00f44a22d5972dff3835",
+      "locator": "/data/4/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "923399658",
+      "date": "2026-02-10T08:17:00Z",
+      "type": "initialRegistrationDate",
+      "sha256": "ab0a9ad323e8ec866c2e8f275c7a7c9a182855db75667180d540d7b792f72a13",
+      "locator": "/data/2/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "957687504",
+      "date": "2026-06-03T07:53:00Z",
+      "type": "initialRegistrationDate",
+      "sha256": "e9120355abe3b0a995defdadb429531cf84ebfe9caaaa8800a9f60356f5758a2",
+      "locator": "/data/1/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "991853995",
+      "date": "2016-08-07T23:00:00Z",
+      "type": "initialRegistrationDate",
+      "sha256": "e9120355abe3b0a995defdadb429531cf84ebfe9caaaa8800a9f60356f5758a2",
+      "locator": "/data/4/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "999504116",
+      "date": "2025-06-03T09:55:57Z",
+      "type": "initialRegistrationDate",
+      "sha256": "e9120355abe3b0a995defdadb429531cf84ebfe9caaaa8800a9f60356f5758a2",
+      "locator": "/data/6/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "926489380",
+      "date": "2021-06-23T16:13:15Z",
+      "type": "initialRegistrationDate",
+      "sha256": "ab0a9ad323e8ec866c2e8f275c7a7c9a182855db75667180d540d7b792f72a13",
+      "locator": "/data/3/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "899174682",
+      "date": "2018-02-14T15:34:00Z",
+      "type": "initialRegistrationDate",
+      "sha256": "3ae5bfd70497a420e6310b6b1882161053a94b127b4d00f44a22d5972dff3835",
+      "locator": "/data/1/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "918703853",
+      "date": "2018-01-19T15:32:00Z",
+      "type": "initialRegistrationDate",
+      "sha256": "3ae5bfd70497a420e6310b6b1882161053a94b127b4d00f44a22d5972dff3835",
+      "locator": "/data/5/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "917751412",
+      "date": "2025-02-06T06:46:00Z",
+      "type": "initialRegistrationDate",
+      "sha256": "3ae5bfd70497a420e6310b6b1882161053a94b127b4d00f44a22d5972dff3835",
+      "locator": "/data/3/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "989965964",
+      "date": "2017-11-22T15:32:00Z",
+      "type": "initialRegistrationDate",
+      "sha256": "e9120355abe3b0a995defdadb429531cf84ebfe9caaaa8800a9f60356f5758a2",
+      "locator": "/data/5/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "815566602",
+      "date": "2017-11-16T16:28:00Z",
+      "type": "initialRegistrationDate",
+      "sha256": "3ae5bfd70497a420e6310b6b1882161053a94b127b4d00f44a22d5972dff3835",
+      "locator": "/data/2/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "925622605",
+      "date": "2022-05-06T07:25:00Z",
+      "type": "initialRegistrationDate",
+      "sha256": "ab0a9ad323e8ec866c2e8f275c7a7c9a182855db75667180d540d7b792f72a13",
+      "locator": "/data/4/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "926073737",
+      "date": "2021-01-15T12:09:59Z",
+      "type": "initialRegistrationDate",
+      "sha256": "70a160e36fa726559bb6de292f55dbfa626f6e6e706339cb9872883e9bb9fafe",
+      "locator": "/data/2/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "995991993",
+      "date": "2018-01-09T15:35:00Z",
+      "type": "initialRegistrationDate",
+      "sha256": "c4b8835bade0d8175e579126ec6f8ca960cf635149da0c07cbafad07d353cde8",
+      "locator": "/data/3/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "924004843",
+      "date": "2021-01-13T16:18:38Z",
+      "type": "initialRegistrationDate",
+      "sha256": "70a160e36fa726559bb6de292f55dbfa626f6e6e706339cb9872883e9bb9fafe",
+      "locator": "/data/3/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "927550563",
+      "date": "2021-12-03T17:26:24Z",
+      "type": "initialRegistrationDate",
+      "sha256": "70a160e36fa726559bb6de292f55dbfa626f6e6e706339cb9872883e9bb9fafe",
+      "locator": "/data/5/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "924592753",
+      "date": "2025-03-31T07:05:00Z",
+      "type": "initialRegistrationDate",
+      "sha256": "70a160e36fa726559bb6de292f55dbfa626f6e6e706339cb9872883e9bb9fafe",
+      "locator": "/data/1/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "988894826",
+      "date": "2019-04-12T14:33:16Z",
+      "type": "initialRegistrationDate",
+      "sha256": "c4b8835bade0d8175e579126ec6f8ca960cf635149da0c07cbafad07d353cde8",
+      "locator": "/data/1/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "937969104",
+      "date": "2018-01-17T15:34:00Z",
+      "type": "initialRegistrationDate",
+      "sha256": "84cad08ab15371b523ca31f768ab01a2a330d2164f253012e404604dfe2d1c6c",
+      "locator": "/data/0/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "989194283",
+      "date": "2020-06-29T15:33:41Z",
+      "type": "initialRegistrationDate",
+      "sha256": "c4b8835bade0d8175e579126ec6f8ca960cf635149da0c07cbafad07d353cde8",
+      "locator": "/data/2/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "911818191",
+      "date": "2017-10-08T04:03:00Z",
+      "type": "initialRegistrationDate",
+      "sha256": "8aa44de4c719045238ace78ef21f6fe4e50b418acb3c9175249d056385b164c6",
+      "locator": "/data/0/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "929376935",
+      "date": "2022-06-30T16:07:59Z",
+      "type": "initialRegistrationDate",
+      "sha256": "70a160e36fa726559bb6de292f55dbfa626f6e6e706339cb9872883e9bb9fafe",
+      "locator": "/data/4/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "922718059",
+      "date": "2019-09-10T17:20:20Z",
+      "type": "initialRegistrationDate",
+      "sha256": "70a160e36fa726559bb6de292f55dbfa626f6e6e706339cb9872883e9bb9fafe",
+      "locator": "/data/0/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "982039177",
+      "date": "2017-10-02T20:18:00Z",
+      "type": "initialRegistrationDate",
+      "sha256": "c4b8835bade0d8175e579126ec6f8ca960cf635149da0c07cbafad07d353cde8",
+      "locator": "/data/0/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "988217867",
+      "date": "2017-11-22T15:33:00Z",
+      "type": "initialRegistrationDate",
+      "sha256": "e62385327f17173ffc4ab36f59d7191c3627ca46c372eea6fac6596e107ec8aa",
+      "locator": "/data/0/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "929674006",
+      "date": "2022-10-18T15:20:54Z",
+      "type": "initialRegistrationDate",
+      "sha256": "30b55d37ad4e3a0b8378c06288904441d766fe9aecafd793790e96965b42f022",
+      "locator": "/data/2/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "917148627",
+      "date": "2026-03-24T11:48:00Z",
+      "type": "initialRegistrationDate",
+      "sha256": "c55c97e62feefc7640b58429a33ff913927c8d10fc2388e2f3f001a7b59370b2",
+      "locator": "/data/2/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "918912746",
+      "date": "2018-01-03T15:35:00Z",
+      "type": "initialRegistrationDate",
+      "sha256": "c55c97e62feefc7640b58429a33ff913927c8d10fc2388e2f3f001a7b59370b2",
+      "locator": "/data/3/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "911697688",
+      "date": "2020-07-28T00:00:00Z",
+      "type": "initialRegistrationDate",
+      "sha256": "c55c97e62feefc7640b58429a33ff913927c8d10fc2388e2f3f001a7b59370b2",
+      "locator": "/data/0/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "927636166",
+      "date": "2025-08-06T06:01:00Z",
+      "type": "initialRegistrationDate",
+      "sha256": "30b55d37ad4e3a0b8378c06288904441d766fe9aecafd793790e96965b42f022",
+      "locator": "/data/0/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "917071209",
+      "date": "2025-07-21T09:25:00Z",
+      "type": "initialRegistrationDate",
+      "sha256": "c55c97e62feefc7640b58429a33ff913927c8d10fc2388e2f3f001a7b59370b2",
+      "locator": "/data/1/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "928603229",
+      "date": "2024-02-19T07:56:00Z",
+      "type": "initialRegistrationDate",
+      "sha256": "30b55d37ad4e3a0b8378c06288904441d766fe9aecafd793790e96965b42f022",
+      "locator": "/data/1/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "979993609",
+      "date": "2017-01-12T00:00:00Z",
+      "type": "initialRegistrationDate",
+      "sha256": "e62385327f17173ffc4ab36f59d7191c3627ca46c372eea6fac6596e107ec8aa",
+      "locator": "/data/1/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "917468788",
+      "date": "2025-05-06T06:37:16Z",
+      "type": "initialRegistrationDate",
+      "sha256": "c55c97e62feefc7640b58429a33ff913927c8d10fc2388e2f3f001a7b59370b2",
+      "locator": "/data/4/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "995742764",
+      "date": "2019-03-28T16:25:28Z",
+      "type": "initialRegistrationDate",
+      "sha256": "5f74ff2d63d910e9a8271c036cd980253cae73a29d287e3ebbbd2b37d12ea43b",
+      "locator": "/data/0/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "989272675",
+      "date": "2018-08-10T14:31:00Z",
+      "type": "initialRegistrationDate",
+      "sha256": "5f74ff2d63d910e9a8271c036cd980253cae73a29d287e3ebbbd2b37d12ea43b",
+      "locator": "/data/2/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "917197105",
+      "date": "2026-05-26T08:37:13Z",
+      "type": "initialRegistrationDate",
+      "sha256": "45d1f1b873aca58ba54974bfeabf4c95fcfa069d155047bb28f220a69fac64d7",
+      "locator": "/data/4/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "917791155",
+      "date": "2024-12-05T09:31:00Z",
+      "type": "initialRegistrationDate",
+      "sha256": "45d1f1b873aca58ba54974bfeabf4c95fcfa069d155047bb28f220a69fac64d7",
+      "locator": "/data/1/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "918819193",
+      "date": "2018-02-28T15:31:00Z",
+      "type": "initialRegistrationDate",
+      "sha256": "45d1f1b873aca58ba54974bfeabf4c95fcfa069d155047bb28f220a69fac64d7",
+      "locator": "/data/3/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "997843517",
+      "date": "2022-01-04T14:53:44Z",
+      "type": "initialRegistrationDate",
+      "sha256": "5f74ff2d63d910e9a8271c036cd980253cae73a29d287e3ebbbd2b37d12ea43b",
+      "locator": "/data/1/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "914566371",
+      "date": "2020-11-16T21:30:00Z",
+      "type": "initialRegistrationDate",
+      "sha256": "45d1f1b873aca58ba54974bfeabf4c95fcfa069d155047bb28f220a69fac64d7",
+      "locator": "/data/0/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "980747123",
+      "date": "2018-01-05T21:00:39Z",
+      "type": "initialRegistrationDate",
+      "sha256": "814cb507d56e2936d9a31ae432819377f3b6b5f591f68984c7b0aea05465e657",
+      "locator": "/data/0/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "917455104",
+      "date": "2018-09-28T13:15:02Z",
+      "type": "initialRegistrationDate",
+      "sha256": "45d1f1b873aca58ba54974bfeabf4c95fcfa069d155047bb28f220a69fac64d7",
+      "locator": "/data/2/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "984406622",
+      "date": "2018-04-11T14:26:35Z",
+      "type": "initialRegistrationDate",
+      "sha256": "814cb507d56e2936d9a31ae432819377f3b6b5f591f68984c7b0aea05465e657",
+      "locator": "/data/1/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "966843276",
+      "date": "2017-10-28T21:54:00Z",
+      "type": "initialRegistrationDate",
+      "sha256": "d4f0723712a6c1074fcb528e3818b4711cee919f6961a92684cc9ae0a1394f31",
+      "locator": "/data/0/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "919638575",
+      "date": "2018-01-08T15:34:00Z",
+      "type": "initialRegistrationDate",
+      "sha256": "355f33ae521cc925c7ff12b3f5e5b1668290969c9fd475adc27b5f8968f6bd3b",
+      "locator": "/data/4/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "991658807",
+      "date": "2015-08-20T00:00:00Z",
+      "type": "initialRegistrationDate",
+      "sha256": "d4f0723712a6c1074fcb528e3818b4711cee919f6961a92684cc9ae0a1394f31",
+      "locator": "/data/1/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "915279376",
+      "date": "2017-11-14T22:02:00Z",
+      "type": "initialRegistrationDate",
+      "sha256": "355f33ae521cc925c7ff12b3f5e5b1668290969c9fd475adc27b5f8968f6bd3b",
+      "locator": "/data/2/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "816322812",
+      "date": "2017-10-11T19:39:16Z",
+      "type": "initialRegistrationDate",
+      "sha256": "355f33ae521cc925c7ff12b3f5e5b1668290969c9fd475adc27b5f8968f6bd3b",
+      "locator": "/data/0/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "921082428",
+      "date": "2026-02-06T08:34:00Z",
+      "type": "initialRegistrationDate",
+      "sha256": "87178606ab22464e67c4f07fc7435953959fce1a478693eea2565c06f79325ce",
+      "locator": "/data/1/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "993459747",
+      "date": "2017-11-22T00:33:00Z",
+      "type": "initialRegistrationDate",
+      "sha256": "d4f0723712a6c1074fcb528e3818b4711cee919f6961a92684cc9ae0a1394f31",
+      "locator": "/data/2/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "933085848",
+      "date": "2024-02-28T16:01:40Z",
+      "type": "initialRegistrationDate",
+      "sha256": "6aade727b3830a34d7a606ee5c11fd9dc686a8364a8cf4b34749bd0e0d7370b2",
+      "locator": "/data/0/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "813911442",
+      "date": "2017-10-12T17:15:03Z",
+      "type": "initialRegistrationDate",
+      "sha256": "355f33ae521cc925c7ff12b3f5e5b1668290969c9fd475adc27b5f8968f6bd3b",
+      "locator": "/data/3/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "915057098",
+      "date": "2021-03-08T18:00:00Z",
+      "type": "initialRegistrationDate",
+      "sha256": "355f33ae521cc925c7ff12b3f5e5b1668290969c9fd475adc27b5f8968f6bd3b",
+      "locator": "/data/5/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "948410931",
+      "date": "2017-12-07T15:33:00Z",
+      "type": "initialRegistrationDate",
+      "sha256": "6aade727b3830a34d7a606ee5c11fd9dc686a8364a8cf4b34749bd0e0d7370b2",
+      "locator": "/data/1/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "930086533",
+      "date": "2024-01-30T12:16:46Z",
+      "type": "initialRegistrationDate",
+      "sha256": "87178606ab22464e67c4f07fc7435953959fce1a478693eea2565c06f79325ce",
+      "locator": "/data/0/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "922346283",
+      "date": "2021-03-18T10:37:23Z",
+      "type": "initialRegistrationDate",
+      "sha256": "87178606ab22464e67c4f07fc7435953959fce1a478693eea2565c06f79325ce",
+      "locator": "/data/2/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "889183322",
+      "date": "2017-11-16T16:36:00Z",
+      "type": "initialRegistrationDate",
+      "sha256": "355f33ae521cc925c7ff12b3f5e5b1668290969c9fd475adc27b5f8968f6bd3b",
+      "locator": "/data/1/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "819691452",
+      "date": "2018-08-10T14:19:47Z",
+      "type": "initialRegistrationDate",
+      "sha256": "355f33ae521cc925c7ff12b3f5e5b1668290969c9fd475adc27b5f8968f6bd3b",
+      "locator": "/data/6/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "922224978",
+      "date": "2021-05-04T21:31:00Z",
+      "type": "initialRegistrationDate",
+      "sha256": "abdcc57c077610459f200dabbc7e8300708bfb90a971b0ee49dad1057ce7ec56",
+      "locator": "/data/1/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "921187297",
+      "date": "2020-10-13T21:30:00Z",
+      "type": "initialRegistrationDate",
+      "sha256": "abdcc57c077610459f200dabbc7e8300708bfb90a971b0ee49dad1057ce7ec56",
+      "locator": "/data/0/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "889320362",
+      "date": "2017-11-17T17:40:42Z",
+      "type": "initialRegistrationDate",
+      "sha256": "e2b35f69ce6e0e4e19498e55d85fff3cbe88bc0fdf2a27beb023f6eec56b82ef",
+      "locator": "/data/0/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "819138842",
+      "date": "2020-01-08T15:33:00Z",
+      "type": "initialRegistrationDate",
+      "sha256": "e2b35f69ce6e0e4e19498e55d85fff3cbe88bc0fdf2a27beb023f6eec56b82ef",
+      "locator": "/data/1/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "925821233",
+      "date": "2017-12-20T15:34:00Z",
+      "type": "initialRegistrationDate",
+      "sha256": "abdcc57c077610459f200dabbc7e8300708bfb90a971b0ee49dad1057ce7ec56",
+      "locator": "/data/3/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "988602744",
+      "date": "2018-01-19T20:52:37Z",
+      "type": "initialRegistrationDate",
+      "sha256": "0fc9f215ec7bd6f27617d217559e414eac3f252c8755252142ece44199cb4f25",
+      "locator": "/data/6/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "980616622",
+      "date": "2017-10-20T23:53:00Z",
+      "type": "initialRegistrationDate",
+      "sha256": "0fc9f215ec7bd6f27617d217559e414eac3f252c8755252142ece44199cb4f25",
+      "locator": "/data/3/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "982793289",
+      "date": "2017-10-18T03:10:00Z",
+      "type": "initialRegistrationDate",
+      "sha256": "0fc9f215ec7bd6f27617d217559e414eac3f252c8755252142ece44199cb4f25",
+      "locator": "/data/0/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "990006679",
+      "date": "2017-12-27T19:14:01Z",
+      "type": "initialRegistrationDate",
+      "sha256": "0fc9f215ec7bd6f27617d217559e414eac3f252c8755252142ece44199cb4f25",
+      "locator": "/data/4/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "988706418",
+      "date": "2017-11-10T22:46:00Z",
+      "type": "initialRegistrationDate",
+      "sha256": "0fc9f215ec7bd6f27617d217559e414eac3f252c8755252142ece44199cb4f25",
+      "locator": "/data/2/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "916000316",
+      "date": "2026-03-20T10:43:00Z",
+      "type": "initialRegistrationDate",
+      "sha256": "e2b35f69ce6e0e4e19498e55d85fff3cbe88bc0fdf2a27beb023f6eec56b82ef",
+      "locator": "/data/2/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "918823743",
+      "date": "2020-12-22T22:06:13Z",
+      "type": "initialRegistrationDate",
+      "sha256": "abdcc57c077610459f200dabbc7e8300708bfb90a971b0ee49dad1057ce7ec56",
+      "locator": "/data/2/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "979465114",
+      "date": "2017-12-19T15:35:00Z",
+      "type": "initialRegistrationDate",
+      "sha256": "0fc9f215ec7bd6f27617d217559e414eac3f252c8755252142ece44199cb4f25",
+      "locator": "/data/1/attributes/registration/initialRegistrationDate"
+    },
+    {
+      "orgnr": "989050540",
+      "date": "2022-01-13T15:30:00Z",
+      "type": "initialRegistrationDate",
+      "sha256": "0fc9f215ec7bd6f27617d217559e414eac3f252c8755252142ece44199cb4f25",
+      "locator": "/data/5/attributes/registration/initialRegistrationDate"
+    }
+  ],
+  "no_inference_from": [
+    "lastUpdateDate",
+    "nextRenewalDate",
+    "period_end",
+    "retrieved_at"
+  ]
+}

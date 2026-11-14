@@ -70,7 +70,10 @@ def main():
             for item in counts['changes'][change]:
                 result=review(item,rows[item['orgnr']] if change=='added' else oldrows[item['orgnr']],work if change=='added' else oldwork)
                 records.append({'stage':stage,'seed':seed,'change':change,**item,'review':result})
-        table.append(counts);validation.append({'seed':seed,'verification':verification,'execution':execution,'site':counts['site']})
+        counts['explicit_official_dates']=dict(Counter(c['value']['title'] for r in rows.values() for c in r['claims']
+            if c['availability']=='available' and c['field'].startswith('official_dated.')))
+        table.append(counts);validation.append({'seed':seed,'verification':verification,'execution':execution,'site':counts['site'],
+            'explicit_official_dates':counts['explicit_official_dates']})
     doubtful=[i for i in records if i['change']=='added' and i['review']['verdict']!='correct']
     save(dest/'identity_items.json',{'stage':stage,'items':records,'doubtful_added':doubtful,'method':'Independent saved-evidence rule recheck, not a human review'})
     all_records=[]
@@ -104,6 +107,12 @@ def main():
     summary+=['','Totals: '+json.dumps(dict(totals),sort_keys=True)+'.','',
         'All runs exit 0, 100 ordered terminal envelopes, five cited briefing topics, zero unsupported values, generated site with profile HTML below 250,000 bytes, and hard HTTP/time budgets respected. No doubtful new identity item. [Full new/removed identity receipts](../new_items.md).','']
     if stage=='X1':summary += ['Source capability limitation: the open role-update feed publishes generic role-registry events with exact event type/company/ID/publication time. It does not supply changed role types or persons, so these remain explicitly unknown; a current role roster is never used to invent a past leadership appointment. Leadership-specific preference cannot be applied without source evidence. The timeline and briefing can cite the generic role-registry update. Shared 50-event cap and source-namespaced IDs remain. [Official terms/docs and diagnostic response review](../sources/X1_SOURCE_REVIEW.md).','']
+    if stage=='X5':
+        summary += ['## Explicit dates and source limitations','',
+            'No request is added by X5. It reconstructs dated observations from already-saved exact-company GLEIF records. Initial registration requires initialRegistrationDate; last renewal requires explicit lastRenewalDate. Neither lastUpdateDate nor nextRenewalDate is evidence of a completed renewal. Accounts copy-year arrays and period ends do not provide a filing-availability timestamp, so no annual-accounts-available event is fabricated. Unknown capability states remain explicit in run.refresh.official_dated. Event dates stay within the existing 36-month window and cannot be after run start.','',
+            '| Seed | Explicit official dated events |','|---|---|']
+        for c in table:summary.append('| '+str(c['seed'])+' | '+json.dumps(c['explicit_official_dates'])+' |')
+        summary += ['', 'Full gate: 1,074 tests passed. Existing-source date extraction is independent of website proof. Initial/renewal date tests reject malformed/naive timestamps, foreign company/authority records, and substitutes based on retrieval, update, scheduled next renewal, statement end or year-only values.','']
     (dest/'REPORT.md').write_text('\n'.join(summary),encoding='utf8',newline='\n')
     print(json.dumps({'stage':stage,'totals':dict(totals),'new_items':dict(Counter(i['kind'] for i in records if i['change']=='added')),'doubtful':len(doubtful)}))
 

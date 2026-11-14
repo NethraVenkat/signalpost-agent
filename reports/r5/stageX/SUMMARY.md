@@ -52,6 +52,12 @@ Saved-evidence recheck: 65 added brand claims and one added website all correct;
 
 Live-source changes are not X4 identity-policy gains: one existing-rule website recovered, while LOOPYTY933519708 and AURSJ?KRAFT925700398 timed out. Two older brand aliases were withdrawn by the stricter publisher-name extractor. No social URL changes. An incomplete seed20261115 attempt had no final report/exit receipt and its process disappeared; cause/finalHTTP/runtime unknown. Its raw state and trial settings are retained under X4/trials/interrupted_seed20261115. A new-ID fresh-state recovery passed, then seeds20261116/17 completed with the same runtime source. No interrupted output is counted as an accepted run.
 
-## Remaining queue and amended measurement plan
+## X5 attempt - reverted at committed checkpoint
 
-Next is X5, then R6a?f, R7a?f, X2, X3 audit-first and X6. These remaining items are **not implemented or measured** in this report. R6/R7 each use one green pytest commit per sub-step, then one six-sample measurement after the complete stage; gains are attributed by proof labels. A doubtful site requires reverting the responsible sub-step and one stage remeasurement. X2 remains required. Skip X3/X6 if R7 is not committed by Sunday2026-11-15 06:00IST (00:30UTC). No push. User permits stopping cleanly after a completed item if time/budget is tight.
+X5 is **not completed**. Its uncommitted runtime/test changes were restored to the X4 feature checkpoint after repeated interrupted measurements and a hard-time/site validation failure exceeded the inherited approximately90-minute stage allowance. All trial outputs and implementation snapshots remain in [X5 REPORT.md](X5/REPORT.md) and [REVERTED.json](X5/REVERTED.json). Earlier green tests and three partial verified samples are not represented as a completed six-sample stage. No dated filing or renewal is invented to fill source gaps.
+
+## Remaining queue and current measurement plan
+
+Resume X5 before R6a-f, R7a-f and X2. These items are unfinished; no R6/R7/X2 gains or tables are claimed. X3 and X6 are dropped. R6 and R7 each retain one green pytest commit per sub-step, followed by ONE six-sample stage measurement. Gains are attributed by proof type; a doubtful site requires reversal of its responsible sub-step and one stage remeasurement. R1/R2/R4 evidence, robot and budget safeguards remain. Never push. Only committed checkpoints may be used to pause.
+
+Restored checkpoint full pytest: **1,067 passed in 183.47s (restored X4 runtime)**. Runtime source is restored; the reports-only checkpoint does not claim X5 completion.

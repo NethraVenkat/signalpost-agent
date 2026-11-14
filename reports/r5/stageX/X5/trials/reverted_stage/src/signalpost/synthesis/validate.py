@@ -1,0 +1,248 @@
+"""Fail-closed sentence checks over a bounded, evidence-backed claim catalog."""
+import re
+from datetime import date
+from decimal import Decimal,InvalidOperation
+from .catalog import catalog,leaves
+from ..models.synthesis import Sentence,Unknown
+from .readability import headline,nace_sentence,dual_role,normalised_description,money,workplaces_sentence
+from .nace import unspecified
+
+SECTIONS=('what_it_does','scale','leadership','changes','limitations','takeaway')
+LEVELS={'VERIFIED','HIGH','REGISTRY_DECLARED'}
+FIXED_WORDS=set('Registered activity purpose NACE Website Self description Employees Reported revenue Annual result Fiscal year Municipality Workplaces Board members Verified active ads found Official website Social profile CEO Chair Auditor First observation no earlier run to compare Previous Current Change From To Bankruptcy Liquidation Deletion Registration date Previously supported As registered NOK FY English CEO'.casefold().split())
+DATE=re.compile(r'\b(?:\d{4}[-/]\d{2}[-/]\d{2}|\d{1,2}[/.]\d{1,2}[/.]\d{4})\b')
+NUMBER=re.compile(r'(?<![\w])[-+]?\d+(?:[ ,\u00a0]\d{3})*(?:\.\d+)?(?:[eE][+-]?\d+)?(?![\w])')
+URL=re.compile(r'https?://[^\s<>«»]+')
+NAME=re.compile(r'\b[A-ZÆØÅ][\wÆØÅæøå-]*(?:\s+[A-ZÆØÅ][\wÆØÅæøå-]*)*')
+
+
+def number(value):
+    try:return str(Decimal(value.replace(',','').replace(' ','').replace('\u00a0','')).normalize())
+    except InvalidOperation:return None
+
+
+def date_token(value):
+    try:
+        if re.match(r'^\d{4}',value):parts=[int(x) for x in re.split('[-/]',value)]
+        else:
+            day,month,year=[int(x) for x in re.split('[/.]',value)];parts=[year,month,day]
+        return date(*parts).isoformat()
+    except (ValueError,TypeError):return None
+
+
+def tokens(text):
+    dates={date_token(m.group()) for m in DATE.finditer(text)}
+    without_dates=DATE.sub(' ',text)
+    urls={m.group().rstrip('.,;') for m in URL.finditer(text)}
+    without_urls=URL.sub(' ',without_dates)
+    without_urls=re.sub(r'\bFY(\d{4})\b',r'\1',without_urls)
+    nums={number(m.group()) for m in NUMBER.finditer(without_urls)}
+    return dates-{None},nums-{None},urls
+
+
+def claim_strings(claim):
+    strings=list(leaves(claim.value))
+    if getattr(claim,'reporting_period',None):strings+=list(leaves(claim.reporting_period))
+    return strings
+
+
+def permitted(claim,envelope):
+    if getattr(claim,'family',None)=='activity':
+        if claim.field.startswith('official_dated.'):
+            return any(e.extraction_method=='signalpost.dated_official.v1' and e.id in claim.evidence_ids for e in envelope.evidence)
+        if claim.field.startswith('registry_change.'):
+            from ..sources.registry_changes import permitted as registry_permitted
+            return registry_permitted(claim, envelope)
+        if not isinstance(claim.value, dict): return False
+        parent=next((c for c in envelope.claims if c.id==claim.value.get('identity_claim_id')),None)
+        return bool(parent and parent.availability=='available' and parent.field=='official_website' and permitted(parent,envelope))
+    if getattr(claim,'family',None)=='website':
+        if claim.field=='official_website':return isinstance(claim.value,dict) and claim.value.get('identity_level') in LEVELS
+        if claim.field.startswith('website_description.'):
+            parent=next((c for c in envelope.claims if c.id==claim.value.get('identity_claim_id')),None)
+            return bool(parent and parent.availability=='available' and parent.field=='official_website' and permitted(parent,envelope))
+        parent=next((c for c in envelope.claims if c.field=='official_website' and c.availability=='available'),None)
+        return bool(parent and permitted(parent,envelope))
+    return True
+
+
+def sentence_error(sentence,envelope):
+    available=catalog(envelope)
+    if sentence.topic is not None or sentence.formula is not None or sentence.observation_ids:
+        if not sentence.claim_ids and not sentence.observation_ids:return 'uncited_sentence'
+        if any(key not in available for key in sentence.claim_ids):return 'missing_or_unavailable_claim'
+        claims=[available[key] for key in sentence.claim_ids]
+        evidence={e.id for e in envelope.evidence}
+        if any(not c.evidence_ids or set(c.evidence_ids)-evidence for c in claims):return 'missing_evidence'
+        if any(not permitted(c,envelope) for c in claims):return 'identity_below_threshold'
+        if sentence.topic:
+            from .overview import required
+            return None if sentence == required(envelope)[sentence.topic] else 'unverified_required_topic'
+        if sentence.formula:
+            from .financial import analyze,metric_sentence
+            return None if sentence in [metric_sentence(m) for m in analyze(envelope)[0]] else 'unverified_financial_derivation'
+        return 'unbound_run_observation'
+    if not sentence.claim_ids:return 'uncited_sentence'
+    if any(key not in available for key in sentence.claim_ids):return 'missing_or_unavailable_claim'
+    claims=[available[key] for key in sentence.claim_ids]
+    evidence={e.id for e in envelope.evidence}
+    if any(not c.evidence_ids or set(c.evidence_ids)-evidence for c in claims):return 'missing_evidence'
+    if any(not permitted(c,envelope) for c in claims):return 'identity_below_threshold'
+    # These new frames are checked in full, bound to every claim they use.
+    # Table titles authorize only the matching NACE frame or headline.
+    plain=sentence.text.removeprefix('Previously supported. ')
+    if any(getattr(c,'family',None) in {'gleif','procurement'} for c in claims):
+        from ..sources.exact_public import briefing_sentences
+        return None if sentence in briefing_sentences(envelope) else 'unverified_public_frame'
+    from .brief import DEPTH_LABELS, depth_text, period_claims, LIMITATION, EMPLOYEE_GAP
+    if sentence.text == EMPLOYEE_GAP or sentence.text.startswith('The registry does not report'):
+        if (len(claims) != 1 or claims[0].field != 'identity.employees_reported' or claims[0].value is not False
+                or claims[0].carried_forward or sentence.text != EMPLOYEE_GAP
+                or any(c.field == 'identity.employees' and c.availability == 'available' for c in envelope.claims)
+                or sentence.value_kind != 'reported' or sentence.count is not None or sentence.record_type is not None):
+            return 'unverified_employee_gap'
+        return None
+    if sentence.text == LIMITATION or sentence.text.startswith('Only one reported fiscal period'):
+        expected = period_claims(envelope)
+        if (sentence.text != LIMITATION or not expected or sentence.claim_ids != [c.id for c in expected]
+                or sentence.value_kind != 'reported' or sentence.count is not None or sentence.record_type is not None):
+            return 'unverified_reporting_limitation'
+        return None
+    if any(plain.startswith(label + ':') for label in DEPTH_LABELS.values()):
+        if (len(claims) != 1 or sentence.text != depth_text(claims[0])
+                or sentence.value_kind != 'reported' or sentence.count is not None or sentence.record_type is not None):
+            return 'misbound_registry_depth'
+        return None
+    if 'Registry publication time:' in plain:
+        from ..sources.registry_changes import sentence as registry_sentence
+        if (len(claims) != 1 or not claims[0].field.startswith('registry_change.')
+                or claims[0].carried_forward or sentence.text != registry_sentence(claims[0].value)):
+            return 'unverified_registry_change'
+        if sentence.value_kind != 'reported' or sentence.count is not None or sentence.record_type is not None:
+            return 'unmarked_derived_count'
+        return None
+    if plain.startswith('Latest dated update on its website: '):
+        if len(claims)!=1 or getattr(claims[0],'family',None)!='activity' or claims[0].carried_forward:return 'misbound_dated_activity'
+        value=claims[0].value
+        expected='Latest dated update on its website: «'+value['title']+'» ('+value['date']+').'
+        if sentence.text!=expected:return 'unverified_dated_activity'
+        if sentence.value_kind!='reported' or sentence.count is not None or sentence.record_type is not None:return 'unmarked_derived_count'
+        return None
+    from ..registry_activity import recent, LABELS
+    if any(plain.startswith(label+': ') for label in LABELS.values()):
+        events=recent(envelope)
+        if len(claims)!=1 or not any(c.id==claims[0].id and sentence.text==label+': '+day+'.' for day,label,c in events):return 'unverified_registry_activity'
+        if sentence.value_kind!='reported' or sentence.count is not None or sentence.record_type is not None:return 'unmarked_derived_count'
+        return None
+    opening=headline(claims)
+    opening_matches=opening and sentence.text==opening[0]
+    municipality=next((c for c in claims if c.field=='identity.municipality'),None)
+    if opening and municipality and not opening_matches and ' is based in ' in opening[0]:
+        start=opening[0].index(' is based in ')+len(' is based in ')
+        end=start+len(str(municipality.value).title())
+        city=sentence.text[start:end]
+        opening_matches=city.casefold()==str(municipality.value).casefold() and sentence.text==headline(claims,municipality_display=city)[0]
+    if opening_matches:
+        if set(sentence.claim_ids)!=set(opening[1]):return 'misbound_headline'
+        if sentence.value_kind!='reported' or sentence.count is not None or sentence.record_type is not None:return 'unmarked_derived_count'
+        return None
+    outside_quotes=re.sub(r'«.*?»',' ',plain,flags=re.S)
+    if ' is a ' in outside_quotes or ' is based in ' in outside_quotes or 'registered under ' in outside_quotes or outside_quotes.startswith('Registered name: ') or ' registered employees' in outside_quotes or ' in revenue in FY' in outside_quotes:
+        return 'unverified_headline'
+    if plain.startswith('NACE '):
+        if len(claims)!=1 or not claims[0].field.startswith('identity.nace') or unspecified(claims[0].value) or sentence.text!=nace_sentence(claims[0]):return 'unverified_nace_title'
+        if sentence.value_kind!='reported' or sentence.count is not None or sentence.record_type is not None:return 'unmarked_derived_count'
+        return None
+    if ' is both CEO and chair.' in plain:
+        if any(not c.field.startswith('roles.role.') or c.value.get('inactive') is True for c in claims):return 'misbound_role'
+        merged=dual_role(claims)
+        if not merged or sentence.text!=merged[0] or set(sentence.claim_ids)!=set(merged[1]):return 'misbound_role'
+        if sentence.value_kind!='reported' or sentence.count is not None or sentence.record_type is not None:return 'unmarked_derived_count'
+        return None
+    if plain.startswith('Registered activity and purpose: '):
+        fields={c.field:c for c in claims}
+        if set(fields)!={'identity.registered_activity','identity.statutory_purpose'} or len(claims)!=2:return 'misbound_activity'
+        activity=fields['identity.registered_activity'];purpose=fields['identity.statutory_purpose']
+        value=normalised_description(activity.value)
+        prefix='Previously supported. ' if activity.carried_forward or purpose.carried_forward else ''
+        if value!=normalised_description(purpose.value) or sentence.text!=prefix+'Registered activity and purpose: «'+value[:300]+'».':return 'non_verbatim_quote'
+        if sentence.value_kind!='reported' or sentence.count is not None or sentence.record_type is not None:return 'unmarked_derived_count'
+        return None
+    if plain in {'First observation; no earlier run to compare.','No changes since the previous run.'}:
+        refresh=getattr(getattr(envelope,'run',None),'refresh',{})
+        baseline=refresh.get('mode')=='baseline'
+        if (plain.startswith('First observation') and not baseline) or (plain.startswith('No changes') and (baseline or envelope.changes)):return 'unverified_refresh_notice'
+    # Money can cite only the exact account amount, not a year or another
+    # numeric value in the same citation. Reject abbreviated/rounded amounts.
+    if re.search(r'\b(?:million|billion|thousand)\b',plain,re.I):return 'unverified_number'
+    for match in re.finditer(r'\b(NOK|EUR|USD|SEK|DKK|GBP)\s+([-+]?\d[\d, .\u00a0]*\d|[-+]?\d)',plain):
+        rendered=match.group(2).strip().rstrip('.')
+        if not any(c.field.startswith('accounts.') and isinstance(c.value,(int,float)) and
+                   (getattr(c,'reporting_period',None) or {}).get('currency')==match.group(1) and
+                   (getattr(c,'reporting_period',None) or {}).get('unit')==match.group(1) and
+                   number(rendered)==number(str(c.value)) and
+                   re.sub(r'\D','',rendered)==re.sub(r'\D','',money(c.value)) for c in claims):return 'unverified_number'
+    derived=None
+    if sentence.value_kind=='derived':
+        def matches(claim):
+            if not getattr(claim,'family',None):return False
+            if sentence.record_type=='workplaces':return claim.family=='subunits' and claim.field.startswith('subunits.unit.')
+            if sentence.record_type=='active_ads':return claim.family=='hiring' and claim.field.startswith('hiring.job.') and not claim.carried_forward
+            if sentence.record_type=='board_members':
+                return claim.family=='roles' and isinstance(claim.value,dict) and (claim.value.get('group_type') or {}).get('kode')=='STYR' and (claim.value.get('role_type') or {}).get('kode') in {'LEDE','NEST','MEDL'} and claim.value.get('inactive') is not True
+            return False
+        records={c.id for c in claims if matches(c)}
+        if sentence.count is None or sentence.count<=0 or sentence.count!=len(records):return 'unverified_derived_count'
+        if sentence.record_type=='workplaces':
+            all_units={c.id for c in envelope.claims if c.availability=='available' and matches(c)}
+            if len(claims)!=len(records) or records!=all_units or sentence.text!=workplaces_sentence(claims):return 'unverified_derived_count'
+            return None
+        labels={'workplaces':'Registered workplaces','board_members':'Registered board members','active_ads':'Verified active ads found'}
+        if sentence.text!=labels[sentence.record_type]+': '+str(sentence.count)+'.':return 'unverified_derived_count'
+        derived=number(str(sentence.count))
+    elif sentence.count is not None or sentence.record_type is not None:return 'unmarked_derived_count'
+    strings=[text for claim in claims for text in claim_strings(claim)]
+    for quoted in re.findall(r'«(.*?)»',sentence.text,re.S):
+        if not any(quoted in value for value in strings):return 'non_verbatim_quote'
+    expected=[tokens(text) for text in strings]
+    actual=tokens(sentence.text)
+    for index,label in enumerate(('date','number','url')):
+        supported=set().union(*(item[index] for item in expected)) if expected else set()
+        if index==1 and derived is not None:supported.add(derived)
+        if actual[index]-supported:return 'unverified_'+label
+    # Proper-name tokens must be present in cited values, never merely plausible.
+    outside_quotes=re.sub(r'«.*?»',' ',sentence.text,flags=re.S)
+    outside_quotes=URL.sub(' ',outside_quotes)
+    supported_words={word.casefold() for text in strings for word in re.findall(r'[\wÆØÅæøå-]+',text)}
+    for match in NAME.finditer(outside_quotes):
+        if any(word.casefold() not in FIXED_WORDS|supported_words for word in match.group().split()):return 'unverified_name'
+    return None
+
+
+def validate_synthesis(synthesis,envelope):
+    rejected=[]
+    for section in SECTIONS:
+        sentences=getattr(synthesis.sections,section);valid=[]
+        for raw in sentences:
+            sentence=raw if isinstance(raw,Sentence) else Sentence.model_validate(raw)
+            reason=sentence_error(sentence,envelope)
+            if reason:rejected.append({'section':section,'reason':reason})
+            else:valid.append(sentence)
+        setattr(synthesis.sections,section,valid)
+        if sentences and not valid:
+            synthesis.sections.unknowns.append(Unknown(family=section,state='failed',reason='No sentence passed evidence validation.'))
+    briefing = []
+    for sentence in synthesis.briefing:
+        reason = sentence_error(sentence,envelope)
+        from ..sources.exact_public import briefing_sentences
+        if not reason and len(briefing) >= 6+len(briefing_sentences(envelope)): reason = 'briefing_sentence_cap'
+        if reason: rejected.append({'section':'briefing','reason':reason})
+        else: briefing.append(sentence)
+    synthesis.briefing = briefing
+    total=sum(len(getattr(synthesis.sections,key)) for key in SECTIONS)
+    synthesis.checks.sentences=synthesis.checks.cited=total
+    synthesis.checks.values_verified=True
+    synthesis.checks.dropped_sentences+=len(rejected)
+    synthesis.checks.rejections.extend(rejected)
+    synthesis.summary=' '.join(s.text for key in SECTIONS for s in getattr(synthesis.sections,key))
+    return synthesis
