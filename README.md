@@ -210,6 +210,14 @@ Human hand review (explicit user confirmation, 2026-11-13): 4 original Stage T i
 
 Stage H human hand review (explicit user confirmation, 2026-11-13): all three automated-doubtful items are confirmed **correct**: SOLLIA GJESTEGÅRD AS 917455104 LEI (å transliterated as a in GLEIF, exact orgnr); VALAKER BAKERI OG KONDITORI AS 948039958 job (exact NAV employer orgnr through proven subunit, spelling variant only); and SISSENER AS 991658807 website. SISSENER's saved URL is `https://www.sissener.no`, satisfying the user's exact-domain condition; the user cites the company's own fund documents naming Sissener AS at www.sissener.no. No other domain is approved by this verdict. The [Stage H human-review column](reports/r5/stageH/precision/LEDGER.md) records these exact sample/value-scoped confirmations separately from the unchanged automated results (75 correct, 3 doubtful, 0 wrong across 78 items). Original proof tiers, source excerpts and published outputs remain unchanged; these three hand checks are not a population precision estimate.
 
+<!-- R5/R3 human precision review -->
+
+R5/R3 human hand review — **Nethra Venkat, 2026-11-14, independent web verification**: all **11 company websites CORRECT**, covering 13 saved URLs (both VALAKER domains and VESTFJORDEN apex/www). OPTIMAL REGNSKAP’s own name/address/phone/email match the register; it is not a client listing. Tashakori’s orgnr is on its privacy page; VALAKER’s is in the footer, and VESTFJORDEN’s is on page. MASKINKURS, BAGGES, ELEKTROFIL, DICA, A TIL Å PROFILERING, TIDEMANN and KRAABOL are confirmed correct. Optimal, Maskinkurs and Bagges Facebook links are confirmed on their own sites; Bagges LinkedIn links back to bagges.no. [Exact URL-scoped human ledger and receipts](reports/r5/stageR3/LEDGER.md).
+
+Cumulative deduplicated checked items: **162**; **24 human-verified correct**; **0 wrong**. This union covers the original T/H precision ledgers plus R5/R3 website/social receipts, counting an organisation/type/URL, LEI, parent relationship or job UUID once. It does not treat unreviewed items as human-verified, overwrite automated doubtful verdicts, re-audit all later source families, or claim population accuracy. See the ledger for per-type totals, methodology and source limits.
+
+<!-- End R5/R3 human precision review -->
+
 ### Historical scale measurements
 
 All live checks below used a 2,400-second budget and template synthesis. Coverage describes these samples, not a universal recall estimate.

@@ -1,0 +1,1712 @@
+{
+  "reviewer": "Nethra Venkat",
+  "review_date": "2026-11-14",
+  "reviews": [
+    {
+      "organisation_number": "918638628",
+      "company": "VESTFJORDEN ELEKTRO AS",
+      "kind": "website",
+      "url": "https://vestfjordenelektro.no",
+      "verdict": "correct",
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-14",
+      "method": "Human hand-check with independent web verification, supplied explicitly in conversation.",
+      "note": "Organisation number verified on page; saved apex/www variants are scoped separately.",
+      "automated_verdict": "correct",
+      "proof_tier": "orgnr_on_page",
+      "receipts": [
+        {
+          "id": "c9e43c96c72c2ca0c5c7630c253efda19900b1d90c9214f0dcd8fbcd01cd7b11",
+          "source_url": "https://vestfjordenelektro.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-14T01:32:31.232603Z",
+          "content_sha256": "75845e36b0bc2bd1e86472a01a7ed574d536c05fa7d674b6bd8eda8365f8018b",
+          "claim_span": ": Kristoffer Mørch<br />\n\t\t\t\t\tOrg. nr.: 918 638 628<br />\n\t\t\t\t\tBesøksadresse: Åsveien 4, 3475 Sætre\n\t\t\t\t</p>\n\t\t\t\t<!-- Nav tabs -->\n\t\t\t\t<ul class=\"nav ",
+          "locator": "identity-proof:918638628",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "registry_receipts": {
+        "identity.legal_name": {
+          "value": "VESTFJORDEN ELEKTRO AS",
+          "evidence": [
+            {
+              "id": "64d3812761e509d66f0f1775e0570dc65c3393ae295a6a7791eca477194818da",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T01:31:28.211152Z",
+              "content_sha256": "89cc603f9905b3d036194ca216d821405069c1649f6af9ac898b6341a943bca7",
+              "claim_span": "918638628,VESTFJORDEN ELEKTRO AS,AS,Aksjeselskap,43.210,Elektrisk installasjonsarbeid,,,,,,,true,,2024-02-13,2024-02-10,,,,,,,,,,,,Klokkeveien 2,TOFTE,3482,ASKER,3203,Norge,NO,2100,Private aksjeselskaper mv.,2025,2017-03-01,2017-01-10,true,2017-03-01,2017-05-08,,,false,,true,2017-03-01,false,false,,",
+              "locator": "row:918638628/column:navn",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:eb6e3ca98ca658c77edca3a8558a03e3faaaa78c49a8c8baaf194abfc189fbec",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        }
+      },
+      "stages": [
+        "stageR3"
+      ]
+    },
+    {
+      "organisation_number": "918638628",
+      "company": "VESTFJORDEN ELEKTRO AS",
+      "kind": "website",
+      "url": "https://www.vestfjordenelektro.no",
+      "verdict": "correct",
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-14",
+      "method": "Human hand-check with independent web verification, supplied explicitly in conversation.",
+      "note": "Organisation number verified on page; saved apex/www variants are scoped separately.",
+      "automated_verdict": "correct",
+      "proof_tier": "orgnr_on_page",
+      "receipts": [
+        {
+          "id": "950db7947b358be3bd071cbba8c70188cc251d83d48e2fc3642a5ece49671a27",
+          "source_url": "https://www.vestfjordenelektro.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-14T00:50:51.455741Z",
+          "content_sha256": "75845e36b0bc2bd1e86472a01a7ed574d536c05fa7d674b6bd8eda8365f8018b",
+          "claim_span": ": Kristoffer Mørch<br />\n\t\t\t\t\tOrg. nr.: 918 638 628<br />\n\t\t\t\t\tBesøksadresse: Åsveien 4, 3475 Sætre\n\t\t\t\t</p>\n\t\t\t\t<!-- Nav tabs -->\n\t\t\t\t<ul class=\"nav ",
+          "locator": "identity-proof:918638628",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "registry_receipts": {
+        "identity.legal_name": {
+          "value": "VESTFJORDEN ELEKTRO AS",
+          "evidence": [
+            {
+              "id": "64d3812761e509d66f0f1775e0570dc65c3393ae295a6a7791eca477194818da",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T00:49:27.902654Z",
+              "content_sha256": "89cc603f9905b3d036194ca216d821405069c1649f6af9ac898b6341a943bca7",
+              "claim_span": "918638628,VESTFJORDEN ELEKTRO AS,AS,Aksjeselskap,43.210,Elektrisk installasjonsarbeid,,,,,,,true,,2024-02-13,2024-02-10,,,,,,,,,,,,Klokkeveien 2,TOFTE,3482,ASKER,3203,Norge,NO,2100,Private aksjeselskaper mv.,2025,2017-03-01,2017-01-10,true,2017-03-01,2017-05-08,,,false,,true,2017-03-01,false,false,,",
+              "locator": "row:918638628/column:navn",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:eb6e3ca98ca658c77edca3a8558a03e3faaaa78c49a8c8baaf194abfc189fbec",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        }
+      },
+      "stages": [
+        "stageR5"
+      ]
+    },
+    {
+      "organisation_number": "934626176",
+      "company": "ADVOKATFIRMAET TASHAKORI AS",
+      "kind": "website",
+      "url": "https://tashakori.no",
+      "verdict": "correct",
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-14",
+      "method": "Human hand-check with independent web verification, supplied explicitly in conversation.",
+      "note": "Organisation number verified on the privacy page.",
+      "automated_verdict": "correct",
+      "proof_tier": "registry_declared_publisher_name",
+      "receipts": [
+        {
+          "id": "88534130f92ec7ed3babdb7650302a8a6782aa9c673a06b4051fede5bda3c622",
+          "source_url": "https://tashakori.no/nb",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-14T00:20:38.616295Z",
+          "content_sha256": "6e249158873fd837e088f6a83afdcc84d6f3baba0972384a500b098426c71375",
+          "claim_span": "5 tracking-wide\">© <!-- -->2026<!-- --> Advokatfirmaet Tashakori AS. Alle rettigheter forbeholdt.</p><div class=\"flex items-center gap-1\"><a class=\"text-[11px] text-foreground/25 hover:text-foreground/60 transition-colors duration-200 px-2\" href=\"/nb/personvern\">Personvern</a><span class=\"text-foreg",
+          "locator": "identity-proof:934626176",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "registry_receipts": {
+        "identity.legal_name": {
+          "value": "ADVOKATFIRMAET TASHAKORI AS",
+          "evidence": [
+            {
+              "id": "74d5fa044c2b332fa3da82127cd66998045dbce65f8115478885f20e985bbd32",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T00:19:13.350335Z",
+              "content_sha256": "3fe6aaf862cd3d2ba2f6faa638a21c5fa517fbbce3e7d5ed45ea1d602fdeeaf0",
+              "claim_span": "934626176,ADVOKATFIRMAET TASHAKORI AS,AS,Aksjeselskap,69.100,Juridisk tjenesteyting,,,,,,,true,6,2026-09-14,2026-09-10,www.tashakori.no,tashakori.o@gmail.com,,482 19 268,Postboks 8832 Youngstorget,OSLO,0028,OSLO,0301,Norge,NO,C. J. Hambros plass 2,OSLO,0164,OSLO,0301,Norge,NO,2100,Private aksjeselsk",
+              "locator": "row:934626176/column:navn",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:5b92dd3a9015a2f6a8ad9eaf6d5796f779669a382effdb59bbb9260d803dbd90",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        },
+        "identity.registered_website": {
+          "value": "www.tashakori.no",
+          "evidence": [
+            {
+              "id": "71b2106dc05c78b2a57069ea5af19567f2291e1e216e1595fb73ddec1a1d8f76",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T00:19:13.350335Z",
+              "content_sha256": "3fe6aaf862cd3d2ba2f6faa638a21c5fa517fbbce3e7d5ed45ea1d602fdeeaf0",
+              "claim_span": "0,Juridisk tjenesteyting,,,,,,,true,6,2026-09-14,2026-09-10,www.tashakori.no,tashakori.o@gmail.com,,482 19 268,Postboks 8832 Youngstorget,OSLO,0028,OSLO,0301,Norge,NO,C. J. Hambros plass 2,OSLO,0164,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2024-12-10,2024-11-27,true,2025-01-06,2025-01",
+              "locator": "row:934626176/column:hjemmeside",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:5b92dd3a9015a2f6a8ad9eaf6d5796f779669a382effdb59bbb9260d803dbd90",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        },
+        "identity.registered_email": {
+          "value": "tashakori.o@gmail.com",
+          "evidence": [
+            {
+              "id": "6acddd5fd2356d9c5948745a315dc78dcb702a21f036e446eeb22cd8fb2ecf91",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T00:19:13.350335Z",
+              "content_sha256": "3fe6aaf862cd3d2ba2f6faa638a21c5fa517fbbce3e7d5ed45ea1d602fdeeaf0",
+              "claim_span": "teyting,,,,,,,true,6,2026-09-14,2026-09-10,www.tashakori.no,tashakori.o@gmail.com,,482 19 268,Postboks 8832 Youngstorget,OSLO,0028,OSLO,0301,Norge,NO,C. J. Hambros plass 2,OSLO,0164,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2024-12-10,2024-11-27,true,2025-01-06,2025-01-06,,,false,,true",
+              "locator": "row:934626176/column:epostadresse",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:5b92dd3a9015a2f6a8ad9eaf6d5796f779669a382effdb59bbb9260d803dbd90",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        },
+        "identity.registered_mobile": {
+          "value": "482 19 268",
+          "evidence": [
+            {
+              "id": "2f72a1396bb8a58b2ce780da92691a60c91b3fbde2e5cc547efe7a5e5c524e76",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T00:19:13.350335Z",
+              "content_sha256": "3fe6aaf862cd3d2ba2f6faa638a21c5fa517fbbce3e7d5ed45ea1d602fdeeaf0",
+              "claim_span": "26-09-14,2026-09-10,www.tashakori.no,tashakori.o@gmail.com,,482 19 268,Postboks 8832 Youngstorget,OSLO,0028,OSLO,0301,Norge,NO,C. J. Hambros plass 2,OSLO,0164,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2024-12-10,2024-11-27,true,2025-01-06,2025-01-06,,,false,,true,2024-12-10,false,false",
+              "locator": "row:934626176/column:mobil",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:5b92dd3a9015a2f6a8ad9eaf6d5796f779669a382effdb59bbb9260d803dbd90",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        }
+      },
+      "stages": [
+        "stageR5",
+        "stageR3"
+      ]
+    },
+    {
+      "organisation_number": "948039958",
+      "company": "VALAKER BAKERI OG KONDITORI AS",
+      "kind": "website",
+      "url": "https://www.braudbakeri.no",
+      "verdict": "correct",
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-14",
+      "method": "Human hand-check with independent web verification, supplied explicitly in conversation.",
+      "note": "Both braudbakeri.no and valakerbakeri.no confirmed; organisation number in the footer.",
+      "automated_verdict": "correct",
+      "proof_tier": "orgnr_on_page",
+      "receipts": [
+        {
+          "id": "b9eb301058bfb7cf4969fb5b86133a62dcbd9c0ec955182b04f43d1c5dd72739",
+          "source_url": "https://www.braudbakeri.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-14T00:53:57.818767Z",
+          "content_sha256": "4d85f72db403e0b943479ee9dc666a4512c840eadcfb98cdc9b149cea0e529fa",
+          "claim_span": " © Valaker Bakeri og Konditori AS - Org. nr. 948 039 958</p></p></div></div></section></footer><style>/* common style */\n\n@media (min-width: 576px) {\n",
+          "locator": "identity-proof:948039958",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "registry_receipts": {
+        "identity.legal_name": {
+          "value": "VALAKER BAKERI OG KONDITORI AS",
+          "evidence": [
+            {
+              "id": "1746c0a9f9ebb7f55717d3f79a3407b1049508597d8df7224ebe6773c4e6a79d",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T00:49:27.930650Z",
+              "content_sha256": "a6554e27e2618cd6f7e517d93b8c66b08a85a445ad7edb3108db533bd6689466",
+              "claim_span": "948039958,VALAKER BAKERI OG KONDITORI AS,AS,Aksjeselskap,10.710,Produksjon av brød og ferske konditorvarer,47.240,\"Detaljhandel med bakervarer, konditorvarer og sukkervarer\",,,,,true,166,2026-09-14,2026-09-10,,post@valaker.as,70 21 65 90,91595160,,,,,,,,Søvikvegen 31,SØVIK,6280,HARAM,1580,Norge,NO,2",
+              "locator": "row:948039958/column:navn",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:eb6e3ca98ca658c77edca3a8558a03e3faaaa78c49a8c8baaf194abfc189fbec",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        },
+        "identity.registered_email": {
+          "value": "post@valaker.as",
+          "evidence": [
+            {
+              "id": "843be71ddb9df040eafa1be6fd2396616b8c0d4b8747285f5bff234b313ee42d",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T00:49:27.930650Z",
+              "content_sha256": "a6554e27e2618cd6f7e517d93b8c66b08a85a445ad7edb3108db533bd6689466",
+              "claim_span": "orvarer og sukkervarer\",,,,,true,166,2026-09-14,2026-09-10,,post@valaker.as,70 21 65 90,91595160,,,,,,,,Søvikvegen 31,SØVIK,6280,HARAM,1580,Norge,NO,2100,Private aksjeselskaper mv.,2025,1995-02-19,1988-06-01,true,1988-05-01,1995-02-19,,,false,,true,1988-11-17,false,false,,false,,false,,false,,,,,,,N",
+              "locator": "row:948039958/column:epostadresse",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:eb6e3ca98ca658c77edca3a8558a03e3faaaa78c49a8c8baaf194abfc189fbec",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        },
+        "identity.registered_phone": {
+          "value": "70 21 65 90",
+          "evidence": [
+            {
+              "id": "d250a1922155d8b7f9d6b929ba5565bc85b6b79cd5799081fd0192d42107a027",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T00:49:27.930650Z",
+              "content_sha256": "a6554e27e2618cd6f7e517d93b8c66b08a85a445ad7edb3108db533bd6689466",
+              "claim_span": "rvarer\",,,,,true,166,2026-09-14,2026-09-10,,post@valaker.as,70 21 65 90,91595160,,,,,,,,Søvikvegen 31,SØVIK,6280,HARAM,1580,Norge,NO,2100,Private aksjeselskaper mv.,2025,1995-02-19,1988-06-01,true,1988-05-01,1995-02-19,,,false,,true,1988-11-17,false,false,,false,,false,,false,,,,,,,Nynorsk,2011-11-0",
+              "locator": "row:948039958/column:telefon",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:eb6e3ca98ca658c77edca3a8558a03e3faaaa78c49a8c8baaf194abfc189fbec",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        },
+        "identity.registered_mobile": {
+          "value": "91595160",
+          "evidence": [
+            {
+              "id": "e4b85356e4e82d3876ccb179bf6f51f91e8313e7f7a294be90a7b50f3134fd5e",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T00:49:27.930650Z",
+              "content_sha256": "a6554e27e2618cd6f7e517d93b8c66b08a85a445ad7edb3108db533bd6689466",
+              "claim_span": "true,166,2026-09-14,2026-09-10,,post@valaker.as,70 21 65 90,91595160,,,,,,,,Søvikvegen 31,SØVIK,6280,HARAM,1580,Norge,NO,2100,Private aksjeselskaper mv.,2025,1995-02-19,1988-06-01,true,1988-05-01,1995-02-19,,,false,,true,1988-11-17,false,false,,false,,false,,false,,,,,,,Nynorsk,2011-11-01,Å drive pr",
+              "locator": "row:948039958/column:mobil",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:eb6e3ca98ca658c77edca3a8558a03e3faaaa78c49a8c8baaf194abfc189fbec",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        }
+      },
+      "stages": [
+        "stageR5"
+      ]
+    },
+    {
+      "organisation_number": "948039958",
+      "company": "VALAKER BAKERI OG KONDITORI AS",
+      "kind": "website",
+      "url": "https://www.valakerbakeri.no",
+      "verdict": "correct",
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-14",
+      "method": "Human hand-check with independent web verification, supplied explicitly in conversation.",
+      "note": "Both braudbakeri.no and valakerbakeri.no confirmed; organisation number in the footer.",
+      "automated_verdict": "correct",
+      "proof_tier": "orgnr_on_page",
+      "receipts": [
+        {
+          "id": "6bcf8498c72a105e5c26f499d945323a1a0716864c9143b26c74aa2ebcda706d",
+          "source_url": "https://www.valakerbakeri.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-14T01:35:01.640556Z",
+          "content_sha256": "546e8a71f5fb688e05ecfd84b0b8ce3567a6604357c1c1cd51a8a156e5015a14",
+          "claim_span": " © Valaker Bakeri og Konditori AS - Org. nr. 948 039 958</p></p></div></div></section></footer><style>/* common style */\n\n@media (min-width: 576px) {\n",
+          "locator": "identity-proof:948039958",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "registry_receipts": {
+        "identity.legal_name": {
+          "value": "VALAKER BAKERI OG KONDITORI AS",
+          "evidence": [
+            {
+              "id": "1746c0a9f9ebb7f55717d3f79a3407b1049508597d8df7224ebe6773c4e6a79d",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T01:31:28.241350Z",
+              "content_sha256": "a6554e27e2618cd6f7e517d93b8c66b08a85a445ad7edb3108db533bd6689466",
+              "claim_span": "948039958,VALAKER BAKERI OG KONDITORI AS,AS,Aksjeselskap,10.710,Produksjon av brød og ferske konditorvarer,47.240,\"Detaljhandel med bakervarer, konditorvarer og sukkervarer\",,,,,true,166,2026-09-14,2026-09-10,,post@valaker.as,70 21 65 90,91595160,,,,,,,,Søvikvegen 31,SØVIK,6280,HARAM,1580,Norge,NO,2",
+              "locator": "row:948039958/column:navn",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:eb6e3ca98ca658c77edca3a8558a03e3faaaa78c49a8c8baaf194abfc189fbec",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        },
+        "identity.registered_email": {
+          "value": "post@valaker.as",
+          "evidence": [
+            {
+              "id": "843be71ddb9df040eafa1be6fd2396616b8c0d4b8747285f5bff234b313ee42d",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T01:31:28.241350Z",
+              "content_sha256": "a6554e27e2618cd6f7e517d93b8c66b08a85a445ad7edb3108db533bd6689466",
+              "claim_span": "orvarer og sukkervarer\",,,,,true,166,2026-09-14,2026-09-10,,post@valaker.as,70 21 65 90,91595160,,,,,,,,Søvikvegen 31,SØVIK,6280,HARAM,1580,Norge,NO,2100,Private aksjeselskaper mv.,2025,1995-02-19,1988-06-01,true,1988-05-01,1995-02-19,,,false,,true,1988-11-17,false,false,,false,,false,,false,,,,,,,N",
+              "locator": "row:948039958/column:epostadresse",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:eb6e3ca98ca658c77edca3a8558a03e3faaaa78c49a8c8baaf194abfc189fbec",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        },
+        "identity.registered_phone": {
+          "value": "70 21 65 90",
+          "evidence": [
+            {
+              "id": "d250a1922155d8b7f9d6b929ba5565bc85b6b79cd5799081fd0192d42107a027",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T01:31:28.241350Z",
+              "content_sha256": "a6554e27e2618cd6f7e517d93b8c66b08a85a445ad7edb3108db533bd6689466",
+              "claim_span": "rvarer\",,,,,true,166,2026-09-14,2026-09-10,,post@valaker.as,70 21 65 90,91595160,,,,,,,,Søvikvegen 31,SØVIK,6280,HARAM,1580,Norge,NO,2100,Private aksjeselskaper mv.,2025,1995-02-19,1988-06-01,true,1988-05-01,1995-02-19,,,false,,true,1988-11-17,false,false,,false,,false,,false,,,,,,,Nynorsk,2011-11-0",
+              "locator": "row:948039958/column:telefon",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:eb6e3ca98ca658c77edca3a8558a03e3faaaa78c49a8c8baaf194abfc189fbec",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        },
+        "identity.registered_mobile": {
+          "value": "91595160",
+          "evidence": [
+            {
+              "id": "e4b85356e4e82d3876ccb179bf6f51f91e8313e7f7a294be90a7b50f3134fd5e",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T01:31:28.241350Z",
+              "content_sha256": "a6554e27e2618cd6f7e517d93b8c66b08a85a445ad7edb3108db533bd6689466",
+              "claim_span": "true,166,2026-09-14,2026-09-10,,post@valaker.as,70 21 65 90,91595160,,,,,,,,Søvikvegen 31,SØVIK,6280,HARAM,1580,Norge,NO,2100,Private aksjeselskaper mv.,2025,1995-02-19,1988-06-01,true,1988-05-01,1995-02-19,,,false,,true,1988-11-17,false,false,,false,,false,,false,,,,,,,Nynorsk,2011-11-01,Å drive pr",
+              "locator": "row:948039958/column:mobil",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:eb6e3ca98ca658c77edca3a8558a03e3faaaa78c49a8c8baaf194abfc189fbec",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        }
+      },
+      "stages": [
+        "stageR3"
+      ]
+    },
+    {
+      "organisation_number": "980616622",
+      "company": "BAGGES AS",
+      "kind": "social",
+      "url": "https://www.facebook.com/BAGGES.AS",
+      "verdict": "correct",
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-14",
+      "method": "Human hand-check with independent web verification, supplied explicitly in conversation.",
+      "note": "Link confirmed present on the company’s own site.",
+      "automated_verdict": "correct",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "receipts": [
+        {
+          "id": "e932108441bc0df5303686a34b488522cb0004bb4dcdb409e0ff285d5fdd1550",
+          "source_url": "https://www.bagges.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-14T01:32:58.325215Z",
+          "content_sha256": "c9a5c43c17ac6d471209edc8a3a18f6948219b46e104f5b600119bd3d87c37c8",
+          "claim_span": "<a href=\"https://www.facebook.com/BAGGES.AS/\" target=\"_blank\" title=\"Facebook\" class=\"u-margin-bottom-5px\" rel=\"noopener\">",
+          "locator": "company-link:https://www.facebook.com/BAGGES.AS",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "registry_receipts": {
+        "identity.legal_name": {
+          "value": "BAGGES AS",
+          "evidence": [
+            {
+              "id": "62e82602a381fc2138aaff48a69d24ba21459a7b66baed1d6c6e046e4939d886",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T01:31:28.247629Z",
+              "content_sha256": "d28b07489329b89b75bbbe4511a69e83c9f5359f2d970f2ec651e70983d60fc6",
+              "claim_span": "980616622,BAGGES AS,AS,Aksjeselskap,46.640,Engroshandel med maskiner og utstyr ellers,,,,,,,true,40,2026-08-12,2026-08-10,,firmapost@bagges.no,64 83 50 00,,,,,,,,,Industriveien 15,SKEDSMOKORSET,2020,LILLESTRØM,3205,Norge,NO,2100,Private aksjeselskaper mv.,2025,1999-03-25,1999-01-25,true,1999-01-01,1",
+              "locator": "row:980616622/column:navn",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:eb6e3ca98ca658c77edca3a8558a03e3faaaa78c49a8c8baaf194abfc189fbec",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        },
+        "identity.registered_email": {
+          "value": "firmapost@bagges.no",
+          "evidence": [
+            {
+              "id": "e848d9ee10cddb058daa0b89bff8b324830cbf20f2ee12513d7b13e933dc23bf",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T01:31:28.247629Z",
+              "content_sha256": "d28b07489329b89b75bbbe4511a69e83c9f5359f2d970f2ec651e70983d60fc6",
+              "claim_span": "kiner og utstyr ellers,,,,,,,true,40,2026-08-12,2026-08-10,,firmapost@bagges.no,64 83 50 00,,,,,,,,,Industriveien 15,SKEDSMOKORSET,2020,LILLESTRØM,3205,Norge,NO,2100,Private aksjeselskaper mv.,2025,1999-03-25,1999-01-25,true,1999-01-01,1999-04-09,,,false,,true,1999-03-25,false,false,,false,,false,,f",
+              "locator": "row:980616622/column:epostadresse",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:eb6e3ca98ca658c77edca3a8558a03e3faaaa78c49a8c8baaf194abfc189fbec",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        },
+        "identity.registered_phone": {
+          "value": "64 83 50 00",
+          "evidence": [
+            {
+              "id": "81e44539aede921be212b55842903fcd2e0cb72f36496f20537d6ebecb31e839",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T01:31:28.247629Z",
+              "content_sha256": "d28b07489329b89b75bbbe4511a69e83c9f5359f2d970f2ec651e70983d60fc6",
+              "claim_span": "rs,,,,,,,true,40,2026-08-12,2026-08-10,,firmapost@bagges.no,64 83 50 00,,,,,,,,,Industriveien 15,SKEDSMOKORSET,2020,LILLESTRØM,3205,Norge,NO,2100,Private aksjeselskaper mv.,2025,1999-03-25,1999-01-25,true,1999-01-01,1999-04-09,,,false,,true,1999-03-25,false,false,,false,,false,,false,,,,,,,Bokmål,19",
+              "locator": "row:980616622/column:telefon",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:eb6e3ca98ca658c77edca3a8558a03e3faaaa78c49a8c8baaf194abfc189fbec",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        }
+      },
+      "stages": [
+        "stageR3"
+      ]
+    },
+    {
+      "organisation_number": "980616622",
+      "company": "BAGGES AS",
+      "kind": "social",
+      "url": "https://www.linkedin.com/company/bagges-as",
+      "verdict": "correct",
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-14",
+      "method": "Human hand-check with independent web verification, supplied explicitly in conversation.",
+      "note": "Link confirmed present on the company’s own site. LinkedIn also links back to bagges.no.",
+      "automated_verdict": "correct",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "receipts": [
+        {
+          "id": "010b5cf6a8f0ecaa4223e7653aee643fb09cb651567282b276ea8ad3ec987b0b",
+          "source_url": "https://www.bagges.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-14T01:32:58.325215Z",
+          "content_sha256": "c9a5c43c17ac6d471209edc8a3a18f6948219b46e104f5b600119bd3d87c37c8",
+          "claim_span": "<a href=\"https://www.linkedin.com/company/bagges-as/\" target=\"_blank\" title=\"LinkedIn\" class=\"u-margin-bottom-5px\" rel=\"noopener\">",
+          "locator": "company-link:https://www.linkedin.com/company/bagges-as",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "registry_receipts": {
+        "identity.legal_name": {
+          "value": "BAGGES AS",
+          "evidence": [
+            {
+              "id": "62e82602a381fc2138aaff48a69d24ba21459a7b66baed1d6c6e046e4939d886",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T01:31:28.247629Z",
+              "content_sha256": "d28b07489329b89b75bbbe4511a69e83c9f5359f2d970f2ec651e70983d60fc6",
+              "claim_span": "980616622,BAGGES AS,AS,Aksjeselskap,46.640,Engroshandel med maskiner og utstyr ellers,,,,,,,true,40,2026-08-12,2026-08-10,,firmapost@bagges.no,64 83 50 00,,,,,,,,,Industriveien 15,SKEDSMOKORSET,2020,LILLESTRØM,3205,Norge,NO,2100,Private aksjeselskaper mv.,2025,1999-03-25,1999-01-25,true,1999-01-01,1",
+              "locator": "row:980616622/column:navn",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:eb6e3ca98ca658c77edca3a8558a03e3faaaa78c49a8c8baaf194abfc189fbec",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        },
+        "identity.registered_email": {
+          "value": "firmapost@bagges.no",
+          "evidence": [
+            {
+              "id": "e848d9ee10cddb058daa0b89bff8b324830cbf20f2ee12513d7b13e933dc23bf",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T01:31:28.247629Z",
+              "content_sha256": "d28b07489329b89b75bbbe4511a69e83c9f5359f2d970f2ec651e70983d60fc6",
+              "claim_span": "kiner og utstyr ellers,,,,,,,true,40,2026-08-12,2026-08-10,,firmapost@bagges.no,64 83 50 00,,,,,,,,,Industriveien 15,SKEDSMOKORSET,2020,LILLESTRØM,3205,Norge,NO,2100,Private aksjeselskaper mv.,2025,1999-03-25,1999-01-25,true,1999-01-01,1999-04-09,,,false,,true,1999-03-25,false,false,,false,,false,,f",
+              "locator": "row:980616622/column:epostadresse",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:eb6e3ca98ca658c77edca3a8558a03e3faaaa78c49a8c8baaf194abfc189fbec",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        },
+        "identity.registered_phone": {
+          "value": "64 83 50 00",
+          "evidence": [
+            {
+              "id": "81e44539aede921be212b55842903fcd2e0cb72f36496f20537d6ebecb31e839",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T01:31:28.247629Z",
+              "content_sha256": "d28b07489329b89b75bbbe4511a69e83c9f5359f2d970f2ec651e70983d60fc6",
+              "claim_span": "rs,,,,,,,true,40,2026-08-12,2026-08-10,,firmapost@bagges.no,64 83 50 00,,,,,,,,,Industriveien 15,SKEDSMOKORSET,2020,LILLESTRØM,3205,Norge,NO,2100,Private aksjeselskaper mv.,2025,1999-03-25,1999-01-25,true,1999-01-01,1999-04-09,,,false,,true,1999-03-25,false,false,,false,,false,,false,,,,,,,Bokmål,19",
+              "locator": "row:980616622/column:telefon",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:eb6e3ca98ca658c77edca3a8558a03e3faaaa78c49a8c8baaf194abfc189fbec",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        }
+      },
+      "stages": [
+        "stageR3"
+      ]
+    },
+    {
+      "organisation_number": "980616622",
+      "company": "BAGGES AS",
+      "kind": "website",
+      "url": "https://www.bagges.no",
+      "verdict": "correct",
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-14",
+      "method": "Human hand-check with independent web verification, supplied explicitly in conversation.",
+      "note": "Independent web hand-check confirms the company website.",
+      "automated_verdict": "correct",
+      "proof_tier": "publisher_name_rare_contact",
+      "receipts": [
+        {
+          "id": "84a7cfa7f927e20d74992dd4c3508e830374e4125d30142e570346230e53433e",
+          "source_url": "https://www.bagges.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-14T01:32:58.325215Z",
+          "content_sha256": "c9a5c43c17ac6d471209edc8a3a18f6948219b46e104f5b600119bd3d87c37c8",
+          "claim_span": "   <meta charset=\"utf-8\" />\r\n    <title>BAGGES AS - Ventiler, pakninger og tekniske løsninger</title>\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n    <meta name=\"robots\" content=\"index, follow\">\r\n    <meta name=\"theme-color\" content=\"#002554\" />\r\n<meta name=\"generato",
+          "locator": "identity-proof:980616622",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "registry_receipts": {
+        "identity.legal_name": {
+          "value": "BAGGES AS",
+          "evidence": [
+            {
+              "id": "62e82602a381fc2138aaff48a69d24ba21459a7b66baed1d6c6e046e4939d886",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T01:31:28.247629Z",
+              "content_sha256": "d28b07489329b89b75bbbe4511a69e83c9f5359f2d970f2ec651e70983d60fc6",
+              "claim_span": "980616622,BAGGES AS,AS,Aksjeselskap,46.640,Engroshandel med maskiner og utstyr ellers,,,,,,,true,40,2026-08-12,2026-08-10,,firmapost@bagges.no,64 83 50 00,,,,,,,,,Industriveien 15,SKEDSMOKORSET,2020,LILLESTRØM,3205,Norge,NO,2100,Private aksjeselskaper mv.,2025,1999-03-25,1999-01-25,true,1999-01-01,1",
+              "locator": "row:980616622/column:navn",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:eb6e3ca98ca658c77edca3a8558a03e3faaaa78c49a8c8baaf194abfc189fbec",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        },
+        "identity.registered_email": {
+          "value": "firmapost@bagges.no",
+          "evidence": [
+            {
+              "id": "e848d9ee10cddb058daa0b89bff8b324830cbf20f2ee12513d7b13e933dc23bf",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T01:31:28.247629Z",
+              "content_sha256": "d28b07489329b89b75bbbe4511a69e83c9f5359f2d970f2ec651e70983d60fc6",
+              "claim_span": "kiner og utstyr ellers,,,,,,,true,40,2026-08-12,2026-08-10,,firmapost@bagges.no,64 83 50 00,,,,,,,,,Industriveien 15,SKEDSMOKORSET,2020,LILLESTRØM,3205,Norge,NO,2100,Private aksjeselskaper mv.,2025,1999-03-25,1999-01-25,true,1999-01-01,1999-04-09,,,false,,true,1999-03-25,false,false,,false,,false,,f",
+              "locator": "row:980616622/column:epostadresse",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:eb6e3ca98ca658c77edca3a8558a03e3faaaa78c49a8c8baaf194abfc189fbec",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        },
+        "identity.registered_phone": {
+          "value": "64 83 50 00",
+          "evidence": [
+            {
+              "id": "81e44539aede921be212b55842903fcd2e0cb72f36496f20537d6ebecb31e839",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T01:31:28.247629Z",
+              "content_sha256": "d28b07489329b89b75bbbe4511a69e83c9f5359f2d970f2ec651e70983d60fc6",
+              "claim_span": "rs,,,,,,,true,40,2026-08-12,2026-08-10,,firmapost@bagges.no,64 83 50 00,,,,,,,,,Industriveien 15,SKEDSMOKORSET,2020,LILLESTRØM,3205,Norge,NO,2100,Private aksjeselskaper mv.,2025,1999-03-25,1999-01-25,true,1999-01-01,1999-04-09,,,false,,true,1999-03-25,false,false,,false,,false,,false,,,,,,,Bokmål,19",
+              "locator": "row:980616622/column:telefon",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:eb6e3ca98ca658c77edca3a8558a03e3faaaa78c49a8c8baaf194abfc189fbec",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        }
+      },
+      "stages": [
+        "stageR3"
+      ]
+    },
+    {
+      "organisation_number": "984177070",
+      "company": "KRAABOL AS",
+      "kind": "website",
+      "url": "https://www.kraabol-as.com",
+      "verdict": "correct",
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-14",
+      "method": "Human hand-check with independent web verification, supplied explicitly in conversation.",
+      "note": "Independent web hand-check confirms the company website.",
+      "automated_verdict": "correct",
+      "proof_tier": "registry_declared_publisher_name",
+      "receipts": [
+        {
+          "id": "9d699490090698f31105e4e5f5a90efbd63109fec697999e0ee3231e7fafe5d9",
+          "source_url": "https://www.kraabol-as.com/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-14T00:43:30.674996Z",
+          "content_sha256": "05c54b91080bb9bc2fca181bcf63addf4e89792321854d416fbc39915d7113d5",
+          "claim_span": "href=\"http://gmpg.org/xfn/11\">\n\t\t<title>Kraabol AS &#8211; We provide a professional and global network to support your business needs.</title>\n<meta name='robots' content='max-image-preview:large' />\n<link rel='dns-prefetch' href='//fonts.googleapis.com' />\n<link rel=\"alternate\" type=\"application/r",
+          "locator": "identity-proof:984177070",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "registry_receipts": {
+        "identity.legal_name": {
+          "value": "KRAABOL AS",
+          "evidence": [
+            {
+              "id": "c1ea82d44c89d5b834aac9ef1556040a83d1f08f057e2425cd1c5317f416a79c",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T00:40:01.399594Z",
+              "content_sha256": "58600383e968018228fb471bb87430c71bfb48a23c291005dfdd903b0a3d2e74",
+              "claim_span": "984177070,KRAABOL AS,AS,Aksjeselskap,43.600,Formidlingstjenester innenfor spesialisert bygge- og anleggsvirksomhet,,,,,,,false,,,,www.kraabol-as.com,bkraabol@yahoo.com,22 22 56 83,96669011,,,,,,,,Holtervegen 79,HOLTER,2034,NANNESTAD,3238,Norge,NO,2100,Private aksjeselskaper mv.,2025,2002-02-19,2002-",
+              "locator": "row:984177070/column:navn",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:aef414072567eda80df4802df2d6054f07c8f9749dbc4bfacd1c09906a2fb8d9",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        },
+        "identity.registered_website": {
+          "value": "www.kraabol-as.com",
+          "evidence": [
+            {
+              "id": "ec1ee89e2eeae7f4978ca73ff92b29b0533a1882f90afbe84baa722007d0146c",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T00:40:01.399594Z",
+              "content_sha256": "58600383e968018228fb471bb87430c71bfb48a23c291005dfdd903b0a3d2e74",
+              "claim_span": "for spesialisert bygge- og anleggsvirksomhet,,,,,,,false,,,,www.kraabol-as.com,bkraabol@yahoo.com,22 22 56 83,96669011,,,,,,,,Holtervegen 79,HOLTER,2034,NANNESTAD,3238,Norge,NO,2100,Private aksjeselskaper mv.,2025,2002-02-19,2002-01-21,true,2002-01-01,2002-10-17,,,false,,true,2002-02-19,false,false,",
+              "locator": "row:984177070/column:hjemmeside",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:aef414072567eda80df4802df2d6054f07c8f9749dbc4bfacd1c09906a2fb8d9",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        },
+        "identity.registered_email": {
+          "value": "bkraabol@yahoo.com",
+          "evidence": [
+            {
+              "id": "8359371faf51384c99253a8ab03937c84c5b686db40635b1e61f8167e71158c9",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T00:40:01.399594Z",
+              "content_sha256": "58600383e968018228fb471bb87430c71bfb48a23c291005dfdd903b0a3d2e74",
+              "claim_span": "gge- og anleggsvirksomhet,,,,,,,false,,,,www.kraabol-as.com,bkraabol@yahoo.com,22 22 56 83,96669011,,,,,,,,Holtervegen 79,HOLTER,2034,NANNESTAD,3238,Norge,NO,2100,Private aksjeselskaper mv.,2025,2002-02-19,2002-01-21,true,2002-01-01,2002-10-17,,,false,,true,2002-02-19,false,false,,false,,false,,fals",
+              "locator": "row:984177070/column:epostadresse",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:aef414072567eda80df4802df2d6054f07c8f9749dbc4bfacd1c09906a2fb8d9",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        },
+        "identity.registered_phone": {
+          "value": "22 22 56 83",
+          "evidence": [
+            {
+              "id": "ca0515fd234dfca911517c47f4ec04b9727644759cdef1d40285a1afa5035e4f",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T00:40:01.399594Z",
+              "content_sha256": "58600383e968018228fb471bb87430c71bfb48a23c291005dfdd903b0a3d2e74",
+              "claim_span": "somhet,,,,,,,false,,,,www.kraabol-as.com,bkraabol@yahoo.com,22 22 56 83,96669011,,,,,,,,Holtervegen 79,HOLTER,2034,NANNESTAD,3238,Norge,NO,2100,Private aksjeselskaper mv.,2025,2002-02-19,2002-01-21,true,2002-01-01,2002-10-17,,,false,,true,2002-02-19,false,false,,false,,false,,false,,,,,,,Bokmål,2015",
+              "locator": "row:984177070/column:telefon",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:aef414072567eda80df4802df2d6054f07c8f9749dbc4bfacd1c09906a2fb8d9",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        },
+        "identity.registered_mobile": {
+          "value": "96669011",
+          "evidence": [
+            {
+              "id": "7d69086ed38b879320e43fef545c09e56ee0ed125bd7b5a219057b018ae79478",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T00:40:01.399594Z",
+              "content_sha256": "58600383e968018228fb471bb87430c71bfb48a23c291005dfdd903b0a3d2e74",
+              "claim_span": ",false,,,,www.kraabol-as.com,bkraabol@yahoo.com,22 22 56 83,96669011,,,,,,,,Holtervegen 79,HOLTER,2034,NANNESTAD,3238,Norge,NO,2100,Private aksjeselskaper mv.,2025,2002-02-19,2002-01-21,true,2002-01-01,2002-10-17,,,false,,true,2002-02-19,false,false,,false,,false,,false,,,,,,,Bokmål,2015-04-22,Hande",
+              "locator": "row:984177070/column:mobil",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:aef414072567eda80df4802df2d6054f07c8f9749dbc4bfacd1c09906a2fb8d9",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        }
+      },
+      "stages": [
+        "stageR5",
+        "stageR3"
+      ]
+    },
+    {
+      "organisation_number": "984204663",
+      "company": "A TIL Å PROFILERING AS",
+      "kind": "website",
+      "url": "https://www.atilaa.com",
+      "verdict": "correct",
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-14",
+      "method": "Human hand-check with independent web verification, supplied explicitly in conversation.",
+      "note": "Independent web hand-check confirms the company website.",
+      "automated_verdict": "correct",
+      "proof_tier": "registry_declared_publisher_name",
+      "receipts": [
+        {
+          "id": "139906773338c2d96b4fcf4347728e36ff3ebd8de9c79c87cfe1168f9a83d288",
+          "source_url": "https://www.atilaa.com/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-14T00:34:31.546357Z",
+          "content_sha256": "664f1baee243518651936b27e21f9340d6cee629d1882d5c3f857a53638ade50",
+          "claim_span": "ice-width, initial-scale=1.0\">\n  <title>A til Å Profilering AS</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<style>\n\t:root {\n\t\t--blue: #00A4FF;\n\t\t--turquoise: #00C6B8;\n\t\t--green: #00CC66;\n\t\t\n\t\t--pink: #FF4FA8;\n\t\t--purple: #A033FF;\n\t\t\n\t\t--text-dark: #222222;\n\t\t--gray: #CCCCCC;\n\t\t--gray-",
+          "locator": "identity-proof:984204663",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "registry_receipts": {
+        "identity.legal_name": {
+          "value": "A TIL Å PROFILERING AS",
+          "evidence": [
+            {
+              "id": "1ef965f10d7b6439565852a79cfcd5973e31683d726c951d7ae987f03c75bee2",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T00:32:39.471263Z",
+              "content_sha256": "058b94dfc123f4188707923ded5985956bd3106902b71ead31b927234d136e6f",
+              "claim_span": "984204663,A TIL Å PROFILERING AS,AS,Aksjeselskap,73.300,Pr og kommunikasjonstjenester,,,,,,,false,,,,www.atilaa.com,post@atilaa.com,33 07 07 41,954 37 738,,,,,,,,Torget 1A,HORTEN,3181,HORTEN,3901,Norge,NO,2100,Private aksjeselskaper mv.,2025,2002-02-16,2002-01-12,true,2002-01-01,2002-02-21,,,false,,",
+              "locator": "row:984204663/column:navn",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:bd3598aeae1b5c6b107e61ba1ffdb4d2a92af86edeef91f9b0dbfe65e0d418d3",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        },
+        "identity.registered_website": {
+          "value": "www.atilaa.com",
+          "evidence": [
+            {
+              "id": "a6de18cd6641d62cb53dcae5c2320d8987f48532970de5fba1bca15cf3ef1168",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T00:32:39.471263Z",
+              "content_sha256": "058b94dfc123f4188707923ded5985956bd3106902b71ead31b927234d136e6f",
+              "claim_span": "selskap,73.300,Pr og kommunikasjonstjenester,,,,,,,false,,,,www.atilaa.com,post@atilaa.com,33 07 07 41,954 37 738,,,,,,,,Torget 1A,HORTEN,3181,HORTEN,3901,Norge,NO,2100,Private aksjeselskaper mv.,2025,2002-02-16,2002-01-12,true,2002-01-01,2002-02-21,,,false,,true,2002-02-16,false,false,,false,,false",
+              "locator": "row:984204663/column:hjemmeside",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:bd3598aeae1b5c6b107e61ba1ffdb4d2a92af86edeef91f9b0dbfe65e0d418d3",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        },
+        "identity.registered_email": {
+          "value": "post@atilaa.com",
+          "evidence": [
+            {
+              "id": "3e92b9944c0625107063d15a4b06793f7ea74f232d49d96ab2f809ddae3c6023",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T00:32:39.471263Z",
+              "content_sha256": "058b94dfc123f4188707923ded5985956bd3106902b71ead31b927234d136e6f",
+              "claim_span": "Pr og kommunikasjonstjenester,,,,,,,false,,,,www.atilaa.com,post@atilaa.com,33 07 07 41,954 37 738,,,,,,,,Torget 1A,HORTEN,3181,HORTEN,3901,Norge,NO,2100,Private aksjeselskaper mv.,2025,2002-02-16,2002-01-12,true,2002-01-01,2002-02-21,,,false,,true,2002-02-16,false,false,,false,,false,,false,,,,,,,B",
+              "locator": "row:984204663/column:epostadresse",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:bd3598aeae1b5c6b107e61ba1ffdb4d2a92af86edeef91f9b0dbfe65e0d418d3",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        },
+        "identity.registered_phone": {
+          "value": "33 07 07 41",
+          "evidence": [
+            {
+              "id": "cbbf09636a404e63b588cf62b2483d6904bd3c73e68ac9132217605725057d92",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T00:32:39.471263Z",
+              "content_sha256": "058b94dfc123f4188707923ded5985956bd3106902b71ead31b927234d136e6f",
+              "claim_span": "jonstjenester,,,,,,,false,,,,www.atilaa.com,post@atilaa.com,33 07 07 41,954 37 738,,,,,,,,Torget 1A,HORTEN,3181,HORTEN,3901,Norge,NO,2100,Private aksjeselskaper mv.,2025,2002-02-16,2002-01-12,true,2002-01-01,2002-02-21,,,false,,true,2002-02-16,false,false,,false,,false,,false,,,,,,,Bokmål,2008-03-18",
+              "locator": "row:984204663/column:telefon",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:bd3598aeae1b5c6b107e61ba1ffdb4d2a92af86edeef91f9b0dbfe65e0d418d3",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        },
+        "identity.registered_mobile": {
+          "value": "954 37 738",
+          "evidence": [
+            {
+              "id": "4a1188fb9279530f99fbc88ab6d60a8424bd19be6cb0a39494ced689cc5976c1",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T00:32:39.471263Z",
+              "content_sha256": "058b94dfc123f4188707923ded5985956bd3106902b71ead31b927234d136e6f",
+              "claim_span": "r,,,,,,,false,,,,www.atilaa.com,post@atilaa.com,33 07 07 41,954 37 738,,,,,,,,Torget 1A,HORTEN,3181,HORTEN,3901,Norge,NO,2100,Private aksjeselskaper mv.,2025,2002-02-16,2002-01-12,true,2002-01-01,2002-02-21,,,false,,true,2002-02-16,false,false,,false,,false,,false,,,,,,,Bokmål,2008-03-18,\"Tilby stra",
+              "locator": "row:984204663/column:mobil",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:bd3598aeae1b5c6b107e61ba1ffdb4d2a92af86edeef91f9b0dbfe65e0d418d3",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        }
+      },
+      "stages": [
+        "stageR5",
+        "stageR3"
+      ]
+    },
+    {
+      "organisation_number": "984406622",
+      "company": "TIDEMANN BIL AS",
+      "kind": "website",
+      "url": "https://tidemannbil.no",
+      "verdict": "correct",
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-14",
+      "method": "Human hand-check with independent web verification, supplied explicitly in conversation.",
+      "note": "Independent web hand-check confirms the company website.",
+      "automated_verdict": "correct",
+      "proof_tier": "registry_declared_publisher_name",
+      "receipts": [
+        {
+          "id": "0e90626de9b57458c1a03fb2e271d1d7570b341ee2803f7b445764e82dc25fe1",
+          "source_url": "https://tidemannbil.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-14T00:36:58.924309Z",
+          "content_sha256": "41c09cd5fd93f305e5acaa83b7c0e7c39fed8073fb1db8d491c13fc8e0920df8",
+          "claim_span": "ad>\r\n\t<meta charset=\"UTF-8\" />\r\n\t<title>Tidemann Bil AS &#8211; Bensinstasjonen med sjel</title>\r\n\t\t\t\r\n\t\r\n\t<link rel=\"pingback\" href=\"https://tidemannbil.no/xmlrpc.php\" />\r\n\r\n\t\t<!--[if lt IE 9]>\r\n\t<script src=\"https://tidemannbil.no/wp-content/themes/tidemannbil/js/html5.js\" type=\"text/javascript\"><",
+          "locator": "identity-proof:984406622",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "registry_receipts": {
+        "identity.legal_name": {
+          "value": "TIDEMANN BIL AS",
+          "evidence": [
+            {
+              "id": "8293728205e651606a6d4476fa0694fe5950f776f7542fd4c5435be4b2513df0",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T00:32:39.471263Z",
+              "content_sha256": "5f00f71fd7c2656b61e4338358f92c190512109b250c4c85e0d081230e6e40d1",
+              "claim_span": "984406622,TIDEMANN BIL AS,AS,Aksjeselskap,47.300,Detaljhandel med drivstoff til motorvogner,,,,,,,true,6,2026-08-12,2026-08-10,www.tidemannbil.no,ulftidemann@gmail.com,75 72 10 80,472 50 555,,,,,,,,Chr. Tidemanns vei 22,ØRNES,8150,MELØY,1837,Norge,NO,2100,Private aksjeselskaper mv.,2025,2002-04-24,2",
+              "locator": "row:984406622/column:navn",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:bd3598aeae1b5c6b107e61ba1ffdb4d2a92af86edeef91f9b0dbfe65e0d418d3",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        },
+        "identity.registered_website": {
+          "value": "www.tidemannbil.no",
+          "evidence": [
+            {
+              "id": "84d9108f6c043eb73d6d051a7ad88cb30b744b17f2f70368cc2d6a0f10f80a7b",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T00:32:39.471263Z",
+              "content_sha256": "5f00f71fd7c2656b61e4338358f92c190512109b250c4c85e0d081230e6e40d1",
+              "claim_span": "rivstoff til motorvogner,,,,,,,true,6,2026-08-12,2026-08-10,www.tidemannbil.no,ulftidemann@gmail.com,75 72 10 80,472 50 555,,,,,,,,Chr. Tidemanns vei 22,ØRNES,8150,MELØY,1837,Norge,NO,2100,Private aksjeselskaper mv.,2025,2002-04-24,2002-03-15,true,2002-07-01,2002-07-15,,,false,,true,2002-04-24,false",
+              "locator": "row:984406622/column:hjemmeside",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:bd3598aeae1b5c6b107e61ba1ffdb4d2a92af86edeef91f9b0dbfe65e0d418d3",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        },
+        "identity.registered_email": {
+          "value": "ulftidemann@gmail.com",
+          "evidence": [
+            {
+              "id": "6972d34ea2e5c06d5b25a4206c30354912a04f22b5378e5db91efe90e0e739bc",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T00:32:39.471263Z",
+              "content_sha256": "5f00f71fd7c2656b61e4338358f92c190512109b250c4c85e0d081230e6e40d1",
+              "claim_span": "ogner,,,,,,,true,6,2026-08-12,2026-08-10,www.tidemannbil.no,ulftidemann@gmail.com,75 72 10 80,472 50 555,,,,,,,,Chr. Tidemanns vei 22,ØRNES,8150,MELØY,1837,Norge,NO,2100,Private aksjeselskaper mv.,2025,2002-04-24,2002-03-15,true,2002-07-01,2002-07-15,,,false,,true,2002-04-24,false,false,,false,,fals",
+              "locator": "row:984406622/column:epostadresse",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:bd3598aeae1b5c6b107e61ba1ffdb4d2a92af86edeef91f9b0dbfe65e0d418d3",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        },
+        "identity.registered_phone": {
+          "value": "75 72 10 80",
+          "evidence": [
+            {
+              "id": "c736583f19e49f395a88d9c74fac9da587ad330afd08b4a2d6556c359eced55b",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T00:32:39.471263Z",
+              "content_sha256": "5f00f71fd7c2656b61e4338358f92c190512109b250c4c85e0d081230e6e40d1",
+              "claim_span": "6-08-12,2026-08-10,www.tidemannbil.no,ulftidemann@gmail.com,75 72 10 80,472 50 555,,,,,,,,Chr. Tidemanns vei 22,ØRNES,8150,MELØY,1837,Norge,NO,2100,Private aksjeselskaper mv.,2025,2002-04-24,2002-03-15,true,2002-07-01,2002-07-15,,,false,,true,2002-04-24,false,false,,false,,false,,false,,,,,,,Bokmål,",
+              "locator": "row:984406622/column:telefon",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:bd3598aeae1b5c6b107e61ba1ffdb4d2a92af86edeef91f9b0dbfe65e0d418d3",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        },
+        "identity.registered_mobile": {
+          "value": "472 50 555",
+          "evidence": [
+            {
+              "id": "4711e7585077b19e9af2816a74dfe18c8b503c1706f698e9f578296a6c8dc1a3",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T00:32:39.471263Z",
+              "content_sha256": "5f00f71fd7c2656b61e4338358f92c190512109b250c4c85e0d081230e6e40d1",
+              "claim_span": "-08-10,www.tidemannbil.no,ulftidemann@gmail.com,75 72 10 80,472 50 555,,,,,,,,Chr. Tidemanns vei 22,ØRNES,8150,MELØY,1837,Norge,NO,2100,Private aksjeselskaper mv.,2025,2002-04-24,2002-03-15,true,2002-07-01,2002-07-15,,,false,,true,2002-04-24,false,false,,false,,false,,false,,,,,,,Bokmål,2024-09-20,\"",
+              "locator": "row:984406622/column:mobil",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:bd3598aeae1b5c6b107e61ba1ffdb4d2a92af86edeef91f9b0dbfe65e0d418d3",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        }
+      },
+      "stages": [
+        "stageR5",
+        "stageR3"
+      ]
+    },
+    {
+      "organisation_number": "986128662",
+      "company": "MASKINKURS AS",
+      "kind": "social",
+      "url": "https://www.facebook.com/maskinkurs",
+      "verdict": "correct",
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-14",
+      "method": "Human hand-check with independent web verification, supplied explicitly in conversation.",
+      "note": "Link confirmed present on the company’s own site.",
+      "automated_verdict": "correct",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "receipts": [
+        {
+          "id": "0d40831631ff572c487412072fd420de8f9fe471a3b79a731d17011950bf0c4d",
+          "source_url": "https://maskinkurs.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-14T01:16:20.185024Z",
+          "content_sha256": "ab612600fe44500ea955478ca21481559e3848684efb61ad803137e56ddcf9e1",
+          "claim_span": "<a class=\"\" href=\"https://www.facebook.com/maskinkurs/?locale=nb_NO\" target=\"_blank\" rel=\"noopener\" data-track-event=\"click\" data-track-action=\"social_link\">",
+          "locator": "company-link:https://www.facebook.com/maskinkurs",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "registry_receipts": {
+        "identity.legal_name": {
+          "value": "MASKINKURS AS",
+          "evidence": [
+            {
+              "id": "591e6b1c70453a8a3aea6de751823d9d70f4e392774ca29863cf8d67e082312d",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T01:13:47.416647Z",
+              "content_sha256": "2518ad3157f54919a56aebe772719739c624dcecdb4093f050421ad1abcb6cd5",
+              "claim_span": "986128662,MASKINKURS AS,AS,Aksjeselskap,85.597,Annen undervisning ellers,,,,,,,true,,2025-09-13,2025-09-10,,dane@kristoffersenkompe.no,55 32 32 94,45044433,,,,,,,,Spelhaugen 15,FYLLINGSDALEN,5147,BERGEN,4601,Norge,NO,2100,Private aksjeselskaper mv.,2025,2003-10-10,2003-09-24,false,,,,,false,,true,20",
+              "locator": "row:986128662/column:navn",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:e19cf6e47d266b6a605b0b3dd14f1cbf08b31a78fb32820182fbb91753d96b4f",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        },
+        "identity.registered_email": {
+          "value": "dane@kristoffersenkompe.no",
+          "evidence": [
+            {
+              "id": "17d531b9f782b957b5dafb1a8897e1466aaa395429b5367dd229ed54dcb9ec7d",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T01:13:47.416647Z",
+              "content_sha256": "2518ad3157f54919a56aebe772719739c624dcecdb4093f050421ad1abcb6cd5",
+              "claim_span": "nnen undervisning ellers,,,,,,,true,,2025-09-13,2025-09-10,,dane@kristoffersenkompe.no,55 32 32 94,45044433,,,,,,,,Spelhaugen 15,FYLLINGSDALEN,5147,BERGEN,4601,Norge,NO,2100,Private aksjeselskaper mv.,2025,2003-10-10,2003-09-24,false,,,,,false,,true,2003-10-10,false,false,,false,,false,,false,,,,,,,",
+              "locator": "row:986128662/column:epostadresse",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:e19cf6e47d266b6a605b0b3dd14f1cbf08b31a78fb32820182fbb91753d96b4f",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        },
+        "identity.registered_phone": {
+          "value": "55 32 32 94",
+          "evidence": [
+            {
+              "id": "3a0b6fed1ae911dd7b26affcec5da8d6061f8d5052479f940a18aa2135fa51cf",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T01:13:47.416647Z",
+              "content_sha256": "2518ad3157f54919a56aebe772719739c624dcecdb4093f050421ad1abcb6cd5",
+              "claim_span": ",,,,true,,2025-09-13,2025-09-10,,dane@kristoffersenkompe.no,55 32 32 94,45044433,,,,,,,,Spelhaugen 15,FYLLINGSDALEN,5147,BERGEN,4601,Norge,NO,2100,Private aksjeselskaper mv.,2025,2003-10-10,2003-09-24,false,,,,,false,,true,2003-10-10,false,false,,false,,false,,false,,,,,,,Bokmål,2015-12-13,\"Sikkerhe",
+              "locator": "row:986128662/column:telefon",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:e19cf6e47d266b6a605b0b3dd14f1cbf08b31a78fb32820182fbb91753d96b4f",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        },
+        "identity.registered_mobile": {
+          "value": "45044433",
+          "evidence": [
+            {
+              "id": "27f33380b09b27049ea70823487abe204c1370c14397ea1ee7ff03fead927216",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T01:13:47.416647Z",
+              "content_sha256": "2518ad3157f54919a56aebe772719739c624dcecdb4093f050421ad1abcb6cd5",
+              "claim_span": "25-09-13,2025-09-10,,dane@kristoffersenkompe.no,55 32 32 94,45044433,,,,,,,,Spelhaugen 15,FYLLINGSDALEN,5147,BERGEN,4601,Norge,NO,2100,Private aksjeselskaper mv.,2025,2003-10-10,2003-09-24,false,,,,,false,,true,2003-10-10,false,false,,false,,false,,false,,,,,,,Bokmål,2015-12-13,\"Sikkerhetsopplæring,",
+              "locator": "row:986128662/column:mobil",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:e19cf6e47d266b6a605b0b3dd14f1cbf08b31a78fb32820182fbb91753d96b4f",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        }
+      },
+      "stages": [
+        "stageR3"
+      ]
+    },
+    {
+      "organisation_number": "986128662",
+      "company": "MASKINKURS AS",
+      "kind": "website",
+      "url": "https://maskinkurs.no",
+      "verdict": "correct",
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-14",
+      "method": "Human hand-check with independent web verification, supplied explicitly in conversation.",
+      "note": "Independent web hand-check confirms the company website.",
+      "automated_verdict": "correct",
+      "proof_tier": "publisher_name_rare_contact",
+      "receipts": [
+        {
+          "id": "99dbb75c0cca1f0536e5d4a606e13a1dd4ccea40aa4ebbbe4a6a2846cc1971b6",
+          "source_url": "https://maskinkurs.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-14T01:16:20.185024Z",
+          "content_sha256": "ab612600fe44500ea955478ca21481559e3848684efb61ad803137e56ddcf9e1",
+          "claim_span": "<title>Kurs og Sertifisering i Bergen | Maskinkurs AS</title><meta name=\"keywords\" content=\"kurs\"><meta name=\"description\" content=\"Maskinkurs AS tilbyr et bredt utvalg av sertifiserte kurs innen truck, anleggsmaskiner, kran, fallsikring og sikkerhet. Se alle våre kurs og kommende datoer i Bergen.\">",
+          "locator": "identity-proof:986128662",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "registry_receipts": {
+        "identity.legal_name": {
+          "value": "MASKINKURS AS",
+          "evidence": [
+            {
+              "id": "591e6b1c70453a8a3aea6de751823d9d70f4e392774ca29863cf8d67e082312d",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T01:13:47.416647Z",
+              "content_sha256": "2518ad3157f54919a56aebe772719739c624dcecdb4093f050421ad1abcb6cd5",
+              "claim_span": "986128662,MASKINKURS AS,AS,Aksjeselskap,85.597,Annen undervisning ellers,,,,,,,true,,2025-09-13,2025-09-10,,dane@kristoffersenkompe.no,55 32 32 94,45044433,,,,,,,,Spelhaugen 15,FYLLINGSDALEN,5147,BERGEN,4601,Norge,NO,2100,Private aksjeselskaper mv.,2025,2003-10-10,2003-09-24,false,,,,,false,,true,20",
+              "locator": "row:986128662/column:navn",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:e19cf6e47d266b6a605b0b3dd14f1cbf08b31a78fb32820182fbb91753d96b4f",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        },
+        "identity.registered_email": {
+          "value": "dane@kristoffersenkompe.no",
+          "evidence": [
+            {
+              "id": "17d531b9f782b957b5dafb1a8897e1466aaa395429b5367dd229ed54dcb9ec7d",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T01:13:47.416647Z",
+              "content_sha256": "2518ad3157f54919a56aebe772719739c624dcecdb4093f050421ad1abcb6cd5",
+              "claim_span": "nnen undervisning ellers,,,,,,,true,,2025-09-13,2025-09-10,,dane@kristoffersenkompe.no,55 32 32 94,45044433,,,,,,,,Spelhaugen 15,FYLLINGSDALEN,5147,BERGEN,4601,Norge,NO,2100,Private aksjeselskaper mv.,2025,2003-10-10,2003-09-24,false,,,,,false,,true,2003-10-10,false,false,,false,,false,,false,,,,,,,",
+              "locator": "row:986128662/column:epostadresse",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:e19cf6e47d266b6a605b0b3dd14f1cbf08b31a78fb32820182fbb91753d96b4f",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        },
+        "identity.registered_phone": {
+          "value": "55 32 32 94",
+          "evidence": [
+            {
+              "id": "3a0b6fed1ae911dd7b26affcec5da8d6061f8d5052479f940a18aa2135fa51cf",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T01:13:47.416647Z",
+              "content_sha256": "2518ad3157f54919a56aebe772719739c624dcecdb4093f050421ad1abcb6cd5",
+              "claim_span": ",,,,true,,2025-09-13,2025-09-10,,dane@kristoffersenkompe.no,55 32 32 94,45044433,,,,,,,,Spelhaugen 15,FYLLINGSDALEN,5147,BERGEN,4601,Norge,NO,2100,Private aksjeselskaper mv.,2025,2003-10-10,2003-09-24,false,,,,,false,,true,2003-10-10,false,false,,false,,false,,false,,,,,,,Bokmål,2015-12-13,\"Sikkerhe",
+              "locator": "row:986128662/column:telefon",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:e19cf6e47d266b6a605b0b3dd14f1cbf08b31a78fb32820182fbb91753d96b4f",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        },
+        "identity.registered_mobile": {
+          "value": "45044433",
+          "evidence": [
+            {
+              "id": "27f33380b09b27049ea70823487abe204c1370c14397ea1ee7ff03fead927216",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T01:13:47.416647Z",
+              "content_sha256": "2518ad3157f54919a56aebe772719739c624dcecdb4093f050421ad1abcb6cd5",
+              "claim_span": "25-09-13,2025-09-10,,dane@kristoffersenkompe.no,55 32 32 94,45044433,,,,,,,,Spelhaugen 15,FYLLINGSDALEN,5147,BERGEN,4601,Norge,NO,2100,Private aksjeselskaper mv.,2025,2003-10-10,2003-09-24,false,,,,,false,,true,2003-10-10,false,false,,false,,false,,false,,,,,,,Bokmål,2015-12-13,\"Sikkerhetsopplæring,",
+              "locator": "row:986128662/column:mobil",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:e19cf6e47d266b6a605b0b3dd14f1cbf08b31a78fb32820182fbb91753d96b4f",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        }
+      },
+      "stages": [
+        "stageR3"
+      ]
+    },
+    {
+      "organisation_number": "986464492",
+      "company": "OPTIMAL REGNSKAP AS",
+      "kind": "social",
+      "url": "https://www.facebook.com/optimalregnskap",
+      "verdict": "correct",
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-14",
+      "method": "Human hand-check with independent web verification, supplied explicitly in conversation.",
+      "note": "Link confirmed present on the company’s own site.",
+      "automated_verdict": "correct",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "receipts": [
+        {
+          "id": "d75013ca0809c5e3144c339e70679246ad93c60af117edcf66effdc2c32c4281",
+          "source_url": "https://www.optimal-regnskap.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-14T01:15:53.639703Z",
+          "content_sha256": "876a8b707878e0afb23735b2accd765a63b6b5c762731c76ad1f1b66e6923050",
+          "claim_span": "<a href=\"https://www.facebook.com/optimalregnskap/\" target=\"_blank\">",
+          "locator": "company-link:https://www.facebook.com/optimalregnskap",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "registry_receipts": {
+        "identity.legal_name": {
+          "value": "OPTIMAL REGNSKAP AS",
+          "evidence": [
+            {
+              "id": "3aaee106413b96801a9cdeea3db871bb35fb516e86f7c496289d5f510ba17235",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T01:13:47.417647Z",
+              "content_sha256": "f550604aa659cbf8b8aecad46575a500bd97a248aa2dea07d912f2e512a59371",
+              "claim_span": "986464492,OPTIMAL REGNSKAP AS,AS,Aksjeselskap,69.202,Regnskapsføring og bokføring,,,,,,,true,9,2026-07-15,2026-07-10,,post@optimal-regnskap.no,72 48 36 30,,,,,,,,,Orkdalsveien 67,ORKANGER,7300,ORKLAND,5059,Norge,NO,2100,Private aksjeselskaper mv.,2025,2004-01-24,2004-01-01,true,2004-01-01,2004-02-23",
+              "locator": "row:986464492/column:navn",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:e19cf6e47d266b6a605b0b3dd14f1cbf08b31a78fb32820182fbb91753d96b4f",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        },
+        "identity.registered_email": {
+          "value": "post@optimal-regnskap.no",
+          "evidence": [
+            {
+              "id": "162f071fd6b8d3100e6b013f6fae333fdbff8579c48417cdbd53999b736c870b",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T01:13:47.417647Z",
+              "content_sha256": "f550604aa659cbf8b8aecad46575a500bd97a248aa2dea07d912f2e512a59371",
+              "claim_span": "kapsføring og bokføring,,,,,,,true,9,2026-07-15,2026-07-10,,post@optimal-regnskap.no,72 48 36 30,,,,,,,,,Orkdalsveien 67,ORKANGER,7300,ORKLAND,5059,Norge,NO,2100,Private aksjeselskaper mv.,2025,2004-01-24,2004-01-01,true,2004-01-01,2004-02-23,Utleier av bygg eller anlegg,2014-01-28,false,,true,2004-",
+              "locator": "row:986464492/column:epostadresse",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:e19cf6e47d266b6a605b0b3dd14f1cbf08b31a78fb32820182fbb91753d96b4f",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        },
+        "identity.registered_phone": {
+          "value": "72 48 36 30",
+          "evidence": [
+            {
+              "id": "b1e0d193236f31ea8d8e2ddb274f6233fcaeadac8418dcb92dea05e6bbad4ee9",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T01:13:47.417647Z",
+              "content_sha256": "f550604aa659cbf8b8aecad46575a500bd97a248aa2dea07d912f2e512a59371",
+              "claim_span": ",,,,,true,9,2026-07-15,2026-07-10,,post@optimal-regnskap.no,72 48 36 30,,,,,,,,,Orkdalsveien 67,ORKANGER,7300,ORKLAND,5059,Norge,NO,2100,Private aksjeselskaper mv.,2025,2004-01-24,2004-01-01,true,2004-01-01,2004-02-23,Utleier av bygg eller anlegg,2014-01-28,false,,true,2004-01-24,false,false,,false,",
+              "locator": "row:986464492/column:telefon",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:e19cf6e47d266b6a605b0b3dd14f1cbf08b31a78fb32820182fbb91753d96b4f",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        }
+      },
+      "stages": [
+        "stageR3"
+      ]
+    },
+    {
+      "organisation_number": "986464492",
+      "company": "OPTIMAL REGNSKAP AS",
+      "kind": "website",
+      "url": "https://www.optimal-regnskap.no",
+      "verdict": "correct",
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-14",
+      "method": "Human hand-check with independent web verification, supplied explicitly in conversation.",
+      "note": "Own legal name, address, phone and email match the register; not a client listing.",
+      "automated_verdict": "correct",
+      "proof_tier": "publisher_name_rare_contact",
+      "receipts": [
+        {
+          "id": "18f7909cd846b0c664241b492bbd44b103831b6b6ad86f5dec3cda3ca850157c",
+          "source_url": "https://www.optimal-regnskap.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-14T01:15:53.639703Z",
+          "content_sha256": "876a8b707878e0afb23735b2accd765a63b6b5c762731c76ad1f1b66e6923050",
+          "claim_span": "ale\" content=\"nb_NO\" />\n\n        <title>Optimal Regnskap AS -   Hjem</title>\n        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"https://fonts.googleapis.com/css?fa",
+          "locator": "identity-proof:986464492",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "registry_receipts": {
+        "identity.legal_name": {
+          "value": "OPTIMAL REGNSKAP AS",
+          "evidence": [
+            {
+              "id": "3aaee106413b96801a9cdeea3db871bb35fb516e86f7c496289d5f510ba17235",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T01:13:47.417647Z",
+              "content_sha256": "f550604aa659cbf8b8aecad46575a500bd97a248aa2dea07d912f2e512a59371",
+              "claim_span": "986464492,OPTIMAL REGNSKAP AS,AS,Aksjeselskap,69.202,Regnskapsføring og bokføring,,,,,,,true,9,2026-07-15,2026-07-10,,post@optimal-regnskap.no,72 48 36 30,,,,,,,,,Orkdalsveien 67,ORKANGER,7300,ORKLAND,5059,Norge,NO,2100,Private aksjeselskaper mv.,2025,2004-01-24,2004-01-01,true,2004-01-01,2004-02-23",
+              "locator": "row:986464492/column:navn",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:e19cf6e47d266b6a605b0b3dd14f1cbf08b31a78fb32820182fbb91753d96b4f",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        },
+        "identity.registered_email": {
+          "value": "post@optimal-regnskap.no",
+          "evidence": [
+            {
+              "id": "162f071fd6b8d3100e6b013f6fae333fdbff8579c48417cdbd53999b736c870b",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T01:13:47.417647Z",
+              "content_sha256": "f550604aa659cbf8b8aecad46575a500bd97a248aa2dea07d912f2e512a59371",
+              "claim_span": "kapsføring og bokføring,,,,,,,true,9,2026-07-15,2026-07-10,,post@optimal-regnskap.no,72 48 36 30,,,,,,,,,Orkdalsveien 67,ORKANGER,7300,ORKLAND,5059,Norge,NO,2100,Private aksjeselskaper mv.,2025,2004-01-24,2004-01-01,true,2004-01-01,2004-02-23,Utleier av bygg eller anlegg,2014-01-28,false,,true,2004-",
+              "locator": "row:986464492/column:epostadresse",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:e19cf6e47d266b6a605b0b3dd14f1cbf08b31a78fb32820182fbb91753d96b4f",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        },
+        "identity.registered_phone": {
+          "value": "72 48 36 30",
+          "evidence": [
+            {
+              "id": "b1e0d193236f31ea8d8e2ddb274f6233fcaeadac8418dcb92dea05e6bbad4ee9",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T01:13:47.417647Z",
+              "content_sha256": "f550604aa659cbf8b8aecad46575a500bd97a248aa2dea07d912f2e512a59371",
+              "claim_span": ",,,,,true,9,2026-07-15,2026-07-10,,post@optimal-regnskap.no,72 48 36 30,,,,,,,,,Orkdalsveien 67,ORKANGER,7300,ORKLAND,5059,Norge,NO,2100,Private aksjeselskaper mv.,2025,2004-01-24,2004-01-01,true,2004-01-01,2004-02-23,Utleier av bygg eller anlegg,2014-01-28,false,,true,2004-01-24,false,false,,false,",
+              "locator": "row:986464492/column:telefon",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:e19cf6e47d266b6a605b0b3dd14f1cbf08b31a78fb32820182fbb91753d96b4f",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        }
+      },
+      "stages": [
+        "stageR3"
+      ]
+    },
+    {
+      "organisation_number": "994882597",
+      "company": "DICA PROFIL & YRKESKLÆR AS",
+      "kind": "website",
+      "url": "http://dica.no",
+      "verdict": "correct",
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-14",
+      "method": "Human hand-check with independent web verification, supplied explicitly in conversation.",
+      "note": "Independent web hand-check confirms the company website.",
+      "automated_verdict": "correct",
+      "proof_tier": "registry_declared_publisher_name",
+      "receipts": [
+        {
+          "id": "43479752dd666ed4c62a9ce7a90a6a34f4617626ecc688609be1e28d2d95e319",
+          "source_url": "http://dica.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-14T00:29:39.319934Z",
+          "content_sha256": "1349258208a2f06a4d8ed45921104fa9e0225d383fb1f23e224dab0d4ae6e3fd",
+          "claim_span": "\t\t\t\t<div class=\"kontakt\">\n\t\t\t\t\t\t<strong>Dica Profil & Yrkesklær AS</strong>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li><p>Mjåvannsveien 15<br />\r\n4628 Kristiansand</p></li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><a href=\"tel:38 18 50 60\"><span class=\"telefon\"><img src=\"http://dica.no/wp-content/themes/dica/gfx/phone.svg\" class=\"svg\"></",
+          "locator": "identity-proof:994882597",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "registry_receipts": {
+        "identity.legal_name": {
+          "value": "DICA PROFIL & YRKESKLÆR AS",
+          "evidence": [
+            {
+              "id": "425dd5bfdf9fe796811d8a4d4e3ce3972767d2e459f35364ba58128fee642220",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T00:26:48.331217Z",
+              "content_sha256": "ced6081ab267269efbcdd89670683f0cdca417a46a010c46d43ba7f8d4bd207a",
+              "claim_span": "994882597,DICA PROFIL & YRKESKLÆR AS,AS,Aksjeselskap,46.420,Engroshandel med klær og skotøy,,,,,,,true,,2010-03-01,2010-01-18,www.dica.no,frank@dica.no,38 18 50 60,98285062,,,,,,,,Mjåvannsvegen 15,KRISTIANSAND S,4628,KRISTIANSAND,4204,Norge,NO,2100,Private aksjeselskaper mv.,2025,2009-12-19,2009-12-",
+              "locator": "row:994882597/column:navn",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:e19cf6e47d266b6a605b0b3dd14f1cbf08b31a78fb32820182fbb91753d96b4f",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        },
+        "identity.registered_website": {
+          "value": "www.dica.no",
+          "evidence": [
+            {
+              "id": "43fa9c040acc180b727fcd40d0733020dc4467c3d75fb2c9006f6a1e931e4c09",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T00:26:48.331217Z",
+              "content_sha256": "ced6081ab267269efbcdd89670683f0cdca417a46a010c46d43ba7f8d4bd207a",
+              "claim_span": "handel med klær og skotøy,,,,,,,true,,2010-03-01,2010-01-18,www.dica.no,frank@dica.no,38 18 50 60,98285062,,,,,,,,Mjåvannsvegen 15,KRISTIANSAND S,4628,KRISTIANSAND,4204,Norge,NO,2100,Private aksjeselskaper mv.,2025,2009-12-19,2009-12-02,true,2010-01-01,2010-02-10,,,false,,true,2009-12-19,false,false",
+              "locator": "row:994882597/column:hjemmeside",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:e19cf6e47d266b6a605b0b3dd14f1cbf08b31a78fb32820182fbb91753d96b4f",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        },
+        "identity.registered_email": {
+          "value": "frank@dica.no",
+          "evidence": [
+            {
+              "id": "8486f3603334034f1551112dacb368fb746ab3336a49a5bf02eec45dfe277f49",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T00:26:48.331217Z",
+              "content_sha256": "ced6081ab267269efbcdd89670683f0cdca417a46a010c46d43ba7f8d4bd207a",
+              "claim_span": "lær og skotøy,,,,,,,true,,2010-03-01,2010-01-18,www.dica.no,frank@dica.no,38 18 50 60,98285062,,,,,,,,Mjåvannsvegen 15,KRISTIANSAND S,4628,KRISTIANSAND,4204,Norge,NO,2100,Private aksjeselskaper mv.,2025,2009-12-19,2009-12-02,true,2010-01-01,2010-02-10,,,false,,true,2009-12-19,false,false,,false,,fal",
+              "locator": "row:994882597/column:epostadresse",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:e19cf6e47d266b6a605b0b3dd14f1cbf08b31a78fb32820182fbb91753d96b4f",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        },
+        "identity.registered_phone": {
+          "value": "38 18 50 60",
+          "evidence": [
+            {
+              "id": "42f580fc540199b9138fd2e21f1d11d35da7bfa38170b30f2847f4e47853060e",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T00:26:48.331217Z",
+              "content_sha256": "ced6081ab267269efbcdd89670683f0cdca417a46a010c46d43ba7f8d4bd207a",
+              "claim_span": ",,,,,,true,,2010-03-01,2010-01-18,www.dica.no,frank@dica.no,38 18 50 60,98285062,,,,,,,,Mjåvannsvegen 15,KRISTIANSAND S,4628,KRISTIANSAND,4204,Norge,NO,2100,Private aksjeselskaper mv.,2025,2009-12-19,2009-12-02,true,2010-01-01,2010-02-10,,,false,,true,2009-12-19,false,false,,false,,false,,false,,,,,",
+              "locator": "row:994882597/column:telefon",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:e19cf6e47d266b6a605b0b3dd14f1cbf08b31a78fb32820182fbb91753d96b4f",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        },
+        "identity.registered_mobile": {
+          "value": "98285062",
+          "evidence": [
+            {
+              "id": "fe19f88a062c59e6fd0209413468a7dedc066b530910274b6d9ae94496cd5553",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T00:26:48.331217Z",
+              "content_sha256": "ced6081ab267269efbcdd89670683f0cdca417a46a010c46d43ba7f8d4bd207a",
+              "claim_span": "2010-03-01,2010-01-18,www.dica.no,frank@dica.no,38 18 50 60,98285062,,,,,,,,Mjåvannsvegen 15,KRISTIANSAND S,4628,KRISTIANSAND,4204,Norge,NO,2100,Private aksjeselskaper mv.,2025,2009-12-19,2009-12-02,true,2010-01-01,2010-02-10,,,false,,true,2009-12-19,false,false,,false,,false,,false,,,,,,,Bokmål,201",
+              "locator": "row:994882597/column:mobil",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:e19cf6e47d266b6a605b0b3dd14f1cbf08b31a78fb32820182fbb91753d96b4f",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        }
+      },
+      "stages": [
+        "stageR5",
+        "stageR3"
+      ]
+    },
+    {
+      "organisation_number": "997274253",
+      "company": "ELEKTROFIL AS",
+      "kind": "website",
+      "url": "https://www.elektrofil.as",
+      "verdict": "correct",
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-14",
+      "method": "Human hand-check with independent web verification, supplied explicitly in conversation.",
+      "note": "Independent web hand-check confirms the company website.",
+      "automated_verdict": "correct",
+      "proof_tier": "registry_declared_publisher_name",
+      "receipts": [
+        {
+          "id": "b1eb05cb120cea8d4fd8d1fa9e0310f905de796c6e653b5eb80632c9587371ec",
+          "source_url": "https://www.elektrofil.as/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-14T00:22:58.265942Z",
+          "content_sha256": "c8f1cce55b31955d486bc67415667b23fce8a3144be58fcbd7baaf23fc0544f8",
+          "claim_span": "><title>Elektriker i Oslo og Akershus | Elektrofil AS</title><meta name=\"keywords\" content=\"Hovedside, elektriker elektrikeroppdrag, bolig, næringsbygg, elsjekk, service, installasjon, belysning, varme, brannsikkerhet, Oslo og Akershus, Elektrofil AS\"><meta name=\"description\" content=\"Elektrofil AS ",
+          "locator": "identity-proof:997274253",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "registry_receipts": {
+        "identity.legal_name": {
+          "value": "ELEKTROFIL AS",
+          "evidence": [
+            {
+              "id": "43518e8ad8d44e3d7bf2eec79581ff235ad676b1db815593e26fcd2de698bb1a",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T00:19:13.486468Z",
+              "content_sha256": "e82dab0e10a65d673c6fc8f7c218b685c2ccaeca6dc3fbcb2e93e19ffcbeaa3f",
+              "claim_span": "997274253,ELEKTROFIL AS,AS,Aksjeselskap,43.210,Elektrisk installasjonsarbeid,,,,,,,true,6,2026-08-12,2026-08-10,www.elektrofil.as,,22 22 54 99,,,,,,,,,Hvamsvingen 4,SKJETTEN,2013,LILLESTRØM,3205,Norge,NO,2100,Private aksjeselskaper mv.,2025,2011-09-05,2011-08-25,true,2011-09-01,2011-11-21,,,false,,t",
+              "locator": "row:997274253/column:navn",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:5b92dd3a9015a2f6a8ad9eaf6d5796f779669a382effdb59bbb9260d803dbd90",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        },
+        "identity.registered_website": {
+          "value": "www.elektrofil.as",
+          "evidence": [
+            {
+              "id": "d2c2524509813412e8a1bc3ddc6ce5e2473e804fd9b6ab2cf3369a585dd6155b",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T00:19:13.486468Z",
+              "content_sha256": "e82dab0e10a65d673c6fc8f7c218b685c2ccaeca6dc3fbcb2e93e19ffcbeaa3f",
+              "claim_span": "risk installasjonsarbeid,,,,,,,true,6,2026-08-12,2026-08-10,www.elektrofil.as,,22 22 54 99,,,,,,,,,Hvamsvingen 4,SKJETTEN,2013,LILLESTRØM,3205,Norge,NO,2100,Private aksjeselskaper mv.,2025,2011-09-05,2011-08-25,true,2011-09-01,2011-11-21,,,false,,true,2011-09-05,false,false,,false,,false,,false,,,,,",
+              "locator": "row:997274253/column:hjemmeside",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:5b92dd3a9015a2f6a8ad9eaf6d5796f779669a382effdb59bbb9260d803dbd90",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        },
+        "identity.registered_phone": {
+          "value": "22 22 54 99",
+          "evidence": [
+            {
+              "id": "6eeb983c56acc957d483c2d7f3f3e850ec53480813725693c20b6415169ee357",
+              "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+              "source_class": "official_registry",
+              "retrieved_at": "2026-11-14T00:19:13.486468Z",
+              "content_sha256": "e82dab0e10a65d673c6fc8f7c218b685c2ccaeca6dc3fbcb2e93e19ffcbeaa3f",
+              "claim_span": "rbeid,,,,,,,true,6,2026-08-12,2026-08-10,www.elektrofil.as,,22 22 54 99,,,,,,,,,Hvamsvingen 4,SKJETTEN,2013,LILLESTRØM,3205,Norge,NO,2100,Private aksjeselskaper mv.,2025,2011-09-05,2011-08-25,true,2011-09-01,2011-11-21,,,false,,true,2011-09-05,false,false,,false,,false,,false,,,,,,,Bokmål,2011-08-25",
+              "locator": "row:997274253/column:telefon",
+              "extraction_method": "signalpost.registry.v1",
+              "source_identifier": "registry100.csv:sha256:5b92dd3a9015a2f6a8ad9eaf6d5796f779669a382effdb59bbb9260d803dbd90",
+              "effective_at": null,
+              "reporting_period": null
+            }
+          ]
+        }
+      },
+      "stages": [
+        "stageR5",
+        "stageR3"
+      ]
+    }
+  ],
+  "counts": {
+    "website": {
+      "items_checked": 41,
+      "human_verified_correct": 16,
+      "automated_correct": 41,
+      "automated_doubtful": 0,
+      "wrong": 0
+    },
+    "social": {
+      "items_checked": 25,
+      "human_verified_correct": 5,
+      "automated_correct": 25,
+      "automated_doubtful": 0,
+      "wrong": 0
+    },
+    "job": {
+      "items_checked": 4,
+      "human_verified_correct": 1,
+      "automated_correct": 3,
+      "automated_doubtful": 1,
+      "wrong": 0
+    },
+    "LEI": {
+      "items_checked": 80,
+      "human_verified_correct": 2,
+      "automated_correct": 78,
+      "automated_doubtful": 2,
+      "wrong": 0
+    },
+    "parent": {
+      "items_checked": 12,
+      "human_verified_correct": 0,
+      "automated_correct": 12,
+      "automated_doubtful": 0,
+      "wrong": 0
+    },
+    "award": {
+      "items_checked": 0,
+      "human_verified_correct": 0,
+      "automated_correct": 0,
+      "automated_doubtful": 0,
+      "wrong": 0
+    }
+  },
+  "totals": {
+    "items_checked": 162,
+    "human_verified_correct": 24,
+    "automated_correct": 159,
+    "automated_doubtful": 3,
+    "wrong": 0
+  },
+  "counting_method": "Cumulative distinct organisation/type/URL (website/social), LEI, parent relationship or job UUID; same item across stages counted once. Original automated verdicts are not rewritten by a human verdict.",
+  "input_ledgers": [
+    "reports/r5/precision/ledger.json",
+    "reports/r5/stageH/precision/ledger.json",
+    "reports/r5/stageR5/items.json",
+    "reports/r5/stageR3/items.json"
+  ],
+  "limits": "Human verification is the reviewer’s supplied independent web hand-check, not an assistant re-fetch or population precision estimate. Published outputs and proof tiers unchanged."
+}
