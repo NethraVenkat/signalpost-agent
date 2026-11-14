@@ -1,5 +1,5 @@
 """Read-only full publisher review packet for every added measured website."""
-import json,hashlib,sys
+import json,hashlib,sys,re
 from pathlib import Path
 sys.path.insert(0,str(Path.cwd()))
 from signalpost.web.html import Page
@@ -26,6 +26,6 @@ def main():
         items.append({'orgnr':item['orgnr'],'name':item['legal_name'],'kind':item['kind'],'url':item['identity'],'value':item['value'],'registry_context':context,'pages':pages,'review_status':'pending_saved_publisher_review'})
     (base/'publisher_review.json').write_text(json.dumps({'seed':seed,'items':items,'method':'Full saved publisher context for assistant inspection; no network or human-verdict claim'},ensure_ascii=False,indent=2)+'\n',encoding='utf8')
     for i in items:
-        print(json.dumps(i,ensure_ascii=True))
+        print(json.dumps({**i,'pages':[{**p,'visible_context':re.sub(r'\s+',' ',p['visible_context'])} for p in i['pages']]},ensure_ascii=True))
 
 if __name__=='__main__':main()

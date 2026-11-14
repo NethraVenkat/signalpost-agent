@@ -1,0 +1,7 @@
+{
+  "reason": "GLEIF parent endpoint RemoteProtocolError caused public_source_exception for all 100 companies. Whole batch was honestly failed; zero unsupported values. One fresh-state retry authorized.",
+  "HTTP": 788,
+  "CLI_seconds": 594.156,
+  "cost_usd": 0,
+  "state_path": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageR7-20261117-source-recovery"
+}

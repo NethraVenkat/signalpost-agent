@@ -1,0 +1,160 @@
+{
+  "seed": 20261116,
+  "items": [
+    {
+      "orgnr": "983089887",
+      "name": "MELDAL MILJØANLEGG AS",
+      "kind": "website",
+      "url": "https://www.meldalmiljoanlegg.no",
+      "value": {
+        "final_url": "https://www.meldalmiljoanlegg.no",
+        "identity_level": "VERIFIED",
+        "proof_type": "orgnr_on_page",
+        "proof_page_url": "https://www.meldalmiljoanlegg.no/",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": []
+      },
+      "registry_context": {
+        "name": "MELDAL MILJØANLEGG AS",
+        "website": null,
+        "phone": "72 48 37 00",
+        "email": null,
+        "mobile": "476 07 215",
+        "municipality": "ORKLAND",
+        "street": null,
+        "postcode": "7336",
+        "city": "MELDAL"
+      },
+      "pages": [
+        {
+          "url": "https://www.meldalmiljoanlegg.no/",
+          "sha256": "f7c7fb20861c9bddfbd09ba6e06bd67b03122aee99a4204bc0536adaf75e0f75",
+          "title": "Hjem | Meldal Miljoanlegg",
+          "publisher": [
+            [
+              "title",
+              "Hjem | Meldal Miljoanlegg"
+            ],
+            [
+              "og:site_name",
+              "Meldal Miljoanlegg"
+            ],
+            [
+              "header",
+              "Hjem Våre tjenester Om oss Blogg Kontakt More"
+            ],
+            [
+              "footer",
+              "© 2035 by Happy Farm Sanctuary. Powered and secured by Wix"
+            ]
+          ],
+          "visible_context": "\n \n \n \n \n\n\n\n\n\n\n\n     \n     \n    \n     \n     \n\n\n\n\n \n\n\n \n\n\n\n\n\n\n \n \n\n top of page Hjem Våre tjenester Om oss Blogg Kontakt More Hjem Våre tjenester Om oss Blogg Kontakt More Vi jobber for gjenvinning av materialer og ressurser For et bedre klima i fremtiden OM OSS Meldal Miljøanlegg ligger i Meldal, som er en del av Orkland Kommune.Vår kjernevirksomhet er drift av ordinært avfallsdeponi, samt komposteringsanlegg. LES MER VÅRE TJENESTER Høring – søknad om revidering av tillatelse etter forurensningsloven til kompostering av organisk avfall \n– Meldal Miljøanlegg – Orkland kommune Meldal Miljøanlegg søker om en revidering av tillatelsen etter forurensningsloven til virksomhet på gnr. 413, bnr. 1 og 4 i Orkland kommune. \nDet er søkt om å utvide tillatelsen til mottak av større mengder, i tillegg til flere fraksjoner organisk avfall. En ønsker også å drive aktivt FOU-arbeid som en del av utviklingen av virksomheten. Dette omfatter både mottak og behandling av flere nedbrytbare organiske fraksjoner, samt utvikling av nye ferdigprodukter basert på organiske avfallsprodukter. \n \nLes mer om søknaden  her Meldal Miljøanlegg \n \n Kvamsveien 125, Meldal \n\n firmapost@meldalmiljoanlegg.no \n\n \n Kontaktperson: John Horg \njohn.horg@meldalmiljoanlegg.no / tlf:  926 47 341 \n  \n\n Orgnummer: 983 089 887 Åpningstider: \n\n Mandag - fredag kl. 07.30 - 15.00 Følg oss her: © 2035 by Happy Farm Sanctuary. Powered and secured by  Wix bottom of page \n\n \n\n     \n     \n\n    \n         \n    \n\n     \n     \n\n\n \n \n \n \n \n\n\n \n\n    \n     \n\n    \n     \n\n    \n     \n\n    \n     \n\n\n\n\n\n   \n   \n   \n   \n   \n   \n   \n   \n\n\n \n \n\n \n\n \n \n\n \n\n\n \n\n\n \n \n \n \n\n \n\n \n\n     \n\n \n\n \n \n \n \n \n \n \n \n \n \n \n \n \n\n \n\n\n\n     \n     \n\n\n \n \n \n \n \n \n    \n         \n    \n\n    \n     \n\n\n\n\n\n\n\n     \n     \n    \n     \n     \n\n\n\n\n\n \n \n \n\n\n \n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n \n \n",
+          "exact_receipt_excerpt": "lass=\"wixui-rich-text__text\">Orgnummer: 983 089 887</span></span></span></span></span></span></span></span></span></span></span></span></span></span><"
+        }
+      ],
+      "review_status": "correct_saved_publisher_review",
+      "review_reason": "Recovered existing exact-orgnr proof: substantive waste/recycling-company description and exact own Orgnummer: 983 089 887 alongside own name/contact. Footer retains Happy Farm Sanctuary stock copyright; disclosed for human review, not used as proof. Real company content dominates; not the empty stock-theme combination rejected by R7e rollback."
+    },
+    {
+      "orgnr": "995135086",
+      "name": "CRAFTING HOUSE AS",
+      "kind": "website",
+      "url": "https://craftinghouse.no",
+      "value": {
+        "final_url": "https://craftinghouse.no",
+        "identity_level": "HIGH",
+        "proof_type": "registry_declared_live",
+        "proof_page_url": "https://craftinghouse.no/",
+        "signals": [
+          "publisher_owner_receipt"
+        ],
+        "points": 0,
+        "candidate_origin": "registry_website",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publisher_identity": {
+          "tier": "registry_declared_live",
+          "legal_name": "CRAFTING HOUSE AS",
+          "publisher_location": "title",
+          "publisher_excerpt": "Crafting House – Samskaper med ledere som beveger samfunn",
+          "candidate_url": "https://www.craftinghouse.no/",
+          "proof_page_url": "https://craftinghouse.no/",
+          "proof_token": "crafting house",
+          "owner_signal": {
+            "kind": "rare_name_core",
+            "name_key": "crafting house",
+            "rarity_count": 1
+          },
+          "rarity_table": {
+            "bundle_sha256": "900882536a574656025214e5163174812d4d4234e4922b9e452e86882b530d07",
+            "built_at": "2026-11-13T19:05:51.310268+00:00",
+            "entity_count": 1177860,
+            "sources": [
+              {
+                "kind": "enheter",
+                "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+                "file": "registry.csv",
+                "sha256": "5b0df27c5567a655320b8dfb8975049b76c46ba93d748a8a763f8db7050b7862",
+                "valid_rows": 1177860,
+                "local_file_modified_at": "2026-10-13T06:48:09.113086+00:00"
+              }
+            ],
+            "attribution": "Brønnøysundregistrene / Enhetsregisteret; NLOD 2.0",
+            "licence_url": "https://data.norge.no/nlod/no/2.0"
+          },
+          "registry_homepage": "www.craftinghouse.no"
+        }
+      },
+      "registry_context": {
+        "name": "CRAFTING HOUSE AS",
+        "website": "www.craftinghouse.no",
+        "phone": null,
+        "email": "post@craftinghouse.no",
+        "mobile": null,
+        "municipality": "OSLO",
+        "street": "Biskop Gunnerus' gate 14A",
+        "postcode": "0185",
+        "city": "OSLO"
+      },
+      "pages": [
+        {
+          "url": "https://craftinghouse.no/",
+          "sha256": "5089733488a7869f90bd42c26903e5ecfec5d7e5ffe04032945073fdd590f80f",
+          "title": "Crafting House – Samskaper med ledere som beveger samfunn",
+          "publisher": [
+            [
+              "title",
+              "Crafting House – Samskaper med ledere som beveger samfunn"
+            ],
+            [
+              "og:site_name",
+              "Crafting House"
+            ],
+            [
+              "logo",
+              "Skip to content Crafting House Samskaper med ledere som beveger samfunn Menu Vårt bidrag Tjenester 7 tegn på et vinnerlag Bedre møter Konsulentene Om oss Kontakt oss Proudly"
+            ],
+            [
+              "header",
+              "Crafting House Samskaper med ledere som beveger samfunn Menu Vårt bidrag Tjenester 7 tegn på et vinnerlag Bedre møter Konsulentene Om oss Kontakt oss"
+            ],
+            [
+              "footer",
+              "Proudly"
+            ]
+          ],
+          "visible_context": "\n \n \n\n \n \n\t Skip to content \n\n\t \n\t\t\t\t \n\t\t\t \n\t\t\t\t \t\t\t\t Crafting House \n\t\t\t\t Samskaper med ledere som beveger samfunn \n\t\t\t \n\n\t\t\t\t\t\t\t \n\t\t\t\t\t Menu \n\t\t\t\t\t Vårt bidrag \n Tjenester \n \n\t 7 tegn på et vinnerlag \n\t Bedre møter \n \n \n Konsulentene \n Om oss \n Kontakt oss \n \t\t\t\t \n\t\t\t\n\t\t\t\t\t\t\t \n\t\t\t\t\t \n\t\t\t\t\t\t \n\t\t\t\t\t \n\t\t\t\t \n\t\t\t\t\t \n\t\t\t \n\n\t \n\n\t \n\t\t \n\t\t\t \n\n\t\t\t\t\n\t\t\t\t\t\n \n\t Vårt bidrag \n\t \n\t\t\n Crafting House kjennetegnes av erfarne konsulenter som arbeider praktisk rettet for å løse kundens utfordringer på enkleste måte. Personlig forpliktelse fra grupper eller enkeltledere er drivkraften i våre endringsprosesser. Vårt fundament er respekt for kundens oppdrag og begrensede ressurser. Vi bidrar til å gjøre mennesker, prosesser og metoder bedre hos kunden.  \n\n\n\n \n\t\t\t \n\n\t \n\n\t\t\t\t\t\n\t\t\t\t\n\t\t\t \n\t\t \n\t \n\n\n\t \n\n\t\n\t\n\t \n\t\t \n\t\t\t Proudly powered by WordPress \n\t\t\t  —  \n\t\t\tTheme: Sequential by  WordPress.com .\t\t \n\t \n \n\n \n \n \n \n \n \n \n \n \n \n \n\n \n",
+          "exact_receipt_excerpt": "//craftinghouse.no/xmlrpc.php\">\n\n<title>Crafting House &#8211; Samskaper med ledere som beveger samfunn</title>\n<meta name='robots' content='max-image-preview:large' />\n<link rel='dns-prefetch' href='//secure.gravatar.com' />\n<link rel='dns-prefetch' href='//fonts.googleapis.com' />\n<link rel='dns-p"
+        }
+      ],
+      "review_status": "correct_saved_publisher_review",
+      "review_reason": "Registry declares www.craftinghouse.no root; same-domain apex serves a real single-company consultancy page. Distinctive unique Crafting House core in title, og:site_name and own header/logo, no foreign legal publisher/group/portal. No staff contact is used. Generic WordPress footer/theme credit is not an owner signal."
+    }
+  ],
+  "method": "Full saved publisher context for assistant inspection; no network or human-verdict claim",
+  "review_complete": true,
+  "review_kind": "Assistant saved-source/context review; independent human check still requested"
+}

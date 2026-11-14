@@ -59,3 +59,9 @@ X5 remains dropped. R6a/d/e were implemented with green gates then individually 
 R6 accepted result: 37 websites / 600, declared-homepage recall 19/72; 4,424 requests and 2,781.080 summed process seconds, $0. Zero unsupported values; all six site/order/five-topic gates pass. One old exact-number site recovered and two old sites withdrew with live source failures. No retained new-tier website gain.
 
 Remaining authorized order: R7a?g (including root-only, own branding and company-contact guardrails), Stage L0?L4 legal-disclosure proof, X2 owner-declared social, P0 official-source outage resilience, P2 new non-overlapping 500-company clean-clone scale test. X3/X5/X6 remain dropped. One full six-sample measurement per R7 and L stage; green pytest commit per sub-step. Foreground one sample at a time, exactly seven flags, fresh state/new IDs, strict proof/robots/global limits; never push. Review every new saved publisher context and revert only the responsible doubtful rule.
+
+## R7 completed measured checkpoint
+
+R7a/b/c/d/f/g are retained; R7e was individually reverted after a stock-template false attribution. Final qualification:40websites/600 (R6:37), declared recall20/72(R6:19/72),26social/17companies,4,949HTTP,2,884.172summed process seconds,$0. Zero unsupported values; all600ordered terminal/five-topic/site checks pass. Full final serialpytest1,164green. [R7 complete table, commits, safety rollback and costs](../stageR7/SUMMARY.md); [every added/removed/withheld URL and exact publisher review](../stageR7/new_websites.md).
+
+Next authorized work: StageL0?L4, thenX2, P0, P2NEW500-company clean-clone qualification. Never push. X3/X5/X6 remain dropped.
