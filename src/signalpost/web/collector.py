@@ -171,14 +171,26 @@ async def ordered_proof_targets(org,http,page,seen):
     """Real own links, then bounded sitemap nominations, then legacy guesses."""
     linked=[url for url in proof_page_targets(page,page.url,limit=100)
             if url in {normalize_url(link) for link in followup_links(page)} and domain(url)==domain(page.url)]
-    for url in linked:yield url
+    yielded=set()
+    async def queued_pdfs():
+        for pdf_url in list(getattr(http,'legal_pdf_links',{}).get(org,{})):
+            if pdf_url not in yielded and pdf_url not in seen:
+                yielded.add(pdf_url);yield pdf_url
+    for url in linked:
+        yielded.add(url);yield url
+        async for pdf_url in queued_pdfs():yield pdf_url
+    async for pdf_url in queued_pdfs():yield pdf_url
     from .proof_sitemaps import discover
     # Leave capacity for at least the map and one proof page. No allowance is
     # added and all robots/redirect requests still consume the shared counters.
     if http.company_cap(org)-http.counts.get(org,0)>=2:
-        for url in await discover(org,http,page.url,seen):yield url
+        for url in await discover(org,http,page.url,seen):
+            yielded.add(url);yield url
+            async for pdf_url in queued_pdfs():yield pdf_url
     for url in proof_page_targets(page,page.url):
-        if url not in linked:yield url
+        if url not in yielded:
+            yielded.add(url);yield url
+            async for pdf_url in queued_pdfs():yield pdf_url
 
 
 def previous_nomination(previous, context, units):
@@ -295,12 +307,16 @@ async def fetch(org, envelope, bulk, http, previous=None, *, resume=False, candi
                                      'reason': exc.code, 'page': refresh_proof})
             if proof.level not in {"VERIFIED", "REJECT"}:
                 seen = {response.url}
+                from .legal_pages import pdf_receipts
+                http.legal_pdf_links=getattr(http,'legal_pdf_links',{})
+                http.legal_pdf_links.setdefault(org,{}).update(pdf_receipts(response,page))
                 async for target in ordered_proof_targets(org,http,page,seen):
                     if not target or target in seen or domain(target) != domain(response.url):
                         continue
                     seen.add(target)
                     try:
-                        extra = await http.get(target, org, candidate.domain, proved)
+                        is_pdf_target=target in http.legal_pdf_links.get(org,{})
+                        extra = await http.get(target, org, candidate.domain, proved,**({'pdf':True} if is_pdf_target else {}))
                     except SourceFailure as exc:
                         if exc.code in {'block_page','http_blocked','robots','robots_unavailable'}:raise
                         if exc.code in TRANSIENT:failures[key]={'candidate':candidate,'reason':exc.code}
@@ -313,8 +329,26 @@ async def fetch(org, envelope, bulk, http, previous=None, *, resume=False, candi
                         if extra.status in {401,403,429}:raise SourceFailure('http_blocked')
                         if extra.status>=500:failures[key]={'candidate':candidate,'reason':'website_http_5xx'}
                         continue
-                    extra_page = await offload(Page,extra.body,extra.url)
-                    extra_proof = await offload(candidate_proof,extra_page,org,context,candidate,leaders)
+                    if is_pdf_target:
+                        if extra.url!=target:
+                            attempts.append({'domain':candidate.domain,'page':target,'reason':'pdf_redirect_unproven'});continue
+                        from .legal_pdf import prove as prove_pdf
+                        try:
+                            remaining=max(.001,http.budget.deadline-__import__('time').monotonic())
+                            result=await asyncio.wait_for(offload(prove_pdf,extra,org,context,candidate,leaders,http.legal_pdf_links[org][target]),timeout=min(5,remaining))
+                        except (SourceFailure,TimeoutError) as exc:
+                            if getattr(exc,'code',None)=='pdf_publisher_conflict':
+                                from .proof import Proof
+                                best=(Proof('REJECT',reason='pdf_publisher_conflict'),extra,Page(b'',extra.url))
+                                break
+                            attempts.append({'domain':candidate.domain,'page':target,'reason':getattr(exc,'code','pdf_parse_timeout')});continue
+                        if not result:continue
+                        extra,extra_page,extra_proof=result
+                        await offload(http.blobs.put,extra.body)
+                    else:
+                        extra_page = await offload(Page,extra.body,extra.url)
+                        http.legal_pdf_links[org].update(pdf_receipts(extra,extra_page))
+                        extra_proof = await offload(candidate_proof,extra_page,org,context,candidate,leaders)
                     from .legal_pages import is_legal
                     if is_legal(urlsplit(extra.url).path) and extra_proof.level in {'HIGH','REGISTRY_DECLARED'}:
                         from .proof import Proof
@@ -536,6 +570,7 @@ def publish_result(org,envelope,http,section,choices,attempts,context):
              "proof_page_url": response.url, "signals": proof.signals, "points": proof.points,
              "candidate_origin": candidate.origin, "relationship_note": "group_site" if proof.other_orgnrs else None,
              "other_orgnrs": proof.other_orgnrs}
+    if getattr(response,'pdf_receipt',None):value['pdf_proof']=response.pdf_receipt
     if getattr(proof,'publisher_receipt',None):
         value['publisher_identity'] = proof.publisher_receipt
     proven_units={str(u['orgnr']) for u in context.get('subunits',[]) if u.get('orgnr')}
@@ -551,8 +586,12 @@ def publish_result(org,envelope,http,section,choices,attempts,context):
         if refs: contact_refs[kind] = refs
     if contact_refs:
         value['registry_contact_matches'] = {kind:contact_matches[kind][0] for kind in contact_refs}
-    publish(section, response, org, "official_website", value, "identity-proof:" + matched, span)
+    locator=('pdf:page:'+str(response.pdf_receipt['page_number'])+'/' if getattr(response,'pdf_receipt',None) else '')+'identity-proof:'+matched
+    publish(section,response,org,'official_website',value,locator,span)
     web_claim = section.claims[-1]
+    if getattr(response,'pdf_receipt',None):
+        from .legal_pdf import attach
+        attach(section,web_claim,response)
     for kind, refs in contact_refs.items():
         contact_value, contact_span = contact_matches[kind]
         if not contact_span or len(contact_span) > 300 or contact_span not in page.raw: continue
@@ -576,7 +615,7 @@ def publish_result(org,envelope,http,section,choices,attempts,context):
         section.evidence.extend(registry_refs)
         section.claims[-1].evidence_ids.extend(e.id for e in registry_refs)
     from .descriptions import extract as descriptions
-    accepted_domain_pages = [(r, p) for r, p in pages if domain(r.url) == domain(response.url)]
+    accepted_domain_pages = [(r, p) for r, p in pages if domain(r.url) == domain(response.url) and not getattr(r,'pdf_receipt',None)]
     identity_claim = section.claims[-1]
     descriptions(section, org, identity_claim, accepted_domain_pages)
     extract_contacts_and_social(section, org, identity_claim, accepted_domain_pages, context=context, envelope=envelope)
@@ -585,7 +624,7 @@ def publish_result(org,envelope,http,section,choices,attempts,context):
         span = (page.span_for(brand) or "")[:150]
         publish(section, response, org, "public_brand", brand, "meta:brand", span)
     section.state = "available"
-    http.accepted_pages[org] = [(r, p) for r, p in pages if domain(r.url) == domain(response.url)]
+    http.accepted_pages[org] = accepted_domain_pages
     envelope.run.refresh['website'] = {'checked_urls': sorted({r.url for r, _ in http.accepted_pages[org]}),
                                        'social_policy':'own_header_footer_exact_name_or_numeric_linkedin_v2'}
     section.errors.append(Error(section='website',code='website_candidates',message=json.dumps(attempts+http.attempts.get(org,[]),ensure_ascii=False)))

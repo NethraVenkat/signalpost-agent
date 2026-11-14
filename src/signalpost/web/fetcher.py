@@ -116,7 +116,7 @@ class WebsiteHttp:
                 raise SourceFailure(result)
             policy.check_ips(result)
 
-    async def raw(self, url, org, domains, xml=False, obey_robots=False, registry_redirect=False):
+    async def raw(self, url, org, domains, xml=False, obey_robots=False, registry_redirect=False, pdf=False):
         domains=set(domains)
         url = policy.validate_url(url, domains)
         for hop in range(4):
@@ -146,7 +146,7 @@ class WebsiteHttp:
                     seconds=min(REQUEST_SECONDS.get(),max(.001,remaining))
                     event['timeout_seconds']=seconds
                     async with asyncio.timeout(seconds):
-                        async with self.client.stream("GET", url, headers={"User-Agent": self.config.website_user_agent, "Accept": "application/xml,text/xml,application/rss+xml,application/atom+xml" if xml else "text/html,application/xhtml+xml,text/plain"}, timeout=seconds, follow_redirects=False) as stream:
+                        async with self.client.stream("GET", url, headers={"User-Agent": self.config.website_user_agent, "Accept": "application/pdf" if pdf else "application/xml,text/xml,application/rss+xml,application/atom+xml" if xml else "text/html,application/xhtml+xml,text/plain"}, timeout=seconds, follow_redirects=False) as stream:
                             chunks = []
                             size = 0
                             event["status"] = stream.status_code
@@ -182,6 +182,7 @@ class WebsiteHttp:
                                 url = policy.validate_url(target, domains)
                                 continue
                             permitted = {"text/html", "application/xhtml+xml", "text/plain"}
+                            if pdf:permitted.add('application/pdf')
                             if xml:
                                 permitted |= {"application/xml", "text/xml", "application/rss+xml", "application/atom+xml"}
                             if stream.status_code == 200 and content_type not in permitted:
@@ -227,17 +228,17 @@ class WebsiteHttp:
             if not await offload(self.robots[origin].can_fetch,self.config.website_user_agent,url):
                 raise SourceFailure("robots")
 
-    async def get(self, url, org, candidate_domain, proven=(), xml=False, registry_redirect=False):
+    async def get(self, url, org, candidate_domain, proven=(), xml=False, registry_redirect=False, pdf=False):
         domains = {candidate_domain, *proven}
         url = policy.validate_url(url, domains)
         # Robots are checked again on the effective redirect authority. raw()
         # can follow only already permitted domains; content is not extracted
         # until the final authority's policy has also been checked.
-        key = (url, xml, tuple(sorted(domains)),registry_redirect)
+        key = (url, xml, tuple(sorted(domains)),registry_redirect,pdf)
         async with self.page_locks.setdefault(key, asyncio.Lock()):
             if key not in self.page_cache:
                 try:
-                    self.page_cache[key] = await self.raw(url, org, domains, xml, obey_robots=True,registry_redirect=registry_redirect)
+                    self.page_cache[key] = await self.raw(url, org, domains, xml, obey_robots=True,registry_redirect=registry_redirect,pdf=pdf)
                 except SourceFailure as exc:
                     if exc.code not in {'website_budget_exhausted', 'budget_exhausted', 'deadline'}:
                         self.page_cache[key] = exc
@@ -331,7 +332,7 @@ class WebsiteHttp:
                         retried = True
                         retry_seconds=16 if exc.code=='website_timeout' else 8
                         notes.append({'domain':candidate.domain,'origin':candidate.origin,'url':target,'reason':'declared_timeout_retry','timeout_seconds':retry_seconds})
-                        self.page_cache.pop((target, False, tuple(sorted({candidate.domain, *proven})),candidate.origin=='registry_website'), None)
+                        self.page_cache.pop((target,False,tuple(sorted({candidate.domain,*proven})),candidate.origin=='registry_website',False),None)
                         continue
                     if exc.code in {'website_timeout', 'dns_timeout'}:
                         raise
