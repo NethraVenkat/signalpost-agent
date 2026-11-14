@@ -1,0 +1,242 @@
+[
+  {
+    "seed": 20261113,
+    "orgnr": "934626176",
+    "legal_name": "ADVOKATFIRMAET TASHAKORI AS",
+    "kind": "website",
+    "url": "https://tashakori.no",
+    "tier": "registry_declared_publisher_name",
+    "value": {
+      "final_url": "https://tashakori.no",
+      "identity_level": "HIGH",
+      "proof_type": "registry_declared_publisher_name",
+      "proof_page_url": "https://tashakori.no/nb",
+      "signals": [
+        "publisher_full_legal_name",
+        "registry_declared_domain"
+      ],
+      "points": 0,
+      "candidate_origin": "registry_website",
+      "relationship_note": null,
+      "other_orgnrs": [],
+      "publisher_identity": {
+        "tier": "registry_declared_publisher_name",
+        "legal_name": "ADVOKATFIRMAET TASHAKORI AS",
+        "publisher_location": "footer",
+        "publisher_excerpt": "Tashakori Advokatfirma Din sak, vår styrke. Vi leverer juridisk bistand med integritet, faglig styrke og personlig oppfølging. sa@tashakori.no +47 411 78 083 Postadresse Postboks 8832 Youngstorget, 0028 Oslo Besøksadresse C.J. Hambros plass 2, Bygg D, 0164 Oslo Hurtiglenker › Om oss › Menneskene › Kontakt oss Ressurser › Saksartikler › Våre tjenester › Vanlige spørsmål › Nyheter Vilkår › Vilkår og betingelser › Informasjonskapsler › Personvern Åpent mandag – søndag 24 timer i døgnet Fri rettshjelp vurderes alltid — kontakt oss for en uforpliktet samtale © 2026 Advokatfirmaet Tashakori AS. Alle rettigheter forbeholdt. Personvern · Vilkår · Informasjonskapsler",
+        "registry_homepage": "www.tashakori.no",
+        "candidate_url": "https://www.tashakori.no/",
+        "proof_page_url": "https://tashakori.no/nb"
+      }
+    },
+    "own_receipts": [
+      {
+        "id": "88534130f92ec7ed3babdb7650302a8a6782aa9c673a06b4051fede5bda3c622",
+        "source_url": "https://tashakori.no/nb",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-14T00:20:38.616295Z",
+        "content_sha256": "6e249158873fd837e088f6a83afdcc84d6f3baba0972384a500b098426c71375",
+        "claim_span": "5 tracking-wide\">© <!-- -->2026<!-- --> Advokatfirmaet Tashakori AS. Alle rettigheter forbeholdt.</p><div class=\"flex items-center gap-1\"><a class=\"text-[11px] text-foreground/25 hover:text-foreground/60 transition-colors duration-200 px-2\" href=\"/nb/personvern\">Personvern</a><span class=\"text-foreg",
+        "locator": "identity-proof:934626176",
+        "extraction_method": "signalpost.website.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ],
+    "registry_receipts": {
+      "identity.legal_name": {
+        "value": "ADVOKATFIRMAET TASHAKORI AS",
+        "evidence": [
+          {
+            "id": "74d5fa044c2b332fa3da82127cd66998045dbce65f8115478885f20e985bbd32",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T00:19:13.350335Z",
+            "content_sha256": "3fe6aaf862cd3d2ba2f6faa638a21c5fa517fbbce3e7d5ed45ea1d602fdeeaf0",
+            "claim_span": "934626176,ADVOKATFIRMAET TASHAKORI AS,AS,Aksjeselskap,69.100,Juridisk tjenesteyting,,,,,,,true,6,2026-09-14,2026-09-10,www.tashakori.no,tashakori.o@gmail.com,,482 19 268,Postboks 8832 Youngstorget,OSLO,0028,OSLO,0301,Norge,NO,C. J. Hambros plass 2,OSLO,0164,OSLO,0301,Norge,NO,2100,Private aksjeselsk",
+            "locator": "row:934626176/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:5b92dd3a9015a2f6a8ad9eaf6d5796f779669a382effdb59bbb9260d803dbd90",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      "identity.registered_website": {
+        "value": "www.tashakori.no",
+        "evidence": [
+          {
+            "id": "71b2106dc05c78b2a57069ea5af19567f2291e1e216e1595fb73ddec1a1d8f76",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T00:19:13.350335Z",
+            "content_sha256": "3fe6aaf862cd3d2ba2f6faa638a21c5fa517fbbce3e7d5ed45ea1d602fdeeaf0",
+            "claim_span": "0,Juridisk tjenesteyting,,,,,,,true,6,2026-09-14,2026-09-10,www.tashakori.no,tashakori.o@gmail.com,,482 19 268,Postboks 8832 Youngstorget,OSLO,0028,OSLO,0301,Norge,NO,C. J. Hambros plass 2,OSLO,0164,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2024-12-10,2024-11-27,true,2025-01-06,2025-01",
+            "locator": "row:934626176/column:hjemmeside",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:5b92dd3a9015a2f6a8ad9eaf6d5796f779669a382effdb59bbb9260d803dbd90",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      "identity.registered_email": {
+        "value": "tashakori.o@gmail.com",
+        "evidence": [
+          {
+            "id": "6acddd5fd2356d9c5948745a315dc78dcb702a21f036e446eeb22cd8fb2ecf91",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T00:19:13.350335Z",
+            "content_sha256": "3fe6aaf862cd3d2ba2f6faa638a21c5fa517fbbce3e7d5ed45ea1d602fdeeaf0",
+            "claim_span": "teyting,,,,,,,true,6,2026-09-14,2026-09-10,www.tashakori.no,tashakori.o@gmail.com,,482 19 268,Postboks 8832 Youngstorget,OSLO,0028,OSLO,0301,Norge,NO,C. J. Hambros plass 2,OSLO,0164,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2024-12-10,2024-11-27,true,2025-01-06,2025-01-06,,,false,,true",
+            "locator": "row:934626176/column:epostadresse",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:5b92dd3a9015a2f6a8ad9eaf6d5796f779669a382effdb59bbb9260d803dbd90",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      "identity.registered_mobile": {
+        "value": "482 19 268",
+        "evidence": [
+          {
+            "id": "2f72a1396bb8a58b2ce780da92691a60c91b3fbde2e5cc547efe7a5e5c524e76",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T00:19:13.350335Z",
+            "content_sha256": "3fe6aaf862cd3d2ba2f6faa638a21c5fa517fbbce3e7d5ed45ea1d602fdeeaf0",
+            "claim_span": "26-09-14,2026-09-10,www.tashakori.no,tashakori.o@gmail.com,,482 19 268,Postboks 8832 Youngstorget,OSLO,0028,OSLO,0301,Norge,NO,C. J. Hambros plass 2,OSLO,0164,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2024-12-10,2024-11-27,true,2025-01-06,2025-01-06,,,false,,true,2024-12-10,false,false",
+            "locator": "row:934626176/column:mobil",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:5b92dd3a9015a2f6a8ad9eaf6d5796f779669a382effdb59bbb9260d803dbd90",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      }
+    },
+    "automated_verdict": "correct",
+    "checks": [
+      {
+        "status": "CORRECT",
+        "reason": "Exact full publisher legal name on registry-declared domain",
+        "source_url": "https://tashakori.no/nb",
+        "content_sha256": "6e249158873fd837e088f6a83afdcc84d6f3baba0972384a500b098426c71375"
+      }
+    ]
+  },
+  {
+    "seed": 20261113,
+    "orgnr": "997274253",
+    "legal_name": "ELEKTROFIL AS",
+    "kind": "website",
+    "url": "https://www.elektrofil.as",
+    "tier": "registry_declared_publisher_name",
+    "value": {
+      "final_url": "https://www.elektrofil.as",
+      "identity_level": "HIGH",
+      "proof_type": "registry_declared_publisher_name",
+      "proof_page_url": "https://www.elektrofil.as/",
+      "signals": [
+        "publisher_full_legal_name",
+        "registry_declared_domain"
+      ],
+      "points": 0,
+      "candidate_origin": "registry_website",
+      "relationship_note": null,
+      "other_orgnrs": [],
+      "publisher_identity": {
+        "tier": "registry_declared_publisher_name",
+        "legal_name": "ELEKTROFIL AS",
+        "publisher_location": "title",
+        "publisher_excerpt": "Elektriker i Oslo og Akershus | Elektrofil AS",
+        "registry_homepage": "www.elektrofil.as",
+        "candidate_url": "https://www.elektrofil.as/",
+        "proof_page_url": "https://www.elektrofil.as/"
+      }
+    },
+    "own_receipts": [
+      {
+        "id": "b1eb05cb120cea8d4fd8d1fa9e0310f905de796c6e653b5eb80632c9587371ec",
+        "source_url": "https://www.elektrofil.as/",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-14T00:22:58.265942Z",
+        "content_sha256": "c8f1cce55b31955d486bc67415667b23fce8a3144be58fcbd7baaf23fc0544f8",
+        "claim_span": "><title>Elektriker i Oslo og Akershus | Elektrofil AS</title><meta name=\"keywords\" content=\"Hovedside, elektriker elektrikeroppdrag, bolig, næringsbygg, elsjekk, service, installasjon, belysning, varme, brannsikkerhet, Oslo og Akershus, Elektrofil AS\"><meta name=\"description\" content=\"Elektrofil AS ",
+        "locator": "identity-proof:997274253",
+        "extraction_method": "signalpost.website.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ],
+    "registry_receipts": {
+      "identity.legal_name": {
+        "value": "ELEKTROFIL AS",
+        "evidence": [
+          {
+            "id": "43518e8ad8d44e3d7bf2eec79581ff235ad676b1db815593e26fcd2de698bb1a",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T00:19:13.486468Z",
+            "content_sha256": "e82dab0e10a65d673c6fc8f7c218b685c2ccaeca6dc3fbcb2e93e19ffcbeaa3f",
+            "claim_span": "997274253,ELEKTROFIL AS,AS,Aksjeselskap,43.210,Elektrisk installasjonsarbeid,,,,,,,true,6,2026-08-12,2026-08-10,www.elektrofil.as,,22 22 54 99,,,,,,,,,Hvamsvingen 4,SKJETTEN,2013,LILLESTRØM,3205,Norge,NO,2100,Private aksjeselskaper mv.,2025,2011-09-05,2011-08-25,true,2011-09-01,2011-11-21,,,false,,t",
+            "locator": "row:997274253/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:5b92dd3a9015a2f6a8ad9eaf6d5796f779669a382effdb59bbb9260d803dbd90",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      "identity.registered_website": {
+        "value": "www.elektrofil.as",
+        "evidence": [
+          {
+            "id": "d2c2524509813412e8a1bc3ddc6ce5e2473e804fd9b6ab2cf3369a585dd6155b",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T00:19:13.486468Z",
+            "content_sha256": "e82dab0e10a65d673c6fc8f7c218b685c2ccaeca6dc3fbcb2e93e19ffcbeaa3f",
+            "claim_span": "risk installasjonsarbeid,,,,,,,true,6,2026-08-12,2026-08-10,www.elektrofil.as,,22 22 54 99,,,,,,,,,Hvamsvingen 4,SKJETTEN,2013,LILLESTRØM,3205,Norge,NO,2100,Private aksjeselskaper mv.,2025,2011-09-05,2011-08-25,true,2011-09-01,2011-11-21,,,false,,true,2011-09-05,false,false,,false,,false,,false,,,,,",
+            "locator": "row:997274253/column:hjemmeside",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:5b92dd3a9015a2f6a8ad9eaf6d5796f779669a382effdb59bbb9260d803dbd90",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      "identity.registered_phone": {
+        "value": "22 22 54 99",
+        "evidence": [
+          {
+            "id": "6eeb983c56acc957d483c2d7f3f3e850ec53480813725693c20b6415169ee357",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T00:19:13.486468Z",
+            "content_sha256": "e82dab0e10a65d673c6fc8f7c218b685c2ccaeca6dc3fbcb2e93e19ffcbeaa3f",
+            "claim_span": "rbeid,,,,,,,true,6,2026-08-12,2026-08-10,www.elektrofil.as,,22 22 54 99,,,,,,,,,Hvamsvingen 4,SKJETTEN,2013,LILLESTRØM,3205,Norge,NO,2100,Private aksjeselskaper mv.,2025,2011-09-05,2011-08-25,true,2011-09-01,2011-11-21,,,false,,true,2011-09-05,false,false,,false,,false,,false,,,,,,,Bokmål,2011-08-25",
+            "locator": "row:997274253/column:telefon",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:5b92dd3a9015a2f6a8ad9eaf6d5796f779669a382effdb59bbb9260d803dbd90",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      }
+    },
+    "automated_verdict": "correct",
+    "checks": [
+      {
+        "status": "CORRECT",
+        "reason": "Exact full publisher legal name on registry-declared domain",
+        "source_url": "https://www.elektrofil.as/",
+        "content_sha256": "c8f1cce55b31955d486bc67415667b23fce8a3144be58fcbd7baaf23fc0544f8"
+      }
+    ]
+  }
+]

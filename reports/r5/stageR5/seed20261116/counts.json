@@ -1,0 +1,48 @@
+{
+  "seed": 20261116,
+  "websites_before": 5,
+  "websites_after": 6,
+  "declared_homepages": 17,
+  "declared_recall_before": 2,
+  "declared_recall_after": 3,
+  "tier_counts": {
+    "signals": 1,
+    "orgnr_on_page": 4,
+    "registry_declared_publisher_name": 1
+  },
+  "http_before": 787,
+  "http_after": 787,
+  "runtime_seconds": 500.6719999999914,
+  "cost_usd": 0.0,
+  "changes": {
+    "added": {
+      "984177070": {
+        "final_url": "https://www.kraabol-as.com",
+        "identity_level": "HIGH",
+        "proof_type": "registry_declared_publisher_name",
+        "proof_page_url": "https://www.kraabol-as.com/",
+        "signals": [
+          "publisher_full_legal_name",
+          "registry_declared_domain"
+        ],
+        "points": 0,
+        "candidate_origin": "registry_website",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publisher_identity": {
+          "tier": "registry_declared_publisher_name",
+          "legal_name": "KRAABOL AS",
+          "publisher_location": "title",
+          "publisher_excerpt": "Kraabol AS – We provide a professional and global network to support your business needs.",
+          "registry_homepage": "www.kraabol-as.com",
+          "candidate_url": "https://www.kraabol-as.com/",
+          "proof_page_url": "https://www.kraabol-as.com/"
+        }
+      }
+    },
+    "removed": {},
+    "url_changed": {}
+  },
+  "envelopes_sha256": "52c2848a0675078adc5d22ac279be3190ca084878ed507ed8887ab51dec14671",
+  "profiles_sha256": "02ff7ad46ebafaea1c955b7ecd13b86eeacf96bf7cbc8e48b93ad8637b52d42c"
+}

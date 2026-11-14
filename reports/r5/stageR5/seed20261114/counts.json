@@ -1,0 +1,52 @@
+{
+  "seed": 20261114,
+  "websites_before": 3,
+  "websites_after": 4,
+  "declared_homepages": 8,
+  "declared_recall_before": 3,
+  "declared_recall_after": 4,
+  "tier_counts": {
+    "signals": 1,
+    "registry_declared_publisher_name": 1,
+    "orgnr_on_page": 2
+  },
+  "http_before": 723,
+  "http_after": 726,
+  "runtime_seconds": 336.0469999999914,
+  "cost_usd": 0.0,
+  "changes": {
+    "added": {
+      "994882597": {
+        "final_url": "http://dica.no",
+        "identity_level": "HIGH",
+        "proof_type": "registry_declared_publisher_name",
+        "proof_page_url": "http://dica.no/",
+        "signals": [
+          "publisher_full_legal_name",
+          "registry_declared_domain"
+        ],
+        "points": 0,
+        "candidate_origin": "registry_website",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publisher_identity": {
+          "tier": "registry_declared_publisher_name",
+          "legal_name": "DICA PROFIL & YRKESKLÆR AS",
+          "publisher_location": "title",
+          "publisher_excerpt": "Dica Profil & Yrkesklær AS",
+          "registry_homepage": "www.dica.no",
+          "candidate_url": "https://www.dica.no/",
+          "proof_page_url": "http://dica.no/"
+        },
+        "registry_contact_matches": {
+          "phone": "+4738185060",
+          "email_domain": "dica.no"
+        }
+      }
+    },
+    "removed": {},
+    "url_changed": {}
+  },
+  "envelopes_sha256": "376d3d07599d53e531b3d03330330136dd1be3f2dd316c6528cc5e207d896bd7",
+  "profiles_sha256": "8be1f25004f045605d74ba20f6cfba3d553f48fecf3724b0f149019a3dbcd890"
+}

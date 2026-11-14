@@ -1,0 +1,54 @@
+[
+  {
+    "seed": 20261017,
+    "work": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageR5-20261017-release-final",
+    "accepted": false,
+    "http": 699,
+    "wall_seconds": 343.89,
+    "cost_usd": 0.0,
+    "websites": 5,
+    "declared_homepages": 11,
+    "declared_homepage_recall_published": 4,
+    "exit_code": 0,
+    "reason": "Superseded by punctuation/localized-name fallback correction; final six-sample suite rerun from fresh state."
+  },
+  {
+    "seed": 20261113,
+    "work": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageR5-20261113-release-final",
+    "accepted": false,
+    "http": 777,
+    "wall_seconds": 436.516,
+    "cost_usd": 0.0,
+    "websites": 6,
+    "declared_homepages": 11,
+    "declared_homepage_recall_published": 5,
+    "exit_code": 0,
+    "reason": "Superseded by punctuation/localized-name fallback correction; final six-sample suite rerun from fresh state."
+  },
+  {
+    "seed": 20261114,
+    "work": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageR5-20261114-release-final",
+    "accepted": false,
+    "http": 727,
+    "wall_seconds": 376.984,
+    "cost_usd": 0.0,
+    "websites": 3,
+    "declared_homepages": 8,
+    "declared_homepage_recall_published": 3,
+    "exit_code": 0,
+    "reason": "Superseded by punctuation/localized-name fallback correction; final six-sample suite rerun from fresh state."
+  },
+  {
+    "seed": 20261115,
+    "work": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageR5-20261115-release-final",
+    "accepted": false,
+    "http": 749,
+    "wall_seconds": 433.782,
+    "cost_usd": 0.0,
+    "websites": 8,
+    "declared_homepages": 14,
+    "declared_homepage_recall_published": 3,
+    "exit_code": null,
+    "reason": "Superseded by punctuation/localized-name fallback correction; final six-sample suite rerun from fresh state."
+  }
+]

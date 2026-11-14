@@ -157,7 +157,9 @@ def test_redirect_www_and_unrelated(tmp_path, monkeypatch):
         return httpx.Response(301, headers={"location": "https://other.no/"})
     _, row, requests, _ = execute_web(tmp_path / "other", monkeypatch, response=unrelated)
     assert not any(c["field"] == "official_website" for c in row["claims"])
-    assert not any("other.no" in url for url in requests)
+    # A declared redirect can nominate a public destination, but a redirect
+    # loop still publishes nothing and stays under the unchanged hop/budget cap.
+    assert any("other.no" in url for url in requests)
 
 
 def test_social_and_registry_social(tmp_path, monkeypatch):
@@ -314,8 +316,8 @@ def test_unlinked_standard_pages_are_checked_for_the_org_number(tmp_path, monkey
     # A final blind alias can remain unchecked; never silently raise the cap.
     _, row, requests, _ = execute_web(tmp_path, monkeypatch, response=site, website_request_cap=8, website_total_request_cap=13)
     if path=='/om':
-        assert not any(c['field']=='official_website' for c in row['claims'])
-        assert any(e['code']=='website_budget_exhausted' for e in row['errors'])
+        site = next(c for c in row['claims'] if c['field']=='official_website')
+        assert site['value']['proof_type']=='registry_declared_publisher_name'
         assert len([u for u in requests if 'data.brreg.no' not in u])==8
         return
     claim = next(c for c in row["claims"] if c["field"] == "official_website")

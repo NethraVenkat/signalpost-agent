@@ -113,7 +113,7 @@ def test_hostname_pair_reuses_candidate_without_reusing_entity_verdict(tmp_path)
     async def go():
         async with httpx.AsyncClient() as client:
             fetcher = WebsiteHttp(client, cfg, Budget(cfg), BlobStore(tmp_path), resolver=resolve)
-            async def get(url, *args):
+            async def get(url, *args, **kwargs):
                 calls.append(url)
                 return SimpleNamespace(status=200, url=url, body=html('Org nr '+OUR).encode())
             fetcher.get = get
@@ -137,7 +137,7 @@ def test_source_veto_reused_across_hostname_pair_without_another_request(tmp_pat
     async def go():
         async with httpx.AsyncClient() as client:
             fetcher = WebsiteHttp(client, cfg, Budget(cfg), BlobStore(tmp_path), resolver=resolve)
-            async def get(url, *args):
+            async def get(url, *args, **kwargs):
                 calls.append(url)
                 raise SourceFailure('url_refused')
             fetcher.get = get

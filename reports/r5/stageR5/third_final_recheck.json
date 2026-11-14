@@ -1,0 +1,153 @@
+[
+  {
+    "seed": 20261114,
+    "orgnr": "994882597",
+    "legal_name": "DICA PROFIL & YRKESKLÆR AS",
+    "kind": "website",
+    "url": "http://dica.no",
+    "tier": "registry_declared_publisher_name",
+    "value": {
+      "final_url": "http://dica.no",
+      "identity_level": "HIGH",
+      "proof_type": "registry_declared_publisher_name",
+      "proof_page_url": "http://dica.no/",
+      "signals": [
+        "publisher_full_legal_name",
+        "registry_declared_domain"
+      ],
+      "points": 0,
+      "candidate_origin": "registry_website",
+      "relationship_note": null,
+      "other_orgnrs": [],
+      "publisher_identity": {
+        "tier": "registry_declared_publisher_name",
+        "legal_name": "DICA PROFIL & YRKESKLÆR AS",
+        "publisher_location": "title",
+        "publisher_excerpt": "Dica Profil & Yrkesklær AS",
+        "registry_homepage": "www.dica.no",
+        "candidate_url": "https://www.dica.no/",
+        "proof_page_url": "http://dica.no/"
+      },
+      "registry_contact_matches": {
+        "phone": "+4738185060",
+        "email_domain": "dica.no"
+      }
+    },
+    "own_receipts": [
+      {
+        "id": "43479752dd666ed4c62a9ce7a90a6a34f4617626ecc688609be1e28d2d95e319",
+        "source_url": "http://dica.no/",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-14T00:29:39.319934Z",
+        "content_sha256": "1349258208a2f06a4d8ed45921104fa9e0225d383fb1f23e224dab0d4ae6e3fd",
+        "claim_span": "\t\t\t\t<div class=\"kontakt\">\n\t\t\t\t\t\t<strong>Dica Profil & Yrkesklær AS</strong>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li><p>Mjåvannsveien 15<br />\r\n4628 Kristiansand</p></li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<p><a href=\"tel:38 18 50 60\"><span class=\"telefon\"><img src=\"http://dica.no/wp-content/themes/dica/gfx/phone.svg\" class=\"svg\"></",
+        "locator": "identity-proof:994882597",
+        "extraction_method": "signalpost.website.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ],
+    "registry_receipts": {
+      "identity.legal_name": {
+        "value": "DICA PROFIL & YRKESKLÆR AS",
+        "evidence": [
+          {
+            "id": "425dd5bfdf9fe796811d8a4d4e3ce3972767d2e459f35364ba58128fee642220",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T00:26:48.331217Z",
+            "content_sha256": "ced6081ab267269efbcdd89670683f0cdca417a46a010c46d43ba7f8d4bd207a",
+            "claim_span": "994882597,DICA PROFIL & YRKESKLÆR AS,AS,Aksjeselskap,46.420,Engroshandel med klær og skotøy,,,,,,,true,,2010-03-01,2010-01-18,www.dica.no,frank@dica.no,38 18 50 60,98285062,,,,,,,,Mjåvannsvegen 15,KRISTIANSAND S,4628,KRISTIANSAND,4204,Norge,NO,2100,Private aksjeselskaper mv.,2025,2009-12-19,2009-12-",
+            "locator": "row:994882597/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:e19cf6e47d266b6a605b0b3dd14f1cbf08b31a78fb32820182fbb91753d96b4f",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      "identity.registered_website": {
+        "value": "www.dica.no",
+        "evidence": [
+          {
+            "id": "43fa9c040acc180b727fcd40d0733020dc4467c3d75fb2c9006f6a1e931e4c09",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T00:26:48.331217Z",
+            "content_sha256": "ced6081ab267269efbcdd89670683f0cdca417a46a010c46d43ba7f8d4bd207a",
+            "claim_span": "handel med klær og skotøy,,,,,,,true,,2010-03-01,2010-01-18,www.dica.no,frank@dica.no,38 18 50 60,98285062,,,,,,,,Mjåvannsvegen 15,KRISTIANSAND S,4628,KRISTIANSAND,4204,Norge,NO,2100,Private aksjeselskaper mv.,2025,2009-12-19,2009-12-02,true,2010-01-01,2010-02-10,,,false,,true,2009-12-19,false,false",
+            "locator": "row:994882597/column:hjemmeside",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:e19cf6e47d266b6a605b0b3dd14f1cbf08b31a78fb32820182fbb91753d96b4f",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      "identity.registered_email": {
+        "value": "frank@dica.no",
+        "evidence": [
+          {
+            "id": "8486f3603334034f1551112dacb368fb746ab3336a49a5bf02eec45dfe277f49",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T00:26:48.331217Z",
+            "content_sha256": "ced6081ab267269efbcdd89670683f0cdca417a46a010c46d43ba7f8d4bd207a",
+            "claim_span": "lær og skotøy,,,,,,,true,,2010-03-01,2010-01-18,www.dica.no,frank@dica.no,38 18 50 60,98285062,,,,,,,,Mjåvannsvegen 15,KRISTIANSAND S,4628,KRISTIANSAND,4204,Norge,NO,2100,Private aksjeselskaper mv.,2025,2009-12-19,2009-12-02,true,2010-01-01,2010-02-10,,,false,,true,2009-12-19,false,false,,false,,fal",
+            "locator": "row:994882597/column:epostadresse",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:e19cf6e47d266b6a605b0b3dd14f1cbf08b31a78fb32820182fbb91753d96b4f",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      "identity.registered_phone": {
+        "value": "38 18 50 60",
+        "evidence": [
+          {
+            "id": "42f580fc540199b9138fd2e21f1d11d35da7bfa38170b30f2847f4e47853060e",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T00:26:48.331217Z",
+            "content_sha256": "ced6081ab267269efbcdd89670683f0cdca417a46a010c46d43ba7f8d4bd207a",
+            "claim_span": ",,,,,,true,,2010-03-01,2010-01-18,www.dica.no,frank@dica.no,38 18 50 60,98285062,,,,,,,,Mjåvannsvegen 15,KRISTIANSAND S,4628,KRISTIANSAND,4204,Norge,NO,2100,Private aksjeselskaper mv.,2025,2009-12-19,2009-12-02,true,2010-01-01,2010-02-10,,,false,,true,2009-12-19,false,false,,false,,false,,false,,,,,",
+            "locator": "row:994882597/column:telefon",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:e19cf6e47d266b6a605b0b3dd14f1cbf08b31a78fb32820182fbb91753d96b4f",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      "identity.registered_mobile": {
+        "value": "98285062",
+        "evidence": [
+          {
+            "id": "fe19f88a062c59e6fd0209413468a7dedc066b530910274b6d9ae94496cd5553",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T00:26:48.331217Z",
+            "content_sha256": "ced6081ab267269efbcdd89670683f0cdca417a46a010c46d43ba7f8d4bd207a",
+            "claim_span": "2010-03-01,2010-01-18,www.dica.no,frank@dica.no,38 18 50 60,98285062,,,,,,,,Mjåvannsvegen 15,KRISTIANSAND S,4628,KRISTIANSAND,4204,Norge,NO,2100,Private aksjeselskaper mv.,2025,2009-12-19,2009-12-02,true,2010-01-01,2010-02-10,,,false,,true,2009-12-19,false,false,,false,,false,,false,,,,,,,Bokmål,201",
+            "locator": "row:994882597/column:mobil",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:e19cf6e47d266b6a605b0b3dd14f1cbf08b31a78fb32820182fbb91753d96b4f",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      }
+    },
+    "automated_verdict": "correct",
+    "checks": [
+      {
+        "status": "CORRECT",
+        "reason": "Exact full publisher legal name on registry-declared domain",
+        "source_url": "http://dica.no/",
+        "content_sha256": "1349258208a2f06a4d8ed45921104fa9e0225d383fb1f23e224dab0d4ae6e3fd"
+      }
+    ]
+  }
+]

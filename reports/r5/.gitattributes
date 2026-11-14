@@ -13,3 +13,10 @@ stageW/*.json -text
 stageW/**/*.json -text whitespace=cr-at-eol
 stageW/rejections.md -text
 stageW/new_websites.md -text
+stageR5/**/*.json -text whitespace=cr-at-eol
+stageR5/*.json -text
+stageR5/new_websites.md -text whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+stageR5/declared_gap.md -text
+stageR3/**/*.json -text whitespace=cr-at-eol
+stageR3/*.json -text
+stageR3/new_websites.md -text whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol

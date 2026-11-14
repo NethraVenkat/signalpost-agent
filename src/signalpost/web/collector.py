@@ -464,17 +464,27 @@ def extract_contacts_and_social(section, org, web_claim, pages, context=None, en
 
 
 def candidate_proof(page,org,context,candidate,leaders):
-    context = {**context, 'publisher_company_orgnr': org}
+    context = {**context, 'publisher_company_orgnr': org, 'candidate_url': candidate.url}
     proof=score(page,org,context,candidate.origin,leaders)
     if proof.reason.startswith('publisher_'):
         return proof
+    if candidate.origin=='registry_website' and domain(page.url)!=candidate.domain:
+        from .publisher_identity import declared_match
+        if not declared_match(page,org,context):
+            from .proof import Proof
+            return Proof('REJECT',reason='registry_redirect_identity_missing')
     if candidate.subunit_orgnr and proof.level not in {'VERIFIED','BLOCKED'}:
         unit=score(page,candidate.subunit_orgnr,context,candidate.origin,leaders)
         if unit.level=='VERIFIED':return unit
     matches = registry_contacts(page, context)
-    if proof.level in {'HIGH','REGISTRY_DECLARED'} and not matches:
+    if proof.level in {'HIGH','REGISTRY_DECLARED'} and not proof.publisher_receipt and (not matches or not page.name_span(proof.token)):
         from .proof import Proof
-        return Proof('MEDIUM', signals=proof.signals, points=proof.points, reason='registry_contact_missing')
+        from .publisher_identity import declared_receipt, DECLARED
+        if receipt := declared_receipt(page,org,context):
+            return Proof('HIGH',DECLARED,['publisher_full_legal_name','registry_declared_domain'],
+                         reason=DECLARED,token=context['name'],publisher_receipt=receipt)
+        if not matches:
+            return Proof('MEDIUM', signals=proof.signals, points=proof.points, reason='registry_contact_missing')
     # A shared registry phone/domain is corroboration, never a replacement for
     # exact-entity proof or an override of parked/foreign/group/source vetoes.
     return proof
@@ -486,12 +496,17 @@ def publish_result(org,envelope,http,section,choices,attempts,context):
     root_url = urlunsplit((p.scheme, p.netloc, "", "", ""))
     matched=proof.token if proof.level=='VERIFIED' else org
     span = page.proof_span(matched) if proof.level == "VERIFIED" else page.name_span(proof.token)
+    if getattr(proof,'publisher_receipt',None):
+        from .publisher_identity import localized_span
+        span = localized_span(page,proof.publisher_receipt)
     if not span:
         return missing("website", "no_localized_proof", state="ambiguous")
     value = {"final_url": root_url, "identity_level": proof.level, "proof_type": proof.proof_type,
              "proof_page_url": response.url, "signals": proof.signals, "points": proof.points,
              "candidate_origin": candidate.origin, "relationship_note": "group_site" if proof.other_orgnrs else None,
              "other_orgnrs": proof.other_orgnrs}
+    if getattr(proof,'publisher_receipt',None):
+        value['publisher_identity'] = proof.publisher_receipt
     if candidate.subunit_orgnr and matched==candidate.subunit_orgnr:
         value['matched_via_subunit']=matched
     contact_matches = registry_contacts(page, context) if not proof.other_orgnrs else {}

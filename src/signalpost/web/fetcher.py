@@ -114,7 +114,8 @@ class WebsiteHttp:
                 raise SourceFailure(result)
             policy.check_ips(result)
 
-    async def raw(self, url, org, domains, xml=False, obey_robots=False):
+    async def raw(self, url, org, domains, xml=False, obey_robots=False, registry_redirect=False):
+        domains=set(domains)
         url = policy.validate_url(url, domains)
         for hop in range(4):
             parts = urlsplit(url)
@@ -168,6 +169,12 @@ class WebsiteHttp:
                                 if hop == 3:
                                     raise SourceFailure("redirect_limit")
                                 target = urljoin(url, stream.headers.get("location", ""))
+                                event['redirect_target']=target
+                                if registry_redirect and obey_robots and policy.normalize_url(target):
+                                    # Registry redirects nominate a destination, never prove
+                                    # ownership. Every hop still pays the existing budget,
+                                    # rechecks public IPs/TLS and obeys its own robots policy.
+                                    domains.add(policy.domain(target))
                                 url = policy.validate_url(target, domains)
                                 continue
                             permitted = {"text/html", "application/xhtml+xml", "text/plain"}
@@ -216,17 +223,17 @@ class WebsiteHttp:
             if not await offload(self.robots[origin].can_fetch,self.config.website_user_agent,url):
                 raise SourceFailure("robots")
 
-    async def get(self, url, org, candidate_domain, proven=(), xml=False):
+    async def get(self, url, org, candidate_domain, proven=(), xml=False, registry_redirect=False):
         domains = {candidate_domain, *proven}
         url = policy.validate_url(url, domains)
         # Robots are checked again on the effective redirect authority. raw()
         # can follow only already permitted domains; content is not extracted
         # until the final authority's policy has also been checked.
-        key = (url, xml, tuple(sorted(domains)))
+        key = (url, xml, tuple(sorted(domains)),registry_redirect)
         async with self.page_locks.setdefault(key, asyncio.Lock()):
             if key not in self.page_cache:
                 try:
-                    self.page_cache[key] = await self.raw(url, org, domains, xml, obey_robots=True)
+                    self.page_cache[key] = await self.raw(url, org, domains, xml, obey_robots=True,registry_redirect=registry_redirect)
                 except SourceFailure as exc:
                     if exc.code not in {'website_budget_exhausted', 'budget_exhausted', 'deadline'}:
                         self.page_cache[key] = exc
@@ -294,7 +301,7 @@ class WebsiteHttp:
         for target in trials:
             while True:
                 try:
-                    response = await self.get(target, org, candidate.domain, proven)
+                    response = await self.get(target, org, candidate.domain, proven,registry_redirect=candidate.origin=='registry_website')
                     notes.append({'domain':candidate.domain,'origin':candidate.origin,'url':target,'status':response.status})
                     if 200 <= response.status < 300 or response.status in {401,403,429}:
                         return response
@@ -314,7 +321,7 @@ class WebsiteHttp:
                         connect_hosts.append(urlsplit(target).hostname)
                     if exc.code in {'website_timeout','dns_timeout'} and candidate.origin == 'registry_website' and self.budget.phase!='pass2' and not retried and self.counts.get(org,0) < self.config.website_request_cap:
                         retried = True
-                        self.page_cache.pop((target, False, tuple(sorted({candidate.domain, *proven}))), None)
+                        self.page_cache.pop((target, False, tuple(sorted({candidate.domain, *proven})),candidate.origin=='registry_website'), None)
                         continue
                     if exc.code in {'website_timeout', 'dns_timeout'}:
                         raise
@@ -323,7 +330,7 @@ class WebsiteHttp:
         for host in dict.fromkeys(connect_hosts):
             target = urlunsplit(('http',host,p.path or '/','',''))
             try:
-                response = await self.get(target,org,candidate.domain,proven)
+                response = await self.get(target,org,candidate.domain,proven,registry_redirect=candidate.origin=='registry_website')
                 notes.append({'domain':candidate.domain,'origin':candidate.origin,'url':target,'status':response.status})
                 if 200 <= response.status < 300 or response.status in {401,403,429}: return response
                 last = SourceFailure('website_http_5xx' if response.status>=500 else 'http_'+str(response.status))

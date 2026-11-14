@@ -27,7 +27,7 @@ def test_dns_fallback_checks_other_hostname_without_raising_caps(tmp_path, monke
     async def go():
         async with httpx.AsyncClient() as client:
             fetcher=WebsiteHttp(client,cfg,Budget(cfg),BlobStore(tmp_path))
-            async def get(url,*args):
+            async def get(url,*args,**kwargs):
                 assert url.startswith('https://www.example.no/')
                 return type('Response',(),{'status':200})()
             fetcher.get=get

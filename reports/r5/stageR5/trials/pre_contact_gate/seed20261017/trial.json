@@ -1,0 +1,18 @@
+{
+  "accepted": false,
+  "reason": "Old HIGH contact gate could suppress a newly authorized declared-domain/full-publisher-name proof; fixed and covered by regression before final six-sample suite.",
+  "cli_exit_code": null,
+  "exit_code_reason": "Driver stopped to prevent next sample; current CLI child completed outputs independently. Child exit code was not captured.",
+  "http": 699,
+  "completion": {
+    "wall_seconds": 369.266,
+    "within_requested_time_budget": true,
+    "within_effective_time_budget": true,
+    "note": "Includes preparation, crawl, mandatory outputs and site; final report flush adds filesystem latency."
+  },
+  "cost_usd": 0.0,
+  "source_note": "Initial source manifest retained; collector fix occurred during child lifetime. Trial is not substituted for a final-source run.",
+  "websites": 5,
+  "declared_homepages": 11,
+  "declared_homepage_recall_published": 4
+}

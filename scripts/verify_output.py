@@ -1,10 +1,14 @@
 """Independent saved-output checks; never rewrites an envelope to pass a gate."""
 import argparse
+import sys
 import hashlib
 import json
 import csv,io
 from functools import lru_cache
 from pathlib import Path
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0,str(ROOT))
 from signalpost.models.shapes import validate
 from signalpost.io.input_adapter import read
 from signalpost.models.claim import Claim
@@ -337,6 +341,8 @@ def verify(first, state_dir, count, organisations=None, report=None, require_cle
         registry_events+=verify_registry_events(row,data,evidence,stored_body,registry_documents)
         verify_careers(row,data,evidence,stored_body)
         exact_public+=verify_exact_public(row,data,evidence,stored_body)
+        from scripts.verify_publisher_identity import verify as verify_publisher
+        verify_publisher(row['organisation_number'],data,evidence,stored_body)
         filing_year_facts+=verify_filing_years(row,data,evidence,stored_body)
     result = {"lines": len(rows), "schema_valid": True, "published_claims": published, "source_blobs_verified": len(seen)}
     result.update(synthesis_companies=synthesis_companies,synthesis_sentences=synthesis_sentences,synthesis_unverified_values=0)

@@ -1,0 +1,149 @@
+[
+  {
+    "seed": 20261116,
+    "orgnr": "984177070",
+    "legal_name": "KRAABOL AS",
+    "kind": "website",
+    "url": "https://www.kraabol-as.com",
+    "tier": "registry_declared_publisher_name",
+    "value": {
+      "final_url": "https://www.kraabol-as.com",
+      "identity_level": "HIGH",
+      "proof_type": "registry_declared_publisher_name",
+      "proof_page_url": "https://www.kraabol-as.com/",
+      "signals": [
+        "publisher_full_legal_name",
+        "registry_declared_domain"
+      ],
+      "points": 0,
+      "candidate_origin": "registry_website",
+      "relationship_note": null,
+      "other_orgnrs": [],
+      "publisher_identity": {
+        "tier": "registry_declared_publisher_name",
+        "legal_name": "KRAABOL AS",
+        "publisher_location": "title",
+        "publisher_excerpt": "Kraabol AS – We provide a professional and global network to support your business needs.",
+        "registry_homepage": "www.kraabol-as.com",
+        "candidate_url": "https://www.kraabol-as.com/",
+        "proof_page_url": "https://www.kraabol-as.com/"
+      }
+    },
+    "own_receipts": [
+      {
+        "id": "9d699490090698f31105e4e5f5a90efbd63109fec697999e0ee3231e7fafe5d9",
+        "source_url": "https://www.kraabol-as.com/",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-14T00:43:30.674996Z",
+        "content_sha256": "05c54b91080bb9bc2fca181bcf63addf4e89792321854d416fbc39915d7113d5",
+        "claim_span": "href=\"http://gmpg.org/xfn/11\">\n\t\t<title>Kraabol AS &#8211; We provide a professional and global network to support your business needs.</title>\n<meta name='robots' content='max-image-preview:large' />\n<link rel='dns-prefetch' href='//fonts.googleapis.com' />\n<link rel=\"alternate\" type=\"application/r",
+        "locator": "identity-proof:984177070",
+        "extraction_method": "signalpost.website.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ],
+    "registry_receipts": {
+      "identity.legal_name": {
+        "value": "KRAABOL AS",
+        "evidence": [
+          {
+            "id": "c1ea82d44c89d5b834aac9ef1556040a83d1f08f057e2425cd1c5317f416a79c",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T00:40:01.399594Z",
+            "content_sha256": "58600383e968018228fb471bb87430c71bfb48a23c291005dfdd903b0a3d2e74",
+            "claim_span": "984177070,KRAABOL AS,AS,Aksjeselskap,43.600,Formidlingstjenester innenfor spesialisert bygge- og anleggsvirksomhet,,,,,,,false,,,,www.kraabol-as.com,bkraabol@yahoo.com,22 22 56 83,96669011,,,,,,,,Holtervegen 79,HOLTER,2034,NANNESTAD,3238,Norge,NO,2100,Private aksjeselskaper mv.,2025,2002-02-19,2002-",
+            "locator": "row:984177070/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:aef414072567eda80df4802df2d6054f07c8f9749dbc4bfacd1c09906a2fb8d9",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      "identity.registered_website": {
+        "value": "www.kraabol-as.com",
+        "evidence": [
+          {
+            "id": "ec1ee89e2eeae7f4978ca73ff92b29b0533a1882f90afbe84baa722007d0146c",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T00:40:01.399594Z",
+            "content_sha256": "58600383e968018228fb471bb87430c71bfb48a23c291005dfdd903b0a3d2e74",
+            "claim_span": "for spesialisert bygge- og anleggsvirksomhet,,,,,,,false,,,,www.kraabol-as.com,bkraabol@yahoo.com,22 22 56 83,96669011,,,,,,,,Holtervegen 79,HOLTER,2034,NANNESTAD,3238,Norge,NO,2100,Private aksjeselskaper mv.,2025,2002-02-19,2002-01-21,true,2002-01-01,2002-10-17,,,false,,true,2002-02-19,false,false,",
+            "locator": "row:984177070/column:hjemmeside",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:aef414072567eda80df4802df2d6054f07c8f9749dbc4bfacd1c09906a2fb8d9",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      "identity.registered_email": {
+        "value": "bkraabol@yahoo.com",
+        "evidence": [
+          {
+            "id": "8359371faf51384c99253a8ab03937c84c5b686db40635b1e61f8167e71158c9",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T00:40:01.399594Z",
+            "content_sha256": "58600383e968018228fb471bb87430c71bfb48a23c291005dfdd903b0a3d2e74",
+            "claim_span": "gge- og anleggsvirksomhet,,,,,,,false,,,,www.kraabol-as.com,bkraabol@yahoo.com,22 22 56 83,96669011,,,,,,,,Holtervegen 79,HOLTER,2034,NANNESTAD,3238,Norge,NO,2100,Private aksjeselskaper mv.,2025,2002-02-19,2002-01-21,true,2002-01-01,2002-10-17,,,false,,true,2002-02-19,false,false,,false,,false,,fals",
+            "locator": "row:984177070/column:epostadresse",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:aef414072567eda80df4802df2d6054f07c8f9749dbc4bfacd1c09906a2fb8d9",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      "identity.registered_phone": {
+        "value": "22 22 56 83",
+        "evidence": [
+          {
+            "id": "ca0515fd234dfca911517c47f4ec04b9727644759cdef1d40285a1afa5035e4f",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T00:40:01.399594Z",
+            "content_sha256": "58600383e968018228fb471bb87430c71bfb48a23c291005dfdd903b0a3d2e74",
+            "claim_span": "somhet,,,,,,,false,,,,www.kraabol-as.com,bkraabol@yahoo.com,22 22 56 83,96669011,,,,,,,,Holtervegen 79,HOLTER,2034,NANNESTAD,3238,Norge,NO,2100,Private aksjeselskaper mv.,2025,2002-02-19,2002-01-21,true,2002-01-01,2002-10-17,,,false,,true,2002-02-19,false,false,,false,,false,,false,,,,,,,Bokmål,2015",
+            "locator": "row:984177070/column:telefon",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:aef414072567eda80df4802df2d6054f07c8f9749dbc4bfacd1c09906a2fb8d9",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      "identity.registered_mobile": {
+        "value": "96669011",
+        "evidence": [
+          {
+            "id": "7d69086ed38b879320e43fef545c09e56ee0ed125bd7b5a219057b018ae79478",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T00:40:01.399594Z",
+            "content_sha256": "58600383e968018228fb471bb87430c71bfb48a23c291005dfdd903b0a3d2e74",
+            "claim_span": ",false,,,,www.kraabol-as.com,bkraabol@yahoo.com,22 22 56 83,96669011,,,,,,,,Holtervegen 79,HOLTER,2034,NANNESTAD,3238,Norge,NO,2100,Private aksjeselskaper mv.,2025,2002-02-19,2002-01-21,true,2002-01-01,2002-10-17,,,false,,true,2002-02-19,false,false,,false,,false,,false,,,,,,,Bokmål,2015-04-22,Hande",
+            "locator": "row:984177070/column:mobil",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:aef414072567eda80df4802df2d6054f07c8f9749dbc4bfacd1c09906a2fb8d9",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      }
+    },
+    "automated_verdict": "correct",
+    "checks": [
+      {
+        "status": "CORRECT",
+        "reason": "Exact full publisher legal name on registry-declared domain",
+        "source_url": "https://www.kraabol-as.com/",
+        "content_sha256": "05c54b91080bb9bc2fca181bcf63addf4e89792321854d416fbc39915d7113d5"
+      }
+    ]
+  }
+]

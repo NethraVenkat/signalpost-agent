@@ -1,0 +1,299 @@
+[
+  {
+    "seed": 20261115,
+    "orgnr": "984204663",
+    "legal_name": "A TIL Å PROFILERING AS",
+    "kind": "website",
+    "url": "https://www.atilaa.com",
+    "tier": "registry_declared_publisher_name",
+    "value": {
+      "final_url": "https://www.atilaa.com",
+      "identity_level": "HIGH",
+      "proof_type": "registry_declared_publisher_name",
+      "proof_page_url": "https://www.atilaa.com/",
+      "signals": [
+        "publisher_full_legal_name",
+        "registry_declared_domain"
+      ],
+      "points": 0,
+      "candidate_origin": "registry_website",
+      "relationship_note": null,
+      "other_orgnrs": [],
+      "publisher_identity": {
+        "tier": "registry_declared_publisher_name",
+        "legal_name": "A TIL Å PROFILERING AS",
+        "publisher_location": "title",
+        "publisher_excerpt": "A til Å Profilering AS",
+        "registry_homepage": "www.atilaa.com",
+        "candidate_url": "https://www.atilaa.com/",
+        "proof_page_url": "https://www.atilaa.com/"
+      },
+      "registry_contact_matches": {
+        "email_domain": "atilaa.com"
+      }
+    },
+    "own_receipts": [
+      {
+        "id": "139906773338c2d96b4fcf4347728e36ff3ebd8de9c79c87cfe1168f9a83d288",
+        "source_url": "https://www.atilaa.com/",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-14T00:34:31.546357Z",
+        "content_sha256": "664f1baee243518651936b27e21f9340d6cee629d1882d5c3f857a53638ade50",
+        "claim_span": "ice-width, initial-scale=1.0\">\n  <title>A til Å Profilering AS</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<style>\n\t:root {\n\t\t--blue: #00A4FF;\n\t\t--turquoise: #00C6B8;\n\t\t--green: #00CC66;\n\t\t\n\t\t--pink: #FF4FA8;\n\t\t--purple: #A033FF;\n\t\t\n\t\t--text-dark: #222222;\n\t\t--gray: #CCCCCC;\n\t\t--gray-",
+        "locator": "identity-proof:984204663",
+        "extraction_method": "signalpost.website.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ],
+    "registry_receipts": {
+      "identity.legal_name": {
+        "value": "A TIL Å PROFILERING AS",
+        "evidence": [
+          {
+            "id": "1ef965f10d7b6439565852a79cfcd5973e31683d726c951d7ae987f03c75bee2",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T00:32:39.471263Z",
+            "content_sha256": "058b94dfc123f4188707923ded5985956bd3106902b71ead31b927234d136e6f",
+            "claim_span": "984204663,A TIL Å PROFILERING AS,AS,Aksjeselskap,73.300,Pr og kommunikasjonstjenester,,,,,,,false,,,,www.atilaa.com,post@atilaa.com,33 07 07 41,954 37 738,,,,,,,,Torget 1A,HORTEN,3181,HORTEN,3901,Norge,NO,2100,Private aksjeselskaper mv.,2025,2002-02-16,2002-01-12,true,2002-01-01,2002-02-21,,,false,,",
+            "locator": "row:984204663/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:bd3598aeae1b5c6b107e61ba1ffdb4d2a92af86edeef91f9b0dbfe65e0d418d3",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      "identity.registered_website": {
+        "value": "www.atilaa.com",
+        "evidence": [
+          {
+            "id": "a6de18cd6641d62cb53dcae5c2320d8987f48532970de5fba1bca15cf3ef1168",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T00:32:39.471263Z",
+            "content_sha256": "058b94dfc123f4188707923ded5985956bd3106902b71ead31b927234d136e6f",
+            "claim_span": "selskap,73.300,Pr og kommunikasjonstjenester,,,,,,,false,,,,www.atilaa.com,post@atilaa.com,33 07 07 41,954 37 738,,,,,,,,Torget 1A,HORTEN,3181,HORTEN,3901,Norge,NO,2100,Private aksjeselskaper mv.,2025,2002-02-16,2002-01-12,true,2002-01-01,2002-02-21,,,false,,true,2002-02-16,false,false,,false,,false",
+            "locator": "row:984204663/column:hjemmeside",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:bd3598aeae1b5c6b107e61ba1ffdb4d2a92af86edeef91f9b0dbfe65e0d418d3",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      "identity.registered_email": {
+        "value": "post@atilaa.com",
+        "evidence": [
+          {
+            "id": "3e92b9944c0625107063d15a4b06793f7ea74f232d49d96ab2f809ddae3c6023",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T00:32:39.471263Z",
+            "content_sha256": "058b94dfc123f4188707923ded5985956bd3106902b71ead31b927234d136e6f",
+            "claim_span": "Pr og kommunikasjonstjenester,,,,,,,false,,,,www.atilaa.com,post@atilaa.com,33 07 07 41,954 37 738,,,,,,,,Torget 1A,HORTEN,3181,HORTEN,3901,Norge,NO,2100,Private aksjeselskaper mv.,2025,2002-02-16,2002-01-12,true,2002-01-01,2002-02-21,,,false,,true,2002-02-16,false,false,,false,,false,,false,,,,,,,B",
+            "locator": "row:984204663/column:epostadresse",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:bd3598aeae1b5c6b107e61ba1ffdb4d2a92af86edeef91f9b0dbfe65e0d418d3",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      "identity.registered_phone": {
+        "value": "33 07 07 41",
+        "evidence": [
+          {
+            "id": "cbbf09636a404e63b588cf62b2483d6904bd3c73e68ac9132217605725057d92",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T00:32:39.471263Z",
+            "content_sha256": "058b94dfc123f4188707923ded5985956bd3106902b71ead31b927234d136e6f",
+            "claim_span": "jonstjenester,,,,,,,false,,,,www.atilaa.com,post@atilaa.com,33 07 07 41,954 37 738,,,,,,,,Torget 1A,HORTEN,3181,HORTEN,3901,Norge,NO,2100,Private aksjeselskaper mv.,2025,2002-02-16,2002-01-12,true,2002-01-01,2002-02-21,,,false,,true,2002-02-16,false,false,,false,,false,,false,,,,,,,Bokmål,2008-03-18",
+            "locator": "row:984204663/column:telefon",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:bd3598aeae1b5c6b107e61ba1ffdb4d2a92af86edeef91f9b0dbfe65e0d418d3",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      "identity.registered_mobile": {
+        "value": "954 37 738",
+        "evidence": [
+          {
+            "id": "4a1188fb9279530f99fbc88ab6d60a8424bd19be6cb0a39494ced689cc5976c1",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T00:32:39.471263Z",
+            "content_sha256": "058b94dfc123f4188707923ded5985956bd3106902b71ead31b927234d136e6f",
+            "claim_span": "r,,,,,,,false,,,,www.atilaa.com,post@atilaa.com,33 07 07 41,954 37 738,,,,,,,,Torget 1A,HORTEN,3181,HORTEN,3901,Norge,NO,2100,Private aksjeselskaper mv.,2025,2002-02-16,2002-01-12,true,2002-01-01,2002-02-21,,,false,,true,2002-02-16,false,false,,false,,false,,false,,,,,,,Bokmål,2008-03-18,\"Tilby stra",
+            "locator": "row:984204663/column:mobil",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:bd3598aeae1b5c6b107e61ba1ffdb4d2a92af86edeef91f9b0dbfe65e0d418d3",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      }
+    },
+    "automated_verdict": "correct",
+    "checks": [
+      {
+        "status": "CORRECT",
+        "reason": "Exact full publisher legal name on registry-declared domain",
+        "source_url": "https://www.atilaa.com/",
+        "content_sha256": "664f1baee243518651936b27e21f9340d6cee629d1882d5c3f857a53638ade50"
+      }
+    ]
+  },
+  {
+    "seed": 20261115,
+    "orgnr": "984406622",
+    "legal_name": "TIDEMANN BIL AS",
+    "kind": "website",
+    "url": "https://tidemannbil.no",
+    "tier": "registry_declared_publisher_name",
+    "value": {
+      "final_url": "https://tidemannbil.no",
+      "identity_level": "HIGH",
+      "proof_type": "registry_declared_publisher_name",
+      "proof_page_url": "https://tidemannbil.no/",
+      "signals": [
+        "publisher_full_legal_name",
+        "registry_declared_domain"
+      ],
+      "points": 0,
+      "candidate_origin": "registry_website",
+      "relationship_note": null,
+      "other_orgnrs": [],
+      "publisher_identity": {
+        "tier": "registry_declared_publisher_name",
+        "legal_name": "TIDEMANN BIL AS",
+        "publisher_location": "title",
+        "publisher_excerpt": "Tidemann Bil AS – Bensinstasjonen med sjel",
+        "registry_homepage": "www.tidemannbil.no",
+        "candidate_url": "https://www.tidemannbil.no/",
+        "proof_page_url": "https://tidemannbil.no/"
+      }
+    },
+    "own_receipts": [
+      {
+        "id": "0e90626de9b57458c1a03fb2e271d1d7570b341ee2803f7b445764e82dc25fe1",
+        "source_url": "https://tidemannbil.no/",
+        "source_class": "company_owned",
+        "retrieved_at": "2026-11-14T00:36:58.924309Z",
+        "content_sha256": "41c09cd5fd93f305e5acaa83b7c0e7c39fed8073fb1db8d491c13fc8e0920df8",
+        "claim_span": "ad>\r\n\t<meta charset=\"UTF-8\" />\r\n\t<title>Tidemann Bil AS &#8211; Bensinstasjonen med sjel</title>\r\n\t\t\t\r\n\t\r\n\t<link rel=\"pingback\" href=\"https://tidemannbil.no/xmlrpc.php\" />\r\n\r\n\t\t<!--[if lt IE 9]>\r\n\t<script src=\"https://tidemannbil.no/wp-content/themes/tidemannbil/js/html5.js\" type=\"text/javascript\"><",
+        "locator": "identity-proof:984406622",
+        "extraction_method": "signalpost.website.v1",
+        "source_identifier": null,
+        "effective_at": null,
+        "reporting_period": null
+      }
+    ],
+    "registry_receipts": {
+      "identity.legal_name": {
+        "value": "TIDEMANN BIL AS",
+        "evidence": [
+          {
+            "id": "8293728205e651606a6d4476fa0694fe5950f776f7542fd4c5435be4b2513df0",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T00:32:39.471263Z",
+            "content_sha256": "5f00f71fd7c2656b61e4338358f92c190512109b250c4c85e0d081230e6e40d1",
+            "claim_span": "984406622,TIDEMANN BIL AS,AS,Aksjeselskap,47.300,Detaljhandel med drivstoff til motorvogner,,,,,,,true,6,2026-08-12,2026-08-10,www.tidemannbil.no,ulftidemann@gmail.com,75 72 10 80,472 50 555,,,,,,,,Chr. Tidemanns vei 22,ØRNES,8150,MELØY,1837,Norge,NO,2100,Private aksjeselskaper mv.,2025,2002-04-24,2",
+            "locator": "row:984406622/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:bd3598aeae1b5c6b107e61ba1ffdb4d2a92af86edeef91f9b0dbfe65e0d418d3",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      "identity.registered_website": {
+        "value": "www.tidemannbil.no",
+        "evidence": [
+          {
+            "id": "84d9108f6c043eb73d6d051a7ad88cb30b744b17f2f70368cc2d6a0f10f80a7b",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T00:32:39.471263Z",
+            "content_sha256": "5f00f71fd7c2656b61e4338358f92c190512109b250c4c85e0d081230e6e40d1",
+            "claim_span": "rivstoff til motorvogner,,,,,,,true,6,2026-08-12,2026-08-10,www.tidemannbil.no,ulftidemann@gmail.com,75 72 10 80,472 50 555,,,,,,,,Chr. Tidemanns vei 22,ØRNES,8150,MELØY,1837,Norge,NO,2100,Private aksjeselskaper mv.,2025,2002-04-24,2002-03-15,true,2002-07-01,2002-07-15,,,false,,true,2002-04-24,false",
+            "locator": "row:984406622/column:hjemmeside",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:bd3598aeae1b5c6b107e61ba1ffdb4d2a92af86edeef91f9b0dbfe65e0d418d3",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      "identity.registered_email": {
+        "value": "ulftidemann@gmail.com",
+        "evidence": [
+          {
+            "id": "6972d34ea2e5c06d5b25a4206c30354912a04f22b5378e5db91efe90e0e739bc",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T00:32:39.471263Z",
+            "content_sha256": "5f00f71fd7c2656b61e4338358f92c190512109b250c4c85e0d081230e6e40d1",
+            "claim_span": "ogner,,,,,,,true,6,2026-08-12,2026-08-10,www.tidemannbil.no,ulftidemann@gmail.com,75 72 10 80,472 50 555,,,,,,,,Chr. Tidemanns vei 22,ØRNES,8150,MELØY,1837,Norge,NO,2100,Private aksjeselskaper mv.,2025,2002-04-24,2002-03-15,true,2002-07-01,2002-07-15,,,false,,true,2002-04-24,false,false,,false,,fals",
+            "locator": "row:984406622/column:epostadresse",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:bd3598aeae1b5c6b107e61ba1ffdb4d2a92af86edeef91f9b0dbfe65e0d418d3",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      "identity.registered_phone": {
+        "value": "75 72 10 80",
+        "evidence": [
+          {
+            "id": "c736583f19e49f395a88d9c74fac9da587ad330afd08b4a2d6556c359eced55b",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T00:32:39.471263Z",
+            "content_sha256": "5f00f71fd7c2656b61e4338358f92c190512109b250c4c85e0d081230e6e40d1",
+            "claim_span": "6-08-12,2026-08-10,www.tidemannbil.no,ulftidemann@gmail.com,75 72 10 80,472 50 555,,,,,,,,Chr. Tidemanns vei 22,ØRNES,8150,MELØY,1837,Norge,NO,2100,Private aksjeselskaper mv.,2025,2002-04-24,2002-03-15,true,2002-07-01,2002-07-15,,,false,,true,2002-04-24,false,false,,false,,false,,false,,,,,,,Bokmål,",
+            "locator": "row:984406622/column:telefon",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:bd3598aeae1b5c6b107e61ba1ffdb4d2a92af86edeef91f9b0dbfe65e0d418d3",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      "identity.registered_mobile": {
+        "value": "472 50 555",
+        "evidence": [
+          {
+            "id": "4711e7585077b19e9af2816a74dfe18c8b503c1706f698e9f578296a6c8dc1a3",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T00:32:39.471263Z",
+            "content_sha256": "5f00f71fd7c2656b61e4338358f92c190512109b250c4c85e0d081230e6e40d1",
+            "claim_span": "-08-10,www.tidemannbil.no,ulftidemann@gmail.com,75 72 10 80,472 50 555,,,,,,,,Chr. Tidemanns vei 22,ØRNES,8150,MELØY,1837,Norge,NO,2100,Private aksjeselskaper mv.,2025,2002-04-24,2002-03-15,true,2002-07-01,2002-07-15,,,false,,true,2002-04-24,false,false,,false,,false,,false,,,,,,,Bokmål,2024-09-20,\"",
+            "locator": "row:984406622/column:mobil",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:bd3598aeae1b5c6b107e61ba1ffdb4d2a92af86edeef91f9b0dbfe65e0d418d3",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      }
+    },
+    "automated_verdict": "correct",
+    "checks": [
+      {
+        "status": "CORRECT",
+        "reason": "Exact full publisher legal name on registry-declared domain",
+        "source_url": "https://tidemannbil.no/",
+        "content_sha256": "41c09cd5fd93f305e5acaa83b7c0e7c39fed8073fb1db8d491c13fc8e0920df8"
+      }
+    ]
+  }
+]

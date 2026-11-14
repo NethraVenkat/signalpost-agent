@@ -1,0 +1,78 @@
+{
+  "seed": 20261117,
+  "websites_before": 7,
+  "websites_after": 7,
+  "declared_homepages": 11,
+  "declared_recall_before": 0,
+  "declared_recall_after": 0,
+  "tier_counts": {
+    "orgnr_on_page": 7
+  },
+  "http_before": 734,
+  "http_after": 749,
+  "runtime_seconds": 368.4210000000021,
+  "cost_usd": 0.0,
+  "changes": {
+    "added": {},
+    "removed": {},
+    "url_changed": {
+      "918638628": {
+        "before": {
+          "final_url": "https://vestfjordenelektro.no",
+          "identity_level": "VERIFIED",
+          "proof_type": "orgnr_on_page",
+          "proof_page_url": "https://vestfjordenelektro.no/",
+          "signals": [],
+          "points": 0,
+          "candidate_origin": "legal_name_slug",
+          "relationship_note": null,
+          "other_orgnrs": []
+        },
+        "after": {
+          "final_url": "https://www.vestfjordenelektro.no",
+          "identity_level": "VERIFIED",
+          "proof_type": "orgnr_on_page",
+          "proof_page_url": "https://www.vestfjordenelektro.no/",
+          "signals": [],
+          "points": 0,
+          "candidate_origin": "legal_name_slug",
+          "relationship_note": null,
+          "other_orgnrs": []
+        }
+      },
+      "948039958": {
+        "before": {
+          "final_url": "https://www.valakerbakeri.no",
+          "identity_level": "VERIFIED",
+          "proof_type": "orgnr_on_page",
+          "proof_page_url": "https://www.valakerbakeri.no/",
+          "signals": [],
+          "points": 0,
+          "candidate_origin": "nav_employer_homepage",
+          "relationship_note": null,
+          "other_orgnrs": [],
+          "registry_contact_matches": {
+            "phone": "+4770216590",
+            "email_domain": "valaker.as"
+          }
+        },
+        "after": {
+          "final_url": "https://www.braudbakeri.no",
+          "identity_level": "VERIFIED",
+          "proof_type": "orgnr_on_page",
+          "proof_page_url": "https://www.braudbakeri.no/",
+          "signals": [],
+          "points": 0,
+          "candidate_origin": "nav_employer_homepage",
+          "relationship_note": null,
+          "other_orgnrs": [],
+          "registry_contact_matches": {
+            "phone": "+4770216590"
+          }
+        }
+      }
+    }
+  },
+  "envelopes_sha256": "cf6669605668b877205aa10de8b6d0dc62933067c61b4443d1a158b27016e35b",
+  "profiles_sha256": "30ea2b1747b41bd794def42096fa2eca4bfe5ac9b33795d8ee4a23b7e739574d"
+}

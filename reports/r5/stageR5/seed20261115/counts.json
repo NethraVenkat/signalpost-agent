@@ -1,0 +1,74 @@
+{
+  "seed": 20261115,
+  "websites_before": 6,
+  "websites_after": 8,
+  "declared_homepages": 14,
+  "declared_recall_before": 1,
+  "declared_recall_after": 3,
+  "tier_counts": {
+    "jsonld_vatid": 1,
+    "orgnr_on_page": 5,
+    "registry_declared_publisher_name": 2
+  },
+  "http_before": 748,
+  "http_after": 755,
+  "runtime_seconds": 411.625,
+  "cost_usd": 0.0,
+  "changes": {
+    "added": {
+      "984406622": {
+        "final_url": "https://tidemannbil.no",
+        "identity_level": "HIGH",
+        "proof_type": "registry_declared_publisher_name",
+        "proof_page_url": "https://tidemannbil.no/",
+        "signals": [
+          "publisher_full_legal_name",
+          "registry_declared_domain"
+        ],
+        "points": 0,
+        "candidate_origin": "registry_website",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publisher_identity": {
+          "tier": "registry_declared_publisher_name",
+          "legal_name": "TIDEMANN BIL AS",
+          "publisher_location": "title",
+          "publisher_excerpt": "Tidemann Bil AS – Bensinstasjonen med sjel",
+          "registry_homepage": "www.tidemannbil.no",
+          "candidate_url": "https://www.tidemannbil.no/",
+          "proof_page_url": "https://tidemannbil.no/"
+        }
+      },
+      "984204663": {
+        "final_url": "https://www.atilaa.com",
+        "identity_level": "HIGH",
+        "proof_type": "registry_declared_publisher_name",
+        "proof_page_url": "https://www.atilaa.com/",
+        "signals": [
+          "publisher_full_legal_name",
+          "registry_declared_domain"
+        ],
+        "points": 0,
+        "candidate_origin": "registry_website",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publisher_identity": {
+          "tier": "registry_declared_publisher_name",
+          "legal_name": "A TIL Å PROFILERING AS",
+          "publisher_location": "title",
+          "publisher_excerpt": "A til Å Profilering AS",
+          "registry_homepage": "www.atilaa.com",
+          "candidate_url": "https://www.atilaa.com/",
+          "proof_page_url": "https://www.atilaa.com/"
+        },
+        "registry_contact_matches": {
+          "email_domain": "atilaa.com"
+        }
+      }
+    },
+    "removed": {},
+    "url_changed": {}
+  },
+  "envelopes_sha256": "0fa973ee0f7be7375fa105c7af8f9ff7559e3f27f84573848888f6d5355b9512",
+  "profiles_sha256": "2bf983b86e8b7ec7aa126882b08f05c8fdda41f87536bef62fb9f955ecf80317"
+}

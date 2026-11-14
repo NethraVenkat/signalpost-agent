@@ -81,26 +81,22 @@ def _excluded(node):
     return False
 
 
-def _text(node):
+def _text(node, cut_credit=True):
     if isinstance(node, str):
         # Agency credits do not identify the publishing legal entity, including
         # when they share one text node with the owner's copyright notice.
-        return _CREDIT.split(node, maxsplit=1)[0]
+        return _CREDIT.split(node, maxsplit=1)[0] if cut_credit else node
     if _excluded(node):
         return ''
-    if node.tag in {'a', 'span', 'p', 'div'}:
-        def plain(item):
-            return item if isinstance(item, str) else ' '.join(plain(c) for c in item.children)
-        if _CREDIT.match(' '.join(plain(node).split())):
-            return ''
     if node.tag == 'img':
         return node.attrs.get('alt') or ''
-    parts = [_text(c) for c in node.children]
+    # Preserve the credit marker across child boundaries until the complete
+    # region has been joined. Removing it first can leave the agency name
+    # behind as a false publisher ("Utviklet av" + sibling agency link).
+    parts = [_text(c, False) for c in node.children]
     text = ' '.join(' '.join(parts).split())
     # A small credit wrapper can split "levert av" across text/link nodes.
-    if node.tag in {'a', 'span', 'p', 'div'} and _CREDIT.match(text):
-        return ''
-    return _CREDIT.split(text, maxsplit=1)[0].strip()
+    return (_CREDIT.split(text, maxsplit=1)[0] if cut_credit else text).strip()
 
 
 def _region(node):
@@ -166,8 +162,19 @@ def extract_publisher(page):
                 smaller = any(isinstance(c, _Node) and c.tag in {'div', 'p', 'address', 'header', 'footer', 'main', 'section', 'aside', 'ul', 'li', 'table'} and _CONTACT_SIGNAL.search(_text(c)) for c in node.children)
                 if not smaller:
                     add('imprint-kontakt', text)
+        prefix = ''
         for child in node.children:
+            uncut = _text(child, False)
+            combined = prefix + ' ' + uncut
+            if _CREDIT.search(combined):
+                # Traverse only a child's own pre-credit content. If the
+                # marker spans siblings, this child and all following nodes
+                # are inside the credit, including logos/copyright fragments.
+                if _CREDIT.search(uncut) and not _CREDIT.match(uncut.strip()):
+                    walk(child, inherited or bool(location))
+                break
             walk(child, inherited or bool(location))
+            prefix = combined
 
     walk(tree.root)
     return PublisherContext(tuple(fragments))

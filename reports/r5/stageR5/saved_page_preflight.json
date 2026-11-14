@@ -1,0 +1,48 @@
+{
+  "eligible_companies": [
+    {
+      "seed": 20261113,
+      "orgnr": "934626176",
+      "name": "ADVOKATFIRMAET TASHAKORI AS",
+      "url": "https://tashakori.no/nb/om-oss",
+      "localized": true
+    },
+    {
+      "seed": 20261113,
+      "orgnr": "997274253",
+      "name": "ELEKTROFIL AS",
+      "url": "https://www.elektrofil.as/personvern",
+      "localized": true
+    },
+    {
+      "seed": 20261114,
+      "orgnr": "994882597",
+      "name": "DICA PROFIL & YRKESKLÆR AS",
+      "url": "http://dica.no/",
+      "localized": true
+    },
+    {
+      "seed": 20261115,
+      "orgnr": "984204663",
+      "name": "A TIL Å PROFILERING AS",
+      "url": "https://www.atilaa.com/",
+      "localized": true
+    },
+    {
+      "seed": 20261115,
+      "orgnr": "984406622",
+      "name": "TIDEMANN BIL AS",
+      "url": "https://tidemannbil.no/personvern/",
+      "localized": true
+    },
+    {
+      "seed": 20261116,
+      "orgnr": "984177070",
+      "name": "KRAABOL AS",
+      "url": "https://www.kraabol-as.com/kontakt/",
+      "localized": true
+    }
+  ],
+  "localization_failures": [],
+  "method": "Offline eligibility/localization preflight only, not a fresh measurement or acceptance of a live source."
+}

@@ -1,0 +1,8 @@
+{
+  "method": "Verified identical bytes and SHA-256, atomic hard-link replacement; all original paths and bytes retained, workspace .data/r5 only.",
+  "linked_blobs": 15635,
+  "bytes_deduplicated": 3403834486,
+  "checked_blobs": 15635,
+  "free_before": 3181400064,
+  "free_after": 100138528768
+}

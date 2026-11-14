@@ -252,6 +252,7 @@ class Proof:
     other_orgnrs: list[str] = field(default_factory=list)
     reason: str = ""
     token: str = ""
+    publisher_receipt: dict = field(default_factory=dict)
 
 
 def score(page, org, context, origin, leaders):
@@ -335,6 +336,10 @@ def score(page, org, context, origin, leaders):
     high = points >= 5 and "legal_name" in signals and own_brand and len(signals) >= 2 and bool(set(signals) & {"address", "phone", "leader"}) and origin == "registry_website"
     if high:
         return Proof('HIGH','signals',signals,points,reason='corroboration',token=name)
+    from .publisher_identity import declared_receipt, DECLARED
+    if receipt := declared_receipt(page, org, context):
+        return Proof('HIGH', DECLARED, ['publisher_full_legal_name','registry_declared_domain'],
+                     reason=DECLARED, token=context['name'], publisher_receipt=receipt)
     if origin == 'registry_website':
         branded = legal_name(page.title+' '+page.meta.get('og:site_name','')+' '+' '.join(page.brand_parts))
         generic = GENERIC | {'norsk','norske','norge','stiftelsen','selskap','gruppen','group','nasjonalt','ressurssenter','foreningen'}
