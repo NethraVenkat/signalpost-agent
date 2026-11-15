@@ -9,7 +9,7 @@ from scripts.accuracy_audit import extract_org_context_and_leaders
 ROOT=Path.cwd()
 
 def main():
-    stage=sys.argv[1];seed=int(sys.argv[2]);base=ROOT/f'reports/r5/stage{stage}/{stage}/seed{seed}'
+    stage=sys.argv[1];seed=int(sys.argv[2]);base=ROOT/(f'reports/r5/stageX/X2/seed{seed}' if stage=='X2' else f'reports/r5/stage{stage}/{stage}/seed{seed}')
     settings=json.loads((base/'settings.json').read_text(encoding='utf8'));work=Path(settings['working_directory'])
     counts=json.loads((base/'counts.json').read_text(encoding='utf8'));rows={r['organisation_number']:r for r in map(json.loads,(work/'envelopes.jsonl').read_text(encoding='utf8').splitlines())}
     items=[]

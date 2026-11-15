@@ -1,0 +1,128 @@
+{
+  "stage": "X2",
+  "seed": 20261017,
+  "before": {
+    "websites": 6,
+    "declared_homepage_recall": 4,
+    "declared_homepages": 11,
+    "social_companies": 4,
+    "social_claims": 9,
+    "activity_companies": 100,
+    "activity_claims": 1398,
+    "brand_companies": 6,
+    "brand_claims": 8,
+    "role_change_claims": 232,
+    "facts": 13556,
+    "families": {
+      "identity": 2941,
+      "subunits": 851,
+      "roles": 1260,
+      "accounts": 7045,
+      "gleif": 19,
+      "activity": 1398,
+      "website": 42
+    }
+  },
+  "after": {
+    "websites": 6,
+    "declared_homepage_recall": 4,
+    "declared_homepages": 11,
+    "social_companies": 4,
+    "social_claims": 10,
+    "activity_companies": 100,
+    "activity_claims": 1392,
+    "brand_companies": 6,
+    "brand_claims": 8,
+    "role_change_claims": 232,
+    "facts": 13551,
+    "families": {
+      "identity": 2941,
+      "subunits": 851,
+      "roles": 1260,
+      "accounts": 7045,
+      "gleif": 19,
+      "activity": 1392,
+      "website": 43
+    }
+  },
+  "HTTP": 924,
+  "runtime_seconds": 568.375,
+  "CLI_runtime_seconds": 547.4839999999967,
+  "cost_usd": 0.0,
+  "site": {
+    "state": "available",
+    "companies": 100,
+    "input_records": 100,
+    "pages": 102,
+    "skipped_invalid_identifiers": 0,
+    "total_bytes": 37947127,
+    "largest_profile_data_bytes": 601215,
+    "largest_profile_bytes": 239535
+  },
+  "changes": {
+    "added": [
+      {
+        "orgnr": "926818317",
+        "legal_name": "SPEDIFY AS",
+        "kind": "social",
+        "identity": "https://www.facebook.com/spedify.no",
+        "field": "social_profile.89b8e862f29ef070d3c3",
+        "value": {
+          "url": "https://www.facebook.com/spedify.no",
+          "platform": "facebook.com",
+          "proof_tier": "own_contact_follow_us_v1",
+          "company_name": "SPEDIFY AS",
+          "owner_declaration": {
+            "span": "<a href=\"https://www.facebook.com/spedify.no\" target=\"_blank\" rel=\"noopener\" aria-label=\"Facebook\" title=\"Facebook\">",
+            "tier": "own_contact_follow_us_v1",
+            "publisher_excerpt": "Spedify Logo_T Kontakt Spedify AS Sagveien 25 1814 Askim Org.nr. 926 818 317 Følg oss Selskapet Om Spedify Kundereferanser Nyheter 3PL-ressurser Lokasjoner Ledige stillinger Tjenester 3PL og fulfillment Markedsplasser og retail Retur og reparasjon Integrasjoner Praktisk Kontakt Tlf. 35 90 15 50 post@spedify.no Personvernerklæring Informasjonskapsler Spedify AS Copyright ©2026. Alle rettigheter forbeholdt."
+          }
+        },
+        "evidence": [
+          {
+            "id": "8466d46c28700fd096267897922d30b0153208f9124fb2b9d48be88e8786df0e",
+            "source_url": "https://spedify.no/kontakt-oss",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-15T03:26:37.660443Z",
+            "content_sha256": "811583432144f8a83d8089c1cd8677207f44d2da2018a98429369dad91ef6a88",
+            "claim_span": "<a href=\"https://www.facebook.com/spedify.no\" target=\"_blank\" rel=\"noopener\" aria-label=\"Facebook\" title=\"Facebook\">",
+            "locator": "company-link:https://www.facebook.com/spedify.no",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "845bdfe95e1e0129e44d6a7f282fef53965fa39f3781764b53d8a74931d8c566",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-15T03:25:17.625158Z",
+            "content_sha256": "6a296a4898f7a215fafd9a94433c851034b6ef5af9d8692449ec89b7b210f04e",
+            "claim_span": "926818317,SPEDIFY AS,AS,Aksjeselskap,52.100,Lagring,,,,,,,true,77,2026-09-14,2026-09-10,,,,,,,,,,,,\"c/o AssistCo AS\nSvaddevegen 125\",RJUKAN,3660,TINN,4026,Norge,NO,2100,Private aksjeselskaper mv.,2025,2021-03-23,2021-02-27,true,2024-03-22,2024-04-22,,,false,,true,2021-03-23,false,false,,false,,false",
+            "locator": "row:926818317/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:bd244f0fe6ad92bfcadcbce9ba545863c0ca0afa8b9b5b4c5e3425830a63186d",
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "4f9e3c2c0100ea4c947342055839969dbeeaeb69303016b3357803eec53cce96",
+            "source_url": "https://spedify.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-15T03:26:35.954191Z",
+            "content_sha256": "52ab413b475db6341975f9892d087395e9ac54286f4b9a571b53edd30a2b25e2",
+            "claim_span": " footer-item\" role=\"none\"><span>Org.nr. 926 818 317</span></li>\n        </ul>\n        <div class=\"footer-social\" aria-label=\"Spedify i sosiale medier\"",
+            "locator": "identity-proof:926818317",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      }
+    ],
+    "removed": []
+  },
+  "envelopes_sha256": "b795bf02cc3cc1a2dd6b942cb1341bc5e0b0474cab2a90c80db5854793c23823",
+  "profiles_sha256": "e32eba1fc0cc561be7b01216de9f041d85b095dc27ca352f6124ae857989a207"
+}

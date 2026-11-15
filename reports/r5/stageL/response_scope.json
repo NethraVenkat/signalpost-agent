@@ -1,0 +1,86 @@
+{
+  "network_requests": 0,
+  "scope": "Same six saved R7 inputs/hashes as L0. Website-section HTTP200 includes robots; HTML site-page definition excludes robots/sitemap/PDF and requires HTML document/structural tags in the first10kbytes. This clarifies denominators; original exact link receipts remain unchanged.",
+  "samples": [
+    {
+      "seed": 20261017,
+      "successful_website_section_companies": 38,
+      "html_site_companies": 34,
+      "without_html_site_page": 4,
+      "unique_successful_responses": 136,
+      "response_types": {
+        "robots": 38,
+        "html_site_page": 83,
+        "sitemap_xml": 15
+      }
+    },
+    {
+      "seed": 20261113,
+      "successful_website_section_companies": 38,
+      "html_site_companies": 34,
+      "without_html_site_page": 4,
+      "unique_successful_responses": 158,
+      "response_types": {
+        "robots": 42,
+        "html_site_page": 98,
+        "sitemap_xml": 18
+      }
+    },
+    {
+      "seed": 20261114,
+      "successful_website_section_companies": 37,
+      "html_site_companies": 32,
+      "without_html_site_page": 5,
+      "unique_successful_responses": 128,
+      "response_types": {
+        "robots": 36,
+        "html_site_page": 75,
+        "sitemap_xml": 16,
+        "other_response": 1
+      }
+    },
+    {
+      "seed": 20261115,
+      "successful_website_section_companies": 36,
+      "html_site_companies": 30,
+      "without_html_site_page": 6,
+      "unique_successful_responses": 135,
+      "response_types": {
+        "html_site_page": 87,
+        "robots": 36,
+        "sitemap_xml": 11,
+        "other_response": 1
+      }
+    },
+    {
+      "seed": 20261116,
+      "successful_website_section_companies": 42,
+      "html_site_companies": 36,
+      "without_html_site_page": 6,
+      "unique_successful_responses": 182,
+      "response_types": {
+        "robots": 44,
+        "html_site_page": 117,
+        "sitemap_xml": 21
+      }
+    },
+    {
+      "seed": 20261117,
+      "successful_website_section_companies": 40,
+      "html_site_companies": 36,
+      "without_html_site_page": 4,
+      "unique_successful_responses": 137,
+      "response_types": {
+        "html_site_page": 87,
+        "robots": 40,
+        "sitemap_xml": 10
+      }
+    }
+  ],
+  "totals": {
+    "successful_website_section_companies": 231,
+    "html_site_companies": 202,
+    "without_html_site_page": 29,
+    "unique_successful_responses": 876
+  }
+}

@@ -19142,3 +19142,180 @@ Exact excerpt:
 ```
 217-126" class="ct-text-block" >Org.nr: 926 148 931</div></div><div id="div_block-208-126" class="ct-div-block" ><div id="text_block-219-126" class="c
 ```
+
+## X2 / 20261017 / added / 926818317 / SPEDIFY AS
+
+Type: social; identity: https://www.facebook.com/spedify.no; saved-evidence verdict: correct.
+
+```json
+{
+  "url": "https://www.facebook.com/spedify.no",
+  "platform": "facebook.com",
+  "proof_tier": "own_contact_follow_us_v1",
+  "company_name": "SPEDIFY AS",
+  "owner_declaration": {
+    "span": "<a href=\"https://www.facebook.com/spedify.no\" target=\"_blank\" rel=\"noopener\" aria-label=\"Facebook\" title=\"Facebook\">",
+    "tier": "own_contact_follow_us_v1",
+    "publisher_excerpt": "Spedify Logo_T Kontakt Spedify AS Sagveien 25 1814 Askim Org.nr. 926 818 317 Følg oss Selskapet Om Spedify Kundereferanser Nyheter 3PL-ressurser Lokasjoner Ledige stillinger Tjenester 3PL og fulfillment Markedsplasser og retail Retur og reparasjon Integrasjoner Praktisk Kontakt Tlf. 35 90 15 50 post@spedify.no Personvernerklæring Informasjonskapsler Spedify AS Copyright ©2026. Alle rettigheter forbeholdt."
+  }
+}
+```
+
+Source: https://spedify.no/kontakt-oss / retrieved 2026-11-15T03:26:37.660443Z / SHA-256 `811583432144f8a83d8089c1cd8677207f44d2da2018a98429369dad91ef6a88` / locator `company-link:https://www.facebook.com/spedify.no`
+
+Exact excerpt:
+
+```
+<a href="https://www.facebook.com/spedify.no" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook">
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-15T03:25:17.625158Z / SHA-256 `6a296a4898f7a215fafd9a94433c851034b6ef5af9d8692449ec89b7b210f04e` / locator `row:926818317/column:navn`
+
+Exact excerpt:
+
+```
+926818317,SPEDIFY AS,AS,Aksjeselskap,52.100,Lagring,,,,,,,true,77,2026-09-14,2026-09-10,,,,,,,,,,,,"c/o AssistCo AS
+Svaddevegen 125",RJUKAN,3660,TINN,4026,Norge,NO,2100,Private aksjeselskaper mv.,2025,2021-03-23,2021-02-27,true,2024-03-22,2024-04-22,,,false,,true,2021-03-23,false,false,,false,,false
+```
+
+Source: https://spedify.no/ / retrieved 2026-11-15T03:26:35.954191Z / SHA-256 `52ab413b475db6341975f9892d087395e9ac54286f4b9a571b53edd30a2b25e2` / locator `identity-proof:926818317`
+
+Exact excerpt:
+
+```
+ footer-item" role="none"><span>Org.nr. 926 818 317</span></li>
+        </ul>
+        <div class="footer-social" aria-label="Spedify i sosiale medier"
+```
+
+## X2 / 20261115 / added / 982326125 / ORKDAL BLOMSTER AS
+
+Type: social; identity: https://www.facebook.com/pages/Orkdal-Blomster/119910848049561; saved-evidence verdict: correct.
+
+```json
+{
+  "url": "https://www.facebook.com/pages/Orkdal-Blomster/119910848049561",
+  "platform": "facebook.com",
+  "proof_tier": "own_header_footer_exact_name_v1",
+  "company_name": "ORKDAL BLOMSTER AS"
+}
+```
+
+Source: https://www.orkdalblomster.no/ / retrieved 2026-11-15T03:57:47.587720Z / SHA-256 `d5db004911971d089447b78319802b132906cd38baeba801aec90e66edb9d666` / locator `company-link:https://www.facebook.com/pages/Orkdal-Blomster/119910848049561`
+
+Exact excerpt:
+
+```
+<a target="_blank" href="https://www.facebook.com/pages/Orkdal-Blomster/119910848049561">
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-15T03:54:21.563912Z / SHA-256 `aebdf32468a7b90cf38da90fcdf3605c230dbdc487a0c7e5160429691adb7a88` / locator `row:982326125/column:navn`
+
+Exact excerpt:
+
+```
+982326125,ORKDAL BLOMSTER AS,AS,Aksjeselskap,47.761,"Detaljhandel med blomster, planter, gjødsel og plantevernmidler",,,,,,,true,11,2026-06-11,2026-06-10,,,72 48 10 20,,,,,,,,,Orkdalsveien 42,ORKANGER,7300,ORKLAND,5059,Norge,NO,2100,Private aksjeselskaper mv.,2025,2000-08-31,2000-08-22,true,2000-09-
+```
+
+Source: https://www.orkdalblomster.no/ / retrieved 2026-11-15T03:57:47.587720Z / SHA-256 `d5db004911971d089447b78319802b132906cd38baeba801aec90e66edb9d666` / locator `identity-proof:982326125`
+
+Exact excerpt:
+
+```
+300 ORKANGER<br />
+										Org. nr.: 982 326 125
+									</div>
+									<div class="cell small-6">
+										Tlf: <a href="tel:72 48 10 20">72
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-15T03:54:21.563912Z / SHA-256 `aebdf32468a7b90cf38da90fcdf3605c230dbdc487a0c7e5160429691adb7a88` / locator `row:982326125/column:telefon`
+
+Exact excerpt:
+
+```
+ og plantevernmidler",,,,,,,true,11,2026-06-11,2026-06-10,,,72 48 10 20,,,,,,,,,Orkdalsveien 42,ORKANGER,7300,ORKLAND,5059,Norge,NO,2100,Private aksjeselskaper mv.,2025,2000-08-31,2000-08-22,true,2000-09-01,2000-11-01,,,false,,true,2000-08-31,false,false,,false,,false,,false,,,,,,,Bokmål,2008-05-08,
+```
+
+Source: https://www.orkdalblomster.no/ / retrieved 2026-11-15T03:57:47.587720Z / SHA-256 `d5db004911971d089447b78319802b132906cd38baeba801aec90e66edb9d666` / locator `registry-contact:phone`
+
+Exact excerpt:
+
+```
+<a href="tel:72 48 10 20">
+```
+
+## X2 / 20261115 / added / 982326125 / ORKDAL BLOMSTER AS
+
+Type: website; identity: https://www.orkdalblomster.no; saved-evidence verdict: correct.
+
+```json
+{
+  "final_url": "https://www.orkdalblomster.no",
+  "identity_level": "VERIFIED",
+  "proof_type": "orgnr_on_page",
+  "proof_page_url": "https://www.orkdalblomster.no/",
+  "signals": [],
+  "points": 0,
+  "candidate_origin": "legal_name_slug",
+  "relationship_note": null,
+  "other_orgnrs": [],
+  "registry_contact_matches": {
+    "phone": "+4772481020"
+  }
+}
+```
+
+Source: https://www.orkdalblomster.no/ / retrieved 2026-11-15T03:57:47.587720Z / SHA-256 `d5db004911971d089447b78319802b132906cd38baeba801aec90e66edb9d666` / locator `identity-proof:982326125`
+
+Exact excerpt:
+
+```
+300 ORKANGER<br />
+										Org. nr.: 982 326 125
+									</div>
+									<div class="cell small-6">
+										Tlf: <a href="tel:72 48 10 20">72
+```
+
+Source: https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv / retrieved 2026-11-15T03:54:21.563912Z / SHA-256 `aebdf32468a7b90cf38da90fcdf3605c230dbdc487a0c7e5160429691adb7a88` / locator `row:982326125/column:telefon`
+
+Exact excerpt:
+
+```
+ og plantevernmidler",,,,,,,true,11,2026-06-11,2026-06-10,,,72 48 10 20,,,,,,,,,Orkdalsveien 42,ORKANGER,7300,ORKLAND,5059,Norge,NO,2100,Private aksjeselskaper mv.,2025,2000-08-31,2000-08-22,true,2000-09-01,2000-11-01,,,false,,true,2000-08-31,false,false,,false,,false,,false,,,,,,,Bokmål,2008-05-08,
+```
+
+Source: https://www.orkdalblomster.no/ / retrieved 2026-11-15T03:57:47.587720Z / SHA-256 `d5db004911971d089447b78319802b132906cd38baeba801aec90e66edb9d666` / locator `registry-contact:phone`
+
+Exact excerpt:
+
+```
+<a href="tel:72 48 10 20">
+```
+
+## X2 / 20261117 / added / 926148931 / ATLO AS
+
+Type: website; identity: https://atlo.no; saved-evidence verdict: correct.
+
+```json
+{
+  "final_url": "https://atlo.no",
+  "identity_level": "VERIFIED",
+  "proof_type": "orgnr_on_page",
+  "proof_page_url": "https://atlo.no/",
+  "signals": [],
+  "points": 0,
+  "candidate_origin": "legal_name_slug",
+  "relationship_note": null,
+  "other_orgnrs": []
+}
+```
+
+Source: https://atlo.no/ / retrieved 2026-11-15T04:14:41.789943Z / SHA-256 `02c3b44e2be6555ec8f5fd3936734b0b603776ac205b6c8ece0f336366140efd` / locator `identity-proof:926148931`
+
+Exact excerpt:
+
+```
+217-126" class="ct-text-block" >Org.nr: 926 148 931</div></div><div id="div_block-208-126" class="ct-div-block" ><div id="text_block-219-126" class="c
+```

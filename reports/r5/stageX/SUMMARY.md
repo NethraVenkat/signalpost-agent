@@ -69,3 +69,20 @@ Next authorized work: StageL0?L4, thenX2, P0, P2NEW500-company clean-clone quali
 ## L completed before X2
 
 [StageL measured table and limitations](../stageL/SUMMARY.md): 38/600websites, declared21/72, 5456HTTP,$0. [Every new/removed site](../stageL/new_websites.md). Full greenL4runtime unchanged. X2?P0?P2new500remain queued.
+
+## R6/R7/L/X2 accepted measurements
+
+| Stage | Websites /600 | Declared homepage recall /72 | Social companies / claims | HTTP | Summed process seconds |
+|---|---:|---:|---:|---:|---:|
+| R6 | 37 | 19 | 16 / 25 | 4424 | 2781.080 |
+| R7 | 40 | 20 | 17 / 26 | 4949 | 2884.172 |
+| L | 38 | 21 | 15 / 24 | 5456 | 4064.377 |
+| X2 | 40 | 21 | 16 / 26 | 5540 | 3385.844 |
+
+Six samples20261017/20261113/20261114/20261115/20261116/20261117, fresh state, exact seven flags, source manifests and per-run receipt hashes. Each accepted run passes100ordered terminal envelopes, five cited briefing topics, zero unsupported values, generated site below250000bytes/profile, hard HTTP/time limits,$0. Live-source recoveries and failures are not attributed to new proof rules.
+
+R6retainsb/c/f; a/d/e were reverted after doubtful sites. R7retainsa/b/c/d/f/g; ewas reverted after a stock-template site. Ladds exact-number legal HTML and bounded linkedPDFverification; no speculative builder parser or new identity tier. X2adds exact owner declarations/contactFollowus, preserving numericLinkedIn exclusions. Every new/removed URL and brand is in[new_items.md](new_items.md), with complete new publisher review packets per seed.
+
+New X2website/social publication labels: {"own_contact_follow_us_v1": 1, "own_header_footer_exact_name_v1": 1, "orgnr_on_page": 2}. Full gate1,246passed/155.60seconds; failed integration gate and fixes preserved. Saved-context reviews are assistant inspection, not independent human verification. Human hand checks remain pending.
+
+X5/X3/X6 remain dropped. Next authorized items are P0source-outage resilience and P2fresh-clean-clone500company scale qualification; no push.

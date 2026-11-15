@@ -32,6 +32,10 @@ def test_own_linked_legal_page_exact_number_and_conflict(tmp_path,monkeypatch,ow
     if accepted:
         assert sites[0]['value']['identity_level']=='VERIFIED'
         assert sites[0]['value']['proof_page_url'].endswith('/salgsbetingelser')
+        assert sum(u.endswith('/contact') for u in urls)==1
+        assert next(n for n,u in enumerate(urls) if u.endswith('/salgsbetingelser'))<next(n for n,u in enumerate(urls) if u.endswith('/contact'))
+        assert row['run']['refresh']['owner_social']['checked_urls']==['https://example.no/contact']
+    else:
         assert not any(u.endswith('/contact') for u in urls)
     assert report['max_requests_per_company']<=13
 

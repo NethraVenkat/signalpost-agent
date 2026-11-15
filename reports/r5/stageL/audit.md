@@ -8740,3 +8740,7 @@ https://www.falco.com/contact
 ```
 
 Counts distinguish response/link occurrences from unique company+target URLs. Multiple company pages can repeat the same footer link. All six accepted R7 output hashes and response hashes remain in audit.json. No network or live gain measurement. Zero builder hits means L3 will not introduce a parser.
+
+## Response-scope clarification
+
+The scan covered876unique successful website-section responses across231unproved companies. Of those,202had HTML site pages and29had only robots/other response types under the explicit HTML classification in[response_scope.json](response_scope.json). The original fetched_without_proof_companies231counter is the broader HTTP200-response denominator, including robots; it must not be read as231successful company homepages. The198retained item records are pages with legal links, legal sitemap entries or builder hits, rather than the total responses scanned. Original link/source receipts and their counts are unchanged. Supplemental audit used0network requests.

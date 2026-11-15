@@ -189,6 +189,18 @@ Latest three-sample Stage T results (the earlier release samples remain in linke
 
 Refresh correctness (Stage E scope, before GLEIF/TED): 7/7 planted source interventions detected, 40 supported field events and zero unexpected events; unchanged/repeated false-change rate 0; 112 prior claims retained with stale markers on transient failures. Exact saved 100-company timestamp-format regression and final live frozen refresh both emitted 0 company changes and 0 coverage observations. This does not validate new-source refresh coverage. [Measured refresh correctness](docs/REFRESH.md#measured-refresh-correctness).
 
+
+## R6/R7/L/X2 accepted measurements
+
+| Stage | Websites /600 | Declared homepage recall /72 | Social companies / claims | HTTP | Summed process seconds |
+|---|---:|---:|---:|---:|---:|
+| R6 | 37 | 19 | 16 / 25 | 4424 | 2781.080 |
+| R7 | 40 | 20 | 17 / 26 | 4949 | 2884.172 |
+| L | 38 | 21 | 15 / 24 | 5456 | 4064.377 |
+| X2 | 40 | 21 | 16 / 26 | 5540 | 3385.844 |
+
+Exact receipts and limits: [X-stage accepted summary](reports/r5/stageX/SUMMARY.md), [all new/removed identity items](reports/r5/stageX/new_items.md). These six-sample runs are fresh live observations, not controlled counterfactual estimates. Human precision totals below remain scoped to their original reviewed ledger.
+
 ## Measured precision
 
 Automated re-check of every published website, social profile, job, LEI, parent and procurement award in the latest three Stage T samples (300 company inputs). Counts are published items per sample, not unique companies across types. [Complete verdict ledger](reports/r5/precision/LEDGER.md) preserves every value, proof tier, exact excerpt, URL, retrieval time, hash and review reason; no item was silently removed.

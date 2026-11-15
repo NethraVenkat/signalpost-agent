@@ -1,0 +1,33 @@
+{"command": ["C:\\Users\\<USER>\\signal-nethra\\.venv\\Scripts\\python.exe", "C:\\Users\\<USER>\\signal-nethra\\reports\\r5\\stage4_7\\run_tests.py", "-q", "-p", "no:cacheprovider", "--tb=short"], "priority": "above_normal", "mutates_test_assertions_or_timeouts": false}
+........................................................................ [  5%]
+........................................................................ [ 11%]
+........................................................................ [ 17%]
+.............................F.......................................... [ 23%]
+........................................................................ [ 28%]
+........................................................................ [ 34%]
+........................................................................ [ 40%]
+........................................................................ [ 46%]
+........................................................................ [ 52%]
+........................................................................ [ 57%]
+........................................................................ [ 63%]
+........................................................................ [ 69%]
+........................................................................ [ 75%]
+...............................................F........................ [ 80%]
+........................................................................ [ 86%]
+........................................................................ [ 92%]
+........................................................................ [ 98%]
+.....................                                                    [100%]
+================================== FAILURES ===================================
+____ test_own_linked_legal_page_exact_number_and_conflict[923609016-True] _____
+tests\test_legal_pages.py:35: in test_own_linked_legal_page_exact_number_and_conflict
+    assert not any(u.endswith('/contact') for u in urls)
+E   assert not True
+E    +  where True = any(<generator object test_own_linked_legal_page_exact_number_and_conflict.<locals>.<genexpr> at 0x0000022590CF0110>)
+________ test_saved_source_refresh_precision_recall_and_stale_evidence ________
+tests\test_refresh_proof_harness.py:23: in test_saved_source_refresh_precision_recall_and_stale_evidence
+    assert not c['execution']['unrecorded_urls']
+E   AssertionError: assert not ['https://digitaliq.no/kontakt']
+=========================== short test summary info ===========================
+FAILED tests/test_legal_pages.py::test_own_linked_legal_page_exact_number_and_conflict[923609016-True]
+FAILED tests/test_refresh_proof_harness.py::test_saved_source_refresh_precision_recall_and_stale_evidence
+2 failed, 1243 passed in 167.86s (0:02:47)

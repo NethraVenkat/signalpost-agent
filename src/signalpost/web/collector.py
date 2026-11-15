@@ -439,10 +439,15 @@ async def fetch(org, envelope, bulk, http, previous=None, *, resume=False, candi
             section.errors.append(Error(section="website", code=budget_hit, message="Website work ended at configured budget"))
         section.errors.append(Error(section="website", code="website_candidates", message=json.dumps(attempts+http.attempts.get(org,[]), ensure_ascii=False)))
         return section
+    from .owner_social_contact import collect as owner_contact
+    owner_pages,owner_state=await owner_contact(org,choices[0],http,proved,context)
+    http.owner_social_pages=getattr(http,'owner_social_pages',{})
+    http.owner_social_pages[org]=owner_pages
+    envelope.run.refresh['owner_social']=owner_state
     return await offload(publish_result,org,envelope,http,section,choices,attempts,context)
 
 
-def extract_contacts_and_social(section, org, web_claim, pages, context=None, envelope=None):
+def extract_contacts_and_social(section, org, web_claim, pages, context=None, envelope=None, owner_pages=()):
     """
     Extracts contacts and verified social profiles from website pages.
     Enforces corporate entity card attribution and filters sibling/group accounts on multi-entity group sites.
@@ -464,33 +469,29 @@ def extract_contacts_and_social(section, org, web_claim, pages, context=None, en
     target_domain = domain(proof_url) if proof_url else (domain(pages[0][0].url) if pages else "")
 
     social_seen, contact_seen = set(), set()
-    for source_response, source_page in pages:
+    original_pages={(id(r),id(p)) for r,p in pages}
+    for source_response, source_page in list(pages)+list(owner_pages):
         if domain(source_response.url) != target_domain:
             continue
         cards = extract_entity_cards(source_page.raw) if is_group else []
-        for url, source_span in discover_strict(source_page, context.get('name')).items():
-            if is_group: continue  # A shared group footer is not this entity's own account.
+        from .owner_social import declared_profiles
+        profiles={url:{'span':span,'tier':'own_header_footer_numeric_linkedin_v1' if numeric_linkedin(url) else 'own_header_footer_exact_name_v1'}
+                  for url,span in discover_strict(source_page,context.get('name')).items()}
+        if not is_group and web_val.get('identity_level') in {'HIGH','VERIFIED'}:
+            for url,receipt in declared_profiles(source_page,context.get('name'),org,context).items():profiles.setdefault(url,receipt)
+        for url,receipt in profiles.items():
+            if is_group:continue
             if url not in social_seen:
-                if is_group:
-                    p_path = urlsplit(url).path.rstrip("/").lower()
-                    legal_nm = (context.get("name") or "").lower()
-                    if any(term in p_path for term in ("group", "holding", "gruppe")) and not any(term in legal_nm for term in ("group", "holding", "gruppe")):
-                        continue
-                    pos = source_page.raw.find(url)
-                    if pos >= 0:
-                        c = find_containing_card(cards, pos)
-                        if c and c.is_sibling(org, other_orgnrs, subunits):
-                            continue
-                publish(section, source_response, org, "social_profile." + digest(url)[:20],
-                        {"url": url, "platform": domain(url), 'proof_tier':
-                         'own_header_footer_numeric_linkedin_v1' if numeric_linkedin(url) else 'own_header_footer_exact_name_v1',
-                         'company_name':context.get('name')}, "company-link:" + url, source_span)
+                value={'url':url,'platform':domain(url),'proof_tier':receipt['tier'],'company_name':context.get('name')}
+                if receipt['tier'] in {'owner_jsonld_sameas_v1','own_contact_follow_us_v1'}:value['owner_declaration']=receipt
+                publish(section,source_response,org,'social_profile.'+digest(url)[:20],value,'company-link:'+url,receipt['span'])
                 refs={eid for c in envelope.claims if c.field=='identity.legal_name' and c.availability=='available' for eid in c.evidence_ids} if envelope else set()
                 section.evidence.extend(e for e in envelope.evidence if e.id in refs) if envelope else None
                 section.claims[-1].evidence_ids.extend(sorted(refs))
                 section.claims[-1].evidence_ids.extend(web_claim.evidence_ids)
                 section.claims[-1].reasons['relationship'] = 'Company-owned profile linked from verified website'
                 social_seen.add(url)
+        if (id(source_response),id(source_page)) not in original_pages:continue
         contacts = []
         for link in source_page.links:
             if link.href.startswith("tel:") and (number := phone(link.href[4:])):
@@ -634,7 +635,7 @@ def publish_result(org,envelope,http,section,choices,attempts,context):
     accepted_domain_pages = [(r, p) for r, p in pages if domain(r.url) == domain(response.url) and not getattr(r,'pdf_receipt',None)]
     identity_claim = section.claims[-1]
     descriptions(section, org, identity_claim, accepted_domain_pages)
-    extract_contacts_and_social(section, org, identity_claim, accepted_domain_pages, context=context, envelope=envelope)
+    extract_contacts_and_social(section, org, identity_claim, accepted_domain_pages, context=context, envelope=envelope,owner_pages=getattr(http,'owner_social_pages',{}).get(org,()))
     brand = extract_public_brand(page, context.get("name"))
     if brand:
         span = (page.span_for(brand) or "")[:150]
@@ -642,6 +643,6 @@ def publish_result(org,envelope,http,section,choices,attempts,context):
     section.state = "available"
     http.accepted_pages[org] = accepted_domain_pages
     envelope.run.refresh['website'] = {'checked_urls': sorted({r.url for r, _ in http.accepted_pages[org]}),
-                                       'social_policy':'own_header_footer_exact_name_or_numeric_linkedin_v2'}
+                                       'social_policy':'strict_header_footer_or_exact_owner_declaration_v3'}
     section.errors.append(Error(section='website',code='website_candidates',message=json.dumps(attempts+http.attempts.get(org,[]),ensure_ascii=False)))
     return section

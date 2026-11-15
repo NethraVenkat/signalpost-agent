@@ -1,0 +1,293 @@
+{
+  "stage": "X2",
+  "items": [
+    {
+      "stage": "X2",
+      "seed": 20261017,
+      "change": "added",
+      "orgnr": "926818317",
+      "legal_name": "SPEDIFY AS",
+      "kind": "social",
+      "identity": "https://www.facebook.com/spedify.no",
+      "field": "social_profile.89b8e862f29ef070d3c3",
+      "value": {
+        "url": "https://www.facebook.com/spedify.no",
+        "platform": "facebook.com",
+        "proof_tier": "own_contact_follow_us_v1",
+        "company_name": "SPEDIFY AS",
+        "owner_declaration": {
+          "span": "<a href=\"https://www.facebook.com/spedify.no\" target=\"_blank\" rel=\"noopener\" aria-label=\"Facebook\" title=\"Facebook\">",
+          "tier": "own_contact_follow_us_v1",
+          "publisher_excerpt": "Spedify Logo_T Kontakt Spedify AS Sagveien 25 1814 Askim Org.nr. 926 818 317 Følg oss Selskapet Om Spedify Kundereferanser Nyheter 3PL-ressurser Lokasjoner Ledige stillinger Tjenester 3PL og fulfillment Markedsplasser og retail Retur og reparasjon Integrasjoner Praktisk Kontakt Tlf. 35 90 15 50 post@spedify.no Personvernerklæring Informasjonskapsler Spedify AS Copyright ©2026. Alle rettigheter forbeholdt."
+        }
+      },
+      "evidence": [
+        {
+          "id": "8466d46c28700fd096267897922d30b0153208f9124fb2b9d48be88e8786df0e",
+          "source_url": "https://spedify.no/kontakt-oss",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-15T03:26:37.660443Z",
+          "content_sha256": "811583432144f8a83d8089c1cd8677207f44d2da2018a98429369dad91ef6a88",
+          "claim_span": "<a href=\"https://www.facebook.com/spedify.no\" target=\"_blank\" rel=\"noopener\" aria-label=\"Facebook\" title=\"Facebook\">",
+          "locator": "company-link:https://www.facebook.com/spedify.no",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "845bdfe95e1e0129e44d6a7f282fef53965fa39f3781764b53d8a74931d8c566",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-15T03:25:17.625158Z",
+          "content_sha256": "6a296a4898f7a215fafd9a94433c851034b6ef5af9d8692449ec89b7b210f04e",
+          "claim_span": "926818317,SPEDIFY AS,AS,Aksjeselskap,52.100,Lagring,,,,,,,true,77,2026-09-14,2026-09-10,,,,,,,,,,,,\"c/o AssistCo AS\nSvaddevegen 125\",RJUKAN,3660,TINN,4026,Norge,NO,2100,Private aksjeselskaper mv.,2025,2021-03-23,2021-02-27,true,2024-03-22,2024-04-22,,,false,,true,2021-03-23,false,false,,false,,false",
+          "locator": "row:926818317/column:navn",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": "registry100.csv:sha256:bd244f0fe6ad92bfcadcbce9ba545863c0ca0afa8b9b5b4c5e3425830a63186d",
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "4f9e3c2c0100ea4c947342055839969dbeeaeb69303016b3357803eec53cce96",
+          "source_url": "https://spedify.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-15T03:26:35.954191Z",
+          "content_sha256": "52ab413b475db6341975f9892d087395e9ac54286f4b9a571b53edd30a2b25e2",
+          "claim_span": " footer-item\" role=\"none\"><span>Org.nr. 926 818 317</span></li>\n        </ul>\n        <div class=\"footer-social\" aria-label=\"Spedify i sosiale medier\"",
+          "locator": "identity-proof:926818317",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "review": {
+        "verdict": "correct",
+        "checks": [
+          {
+            "verdict": "CORRECT",
+            "reason": "Existing strict own-publisher social link replay"
+          }
+        ]
+      }
+    },
+    {
+      "stage": "X2",
+      "seed": 20261115,
+      "change": "added",
+      "orgnr": "982326125",
+      "legal_name": "ORKDAL BLOMSTER AS",
+      "kind": "social",
+      "identity": "https://www.facebook.com/pages/Orkdal-Blomster/119910848049561",
+      "field": "social_profile.33a3171292450921e319",
+      "value": {
+        "url": "https://www.facebook.com/pages/Orkdal-Blomster/119910848049561",
+        "platform": "facebook.com",
+        "proof_tier": "own_header_footer_exact_name_v1",
+        "company_name": "ORKDAL BLOMSTER AS"
+      },
+      "evidence": [
+        {
+          "id": "49acf798663007dd3dee8272e1b28ddce7b713f4ab126f7f9fafe43308995591",
+          "source_url": "https://www.orkdalblomster.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-15T03:57:47.587720Z",
+          "content_sha256": "d5db004911971d089447b78319802b132906cd38baeba801aec90e66edb9d666",
+          "claim_span": "<a target=\"_blank\" href=\"https://www.facebook.com/pages/Orkdal-Blomster/119910848049561\">",
+          "locator": "company-link:https://www.facebook.com/pages/Orkdal-Blomster/119910848049561",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "299ee6422070a5a9e51593ae2a21370bc18049ff675ec524adc48ae231460b8f",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-15T03:54:21.563912Z",
+          "content_sha256": "aebdf32468a7b90cf38da90fcdf3605c230dbdc487a0c7e5160429691adb7a88",
+          "claim_span": "982326125,ORKDAL BLOMSTER AS,AS,Aksjeselskap,47.761,\"Detaljhandel med blomster, planter, gjødsel og plantevernmidler\",,,,,,,true,11,2026-06-11,2026-06-10,,,72 48 10 20,,,,,,,,,Orkdalsveien 42,ORKANGER,7300,ORKLAND,5059,Norge,NO,2100,Private aksjeselskaper mv.,2025,2000-08-31,2000-08-22,true,2000-09-",
+          "locator": "row:982326125/column:navn",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": "registry100.csv:sha256:bd3598aeae1b5c6b107e61ba1ffdb4d2a92af86edeef91f9b0dbfe65e0d418d3",
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "5a3c5ec0621747a300bc42687e412a84c5260e83b637e3e9049ac8f05f74c685",
+          "source_url": "https://www.orkdalblomster.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-15T03:57:47.587720Z",
+          "content_sha256": "d5db004911971d089447b78319802b132906cd38baeba801aec90e66edb9d666",
+          "claim_span": "300 ORKANGER<br />\r\n\t\t\t\t\t\t\t\t\t\tOrg. nr.: 982 326 125\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t<div class=\"cell small-6\">\r\n\t\t\t\t\t\t\t\t\t\tTlf: <a href=\"tel:72 48 10 20\">72",
+          "locator": "identity-proof:982326125",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "7ff19ed6ce83736b29f45c9bf9a4aaae605a57baaaaf1d26c8c55344612963c9",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-15T03:54:21.563912Z",
+          "content_sha256": "aebdf32468a7b90cf38da90fcdf3605c230dbdc487a0c7e5160429691adb7a88",
+          "claim_span": " og plantevernmidler\",,,,,,,true,11,2026-06-11,2026-06-10,,,72 48 10 20,,,,,,,,,Orkdalsveien 42,ORKANGER,7300,ORKLAND,5059,Norge,NO,2100,Private aksjeselskaper mv.,2025,2000-08-31,2000-08-22,true,2000-09-01,2000-11-01,,,false,,true,2000-08-31,false,false,,false,,false,,false,,,,,,,Bokmål,2008-05-08,",
+          "locator": "row:982326125/column:telefon",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": "registry100.csv:sha256:bd3598aeae1b5c6b107e61ba1ffdb4d2a92af86edeef91f9b0dbfe65e0d418d3",
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "3e568673b427822d29040387c167b92f0515ffe95eb7656551b24bf6134d03a6",
+          "source_url": "https://www.orkdalblomster.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-15T03:57:47.587720Z",
+          "content_sha256": "d5db004911971d089447b78319802b132906cd38baeba801aec90e66edb9d666",
+          "claim_span": "<a href=\"tel:72 48 10 20\">",
+          "locator": "registry-contact:phone",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "review": {
+        "verdict": "correct",
+        "checks": [
+          {
+            "verdict": "CORRECT",
+            "reason": "Existing strict own-publisher social link replay"
+          }
+        ]
+      }
+    },
+    {
+      "stage": "X2",
+      "seed": 20261115,
+      "change": "added",
+      "orgnr": "982326125",
+      "legal_name": "ORKDAL BLOMSTER AS",
+      "kind": "website",
+      "identity": "https://www.orkdalblomster.no",
+      "field": "official_website",
+      "value": {
+        "final_url": "https://www.orkdalblomster.no",
+        "identity_level": "VERIFIED",
+        "proof_type": "orgnr_on_page",
+        "proof_page_url": "https://www.orkdalblomster.no/",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "registry_contact_matches": {
+          "phone": "+4772481020"
+        }
+      },
+      "evidence": [
+        {
+          "id": "5a3c5ec0621747a300bc42687e412a84c5260e83b637e3e9049ac8f05f74c685",
+          "source_url": "https://www.orkdalblomster.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-15T03:57:47.587720Z",
+          "content_sha256": "d5db004911971d089447b78319802b132906cd38baeba801aec90e66edb9d666",
+          "claim_span": "300 ORKANGER<br />\r\n\t\t\t\t\t\t\t\t\t\tOrg. nr.: 982 326 125\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t<div class=\"cell small-6\">\r\n\t\t\t\t\t\t\t\t\t\tTlf: <a href=\"tel:72 48 10 20\">72",
+          "locator": "identity-proof:982326125",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "7ff19ed6ce83736b29f45c9bf9a4aaae605a57baaaaf1d26c8c55344612963c9",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-15T03:54:21.563912Z",
+          "content_sha256": "aebdf32468a7b90cf38da90fcdf3605c230dbdc487a0c7e5160429691adb7a88",
+          "claim_span": " og plantevernmidler\",,,,,,,true,11,2026-06-11,2026-06-10,,,72 48 10 20,,,,,,,,,Orkdalsveien 42,ORKANGER,7300,ORKLAND,5059,Norge,NO,2100,Private aksjeselskaper mv.,2025,2000-08-31,2000-08-22,true,2000-09-01,2000-11-01,,,false,,true,2000-08-31,false,false,,false,,false,,false,,,,,,,Bokmål,2008-05-08,",
+          "locator": "row:982326125/column:telefon",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": "registry100.csv:sha256:bd3598aeae1b5c6b107e61ba1ffdb4d2a92af86edeef91f9b0dbfe65e0d418d3",
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "3e568673b427822d29040387c167b92f0515ffe95eb7656551b24bf6134d03a6",
+          "source_url": "https://www.orkdalblomster.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-15T03:57:47.587720Z",
+          "content_sha256": "d5db004911971d089447b78319802b132906cd38baeba801aec90e66edb9d666",
+          "claim_span": "<a href=\"tel:72 48 10 20\">",
+          "locator": "registry-contact:phone",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "review": {
+        "verdict": "correct",
+        "checks": [
+          {
+            "verdict": "CORRECT",
+            "reason": "Exact orgnr 982326125 verified in company ownership context"
+          },
+          {
+            "verdict": "CORRECT",
+            "reason": "Exact orgnr 982326125 verified in company ownership context"
+          }
+        ]
+      }
+    },
+    {
+      "stage": "X2",
+      "seed": 20261117,
+      "change": "added",
+      "orgnr": "926148931",
+      "legal_name": "ATLO AS",
+      "kind": "website",
+      "identity": "https://atlo.no",
+      "field": "official_website",
+      "value": {
+        "final_url": "https://atlo.no",
+        "identity_level": "VERIFIED",
+        "proof_type": "orgnr_on_page",
+        "proof_page_url": "https://atlo.no/",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": []
+      },
+      "evidence": [
+        {
+          "id": "612fc39ca881825e8a566a6f09469f84b2bf45997c3d2e237db52b33014a5181",
+          "source_url": "https://atlo.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-15T04:14:41.789943Z",
+          "content_sha256": "02c3b44e2be6555ec8f5fd3936734b0b603776ac205b6c8ece0f336366140efd",
+          "claim_span": "217-126\" class=\"ct-text-block\" >Org.nr: 926 148 931</div></div><div id=\"div_block-208-126\" class=\"ct-div-block\" ><div id=\"text_block-219-126\" class=\"c",
+          "locator": "identity-proof:926148931",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "review": {
+        "verdict": "correct",
+        "checks": [
+          {
+            "verdict": "CORRECT",
+            "reason": "Exact orgnr 926148931 verified in company ownership context"
+          }
+        ]
+      }
+    }
+  ],
+  "doubtful_added": [],
+  "method": "Independent saved-evidence rule recheck, not a human review"
+}

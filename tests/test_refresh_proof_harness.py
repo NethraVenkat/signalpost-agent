@@ -12,6 +12,7 @@ def test_saved_source_refresh_precision_recall_and_stale_evidence(tmp_path):
     assert result['equivalent_timestamp_changes']==0
     assert not result['equivalent_timestamp_execution']['coverage_observations']
     assert result['false_change_rate_unchanged']==0
+    assert any(a.get('requested')=='https://digitaliq.no/kontakt' and a.get('unsupported_source') for a in result['baseline_execution']['batch_aliases'])
     assert not result['unchanged_execution']['coverage_observations']
     assert not result['idempotent_execution']['coverage_observations']
     assert result['transient']['changes']==0 and result['transient']['carried_claims']>0

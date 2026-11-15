@@ -1,0 +1,140 @@
+[
+  {
+    "orgnr": "997095987",
+    "field": "registry_change.aff10c0580b93cd86aeab5fc",
+    "value": {
+      "company_orgnr": "997095987",
+      "event_id": 18195674,
+      "date": "2023-11-14T22:33:04.624+01:00",
+      "date_source": "registry publication time (not effective date)",
+      "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?oppdateringsid=18195674&size=1&includeChanges=true",
+      "event_type": "Endring",
+      "changed_fields": [],
+      "record_orgnr": "997095987",
+      "title": "Registry record updated"
+    },
+    "before_state": "available",
+    "after_state": "available",
+    "after_errors": [
+      {
+        "section": "activity",
+        "code": "no_verified_website",
+        "message": "no_verified_website"
+      }
+    ]
+  },
+  {
+    "orgnr": "931515152",
+    "field": "registry_change.d29b86661c4e332c6cf7b486",
+    "value": {
+      "company_orgnr": "931515152",
+      "event_id": 18178434,
+      "date": "2023-11-14T22:31:54.989+01:00",
+      "date_source": "registry publication time (not effective date)",
+      "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?oppdateringsid=18178434&size=1&includeChanges=true",
+      "event_type": "Endring",
+      "changed_fields": [],
+      "record_orgnr": "931515152",
+      "title": "Registry record updated"
+    },
+    "before_state": "available",
+    "after_state": "available",
+    "after_errors": [
+      {
+        "section": "activity",
+        "code": "no_verified_website",
+        "message": "no_verified_website"
+      }
+    ]
+  },
+  {
+    "orgnr": "929603176",
+    "field": "registry_change.6f86da919801ab3668520f71",
+    "value": {
+      "company_orgnr": "929603176",
+      "event_id": 18203342,
+      "date": "2023-11-14T22:33:38.468+01:00",
+      "date_source": "registry publication time (not effective date)",
+      "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?oppdateringsid=18203342&size=1&includeChanges=true",
+      "event_type": "Endring",
+      "changed_fields": [],
+      "record_orgnr": "929603176",
+      "title": "Registry record updated"
+    },
+    "before_state": "available",
+    "after_state": "available",
+    "after_errors": [
+      {
+        "section": "activity",
+        "code": "no_verified_website",
+        "message": "no_verified_website"
+      }
+    ]
+  },
+  {
+    "orgnr": "912702847",
+    "field": "registry_change.39138d33266644316478c57d",
+    "value": {
+      "company_orgnr": "912702847",
+      "event_id": 18186342,
+      "date": "2023-11-14T22:32:23.625+01:00",
+      "date_source": "registry publication time (not effective date)",
+      "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?oppdateringsid=18186342&size=1&includeChanges=true",
+      "event_type": "Endring",
+      "changed_fields": [],
+      "record_orgnr": "912702847",
+      "title": "Registry record updated"
+    },
+    "before_state": "available",
+    "after_state": "available",
+    "after_errors": [
+      {
+        "section": "activity",
+        "code": "no_verified_website",
+        "message": "no_verified_website"
+      }
+    ]
+  },
+  {
+    "orgnr": "998340888",
+    "field": "registry_change.0274bd466b04b80d4515518a",
+    "value": {
+      "company_orgnr": "998340888",
+      "event_id": 18196072,
+      "date": "2023-11-14T22:33:08.581+01:00",
+      "date_source": "registry publication time (not effective date)",
+      "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?oppdateringsid=18196072&size=1&includeChanges=true",
+      "event_type": "Endring",
+      "changed_fields": [],
+      "record_orgnr": "998340888",
+      "title": "Registry record updated"
+    },
+    "before_state": "failed",
+    "after_state": "failed",
+    "after_errors": [
+      {
+        "section": "activity",
+        "code": "website_check_incomplete",
+        "message": "website_check_incomplete"
+      }
+    ]
+  },
+  {
+    "orgnr": "987769386",
+    "field": "registry_change.d1a37afc53a400446a8d9ed6",
+    "value": {
+      "company_orgnr": "987769386",
+      "event_id": 18195608,
+      "date": "2023-11-14T22:33:04.624+01:00",
+      "date_source": "registry publication time (not effective date)",
+      "url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?oppdateringsid=18195608&size=1&includeChanges=true",
+      "event_type": "Endring",
+      "changed_fields": [],
+      "record_orgnr": "987769386",
+      "title": "Registry record updated"
+    },
+    "before_state": "available",
+    "after_state": "available",
+    "after_errors": []
+  }
+]

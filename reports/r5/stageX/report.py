@@ -35,6 +35,11 @@ def review(item,row,work):
         elif item['kind']=='social' and e['locator']=='company-link:'+item['identity'] and site:
             page=Page(body,e['source_url'])
             links=discover_strict(page,context['name'])
+            if item['value'].get('owner_declaration'):
+                from signalpost.web.owner_social import declared_profiles
+                from scripts.verify_owner_social import verify as verify_social
+                verify_social(row['organisation_number'],row,evidence,lambda sha:decode_body((work/'state/blobs'/sha).read_bytes()))
+                links.update({url:receipt['span'] for url,receipt in declared_profiles(page,context['name'],row['organisation_number'],context).items()})
             correct=item['identity'] in links and links[item['identity']]==e['claim_span'] and domain(e['source_url'])==domain(site['value']['final_url']) and not site['value'].get('other_orgnrs') and site['value'].get('relationship_note')!='group_site'
             proofs.append({'verdict':'CORRECT' if correct else 'DOUBTFUL','reason':'Existing strict own-publisher social link replay'})
         elif item['kind']=='brand' and item['field']=='public_brand' and e['source_class']=='company_owned' and site:

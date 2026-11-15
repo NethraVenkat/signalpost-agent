@@ -106,6 +106,9 @@ def one(work,label,case,previous=None,fixture_path=FIXTURE):
             # invented event or publisher timestamp.
             key=next((u for u in routes if urlsplit(u).path==p.path),key)
             if key!=url:aliases.append({'requested':url,'saved':key})
+        if key not in routes and url=='https://digitaliq.no/kontakt':
+            aliases.append({'requested':url,'unsupported_source':'X2 optional own contact page was not recorded in this pre-X2 saved fixture; explicit unavailable state, no fabricated page or social claim.'})
+            raise SourceFailure('offline_contact_not_recorded')
         if key not in routes:
             unrecorded.append(url);raise SourceFailure('offline_unrecorded_url')
         item=routes[key];status,body=reply(bodies[item['sha256']],url,case,manifest)
