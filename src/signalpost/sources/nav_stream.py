@@ -272,7 +272,7 @@ async def prefetch(client,config,budget,blobs,index,names_ready=None,previous=No
         async with asyncio.timeout(time_cap(config)):
             token=token_from(os.environ.get('NAV_API_TOKEN'));from_environment=bool(token)
             state.token=token or await http.public_token()
-            if not state.token:index.blocked=True;index.reason='token_unavailable';return index
+            if not state.token:index.reason=getattr(http,'token_failure',None) or 'token_unavailable';index.blocked=index.reason=='token_unavailable';return index
             if names_ready is not None and hasattr(names_ready,'initial_names'):
                 await offload(state.ready,names_ready.initial_names)
             async def prepare():
@@ -292,7 +292,7 @@ async def prefetch(client,config,budget,blobs,index,names_ready=None,previous=No
                 except SourceFailure as exc:
                     if exc.code!='token_unavailable' or not from_environment:raise
                     state.token=await http.public_token();from_environment=False
-                    if not state.token:raise
+                    if not state.token:raise SourceFailure(getattr(http,'token_failure',None) or 'token_unavailable')
                     _,body,sha,retrieved=await http.get(url,state.token,headers)
                 data=await nav_offload(json.loads,body)
                 if not isinstance(data,dict) or not isinstance(data.get('items'),list):raise SourceFailure('nav_malformed_page')

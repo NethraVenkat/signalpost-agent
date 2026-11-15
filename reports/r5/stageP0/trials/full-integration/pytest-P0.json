@@ -1,0 +1,14 @@
+{
+  "stage": "P0",
+  "argv": [
+    "C:\\Users\\<USER>\\signal-nethra\\.venv\\Scripts\\python.exe",
+    "reports/r5/stage4_7/run_tests.py",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "--tb=short"
+  ],
+  "exit_code": 1,
+  "wall_seconds": 577.1880000000237,
+  "runtime_source_unchanged": true
+}

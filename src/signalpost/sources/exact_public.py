@@ -17,6 +17,7 @@ from ..models.evidence import utc_now, digest
 from ..workers import offload
 from .extract import Section, add, missing, response_source
 from .http import Response
+from .official_resilience import check_source,DNS_FAILURES,pause,retry_after
 
 GLEIF='https://api.gleif.org/api/v1/'
 TED='https://api.ted.europa.eu/v3/notices/search'
@@ -38,9 +39,28 @@ def variants(org):return [org,org[:3]+' '+org[3:6]+' '+org[6:]]
 class PublicHttp:
     def __init__(self,client,config,budget,blobs):
         self.client,self.config,self.budget,self.blobs=client,config,budget,blobs
-        self.robots={};self.last={};self.delays={};self.locks={h:asyncio.Lock() for h in HOSTS}
+        self.robots={};self.robots_failures={};self.last={};self.delays={};self.locks={h:asyncio.Lock() for h in HOSTS}
 
     async def raw(self,url,org,payload=None):
+        check_source(self.budget,url)
+        for attempt in range(3):
+            event=None;minimum=0.0
+            try:
+                response=await self._raw(url,org,payload)
+                event=response.request_event
+                event['official_retry_attempt']=attempt
+                if response.status<500:return response
+                event['official_transient']=True
+                minimum=response.retry_after_seconds
+                if attempt==2:return response
+            except SourceFailure as exc:
+                event=getattr(exc,'request_event',None)
+                if exc.code not in DNS_FAILURES|{'public_timeout','public_connect'} or event is None:raise
+                event.update(official_transient=True,official_retry_attempt=attempt)
+                if attempt==2:raise
+            await pause(self.budget,event,attempt,minimum=minimum)
+
+    async def _raw(self,url,org,payload=None):
         p=urlsplit(url)
         if p.scheme!='https' or p.hostname not in HOSTS or p.port not in (None,443) or p.username or p.password:
             raise SourceFailure('public_url_refused')
@@ -59,9 +79,16 @@ class PublicHttp:
                 event['status']=r.status_code
                 sha=await offload(self.blobs.put,r.content);event['content_sha256']=sha
                 if len(r.content)>8_000_000:raise SourceFailure('public_body_limit')
-                return Response(r.content,r.status_code,url,utc_now(),sha)
-            except (httpx.TimeoutException,httpx.NetworkError) as exc:
-                event['error']=type(exc).__name__;raise SourceFailure('public_timeout' if isinstance(exc,httpx.TimeoutException) else 'public_connect') from exc
+                response=Response(r.content,r.status_code,url,utc_now(),sha)
+                response.request_event=event
+                response.retry_after_seconds=retry_after(r.headers.get('Retry-After'))
+                return response
+            except (httpx.TimeoutException,httpx.NetworkError,httpx.ProtocolError) as exc:
+                event['error']=type(exc).__name__
+                failure=SourceFailure('public_timeout' if isinstance(exc,httpx.TimeoutException) else 'public_connect')
+                failure.request_event=event;raise failure from exc
+            except SourceFailure as exc:
+                event['error']=exc.code;exc.request_event=event;raise
             finally:
                 self.last[host]=time.monotonic();event['runtime_ms']=round((time.monotonic()-began)*1000)
 
@@ -76,9 +103,10 @@ class PublicHttp:
                 self.delays[host]=parser.crawl_delay(self.config.website_user_agent) or parser.crawl_delay('*') or 0
             else:
                 self.robots[host]=False
+                if r.status>=500:self.robots_failures[host]="public_robots_unavailable_http"+str(r.status)
         parser=self.robots[host]
         if parser is False or (parser is not None and not parser.can_fetch(self.config.website_user_agent,url)):
-            raise SourceFailure('public_robots_blocked')
+            raise SourceFailure(self.robots_failures.get(host,'public_robots_blocked'))
         r=await self.raw(url,org,payload)
         if r.status in {401,403,429}:self.robots[host]=False  # No further calls to a refused/rate-limited host this run.
         if r.status!=200:raise SourceFailure('public_http_'+str(r.status))

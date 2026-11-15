@@ -30,6 +30,7 @@ def test_evaluator_seven_flags_build_site_by_default_or_explicitly_disable(tmp_p
     monkeypatch.setattr(WebsiteHttp, 'resolve', no_dns)
     registry = handler()
     def sources(request):
+        if request.method=='HEAD':return httpx.Response(200)  # Reachability only; no company fact.
         return registry(request) if request.url.host == 'data.brreg.no' else httpx.Response(404)
     with respx.mock(assert_all_called=False) as router:
         router.route().mock(side_effect=sources)

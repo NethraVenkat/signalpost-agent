@@ -1,3 +1,4 @@
+import httpx
 import json
 from html.parser import HTMLParser
 from pathlib import Path
@@ -159,6 +160,7 @@ def test_cli_site_failure_keeps_exit_zero(tmp_path, monkeypatch):
     def fail(*args, **kwargs): raise RuntimeError('forced template error')
     monkeypatch.setattr('signalpost.site.profile', fail)
     with respx.mock(assert_all_called=False) as router:
+        router.head(url__regex=r'https://(?:data\.brreg\.no|pam-stilling-feed\.nav\.no|api\.gleif\.org)/.*').mock(return_value=httpx.Response(200))
         router.get(url__regex=r'https://data\.brreg\.no/.*').mock(side_effect=handler())
         assert main() == 0
     assert json.loads(cfg.report.read_text(encoding='utf8'))['site']['state'] == 'failed'

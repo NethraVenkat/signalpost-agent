@@ -1,0 +1,18 @@
+.FF..                                                                    [100%]
+================================== FAILURES ===================================
+_______________ test_actual_http_timeout_and_five_hundred_retry _______________
+tests\test_registry.py:321: in test_actual_http_timeout_and_five_hundred_retry
+    assert any(e["code"] == "timeout" for e in rows[0]["errors"])
+E   assert False
+E    +  where False = any(<generator object test_actual_http_timeout_and_five_hundred_retry.<locals>.<genexpr> at 0x0000022098E465A0>)
+__________________ test_token_unavailable_and_zero_page_cap ___________________
+tests\test_nav.py:147: in test_token_unavailable_and_zero_page_cap
+    assert row['run']['sections']['hiring']=='blocked'
+E   AssertionError: assert 'failed' == 'blocked'
+E     
+E     - blocked
+E     + failed
+=========================== short test summary info ===========================
+FAILED tests/test_registry.py::test_actual_http_timeout_and_five_hundred_retry
+FAILED tests/test_nav.py::test_token_unavailable_and_zero_page_cap - Assertio...
+2 failed, 3 passed in 28.16s

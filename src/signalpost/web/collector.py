@@ -477,7 +477,7 @@ def extract_contacts_and_social(section, org, web_claim, pages, context=None, en
         from .owner_social import declared_profiles
         profiles={url:{'span':span,'tier':'own_header_footer_numeric_linkedin_v1' if numeric_linkedin(url) else 'own_header_footer_exact_name_v1'}
                   for url,span in discover_strict(source_page,context.get('name')).items()}
-        if not is_group and web_val.get('identity_level') in {'HIGH','VERIFIED'}:
+        if context.get('name') and not is_group and web_val.get('identity_level') in {'HIGH','VERIFIED'}:
             for url,receipt in declared_profiles(source_page,context.get('name'),org,context).items():profiles.setdefault(url,receipt)
         for url,receipt in profiles.items():
             if is_group:continue

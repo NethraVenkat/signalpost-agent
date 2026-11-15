@@ -144,8 +144,10 @@ def test_inactive_expired_and_partial(tmp_path):
 def test_token_unavailable_and_zero_page_cap(tmp_path,monkeypatch):
     monkeypatch.delenv('NAV_API_TOKEN',raising=False)
     report,row,_,_=execute(tmp_path/'token',token_ok=False)
-    assert row['run']['sections']['hiring']=='blocked'
-    assert any(e['code']=='token_unavailable' for e in row['errors'])
+    assert row['run']['sections']['hiring']=='failed'
+    assert any(e['code']=='deadline' for e in row['errors'])
+    token_attempts=[e for e in report['request_log'] if e['url'].endswith('/api/publicToken')]
+    assert len(token_attempts)==2 and all(e['status']==503 and not e.get('content_sha256') for e in token_attempts)
     _,row,_,_=execute(tmp_path/'pages',nav_max_pages=0)
     assert row['run']['sections']['hiring']=='failed'
 

@@ -88,7 +88,7 @@ def declared_profiles(page,company_name,org,context=None):
                 if isinstance(country,dict):country=country.get('name') or country.get('@id')
                 if country and str(country).casefold() not in {'no','norway','norge'}:continue
             if isinstance(vat,str) and re.match(r'\s*[A-Z]{2}',vat,re.I) and not re.match(r'\s*NO\b|\s*NO\d',vat,re.I):continue
-            exact_name=normalize_name(node.get('name'))==normalize_name(company_name)
+            exact_name=bool(company_name) and isinstance(node.get('name'),str) and normalize_name(node['name'])==normalize_name(company_name)
             exact_id=exact_identifier(vat,org) or exact_identifier(identifier,org)
             if not (exact_name or exact_id):continue
             # A different explicit nine-digit registered ID vetoes a name match.

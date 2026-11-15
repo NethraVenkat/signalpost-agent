@@ -1,3 +1,4 @@
+import httpx
 import json
 import pytest
 from signalpost.profiles import project
@@ -71,6 +72,7 @@ def test_cli_accepts_reference_runner_flag_names_and_writes_both_files(tmp_path,
         '--output',str(cfg.output),'--profiles-output',str(profiles),'--report',str(cfg.report),
         '--state-dir',str(cfg.state_dir),'--run-id','kit-call','--expected-count','1'])
     with respx.mock(assert_all_called=False) as router:
+        router.head(url__regex=r'https://(?:data\.brreg\.no|pam-stilling-feed\.nav\.no|api\.gleif\.org)/.*').mock(return_value=httpx.Response(200))
         router.get(url__regex=r'https://data\.brreg\.no/.*').mock(side_effect=handler())
         assert main()==0
     assert json.loads(cfg.output.read_text(encoding='utf8'))['run_id']=='kit-call'

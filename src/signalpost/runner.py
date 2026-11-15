@@ -435,6 +435,11 @@ async def _run(config, client=None,synthesis_provider=None):
             progress.company_completed(org, success=is_success)
     async def execute(active_client, nav_client=None):
         if storage_error is not None:return
+        from .sources.official_resilience import health_check
+        if config.official_source_health and valid_orgs:
+            source_health.extend(await health_check(active_client,config,budget))
+        elif not valid_orgs:source_health.append({'state':'not_applicable','reason':'No valid company identifiers'})
+        else:source_health.append({'state':'disabled','reason':'Config.official_source_health=False'})
         http = Http(active_client, config, budget, blobs)
         website_http = WebsiteHttp(active_client, config, budget, blobs, dns_metrics=dns_metrics)
         from .web.search import Search
@@ -542,6 +547,7 @@ async def _run(config, client=None,synthesis_provider=None):
     adaptive_metrics = ({'state':'pending'} if config.websites and config.adaptive_websites else
                         {'state':'disabled','reason':'Website discovery or adaptive scheduling was disabled'})
     search_metrics={'status':'not configured','queries':0,'estimated_usd':0.}
+    source_health=[]
     if client is None:
         transport = safe_transport(config.workers * 2, dns_metrics) if config.websites or config.hiring else httpx.AsyncHTTPTransport(limits=httpx.Limits(max_connections=config.workers * 2))
         async with AsyncExitStack() as stack:
@@ -588,6 +594,8 @@ async def _run(config, client=None,synthesis_provider=None):
                             scaled_hard_time_seconds=budget.hard_seconds)
     report['enrichment']={name:getattr(config,name) for name in ('websites','hiring','public_activity')}
     report['adaptive_websites']=adaptive_metrics
+    from .sources.official_resilience import summary as outage_summary
+    report['official_source_outages']=outage_summary(budget.events,source_health)
     report['measured_request_projection']={'baseline':'1000-company retained-features run',
         'baseline_mean_http':5.975,'projected_http':round(5.975*len(inputs.unique)),
         'note':'Projection from a measured sample; source pagination/retries and feed changes can differ.'}

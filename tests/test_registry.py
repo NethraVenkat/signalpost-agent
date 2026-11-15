@@ -69,6 +69,7 @@ def config(tmp, orgs, **kwargs):
     path = tmp / "batch.txt"
     path.write_text("\n".join(orgs), encoding="utf-8")
     kwargs.setdefault('nav_index_path',tmp/'missing-nav-index.json.gz')
+    kwargs.setdefault('official_source_health',False)  # Source-isolation fixtures; production CLI/library default is tested separately.
     kwargs.setdefault('registry_changes', False)  # Legacy fixtures contain no change-feed responses.
     # Registry-only fixtures explicitly opt out; production defaults are tested separately.
     for feature in ('websites', 'hiring', 'public_activity', 'gleif', 'procurement'):
@@ -317,7 +318,9 @@ def test_actual_http_timeout_and_five_hundred_retry(tmp_path):
     report, rows = execute(config(tmp_path, ["923609016"]), transport)
     assert report["requests"] == 7
     assert rows[0]["run"]["sections"]["roles"] == "failed"
-    assert any(e["code"] == "timeout" for e in rows[0]["errors"])
+    assert any(e["code"] == "deadline" for e in rows[0]["errors"])
+    role_attempts=[e for e in report["request_log"] if e["url"].endswith("/roller")]
+    assert len(role_attempts)==2 and all(e["error"]=="ReadTimeout" for e in role_attempts)
     assert rows[0]["modules"]["roles"]["retry_count"] == 1
 
 

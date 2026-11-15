@@ -176,7 +176,9 @@ async def prefetch(client,config,budget,blobs,index,data,age,path,names_ready,pr
                 if token==attempted and from_environment:
                     token=await http.public_token();from_environment=False
             if not token or token==attempted:
-                index.blocked=True;index.reason='token_unavailable';raise
+                reason=(getattr(http,'token_failure',None) if not token else None) or 'token_unavailable'
+                index.blocked=reason=='token_unavailable';index.reason=reason
+                raise SourceFailure(reason)
             try:return await http.get(url,token,**kwargs)
             except SourceFailure as retry:
                 if retry.code=='token_unavailable':index.blocked=True;index.reason='token_unavailable'
@@ -294,7 +296,7 @@ async def prefetch(client,config,budget,blobs,index,data,age,path,names_ready,pr
             index.metrics['offline_index_candidates']=len(state.discovered)
             token=token_from(os.environ.get('NAV_API_TOKEN'));from_environment=bool(token)
             token=token or await http.public_token()
-            if not token:index.blocked=True;index.reason='token_unavailable';return index
+            if not token:index.reason=getattr(http,'token_failure',None) or 'token_unavailable';index.blocked=index.reason=='token_unavailable';return index
             header_task=asyncio.create_task(headers())
             tasks=[header_task,asyncio.create_task(prepare())]+[asyncio.create_task(worker()) for _ in range(config.nav_concurrency)]
             url=data['cursor'];seen=set();feed_began=time.monotonic()

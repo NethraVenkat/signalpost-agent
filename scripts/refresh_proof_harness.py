@@ -118,6 +118,7 @@ def one(work,label,case,previous=None,fixture_path=FIXTURE):
         return ['93.184.216.34']
     async def replay(config):
         config.gleif=False;config.procurement=False  # Saved Stage C fixture predates these sources.
+        config.official_source_health=False  # Saved pre-P0 source collection; dedicated resilience tests cover startup probes.
         config.previous=previous;config.state_dir=target/'state';config.nav_index_path=fixture_path/'nav_index.json.gz'
         config.website_politeness_seconds=0  # no network exists in this harness
         async with httpx.AsyncClient(transport=httpx.MockTransport(dispatch),trust_env=False) as client:

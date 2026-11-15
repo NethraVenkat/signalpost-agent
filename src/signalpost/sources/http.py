@@ -1,7 +1,7 @@
 from ..workers import offload
+from .official_resilience import check_source,DNS_FAILURES,pause
 import asyncio
 import email.utils
-import random
 import time
 from urllib.parse import urlsplit
 from dataclasses import dataclass
@@ -39,6 +39,7 @@ class Http:
         self.year_sleep=asyncio.sleep
 
     async def get(self, url, org):
+        check_source(self.budget,url)
         if '/aarsregnskap/kopi/' not in url:return await self._get(url,org)
         async with self.year_lock:
             delay=max(0,self.year_next-self.year_clock())
@@ -50,12 +51,14 @@ class Http:
 
     async def _get(self,url,org):
         host = allow(url)
-        attempts = 3 if "/regnskapsregisteret/" in url else 2
+        check_source(self.budget,url)
+        attempts = 3
         for attempt in range(attempts):
             self.budget.check()
             response = None
             async with self.semaphores[host]:
                 event = self.budget.reserve(url, host, org)
+                event["official_retry_attempt"]=attempt
                 begin = time.monotonic()
                 try:
                     timeout = min(self.config.request_timeout, max(0.001, self.budget.deadline - time.monotonic()))
@@ -82,18 +85,25 @@ class Http:
                         raise SourceFailure("url_refused", "Redirects are refused; target not requested")
                     if response.status_code not in {429, 500, 502, 503, 504} and response.status_code < 500:
                         return result
-                    if attempt == attempts - 1:
+                    event["official_transient"]=response.status_code>=500
+                    if attempt == attempts - 1 or (response.status_code==429 and attempt>=1):
                         return result
-                except (httpx.TimeoutException, httpx.NetworkError) as exc:
+                except (httpx.TimeoutException, httpx.NetworkError,httpx.ProtocolError) as exc:
                     event["error"] = type(exc).__name__
+                    event["official_transient"]=True
                     if attempt == attempts - 1:
                         raise SourceFailure("timeout" if isinstance(exc, httpx.TimeoutException) else "network_error") from exc
+                except SourceFailure as exc:
+                    event['error']=exc.code
+                    if exc.code not in DNS_FAILURES:raise
+                    event['official_transient']=True
+                    if attempt==attempts-1:raise
                 except asyncio.CancelledError:
                     event["error"] = "deadline"
                     raise
                 finally:
                     event["runtime_ms"] = round((time.monotonic() - begin) * 1000)
-            delay = random.uniform(0.1, 0.3) * (2 ** attempt)
+            delay = 0.0
             if response is not None:
                 retry = response.headers.get("Retry-After")
                 if retry:
@@ -104,6 +114,4 @@ class Http:
                             delay = max(delay, email.utils.parsedate_to_datetime(retry).timestamp() - time.time())
                         except (ValueError, TypeError, OverflowError):
                             pass
-            if time.monotonic() + delay >= self.budget.deadline:
-                raise SourceFailure("deadline")
-            await asyncio.sleep(delay)
+            await pause(self.budget,event,attempt,minimum=delay)

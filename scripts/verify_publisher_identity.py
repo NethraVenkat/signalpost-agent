@@ -9,14 +9,14 @@ from signalpost.web.publisher_identity import DECLARED, RARE, REDIRECT, declared
 from signalpost.web.publisher_veto import conflict
 
 
-def registry_context(org,data,evidence,stored_body):
+def registry_context(org,data,evidence,stored_body,allow_carried=False):
     fields={'name':('legal_name','navn'),'website':('registered_website','hjemmeside'),
             'phone':('registered_phone','telefon'),'mobile':('registered_mobile','mobil'),
             'email':('registered_email','epostadresse')}
     context={}
     refs=set()
     for key,(field,column) in fields.items():
-        claim=next((c for c in data['claims'] if c['field']=='identity.'+field and c['availability']=='available' and not c.get('carried_forward')),None)
+        claim=next((c for c in data['claims'] if c['field']=='identity.'+field and c['availability']=='available' and (allow_carried or not c.get('carried_forward'))),None)
         if not claim:continue
         valid=False
         for ref in claim['evidence_ids']:
@@ -34,7 +34,7 @@ def registry_context(org,data,evidence,stored_body):
             if match:valid=True;refs.add(ref)
         assert valid,'Publisher identity registry input not supported by exact source field: '+key
         context[key]=claim['value']
-    address=next((c for c in data['claims'] if c['field']=='identity.registered_address' and c['availability']=='available' and not c.get('carried_forward')),None)
+    address=next((c for c in data['claims'] if c['field']=='identity.registered_address' and c['availability']=='available' and (allow_carried or not c.get('carried_forward'))),None)
     if address:
         valid=False
         for ref in address['evidence_ids']:
@@ -62,7 +62,7 @@ def verify(org,data,evidence,stored_body):
         value=claim['value']
         tier=value.get('proof_type')
         if tier not in {DECLARED,RARE,REDIRECT}|RULES.keys():continue
-        context,refs=registry_context(org,data,evidence,stored_body)
+        context,refs=registry_context(org,data,evidence,stored_body,allow_carried=bool(claim.get('carried_forward')))
         assert refs<=set(claim['evidence_ids']),'Missing registry proof dependencies'
         receipt=value['publisher_identity'];context['candidate_url']=receipt['candidate_url']
         own=[evidence[e] for e in claim['evidence_ids'] if evidence[e]['source_class']=='company_owned' and evidence[e]['source_url']==value['proof_page_url']]

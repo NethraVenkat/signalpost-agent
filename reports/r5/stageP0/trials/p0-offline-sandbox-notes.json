@@ -1,0 +1,7 @@
+{
+  "implementation": "Isolated copy of this workspace source only, no network, no external repository code",
+  "first_trial": "Stopped only sandbox pytestPID548892 after its runner fixture globally replaced asyncio.sleep and starved the progress loop; original30-dot log retained",
+  "fix": "Runner fixture stubs official retry pause only; production retry and progress-loop code unchanged",
+  "final": "37passed in1.27seconds",
+  "production_x2_runtime_edited": false
+}

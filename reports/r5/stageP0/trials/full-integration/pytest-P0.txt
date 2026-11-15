@@ -1,0 +1,117 @@
+{"command": ["C:\\Users\\<USER>\\signal-nethra\\.venv\\Scripts\\python.exe", "C:\\Users\\<USER>\\signal-nethra\\reports\\r5\\stage4_7\\run_tests.py", "-q", "-p", "no:cacheprovider", "--tb=short"], "priority": "above_normal", "mutates_test_assertions_or_timeouts": false}
+........................................................................ [  5%]
+........................................................................ [ 11%]
+..................................F..........F.......................... [ 16%]
+.......F................................................................ [ 22%]
+........................................................................ [ 28%]
+........................................................................ [ 33%]
+..............F......................................................... [ 39%]
+........................................................................ [ 44%]
+........................................................................ [ 50%]
+........................................................................ [ 56%]
+........................................................................ [ 61%]
+........................................................................ [ 67%]
+....................FF.................................................. [ 72%]
+........................................................................ [ 78%]
+........................................................................ [ 84%]
+....................................................F................... [ 89%]
+........................................................................ [ 95%]
+...........................................................              [100%]
+================================== FAILURES ===================================
+_____________________ test_external_sources_strict_replay _____________________
+tests\test_external_integration.py:20: in test_external_sources_strict_replay
+    first = asyncio.run(execute('first'))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\runners.py:195: in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\runners.py:118: in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\base_events.py:691: in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+tests\test_external_integration.py:13: in execute
+    await run_production_replay(
+scripts\production_replay.py:454: in run_production_replay
+    raise ReplayFixtureError("Production replay failed: " + ", ".join(reasons))
+E   scripts.production_replay.ReplayFixtureError: Production replay failed: 3 missing fixture(s)
+---------------------------- Captured stdout call -----------------------------
+Loaded 34 recorded fixtures from manifest manifest.json
+------------------------------ Captured log call ------------------------------
+WARNING  production_replay:production_replay.py:152 Replay transport miss: No recorded fixture for HEAD https://data.brreg.no/enhetsregisteret/api/enheter?size=1
+WARNING  production_replay:production_replay.py:152 Replay transport miss: No recorded fixture for HEAD https://data.brreg.no/regnskapsregisteret/regnskap
+WARNING  production_replay:production_replay.py:152 Replay transport miss: No recorded fixture for HEAD https://pam-stilling-feed.nav.no/api/publicToken
+ERROR    production_replay:production_replay.py:437 Missing fixture: method=HEAD url=https://data.brreg.no/enhetsregisteret/api/enheter?size=1 reason=No recorded fixture for HEAD https://data.brreg.no/enhetsregisteret/api/enheter?size=1
+ERROR    production_replay:production_replay.py:437 Missing fixture: method=HEAD url=https://data.brreg.no/regnskapsregisteret/regnskap reason=No recorded fixture for HEAD https://data.brreg.no/regnskapsregisteret/regnskap
+ERROR    production_replay:production_replay.py:437 Missing fixture: method=HEAD url=https://pam-stilling-feed.nav.no/api/publicToken reason=No recorded fixture for HEAD https://pam-stilling-feed.nav.no/api/publicToken
+___________________ test_nav_token_down_and_truncated_feed ____________________
+tests\test_failure_drills.py:51: in test_nav_token_down_and_truncated_feed
+    assert row['run']['sections']['hiring']==state
+E   AssertionError: assert 'failed' == 'blocked'
+E     
+E     - blocked
+E     + failed
+_______________ test_production_replay_determinism_across_runs ________________
+tests\test_integration_determinism.py:59: in test_production_replay_determinism_across_runs
+    asyncio.run(execute_runs())
+..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\runners.py:195: in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\runners.py:118: in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\base_events.py:691: in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+tests\test_integration_determinism.py:33: in execute_runs
+    r1 = await run_production_replay(
+scripts\production_replay.py:454: in run_production_replay
+    raise ReplayFixtureError("Production replay failed: " + ", ".join(reasons))
+E   scripts.production_replay.ReplayFixtureError: Production replay failed: 2 missing fixture(s)
+---------------------------- Captured stdout call -----------------------------
+Loaded 8 recorded fixtures from manifest manifest.json
+------------------------------ Captured log call ------------------------------
+WARNING  production_replay:production_replay.py:152 Replay transport miss: No recorded fixture for HEAD https://data.brreg.no/enhetsregisteret/api/enheter?size=1
+WARNING  production_replay:production_replay.py:152 Replay transport miss: No recorded fixture for HEAD https://data.brreg.no/regnskapsregisteret/regnskap
+ERROR    production_replay:production_replay.py:437 Missing fixture: method=HEAD url=https://data.brreg.no/enhetsregisteret/api/enheter?size=1 reason=No recorded fixture for HEAD https://data.brreg.no/enhetsregisteret/api/enheter?size=1
+ERROR    production_replay:production_replay.py:437 Missing fixture: method=HEAD url=https://data.brreg.no/regnskapsregisteret/regnskap reason=No recorded fixture for HEAD https://data.brreg.no/regnskapsregisteret/regnskap
+_____ test_cli_accepts_reference_runner_flag_names_and_writes_both_files ______
+tests\test_profiles.py:75: in test_cli_accepts_reference_runner_flag_names_and_writes_both_files
+    assert main()==0
+E   assert 1 == 0
+E    +  where 1 = <function main at 0x000001C81A1BFBA0>()
+---------------------------- Captured stderr call -----------------------------
+signalpost could not produce output: AllMockedAssertionError: RESPX: <Request('HEAD', 'https://data.brreg.no/enhetsregisteret/api/enheter?size=1')> not mocked!
+_ test_evaluator_seven_flags_build_site_by_default_or_explicitly_disable[False] _
+C:\Users\<USER>\signal-nethra\tests\test_r5_stage_u.py:36: in test_evaluator_seven_flags_build_site_by_default_or_explicitly_disable
+    assert cli.main() == 0
+E   assert 1 == 0
+E    +  where 1 = <function main at 0x000001C81A1BFBA0>()
+E    +    where <function main at 0x000001C81A1BFBA0> = cli.main
+---------------------------- Captured stderr call -----------------------------
+signalpost could not produce output: TypeError: 'NoneType' object is not subscriptable
+_ test_evaluator_seven_flags_build_site_by_default_or_explicitly_disable[True] _
+C:\Users\<USER>\signal-nethra\tests\test_r5_stage_u.py:36: in test_evaluator_seven_flags_build_site_by_default_or_explicitly_disable
+    assert cli.main() == 0
+E   assert 1 == 0
+E    +  where 1 = <function main at 0x000001C81A1BFBA0>()
+E    +    where <function main at 0x000001C81A1BFBA0> = cli.main
+---------------------------- Captured stderr call -----------------------------
+signalpost could not produce output: TypeError: 'NoneType' object is not subscriptable
+____________________ test_cli_site_failure_keeps_exit_zero ____________________
+tests\test_site.py:163: in test_cli_site_failure_keeps_exit_zero
+    assert main() == 0
+E   assert 1 == 0
+E    +  where 1 = <function main at 0x000001C81A1BFBA0>()
+---------------------------- Captured stderr call -----------------------------
+signalpost could not produce output: AllMockedAssertionError: RESPX: <Request('HEAD', 'https://data.brreg.no/enhetsregisteret/api/enheter?size=1')> not mocked!
+=========================== short test summary info ===========================
+FAILED tests/test_external_integration.py::test_external_sources_strict_replay
+FAILED tests/test_failure_drills.py::test_nav_token_down_and_truncated_feed
+FAILED tests/test_integration_determinism.py::test_production_replay_determinism_across_runs
+FAILED tests/test_profiles.py::test_cli_accepts_reference_runner_flag_names_and_writes_both_files
+FAILED tests/test_r5_stage_u.py::test_evaluator_seven_flags_build_site_by_default_or_explicitly_disable[False]
+FAILED tests/test_r5_stage_u.py::test_evaluator_seven_flags_build_site_by_default_or_explicitly_disable[True]
+FAILED tests/test_site.py::test_cli_site_failure_keeps_exit_zero - assert 1 == 0
+7 failed, 1276 passed in 576.34s (0:09:36)

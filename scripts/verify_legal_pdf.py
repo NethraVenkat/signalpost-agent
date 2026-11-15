@@ -25,7 +25,7 @@ def verify(org,data,evidence,stored_body,read_blob):
         original=next(evidence[x] for x in c['evidence_ids'] if evidence[x]['extraction_method']==METHOD and evidence[x]['locator']=='pdf:original')
         assert original['content_sha256']==receipt['raw_pdf_sha256'] and original['source_url']==receipt['pdf_url']
         assert json.loads(original['source_identifier'])==receipt
-        context,refs=registry_context(org,data,evidence,stored_body)
+        context,refs=registry_context(org,data,evidence,stored_body,allow_carried=bool(c.get('carried_forward')))
         link=receipt['linked_from'];assert domain(link['source_url'])==domain(value['final_url'])
         parent_raw=read_blob(link['content_sha256']);assert hashlib.sha256(parent_raw).hexdigest()==link['content_sha256']
         parent=Page(parent_raw,link['source_url']);source=SimpleNamespace(url=parent.url,sha=link['content_sha256'],retrieved_at=link['retrieved_at'])

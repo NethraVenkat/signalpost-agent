@@ -19,6 +19,7 @@ from urllib.parse import urljoin, urlsplit, parse_qs
 from uuid import UUID
 import httpx
 from ..budget import SourceFailure
+from .official_resilience import check_source,DNS_FAILURES,pause as retry_pause,retry_after
 from ..identity.orgnr import valid
 from ..models.evidence import utc_now
 from ..models.envelope import Error
@@ -179,6 +180,7 @@ class NavHttp:
 
     async def get(self,raw,token=None,headers=None,secret=False,companies=(),persist=True):
         url=allowed(raw)
+        check_source(self.budget,url)
         supplied=dict(headers or {})
         key=url+'|'+supplied.get('If-Modified-Since','')
         cached=self.cache.get(key)
@@ -187,8 +189,9 @@ class NavHttp:
         supplied['Accept']='text/plain' if secret else 'application/json'
         supplied['User-Agent']=self.config.website_user_agent
         async with (self.semaphore if '/feedentry/' in url else self.feed_semaphore):
-            for attempt in range(2):
+            for attempt in range(3):
                 if self.polite_backoff and self.pause_until>time.monotonic():
+                    if self.pause_until>=self.budget.deadline:raise SourceFailure('deadline')
                     await asyncio.sleep(self.pause_until-time.monotonic())
                 if '/feedentry/' in url and self.index.metrics.get('detail_requests',0)>=self.index.metrics.get('detail_request_cap', self.config.nav_max_details if self.config.nav_max_details is not None else 300):
                     raise SourceFailure('nav_detail_cap')
@@ -197,7 +200,7 @@ class NavHttp:
                     self.index.metrics['detail_requests']=self.index.metrics.get('detail_requests',0)+1
                     by_company=self.index.metrics.setdefault('detail_requests_by_company',{})
                     for org in companies: by_company[org]=by_company.get(org,0)+1
-                event['section']='hiring_prefetch'
+                event['section']='hiring_prefetch';event['official_retry_attempt']=attempt
                 self.index.metrics['requests']+=1
                 if hasattr(self.index,'started'):self.index.started.set()
                 began=time.monotonic()
@@ -238,7 +241,12 @@ class NavHttp:
                             self.index.metrics['bytes']+=len(body)
                             if response.status_code in {301,302,303,307,308}: raise SourceFailure('nav_redirect_refused')
                             if secret:
-                                # Credential bodies are the deliberate blob-store exception.
+                                # Credential bodies never enter the blob store, even on retry.
+                                if response.status_code>=500 or response.status_code==429:
+                                    event['official_transient']=response.status_code>=500
+                                    if attempt<(2 if response.status_code>=500 else 1):
+                                        await retry_pause(self.budget,event,attempt,minimum=retry_after(response.headers.get('Retry-After')))
+                                        continue
                                 return response.status_code,body,None,utc_now()
                             if token and token.encode() in body: raise SourceFailure('credential_echo_refused')
                             if response.status_code==304:
@@ -260,7 +268,8 @@ class NavHttp:
                                     pause=max(retry_seconds,min(60,2**min(self.throttle_count,6)))
                                     self.pause_until=max(self.pause_until,time.monotonic()+pause)
                                     event['retry_backoff_seconds']=pause
-                                if attempt==0:
+                                event['official_transient']=response.status_code>=500
+                                if attempt<(2 if response.status_code>=500 else 1):
                                     retry=response.headers.get('Retry-After','0')
                                     try: delay=float(retry)
                                     except ValueError:
@@ -268,7 +277,7 @@ class NavHttp:
                                         except (ValueError,TypeError,OverflowError): delay=.2
                                     if self.polite_backoff:delay=max(delay,event['retry_backoff_seconds'])
                                     if time.monotonic()+max(.2,delay)>=self.budget.deadline: raise SourceFailure('deadline')
-                                    await asyncio.sleep(max(.2,delay)); continue
+                                    await retry_pause(self.budget,event,attempt,minimum=max(.2,delay)); continue
                                 raise SourceFailure('nav_http_'+str(response.status_code))
                             if response.status_code!=200: raise SourceFailure('nav_http_'+str(response.status_code))
                             if persist and response.headers.get('etag'):
@@ -276,9 +285,15 @@ class NavHttp:
                             return 200,body,sha,utc_now()
                 except (TimeoutError,httpx.HTTPError) as exc:
                     event['error']=type(exc).__name__
-                    if attempt: raise SourceFailure('nav_network_error') from None
+                    event['official_transient']=True
+                    if attempt==2: raise SourceFailure('nav_network_error') from None
+                    await retry_pause(self.budget,event,attempt)
                 except SourceFailure as exc:
                     event['error']=exc.code
+                    if exc.code in DNS_FAILURES:
+                        event['official_transient']=True
+                        if attempt<2:
+                            await retry_pause(self.budget,event,attempt);continue
                     raise
                 finally:
                     event['runtime_ms']=round((time.monotonic()-began)*1000)
@@ -288,10 +303,16 @@ class NavHttp:
         raise SourceFailure('nav_network_error')
 
     async def public_token(self):
+        self.token_failure=None
         try:
             status,body,_,_=await self.get(BASE+'/api/publicToken',secret=True)
-            return token_from(body.decode('utf8',errors='replace')) if status==200 else None
-        except Exception: return None
+            if status!=200:
+                self.token_failure='token_unavailable' if status in {401,403} else 'nav_http_'+str(status);return None
+            return token_from(body.decode('utf8',errors='replace'))
+        except SourceFailure as exc:
+            self.token_failure=exc.code;return None
+        except Exception:
+            self.token_failure='token_unavailable';return None
 
     def save(self):
         try:
@@ -301,6 +322,12 @@ class NavHttp:
 
 
 async def prefetch(client,config,budget,blobs,index,names_ready=None,previous=None):
+    try:check_source(budget,BASE+'/api/v1/feed')
+    except SourceFailure as exc:
+        index.reason=exc.code;index.complete=False;index.coverage_ready=False;index.blocked=False
+        index.metrics['source_mode']='official_source_outage'
+        if hasattr(index,'started'):index.started.set()
+        return index
     from .nav_index import load,DEFAULT_PATH
     path=config.nav_index_path or DEFAULT_PATH
     try:data,age=await nav_offload(load,path,config.nav_index_max_age_days)

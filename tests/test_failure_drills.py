@@ -45,7 +45,7 @@ def test_bad_bulk_falls_back_without_losing_rows(tmp_path,kind):
 
 def test_nav_token_down_and_truncated_feed(tmp_path):
     from tests.test_nav import execute as nav_run
-    for label,kw,state in [('token',{'token_ok':False},'blocked'),('partial',{'partial':True},'failed')]:
+    for label,kw,state in [('token',{'token_ok':False},'failed'),('partial',{'partial':True},'failed')]:
         report,row,cfg,_=nav_run(tmp_path/label,**kw)
         checked(cfg,report,[row],1)
         assert row['run']['sections']['hiring']==state
