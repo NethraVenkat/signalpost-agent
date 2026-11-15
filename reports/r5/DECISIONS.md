@@ -1,4 +1,4 @@
-﻿# R5 decisions
+# R5 decisions
 
 ## Stage 4.7 â€” budget accounting and candidate work
 
@@ -598,3 +598,11 @@
 - Existing extra pass2allowance and global/time ceilings unchanged, no counter/reset/once-only cache clearing. Existing strong-candidate transient retry jobs retain their own retry path and are not consumed by a legal-resume job. Failed budget targets remain eligible if actually unvisited.
 - Report pass2.legal_priority records resumes, actual company website requests consumed by legal work before downstream refresh, and exact websites gained. Discovery nominations are not proof; L1exact-number/L2raw-PDFchain/R4/robots rules still apply.
 -46focused scheduler/PDF/adaptive tests passed, including pending PDF, no extra/global room, foreign veto, once-only404, and proof/evidence replay. The PDFtest initially omitted enabling the adaptive test fixture and was corrected; no runtime safety change. Full pytest gates final L implementation; then ONE six-sample measurement and every new publisher review.
+
+### L3 audit clarification ? all builder numeric patterns
+- Initial L0/L3 receipt counted exact target orgnr only. Supplemental offline audit now counts all marker-bearing script instances and raw nine-digit fragments, retaining page/script hashes and exact contexts: Wix343scripts/716fragments/33checksum-valid, Squarespace23/35/0, Next8/17/1, Nuxt4/0/0.
+- Inspected every one of34checksum-valid fragments: one latitude decimal,33opaque build fingerprints/asset identifiers/UUID tails;0labelled legal identifiers,0target IDs,0qualifying footer/contact orgnr components. They remain arbitrary script strings and cannot prove identity. No runtime component parser is introduced without a qualifying observed component. Reports-only clarification preserves the frozen L runtime manifest; old exact-target-zero count is not misrepresented as zero raw numeric patterns.
+
+### L accepted six-sample checkpoint
+- Websites 40?38/600; declared-homepage recall 20?21/72. Added locations {'legal HTML': 1}; PDF0/builder0. Every added own publisher reviewed; no doubtful identity survives. Exact receipts and removals in stageL/new_websites.md.
+- Total 5456HTTP, 4064.377summed process seconds,$0. Legal pass2 155resumes/771requests/0gains. Source failures and single fresh retries of15/17 preserved, never unioned/cherry-picked. All600ordered terminal envelopes, five cited topics,0unsupported, sites below250000bytes. Runtime remains greenL4(1205passed); report-only checkpoint. ContinueX2?P0?new500cleanclone; neverpush.

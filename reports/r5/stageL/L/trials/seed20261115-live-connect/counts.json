@@ -1,0 +1,341 @@
+{
+  "stage": "L",
+  "seed": 20261115,
+  "before": {
+    "websites": 7,
+    "declared_homepage_recall": 3,
+    "declared_homepages": 14,
+    "social_companies": 4,
+    "social_claims": 4,
+    "activity_companies": 100,
+    "activity_claims": 1153,
+    "brand_companies": 5,
+    "brand_claims": 7,
+    "role_change_claims": 183,
+    "facts": 13270,
+    "families": {
+      "identity": 2963,
+      "roles": 1029,
+      "accounts": 7190,
+      "activity": 1153,
+      "subunits": 893,
+      "gleif": 10,
+      "website": 32
+    }
+  },
+  "after": {
+    "websites": 5,
+    "declared_homepage_recall": 3,
+    "declared_homepages": 14,
+    "social_companies": 2,
+    "social_claims": 2,
+    "activity_companies": 100,
+    "activity_claims": 1153,
+    "brand_companies": 4,
+    "brand_claims": 5,
+    "role_change_claims": 183,
+    "facts": 13259,
+    "families": {
+      "identity": 2963,
+      "roles": 1029,
+      "accounts": 7190,
+      "activity": 1153,
+      "subunits": 893,
+      "gleif": 10,
+      "website": 21
+    }
+  },
+  "HTTP": 933,
+  "runtime_seconds": 625.594000000041,
+  "CLI_runtime_seconds": 598.8600000000442,
+  "cost_usd": 0.0,
+  "site": {
+    "state": "available",
+    "companies": 100,
+    "input_records": 100,
+    "pages": 102,
+    "skipped_invalid_identifiers": 0,
+    "total_bytes": 36062985,
+    "largest_profile_data_bytes": 484236,
+    "largest_profile_bytes": 221671
+  },
+  "changes": {
+    "added": [],
+    "removed": [
+      {
+        "orgnr": "932849429",
+        "legal_name": "JAASTAD SIDERI AS",
+        "kind": "social",
+        "identity": "https://instagram.com/jaastadsideri",
+        "field": "social_profile.74c48d281685929078c9",
+        "value": {
+          "url": "https://instagram.com/jaastadsideri",
+          "platform": "instagram.com",
+          "proof_tier": "own_header_footer_exact_name_v1",
+          "company_name": "JAASTAD SIDERI AS"
+        },
+        "evidence": [
+          {
+            "id": "36c99d96856c5d860fe69564135e90d11f01ab72476feded9dfa62cc183d6c21",
+            "source_url": "https://www.jaastadsideri.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-14T18:32:47.868397Z",
+            "content_sha256": "d9e51ab1dd9c81f0d8050e436e652f08323fa853f9479b3eefceb0914f083ddb",
+            "claim_span": "<a href=\"https://instagram.com/jaastadsideri\" target=\"_blank\">",
+            "locator": "company-link:https://instagram.com/jaastadsideri",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "0e1fec66e255829680624587fb5a206b99c55e14057eed8377ef4e003f383765",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T18:29:29.276226Z",
+            "content_sha256": "5efb4e6a040fb875f513a6c57d17169002f27860c3bcb2471a9bf575496999cd",
+            "claim_span": "932849429,JAASTAD SIDERI AS,AS,Aksjeselskap,11.030,Produksjon av sider og andre gjærede fruktdrikker,,,,,,,false,,,,,,,,,,,,,,,Gamlevegen 46,GRIMO,5777,ULLENSVANG,4618,Norge,NO,2100,Private aksjeselskaper mv.,2025,2024-01-18,2024-01-05,true,2024-06-14,2024-07-09,,,false,,true,2024-01-18,false,false,",
+            "locator": "row:932849429/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:bd3598aeae1b5c6b107e61ba1ffdb4d2a92af86edeef91f9b0dbfe65e0d418d3",
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "56698e0821a9e1b7a020604382c0ddfaa51a3749418586987938995e524a3760",
+            "source_url": "https://www.jaastadsideri.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-14T18:32:47.868397Z",
+            "content_sha256": "d9e51ab1dd9c81f0d8050e436e652f08323fa853f9479b3eefceb0914f083ddb",
+            "claim_span": "\" style=\"white-space:pre-wrap;\">Org.nr: 932 849 429</p></div>\n\n\n  \n<style id=\"container-styles\">#block-aea1cdc2ac29526ff6f0 {\n    \n    --stroke-style:",
+            "locator": "identity-proof:932849429",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "orgnr": "932849429",
+        "legal_name": "JAASTAD SIDERI AS",
+        "kind": "brand",
+        "identity": "JAASTAD Sideri",
+        "field": "public_brand",
+        "value": "JAASTAD Sideri",
+        "evidence": [
+          {
+            "id": "8a8ba9c68095ddddb6f828d1ab3f7662c7506c44e2f14c9fbebaa4e5669537fe",
+            "source_url": "https://www.jaastadsideri.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-14T18:32:47.868397Z",
+            "content_sha256": "d9e51ab1dd9c81f0d8050e436e652f08323fa853f9479b3eefceb0914f083ddb",
+            "claim_span": "ref=\"\">\n<meta charset=\"utf-8\" />\n<title>JAASTAD Sideri</title>\n<meta http-equiv=\"Accept-CH\" content=\"Sec-CH-UA-Platform-Version, Sec-CH-UA-Model\" /><link rel=\"icon\" type=\"image/x-icon\" media=\"(prefers-color-scheme: light)\" href=\"https://images.squarespace-cdn.com/content/v1/661649e3d2940d02173756a3/",
+            "locator": "publisher-public-name",
+            "extraction_method": "signalpost.public_names.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "56698e0821a9e1b7a020604382c0ddfaa51a3749418586987938995e524a3760",
+            "source_url": "https://www.jaastadsideri.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-14T18:32:47.868397Z",
+            "content_sha256": "d9e51ab1dd9c81f0d8050e436e652f08323fa853f9479b3eefceb0914f083ddb",
+            "claim_span": "\" style=\"white-space:pre-wrap;\">Org.nr: 932 849 429</p></div>\n\n\n  \n<style id=\"container-styles\">#block-aea1cdc2ac29526ff6f0 {\n    \n    --stroke-style:",
+            "locator": "identity-proof:932849429",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "0e1fec66e255829680624587fb5a206b99c55e14057eed8377ef4e003f383765",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T18:29:29.276226Z",
+            "content_sha256": "5efb4e6a040fb875f513a6c57d17169002f27860c3bcb2471a9bf575496999cd",
+            "claim_span": "932849429,JAASTAD SIDERI AS,AS,Aksjeselskap,11.030,Produksjon av sider og andre gjærede fruktdrikker,,,,,,,false,,,,,,,,,,,,,,,Gamlevegen 46,GRIMO,5777,ULLENSVANG,4618,Norge,NO,2100,Private aksjeselskaper mv.,2025,2024-01-18,2024-01-05,true,2024-06-14,2024-07-09,,,false,,true,2024-01-18,false,false,",
+            "locator": "row:932849429/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:bd3598aeae1b5c6b107e61ba1ffdb4d2a92af86edeef91f9b0dbfe65e0d418d3",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "orgnr": "926705261",
+        "legal_name": "LEV AKTIVT AS",
+        "kind": "social",
+        "identity": "https://www.instagram.com/levaktivt",
+        "field": "social_profile.d364548492effc5b1d9f",
+        "value": {
+          "url": "https://www.instagram.com/levaktivt",
+          "platform": "instagram.com",
+          "proof_tier": "own_header_footer_exact_name_v1",
+          "company_name": "LEV AKTIVT AS"
+        },
+        "evidence": [
+          {
+            "id": "958285794d6c6b27d3171baa6da0d7f1da97c63317fcad90689209c0f959be98",
+            "source_url": "https://levaktivt.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-14T18:33:35.766782Z",
+            "content_sha256": "40329f9e97ab101470abef043e6d3d7b5ec983c69d2f475c9edfd5d7185aaafd",
+            "claim_span": "<a class=\"elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-bafde3e\" href=\"https://www.instagram.com/levaktivt/\" target=\"_blank\">",
+            "locator": "company-link:https://www.instagram.com/levaktivt",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "8d733663c38404a88ed879da875991d57303fbf66e8cdadf7cb0d80d3fea341d",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T18:29:29.268744Z",
+            "content_sha256": "15b80192aa51e0961cbc3a670cc67448e180ed533880048d77d19bd2f6dbc5b0",
+            "claim_span": "926705261,LEV AKTIVT AS,AS,Aksjeselskap,62.100,Dataprogrammeringstjenester,,,,,,,false,,,,,,,,,,,,,,,Gårdsveien 4A,SANDEFJORD,3230,SANDEFJORD,3907,Norge,NO,2100,Private aksjeselskaper mv.,2025,2021-03-30,2020-12-28,false,,,,,false,,true,2021-03-30,false,false,,false,,true,2026-09-02,false,,,,,,,Bokm",
+            "locator": "row:926705261/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:bd3598aeae1b5c6b107e61ba1ffdb4d2a92af86edeef91f9b0dbfe65e0d418d3",
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "31114399148dfbe4ee305e0b72541372b4aa92c6acb7608fd0055a557fde8a9b",
+            "source_url": "https://levaktivt.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-14T18:33:35.766782Z",
+            "content_sha256": "40329f9e97ab101470abef043e6d3d7b5ec983c69d2f475c9edfd5d7185aaafd",
+            "claim_span": "19\" data-end=\"155\">Organisasjonsnummer: 926 705 261</strong></p><p data-start=\"159\" data-end=\"287\">Denne personvernerklæringen gir informasjon om hvor",
+            "locator": "identity-proof:926705261",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "orgnr": "926705261",
+        "legal_name": "LEV AKTIVT AS",
+        "kind": "website",
+        "identity": "https://levaktivt.no",
+        "field": "official_website",
+        "value": {
+          "final_url": "https://levaktivt.no",
+          "identity_level": "VERIFIED",
+          "proof_type": "orgnr_on_page",
+          "proof_page_url": "https://levaktivt.no/",
+          "signals": [],
+          "points": 0,
+          "candidate_origin": "legal_name_slug",
+          "relationship_note": null,
+          "other_orgnrs": []
+        },
+        "evidence": [
+          {
+            "id": "31114399148dfbe4ee305e0b72541372b4aa92c6acb7608fd0055a557fde8a9b",
+            "source_url": "https://levaktivt.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-14T18:33:35.766782Z",
+            "content_sha256": "40329f9e97ab101470abef043e6d3d7b5ec983c69d2f475c9edfd5d7185aaafd",
+            "claim_span": "19\" data-end=\"155\">Organisasjonsnummer: 926 705 261</strong></p><p data-start=\"159\" data-end=\"287\">Denne personvernerklæringen gir informasjon om hvor",
+            "locator": "identity-proof:926705261",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "orgnr": "926705261",
+        "legal_name": "LEV AKTIVT AS",
+        "kind": "brand",
+        "identity": "Lev Aktivt",
+        "field": "public_brand",
+        "value": "Lev Aktivt",
+        "evidence": [
+          {
+            "id": "a4b43b6f4c810f0d7ec4263e71e1bda8899467612329122a9dea0c47cfea8b27",
+            "source_url": "https://levaktivt.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-14T18:33:35.766782Z",
+            "content_sha256": "40329f9e97ab101470abef043e6d3d7b5ec983c69d2f475c9edfd5d7185aaafd",
+            "claim_span": "s://levaktivt.no/xmlrpc.php\" />\n\t<title>Lev Aktivt &#8211; Ta vare på deg selv</title>\n<meta name='robots' content='max-image-preview:large' />\n<link rel=\"alternate\" type=\"application/rss+xml\" title=\"Lev Aktivt &raquo; strøm\" href=\"https://levaktivt.no/feed/\" />\n<link rel=\"alternate\" type=\"applicati",
+            "locator": "publisher-public-name",
+            "extraction_method": "signalpost.public_names.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "31114399148dfbe4ee305e0b72541372b4aa92c6acb7608fd0055a557fde8a9b",
+            "source_url": "https://levaktivt.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-14T18:33:35.766782Z",
+            "content_sha256": "40329f9e97ab101470abef043e6d3d7b5ec983c69d2f475c9edfd5d7185aaafd",
+            "claim_span": "19\" data-end=\"155\">Organisasjonsnummer: 926 705 261</strong></p><p data-start=\"159\" data-end=\"287\">Denne personvernerklæringen gir informasjon om hvor",
+            "locator": "identity-proof:926705261",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "8d733663c38404a88ed879da875991d57303fbf66e8cdadf7cb0d80d3fea341d",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-14T18:29:29.268744Z",
+            "content_sha256": "15b80192aa51e0961cbc3a670cc67448e180ed533880048d77d19bd2f6dbc5b0",
+            "claim_span": "926705261,LEV AKTIVT AS,AS,Aksjeselskap,62.100,Dataprogrammeringstjenester,,,,,,,false,,,,,,,,,,,,,,,Gårdsveien 4A,SANDEFJORD,3230,SANDEFJORD,3907,Norge,NO,2100,Private aksjeselskaper mv.,2025,2021-03-30,2020-12-28,false,,,,,false,,true,2021-03-30,false,false,,false,,true,2026-09-02,false,,,,,,,Bokm",
+            "locator": "row:926705261/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:bd3598aeae1b5c6b107e61ba1ffdb4d2a92af86edeef91f9b0dbfe65e0d418d3",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "orgnr": "932849429",
+        "legal_name": "JAASTAD SIDERI AS",
+        "kind": "website",
+        "identity": "https://www.jaastadsideri.no",
+        "field": "official_website",
+        "value": {
+          "final_url": "https://www.jaastadsideri.no",
+          "identity_level": "VERIFIED",
+          "proof_type": "orgnr_on_page",
+          "proof_page_url": "https://www.jaastadsideri.no/",
+          "signals": [],
+          "points": 0,
+          "candidate_origin": "legal_name_slug",
+          "relationship_note": null,
+          "other_orgnrs": []
+        },
+        "evidence": [
+          {
+            "id": "56698e0821a9e1b7a020604382c0ddfaa51a3749418586987938995e524a3760",
+            "source_url": "https://www.jaastadsideri.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-14T18:32:47.868397Z",
+            "content_sha256": "d9e51ab1dd9c81f0d8050e436e652f08323fa853f9479b3eefceb0914f083ddb",
+            "claim_span": "\" style=\"white-space:pre-wrap;\">Org.nr: 932 849 429</p></div>\n\n\n  \n<style id=\"container-styles\">#block-aea1cdc2ac29526ff6f0 {\n    \n    --stroke-style:",
+            "locator": "identity-proof:932849429",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      }
+    ]
+  },
+  "envelopes_sha256": "0ebb348bd516c44892b9e629bc48cb612152864e287022d3a4fb27bc17daad95",
+  "profiles_sha256": "0ea5fc8cebdba8f4247b4e0454a45a7cd28978cdafd6435eb25ca400aaf3f7ea"
+}

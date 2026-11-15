@@ -1,0 +1,295 @@
+{
+  "stage": "L",
+  "seed": 20261117,
+  "before": {
+    "websites": 8,
+    "declared_homepage_recall": 0,
+    "declared_homepages": 11,
+    "social_companies": 4,
+    "social_claims": 7,
+    "activity_companies": 100,
+    "activity_claims": 1248,
+    "brand_companies": 6,
+    "brand_claims": 24,
+    "role_change_claims": 172,
+    "facts": 14074,
+    "families": {
+      "identity": 3020,
+      "subunits": 1163,
+      "roles": 1062,
+      "accounts": 7505,
+      "website": 54,
+      "activity": 1248,
+      "gleif": 20,
+      "hiring": 2
+    }
+  },
+  "after": {
+    "websites": 8,
+    "declared_homepage_recall": 1,
+    "declared_homepages": 11,
+    "social_companies": 4,
+    "social_claims": 7,
+    "activity_companies": 100,
+    "activity_claims": 1243,
+    "brand_companies": 7,
+    "brand_claims": 25,
+    "role_change_claims": 172,
+    "facts": 14066,
+    "families": {
+      "identity": 3020,
+      "subunits": 1163,
+      "roles": 1062,
+      "accounts": 7505,
+      "website": 51,
+      "activity": 1243,
+      "gleif": 20,
+      "hiring": 2
+    }
+  },
+  "HTTP": 887,
+  "runtime_seconds": 565.7189999999828,
+  "CLI_runtime_seconds": 549.5149999999558,
+  "cost_usd": 0.0,
+  "site": {
+    "state": "available",
+    "companies": 100,
+    "input_records": 100,
+    "pages": 102,
+    "skipped_invalid_identifiers": 0,
+    "total_bytes": 38152616,
+    "largest_profile_data_bytes": 936687,
+    "largest_profile_bytes": 249037
+  },
+  "changes": {
+    "added": [
+      {
+        "orgnr": "934608143",
+        "legal_name": "NORWAY MARINE SUPPLY AS",
+        "kind": "website",
+        "identity": "https://www.maritim.no",
+        "field": "official_website",
+        "value": {
+          "final_url": "https://www.maritim.no",
+          "identity_level": "VERIFIED",
+          "proof_type": "orgnr_on_page",
+          "proof_page_url": "https://www.maritim.no/kjopsbetingelser",
+          "signals": [],
+          "points": 0,
+          "candidate_origin": "registry_website",
+          "relationship_note": null,
+          "other_orgnrs": [],
+          "registry_contact_matches": {
+            "email_domain": "maritim.no",
+            "phone": "+4737000370"
+          }
+        },
+        "evidence": [
+          {
+            "id": "ff4cb904fa257bde79d13f09ab190799068571eb0f7e1e01e94fb0385cd3f7cf",
+            "source_url": "https://www.maritim.no/kjopsbetingelser",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-15T03:05:39.244975Z",
+            "content_sha256": "9d2e566a7383fbb8f3098d383247ab995d14bb90f91c8e81d593150d800c6076",
+            "claim_span": "e\">37 00 03 70</a> Organisasjonsnummer: 934 608 143</span></span></span></p>\n\n<p style=\"margin-bottom:11px\"><br/>\n<span style=\"font-size:11pt\"><span s",
+            "locator": "identity-proof:934608143",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "e7bc0c1e1fc1e7f37e2ac54633ef0258bda01f6e45e605315ad430cc37e27e4a",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-15T03:01:43.412102Z",
+            "content_sha256": "ef54a79b9064411f1fb9f757ce88b1e6e4cf4614d5f2ea07290fae6b7e990361",
+            "claim_span": "ngsvarer,,,,,,,true,61,2026-09-14,2026-09-10,www.maritim.no,salg@maritim.no,37 00 03 70,,Postboks 777  Stoa,ARENDAL,4808,ARENDAL,4203,Norge,NO,Åsbieveien 11,ARENDAL,4848,ARENDAL,4203,Norge,NO,2100,Private aksjeselskaper mv.,2025,1995-02-19,1984-01-03,true,1984-01-01,1995-02-19,,,false,,true,1989-06-",
+            "locator": "row:934608143/column:epostadresse",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:eb6e3ca98ca658c77edca3a8558a03e3faaaa78c49a8c8baaf194abfc189fbec",
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "c73e3a5f225c7de833bf01bce3d548287616a6478b7d1abdb5c222aeed317e52",
+            "source_url": "https://www.maritim.no/kjopsbetingelser",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-15T03:05:39.244975Z",
+            "content_sha256": "9d2e566a7383fbb8f3098d383247ab995d14bb90f91c8e81d593150d800c6076",
+            "claim_span": "<a href=\"mailto:salg@maritim.no\" style=\"color:#467886; text-decoration:underline\">",
+            "locator": "registry-contact:email_domain",
+            "extraction_method": "signalpost.registry_contact.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "162f09e00a389d64ec5ccf3ca223cd92ea6ccf3b93eb6eae264ed90e261230c9",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-15T03:01:43.412102Z",
+            "content_sha256": "ef54a79b9064411f1fb9f757ce88b1e6e4cf4614d5f2ea07290fae6b7e990361",
+            "claim_span": "rue,61,2026-09-14,2026-09-10,www.maritim.no,salg@maritim.no,37 00 03 70,,Postboks 777  Stoa,ARENDAL,4808,ARENDAL,4203,Norge,NO,Åsbieveien 11,ARENDAL,4848,ARENDAL,4203,Norge,NO,2100,Private aksjeselskaper mv.,2025,1995-02-19,1984-01-03,true,1984-01-01,1995-02-19,,,false,,true,1989-06-15,false,false,,",
+            "locator": "row:934608143/column:telefon",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:eb6e3ca98ca658c77edca3a8558a03e3faaaa78c49a8c8baaf194abfc189fbec",
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "77dca4fccc717d93225199ab1994e632b2a4cc82cd217e970bd6a5ffde678d2d",
+            "source_url": "https://www.maritim.no/kjopsbetingelser",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-15T03:05:39.244975Z",
+            "content_sha256": "9d2e566a7383fbb8f3098d383247ab995d14bb90f91c8e81d593150d800c6076",
+            "claim_span": "<a href=\"tel:+4737000370\" style=\"color:#467886; text-decoration:underline\">",
+            "locator": "registry-contact:phone",
+            "extraction_method": "signalpost.registry_contact.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      {
+        "orgnr": "934608143",
+        "legal_name": "NORWAY MARINE SUPPLY AS",
+        "kind": "brand",
+        "identity": "Maritim Båtutstyr",
+        "field": "public_brand",
+        "value": "Maritim Båtutstyr",
+        "evidence": [
+          {
+            "id": "7f7d352f89cf2506b29656bb6945528422bddc7460e9e91523ba63f4f2d3ae13",
+            "source_url": "https://www.maritim.no/kjopsbetingelser",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-15T03:05:39.244975Z",
+            "content_sha256": "9d2e566a7383fbb8f3098d383247ab995d14bb90f91c8e81d593150d800c6076",
+            "claim_span": "odules/meta -->\n<title>Kjøpsbetingelser Maritim Båtutstyr</title>\n<meta name=\"generator\" content=\"Gurusoft Ecommerce\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\">\n<meta http-equiv=\"X-UA-Compatible\" content",
+            "locator": "publisher-public-name",
+            "extraction_method": "signalpost.public_names.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "162f09e00a389d64ec5ccf3ca223cd92ea6ccf3b93eb6eae264ed90e261230c9",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-15T03:01:43.412102Z",
+            "content_sha256": "ef54a79b9064411f1fb9f757ce88b1e6e4cf4614d5f2ea07290fae6b7e990361",
+            "claim_span": "rue,61,2026-09-14,2026-09-10,www.maritim.no,salg@maritim.no,37 00 03 70,,Postboks 777  Stoa,ARENDAL,4808,ARENDAL,4203,Norge,NO,Åsbieveien 11,ARENDAL,4848,ARENDAL,4203,Norge,NO,2100,Private aksjeselskaper mv.,2025,1995-02-19,1984-01-03,true,1984-01-01,1995-02-19,,,false,,true,1989-06-15,false,false,,",
+            "locator": "row:934608143/column:telefon",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:eb6e3ca98ca658c77edca3a8558a03e3faaaa78c49a8c8baaf194abfc189fbec",
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "77dca4fccc717d93225199ab1994e632b2a4cc82cd217e970bd6a5ffde678d2d",
+            "source_url": "https://www.maritim.no/kjopsbetingelser",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-15T03:05:39.244975Z",
+            "content_sha256": "9d2e566a7383fbb8f3098d383247ab995d14bb90f91c8e81d593150d800c6076",
+            "claim_span": "<a href=\"tel:+4737000370\" style=\"color:#467886; text-decoration:underline\">",
+            "locator": "registry-contact:phone",
+            "extraction_method": "signalpost.registry_contact.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "c73e3a5f225c7de833bf01bce3d548287616a6478b7d1abdb5c222aeed317e52",
+            "source_url": "https://www.maritim.no/kjopsbetingelser",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-15T03:05:39.244975Z",
+            "content_sha256": "9d2e566a7383fbb8f3098d383247ab995d14bb90f91c8e81d593150d800c6076",
+            "claim_span": "<a href=\"mailto:salg@maritim.no\" style=\"color:#467886; text-decoration:underline\">",
+            "locator": "registry-contact:email_domain",
+            "extraction_method": "signalpost.registry_contact.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "e7bc0c1e1fc1e7f37e2ac54633ef0258bda01f6e45e605315ad430cc37e27e4a",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-15T03:01:43.412102Z",
+            "content_sha256": "ef54a79b9064411f1fb9f757ce88b1e6e4cf4614d5f2ea07290fae6b7e990361",
+            "claim_span": "ngsvarer,,,,,,,true,61,2026-09-14,2026-09-10,www.maritim.no,salg@maritim.no,37 00 03 70,,Postboks 777  Stoa,ARENDAL,4808,ARENDAL,4203,Norge,NO,Åsbieveien 11,ARENDAL,4848,ARENDAL,4203,Norge,NO,2100,Private aksjeselskaper mv.,2025,1995-02-19,1984-01-03,true,1984-01-01,1995-02-19,,,false,,true,1989-06-",
+            "locator": "row:934608143/column:epostadresse",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:eb6e3ca98ca658c77edca3a8558a03e3faaaa78c49a8c8baaf194abfc189fbec",
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "ff4cb904fa257bde79d13f09ab190799068571eb0f7e1e01e94fb0385cd3f7cf",
+            "source_url": "https://www.maritim.no/kjopsbetingelser",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-15T03:05:39.244975Z",
+            "content_sha256": "9d2e566a7383fbb8f3098d383247ab995d14bb90f91c8e81d593150d800c6076",
+            "claim_span": "e\">37 00 03 70</a> Organisasjonsnummer: 934 608 143</span></span></span></p>\n\n<p style=\"margin-bottom:11px\"><br/>\n<span style=\"font-size:11pt\"><span s",
+            "locator": "identity-proof:934608143",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "e11f812cf1bd938731f39f0ea8b8c4073d49a1ca6197a8fdb0dec1fe30ddbd52",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-15T03:01:43.412102Z",
+            "content_sha256": "ef54a79b9064411f1fb9f757ce88b1e6e4cf4614d5f2ea07290fae6b7e990361",
+            "claim_span": "934608143,NORWAY MARINE SUPPLY AS,AS,Aksjeselskap,46.490,Engroshandel med andre husholdningsvarer,,,,,,,true,61,2026-09-14,2026-09-10,www.maritim.no,salg@maritim.no,37 00 03 70,,Postboks 777  Stoa,ARENDAL,4808,ARENDAL,4203,Norge,NO,Åsbieveien 11,ARENDAL,4848,ARENDAL,4203,Norge,NO,2100,Private aksjes",
+            "locator": "row:934608143/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:eb6e3ca98ca658c77edca3a8558a03e3faaaa78c49a8c8baaf194abfc189fbec",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      }
+    ],
+    "removed": [
+      {
+        "orgnr": "926148931",
+        "legal_name": "ATLO AS",
+        "kind": "website",
+        "identity": "https://atlo.no",
+        "field": "official_website",
+        "value": {
+          "final_url": "https://atlo.no",
+          "identity_level": "VERIFIED",
+          "proof_type": "orgnr_on_page",
+          "proof_page_url": "https://atlo.no/",
+          "signals": [],
+          "points": 0,
+          "candidate_origin": "legal_name_slug",
+          "relationship_note": null,
+          "other_orgnrs": []
+        },
+        "evidence": [
+          {
+            "id": "2b2e301b95341ce66a6db6e057528b599fac24ddc6b606d189370ee388f683d0",
+            "source_url": "https://atlo.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-14T19:03:03.017392Z",
+            "content_sha256": "40331e3d20b7de6c0f09f2aa7a40fce2312fd9f0b03957a10ce1b96c715e66e2",
+            "claim_span": "217-126\" class=\"ct-text-block\" >Org.nr: 926 148 931</div></div><div id=\"div_block-208-126\" class=\"ct-div-block\" ><div id=\"text_block-219-126\" class=\"c",
+            "locator": "identity-proof:926148931",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      }
+    ]
+  },
+  "envelopes_sha256": "461bcf5c9f8d83d2b30db9034f651ac7efe91f6e69b6598bb0eb7f345855c3b6",
+  "profiles_sha256": "5bec1c156f94b54df064717bc7cec3a36cb44226b2e77b2d9ea590a855240b52"
+}

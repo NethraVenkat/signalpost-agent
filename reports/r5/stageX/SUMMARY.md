@@ -65,3 +65,7 @@ Remaining authorized order: R7a?g (including root-only, own branding and company
 R7a/b/c/d/f/g are retained; R7e was individually reverted after a stock-template false attribution. Final qualification:40websites/600 (R6:37), declared recall20/72(R6:19/72),26social/17companies,4,949HTTP,2,884.172summed process seconds,$0. Zero unsupported values; all600ordered terminal/five-topic/site checks pass. Full final serialpytest1,164green. [R7 complete table, commits, safety rollback and costs](../stageR7/SUMMARY.md); [every added/removed/withheld URL and exact publisher review](../stageR7/new_websites.md).
 
 Next authorized work: StageL0?L4, thenX2, P0, P2NEW500-company clean-clone qualification. Never push. X3/X5/X6 remain dropped.
+
+## L completed before X2
+
+[StageL measured table and limitations](../stageL/SUMMARY.md): 38/600websites, declared21/72, 5456HTTP,$0. [Every new/removed site](../stageL/new_websites.md). Full greenL4runtime unchanged. X2?P0?P2new500remain queued.
