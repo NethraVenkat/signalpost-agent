@@ -105,6 +105,21 @@ def verify_exact_public(row,data,evidence,stored_body):
     return count
 
 
+def bundled_match(eo,bundle_path,derive,claim,receipt,body,org,row):
+    """The receipt body must be one exact bundled record of this org, from the named source."""
+    from datetime import datetime
+    bundle=eo.load_bundle(bundle_path)
+    if body not in bundle['records'].get(org,[]):return False
+    record=json.loads(body);meta=eo.bundled_sources(bundle)[record['source']]
+    if receipt['source_url']!=meta['source_url'] or receipt['retrieved_at']!=meta['retrieved_at']:return False
+    completed=(row.get('run') or {}).get('completed_at') or row.get('completed_at') or meta['retrieved_at']
+    derived=derive(record,org,datetime.fromisoformat(completed.replace('Z','+00:00')))
+    if not derived:return False
+    value,_=derived
+    record_id=value.get('project_id') or value.get('inspection_id')
+    return value==claim['value'] and claim['field'].endswith('.'+record['source']+'.'+str(record_id))
+
+
 def verify_exact_official(row,data,evidence,stored_body):
     """Stage S: re-derive every exact-ID official claim from its saved source record."""
     from signalpost.sources import exact_official as eo
@@ -126,6 +141,8 @@ def verify_exact_official(row,data,evidence,stored_body):
                 index=int(receipt['locator'].split('/')[2])
                 award=eo.state_aid_award(items[index],org,at)
                 matched |= bool(award) and award[0]==value and claim['field']=='state_aid.award.'+value['award_id']
+            elif claim['field'].startswith('research.project.'):
+                matched |= bundled_match(eo,eo.RESEARCH_BUNDLE,eo.research_value,claim,receipt,body,org,row)
             else:raise AssertionError('Unknown exact-ID official claim')
         assert matched,'Unsupported exact-ID official value or attribution'
         count+=1

@@ -2,6 +2,8 @@
 
 S2 Støtteregisteret (Brønnøysundregistrene, NLOD 2.0): dated state-aid awards
 whose single registered beneficiary role holds our exact organisation number.
+S3 Research Council of Norway projects and SkatteFUNN approvals (NLOD 2.0),
+from a bundled snapshot built by scripts/build_official_snapshots.py.
 
 No names, domains or fuzzy matching widen company scope. Failures and partial
 coverage stay explicit; dates and amounts are copied only when the record
@@ -16,10 +18,10 @@ from ..budget import SourceFailure
 from .extract import Section, add, missing, response_source
 
 METHOD = 'signalpost.exact_official.v1'
-FAMILIES = ('state_aid',)
+FAMILIES = ('state_aid', 'research')
 # Site grouping and labels for each family.
-SITE_GROUP = {'state_aid': 'activity'}
-LABELS = {'state_aid.award.': 'State aid award'}
+SITE_GROUP = {'state_aid': 'activity', 'research': 'activity'}
+LABELS = {'state_aid.award.': 'State aid award', 'research.project.': 'Research or innovation project'}
 STOTTE_HOST = 'stottetiltak-registerinfo-api.app.brreg.no'
 STOTTE = 'https://' + STOTTE_HOST + '/api/v1/soek/stoettetildeling'
 STOTTE_PAGE_SIZE = 100
@@ -170,6 +172,9 @@ async def state_aid(org, http, now):
 
 
 FETCHERS = {'state_aid': lambda org, http, now: state_aid(org, http, now)}
+# Local bundled snapshots: no network, evidence body = the exact bundled record.
+LOCAL = {'research': lambda org, now, blobs: record_section('research', 'research.project.', load_bundle(RESEARCH_BUNDLE), org, now,
+                                                            research_value, blobs, 'official_research', 'project_id')}
 
 
 def enabled_families(config):
@@ -183,6 +188,14 @@ async def enrich(envelopes, client, config, budget, blobs, update):
                       robots_unserved=ROBOTS_UNSERVED, politeness=POLITENESS_SECONDS)
     now = datetime.now(timezone.utc)
     for family in enabled_families(config):
+        if family in LOCAL:
+            for org in eligible:
+                try:
+                    section = LOCAL[family](org, now, blobs)
+                except (SourceFailure, ValueError, TypeError, OSError) as exc:
+                    section = missing(family, getattr(exc, 'code', type(exc).__name__))
+                update(envelopes[org], family, section)
+            continue
         fetch = FETCHERS[family]
         stop = None  # (code, state) once the source is refused or limits are reached
         for org in eligible:
@@ -200,6 +213,124 @@ async def enrich(envelopes, client, config, budget, blobs, update):
             update(envelopes[org], family, section)
 
 
+# --- S3 research projects (bundled snapshot; appended to exact_official.py) ---
+import gzip as _gzip
+from functools import lru_cache as _lru_cache
+from pathlib import Path as _Path
+from types import SimpleNamespace as _NS
+
+RESEARCH_BUNDLE = _Path(__file__).resolve().parents[1] / 'data' / 'research_projects.json.gz'
+RESEARCH_LABELS = {'rcn': 'Research Council of Norway project', 'skattefunn_2024_2026': 'SkatteFUNN-approved R&D project',
+                   'skattefunn_2002_2024': 'SkatteFUNN-approved R&D project'}
+
+
+@_lru_cache(maxsize=4)
+def load_bundle(path):
+    """Local bundled snapshot; schema/size bounded, never a network fallback."""
+    raw = _Path(path).read_bytes()
+    if len(raw) > 64_000_000:
+        raise SourceFailure('bundle_too_large')
+    data = json.loads(_gzip.decompress(raw))
+    if data.get('schema') != 1 or not isinstance(data.get('records'), dict) or not isinstance(data.get('sources'), list):
+        raise SourceFailure('bundle_schema')
+    return data
+
+
+def excel_day(value):
+    try:
+        serial = float(value)
+    except (TypeError, ValueError):
+        return None
+    if not 1 <= serial < 2958466:
+        return None
+    from datetime import timedelta
+    return date(1899, 12, 30) + timedelta(days=int(serial))
+
+
+def research_value(record, org, now):
+    """(value, pointer paths) for one bundled record whose own orgnr field is ours."""
+    source, f = record.get('source'), record.get('fields') or {}
+    if source == 'rcn':
+        if (f.get('organisasjonsnummer') or '').strip() != org or f.get('prosjektansvarlig_type') != 'Organisasjon':
+            return None
+        if f.get('prosjektfase') not in {'Bevilgning', 'Avsluttet'}:
+            return None
+        start, end = f.get('prosjektstart') or '', f.get('prosjektslutt') or ''
+        if not (re.fullmatch(r'\d{4}', start) and re.fullmatch(r'\d{4}', end)) or int(start) > now.year or int(end) < window_start(now).year:
+            return None
+        if not (f.get('prosjektnummer') or '').strip() or not (f.get('prosjekttittel') or '').strip():
+            return None
+        value = {'company_orgnr': org, 'project_id': f['prosjektnummer'].strip(), 'title': f['prosjekttittel'].strip(),
+                 'date': start, 'date_precision': 'year', 'date_source': 'project start year (prosjektstart) as published',
+                 'start_year': start, 'end_year': end,
+                 'phase': 'granted' if f['prosjektfase'] == 'Bevilgning' else 'completed',
+                 'source': 'Research Council of Norway', 'label': RESEARCH_LABELS['rcn']}
+        paths = ['/fields/organisasjonsnummer', '/fields/prosjektnummer', '/fields/prosjekttittel', '/fields/prosjektstart',
+                 '/fields/prosjektslutt', '/fields/prosjektfase']
+        for key, name in (('aktivitet', 'programme'), ('virkemiddel', 'instrument')):
+            if (f.get(key) or '').strip():
+                value[name] = f[key].strip(); paths.append('/fields/' + key)
+        amount = (f.get('tildelt_belop') or '').strip()
+        if re.fullmatch(r'\d+(\.\d+)?', amount) and float(amount) > 0:
+            # As given for this project over its whole period; the source states no unit.
+            value.update(amount=float(amount), amount_note='granted total for the project period as given; unit not stated in source')
+            paths.append('/fields/tildelt_belop')
+        return value, paths
+    if source in {'skattefunn_2024_2026', 'skattefunn_2002_2024'}:
+        new = source == 'skattefunn_2024_2026'
+        org_key = 'Organisasjonsnr' if new else 'Organisasjonsnummer'
+        if (f.get(org_key) or '').strip() != org:
+            return None
+        approved = f.get('Godkjent') == 'JA' if new else (f.get('Søknad godkjent') == 'JA' and f.get('Søknad avslått') == 'NEI')
+        decided = excel_day(f.get('Vedtaksdato'))
+        if not approved or decided is None or not window_start(now) <= decided <= now.date():
+            return None
+        if not (f.get('Prosjektnummer') or '').strip() or not (f.get('Prosjekttittel') or '').strip():
+            return None
+        value = {'company_orgnr': org, 'project_id': str(f['Prosjektnummer']).strip(), 'title': f['Prosjekttittel'].strip(),
+                 'date': decided.isoformat(), 'date_precision': 'day',
+                 'date_source': 'SkatteFUNN decision date (Vedtaksdato) as published, decoded from the spreadsheet date serial',
+                 'decision_date_serial': f['Vedtaksdato'], 'source': 'SkatteFUNN (Research Council of Norway)',
+                 'label': RESEARCH_LABELS[source]}
+        paths = ['/fields/' + org_key, '/fields/Prosjektnummer', '/fields/Prosjekttittel', '/fields/Vedtaksdato',
+                 '/fields/' + ('Godkjent' if new else 'Søknad godkjent')]
+        return value, paths
+    return None
+
+
+def bundled_sources(bundle):
+    return {s['key']: s for s in bundle['sources']}
+
+
+def bundled_records(bundle, org):
+    return bundle['records'].get(org, [])
+
+
+def record_section(family, field_prefix, bundle, org, now, derive, blobs, source_class, id_key):
+    """Publish every bundled record of ours; each record's exact bytes are the stored evidence body."""
+    from .http import Response
+    section = Section()
+    sources = bundled_sources(bundle)
+    for text in bundled_records(bundle, org):
+        record = json.loads(text)
+        derived = derive(record, org, now)
+        if not derived:
+            continue
+        value, paths = derived
+        field = f"{field_prefix}{record['source']}.{value[id_key]}"
+        if any(c.field == field for c in section.claims):
+            continue  # the same project/inspection id listed twice publishes once
+        meta = sources[record['source']]
+        body = text.encode('utf8')
+        sha = blobs.put(body)
+        response = Response(body, 200, meta['source_url'], meta['retrieved_at'], sha)
+        merged_claim(section, response, org, family, field, value, paths, source_class)
+    if not any(c.availability == 'available' for c in section.claims):
+        section.state = 'not_available'
+        section.errors += missing(family, family + '_none_in_bundled_snapshot', state='not_available').errors
+    return section
+
+
 def number(value):
     """Exact source number as text: no rounding, scaling or scientific notation."""
     return str(int(value)) if float(value).is_integer() else repr(float(value))
@@ -211,6 +342,12 @@ def briefing_sentences(envelope):
     result = []
     awards = sorted((c for c in claims if c.field.startswith('state_aid.award.')),
                     key=lambda c: (c.value['date'], c.id), reverse=True)[:3]
+    projects = sorted((c for c in claims if c.field.startswith('research.project.')),
+                      key=lambda c: (c.value['date'], c.id), reverse=True)[:3]
+    for claim in projects:
+        v = claim.value
+        when = (f"start year {v['date']}, {v['phase']}" if v['date_precision'] == 'year' else f"decision {v['date']}")
+        result.append(Sentence(text=f"{v['label']}: {v['title']}; {when}.", claim_ids=[claim.id]))
     for claim in awards:
         v = claim.value
         amount = (f"{number(v['amount'])} {v['currency']}" if 'amount' in v else

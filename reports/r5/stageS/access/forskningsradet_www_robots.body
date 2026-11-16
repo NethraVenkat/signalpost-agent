@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /episerver/
+Disallow: /EPIserver
+Disallow: /utils/
+Disallow: */Download

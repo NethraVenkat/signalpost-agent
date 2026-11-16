@@ -1,0 +1,22 @@
+HTTP/1.1 200 OK
+Date: Mon, 16 Nov 2026 11:00:17 GMT
+Content-Type: text/plain
+Content-Length: 96
+Connection: keep-alive
+Server: cloudflare
+Cache-Control: public, max-age=14400
+Vary: accept-encoding
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+Request-Context: appId=cid-v1:68a85934-d356-46f7-b553-d3abbf7281d4
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: same-origin
+X-Content-Type-Options: nosniff
+Reporting-Endpoints: report-endpoint="https://www.forskningsradet.no/api/cspreports", report-only-endpoint="https://www.forskningsradet.no/csp-report-only"
+X-Frame-Options: SAMEORIGIN
+expires: Mon, 16 Nov 2026 15:00:17 GMT
+Accept-Ranges: bytes
+last-modified: Mon, 16 Nov 2026 11:00:17 GMT
+cf-cache-status: EXPIRED
+CF-RAY: a5b5fdb5b83b5198-MAA
+alt-svc: h3=":443"; ma=86400
+
