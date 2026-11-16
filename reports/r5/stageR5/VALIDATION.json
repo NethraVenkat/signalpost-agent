@@ -2,7 +2,7 @@
   "samples": [
     {
       "seed": 20261017,
-      "work": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageR5-20261017-release-proof-final",
+      "work": "<REPO>\\.data\\r5\\stageR5-20261017-release-proof-final",
       "verification": {
         "lines": 100,
         "schema_valid": true,
@@ -40,7 +40,7 @@
     },
     {
       "seed": 20261113,
-      "work": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageR5-20261113-release-proof-final",
+      "work": "<REPO>\\.data\\r5\\stageR5-20261113-release-proof-final",
       "verification": {
         "lines": 100,
         "schema_valid": true,
@@ -78,7 +78,7 @@
     },
     {
       "seed": 20261114,
-      "work": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageR5-20261114-release-proof-final",
+      "work": "<REPO>\\.data\\r5\\stageR5-20261114-release-proof-final",
       "verification": {
         "lines": 100,
         "schema_valid": true,
@@ -116,7 +116,7 @@
     },
     {
       "seed": 20261115,
-      "work": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageR5-20261115-release-proof-final",
+      "work": "<REPO>\\.data\\r5\\stageR5-20261115-release-proof-final",
       "verification": {
         "lines": 100,
         "schema_valid": true,
@@ -154,7 +154,7 @@
     },
     {
       "seed": 20261116,
-      "work": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageR5-20261116-release-proof-final",
+      "work": "<REPO>\\.data\\r5\\stageR5-20261116-release-proof-final",
       "verification": {
         "lines": 100,
         "schema_valid": true,
@@ -192,7 +192,7 @@
     },
     {
       "seed": 20261117,
-      "work": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageR5-20261117-release-proof-final",
+      "work": "<REPO>\\.data\\r5\\stageR5-20261117-release-proof-final",
       "verification": {
         "lines": 100,
         "schema_valid": true,

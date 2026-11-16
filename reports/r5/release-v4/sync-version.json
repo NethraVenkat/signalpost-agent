@@ -4,7 +4,7 @@
     "sync",
     "--frozen"
   ],
-  "cwd": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\release-v4-20261113-112818\\repo",
+  "cwd": "<REPO>\\.data\\r5\\release-v4-20261113-112818\\repo",
   "exit_code": 0,
   "wall_seconds": 73.6751981999987,
   "finished_at_utc": "2026-11-13T06:23:49.458881+00:00"

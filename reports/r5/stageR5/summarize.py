@@ -1,4 +1,5 @@
 """Evidence inventory and stage comparisons, using saved responses only."""
+from signalpost.portable_paths import portable, portable_text  # saved paths stay repo-relative
 import hashlib
 import json
 import sys
@@ -77,7 +78,7 @@ def main():
             lines += ['Registry receipts:','','```json',json.dumps(i['registry_receipts'],ensure_ascii=False,indent=2),'```','']
     if checks['new_doubtful']:
         lines += ['## Requires withholding/review','',json.dumps(checks['new_doubtful'],ensure_ascii=False,indent=2)]
-    (dest/'new_websites.md').write_text('\n'.join(lines)+'\n',encoding='utf8',newline='\n')
+    (dest/'new_websites.md').write_text(portable_text('\n'.join(lines)+'\n'),encoding='utf8',newline='\n')
     print(json.dumps({'added':dict(Counter(i['kind'] for i in added)),'removed':dict(Counter(i['kind'] for i in removed)),
                       'new_doubtful':[(i['orgnr'],i['url']) for i in checks['new_doubtful']],
                       'websites':sum(t['websites_after'] for t in tables),'declared_recall':sum(t['declared_recall_after'] for t in tables),

@@ -1,4 +1,5 @@
 """Prove the HIGH fixture fails with both retained buggy extractors."""
+from signalpost.portable_paths import portable, portable_text  # saved paths stay repo-relative
 import hashlib
 import importlib.util
 import json
@@ -43,7 +44,7 @@ def main():
         fixture.score = original_score
     output = {'method': 'One authored synthetic fixture, actual retained before-fix extractor code versus current extractor. No network, output editing, new proof tier or threshold change.',
               'fixture': 'tests/test_publisher_veto.py::test_biography_group_name_outside_real_header_does_not_veto', 'results': results}
-    (DEST / 'r4_regression_before_after.json').write_text(json.dumps(output, indent=2) + '\n', encoding='utf8', newline='\n')
+    (DEST / 'r4_regression_before_after.json').write_text(portable_text(json.dumps(output, indent=2) + '\n'), encoding='utf8', newline='\n')
     print(json.dumps(output))
 
 

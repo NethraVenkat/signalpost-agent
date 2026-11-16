@@ -2,7 +2,7 @@
 ================================== FAILURES ===================================
 ________ test_cap_newest_order_no_extra_requests_full_raw_verification ________
 
-tmp_path = WindowsPath('C:/Users/<USER>/AppData/Local/Temp/pytest-of-<USER>/pytest-1575/test_cap_newest_order_no_extra0')
+tmp_path = WindowsPath('<TEMP>/pytest-of-<USER>/pytest-1575/test_cap_newest_order_no_extra0')
 
     def test_cap_newest_order_no_extra_requests_full_raw_verification(tmp_path):
         cfg,report,row,requests=execute_events(tmp_path,subunit=True)

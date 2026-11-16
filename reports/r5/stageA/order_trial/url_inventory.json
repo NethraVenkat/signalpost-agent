@@ -1,7 +1,7 @@
 {
   "inputs": {
     "stageS": {
-      "output": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageS-run\\envelopes.jsonl",
+      "output": "<REPO>\\.data\\r5\\stageS-run\\envelopes.jsonl",
       "sha256": "77813314c0d835c5160f6fd78e98f13f9b6f47e931aeec0f9ba3c364b97ecf2b",
       "website_urls": 6,
       "social_urls": 8,
@@ -285,7 +285,7 @@
       ]
     },
     "stageA0": {
-      "output": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageA0-run\\envelopes.jsonl",
+      "output": "<REPO>\\.data\\r5\\stageA0-run\\envelopes.jsonl",
       "sha256": "9d1ccb0c9270078857f4d95a67d4d04900a7dbc8602ffae0385aec615935fbe7",
       "website_urls": 6,
       "social_urls": 8,
@@ -569,7 +569,7 @@
       ]
     },
     "stageA": {
-      "output": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageA-run-final\\envelopes.jsonl",
+      "output": "<REPO>\\.data\\r5\\stageA-run-final\\envelopes.jsonl",
       "sha256": "2d2f83d4fa4fbe6370293a28feb5c2e8375d976818799d763c32948bfa1dd6d4",
       "website_urls": 5,
       "social_urls": 7,

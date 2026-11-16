@@ -1,4 +1,5 @@
 """Summarize accepted F1/C evidence; no network or source mutation."""
+from signalpost.portable_paths import portable, portable_text  # saved paths stay repo-relative
 import json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[3]
@@ -70,6 +71,6 @@ Hand checks: compare F1 and C proof URL inventories; inspect any removed URL's c
 
 Cost/models/licences: $0 provider fees; model calls=0, paid search=0. Code and Playwright retain MIT, Brreg NLOD 2.0 attribution, NAV official reuse terms and SSB CC BY 4.0; company content retains its own terms. Compute/storage/network excluded as in prior reports. No push, publication or next stage. Commit C, commit the combined SUMMARY.md, then stop.
 '''
-    (R/'stageC/C_REPORT.md').write_text(text,encoding='utf8')
+    (R/'stageC/C_REPORT.md').write_text(portable_text(text),encoding='utf8')
 
 if __name__=='__main__':main()

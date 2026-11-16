@@ -1,6 +1,6 @@
 {
   "reason": "Intentional stop after R7e produced a doubtful placeholder site. Not a source outage or host suspension. Full raw partial state retained. Never counted as accepted sample.",
-  "working_directory": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageR7-20261114-final",
+  "working_directory": "<REPO>\\.data\\r5\\stageR7-20261114-final",
   "last_progress": {
     "schema_version": 1,
     "run_id": "r5-stageR7-seed20261114-final",

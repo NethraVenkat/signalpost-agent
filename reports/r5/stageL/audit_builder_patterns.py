@@ -1,4 +1,5 @@
 """Supplemental offline audit of all nine-digit builder patterns, including foreign IDs."""
+from signalpost.portable_paths import expand, portable, portable_text  # saved paths stay repo-relative
 import hashlib,json,re,sys
 from pathlib import Path
 from collections import Counter
@@ -9,7 +10,7 @@ BUILDERS={'wix':r'wixBiSession|warmupData|viewerModel|wix-warmup-data','squaresp
 def main():
     counts=Counter();items=[];seen=set()
     for seed in (20261017,20261113,20261114,20261115,20261116,20261117):
-        base=ROOT/f'reports/r5/stageR7/R7/seed{seed}';work=Path(json.loads((base/'settings.json').read_text(encoding='utf8'))['working_directory'])
+        base=ROOT/f'reports/r5/stageR7/R7/seed{seed}';work=Path(expand(json.loads((base/'settings.json').read_text(encoding='utf8'))['working_directory']))
         rows={r['organisation_number']:r for r in map(json.loads,(work/'envelopes.jsonl').read_text(encoding='utf8').splitlines())}
         for e in json.loads((base/'report.json').read_text(encoding='utf8'))['request_log']:
             row=rows.get(e['organisation_number'])
@@ -32,6 +33,6 @@ def main():
                     counts[builder+'_labelled_valid_patterns']+=sum(p['checksum_valid'] and p['label_nearby'] for p in patterns)
                     if patterns:items.append({'seed':seed,'orgnr':row['organisation_number'],'url':e['url'],'body_sha256':e['content_sha256'],'builder':builder,'script_sha256':hashlib.sha256(script.group().encode()).hexdigest(),'patterns':patterns})
     result={'network_requests':0,'method':'All marker-bearing scripts from saved R7 unproved responses; raw 9-digit patterns are candidates, not identity proof. Checksum and nearby orgnr/VAT labels reported separately.','counts':dict(counts),'items':items}
-    (ROOT/'reports/r5/stageL/builder_patterns.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+    (ROOT/'reports/r5/stageL/builder_patterns.json').write_text(portable_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n'),encoding='utf8')
     print(json.dumps(dict(counts)))
 if __name__=='__main__':main()

@@ -1,4 +1,5 @@
 """Offline file:// screenshot and DOM audit. No application code is modified."""
+from signalpost.portable_paths import portable, portable_text  # saved paths stay repo-relative
 import json
 import os
 from pathlib import Path
@@ -154,7 +155,7 @@ with sync_playwright() as p:
             context.close()
     browser.close()
 Path(os.environ.get('SIGNALPOST_DOM_OUTPUT', str(UX / 'dom-audit.json'))).write_text(
-    json.dumps(results, indent=2, ensure_ascii=False), encoding='utf8')
+    portable_text(json.dumps(results, indent=2, ensure_ascii=False)), encoding='utf8')
 print(json.dumps({'screenshots': sum(len(v) for v in results['pages'].values()),
                   'load_failures': [(k,w) for k,v in results['pages'].items() for w,e in v.items() if e['load_error']],
                   'console_errors': sum(len(e['errors']['console']) for v in results['pages'].values() for e in v.values()),

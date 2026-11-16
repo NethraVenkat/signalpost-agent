@@ -8,11 +8,11 @@
   "universe_content_sha256": "b82d6a3e7231d1759a958c282bc4366b80ec2fab8095053d8ed7fa9cd01bc838",
   "inputs": {
     "universe_archive": {
-      "path": "C:/Users/<USER>/Downloads/Signalpost/state/downloads/universe.jsonl.gz",
+      "path": "<HOME>/Downloads/Signalpost/state/downloads/universe.jsonl.gz",
       "sha256": "1c89710e5b01f8617e86d09fbdff4a52f2f8dbbba297e74f7164b5984f5a0384"
     },
     "registry_snapshot": {
-      "path": "C:/Users/<USER>/Downloads/Signalpost/state/downloads/registry.csv",
+      "path": "<HOME>/Downloads/Signalpost/state/downloads/registry.csv",
       "sha256": "5b0df27c5567a655320b8dfb8975049b76c46ba93d748a8a763f8db7050b7862"
     },
     "sample": {
@@ -32,8 +32,8 @@
       "sha256": "5b6d18a9d853d0b788e01d18b66eba1c9459b1d61498e0559a528dca8a37ed97"
     }
   },
-  "sampling_command": "uv run python scripts/sample_universe.py --universe C:\\Users\\<USER>\\Downloads\\Signalpost\\state\\downloads\\universe.jsonl.gz --output reports/r5/baseline/companies.jsonl --count 100 --seed 20261017",
-  "bulk_extraction_command": "uv run python scripts/extract_bulk.py --bulk C:\\Users\\<USER>\\Downloads\\Signalpost\\state\\downloads\\registry.csv --batch reports/r5/baseline/companies.jsonl --output reports/r5/baseline/registry100.csv",
+  "sampling_command": "uv run python scripts/sample_universe.py --universe <HOME>\\Downloads\\Signalpost\\state\\downloads\\universe.jsonl.gz --output reports/r5/baseline/companies.jsonl --count 100 --seed 20261017",
+  "bulk_extraction_command": "uv run python scripts/extract_bulk.py --bulk <HOME>\\Downloads\\Signalpost\\state\\downloads\\registry.csv --batch reports/r5/baseline/companies.jsonl --output reports/r5/baseline/registry100.csv",
   "bulk_extraction": {
     "rows": 100,
     "expected": 100,

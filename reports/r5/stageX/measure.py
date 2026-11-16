@@ -1,4 +1,5 @@
 """Sequential, fresh seven-flag qualification for X and R6 items."""
+from signalpost.portable_paths import expand, portable, portable_text, sanitize_file  # saved paths stay repo-relative
 import hashlib
 import json
 import os
@@ -15,7 +16,7 @@ ORDER=('X1','X4','R6','R7','L','X2')
 
 
 def save(path,value):
-    path.write_text(json.dumps(value,ensure_ascii=False,indent=2)+'\n',encoding='utf8',newline='\n')
+    path.write_text(portable_text(json.dumps(value,ensure_ascii=False,indent=2)+'\n'),encoding='utf8',newline='\n')
 
 
 def sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()
@@ -75,8 +76,8 @@ def main():
         if chosen and seed not in chosen:continue
         oldfolder=folder(previous)/f'seed{seed}' if previous else ROOT/f'reports/r5/stageR3/seed{seed}'
         oldsettings=json.loads((oldfolder/'settings.json').read_text(encoding='utf8'));oldargv=oldsettings['command_argv']
-        orgs=Path(oldargv[oldargv.index('--organisations')+1]);bulk=Path(oldargv[oldargv.index('--bulk')+1])
-        oldwork=Path(oldsettings['working_directory']);oldrows=[json.loads(s) for s in (oldwork/'envelopes.jsonl').read_text(encoding='utf8').splitlines()]
+        orgs=Path(expand(oldargv[oldargv.index('--organisations')+1]));bulk=Path(expand(oldargv[oldargv.index('--bulk')+1]))
+        oldwork=Path(expand(oldsettings['working_directory']));oldrows=[json.loads(s) for s in (oldwork/'envelopes.jsonl').read_text(encoding='utf8').splitlines()]
         work=ROOT/'.data/r5'/f'stage{stage}-{seed}-{label}';work.mkdir(exist_ok=False)
         output=dest/f'seed{seed}';output.mkdir(exist_ok=label!='final')
         argv=[sys.executable,'-m','signalpost.cli','run']
@@ -89,11 +90,12 @@ def main():
         print('Starting',stage,seed,flush=True);started=time.monotonic()
         with (output/'execution.txt').open('w',encoding='utf8',newline='\n') as log:
             executed=subprocess.run(argv,cwd=work,env=env,stdout=log,stderr=subprocess.STDOUT,timeout=2160)
+        sanitize_file(output/'execution.txt')  # keep captured paths repo-relative
         save(output/'execution.json',{'exit_code':executed.returncode,'wall_seconds':time.monotonic()-started,'argv':argv,'cwd':str(work)})
         assert executed.returncode==0
         checked=subprocess.run([sys.executable,str(ROOT/'scripts/check_live_run.py'),'--output',str(work/'envelopes.jsonl'),'--organisations',str(orgs),
             '--state',str(work/'state'),'--report',str(work/'report.json'),'--site',str(work/'site'),'--count','100'],cwd=ROOT,env=env,capture_output=True,text=True,encoding='utf8')
-        (output/'verification.txt').write_text(checked.stdout+checked.stderr,encoding='utf8',newline='\n');assert checked.returncode==0
+        (output/'verification.txt').write_text(portable_text(checked.stdout+checked.stderr),encoding='utf8',newline='\n');assert checked.returncode==0
         verification=json.loads(checked.stdout);save(output/'verification.json',verification)
         shutil.copyfile(work/'report.json',output/'report.json')
         rows=[json.loads(s) for s in (work/'envelopes.jsonl').read_text(encoding='utf8').splitlines()]

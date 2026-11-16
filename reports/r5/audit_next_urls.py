@@ -1,4 +1,5 @@
 """List every website/social URL delta with the exact saved proof receipt."""
+from signalpost.portable_paths import expand, portable, portable_text  # saved paths stay repo-relative
 import hashlib,json
 from pathlib import Path
 
@@ -13,10 +14,10 @@ def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def inventory(stage):
     if stage in ('release','release-v4b'):
         saved=json.loads((ROOT/('reports/r5/release-v4b' if stage=='release-v4b' else 'reports/r5/release-v4')/'daily.json').read_text(encoding='utf8'))
-        path=Path(saved['cwd'])/'envelopes.jsonl'
+        path=Path(expand(saved['cwd']))/'envelopes.jsonl'
     else:
         settings=json.loads((ROOT/'reports/r5'/stage/'settings.json').read_text(encoding='utf8'))
-        path=Path(settings['cwd'])/'envelopes.jsonl' if stage=='stageE/live_refresh' else Path(settings['resolved_config']['output'])
+        path=Path(expand(settings['cwd']))/'envelopes.jsonl' if stage=='stageE/live_refresh' else Path(expand(settings['resolved_config']['output']))
     if not path.is_absolute():path=ROOT/path
     rows=[json.loads(line) for line in path.read_text(encoding='utf8').splitlines()]
     records={};states={}
@@ -70,8 +71,8 @@ def main():
                             'social_urls':sum(r['kind']=='social' for r in info['records'].values()),
                             'records':list(info['records'].values())} for stage,info in data.items()},
             'comparisons':comparisons}
-    (DEST/'url_inventory.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
-    (DEST/'new_websites.md').write_text(text.rstrip()+'\n',encoding='utf8',newline='')
+    (DEST/'url_inventory.json').write_text(portable_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n'),encoding='utf8')
+    (DEST/'new_websites.md').write_text(portable_text(text.rstrip()+'\n'),encoding='utf8',newline='')
     print(json.dumps({k:{action:len(items) for action,items in value.items()} for k,value in comparisons.items()}))
 
 if __name__=='__main__':main()

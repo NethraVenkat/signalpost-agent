@@ -1,4 +1,5 @@
 """Offline declared-homepage gaps from the six accepted R4 runs, before R5."""
+from signalpost.portable_paths import expand, portable, portable_text  # saved paths stay repo-relative
 import csv
 import hashlib
 import json
@@ -20,14 +21,14 @@ SEEDS = (20261017, 20261113, 20261114, 20261115, 20261116, 20261117)
 
 
 def save(path, value):
-    path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + '\n', encoding='utf8', newline='\n')
+    path.write_text(portable_text(json.dumps(value, ensure_ascii=False, indent=2) + '\n'), encoding='utf8', newline='\n')
 
 
 def records(stage, seed):
     settings = json.loads((ROOT / f'reports/r5/{stage}/seed{seed}/settings.json').read_text(encoding='utf8'))
-    work = Path(settings['working_directory'])
+    work = Path(expand(settings['working_directory']))
     argv = settings['command_argv']
-    with open(argv[argv.index('--bulk') + 1], encoding='utf-8-sig', newline='') as f:
+    with open(expand(argv[argv.index('--bulk') + 1]), encoding='utf-8-sig', newline='') as f:
         registry = {r['organisasjonsnummer']: r for r in csv.DictReader(f)}
     rows = [json.loads(line) for line in (work / 'envelopes.jsonl').read_text(encoding='utf8').splitlines()]
     return settings, work, registry, rows, json.loads((work / 'report.json').read_text(encoding='utf8'))
@@ -101,7 +102,7 @@ def audit():
     lines = ['# Declared-homepage gap before R5', '', 'Six accepted R4 runs; saved responses only, no new HTTP. 13/72 companies with registry homepages publish a site; 59 gaps. Registry declarations are recall labels, not independent current ownership proof.', '', 'Primary causes (exclusive): '+json.dumps(result['cause_counts']), '']
     for g in gaps:
         lines += [f"## {g['seed']} / {g['orgnr']} / {g['legal_name']}", '', f"Declared: {g['declared_url']}; cause: {g['cause']}; final host: {g['final_host']}; cross-domain redirect: {g['cross_registrable_redirect']}", '', '```json', json.dumps(g,ensure_ascii=False,indent=2),'```','']
-    (DEST/'declared_gap.md').write_text('\n'.join(lines),encoding='utf8',newline='\n')
+    (DEST/'declared_gap.md').write_text(portable_text('\n'.join(lines)),encoding='utf8',newline='\n')
     print(json.dumps({'baseline':dict(totals),'gaps':len(gaps),'causes':result['cause_counts']}))
 
 

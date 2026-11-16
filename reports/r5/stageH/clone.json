@@ -5,10 +5,10 @@
     "--no-hardlinks",
     "--branch",
     "revision/r5",
-    "C:\\Users\\<USER>\\signal-nethra",
-    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageH-clean\\repo"
+    "<REPO>",
+    "<REPO>\\.data\\r5\\stageH-clean\\repo"
   ],
-  "cwd": "C:\\Users\\<USER>\\signal-nethra",
+  "cwd": "<REPO>",
   "exit_code": 0,
   "wall_seconds": 30.840612600004533,
   "completed_at_utc": "2026-11-13T17:29:45.125993+00:00",

@@ -1,8 +1,8 @@
 Traceback (most recent call last):
-  File "C:\Users\<USER>\signal-nethra\reports\r5\stageX\measure.py", line 113, in <module>
+  File "<REPO>\reports\r5\stageX\measure.py", line 113, in <module>
     if __name__=='__main__':main()
                             ^^^^^^
-  File "C:\Users\<USER>\signal-nethra\reports\r5\stageX\measure.py", line 96, in main
+  File "<REPO>\reports\r5\stageX\measure.py", line 96, in main
     (output/'verification.txt').write_text(checked.stdout+checked.stderr,encoding='utf8',newline='\n');assert checked.returncode==0
                                                                                                               ^^^^^^^^^^^^^^^^^^^^^
 AssertionError

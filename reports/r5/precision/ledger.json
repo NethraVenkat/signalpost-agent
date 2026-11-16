@@ -4,21 +4,21 @@
   "inputs": {
     "frozen": {
       "seed": 20261017,
-      "output": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageT-frozen-run-final\\envelopes.jsonl",
+      "output": "<REPO>\\.data\\r5\\stageT-frozen-run-final\\envelopes.jsonl",
       "sha256": "5509874df9e7d9af8b5d43d4ae387aeb85febb15d59aae099819c07900574572",
       "run_id": "r5-stageT-frozen-seed20261017-final",
       "source_manifest_sha256": "08bc7358a96e457b62b3c8c5dcee958868aa1aa53d85d9a125c98cf025575e30"
     },
     "daily": {
       "seed": 20261113,
-      "output": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageT-daily-run-final\\envelopes.jsonl",
+      "output": "<REPO>\\.data\\r5\\stageT-daily-run-final\\envelopes.jsonl",
       "sha256": "a5c37690a49e474a7f35e94c473d7d58c05af352ac8917a2c594cf93aafb58a4",
       "run_id": "r5-stageT-daily-seed20261113-final",
       "source_manifest_sha256": "08bc7358a96e457b62b3c8c5dcee958868aa1aa53d85d9a125c98cf025575e30"
     },
     "mock": {
       "seed": 20261114,
-      "output": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageT-mock-run-final\\envelopes.jsonl",
+      "output": "<REPO>\\.data\\r5\\stageT-mock-run-final\\envelopes.jsonl",
       "sha256": "dd1b16dd1f18bacc82c251127e32b23620417611b703af092ed7ea750b0caa35",
       "run_id": "r5-stageT-mock-seed20261114-final",
       "source_manifest_sha256": "08bc7358a96e457b62b3c8c5dcee958868aa1aa53d85d9a125c98cf025575e30"

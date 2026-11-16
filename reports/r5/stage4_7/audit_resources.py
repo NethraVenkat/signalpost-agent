@@ -1,4 +1,5 @@
 """Count actual attempts separately from logical DNS nominations."""
+from signalpost.portable_paths import portable, portable_text  # saved paths stay repo-relative
 import json
 from collections import Counter
 from pathlib import Path
@@ -24,5 +25,5 @@ for step in ('budget', 'caps', 'order', 'singlehost', 'social', 'reuse'):
         dns_precheck_lookups=report['dns_precheck_lookups'],
         per_company={o:dict(website_http_attempts=website[o], all_http_attempts=all_calls[o],
                             dns_nominations=nominations.get(o,0)) for o in sorted(companies)})
-(root/'resource_audit.json').write_text(json.dumps(result, indent=2)+'\n', encoding='utf8')
+(root/'resource_audit.json').write_text(portable_text(json.dumps(result, indent=2)+'\n'), encoding='utf8')
 print(json.dumps({s:{k:v for k,v in values.items() if k!='per_company'} for s,values in result.items()}))

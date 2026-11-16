@@ -2,24 +2,24 @@
   "exit_code": 0,
   "wall_seconds": 371.7809999999881,
   "argv": [
-    "C:\\Users\\<USER>\\signal-nethra\\.venv\\Scripts\\python.exe",
+    "<REPO>\\.venv\\Scripts\\python.exe",
     "-m",
     "signalpost.cli",
     "run",
     "--organisations",
-    "C:\\Users\\<USER>\\signal-nethra\\reports\\r5\\stageH\\seed20261115\\companies100.jsonl",
+    "<REPO>\\reports\\r5\\stageH\\seed20261115\\companies100.jsonl",
     "--bulk",
-    "C:\\Users\\<USER>\\signal-nethra\\reports\\r5\\stageH\\seed20261115\\registry100.csv",
+    "<REPO>\\reports\\r5\\stageH\\seed20261115\\registry100.csv",
     "--output",
-    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageX1-20261115-final\\envelopes.jsonl",
+    "<REPO>\\.data\\r5\\stageX1-20261115-final\\envelopes.jsonl",
     "--profiles-output",
-    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageX1-20261115-final\\profiles.jsonl",
+    "<REPO>\\.data\\r5\\stageX1-20261115-final\\profiles.jsonl",
     "--report",
-    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageX1-20261115-final\\report.json",
+    "<REPO>\\.data\\r5\\stageX1-20261115-final\\report.json",
     "--run-id",
     "r5-stageX1-seed20261115-final",
     "--expected-count",
     "100"
   ],
-  "cwd": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageX1-20261115-final"
+  "cwd": "<REPO>\\.data\\r5\\stageX1-20261115-final"
 }

@@ -8,6 +8,7 @@ Audits three separate categories:
 
 Never conflates Category A structural integrity with Category B or C factual truth.
 """
+from signalpost.portable_paths import portable, portable_text  # saved paths stay repo-relative
 import argparse
 from decimal import Decimal, InvalidOperation
 import hashlib
@@ -1547,7 +1548,7 @@ def run_comprehensive_audit(envelopes_path: Path, state_dir: Path, sample_seed: 
 
     out_file = output_path or Path("reports/accuracy-audit-report.json")
     out_file.parent.mkdir(parents=True, exist_ok=True)
-    out_file.write_text(json.dumps(report, indent=2, ensure_ascii=False, default=str), encoding="utf-8")
+    out_file.write_text(portable_text(json.dumps(report, indent=2, ensure_ascii=False, default=str)), encoding="utf-8")
     print(f"Wrote strict accuracy audit report to {out_file}")
     return report
 

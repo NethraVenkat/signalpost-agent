@@ -1,4 +1,5 @@
 """Aggregate measured items without silently dropping doubtful identities."""
+from signalpost.portable_paths import expand, portable, portable_text  # saved paths stay repo-relative
 import hashlib
 import json
 import sys
@@ -59,7 +60,7 @@ def main():
     records=[];table=[];validation=[]
     for seed in SEEDS:
         directory=dest/f'seed{seed}'
-        settings=json.loads((directory/'settings.json').read_text(encoding='utf8'));work=Path(settings['working_directory'])
+        settings=json.loads((directory/'settings.json').read_text(encoding='utf8'));work=Path(expand(settings['working_directory']))
         counts=json.loads((directory/'counts.json').read_text(encoding='utf8'))
         assert sum(a.startswith('--') for a in settings['command_argv'])==7
         assert counts['envelopes_sha256']==hashlib.sha256((work/'envelopes.jsonl').read_bytes()).hexdigest()
@@ -69,7 +70,7 @@ def main():
         assert verification['briefing_unverified_values']==verification['synthesis_unverified_values']==verification['cost_usd']==0
         assert counts['HTTP']<=1850 and counts['CLI_runtime_seconds']<2100 and counts['site']['largest_profile_bytes']<250000
         rows={r['organisation_number']:r for r in (json.loads(s) for s in (work/'envelopes.jsonl').read_text(encoding='utf8').splitlines())}
-        oldwork=Path(settings['previous_working_directory'])
+        oldwork=Path(expand(settings['previous_working_directory']))
         oldrows={r['organisation_number']:r for r in (json.loads(s) for s in (oldwork/'envelopes.jsonl').read_text(encoding='utf8').splitlines())}
         for change in ('added','removed'):
             for item in counts['changes'][change]:
@@ -95,7 +96,7 @@ def main():
         for e in i['evidence']:
             lines += [f"Source: {e['source_url']} / retrieved {e['retrieved_at']} / SHA-256 `{e['content_sha256']}` / locator `{e['locator']}`",'','Exact excerpt:','','```',e['claim_span'],'```','']
     if not all_records:lines += ['No new or removed website/social/brand item in the completed measured stages.','']
-    (reportroot/'new_items.md').write_text('\n'.join(lines),encoding='utf8',newline='\n')
+    (reportroot/'new_items.md').write_text(portable_text('\n'.join(lines)),encoding='utf8',newline='\n')
     save(dest/'VALIDATION.json',{'stage':stage,'runtime_source_unchanged':True,'samples':validation,'doubtful_added':doubtful,'cost_usd':0})
     assert not doubtful,'Doubtful identity item: revert this item as instructed; do not silently remove it'
     totals=Counter()
@@ -118,7 +119,7 @@ def main():
             '| Seed | Explicit official dated events |','|---|---|']
         for c in table:summary.append('| '+str(c['seed'])+' | '+json.dumps(c['explicit_official_dates'])+' |')
         summary += ['', 'Full gate: 1,074 tests passed. Existing-source date extraction is independent of website proof. Initial/renewal date tests reject malformed/naive timestamps, foreign company/authority records, and substitutes based on retrieval, update, scheduled next renewal, statement end or year-only values.','']
-    (dest/'REPORT.md').write_text('\n'.join(summary),encoding='utf8',newline='\n')
+    (dest/'REPORT.md').write_text(portable_text('\n'.join(summary)),encoding='utf8',newline='\n')
     print(json.dumps({'stage':stage,'totals':dict(totals),'new_items':dict(Counter(i['kind'] for i in records if i['change']=='added')),'doubtful':len(doubtful)}))
 
 

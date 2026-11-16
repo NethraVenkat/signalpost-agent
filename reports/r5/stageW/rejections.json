@@ -101,37 +101,37 @@
   "provenance": [
     {
       "seed": 20261017,
-      "work": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageT-frozen-run-final",
+      "work": "<REPO>\\.data\\r5\\stageT-frozen-run-final",
       "envelopes_sha256": "5509874df9e7d9af8b5d43d4ae387aeb85febb15d59aae099819c07900574572",
       "report_sha256": "7318342d44cc8660c8341c9fe6ded29a5f69a4015d42310867efa6974d15a274"
     },
     {
       "seed": 20261113,
-      "work": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageT-daily-run-final",
+      "work": "<REPO>\\.data\\r5\\stageT-daily-run-final",
       "envelopes_sha256": "a5c37690a49e474a7f35e94c473d7d58c05af352ac8917a2c594cf93aafb58a4",
       "report_sha256": "27f2963d478e025c7179197113c66cefa2aead73c209f884409d3fdc19f3b0e0"
     },
     {
       "seed": 20261114,
-      "work": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageT-mock-run-final",
+      "work": "<REPO>\\.data\\r5\\stageT-mock-run-final",
       "envelopes_sha256": "dd1b16dd1f18bacc82c251127e32b23620417611b703af092ed7ea750b0caa35",
       "report_sha256": "d692fe962be4e10dba5ff4081cc56ba2d2f9884436bae9612c1dc06fb1e8de78"
     },
     {
       "seed": 20261115,
-      "work": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageH-clean\\repo\\.data\\stageH-20261115-first",
+      "work": "<REPO>\\.data\\r5\\stageH-clean\\repo\\.data\\stageH-20261115-first",
       "envelopes_sha256": "bd24de871c8649972d019a30a1921899cb40b14dc0eb7b6e58f49246421eb4f0",
       "report_sha256": "c131a31096c4896b8fee23af9404c9b1a750e056031e9bb2d82b82fe62b95f5a"
     },
     {
       "seed": 20261116,
-      "work": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageH-clean\\repo\\.data\\stageH-20261116-first",
+      "work": "<REPO>\\.data\\r5\\stageH-clean\\repo\\.data\\stageH-20261116-first",
       "envelopes_sha256": "d67cae51a48ffb54373ea96ed7362b353a4279d16d2899e4ceec7d51616ef028",
       "report_sha256": "e25757975d3f2ad6c3671855e1b5bbf782b724c6658a3b7f7c95dbe6e4b15d37"
     },
     {
       "seed": 20261117,
-      "work": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageH-clean\\repo\\.data\\stageH-20261117-first",
+      "work": "<REPO>\\.data\\r5\\stageH-clean\\repo\\.data\\stageH-20261117-first",
       "envelopes_sha256": "ec1f1fb4687350de1fad1367bf0e1eb8ac1d45726400398ed6a6b8137a8772da",
       "report_sha256": "1057365268e2baa62915623659d5566d0be18e29d104915a96bb666b2145d11d"
     }

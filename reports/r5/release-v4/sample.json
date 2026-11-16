@@ -1,17 +1,17 @@
 {
   "argv": [
-    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\release-v4-20261113-112818\\repo\\.venv\\Scripts\\python.exe",
+    "<REPO>\\.data\\r5\\release-v4-20261113-112818\\repo\\.venv\\Scripts\\python.exe",
     "scripts/sample_universe.py",
     "--universe",
-    "C:/Users/<USER>/Downloads/Signalpost/state/downloads/universe.jsonl.gz",
+    "<HOME>/Downloads/Signalpost/state/downloads/universe.jsonl.gz",
     "--output",
-    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\release-v4-20261113-112818\\repo\\reports\\r5\\release-v4\\companies100.jsonl",
+    "<REPO>\\.data\\r5\\release-v4-20261113-112818\\repo\\reports\\r5\\release-v4\\companies100.jsonl",
     "--count",
     "100",
     "--seed",
     "20261113"
   ],
-  "cwd": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\release-v4-20261113-112818\\repo",
+  "cwd": "<REPO>\\.data\\r5\\release-v4-20261113-112818\\repo",
   "exit_code": 0,
   "wall_seconds": 11.283036299995729,
   "finished_at_utc": "2026-11-13T06:08:01.584052+00:00"

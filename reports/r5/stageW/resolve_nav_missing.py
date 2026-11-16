@@ -1,4 +1,5 @@
 """Bounded exact-identifier follow-up for NAV IDs absent from batch search."""
+from signalpost.portable_paths import expand, portable, portable_text  # saved paths stay repo-relative
 import asyncio
 import gzip
 import hashlib
@@ -36,7 +37,7 @@ async def main():
                 receipt = {'kind': 'direct_' + kind, 'requested_orgnrs': [org], 'requested_at': datetime.now(timezone.utc).isoformat(), 'url': url}
                 try:
                     if cached:
-                        receipt = dict(cached); raw = Path(receipt['body_path']).read_bytes(); sha = hashlib.sha256(raw).hexdigest()
+                        receipt = dict(cached); raw = Path(expand(receipt['body_path'])).read_bytes(); sha = hashlib.sha256(raw).hexdigest()
                         assert sha == receipt['content_sha256']; status = receipt['status']
                     else:
                         async with client.stream('GET', url) as response:
@@ -77,8 +78,8 @@ async def main():
                     receipt['error'] = str(exc); stopped = True
                     result['failures'].append({'reason': 'direct_lookup_failure', 'orgnr': org, 'error': str(exc)})
                 if not cached:result['receipts'].append(receipt)
-                (DEST / 'nav_parent_direct_progress.json').write_text(json.dumps({'receipts': result['receipts'], 'relations': list(relations.values()),
-                    'confirmed_main_employers': mains, 'unresolved': unresolved}, ensure_ascii=False, indent=2) + '\n', encoding='utf8', newline='\n')
+                (DEST / 'nav_parent_direct_progress.json').write_text(portable_text(json.dumps({'receipts': result['receipts'], 'relations': list(relations.values()),
+                    'confirmed_main_employers': mains, 'unresolved': unresolved}, ensure_ascii=False, indent=2) + '\n'), encoding='utf8', newline='\n')
                 if not cached:await asyncio.sleep(5)
                 if resolved or stopped:
                     break
@@ -106,7 +107,7 @@ async def main():
     result['expected_rate_per_1000'] = len(represented) / len(universe) * 1000 if result['complete'] else None
     result['confirmed_rate_lower_bound_per_1000'] = len(represented) / len(universe) * 1000
     result['possible_rate_upper_bound_per_1000'] = (len(represented) + len(result['missing_employers'])) / len(universe) * 1000
-    path.write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n', encoding='utf8', newline='\n')
+    path.write_text(portable_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n'), encoding='utf8', newline='\n')
     print(json.dumps({k: result[k] for k in ('complete', 'mapped_employers', 'classified_employers', 'unique_index_companies_in_universe', 'expected_rate_per_1000', 'missing_employers', 'http_requests', 'runtime_seconds')}))
 
 

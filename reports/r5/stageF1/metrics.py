@@ -1,4 +1,5 @@
 """Count supported dimensionless arithmetic and its cited sentence coverage."""
+from signalpost.portable_paths import expand, portable, portable_text  # saved paths stay repo-relative
 import json,sys
 from collections import Counter
 from pathlib import Path
@@ -8,7 +9,7 @@ def main():
     stage=sys.argv[1] if len(sys.argv)>1 else 'F1';result={}
     for sample in ('frozen','daily'):
         dest=ROOT/'reports/r5'/('stage'+stage)/sample
-        settings=json.loads((dest/'settings.json').read_text(encoding='utf8'));out=Path(settings['working_directory'])
+        settings=json.loads((dest/'settings.json').read_text(encoding='utf8'));out=Path(expand(settings['working_directory']))
         rows=[json.loads(x) for x in (out/'envelopes.jsonl').read_text(encoding='utf8').splitlines()]
         formulas=Counter();yoy_sentences=0;companies=Counter();absolute_unscaled=0
         for row in rows:
@@ -23,7 +24,7 @@ def main():
         result[sample]={'formula_counts':dict(formulas),'companies_by_formula':dict(companies),
             'derived_ratios':formulas['operating_margin']+formulas['equity_ratio'],'yoy_metrics':formulas['revenue_yoy'],
             'yoy_cited_sentence_instances':yoy_sentences,'absolute_figures_with_unknown_unit':absolute_unscaled}
-    (ROOT/'reports/r5'/('stage'+stage)/'financial_metrics.json').write_text(json.dumps(result,indent=2)+'\n',encoding='utf8')
+    (ROOT/'reports/r5'/('stage'+stage)/'financial_metrics.json').write_text(portable_text(json.dumps(result,indent=2)+'\n'),encoding='utf8')
     print(json.dumps(result))
 
 if __name__=='__main__':main()

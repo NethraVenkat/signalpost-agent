@@ -1,4 +1,5 @@
 """Finalize measured foundation report from saved artifacts, never alter output."""
+from signalpost.portable_paths import expand, portable, portable_text  # saved paths stay repo-relative
 import hashlib
 import json
 import subprocess
@@ -32,7 +33,7 @@ def main():
     all_deltas = []; rows_md = []; unchanged_sites = 0
     inventory = {}
     for seed, previous, registry, before_rows, before_report in load_runs():
-        folder = DEST / ('seed' + str(seed)); config = read(folder / 'settings.json'); work = Path(config['working_directory'])
+        folder = DEST / ('seed' + str(seed)); config = read(folder / 'settings.json'); work = Path(expand(config['working_directory']))
         counts = read(folder / 'counts.json'); verification = read(folder / 'verification.json'); report = read(folder / 'report.json')
         assert verification['complete_briefing_contracts'] == 100 and verification['synthesis_unverified_values'] == verification['briefing_unverified_values'] == 0
         assert verification['site_verified'] and counts['http_after'] <= 1850 and counts['runtime_seconds'] <= 2100 and counts['cost_usd'] == 0
@@ -44,7 +45,7 @@ def main():
         counts['section_availability_counts'] = report['counts_by_availability']
         counts['website_states'] = dict(Counter(r['run']['sections']['website'] for r in current))
         counts['counts_note'] = 'Website states recomputed from envelopes; global availability counts retained separately. Raw execution logs unchanged.'
-        (folder / 'counts.json').write_text(json.dumps(counts, ensure_ascii=False, indent=2) + '\n', encoding='utf8', newline='\n')
+        (folder / 'counts.json').write_text(portable_text(json.dumps(counts, ensure_ascii=False, indent=2) + '\n'), encoding='utf8', newline='\n')
         old, new = urls(before_rows), urls(current)
         added = [new[k] for k in sorted(new.keys() - old.keys())]; removed = [old[k] for k in sorted(old.keys() - new.keys())]
         all_deltas.append({'seed': seed, 'added': added, 'removed': removed})
@@ -52,7 +53,7 @@ def main():
         unchanged_sites += sum(k[1] == 'official_website' for k in old.keys() & new.keys())
         rows_md.append(f"| {seed} | {counts['websites_before']} | {counts['websites_after']} | {counts['http_before']} | {counts['http_after']} | {counts['runtime_seconds']:.3f} | 0 |")
     out = {'comparisons': all_deltas, 'published_inventory': inventory}
-    (DEST / 'r4_url_inventory.json').write_text(json.dumps(out, ensure_ascii=False, indent=2) + '\n', encoding='utf8', newline='\n')
+    (DEST / 'r4_url_inventory.json').write_text(portable_text(json.dumps(out, ensure_ascii=False, indent=2) + '\n'), encoding='utf8', newline='\n')
     lines = ['# R4 website/social URL changes', '', 'Each removed item uses the prior saved proof, never proof of current closure. Each added item uses the new saved proof. No new proof tier is introduced.', '']
     for delta in all_deltas:
         lines += [f"## {delta['seed']}", '']
@@ -62,7 +63,7 @@ def main():
                 lines += [f"### {item['orgnr']} / {item['name']} / {item['field']}", '', f"URL: {item['url']}; proof tier: {item['proof_tier']}.", '']
                 for e in item['evidence']:
                     lines += [f"Source: {e['source_url']}; retrieved {e['retrieved_at']}; SHA-256 `{e['content_sha256']}`; locator `{e['locator']}`.", '', '```text', e['claim_span'], '```', '']
-    (DEST / 'new_websites.md').write_text('\n'.join(lines), encoding='utf8', newline='\n')
+    (DEST / 'new_websites.md').write_text(portable_text('\n'.join(lines)), encoding='utf8', newline='\n')
     summary = ['# W0 / R1 / R2 / R4 foundations', '', 'Branch revision/r5. Author Nethra Venkat. No push, publication, model or paid search. Provider cost $0. No new proof tier.', '',
                '## W0 saved-output baseline', '', '| Seed | Sites | Registry homepage | Declared domain published | Veto | Ambiguous | Fetched without proof |', '|---|---:|---:|---:|---:|---:|---:|']
     for s in audit['samples']:
@@ -94,7 +95,7 @@ def main():
                 '- Review r4_published_replay.json, including human-reviewed SISSENER, CONCEDO and GLÅMDAL; human verdicts and existing proof tiers remain distinct.',
                 '- Publisher extraction cannot evaluate CSS-computed visibility or infer unmarked customer-list semantics. Existing independent proof vetoes remain active.',
                 '- Registry snapshot dates and the current live sources differ; this is a measured sample comparison, not an accuracy guarantee. No model calls, paid APIs or search; source licences/terms remain in docs/SOURCES.md. Stop after these foundations; no new proof tier or next stage.']
-    (DEST / 'SUMMARY_FOUNDATIONS.md').write_text('\n'.join(summary) + '\n', encoding='utf8', newline='\n')
+    (DEST / 'SUMMARY_FOUNDATIONS.md').write_text(portable_text('\n'.join(summary) + '\n'), encoding='utf8', newline='\n')
     print(json.dumps({'url_changes': [{ 'seed': d['seed'], 'added': len(d['added']), 'removed': len(d['removed'])} for d in all_deltas], 'unchanged_sites': unchanged_sites}))
 
 

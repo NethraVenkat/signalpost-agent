@@ -1,4 +1,5 @@
 ﻿"""Run and verify an R5 stage with the frozen baseline's exact settings."""
+from signalpost.portable_paths import expand, portable, portable_text, sanitize_file  # saved paths stay repo-relative
 import hashlib
 import json
 import os
@@ -41,13 +42,13 @@ def main():
         config['website_request_cap'] = 8
         config['website_total_request_cap'] = 13
         command = command.replace('--websites --hiring', '--website-request-cap 8 --website-total-request-cap 13 --websites --hiring')
-    (dest/'run.ps1').write_text(command, encoding='utf8')
+    (dest/'run.ps1').write_text(portable_text(command), encoding='utf8')
     metadata = {'stage': stage, 'parent_commit': subprocess.check_output(['git','rev-parse','HEAD'], text=True).strip(),
                 'source_diff_sha256': hashlib.sha256(subprocess.check_output(['git','diff','HEAD','--','src','tests','docs'])).hexdigest(),
                 'resolved_config': config, 'environment_overrides': settings['environment_overrides'],
                 'input_sha256': sha(base/'companies.jsonl'), 'registry_sha256': sha(base/'registry100.csv'),
                 'started_at_utc': datetime.now(timezone.utc).isoformat()}
-    (dest/'settings.json').write_text(json.dumps(metadata, indent=2)+'\n', encoding='utf8')
+    (dest/'settings.json').write_text(portable_text(json.dumps(metadata, indent=2)+'\n'), encoding='utf8')
     env = os.environ.copy(); env.update(settings['environment_overrides'])
     began = time.perf_counter()
     with (dest/'process.txt').open('w', encoding='utf8') as log:
@@ -56,18 +57,19 @@ def main():
             line = line.strip().rstrip('`').strip()
             if line.startswith('--'): args.extend(line.split())
         result = subprocess.run(args, env=env, stdout=log, stderr=subprocess.STDOUT)
+    sanitize_file(dest/'process.txt')  # keep captured paths repo-relative
     execution = {'exit_code': result.returncode, 'wall_seconds': time.perf_counter()-began,
                  'completed_at_utc': datetime.now(timezone.utc).isoformat()}
-    (dest/'execution.json').write_text(json.dumps(execution, indent=2)+'\n', encoding='utf8')
+    (dest/'execution.json').write_text(portable_text(json.dumps(execution, indent=2)+'\n'), encoding='utf8')
     result.check_returncode()
     verify = [sys.executable,'scripts/verify_output.py','--first',config['output'],
               '--organisations',config['organisations'],'--count','100','--state-dir',config['state_dir'],'--report',config['report']]
     verified = subprocess.run(verify, env=env, capture_output=True, text=True, check=True)
     verification = {'command': verify, 'exit_code': 0, **json.loads(verified.stdout)}
-    (dest/'verification.json').write_text(json.dumps(verification, indent=2)+'\n', encoding='utf8')
+    (dest/'verification.json').write_text(portable_text(json.dumps(verification, indent=2)+'\n'), encoding='utf8')
     # Use exactly the baseline counting definitions, not aggregate section success.
-    rows = [json.loads(x) for x in Path(config['output']).read_text(encoding='utf8').splitlines()]
-    report = json.loads(Path(config['report']).read_text(encoding='utf8'))
+    rows = [json.loads(x) for x in Path(expand(config['output'])).read_text(encoding='utf8').splitlines()]
+    report = json.loads(Path(expand(config['report'])).read_text(encoding='utf8'))
     assert report['total_cost_usd'] == report['search']['queries'] == report['llm']['calls'] == 0
     per = []
     for row in rows:
@@ -95,8 +97,8 @@ def main():
     counts = {'metrics':metrics,'counts_by_section_state':states,'per_company':per,
               'metric_definitions':baseline['metric_definitions'],
               'artifacts':{name:sha(out/name) for name in ('envelopes.jsonl','profiles.jsonl','report.json')}}
-    (dest/'counts.json').write_text(json.dumps(counts,indent=2)+'\n',encoding='utf8')
-    (dest/'report.json').write_bytes(Path(config['report']).read_bytes())
+    (dest/'counts.json').write_text(portable_text(json.dumps(counts,indent=2)+'\n'),encoding='utf8')
+    (dest/'report.json').write_bytes(Path(expand(config['report'])).read_bytes())
     table = f'| Metric | Stage 3 | Stage {stage} | Delta |\n|---|---:|---:|---:|\n'
     for key,val in metrics.items():
         before = baseline['metrics'][key]
@@ -106,7 +108,7 @@ def main():
         for state,val in values.items():
             before = baseline['counts_by_section_state'][section][state]
             table += f'| {section} / {state} | {before} | {val} | {val-before:+} |\n'
-    (dest/'table.md').write_text(table,encoding='utf8')
+    (dest/'table.md').write_text(portable_text(table),encoding='utf8')
     print(json.dumps({'stage':stage,'metrics':metrics,'verification':verification,'section_states':states}))
 
 

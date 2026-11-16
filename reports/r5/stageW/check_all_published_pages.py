@@ -1,4 +1,5 @@
 """Replay every fetched page on previously published website candidates."""
+from signalpost.portable_paths import portable, portable_text  # saved paths stay repo-relative
 import hashlib
 import json
 from collections import Counter
@@ -35,7 +36,7 @@ def main():
                                'sha256': sha, 'rule': rule, 'foreign_orgnrs': foreign})
     output = {'method': 'All saved fetched pages on the 29 historically published website candidates, including follow-up contact/about pages, not just selected proof pages.',
               'pages_checked': len(checks), 'rules': dict(Counter(c['rule'] or 'no_new_veto' for c in checks)), 'checks': checks}
-    (DEST / 'r4_all_published_pages.json').write_text(json.dumps(output, ensure_ascii=False, indent=2) + '\n', encoding='utf8', newline='\n')
+    (DEST / 'r4_all_published_pages.json').write_text(portable_text(json.dumps(output, ensure_ascii=False, indent=2) + '\n'), encoding='utf8', newline='\n')
     print(json.dumps({'pages_checked': len(checks), 'vetoes': [c for c in checks if c['rule']]}, ensure_ascii=True, indent=2))
 
 

@@ -1,4 +1,5 @@
 """One public-resolver query per unique non-NXDOMAIN candidate; diagnostic only."""
+from signalpost.portable_paths import portable, portable_text  # saved paths stay repo-relative
 import asyncio
 import hashlib
 import json
@@ -40,7 +41,7 @@ async def main():
                       'unique_names': len(names), 'completed': len(results), 'http_requests': len(results), 'cost_usd': 0,
                       'counts': dict(Counter(r['state'] for r in results)), 'results': results,
                       'limits': 'A query only: NOERROR without A does not prove nonexistence. Generic historical errors include nomination cutoffs. Diagnostic results never publish identity claims.'}
-            (DEST / 'dns_recheck.json').write_text(json.dumps(output, ensure_ascii=False, indent=2) + '\n', encoding='utf8', newline='\n')
+            (DEST / 'dns_recheck.json').write_text(portable_text(json.dumps(output, ensure_ascii=False, indent=2) + '\n'), encoding='utf8', newline='\n')
             await asyncio.sleep(.3)
     print(json.dumps(output['counts']))
 

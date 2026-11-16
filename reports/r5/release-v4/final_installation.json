@@ -1,7 +1,7 @@
 {
   "version": "1.2.0",
-  "python_executable": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\release-v4-20261113-112818\\repo\\.venv\\Scripts\\python.exe",
-  "python_prefix": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\release-v4-20261113-112818\\repo\\.venv",
+  "python_executable": "<REPO>\\.data\\r5\\release-v4-20261113-112818\\repo\\.venv\\Scripts\\python.exe",
+  "python_prefix": "<REPO>\\.data\\r5\\release-v4-20261113-112818\\repo\\.venv",
   "uv_lock_sha256": "b3aa004ea4ef319bb4299ee1db21f9cb5b5c7cc15e98e471102cdce1f8d8ed75",
   "application_source_unchanged_from_tested_commit": true,
   "source_manifest_matches": true,

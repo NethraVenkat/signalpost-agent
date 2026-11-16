@@ -2,24 +2,24 @@
   "exit_code": 0,
   "wall_seconds": 317.6559999999881,
   "argv": [
-    "C:\\Users\\<USER>\\signal-nethra\\.venv\\Scripts\\python.exe",
+    "<REPO>\\.venv\\Scripts\\python.exe",
     "-m",
     "signalpost.cli",
     "run",
     "--organisations",
-    "C:\\Users\\<USER>\\signal-nethra\\reports\\r5\\stageH\\seed20261117\\companies100.jsonl",
+    "<REPO>\\reports\\r5\\stageH\\seed20261117\\companies100.jsonl",
     "--bulk",
-    "C:\\Users\\<USER>\\signal-nethra\\reports\\r5\\stageH\\seed20261117\\registry100.csv",
+    "<REPO>\\reports\\r5\\stageH\\seed20261117\\registry100.csv",
     "--output",
-    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageR3-20261117-release-proof-final\\envelopes.jsonl",
+    "<REPO>\\.data\\r5\\stageR3-20261117-release-proof-final\\envelopes.jsonl",
     "--profiles-output",
-    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageR3-20261117-release-proof-final\\profiles.jsonl",
+    "<REPO>\\.data\\r5\\stageR3-20261117-release-proof-final\\profiles.jsonl",
     "--report",
-    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageR3-20261117-release-proof-final\\report.json",
+    "<REPO>\\.data\\r5\\stageR3-20261117-release-proof-final\\report.json",
     "--run-id",
     "r5-stageR3-seed20261117-release-proof-final",
     "--expected-count",
     "100"
   ],
-  "cwd": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageR3-20261117-release-proof-final"
+  "cwd": "<REPO>\\.data\\r5\\stageR3-20261117-release-proof-final"
 }

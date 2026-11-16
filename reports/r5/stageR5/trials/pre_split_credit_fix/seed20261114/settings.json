@@ -1,21 +1,21 @@
 {
   "seed": 20261114,
-  "working_directory": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageR5-20261114-release-accepted",
+  "working_directory": "<REPO>\\.data\\r5\\stageR5-20261114-release-accepted",
   "command_argv": [
-    "C:\\Users\\<USER>\\signal-nethra\\.venv\\Scripts\\python.exe",
+    "<REPO>\\.venv\\Scripts\\python.exe",
     "-m",
     "signalpost.cli",
     "run",
     "--organisations",
-    "C:\\Users\\<USER>\\signal-nethra\\reports\\r5\\release-v4b\\companies100.jsonl",
+    "<REPO>\\reports\\r5\\release-v4b\\companies100.jsonl",
     "--bulk",
-    "C:\\Users\\<USER>\\signal-nethra\\reports\\r5\\release-v4b\\registry100.csv",
+    "<REPO>\\reports\\r5\\release-v4b\\registry100.csv",
     "--output",
-    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageR5-20261114-release-accepted\\envelopes.jsonl",
+    "<REPO>\\.data\\r5\\stageR5-20261114-release-accepted\\envelopes.jsonl",
     "--profiles-output",
-    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageR5-20261114-release-accepted\\profiles.jsonl",
+    "<REPO>\\.data\\r5\\stageR5-20261114-release-accepted\\profiles.jsonl",
     "--report",
-    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageR5-20261114-release-accepted\\report.json",
+    "<REPO>\\.data\\r5\\stageR5-20261114-release-accepted\\report.json",
     "--run-id",
     "r5-stageR5-seed20261114-release-accepted",
     "--expected-count",
@@ -26,5 +26,5 @@
   "bulk_sha256": "e19cf6e47d266b6a605b0b3dd14f1cbf08b31a78fb32820182fbb91753d96b4f",
   "source_manifest_sha256": "f764016e09cd2176391831edce8e5e3c518f4251e91aee61706d8ab09163bbf5",
   "parent_commit": "23838192f00b27fd4c0bb0ea6fea72423122f364",
-  "previous_working_directory": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageR4-20261114-release"
+  "previous_working_directory": "<REPO>\\.data\\r5\\stageR4-20261114-release"
 }

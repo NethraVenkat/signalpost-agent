@@ -1,4 +1,5 @@
 ﻿"""Audit retained event order/caps/receipts and old-vs-new extraction on identical bodies."""
+from signalpost.portable_paths import expand, portable, portable_text  # saved paths stay repo-relative
 import asyncio,hashlib,json,subprocess,types
 from collections import Counter
 from pathlib import Path
@@ -16,7 +17,7 @@ def main():
     summary={}
     for sample in ['frozen','daily']:
         dest=DEST/sample;settings=json.loads((dest/'settings.json').read_text(encoding='utf8'))
-        work=Path(settings['working_directory']);blobs=BlobStore(work/'state')
+        work=Path(expand(settings['working_directory']));blobs=BlobStore(work/'state')
         rows=[json.loads(line) for line in (work/'envelopes.jsonl').read_text(encoding='utf8').splitlines()]
         report=json.loads((dest/'report.json').read_text(encoding='utf8'))
         events=[];per=[];prior_count=0;types_count=Counter();claims_count=0
@@ -50,9 +51,9 @@ def main():
             'event_types':{str(k):v for k,v in types_count.items()},'previous_extractor_claims_on_the_same_retained_events':prior_count,
             'shared_registry_http_requests':sum('/oppdateringer/' in e['url'] for e in report['request_log']),
             'companies_truncated':sum(x['coverage'].get('truncated',False) for x in per),'per_company':per,'events':events}
-        (dest/'events_audit.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+        (dest/'events_audit.json').write_text(portable_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n'),encoding='utf8')
         summary[sample]={k:v for k,v in result.items() if k not in {'events','per_company'}}
-    (DEST/'event_comparison.json').write_text(json.dumps(summary,indent=2)+'\n',encoding='utf8')
+    (DEST/'event_comparison.json').write_text(portable_text(json.dumps(summary,indent=2)+'\n'),encoding='utf8')
     print(json.dumps(summary))
 
 if __name__=='__main__':main()

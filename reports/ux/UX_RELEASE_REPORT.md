@@ -55,7 +55,7 @@ From the clean clone, after copying the first 100 lines of the frozen `batch1000
 ```powershell
 $env:UV_CACHE_DIR = Join-Path (Get-Location) '.uv-cache'
 uv sync --frozen
-uv run --frozen signalpost run --organisations out/smoke100/batch.jsonl --bulk C:\Users\<USER>\Downloads\Signalpost-v5\out\capacity-inputs\bulk1000.csv --output out/smoke100/envelopes.jsonl --profiles-output out/smoke100/profiles.jsonl --report out/smoke100/report.json --site-dir out/smoke100/site --websites --hiring --public-activity --run-id ux-r4-github-smoke100 --expected-count 100
+uv run --frozen signalpost run --organisations out/smoke100/batch.jsonl --bulk <HOME>\Downloads\Signalpost-v5\out\capacity-inputs\bulk1000.csv --output out/smoke100/envelopes.jsonl --profiles-output out/smoke100/profiles.jsonl --report out/smoke100/report.json --site-dir out/smoke100/site --websites --hiring --public-activity --run-id ux-r4-github-smoke100 --expected-count 100
 ```
 
 Local evidence remains under `out/ux-r4-github-clone/out/smoke100/`: input `batch.jsonl` SHA-256 `7d59169d3fd274ec576dca84430beac887b4a1cf06697e20ab7e875420673686`, `envelopes.jsonl` SHA-256 `8b094560db61643d0bd57b921e8836b573603f1d2191f4a9a20d23bdf60b5b10`, and `report.json` SHA-256 `ad951624bb010d5dc51e9671c3922dfe318be731f6dcca61bcaf2669c65261dd`. The clean-clone guard diff from `c28b580` had 29 changed paths, all within `src/signalpost/site.py`, `src/signalpost/site_assets/*`, `tests/*` or `reports/ux/*`. The exact protected-path diff command below exited 0 with no output.

@@ -8,6 +8,7 @@ It is retained strictly for historical data lineage and reproducibility of the c
 For production offline pipeline execution using recorded transports against primary sources,
 use `scripts/production_replay.py` which executes `signalpost.runner.run(config, client=...)`.
 """
+from signalpost.portable_paths import portable, portable_text  # saved paths stay repo-relative
 import json
 import re
 from pathlib import Path
@@ -138,7 +139,7 @@ def main():
     for r in corrected_rows:
         prof_data = r.profile.model_dump(mode="json") if hasattr(r.profile, "model_dump") else r.profile
         profile_lines.append(json.dumps(prof_data, ensure_ascii=False))
-    OUT_PROFILES.write_text("\n".join(profile_lines) + "\n", encoding="utf-8")
+    OUT_PROFILES.write_text(portable_text("\n".join(profile_lines) + "\n"), encoding="utf-8")
     print(f"Wrote {len(profile_lines)} corrected profiles to {OUT_PROFILES}")
 
     # Validate output shapes

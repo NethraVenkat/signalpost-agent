@@ -1,4 +1,5 @@
 """Saved-output measurements and full GLEIF/TED proof inventory; no network."""
+from signalpost.portable_paths import expand, portable, portable_text  # saved paths stay repo-relative
 import hashlib,json
 import sys
 from pathlib import Path
@@ -12,7 +13,7 @@ def collect():
     dest=ROOT/'reports/r5/stageT';items=[];metrics={};inputs={};withheld=[]
     for sample,seed in [('frozen',20261017),('daily',20261113),('mock',20261114)]:
         folder=dest/sample;settings=json.loads((folder/'settings.json').read_text(encoding='utf8'))
-        work=Path(settings['working_directory']);output=work/'envelopes.jsonl'
+        work=Path(expand(settings['working_directory']));output=work/'envelopes.jsonl'
         rows=[json.loads(x) for x in output.read_text(encoding='utf8').splitlines()]
         report=json.loads((folder/'report.json').read_text(encoding='utf8'))
         base=json.loads((folder/'counts.json').read_text(encoding='utf8'))['metrics']
@@ -69,10 +70,10 @@ def collect():
         text+='Proof tier: `'+item['proof_tier']+'`.\n\nPublished value:\n\n```json\n'+json.dumps(item['value'],ensure_ascii=False,indent=2)+'\n```\n\n'
         for e in item['evidence']:
             text+=f"Source: {e['source_url']}\n\nRetrieved: {e['retrieved_at']}; SHA-256: `{e['content_sha256']}`; locator: `{e['locator']}`.\n\nExact excerpt:\n\n```text\n{e['claim_span']}\n```\n\n"
-    (dest/'items.md').write_text(text,encoding='utf8',newline='')
-    (dest/'items.json').write_text(json.dumps({'inputs':inputs,'items':items},ensure_ascii=False,indent=2)+'\n',encoding='utf8')
-    (dest/'metrics.json').write_text(json.dumps(metrics,indent=2)+'\n',encoding='utf8')
-    (dest/'withheld_ted_nominations.json').write_text(json.dumps(withheld,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+    (dest/'items.md').write_text(portable_text(text),encoding='utf8',newline='')
+    (dest/'items.json').write_text(portable_text(json.dumps({'inputs':inputs,'items':items},ensure_ascii=False,indent=2)+'\n'),encoding='utf8')
+    (dest/'metrics.json').write_text(portable_text(json.dumps(metrics,indent=2)+'\n'),encoding='utf8')
+    (dest/'withheld_ted_nominations.json').write_text(portable_text(json.dumps(withheld,ensure_ascii=False,indent=2)+'\n'),encoding='utf8')
     print(json.dumps(metrics))
 
 

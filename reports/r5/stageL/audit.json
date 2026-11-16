@@ -18,32 +18,32 @@
   "sources": [
     {
       "seed": 20261017,
-      "work": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageR7-20261017-source-recovery",
+      "work": "<REPO>\\.data\\r5\\stageR7-20261017-source-recovery",
       "envelopes_sha256": "40f8dbca703bbe5d5b8a178c656f9b81fa76a35de3d971abb1c28012466a05ab"
     },
     {
       "seed": 20261113,
-      "work": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageR7-20261113-source-recovery",
+      "work": "<REPO>\\.data\\r5\\stageR7-20261113-source-recovery",
       "envelopes_sha256": "504dc6aeaf32d15af016f235f8e23bed61fc905120659e883bcd2f1ed715fcd2"
     },
     {
       "seed": 20261114,
-      "work": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageR7-20261114-source-recovery",
+      "work": "<REPO>\\.data\\r5\\stageR7-20261114-source-recovery",
       "envelopes_sha256": "a17884fd55d79a51e99b6a148c9f58d874376d650cd39d2a6c067176fa70d454"
     },
     {
       "seed": 20261115,
-      "work": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageR7-20261115-source-recovery",
+      "work": "<REPO>\\.data\\r5\\stageR7-20261115-source-recovery",
       "envelopes_sha256": "cccc4733290d490515aae943dbeb8aa8c768c518266b503015d0378126986723"
     },
     {
       "seed": 20261116,
-      "work": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageR7-20261116-source-recovery",
+      "work": "<REPO>\\.data\\r5\\stageR7-20261116-source-recovery",
       "envelopes_sha256": "1ef835ce888aa54baeb091aedebcd5773af7a456d4de7c71365afe811989ae6d"
     },
     {
       "seed": 20261117,
-      "work": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageR7-20261117-outage-retry",
+      "work": "<REPO>\\.data\\r5\\stageR7-20261117-outage-retry",
       "envelopes_sha256": "dab4d579ee93948e8876e6090e0b017a133d309fafe9ef0ea1e338cf3cde7f9a"
     }
   ],

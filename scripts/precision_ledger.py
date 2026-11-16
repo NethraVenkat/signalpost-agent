@@ -1,4 +1,5 @@
 """Offline, exhaustive publication ledger; verdicts never edit published outputs."""
+from signalpost.portable_paths import expand, portable, portable_text  # saved paths stay repo-relative
 import hashlib
 import json
 import re
@@ -123,7 +124,7 @@ def build(root=ROOT,runs=None,dest=None):
     records=[];inputs={};measurements={}
     for sample,seed,folder in runs:
         folder=Path(folder)
-        settings=json.loads((folder/'settings.json').read_text(encoding='utf8'));work=Path(settings['working_directory'])
+        settings=json.loads((folder/'settings.json').read_text(encoding='utf8'));work=Path(expand(settings['working_directory']))
         output=work/'envelopes.jsonl';rows=[json.loads(x) for x in output.read_text(encoding='utf8').splitlines()]
         assert len(rows)==100
         inputs[sample]={'seed':seed,'output':str(output),'sha256':hashlib.sha256(output.read_bytes()).hexdigest(),
@@ -165,7 +166,7 @@ def build(root=ROOT,runs=None,dest=None):
             'correct means clear under saved evidence rules at retrieval, not guaranteed current internet truth.',
             'Name/cross-entity/group/historical concerns are doubtful even if publication identity checks passed.',
             'Foreign counterparties/parents are legitimate; exact country/ID must match the target role, not every party in a batch.']}
-    (dest/'ledger.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+    (dest/'ledger.json').write_text(portable_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n'),encoding='utf8')
     text='# Precision ledger - measured samples\n\n'+report['method']+'. No item is silently removed. Correct/doubtful/wrong are automated saved-evidence verdicts, not human-labelled accuracy. The separate human-review column records explicit user verdicts for the exact sample/value, without upgrading original proof tiers. Remaining unreviewed doubtful/wrong items need hand review.\n\n'
     text+='| Type | Checked | Correct | Doubtful | Wrong |\n|---|---:|---:|---:|---:|\n'
     for typ,c in counts.items():text+=f"| {typ} | {sum(c.values())} | {c['correct']} | {c['doubtful']} | {c['wrong']} |\n"
@@ -180,7 +181,7 @@ def build(root=ROOT,runs=None,dest=None):
         text+='| '+display.replace('|','&#124;').replace('\n',' ')+' | '+str(item['proof_tier'])+' | **'+item['verdict']+'** | '+human_text+' | '+('; '.join(item['reasons']) or 'All saved-evidence checks passed').replace('|','&#124;')+' |\n\n'
         for e in item['evidence']:
             text+=f"Source: {e['source_url']}\n\nRetrieved: {e['retrieved_at']}; SHA-256: `{e['content_sha256']}`; locator: `{e['locator']}`.\n\nExact excerpt:\n\n```text\n{e['claim_span']}\n```\n\n"
-    (dest/'LEDGER.md').write_text(text,encoding='utf8',newline='')
+    (dest/'LEDGER.md').write_text(portable_text(text),encoding='utf8',newline='')
     return report
 
 
@@ -190,5 +191,5 @@ if __name__=='__main__':
     parser.add_argument('--runs',type=Path,help='JSON list of sample/seed/folder entries')
     parser.add_argument('--destination',type=Path)
     args=parser.parse_args()
-    runs=[(r['sample'],r['seed'],Path(r['folder'])) for r in json.loads(args.runs.read_text(encoding='utf8'))] if args.runs else None
+    runs=[(r['sample'],r['seed'],Path(expand(r['folder']))) for r in json.loads(args.runs.read_text(encoding='utf8'))] if args.runs else None
     report=build(runs=runs,dest=args.destination);print(json.dumps({'counts':report['counts'],'measurements':report['measurements']}))

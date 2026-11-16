@@ -1,4 +1,5 @@
 """Build the final comparison from the committed measurement artifacts."""
+from signalpost.portable_paths import expand, portable, portable_text  # saved paths stay repo-relative
 import json
 import subprocess
 from collections import Counter
@@ -18,7 +19,7 @@ counts = [json.loads((p/'counts.json').read_text()) for _,p in paths]
 text = '# Stage 4.7 summary\n\n'
 last = counts[-1]
 final_config = json.loads((paths[-1][1]/'settings.json').read_text())['resolved_config']
-final_rows = [json.loads(line) for line in Path(final_config['output']).read_text(encoding='utf8').splitlines()]
+final_rows = [json.loads(line) for line in Path(expand(final_config['output'])).read_text(encoding='utf8').splitlines()]
 levels = Counter(c['value']['identity_level'] for row in final_rows for c in row['claims']
                  if c['field']=='official_website' and c['availability']=='available')
 text += (f"Frozen 100: **{last['metrics']['verified_websites']} verified websites**, "
@@ -77,4 +78,4 @@ text += ('Two excluded diagnostic acquisitions remain local: sandbox-denied requ
          'Failed test attempts are retained in `test_attempts/`. Later gates use the recorded `run_tests.py` command, which raises only its own Windows process priority to Above Normal to reduce scheduling contention; it changes no assertion or timeout. Crawl measurements use normal process priority.\n\n'
          'Decisions: [DECISIONS.md](../DECISIONS.md). Stage 4.7 ends with this committed report; no Stage 5 work or push was performed.\n')
 text += '\nFinal documentation gate: '+re.findall(r'\d+ passed[^\n]*', read_log(root/'final_report_tests.txt'))[-1].strip()+'.\n'
-(root/'SUMMARY.md').write_text(text, encoding='utf8')
+(root/'SUMMARY.md').write_text(portable_text(text), encoding='utf8')

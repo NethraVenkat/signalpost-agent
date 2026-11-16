@@ -1,7 +1,7 @@
 {
   "inputs": {
     "stageF1/frozen": {
-      "output": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageF1-frozen-run-final\\envelopes.jsonl",
+      "output": "<REPO>\\.data\\r5\\stageF1-frozen-run-final\\envelopes.jsonl",
       "sha256": "a7056cae77f89eccb7711ae89d8a397eda9a88def85d7eb11c52d21035c8442e",
       "website_urls": 6,
       "social_urls": 8,
@@ -285,7 +285,7 @@
       ]
     },
     "stageC/frozen": {
-      "output": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageC-frozen-run-commit\\envelopes.jsonl",
+      "output": "<REPO>\\.data\\r5\\stageC-frozen-run-commit\\envelopes.jsonl",
       "sha256": "87e3e892281215204b7464e1014afd211bfb1db1a3c232fc8d208ad880baea30",
       "website_urls": 6,
       "social_urls": 8,
@@ -569,7 +569,7 @@
       ]
     },
     "stageF1/daily": {
-      "output": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageF1-daily-run-final\\envelopes.jsonl",
+      "output": "<REPO>\\.data\\r5\\stageF1-daily-run-final\\envelopes.jsonl",
       "sha256": "9ddcd3638c1465b8fd86d0748067087b7c2ded88b2a88c3f6449446d1355ba66",
       "website_urls": 4,
       "social_urls": 2,
@@ -885,7 +885,7 @@
       ]
     },
     "stageC/daily": {
-      "output": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageC-daily-run-commit\\envelopes.jsonl",
+      "output": "<REPO>\\.data\\r5\\stageC-daily-run-commit\\envelopes.jsonl",
       "sha256": "3d663d86bec6f809c579e1f9948caf384d05cf8122958a0d172fdc03e018c723",
       "website_urls": 3,
       "social_urls": 2,

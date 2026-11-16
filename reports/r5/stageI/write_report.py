@@ -1,4 +1,5 @@
 """Build the measured Stage I report from saved, independently verified runs."""
+from signalpost.portable_paths import portable, portable_text  # saved paths stay repo-relative
 import json
 from pathlib import Path
 
@@ -57,6 +58,6 @@ Code: MIT. Brreg registry/accounts data: NLOD 2.0 with attribution. NAV: officia
 
 The final combined report is ../stageD/SUMMARY.md. Stop after I and that summary; do not start C.
 '''
-    (R/'stageI/I_REPORT.md').write_text(text,encoding='utf8')
+    (R/'stageI/I_REPORT.md').write_text(portable_text(text),encoding='utf8')
 
 if __name__=='__main__':main()

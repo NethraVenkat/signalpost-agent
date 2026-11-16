@@ -6,9 +6,9 @@ At line:2 char:1
     + FullyQualifiedErrorId : NativeCommandError
  
 Creating virtual environment at: .venv
-   Building signalpost-agent @ file:///C:/Users/<USER>/signal-nethra/.data/r5/release-v4-20261113-112818/repo
+   Building signalpost-agent @ file:///<REPO>/.data/r5/release-v4-20261113-112818/repo
 WARN Retry attempt #0. Sleeping 1.5044108s before the next attempt
-      Built signalpost-agent @ file:///C:/Users/<USER>/signal-nethra/.data/r5/release-v4-20261113-112818/repo
+      Built signalpost-agent @ file:///<REPO>/.data/r5/release-v4-20261113-112818/repo
 Prepared 1 package in 20.33s
 Installed 25 packages in 8.47s
  + annotated-types==0.8.0
@@ -31,7 +31,7 @@ Installed 25 packages in 8.47s
  + requests==2.34.2
  + requests-file==3.0.1
  + respx==0.23.1
- + signalpost-agent==1.1.1 (from file:///C:/Users/<USER>/signal-nethra/.data/r5/release-v4-20261113-112818/repo)
+ + signalpost-agent==1.1.1 (from file:///<REPO>/.data/r5/release-v4-20261113-112818/repo)
  + tldextract==5.4.0
  + typing-extensions==4.16.0
  + typing-inspection==0.4.4

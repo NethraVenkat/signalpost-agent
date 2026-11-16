@@ -1,6 +1,6 @@
 {
   "before": "out/cancelfix-gate-normal/envelopes.jsonl",
-  "after": "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r2-check-normal\\envelopes.jsonl",
+  "after": "<HOME>\\Downloads\\Signalpost-v5\\out\\r2-check-normal\\envelopes.jsonl",
   "before_rows": 1000,
   "after_rows": 1000,
   "same_order": true,

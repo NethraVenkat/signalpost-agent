@@ -1,4 +1,5 @@
 """Build the final combined A2/B measurement report from saved verified artifacts."""
+from signalpost.portable_paths import portable, portable_text  # saved paths stay repo-relative
 import hashlib,json,subprocess
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[3]
@@ -95,6 +96,6 @@ See ../DECISIONS.md. Hand-check:
 
 Stopped after Stage B. No Stage D, push or publication.
 """
-    (DEST/'SUMMARY.md').write_text(s,encoding='utf8')
+    (DEST/'SUMMARY.md').write_text(portable_text(s),encoding='utf8')
 
 if __name__=='__main__':main()

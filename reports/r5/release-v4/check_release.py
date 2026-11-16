@@ -1,4 +1,5 @@
 ﻿"""Reproduce the clean-clone release smoke checks without extra evaluator flags."""
+from signalpost.portable_paths import portable, portable_text, sanitize_file  # saved paths stay repo-relative
 import hashlib,importlib.metadata,json,os,subprocess,sys,time
 from collections import Counter
 from datetime import datetime,timezone
@@ -12,13 +13,14 @@ ENV=os.environ.copy();ENV.update(SIGNALPOST_SEARCH_PROVIDER='disabled',SIGNALPOS
 
 
 def sha(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
-def save(name,value): (DEST/name).write_text(json.dumps(value,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+def save(name,value): (DEST/name).write_text(portable_text(json.dumps(value,ensure_ascii=False,indent=2)+'\n'),encoding='utf8')
 
 
 def command(name,args,cwd=ROOT):
     began=time.perf_counter()
     with (DEST/(name+'.txt')).open('w',encoding='utf8') as log:
         result=subprocess.run([str(a) for a in args],cwd=cwd,env=ENV,stdout=log,stderr=subprocess.STDOUT)
+    sanitize_file(DEST/(name+'.txt'))  # keep captured paths repo-relative
     info={'argv':[str(a) for a in args],'cwd':str(cwd),'exit_code':result.returncode,
           'wall_seconds':time.perf_counter()-began,'finished_at_utc':datetime.now(timezone.utc).isoformat()}
     save(name+'.json',info);result.check_returncode()
@@ -43,7 +45,7 @@ def prepare():
     old={json.loads(line)['organisation_number'] for line in (ROOT/'reports/r5/baseline/companies.jsonl').read_text(encoding='utf8').splitlines()}
     edge=[rows[0],'123456789',rows[1],rows[2],rows[0],rows[3],'923609017',rows[4],rows[5],rows[6]]
     assert sum(not valid(org) for org in edge)==2 and len(edge)-len(set(edge))==1
-    (DEST/'companies10.jsonl').write_text(''.join(json.dumps({'organisation_number':org})+'\n' for org in edge),encoding='utf8')
+    (DEST/'companies10.jsonl').write_text(portable_text(''.join(json.dumps({'organisation_number':org})+'\n' for org in edge)),encoding='utf8')
     save('clean_clone.json',{'tested_source_commit':head,'clone_directory':str(ROOT),'python_executable':sys.executable,
         'python_prefix':sys.prefix,'loaded_signalpost_module':signalpost.__file__,
         'installed_version_at_smoke':importlib.metadata.version('signalpost-agent'),

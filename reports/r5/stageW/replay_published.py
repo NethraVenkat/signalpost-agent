@@ -1,4 +1,5 @@
 """Check R4 against all historically published sites using exact saved bytes."""
+from signalpost.portable_paths import portable, portable_text  # saved paths stay repo-relative
 import hashlib
 import json
 from pathlib import Path
@@ -39,7 +40,7 @@ def main():
                                   'publisher': [{'location': f.location, 'text': f.text} for f in extract_publisher(page).fragments]})
     result = {'method': 'New conflict guard applied to exact historically published proof-page receipts; no re-fetch or output edits',
               'published_sites_checked': len(items), 'vetoes': sum(bool(i['rule']) for i in items), 'items': items}
-    (DEST / 'r4_published_replay.json').write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n', encoding='utf8', newline='\n')
+    (DEST / 'r4_published_replay.json').write_text(portable_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n'), encoding='utf8', newline='\n')
     print(json.dumps({'checked': len(items), 'vetoes': [{k: v for k, v in i.items() if k != 'publisher'} for i in items if i['rule']]}, ensure_ascii=True, indent=2))
 
 

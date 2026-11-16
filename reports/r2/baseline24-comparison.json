@@ -1,6 +1,6 @@
 {
   "before": "out/audit24-v1/fresh.jsonl",
-  "after": "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r2-check24\\envelopes.jsonl",
+  "after": "<HOME>\\Downloads\\Signalpost-v5\\out\\r2-check24\\envelopes.jsonl",
   "before_rows": 24,
   "after_rows": 24,
   "same_order": true,

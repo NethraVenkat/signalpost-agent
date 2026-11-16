@@ -1,4 +1,5 @@
 """Verify the committed R2 tree independently of pending R4 working files."""
+from signalpost.portable_paths import portable, portable_text, sanitize_file  # saved paths stay repo-relative
 import json
 import os
 from pathlib import Path
@@ -23,10 +24,11 @@ def main():
     started = time.monotonic()
     with (DEST / 'pytest-R2-committed-tree.txt').open('w', encoding='utf8', newline='\n') as log:
         result = subprocess.run(argv, cwd=work, env=env, stdout=log, stderr=subprocess.STDOUT)
+    sanitize_file(DEST / 'pytest-R2-committed-tree.txt')  # keep captured paths repo-relative
     receipt = {'commit': head, 'working_directory': str(work), 'module': module, 'command_argv': argv,
                'exit_code': result.returncode, 'wall_seconds': time.monotonic() - started,
                'dependencies': 'Existing local environment; PYTHONPATH and module receipt prove this exact worktree supplies application code. No network install or paid service.'}
-    (DEST / 'r2_committed_tree_check.json').write_text(json.dumps(receipt, indent=2) + '\n', encoding='utf8', newline='\n')
+    (DEST / 'r2_committed_tree_check.json').write_text(portable_text(json.dumps(receipt, indent=2) + '\n'), encoding='utf8', newline='\n')
     print(json.dumps(receipt))
     raise SystemExit(result.returncode)
 

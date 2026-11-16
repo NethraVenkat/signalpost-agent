@@ -1,5 +1,5 @@
 {
-  "site": "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\ux-audit-worktree\\reports\\ux\\sample\\site",
+  "site": "<HOME>\\Downloads\\Signalpost-v5\\out\\ux-audit-worktree\\reports\\ux\\sample\\site",
   "browser": "Playwright Chrome, file://, all non-file requests aborted",
   "selection": {
     "923609016": "Equinor large-company layout",
@@ -13,7 +13,7 @@
   "pages": {
     "directory": {
       "1440": {
-        "url": "file:///C:/Users/<USER>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/index.html",
+        "url": "file:///<HOME>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/index.html",
         "screenshot": "screenshots\\before\\directory_1440.png",
         "load_error": null,
         "dom": {
@@ -47,7 +47,7 @@
         }
       },
       "375": {
-        "url": "file:///C:/Users/<USER>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/index.html",
+        "url": "file:///<HOME>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/index.html",
         "screenshot": "screenshots\\before\\directory_375.png",
         "load_error": null,
         "dom": {
@@ -81,7 +81,7 @@
         }
       },
       "320": {
-        "url": "file:///C:/Users/<USER>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/index.html",
+        "url": "file:///<HOME>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/index.html",
         "screenshot": "screenshots\\before\\directory_320.png",
         "load_error": null,
         "dom": {
@@ -117,7 +117,7 @@
     },
     "equinor": {
       "1440": {
-        "url": "file:///C:/Users/<USER>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/c/923609016.html",
+        "url": "file:///<HOME>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/c/923609016.html",
         "screenshot": "screenshots\\before\\equinor_1440.png",
         "load_error": null,
         "dom": {
@@ -164,7 +164,7 @@
         }
       },
       "375": {
-        "url": "file:///C:/Users/<USER>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/c/923609016.html",
+        "url": "file:///<HOME>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/c/923609016.html",
         "screenshot": "screenshots\\before\\equinor_375.png",
         "load_error": null,
         "dom": {
@@ -211,7 +211,7 @@
         }
       },
       "320": {
-        "url": "file:///C:/Users/<USER>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/c/923609016.html",
+        "url": "file:///<HOME>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/c/923609016.html",
         "screenshot": "screenshots\\before\\equinor_320.png",
         "load_error": null,
         "dom": {
@@ -247,7 +247,7 @@
     },
     "filmtek": {
       "1440": {
-        "url": "file:///C:/Users/<USER>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/c/988330752.html",
+        "url": "file:///<HOME>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/c/988330752.html",
         "screenshot": "screenshots\\before\\filmtek_1440.png",
         "load_error": null,
         "dom": {
@@ -294,7 +294,7 @@
         }
       },
       "375": {
-        "url": "file:///C:/Users/<USER>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/c/988330752.html",
+        "url": "file:///<HOME>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/c/988330752.html",
         "screenshot": "screenshots\\before\\filmtek_375.png",
         "load_error": null,
         "dom": {
@@ -341,7 +341,7 @@
         }
       },
       "320": {
-        "url": "file:///C:/Users/<USER>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/c/988330752.html",
+        "url": "file:///<HOME>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/c/988330752.html",
         "screenshot": "screenshots\\before\\filmtek_320.png",
         "load_error": null,
         "dom": {
@@ -377,7 +377,7 @@
     },
     "small": {
       "1440": {
-        "url": "file:///C:/Users/<USER>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/c/925181536.html",
+        "url": "file:///<HOME>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/c/925181536.html",
         "screenshot": "screenshots\\before\\small_1440.png",
         "load_error": null,
         "dom": {
@@ -424,7 +424,7 @@
         }
       },
       "375": {
-        "url": "file:///C:/Users/<USER>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/c/925181536.html",
+        "url": "file:///<HOME>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/c/925181536.html",
         "screenshot": "screenshots\\before\\small_375.png",
         "load_error": null,
         "dom": {
@@ -471,7 +471,7 @@
         }
       },
       "320": {
-        "url": "file:///C:/Users/<USER>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/c/925181536.html",
+        "url": "file:///<HOME>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/c/925181536.html",
         "screenshot": "screenshots\\before\\small_320.png",
         "load_error": null,
         "dom": {
@@ -507,7 +507,7 @@
     },
     "near_empty": {
       "1440": {
-        "url": "file:///C:/Users/<USER>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/c/820042182.html",
+        "url": "file:///<HOME>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/c/820042182.html",
         "screenshot": "screenshots\\before\\near_empty_1440.png",
         "load_error": null,
         "dom": {
@@ -548,7 +548,7 @@
         }
       },
       "375": {
-        "url": "file:///C:/Users/<USER>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/c/820042182.html",
+        "url": "file:///<HOME>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/c/820042182.html",
         "screenshot": "screenshots\\before\\near_empty_375.png",
         "load_error": null,
         "dom": {
@@ -589,7 +589,7 @@
         }
       },
       "320": {
-        "url": "file:///C:/Users/<USER>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/c/820042182.html",
+        "url": "file:///<HOME>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/c/820042182.html",
         "screenshot": "screenshots\\before\\near_empty_320.png",
         "load_error": null,
         "dom": {
@@ -625,7 +625,7 @@
     },
     "registry_activity": {
       "1440": {
-        "url": "file:///C:/Users/<USER>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/c/932525070.html",
+        "url": "file:///<HOME>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/c/932525070.html",
         "screenshot": "screenshots\\before\\registry_activity_1440.png",
         "load_error": null,
         "dom": {
@@ -672,7 +672,7 @@
         }
       },
       "375": {
-        "url": "file:///C:/Users/<USER>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/c/932525070.html",
+        "url": "file:///<HOME>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/c/932525070.html",
         "screenshot": "screenshots\\before\\registry_activity_375.png",
         "load_error": null,
         "dom": {
@@ -719,7 +719,7 @@
         }
       },
       "320": {
-        "url": "file:///C:/Users/<USER>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/c/932525070.html",
+        "url": "file:///<HOME>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/c/932525070.html",
         "screenshot": "screenshots\\before\\registry_activity_320.png",
         "load_error": null,
         "dom": {
@@ -755,7 +755,7 @@
     },
     "compare_2": {
       "1440": {
-        "url": "file:///C:/Users/<USER>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/compare.html?companies=923609016,988330752",
+        "url": "file:///<HOME>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/compare.html?companies=923609016,988330752",
         "screenshot": "screenshots\\before\\compare_2_1440.png",
         "load_error": null,
         "dom": {
@@ -789,7 +789,7 @@
         }
       },
       "375": {
-        "url": "file:///C:/Users/<USER>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/compare.html?companies=923609016,988330752",
+        "url": "file:///<HOME>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/compare.html?companies=923609016,988330752",
         "screenshot": "screenshots\\before\\compare_2_375.png",
         "load_error": null,
         "dom": {
@@ -823,7 +823,7 @@
         }
       },
       "320": {
-        "url": "file:///C:/Users/<USER>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/compare.html?companies=923609016,988330752",
+        "url": "file:///<HOME>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/compare.html?companies=923609016,988330752",
         "screenshot": "screenshots\\before\\compare_2_320.png",
         "load_error": null,
         "dom": {
@@ -859,7 +859,7 @@
     },
     "compare_4": {
       "1440": {
-        "url": "file:///C:/Users/<USER>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/compare.html?companies=923609016,988330752,932525070,929583027",
+        "url": "file:///<HOME>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/compare.html?companies=923609016,988330752,932525070,929583027",
         "screenshot": "screenshots\\before\\compare_4_1440.png",
         "load_error": null,
         "dom": {
@@ -893,7 +893,7 @@
         }
       },
       "375": {
-        "url": "file:///C:/Users/<USER>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/compare.html?companies=923609016,988330752,932525070,929583027",
+        "url": "file:///<HOME>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/compare.html?companies=923609016,988330752,932525070,929583027",
         "screenshot": "screenshots\\before\\compare_4_375.png",
         "load_error": null,
         "dom": {
@@ -927,7 +927,7 @@
         }
       },
       "320": {
-        "url": "file:///C:/Users/<USER>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/compare.html?companies=923609016,988330752,932525070,929583027",
+        "url": "file:///<HOME>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/compare.html?companies=923609016,988330752,932525070,929583027",
         "screenshot": "screenshots\\before\\compare_4_320.png",
         "load_error": null,
         "dom": {
@@ -963,7 +963,7 @@
     },
     "invalid_input": {
       "1440": {
-        "url": "file:///C:/Users/<USER>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/index.html#invalid-inputs",
+        "url": "file:///<HOME>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/index.html#invalid-inputs",
         "screenshot": "screenshots\\before\\invalid_input_1440.png",
         "load_error": null,
         "dom": {
@@ -997,7 +997,7 @@
         }
       },
       "375": {
-        "url": "file:///C:/Users/<USER>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/index.html#invalid-inputs",
+        "url": "file:///<HOME>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/index.html#invalid-inputs",
         "screenshot": "screenshots\\before\\invalid_input_375.png",
         "load_error": null,
         "dom": {
@@ -1031,7 +1031,7 @@
         }
       },
       "320": {
-        "url": "file:///C:/Users/<USER>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/index.html#invalid-inputs",
+        "url": "file:///<HOME>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/index.html#invalid-inputs",
         "screenshot": "screenshots\\before\\invalid_input_320.png",
         "load_error": null,
         "dom": {
@@ -1216,7 +1216,7 @@
         "cards": 2,
         "cards_after_reload": 2,
         "input_count": 3,
-        "url": "file:///C:/Users/<USER>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/compare.html?companies=923609016%2C988330752"
+        "url": "file:///<HOME>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/compare.html?companies=923609016%2C988330752"
       }
     },
     "compare_4": {
@@ -1237,7 +1237,7 @@
         "cards": 3,
         "cards_after_reload": 3,
         "input_count": 3,
-        "url": "file:///C:/Users/<USER>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/compare.html?companies=923609016%2C988330752%2C932525070"
+        "url": "file:///<HOME>/Downloads/Signalpost-v5/out/ux-audit-worktree/reports/ux/sample/site/compare.html?companies=923609016%2C988330752%2C932525070"
       }
     },
     "invalid_input": {

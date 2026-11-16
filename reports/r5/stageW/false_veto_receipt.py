@@ -1,4 +1,5 @@
 """Retain the saved SISSENER excerpt behind the discarded broad group match."""
+from signalpost.portable_paths import expand, portable, portable_text  # saved paths stay repo-relative
 import hashlib
 import json
 from pathlib import Path
@@ -9,7 +10,7 @@ from audit import ROOT, DEST
 
 def main():
     settings = json.loads((ROOT / 'reports/r5/stageH/seed20261116/settings.json').read_text(encoding='utf8'))
-    work = Path(settings['working_directory'])
+    work = Path(expand(settings['working_directory']))
     sha = '1fef9e92174a78bf6c105c6b7f14b8e488a231a8b0833d2f72325efcfdaf2702'
     body = (work / 'state/blobs' / sha).read_bytes()
     assert hashlib.sha256(body).hexdigest() == sha
@@ -23,7 +24,7 @@ def main():
             'initial_trial_rule': 'publisher_group_without_exact_orgnr', 'current_conflict_rule': rule,
             'reason': 'The phrase concerns the fund selection process, not parent/group ownership. Bare part-of phrases were removed; explicit group/parent markers remain.',
             'method': 'Retrospective reproduction of discarded broad matcher on the original saved proof; not an accepted live result or new identity evidence.'}
-    (DEST / 'r4_false_veto.json').write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf8', newline='\n')
+    (DEST / 'r4_false_veto.json').write_text(portable_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n'), encoding='utf8', newline='\n')
     print('Saved exact SISSENER false-veto receipt; corrected conflict guard passes.')
 
 

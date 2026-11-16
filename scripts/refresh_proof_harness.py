@@ -3,6 +3,7 @@
 Only this harness replaces transport/clock/politeness. Production proof, budgets,
 extraction, refresh, synthesis and site code run unchanged. No network fallback.
 """
+from signalpost.portable_paths import expand, portable, portable_text  # saved paths stay repo-relative
 import asyncio,base64,copy,csv,gzip,hashlib,importlib,io,json,os,pkgutil,sys
 from contextlib import ExitStack,redirect_stdout
 from datetime import datetime,timezone
@@ -80,7 +81,7 @@ def one(work,label,case,previous=None,fixture_path=FIXTURE):
     if target.exists():raise ValueError('Fresh replay state required')
     target.mkdir(parents=True);org=manifest['organisation_number']
     batch=target/'companies.jsonl';batch.write_bytes((fixture_path/'companies.jsonl').read_bytes())
-    bulk=target/'registry.csv';bulk.write_text(mutate_table((fixture_path/'registry.csv').read_text(encoding='utf8'),case),encoding='utf8',newline='')
+    bulk=target/'registry.csv';bulk.write_text(portable_text(mutate_table((fixture_path/'registry.csv').read_text(encoding='utf8'),case)),encoding='utf8',newline='')
     if previous:
         # Immutable previous proof bodies only. No HTTP/NAV cache or candidate
         # result is copied; all current responses traverse the fresh transport.
@@ -156,7 +157,7 @@ def one(work,label,case,previous=None,fixture_path=FIXTURE):
         'case':case,'unrecorded_urls':sorted(set(unrecorded)),'batch_aliases':aliases,'requested_urls':requested,'verification':verification,
         'output_sha256':hashlib.sha256((target/'envelopes.jsonl').read_bytes()).hexdigest(),
         'snapshot_changes':rows[0]['changes'],'coverage_observations':rows[0]['run']['refresh'].get('observation_changes',[])}
-    (target/'execution.json').write_text(json.dumps(record,indent=2)+'\n',encoding='utf8')
+    (target/'execution.json').write_text(portable_text(json.dumps(record,indent=2)+'\n'),encoding='utf8')
     return rows[0],target/'envelopes.jsonl',record
 
 
@@ -206,9 +207,9 @@ def run_suite(work,fixture_path=FIXTURE):
             'stale_markers_present':bool(carried),'execution':stale_record},
         'equivalent_timestamp_changes':len(equivalent['changes']),'equivalent_timestamp_execution':equivalent_record,
         'network_access':False,'paid_cost_usd':0,'current_proof_never_reused':True}
-    (work/'refresh_results.json').write_text(json.dumps(result,indent=2)+'\n',encoding='utf8')
+    (work/'refresh_results.json').write_text(portable_text(json.dumps(result,indent=2)+'\n'),encoding='utf8')
     return result
 
 if __name__=='__main__':
-    result=run_suite(Path(sys.argv[1]) if len(sys.argv)>1 else ROOT/'.data/r5/stageE-offline')
+    result=run_suite(Path(expand(sys.argv[1])) if len(sys.argv)>1 else ROOT/'.data/r5/stageE-offline')
     print(json.dumps({k:v for k,v in result.items() if k not in {'cases','baseline_execution','unchanged_execution','idempotent_execution','transient'}}))

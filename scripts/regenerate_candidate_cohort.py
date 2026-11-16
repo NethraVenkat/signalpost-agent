@@ -13,6 +13,7 @@ Enforces:
 - Deterministic claim ordering
 - Detailed audit manifest generation
 """
+from signalpost.portable_paths import portable, portable_text  # saved paths stay repo-relative
 import argparse
 import hashlib
 import html
@@ -221,7 +222,7 @@ def regenerate_cohort(
     for r in updated_envelopes:
         prof_data = r.profile.model_dump(mode="json") if hasattr(r.profile, "model_dump") else r.profile
         profile_lines.append(json.dumps(prof_data, ensure_ascii=False))
-    output_profiles.write_text("\n".join(profile_lines) + "\n", encoding="utf-8")
+    output_profiles.write_text(portable_text("\n".join(profile_lines) + "\n"), encoding="utf-8")
     print(f"Wrote updated profiles to {output_profiles}")
 
     # Validate shape schema
@@ -252,7 +253,7 @@ def regenerate_cohort(
         "total_claims_after": total_claims_after,
         "blob_integrity_failures": blob_integrity_failures,
     }
-    manifest_path.write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    manifest_path.write_text(portable_text(json.dumps(manifest, indent=2, ensure_ascii=False) + "\n"), encoding="utf-8")
     print(f"Wrote change manifest to {manifest_path}")
 
     return manifest

@@ -1,4 +1,4 @@
-{"command": ["C:\\Users\\<USER>\\signal-nethra\\.venv\\Scripts\\python.exe", "C:\\Users\\<USER>\\signal-nethra\\reports\\r5\\stage4_7\\run_tests.py", "-q", "-p", "no:cacheprovider", "--basetemp=.data/r5/pytest-stageA0"], "priority": "above_normal", "mutates_test_assertions_or_timeouts": false}
+{"command": ["<REPO>\\.venv\\Scripts\\python.exe", "<REPO>\\reports\\r5\\stage4_7\\run_tests.py", "-q", "-p", "no:cacheprovider", "--basetemp=.data/r5/pytest-stageA0"], "priority": "above_normal", "mutates_test_assertions_or_timeouts": false}
 ........................................................................ [  8%]
 ........................................................................ [ 17%]
 ........................................................................ [ 26%]
@@ -14,14 +14,14 @@
 ================================== FAILURES ===================================
 ___________ test_nav_time_cap_follows_budget_and_can_be_overridden ____________
 
-tmp_path = WindowsPath('C:/Users/<USER>/signal-nethra/.data/r5/pytest-stageA0/test_nav_time_cap_follows_budg0')
+tmp_path = WindowsPath('<REPO>/.data/r5/pytest-stageA0/test_nav_time_cap_follows_budg0')
 
     def test_nav_time_cap_follows_budget_and_can_be_overridden(tmp_path):
         assert time_cap(config(tmp_path / 'small', [], time_budget_seconds=900)) == 360
 >       assert time_cap(config(tmp_path / 'default', [])) == 900
 E       AssertionError: assert 840.0 == 900
-E        +  where 840.0 = time_cap(Config(organisations=WindowsPath('C:/Users/<USER>/signal-nethra/.data/r5/pytest-stageA0/test_nav_time_cap_follows_budg...=5, search_unit_price_usd=0.005, synthesis='template', llm_max_calls=100, llm_max_cost_usd=0.5, llm_timeout_seconds=15))
-E        +    where Config(organisations=WindowsPath('C:/Users/<USER>/signal-nethra/.data/r5/pytest-stageA0/test_nav_time_cap_follows_budg...=5, search_unit_price_usd=0.005, synthesis='template', llm_max_calls=100, llm_max_cost_usd=0.5, llm_timeout_seconds=15) = config((WindowsPath('C:/Users/<USER>/signal-nethra/.data/r5/pytest-stageA0/test_nav_time_cap_follows_budg0') / 'default'), [])
+E        +  where 840.0 = time_cap(Config(organisations=WindowsPath('<REPO>/.data/r5/pytest-stageA0/test_nav_time_cap_follows_budg...=5, search_unit_price_usd=0.005, synthesis='template', llm_max_calls=100, llm_max_cost_usd=0.5, llm_timeout_seconds=15))
+E        +    where Config(organisations=WindowsPath('<REPO>/.data/r5/pytest-stageA0/test_nav_time_cap_follows_budg...=5, search_unit_price_usd=0.005, synthesis='template', llm_max_calls=100, llm_max_cost_usd=0.5, llm_timeout_seconds=15) = config((WindowsPath('<REPO>/.data/r5/pytest-stageA0/test_nav_time_cap_follows_budg0') / 'default'), [])
 
 tests\test_nav_pool.py:7: AssertionError
 =========================== short test summary info ===========================

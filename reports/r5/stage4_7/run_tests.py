@@ -4,6 +4,7 @@ import json
 import os
 import sys
 import pytest
+from signalpost.portable_paths import portable  # saved paths stay repo-relative
 
 def main():
     priority_set = False
@@ -13,7 +14,7 @@ def main():
         kernel.GetCurrentProcess.restype = ctypes.c_void_p
         kernel.SetPriorityClass.argtypes = [ctypes.c_void_p, ctypes.c_uint]
         priority_set = bool(kernel.SetPriorityClass(kernel.GetCurrentProcess(), 0x8000))
-    print(json.dumps({'command': [sys.executable, __file__, *sys.argv[1:]],
+    print(json.dumps({'command': portable([sys.executable, __file__, *sys.argv[1:]]),
                       'priority': 'above_normal' if priority_set else 'unchanged',
                       'mutates_test_assertions_or_timeouts': False}), flush=True)
     return pytest.main(sys.argv[1:])

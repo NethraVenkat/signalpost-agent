@@ -1,4 +1,5 @@
 """Offline legal-page and builder audit over accepted six-sample receipts."""
+from signalpost.portable_paths import expand, portable, portable_text  # saved paths stay repo-relative
 import hashlib,json,re,sys
 from pathlib import Path
 from collections import Counter
@@ -18,7 +19,7 @@ def main():
     records=[];counts=Counter();seen=set();provenance=[]
     for seed in SEEDS:
         path=ROOT/f'reports/r5/stage{stage}/{stage}/seed{seed}'
-        settings=json.loads((path/'settings.json').read_text(encoding='utf8'));work=Path(settings['working_directory'])
+        settings=json.loads((path/'settings.json').read_text(encoding='utf8'));work=Path(expand(settings['working_directory']))
         rows={r['organisation_number']:r for r in map(json.loads,(work/'envelopes.jsonl').read_text(encoding='utf8').splitlines())}
         report=json.loads((work/'report.json').read_text(encoding='utf8'))
         provenance.append({'seed':seed,'work':str(work),'envelopes_sha256':hashlib.sha256((work/'envelopes.jsonl').read_bytes()).hexdigest()})
@@ -62,10 +63,10 @@ def main():
     counts['unique_legal_html_targets']=len({(r['seed'],r['orgnr'],l['url']) for r in records for l in r['links'] if not l['pdf']})
     counts['unique_linked_pdf_targets']=len({(r['seed'],r['orgnr'],l['url']) for r in records for l in r['links'] if l['pdf']})
     doc={'network_requests':0,'method':'Saved accepted response bodies only; same-site publisher/footer/nav/legal links; builder marker plus exact target orgnr is an audit hit, not proof','counts':dict(counts),'sources':provenance,'items':records}
-    (dest/'audit.json').write_text(json.dumps(doc,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+    (dest/'audit.json').write_text(portable_text(json.dumps(doc,ensure_ascii=False,indent=2)+'\n'),encoding='utf8')
     lines=['# L0 offline legal-disclosure audit','','Zero network requests. Audit hits nominate pages or builder inspection; they do not establish identity.','', '```json',json.dumps(dict(counts),indent=2),'```','']
     for r in records:lines += [f"## {r['seed']} / {r['orgnr']} / {r['name']}",'',r['page'],'','```json',json.dumps(r,ensure_ascii=False,indent=2),'```','']
-    (dest/'audit.md').write_text('\n'.join(lines),encoding='utf8')
+    (dest/'audit.md').write_text(portable_text('\n'.join(lines)),encoding='utf8')
     print(json.dumps(dict(counts)))
 
 if __name__=='__main__':main()

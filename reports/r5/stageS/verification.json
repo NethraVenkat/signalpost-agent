@@ -1,6 +1,6 @@
 {
   "command": [
-    "C:\\Users\\<USER>\\signal-nethra\\.venv\\Scripts\\python.exe",
+    "<REPO>\\.venv\\Scripts\\python.exe",
     "scripts/verify_output.py",
     "--first",
     ".data/r5/stageS-run/envelopes.jsonl",

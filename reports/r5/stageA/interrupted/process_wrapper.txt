@@ -7,12 +7,12 @@ At line:2 char:22
     + FullyQualifiedErrorId : NativeCommandError
  
 Traceback (most recent call last):
-  File "C:\Users\<USER>\signal-nethra\reports\r5\measure_adaptive.py", line 129, in <module>
+  File "<REPO>\reports\r5\measure_adaptive.py", line 129, in <module>
     else: main()
           ^^^^^^
-  File "C:\Users\<USER>\signal-nethra\reports\r5\measure_adaptive.py", line 66, in main
+  File "<REPO>\reports\r5\measure_adaptive.py", line 66, in main
     summarize()
-  File "C:\Users\<USER>\signal-nethra\reports\r5\measure_adaptive.py", line 82, in summarize
+  File "<REPO>\reports\r5\measure_adaptive.py", line 82, in summarize
     assert report['completion']['within_requested_time_budget'] and 
 report['completion']['within_effective_time_budget']
            

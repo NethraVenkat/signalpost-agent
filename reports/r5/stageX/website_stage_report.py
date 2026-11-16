@@ -1,4 +1,5 @@
 ﻿"""Write the website-stage hand-check ledger from accepted saved receipts."""
+from signalpost.portable_paths import portable, portable_text  # saved paths stay repo-relative
 import json
 import sys
 from collections import Counter
@@ -22,7 +23,7 @@ def main():
         for e in i['evidence']:
             lines += [f"Source: {e['source_url']}; retrieval: {e['retrieved_at']}; SHA-256: `{e['content_sha256']}`; locator: `{e['locator']}`.",'','Exact excerpt:','','```',e['claim_span'],'```','']
     if not items:lines+=['No added or removed website or social URLs.','']
-    (dest.parent/'new_websites.md').write_text('\n'.join(lines),encoding='utf8',newline='\n')
+    (dest.parent/'new_websites.md').write_text(portable_text('\n'.join(lines)),encoding='utf8',newline='\n')
     summary=['# '+stage+' six-sample measurement','',
         'Exactly seven evaluator flags, fresh state, sequential foreground samples, $0. The runtime source manifest is identical across all accepted samples. X5 remains dropped.','',
         '| Seed | Websites before / after | Declared recall before / after / listed | New website proof types | Social companies | Activity claims | Brand claims | Facts | HTTP | Process seconds |',
@@ -36,6 +37,6 @@ def main():
         'Proof labels attribute the published evidence tier. Retry and candidate-order changes are discovery changes and cannot be causally isolated by proof label; live-source recoveries/removals are disclosed separately in the URL ledger.','',
         'All accepted samples: exit 0, 100 ordered terminal envelopes, five cited briefing topics, zero unsupported values, site generated below the 250,000-byte profile gate, hard HTTP/time limits respected. No doubtful added identity survives the saved-evidence recheck.','',
         '[Every added/removed website and social URL with exact receipts](new_websites.md). See '+stage+'/VALIDATION.json, each seed settings/report/counts and execution/verification receipts for the complete audit trail.','']
-    (dest.parent/'SUMMARY.md').write_text('\n'.join(summary),encoding='utf8',newline='\n')
+    (dest.parent/'SUMMARY.md').write_text(portable_text('\n'.join(summary)),encoding='utf8',newline='\n')
 
 if __name__=='__main__':main()

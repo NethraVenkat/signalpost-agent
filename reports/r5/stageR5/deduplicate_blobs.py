@@ -1,4 +1,5 @@
 """Lossless workspace-only saved-blob deduplication after disk exhaustion."""
+from signalpost.portable_paths import portable, portable_text  # saved paths stay repo-relative
 import hashlib
 import json
 import os
@@ -38,7 +39,7 @@ def main():
             linked+=1;logical+=size
     result={'method':'Verified identical bytes and SHA-256, atomic hard-link replacement; all original paths and bytes retained, workspace .data/r5 only.',
         'linked_blobs':linked,'bytes_deduplicated':logical,'checked_blobs':checked,'free_before':before,'free_after':shutil.disk_usage(ROOT).free}
-    (Path(__file__).parent/'blob_deduplication.json').write_text(json.dumps(result,indent=2)+'\n',encoding='utf8')
+    (Path(__file__).parent/'blob_deduplication.json').write_text(portable_text(json.dumps(result,indent=2)+'\n'),encoding='utf8')
     print(json.dumps(result))
 
 

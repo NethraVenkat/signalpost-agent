@@ -1,4 +1,5 @@
 """Audit both final C runs, retained proof nominations and cap usage."""
+from signalpost.portable_paths import expand, portable, portable_text  # saved paths stay repo-relative
 import json,hashlib
 from pathlib import Path
 from collections import Counter
@@ -8,7 +9,7 @@ def main():
     result={}
     for sample in ('frozen','daily'):
         folder=ROOT/'reports/r5/stageC'/sample
-        settings=json.loads((folder/'settings.json').read_text(encoding='utf8'));out=Path(settings['working_directory'])
+        settings=json.loads((folder/'settings.json').read_text(encoding='utf8'));out=Path(expand(settings['working_directory']))
         rows=[json.loads(x) for x in (out/'envelopes.jsonl').read_text(encoding='utf8').splitlines()]
         report=json.loads((out/'report.json').read_text(encoding='utf8'));verify=json.loads((folder/'verification.json').read_text(encoding='utf8'))
         assert len(rows)==100 and report['requests']<=1850 and report['total_cost_usd']==0
@@ -38,6 +39,6 @@ def main():
         result[sample]={'http':report['requests'],'website_http_max':max(web.values()),'largest_profile_bytes':report['site']['largest_profile_bytes'],
             'sitemap_attempt_states':dict(maps),'companies_by_nominated_page_count':dict(nominated),
             'sitemap_proof_successes':verified,'challenge_companies':blocked,'source_manifest_matches':True,'cost_usd':0}
-    (ROOT/'reports/r5/stageC/audit.json').write_text(json.dumps(result,indent=2)+'\n',encoding='utf8');print(json.dumps(result))
+    (ROOT/'reports/r5/stageC/audit.json').write_text(portable_text(json.dumps(result,indent=2)+'\n'),encoding='utf8');print(json.dumps(result))
 
 if __name__=='__main__':main()

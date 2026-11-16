@@ -1,4 +1,5 @@
 """All published mock-run website/social/job claims with exact saved proof."""
+from signalpost.portable_paths import portable, portable_text  # saved paths stay repo-relative
 import hashlib,json
 from collections import Counter
 from pathlib import Path
@@ -65,10 +66,10 @@ New seed-20261114 sample, disjoint from both prior 100-company samples. Every pu
                 for span in receipt['exact_excerpts']:
                     text+='<pre>'+span.replace('&','&amp;').replace('<','&lt;').replace('>','&gt;')+'</pre>\n\n'
     if not records:text+='No website/social/job claims published.\n'
-    (DEST/'urls.md').write_text(text.rstrip()+'\n',encoding='utf8',newline='\n')
+    (DEST/'urls.md').write_text(portable_text(text.rstrip()+'\n'),encoding='utf8',newline='\n')
     result={'output':str(OUT/'envelopes.jsonl'),'output_sha256':hashlib.sha256((OUT/'envelopes.jsonl').read_bytes()).hexdigest(),
         'count_by_kind':dict(counts),'records':records}
-    (DEST/'urls.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+    (DEST/'urls.json').write_text(portable_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n'),encoding='utf8')
     print(json.dumps(dict(counts)))
 
 if __name__=='__main__':main()

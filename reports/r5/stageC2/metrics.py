@@ -1,4 +1,5 @@
 """Measure exhausted scopes and proof gains without equating live drift to causality."""
+from signalpost.portable_paths import portable, portable_text  # saved paths stay repo-relative
 import json
 from collections import Counter
 from pathlib import Path
@@ -30,7 +31,7 @@ def main():
             'website_http_max':max(Counter(e['organisation_number'] for e in bp['request_log'] if e.get('section')=='website').values(),default=0),
             'output_sha256':json.loads((after/'counts.json').read_text(encoding='utf8'))['artifacts']['envelopes.jsonl']}
         assert result[sample]['website_http_max']<=23 and bp['requests']<=1850 and bp['total_cost_usd']==0
-    dest=ROOT/'reports/r5/stageC2/metrics.json';dest.write_text(json.dumps(result,indent=2)+'\n',encoding='utf8')
+    dest=ROOT/'reports/r5/stageC2/metrics.json';dest.write_text(portable_text(json.dumps(result,indent=2)+'\n'),encoding='utf8')
     print(json.dumps({s:{k:v for k,v in r.items() if k!='extended_records'} for s,r in result.items()}))
 
 if __name__=='__main__':main()

@@ -1,4 +1,5 @@
 """Hash-check the public corpus and uniformly sample with a fixed seed."""
+from signalpost.portable_paths import portable, portable_text  # saved paths stay repo-relative
 import argparse
 import gzip
 import hashlib
@@ -29,7 +30,7 @@ def main():
     assert len(corpus) == 411160
     sample = random.Random(args.seed).sample(corpus, args.count)
     args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text("".join(json.dumps({"organisation_number": str(x["organisation_number"])}) + "\n" for x in sample), encoding="utf-8")
+    args.output.write_text(portable_text("".join(json.dumps({"organisation_number": str(x["organisation_number"])}) + "\n" for x in sample)), encoding="utf-8")
     print(json.dumps({"archive_sha256": archive_sha, "content_sha256": sha.hexdigest(), "rows": len(corpus), "sample_count": len(sample), "seed": args.seed, "sample_sha256": hashlib.sha256(args.output.read_bytes()).hexdigest()}))
 
 

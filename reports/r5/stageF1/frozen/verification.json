@@ -1,17 +1,17 @@
 {
   "command": [
-    "C:\\Users\\<USER>\\signal-nethra\\.venv\\Scripts\\python.exe",
+    "<REPO>\\.venv\\Scripts\\python.exe",
     "scripts/verify_output.py",
     "--first",
-    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageF1-frozen-run-final\\envelopes.jsonl",
+    "<REPO>\\.data\\r5\\stageF1-frozen-run-final\\envelopes.jsonl",
     "--organisations",
-    "C:\\Users\\<USER>\\signal-nethra\\reports\\r5\\baseline\\companies.jsonl",
+    "<REPO>\\reports\\r5\\baseline\\companies.jsonl",
     "--count",
     "100",
     "--state-dir",
-    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageF1-frozen-run-final\\state",
+    "<REPO>\\.data\\r5\\stageF1-frozen-run-final\\state",
     "--report",
-    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageF1-frozen-run-final\\report.json"
+    "<REPO>\\.data\\r5\\stageF1-frozen-run-final\\report.json"
   ],
   "exit_code": 0,
   "lines": 100,

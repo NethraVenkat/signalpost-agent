@@ -4,7 +4,7 @@ PASS for the requested technical release checks. No new application features, pu
 
 ## Clean clone and tested source
 
-Exact tested revision/r5 HEAD: `7ff7c031508036d5fd65737c1a6d93915cebe9fe`; source tree `aeab38688a4bd83d684a4b234d1abbd050fe61a5`. Clone: `C:\Users\<USER>\signal-nethra\.data\r5\release-v4b-20261113-183129\repo`. It was created with git clone --no-hardlinks --single-branch --branch revision/r5 from the local repository into a new temporary workspace directory. It began with no tracked changes or copied runtime state. uv sync --frozen installed an isolated .venv; installation-smoke.json records interpreter/prefix/module/version and dependency licences, proving the clone was loaded. Initial full pytest and every sample/extraction/smoke/verification command run from this clone. No external application code was copied.
+Exact tested revision/r5 HEAD: `7ff7c031508036d5fd65737c1a6d93915cebe9fe`; source tree `aeab38688a4bd83d684a4b234d1abbd050fe61a5`. Clone: `<REPO>\.data\r5\release-v4b-20261113-183129\repo`. It was created with git clone --no-hardlinks --single-branch --branch revision/r5 from the local repository into a new temporary workspace directory. It began with no tracked changes or copied runtime state. uv sync --frozen installed an isolated .venv; installation-smoke.json records interpreter/prefix/module/version and dependency licences, proving the clone was loaded. Initial full pytest and every sample/extraction/smoke/verification command run from this clone. No external application code was copied.
 
 The new 100-company smoke tested metadata version 1.2.0; the accepted exact-prior-input edge rerun tested version 1.3.0. Between them, only pyproject/uv.lock editable project metadata and README/evidence changed to 1.3.0. A second uv sync --frozen and full pytest passed; all application source bytes and third-party dependency versions remain unchanged. installation-final.json and release_checks.json verify this identity. No lock upgrade or source behavior change is hidden in the release.
 
@@ -47,20 +47,20 @@ From the working directories in daily.json/edge.json, using recorded environment
 
 ### daily
 
-Working directory: `C:\Users\<USER>\signal-nethra\.data\r5\release-v4b-20261113-183129\repo\.data\release-v4b\daily`
+Working directory: `<REPO>\.data\r5\release-v4b-20261113-183129\repo\.data\release-v4b\daily`
 
 ```powershell
-# Run from C:\Users\<USER>\signal-nethra\.data\r5\release-v4b-20261113-183129\repo\.data\release-v4b\daily with recorded environment overrides.
-& 'C:\Users\<USER>\signal-nethra\.data\r5\release-v4b-20261113-183129\repo\.venv\Scripts\python.exe' '-m' 'signalpost.cli' 'run' '--organisations' 'C:\Users\<USER>\signal-nethra\.data\r5\release-v4b-20261113-183129\repo\reports\r5\release-v4b\companies100.jsonl' '--bulk' 'C:\Users\<USER>\signal-nethra\.data\r5\release-v4b-20261113-183129\repo\reports\r5\release-v4b\registry100.csv' '--output' 'C:\Users\<USER>\signal-nethra\.data\r5\release-v4b-20261113-183129\repo\.data\release-v4b\daily\envelopes.jsonl' '--profiles-output' 'C:\Users\<USER>\signal-nethra\.data\r5\release-v4b-20261113-183129\repo\.data\release-v4b\daily\profiles.jsonl' '--report' 'C:\Users\<USER>\signal-nethra\.data\r5\release-v4b-20261113-183129\repo\.data\release-v4b\daily\report.json' '--run-id' 'release-v4b-daily-seed20261114' '--expected-count' '100'
+# Run from <REPO>\.data\r5\release-v4b-20261113-183129\repo\.data\release-v4b\daily with recorded environment overrides.
+& '<REPO>\.data\r5\release-v4b-20261113-183129\repo\.venv\Scripts\python.exe' '-m' 'signalpost.cli' 'run' '--organisations' '<REPO>\.data\r5\release-v4b-20261113-183129\repo\reports\r5\release-v4b\companies100.jsonl' '--bulk' '<REPO>\.data\r5\release-v4b-20261113-183129\repo\reports\r5\release-v4b\registry100.csv' '--output' '<REPO>\.data\r5\release-v4b-20261113-183129\repo\.data\release-v4b\daily\envelopes.jsonl' '--profiles-output' '<REPO>\.data\r5\release-v4b-20261113-183129\repo\.data\release-v4b\daily\profiles.jsonl' '--report' '<REPO>\.data\r5\release-v4b-20261113-183129\repo\.data\release-v4b\daily\report.json' '--run-id' 'release-v4b-daily-seed20261114' '--expected-count' '100'
 ```
 
 ### edge
 
-Working directory: `C:\Users\<USER>\signal-nethra\.data\r5\release-v4b-20261113-183129\repo\.data\release-v4b\edge-repeat`
+Working directory: `<REPO>\.data\r5\release-v4b-20261113-183129\repo\.data\release-v4b\edge-repeat`
 
 ```powershell
-# Run from C:\Users\<USER>\signal-nethra\.data\r5\release-v4b-20261113-183129\repo\.data\release-v4b\edge-repeat with recorded environment overrides.
-& 'C:\Users\<USER>\signal-nethra\.data\r5\release-v4b-20261113-183129\repo\.venv\Scripts\python.exe' '-m' 'signalpost.cli' 'run' '--organisations' 'C:\Users\<USER>\signal-nethra\.data\r5\release-v4b-20261113-183129\repo\reports\r5\release-v4b\companies10.jsonl' '--bulk' 'C:\Users\<USER>\signal-nethra\.data\r5\release-v4b-20261113-183129\repo\reports\r5\release-v4\registry100.csv' '--output' 'C:\Users\<USER>\signal-nethra\.data\r5\release-v4b-20261113-183129\repo\.data\release-v4b\edge-repeat\envelopes.jsonl' '--profiles-output' 'C:\Users\<USER>\signal-nethra\.data\r5\release-v4b-20261113-183129\repo\.data\release-v4b\edge-repeat\profiles.jsonl' '--report' 'C:\Users\<USER>\signal-nethra\.data\r5\release-v4b-20261113-183129\repo\.data\release-v4b\edge-repeat\report.json' '--run-id' 'release-v4b-edge-repeat-prior' '--expected-count' '10'
+# Run from <REPO>\.data\r5\release-v4b-20261113-183129\repo\.data\release-v4b\edge-repeat with recorded environment overrides.
+& '<REPO>\.data\r5\release-v4b-20261113-183129\repo\.venv\Scripts\python.exe' '-m' 'signalpost.cli' 'run' '--organisations' '<REPO>\.data\r5\release-v4b-20261113-183129\repo\reports\r5\release-v4b\companies10.jsonl' '--bulk' '<REPO>\.data\r5\release-v4b-20261113-183129\repo\reports\r5\release-v4\registry100.csv' '--output' '<REPO>\.data\r5\release-v4b-20261113-183129\repo\.data\release-v4b\edge-repeat\envelopes.jsonl' '--profiles-output' '<REPO>\.data\r5\release-v4b-20261113-183129\repo\.data\release-v4b\edge-repeat\profiles.jsonl' '--report' '<REPO>\.data\r5\release-v4b-20261113-183129\repo\.data\release-v4b\edge-repeat\report.json' '--run-id' 'release-v4b-edge-repeat-prior' '--expected-count' '10'
 ```
 
 ## Prior samples and new mock

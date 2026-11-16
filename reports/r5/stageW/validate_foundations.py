@@ -1,4 +1,5 @@
 """Final artifact/measurement consistency gate; no network or output mutation."""
+from signalpost.portable_paths import expand, portable, portable_text  # saved paths stay repo-relative
 import hashlib
 import json
 from collections import Counter
@@ -20,14 +21,14 @@ def main():
         argv = settings['command_argv']; flags = [x for x in argv if x.startswith('--')]
         assert len(flags) == 7 and set(flags) == expected_flags
         assert settings['source_manifest_sha256'] == hashlib.sha256((DEST / 'r4_source_manifest.json').read_bytes()).hexdigest()
-        work = Path(settings['working_directory']); report = read(work / 'report.json'); verification = read(folder / 'verification.json'); execution = read(folder / 'execution.json')
+        work = Path(expand(settings['working_directory'])); report = read(work / 'report.json'); verification = read(folder / 'verification.json'); execution = read(folder / 'execution.json')
         assert execution['exit_code'] == 0 and execution['wall_seconds'] <= 2100 and report['requests'] <= 1850
         assert report['total_cost_usd'] == report['llm']['calls'] == report['search']['queries'] == 0
         assert report['site']['state'] == 'available' and report['site']['companies'] == 100
         assert verification['complete_briefing_contracts'] == 100 and verification['synthesis_unverified_values'] == verification['briefing_unverified_values'] == 0
         rows = [json.loads(line) for line in (work / 'envelopes.jsonl').read_text(encoding='utf8').splitlines()]
         ids = [r['organisation_number'] for r in rows]; assert len(ids) == len(set(ids)) == 100 and not all_ids.intersection(ids)
-        inputs = [json.loads(line)['organisation_number'] for line in Path(argv[argv.index('--organisations') + 1]).read_text(encoding='utf8').splitlines()]
+        inputs = [json.loads(line)['organisation_number'] for line in Path(expand(argv[argv.index('--organisations') + 1])).read_text(encoding='utf8').splitlines()]
         assert ids == inputs and report['run_id'] not in run_ids
         assert all(r['run']['terminal_status'] in {'completed', 'failed'} for r in rows)
         all_ids.update(ids); run_ids.add(report['run_id'])
@@ -61,7 +62,7 @@ def main():
               'resource_totals': dict(aggregate), 'dns_audit_http': 7, 'failed_bulk_preflight_attempts': 2,
               'nav_parent_audit_http': parent['http_requests'], 'all_provider_cost_usd': 0,
               'limits': 'Rejected runs are included in resource totals, never substituted for accepted samples. Two stopped-driver child exit codes/import windows remain unknown in their trial receipts.'}
-    (DEST / 'VALIDATION.json').write_text(json.dumps(result, indent=2) + '\n', encoding='utf8', newline='\n')
+    (DEST / 'VALIDATION.json').write_text(portable_text(json.dumps(result, indent=2) + '\n'), encoding='utf8', newline='\n')
     print(json.dumps(result))
 
 

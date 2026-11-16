@@ -1,4 +1,4 @@
-{"command": ["C:\\Users\\<USER>\\signal-nethra\\.venv\\Scripts\\python.exe", "C:\\Users\\<USER>\\signal-nethra\\reports\\r5\\stage4_7\\run_tests.py", "-q", "-p", "no:cacheprovider", "--tb=short"], "priority": "above_normal", "mutates_test_assertions_or_timeouts": false}
+{"command": ["<REPO>\\.venv\\Scripts\\python.exe", "<REPO>\\reports\\r5\\stage4_7\\run_tests.py", "-q", "-p", "no:cacheprovider", "--tb=short"], "priority": "above_normal", "mutates_test_assertions_or_timeouts": false}
 ........................................................................ [  5%]
 ........................................................................ [ 11%]
 ..................................F..........F.......................... [ 16%]
@@ -84,7 +84,7 @@ E    +  where 1 = <function main at 0x000001C81A1BFBA0>()
 ---------------------------- Captured stderr call -----------------------------
 signalpost could not produce output: AllMockedAssertionError: RESPX: <Request('HEAD', 'https://data.brreg.no/enhetsregisteret/api/enheter?size=1')> not mocked!
 _ test_evaluator_seven_flags_build_site_by_default_or_explicitly_disable[False] _
-C:\Users\<USER>\signal-nethra\tests\test_r5_stage_u.py:36: in test_evaluator_seven_flags_build_site_by_default_or_explicitly_disable
+<REPO>\tests\test_r5_stage_u.py:36: in test_evaluator_seven_flags_build_site_by_default_or_explicitly_disable
     assert cli.main() == 0
 E   assert 1 == 0
 E    +  where 1 = <function main at 0x000001C81A1BFBA0>()
@@ -92,7 +92,7 @@ E    +    where <function main at 0x000001C81A1BFBA0> = cli.main
 ---------------------------- Captured stderr call -----------------------------
 signalpost could not produce output: TypeError: 'NoneType' object is not subscriptable
 _ test_evaluator_seven_flags_build_site_by_default_or_explicitly_disable[True] _
-C:\Users\<USER>\signal-nethra\tests\test_r5_stage_u.py:36: in test_evaluator_seven_flags_build_site_by_default_or_explicitly_disable
+<REPO>\tests\test_r5_stage_u.py:36: in test_evaluator_seven_flags_build_site_by_default_or_explicitly_disable
     assert cli.main() == 0
 E   assert 1 == 0
 E    +  where 1 = <function main at 0x000001C81A1BFBA0>()

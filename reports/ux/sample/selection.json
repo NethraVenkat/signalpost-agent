@@ -1,7 +1,7 @@
 {
-  "source": "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r3b-retry\\default1000\\envelopes.jsonl",
+  "source": "<HOME>\\Downloads\\Signalpost-v5\\out\\r3b-retry\\default1000\\envelopes.jsonl",
   "source_sha256": "4170b42777a239ee9688f0bdeea042b67c6ed9d440715ac65c64d6ea70dc5d20",
-  "bulk": "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\capacity-inputs\\bulk1000.csv",
+  "bulk": "<HOME>\\Downloads\\Signalpost-v5\\out\\capacity-inputs\\bulk1000.csv",
   "bulk_sha256": "9b5aeda58ea75c798061a22e61f82f0af2999b698c49429d942ce3e090481f91",
   "special_cases": {
     "923609016": "Equinor large-company layout",

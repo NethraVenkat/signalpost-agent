@@ -1,5 +1,5 @@
 {
   "accepted": false,
   "reason": "Process absent on continuation, no final report/exit receipt; cause, final requests and runtime unknown. Preserve raw state and restart fresh.",
-  "working_directory": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageX5-20261114-final"
+  "working_directory": "<REPO>\\.data\\r5\\stageX5-20261114-final"
 }

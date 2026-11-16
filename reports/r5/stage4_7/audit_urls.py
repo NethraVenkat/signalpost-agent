@@ -1,4 +1,5 @@
 """Audit each measured URL transition against retained, hash-verified bodies."""
+from signalpost.portable_paths import expand, portable, portable_text  # saved paths stay repo-relative
 import hashlib
 import json
 from pathlib import Path
@@ -49,7 +50,7 @@ def main():
         path = ROOT / ('step' + step) / 'settings.json'
         if path.exists():
             cfg = json.loads(path.read_text(encoding='utf-8-sig'))['resolved_config']
-            if Path(cfg['output']).exists(): stages.append((step, cfg['output'], cfg['state_dir']))
+            if Path(expand(cfg['output'])).exists(): stages.append((step, cfg['output'], cfg['state_dir']))
     transitions = []
     for (old_label, old_path, old_state), (label, path, state) in zip(stages, stages[1:]):
         for old, new in zip(rows(old_path), rows(path)):
@@ -96,7 +97,7 @@ def main():
                     accepted=link.href.rstrip('/') in discover_strict(page, name) and bool(web) and not web['value'].get('other_orgnrs'),
                     ancestor_opening_tags=ancestor_tags(page.raw,url,link.href),
                     exact_context=page.raw[max(0, pos-350):pos+len(link.span)+350]))
-    (ROOT/'url_audit.json').write_text(json.dumps({'transitions':transitions,'withheld_recheck':contexts}, ensure_ascii=False, indent=2)+'\n', encoding='utf8')
+    (ROOT/'url_audit.json').write_text(portable_text(json.dumps({'transitions':transitions,'withheld_recheck':contexts}, ensure_ascii=False, indent=2)+'\n'), encoding='utf8')
     text = '# Stage 4.7 website and social URL audit\n\nEvery transition is shown, including Stage 3 to 4.6 for the two previously withheld URLs. Evidence excerpts below are verbatim; complete evidence and context are in `url_audit.json`.\n\n'
     for item in transitions:
         text += f"## {item['comparison']} to {item['step']}: {item['action']}\n\n{item['organisation_number']} — {item['name']} — {item['url']}\n\nProof tier: `{item['proof_tier']}`\n\n"
@@ -108,7 +109,7 @@ def main():
         text += f"### {item['organisation_number']} — {item['name']}\n\nURL: {item['url']}\n\nSource: {item['source_url']} · SHA-256 `{item['content_sha256']}`\n\nOwn header/footer: {item['header_footer_context']}; group site: {item['group_site']}; accepted: {item['accepted']}.\n\nExact link text: `{item['anchor_text']}`\n\n```html\n{item['exact_context']}\n```\n\n"
         for ancestors in item['ancestor_opening_tags']:
             text += 'Enclosing ancestor opening tags, each verbatim from this body:\n\n```html\n'+'\n'.join(ancestors)+'\n```\n\n'
-    (ROOT/'new_websites.md').write_text(text, encoding='utf8')
+    (ROOT/'new_websites.md').write_text(portable_text(text), encoding='utf8')
     print(json.dumps({'transitions':len(transitions),'contexts':len(contexts)}))
 
 

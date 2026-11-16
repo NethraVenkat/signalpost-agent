@@ -1,4 +1,5 @@
 """Check cited synthesis and missing-state coverage on the frozen sample."""
+from signalpost.portable_paths import portable, portable_text  # saved paths stay repo-relative
 import json
 from collections import Counter
 from pathlib import Path
@@ -33,7 +34,7 @@ for row in rows:
                                        'reason': s.get('reason')} for s in sections.get(k, [])[:3]]
                                     for k in ('what_it_does', 'changes', 'unknowns')}
 result['unknown_texts'] = dict(result['unknown_texts'])
-(UX / 'synthesis-checks.json').write_text(json.dumps(result, indent=2, ensure_ascii=False), encoding='utf8')
+(UX / 'synthesis-checks.json').write_text(portable_text(json.dumps(result, indent=2, ensure_ascii=False)), encoding='utf8')
 print(json.dumps({k: result[k] for k in ('companies', 'section_sentence_count',
                                          'unknown_sentence_count', 'unknowns_with_claim_ids',
                                          'no_change_phrase_count')}))

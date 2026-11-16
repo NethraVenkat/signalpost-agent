@@ -1,7 +1,7 @@
 {
   "inputs": {
     "stageC2/frozen": {
-      "output": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageC2-frozen-run-trial\\envelopes.jsonl",
+      "output": "<REPO>\\.data\\r5\\stageC2-frozen-run-trial\\envelopes.jsonl",
       "sha256": "e0d784bed92463fa4dd0bfb92a0ee6644281ee5209eaf58df62dd0e5c4c05d1a",
       "website_urls": 5,
       "social_urls": 8,
@@ -268,7 +268,7 @@
       ]
     },
     "stageE/frozen": {
-      "output": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-frozen-run-timezone\\envelopes.jsonl",
+      "output": "<REPO>\\.data\\r5\\stageE-frozen-run-timezone\\envelopes.jsonl",
       "sha256": "be5b9c06937f42430425a29c6e8f4d6f2e50c7dffd54b515e08ad72a03f871f7",
       "website_urls": 5,
       "social_urls": 8,
@@ -535,7 +535,7 @@
       ]
     },
     "stageC2/daily": {
-      "output": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageC2-daily-run-trial\\envelopes.jsonl",
+      "output": "<REPO>\\.data\\r5\\stageC2-daily-run-trial\\envelopes.jsonl",
       "sha256": "45348a2c87137751d4dd716d7eae49d51485329be99e0e14d04a5af3038b2008",
       "website_urls": 4,
       "social_urls": 2,
@@ -851,7 +851,7 @@
       ]
     },
     "stageE/daily": {
-      "output": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-daily-run-timezone\\envelopes.jsonl",
+      "output": "<REPO>\\.data\\r5\\stageE-daily-run-timezone\\envelopes.jsonl",
       "sha256": "2ec62d055e3c55241bdbf44c72a5c8131987406fc11c52fb86b87f09ad2ae333",
       "website_urls": 4,
       "social_urls": 2,
@@ -1167,7 +1167,7 @@
       ]
     },
     "stageC2/mock": {
-      "output": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageC2-mock-run-trial\\envelopes.jsonl",
+      "output": "<REPO>\\.data\\r5\\stageC2-mock-run-trial\\envelopes.jsonl",
       "sha256": "8ac354f7e713f28ca4104bc37226a836a723313cf1a83e7ad640036361de6166",
       "website_urls": 3,
       "social_urls": 2,
@@ -2074,7 +2074,7 @@
       ]
     },
     "stageE/mock": {
-      "output": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-mock-run-timezone\\envelopes.jsonl",
+      "output": "<REPO>\\.data\\r5\\stageE-mock-run-timezone\\envelopes.jsonl",
       "sha256": "23597f2d375a941c28cc9e06cd94db3711dd416552da200d77f24d395c2f3691",
       "website_urls": 3,
       "social_urls": 2,
@@ -2981,7 +2981,7 @@
       ]
     },
     "stageE/live_refresh": {
-      "output": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-frozen-live-refresh-timezone\\envelopes.jsonl",
+      "output": "<REPO>\\.data\\r5\\stageE-frozen-live-refresh-timezone\\envelopes.jsonl",
       "sha256": "9401377ee945af2248590035acec988f96147ca7d28a57a15fc45f82830d1daa",
       "website_urls": 5,
       "social_urls": 8,

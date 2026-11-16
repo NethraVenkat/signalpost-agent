@@ -1,7 +1,7 @@
 {
-  "python_executable": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\release-v4b-20261113-183129\\repo\\.venv\\Scripts\\python.exe",
-  "python_prefix": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\release-v4b-20261113-183129\\repo\\.venv",
-  "loaded_signalpost_module": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\release-v4b-20261113-183129\\repo\\src\\signalpost\\__init__.py",
+  "python_executable": "<REPO>\\.data\\r5\\release-v4b-20261113-183129\\repo\\.venv\\Scripts\\python.exe",
+  "python_prefix": "<REPO>\\.data\\r5\\release-v4b-20261113-183129\\repo\\.venv",
+  "loaded_signalpost_module": "<REPO>\\.data\\r5\\release-v4b-20261113-183129\\repo\\src\\signalpost\\__init__.py",
   "installed_version": "1.2.0",
   "uv_lock_sha256": "be511be034a94a53605103effcab4926c9e017a5254da8d60df3aad963a61fc7",
   "dependencies": [

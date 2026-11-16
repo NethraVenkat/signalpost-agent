@@ -1,4 +1,5 @@
 """Record supplied independent human reviews, preserving automated verdicts."""
+from signalpost.portable_paths import portable, portable_text  # saved paths stay repo-relative
 import json
 import hashlib
 from collections import Counter
@@ -9,7 +10,7 @@ DEST=Path(__file__).resolve().parent
 
 
 def save(path,data):
-    path.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n',encoding='utf8',newline='\n')
+    path.write_text(portable_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n'),encoding='utf8',newline='\n')
 
 
 def identity(org,kind,value):
@@ -96,7 +97,7 @@ def main():
         '|---|---|---|---|---|---|---|']
     for r in reviews:lines.append(f"| {r['organisation_number']} | {r['company']} | {r['kind']} | {r['url']} | {r['proof_tier']} | **CORRECT** | {r['note']} |")
     lines+=['','Full saved response excerpts, hashes, retrieval times and registry receipts are retained in [human_reviews.json](human_reviews.json), [R5 URL receipts](../stageR5/new_websites.md) and [R3 URL receipts](new_websites.md). Findings are URL/company-scoped; no other domain or social profile is approved by inference.','']
-    (DEST/'LEDGER.md').write_text('\n'.join(lines),encoding='utf8',newline='\n')
+    (DEST/'LEDGER.md').write_text(portable_text('\n'.join(lines)),encoding='utf8',newline='\n')
     readme=ROOT/'README.md';text=readme.read_text(encoding='utf8')
     start='<!-- R5/R3 human precision review -->';end='<!-- End R5/R3 human precision review -->'
     block='\n'.join([start,'',
@@ -104,7 +105,7 @@ def main():
         f"Cumulative deduplicated checked items: **{totals['items_checked']}**; **{totals['human_verified_correct']} human-verified correct**; **0 wrong**. This union covers the original T/H precision ledgers plus R5/R3 website/social receipts, counting an organisation/type/URL, LEI, parent relationship or job UUID once. It does not treat unreviewed items as human-verified, overwrite automated doubtful verdicts, re-audit all later source families, or claim population accuracy. See the ledger for per-type totals, methodology and source limits.",'',end,''])
     if start in text:text=text[:text.index(start)]+block+text[text.index(end)+len(end):].lstrip('\n')
     else:text=text.replace('### Historical scale measurements',block+'\n### Historical scale measurements',1)
-    readme.write_text(text,encoding='utf8',newline='\n')
+    readme.write_text(portable_text(text),encoding='utf8',newline='\n')
     print(json.dumps({'reviewed_companies':11,'new_human_website_URLs':13,'new_human_social_URLs':4,'cumulative':totals}))
 
 

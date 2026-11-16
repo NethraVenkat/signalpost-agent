@@ -1,4 +1,5 @@
 """Saved-response W0 audit. No publication or runtime behavior changes."""
+from signalpost.portable_paths import expand, portable, portable_text  # saved paths stay repo-relative
 import csv
 import gzip
 import hashlib
@@ -18,7 +19,7 @@ from signalpost.web.publisher import extract_publisher
 
 ROOT = Path(__file__).resolve().parents[3]
 DEST = ROOT / 'reports/r5/stageW'
-DOWNLOADS = Path('C:/Users/<USER>/Downloads/Signalpost/state/downloads')
+DOWNLOADS = Path.home() / 'Downloads/Signalpost/state/downloads'
 SAMPLES = [(20261017, 'stageT/frozen'), (20261113, 'stageT/daily'),
            (20261114, 'stageT/mock')] + [(s, f'stageH/seed{s}') for s in range(20261115, 20261118)]
 
@@ -135,9 +136,9 @@ def load_runs():
     for seed, folder in SAMPLES:
         settings_path = ROOT / 'reports/r5' / folder / 'settings.json'
         settings = json.loads(settings_path.read_text(encoding='utf8'))
-        work = Path(settings['working_directory'])
+        work = Path(expand(settings['working_directory']))
         argv = settings['command_argv']
-        bulk = Path(argv[argv.index('--bulk') + 1])
+        bulk = Path(expand(argv[argv.index('--bulk') + 1]))
         with bulk.open(encoding='utf-8-sig', newline='') as f:
             registry = {r['organisasjonsnummer']: r for r in csv.DictReader(f)}
         rows = [json.loads(line) for line in (work / 'envelopes.jsonl').read_text(encoding='utf8').splitlines()]
@@ -242,7 +243,7 @@ def audit():
               'dns_records': dns, 'dns_historical_counts': dict(Counter(r['historical_class'] for r in dns)),
               'dns_unique_candidate_counts': dict(Counter(r['historical_class'] for r in unique_dns.values())),
               'dns_unique_hosts': len({r['host'] for r in dns}), 'jobs': jobs}
-    (DEST / 'rejections.json').write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n', encoding='utf8', newline='\n')
+    (DEST / 'rejections.json').write_text(portable_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n'), encoding='utf8', newline='\n')
     lines = ['# W0 rejection audit', '', 'Saved receipts only. Categories overlap. All fetched pages and identity locations are retained in rejections.json. A candidate-level rule cannot be attributed to one particular fetched page when the old output did not save that association.', '', '| Seed | Companies | Published sites | Declared homepage | Declared with a published site | Declared domain published | Veto | Ambiguous | Fetched without proof |', '|---|---:|---:|---:|---:|---:|---:|---:|---:|']
     for s in summaries:
         lines.append('| ' + ' | '.join(str(s.get(k, 0)) for k in ('seed', 'companies', 'websites', 'declared_homepage', 'declared_homepage_published', 'declared_domain_published', 'veto', 'ambiguous', 'fetched-without-proof')) + ' |')
@@ -256,7 +257,7 @@ def audit():
             lines += ['', f"Page: {p['url']} — title: {p['title']}", '', f"SHA-256: `{p['content_sha256']}`; candidate rules: {', '.join(p['recorded_rules'])}", '', '```json', json.dumps(signals, ensure_ascii=False, indent=2), '```']
         if not r['pages']:
             lines += ['', 'No HTML body associated with this company survives in the saved request ledger. No identity signals inferred.']
-    (DEST / 'rejections.md').write_text('\n'.join(lines) + '\n', encoding='utf8', newline='\n')
+    (DEST / 'rejections.md').write_text(portable_text('\n'.join(lines) + '\n'), encoding='utf8', newline='\n')
     print(json.dumps({'samples': summaries, 'categories': result['category_counts'], 'dns': result['dns_historical_counts'], 'jobs': jobs}, indent=2))
 
 

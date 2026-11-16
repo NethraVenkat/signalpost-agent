@@ -1,4 +1,5 @@
 """Clarify L0 scan denominator without changing links, source bytes or proof rules."""
+from signalpost.portable_paths import expand, portable, portable_text  # saved paths stay repo-relative
 import json,re,hashlib
 from pathlib import Path
 from urllib.parse import urlsplit
@@ -7,7 +8,7 @@ ROOT=Path(__file__).resolve().parents[3]
 def main():
     samples=[]
     for seed in (20261017,20261113,20261114,20261115,20261116,20261117):
-        base=ROOT/f'reports/r5/stageR7/R7/seed{seed}';work=Path(json.loads((base/'settings.json').read_text(encoding='utf8'))['working_directory'])
+        base=ROOT/f'reports/r5/stageR7/R7/seed{seed}';work=Path(expand(json.loads((base/'settings.json').read_text(encoding='utf8'))['working_directory']))
         rows={r['organisation_number']:r for r in map(json.loads,(work/'envelopes.jsonl').read_text(encoding='utf8').splitlines())}
         all_orgs=set();html_orgs=set();seen=set();types=Counter()
         for e in json.loads((base/'report.json').read_text(encoding='utf8'))['request_log']:
@@ -23,6 +24,6 @@ def main():
             if kind=='html_site_page':html_orgs.add(org)
         samples.append({'seed':seed,'successful_website_section_companies':len(all_orgs),'html_site_companies':len(html_orgs),'without_html_site_page':len(all_orgs-html_orgs),'unique_successful_responses':len(seen),'response_types':dict(types)})
     result={'network_requests':0,'scope':'Same six saved R7 inputs/hashes as L0. Website-section HTTP200 includes robots; HTML site-page definition excludes robots/sitemap/PDF and requires HTML document/structural tags in the first10kbytes. This clarifies denominators; original exact link receipts remain unchanged.','samples':samples,'totals':{k:sum(r[k] for r in samples) for k in ('successful_website_section_companies','html_site_companies','without_html_site_page','unique_successful_responses')}}
-    (ROOT/'reports/r5/stageL/response_scope.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+    (ROOT/'reports/r5/stageL/response_scope.json').write_text(portable_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n'),encoding='utf8')
     print(json.dumps(result['totals']))
 if __name__=='__main__':main()

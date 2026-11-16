@@ -25,11 +25,11 @@ The root checkout contained unrelated untracked report files; no user file was r
 
 [`sample/batch.jsonl`](sample/batch.jsonl) contains exactly 50 inputs. [`sample/selection.json`](sample/selection.json) records the source SHA-256, bulk SHA-256 and special-case rationale. Controls: Equinor `923609016` (large), FILMTEK `988330752` (known site ambiguity), `932525070` (11 registry event claims), `929583027` (NAV ad), `991853995` (exact-proof website), `820042182` (sparse external coverage), and invalid `12345678`. The other 43 are distinct valid companies in input order from the frozen 1,000-company bulk cohort. The invalid ID has a terminal envelope and an index-page notice, **not** a separate invalid-input HTML route.
 
-From this worktree, with the original frozen bulk CSV at `C:\Users\<USER>\Downloads\Signalpost-v5\out\capacity-inputs\bulk1000.csv`:
+From this worktree, with the original frozen bulk CSV at `<HOME>\Downloads\Signalpost-v5\out\capacity-inputs\bulk1000.csv`:
 
 ```powershell
 $env:UV_CACHE_DIR = Join-Path (Get-Location) 'reports/ux/tools/uv-cache'
-uv run --frozen signalpost run --organisations reports/ux/sample/batch.jsonl --bulk 'C:\Users\<USER>\Downloads\Signalpost-v5\out\capacity-inputs\bulk1000.csv' --output reports/ux/sample/out/envelopes.jsonl --profiles-output reports/ux/sample/out/profiles.jsonl --report reports/ux/sample/out/report.json --site-dir reports/ux/sample/site --state-dir reports/ux/sample/out/state --websites --hiring --public-activity --run-id ux-audit-50 --expected-count 50
+uv run --frozen signalpost run --organisations reports/ux/sample/batch.jsonl --bulk '<HOME>\Downloads\Signalpost-v5\out\capacity-inputs\bulk1000.csv' --output reports/ux/sample/out/envelopes.jsonl --profiles-output reports/ux/sample/out/profiles.jsonl --report reports/ux/sample/out/report.json --site-dir reports/ux/sample/site --state-dir reports/ux/sample/out/state --websites --hiring --public-activity --run-id ux-audit-50 --expected-count 50
 .\.venv\Scripts\python.exe scripts/verify_output.py --first reports/ux/sample/out/envelopes.jsonl --state-dir reports/ux/sample/out/state --count 50 --organisations reports/ux/sample/batch.jsonl --report reports/ux/sample/out/report.json
 uv run --offline --frozen --with playwright python reports/ux/tools/audit.py
 uv run --offline --frozen --with playwright python reports/ux/tools/deep_checks.py

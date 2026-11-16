@@ -2,24 +2,24 @@
   "exit_code": 0,
   "wall_seconds": 335.64100000000326,
   "argv": [
-    "C:\\Users\\<USER>\\signal-nethra\\.venv\\Scripts\\python.exe",
+    "<REPO>\\.venv\\Scripts\\python.exe",
     "-m",
     "signalpost.cli",
     "run",
     "--organisations",
-    "C:\\Users\\<USER>\\signal-nethra\\reports\\r5\\baseline\\companies.jsonl",
+    "<REPO>\\reports\\r5\\baseline\\companies.jsonl",
     "--bulk",
-    "C:\\Users\\<USER>\\signal-nethra\\reports\\r5\\baseline\\registry100.csv",
+    "<REPO>\\reports\\r5\\baseline\\registry100.csv",
     "--output",
-    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageR6-20261017-resume-final\\envelopes.jsonl",
+    "<REPO>\\.data\\r5\\stageR6-20261017-resume-final\\envelopes.jsonl",
     "--profiles-output",
-    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageR6-20261017-resume-final\\profiles.jsonl",
+    "<REPO>\\.data\\r5\\stageR6-20261017-resume-final\\profiles.jsonl",
     "--report",
-    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageR6-20261017-resume-final\\report.json",
+    "<REPO>\\.data\\r5\\stageR6-20261017-resume-final\\report.json",
     "--run-id",
     "r5-stageR6-seed20261017-resume-final",
     "--expected-count",
     "100"
   ],
-  "cwd": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageR6-20261017-resume-final"
+  "cwd": "<REPO>\\.data\\r5\\stageR6-20261017-resume-final"
 }

@@ -1,4 +1,5 @@
 """Summarize qualification receipts without touching published outputs."""
+from signalpost.portable_paths import expand, portable, portable_text  # saved paths stay repo-relative
 import hashlib,json,subprocess
 from pathlib import Path
 from collections import Counter
@@ -20,7 +21,7 @@ def summarize():
         assert verification['lines']==verification['complete_briefing_contracts']==100 and verification['site_verified']
         assert verification['synthesis_unverified_values']==verification['briefing_unverified_values']==0
         assert counts['metrics']['http_requests']<=1850 and counts['metrics']['cost_usd']==0
-        work=Path(settings['working_directory'])
+        work=Path(expand(settings['working_directory']))
         for name,expected in counts['artifacts'].items():assert hashlib.sha256((work/name).read_bytes()).hexdigest()==expected
         assert hashlib.sha256((folder/'report.json').read_bytes()).hexdigest()==counts['artifacts']['report.json']
         rows=[json.loads(x) for x in (work/'envelopes.jsonl').read_text(encoding='utf8').splitlines()]
@@ -37,7 +38,7 @@ def summarize():
         'process_wall_seconds_total':sum(s['metrics']['process_wall_seconds'] for s in samples.values()),
         'published_facts':sum(s['metrics']['total_facts'] for s in samples.values()),'cost_usd':0,
         'precision_counts':counts,'flagged_items':len(flagged),'wrong_items':sum(i['verdict']=='wrong' for i in flagged)}
-    save=DEST/'results.json';save.write_text(json.dumps(summary,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+    save=DEST/'results.json';save.write_text(portable_text(json.dumps(summary,ensure_ascii=False,indent=2)+'\n'),encoding='utf8')
     text='# Stage H - three clean-clone mock daily tests\n\n'
     text+='Tested `revision/r5` HEAD `'+metadata['tested_commit']+'` (CI repair and four human verdicts), cloned locally with --no-hardlinks; uv sync --frozen succeeded. Interpreter/module paths and lock/source hashes are retained. No push, publication, tag or version change. Author/committer Nethra Venkat. No external implementation code copied; provider cost $0.\n\n'
     text+='## Per-batch results\n\n'
@@ -65,7 +66,7 @@ def summarize():
     if not flagged:text+='No doubtful/wrong items were identified under the saved-evidence rules; this is not a guarantee of live correctness.\n'
     text+='\n## Validation and limits\n\nClean-clone full pytest: 952 passed (pytest.txt/pytest.json). Parent checkout final full pytest including both wrapper environment/extraction regression tests: 954 passed (pytest-parent-commit.txt). CI source gates: 952 passing tests and 33 focused site/gate tests before commit; all proof/access/robots/politeness/global/time rules unchanged. Stage H clone package remains version 1.3.0; lockfile frozen, no new dependency. GLEIF CC0, TED EU reuse policy, official registry/NAV and verified site terms remain in docs/SOURCES.md. Some live APIs may block cloud runners; current published claims must still pass the same saved-evidence validation. Local Windows qualification is not a GitHub Linux execution or official score.\n\n'
     text+='Decisions: [DECISIONS.md](../DECISIONS.md), CI and H entries. Historical reports remain historical. Stopped after H summary commit; nothing pushed.\n'
-    (DEST/'SUMMARY.md').write_text(text,encoding='utf8')
+    (DEST/'SUMMARY.md').write_text(portable_text(text),encoding='utf8')
     print(json.dumps({k:v for k,v in summary.items() if k!='samples'}))
     return summary
 

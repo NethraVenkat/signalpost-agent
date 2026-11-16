@@ -1,7 +1,7 @@
 {
   "inputs": {
     "stageF1/frozen": {
-      "output": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageF1-frozen-run-final\\envelopes.jsonl",
+      "output": "<REPO>\\.data\\r5\\stageF1-frozen-run-final\\envelopes.jsonl",
       "sha256": "a7056cae77f89eccb7711ae89d8a397eda9a88def85d7eb11c52d21035c8442e",
       "website_urls": 6,
       "social_urls": 8,
@@ -285,7 +285,7 @@
       ]
     },
     "stageC/frozen": {
-      "output": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageC-frozen-run-recovery\\envelopes.jsonl",
+      "output": "<REPO>\\.data\\r5\\stageC-frozen-run-recovery\\envelopes.jsonl",
       "sha256": "3bf691e61db3502c4d4022070c8b1dc49597c9a75a083539f91f58ce7dd61338",
       "website_urls": 5,
       "social_urls": 8,
@@ -552,7 +552,7 @@
       ]
     },
     "stageF1/daily": {
-      "output": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageF1-daily-run-final\\envelopes.jsonl",
+      "output": "<REPO>\\.data\\r5\\stageF1-daily-run-final\\envelopes.jsonl",
       "sha256": "9ddcd3638c1465b8fd86d0748067087b7c2ded88b2a88c3f6449446d1355ba66",
       "website_urls": 4,
       "social_urls": 2,
@@ -868,7 +868,7 @@
       ]
     },
     "stageC/daily": {
-      "output": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageC-daily-run-recovery\\envelopes.jsonl",
+      "output": "<REPO>\\.data\\r5\\stageC-daily-run-recovery\\envelopes.jsonl",
       "sha256": "d733c77ea177942dd5b0a2b6660e45b70a8d3dde960e5aa4b670cdd15e7228ae",
       "website_urls": 4,
       "social_urls": 2,

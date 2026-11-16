@@ -1,4 +1,5 @@
 """Targeted source and synthesis checks against the generated offline site."""
+from signalpost.portable_paths import portable, portable_text  # saved paths stay repo-relative
 import json
 import os
 from pathlib import Path
@@ -85,5 +86,5 @@ with sync_playwright() as p:
     page.close()
     browser.close()
 Path(os.environ.get('SIGNALPOST_DEEP_OUTPUT', str(UX / 'deep-checks.json'))).write_text(
-    json.dumps(result, indent=2, ensure_ascii=False), encoding='utf8')
+    portable_text(json.dumps(result, indent=2, ensure_ascii=False)), encoding='utf8')
 print(json.dumps(result, indent=2, ensure_ascii=False))

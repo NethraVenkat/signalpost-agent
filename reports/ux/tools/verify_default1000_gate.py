@@ -1,5 +1,6 @@
 """Record the explicitly permitted network-loss exception for the two 1,000 runs."""
 
+from signalpost.portable_paths import portable, portable_text  # saved paths stay repo-relative
 import hashlib
 import json
 from pathlib import Path
@@ -7,7 +8,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 GATES = ROOT / "gates"
-BULK = Path(r"C:\Users\<USER>\Downloads\Signalpost-v5\out\capacity-inputs\bulk1000.csv")
+BULK = Path.home() / "Downloads" / "Signalpost-v5" / "out" / "capacity-inputs" / "bulk1000.csv"
 TARGET = "827248592"
 MISSING_FIELDS = {"identity.legal_name", "identity.organisation_form", "identity.deleted"}
 
@@ -72,7 +73,7 @@ def main() -> None:
         ) and TARGET not in bulk_text and not missing_ids and not added_ids,
     }
     path = ROOT / "default1000-gate.json"
-    path.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
+    path.write_text(portable_text(json.dumps(result, indent=2) + "\n"), encoding="utf-8")
     print(json.dumps(result, indent=2))
     assert result["accepted_under_user_exception"]
 

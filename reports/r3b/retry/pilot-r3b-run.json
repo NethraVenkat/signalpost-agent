@@ -25,22 +25,22 @@
   "command": {
     "label": "pilot-r3b",
     "command": [
-      "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\.venv\\Scripts\\python.exe",
+      "<HOME>\\Downloads\\Signalpost-v5\\.venv\\Scripts\\python.exe",
       "-m",
       "signalpost.cli",
       "run",
       "--organisations",
       "out/r3b-gates/pilot50.jsonl",
       "--output",
-      "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r3b-retry\\pilot-r3b\\envelopes.jsonl",
+      "<HOME>\\Downloads\\Signalpost-v5\\out\\r3b-retry\\pilot-r3b\\envelopes.jsonl",
       "--report",
-      "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r3b-retry\\pilot-r3b\\report.json",
+      "<HOME>\\Downloads\\Signalpost-v5\\out\\r3b-retry\\pilot-r3b\\report.json",
       "--profiles-output",
-      "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r3b-retry\\pilot-r3b\\profiles.jsonl",
+      "<HOME>\\Downloads\\Signalpost-v5\\out\\r3b-retry\\pilot-r3b\\profiles.jsonl",
       "--site-dir",
-      "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r3b-retry\\pilot-r3b\\site",
+      "<HOME>\\Downloads\\Signalpost-v5\\out\\r3b-retry\\pilot-r3b\\site",
       "--state-dir",
-      "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r3b-retry\\pilot-r3b\\state",
+      "<HOME>\\Downloads\\Signalpost-v5\\out\\r3b-retry\\pilot-r3b\\state",
       "--expected-count",
       "50",
       "--websites",
@@ -53,7 +53,7 @@
     "exit": 0,
     "seconds": 119.73789709999983,
     "source_sha": "9d9d80679b2e86ec17f386c2300a31e8c80bc9d8",
-    "source_path": "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\src"
+    "source_path": "<HOME>\\Downloads\\Signalpost-v5\\src"
   },
   "report_sha256": "41c215d90356068ff6d1760b1d7ef90cece15beb1c9cf7cd783fd73d41ef0167"
 }

@@ -219,7 +219,7 @@
     "controlled_same_fixture_comparison": {
       "before_source": "a11d4ec",
       "before": {
-        "implementation": "C:\\Users\\<USER>\\Downloads\\Signalpost\\state\\remediation-closed\\src\\signalpost\\sources\\nav_cached.py",
+        "implementation": "<HOME>\\Downloads\\Signalpost\\state\\remediation-closed\\src\\signalpost\\sources\\nav_cached.py",
         "detail_attempts": 2,
         "complete": true,
         "ad_values": [
@@ -287,7 +287,7 @@
         }
       },
       "after": {
-        "implementation": "C:\\Users\\<USER>\\Downloads\\Signalpost\\src\\signalpost\\sources\\nav_cached.py",
+        "implementation": "<HOME>\\Downloads\\Signalpost\\src\\signalpost\\sources\\nav_cached.py",
         "detail_attempts": 1,
         "complete": true,
         "ad_values": [
@@ -835,7 +835,7 @@
       "input_sha256": "54de285dd71e69515c532febc37cfec16a467d7bc0880c96931fc6c83ecc807a",
       "bulk_sha256": "a2d13b6b88ed7cf66a581bb99342c09cd7d55638e15ea6601d2fc6f680715e29",
       "command": [
-        "C:\\Users\\<USER>\\Downloads\\Signalpost\\state\\evaluation-uv-cache\\builds-v0\\.tmptjqUsJ\\Scripts\\python.exe",
+        "<HOME>\\Downloads\\Signalpost\\state\\evaluation-uv-cache\\builds-v0\\.tmptjqUsJ\\Scripts\\python.exe",
         "-m",
         "signalpost.cli",
         "run",

@@ -5094,22 +5094,22 @@
   "command": {
     "label": "default1000",
     "command": [
-      "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\.venv\\Scripts\\python.exe",
+      "<HOME>\\Downloads\\Signalpost-v5\\.venv\\Scripts\\python.exe",
       "-m",
       "signalpost.cli",
       "run",
       "--organisations",
       "out/capacity-inputs/batch1000.jsonl",
       "--output",
-      "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r3b-retry\\default1000\\envelopes.jsonl",
+      "<HOME>\\Downloads\\Signalpost-v5\\out\\r3b-retry\\default1000\\envelopes.jsonl",
       "--report",
-      "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r3b-retry\\default1000\\report.json",
+      "<HOME>\\Downloads\\Signalpost-v5\\out\\r3b-retry\\default1000\\report.json",
       "--profiles-output",
-      "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r3b-retry\\default1000\\profiles.jsonl",
+      "<HOME>\\Downloads\\Signalpost-v5\\out\\r3b-retry\\default1000\\profiles.jsonl",
       "--site-dir",
-      "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r3b-retry\\default1000\\site",
+      "<HOME>\\Downloads\\Signalpost-v5\\out\\r3b-retry\\default1000\\site",
       "--state-dir",
-      "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r3b-retry\\default1000\\state",
+      "<HOME>\\Downloads\\Signalpost-v5\\out\\r3b-retry\\default1000\\state",
       "--expected-count",
       "1000",
       "--websites",
@@ -5121,7 +5121,7 @@
     "exit": 0,
     "seconds": 272.34116169999834,
     "source_sha": "a2e7b70fd4fe2ec1757eaf6c97c52a4249afdb85",
-    "source_path": "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\src"
+    "source_path": "<HOME>\\Downloads\\Signalpost-v5\\src"
   },
   "envelopes_sha256": "4170b42777a239ee9688f0bdeea042b67c6ed9d440715ac65c64d6ea70dc5d20",
   "full_loss_artifact": {

@@ -1,4 +1,5 @@
 """Merge the verified registry join into the final W0 report, retaining limits."""
+from signalpost.portable_paths import portable, portable_text  # saved paths stay repo-relative
 import hashlib
 import json
 import re
@@ -24,14 +25,14 @@ def main():
                 parent_join_http_requests=result['http_requests'], parent_join_active_runtime_seconds=result['runtime_seconds'],
                 parent_join_receipts='nav_parent_join.json', parent_join_verification='nav_parent_verification.json',
                 limitation='Index discovery expectation, not current job-posting proof. Three deleted-unit tombstones omit their former parent; no name-based parent inference. Interval allows at most one additional distinct eligible parent per unresolved unit. Index/registry retrieval dates differ; this targeted join is not a nationwide subunit snapshot.')
-    (DEST / 'rejections.json').write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf8', newline='\n')
+    (DEST / 'rejections.json').write_text(portable_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n'), encoding='utf8', newline='\n')
     path = DEST / 'rejections.md'; text = path.read_text(encoding='utf8')
     text = re.sub(r'(## NAV/universe overlap\n\n```json\n).*?(\n```)', lambda m: m.group(1) + json.dumps(jobs, ensure_ascii=False, indent=2) + m.group(2), text, count=1, flags=re.S)
-    path.write_text(text, encoding='utf8', newline='\n')
+    path.write_text(portable_text(text), encoding='utf8', newline='\n')
     dns_path = DEST / 'dns_recheck.json'; dns = json.loads(dns_path.read_text(encoding='utf8'))
     dns['input_audit_sha256'] = hashlib.sha256((DEST / 'rejections.json').read_bytes()).hexdigest()
     dns['input_correction'] = 'Final report-only corrections and verified NAV-parent audit merged. Original DNS candidate records unchanged; no resolver query repeated.'
-    dns_path.write_text(json.dumps(dns, ensure_ascii=False, indent=2) + '\n', encoding='utf8', newline='\n')
+    dns_path.write_text(portable_text(json.dumps(dns, ensure_ascii=False, indent=2) + '\n'), encoding='utf8', newline='\n')
     lower, upper = checked['confirmed_rate_per_1000'], checked['possible_upper_rate_per_1000']
     report = f'''# W0 saved-evidence audits
 
@@ -66,7 +67,7 @@ Three missing search results are deleted-unit tombstones, with no former parent 
 
 The parent audit used {result['http_requests']} HTTP attempts within 40 and {result['runtime_seconds']:.3f} active seconds within 300; operator intervals and individual UTC receipts remain visible. Zero unsupported parent values. It ran after the final live qualifications, so its calls do not enter their timing/request totals. Combined ancillary attempts: seven DNS, two failed bulk preflights and 34 parent API calls, paid cost $0. Runtime profiles, NAV index and rarity bundle were not modified by this diagnostic join. A targeted 6,012-ID join is not a complete underenheter snapshot for frequency estimation.
 '''
-    (DEST / 'W0_REPORT.md').write_text(report, encoding='utf8', newline='\n')
+    (DEST / 'W0_REPORT.md').write_text(portable_text(report), encoding='utf8', newline='\n')
     print(json.dumps({'expected_rate_interval_per_1000': [lower, upper], 'measured_rate_per_1000': 5, 'parent_http': result['http_requests']}))
 
 

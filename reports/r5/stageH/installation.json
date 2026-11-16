@@ -1,10 +1,10 @@
 {
   "argv": [
-    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageH-clean\\repo\\.venv\\Scripts\\python.exe",
+    "<REPO>\\.data\\r5\\stageH-clean\\repo\\.venv\\Scripts\\python.exe",
     "-c",
     "import signalpost,sys,json,importlib.metadata;print(json.dumps({'python':sys.executable,'prefix':sys.prefix,'module':signalpost.__file__,'version':importlib.metadata.version('signalpost-agent')}))"
   ],
-  "cwd": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageH-clean\\repo",
+  "cwd": "<REPO>\\.data\\r5\\stageH-clean\\repo",
   "exit_code": 0,
   "wall_seconds": 0.2081670000043232,
   "completed_at_utc": "2026-11-13T17:39:54.735198+00:00",

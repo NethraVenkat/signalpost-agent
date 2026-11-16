@@ -6,10 +6,10 @@
       "--no-hardlinks",
       "--branch",
       "revision/r5",
-      "C:\\Users\\<USER>\\signal-nethra",
-      "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\ci-repro-1e93023"
+      "<REPO>",
+      "<REPO>\\.data\\r5\\ci-repro-1e93023"
     ],
-    "cwd": "C:\\Users\\<USER>\\signal-nethra",
+    "cwd": "<REPO>",
     "exit_code": 0,
     "wall_seconds": 28.502659700025106
   },
@@ -20,7 +20,7 @@
       "--detach",
       "1e93023"
     ],
-    "cwd": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\ci-repro-1e93023",
+    "cwd": "<REPO>\\.data\\r5\\ci-repro-1e93023",
     "exit_code": 0,
     "wall_seconds": 37.3766957000189
   },
@@ -30,7 +30,7 @@
       "sync",
       "--frozen"
     ],
-    "cwd": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\ci-repro-1e93023",
+    "cwd": "<REPO>\\.data\\r5\\ci-repro-1e93023",
     "exit_code": 0,
     "wall_seconds": 13.656137999991188
   },
@@ -53,7 +53,7 @@
       "--time-budget-seconds",
       "180"
     ],
-    "cwd": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\ci-repro-1e93023",
+    "cwd": "<REPO>\\.data\\r5\\ci-repro-1e93023",
     "exit_code": 0,
     "wall_seconds": 101.21700859998236
   },
@@ -75,7 +75,7 @@
       "out/ci20-report.json",
       "--require-clean"
     ],
-    "cwd": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\ci-repro-1e93023",
+    "cwd": "<REPO>\\.data\\r5\\ci-repro-1e93023",
     "exit_code": 1,
     "wall_seconds": 3.434390299982624
   }

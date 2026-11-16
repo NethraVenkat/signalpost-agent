@@ -16,37 +16,37 @@
   "provenance": [
     {
       "seed": 20261017,
-      "work": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageR4-20261017-release",
+      "work": "<REPO>\\.data\\r5\\stageR4-20261017-release",
       "envelopes_sha256": "f921fadbad1d18375c0d929b681ed0623fd626405921a101bda907216f486295",
       "report_sha256": "66b0ec21fd9354baf44fecf67672e35f2c6bd3daae2a610f51bf35c78e19c8f5"
     },
     {
       "seed": 20261113,
-      "work": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageR4-20261113-release",
+      "work": "<REPO>\\.data\\r5\\stageR4-20261113-release",
       "envelopes_sha256": "a726c9846293008b78e1a5f751b174c607848da4acf3f846fdc0e9461740ed59",
       "report_sha256": "8ab7a89252d3eaef814ebf2283bb91d82530c3dbddedc178c40836e7ef484e95"
     },
     {
       "seed": 20261114,
-      "work": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageR4-20261114-release",
+      "work": "<REPO>\\.data\\r5\\stageR4-20261114-release",
       "envelopes_sha256": "134e6b76e56efb7617ddd22036f14b6c2e721f8497db2c76f305694770c2b17b",
       "report_sha256": "e88757d63ee4b11ccb41d3a73124399ea7ebc379147866ae2fc615d78cccd73b"
     },
     {
       "seed": 20261115,
-      "work": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageR4-20261115-release",
+      "work": "<REPO>\\.data\\r5\\stageR4-20261115-release",
       "envelopes_sha256": "3db45092d6566edd9baf3fdb780cbcf56fc503c7d5422ca2e8597f0562e8e1e6",
       "report_sha256": "30d7b74437011e5e9a240078fd675fb45851c3aef71745226d30e2a2f55a578f"
     },
     {
       "seed": 20261116,
-      "work": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageR4-20261116-release",
+      "work": "<REPO>\\.data\\r5\\stageR4-20261116-release",
       "envelopes_sha256": "1851a15c6134d4c74a146c6ff9b191b49d149c691b046a8a8ea1447e5571802e",
       "report_sha256": "26e094fa331428a9706ea2ca561fb37340c219d53385937e51ee9fd8d30b8cdd"
     },
     {
       "seed": 20261117,
-      "work": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageR4-20261117-release",
+      "work": "<REPO>\\.data\\r5\\stageR4-20261117-release",
       "envelopes_sha256": "69dcdac8fb65c56f6f8b8dc4eab9714c90a4f5fd0262a83229aeabb1b9e5eb44",
       "report_sha256": "9c3942ddbae3991e01fcaeddf094d6e5449c2503c1692a738476d2fc3c570b90"
     }

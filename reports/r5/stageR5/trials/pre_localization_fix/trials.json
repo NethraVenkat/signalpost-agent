@@ -1,7 +1,7 @@
 [
   {
     "seed": 20261017,
-    "work": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageR5-20261017-release-final",
+    "work": "<REPO>\\.data\\r5\\stageR5-20261017-release-final",
     "accepted": false,
     "http": 699,
     "wall_seconds": 343.89,
@@ -14,7 +14,7 @@
   },
   {
     "seed": 20261113,
-    "work": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageR5-20261113-release-final",
+    "work": "<REPO>\\.data\\r5\\stageR5-20261113-release-final",
     "accepted": false,
     "http": 777,
     "wall_seconds": 436.516,
@@ -27,7 +27,7 @@
   },
   {
     "seed": 20261114,
-    "work": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageR5-20261114-release-final",
+    "work": "<REPO>\\.data\\r5\\stageR5-20261114-release-final",
     "accepted": false,
     "http": 727,
     "wall_seconds": 376.984,
@@ -40,7 +40,7 @@
   },
   {
     "seed": 20261115,
-    "work": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageR5-20261115-release-final",
+    "work": "<REPO>\\.data\\r5\\stageR5-20261115-release-final",
     "accepted": false,
     "http": 749,
     "wall_seconds": 433.782,

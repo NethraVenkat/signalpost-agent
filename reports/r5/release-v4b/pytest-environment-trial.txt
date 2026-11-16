@@ -1,4 +1,4 @@
-{"command": ["C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\release-v4b-20261113-183129\\repo\\.venv\\Scripts\\python.exe", "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\release-v4b-20261113-183129\\repo\\reports\\r5\\stage4_7\\run_tests.py", "-q"], "priority": "above_normal", "mutates_test_assertions_or_timeouts": false}
+{"command": ["<REPO>\\.data\\r5\\release-v4b-20261113-183129\\repo\\.venv\\Scripts\\python.exe", "<REPO>\\.data\\r5\\release-v4b-20261113-183129\\repo\\reports\\r5\\stage4_7\\run_tests.py", "-q"], "priority": "above_normal", "mutates_test_assertions_or_timeouts": false}
 ........................................................................ [  7%]
 ........................................................................ [ 15%]
 ........................................................................ [ 23%]
@@ -15,7 +15,7 @@
 ================================== FAILURES ===================================
 _____ test_search_candidate_only_publishes_with_fetched_exact_orgnr[True] _____
 
-tmp_path = WindowsPath('C:/Users/<USER>/AppData/Local/Temp/pytest-of-<USER>/pytest-1627/test_search_candidate_only_pub0')
+tmp_path = WindowsPath('<TEMP>/pytest-of-<USER>/pytest-1627/test_search_candidate_only_pub0')
 monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000015B2CA5FD10>
 proven = True
 
@@ -34,7 +34,7 @@ E        +  where False = bool([])
 tests\test_search.py:72: AssertionError
 ____ test_search_candidate_only_publishes_with_fetched_exact_orgnr[False] _____
 
-tmp_path = WindowsPath('C:/Users/<USER>/AppData/Local/Temp/pytest-of-<USER>/pytest-1627/test_search_candidate_only_pub1')
+tmp_path = WindowsPath('<TEMP>/pytest-of-<USER>/pytest-1627/test_search_candidate_only_pub1')
 monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000015B2D3027B0>
 proven = False
 

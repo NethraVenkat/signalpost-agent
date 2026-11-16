@@ -1,4 +1,5 @@
 """Focused keyboard, missing-value and focus checks for the offline audit."""
+from signalpost.portable_paths import portable, portable_text  # saved paths stay repo-relative
 import json
 import os
 from pathlib import Path
@@ -43,7 +44,7 @@ with sync_playwright() as p:
         context.close()
     browser.close()
 Path(os.environ.get('SIGNALPOST_A11Y_OUTPUT', str(UX / 'a11y-checks.json'))).write_text(
-    json.dumps(result, indent=2, ensure_ascii=False), encoding='utf8')
+    portable_text(json.dumps(result, indent=2, ensure_ascii=False)), encoding='utf8')
 print(json.dumps({k:{'focus':len(v['focus_sequence']), 'missing':len(v['missing_examples']),
                      'compare_missing':len(v['compare_missing_examples']),
                      'unlabelled':len(v['unlabelled_visible_inputs']),

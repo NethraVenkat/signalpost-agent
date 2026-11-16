@@ -1,4 +1,5 @@
 """Explicit user-authorized --previous exception to the seven-flag live check."""
+from signalpost.portable_paths import expand, portable, portable_text, sanitize_file  # saved paths stay repo-relative
 import json,os,subprocess,sys,time,hashlib
 from pathlib import Path
 from collections import Counter
@@ -7,7 +8,7 @@ ROOT=Path(__file__).resolve().parents[3]
 def main():
     dest=ROOT/'reports/r5/stageE/live_refresh';dest.mkdir(parents=True,exist_ok=True)
     previous_settings=json.loads((ROOT/'reports/r5/stageE/frozen/settings.json').read_text(encoding='utf8'))
-    previous=Path(previous_settings['working_directory'])/'envelopes.jsonl'
+    previous=Path(expand(previous_settings['working_directory']))/'envelopes.jsonl'
     assert previous.exists()
     attempt=sys.argv[1] if len(sys.argv)>1 else None
     if attempt:assert attempt.isalnum()
@@ -24,13 +25,14 @@ def main():
         'flag_exception':'Seven evaluator flags plus --previous, explicitly requested for live refresh; no feature/cap/time flags',
         'source_commit':subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip()}
     source_manifest={p.relative_to(ROOT).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted((ROOT/'src').rglob('*')) if p.is_file() and '__pycache__' not in p.parts}
-    (dest/'source_manifest.json').write_text(json.dumps(source_manifest,indent=2)+'\n',encoding='utf8')
+    (dest/'source_manifest.json').write_text(portable_text(json.dumps(source_manifest,indent=2)+'\n'),encoding='utf8')
     metadata['source_manifest_sha256']=hashlib.sha256((dest/'source_manifest.json').read_bytes()).hexdigest()
-    (dest/'settings.json').write_text(json.dumps(metadata,indent=2)+'\n',encoding='utf8')
+    (dest/'settings.json').write_text(portable_text(json.dumps(metadata,indent=2)+'\n'),encoding='utf8')
     began=time.perf_counter()
     with (dest/'process.txt').open('w',encoding='utf8') as log:r=subprocess.run(argv,cwd=out,env=env,stdout=log,stderr=subprocess.STDOUT)
+    sanitize_file(dest/'process.txt')  # keep captured paths repo-relative
     execution={'exit_code':r.returncode,'wall_seconds':time.perf_counter()-began}
-    (dest/'execution.json').write_text(json.dumps(execution,indent=2)+'\n',encoding='utf8');r.check_returncode()
+    (dest/'execution.json').write_text(portable_text(json.dumps(execution,indent=2)+'\n'),encoding='utf8');r.check_returncode()
     # Archived proof bodies are immutable verification inputs, not current
     # runtime caches. Add only missing evidence bodies after the live run.
     rows=[json.loads(x) for x in (out/'envelopes.jsonl').read_text(encoding='utf8').splitlines()]
@@ -43,7 +45,7 @@ def main():
     cmd=[sys.executable,'scripts/verify_output.py','--first',str(out/'envelopes.jsonl'),'--organisations',str(flags['organisations']),
          '--count','100','--state-dir',str(out/'state'),'--report',str(out/'report.json')]
     v=subprocess.run(cmd,cwd=ROOT,env=env,capture_output=True,text=True,check=True);verified=json.loads(v.stdout)
-    (dest/'verification.json').write_text(json.dumps({'argv':cmd,'exit_code':0,**verified},indent=2)+'\n',encoding='utf8')
+    (dest/'verification.json').write_text(portable_text(json.dumps({'argv':cmd,'exit_code':0,**verified},indent=2)+'\n'),encoding='utf8')
     report=json.loads((out/'report.json').read_text(encoding='utf8'));assert report['requests']<=1850 and report['total_cost_usd']==0
     assert report['site']['state']=='available' and report['completion']['within_effective_time_budget']
     assert len(rows)==100 and execution['exit_code']==0
@@ -55,7 +57,7 @@ def main():
         'coverage_observations':len(observations),'material_change_events':[c for c in changes if c['materiality']=='material'],
         'all_changes':changes,'observations':observations,'carried_claims':sum(c['carried_forward'] for row in rows for c in row['claims']),
         'previous_evidence_blobs_added_after_run_for_verification':copied,'verification':verified}
-    (dest/'results.json').write_text(json.dumps(result,indent=2)+'\n',encoding='utf8')
+    (dest/'results.json').write_text(portable_text(json.dumps(result,indent=2)+'\n'),encoding='utf8')
     (dest/'report.json').write_bytes((out/'report.json').read_bytes())
     print(json.dumps({k:v for k,v in result.items() if k not in ('all_changes','observations','material_change_events','verification')}))
 

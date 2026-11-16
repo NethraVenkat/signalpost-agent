@@ -1,4 +1,4 @@
-{"command": ["C:\\Users\\<USER>\\signal-nethra\\.venv\\Scripts\\python.exe", "C:\\Users\\<USER>\\signal-nethra\\reports\\r5\\stage4_7\\run_tests.py", "-q", "-p", "no:cacheprovider", "--basetemp=.data/r5/pytest-stageA-final"], "priority": "above_normal", "mutates_test_assertions_or_timeouts": false}
+{"command": ["<REPO>\\.venv\\Scripts\\python.exe", "<REPO>\\reports\\r5\\stage4_7\\run_tests.py", "-q", "-p", "no:cacheprovider", "--basetemp=.data/r5/pytest-stageA-final"], "priority": "above_normal", "mutates_test_assertions_or_timeouts": false}
 ........................................................................ [  8%]
 ........................................................................ [ 17%]
 ..................F..................................................... [ 25%]
@@ -36,7 +36,7 @@ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-self = <Popen: returncode: 1 args: ['C:\\Users\\<USER>\\signal-nethra\\.venv\\Scrip...>
+self = <Popen: returncode: 1 args: ['<REPO>\\.venv\\Scrip...>
 input = None, endtime = 115860.312, orig_timeout = 5
 
     def _communicate(self, input, endtime, orig_timeout):
@@ -67,12 +67,12 @@ input = None, endtime = 115860.312, orig_timeout = 5
             self.stdout_thread.join(self._remaining_time(endtime))
             if self.stdout_thread.is_alive():
 >               raise TimeoutExpired(self.args, orig_timeout)
-E               subprocess.TimeoutExpired: Command '['C:\\Users\\<USER>\\signal-nethra\\.venv\\Scripts\\python.exe', '-c', "\nfrom signalpost.web.html import Page\nfrom signalpost.web.social import discover\nurl = 'https://www.instagram.com/example'\nbody = '<footer><a ' + 'x' * 50000 + ' href=' + url + '>Profile</a></footer>'\nassert url in discover(Page(body.encode(), 'https://example.no/'))[url]\n"]' timed out after 5 seconds
+E               subprocess.TimeoutExpired: Command '['<REPO>\\.venv\\Scripts\\python.exe', '-c', "\nfrom signalpost.web.html import Page\nfrom signalpost.web.social import discover\nurl = 'https://www.instagram.com/example'\nbody = '<footer><a ' + 'x' * 50000 + ' href=' + url + '>Profile</a></footer>'\nassert url in discover(Page(body.encode(), 'https://example.no/'))[url]\n"]' timed out after 5 seconds
 
 ..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\subprocess.py:1630: TimeoutExpired
 ___ test_new_pass2_website_activity_cannot_drop_existing_registry_activity ____
 
-tmp_path = WindowsPath('C:/Users/<USER>/signal-nethra/.data/r5/pytest-stageA-final/test_new_pass2_website_activit0')
+tmp_path = WindowsPath('<REPO>/.data/r5/pytest-stageA-final/test_new_pass2_website_activit0')
 monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000018B8FCAD820>
 
     def test_new_pass2_website_activity_cannot_drop_existing_registry_activity(tmp_path,monkeypatch):

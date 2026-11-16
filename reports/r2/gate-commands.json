@@ -24,7 +24,7 @@
       "--max-requests",
       "20000"
     ],
-    "cwd": "C:\\Users\\<USER>\\Downloads\\Signalpost-v5",
+    "cwd": "<HOME>\\Downloads\\Signalpost-v5",
     "exit": 0,
     "wall_seconds": 168.85612669999682
   },
@@ -53,7 +53,7 @@
       "--max-requests",
       "20000"
     ],
-    "cwd": "C:\\Users\\<USER>\\Downloads\\Signalpost-v5",
+    "cwd": "<HOME>\\Downloads\\Signalpost-v5",
     "exit": 0,
     "wall_seconds": 17.892061500002455
   },
@@ -82,7 +82,7 @@
       "--max-requests",
       "20000"
     ],
-    "cwd": "C:\\Users\\<USER>\\Downloads\\Signalpost-v5",
+    "cwd": "<HOME>\\Downloads\\Signalpost-v5",
     "exit": 0,
     "wall_seconds": 57.536011600001075
   },
@@ -111,7 +111,7 @@
       "--max-requests",
       "20000"
     ],
-    "cwd": "C:\\Users\\<USER>\\Downloads\\Signalpost-v5",
+    "cwd": "<HOME>\\Downloads\\Signalpost-v5",
     "exit": 0,
     "wall_seconds": 187.7155475000036
   },
@@ -140,7 +140,7 @@
       "--max-requests",
       "3000"
     ],
-    "cwd": "C:\\Users\\<USER>\\Downloads\\Signalpost-v5",
+    "cwd": "<HOME>\\Downloads\\Signalpost-v5",
     "exit": 0,
     "wall_seconds": 136.90110229999846
   },
@@ -169,7 +169,7 @@
       "--max-requests",
       "20000"
     ],
-    "cwd": "C:\\Users\\<USER>\\Downloads\\Signalpost-v5",
+    "cwd": "<HOME>\\Downloads\\Signalpost-v5",
     "exit": 0,
     "wall_seconds": 19.85276700000395
   },
@@ -198,29 +198,29 @@
       "--max-requests",
       "20000"
     ],
-    "cwd": "C:\\Users\\<USER>\\Downloads\\Signalpost-v5",
+    "cwd": "<HOME>\\Downloads\\Signalpost-v5",
     "exit": 0,
     "wall_seconds": 238.16737499999726
   },
   {
     "label": "refresh",
     "command": [
-      "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\.venv\\Scripts\\python.exe",
+      "<HOME>\\Downloads\\Signalpost-v5\\.venv\\Scripts\\python.exe",
       "-m",
       "signalpost.cli",
       "run",
       "--organisations",
       "out/capacity-inputs/batch1000.jsonl",
       "--output",
-      "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r2-check-refresh\\envelopes.jsonl",
+      "<HOME>\\Downloads\\Signalpost-v5\\out\\r2-check-refresh\\envelopes.jsonl",
       "--profiles-output",
-      "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r2-check-refresh\\profiles.jsonl",
+      "<HOME>\\Downloads\\Signalpost-v5\\out\\r2-check-refresh\\profiles.jsonl",
       "--report",
-      "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r2-check-refresh\\report.json",
+      "<HOME>\\Downloads\\Signalpost-v5\\out\\r2-check-refresh\\report.json",
       "--site-dir",
-      "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r2-check-refresh\\site",
+      "<HOME>\\Downloads\\Signalpost-v5\\out\\r2-check-refresh\\site",
       "--state-dir",
-      "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r2-check-normal\\state",
+      "<HOME>\\Downloads\\Signalpost-v5\\out\\r2-check-normal\\state",
       "--expected-count",
       "1000",
       "--run-id",
@@ -239,31 +239,31 @@
       "--bulk",
       "out/capacity-inputs/bulk1000.csv",
       "--previous",
-      "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r2-check-normal\\envelopes.jsonl"
+      "<HOME>\\Downloads\\Signalpost-v5\\out\\r2-check-normal\\envelopes.jsonl"
     ],
-    "cwd": "C:\\Users\\<USER>\\Downloads\\Signalpost-v5",
+    "cwd": "<HOME>\\Downloads\\Signalpost-v5",
     "exit": 0,
     "wall_seconds": 268.11306659999536
   },
   {
     "label": "baseline24",
     "command": [
-      "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\.venv\\Scripts\\python.exe",
+      "<HOME>\\Downloads\\Signalpost-v5\\.venv\\Scripts\\python.exe",
       "-m",
       "signalpost.cli",
       "run",
       "--organisations",
       "out/judge-evidence/batch.jsonl",
       "--output",
-      "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r2-check24\\envelopes.jsonl",
+      "<HOME>\\Downloads\\Signalpost-v5\\out\\r2-check24\\envelopes.jsonl",
       "--profiles-output",
-      "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r2-check24\\profiles.jsonl",
+      "<HOME>\\Downloads\\Signalpost-v5\\out\\r2-check24\\profiles.jsonl",
       "--report",
-      "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r2-check24\\report.json",
+      "<HOME>\\Downloads\\Signalpost-v5\\out\\r2-check24\\report.json",
       "--site-dir",
-      "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r2-check24\\site",
+      "<HOME>\\Downloads\\Signalpost-v5\\out\\r2-check24\\site",
       "--state-dir",
-      "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r2-check24\\state",
+      "<HOME>\\Downloads\\Signalpost-v5\\out\\r2-check24\\state",
       "--expected-count",
       "24",
       "--run-id",
@@ -280,104 +280,104 @@
       "--max-cost-usd",
       "0"
     ],
-    "cwd": "C:\\Users\\<USER>\\Downloads\\Signalpost-v5",
+    "cwd": "<HOME>\\Downloads\\Signalpost-v5",
     "exit": 0,
     "wall_seconds": 50.88191299999744
   },
   {
     "label": "compare1000",
     "command": [
-      "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\.venv\\Scripts\\python.exe",
+      "<HOME>\\Downloads\\Signalpost-v5\\.venv\\Scripts\\python.exe",
       "out/r1_compare.py",
       "out/cancelfix-gate-normal/envelopes.jsonl",
-      "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r2-check-normal\\envelopes.jsonl",
-      "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r2-check-validation\\compare1000.json"
+      "<HOME>\\Downloads\\Signalpost-v5\\out\\r2-check-normal\\envelopes.jsonl",
+      "<HOME>\\Downloads\\Signalpost-v5\\out\\r2-check-validation\\compare1000.json"
     ],
-    "cwd": "C:\\Users\\<USER>\\Downloads\\Signalpost-v5",
+    "cwd": "<HOME>\\Downloads\\Signalpost-v5",
     "exit": 0,
     "wall_seconds": 3.533898899993801
   },
   {
     "label": "compare-refresh",
     "command": [
-      "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\.venv\\Scripts\\python.exe",
+      "<HOME>\\Downloads\\Signalpost-v5\\.venv\\Scripts\\python.exe",
       "out/r1_compare.py",
-      "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r2-check-normal\\envelopes.jsonl",
-      "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r2-check-refresh\\envelopes.jsonl",
-      "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r2-check-validation\\compare-refresh.json"
+      "<HOME>\\Downloads\\Signalpost-v5\\out\\r2-check-normal\\envelopes.jsonl",
+      "<HOME>\\Downloads\\Signalpost-v5\\out\\r2-check-refresh\\envelopes.jsonl",
+      "<HOME>\\Downloads\\Signalpost-v5\\out\\r2-check-validation\\compare-refresh.json"
     ],
-    "cwd": "C:\\Users\\<USER>\\Downloads\\Signalpost-v5",
+    "cwd": "<HOME>\\Downloads\\Signalpost-v5",
     "exit": 0,
     "wall_seconds": 3.1918031000022893
   },
   {
     "label": "compare24",
     "command": [
-      "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\.venv\\Scripts\\python.exe",
+      "<HOME>\\Downloads\\Signalpost-v5\\.venv\\Scripts\\python.exe",
       "out/r1_compare.py",
       "out/audit24-v1/fresh.jsonl",
-      "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r2-check24\\envelopes.jsonl",
-      "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r2-check-validation\\compare24.json"
+      "<HOME>\\Downloads\\Signalpost-v5\\out\\r2-check24\\envelopes.jsonl",
+      "<HOME>\\Downloads\\Signalpost-v5\\out\\r2-check-validation\\compare24.json"
     ],
-    "cwd": "C:\\Users\\<USER>\\Downloads\\Signalpost-v5",
+    "cwd": "<HOME>\\Downloads\\Signalpost-v5",
     "exit": 0,
     "wall_seconds": 0.16096449999895412
   },
   {
     "label": "verify1000",
     "command": [
-      "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\.venv\\Scripts\\python.exe",
+      "<HOME>\\Downloads\\Signalpost-v5\\.venv\\Scripts\\python.exe",
       "scripts/verify_output.py",
       "--first",
-      "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r2-check-normal\\envelopes.jsonl",
+      "<HOME>\\Downloads\\Signalpost-v5\\out\\r2-check-normal\\envelopes.jsonl",
       "--state-dir",
-      "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r2-check-normal\\state",
+      "<HOME>\\Downloads\\Signalpost-v5\\out\\r2-check-normal\\state",
       "--organisations",
       "out/capacity-inputs/batch1000.jsonl",
       "--count",
       "1000",
       "--report",
-      "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r2-check-normal\\report.json"
+      "<HOME>\\Downloads\\Signalpost-v5\\out\\r2-check-normal\\report.json"
     ],
-    "cwd": "C:\\Users\\<USER>\\Downloads\\Signalpost-v5",
+    "cwd": "<HOME>\\Downloads\\Signalpost-v5",
     "exit": 0,
     "wall_seconds": 5.00629740000295
   },
   {
     "label": "verify24",
     "command": [
-      "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\.venv\\Scripts\\python.exe",
+      "<HOME>\\Downloads\\Signalpost-v5\\.venv\\Scripts\\python.exe",
       "scripts/verify_output.py",
       "--first",
-      "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r2-check24\\envelopes.jsonl",
+      "<HOME>\\Downloads\\Signalpost-v5\\out\\r2-check24\\envelopes.jsonl",
       "--state-dir",
-      "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r2-check24\\state",
+      "<HOME>\\Downloads\\Signalpost-v5\\out\\r2-check24\\state",
       "--organisations",
       "out/judge-evidence/batch.jsonl",
       "--count",
       "24",
       "--report",
-      "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r2-check24\\report.json"
+      "<HOME>\\Downloads\\Signalpost-v5\\out\\r2-check24\\report.json"
     ],
-    "cwd": "C:\\Users\\<USER>\\Downloads\\Signalpost-v5",
+    "cwd": "<HOME>\\Downloads\\Signalpost-v5",
     "exit": 0,
     "wall_seconds": 1.0127952999973786
   },
   {
     "label": "audit",
     "command": [
-      "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\.venv\\Scripts\\python.exe",
+      "<HOME>\\Downloads\\Signalpost-v5\\.venv\\Scripts\\python.exe",
       "scripts/accuracy_audit.py",
       "--envelopes",
-      "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r2-check-normal\\envelopes.jsonl",
+      "<HOME>\\Downloads\\Signalpost-v5\\out\\r2-check-normal\\envelopes.jsonl",
       "--state-dir",
-      "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r2-check-normal\\state",
+      "<HOME>\\Downloads\\Signalpost-v5\\out\\r2-check-normal\\state",
       "--sample-size",
       "1000",
       "--output",
-      "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r2-check-validation\\source-audit.json"
+      "<HOME>\\Downloads\\Signalpost-v5\\out\\r2-check-validation\\source-audit.json"
     ],
-    "cwd": "C:\\Users\\<USER>\\Downloads\\Signalpost-v5",
+    "cwd": "<HOME>\\Downloads\\Signalpost-v5",
     "exit": 0,
     "wall_seconds": 9.730350300000282
   }

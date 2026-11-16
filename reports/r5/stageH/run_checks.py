@@ -1,4 +1,5 @@
 """Clean-clone, disjoint-seed daily qualification. No paid source or push."""
+from signalpost.portable_paths import expand, portable, portable_text, sanitize_file  # saved paths stay repo-relative
 import gzip,hashlib,json,os,random,subprocess,sys,time
 from pathlib import Path
 from datetime import datetime,timezone
@@ -18,7 +19,7 @@ def validate_subset(extraction,sample):
     return missing
 def save(path,value):
     path.parent.mkdir(parents=True,exist_ok=True)
-    path.write_text(json.dumps(value,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+    path.write_text(portable_text(json.dumps(value,ensure_ascii=False,indent=2)+'\n'),encoding='utf8')
 
 
 def execution_environment(test_mode=False):
@@ -37,6 +38,7 @@ def command(folder,name,argv,cwd,check=True):
     started=time.perf_counter()
     with (folder/(name+'.txt')).open('w',encoding='utf8') as log:
         result=subprocess.run([str(a) for a in argv],cwd=cwd,env=env,stdout=log,stderr=subprocess.STDOUT)
+    sanitize_file(folder/(name+'.txt'))  # keep captured paths repo-relative
     receipt={'argv':[str(a) for a in argv],'cwd':str(cwd),'exit_code':result.returncode,
         'wall_seconds':time.perf_counter()-started,'completed_at_utc':datetime.now(timezone.utc).isoformat(),
         'environment_overrides':{k:env.get(k,'unset') for k in ('SIGNALPOST_SEARCH_PROVIDER','SIGNALPOST_SEARCH_MOCK','PYTHONUTF8')},'PYTHONPATH':'unset'}
@@ -56,11 +58,11 @@ def prepare(resume=False,reuse_passed_tests=False):
     inspect="import signalpost,sys,json,importlib.metadata;print(json.dumps({'python':sys.executable,'prefix':sys.prefix,'module':signalpost.__file__,'version':importlib.metadata.version('signalpost-agent')}))"
     command(DEST,'installation',[python,'-c',inspect],CLONE)
     installation=json.loads((DEST/'installation.txt').read_text(encoding='utf8'))
-    assert Path(installation['prefix']).resolve()==(CLONE/'.venv').resolve()
-    assert Path(installation['module']).resolve().is_relative_to(CLONE/'src')
+    assert Path(expand(installation['prefix'])).resolve()==(CLONE/'.venv').resolve()
+    assert Path(expand(installation['module'])).resolve().is_relative_to(CLONE/'src')
     if reuse_passed_tests:
         receipt=json.loads((DEST/'pytest.json').read_text(encoding='utf8'))
-        assert receipt['exit_code']==0 and Path(receipt['cwd']).resolve()==CLONE.resolve()
+        assert receipt['exit_code']==0 and Path(expand(receipt['cwd'])).resolve()==CLONE.resolve()
     else:command(DEST,'pytest',[python,'reports/r5/stage4_7/run_tests.py','-q','-p','no:cacheprovider'],CLONE)
     baseline=json.loads((CLONE/'reports/r5/baseline/settings.json').read_text(encoding='utf8'))
     universe=baseline['inputs']['universe_archive'];bulk=baseline['inputs']['registry_snapshot']
@@ -82,7 +84,7 @@ def prepare(resume=False,reuse_passed_tests=False):
     assert all(p in prior for p in required)
     excluded=set().union(*(p['ids'] for p in prior.values()));original_excluded=set(excluded)
     corpus=[];digest=hashlib.sha256();total=0
-    with gzip.open(universe['path'],'rb') as f:
+    with gzip.open(expand(universe['path']),'rb') as f:
         for line in f:
             digest.update(line);total+=1;corpus.append(str(json.loads(line)['organisation_number']))
     assert total==411160 and digest.hexdigest()==baseline['universe_content_sha256']
@@ -174,7 +176,7 @@ def main():
         for e in item['evidence']:
             text+='Source: '+e['source_url']+'; retrieval '+e['retrieved_at']+'; SHA-256 `'+e['content_sha256']+'`; locator `'+e['locator']+'`.\n\n```text\n'+e['claim_span']+'\n```\n\n'
     if not doubtful:text+='No doubtful or wrong published items under the automated saved-evidence rules. This is not independent human-labelled precision.\n'
-    (DEST/'doubtful_items.md').write_text(text,encoding='utf8',newline='')
+    (DEST/'doubtful_items.md').write_text(portable_text(text),encoding='utf8',newline='')
     print(json.dumps({'ledger_counts':ledger['counts'],'flagged_items':len(doubtful)}),flush=True)
 
 

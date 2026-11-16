@@ -1,4 +1,5 @@
 """Development-only, resumable official NAV index build. No ad text is exported."""
+from signalpost.portable_paths import portable, portable_text  # saved paths stay repo-relative
 import argparse,asyncio,json,os,sqlite3,time
 from datetime import datetime,timedelta,timezone
 from email.utils import format_datetime
@@ -143,7 +144,7 @@ async def build(args):
             result={k:v for k,v in data.items() if k!='ads'}
             result.update({'compressed_bytes':size,'runtime_seconds':time.monotonic()-began,'requests_this_attempt':len(budget.events),
                 'checkpoint':str(args.state_dir/'nav-index-checkpoint.sqlite3'),'request_log':budget.events})
-            args.report.parent.mkdir(parents=True,exist_ok=True);args.report.write_text(json.dumps(result,indent=2),encoding='utf8')
+            args.report.parent.mkdir(parents=True,exist_ok=True);args.report.write_text(portable_text(json.dumps(result,indent=2)),encoding='utf8')
             print(json.dumps({k:v for k,v in result.items() if k!='request_log'}),flush=True)
             if failures:raise SourceFailure('index_incomplete: rerun with same state-dir to retry failed details')
     finally:

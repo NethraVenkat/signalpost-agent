@@ -11,9 +11,9 @@
         "--branch",
         "revision/r3b",
         "https://github.com/NethraVenkat/signalpost-agent.git",
-        "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r3b-retry\\candidate-smoke100\\clone"
+        "<HOME>\\Downloads\\Signalpost-v5\\out\\r3b-retry\\candidate-smoke100\\clone"
       ],
-      "cwd": "C:\\Users\\<USER>\\Downloads\\Signalpost-v5",
+      "cwd": "<HOME>\\Downloads\\Signalpost-v5",
       "exit": 0,
       "seconds": 3.6538481999996293
     },
@@ -26,7 +26,7 @@
         "--python",
         "3.12"
       ],
-      "cwd": "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r3b-retry\\candidate-smoke100\\clone",
+      "cwd": "<HOME>\\Downloads\\Signalpost-v5\\out\\r3b-retry\\candidate-smoke100\\clone",
       "exit": 0,
       "seconds": 10.237913999997545
     },
@@ -39,19 +39,19 @@
         "signalpost",
         "run",
         "--organisations",
-        "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\smoke100-inputs\\batch100.jsonl",
+        "<HOME>\\Downloads\\Signalpost-v5\\out\\smoke100-inputs\\batch100.jsonl",
         "--bulk",
-        "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\capacity-inputs\\bulk1000.csv",
+        "<HOME>\\Downloads\\Signalpost-v5\\out\\capacity-inputs\\bulk1000.csv",
         "--output",
-        "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r3b-retry\\candidate-smoke100\\envelopes.jsonl",
+        "<HOME>\\Downloads\\Signalpost-v5\\out\\r3b-retry\\candidate-smoke100\\envelopes.jsonl",
         "--profiles-output",
-        "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r3b-retry\\candidate-smoke100\\profiles.jsonl",
+        "<HOME>\\Downloads\\Signalpost-v5\\out\\r3b-retry\\candidate-smoke100\\profiles.jsonl",
         "--report",
-        "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r3b-retry\\candidate-smoke100\\report.json",
+        "<HOME>\\Downloads\\Signalpost-v5\\out\\r3b-retry\\candidate-smoke100\\report.json",
         "--site-dir",
-        "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r3b-retry\\candidate-smoke100\\site",
+        "<HOME>\\Downloads\\Signalpost-v5\\out\\r3b-retry\\candidate-smoke100\\site",
         "--state-dir",
-        "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r3b-retry\\candidate-smoke100\\state",
+        "<HOME>\\Downloads\\Signalpost-v5\\out\\r3b-retry\\candidate-smoke100\\state",
         "--websites",
         "--hiring",
         "--public-activity",
@@ -61,7 +61,7 @@
         "100",
         "--registry-changes"
       ],
-      "cwd": "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r3b-retry\\candidate-smoke100\\clone",
+      "cwd": "<HOME>\\Downloads\\Signalpost-v5\\out\\r3b-retry\\candidate-smoke100\\clone",
       "exit": 0,
       "seconds": 57.243267599998944
     },
@@ -74,17 +74,17 @@
         "python",
         "scripts/verify_output.py",
         "--first",
-        "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r3b-retry\\candidate-smoke100\\envelopes.jsonl",
+        "<HOME>\\Downloads\\Signalpost-v5\\out\\r3b-retry\\candidate-smoke100\\envelopes.jsonl",
         "--state-dir",
-        "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r3b-retry\\candidate-smoke100\\state",
+        "<HOME>\\Downloads\\Signalpost-v5\\out\\r3b-retry\\candidate-smoke100\\state",
         "--count",
         "100",
         "--organisations",
-        "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\smoke100-inputs\\batch100.jsonl",
+        "<HOME>\\Downloads\\Signalpost-v5\\out\\smoke100-inputs\\batch100.jsonl",
         "--report",
-        "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r3b-retry\\candidate-smoke100\\report.json"
+        "<HOME>\\Downloads\\Signalpost-v5\\out\\r3b-retry\\candidate-smoke100\\report.json"
       ],
-      "cwd": "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r3b-retry\\candidate-smoke100\\clone",
+      "cwd": "<HOME>\\Downloads\\Signalpost-v5\\out\\r3b-retry\\candidate-smoke100\\clone",
       "exit": 0,
       "seconds": 5.765966999999364
     },
@@ -97,13 +97,13 @@
         "python",
         "scripts/verify_registry_changes.py",
         "--envelopes",
-        "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r3b-retry\\candidate-smoke100\\envelopes.jsonl",
+        "<HOME>\\Downloads\\Signalpost-v5\\out\\r3b-retry\\candidate-smoke100\\envelopes.jsonl",
         "--state-dir",
-        "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r3b-retry\\candidate-smoke100\\state",
+        "<HOME>\\Downloads\\Signalpost-v5\\out\\r3b-retry\\candidate-smoke100\\state",
         "--output",
-        "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r3b-retry\\candidate-smoke100\\registry-audit.json"
+        "<HOME>\\Downloads\\Signalpost-v5\\out\\r3b-retry\\candidate-smoke100\\registry-audit.json"
       ],
-      "cwd": "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r3b-retry\\candidate-smoke100\\clone",
+      "cwd": "<HOME>\\Downloads\\Signalpost-v5\\out\\r3b-retry\\candidate-smoke100\\clone",
       "exit": 0,
       "seconds": 0.4196509000030346
     }

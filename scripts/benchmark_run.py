@@ -1,4 +1,5 @@
 """Isolated live runner with external load sampling; psutil is a tool-only extra."""
+from signalpost.portable_paths import portable, portable_text, sanitize_file  # saved paths stay repo-relative
 import argparse
 import hashlib
 import json
@@ -82,11 +83,12 @@ def main():
             samples.append(sample)
             try:code=process.wait(timeout=1);break
             except psutil.TimeoutExpired:pass
+    sanitize_file(out/'process.log')  # keep captured paths repo-relative
     metadata.update(wall_seconds=time.perf_counter()-began,exit_code=code,observation_end=datetime.now(timezone.utc).isoformat(),samples=samples,
                     memory={'sampling_interval_seconds':1,'observed_peak_tree_rss_bytes':max((s['process_tree_rss_bytes'] for s in samples),default=0),
                             'observed_processes':list(observed.values()),
                             'scope':'Launched root plus recursive descendants, including actual Python pipeline behind Windows launchers; summed RSS may double count shared pages; brief peaks/exited children between samples may be missed. Not system available RAM.'})
-    (out/'measurement.json').write_text(json.dumps(metadata,ensure_ascii=True,indent=2),encoding='utf8')
+    (out/'measurement.json').write_text(portable_text(json.dumps(metadata,ensure_ascii=True,indent=2)),encoding='utf8')
     print(json.dumps({k:v for k,v in metadata.items() if k not in ['samples','command']}))
     raise SystemExit(code)
 

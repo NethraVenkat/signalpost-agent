@@ -1,4 +1,5 @@
 """Build frequency counts from the project's own official registry snapshots."""
+from signalpost.portable_paths import portable, portable_text  # saved paths stay repo-relative
 import argparse
 import csv
 import gzip
@@ -67,7 +68,7 @@ def main():
     report['bytes'] = args.output.stat().st_size
     report['distribution'] = {kind: dict(Counter('1' if n == 1 else '2' if n == 2 else '3–4' if n < 5 else '≥5' for n in values.values())) for kind, values in data['counts'].items()}
     args.report.parent.mkdir(parents=True, exist_ok=True)
-    args.report.write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf8', newline='\n')
+    args.report.write_text(portable_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n'), encoding='utf8', newline='\n')
     print(json.dumps(report, ensure_ascii=True, indent=2))
 
 

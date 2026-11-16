@@ -1,8 +1,8 @@
 Traceback (most recent call last):
-  File "C:\Users\<USER>\signal-nethra\reports\r5\stageX\unattended.py", line 40, in <module>
+  File "<REPO>\reports\r5\stageX\unattended.py", line 40, in <module>
     if __name__=='__main__':main()
                             ^^^^^^
-  File "C:\Users\<USER>\signal-nethra\reports\r5\stageX\unattended.py", line 36, in main
+  File "<REPO>\reports\r5\stageX\unattended.py", line 36, in main
     if attempt:raise RuntimeError(f'{seed}: one allowed retry failed; retained checkpoint evidence')
                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 RuntimeError: 20261017: one allowed retry failed; retained checkpoint evidence

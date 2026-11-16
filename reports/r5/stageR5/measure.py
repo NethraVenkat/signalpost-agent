@@ -1,4 +1,5 @@
 """Fresh six-sample seven-flag measurements; preserves all raw run state."""
+from signalpost.portable_paths import expand, portable, portable_text, sanitize_file  # saved paths stay repo-relative
 import hashlib
 import json
 import os
@@ -29,7 +30,7 @@ def main():
         if chosen and seed not in chosen:continue
         old_settings,old_work,registry,before,old_report=records('stageW' if stage=='stageR5' else 'stageR5',seed)
         original=old_settings['command_argv']
-        organisations=Path(original[original.index('--organisations')+1]);bulk=Path(original[original.index('--bulk')+1])
+        organisations=Path(expand(original[original.index('--organisations')+1]));bulk=Path(expand(original[original.index('--bulk')+1]))
         label='release-proof-final'
         out=ROOT/'.data/r5'/f'{stage}-{seed}-{label}';out.mkdir(exist_ok=False)
         folder=dest/f'seed{seed}';folder.mkdir(exist_ok=True)
@@ -45,12 +46,13 @@ def main():
         started=time.monotonic()
         with (folder/'execution.txt').open('w',encoding='utf8',newline='\n') as log:
             result=subprocess.run(argv,cwd=out,env=env,stdout=log,stderr=subprocess.STDOUT,timeout=2160)
+        sanitize_file(folder/'execution.txt')  # keep captured paths repo-relative
         execution={'exit_code':result.returncode,'wall_seconds':time.monotonic()-started,'argv':argv,'cwd':str(out)}
         save(folder/'execution.json',execution)
         if result.returncode:raise RuntimeError(f'{seed}: CLI exit {result.returncode}')
         checked=subprocess.run([sys.executable,str(ROOT/'scripts/check_live_run.py'),'--output',str(out/'envelopes.jsonl'),'--organisations',str(organisations),
             '--state',str(out/'state'),'--report',str(out/'report.json'),'--site',str(out/'site'),'--count','100'],cwd=ROOT,env=env,capture_output=True,text=True,encoding='utf8')
-        (folder/'verification.txt').write_text(checked.stdout+checked.stderr,encoding='utf8',newline='\n')
+        (folder/'verification.txt').write_text(portable_text(checked.stdout+checked.stderr),encoding='utf8',newline='\n')
         if checked.returncode:raise RuntimeError(f'{seed}: independent verification failed')
         save(folder/'verification.json',json.loads(checked.stdout))
         shutil.copyfile(out/'report.json',folder/'report.json')

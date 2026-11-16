@@ -1,4 +1,5 @@
 """Final R5/R3 summary, exact saved-evidence inventory and validation."""
+from signalpost.portable_paths import expand, portable, portable_text  # saved paths stay repo-relative
 import hashlib
 import json
 import sys
@@ -21,7 +22,7 @@ def main():
     checked=[];table=[];totals=Counter()
     for seed in SEEDS:
         folder=dest/f'seed{seed}';settings=json.loads((folder/'settings.json').read_text(encoding='utf8'))
-        work=Path(settings['working_directory']);args=settings['command_argv']
+        work=Path(expand(settings['working_directory']));args=settings['command_argv']
         assert work.name.endswith('release-proof-final') and sum(a.startswith('--') for a in args)==7
         execution=json.loads((folder/'execution.json').read_text(encoding='utf8'));assert execution['exit_code']==0
         verification=json.loads((folder/'verification.json').read_text(encoding='utf8'))
@@ -73,7 +74,7 @@ def main():
         for i in items:
             lines.append(f"- {stage} / {i['seed']} / {i['orgnr']} / {i['legal_name']} / {i['kind']}: {i['url']} — `{i['tier']}`; saved-evidence verdict {i['automated_verdict']}.")
     lines += ['', 'Automated review limitation: exact evidence/rule replay can verify the published support, but cannot guarantee sources remain current or replace a human’s independent ownership check. Rarity only describes its bundled snapshot. No new social profile bypasses the strict own header/footer/name/group-context rule. Stop after this summary/stage commit; no new stage or push.','']
-    (dest/'SUMMARY.md').write_text('\n'.join(lines),encoding='utf8',newline='\n')
+    (dest/'SUMMARY.md').write_text(portable_text('\n'.join(lines)),encoding='utf8',newline='\n')
     print(json.dumps({'totals':dict(totals),'test_result':test_result,'added':dict(Counter(i['kind'] for i in data['added'])),'removed':dict(Counter(i['kind'] for i in data['removed']))}))
 
 

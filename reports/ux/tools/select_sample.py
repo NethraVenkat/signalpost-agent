@@ -1,4 +1,5 @@
 """Choose reproducible controls from the saved R3b 1,000-company run."""
+from signalpost.portable_paths import portable, portable_text  # saved paths stay repo-relative
 import csv
 import hashlib
 import json
@@ -56,11 +57,11 @@ for row in rows:
 assert len(chosen) == len(set(chosen)) == 50
 folder = Path(__file__).resolve().parents[1] / 'sample'
 folder.mkdir(parents=True, exist_ok=True)
-(folder / 'batch.jsonl').write_text(''.join(json.dumps({'organisation_number': org}) + '\n' for org in chosen), encoding='utf8')
-(folder / 'selection.json').write_text(json.dumps({
+(folder / 'batch.jsonl').write_text(portable_text(''.join(json.dumps({'organisation_number': org}) + '\n' for org in chosen)), encoding='utf8')
+(folder / 'selection.json').write_text(portable_text(json.dumps({
     'source': str(SOURCE), 'source_sha256': hashlib.sha256(SOURCE.read_bytes()).hexdigest(),
     'bulk': str(BULK), 'bulk_sha256': hashlib.sha256(BULK.read_bytes()).hexdigest(),
     'special_cases': special,
     'remaining': 'first unused input-order valid companies in frozen 1,000-company bulk cohort',
-    'count': len(chosen)}, indent=2), encoding='utf8')
+    'count': len(chosen)}, indent=2)), encoding='utf8')
 print(json.dumps({'special_cases': special, 'count': len(chosen)}))

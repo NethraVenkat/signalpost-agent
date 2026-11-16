@@ -1,4 +1,5 @@
 """Write the measured R5 report after all six runs and receipt rechecks."""
+from signalpost.portable_paths import expand, portable, portable_text  # saved paths stay repo-relative
 import json
 import hashlib
 from pathlib import Path
@@ -18,7 +19,7 @@ def main():
         folder=dest/f'seed{seed}'
         settings=json.loads((folder/'settings.json').read_text(encoding='utf8'))
         counts=json.loads((folder/'counts.json').read_text(encoding='utf8'))
-        work=Path(settings['working_directory'])
+        work=Path(expand(settings['working_directory']))
         assert work.name.endswith('release-proof-final') and sum(a.startswith('--') for a in settings['command_argv'])==7
         assert counts['envelopes_sha256']==hashlib.sha256((work/'envelopes.jsonl').read_bytes()).hexdigest(),'Stale trial counts'
         assert counts['profiles_sha256']==hashlib.sha256((work/'profiles.jsonl').read_bytes()).hexdigest(),'Stale trial profiles'
@@ -58,7 +59,7 @@ def main():
         'Lossless workspace-only disk recovery: byte-identical saved blobs were SHA-256 checked and atomically replaced with hard links to identical local blobs. Every evidence path and byte remains available. blob_deduplication.json records reclaimed space/method. No other repository code/data was read, copied or modified.','',
         'Conservative withholding: PROFINOVA AS 899177932 has a matching title but its saved owner body is only a 49-character frame fallback; embedded publisher content is not fetched/proven and standard proof pages return 404. The existing short/script-shell guard remains. No title-only acceptance of that unverified frame is added. Saved-page eligibility/localization preflight found six eligible gap companies and zero remaining localization failures; this offline preflight is not a fresh measurement.','',
         'The previous completed R4 measurement has 30 total sites (including the documented LOOPYTY live-source recovery); W0 had 29. The declared-homepage baseline remains 13/72 in both. No proof-label relabelling is counted as a newly gained URL.','']
-    (dest/'REPORT.md').write_text('\n'.join(lines),encoding='utf8',newline='\n')
+    (dest/'REPORT.md').write_text(portable_text('\n'.join(lines)),encoding='utf8',newline='\n')
     print(json.dumps({'websites_before':old,'websites_after':new,'declared_recall_after':recall,'new_site_tiers':dict(gains)}))
 
 

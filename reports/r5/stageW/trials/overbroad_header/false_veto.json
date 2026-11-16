@@ -8,6 +8,6 @@
   "corrected_rule": null,
   "false_header_wrapper_classes": "header-over-content dmPageBody",
   "reason": "Whole-page layout modifiers were mistaken for a header region. The Group words belong to employee biographies about former employers, not publisher/group branding.",
-  "trial_raw_outputs_preserved": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageR4-20261116-final",
+  "trial_raw_outputs_preserved": "<REPO>\\.data\\r5\\stageR4-20261116-final",
   "changes_to_proof_thresholds": false
 }

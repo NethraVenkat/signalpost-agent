@@ -1,4 +1,5 @@
 """Official bulk download for the audit's complete NAV parent/universe join."""
+from signalpost.portable_paths import portable, portable_text  # saved paths stay repo-relative
 import hashlib
 import json
 import time
@@ -35,11 +36,11 @@ def main():
                     count += len(chunk)
                     if count > 512 * 1024 * 1024:
                         raise SystemExit('512 MiB download ceiling reached; partial is not accepted')
-                    sha.update(chunk); target.write(chunk)
+                    sha.update(chunk); target.write(portable_text(chunk))
             records.append({'url': URL, 'status': response.status_code, 'sha256': sha.hexdigest(), 'bytes': count, 'headers': dict(response.headers)})
     out = {'retrieved_at': datetime.now(timezone.utc).isoformat(), 'path': str(DEST), 'http_requests': 2, 'cost_usd': 0,
            'attribution': 'Brønnøysundregistrene, Enhetsregisteret, NLOD 2.0', 'requests': records}
-    (Path(__file__).parent / 'subunit_snapshot.json').write_text(json.dumps(out, ensure_ascii=False, indent=2) + '\n', encoding='utf8', newline='\n')
+    (Path(__file__).parent / 'subunit_snapshot.json').write_text(portable_text(json.dumps(out, ensure_ascii=False, indent=2) + '\n'), encoding='utf8', newline='\n')
     print(json.dumps({'bytes': count, 'sha256': sha.hexdigest()}))
 
 

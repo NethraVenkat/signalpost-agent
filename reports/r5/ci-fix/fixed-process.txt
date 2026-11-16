@@ -1,5 +1,5 @@
-   Building signalpost-agent @ file:///C:/Users/<USER>/signal-nethra
-      Built signalpost-agent @ file:///C:/Users/<USER>/signal-nethra
+   Building signalpost-agent @ file:///<REPO>
+      Built signalpost-agent @ file:///<REPO>
 Uninstalled 1 package in 27ms
 Installed 1 package in 40ms
 {"emitted_envelopes": 20, "invalid_inputs": [], "requests": 147, "runtime_ms": 96672, "changes": 0, "observation_changes": 0, "deadline_hits": 0, "warnings": ["site generation failed: ValueError"]}

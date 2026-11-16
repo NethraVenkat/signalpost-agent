@@ -1,4 +1,5 @@
 """Extract saved DIGITALIQ responses from seed-20261113, without network calls."""
+from signalpost.portable_paths import portable, portable_text  # saved paths stay repo-relative
 import base64,csv,gzip,hashlib,io,json,sys
 from pathlib import Path
 from urllib.parse import urlsplit,parse_qs
@@ -35,7 +36,7 @@ def main():
     assert len(selected)==1
     csvout=io.StringIO(newline='');writer=csv.DictWriter(csvout,fieldnames=fields);writer.writeheader();writer.writerows(selected)
     table=csvout.getvalue().encode('utf8');(destination/'registry.csv').write_bytes(table)
-    (destination/'companies.jsonl').write_text(json.dumps({'organisation_number':ORG})+'\n',encoding='utf8',newline='\n')
+    (destination/'companies.jsonl').write_text(portable_text(json.dumps({'organisation_number':ORG})+'\n'),encoding='utf8',newline='\n')
     packed=gzip.compress(json.dumps(bodies,sort_keys=True,separators=(',',':')).encode(),mtime=0)
     (destination/'bodies.json.gz').write_bytes(packed)
     from signalpost.sources.nav_index import load,write
@@ -53,7 +54,7 @@ def main():
         'website':website['value']['final_url'],'nav_uuid':job['value']['uuid'],
         'scope':'One exact-identity company from saved seed-20261113 responses, seven isolated mutation types plus unchanged/idempotence/transient checks; not a 100-company generalization.',
         'normalization':'CSV subset reserialized without changing field values. Body bytes are original. Last complete response per URL; absent HTTP headers are not invented. Synthetic auth is offline only and not publication evidence.'}
-    (destination/'manifest.json').write_text(json.dumps(manifest,indent=2)+'\n',encoding='utf8')
+    (destination/'manifest.json').write_text(portable_text(json.dumps(manifest,indent=2)+'\n'),encoding='utf8')
     print(json.dumps({'routes':len(routes),'body_bytes':len(packed),'org':ORG}))
 
 if __name__=='__main__':main()

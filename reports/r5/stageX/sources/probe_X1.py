@@ -1,4 +1,5 @@
 """Two bounded official source checks after documentation/licence review."""
+from signalpost.portable_paths import portable, portable_text  # saved paths stay repo-relative
 import asyncio
 import hashlib
 import json
@@ -29,7 +30,7 @@ async def main():
                 print(r.status_code,body[:1000],flush=True)
             except Exception as exc:item={'url':url,'error':type(exc).__name__,'runtime':time.monotonic()-started};print(item,flush=True)
             receipts.append(item);await asyncio.sleep(1)
-    (dest/'X1-probe.json').write_text(json.dumps({'diagnostic_HTTP_attempts':len(receipts),'cost_usd':0,'receipts':receipts},indent=2)+'\n',encoding='utf8')
+    (dest/'X1-probe.json').write_text(portable_text(json.dumps({'diagnostic_HTTP_attempts':len(receipts),'cost_usd':0,'receipts':receipts},indent=2)+'\n'),encoding='utf8')
 
 
 if __name__=='__main__':asyncio.run(main())

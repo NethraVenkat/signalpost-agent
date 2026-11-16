@@ -1,4 +1,5 @@
 """Measure every generated site file and its synchronous file:// dependencies."""
+from signalpost.portable_paths import portable, portable_text  # saved paths stay repo-relative
 import json
 from html.parser import HTMLParser
 from pathlib import Path
@@ -60,6 +61,6 @@ result = {'site': str(SITE), 'file_count': len(files), 'total_bytes': sum(files.
           'html_limit_failures': [name for name, v in pages.items() if v['over_html_limit']],
           'initial_limit_failures': [name for name, v in pages.items() if v['over_initial_limit']],
           'lazy_chunk_limit_failures': []}
-OUT.write_text(json.dumps(result, indent=2), encoding='utf8')
+OUT.write_text(portable_text(json.dumps(result, indent=2)), encoding='utf8')
 print(json.dumps({k: result[k] for k in ('file_count', 'total_bytes', 'largest_html', 'largest_initial',
                                          'html_limit_failures', 'initial_limit_failures')}))

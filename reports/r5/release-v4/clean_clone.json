@@ -1,17 +1,17 @@
 {
   "tested_source_commit": "3168e29b7224270ff1b3829ddad4fc596d1d6705",
-  "clone_directory": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\release-v4-20261113-112818\\repo",
-  "python_executable": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\release-v4-20261113-112818\\repo\\.venv\\Scripts\\python.exe",
-  "python_prefix": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\release-v4-20261113-112818\\repo\\.venv",
-  "loaded_signalpost_module": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\release-v4-20261113-112818\\repo\\src\\signalpost\\__init__.py",
+  "clone_directory": "<REPO>\\.data\\r5\\release-v4-20261113-112818\\repo",
+  "python_executable": "<REPO>\\.data\\r5\\release-v4-20261113-112818\\repo\\.venv\\Scripts\\python.exe",
+  "python_prefix": "<REPO>\\.data\\r5\\release-v4-20261113-112818\\repo\\.venv",
+  "loaded_signalpost_module": "<REPO>\\.data\\r5\\release-v4-20261113-112818\\repo\\src\\signalpost\\__init__.py",
   "installed_version_at_smoke": "1.1.1",
   "uv_lock_sha256": "da856b8a1bf3d4b4cf3cb51e11862cef598cc986ae197914cacb787d4906bdae",
   "universe": {
-    "path": "C:/Users/<USER>/Downloads/Signalpost/state/downloads/universe.jsonl.gz",
+    "path": "<HOME>/Downloads/Signalpost/state/downloads/universe.jsonl.gz",
     "sha256": "1c89710e5b01f8617e86d09fbdff4a52f2f8dbbba297e74f7164b5984f5a0384"
   },
   "registry_snapshot": {
-    "path": "C:/Users/<USER>/Downloads/Signalpost/state/downloads/registry.csv",
+    "path": "<HOME>/Downloads/Signalpost/state/downloads/registry.csv",
     "sha256": "5b0df27c5567a655320b8dfb8975049b76c46ba93d748a8a763f8db7050b7862"
   },
   "sample_seed": 20261113,

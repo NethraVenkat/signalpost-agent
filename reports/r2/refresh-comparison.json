@@ -1,6 +1,6 @@
 {
-  "before": "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r2-check-normal\\envelopes.jsonl",
-  "after": "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\out\\r2-check-refresh\\envelopes.jsonl",
+  "before": "<HOME>\\Downloads\\Signalpost-v5\\out\\r2-check-normal\\envelopes.jsonl",
+  "after": "<HOME>\\Downloads\\Signalpost-v5\\out\\r2-check-refresh\\envelopes.jsonl",
   "before_rows": 1000,
   "after_rows": 1000,
   "same_order": true,

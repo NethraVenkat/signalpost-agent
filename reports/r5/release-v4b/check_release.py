@@ -1,4 +1,5 @@
 """Authored release-only checks: isolated clone, disjoint sample, seven flags."""
+from signalpost.portable_paths import expand, portable, portable_text, sanitize_file  # saved paths stay repo-relative
 import gzip,hashlib,importlib.metadata,json,os,random,subprocess,sys,time
 from collections import Counter
 from datetime import datetime,timezone
@@ -13,12 +14,13 @@ ENV=os.environ.copy();ENV.update(SIGNALPOST_SEARCH_PROVIDER='disabled',SIGNALPOS
 def sha(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 def save(name,value):
     DEST.mkdir(parents=True,exist_ok=True)
-    (DEST/name).write_text(json.dumps(value,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+    (DEST/name).write_text(portable_text(json.dumps(value,ensure_ascii=False,indent=2)+'\n'),encoding='utf8')
 
 def command(name,args,cwd=ROOT,env=None):
     began=time.perf_counter()
     with (DEST/(name+'.txt')).open('w',encoding='utf8') as log:
         result=subprocess.run([str(a) for a in args],cwd=cwd,env=ENV if env is None else env,stdout=log,stderr=subprocess.STDOUT)
+    sanitize_file(DEST/(name+'.txt'))  # keep captured paths repo-relative
     info={'argv':[str(a) for a in args],'cwd':str(cwd),'exit_code':result.returncode,
           'wall_seconds':time.perf_counter()-began,'completed_at_utc':datetime.now(timezone.utc).isoformat()}
     save(name+'.json',info);result.check_returncode();return info
@@ -44,7 +46,7 @@ def prepare():
     prior={label:{json.loads(line)['organisation_number'] for line in (ROOT/path).read_text(encoding='utf8').splitlines()}
         for label,path in [('seed20261017','reports/r5/baseline/companies.jsonl'),('seed20261113','reports/r5/release-v4/companies100.jsonl')]}
     excluded=set().union(*prior.values());corpus=[];digest=hashlib.sha256();total=0
-    with gzip.open(universe['path'],'rb') as f:
+    with gzip.open(expand(universe['path']),'rb') as f:
         for line in f:
             digest.update(line);total+=1;row=json.loads(line);org=str(row['organisation_number'])
             if org not in excluded:corpus.append(org)
@@ -53,7 +55,7 @@ def prepare():
     assert len(set(sample))==100 and all(valid(org) for org in sample)
     assert all(not (set(sample)&old) for old in prior.values())
     DEST.mkdir(parents=True,exist_ok=True)
-    (DEST/'companies100.jsonl').write_text(''.join(json.dumps({'organisation_number':org})+'\n' for org in sample),encoding='utf8')
+    (DEST/'companies100.jsonl').write_text(portable_text(''.join(json.dumps({'organisation_number':org})+'\n' for org in sample)),encoding='utf8')
     command('extract',[sys.executable,'scripts/extract_bulk.py','--bulk',bulk['path'],'--batch',DEST/'companies100.jsonl','--output',DEST/'registry100.csv'])
     extraction=json.loads((DEST/'extract.txt').read_text(encoding='utf8'));assert extraction['rows']==100 and not extraction['missing_organisation_numbers']
     prior_edge=ROOT/'reports/r5/release-v4/companies10.jsonl'
@@ -87,7 +89,7 @@ def smoke(kind,summarize_only=False):
     assert len([v for v in args if v.startswith('--')])==7
     execution=json.loads((DEST/(kind+'.json')).read_text(encoding='utf8')) if summarize_only else command(kind,args,work)
     quote=lambda v:"'"+str(v).replace("'","''")+"'"
-    (DEST/(kind+'-run.ps1')).write_text('# Run from '+str(work)+' with recorded environment overrides.\n& '+' '.join(map(quote,args))+'\n',encoding='utf8')
+    (DEST/(kind+'-run.ps1')).write_text(portable_text('# Run from '+str(work)+' with recorded environment overrides.\n& '+' '.join(map(quote,args))+'\n'),encoding='utf8')
     verify=[sys.executable,'scripts/verify_output.py','--first',work/'envelopes.jsonl','--organisations',batch,'--count',str(count),'--state-dir',work/'state','--report',work/'report.json']
     command(kind+'-verify',verify);checked=json.loads((DEST/(kind+'-verify.txt')).read_text(encoding='utf8'))
     save(kind+'-verification.json',checked)

@@ -1,4 +1,5 @@
 """One fresh-state retry per failed sample, preserving every attempt."""
+from signalpost.portable_paths import portable, portable_text, sanitize_file  # saved paths stay repo-relative
 import json
 import os
 from pathlib import Path
@@ -21,6 +22,7 @@ def main():
             with (dest/f'{seed}-{label}.txt').open('w',encoding='utf8') as log:
                 result=subprocess.run([sys.executable,str(ROOT/'reports/r5/stageX/measure.py'),stage,str(seed)],cwd=ROOT,env=env,
                     stdout=log,stderr=subprocess.STDOUT)
+            sanitize_file(dest/f'{seed}-{label}.txt')  # keep captured paths repo-relative
             output=dest/f'seed{seed}'
             counts_path=output/'counts.json'
             outage=False
@@ -29,7 +31,7 @@ def main():
                 outage=counts['before']['websites']>0 and counts['after']['websites']==0 and counts['after']['activity_claims']==0
             record={'seed':seed,'attempt':attempt+1,'label':label,'exit_code':result.returncode,'wall_seconds':time.monotonic()-start,'source_outage':outage}
             records.append(record)
-            (dest/'unattended_attempts.json').write_text(json.dumps(records,indent=2)+'\n',encoding='utf8')
+            (dest/'unattended_attempts.json').write_text(portable_text(json.dumps(records,indent=2)+'\n'),encoding='utf8')
             if result.returncode==0 and not outage:break
             trial=dest/'trials'/f'{seed}-{label}';trial.mkdir(parents=True,exist_ok=True)
             if output.exists():shutil.copytree(output,trial/'receipts',dirs_exist_ok=True)

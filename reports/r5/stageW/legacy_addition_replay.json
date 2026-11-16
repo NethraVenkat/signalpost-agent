@@ -1,6 +1,6 @@
 {
   "pre_R4_commit": "81a76b8dcb48b9891f605cd515f3d1197938f274",
-  "application_module": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageR2-commit-check\\src\\signalpost\\__init__.py",
+  "application_module": "<REPO>\\.data\\r5\\stageR2-commit-check\\src\\signalpost\\__init__.py",
   "network_requests": 0,
   "method": "Unmodified pre-R4 score and localization functions from the isolated committed R2 worktree, applied to the exact new saved response bytes.",
   "cases": [

@@ -1,4 +1,4 @@
-{"command": ["C:\\Users\\<USER>\\signal-nethra\\.venv\\Scripts\\python.exe", "C:\\Users\\<USER>\\signal-nethra\\reports\\r5\\stage4_7\\run_tests.py", "-q", "-p", "no:cacheprovider", "--basetemp=.data/r5/pytest-stageA"], "priority": "above_normal", "mutates_test_assertions_or_timeouts": false}
+{"command": ["<REPO>\\.venv\\Scripts\\python.exe", "<REPO>\\reports\\r5\\stage4_7\\run_tests.py", "-q", "-p", "no:cacheprovider", "--basetemp=.data/r5/pytest-stageA"], "priority": "above_normal", "mutates_test_assertions_or_timeouts": false}
 ........................................................................ [  8%]
 ........................................................................ [ 17%]
 .......................................F................................ [ 25%]
@@ -14,7 +14,7 @@
 ================================== FAILURES ===================================
 _________ test_website_wait_does_not_hold_next_company_registry_slot __________
 
-tmp_path = WindowsPath('C:/Users/<USER>/signal-nethra/.data/r5/pytest-stageA/test_website_wait_does_not_hol0')
+tmp_path = WindowsPath('<REPO>/.data/r5/pytest-stageA/test_website_wait_does_not_hol0')
 monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001BA9A049D60>
 
     def test_website_wait_does_not_hold_next_company_registry_slot(tmp_path,monkeypatch):
@@ -40,7 +40,7 @@ E       assert 2 == 0
 tests\test_loop_responsiveness.py:98: AssertionError
 _ test_numeric_linkedin_from_shared_group_site_is_withheld[Org nr 923609016 Our companies-Example AS] _
 
-tmp_path = WindowsPath('C:/Users/<USER>/signal-nethra/.data/r5/pytest-stageA/test_numeric_linkedin_from_sha2')
+tmp_path = WindowsPath('<REPO>/.data/r5/pytest-stageA/test_numeric_linkedin_from_sha2')
 monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001BA99F96810>
 footer = 'Org nr 923609016 Our companies', title = 'Example AS'
 

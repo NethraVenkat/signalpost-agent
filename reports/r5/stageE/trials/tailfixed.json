@@ -1,5 +1,5 @@
 {
-  "fixture": "C:/Users/<USER>/signal-nethra/tests/fixtures/refresh_proof",
+  "fixture": "<REPO>/tests/fixtures/refresh_proof",
   "scope": "One exact-identity company from saved seed-20261113 responses, seven isolated mutation types plus unchanged/idempotence/transient checks; not a 100-company generalization.",
   "nav_scaffold": "Synthetic empty forward tail only; no claims derive from it. Exact live ad detail from saved source is mandatory. This is not full-feed discovery coverage validation.",
   "planted_causal_changes": 7,

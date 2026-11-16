@@ -1,5 +1,6 @@
 """Compare a site-only rebuild with the fixed Phase 1 site."""
 
+from signalpost.portable_paths import portable, portable_text  # saved paths stay repo-relative
 import hashlib
 import json
 from pathlib import Path
@@ -45,7 +46,7 @@ def main() -> None:
         "oversized_html": oversized_html,
         "over_ten_percent": over_ten_percent,
     }
-    (ROOT / "site-gate.json").write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
+    (ROOT / "site-gate.json").write_text(portable_text(json.dumps(result, indent=2) + "\n"), encoding="utf-8")
     print(json.dumps(result, indent=2))
     assert names_match and result["claim_ids_and_values_identical"] and envelope_count == 50
     assert not oversized_html and not over_ten_percent

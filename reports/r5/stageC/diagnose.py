@@ -1,4 +1,5 @@
 """Diagnose saved missing-site outcomes; never fetch or relax proof."""
+from signalpost.portable_paths import expand, portable, portable_text  # saved paths stay repo-relative
 import json,sys
 from collections import Counter
 from pathlib import Path
@@ -32,7 +33,7 @@ def main():
     stage=sys.argv[1] if len(sys.argv)>1 else 'F1';result={}
     text='# Missing-website diagnosis before Stage C\n\nSource: Stage '+stage+' saved runs. No network calls. Primary buckets are exclusive; signal counts overlap. Budget/ambiguity are terminal outcomes and can mask underlying DNS/no-proof failures. Robots includes access challenges; timeout includes connect/5xx. A veto is preserved, not a candidate for weaker proof.\n\n'
     for sample in ('frozen','daily'):
-        settings=json.loads((ROOT/'reports/r5'/('stage'+stage)/sample/'settings.json').read_text(encoding='utf8'));out=Path(settings['working_directory'])
+        settings=json.loads((ROOT/'reports/r5'/('stage'+stage)/sample/'settings.json').read_text(encoding='utf8'));out=Path(expand(settings['working_directory']))
         rows=[json.loads(x) for x in (out/'envelopes.jsonl').read_text(encoding='utf8').splitlines()];report=json.loads((out/'report.json').read_text(encoding='utf8'))
         missing=[classify(row,report['request_log']) for row in rows if not any(c['field']=='official_website' and c['availability']=='available' for c in row['claims'])]
         primary=Counter(m['primary'] for m in missing);signals=Counter(s for m in missing for s in m['signals'])
@@ -46,7 +47,7 @@ def main():
     dest=ROOT/'reports/r5/stageC';dest.mkdir(parents=True,exist_ok=True)
     name='diagnosis_after' if stage=='C' else 'diagnosis'
     if stage=='C':text=text.replace('diagnosis before Stage C','diagnosis after Stage C')
-    (dest/(name+'.md')).write_text(text,encoding='utf8');(dest/(name+'.json')).write_text(json.dumps(result,indent=2)+'\n',encoding='utf8')
+    (dest/(name+'.md')).write_text(portable_text(text),encoding='utf8');(dest/(name+'.json')).write_text(portable_text(json.dumps(result,indent=2)+'\n'),encoding='utf8')
     print(json.dumps({s:{k:v for k,v in data.items() if k!='companies'} for s,data in result.items()}))
 
 if __name__=='__main__':main()

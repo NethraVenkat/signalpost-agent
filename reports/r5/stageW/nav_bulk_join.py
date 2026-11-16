@@ -1,4 +1,5 @@
 """Check whether the existing main-entity snapshot can supply NAV parents."""
+from signalpost.portable_paths import portable, portable_text  # saved paths stay repo-relative
 import csv
 import gzip
 import hashlib
@@ -24,7 +25,7 @@ def main():
               'rows_scanned': rows, 'index_employers': len(employers), 'employers_found_in_main_entity_snapshot': len(matched),
               'employers_with_parent_field': sum(bool(r.get('overordnetEnhet')) for r in matched), 'matches': matched,
               'method': 'Exact orgnr lookup only; no company-name matching; existing official bulk only; zero network requests.'}
-    (DEST / 'nav_bulk_join.json').write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n', encoding='utf8', newline='\n')
+    (DEST / 'nav_bulk_join.json').write_text(portable_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n'), encoding='utf8', newline='\n')
     print(json.dumps({k: v for k, v in result.items() if k != 'matches'}))
 
 

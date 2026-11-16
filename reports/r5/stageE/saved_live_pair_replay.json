@@ -1,7 +1,7 @@
 {
   "scope": "Offline re-comparison of the exact saved 100-company live pair; no network, no edited publisher bytes",
-  "previous": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-frozen-run-final\\envelopes.jsonl",
-  "current": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-frozen-live-refresh\\envelopes.jsonl",
+  "previous": "<REPO>\\.data\\r5\\stageE-frozen-run-final\\envelopes.jsonl",
+  "current": "<REPO>\\.data\\r5\\stageE-frozen-live-refresh\\envelopes.jsonl",
   "original_false_minor_changes": 620,
   "all_original_differences_are_equivalent_aware_instants": true,
   "corrected_changes": 0,
@@ -42,7 +42,7 @@
     "newer_filing_flags": 0
   },
   "input_sha256": {
-    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-frozen-run-final\\envelopes.jsonl": "24b536714af1f7b56239c8289dd2f9be0856117431c62549ab402da73909a610",
-    "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageE-frozen-live-refresh\\envelopes.jsonl": "99ebfb284e7cc81eca8b470d41c530559cdb7f9a09f47a3870ccfe597af53fa0"
+    "<REPO>\\.data\\r5\\stageE-frozen-run-final\\envelopes.jsonl": "24b536714af1f7b56239c8289dd2f9be0856117431c62549ab402da73909a610",
+    "<REPO>\\.data\\r5\\stageE-frozen-live-refresh\\envelopes.jsonl": "99ebfb284e7cc81eca8b470d41c530559cdb7f9a09f47a3870ccfe597af53fa0"
   }
 }

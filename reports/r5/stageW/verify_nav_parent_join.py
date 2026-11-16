@@ -1,4 +1,5 @@
 """Independently recount the audit from hash-checked official response pointers."""
+from signalpost.portable_paths import expand, portable, portable_text  # saved paths stay repo-relative
 import gzip
 import hashlib
 import json
@@ -32,7 +33,7 @@ def main():
         parts = urlsplit(receipt['url'])
         assert parts.scheme == 'https' and parts.hostname == 'data.brreg.no'
         assert parts.path == '/enhetsregisteret/api/underenheter' or re.fullmatch(r'/enhetsregisteret/api/(?:under)?enheter/\d{9}', parts.path)
-        raw = Path(receipt['body_path']).read_bytes(); digest = hashlib.sha256(raw).hexdigest()
+        raw = Path(expand(receipt['body_path'])).read_bytes(); digest = hashlib.sha256(raw).hexdigest()
         assert digest == receipt['content_sha256']
         if receipt['status'] == 200:
             documents[digest] = json.loads(raw); raw_texts[digest] = raw.decode('utf8')
@@ -85,7 +86,7 @@ def main():
                 matched_samples.append({'seed': seed, 'orgnr': row['organisation_number'], 'name': row['run']['legal_identity']['legal_name'],
                     'job_published': any(c['field'].startswith('hiring.job.') and c['availability'] == 'available' for c in row['claims'])})
     verification['sample_index_matched_companies'] = matched_samples
-    (DEST / 'nav_parent_verification.json').write_text(json.dumps(verification, indent=2) + '\n', encoding='utf8', newline='\n')
+    (DEST / 'nav_parent_verification.json').write_text(portable_text(json.dumps(verification, indent=2) + '\n'), encoding='utf8', newline='\n')
     print(json.dumps(verification))
 
 

@@ -1,4 +1,5 @@
 """Reports-only exact-ID NAV parent join using the approved official REST API."""
+from signalpost.portable_paths import portable, portable_text  # saved paths stay repo-relative
 import asyncio
 import gzip
 import hashlib
@@ -77,9 +78,9 @@ async def main():
                 receipt['error'] = str(exc)
                 failures.append({'batch': offset // 200, 'reason': type(exc).__name__, 'error': str(exc), 'orgnrs': batch})
             receipts.append(receipt)
-            (DEST / 'nav_parent_progress.json').write_text(json.dumps({'state': 'running', 'http_requests': len(receipts),
+            (DEST / 'nav_parent_progress.json').write_text(portable_text(json.dumps({'state': 'running', 'http_requests': len(receipts),
                 'mapped_employers': len(relations), 'receipts': receipts, 'relationships': list(relations.values()),
-                'missing_employers': missing, 'failures': failures}, ensure_ascii=False, indent=2) + '\n', encoding='utf8', newline='\n')
+                'missing_employers': missing, 'failures': failures}, ensure_ascii=False, indent=2) + '\n'), encoding='utf8', newline='\n')
             # Respect access stops; no alternate host/path/credentials or retries.
             if receipt.get('error'):
                 failures.append({'reason': 'source_access_stop', 'unstarted_employers': employers[offset + 200:]})
@@ -103,7 +104,7 @@ async def main():
               'http_requests': len(receipts), 'maximum_requests': 40, 'runtime_seconds': time.monotonic() - started, 'cost_usd': 0,
               'receipt_directory': str(storage), 'receipts': receipts, 'relationships': sorted(relations.values(), key=lambda r: r['employer_orgnr']),
               'limits': 'Index-based expected discovery coverage, not live-current job proof. Index and parent retrieval dates differ. Runtime profiles and rarity bundle are not modified; this is not a nationwide subunit snapshot.'}
-    (DEST / 'nav_parent_join.json').write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n', encoding='utf8', newline='\n')
+    (DEST / 'nav_parent_join.json').write_text(portable_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n'), encoding='utf8', newline='\n')
     print(json.dumps({k: v for k, v in result.items() if k not in {'receipts', 'relationships'}}))
 
 

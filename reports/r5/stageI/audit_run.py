@@ -1,4 +1,5 @@
 """Audit saved D/I defaults, meters, unit provenance and filing-year access."""
+from signalpost.portable_paths import expand, portable, portable_text  # saved paths stay repo-relative
 import hashlib,json
 from pathlib import Path
 from collections import Counter
@@ -10,7 +11,7 @@ def main():
     for stage in ('D','I'):
         for sample in ('frozen','daily'):
             settings=json.loads((ROOT/'reports/r5'/('stage'+stage)/sample/'settings.json').read_text(encoding='utf8'))
-            out=Path(settings['working_directory']);report=json.loads((out/'report.json').read_text(encoding='utf8'))
+            out=Path(expand(settings['working_directory']));report=json.loads((out/'report.json').read_text(encoding='utf8'))
             rows=[json.loads(x) for x in (out/'envelopes.jsonl').read_text(encoding='utf8').splitlines()]
             flags=[x for x in settings['command_argv'] if x.startswith('--')]
             assert flags==['--organisations','--bulk','--output','--profiles-output','--report','--run-id','--expected-count']
@@ -41,7 +42,7 @@ def main():
                 'website_request_maximum':max(web.values(),default=0),'largest_profile_bytes':max_page,
                 'available_year_lists':sum(any(c['field']=='accounts.filed_years' and c['availability']=='available' for c in row['claims']) for row in rows),
                 'complete':len(rows),'cost_usd':0,'output_sha256':hashlib.sha256((out/'envelopes.jsonl').read_bytes()).hexdigest()}
-    (ROOT/'reports/r5/stageI/release_audit.json').write_text(json.dumps(result,indent=2)+'\n',encoding='utf8')
+    (ROOT/'reports/r5/stageI/release_audit.json').write_text(portable_text(json.dumps(result,indent=2)+'\n'),encoding='utf8')
     print(json.dumps(result))
 
 if __name__=='__main__':main()

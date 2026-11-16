@@ -1,7 +1,7 @@
 {
   "inputs": {
     "stageC/frozen": {
-      "output": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageC-frozen-run-recovery\\envelopes.jsonl",
+      "output": "<REPO>\\.data\\r5\\stageC-frozen-run-recovery\\envelopes.jsonl",
       "sha256": "3bf691e61db3502c4d4022070c8b1dc49597c9a75a083539f91f58ce7dd61338",
       "website_urls": 5,
       "social_urls": 8,
@@ -268,7 +268,7 @@
       ]
     },
     "stageC2/frozen": {
-      "output": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageC2-frozen-run-trial\\envelopes.jsonl",
+      "output": "<REPO>\\.data\\r5\\stageC2-frozen-run-trial\\envelopes.jsonl",
       "sha256": "e0d784bed92463fa4dd0bfb92a0ee6644281ee5209eaf58df62dd0e5c4c05d1a",
       "website_urls": 5,
       "social_urls": 8,
@@ -535,7 +535,7 @@
       ]
     },
     "stageC/daily": {
-      "output": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageC-daily-run-recovery\\envelopes.jsonl",
+      "output": "<REPO>\\.data\\r5\\stageC-daily-run-recovery\\envelopes.jsonl",
       "sha256": "d733c77ea177942dd5b0a2b6660e45b70a8d3dde960e5aa4b670cdd15e7228ae",
       "website_urls": 4,
       "social_urls": 2,
@@ -851,7 +851,7 @@
       ]
     },
     "stageC2/daily": {
-      "output": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageC2-daily-run-trial\\envelopes.jsonl",
+      "output": "<REPO>\\.data\\r5\\stageC2-daily-run-trial\\envelopes.jsonl",
       "sha256": "45348a2c87137751d4dd716d7eae49d51485329be99e0e14d04a5af3038b2008",
       "website_urls": 4,
       "social_urls": 2,
@@ -1167,7 +1167,7 @@
       ]
     },
     "release-v4b": {
-      "output": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\release-v4b-20261113-183129\\repo\\.data\\release-v4b\\daily\\envelopes.jsonl",
+      "output": "<REPO>\\.data\\r5\\release-v4b-20261113-183129\\repo\\.data\\release-v4b\\daily\\envelopes.jsonl",
       "sha256": "11e517f56d363aa1ea50ca10175304ea81d23c19e0b4036afb40c9d623539785",
       "website_urls": 3,
       "social_urls": 2,
@@ -2074,7 +2074,7 @@
       ]
     },
     "stageC2/mock": {
-      "output": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\stageC2-mock-run-trial\\envelopes.jsonl",
+      "output": "<REPO>\\.data\\r5\\stageC2-mock-run-trial\\envelopes.jsonl",
       "sha256": "8ac354f7e713f28ca4104bc37226a836a723313cf1a83e7ad640036361de6166",
       "website_urls": 3,
       "social_urls": 2,

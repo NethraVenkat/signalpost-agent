@@ -1,4 +1,5 @@
 """Local equivalent of the corrected CI commands, using isolated state."""
+from signalpost.portable_paths import portable, portable_text, sanitize_file  # saved paths stay repo-relative
 import json,os,subprocess,time,sys
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[3]
@@ -16,14 +17,16 @@ def main():
     for k,v in flags.items():argv+=['--'+k,str(v)]
     began=time.perf_counter()
     with (dest/'process.txt').open('w',encoding='utf8') as log:r=subprocess.run(argv,cwd=work,env=env,stdout=log,stderr=subprocess.STDOUT)
-    (dest/'execution.json').write_text(json.dumps({'argv':argv,'cwd':str(work),'exit_code':r.returncode,
-        'wall_seconds':time.perf_counter()-began,'platform':'Local Windows; GitHub Linux execution not performed'},indent=2)+'\n')
+    sanitize_file(dest/'process.txt')  # keep captured paths repo-relative
+    (dest/'execution.json').write_text(portable_text(json.dumps({'argv':argv,'cwd':str(work),'exit_code':r.returncode,
+        'wall_seconds':time.perf_counter()-began,'platform':'Local Windows; GitHub Linux execution not performed'},indent=2)+'\n'))
     r.check_returncode()
     check=['uv','run','python','scripts/check_live_run.py','--output',str(work/'envelopes.jsonl'),
         '--organisations','tests/fixtures/ci20.jsonl','--count','20','--state',str(work/'state'),
         '--report',str(work/'report.json'),'--site',str(work/'site')]
     with (dest/'verification.json').open('w',encoding='utf8') as log:v=subprocess.run(check,cwd=ROOT,env=env,stdout=log,stderr=subprocess.STDOUT)
-    (dest/'verification-command.json').write_text(json.dumps({'argv':check,'exit_code':v.returncode},indent=2)+'\n')
+    sanitize_file(dest/'verification.json')  # keep captured paths repo-relative
+    (dest/'verification-command.json').write_text(portable_text(json.dumps({'argv':check,'exit_code':v.returncode},indent=2)+'\n'))
     (dest/'report.json').write_bytes((work/'report.json').read_bytes());v.check_returncode()
 
 

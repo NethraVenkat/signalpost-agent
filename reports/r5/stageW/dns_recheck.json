@@ -3,7 +3,7 @@
   "documentation": "https://developers.google.com/speed/public-dns/docs/doh/json",
   "terms": "https://developers.google.com/speed/public-dns/terms",
   "privacy": "https://developers.google.com/speed/public-dns/privacy",
-  "input_audit_sha256": "d8097a4a5abe54c6d2a8e677042b5d686a38f68df0e72e36de5ea6b9d900c822",
+  "input_audit_sha256": "accf851419fd963fa143fba049dcf7ddba72d111695403df5f1d70f10e457a33",
   "unique_names": 7,
   "completed": 7,
   "http_requests": 7,

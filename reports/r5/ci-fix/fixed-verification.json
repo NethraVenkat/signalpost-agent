@@ -1,11 +1,11 @@
 Traceback (most recent call last):
-  File "C:\Users\<USER>\signal-nethra\scripts\check_live_run.py", line 48, in <module>
+  File "<REPO>\scripts\check_live_run.py", line 48, in <module>
     if __name__=='__main__':main()
                             ^^^^^^
-  File "C:\Users\<USER>\signal-nethra\scripts\check_live_run.py", line 45, in main
+  File "<REPO>\scripts\check_live_run.py", line 45, in main
     a=p.parse_args();print(json.dumps(check(a.output,a.organisations,a.state,a.report,a.site,a.count)))
                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\<USER>\signal-nethra\scripts\check_live_run.py", line 26, in check
+  File "<REPO>\scripts\check_live_run.py", line 26, in check
     assert report['site']['state']=='available','Site was not generated'
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: Site was not generated

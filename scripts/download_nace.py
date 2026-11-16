@@ -2,6 +2,7 @@
 
 Usage: python scripts/download_nace.py --date YYYY-MM-DD
 """
+from signalpost.portable_paths import portable, portable_text  # saved paths stay repo-relative
 import argparse
 import json
 from pathlib import Path
@@ -47,7 +48,7 @@ def main():
     pending[f'nace-klass-{args.date}.json'] = {'versions': versions}
     target.mkdir(exist_ok=True)
     for filename, data in pending.items():
-        (target / filename).write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf8')
+        (target / filename).write_text(portable_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n'), encoding='utf8')
 
 
 if __name__ == '__main__':

@@ -1,5 +1,5 @@
 {
-  "output": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\release-v4b-20261113-183129\\repo\\.data\\release-v4b\\daily\\envelopes.jsonl",
+  "output": "<REPO>\\.data\\r5\\release-v4b-20261113-183129\\repo\\.data\\release-v4b\\daily\\envelopes.jsonl",
   "output_sha256": "11e517f56d363aa1ea50ca10175304ea81d23c19e0b4036afb40c9d623539785",
   "count_by_kind": {
     "Ownership-verified social URL": 2,

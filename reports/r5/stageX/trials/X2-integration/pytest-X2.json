@@ -1,7 +1,7 @@
 {
   "stage": "X2",
   "argv": [
-    "C:\\Users\\<USER>\\signal-nethra\\.venv\\Scripts\\python.exe",
+    "<REPO>\\.venv\\Scripts\\python.exe",
     "reports/r5/stage4_7/run_tests.py",
     "-q",
     "-p",

@@ -1,5 +1,5 @@
 {
-  "source_output": "C:\\Users\\<USER>\\signal-nethra\\.data\\r5\\release-v4-20261113-112818\\repo\\.data\\release-v4\\daily\\envelopes.jsonl",
+  "source_output": "<REPO>\\.data\\r5\\release-v4-20261113-112818\\repo\\.data\\release-v4\\daily\\envelopes.jsonl",
   "sha256": "5f8485d4eb0f79ba430aa96b4acc825759df7001b4343dd0b2807a995e384529",
   "count_by_kind": {
     "registry homepage field": 21,

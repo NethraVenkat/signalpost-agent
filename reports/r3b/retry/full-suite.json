@@ -1,6 +1,6 @@
 {
   "command": [
-    "C:\\Users\\<USER>\\Downloads\\Signalpost-v5\\.venv\\Scripts\\python.exe",
+    "<HOME>\\Downloads\\Signalpost-v5\\.venv\\Scripts\\python.exe",
     "-m",
     "pytest",
     "tests",

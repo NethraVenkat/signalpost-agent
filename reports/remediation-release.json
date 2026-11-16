@@ -3100,7 +3100,7 @@
       "input_sha256": "54de285dd71e69515c532febc37cfec16a467d7bc0880c96931fc6c83ecc807a",
       "bulk_sha256": "a2d13b6b88ed7cf66a581bb99342c09cd7d55638e15ea6601d2fc6f680715e29",
       "command": [
-        "C:\\Users\\<USER>\\Downloads\\Signalpost\\state\\evaluation-uv-cache\\builds-v0\\.tmpbHOXdt\\Scripts\\python.exe",
+        "<HOME>\\Downloads\\Signalpost\\state\\evaluation-uv-cache\\builds-v0\\.tmpbHOXdt\\Scripts\\python.exe",
         "-m",
         "signalpost.cli",
         "run",
@@ -3830,7 +3830,7 @@
       "input_sha256": "ae47e66f7a2cc14a85e0bc207c99d9029a32d826ae064eb9530389f23dd5f5a2",
       "bulk_sha256": "3f2de0601515a14db74936ee0958ad680535c45f57c8cbbd9c310c2fd96d8c83",
       "command": [
-        "C:\\Users\\<USER>\\Downloads\\Signalpost\\state\\evaluation-uv-cache\\builds-v0\\.tmpuu0xme\\Scripts\\python.exe",
+        "<HOME>\\Downloads\\Signalpost\\state\\evaluation-uv-cache\\builds-v0\\.tmpuu0xme\\Scripts\\python.exe",
         "-m",
         "signalpost.cli",
         "run",
@@ -4679,7 +4679,7 @@
       "input_sha256": "54de285dd71e69515c532febc37cfec16a467d7bc0880c96931fc6c83ecc807a",
       "bulk_sha256": "a2d13b6b88ed7cf66a581bb99342c09cd7d55638e15ea6601d2fc6f680715e29",
       "command": [
-        "C:\\Users\\<USER>\\Downloads\\Signalpost\\state\\evaluation-uv-cache\\builds-v0\\.tmpWkhGnG\\Scripts\\python.exe",
+        "<HOME>\\Downloads\\Signalpost\\state\\evaluation-uv-cache\\builds-v0\\.tmpWkhGnG\\Scripts\\python.exe",
         "-m",
         "signalpost.cli",
         "run",
@@ -4718,7 +4718,7 @@
       "input_sha256": "ae47e66f7a2cc14a85e0bc207c99d9029a32d826ae064eb9530389f23dd5f5a2",
       "bulk_sha256": "3f2de0601515a14db74936ee0958ad680535c45f57c8cbbd9c310c2fd96d8c83",
       "command": [
-        "C:\\Users\\<USER>\\Downloads\\Signalpost\\state\\evaluation-uv-cache\\builds-v0\\.tmpxTP05E\\Scripts\\python.exe",
+        "<HOME>\\Downloads\\Signalpost\\state\\evaluation-uv-cache\\builds-v0\\.tmpxTP05E\\Scripts\\python.exe",
         "-m",
         "signalpost.cli",
         "run",

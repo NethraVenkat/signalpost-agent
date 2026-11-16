@@ -1,4 +1,5 @@
 """Retain all six superseded runs before measuring the corrected extractor."""
+from signalpost.portable_paths import portable, portable_text  # saved paths stay repo-relative
 import hashlib
 import json
 import shutil
@@ -38,8 +39,8 @@ def main():
                 'false_header_wrapper_classes': 'header-over-content dmPageBody',
                 'reason': 'Whole-page layout modifiers were mistaken for a header region. The Group words belong to employee biographies about former employers, not publisher/group branding.',
                 'trial_raw_outputs_preserved': str(work), 'changes_to_proof_thresholds': False}
-    (trial / 'false_veto.json').write_text(json.dumps(evidence, ensure_ascii=False, indent=2) + '\n', encoding='utf8', newline='\n')
-    (trial / 'README.md').write_text('# Rejected header-wrapper trial\n\nAll six runs are retained, independently schema/evidence/site verified, but are not the accepted R4 comparison. Seed 20261116 falsely lost SISSENER HIGH website because a whole-page header-over-content class exposed biographies as publisher branding. The corrected extractor recognizes region components and excludes layout modifier traits. Exact source excerpt/hash in false_veto.json; old publisher source and complete original source manifest retained. Raw output directories remain in place. No historical proof was carried forward and no proof threshold was relaxed.\n', encoding='utf8', newline='\n')
+    (trial / 'false_veto.json').write_text(portable_text(json.dumps(evidence, ensure_ascii=False, indent=2) + '\n'), encoding='utf8', newline='\n')
+    (trial / 'README.md').write_text(portable_text('# Rejected header-wrapper trial\n\nAll six runs are retained, independently schema/evidence/site verified, but are not the accepted R4 comparison. Seed 20261116 falsely lost SISSENER HIGH website because a whole-page header-over-content class exposed biographies as publisher branding. The corrected extractor recognizes region components and excludes layout modifier traits. Exact source excerpt/hash in false_veto.json; old publisher source and complete original source manifest retained. Raw output directories remain in place. No historical proof was carried forward and no proof threshold was relaxed.\n'), encoding='utf8', newline='\n')
     print('Preserved six trials; corrected SISSENER about-page guard passes.')
 
 

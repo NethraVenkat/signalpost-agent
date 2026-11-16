@@ -1,4 +1,5 @@
 """Replay any live recovery with the exact committed pre-R4 proof code."""
+from signalpost.portable_paths import expand, portable, portable_text  # saved paths stay repo-relative
 import csv
 import hashlib
 import json
@@ -31,12 +32,12 @@ def main():
         settings = json.loads((counts_path.parent / 'settings.json').read_text(encoding='utf8'))
         if not counts['changes']['added']:
             continue
-        argv = settings['command_argv']; bulk = Path(argv[argv.index('--bulk') + 1])
+        argv = settings['command_argv']; bulk = Path(expand(argv[argv.index('--bulk') + 1]))
         with bulk.open(encoding='utf-8-sig', newline='') as f:
             registry = {r['organisasjonsnummer']: r for r in csv.DictReader(f)}
-        work = Path(settings['working_directory'])
+        work = Path(expand(settings['working_directory']))
         rows = {r['organisation_number']: r for line in (work / 'envelopes.jsonl').read_text(encoding='utf8').splitlines() if (r := json.loads(line))}
-        prior = {r['organisation_number']: r for line in (Path(settings['previous_working_directory']) / 'envelopes.jsonl').read_text(encoding='utf8').splitlines() if (r := json.loads(line))}
+        prior = {r['organisation_number']: r for line in (Path(expand(settings['previous_working_directory'])) / 'envelopes.jsonl').read_text(encoding='utf8').splitlines() if (r := json.loads(line))}
         for org in counts['changes']['added']:
             row = rows[org]; claim = next(c for c in row['claims'] if c['field'] == 'official_website' and c['availability'] == 'available')
             evidence = {e['id']: e for e in row['evidence']}
@@ -55,7 +56,7 @@ def main():
                           'classification': 'Existing exact-number policy also publishes this saved response; historical candidate was already attempted but timed out. Live source recovery, not a new positive proof rule.'})
     data = {'pre_R4_commit': head, 'application_module': signalpost.__file__, 'network_requests': 0,
             'method': 'Unmodified pre-R4 score and localization functions from the isolated committed R2 worktree, applied to the exact new saved response bytes.', 'cases': cases}
-    (DEST / 'legacy_addition_replay.json').write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf8', newline='\n')
+    (DEST / 'legacy_addition_replay.json').write_text(portable_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n'), encoding='utf8', newline='\n')
     print(json.dumps(data, ensure_ascii=True))
 
 

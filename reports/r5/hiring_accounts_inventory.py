@@ -1,4 +1,5 @@
 """Saved-run inventories and extra hiring/accounts metrics; no network calls."""
+from signalpost.portable_paths import expand, portable, portable_text  # saved paths stay repo-relative
 import json,sys
 from pathlib import Path
 from signalpost.sources.excerpt import pointer_bounds
@@ -13,7 +14,7 @@ def main():
     for sample in ('frozen','daily'):
         directory=ROOT/'reports/r5'/('stage'+stage)/sample
         settings=json.loads((directory/'settings.json').read_text(encoding='utf8'))
-        out=Path(settings['working_directory']);rows=[json.loads(x) for x in (out/'envelopes.jsonl').read_text(encoding='utf8').splitlines()]
+        out=Path(expand(settings['working_directory']));rows=[json.loads(x) for x in (out/'envelopes.jsonl').read_text(encoding='utf8').splitlines()]
         jobs=[];years=0;yoy=0;accounts=0;careers={};hiring={};filed=0;year_facts=0;unscaled=0;flags=0
         for row in rows:
             available=[c for c in row['claims'] if c['availability']=='available']
@@ -56,8 +57,8 @@ def main():
             'hiring_states':hiring,'careers_reasons':careers,'http_requests':report['requests'],
             'runtime_seconds':report['runtime_seconds'] if 'runtime_seconds' in report else json.loads((directory/'counts.json').read_text())['metrics']['runtime_seconds']}
     destination=ROOT/'reports/r5'/('stage'+stage)
-    (destination/'jobs.md').write_text('\n'.join(lines).rstrip()+'\n',encoding='utf8',newline='\n')
-    (destination/'extra_metrics.json').write_text(json.dumps(metrics,indent=2)+'\n',encoding='utf8')
+    (destination/'jobs.md').write_text(portable_text('\n'.join(lines).rstrip()+'\n'),encoding='utf8',newline='\n')
+    (destination/'extra_metrics.json').write_text(portable_text(json.dumps(metrics,indent=2)+'\n'),encoding='utf8')
     print(json.dumps(metrics))
 
 if __name__=='__main__':main()

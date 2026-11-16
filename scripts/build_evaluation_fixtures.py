@@ -1,4 +1,5 @@
 """Generate synthetic HTTP fixtures; never factual accuracy evidence."""
+from signalpost.portable_paths import portable, portable_text  # saved paths stay repo-relative
 import base64
 import hashlib
 import json
@@ -61,7 +62,7 @@ def main():
         items.append({'id':uuid,'url':'/api/v1/feedentry/'+uuid,'date_modified':'2026-10-14T12:00:00Z','_feed_entry':{'uuid':uuid,'status':'ACTIVE','businessName':'Zephyrsynthetic AS'}})
         add(nav+'/api/v1/feedentry/'+uuid, {'uuid':uuid,'status':'ACTIVE','ad_content':{'uuid':uuid,'title':'Synthetic vacancy','published':'2026-10-13T12:00:00Z','expires':'2026-11-13T12:00:00Z','employer':{'name':'Zephyrsynthetic AS',**({'orgnr':employer} if employer else {})}}})
     add(nav+'/api/v1/feed', {'items':items,'next_url':None,'next_id':None})
-    (root/'manifest.json').write_text(json.dumps({'description':'SYNTHETIC: no real company facts; fixed observation 2026-10-15T10:00:00Z','fixtures':fixtures}, indent=2), encoding='utf-8')
+    (root/'manifest.json').write_text(portable_text(json.dumps({'description':'SYNTHETIC: no real company facts; fixed observation 2026-10-15T10:00:00Z','fixtures':fixtures}, indent=2)), encoding='utf-8')
     (root/'batch.txt').write_text('923609016\n988258229\n999592236\n923609016\n123456789\n', encoding='utf-8')
 
 

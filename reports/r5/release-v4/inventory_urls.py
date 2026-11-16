@@ -1,4 +1,5 @@
 """Inventory every published company website/social URL for the daily smoke."""
+from signalpost.portable_paths import portable, portable_text  # saved paths stay repo-relative
 import hashlib,json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[3]
@@ -48,8 +49,8 @@ for kind in sorted({r['kind'] for r in records}):
                 text+='Supporting receipt: '+receipt['source_url']+'; '+receipt['retrieved_at']+'; SHA-256 `'+receipt['content_sha256']+'`; locator `'+receipt['locator']+'`.\n\n```html\n'+receipt['claim_span']+'\n```\n\n'
 
 if not records:text+='No website or social URL claims were published.\n'
-(DEST/'urls.md').write_text(text,encoding='utf8')
+(DEST/'urls.md').write_text(portable_text(text),encoding='utf8')
 result={'source_output':str(path),'sha256':hashlib.sha256(path.read_bytes()).hexdigest(),
         'count_by_kind':{kind:sum(r['kind']==kind for r in records) for kind in sorted({r['kind'] for r in records})},'urls':records}
-(DEST/'urls.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+(DEST/'urls.json').write_text(portable_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n'),encoding='utf8')
 print(json.dumps(result['count_by_kind']))

@@ -3,6 +3,7 @@
 uv run --with playwright python scripts/browser_verify.py --root out/remediation
 Requires browser-site/ generated from the recorded 100-company output.
 """
+from signalpost.portable_paths import portable, portable_text  # saved paths stay repo-relative
 import argparse
 import csv
 import io
@@ -170,7 +171,7 @@ def main():
     report={'scope':'Installed Chrome headless; isolated ephemeral contexts; localhost only; historical100 site regenerated with current source; synthetic progress states',
         'checks':results,'page_errors':errors,'console_errors':console,'screenshots':[p.name for p in out.glob('*.png')]}
     report['unexpected_console_errors']=unexpected
-    (out/'results.json').write_text(json.dumps(report,ensure_ascii=True,indent=2),encoding='utf8')
+    (out/'results.json').write_text(portable_text(json.dumps(report,ensure_ascii=True,indent=2)),encoding='utf8')
     print(json.dumps({'passed':sum(r['status']=='PASS' for r in results),'failed':[r for r in results if r['status']!='PASS'],'page_errors':errors}))
     if errors or unexpected or any(r['status']=='FAIL' for r in results):raise SystemExit(1)
 

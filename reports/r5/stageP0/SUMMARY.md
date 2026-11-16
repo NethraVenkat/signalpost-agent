@@ -22,7 +22,7 @@ Full pytest: **1,283 passed in 600.85 seconds**, process 601.688 seconds. Earlie
 Exact evaluator command (from settings.json):
 
 ```text
-C:\Users\<USER>\signal-nethra\.venv\Scripts\python.exe -m signalpost.cli run --organisations C:\Users\<USER>\signal-nethra\reports\r5\baseline\companies.jsonl --bulk C:\Users\<USER>\signal-nethra\reports\r5\baseline\registry100.csv --output C:\Users\<USER>\signal-nethra\.data\r5\stageP0-20261017-final\envelopes.jsonl --profiles-output C:\Users\<USER>\signal-nethra\.data\r5\stageP0-20261017-final\profiles.jsonl --report C:\Users\<USER>\signal-nethra\.data\r5\stageP0-20261017-final\report.json --run-id r5-stageP0-seed20261017-final --expected-count 100
+<REPO>\.venv\Scripts\python.exe -m signalpost.cli run --organisations <REPO>\reports\r5\baseline\companies.jsonl --bulk <REPO>\reports\r5\baseline\registry100.csv --output <REPO>\.data\r5\stageP0-20261017-final\envelopes.jsonl --profiles-output <REPO>\.data\r5\stageP0-20261017-final\profiles.jsonl --report <REPO>\.data\r5\stageP0-20261017-final\report.json --run-id r5-stageP0-seed20261017-final --expected-count 100
 ```
 
 Evidence: `verification.json`, `counts.json`, `report.json`, source/verification manifests, execution logs and pytest receipts. Original response bodies and ordered envelopes remain at the working directory recorded in `settings.json`. APIs/licences remain those documented in docs/SOURCES.md; no external code/data, paid API, publication or git push. Human hand-check: no new identity item; inspect the explicit persistent BIEN accounts 500 and outage summary if desired.

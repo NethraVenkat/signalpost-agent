@@ -1,4 +1,5 @@
 """Render measured docs from ledger.json; no network or output editing."""
+from signalpost.portable_paths import portable, portable_text  # saved paths stay repo-relative
 import json,re
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[3]
@@ -30,11 +31,11 @@ def main():
     s=s.replace('Official Bronnoysund registry/accounts APIs, bounded company-site requests and the official NAV feed supply facts.', 'Official Bronnoysund registry/accounts APIs, bounded company-site requests, the official NAV feed, GLEIF (CC0) and TED public procurement notices (EU reuse policy) supply facts. New-source terms, robots receipts and attribution limits are documented in docs/SOURCES.md.')
     s=s.replace('The current baseline was read at 2026-10-14T04:26:40.758720Z: 9,015 active ads, 5,769 employer numbers, zero failed details, 403,768 compressed bytes.', 'The current bundled index was built at 2026-11-13T08:23:53.796625Z: 9,511 ad records and 6,012 employer numbers (index nav-20261113T082353.796625Z-v1).')
     s=s.replace('Of the exported ads, 6,791 were seeded from disk and 2,224 fetched freshly during the build.', 'All 9,511 exported records were freshly fetched in that build; the index stores discovery metadata only.')
-    p.write_text(s,encoding='utf8')
+    p.write_text(portable_text(s),encoding='utf8')
     p=ROOT/'docs/EVAL.md';s=p.read_text(encoding='utf8').split('\n\n## Measured precision\n\n')[0]
     s+='\n\n'+precision.replace('(reports/r5/precision/LEDGER.md)','(../reports/r5/precision/LEDGER.md)')+'\n### Current three-sample measured results\n\n'+table+'\n'+refresh.replace('(docs/REFRESH.md#','(REFRESH.md#')
     s+='\nEach item is present in the machine-readable ledger with its verdict checks and original run/output SHA-256. Reproduce with `python scripts/precision_ledger.py`; this performs no HTTP requests, uses the latest Stage T settings paths and never rewrites envelopes. Three offline ledger tests cover broken bytes/URL substitution, retained doubtful group-site attribution and strict social header/footer context. Full pytest gate: reports/r5/precision/pytest.txt. No independent human hand-check is claimed.\n'
-    p.write_text(s,encoding='utf8')
+    p.write_text(portable_text(s),encoding='utf8')
     print(json.dumps({'counts':r['counts'],'table':table}))
 
 if __name__=='__main__':main()
