@@ -1,0 +1,31 @@
+{
+  "seed": 20261113,
+  "stage": "P0 re-baseline on new machine",
+  "working_directory": "<REPO>\\.data\\r5\\stageP0rb-20261113-final",
+  "command_argv": [
+    "<REPO>\\.venv\\Scripts\\python.exe",
+    "-m",
+    "signalpost.cli",
+    "run",
+    "--organisations",
+    "<REPO>\\reports\\r5\\release-v4\\companies100.jsonl",
+    "--bulk",
+    "<REPO>\\reports\\r5\\release-v4\\registry100.csv",
+    "--output",
+    "<REPO>\\.data\\r5\\stageP0rb-20261113-final\\envelopes.jsonl",
+    "--profiles-output",
+    "<REPO>\\.data\\r5\\stageP0rb-20261113-final\\profiles.jsonl",
+    "--report",
+    "<REPO>\\.data\\r5\\stageP0rb-20261113-final\\report.json",
+    "--run-id",
+    "r5-stageP0rb-seed20261113-final",
+    "--expected-count",
+    "100"
+  ],
+  "exact_seven_flags": true,
+  "input_sha256": "34d436c3bec6b5677bd2c8bab11a178192965c828c56722b571d0ba84547903c",
+  "bulk_sha256": "5b92dd3a9015a2f6a8ad9eaf6d5796f779669a382effdb59bbb9260d803dbd90",
+  "source_manifest_sha256": "2103ed21659e7d2a57fc91492155bb8537c6a34b41fbdec55808202148cbda17",
+  "parent_commit": "d54f9db29f73f6450c75898fc2b779bb845084f9",
+  "comparison": "none (new local reference; earlier run folders were not transferred)"
+}

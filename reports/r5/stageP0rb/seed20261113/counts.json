@@ -1,0 +1,314 @@
+{
+  "seed": 20261113,
+  "counts": {
+    "websites": 6,
+    "declared_homepage_recall": 5,
+    "declared_homepages": 11,
+    "social_companies": 1,
+    "social_claims": 2,
+    "activity_companies": 100,
+    "activity_claims": 1341,
+    "brand_companies": 9,
+    "brand_claims": 10,
+    "role_change_claims": 218,
+    "facts": 13993,
+    "families": {
+      "identity": 3017,
+      "subunits": 959,
+      "roles": 1232,
+      "accounts": 7394,
+      "activity": 1341,
+      "gleif": 12,
+      "website": 37,
+      "hiring": 1
+    }
+  },
+  "HTTP": 927,
+  "CLI_runtime_seconds": 666.0469999999914,
+  "cost_usd": 0.0,
+  "site": {
+    "state": "available",
+    "companies": 100,
+    "input_records": 100,
+    "pages": 102,
+    "skipped_invalid_identifiers": 0,
+    "total_bytes": 38509489,
+    "largest_profile_data_bytes": 497892,
+    "largest_profile_bytes": 224442
+  },
+  "identity_items": [
+    {
+      "orgnr": "918031502",
+      "legal_name": "SUNNCOM AS",
+      "kind": "brand",
+      "identity": "Sunncom",
+      "field": "public_brand",
+      "value": "Sunncom"
+    },
+    {
+      "orgnr": "918031502",
+      "legal_name": "SUNNCOM AS",
+      "kind": "social",
+      "identity": "http://www.linkedin.com/company/77713310",
+      "field": "social_profile.7d97d704767c6bd46f7a",
+      "value": {
+        "url": "http://www.linkedin.com/company/77713310",
+        "platform": "linkedin.com",
+        "proof_tier": "own_header_footer_numeric_linkedin_v1",
+        "company_name": "SUNNCOM AS"
+      }
+    },
+    {
+      "orgnr": "918031502",
+      "legal_name": "SUNNCOM AS",
+      "kind": "social",
+      "identity": "https://www.facebook.com/Sunncom",
+      "field": "social_profile.70bd7975f79a9574a84b",
+      "value": {
+        "url": "https://www.facebook.com/Sunncom",
+        "platform": "facebook.com",
+        "proof_tier": "own_header_footer_exact_name_v1",
+        "company_name": "SUNNCOM AS"
+      }
+    },
+    {
+      "orgnr": "918031502",
+      "legal_name": "SUNNCOM AS",
+      "kind": "website",
+      "identity": "https://www.sunncom.no",
+      "field": "official_website",
+      "value": {
+        "final_url": "https://www.sunncom.no",
+        "identity_level": "VERIFIED",
+        "proof_type": "orgnr_on_page",
+        "proof_page_url": "https://www.sunncom.no/",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": []
+      }
+    },
+    {
+      "orgnr": "918266917",
+      "legal_name": "DIGITALIQ AS",
+      "kind": "website",
+      "identity": "https://digitaliq.no",
+      "field": "official_website",
+      "value": {
+        "final_url": "https://digitaliq.no",
+        "identity_level": "VERIFIED",
+        "proof_type": "orgnr_on_page",
+        "proof_page_url": "https://digitaliq.no/",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "registry_website",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "registry_contact_matches": {
+          "email_domain": "digitaliq.no"
+        }
+      }
+    },
+    {
+      "orgnr": "925496251",
+      "legal_name": "HORN OF AFRICA TROMSØ AS",
+      "kind": "brand",
+      "identity": "WEDEB'S RESTAURANT FOOD FROM HORN OF AFRICA",
+      "field": "brand.registered_subunit.c5e76139d327041a13ac",
+      "value": {
+        "name": "WEDEB'S RESTAURANT FOOD FROM HORN OF AFRICA",
+        "origin": "registered_subunit",
+        "subunit_orgnr": "825531912"
+      }
+    },
+    {
+      "orgnr": "926364715",
+      "legal_name": "GODE RETAIL AS",
+      "kind": "brand",
+      "identity": "GODE RETAIL",
+      "field": "brand.registered_subunit.304518a57c3d716eccf1",
+      "value": {
+        "name": "GODE RETAIL",
+        "origin": "registered_subunit",
+        "subunit_orgnr": "926394363"
+      }
+    },
+    {
+      "orgnr": "926364715",
+      "legal_name": "GODE RETAIL AS",
+      "kind": "brand",
+      "identity": "ST1 SOGNDAL",
+      "field": "brand.registered_subunit.a944f313c395f537fac3",
+      "value": {
+        "name": "ST1 SOGNDAL",
+        "origin": "registered_subunit",
+        "subunit_orgnr": "971810521"
+      }
+    },
+    {
+      "orgnr": "930090077",
+      "legal_name": "AS SOLO",
+      "kind": "brand",
+      "identity": "SOLO AS",
+      "field": "brand.registered_subunit.9228095f719fb8215e66",
+      "value": {
+        "name": "SOLO AS",
+        "origin": "registered_subunit",
+        "subunit_orgnr": "971810564"
+      }
+    },
+    {
+      "orgnr": "931575678",
+      "legal_name": "SOLID ØKONOMI AS",
+      "kind": "website",
+      "identity": "https://solidokonomi.no",
+      "field": "official_website",
+      "value": {
+        "final_url": "https://solidokonomi.no",
+        "identity_level": "VERIFIED",
+        "proof_type": "orgnr_on_page",
+        "proof_page_url": "https://solidokonomi.no/",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "registry_website",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "registry_contact_matches": {
+          "email_domain": "solidokonomi.no"
+        }
+      }
+    },
+    {
+      "orgnr": "934626176",
+      "legal_name": "ADVOKATFIRMAET TASHAKORI AS",
+      "kind": "brand",
+      "identity": "Advokatfirmaet Tashakori",
+      "field": "public_brand",
+      "value": "Advokatfirmaet Tashakori"
+    },
+    {
+      "orgnr": "934626176",
+      "legal_name": "ADVOKATFIRMAET TASHAKORI AS",
+      "kind": "website",
+      "identity": "https://tashakori.no",
+      "field": "official_website",
+      "value": {
+        "final_url": "https://tashakori.no",
+        "identity_level": "VERIFIED",
+        "proof_type": "orgnr_on_page",
+        "proof_page_url": "https://tashakori.no/nb/personvern",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "registry_website",
+        "relationship_note": null,
+        "other_orgnrs": []
+      }
+    },
+    {
+      "orgnr": "985689377",
+      "legal_name": "STIFTELSEN MALLINGGATA 1",
+      "kind": "brand",
+      "identity": "SOLSTREIF RUDOLF STEINER BARNEHAGE",
+      "field": "brand.registered_subunit.36c11823c22630494c77",
+      "value": {
+        "name": "SOLSTREIF RUDOLF STEINER BARNEHAGE",
+        "origin": "registered_subunit",
+        "subunit_orgnr": "973469789"
+      }
+    },
+    {
+      "orgnr": "993821403",
+      "legal_name": "NEXTHOP AS",
+      "kind": "brand",
+      "identity": "ZETTA.IO TECHNOLOGY",
+      "field": "brand.registered_subunit.1b3ed248508a2a5e4bb7",
+      "value": {
+        "name": "ZETTA.IO TECHNOLOGY",
+        "origin": "registered_subunit",
+        "subunit_orgnr": "912562204"
+      }
+    },
+    {
+      "orgnr": "994900544",
+      "legal_name": "FORBERG INTERNATIONAL AS",
+      "kind": "brand",
+      "identity": "FORBERG MIXER TECHNOLOGY AS",
+      "field": "brand.registered_subunit.a030d668d788a6e65f8f",
+      "value": {
+        "name": "FORBERG MIXER TECHNOLOGY AS",
+        "origin": "registered_subunit",
+        "subunit_orgnr": "994941321"
+      }
+    },
+    {
+      "orgnr": "995194163",
+      "legal_name": "GLÅMDAL MASKIN AS",
+      "kind": "website",
+      "identity": "https://www.glomdalmaskin.no",
+      "field": "official_website",
+      "value": {
+        "final_url": "https://www.glomdalmaskin.no",
+        "identity_level": "HIGH",
+        "proof_type": "signals",
+        "proof_page_url": "https://www.glomdalmaskin.no/",
+        "signals": [
+          "legal_name",
+          "address",
+          "registry_website"
+        ],
+        "points": 6,
+        "candidate_origin": "registry_website",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "registry_contact_matches": {
+          "email_domain": "glomdalmaskin.no"
+        }
+      }
+    },
+    {
+      "orgnr": "997274253",
+      "legal_name": "ELEKTROFIL AS",
+      "kind": "website",
+      "identity": "https://www.elektrofil.as",
+      "field": "official_website",
+      "value": {
+        "final_url": "https://www.elektrofil.as",
+        "identity_level": "HIGH",
+        "proof_type": "registry_declared_publisher_name",
+        "proof_page_url": "https://www.elektrofil.as/",
+        "signals": [
+          "publisher_full_legal_name",
+          "registry_declared_domain"
+        ],
+        "points": 0,
+        "candidate_origin": "registry_website",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publisher_identity": {
+          "tier": "registry_declared_publisher_name",
+          "legal_name": "ELEKTROFIL AS",
+          "publisher_location": "title",
+          "publisher_excerpt": "Elektriker i Oslo og Akershus | Elektrofil AS",
+          "registry_homepage": "www.elektrofil.as",
+          "candidate_url": "https://www.elektrofil.as/",
+          "proof_page_url": "https://www.elektrofil.as/"
+        }
+      }
+    },
+    {
+      "orgnr": "997887476",
+      "legal_name": "NORSK DRIFT OG VEDLIKEHOLD AS",
+      "kind": "brand",
+      "identity": "NDV",
+      "field": "brand.registered_subunit.c4310c0af7a4d76a940e",
+      "value": {
+        "name": "NDV",
+        "origin": "registered_subunit",
+        "subunit_orgnr": "997959442"
+      }
+    }
+  ],
+  "envelopes_sha256": "43911f653f2973c8f6c05cee06db4834fb502276e0b77a09b3c8a0d41d9ed178",
+  "profiles_sha256": "5a040599336422628949e9c9f91450fb14f714a03efad97cc9112a0b8824f3a7"
+}

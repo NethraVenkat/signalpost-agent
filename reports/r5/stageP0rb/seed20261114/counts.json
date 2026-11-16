@@ -1,0 +1,443 @@
+{
+  "seed": 20261114,
+  "counts": {
+    "websites": 6,
+    "declared_homepage_recall": 4,
+    "declared_homepages": 8,
+    "social_companies": 4,
+    "social_claims": 4,
+    "activity_companies": 100,
+    "activity_claims": 1256,
+    "brand_companies": 8,
+    "brand_claims": 10,
+    "role_change_claims": 181,
+    "facts": 13464,
+    "families": {
+      "identity": 3005,
+      "subunits": 926,
+      "roles": 1064,
+      "accounts": 7138,
+      "activity": 1256,
+      "website": 63,
+      "gleif": 12
+    }
+  },
+  "HTTP": 950,
+  "CLI_runtime_seconds": 605.75,
+  "cost_usd": 0.0,
+  "site": {
+    "state": "available",
+    "companies": 100,
+    "input_records": 100,
+    "pages": 102,
+    "skipped_invalid_identifiers": 0,
+    "total_bytes": 37829456,
+    "largest_profile_data_bytes": 922055,
+    "largest_profile_bytes": 222891
+  },
+  "identity_items": [
+    {
+      "orgnr": "889320222",
+      "legal_name": "SCANDINAVIAN NAILS BY ABAMEME AS",
+      "kind": "brand",
+      "identity": "Scandinavian nails by abameme",
+      "field": "public_brand",
+      "value": "Scandinavian nails by abameme"
+    },
+    {
+      "orgnr": "889320222",
+      "legal_name": "SCANDINAVIAN NAILS BY ABAMEME AS",
+      "kind": "social",
+      "identity": "https://www.youtube.com/@scandinaviannailsbyabameme",
+      "field": "social_profile.01976b55589eebe0e9db",
+      "value": {
+        "url": "https://www.youtube.com/@scandinaviannailsbyabameme",
+        "platform": "youtube.com",
+        "proof_tier": "own_header_footer_exact_name_v1",
+        "company_name": "SCANDINAVIAN NAILS BY ABAMEME AS"
+      }
+    },
+    {
+      "orgnr": "889320222",
+      "legal_name": "SCANDINAVIAN NAILS BY ABAMEME AS",
+      "kind": "website",
+      "identity": "https://www.abameme.com",
+      "field": "official_website",
+      "value": {
+        "final_url": "https://www.abameme.com",
+        "identity_level": "VERIFIED",
+        "proof_type": "orgnr_on_page",
+        "proof_page_url": "https://www.abameme.com/",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "registry_website",
+        "relationship_note": null,
+        "other_orgnrs": []
+      }
+    },
+    {
+      "orgnr": "915324258",
+      "legal_name": "MUSIKKPLASSEN AS",
+      "kind": "brand",
+      "identity": "Musikkplassen.no",
+      "field": "public_brand",
+      "value": "Musikkplassen.no"
+    },
+    {
+      "orgnr": "915324258",
+      "legal_name": "MUSIKKPLASSEN AS",
+      "kind": "website",
+      "identity": "https://musikkplassen.no",
+      "field": "official_website",
+      "value": {
+        "final_url": "https://musikkplassen.no",
+        "identity_level": "VERIFIED",
+        "proof_type": "orgnr_on_page",
+        "proof_page_url": "https://musikkplassen.no/",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "registry_website",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "registry_contact_matches": {
+          "email_domain": "musikkplassen.no"
+        }
+      }
+    },
+    {
+      "orgnr": "917071209",
+      "legal_name": "SESAM OPPLAND AS",
+      "kind": "brand",
+      "identity": "MIX GJØVIK",
+      "field": "brand.registered_subunit.02c7e2f1345710671564",
+      "value": {
+        "name": "MIX GJØVIK",
+        "origin": "registered_subunit",
+        "subunit_orgnr": "973232002"
+      }
+    },
+    {
+      "orgnr": "927123851",
+      "legal_name": "HEGGHEIM MULTITJENESTER AS",
+      "kind": "brand",
+      "identity": "S.O. HEGGHEIM MULTITJENESTER AS",
+      "field": "brand.registered_subunit.4c77f37134f5778454e1",
+      "value": {
+        "name": "S.O. HEGGHEIM MULTITJENESTER AS",
+        "origin": "registered_subunit",
+        "subunit_orgnr": "986302719"
+      }
+    },
+    {
+      "orgnr": "936195296",
+      "legal_name": "SINDRE SØLVERNES HOLDING AS",
+      "kind": "brand",
+      "identity": "SØLVERNES HOLDING AS",
+      "field": "brand.registered_subunit.7be2bf6d1566a1f1fd7a",
+      "value": {
+        "name": "SØLVERNES HOLDING AS",
+        "origin": "registered_subunit",
+        "subunit_orgnr": "936251625"
+      }
+    },
+    {
+      "orgnr": "958507739",
+      "legal_name": "STØREN DEKKSERVICE AS",
+      "kind": "brand",
+      "identity": "OVERAAE STØREN A/S",
+      "field": "brand.registered_subunit.f649325447b36914c64a",
+      "value": {
+        "name": "OVERAAE STØREN A/S",
+        "origin": "registered_subunit",
+        "subunit_orgnr": "974196867"
+      }
+    },
+    {
+      "orgnr": "986128662",
+      "legal_name": "MASKINKURS AS",
+      "kind": "social",
+      "identity": "https://www.facebook.com/maskinkurs",
+      "field": "social_profile.769765036c9740d1747f",
+      "value": {
+        "url": "https://www.facebook.com/maskinkurs",
+        "platform": "facebook.com",
+        "proof_tier": "own_header_footer_exact_name_v1",
+        "company_name": "MASKINKURS AS"
+      }
+    },
+    {
+      "orgnr": "986128662",
+      "legal_name": "MASKINKURS AS",
+      "kind": "website",
+      "identity": "https://maskinkurs.no",
+      "field": "official_website",
+      "value": {
+        "final_url": "https://maskinkurs.no",
+        "identity_level": "HIGH",
+        "proof_type": "publisher_name_rare_contact",
+        "proof_page_url": "https://maskinkurs.no/",
+        "signals": [
+          "publisher_full_legal_name",
+          "rare_registry_contact"
+        ],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publisher_identity": {
+          "tier": "publisher_name_rare_contact",
+          "legal_name": "MASKINKURS AS",
+          "publisher_location": "title",
+          "publisher_excerpt": "Kurs og Sertifisering i Bergen | Maskinkurs AS",
+          "candidate_url": "https://maskinkurs.no/",
+          "proof_page_url": "https://maskinkurs.no/",
+          "contact": {
+            "registry_field": "mobile",
+            "registry_value": "45044433",
+            "kind": "phone",
+            "normalized_value": "45044433",
+            "publisher_location": "footer",
+            "publisher_excerpt": "Maskinkurs AS Spelhaugen 15 5147 Fyllingsdalen Personvern Telefon +4745044433 E-post kurs@maskinkurs.no",
+            "matched_text": "+4745044433",
+            "rarity_count": 2
+          },
+          "rarity_table": {
+            "bundle_sha256": "900882536a574656025214e5163174812d4d4234e4922b9e452e86882b530d07",
+            "built_at": "2026-11-13T19:05:51.310268+00:00",
+            "entity_count": 1177860,
+            "sources": [
+              {
+                "kind": "enheter",
+                "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+                "file": "registry.csv",
+                "sha256": "5b0df27c5567a655320b8dfb8975049b76c46ba93d748a8a763f8db7050b7862",
+                "valid_rows": 1177860,
+                "local_file_modified_at": "2026-10-13T06:48:09.113086+00:00"
+              }
+            ],
+            "attribution": "Brønnøysundregistrene / Enhetsregisteret; NLOD 2.0",
+            "licence_url": "https://data.norge.no/nlod/no/2.0"
+          }
+        }
+      }
+    },
+    {
+      "orgnr": "986464492",
+      "legal_name": "OPTIMAL REGNSKAP AS",
+      "kind": "brand",
+      "identity": "OPTIMAL REGNSKAP AS AVD DRAMMEN",
+      "field": "brand.registered_subunit.4518af8494c74baef7d0",
+      "value": {
+        "name": "OPTIMAL REGNSKAP AS AVD DRAMMEN",
+        "origin": "registered_subunit",
+        "subunit_orgnr": "824202362"
+      }
+    },
+    {
+      "orgnr": "986464492",
+      "legal_name": "OPTIMAL REGNSKAP AS",
+      "kind": "brand",
+      "identity": "OPTIMAL REGNSKAP AS AVD ORKANGER",
+      "field": "brand.registered_subunit.794684d226c4ff0e13f3",
+      "value": {
+        "name": "OPTIMAL REGNSKAP AS AVD ORKANGER",
+        "origin": "registered_subunit",
+        "subunit_orgnr": "986498125"
+      }
+    },
+    {
+      "orgnr": "986464492",
+      "legal_name": "OPTIMAL REGNSKAP AS",
+      "kind": "social",
+      "identity": "https://www.facebook.com/optimalregnskap",
+      "field": "social_profile.e34195d58defec187bf9",
+      "value": {
+        "url": "https://www.facebook.com/optimalregnskap",
+        "platform": "facebook.com",
+        "proof_tier": "own_header_footer_exact_name_v1",
+        "company_name": "OPTIMAL REGNSKAP AS"
+      }
+    },
+    {
+      "orgnr": "986464492",
+      "legal_name": "OPTIMAL REGNSKAP AS",
+      "kind": "website",
+      "identity": "https://www.optimal-regnskap.no",
+      "field": "official_website",
+      "value": {
+        "final_url": "https://www.optimal-regnskap.no",
+        "identity_level": "HIGH",
+        "proof_type": "publisher_name_rare_contact",
+        "proof_page_url": "https://www.optimal-regnskap.no/",
+        "signals": [
+          "publisher_full_legal_name",
+          "rare_registry_contact"
+        ],
+        "points": 0,
+        "candidate_origin": "registry_email",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publisher_identity": {
+          "tier": "publisher_name_rare_contact",
+          "legal_name": "OPTIMAL REGNSKAP AS",
+          "publisher_location": "og:site_name",
+          "publisher_excerpt": "Optimal Regnskap AS",
+          "candidate_url": "https://optimal-regnskap.no/",
+          "proof_page_url": "https://www.optimal-regnskap.no/",
+          "contact": {
+            "registry_field": "phone",
+            "registry_value": "72 48 36 30",
+            "kind": "phone",
+            "normalized_value": "72483630",
+            "publisher_location": "footer",
+            "publisher_excerpt": "Kontaktinfo Telefon 72 48 36 30 post@optimal-regnskap.no Adresse Orkdalsveien 67 7300 Orkanger Åpningstid Kontoret er åpent 10.00 - 14.00 og etter avtale Følg oss Facebook Linker Skatteetaten / Altinn / Brreg / Lovdata / Fjernhjelp på PC",
+            "matched_text": "72 48 36 30",
+            "rarity_count": 1
+          },
+          "rarity_table": {
+            "bundle_sha256": "900882536a574656025214e5163174812d4d4234e4922b9e452e86882b530d07",
+            "built_at": "2026-11-13T19:05:51.310268+00:00",
+            "entity_count": 1177860,
+            "sources": [
+              {
+                "kind": "enheter",
+                "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+                "file": "registry.csv",
+                "sha256": "5b0df27c5567a655320b8dfb8975049b76c46ba93d748a8a763f8db7050b7862",
+                "valid_rows": 1177860,
+                "local_file_modified_at": "2026-10-13T06:48:09.113086+00:00"
+              }
+            ],
+            "attribution": "Brønnøysundregistrene / Enhetsregisteret; NLOD 2.0",
+            "licence_url": "https://data.norge.no/nlod/no/2.0"
+          }
+        },
+        "registry_contact_matches": {
+          "email_domain": "optimal-regnskap.no",
+          "phone": "+4772483630"
+        }
+      }
+    },
+    {
+      "orgnr": "988217867",
+      "legal_name": "CONCEDO AS",
+      "kind": "brand",
+      "identity": "CONCEDO AS PL1292",
+      "field": "brand.registered_subunit.74f6cec89750d99643b2",
+      "value": {
+        "name": "CONCEDO AS PL1292",
+        "origin": "registered_subunit",
+        "subunit_orgnr": "937339372"
+      }
+    },
+    {
+      "orgnr": "988217867",
+      "legal_name": "CONCEDO AS",
+      "kind": "brand",
+      "identity": "Concedo",
+      "field": "public_brand",
+      "value": "Concedo"
+    },
+    {
+      "orgnr": "988217867",
+      "legal_name": "CONCEDO AS",
+      "kind": "social",
+      "identity": "https://no.linkedin.com/company/concedo-as",
+      "field": "social_profile.64365f4ba0c4877f8bd6",
+      "value": {
+        "url": "https://no.linkedin.com/company/concedo-as",
+        "platform": "linkedin.com",
+        "proof_tier": "own_header_footer_exact_name_v1",
+        "company_name": "CONCEDO AS"
+      }
+    },
+    {
+      "orgnr": "988217867",
+      "legal_name": "CONCEDO AS",
+      "kind": "website",
+      "identity": "https://www.concedo.no",
+      "field": "official_website",
+      "value": {
+        "final_url": "https://www.concedo.no",
+        "identity_level": "HIGH",
+        "proof_type": "registry_declared_live",
+        "proof_page_url": "https://www.concedo.no/",
+        "signals": [
+          "publisher_owner_receipt"
+        ],
+        "points": 0,
+        "candidate_origin": "registry_website",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publisher_identity": {
+          "tier": "registry_declared_live",
+          "legal_name": "CONCEDO AS",
+          "publisher_location": "title",
+          "publisher_excerpt": "Home | Concedo",
+          "candidate_url": "https://www.concedo.no/",
+          "proof_page_url": "https://www.concedo.no/",
+          "proof_token": "concedo",
+          "owner_signal": {
+            "kind": "rare_name_core",
+            "name_key": "concedo",
+            "rarity_count": 1
+          },
+          "rarity_table": {
+            "bundle_sha256": "900882536a574656025214e5163174812d4d4234e4922b9e452e86882b530d07",
+            "built_at": "2026-11-13T19:05:51.310268+00:00",
+            "entity_count": 1177860,
+            "sources": [
+              {
+                "kind": "enheter",
+                "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+                "file": "registry.csv",
+                "sha256": "5b0df27c5567a655320b8dfb8975049b76c46ba93d748a8a763f8db7050b7862",
+                "valid_rows": 1177860,
+                "local_file_modified_at": "2026-10-13T06:48:09.113086+00:00"
+              }
+            ],
+            "attribution": "Brønnøysundregistrene / Enhetsregisteret; NLOD 2.0",
+            "licence_url": "https://data.norge.no/nlod/no/2.0"
+          },
+          "registry_homepage": "www.concedo.no"
+        }
+      }
+    },
+    {
+      "orgnr": "994882597",
+      "legal_name": "DICA PROFIL & YRKESKLÆR AS",
+      "kind": "website",
+      "identity": "http://dica.no",
+      "field": "official_website",
+      "value": {
+        "final_url": "http://dica.no",
+        "identity_level": "HIGH",
+        "proof_type": "registry_declared_publisher_name",
+        "proof_page_url": "http://dica.no/",
+        "signals": [
+          "publisher_full_legal_name",
+          "registry_declared_domain"
+        ],
+        "points": 0,
+        "candidate_origin": "registry_website",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publisher_identity": {
+          "tier": "registry_declared_publisher_name",
+          "legal_name": "DICA PROFIL & YRKESKLÆR AS",
+          "publisher_location": "title",
+          "publisher_excerpt": "Dica Profil & Yrkesklær AS",
+          "registry_homepage": "www.dica.no",
+          "candidate_url": "https://www.dica.no/",
+          "proof_page_url": "http://dica.no/"
+        },
+        "registry_contact_matches": {
+          "phone": "+4738185060",
+          "email_domain": "dica.no"
+        }
+      }
+    }
+  ],
+  "envelopes_sha256": "07957d13a0c48078eb7b51fa930073b272aaeba65045f8c77bea6d2d9b09a769",
+  "profiles_sha256": "cbb8c95df82ba2fdca71c2bdac61796f1f869da73239afa4b02431b9ae4188c2"
+}

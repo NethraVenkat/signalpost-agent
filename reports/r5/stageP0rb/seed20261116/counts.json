@@ -1,0 +1,399 @@
+{
+  "seed": 20261116,
+  "counts": {
+    "websites": 8,
+    "declared_homepage_recall": 4,
+    "declared_homepages": 17,
+    "social_companies": 0,
+    "social_claims": 0,
+    "activity_companies": 100,
+    "activity_claims": 1472,
+    "brand_companies": 11,
+    "brand_claims": 15,
+    "role_change_claims": 253,
+    "facts": 13787,
+    "families": {
+      "identity": 2983,
+      "subunits": 897,
+      "roles": 1255,
+      "accounts": 7122,
+      "activity": 1472,
+      "gleif": 19,
+      "website": 38,
+      "hiring": 1
+    }
+  },
+  "HTTP": 1007,
+  "CLI_runtime_seconds": 653.4379999999946,
+  "cost_usd": 0.0,
+  "site": {
+    "state": "available",
+    "companies": 100,
+    "input_records": 100,
+    "pages": 102,
+    "skipped_invalid_identifiers": 0,
+    "total_bytes": 38923084,
+    "largest_profile_data_bytes": 534443,
+    "largest_profile_bytes": 229166
+  },
+  "identity_items": [
+    {
+      "orgnr": "813911442",
+      "legal_name": "CALIFORNIA INVEST AS",
+      "kind": "brand",
+      "identity": "californiainvest.no",
+      "field": "public_brand",
+      "value": "californiainvest.no"
+    },
+    {
+      "orgnr": "813911442",
+      "legal_name": "CALIFORNIA INVEST AS",
+      "kind": "website",
+      "identity": "https://californiainvest.no",
+      "field": "official_website",
+      "value": {
+        "final_url": "https://californiainvest.no",
+        "identity_level": "VERIFIED",
+        "proof_type": "orgnr_on_page",
+        "proof_page_url": "https://californiainvest.no/Kontakt",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "registry_website",
+        "relationship_note": null,
+        "other_orgnrs": []
+      }
+    },
+    {
+      "orgnr": "815714512",
+      "legal_name": "CARDINOR AS",
+      "kind": "brand",
+      "identity": "CARDINOR AS AVD BODØ",
+      "field": "brand.registered_subunit.605c2c33d3e857e9f178",
+      "value": {
+        "name": "CARDINOR AS AVD BODØ",
+        "origin": "registered_subunit",
+        "subunit_orgnr": "927804751"
+      }
+    },
+    {
+      "orgnr": "815714512",
+      "legal_name": "CARDINOR AS",
+      "kind": "brand",
+      "identity": "CARDINOR AS AVD OSLO",
+      "field": "brand.registered_subunit.c07b986ef9bb846024f6",
+      "value": {
+        "name": "CARDINOR AS AVD OSLO",
+        "origin": "registered_subunit",
+        "subunit_orgnr": "915735088"
+      }
+    },
+    {
+      "orgnr": "925700398",
+      "legal_name": "AURSJOKRAFT AS",
+      "kind": "brand",
+      "identity": "Aursjokraft",
+      "field": "public_brand",
+      "value": "Aursjokraft"
+    },
+    {
+      "orgnr": "925700398",
+      "legal_name": "AURSJOKRAFT AS",
+      "kind": "website",
+      "identity": "https://aursjokraft.no",
+      "field": "official_website",
+      "value": {
+        "final_url": "https://aursjokraft.no",
+        "identity_level": "VERIFIED",
+        "proof_type": "orgnr_on_page",
+        "proof_page_url": "https://aursjokraft.no/",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": []
+      }
+    },
+    {
+      "orgnr": "930453692",
+      "legal_name": "SKIERS LODGE HEMSEDAL AS",
+      "kind": "brand",
+      "identity": "HEMSEDAL CAFE SKIERSLODGE",
+      "field": "brand.registered_subunit.e8bf0321331d4d1188db",
+      "value": {
+        "name": "HEMSEDAL CAFE SKIERSLODGE",
+        "origin": "registered_subunit",
+        "subunit_orgnr": "972758175"
+      }
+    },
+    {
+      "orgnr": "931588397",
+      "legal_name": "MEGAFON FORLAG AS",
+      "kind": "brand",
+      "identity": "Megafon Forlag",
+      "field": "public_brand",
+      "value": "Megafon Forlag"
+    },
+    {
+      "orgnr": "931588397",
+      "legal_name": "MEGAFON FORLAG AS",
+      "kind": "website",
+      "identity": "https://megafonforlag.no",
+      "field": "official_website",
+      "value": {
+        "final_url": "https://megafonforlag.no",
+        "identity_level": "VERIFIED",
+        "proof_type": "orgnr_on_page",
+        "proof_page_url": "https://megafonforlag.no/",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": []
+      }
+    },
+    {
+      "orgnr": "936065651",
+      "legal_name": "HUSHOLDNINGEN AS",
+      "kind": "brand",
+      "identity": "Husholdningen.no",
+      "field": "public_brand",
+      "value": "Husholdningen.no"
+    },
+    {
+      "orgnr": "936065651",
+      "legal_name": "HUSHOLDNINGEN AS",
+      "kind": "website",
+      "identity": "https://husholdningen.no",
+      "field": "official_website",
+      "value": {
+        "final_url": "https://husholdningen.no",
+        "identity_level": "VERIFIED",
+        "proof_type": "orgnr_on_page",
+        "proof_page_url": "https://husholdningen.no/pages/salgsbetingelser",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": []
+      }
+    },
+    {
+      "orgnr": "945103663",
+      "legal_name": "BJØRNAR BRØNDBO AS",
+      "kind": "brand",
+      "identity": "BRØNDBO BJØRNAR AS",
+      "field": "brand.registered_subunit.b4de1fdd0fee7bcc510d",
+      "value": {
+        "name": "BRØNDBO BJØRNAR AS",
+        "origin": "registered_subunit",
+        "subunit_orgnr": "971997214"
+      }
+    },
+    {
+      "orgnr": "983089887",
+      "legal_name": "MELDAL MILJØANLEGG AS",
+      "kind": "brand",
+      "identity": "MELDAL MILJØANLEGG AS AVD MELDAL",
+      "field": "brand.registered_subunit.0a2d2797a3d52215fa8e",
+      "value": {
+        "name": "MELDAL MILJØANLEGG AS AVD MELDAL",
+        "origin": "registered_subunit",
+        "subunit_orgnr": "983105378"
+      }
+    },
+    {
+      "orgnr": "983089887",
+      "legal_name": "MELDAL MILJØANLEGG AS",
+      "kind": "brand",
+      "identity": "MELDAL MILJØANLEGG AS AVD MELHUS",
+      "field": "brand.registered_subunit.d9eca77a11737a2893bc",
+      "value": {
+        "name": "MELDAL MILJØANLEGG AS AVD MELHUS",
+        "origin": "registered_subunit",
+        "subunit_orgnr": "826316802"
+      }
+    },
+    {
+      "orgnr": "983089887",
+      "legal_name": "MELDAL MILJØANLEGG AS",
+      "kind": "brand",
+      "identity": "Meldal Miljoanlegg",
+      "field": "public_brand",
+      "value": "Meldal Miljoanlegg"
+    },
+    {
+      "orgnr": "983089887",
+      "legal_name": "MELDAL MILJØANLEGG AS",
+      "kind": "website",
+      "identity": "https://www.meldalmiljoanlegg.no",
+      "field": "official_website",
+      "value": {
+        "final_url": "https://www.meldalmiljoanlegg.no",
+        "identity_level": "VERIFIED",
+        "proof_type": "orgnr_on_page",
+        "proof_page_url": "https://www.meldalmiljoanlegg.no/",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": []
+      }
+    },
+    {
+      "orgnr": "983803075",
+      "legal_name": "MELTWATER NEWS AS",
+      "kind": "brand",
+      "identity": "MELTWATER NEWS AS AVD OSLO",
+      "field": "brand.registered_subunit.bac6d48bee1636ec5312",
+      "value": {
+        "name": "MELTWATER NEWS AS AVD OSLO",
+        "origin": "registered_subunit",
+        "subunit_orgnr": "986640495"
+      }
+    },
+    {
+      "orgnr": "983803075",
+      "legal_name": "MELTWATER NEWS AS",
+      "kind": "brand",
+      "identity": "MELTWATER NEWS AS AVD OSLO SUPPORT",
+      "field": "brand.registered_subunit.5a507874e331cc372971",
+      "value": {
+        "name": "MELTWATER NEWS AS AVD OSLO SUPPORT",
+        "origin": "registered_subunit",
+        "subunit_orgnr": "986920951"
+      }
+    },
+    {
+      "orgnr": "984177070",
+      "legal_name": "KRAABOL AS",
+      "kind": "website",
+      "identity": "https://www.kraabol-as.com",
+      "field": "official_website",
+      "value": {
+        "final_url": "https://www.kraabol-as.com",
+        "identity_level": "HIGH",
+        "proof_type": "registry_declared_publisher_name",
+        "proof_page_url": "https://www.kraabol-as.com/",
+        "signals": [
+          "publisher_full_legal_name",
+          "registry_declared_domain"
+        ],
+        "points": 0,
+        "candidate_origin": "registry_website",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publisher_identity": {
+          "tier": "registry_declared_publisher_name",
+          "legal_name": "KRAABOL AS",
+          "publisher_location": "title",
+          "publisher_excerpt": "Kraabol AS – We provide a professional and global network to support your business needs.",
+          "registry_homepage": "www.kraabol-as.com",
+          "candidate_url": "https://www.kraabol-as.com/",
+          "proof_page_url": "https://www.kraabol-as.com/"
+        }
+      }
+    },
+    {
+      "orgnr": "987401729",
+      "legal_name": "LS HOLST - NK LARSENS BUREAU KULTURELL REISEVIRKSOMHET AS",
+      "kind": "brand",
+      "identity": "NILS KRISTER LARSEN REISELEDEROPPDRAG AS",
+      "field": "brand.registered_subunit.c0742a959bd51f518a36",
+      "value": {
+        "name": "NILS KRISTER LARSEN REISELEDEROPPDRAG AS",
+        "origin": "registered_subunit",
+        "subunit_orgnr": "987538007"
+      }
+    },
+    {
+      "orgnr": "991658807",
+      "legal_name": "SISSENER AS",
+      "kind": "website",
+      "identity": "https://www.sissener.no",
+      "field": "official_website",
+      "value": {
+        "final_url": "https://www.sissener.no",
+        "identity_level": "HIGH",
+        "proof_type": "signals",
+        "proof_page_url": "https://www.sissener.no/",
+        "signals": [
+          "legal_name",
+          "address",
+          "phone",
+          "registry_website",
+          "municipality"
+        ],
+        "points": 9,
+        "candidate_origin": "registry_website",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "registry_contact_matches": {
+          "phone": "+4723115260",
+          "email_domain": "sissener.no"
+        }
+      }
+    },
+    {
+      "orgnr": "995135086",
+      "legal_name": "CRAFTING HOUSE AS",
+      "kind": "brand",
+      "identity": "Crafting House",
+      "field": "public_brand",
+      "value": "Crafting House"
+    },
+    {
+      "orgnr": "995135086",
+      "legal_name": "CRAFTING HOUSE AS",
+      "kind": "website",
+      "identity": "https://craftinghouse.no",
+      "field": "official_website",
+      "value": {
+        "final_url": "https://craftinghouse.no",
+        "identity_level": "HIGH",
+        "proof_type": "registry_declared_live",
+        "proof_page_url": "https://craftinghouse.no/",
+        "signals": [
+          "publisher_owner_receipt"
+        ],
+        "points": 0,
+        "candidate_origin": "registry_website",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publisher_identity": {
+          "tier": "registry_declared_live",
+          "legal_name": "CRAFTING HOUSE AS",
+          "publisher_location": "title",
+          "publisher_excerpt": "Crafting House – Samskaper med ledere som beveger samfunn",
+          "candidate_url": "https://www.craftinghouse.no/",
+          "proof_page_url": "https://craftinghouse.no/",
+          "proof_token": "crafting house",
+          "owner_signal": {
+            "kind": "rare_name_core",
+            "name_key": "crafting house",
+            "rarity_count": 1
+          },
+          "rarity_table": {
+            "bundle_sha256": "900882536a574656025214e5163174812d4d4234e4922b9e452e86882b530d07",
+            "built_at": "2026-11-13T19:05:51.310268+00:00",
+            "entity_count": 1177860,
+            "sources": [
+              {
+                "kind": "enheter",
+                "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+                "file": "registry.csv",
+                "sha256": "5b0df27c5567a655320b8dfb8975049b76c46ba93d748a8a763f8db7050b7862",
+                "valid_rows": 1177860,
+                "local_file_modified_at": "2026-10-13T06:48:09.113086+00:00"
+              }
+            ],
+            "attribution": "Brønnøysundregistrene / Enhetsregisteret; NLOD 2.0",
+            "licence_url": "https://data.norge.no/nlod/no/2.0"
+          },
+          "registry_homepage": "www.craftinghouse.no"
+        }
+      }
+    }
+  ],
+  "envelopes_sha256": "763066574500b5926a6556b4d64628fa09d50210e61c61a1f1800cff51a116b4",
+  "profiles_sha256": "6bfba9fec57f151ab58e989fcd53bb2cae18466cf486c6d7db9db51741cf3861"
+}
