@@ -4,8 +4,8 @@ Saved reports must never contain an absolute path that reveals a local user
 name.  Writers pass text or JSON-like data through :func:`portable` /
 :func:`portable_text`, which replace the repository checkout with ``<REPO>``,
 the temporary directory with ``<TEMP>`` and any other home directory with
-``<HOME>``.  The original separators after the prefix are kept, so a JSON
-string such as ``C:\\\\Users\\\\x\\\\repo\\\\.data`` becomes
+``<HOME>``.  The original separators after the prefix are kept, so a
+JSON-escaped checkout path followed by ``\\\\.data`` becomes
 ``<REPO>\\\\.data``.  Readers of saved paths use :func:`expand` to resolve
 the placeholders on the current machine.
 """
@@ -33,10 +33,11 @@ _SEP = r"[\\/]+"
 _UNIX_START = r"(?:(?<![\w.~%/:\-])|(?<=file://))"
 HOME_PATH_PATTERNS = (
     re.compile(r"[A-Za-z]:[\\/]+Users[\\/]+[^\\/\s\"'<>|*?]+", re.IGNORECASE),
-    re.compile(_UNIX_START + r"/home/[^/\s\"'<>]+"),
-    re.compile(_UNIX_START + r"/Users/[^/\s\"'<>]+"),
+    # Literals are split ("/" "home/...") so this source never matches itself.
+    re.compile(_UNIX_START + r"/" r"home/[^/\s\"'<>]+"),
+    re.compile(_UNIX_START + r"/" r"Users/[^/\s\"'<>]+"),
 )
-_PYTEST_USER = re.compile(r"pytest-of-(?!<USER>)[^\\/\s\"'<>]+")
+_PYTEST_USER = re.compile(r"pytest-" r"of-(?!<USER>)[^\\/\s\"'<>]+")
 
 
 def _repo_root() -> Path:

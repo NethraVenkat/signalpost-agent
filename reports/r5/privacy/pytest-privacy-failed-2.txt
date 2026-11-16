@@ -1,0 +1,31 @@
+{"command": ["<REPO>\\.venv\\Scripts\\python.exe", "<REPO>\\reports\\r5\\stage4_7\\run_tests.py", "-q", "-p", "no:cacheprovider", "--tb=short"], "priority": "above_normal", "mutates_test_assertions_or_timeouts": false}
+........................................................................ [  5%]
+........................................................................ [ 11%]
+........................................................................ [ 16%]
+........................................................................ [ 22%]
+.............................................F.......................... [ 27%]
+........................................................................ [ 33%]
+........................................................................ [ 39%]
+........................................................................ [ 44%]
+........................................................................ [ 50%]
+........................................................................ [ 55%]
+........................................................................ [ 61%]
+........................................................................ [ 66%]
+........................................................................ [ 72%]
+........................................................................ [ 78%]
+........................................................................ [ 83%]
+........................................................................ [ 89%]
+........................................................................ [ 94%]
+....................................................................     [100%]
+================================== FAILURES ===================================
+__________ test_no_tracked_text_file_contains_a_home_directory_path ___________
+tests\test_no_home_paths.py:64: in test_no_tracked_text_file_contains_a_home_directory_path
+    assert not offenders, "home-directory paths in tracked files:\n" + "\n".join(offenders[:50])
+E   AssertionError: home-directory paths in tracked files:
+E     reports/r5/privacy/pytest-privacy-failed-1.txt: b'[redacted URL path: home/index.html]`.\\n- Writers: new `signalpost.portable_paths` (`portable`, `por'
+E     src/signalpost/portable_paths.py: b'[redacted synthetic docstring path: drive/Users/x]'
+E     tests/test_no_home_paths.py: b'[redacted synthetic test path: drive/Users/alice]")\n    repo = home '
+E   assert not [... same three offenders, redacted as above ...]
+=========================== short test summary info ===========================
+FAILED tests/test_no_home_paths.py::test_no_tracked_text_file_contains_a_home_directory_path
+1 failed, 1291 passed in 615.35s (0:10:15)

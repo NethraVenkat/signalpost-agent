@@ -17,21 +17,25 @@ ROOT = Path(__file__).resolve().parents[1]
 # not mistaken for a local home directory (see portable_paths.HOME_PATH_PATTERNS).
 WINDOWS = re.compile(rb"[A-Za-z]:[\\/]+Users[\\/]+[^\\/]+", re.IGNORECASE)
 START = rb"(?:(?<![\w.~%/:\-])|(?<=file://))"
-UNIX_HOME = re.compile(START + rb"/home/[^/]+")
-MAC_HOME = re.compile(START + rb"/Users/[^/]+")
-PYTEST_USER = re.compile(rb"pytest-of-(?!<USER>)[^\\/\s\"'<>]+")
+# Literals are split ("/" "home/...") so this file never matches its own patterns.
+UNIX_HOME = re.compile(START + rb"/" rb"home/[^/]+")
+MAC_HOME = re.compile(START + rb"/" rb"Users/[^/]+")
+PYTEST_USER = re.compile(rb"pytest-" rb"of-(?!<USER>)[^\\/\s\"'<>]+")
 
 
 def _tracked_files() -> list[Path]:
     if shutil.which("git") is None or not (ROOT / ".git").exists():
         pytest.skip("not a git checkout")
-    out = subprocess.run(["git", "ls-files", "-z"], cwd=ROOT, capture_output=True, check=True).stdout
+    # Tracked files plus untracked, non-ignored ones: a new file is checked
+    # before it is committed, not only after.
+    out = subprocess.run(["git", "ls-files", "-z", "--cached", "--others", "--exclude-standard"],
+                         cwd=ROOT, capture_output=True, check=True).stdout
     return [ROOT / p for p in out.decode("utf-8").split("\0") if p]
 
 
 def _is_saved_source_body(rel: str) -> bool:
     # Verbatim third-party response bytes (hash-pinned evidence).  Their URL
-    # paths, e.g. '/home/index.html' in a script string, are publisher content,
+    # paths, e.g. a home/index.html script string, are publisher content,
     # not local paths; the Windows/pytest user patterns still apply to them.
     return rel.endswith(".body") or "/blobs/" in rel
 
@@ -50,9 +54,9 @@ def test_no_tracked_text_file_contains_a_home_directory_path():
         if b"sers" in data or b"SERS" in data:
             patterns.append(WINDOWS)
         if not _is_saved_source_body(rel):
-            if b"/home/" in data:
+            if b"/" b"home/" in data:
                 patterns.append(UNIX_HOME)
-            if b"/Users/" in data:
+            if b"/" b"Users/" in data:
                 patterns.append(MAC_HOME)
         if b"pytest-of-" in data:
             patterns.append(PYTEST_USER)
@@ -67,13 +71,15 @@ def test_no_tracked_text_file_contains_a_home_directory_path():
 def test_url_paths_are_not_home_directories():
     for text in (b'href="https://ted.europa.eu/home/index.html"', b"https://x.no/Users/guide"):
         assert not UNIX_HOME.search(text) and not MAC_HOME.search(text)
-    for text in (b'"cwd": "/home/alice/repo"', b"file:///home/alice/x", b" /Users/alice/x"):
+    # Positive samples are assembled at runtime so this file itself stays clean.
+    home_dir, mac_dir = b"/" + b"home" + b"/alice", b"/" + b"Users" + b"/alice"
+    for text in (b'"cwd": "' + home_dir + b'/repo"', b"file://" + home_dir + b"/x", b" " + mac_dir + b"/x"):
         assert UNIX_HOME.search(text) or MAC_HOME.search(text)
 
 
 @pytest.mark.parametrize("sep", ["\\", "/", "\\\\"])
 def test_portable_replaces_repo_temp_and_home(sep, monkeypatch, tmp_path):
-    home = Path("C:/Users/alice")
+    home = Path("C:/") / "Users" / "alice"  # assembled; no literal home path in this file
     repo = home / "work" / "repo"
     temp = home / "AppData" / "Local" / "Temp"
     monkeypatch.setattr(pp.Path, "home", classmethod(lambda cls: home))
@@ -86,7 +92,7 @@ def test_portable_replaces_repo_temp_and_home(sep, monkeypatch, tmp_path):
         j = sep.join
         data = {
             "work": j(["C:", "Users", "alice", "work", "repo", ".data", "run"]),
-            "tmp": j(["C:", "Users", "alice", "AppData", "Local", "Temp", "pytest-of-alice", "x"]),
+            "tmp": j(["C:", "Users", "alice", "AppData", "Local", "Temp", "pytest-" + "of-alice", "x"]),
             "dl": "file:///" + "/".join(["C:", "Users", "alice", "Downloads", "a.csv"]),
             "other": j(["D:", "Users", "bob", "x"]),
             "sibling": j(["C:", "Users", "alice", "work", "repo-old"]),

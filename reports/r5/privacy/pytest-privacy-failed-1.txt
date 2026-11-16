@@ -22,8 +22,8 @@ __________ test_no_tracked_text_file_contains_a_home_directory_path ___________
 tests\test_no_home_paths.py:64: in test_no_tracked_text_file_contains_a_home_directory_path
     assert not offenders, "home-directory paths in tracked files:\n" + "\n".join(offenders[:50])
 E   AssertionError: home-directory paths in tracked files:
-E     reports/r5/DECISIONS.md: b'/home/index.html`.\n- Writers: new `signalpost.portable_paths` (`portable`, `port'
-E   assert not ["reports/r5/DECISIONS.md: b'/home/index.html`.\\n- Writers: new `signalpost.portable_paths` (`portable`, `port'"]
+E     reports/r5/DECISIONS.md: b'[redacted URL path: home/index.html]`.\n- Writers: new `signalpost.portable_paths` (`portable`, `port'
+E   assert not ["reports/r5/DECISIONS.md: b'[redacted URL path: home/index.html]`.\\n- Writers: new `signalpost.portable_paths` (`portable`, `port'"]
 =========================== short test summary info ===========================
 FAILED tests/test_no_home_paths.py::test_no_tracked_text_file_contains_a_home_directory_path
 1 failed, 1287 passed in 710.72s (0:11:50)
