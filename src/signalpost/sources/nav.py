@@ -82,7 +82,7 @@ def candidate_score(header, candidate, frequency):
 
 
 def time_cap(config):
-    return config.nav_time_cap_seconds if config.nav_time_cap_seconds is not None else min(900, .40 * config.time_budget_seconds)
+    return config.nav_time_cap_seconds if config.nav_time_cap_seconds is not None else min(900, .40 * (config.time_budget_seconds or 2100))
 
 
 def company_names(envelopes,previous=None):

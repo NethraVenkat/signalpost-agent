@@ -59,7 +59,7 @@ def main():
     command.add_argument("--website-user-agent", default="SignalpostAgent/1.0 (+https://github.com/NethraVenkat/signalpost-agent)")
     command.add_argument("--expected-count", type=int)
     command.add_argument("--run-id", default="")
-    for flag, kind, default in (("max-requests", int, None), ("time-budget-seconds", float, 2100),
+    for flag, kind, default in (("max-requests", int, None), ("time-budget-seconds", float, None),
                                ("deadline-fraction", float, .85), ("max-cost-usd", float, 0),
                                ("host-concurrency", int, 10), ("workers", int, 64), ("request-timeout", float, 10),
                                ("official-batch-size", int, 1100), ("max-output-mb", float, 256)):

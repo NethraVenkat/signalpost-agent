@@ -40,7 +40,13 @@ class Budget:
         self.companies = companies
         self.hard_request_cap = math.floor(HTTP_PER_100 * companies / 100)
         self.hard_seconds = SECONDS_PER_100 * companies / 100
-        self.total_seconds = min(config.time_budget_seconds, self.hard_seconds) if companies else config.time_budget_seconds
+        # The limit scales with unique inputs; by default use all of it. An explicit
+        # --time-budget-seconds may only lower it. Without countable inputs keep 2,100 s.
+        requested = config.time_budget_seconds
+        if companies:
+            self.total_seconds = self.hard_seconds if requested is None else min(requested, self.hard_seconds)
+        else:
+            self.total_seconds = requested if requested is not None else SECONDS_PER_100
         self.finalise_estimate, self.site_estimate = finalisation_estimates(companies, config.site_dir is not None)
         # Crawl until budget - max(finalisation + site, 10%). If that leaves too
         # little time to crawl, drop the optional site reserve first, then cap

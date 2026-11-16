@@ -689,7 +689,7 @@ async def _run(config, client=None,synthesis_provider=None):
     await progress.stop(budget)
     elapsed = time.monotonic() - budget.start
     report['completion'] = {'wall_seconds': round(elapsed, 3),
-        'within_requested_time_budget': elapsed <= config.time_budget_seconds,
+        'within_requested_time_budget': config.time_budget_seconds is None or elapsed <= config.time_budget_seconds,
         'within_effective_time_budget': elapsed <= budget.total_seconds,
         'note': 'Includes preparation, crawl, mandatory outputs and site; final report flush adds filesystem latency.'}
     return report
