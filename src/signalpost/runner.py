@@ -30,6 +30,7 @@ from .sources import nav
 from .synthesis.service import Service as SynthesisService
 
 FAMILIES = ("identity", "roles", "subunits", "accounts")
+from .sources.exact_official import FAMILIES as OFFICIAL_FAMILIES, enabled_families as official_families
 # Bound on waiting for cancelled work; terminal output is written regardless.
 CANCEL_GRACE_SECONDS = 5
 
@@ -107,7 +108,7 @@ def finalize(envelope, old, blobs, budget, began, verify_identity=False):
     envelope.operations.requests = len(events)
     for family, module in envelope.modules.items():
         hints = {"identity": "/api/enheter/", "roles": "/roller", "subunits": "/underenheter?", "accounts": "/regnskapsregisteret/"}
-        matching = [e for e in events if e.get('section')==family] if family in {'gleif','procurement'} else [] if family in {'hiring','activity'} else [e for e in events if e.get("section") == "website"] if family == "website" else [e for e in events if hints[family] in e["url"] and (family != "identity" or not e["url"].endswith("/roller"))]
+        matching = [e for e in events if e.get('section')==family] if family in {'gleif','procurement',*OFFICIAL_FAMILIES} else [] if family in {'hiring','activity'} else [e for e in events if e.get("section") == "website"] if family == "website" else [e for e in events if hints[family] in e["url"] and (family != "identity" or not e["url"].endswith("/roller"))]
         module.retry_count = max(0, len(matching) - len({e["url"] for e in matching}))
     envelope.profile = CompactProfile(organisation_number=envelope.organisation_number,
                                       values={c.field: c.value for c in envelope.claims},
@@ -180,7 +181,7 @@ async def _run(config, client=None,synthesis_provider=None):
         # warning, never falsely claim the supplied batch was processed.
         inputs = Inputs([], [], [], 0)
         warnings.append(f"input unreadable: {type(exc).__name__}")
-    families = FAMILIES + (("website",) if config.websites else ()) + (('hiring',) if config.hiring else ()) + (('activity',) if config.public_activity or config.registry_changes else ()) + (('gleif',) if config.gleif else ()) + (('procurement',) if config.procurement else ())
+    families = FAMILIES + (("website",) if config.websites else ()) + (('hiring',) if config.hiring else ()) + (('activity',) if config.public_activity or config.registry_changes else ()) + (('gleif',) if config.gleif else ()) + (('procurement',) if config.procurement else ()) + tuple(official_families(config))
     envelopes = {org: placeholder(org, config.run_id, started, families) for org in inputs.unique}
     for org in inputs.invalid:
         for family in families:
@@ -523,7 +524,7 @@ async def _run(config, client=None,synthesis_provider=None):
             await finish_before_deadline([task],budget,CANCEL_GRACE_SECONDS)
             if task.done() and not task.cancelled() and task.exception() is not None:
                 for envelope in envelopes.values():
-                    for family in ('gleif','procurement'):
+                    for family in ('gleif','procurement',*official_families(config)):
                         if envelope.run.sections.get(family)=='failed':
                             update(envelope,family,missing(family,'public_enrichment_incomplete'))
             from .public_names import enrich as enrich_public_names

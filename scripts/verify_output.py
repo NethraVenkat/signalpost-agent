@@ -105,6 +105,33 @@ def verify_exact_public(row,data,evidence,stored_body):
     return count
 
 
+def verify_exact_official(row,data,evidence,stored_body):
+    """Stage S: re-derive every exact-ID official claim from its saved source record."""
+    from signalpost.sources import exact_official as eo
+    from datetime import datetime
+    count=0
+    org=row['organisation_number']
+    for claim in data['claims']:
+        if claim['family'] not in eo.FAMILIES or claim['availability']!='available':continue
+        receipts=[evidence[eid] for eid in claim['evidence_ids'] if evidence[eid]['extraction_method']==eo.METHOD]
+        assert receipts,'Missing exact-ID official receipt'
+        value=claim['value'];matched=False
+        assert value.get('company_orgnr')==org,'Official record is not attributed to this company'
+        for receipt in receipts:
+            body=stored_body(receipt['content_sha256'])
+            at=datetime.fromisoformat(receipt['retrieved_at'].replace('Z','+00:00'))
+            if claim['field'].startswith('state_aid.award.'):
+                assert receipt['source_url'].startswith(eo.STOTTE+'?'),'Wrong state-aid endpoint'
+                items=json.loads(body)['stoettetildeling']
+                index=int(receipt['locator'].split('/')[2])
+                award=eo.state_aid_award(items[index],org,at)
+                matched |= bool(award) and award[0]==value and claim['field']=='state_aid.award.'+value['award_id']
+            else:raise AssertionError('Unknown exact-ID official claim')
+        assert matched,'Unsupported exact-ID official value or attribution'
+        count+=1
+    return count
+
+
 def verify_filing_years(row,data,evidence,stored_body):
     from signalpost.sources.accounts_years import YEARS
     checked=0
@@ -332,6 +359,7 @@ def verify(first, state_dir, count, organisations=None, report=None, require_cle
     financial_inputs=derived_metrics=registry_events=filing_year_facts=0
     registry_documents={}
     exact_public=0
+    exact_official=0
     for row in rows:
         companies,sentences=verify_synthesis(row)
         synthesis_companies+=companies;synthesis_sentences+=sentences
@@ -357,6 +385,7 @@ def verify(first, state_dir, count, organisations=None, report=None, require_cle
         registry_events+=verify_registry_events(row,data,evidence,stored_body,registry_documents)
         verify_careers(row,data,evidence,stored_body)
         exact_public+=verify_exact_public(row,data,evidence,stored_body)
+        exact_official+=verify_exact_official(row,data,evidence,stored_body)
         from signalpost.public_names import verify as verify_public_names
         verify_public_names(row['organisation_number'],data,evidence,stored_body)
         from scripts.verify_publisher_identity import verify as verify_publisher
@@ -372,6 +401,7 @@ def verify(first, state_dir, count, organisations=None, report=None, require_cle
     result['registry_events_verified']=registry_events
     result['filing_year_facts_verified']=filing_year_facts
     result['exact_public_items_verified']=exact_public
+    result['exact_official_items_verified']=exact_official
     briefings = [(row['run'].get('synthesis') if 'run' in row else row['profile'].get('synthesis')) or {} for row in rows]
     result.update(briefing_companies=sum(bool(s.get('briefing')) for s in briefings),
                   briefing_sentences=sum(len(s.get('briefing', [])) for s in briefings),

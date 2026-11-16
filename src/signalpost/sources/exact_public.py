@@ -37,16 +37,23 @@ def variants(org):return [org,org[:3]+' '+org[3:6]+' '+org[6:]]
 
 
 class PublicHttp:
-    def __init__(self,client,config,budget,blobs):
+    def __init__(self,client,config,budget,blobs,hosts=None,sections=None,robots_unserved=(),politeness=None):
         self.client,self.config,self.budget,self.blobs=client,config,budget,blobs
-        self.robots={};self.robots_failures={};self.last={};self.delays={};self.locks={h:asyncio.Lock() for h in HOSTS}
+        self.hosts=set(hosts or HOSTS);self.sections=dict(sections or {})
+        # Hosts that serve no robots.txt at all (connection reset on that path):
+        # treated like 404 (no rules), with the reason kept on the request log.
+        self.robots_unserved=set(robots_unserved);self.politeness=politeness
+        self.robots={};self.robots_failures={};self.last={};self.delays={};self.locks={h:asyncio.Lock() for h in self.hosts}
 
-    async def raw(self,url,org,payload=None):
+    def section(self,host):
+        return self.sections.get(host) or ('gleif' if host=='api.gleif.org' else 'procurement')
+
+    async def raw(self,url,org,payload=None,headers=None):
         check_source(self.budget,url)
         for attempt in range(3):
             event=None;minimum=0.0
             try:
-                response=await self._raw(url,org,payload)
+                response=await self._raw(url,org,payload,headers)
                 event=response.request_event
                 event['official_retry_attempt']=attempt
                 if response.status<500:return response
@@ -60,22 +67,23 @@ class PublicHttp:
                 if attempt==2:raise
             await pause(self.budget,event,attempt,minimum=minimum)
 
-    async def _raw(self,url,org,payload=None):
+    async def _raw(self,url,org,payload=None,headers=None):
         p=urlsplit(url)
-        if p.scheme!='https' or p.hostname not in HOSTS or p.port not in (None,443) or p.username or p.password:
+        if p.scheme!='https' or p.hostname not in self.hosts or p.port not in (None,443) or p.username or p.password:
             raise SourceFailure('public_url_refused')
         host=p.hostname
         async with self.locks[host]:
-            delay=max(0,self.last.get(host,0)+max(POLITENESS_SECONDS,self.delays.get(host,0))-time.monotonic())
+            politeness=POLITENESS_SECONDS if self.politeness is None else self.politeness
+            delay=max(0,self.last.get(host,0)+max(politeness,self.delays.get(host,0))-time.monotonic())
             if time.monotonic()+delay>=self.budget.deadline:raise SourceFailure('deadline')
             if delay:await asyncio.sleep(delay)
-            event=self.budget.reserve(url,host,org);event['section']='gleif' if host=='api.gleif.org' else 'procurement'
-            if payload is not None:event['request_json']=payload
+            event=self.budget.reserve(url,host,org);event['section']=self.section(host)
+            if payload is not None:event['request_json']=payload;event['method']='POST'
             began=time.monotonic()
             try:
                 timeout=min(self.config.request_timeout,max(.001,self.budget.deadline-time.monotonic()))
                 r=await self.client.request('POST' if payload is not None else 'GET',url,json=payload,timeout=timeout,
-                    follow_redirects=False,headers={'User-Agent':self.config.website_user_agent})
+                    follow_redirects=False,headers={**(headers or {}),'User-Agent':self.config.website_user_agent})
                 event['status']=r.status_code
                 sha=await offload(self.blobs.put,r.content);event['content_sha256']=sha
                 if len(r.content)>8_000_000:raise SourceFailure('public_body_limit')
@@ -92,12 +100,22 @@ class PublicHttp:
             finally:
                 self.last[host]=time.monotonic();event['runtime_ms']=round((time.monotonic()-began)*1000)
 
-    async def request(self,url,org,payload=None):
+    async def request(self,url,org,payload=None,headers=None):
         host=urlsplit(url).hostname
-        if host not in HOSTS:raise SourceFailure('public_url_refused')
+        if host not in self.hosts:raise SourceFailure('public_url_refused')
         if host not in self.robots:
-            r=await self.raw('https://'+host+'/robots.txt',org)
-            if r.status in {404,410}:self.robots[host]=None
+            try:
+                robots='https://'+host+'/robots.txt'
+                # A host known to serve no robots file gets one attempt, no retry loop.
+                r=await (self._raw(robots,org) if host in self.robots_unserved else self.raw(robots,org))
+            except SourceFailure as exc:
+                if host not in self.robots_unserved or exc.code!='public_connect':raise
+                event=getattr(exc,'request_event',None)
+                if event is not None:event['robots_unserved']='connection reset on /robots.txt; treated as no rules (like 404)'
+                self.robots[host]=None
+                r=None
+            if r is None:pass
+            elif r.status in {404,410}:self.robots[host]=None
             elif r.status==200:
                 parser=RobotFileParser();parser.parse(r.body.decode('utf8',errors='replace').splitlines());self.robots[host]=parser
                 self.delays[host]=parser.crawl_delay(self.config.website_user_agent) or parser.crawl_delay('*') or 0
@@ -107,7 +125,7 @@ class PublicHttp:
         parser=self.robots[host]
         if parser is False or (parser is not None and not parser.can_fetch(self.config.website_user_agent,url)):
             raise SourceFailure(self.robots_failures.get(host,'public_robots_blocked'))
-        r=await self.raw(url,org,payload)
+        r=await self.raw(url,org,payload,headers)
         if r.status in {401,403,429}:self.robots[host]=False  # No further calls to a refused/rate-limited host this run.
         if r.status!=200:raise SourceFailure('public_http_'+str(r.status))
         return r
@@ -336,6 +354,14 @@ async def enrich(envelopes,client,config,budget,blobs,update):
         except Exception as exc:
             sections={o:missing(family,getattr(exc,'code','public_source_exception'),type(exc).__name__) for o in eligible}
         for org,section in sections.items():update(envelopes[org],family,section)
+    from . import exact_official
+    try:
+        await exact_official.enrich(envelopes,client,config,budget,blobs,update)
+    except Exception as exc:
+        for family in exact_official.enabled_families(config):
+            for org in eligible:
+                if envelopes[org].run.sections.get(family) in (None,'pending'):
+                    update(envelopes[org],family,missing(family,getattr(exc,'code','public_source_exception'),type(exc).__name__))
 
 
 def briefing_sentences(envelope):
@@ -353,4 +379,5 @@ def briefing_sentences(envelope):
     for claim in sorted(awards,key=lambda c:(c.value['date'],c.id),reverse=True)[:3]:
         v=claim.value
         result.append(Sentence(text='Public procurement award: '+v['title']+'; buyer: '+v['buyer']+'; '+v['date']+'; matched as '+v['matched_role']+'.',claim_ids=[claim.id]))
-    return result
+    from .exact_official import briefing_sentences as official_sentences
+    return result+official_sentences(envelope)

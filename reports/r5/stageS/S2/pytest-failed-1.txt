@@ -1,0 +1,203 @@
+{"command": ["<REPO>\\.venv\\Scripts\\python.exe", "<REPO>\\reports\\r5\\stage4_7\\run_tests.py", "-q", "-p", "no:cacheprovider", "--tb=short"], "priority": "above_normal", "mutates_test_assertions_or_timeouts": false}
+.......................................................................F [  5%]
+........................................................................ [ 10%]
+......F.............................................F................... [ 16%]
+.........................F.............................................. [ 21%]
+............................F........................................... [ 27%]
+....................................F................................... [ 32%]
+........................................................................ [ 38%]
+........................................................................ [ 43%]
+........................................................................ [ 49%]
+........................................................................ [ 54%]
+........................................................................ [ 60%]
+...........................F..F......................................... [ 65%]
+........................................................................ [ 71%]
+........................................................................ [ 76%]
+......F.................F.F.........F..................F................ [ 82%]
+F..F..FF...................................F............................ [ 87%]
+..................................FF.F.................................. [ 93%]
+..............................................F......................... [ 98%]
+............F.....                                                       [100%]
+================================== FAILURES ===================================
+__________ test_early_nav_exit_with_full_queue_emits_every_envelope ___________
+tests\test_cancellation_safety.py:57: in test_early_nav_exit_with_full_queue_emits_every_envelope
+    assert report['deadline_hits'] == 0
+E   assert 150 == 0
+_________________ test_duplicate_rows_do_not_repeat_research __________________
+tests\test_evaluator_inputs.py:38: in test_duplicate_rows_do_not_repeat_research
+    assert len(rows)==3 and report['requests']==5
+E   AssertionError: assert (3 == 3 and 6 == 5)
+E    +  where 3 = len([{'organisation_number': '923609016', 'run': {'run_id': '74076264a1a64587993decf77702d8d8', 'started_at': '2026-11-16T...heter/923609016', 'source_class': 'official_registry', 'retrieved_at': '2026-11-16T10:49:13.317189Z', ...}, ...], ...}])
+_____________________ test_external_sources_strict_replay _____________________
+tests\test_external_integration.py:20: in test_external_sources_strict_replay
+    first = asyncio.run(execute('first'))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\runners.py:195: in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\runners.py:118: in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\base_events.py:691: in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+tests\test_external_integration.py:13: in execute
+    await run_production_replay(
+scripts\production_replay.py:455: in run_production_replay
+    raise ReplayFixtureError("Production replay failed: " + ", ".join(reasons))
+E   scripts.production_replay.ReplayFixtureError: Production replay failed: 4 missing fixture(s)
+---------------------------- Captured stdout call -----------------------------
+Loaded 34 recorded fixtures from manifest manifest.json
+------------------------------ Captured log call ------------------------------
+WARNING  production_replay:production_replay.py:152 Replay transport miss: No recorded fixture for GET https://stottetiltak-registerinfo-api.app.brreg.no/robots.txt
+WARNING  production_replay:production_replay.py:152 Replay transport miss: No recorded fixture for POST https://stottetiltak-registerinfo-api.app.brreg.no/api/v1/soek/stoettetildeling?pageSize=100&page=1&sortBy=STOETTETILTAKSNUMMER&sortDirection=ASC
+WARNING  production_replay:production_replay.py:152 Replay transport miss: No recorded fixture for POST https://stottetiltak-registerinfo-api.app.brreg.no/api/v1/soek/stoettetildeling?pageSize=100&page=1&sortBy=STOETTETILTAKSNUMMER&sortDirection=ASC
+WARNING  production_replay:production_replay.py:152 Replay transport miss: No recorded fixture for POST https://stottetiltak-registerinfo-api.app.brreg.no/api/v1/soek/stoettetildeling?pageSize=100&page=1&sortBy=STOETTETILTAKSNUMMER&sortDirection=ASC
+ERROR    production_replay:production_replay.py:438 Missing fixture: method=GET url=https://stottetiltak-registerinfo-api.app.brreg.no/robots.txt reason=No recorded fixture for GET https://stottetiltak-registerinfo-api.app.brreg.no/robots.txt
+ERROR    production_replay:production_replay.py:438 Missing fixture: method=POST url=https://stottetiltak-registerinfo-api.app.brreg.no/api/v1/soek/stoettetildeling?pageSize=100&page=1&sortBy=STOETTETILTAKSNUMMER&sortDirection=ASC reason=No recorded fixture for POST https://stottetiltak-registerinfo-api.app.brreg.no/api/v1/soek/stoettetildeling?pageSize=100&page=1&sortBy=STOETTETILTAKSNUMMER&sortDirection=ASC
+ERROR    production_replay:production_replay.py:438 Missing fixture: method=POST url=https://stottetiltak-registerinfo-api.app.brreg.no/api/v1/soek/stoettetildeling?pageSize=100&page=1&sortBy=STOETTETILTAKSNUMMER&sortDirection=ASC reason=No recorded fixture for POST https://stottetiltak-registerinfo-api.app.brreg.no/api/v1/soek/stoettetildeling?pageSize=100&page=1&sortBy=STOETTETILTAKSNUMMER&sortDirection=ASC
+ERROR    production_replay:production_replay.py:438 Missing fixture: method=POST url=https://stottetiltak-registerinfo-api.app.brreg.no/api/v1/soek/stoettetildeling?pageSize=100&page=1&sortBy=STOETTETILTAKSNUMMER&sortDirection=ASC reason=No recorded fixture for POST https://stottetiltak-registerinfo-api.app.brreg.no/api/v1/soek/stoettetildeling?pageSize=100&page=1&sortBy=STOETTETILTAKSNUMMER&sortDirection=ASC
+_______________ test_production_replay_determinism_across_runs ________________
+tests\test_integration_determinism.py:59: in test_production_replay_determinism_across_runs
+    asyncio.run(execute_runs())
+..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\runners.py:195: in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\runners.py:118: in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\asyncio\base_events.py:691: in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+tests\test_integration_determinism.py:33: in execute_runs
+    r1 = await run_production_replay(
+scripts\production_replay.py:455: in run_production_replay
+    raise ReplayFixtureError("Production replay failed: " + ", ".join(reasons))
+E   scripts.production_replay.ReplayFixtureError: Production replay failed: 3 missing fixture(s)
+---------------------------- Captured stdout call -----------------------------
+Loaded 8 recorded fixtures from manifest manifest.json
+------------------------------ Captured log call ------------------------------
+WARNING  production_replay:production_replay.py:152 Replay transport miss: No recorded fixture for GET https://stottetiltak-registerinfo-api.app.brreg.no/robots.txt
+WARNING  production_replay:production_replay.py:152 Replay transport miss: No recorded fixture for POST https://stottetiltak-registerinfo-api.app.brreg.no/api/v1/soek/stoettetildeling?pageSize=100&page=1&sortBy=STOETTETILTAKSNUMMER&sortDirection=ASC
+WARNING  production_replay:production_replay.py:152 Replay transport miss: No recorded fixture for POST https://stottetiltak-registerinfo-api.app.brreg.no/api/v1/soek/stoettetildeling?pageSize=100&page=1&sortBy=STOETTETILTAKSNUMMER&sortDirection=ASC
+ERROR    production_replay:production_replay.py:438 Missing fixture: method=GET url=https://stottetiltak-registerinfo-api.app.brreg.no/robots.txt reason=No recorded fixture for GET https://stottetiltak-registerinfo-api.app.brreg.no/robots.txt
+ERROR    production_replay:production_replay.py:438 Missing fixture: method=POST url=https://stottetiltak-registerinfo-api.app.brreg.no/api/v1/soek/stoettetildeling?pageSize=100&page=1&sortBy=STOETTETILTAKSNUMMER&sortDirection=ASC reason=No recorded fixture for POST https://stottetiltak-registerinfo-api.app.brreg.no/api/v1/soek/stoettetildeling?pageSize=100&page=1&sortBy=STOETTETILTAKSNUMMER&sortDirection=ASC
+ERROR    production_replay:production_replay.py:438 Missing fixture: method=POST url=https://stottetiltak-registerinfo-api.app.brreg.no/api/v1/soek/stoettetildeling?pageSize=100&page=1&sortBy=STOETTETILTAKSNUMMER&sortDirection=ASC reason=No recorded fixture for POST https://stottetiltak-registerinfo-api.app.brreg.no/api/v1/soek/stoettetildeling?pageSize=100&page=1&sortBy=STOETTETILTAKSNUMMER&sortDirection=ASC
+_____________________ test_exact_org_and_shared_requests ______________________
+tests\test_nav.py:120: in test_exact_org_and_shared_requests
+    assert report['shared_requests']==3 and report['requests_per_company']==5
+E   assert (3 == 3 and 6.0 == 5)
+______ test_verification_rejects_missing_membership_and_corrupt_sources _______
+tests\test_output_verification.py:27: in test_verification_rejects_missing_membership_and_corrupt_sources
+    verify(cfg.output, cfg.state_dir, 1, cfg.organisations, cfg.report, True)
+scripts\verify_output.py:420: in verify
+    assert metrics['handled_exceptions'] == metrics['unhandled_exceptions'] == metrics['deadline_hits'] == 0
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AssertionError
+_ test_late_verified_nav_nomination_gains_exact_website_and_social_with_same_receipts _
+tests\test_r5_stage_a.py:87: in test_late_verified_nav_nomination_gains_exact_website_and_social_with_same_receipts
+    assert meter['pass1']['requests']+meter['pass2']['requests']==report['requests']
+E   assert (11 + 2) == 15
+_ test_second_pass_never_resets_company_or_global_counters[kwargs0-website_budget_exhausted] _
+tests\test_r5_stage_a.py:114: in test_second_pass_never_resets_company_or_global_counters
+    assert report['requests']<=kwargs.get('global_cap',7)
+E   AssertionError: assert 9 <= 7
+E    +  where 7 = <built-in method get of dict object at 0x00000253CE2A8EC0>('global_cap', 7)
+E    +    where <built-in method get of dict object at 0x00000253CE2A8EC0> = {'cap': 2}.get
+________________ test_candidate_order_and_stop_after_verified _________________
+tests\test_recall.py:65: in test_candidate_order_and_stop_after_verified
+    assert len([url for url in requests if 'data.brreg.no' not in url])==2
+E   AssertionError: assert 4 == 2
+E    +  where 4 = len(['https://example.no/robots.txt', 'https://example.no/', 'https://stottetiltak-registerinfo-api.app.brreg.no/robots.tx...rinfo-api.app.brreg.no/api/v1/soek/stoettetildeling?pageSize=100&page=1&sortBy=STOETTETILTAKSNUMMER&sortDirection=ASC'])
+______________ test_activity_live_pipeline_synthesis_and_refresh ______________
+tests\test_recall.py:136: in test_activity_live_pipeline_synthesis_and_refresh
+    assert len([u for u in requests if 'data.brreg.no' not in u])==3
+E   AssertionError: assert 5 == 3
+E    +  where 5 = len(['https://example.no/robots.txt', 'https://example.no/', 'https://example.no/feed.xml', 'https://stottetiltak-register...rinfo-api.app.brreg.no/api/v1/soek/stoettetildeling?pageSize=100&page=1&sortBy=STOETTETILTAKSNUMMER&sortDirection=ASC'])
+_______________________ test_activity_robots_and_budget _______________________
+tests\test_recall.py:183: in test_activity_robots_and_budget
+    assert len([u for u in requests if 'data.brreg.no' not in u])<=3
+E   AssertionError: assert 5 <= 3
+E    +  where 5 = len(['https://example.no/robots.txt', 'https://example.no/', 'https://example.no/nyheter', 'https://stottetiltak-registeri...rinfo-api.app.brreg.no/api/v1/soek/stoettetildeling?pageSize=100&page=1&sortBy=STOETTETILTAKSNUMMER&sortDirection=ASC'])
+________ test_saved_source_refresh_precision_recall_and_stale_evidence ________
+tests\test_refresh_proof_harness.py:24: in test_saved_source_refresh_precision_recall_and_stale_evidence
+    assert not c['execution']['unrecorded_urls']
+E   AssertionError: assert not ['https://stottetiltak-registerinfo-api.app.brreg.no/robots.txt']
+_____________________ test_no_zero_provenance_and_report ______________________
+tests\test_registry.py:159: in test_no_zero_provenance_and_report
+    assert report["total_cost_usd"] == 0 and report["requests_by_host"] == {"data.brreg.no": 5}
+E   AssertionError: assert (0.0 == 0 and {'data.brreg.....brreg.no': 1} == {'data.brreg.no': 5}
+E     
+E     Omitting 1 identical items, use -vv to show
+E     Left contains 1 more item:
+E     {'stottetiltak-registerinfo-api.app.brreg.no': 1}
+E     Use -v to get more diff)
+____________________ test_bulk_streaming_and_live_fallback ____________________
+tests\test_registry.py:225: in test_bulk_streaming_and_live_fallback
+    assert report["requests"] == 9
+E   assert 10 == 9
+___________________________ test_retry_and_redirect ___________________________
+tests\test_registry.py:274: in test_retry_and_redirect
+    assert report["requests"] == 6 and rows[0]["modules"]["roles"]["retry_count"] == 1
+E   assert (7 == 6)
+_______________ test_actual_http_timeout_and_five_hundred_retry _______________
+tests\test_registry.py:319: in test_actual_http_timeout_and_five_hundred_retry
+    assert report["requests"] == 7
+E   assert 8 == 7
+_____________ test_multiple_subunit_pages_and_parent_verification _____________
+tests\test_registry.py:334: in test_multiple_subunit_pages_and_parent_verification
+    assert report["requests"] == 6
+E   assert 7 == 6
+_________________________ test_previous_without_blobs _________________________
+tests\test_resource_limits.py:24: in test_previous_without_blobs
+    assert report["requests"] == 5
+E   assert 6 == 5
+____ test_transport_detects_challenges_before_http_retry_or_fallback[503] _____
+tests\test_stage_c.py:53: in test_transport_detects_challenges_before_http_retry_or_fallback
+    assert all(sum(u==url for u in urls)==1 for url in urls if 'data.brreg.no' not in url)
+E   assert False
+E    +  where False = all(<generator object test_transport_detects_challenges_before_http_retry_or_fallback.<locals>.<genexpr> at 0x00000253CF3CB060>)
+_____ test_hidden_sitemap_privacy_proves_exact_number_within_existing_cap _____
+tests\test_stage_c.py:67: in test_hidden_sitemap_privacy_proves_exact_number_within_existing_cap
+    assert len([u for u in urls if 'data.brreg.no' not in u])==4
+E   AssertionError: assert 6 == 4
+E    +  where 6 = len(['https://example.no/robots.txt', 'https://example.no/', 'https://example.no/pages.xml', 'https://example.no/legal/pri...rinfo-api.app.brreg.no/api/v1/soek/stoettetildeling?pageSize=100&page=1&sortBy=STOETTETILTAKSNUMMER&sortDirection=ASC'])
+________________ test_sitemap_robots_and_budget_never_bypassed ________________
+tests\test_stage_c.py:90: in test_sitemap_robots_and_budget_never_bypassed
+    assert len([u for u in urls if 'data.brreg.no' not in u])==2
+E   AssertionError: assert 4 == 2
+E    +  where 4 = len(['https://example.no/robots.txt', 'https://example.no/', 'https://stottetiltak-registerinfo-api.app.brreg.no/robots.tx...rinfo-api.app.brreg.no/api/v1/soek/stoettetildeling?pageSize=100&page=1&sortBy=STOETTETILTAKSNUMMER&sortDirection=ASC'])
+______ test_www_connect_fallback_and_http_only_after_connection_failure _______
+tests\test_website_reliability.py:53: in test_www_connect_fallback_and_http_only_after_connection_failure
+    assert report['max_requests_per_company']<=9
+E   assert 10 <= 9
+______ test_unlinked_standard_pages_are_checked_for_the_org_number[/om] _______
+tests\test_websites.py:321: in test_unlinked_standard_pages_are_checked_for_the_org_number
+    assert len([u for u in requests if 'data.brreg.no' not in u])==8
+E   AssertionError: assert 10 == 8
+E    +  where 10 = len(['https://example.no/robots.txt', 'https://example.no/', 'https://example.no/sitemap.xml', 'https://example.no/personvern', 'https://example.no/personvernerklaering', 'https://example.no/kontakt', ...])
+=========================== short test summary info ===========================
+FAILED tests/test_cancellation_safety.py::test_early_nav_exit_with_full_queue_emits_every_envelope
+FAILED tests/test_evaluator_inputs.py::test_duplicate_rows_do_not_repeat_research
+FAILED tests/test_external_integration.py::test_external_sources_strict_replay
+FAILED tests/test_integration_determinism.py::test_production_replay_determinism_across_runs
+FAILED tests/test_nav.py::test_exact_org_and_shared_requests - assert (3 == 3...
+FAILED tests/test_output_verification.py::test_verification_rejects_missing_membership_and_corrupt_sources
+FAILED tests/test_r5_stage_a.py::test_late_verified_nav_nomination_gains_exact_website_and_social_with_same_receipts
+FAILED tests/test_r5_stage_a.py::test_second_pass_never_resets_company_or_global_counters[kwargs0-website_budget_exhausted]
+FAILED tests/test_recall.py::test_candidate_order_and_stop_after_verified - A...
+FAILED tests/test_recall.py::test_activity_live_pipeline_synthesis_and_refresh
+FAILED tests/test_recall.py::test_activity_robots_and_budget - AssertionError...
+FAILED tests/test_refresh_proof_harness.py::test_saved_source_refresh_precision_recall_and_stale_evidence
+FAILED tests/test_registry.py::test_no_zero_provenance_and_report - Assertion...
+FAILED tests/test_registry.py::test_bulk_streaming_and_live_fallback - assert...
+FAILED tests/test_registry.py::test_retry_and_redirect - assert (7 == 6)
+FAILED tests/test_registry.py::test_actual_http_timeout_and_five_hundred_retry
+FAILED tests/test_registry.py::test_multiple_subunit_pages_and_parent_verification
+FAILED tests/test_resource_limits.py::test_previous_without_blobs - assert 6 ...
+FAILED tests/test_stage_c.py::test_transport_detects_challenges_before_http_retry_or_fallback[503]
+FAILED tests/test_stage_c.py::test_hidden_sitemap_privacy_proves_exact_number_within_existing_cap
+FAILED tests/test_stage_c.py::test_sitemap_robots_and_budget_never_bypassed
+FAILED tests/test_website_reliability.py::test_www_connect_fallback_and_http_only_after_connection_failure
+FAILED tests/test_websites.py::test_unlinked_standard_pages_are_checked_for_the_org_number[/om]
+23 failed, 1291 passed in 651.43s (0:10:51)

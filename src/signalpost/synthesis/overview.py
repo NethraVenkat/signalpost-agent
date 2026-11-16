@@ -5,7 +5,8 @@ from .financial import analyze, metric_sentence
 from .catalog import change_claims, leaves
 
 TOPICS = ('activity','change','unknown','financial','takeaway')
-FAMILIES = ('identity','roles','subunits','accounts','website','hiring','activity','gleif','procurement')
+from ..sources.exact_official import FAMILIES as OFFICIAL_FAMILIES
+FAMILIES = ('identity','roles','subunits','accounts','website','hiring','activity','gleif','procurement')+OFFICIAL_FAMILIES
 STATE_REASON = {'available':'Supported section facts were returned.', 'failed':'Source checking was incomplete.',
                 'blocked':'Source access was refused.', 'ambiguous':'Attribution or coverage was ambiguous.',
                 'not_available':'No supported value was found in the checked source scope.',
@@ -28,7 +29,7 @@ def observations(envelope):
     claims=supported(envelope); metrics,year_check,gaps=analyze(envelope)
     result=[]
     for family in FAMILIES:
-        if family in {'gleif','procurement'} and family not in envelope.run.sections:continue
+        if family in {'gleif','procurement',*OFFICIAL_FAMILIES} and family not in envelope.run.sections:continue
         codes=sorted({e.code for e in getattr(envelope,'errors',[]) if e.section==family and e.code!='website_candidates'})
         state=envelope.run.sections.get(family,'not_recorded')
         result.append(observation(envelope,'source_status',family,{'state':state,'reason':STATE_REASON[state],'reason_codes':codes}))

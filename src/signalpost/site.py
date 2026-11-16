@@ -312,6 +312,10 @@ def fact(claim, records, filing_list=None):
         label = "Company's own description"
     if claim['field'].startswith('procurement.award.'):
         label='Public procurement award'
+    from .sources.exact_official import LABELS as OFFICIAL_LABELS
+    for prefix, official_label in OFFICIAL_LABELS.items():
+        if claim['field'].startswith(prefix):
+            label = official_label
     v = claim.get('value')
     title = english_title(v) if claim['field'].startswith('identity.nace') and isinstance(v, dict) else None
     content = value_html(v) if available else '<p>' + esc(UNKNOWN.get(claim['availability'], 'Unknown.')) + '</p>'
@@ -466,7 +470,8 @@ def profile(row, title, explorer_rows=EXPLORER_VISIBLE_ROWS):
              'Use <strong>Original source</strong> to visit the publisher. The hash identifies the stored response at the shown retrieval time; a later live page may differ.</p></details>')
     sentences = [s for key in ('what_it_does', 'scale', 'leadership', 'changes','limitations','takeaway') for s in synthesis.get('sections', {}).get(key, [])]
     from .synthesis.brief import select
-    overview = select(synthesis, claims, limit=10 if any(c['family'] in {'gleif','procurement'} and c['availability']=='available' for c in claims) else 6)
+    from .sources.exact_official import FAMILIES as OFFICIAL_FAMILIES
+    overview = select(synthesis, claims, limit=10 if any(c['family'] in {'gleif','procurement',*OFFICIAL_FAMILIES} and c['availability']=='available' for c in claims) else 6)
     body += '<section class="summary"><h2>Cited summary</h2>'
     body += ''.join(sentence_html(s, claim_map, change_ids, observation_ids) for s in overview)
     remaining = [s for s in sentences if s not in overview]
@@ -500,6 +505,7 @@ def profile(row, title, explorer_rows=EXPLORER_VISIBLE_ROWS):
         for item in observations:
             body += '<article id="observation-'+esc(item['id'])+'"><h3>'+esc(item['section']+' / '+item['kind'])+'</h3><p>Recorded by this run: '+esc(row['run']['completed_at'])+'</p><pre>'+esc(json.dumps(item['data'],ensure_ascii=False,indent=2))+'</pre></article>'
         body += '</details>'
+    from .sources.exact_official import SITE_GROUP as OFFICIAL_GROUP
     buckets = {key: [] for key, _, _ in GROUPS}
     for c in claims:
         f = c['field']; family = c['family']
@@ -508,7 +514,7 @@ def profile(row, title, explorer_rows=EXPLORER_VISIBLE_ROWS):
                'hiring' if f == 'identity.employees' else
                'online' if family == 'website' or f == 'identity.registered_website' else
                'financials' if family == 'accounts' else 'people' if family in {'roles','gleif'} else
-               'activity' if family == 'procurement' else
+               'activity' if family == 'procurement' else OFFICIAL_GROUP[family] if family in OFFICIAL_GROUP else
                'hiring' if family == 'hiring' else 'activity' if family == 'activity' else 'what-it-does')
         buckets[key].append(c)
     for key, label, family in GROUPS:
@@ -860,9 +866,11 @@ def index_record(row):
     job_dates = [j['published'] for j in job_postings if j.get('published')]
 
     reg_events = registry_events(row)
-    published = [(c['value']['date'], c['value']['title'], c) for c in available
-                 if c['family'] in {'activity','procurement'} and isinstance(c.get('value'), dict)
-                 and c['value'].get('date') and c['value'].get('title') and not c.get('carried_forward')]
+    from .sources.exact_official import FAMILIES as OFFICIAL_FAMILIES
+    published = [(c['value']['date'], c['value'].get('title') or c['value']['label'], c) for c in available
+                 if c['family'] in {'activity','procurement',*OFFICIAL_FAMILIES} and isinstance(c.get('value'), dict)
+                 and c['value'].get('date') and (c['value'].get('title') or c['value'].get('label'))
+                 and not c.get('carried_forward')]
     all_events = sorted(list(reg_events) + published, key=lambda event: event[0], reverse=True)
     latest_event = all_events[0] if all_events else None
     recent_events = ([{'date': latest_event[0], 'label': latest_event[1],

@@ -89,7 +89,8 @@ def sentence_error(sentence,envelope):
     # These new frames are checked in full, bound to every claim they use.
     # Table titles authorize only the matching NACE frame or headline.
     plain=sentence.text.removeprefix('Previously supported. ')
-    if any(getattr(c,'family',None) in {'gleif','procurement'} for c in claims):
+    from ..sources.exact_official import FAMILIES as OFFICIAL_FAMILIES
+    if any(getattr(c,'family',None) in {'gleif','procurement',*OFFICIAL_FAMILIES} for c in claims):
         from ..sources.exact_public import briefing_sentences
         return None if sentence in briefing_sentences(envelope) else 'unverified_public_frame'
     from .brief import DEPTH_LABELS, depth_text, period_claims, LIMITATION, EMPLOYEE_GAP
