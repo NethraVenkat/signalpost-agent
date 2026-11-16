@@ -347,21 +347,27 @@ async def ted_batch(orgs,http,now):
 async def enrich(envelopes,client,config,budget,blobs,update):
     eligible=sorted(o for o,e in envelopes.items() if e.run.sections.get('identity')=='available')
     http=PublicHttp(client,config,budget,blobs)
-    for family,enabled in [('gleif',config.gleif),('procurement',config.procurement)]:
-        if not enabled:continue
+    # GLEIF, TED and each Stage S source are different hosts: run them side by
+    # side. Each host keeps its own lock, politeness clock and robots handling.
+    async def batch(family):
         try:
             sections=await gleif_batch(eligible,http) if family=='gleif' else await ted_batch(eligible,http,datetime.now(timezone.utc))
+        except asyncio.CancelledError:raise
         except Exception as exc:
             sections={o:missing(family,getattr(exc,'code','public_source_exception'),type(exc).__name__) for o in eligible}
         for org,section in sections.items():update(envelopes[org],family,section)
     from . import exact_official
-    try:
-        await exact_official.enrich(envelopes,client,config,budget,blobs,update)
-    except Exception as exc:
-        for family in exact_official.enabled_families(config):
-            for org in eligible:
-                if envelopes[org].run.sections.get(family) in (None,'pending'):
-                    update(envelopes[org],family,missing(family,getattr(exc,'code','public_source_exception'),type(exc).__name__))
+    async def official():
+        try:
+            await exact_official.enrich(envelopes,client,config,budget,blobs,update)
+        except asyncio.CancelledError:raise
+        except Exception as exc:
+            for family in exact_official.enabled_families(config):
+                for org in eligible:
+                    if envelopes[org].run.sections.get(family) in (None,'pending'):
+                        update(envelopes[org],family,missing(family,getattr(exc,'code','public_source_exception'),type(exc).__name__))
+    jobs=[batch(f) for f,enabled in [('gleif',config.gleif),('procurement',config.procurement)] if enabled]+[official()]
+    await asyncio.gather(*jobs)
 
 
 def briefing_sentences(envelope):

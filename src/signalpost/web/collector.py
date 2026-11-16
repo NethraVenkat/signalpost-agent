@@ -381,7 +381,9 @@ async def fetch(org, envelope, bulk, http, previous=None, *, resume=False, candi
                     if extra_proof.level == "VERIFIED":
                         # A foreign footer is not evidence for this entity's
                         # contacts or profiles. Retain only its exact proof page.
-                        if any(candidate_proof(p, org, context, candidate, leaders).reason == 'foreign_orgnr' for _, p in pages):
+                        # Full proof scoring is CPU work: never on the event loop.
+                        rechecked = [await offload(candidate_proof, p, org, context, candidate, leaders) for _, p in pages]
+                        if any(r.reason == 'foreign_orgnr' for r in rechecked):
                             pages = [(extra, extra_page)]
                         break
             proof, response, page = best

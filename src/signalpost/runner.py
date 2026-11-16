@@ -168,6 +168,9 @@ async def run(config, client=None,synthesis_provider=None):
     return report
 
 
+WEBSITE_COMPANIES = 16
+
+
 async def _run(config, client=None,synthesis_provider=None):
     budget = Budget(config)
     if not config.run_id:
@@ -255,7 +258,12 @@ async def _run(config, client=None,synthesis_provider=None):
     from .sources.subunits import build_subunit_map
     pre_loaded_subunit_map = await offload(build_subunit_map, inputs, bulk, prior)
     semaphore = asyncio.Semaphore(config.workers)
-    website_semaphore = asyncio.Semaphore(config.workers)
+    # Website work no longer queues behind the paced filing-years service, so all
+    # companies would reach it at once. Measured: 64 at once saturates a typical
+    # link (timeouts 1.6% -> 11%); WEBSITE_COMPANIES keeps it bounded.
+    website_semaphore = asyncio.Semaphore(min(config.workers, WEBSITE_COMPANIES))
+    # Set once every valid company has identity and subunits: exact-ID sources need nothing more.
+    subunits_ready = asyncio.Event()
     nav_index=nav.Index()
     nav_index.started=asyncio.Event()
     registry_done=set()
@@ -348,6 +356,7 @@ async def _run(config, client=None,synthesis_provider=None):
         DNS_ORG.set(org)
         envelope = envelopes[org]
         begin = time.monotonic()
+        accounts_task = None
         progress.company_started(org)
         if not valid(org):
             for family in families:
@@ -370,7 +379,7 @@ async def _run(config, client=None,synthesis_provider=None):
                         update(envelope, family, missing(family, inherited, state=state))
                     subunits_done.add(org)
                     if valid_orgs <= subunits_done and 'subunits_complete_seconds' not in timing_markers:
-                        timing_markers['subunits_complete_seconds'] = time.monotonic() - budget.start
+                        timing_markers['subunits_complete_seconds'] = time.monotonic() - budget.start; subunits_ready.set()
                     registry_families_done.add(org)
                     if valid_orgs <= registry_families_done and 'registry_complete_seconds' not in timing_markers:
                         timing_markers['registry_complete_seconds'] = time.monotonic() - budget.start
@@ -379,15 +388,16 @@ async def _run(config, client=None,synthesis_provider=None):
                 await isolate(envelope, "subunits", lambda: brreg_underenheter.fetch(org, http, progress=lambda partial: update(envelope, "subunits", partial)))
                 subunits_done.add(org)
                 if valid_orgs <= subunits_done and 'subunits_complete_seconds' not in timing_markers:
-                    timing_markers['subunits_complete_seconds'] = time.monotonic() - budget.start
+                    timing_markers['subunits_complete_seconds'] = time.monotonic() - budget.start; subunits_ready.set()
                 await push_subunit_scope(org, envelope)
                 mark_registry(org)
             async with semaphore:
-                for family, source in (("roles", brreg_roller), ("accounts", regnskap)):
-                    await isolate(envelope, family, lambda source=source: source.fetch(org, http))
-                registry_families_done.add(org)
-                if valid_orgs <= registry_families_done and 'registry_complete_seconds' not in timing_markers:
-                    timing_markers['registry_complete_seconds'] = time.monotonic() - budget.start
+                # Website proof reads registered leaders, so roles come first.
+                await isolate(envelope, "roles", lambda: brreg_roller.fetch(org, http))
+            # Accounts include the separately paced filing-years service (one start
+            # per 2.1 s for the whole batch). Run them beside website work instead of
+            # making every website check queue behind that pacing; same host limits.
+            accounts_task = asyncio.create_task(isolate(envelope, "accounts", lambda: regnskap.fetch(org, http)))
             async with website_semaphore:
                 if config.websites:
                     from .web.adaptive import nav_homepages
@@ -399,6 +409,10 @@ async def _run(config, client=None,synthesis_provider=None):
                 if config.public_activity:
                     from .web.activity import fetch as fetch_activity
                     await isolate(envelope, 'activity', lambda: fetch_activity(org, envelope, website_http, website_http.accepted_pages.get(org, [])))
+            await accounts_task
+            registry_families_done.add(org)
+            if valid_orgs <= registry_families_done and 'registry_complete_seconds' not in timing_markers:
+                timing_markers['registry_complete_seconds'] = time.monotonic() - budget.start
             # Waiting for the shared feed must not occupy registry worker slots.
             mark_registry(org)
             if config.hiring and nav_task:
@@ -413,19 +427,22 @@ async def _run(config, client=None,synthesis_provider=None):
                     section=await careers.fetch(org,envelope,website_http,website_http.accepted_pages.get(org,[]))
                     update(envelope,'hiring',careers.merge(envelope,section))
         except asyncio.CancelledError:
+            if accounts_task is not None and not accounts_task.done():accounts_task.cancel()
             raise
         except SourceFailure as exc:
+            if accounts_task is not None:await asyncio.gather(accounts_task, return_exceptions=True)
             for family in families:
                 if any(e.section == family and e.code == "not_started" for e in envelope.errors):
                     update(envelope, family, missing(family, exc.code))
         except Exception as exc:
+            if accounts_task is not None:await asyncio.gather(accounts_task, return_exceptions=True)
             for family in families:
                 if any(e.section == family and e.code == "not_started" for e in envelope.errors):
                     update(envelope, family, missing(family, "company_exception", type(exc).__name__))
         finally:
             subunits_done.add(org)
             if valid_orgs <= subunits_done and 'subunits_complete_seconds' not in timing_markers:
-                timing_markers['subunits_complete_seconds'] = time.monotonic() - budget.start
+                timing_markers['subunits_complete_seconds'] = time.monotonic() - budget.start; subunits_ready.set()
             registry_families_done.add(org)
             if valid_orgs <= registry_families_done and 'registry_complete_seconds' not in timing_markers:
                 timing_markers['registry_complete_seconds'] = time.monotonic() - budget.start
@@ -474,6 +491,14 @@ async def _run(config, client=None,synthesis_provider=None):
             await finish_before_deadline(urgent, budget, CANCEL_GRACE_SECONDS)
         progress.stage_update("Registry & Subunits", "running")
         tasks = [asyncio.create_task(company(org, http, website_http,nav_task)) for org in inputs.unique if valid(org)]
+        # Cheap exact-ID sources (GLEIF, TED, Stage S) start as soon as identity and
+        # subunits are known, beside website work, not after every other pass.
+        from .sources.exact_public import enrich
+        async def early_enrich():
+            await subunits_ready.wait()
+            await enrich(envelopes,active_client,config,budget,blobs,update)
+        enrich_task=asyncio.create_task(early_enrich())
+        if not valid_orgs:subunits_ready.set()
         try:
             pending, stuck = await finish_before_deadline(tasks, budget, CANCEL_GRACE_SECONDS)
             if stuck:
@@ -519,8 +544,7 @@ async def _run(config, client=None,synthesis_provider=None):
                         pass1={'requests':sum(e.get('pass')=='pass1' for e in budget.events)},
                         pass2={'requests':sum(e.get('pass')=='pass2' for e in budget.events)})
                     warnings.append('adaptive website pass failed: '+type(exc).__name__)
-            from .sources.exact_public import enrich
-            task=asyncio.create_task(enrich(envelopes,active_client,config,budget,blobs,update))
+            task=enrich_task
             await finish_before_deadline([task],budget,CANCEL_GRACE_SECONDS)
             if task.done() and not task.cancelled() and task.exception() is not None:
                 for envelope in envelopes.values():
@@ -531,6 +555,9 @@ async def _run(config, client=None,synthesis_provider=None):
             await offload(enrich_public_names,envelopes,blobs,website_http.accepted_pages)
             return pending
         finally:
+            if 'enrich_task' in locals() and not enrich_task.done():
+                enrich_task.cancel()
+                await asyncio.gather(enrich_task, return_exceptions=True)
             dns_metrics.update({'dns_precheck_lookups': website_http.dns_lookups, 'dns_candidates_by_company': website_http.dns_counts,
                                 'dns_scope': 'prechecks, website preflight and pinned-transport connection resolutions'})
             if subunit_queue is not None:

@@ -116,6 +116,20 @@ def _region(node):
 
 
 def extract_publisher(page):
+    """Cached per parsed page: the result depends only on page.raw, and several
+    proof, veto, identity and contact checks ask for it on the same page."""
+    cached = getattr(page, '_publisher_context', None)
+    if cached is not None and cached[0] is page.raw:
+        return cached[1]
+    result = _extract_publisher(page)
+    try:
+        page._publisher_context = (page.raw, result)
+    except AttributeError:
+        pass
+    return result
+
+
+def _extract_publisher(page):
     """Extract visible own branding/contact blocks, excluding third-party lists.
 
     ``page`` is a parsed HTML Page; extraction is local and performs no requests.

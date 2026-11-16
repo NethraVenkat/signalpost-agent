@@ -1,0 +1,252 @@
+[
+  {
+    "run": "stageS-20261116-final",
+    "http": 1212,
+    "runtime_s": 963.4,
+    "event_loop_lag_max_ms": 27697,
+    "website_timeouts": "2/576",
+    "deadline_hits": 0,
+    "registry_complete_s": 256,
+    "first_request_s": {
+      "state_aid": 648,
+      "licences": 823,
+      "gleif": 629,
+      "procurement": 641,
+      "website": 9
+    },
+    "sections": {
+      "website": {
+        "not_available": 51,
+        "failed": 30,
+        "blocked": 3,
+        "ambiguous": 8,
+        "available": 8
+      },
+      "activity": {
+        "available": 56,
+        "failed": 44
+      },
+      "gleif": {
+        "not_available": 85,
+        "available": 15
+      },
+      "procurement": {
+        "not_available": 98,
+        "blocked": 2
+      },
+      "state_aid": {
+        "not_available": 90,
+        "available": 10
+      },
+      "licences": {
+        "not_available": 98,
+        "available": 2
+      },
+      "accounts": {
+        "available": 99,
+        "failed": 1
+      }
+    },
+    "change": "Stage S measurement (before P3), reference"
+  },
+  {
+    "run": "stageP3-trial-16b",
+    "http": 1011,
+    "runtime_s": 569.0,
+    "event_loop_lag_max_ms": 28056,
+    "website_timeouts": "61/370",
+    "deadline_hits": 0,
+    "registry_complete_s": 342,
+    "first_request_s": {
+      "state_aid": 6,
+      "licences": 6,
+      "gleif": 6,
+      "procurement": 6,
+      "website": 6
+    },
+    "sections": {
+      "website": {
+        "not_available": 27,
+        "failed": 58,
+        "blocked": 3,
+        "ambiguous": 7,
+        "available": 5
+      },
+      "activity": {
+        "available": 29,
+        "failed": 71
+      },
+      "gleif": {
+        "not_available": 85,
+        "available": 15
+      },
+      "procurement": {
+        "not_available": 98,
+        "failed": 2
+      },
+      "state_aid": {
+        "not_available": 90,
+        "available": 10
+      },
+      "licences": {
+        "not_available": 98,
+        "available": 2
+      },
+      "accounts": {
+        "available": 99,
+        "failed": 1
+      }
+    },
+    "change": "accounts beside websites + early/concurrent exact-ID sources + 48 DNS threads; 64 website companies"
+  },
+  {
+    "run": "stageP3-trial-16e",
+    "http": 1150,
+    "runtime_s": 500.2,
+    "event_loop_lag_max_ms": 1228,
+    "website_timeouts": "9/501",
+    "deadline_hits": 0,
+    "registry_complete_s": 258,
+    "first_request_s": {
+      "state_aid": 7,
+      "licences": 7,
+      "gleif": 6,
+      "procurement": 6,
+      "website": 7
+    },
+    "sections": {
+      "website": {
+        "not_available": 27,
+        "failed": 54,
+        "blocked": 3,
+        "ambiguous": 8,
+        "available": 8
+      },
+      "activity": {
+        "available": 32,
+        "failed": 68
+      },
+      "gleif": {
+        "not_available": 85,
+        "available": 15
+      },
+      "procurement": {
+        "not_available": 98,
+        "blocked": 2
+      },
+      "state_aid": {
+        "not_available": 90,
+        "available": 10
+      },
+      "licences": {
+        "not_available": 98,
+        "available": 2
+      },
+      "accounts": {
+        "available": 99,
+        "failed": 1
+      }
+    },
+    "change": "+ cached publisher extraction, proof re-check offloaded (loop stall 28 s -> 1.2 s)"
+  },
+  {
+    "run": "stageP3-trial-16f",
+    "http": 1118,
+    "runtime_s": 541.0,
+    "event_loop_lag_max_ms": 1259,
+    "website_timeouts": "50/464",
+    "deadline_hits": 0,
+    "registry_complete_s": 310,
+    "first_request_s": {
+      "state_aid": 6,
+      "licences": 6,
+      "gleif": 6,
+      "procurement": 6,
+      "website": 6
+    },
+    "sections": {
+      "website": {
+        "not_available": 39,
+        "failed": 42,
+        "blocked": 3,
+        "ambiguous": 9,
+        "available": 7
+      },
+      "activity": {
+        "available": 41,
+        "failed": 59
+      },
+      "gleif": {
+        "not_available": 85,
+        "available": 15
+      },
+      "procurement": {
+        "not_available": 98,
+        "blocked": 2
+      },
+      "state_aid": {
+        "not_available": 90,
+        "available": 10
+      },
+      "licences": {
+        "not_available": 98,
+        "available": 2
+      },
+      "accounts": {
+        "available": 99,
+        "failed": 1
+      }
+    },
+    "change": "48-thread DNS pool reverted (it caused dns_unavailable)"
+  },
+  {
+    "run": "stageP3-trial-16g",
+    "http": 1185,
+    "runtime_s": 507.5,
+    "event_loop_lag_max_ms": 1229,
+    "website_timeouts": "3/535",
+    "deadline_hits": 0,
+    "registry_complete_s": 256,
+    "first_request_s": {
+      "state_aid": 6,
+      "licences": 6,
+      "gleif": 6,
+      "procurement": 6,
+      "website": 7
+    },
+    "sections": {
+      "website": {
+        "not_available": 51,
+        "failed": 29,
+        "blocked": 3,
+        "ambiguous": 9,
+        "available": 8
+      },
+      "activity": {
+        "available": 55,
+        "failed": 45
+      },
+      "gleif": {
+        "not_available": 85,
+        "available": 15
+      },
+      "procurement": {
+        "not_available": 98,
+        "blocked": 2
+      },
+      "state_aid": {
+        "not_available": 90,
+        "available": 10
+      },
+      "licences": {
+        "not_available": 98,
+        "available": 2
+      },
+      "accounts": {
+        "available": 99,
+        "failed": 1
+      }
+    },
+    "change": "website work bounded to 16 companies at once (final)"
+  }
+]

@@ -13,12 +13,14 @@ No names, domains or fuzzy matching widen company scope. Failures and partial
 coverage stay explicit; dates and amounts are copied only when the record
 supplies them, never inferred.
 """
+import asyncio
 import json
 import math
 import re
 from datetime import date, datetime, timezone
 
 from ..budget import SourceFailure
+from ..workers import offload
 from .extract import Section, add, missing, response_source
 
 METHOD = 'signalpost.exact_official.v1'
@@ -195,15 +197,21 @@ async def enrich(envelopes, client, config, budget, blobs, update):
     http = PublicHttp(client, config, budget, blobs, hosts=HOSTS, sections=SECTION_BY_HOST,
                       robots_unserved=ROBOTS_UNSERVED, politeness=POLITENESS_SECONDS)
     now = datetime.now(timezone.utc)
+    live = []
     for family in enabled_families(config):
         if family in LOCAL:
             for org in eligible:
                 try:
-                    section = LOCAL[family](org, now, blobs, envelopes[org])
+                    # Bundle decompression and matching are CPU work; keep them off
+                    # the event loop so concurrent website timeouts are not starved.
+                    section = await offload(LOCAL[family], org, now, blobs, envelopes[org])
                 except (SourceFailure, ValueError, TypeError, OSError) as exc:
                     section = missing(family, getattr(exc, 'code', type(exc).__name__))
                 update(envelopes[org], family, section)
             continue
+        live.append(family)
+
+    async def run_live(family):
         fetch = FETCHERS[family]
         stop = None  # (code, state) once the source is refused or limits are reached
         for org in eligible:
@@ -219,6 +227,8 @@ async def enrich(envelopes, client, config, budget, blobs, update):
                     stop = (code, state)  # one refusal/limit closes the source for the run; no hammering
                 section = missing(family, code, state=state)
             update(envelopes[org], family, section)
+    # Live families use different hosts, each paced by its own lock and clock.
+    await asyncio.gather(*(run_live(f) for f in live))
 
 
 # --- S3 research projects (bundled snapshot; appended to exact_official.py) ---
