@@ -69,7 +69,8 @@ def verify(org,data,evidence,stored_body):
         assert own,'Missing publisher response evidence'
         matched=False
         for e in own:
-            page=Page(stored_body(e['content_sha256']).encode('utf8'),e['source_url'])
+            text=stored_body(e['content_sha256'])
+            page=Page(text.encode('utf8'),e['source_url'],text=text)
             parts=urlsplit(page.url)
             assert value['final_url']==urlunsplit((parts.scheme,parts.netloc,'','','')),'Published URL differs from proven publisher authority'
             assert not conflict(page,org,context)[0],'Publisher conflict'

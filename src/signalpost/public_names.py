@@ -117,7 +117,7 @@ def verify(org,data,evidence,stored_body):
                 site=next(c for c in data['claims'] if c['field']=='official_website' and c['availability']=='available' and not c.get('carried_forward'))
                 assert site['value']['identity_level'] in {'VERIFIED','HIGH'} and not site['value'].get('other_orgnrs')
                 assert set(site['evidence_ids'])<=set(claim['evidence_ids'])
-                page=Page(text.encode('utf8'),e['source_url'])
+                page=Page(text.encode('utf8'),e['source_url'],text=text)
                 units=[{'orgnr':c['value']['organisation_number']} for c in data['claims'] if c['field'].startswith('subunits.unit.') and c['availability']=='available']
                 assert not conflict(page,org,{'name':legal,'subunits':units})[0]
                 supported|=(e['source_url']==site['value']['proof_page_url'] and domain(e['source_url'])==domain(site['value']['final_url']) and site_name(page,legal)==claim['value'])

@@ -25,7 +25,8 @@ def verify(org,data,evidence,stored_body):
             e=evidence[ref]
             if e['source_class']!='company_owned' or e['locator']!='company-link:'+value['url']:continue
             assert domain(e['source_url'])==domain(site['value']['final_url']),'Foreign social publisher'
-            page=Page(stored_body(e['content_sha256']).encode('utf8'),e['source_url'])
+            text=stored_body(e['content_sha256'])
+            page=Page(text.encode('utf8'),e['source_url'],text=text)
             expected=declared_profiles(page,context['name'],org,context).get(value['url'])
             matched |= bool(expected and expected==receipt and expected['tier']==value['proof_tier'] and expected['span']==e['claim_span'])
         assert matched,'Unsupported owner social declaration'

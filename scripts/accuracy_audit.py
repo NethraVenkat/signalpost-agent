@@ -614,7 +614,7 @@ def audit_website_claim(
         if cand_host in DIRECTORY_DOMAINS or any(cand_host.endswith("." + d) or cand_host == d for d in DIRECTORY_DOMAINS):
             return "INCORRECT", f"Directory/aggregator domain '{cand_host}' cannot serve as company official website", None
 
-    page = Page(body.encode("utf-8", errors="replace"), val.get("proof_page_url") or ev.get('source_url') or url or "")
+    page = Page(body.encode("utf-8", errors="replace"), val.get("proof_page_url") or ev.get('source_url') or url or "", text=body)
     from signalpost.web.publisher_veto import conflict
     publisher_context = {**(context or {}), 'publisher_company_orgnr': publisher_company,
                          'subunits': [{'orgnr': unit} for unit in (subunit_map or {}).get(publisher_company, set())]}
@@ -1029,7 +1029,7 @@ def audit_social_claim(
     hrefs = re.findall(r'href=[\'"]([^\'"]+)[\'"]', body, re.IGNORECASE)
     plain_urls = re.findall(r'https?://[^\s<>"\']+', body)
     all_links = set(hrefs + plain_urls)
-    page = Page(body.encode('utf8'), ev.get('source_url') or 'https://invalid.example/')
+    page = Page(body.encode('utf8'), ev.get('source_url') or 'https://invalid.example/', text=body)
     if not is_group:
         for block in page.jsonld:
             for values in json_values(block, 'sameAs', exclude_person=True):

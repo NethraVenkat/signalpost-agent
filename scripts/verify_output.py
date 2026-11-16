@@ -51,14 +51,16 @@ def verify_careers(row,data,evidence,stored_body):
         receipts=[evidence[eid] for eid in claim['evidence_ids'] if evidence[eid]['extraction_method']=='signalpost.careers.v1']
         posting=next(e for e in receipts if e['locator']=='JobPosting/title')
         assert posting['source_url']==value['url']
-        page=Page(stored_body(posting['content_sha256']).encode('utf8'),posting['source_url'])
+        text=stored_body(posting['content_sha256'])
+        page=Page(text.encode('utf8'),posting['source_url'],text=text)
         found=postings(page,row['organisation_number'],datetime.fromisoformat(posting['retrieved_at'].replace('Z','+00:00')))
         assert any(all(value.get(k)==v for k,v in parsed.items()) for parsed,spans in found),'Unsupported careers posting values'
         chain=sorted((e for e in receipts if e['locator'].startswith('careers/link/')),key=lambda e:int(e['locator'].rsplit('/',1)[1]))
         assert 1<=len(chain)<=2
         expected=None
         for depth,receipt in enumerate(chain):
-            parent=Page(stored_body(receipt['content_sha256']).encode('utf8'),receipt['source_url'])
+            text=stored_body(receipt['content_sha256'])
+            parent=Page(text.encode('utf8'),receipt['source_url'],text=text)
             assert not shared_group_context(parent)
             if depth==0:
                 assert domain(parent.url)==root

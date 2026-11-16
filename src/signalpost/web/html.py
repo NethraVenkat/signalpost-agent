@@ -23,10 +23,13 @@ def decode_html(body: bytes) -> str:
 
 
 class Page(HTMLParser):
-    def __init__(self, body: bytes, url: str):
+    def __init__(self, body: bytes, url: str, *, text: str | None = None):
         super().__init__(convert_charrefs=True)
         self.body = body
-        self.raw = decode_html(body)
+        # ``text`` is already-decoded receipt text (verifiers replaying a stored
+        # body). Decoding it again would re-apply a declared non-UTF-8 charset
+        # to UTF-8 bytes and corrupt non-ASCII text, so it is used as-is.
+        self.raw = text if text is not None else decode_html(body)
         self.url = url
         self.stack = []
         self.visible_parts = []
