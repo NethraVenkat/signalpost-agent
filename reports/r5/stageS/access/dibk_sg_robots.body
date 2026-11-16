@@ -1,0 +1,13 @@
+# See https://www.robotstxt.org/robotstxt.html for documentation on how to use the robots.txt file
+#
+# /enterprises/ must stay crawlable: pages of enterprises without a valid
+# approval carry an X-Robots-Tag: noindex header, which crawlers only see
+# if they are allowed to fetch the page.
+User-agent: *
+Disallow: /search
+Disallow: /api/
+Disallow: /municipalities
+Disallow: /counties
+Disallow: /countries
+Disallow: /approval_area_function_types
+Disallow: /approval_area_field_types

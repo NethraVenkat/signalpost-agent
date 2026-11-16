@@ -1,0 +1,145 @@
+{
+ "probed_at_utc": "2026-11-16T08:22:35Z",
+ "user_agent": "project website_user_agent",
+ "probes": [
+  {
+   "name": "wikidata_query_robots",
+   "request": "https://query.wikidata.org/robots.txt",
+   "status_line": "HTTP/1.1 200 OK",
+   "bytes": 95,
+   "sha256": "212a112f9e27af6072758663789987cf84bfde70bd9b87f97ef76f91fd089b0c"
+  },
+  {
+   "name": "wikidata_www_robots",
+   "request": "https://www.wikidata.org/robots.txt",
+   "status_line": "HTTP/1.1 200 OK",
+   "bytes": 15896,
+   "sha256": "31077e60ea72809fd71fdb414951397be2f141e1e23ea2408e69d77aefa62593"
+  },
+  {
+   "name": "stotte_api_robots",
+   "request": "https://stottetiltak-registerinfo-api.app.brreg.no/robots.txt",
+   "status_line": "no response (connection reset by peer)"
+  },
+  {
+   "name": "stotte_api_robots_retry",
+   "request": "https://stottetiltak-registerinfo-api.app.brreg.no/robots.txt",
+   "status_line": "no response (connection reset by peer)"
+  },
+  {
+   "name": "stotte_site_robots",
+   "request": "https://stotte.brreg.no/robots.txt",
+   "status_line": "HTTP/1.1 307 Temporary Redirect",
+   "bytes": 36,
+   "sha256": "637c7df362f4f9fdeb3dce9733ae206b94cd894dcccd49f10d6f3e346f96848b"
+  },
+  {
+   "name": "stotte_search_noauth",
+   "request": "POST https://stottetiltak-registerinfo-api.app.brreg.no/api/v1/soek/stoettetildeling?pageSize=10&page=1 (STOETTEMOTTAKER_ORGNR=923609016, EXACT_MATCH)",
+   "status_line": "HTTP/1.1 200 OK",
+   "bytes": 11768,
+   "sha256": "e7430152463f655ecdd0339b8cc3d33f2617854274ae3c3bd7fcdb26910722cc"
+  },
+  {
+   "name": "stotte_rolletype",
+   "request": "https://stottetiltak-registerinfo-api.app.brreg.no/api/v1/kodeliste/rolletype?language=ENG",
+   "status_line": "HTTP/1.1 200 OK",
+   "bytes": 656,
+   "sha256": "6cd2d6baee16420107c173a65c231dac43529f0169804928f961695333e3d527"
+  },
+  {
+   "name": "finanstilsynet_api_robots",
+   "request": "https://api.finanstilsynet.no/robots.txt",
+   "status_line": "HTTP/1.1 404 Not Found",
+   "bytes": 1245,
+   "sha256": "dc1d54dab6ec8c00f70137927504e4f222c8395f10760b6beecfcfa94e08249f"
+  },
+  {
+   "name": "finanstilsynet_www_robots",
+   "request": "https://www.finanstilsynet.no/robots.txt",
+   "status_line": "HTTP/1.1 200 OK",
+   "bytes": 144,
+   "sha256": "54216b86835d852b7a7ed304604522619e0f28bb5be087415afdb15e9867ca6c"
+  },
+  {
+   "name": "dibk_sg_robots",
+   "request": "https://sgregister.dibk.no/robots.txt",
+   "status_line": "HTTP/1.1 200 OK",
+   "bytes": 482,
+   "sha256": "b56ef3e250d54678fd5fa708b5f5889c7bfa9375edffba2b206face3bf899522"
+  },
+  {
+   "name": "smilefjes_robots",
+   "request": "https://smilefjes.mattilsynet.no/robots.txt",
+   "status_line": "HTTP/1.1 404 Not Found",
+   "bytes": 153,
+   "sha256": "04cb2c1ebba560ef2b9a44451ac84409aae0df6fe609a4d95d54f97c7fd4d6ed"
+  },
+  {
+   "name": "smilefjes_tilsyn_head",
+   "request": "https://smilefjes.mattilsynet.no/api/tilsyn.csv (Range: bytes=0-4095)",
+   "status_line": "HTTP/1.1 206 Partial Content",
+   "bytes": 4096,
+   "sha256": "c4bf571c99564e44cc0ece3e7be64aa99e6e877d6ccae4b3fb8b807353141fab"
+  },
+  {
+   "name": "forskningsradet_license",
+   "request": "https://raw.githubusercontent.com/Forskningsradet/open-data/main/LICENSE",
+   "status_line": "HTTP/1.1 404 Not Found",
+   "bytes": 14,
+   "sha256": "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed"
+  },
+  {
+   "name": "forskningsradet_readme",
+   "request": "https://raw.githubusercontent.com/Forskningsradet/open-data/main/README.md",
+   "status_line": "HTTP/1.1 200 OK",
+   "bytes": 423,
+   "sha256": "a528cc5d6804ee995d627729f09603b93cbd22ca8d533bdc3af54eaa3b15f9f8"
+  },
+  {
+   "name": "forskningsradet_meta",
+   "request": "https://raw.githubusercontent.com/Forskningsradet/open-data/main/datasets/soknader2/meta.xml",
+   "status_line": "HTTP/1.1 200 OK",
+   "bytes": 168,
+   "sha256": "a4e52b6751bd556394f206b4ea2b59584499b2aca53224288ed935e42aa4d929"
+  },
+  {
+   "name": "github_robots",
+   "request": "https://github.com/robots.txt",
+   "status_line": "HTTP/1.1 200 OK",
+   "bytes": 30190,
+   "sha256": "8574d173addf5845b005be576c1ace600547d47d00642d4f4b6587e2c5749da4"
+  },
+  {
+   "name": "github_raw_robots",
+   "request": "https://raw.githubusercontent.com/robots.txt",
+   "status_line": "HTTP/1.1 404 Not Found",
+   "bytes": 14,
+   "sha256": "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed"
+  },
+  {
+   "name": "brreg_rollegruppetyper",
+   "request": "https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper",
+   "status_line": "HTTP/1.1 200 OK",
+   "bytes": 3568,
+   "sha256": "4a141e1424b8826ef57c5836edfc529b8994f1f8e1969bf389544f8bd8e2287b",
+   "probed_at_utc": "2026-11-16T10:42Z"
+  },
+  {
+   "name": "stotte_status",
+   "request": "https://stottetiltak-registerinfo-api.app.brreg.no/api/v1/kodeliste/stottetiltaksstatus?language=ENG",
+   "status_line": "HTTP/1.1 403 Forbidden",
+   "bytes": 120,
+   "sha256": "a484dd313da936239f1710b91625a258375a398dd04c591d12942d2bcaa4d955",
+   "probed_at_utc": "2026-11-16T10:42Z"
+  },
+  {
+   "name": "stotte_status_nested",
+   "request": "https://stottetiltak-registerinfo-api.app.brreg.no/api/v1/kodeliste/stoettetiltakstype/stoettetiltakstype.stoettetildelingMedStatsstoette/stottetiltaksstatus?language=ENG",
+   "status_line": "HTTP/1.1 200 OK",
+   "bytes": 680,
+   "sha256": "68bf69d55bcefe3aad4b0ae646730c582164077195b49bc4e80ff36354845a89",
+   "probed_at_utc": "2026-11-16T10:42Z"
+  }
+ ]
+}

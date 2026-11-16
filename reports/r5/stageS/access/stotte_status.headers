@@ -1,0 +1,14 @@
+HTTP/1.1 403 Forbidden
+x-content-type-options: nosniff
+x-xss-protection: 0
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+pragma: no-cache
+expires: 0
+strict-transport-security: max-age=157680000; includeSubDomains
+x-frame-options: DENY
+content-type: application/json
+transfer-encoding: chunked
+date: Mon, 16 Nov 2026 10:41:50 GMT
+set-cookie: 470e48ae128a54fceeff5109ea01320d=d946c32930871ef60ff6f96f08ca8bf2; path=/; HttpOnly; Secure; SameSite=None
+Set-Cookie: BIGipServer~OCP-prd~ocp01.prd.base.brreg.no-router-443=1040354314.47873.0000; path=/; Httponly; Secure
+

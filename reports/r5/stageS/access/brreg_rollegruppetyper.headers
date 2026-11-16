@@ -1,0 +1,17 @@
+HTTP/1.1 200 OK
+vary: Origin
+vary: Access-Control-Request-Method
+vary: Access-Control-Request-Headers
+x-content-type-options: nosniff
+x-xss-protection: 0
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+pragma: no-cache
+expires: 0
+strict-transport-security: max-age=157680000; includeSubDomains
+x-frame-options: DENY
+content-type: application/json
+transfer-encoding: chunked
+date: Mon, 16 Nov 2026 10:41:48 GMT
+set-cookie: 53bf1040d47e993b20ba0322208d7b80=d96d827c464518c2a38701e70d4a8985; path=/; HttpOnly; Secure; SameSite=None
+Set-Cookie: BIGipServer~OCP-prd~ocp01.prd.base.brreg.no-router-443=1040354314.47873.0000; path=/; Httponly; Secure
+

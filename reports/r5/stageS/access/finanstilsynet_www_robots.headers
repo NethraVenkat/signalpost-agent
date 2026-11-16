@@ -1,0 +1,24 @@
+HTTP/1.1 200 OK
+Date: Mon, 16 Nov 2026 08:22:27 GMT
+Content-Type: text/plain
+Content-Length: 144
+Connection: keep-alive
+Vary: accept-encoding
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+Request-Context: appId=cid-v1:71ca9df4-fe86-4a6f-abab-3fe88173fc18
+X-Frame-Options: sameorigin
+X-Content-Type-Options: nosniff
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: no-referrer
+Cross-Origin-Embedder-Policy: unsafe-none
+Cross-Origin-Opener-Policy: unsafe-none
+Cross-Origin-Resource-Policy: cross-origin
+Cache-Control: public, max-age=14400
+Accept-Ranges: bytes
+last-modified: Mon, 16 Nov 2026 08:22:27 GMT
+expires: Mon, 16 Nov 2026 12:22:27 GMT
+cf-cache-status: EXPIRED
+Server: cloudflare
+CF-RAY: a5b516828daf7fdd-MAA
+alt-svc: h3=":443"; ma=86400
+

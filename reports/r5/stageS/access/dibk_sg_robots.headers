@@ -1,0 +1,15 @@
+HTTP/1.1 200 OK
+Date: Mon, 16 Nov 2026 08:22:28 GMT
+Content-Type: text/plain
+Content-Length: 482
+Connection: keep-alive
+last-modified: Thu, 12 Nov 2026 17:03:12 GMT
+strict-transport-security: max-age=0; includeSubDomains; preload
+Accept-Ranges: bytes
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+cf-cache-status: HIT
+X-Content-Type-Options: nosniff
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=9Gjj9lxij9p%2FTUy5oviD528ZZpGs0GmIJULtVjy5yhPTa0Vu9Ta9CWOIjUijKY%2FFrcw5l2yggA%2BiGXpfrw0HC28UBFy8d31RHqiceQvy0UzuAYNbwX3IB5URY0Z2wcPyOXBWGZg057mGM9cKruc65g%3D%3D"}]}
+Server: cloudflare
+CF-RAY: a5b5168d6db7d431-MAA
+

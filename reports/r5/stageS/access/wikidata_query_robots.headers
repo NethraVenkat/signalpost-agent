@@ -1,0 +1,23 @@
+HTTP/1.1 200 OK
+date: Mon, 16 Nov 2026 08:22:13 GMT
+server: Apache/2.4.68 (Debian)
+reporting-endpoints: csp="https://www.wikidata.org/w/api.php?action=cspreport&format=json&source=wdqs-gui"
+content-security-policy: default-src 'none'; script-src 'report-sample' 'self'; script-src-attr 'report-sample'; style-src 'report-sample' 'self' 'unsafe-inline'; style-src-attr 'unsafe-inline'; img-src 'self' data: blob: https://commons.wikimedia.org https://upload.wikimedia.org https://thumb.wikimedia.org https://maps.wikimedia.org https://tile.openstreetmap.org https://www.wikidata.org; font-src 'self' data:; connect-src 'self' https://query.wikidata.org https://www.wikidata.org https://commons.wikimedia.org https://en.wikipedia.org https://www.mediawiki.org https://maps.wikimedia.org https://meta.wikimedia.org; frame-src 'self' data:; form-action 'self' https://query.wikidata.org; frame-ancestors *; base-uri 'none'; object-src 'none'; worker-src 'self' blob:; manifest-src 'self'; report-uri https://www.wikidata.org/w/api.php?action=cspreport&format=json&source=wdqs-gui; report-to csp
+last-modified: Sat, 24 Oct 2026 08:59:22 GMT
+content-length: 95
+cache-control: max-age=3600, must-revalidate
+content-type: text/plain
+etag: "5f-65e9250142e80"
+age: 0
+accept-ranges: bytes
+x-cache: cp5022 hit, cp5022 miss
+x-cache-status: hit-local
+strict-transport-security: max-age=106384710; includeSubDomains; preload
+report-to: { "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0" }] }
+nel: { "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction": 0.0}
+x-client-ip: 2001:4490:4ea5:7b78:cde6:c62b:c49:e25b
+set-cookie: WMF-Uniq=rv9jvf2NW7wmGgeApLpsPQQaAAAAAFvdn1jPQkal4bP7r6NhbqX24danGuCPCOxK;Domain=.wikidata.org;Path=/;HttpOnly;secure;SameSite=None;Expires=Tue, 16 Nov 2027 00:00:00 GMT
+x-request-id: c23b9820-add3-4da1-8147-d747af6a0092
+x-analytics: 
+server-timing: cache;desc="hit-local", host;desc="cp5022",co_id;desc="2864892825"
+

@@ -1,0 +1,28 @@
+HTTP/1.1 200 OK
+date: Mon, 16 Nov 2026 07:59:12 GMT
+cache-control: s-maxage=3600, must-revalidate, max-age=0
+server: ATS/9.2.16
+x-content-type-options: nosniff
+x-article-id: 16264857
+x-wiki-id: wikidatawiki
+last-modified: Fri, 30 Oct 2026 13:58:26 GMT
+content-type: text/plain; charset=utf-8
+age: 1383
+accept-ranges: bytes
+vary: Accept-Encoding
+x-cache: cp5022 hit, cp5022 hit/8
+x-cache-status: hit-front
+strict-transport-security: max-age=106384710; includeSubDomains; preload
+report-to: { "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0" }] }
+nel: { "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction": 0.0}
+set-cookie: WMF-Last-Access=16-Nov-2026;Path=/;HttpOnly;secure;Expires=Fri, 18 Dec 2026 00:00:00 GMT
+set-cookie: WMF-Last-Access-Global=16-Nov-2026;Path=/;Domain=.wikidata.org;HttpOnly;secure;Expires=Fri, 18 Dec 2026 00:00:00 GMT
+x-client-ip: 2001:4490:4ea5:7b78:cde6:c62b:c49:e25b
+set-cookie: GeoIP=IN:TN:Tirunelveli:8.73:77.69:v4; Path=/; secure; Domain=.wikidata.org
+set-cookie: NetworkProbeLimit=0.001;Path=/;Secure;SameSite=None;Max-Age=3600
+set-cookie: WMF-Uniq=QNuEPH8Q2wh6hwAKL7To_QQaAAAAAFvdUTBd1b_NGWuM43Z65pCV-BIH6x33NTUd;Domain=.wikidata.org;Path=/;HttpOnly;secure;SameSite=None;Expires=Tue, 16 Nov 2027 00:00:00 GMT
+content-length: 15896
+x-request-id: 8b6e8ee5-541c-4db5-8120-a0210dd30935
+x-analytics: 
+server-timing: cache;desc="hit-front", host;desc="cp5022",co_id;desc="369913450"
+

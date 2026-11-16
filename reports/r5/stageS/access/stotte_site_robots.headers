@@ -1,0 +1,9 @@
+HTTP/1.1 307 Temporary Redirect
+location: /robots.txt/oppslag/stoettetildeling
+date: Mon, 16 Nov 2026 08:22:20 GMT
+keep-alive: timeout=5
+transfer-encoding: chunked
+set-cookie: c83ab5b3595a561ca8ca898bec348fec=0a2dc4f05ffaee6013d0cb2d48fe6980; path=/; HttpOnly; Secure; SameSite=None
+Set-Cookie: BIGipServer~OCP-prd~ocp01.prd.base.brreg.no-router-443=1040354314.47873.0000; path=/; Httponly; Secure
+Strict-Transport-Security: max-age=157680000; includeSubDomains
+
