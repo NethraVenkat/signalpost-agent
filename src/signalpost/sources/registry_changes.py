@@ -15,7 +15,11 @@ METHOD = 'signalpost.registry_changes.v3'
 MAX_EVENTS = 50
 PREFIX = 'registry_change.'
 DATE_LABEL = 'registry publication time (not effective date)'
-CHUNK = 200
+# Organisation numbers per update-feed request. Every evidence record must carry
+# its exact request URL, and each record citing a batch response repeats the
+# whole number list. 20 numbers keep that URL ~450 characters (200 made ~2.6
+# KB per record, ~89 MB of a 500-company run) for a few dozen extra requests.
+CHUNK = 20
 PAGE_SIZE = 1000
 LOOKBACK_MONTHS = 36
 
