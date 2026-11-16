@@ -726,3 +726,8 @@
 
 - CC BY 4.0 (data.norge.no); the current nightly CSV is used, not the unmaintained hotell.difi.no copy; robots 404. Bundled dated snapshot (13,813 records / 7,733 orgnrs, 749 KB). Grade meanings are quoted from the publisher's catalogue entry; the undocumented numeric visit-type code is published raw, with no guessed label.
 - Exact rule: the inspection's own `orgnummer` equals ours, or a registry-proven subunit of ours (current underenheter response, exact parent). A subunit match carries the subunit claim's evidence as a dependency, and the verifier re-reads the saved registry body to confirm `overordnetEnhet` equals ours. Tests reject an unproven subunit, a missing dependency, a different parent, forged values, impossible/out-of-window dates and grades outside 0–3. Wired like S3 (local, no network; default on; fixtures/replays opt out). Full gate: **1353 passed in 610.91s** (stageS/S5/pytest.txt).
+
+
+## 2026-11-16 - Stage S6 Brreg signatur/prokura: skipped
+
+- The open role-group code list (21 types, receipt saved) has no SIGN/PROK, and the 100 saved baseline /roller bodies contain only already-published groups. Signatur/prokura need the authorised Maskinporten API, so S6 is skipped and recorded. Docs-only; runtime unchanged from S5 (1353 passed).
