@@ -4,6 +4,8 @@ S2 Støtteregisteret (Brønnøysundregistrene, NLOD 2.0): dated state-aid awards
 whose single registered beneficiary role holds our exact organisation number.
 S3 Research Council of Norway projects and SkatteFUNN approvals (NLOD 2.0),
 from a bundled snapshot built by scripts/build_official_snapshots.py.
+S4 Finanstilsynet registry (NLOD 2.0): own licences and agent registrations of the
+Company entity whose organisationNumber equals ours.
 
 No names, domains or fuzzy matching widen company scope. Failures and partial
 coverage stay explicit; dates and amounts are copied only when the record
@@ -18,16 +20,17 @@ from ..budget import SourceFailure
 from .extract import Section, add, missing, response_source
 
 METHOD = 'signalpost.exact_official.v1'
-FAMILIES = ('state_aid', 'research')
+FAMILIES = ('state_aid', 'research', 'licences')
 # Site grouping and labels for each family.
-SITE_GROUP = {'state_aid': 'activity', 'research': 'activity'}
-LABELS = {'state_aid.award.': 'State aid award', 'research.project.': 'Research or innovation project'}
+SITE_GROUP = {'state_aid': 'activity', 'research': 'activity', 'licences': 'what-it-does'}
+LABELS = {'state_aid.award.': 'State aid award', 'research.project.': 'Research or innovation project',
+          'licences.': 'Finanstilsynet licence/registration'}
 STOTTE_HOST = 'stottetiltak-registerinfo-api.app.brreg.no'
 STOTTE = 'https://' + STOTTE_HOST + '/api/v1/soek/stoettetildeling'
 STOTTE_PAGE_SIZE = 100
 STOTTE_MAX_PAGES = 5
-HOSTS = {STOTTE_HOST}
-SECTION_BY_HOST = {STOTTE_HOST: 'state_aid'}
+HOSTS = {STOTTE_HOST, 'api.finanstilsynet.no'}
+SECTION_BY_HOST = {STOTTE_HOST: 'state_aid', 'api.finanstilsynet.no': 'licences'}
 # The Støtteregisteret API host resets connections on /robots.txt instead of
 # serving a file (receipts in reports/r5/stageS/access). That is recorded as
 # "no robots file served", the same as 404 — never as an allow-list override
@@ -171,7 +174,8 @@ async def state_aid(org, http, now):
     return section
 
 
-FETCHERS = {'state_aid': lambda org, http, now: state_aid(org, http, now)}
+FETCHERS = {'state_aid': lambda org, http, now: state_aid(org, http, now),
+            'licences': lambda org, http, now: licences(org, http, now)}
 # Local bundled snapshots: no network, evidence body = the exact bundled record.
 LOCAL = {'research': lambda org, now, blobs: record_section('research', 'research.project.', load_bundle(RESEARCH_BUNDLE), org, now,
                                                             research_value, blobs, 'official_research', 'project_id')}
@@ -331,6 +335,104 @@ def record_section(family, field_prefix, bundle, org, now, derive, blobs, source
     return section
 
 
+# --- S4 Finanstilsynet registry (live exact-orgnr lookup) ---
+FT_HOST = 'api.finanstilsynet.no'
+FT = 'https://' + FT_HOST + '/registry/v2'
+
+
+def ft_search_url(org):
+    return f'{FT}/legal-entities/search?query={org}&entityType=Company&pageSize=50&page=1'
+
+
+def ft_entity_url(entity_id):
+    return f'{FT}/legal-entities?ids={entity_id}'
+
+
+def ft_date(value):
+    if not isinstance(value, str) or not re.fullmatch(r'\d{4}-\d{2}-\d{2}(T[0-9:.]+)?', value):
+        return None
+    return iso_day(value[:10])
+
+
+def licence_values(entity, org):
+    """(value, paths) per licence row of an entity record whose own organisationNumber is ours."""
+    if not isinstance(entity, dict) or org_id(entity.get('organisationNumber')) != org or entity.get('legalEntityType') != 'Company':
+        return []
+    own_id = entity.get('legalEntityId')
+    if not isinstance(own_id, int):
+        return []
+    result = []
+    for i, licence in enumerate(entity.get('licences') or []):
+        if not isinstance(licence, dict):
+            continue
+        holder = licence.get('licensedEntity') or {}
+        kind = licence.get('serviceProviderType')
+        ltype = licence.get('licenceType') or {}
+        code = ltype.get('code')
+        names = ltype.get('name') or {}
+        name = names.get('english') or names.get('norwegian')
+        if not isinstance(code, str) or not re.fullmatch(r'[A-Z0-9_]{2,20}', code) or not isinstance(name, str) or not name.strip():
+            continue
+        base = f'/legalEntities/0/licences/{i}'
+        paths = ['/legalEntities/0/organisationNumber', base + '/licenceType/code',
+                 base + '/licenceType/name/' + ('english' if names.get('english') else 'norwegian')]
+        if kind == 'Licensed' and holder.get('legalEntityId') == own_id:
+            value = {'company_orgnr': org, 'role': 'licensed', 'licence_code': code, 'licence_name': name.strip()}
+            key = f'{code}.self'
+        elif kind == 'Agent' and isinstance(holder.get('legalEntityId'), int) and holder['legalEntityId'] != own_id \
+                and isinstance(holder.get('legalEntityName'), str) and holder['legalEntityName'].strip():
+            # Registered as an agent for another licensed company: not our own licence.
+            value = {'company_orgnr': org, 'role': 'agent', 'licence_code': code, 'licence_name': name.strip(),
+                     'principal': holder['legalEntityName'].strip(), 'principal_registry_id': holder['legalEntityId']}
+            paths += [base + '/licensedEntity/legalEntityName', base + '/serviceProviderType']
+            key = f"{code}.agent.{holder['legalEntityId']}"
+        else:
+            continue
+        registered = ft_date(licence.get('registeredDate'))
+        if registered:
+            value['registered_date'] = registered.isoformat()
+            value['registered_date_source'] = 'registeredDate as published by Finanstilsynet'
+            paths.append(base + '/registeredDate')
+        value.update(registry_entity_id=own_id, label='Finanstilsynet licence/registration')
+        result.append((key, value, paths))
+    return result
+
+
+async def licences(org, http, now):
+    section = Section()
+    search = await http.request(ft_search_url(org), org, headers={'Accept': 'application/json'})
+    data = json.loads(search.body)
+    hits = data.get('legalEntities') if isinstance(data, dict) else None
+    if not isinstance(hits, list):
+        raise SourceFailure('licences_schema')
+    if isinstance(data.get('total'), int) and data['total'] > len(hits):
+        raise SourceFailure('licences_search_incomplete')
+    exact = [h for h in hits if isinstance(h, dict) and org_id(h.get('organisationNumber')) == org and h.get('legalEntityType') == 'Company']
+    if len(exact) > 1:
+        return missing('licences', 'licences_ambiguous_id', state='ambiguous')
+    if not exact:
+        add(section, response_source(search), org, 'licences', 'licences.registrations', None, '/legalEntities',
+            source_class='official_financial_registry', method=METHOD)
+        section.state = 'not_available'
+        return section
+    entity_id = exact[0].get('legalEntityId')
+    if not isinstance(entity_id, int):
+        raise SourceFailure('licences_schema')
+    record = await http.request(ft_entity_url(entity_id), org, headers={'Accept': 'application/json'})
+    entities = (json.loads(record.body) or {}).get('legalEntities')
+    if not isinstance(entities, list) or len(entities) != 1:
+        raise SourceFailure('licences_schema')
+    for key, value, paths in licence_values(entities[0], org):
+        if any(c.field == 'licences.' + key for c in section.claims):
+            continue
+        merged_claim(section, record, org, 'licences', 'licences.' + key, value, paths, 'official_financial_registry')
+    if not section.claims:
+        add(section, response_source(record), org, 'licences', 'licences.registrations', None, '/legalEntities/0/licences',
+            source_class='official_financial_registry', method=METHOD)
+        section.state = 'not_available'
+    return section
+
+
 def number(value):
     """Exact source number as text: no rounding, scaling or scientific notation."""
     return str(int(value)) if float(value).is_integer() else repr(float(value))
@@ -348,6 +450,11 @@ def briefing_sentences(envelope):
         v = claim.value
         when = (f"start year {v['date']}, {v['phase']}" if v['date_precision'] == 'year' else f"decision {v['date']}")
         result.append(Sentence(text=f"{v['label']}: {v['title']}; {when}.", claim_ids=[claim.id]))
+    for claim in sorted((c for c in claims if c.field.startswith('licences.')), key=lambda c: c.field)[:4]:
+        v = claim.value
+        what = (f"licensed: {v['licence_name']} ({v['licence_code']})" if v['role'] == 'licensed' else
+                f"registered agent for {v['principal']}: {v['licence_name']} ({v['licence_code']})")
+        result.append(Sentence(text=f"Finanstilsynet registry — {what}.", claim_ids=[claim.id]))
     for claim in awards:
         v = claim.value
         amount = (f"{number(v['amount'])} {v['currency']}" if 'amount' in v else

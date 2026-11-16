@@ -31,6 +31,7 @@ class Config(BaseModel):
     procurement: bool = True
     state_aid: bool = True  # Stage S2 Støtteregisteret exact-beneficiary awards
     research: bool = True  # Stage S3 bundled RCN/SkatteFUNN exact-owner projects
+    licences: bool = True  # Stage S4 Finanstilsynet exact-orgnr licences/registrations
     adaptive_websites: bool = True
     adaptive_extra_budget: bool = True
     dns_precheck: bool = True

@@ -1,0 +1,12 @@
+HTTP/1.1 200 OK
+Cache-Control: no-store,no-cache
+Pragma: no-cache
+Content-Type: application/json; charset=utf-8; x-api-version=2
+Server: 
+api-supported-versions: 1.0, 2.0
+X-Powered-By: ASP.NET
+X-Powered-By: ARR/3.0
+Strict-Transport-Security: max-age=31536000
+Date: Mon, 16 Nov 2026 11:04:55 GMT
+Content-Length: 22954
+

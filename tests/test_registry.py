@@ -72,7 +72,7 @@ def config(tmp, orgs, **kwargs):
     kwargs.setdefault('official_source_health',False)  # Source-isolation fixtures; production CLI/library default is tested separately.
     kwargs.setdefault('registry_changes', False)  # Legacy fixtures contain no change-feed responses.
     # Registry-only fixtures explicitly opt out; production defaults are tested separately.
-    for feature in ('websites', 'hiring', 'public_activity', 'gleif', 'procurement', 'state_aid', 'research'):
+    for feature in ('websites', 'hiring', 'public_activity', 'gleif', 'procurement', 'state_aid', 'research', 'licences'):
         kwargs.setdefault(feature, False)
     kwargs.setdefault('adaptive_websites', False)  # Legacy single-pass source fixtures.
     kwargs.setdefault('adaptive_extra_budget', False)  # Legacy 8/13-only fixtures.

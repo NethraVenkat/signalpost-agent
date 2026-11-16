@@ -141,6 +141,11 @@ def verify_exact_official(row,data,evidence,stored_body):
                 index=int(receipt['locator'].split('/')[2])
                 award=eo.state_aid_award(items[index],org,at)
                 matched |= bool(award) and award[0]==value and claim['field']=='state_aid.award.'+value['award_id']
+            elif claim['field'].startswith('licences.'):
+                assert receipt['source_url']==eo.ft_entity_url(value['registry_entity_id']),'Wrong Finanstilsynet record'
+                entities=json.loads(body)['legalEntities']
+                assert len(entities)==1
+                matched |= any('licences.'+key==claim['field'] and found==value for key,found,_ in eo.licence_values(entities[0],org))
             elif claim['field'].startswith('research.project.'):
                 matched |= bundled_match(eo,eo.RESEARCH_BUNDLE,eo.research_value,claim,receipt,body,org,row)
             else:raise AssertionError('Unknown exact-ID official claim')
