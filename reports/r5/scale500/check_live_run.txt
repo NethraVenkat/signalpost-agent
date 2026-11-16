@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "<REPO>\.data\r5\scale500-clean\repo\scripts\check_live_run.py", line 48, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "<REPO>\.data\r5\scale500-clean\repo\scripts\check_live_run.py", line 45, in main
+    a=p.parse_args();print(json.dumps(check(a.output,a.organisations,a.state,a.report,a.site,a.count)))
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<REPO>\.data\r5\scale500-clean\repo\scripts\check_live_run.py", line 16, in check
+    result=verify(output,state,count,organisations,report_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<REPO>\.data\r5\scale500-clean\repo\scripts\verify_output.py", line 361, in verify
+    verify_publisher(row['organisation_number'],data,evidence,stored_body)
+  File "<REPO>\.data\r5\scale500-clean\repo\scripts\verify_publisher_identity.py", line 80, in verify
+    assert matched and value['identity_level']=='HIGH','Unsupported publisher identity receipt'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Unsupported publisher identity receipt

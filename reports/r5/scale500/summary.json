@@ -1,0 +1,151 @@
+{
+  "label": "final",
+  "check": "check_live_run-reverify",
+  "checker_clone_head": "1e0fd6bf52e0a575ce1f39daa2f03795e0bbec46",
+  "gates": {
+    "exit_0": true,
+    "check_live_run_exit_0": true,
+    "ordered_terminal_500": true,
+    "five_cited_topics_500": true,
+    "unsupported_0": true,
+    "http_le_9250": true,
+    "wall_le_scaled_time_budget": true,
+    "largest_profile_lt_250000": true,
+    "cost_0": true,
+    "zero_llm_search_calls": true
+  },
+  "all_gates_pass": true,
+  "source_health": {
+    "enhetsregisteret": "reachable",
+    "accounts": "reachable",
+    "nav": "reachable",
+    "gleif": "reachable"
+  },
+  "official_source_outages_counts": {},
+  "input_rows": 500,
+  "terminal_envelopes": 500,
+  "http_requests": 4156,
+  "limits": {
+    "max_requests": 9250,
+    "max_cost_usd": 0.0,
+    "time_budget_seconds": 2100.0,
+    "deadline_fraction": 0.85,
+    "request_timeout": 10.0,
+    "host_concurrency": 10,
+    "effective_time_budget_seconds": 2100.0,
+    "scaled_hard_request_cap": 9250,
+    "scaled_hard_time_seconds": 10500.0
+  },
+  "wall_seconds": 1838.9439841999847,
+  "runtime_seconds": 1816.219,
+  "deadline_hits": 500,
+  "total_cost_usd": 0.0,
+  "search_queries": 0,
+  "llm_calls": 0,
+  "site": {
+    "state": "available",
+    "companies": 500,
+    "input_records": 500,
+    "pages": 502,
+    "skipped_invalid_identifiers": 0,
+    "total_bytes": 180685852,
+    "largest_profile_data_bytes": 509014,
+    "largest_profile_bytes": 222718
+  },
+  "facts": 65784,
+  "websites": 37,
+  "social_urls": 16,
+  "social_companies": 10,
+  "jobs": 2,
+  "activity_claims": 5819,
+  "families": {
+    "identity": 14560,
+    "subunits": 4174,
+    "roles": 5397,
+    "accounts": 35600,
+    "activity": 5819,
+    "website": 232,
+    "hiring": 2
+  },
+  "section_states": {
+    "accounts": {
+      "available": 485,
+      "failed": 15
+    },
+    "activity": {
+      "available": 290,
+      "failed": 210
+    },
+    "gleif": {
+      "failed": 500
+    },
+    "hiring": {
+      "not_available": 483,
+      "failed": 15,
+      "available": 2
+    },
+    "identity": {
+      "available": 485,
+      "failed": 15
+    },
+    "procurement": {
+      "failed": 500
+    },
+    "roles": {
+      "available": 483,
+      "failed": 15,
+      "not_available": 2
+    },
+    "subunits": {
+      "available": 358,
+      "failed": 15,
+      "not_available": 127
+    },
+    "website": {
+      "not_available": 261,
+      "failed": 169,
+      "available": 37,
+      "ambiguous": 28,
+      "blocked": 5
+    }
+  },
+  "verification": {
+    "lines": 500,
+    "schema_valid": true,
+    "published_claims": 65784,
+    "source_blobs_verified": 1900,
+    "synthesis_companies": 500,
+    "synthesis_sentences": 8875,
+    "synthesis_unverified_values": 0,
+    "financial_inputs_verified": 30665,
+    "derived_financial_metrics_verified": 1084,
+    "registry_events_verified": 5819,
+    "filing_year_facts_verified": 4935,
+    "exact_public_items_verified": 0,
+    "briefing_companies": 500,
+    "briefing_sentences": 2982,
+    "briefing_short_companies": 0,
+    "briefing_unverified_values": 0,
+    "briefing_topic_coverage": {
+      "activity": 500,
+      "change": 500,
+      "unknown": 500,
+      "financial": 500,
+      "takeaway": 500
+    },
+    "complete_briefing_contracts": 500,
+    "newer_filing_flags": 0,
+    "site_verified": true,
+    "terminal_envelopes": 500,
+    "source_failures_permitted": true,
+    "http_requests": 4156,
+    "wall_seconds": 1837.391,
+    "cost_usd": 0
+  },
+  "artifacts": {
+    "envelopes.jsonl": "5c3b33bd743890733f288f9ae1a9e864c424cbb2807c837a30f01309639a6ff3",
+    "profiles.jsonl": "bd6d6f4a9e2767984bf54fcca313a610fd80f1c0d81cb54d62ea88d241c3f86a",
+    "report.json": "3342c24510ee5e952c5f34b43ecafed75fad3632dd719edd14c61fe74655833f"
+  },
+  "work_directory": "<REPO>\\.data\\r5\\scale500-clean\\run-final"
+}

@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "git",
+    "clone",
+    "--no-hardlinks",
+    "--branch",
+    "revision/r5",
+    "<REPO>",
+    "<REPO>\\.data\\r5\\scale500-clean\\repo"
+  ],
+  "cwd": "<REPO>",
+  "exit_code": 0,
+  "wall_seconds": 5.488078800000949,
+  "completed_at_utc": "2026-11-16T08:07:19.904124+00:00"
+}

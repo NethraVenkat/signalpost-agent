@@ -33,3 +33,7 @@ stageR7/new_websites.md -text whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
 stageL/*.json -text
 stageL/**/*.json -text whitespace=cr-at-eol
 stageL/*.md -text whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+
+# Keep P2 exact URL proof excerpts byte-identical.
+scale500/urls.md -text
+scale500/urls.json -text

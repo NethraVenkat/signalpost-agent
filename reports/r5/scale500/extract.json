@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "<REPO>\\.data\\r5\\scale500-clean\\repo\\.venv\\Scripts\\python.exe",
+    "<REPO>\\.data\\r5\\scale500-clean\\repo\\scripts\\extract_bulk.py",
+    "--bulk",
+    "<REPO>\\.data\\r5\\inputs\\brreg-enheter-20261116\\enheter_2026-11-16T04-25-21.340365166.csv.gz",
+    "--batch",
+    "<REPO>\\reports\\r5\\scale500\\companies500.jsonl",
+    "--output",
+    "<REPO>\\reports\\r5\\scale500\\registry500.csv"
+  ],
+  "cwd": "<REPO>\\.data\\r5\\scale500-clean\\repo",
+  "exit_code": 0,
+  "wall_seconds": 13.463144200009992,
+  "completed_at_utc": "2026-11-16T08:07:40.333939+00:00"
+}
