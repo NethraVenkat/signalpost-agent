@@ -6,6 +6,8 @@ S3 Research Council of Norway projects and SkatteFUNN approvals (NLOD 2.0),
 from a bundled snapshot built by scripts/build_official_snapshots.py.
 S4 Finanstilsynet registry (NLOD 2.0): own licences and agent registrations of the
 Company entity whose organisationNumber equals ours.
+S5 Mattilsynet Smilefjes inspections (CC BY 4.0) at our orgnr or a registry-proven
+subunit, from a bundled snapshot.
 
 No names, domains or fuzzy matching widen company scope. Failures and partial
 coverage stay explicit; dates and amounts are copied only when the record
@@ -20,11 +22,12 @@ from ..budget import SourceFailure
 from .extract import Section, add, missing, response_source
 
 METHOD = 'signalpost.exact_official.v1'
-FAMILIES = ('state_aid', 'research', 'licences')
+FAMILIES = ('state_aid', 'research', 'licences', 'inspections')
 # Site grouping and labels for each family.
-SITE_GROUP = {'state_aid': 'activity', 'research': 'activity', 'licences': 'what-it-does'}
+SITE_GROUP = {'state_aid': 'activity', 'research': 'activity', 'licences': 'what-it-does', 'inspections': 'activity'}
 LABELS = {'state_aid.award.': 'State aid award', 'research.project.': 'Research or innovation project',
-          'licences.': 'Finanstilsynet licence/registration'}
+          'licences.': 'Finanstilsynet licence/registration',
+          'inspections.inspection.': 'Food safety inspection (Mattilsynet)'}
 STOTTE_HOST = 'stottetiltak-registerinfo-api.app.brreg.no'
 STOTTE = 'https://' + STOTTE_HOST + '/api/v1/soek/stoettetildeling'
 STOTTE_PAGE_SIZE = 100
@@ -177,8 +180,9 @@ async def state_aid(org, http, now):
 FETCHERS = {'state_aid': lambda org, http, now: state_aid(org, http, now),
             'licences': lambda org, http, now: licences(org, http, now)}
 # Local bundled snapshots: no network, evidence body = the exact bundled record.
-LOCAL = {'research': lambda org, now, blobs: record_section('research', 'research.project.', load_bundle(RESEARCH_BUNDLE), org, now,
-                                                            research_value, blobs, 'official_research', 'project_id')}
+LOCAL = {'research': lambda org, now, blobs, envelope: record_section('research', 'research.project.', load_bundle(RESEARCH_BUNDLE), org,
+                                                                      now, research_value, blobs, 'official_research', 'project_id'),
+         'inspections': lambda org, now, blobs, envelope: inspections_section(org, envelope, now, blobs)}
 
 
 def enabled_families(config):
@@ -195,7 +199,7 @@ async def enrich(envelopes, client, config, budget, blobs, update):
         if family in LOCAL:
             for org in eligible:
                 try:
-                    section = LOCAL[family](org, now, blobs)
+                    section = LOCAL[family](org, now, blobs, envelopes[org])
                 except (SourceFailure, ValueError, TypeError, OSError) as exc:
                     section = missing(family, getattr(exc, 'code', type(exc).__name__))
                 update(envelopes[org], family, section)
@@ -433,6 +437,89 @@ async def licences(org, http, now):
     return section
 
 
+# --- S5 Mattilsynet Smilefjes inspections (bundled snapshot) ---
+INSPECTIONS_BUNDLE = _Path(__file__).resolve().parents[1] / 'data' / 'food_inspections.json.gz'
+# Grade meanings as published by Mattilsynet in the dataset's catalogue entry (data.norge.no).
+INSPECTION_COLUMNS = ('tilsynsobjektid', 'orgnummer', 'navn', 'postnr', 'poststed', 'tilsynid', 'status', 'dato',
+                      'total_karakter', 'tilsynsbesoektype')
+GRADES = {'0': 'No breaches of the regulations found (big smile)',
+          '1': 'Minor breaches not requiring follow-up (big smile)',
+          '2': 'Breaches requiring follow-up (straight mouth)',
+          '3': 'Serious breaches of the regulations (sad mouth)'}
+
+
+def proven_subunits(envelope):
+    """Registry-proven subunits of this company: orgnr -> the subunits.unit claim."""
+    units = {}
+    for c in envelope.claims:
+        if (c.field.startswith('subunits.unit.') and c.availability == 'available' and not c.carried_forward
+                and isinstance(c.value, dict) and org_id(str(c.value.get('organisation_number') or ''))):
+            units[str(c.value['organisation_number'])] = c
+    return units
+
+
+def inspection_value(record, org, now, subunits=()):
+    if record.get('source') != 'smilefjes':
+        return None
+    f = record.get('fields') or {}
+    workplace = (f.get('orgnummer') or '').strip()
+    if workplace == org:
+        matched = 'company'
+    elif workplace in subunits:
+        matched = 'registered_subunit'
+    else:
+        return None
+    raw = f.get('dato') or ''
+    if not re.fullmatch(r'\d{8}', raw):
+        return None
+    try:
+        day = date(int(raw[4:]), int(raw[2:4]), int(raw[:2]))
+    except ValueError:
+        return None
+    if not window_start(now) <= day <= now.date():
+        return None
+    grade = f.get('total_karakter')
+    if grade not in GRADES or not (f.get('tilsynid') or '').strip():
+        return None
+    value = {'company_orgnr': org, 'workplace_orgnr': workplace, 'matched_as': matched, 'inspection_id': f['tilsynid'].strip(),
+             'date': day.isoformat(), 'date_precision': 'day', 'date_source': 'inspection date (dato, ddmmyyyy) as published',
+             'grade': int(grade), 'result': GRADES[grade], 'label': 'Food safety inspection (Mattilsynet smilefjes)'}
+    paths = ['/fields/orgnummer', '/fields/tilsynid', '/fields/dato', '/fields/total_karakter']
+    for key, name in (('navn', 'workplace_name'), ('poststed', 'place'), ('tilsynsbesoektype', 'visit_type_code')):
+        if (f.get(key) or '').strip():
+            value[name] = f[key].strip(); paths.append('/fields/' + key)
+    return value, paths
+
+
+def inspections_section(org, envelope, now, blobs):
+    bundle = load_bundle(INSPECTIONS_BUNDLE)
+    units = proven_subunits(envelope)
+    section = Section()
+    texts = list(bundled_records(bundle, org))
+    for unit in sorted(units):
+        texts += [t for t in bundled_records(bundle, unit) if t not in texts]
+    probe = Section()
+    for text in texts:
+        derived = inspection_value(json.loads(text), org, now, units)
+        if not derived:
+            continue
+        value, _ = derived
+        sub = record_section('inspections', 'inspections.inspection.', {'sources': bundle['sources'], 'records': {org: [text]}},
+                             org, now, lambda r, o, n: inspection_value(r, o, n, units), blobs, 'official_food_inspection', 'inspection_id')
+        for claim in sub.claims:
+            if any(c.field == claim.field for c in section.claims):
+                continue
+            if value['matched_as'] == 'registered_subunit':
+                # The parent link is a dependency: cite the registry subunit claim's own evidence.
+                claim.evidence_ids = list(dict.fromkeys(claim.evidence_ids + units[value['workplace_orgnr']].evidence_ids))
+            section.claims.append(claim)
+        section.evidence += sub.evidence
+    if not section.claims:
+        section.state = 'not_available'
+        section.errors += missing('inspections', 'inspections_none_in_bundled_snapshot', state='not_available').errors
+    return section
+
+
 def number(value):
     """Exact source number as text: no rounding, scaling or scientific notation."""
     return str(int(value)) if float(value).is_integer() else repr(float(value))
@@ -455,6 +542,11 @@ def briefing_sentences(envelope):
         what = (f"licensed: {v['licence_name']} ({v['licence_code']})" if v['role'] == 'licensed' else
                 f"registered agent for {v['principal']}: {v['licence_name']} ({v['licence_code']})")
         result.append(Sentence(text=f"Finanstilsynet registry — {what}.", claim_ids=[claim.id]))
+    for claim in sorted((c for c in claims if c.field.startswith('inspections.inspection.')),
+                        key=lambda c: (c.value['date'], c.id), reverse=True)[:2]:
+        v = claim.value
+        where = 'at the company' if v['matched_as'] == 'company' else f"at registered workplace {v['workplace_orgnr']}"
+        result.append(Sentence(text=f"Food safety inspection {where}: {v['date']}; grade {v['grade']} — {v['result']}.", claim_ids=[claim.id]))
     for claim in awards:
         v = claim.value
         amount = (f"{number(v['amount'])} {v['currency']}" if 'amount' in v else

@@ -120,6 +120,33 @@ def bundled_match(eo,bundle_path,derive,claim,receipt,body,org,row):
     return value==claim['value'] and claim['field'].endswith('.'+record['source']+'.'+str(record_id))
 
 
+def inspection_match(eo,claim,receipt,body,org,row,data,evidence,stored_body):
+    """Smilefjes: exact bundled record at our orgnr, or at a subunit proven by the registry."""
+    from datetime import datetime
+    value=claim['value'];workplace=value['workplace_orgnr'];bundle=eo.load_bundle(eo.INSPECTIONS_BUNDLE)
+    if body not in bundle['records'].get(workplace,[]):return False
+    meta=eo.bundled_sources(bundle)['smilefjes']
+    if receipt['source_url']!=meta['source_url'] or receipt['retrieved_at']!=meta['retrieved_at']:return False
+    units={}
+    if value['matched_as']=='registered_subunit':
+        unit=next((c for c in data['claims'] if c['field']=='subunits.unit.'+workplace and c['availability']=='available'
+                   and not c.get('carried_forward')),None)
+        if unit is None or not set(unit['evidence_ids'])<=set(claim['evidence_ids']):return False
+        proven=False
+        for eid in unit['evidence_ids']:
+            e=evidence[eid]
+            if not e['source_url'].startswith('https://data.brreg.no/enhetsregisteret/api/underenheter?'):continue
+            item=json.loads(stored_body(e['content_sha256']))
+            for part in e['locator'].strip('/').split('/'):item=item[int(part)] if isinstance(item,list) else item[part]
+            proven|=str(item.get('organisasjonsnummer'))==workplace and str(item.get('overordnetEnhet'))==org
+        if not proven:return False
+        units={workplace:unit}
+    elif workplace!=org:return False
+    completed=(row.get('run') or {}).get('completed_at') or row.get('completed_at') or meta['retrieved_at']
+    derived=eo.inspection_value(json.loads(body),org,datetime.fromisoformat(completed.replace('Z','+00:00')),units)
+    return bool(derived) and derived[0]==value and claim['field']=='inspections.inspection.smilefjes.'+value['inspection_id']
+
+
 def verify_exact_official(row,data,evidence,stored_body):
     """Stage S: re-derive every exact-ID official claim from its saved source record."""
     from signalpost.sources import exact_official as eo
@@ -146,6 +173,8 @@ def verify_exact_official(row,data,evidence,stored_body):
                 entities=json.loads(body)['legalEntities']
                 assert len(entities)==1
                 matched |= any('licences.'+key==claim['field'] and found==value for key,found,_ in eo.licence_values(entities[0],org))
+            elif claim['field'].startswith('inspections.inspection.'):
+                matched |= inspection_match(eo,claim,receipt,body,org,row,data,evidence,stored_body)
             elif claim['field'].startswith('research.project.'):
                 matched |= bundled_match(eo,eo.RESEARCH_BUNDLE,eo.research_value,claim,receipt,body,org,row)
             else:raise AssertionError('Unknown exact-ID official claim')

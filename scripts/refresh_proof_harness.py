@@ -118,7 +118,7 @@ def one(work,label,case,previous=None,fixture_path=FIXTURE):
         if host not in hosts:raise SourceFailure('no_such_domain')
         return ['93.184.216.34']
     async def replay(config):
-        config.gleif=False;config.procurement=False;config.state_aid=False;config.research=False;config.licences=False  # Saved Stage C fixture predates these sources.
+        config.gleif=False;config.procurement=False;config.state_aid=False;config.research=False;config.licences=False;config.inspections=False  # Saved Stage C fixture predates these sources.
         config.official_source_health=False  # Saved pre-P0 source collection; dedicated resilience tests cover startup probes.
         config.previous=previous;config.state_dir=target/'state';config.nav_index_path=fixture_path/'nav_index.json.gz'
         config.website_politeness_seconds=0  # no network exists in this harness

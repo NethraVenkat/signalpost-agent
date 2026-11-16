@@ -89,7 +89,7 @@ def test_seven_evaluator_flags_enable_both_new_exact_sources(tmp_path,monkeypatc
     from signalpost.config import Config
     async def capture(cfg):
         assert cfg.gleif and cfg.procurement
-        assert cfg.state_aid and cfg.research and cfg.licences  # Stage S default-on with the seven evaluator flags
+        assert cfg.state_aid and cfg.research and cfg.licences and cfg.inspections  # Stage S default-on with the seven evaluator flags
         assert cfg.websites and cfg.hiring and cfg.public_activity
         assert (cfg.website_request_cap,cfg.website_total_request_cap)==(8,13)
         return dict(emitted_envelopes=100,invalid_inputs=[],requests=0,runtime_ms=0,changes=0,
