@@ -48,3 +48,5 @@ Full final serial pytest gate: **1,164 passed in225.08seconds**. Every implement
 ## Hand check
 
 Review PEAK LANDSCAPES website+Instagram and CRAFTING HOUSE website from the exact receipts in new_websites.md. Review recovered MELDAL's exact-number proof alongside the disclosed stale template copyright. Confirm the withheld ETNE template and whole-rule rollback. No other new website/social URL occurs. Brand additions and all removals are also retained in stageX/new_items.md.
+
+Human verdicts: 3/3 CORRECT (see DECISIONS.md).

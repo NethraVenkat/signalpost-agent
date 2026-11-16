@@ -1,0 +1,418 @@
+{
+  "reviewer": "Nethra Venkat",
+  "review_date": "2026-11-15",
+  "stage": "R7",
+  "reviews": [
+    {
+      "organisation_number": "997995414",
+      "company": "PEAK LANDSCAPES AS",
+      "kind": "website",
+      "url": "https://www.peaklandscapes.no/",
+      "saved_value_url": "https://www.peaklandscapes.no",
+      "field": "official_website",
+      "sample": "seed20261017",
+      "stage": "R7",
+      "change": "added",
+      "value_sha256": "db04d5ef181286b78204ba2181d0812ab0579a90e3c11768a287dbe46cd9c259",
+      "verdict": "correct",
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-15",
+      "method": "Human hand-check with independent web verification, supplied explicitly in conversation.",
+      "basis": "Exact legal name \"Peak Landscapes AS\" + exact register address \"Alunsjøveien 65, 0957 Oslo\" in footer; site links instagram.com/peak_landscapes_as/. No org nr on site. \"© 2025 by SGNXT\" is the web designer credit, not the owner.",
+      "automated_verdict": "correct",
+      "automated_checks": [
+        {
+          "verdict": "CORRECT",
+          "reason": "Saved publisher receipt reconstructed: publisher_name_registered_place"
+        }
+      ],
+      "proof_tier": "publisher_name_registered_place",
+      "identity_level": "HIGH",
+      "receipts": [
+        {
+          "id": "abc0232ac6e583270e4f3bf2ebaaa15937dec8ec1ff61fdb77d92baf6674ab3a",
+          "source_url": "https://www.peaklandscapes.no/about-us",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-14T18:04:43.546048Z",
+          "content_sha256": "ee8ece818b865017ce536d310998ad0df90518a0b6a78fa588d05b7fe0d08139",
+          "claim_span": "><span class=\"wixui-rich-text__text\">Om Peak Landscapes AS</span></h1></div><!--/$--><!--$--><div id=\"comp-lj5jwjaj6\" class=\"N8MGzv _v6ohL AWXfZq PO9MfV comp-lj5jwjaj6 wixui-rich-text\" data-testid=\"richTextElement\"><p class=\"font_2 wixui-rich-text__text\">ET TEAM MED</p>\n\n<p class=\"font_2 wixui-rich-",
+          "locator": "identity-proof:997995414",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "registry_receipts": [
+        {
+          "id": "19622fdedc160d87e2e30954459e6df861b465fc81c9745a44b362d0d5a66e6c",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-14T18:02:43.671919Z",
+          "content_sha256": "3928612976f06bf887573b9d8563a9cd8d512a8f1c54a583b557e4894146ccae",
+          "claim_span": "997995414,PEAK LANDSCAPES AS,AS,Aksjeselskap,81.300,Beplantning av hager og parkanlegg,,,,,,,true,,2026-09-14,2026-09-10,,,,,,,,,,,,Alunsjøveien 65,OSLO,0957,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2012-02-18,2012-01-09,true,2012-05-01,2012-07-12,,,false,,true,2012-02-18,false,false,",
+          "locator": "row:997995414/column:navn",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": "registry100.csv:sha256:bd244f0fe6ad92bfcadcbce9ba545863c0ca0afa8b9b5b4c5e3425830a63186d",
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "3508f36bc3bd5b67196754fcd260470ef0b140e6b2bc8dd6a71938ad75ee1ac8",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-14T18:02:43.671919Z",
+          "content_sha256": "3928612976f06bf887573b9d8563a9cd8d512a8f1c54a583b557e4894146ccae",
+          "claim_span": "reringsdatoantallansatteNAVAaregisteret,hjemmeside,epostadresse,telefon,mobil,postadresse.adresse,postadresse.poststed,postadresse.postnummer,postadresse.kommune,postadresse.kommunenummer,postadresse.land,postadresse.landkode,forretningsadresse.adresse,forretningsadresse.poststed,forretningsadresse.",
+          "locator": "row:997995414/column:hjemmeside",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": "registry100.csv:sha256:bd244f0fe6ad92bfcadcbce9ba545863c0ca0afa8b9b5b4c5e3425830a63186d",
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "d50b6b9a9be8c3275f1199e47796f613af7a3feeac85a264446586ba33cbc464",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-14T18:02:43.671919Z",
+          "content_sha256": "3928612976f06bf887573b9d8563a9cd8d512a8f1c54a583b557e4894146ccae",
+          "claim_span": " og parkanlegg,,,,,,,true,,2026-09-14,2026-09-10,,,,,,,,,,,,Alunsjøveien 65,OSLO,0957,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2012-02-18,2012-01-09,true,2012-05-01,2012-07-12,,,false,,true,2012-02-18,false,false,,false,,false,,false,,,,,,,Bokmål,2012-01-09,\"Anleggsgartnerfirma som sp",
+          "locator": "row:997995414/columns:forretningsadresse.*",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": "registry100.csv:sha256:bd244f0fe6ad92bfcadcbce9ba545863c0ca0afa8b9b5b4c5e3425830a63186d",
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "9f5100064f779e7e8ce79dc4da02d2bbf2117b32587d6bbd00fa0efb36af77be",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-14T18:02:43.671919Z",
+          "content_sha256": "3928612976f06bf887573b9d8563a9cd8d512a8f1c54a583b557e4894146ccae",
+          "claim_span": "organisasjonsnummer,navn,organisasjonsform.kode,organisasjonsform.beskrivelse,naeringskode1.kode,naeringskode1.beskrivelse,naeringskode2.kode,naeringskode2.beskrivelse,naeringskode3.kode,naeringskode3.beskrivelse,hjelpeenhetskode.kode,hjelpeenhetskode.beskrivelse,harRegistrertAntallAnsatte,antallAns",
+          "locator": "row:997995414/columns:postadresse.*",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": "registry100.csv:sha256:bd244f0fe6ad92bfcadcbce9ba545863c0ca0afa8b9b5b4c5e3425830a63186d",
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "df7ff00c9a5be6d6d30de1bc25ac05c2fee2c6b0bb6926386d24e30107ce660a",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-14T18:02:43.671919Z",
+          "content_sha256": "3928612976f06bf887573b9d8563a9cd8d512a8f1c54a583b557e4894146ccae",
+          "claim_span": " og parkanlegg,,,,,,,true,,2026-09-14,2026-09-10,,,,,,,,,,,,Alunsjøveien 65,OSLO,0957,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2012-02-18,2012-01-09,true,2012-05-01,2012-07-12,,,false,,true,2012-02-18,false,false,,false,,false,,false,,,,,,,Bokmål,2012-01-09,\"Anleggsgartnerfirma som sp",
+          "locator": "row:997995414/columns:forretningsadresse.*",
+          "extraction_method": "signalpost.registry_locations.v1",
+          "source_identifier": "registry100.csv:sha256:bd244f0fe6ad92bfcadcbce9ba545863c0ca0afa8b9b5b4c5e3425830a63186d",
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    {
+      "organisation_number": "995135086",
+      "company": "CRAFTING HOUSE AS",
+      "kind": "website",
+      "url": "https://craftinghouse.no/",
+      "saved_value_url": "https://craftinghouse.no",
+      "field": "official_website",
+      "sample": "seed20261116",
+      "stage": "R7",
+      "change": "added",
+      "value_sha256": "155046dd6caa444f8593362aeff16482392493a851f69efe77c661aae158e792",
+      "verdict": "correct",
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-15",
+      "method": "Human hand-check with independent web verification, supplied explicitly in conversation.",
+      "basis": "\"Orgnr 995 135 086 MVA\" on contact page; matches registry-declared homepage. Site address omits \"A\" (register: Biskop Gunnerus' gate 14A) — minor, not a conflict.",
+      "automated_verdict": "correct",
+      "automated_checks": [
+        {
+          "verdict": "CORRECT",
+          "reason": "Saved publisher receipt reconstructed: registry_declared_live"
+        }
+      ],
+      "proof_tier": "registry_declared_live",
+      "identity_level": "HIGH",
+      "receipts": [
+        {
+          "id": "047ce9b0fbb89595da2a42d35b9767de80a2dac1341032c09ecbfb2a7084a067",
+          "source_url": "https://craftinghouse.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-14T18:42:03.510553Z",
+          "content_sha256": "5089733488a7869f90bd42c26903e5ecfec5d7e5ffe04032945073fdd590f80f",
+          "claim_span": "//craftinghouse.no/xmlrpc.php\">\n\n<title>Crafting House &#8211; Samskaper med ledere som beveger samfunn</title>\n<meta name='robots' content='max-image-preview:large' />\n<link rel='dns-prefetch' href='//secure.gravatar.com' />\n<link rel='dns-prefetch' href='//fonts.googleapis.com' />\n<link rel='dns-p",
+          "locator": "identity-proof:995135086",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "registry_receipts": [
+        {
+          "id": "c5da16bc1a706ee6063e23ea97536f652b7145acc26eb851cd19bfb763afe179",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-14T18:37:41.059539Z",
+          "content_sha256": "e05429d47b99029a7bcf6b983b1dc11b38f9156734046076a7f1fec130761926",
+          "claim_span": "995135086,CRAFTING HOUSE AS,AS,Aksjeselskap,70.200,Bedriftsrådgivning og annen administrativ rådgivning,,,,,,,false,,,,www.craftinghouse.no,post@craftinghouse.no,,,,,,,,,,Biskop Gunnerus' gate 14A,OSLO,0185,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2010-02-04,2010-01-06,true,2010-01-01",
+          "locator": "row:995135086/column:navn",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": "registry100.csv:sha256:aef414072567eda80df4802df2d6054f07c8f9749dbc4bfacd1c09906a2fb8d9",
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "63f702df2a91931867c9d02fb4a8f58593c0a3de03fe3392cf9be2d325b69205",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-14T18:37:41.059539Z",
+          "content_sha256": "e05429d47b99029a7bcf6b983b1dc11b38f9156734046076a7f1fec130761926",
+          "claim_span": "rådgivning og annen administrativ rådgivning,,,,,,,false,,,,www.craftinghouse.no,post@craftinghouse.no,,,,,,,,,,Biskop Gunnerus' gate 14A,OSLO,0185,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2010-02-04,2010-01-06,true,2010-01-01,2010-02-11,Utleier av bygg eller anlegg,2014-02-03,false,,",
+          "locator": "row:995135086/column:hjemmeside",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": "registry100.csv:sha256:aef414072567eda80df4802df2d6054f07c8f9749dbc4bfacd1c09906a2fb8d9",
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "405891c9c2fdfc205ac06b8bd7991c68f9dcd7c93661b01e34307ad2dab7c251",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-14T18:37:41.059539Z",
+          "content_sha256": "e05429d47b99029a7bcf6b983b1dc11b38f9156734046076a7f1fec130761926",
+          "claim_span": "alse,,,,www.craftinghouse.no,post@craftinghouse.no,,,,,,,,,,Biskop Gunnerus' gate 14A,OSLO,0185,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2010-02-04,2010-01-06,true,2010-01-01,2010-02-11,Utleier av bygg eller anlegg,2014-02-03,false,,true,2010-02-04,false,false,,false,,false,,false,,,,",
+          "locator": "row:995135086/columns:forretningsadresse.*",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": "registry100.csv:sha256:aef414072567eda80df4802df2d6054f07c8f9749dbc4bfacd1c09906a2fb8d9",
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "164cdf7052bb44f015fcf097af3d0168bec390d0f3d27511604d17dc6e4a18ca",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-14T18:37:41.059539Z",
+          "content_sha256": "e05429d47b99029a7bcf6b983b1dc11b38f9156734046076a7f1fec130761926",
+          "claim_span": "organisasjonsnummer,navn,organisasjonsform.kode,organisasjonsform.beskrivelse,naeringskode1.kode,naeringskode1.beskrivelse,naeringskode2.kode,naeringskode2.beskrivelse,naeringskode3.kode,naeringskode3.beskrivelse,hjelpeenhetskode.kode,hjelpeenhetskode.beskrivelse,harRegistrertAntallAnsatte,antallAns",
+          "locator": "row:995135086/columns:postadresse.*",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": "registry100.csv:sha256:aef414072567eda80df4802df2d6054f07c8f9749dbc4bfacd1c09906a2fb8d9",
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "5217707e4a0a3d3645814f30aa10dd94ef437a0ff5831b063f26f43bd8665c11",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-14T18:37:41.059539Z",
+          "content_sha256": "e05429d47b99029a7bcf6b983b1dc11b38f9156734046076a7f1fec130761926",
+          "claim_span": "alse,,,,www.craftinghouse.no,post@craftinghouse.no,,,,,,,,,,Biskop Gunnerus' gate 14A,OSLO,0185,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2010-02-04,2010-01-06,true,2010-01-01,2010-02-11,Utleier av bygg eller anlegg,2014-02-03,false,,true,2010-02-04,false,false,,false,,false,,false,,,,",
+          "locator": "row:995135086/columns:forretningsadresse.*",
+          "extraction_method": "signalpost.registry_locations.v1",
+          "source_identifier": "registry100.csv:sha256:aef414072567eda80df4802df2d6054f07c8f9749dbc4bfacd1c09906a2fb8d9",
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    },
+    {
+      "organisation_number": "983089887",
+      "company": "MELDAL MILJØANLEGG AS",
+      "kind": "website",
+      "url": "https://www.meldalmiljoanlegg.no/",
+      "saved_value_url": "https://www.meldalmiljoanlegg.no",
+      "field": "official_website",
+      "sample": "seed20261116",
+      "stage": "R7",
+      "change": "added",
+      "value_sha256": "75026589ed05abf3b947dd0a34a1f2822234064dcb5a49a690e7828d8971d7d9",
+      "verdict": "correct",
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-15",
+      "method": "Human hand-check with independent web verification, supplied explicitly in conversation.",
+      "basis": "\"Orgnummer: 983 089 887\" on site. Footer \"© 2035 by Happy Farm Sanctuary\" is leftover template text, not a different owner. Contact john.horg@meldalmiljoanlegg.no / 92647341 independently tied to 983089887 in a Doffin procurement notice.",
+      "automated_verdict": "correct",
+      "automated_checks": [
+        {
+          "verdict": "CORRECT",
+          "reason": "Exact orgnr 983089887 verified in company ownership context"
+        }
+      ],
+      "proof_tier": "orgnr_on_page",
+      "identity_level": "VERIFIED",
+      "receipts": [
+        {
+          "id": "33af77bde95b3627ab3fa4e73d42894c089bab8956149a68b1e5a73ad1f8b6ef",
+          "source_url": "https://www.meldalmiljoanlegg.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-14T18:42:07.597309Z",
+          "content_sha256": "f7c7fb20861c9bddfbd09ba6e06bd67b03122aee99a4204bc0536adaf75e0f75",
+          "claim_span": "lass=\"wixui-rich-text__text\">Orgnummer: 983 089 887</span></span></span></span></span></span></span></span></span></span></span></span></span></span><",
+          "locator": "identity-proof:983089887",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "registry_receipts": []
+    },
+    {
+      "organisation_number": "997995414",
+      "company": "PEAK LANDSCAPES AS",
+      "kind": "social",
+      "url": "instagram.com/peak_landscapes_as/",
+      "saved_value_url": "https://www.instagram.com/peak_landscapes_as",
+      "field": "social_profile.068e48d5e21690ec1714",
+      "sample": "seed20261017",
+      "stage": "R7",
+      "change": "added",
+      "value_sha256": "20cb322282da6e929f6e54a4d8fea3b6216a419b30ece45b565a1854cf34bf98",
+      "verdict": "correct",
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-15",
+      "method": "Human hand-check with independent web verification, supplied explicitly in conversation.",
+      "basis": "Instagram peak_landscapes_as confirmed human-CORRECT: linked from the company's own site.",
+      "automated_verdict": "correct",
+      "automated_checks": [
+        {
+          "verdict": "CORRECT",
+          "reason": "Existing strict own-publisher social link replay"
+        }
+      ],
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "identity_level": null,
+      "receipts": [
+        {
+          "id": "74f012b6685a29585e86e116ba93aa87f2dafe2ccf2e81493f36c8321f6e3b74",
+          "source_url": "https://www.peaklandscapes.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-14T18:04:33.340190Z",
+          "content_sha256": "3a6eb3ef5be3ffbfe51e837088b8bf0560744cc1f37395d5b4bc2488499c9450",
+          "claim_span": "<a href=\"https://www.instagram.com/peak_landscapes_as/\" target=\"_blank\" rel=\"noreferrer noopener\" class=\"wixui-rich-text__text\">",
+          "locator": "company-link:https://www.instagram.com/peak_landscapes_as",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "abc0232ac6e583270e4f3bf2ebaaa15937dec8ec1ff61fdb77d92baf6674ab3a",
+          "source_url": "https://www.peaklandscapes.no/about-us",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-14T18:04:43.546048Z",
+          "content_sha256": "ee8ece818b865017ce536d310998ad0df90518a0b6a78fa588d05b7fe0d08139",
+          "claim_span": "><span class=\"wixui-rich-text__text\">Om Peak Landscapes AS</span></h1></div><!--/$--><!--$--><div id=\"comp-lj5jwjaj6\" class=\"N8MGzv _v6ohL AWXfZq PO9MfV comp-lj5jwjaj6 wixui-rich-text\" data-testid=\"richTextElement\"><p class=\"font_2 wixui-rich-text__text\">ET TEAM MED</p>\n\n<p class=\"font_2 wixui-rich-",
+          "locator": "identity-proof:997995414",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "registry_receipts": [
+        {
+          "id": "19622fdedc160d87e2e30954459e6df861b465fc81c9745a44b362d0d5a66e6c",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-14T18:02:43.671919Z",
+          "content_sha256": "3928612976f06bf887573b9d8563a9cd8d512a8f1c54a583b557e4894146ccae",
+          "claim_span": "997995414,PEAK LANDSCAPES AS,AS,Aksjeselskap,81.300,Beplantning av hager og parkanlegg,,,,,,,true,,2026-09-14,2026-09-10,,,,,,,,,,,,Alunsjøveien 65,OSLO,0957,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2012-02-18,2012-01-09,true,2012-05-01,2012-07-12,,,false,,true,2012-02-18,false,false,",
+          "locator": "row:997995414/column:navn",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": "registry100.csv:sha256:bd244f0fe6ad92bfcadcbce9ba545863c0ca0afa8b9b5b4c5e3425830a63186d",
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "19622fdedc160d87e2e30954459e6df861b465fc81c9745a44b362d0d5a66e6c",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-14T18:02:43.671919Z",
+          "content_sha256": "3928612976f06bf887573b9d8563a9cd8d512a8f1c54a583b557e4894146ccae",
+          "claim_span": "997995414,PEAK LANDSCAPES AS,AS,Aksjeselskap,81.300,Beplantning av hager og parkanlegg,,,,,,,true,,2026-09-14,2026-09-10,,,,,,,,,,,,Alunsjøveien 65,OSLO,0957,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2012-02-18,2012-01-09,true,2012-05-01,2012-07-12,,,false,,true,2012-02-18,false,false,",
+          "locator": "row:997995414/column:navn",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": "registry100.csv:sha256:bd244f0fe6ad92bfcadcbce9ba545863c0ca0afa8b9b5b4c5e3425830a63186d",
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "3508f36bc3bd5b67196754fcd260470ef0b140e6b2bc8dd6a71938ad75ee1ac8",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-14T18:02:43.671919Z",
+          "content_sha256": "3928612976f06bf887573b9d8563a9cd8d512a8f1c54a583b557e4894146ccae",
+          "claim_span": "reringsdatoantallansatteNAVAaregisteret,hjemmeside,epostadresse,telefon,mobil,postadresse.adresse,postadresse.poststed,postadresse.postnummer,postadresse.kommune,postadresse.kommunenummer,postadresse.land,postadresse.landkode,forretningsadresse.adresse,forretningsadresse.poststed,forretningsadresse.",
+          "locator": "row:997995414/column:hjemmeside",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": "registry100.csv:sha256:bd244f0fe6ad92bfcadcbce9ba545863c0ca0afa8b9b5b4c5e3425830a63186d",
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "d50b6b9a9be8c3275f1199e47796f613af7a3feeac85a264446586ba33cbc464",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-14T18:02:43.671919Z",
+          "content_sha256": "3928612976f06bf887573b9d8563a9cd8d512a8f1c54a583b557e4894146ccae",
+          "claim_span": " og parkanlegg,,,,,,,true,,2026-09-14,2026-09-10,,,,,,,,,,,,Alunsjøveien 65,OSLO,0957,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2012-02-18,2012-01-09,true,2012-05-01,2012-07-12,,,false,,true,2012-02-18,false,false,,false,,false,,false,,,,,,,Bokmål,2012-01-09,\"Anleggsgartnerfirma som sp",
+          "locator": "row:997995414/columns:forretningsadresse.*",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": "registry100.csv:sha256:bd244f0fe6ad92bfcadcbce9ba545863c0ca0afa8b9b5b4c5e3425830a63186d",
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "9f5100064f779e7e8ce79dc4da02d2bbf2117b32587d6bbd00fa0efb36af77be",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-14T18:02:43.671919Z",
+          "content_sha256": "3928612976f06bf887573b9d8563a9cd8d512a8f1c54a583b557e4894146ccae",
+          "claim_span": "organisasjonsnummer,navn,organisasjonsform.kode,organisasjonsform.beskrivelse,naeringskode1.kode,naeringskode1.beskrivelse,naeringskode2.kode,naeringskode2.beskrivelse,naeringskode3.kode,naeringskode3.beskrivelse,hjelpeenhetskode.kode,hjelpeenhetskode.beskrivelse,harRegistrertAntallAnsatte,antallAns",
+          "locator": "row:997995414/columns:postadresse.*",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": "registry100.csv:sha256:bd244f0fe6ad92bfcadcbce9ba545863c0ca0afa8b9b5b4c5e3425830a63186d",
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "df7ff00c9a5be6d6d30de1bc25ac05c2fee2c6b0bb6926386d24e30107ce660a",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-14T18:02:43.671919Z",
+          "content_sha256": "3928612976f06bf887573b9d8563a9cd8d512a8f1c54a583b557e4894146ccae",
+          "claim_span": " og parkanlegg,,,,,,,true,,2026-09-14,2026-09-10,,,,,,,,,,,,Alunsjøveien 65,OSLO,0957,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2012-02-18,2012-01-09,true,2012-05-01,2012-07-12,,,false,,true,2012-02-18,false,false,,false,,false,,false,,,,,,,Bokmål,2012-01-09,\"Anleggsgartnerfirma som sp",
+          "locator": "row:997995414/columns:forretningsadresse.*",
+          "extraction_method": "signalpost.registry_locations.v1",
+          "source_identifier": "registry100.csv:sha256:bd244f0fe6ad92bfcadcbce9ba545863c0ca0afa8b9b5b4c5e3425830a63186d",
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "website": {
+      "human_verified_correct": 3,
+      "wrong": 0
+    },
+    "social": {
+      "human_verified_correct": 1,
+      "wrong": 0
+    }
+  },
+  "totals": {
+    "human_verified_correct": 4,
+    "wrong": 0,
+    "previous_recorded_human_verified_correct": 24,
+    "cumulative_human_verified_correct": 28
+  },
+  "counting_method": "Distinct organisation/type/URL. None of these four items appears in earlier human reviews (stageR3/human_reviews.json, precision/human_reviews.json), so the recorded cumulative human-verified count rises 24 -> 28. The earlier items-checked union is not recomputed here.",
+  "input": "reports/r5/stageR7/R7/identity_items.json",
+  "limits": "Human verification is the reviewer's supplied independent web hand-check, not an assistant re-fetch or a population precision estimate. Automated verdicts, proof tiers and published outputs are unchanged. CRAFTING HOUSE was published under registry_declared_live (R7a); the reviewer's contact-page orgnr basis is recorded as human context, not as a change of tier. Verdicts are scoped to these exact sample/value hashes and transfer to no other domain or profile."
+}
