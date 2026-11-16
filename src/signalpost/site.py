@@ -430,6 +430,23 @@ def page(title, body, prefix='', kind='profile', company_data=None):
 EXPLORER_VISIBLE_ROWS = 48
 
 
+# Official-record families can list dozens of dated records for one company.
+# Inline the newest few per family; older ones keep their claim, anchor and
+# receipt in the local data file and render through the details loader, so the
+# unchanged 250 KB HTML gate never drops a fact.
+OFFICIAL_INLINE = 8
+
+
+def official_overflow(claims, inline=OFFICIAL_INLINE):
+    from .sources.exact_official import FAMILIES as OFFICIAL_FAMILIES
+    out = set()
+    for family in OFFICIAL_FAMILIES:
+        items = [c for c in claims if c['family'] == family and c['availability'] == 'available']
+        items.sort(key=lambda c: str((c['value'] or {}).get('date', '')) if isinstance(c['value'], dict) else '', reverse=True)
+        out.update(c['id'] for c in items[inline:])
+    return out
+
+
 def explorer_cells(c, records):
     """Plain-text cells for one Evidence Explorer row (page and data file share this)."""
     f = c.get('field', '')
@@ -444,7 +461,7 @@ def explorer_cells(c, records):
             e.get('content_sha256', '') if e else '', span]
 
 
-def profile(row, title, explorer_rows=EXPLORER_VISIBLE_ROWS):
+def profile(row, title, explorer_rows=EXPLORER_VISIBLE_ROWS, official_inline=OFFICIAL_INLINE):
     claims = row['claims']
     claim_map = {c['id']: c for c in claims}
     records = {e['id']: e for e in row['evidence']}
@@ -507,6 +524,7 @@ def profile(row, title, explorer_rows=EXPLORER_VISIBLE_ROWS):
         body += '</details>'
     from .sources.exact_official import SITE_GROUP as OFFICIAL_GROUP
     buckets = {key: [] for key, _, _ in GROUPS}
+    overflow = official_overflow(claims, official_inline)
     for c in claims:
         f = c['field']; family = c['family']
         key = ('what-it-does' if f.startswith('website_description.') else
@@ -527,8 +545,8 @@ def profile(row, title, explorer_rows=EXPLORER_VISIBLE_ROWS):
             area, heading = areas[key]
             body += f'<section class="company-area" data-area="{area}"><h2>{heading}</h2>'
         items = buckets[key]
-        details=[c for c in items if c['field'].startswith(('roles.detail.','subunits.detail.'))]
-        items=[c for c in items if not c['field'].startswith(('roles.detail.','subunits.detail.'))]
+        details=[c for c in items if c['field'].startswith(('roles.detail.','subunits.detail.')) or c['id'] in overflow]
+        items=[c for c in items if not (c['field'].startswith(('roles.detail.','subunits.detail.')) or c['id'] in overflow)]
         if key == 'activity': items.sort(key=lambda c: str((c['value'] or {}).get('date', '')) if isinstance(c['value'], dict) else '', reverse=True)
         state = row['run']['sections'].get(family, 'not_applicable')
         dated_registry = registry_events(row) if key == 'activity' else []
@@ -569,7 +587,7 @@ def profile(row, title, explorer_rows=EXPLORER_VISIBLE_ROWS):
         if key == 'locations' and len(items) > 10: body += '</div>'
         if key == 'financials' and items: body += '</tbody></table>'
         if details:
-            body += '<details><summary>Additional official attributes ('+str(len(details))+')</summary><div data-registry-details="'+esc(key)+'"></div></details>'
+            body += '<details><summary>'+('Earlier official records' if all(c['id'] in overflow for c in details) else 'Additional official attributes')+' ('+str(len(details))+')</summary><div data-registry-details="'+esc(key)+'"></div></details>'
         body += '</section>'
         if key in {'online', 'financials', 'people', 'locations', 'activity'}:
             body += '</section>'
@@ -770,7 +788,7 @@ def profile(row, title, explorer_rows=EXPLORER_VISIBLE_ROWS):
     return page(str(name) + ' · ' + title, body, '../', company_data=org+'.data.js')
 
 
-def company_payload(row,explorer_rows=EXPLORER_VISIBLE_ROWS):
+def company_payload(row,explorer_rows=EXPLORER_VISIBLE_ROWS,official_inline=OFFICIAL_INLINE):
     evidence={e['id']:e for e in row['evidence']}
     referenced=set()
     facts=[]
@@ -806,9 +824,11 @@ def company_payload(row,explorer_rows=EXPLORER_VISIBLE_ROWS):
         if key not in source_lookup:
             source_lookup[key]=len(sources);sources.append(shared)
         records.append([source_lookup[key]]+[e.get(k) for k in evidence_fields])
+    from .sources.exact_official import SITE_GROUP as OFFICIAL_GROUP
+    overflow = official_overflow(row['claims'], official_inline)
     details=[{'id':c['id'][:16],'field':c['field'],'value':c['value'],'availability':c['availability'],
-              'group':'people' if c['family']=='roles' else 'locations'} for c in row['claims']
-             if c['field'].startswith(('roles.detail.','subunits.detail.'))]
+              'group':OFFICIAL_GROUP[c['family']] if c['id'] in overflow else 'people' if c['family']=='roles' else 'locations'}
+             for c in row['claims'] if c['field'].startswith(('roles.detail.','subunits.detail.')) or c['id'] in overflow]
     name = next((c['value'] for c in row['claims'] if c['field'] == 'identity.legal_name' and c['availability'] == 'available'), row['organisation_number'])
     all_records = {e['id']: e for e in row['evidence']}
     payload = {'orgnr': row['organisation_number'], 'name': name,
@@ -1102,7 +1122,7 @@ def generate_site(input_path, out, title='Signalpost'):
              'data/index.json': payload + '\n', 'data/index.js': 'window.SIGNALPOST_INDEX = ' + js_payload + ';\n'}
     for row in rows:
         org=row['organisation_number']
-        visible=EXPLORER_VISIBLE_ROWS
+        visible=EXPLORER_VISIBLE_ROWS; inline=OFFICIAL_INLINE
         rendered=profile(row,title,visible)
         # Audit rows repeat facts already present above. Defer only those
         # duplicates to the existing local Show remaining loader, preserving
@@ -1110,8 +1130,12 @@ def generate_site(input_path, out, title='Signalpost'):
         while len(rendered.encode('utf8'))>=250_000 and visible:
             visible//=2
             rendered=profile(row,title,visible)
+        # Then defer older official records too (their facts stay in the data file).
+        while len(rendered.encode('utf8'))>=250_000 and inline:
+            inline//=2
+            rendered=profile(row,title,visible,official_inline=inline)
         files['c/' + org + '.html'] = rendered
-        data=json.dumps(company_payload(row,visible),ensure_ascii=False,sort_keys=True,separators=(',',':'),allow_nan=False)
+        data=json.dumps(company_payload(row,visible,official_inline=inline),ensure_ascii=False,sort_keys=True,separators=(',',':'),allow_nan=False)
         data=data.replace('</','<\\/').replace('\u2028','\\u2028').replace('\u2029','\\u2029')
         files['c/'+org+'.data.js']='window.SIGNALPOST_EVIDENCE = '+data+';\n'
     for filename in ('site.css', 'site.js'): files['assets/' + filename] = (ASSETS / filename).read_text(encoding='utf8')

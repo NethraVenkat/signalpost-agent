@@ -1,0 +1,48 @@
+{
+  "seed": 20261117,
+  "envelopes_sha256": "a9dadd7399f9218c77d5ab8704d23ef5fbb9a3d0fa211eb1e4762971b3bc5ce9",
+  "run_site": {
+    "state": "failed",
+    "error": "ValueError",
+    "message": "Profile page exceeds 250 KB gate"
+  },
+  "site": {
+    "state": "available",
+    "companies": 100,
+    "input_records": 100,
+    "pages": 102,
+    "skipped_invalid_identifiers": 0,
+    "total_bytes": 39200699,
+    "largest_profile_data_bytes": 1143966,
+    "largest_profile_bytes": 249326
+  },
+  "site_module_sha256": "deb0f89b1930907b63dccba3e919041b8aa8d359920e540b09f05dde0e04b329",
+  "counts": {
+    "websites": 9,
+    "declared_homepage_recall": 1,
+    "declared_homepages": 11,
+    "social_companies": 4,
+    "social_claims": 7,
+    "activity_companies": 100,
+    "activity_claims": 1243,
+    "brand_companies": 7,
+    "brand_claims": 25,
+    "role_change_claims": 172,
+    "facts": 14142,
+    "families": {
+      "identity": 3020,
+      "subunits": 1163,
+      "roles": 1062,
+      "accounts": 7505,
+      "website": 53,
+      "state_aid": 46,
+      "activity": 1243,
+      "gleif": 20,
+      "research": 1,
+      "hiring": 2,
+      "inspections": 27
+    }
+  },
+  "HTTP": 1109,
+  "parent_commit": "1400584a93bc0be95e977eade0a4e04e2ab43460"
+}

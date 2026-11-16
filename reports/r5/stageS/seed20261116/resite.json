@@ -1,0 +1,54 @@
+{
+  "seed": 20261116,
+  "envelopes_sha256": "2938dffed35d361e3d0527ccc73a5ca56835ccd1909376779ac1510bc9f7e982",
+  "run_site": {
+    "state": "available",
+    "companies": 100,
+    "input_records": 100,
+    "pages": 102,
+    "skipped_invalid_identifiers": 0,
+    "total_bytes": 40144672,
+    "largest_profile_data_bytes": 547750,
+    "largest_profile_bytes": 239436
+  },
+  "site": {
+    "state": "available",
+    "companies": 100,
+    "input_records": 100,
+    "pages": 102,
+    "skipped_invalid_identifiers": 0,
+    "total_bytes": 40140661,
+    "largest_profile_data_bytes": 548242,
+    "largest_profile_bytes": 238371
+  },
+  "site_module_sha256": "deb0f89b1930907b63dccba3e919041b8aa8d359920e540b09f05dde0e04b329",
+  "counts": {
+    "websites": 8,
+    "declared_homepage_recall": 4,
+    "declared_homepages": 17,
+    "social_companies": 0,
+    "social_claims": 0,
+    "activity_companies": 100,
+    "activity_claims": 1472,
+    "brand_companies": 11,
+    "brand_claims": 15,
+    "role_change_claims": 253,
+    "facts": 13880,
+    "families": {
+      "identity": 2983,
+      "subunits": 897,
+      "roles": 1255,
+      "accounts": 7122,
+      "activity": 1472,
+      "state_aid": 76,
+      "gleif": 19,
+      "inspections": 7,
+      "research": 7,
+      "website": 38,
+      "licences": 3,
+      "hiring": 1
+    }
+  },
+  "HTTP": 1212,
+  "parent_commit": "1400584a93bc0be95e977eade0a4e04e2ab43460"
+}

@@ -731,3 +731,10 @@
 ## 2026-11-16 - Stage S6 Brreg signatur/prokura: skipped
 
 - The open role-group code list (21 types, receipt saved) has no SIGN/PROK, and the 100 saved baseline /roller bodies contain only already-published groups. Signatur/prokura need the authorised Maskinporten API, so S6 is skipped and recorded. Docs-only; runtime unchanged from S5 (1353 passed).
+
+
+## 2026-11-16 - Stage S measurement (six samples) and S7 site-gate fix
+
+- Measured once per sample with exact seven flags vs the P0 re-baseline on new machine. 415 official claims published (state aid 337, research 10, licences 26, inspections 42), all 415 re-verified by `verify_exact_official`; 0 unsupported values. HTTP 6,946 vs 5,715 baseline (≤1,212 per 100), $0.
+- Seed 20261117's run completed but its site build hit the 250 KB profile gate (948039958: already 249,037 B, +36 official records). Decision: keep the gate; render the newest 8 records per official family inline and defer older ones to the local data file through the existing details loader, halving only while a page is still over. Nothing is dropped. All six sites rebuilt from their saved envelopes (no recrawl, no union) and passed `check_live_run`; the run's own failed report is kept as `report-run.json`. This is a render step, not a retry: the crawl was not repeated.
+- The earlier synthesis Stage S `SUMMARY.md` in the same folder is left unchanged; this stage's summary is `OFFICIAL_SUMMARY.md`. One identity removal (Bellas Burrito, robots in this run) is live variation, listed in `new_items.md`.

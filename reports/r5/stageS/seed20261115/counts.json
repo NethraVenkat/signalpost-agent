@@ -1,0 +1,450 @@
+{
+  "baseline": {
+    "counts": {
+      "websites": 9,
+      "declared_homepage_recall": 4,
+      "declared_homepages": 14,
+      "social_companies": 4,
+      "social_claims": 4,
+      "activity_companies": 100,
+      "activity_claims": 1153,
+      "brand_companies": 6,
+      "brand_claims": 8,
+      "role_change_claims": 183,
+      "facts": 13287,
+      "families": {
+        "identity": 2963,
+        "roles": 1029,
+        "accounts": 7190,
+        "activity": 1153,
+        "subunits": 893,
+        "gleif": 10,
+        "website": 49
+      }
+    },
+    "HTTP": 951,
+    "CLI_runtime_seconds": 561.1089999999967,
+    "site": {
+      "state": "available",
+      "companies": 100,
+      "input_records": 100,
+      "pages": 102,
+      "skipped_invalid_identifiers": 0,
+      "total_bytes": 36174301,
+      "largest_profile_data_bytes": 484377,
+      "largest_profile_bytes": 222052
+    }
+  },
+  "official_claims": {
+    "state_aid": 31,
+    "research": 0,
+    "licences": 10,
+    "inspections": 0
+  },
+  "official_companies": {
+    "state_aid": 6,
+    "research": 0,
+    "licences": 2,
+    "inspections": 0
+  },
+  "official_sections": {
+    "state_aid": {
+      "not_available": 94,
+      "available": 6
+    },
+    "research": {
+      "not_available": 100
+    },
+    "licences": {
+      "not_available": 98,
+      "available": 2
+    },
+    "inspections": {
+      "not_available": 100
+    }
+  },
+  "identity_changes": {
+    "added": [],
+    "removed": []
+  },
+  "seed": 20261115,
+  "counts": {
+    "websites": 9,
+    "declared_homepage_recall": 4,
+    "declared_homepages": 14,
+    "social_companies": 4,
+    "social_claims": 4,
+    "activity_companies": 100,
+    "activity_claims": 1153,
+    "brand_companies": 6,
+    "brand_claims": 8,
+    "role_change_claims": 183,
+    "facts": 13328,
+    "families": {
+      "identity": 2963,
+      "roles": 1029,
+      "accounts": 7190,
+      "activity": 1153,
+      "subunits": 893,
+      "gleif": 10,
+      "website": 49,
+      "state_aid": 31,
+      "licences": 10
+    }
+  },
+  "HTTP": 1166,
+  "CLI_runtime_seconds": 879.8589999999967,
+  "cost_usd": 0.0,
+  "site": {
+    "state": "available",
+    "companies": 100,
+    "input_records": 100,
+    "pages": 102,
+    "skipped_invalid_identifiers": 0,
+    "total_bytes": 36997479,
+    "largest_profile_data_bytes": 486379,
+    "largest_profile_bytes": 225120
+  },
+  "identity_items": [
+    {
+      "orgnr": "926705261",
+      "legal_name": "LEV AKTIVT AS",
+      "kind": "brand",
+      "identity": "JOGGESKO MED PELS AS",
+      "field": "brand.registered_subunit.83657df0aeb967f45808",
+      "value": {
+        "name": "JOGGESKO MED PELS AS",
+        "origin": "registered_subunit",
+        "subunit_orgnr": "938826846"
+      }
+    },
+    {
+      "orgnr": "926705261",
+      "legal_name": "LEV AKTIVT AS",
+      "kind": "brand",
+      "identity": "Lev Aktivt",
+      "field": "public_brand",
+      "value": "Lev Aktivt"
+    },
+    {
+      "orgnr": "926705261",
+      "legal_name": "LEV AKTIVT AS",
+      "kind": "social",
+      "identity": "https://www.instagram.com/levaktivt",
+      "field": "social_profile.d364548492effc5b1d9f",
+      "value": {
+        "url": "https://www.instagram.com/levaktivt",
+        "platform": "instagram.com",
+        "proof_tier": "own_header_footer_exact_name_v1",
+        "company_name": "LEV AKTIVT AS"
+      }
+    },
+    {
+      "orgnr": "926705261",
+      "legal_name": "LEV AKTIVT AS",
+      "kind": "website",
+      "identity": "https://levaktivt.no",
+      "field": "official_website",
+      "value": {
+        "final_url": "https://levaktivt.no",
+        "identity_level": "VERIFIED",
+        "proof_type": "orgnr_on_page",
+        "proof_page_url": "https://levaktivt.no/",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": []
+      }
+    },
+    {
+      "orgnr": "928882624",
+      "legal_name": "TRAVL AS",
+      "kind": "brand",
+      "identity": "Travl",
+      "field": "public_brand",
+      "value": "Travl"
+    },
+    {
+      "orgnr": "928882624",
+      "legal_name": "TRAVL AS",
+      "kind": "website",
+      "identity": "https://travl.no",
+      "field": "official_website",
+      "value": {
+        "final_url": "https://travl.no",
+        "identity_level": "VERIFIED",
+        "proof_type": "orgnr_on_page",
+        "proof_page_url": "https://travl.no/en/privacy",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": []
+      }
+    },
+    {
+      "orgnr": "932849429",
+      "legal_name": "JAASTAD SIDERI AS",
+      "kind": "brand",
+      "identity": "JAASTAD Sideri",
+      "field": "public_brand",
+      "value": "JAASTAD Sideri"
+    },
+    {
+      "orgnr": "932849429",
+      "legal_name": "JAASTAD SIDERI AS",
+      "kind": "social",
+      "identity": "https://instagram.com/jaastadsideri",
+      "field": "social_profile.74c48d281685929078c9",
+      "value": {
+        "url": "https://instagram.com/jaastadsideri",
+        "platform": "instagram.com",
+        "proof_tier": "own_header_footer_exact_name_v1",
+        "company_name": "JAASTAD SIDERI AS"
+      }
+    },
+    {
+      "orgnr": "932849429",
+      "legal_name": "JAASTAD SIDERI AS",
+      "kind": "website",
+      "identity": "https://www.jaastadsideri.no",
+      "field": "official_website",
+      "value": {
+        "final_url": "https://www.jaastadsideri.no",
+        "identity_level": "VERIFIED",
+        "proof_type": "orgnr_on_page",
+        "proof_page_url": "https://www.jaastadsideri.no/",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": []
+      }
+    },
+    {
+      "orgnr": "933519708",
+      "legal_name": "LOOPYTY AS",
+      "kind": "brand",
+      "identity": "Loopyty",
+      "field": "public_brand",
+      "value": "Loopyty"
+    },
+    {
+      "orgnr": "933519708",
+      "legal_name": "LOOPYTY AS",
+      "kind": "website",
+      "identity": "https://loopyty.com",
+      "field": "official_website",
+      "value": {
+        "final_url": "https://loopyty.com",
+        "identity_level": "VERIFIED",
+        "proof_type": "orgnr_on_page",
+        "proof_page_url": "https://loopyty.com/nb",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": []
+      }
+    },
+    {
+      "orgnr": "935794242",
+      "legal_name": "BUSSIN AS",
+      "kind": "brand",
+      "identity": "BUSSIN MARKEDSFØRINGSBYRÅ AS",
+      "field": "brand.registered_subunit.9dc66107493f1a9b670c",
+      "value": {
+        "name": "BUSSIN MARKEDSFØRINGSBYRÅ AS",
+        "origin": "registered_subunit",
+        "subunit_orgnr": "836188942"
+      }
+    },
+    {
+      "orgnr": "935794242",
+      "legal_name": "BUSSIN AS",
+      "kind": "brand",
+      "identity": "Bussin - Alle fortjener en bra nettside",
+      "field": "public_brand",
+      "value": "Bussin - Alle fortjener en bra nettside"
+    },
+    {
+      "orgnr": "935794242",
+      "legal_name": "BUSSIN AS",
+      "kind": "social",
+      "identity": "https://www.linkedin.com/company/bussin-as",
+      "field": "social_profile.51236203d04c542d9923",
+      "value": {
+        "url": "https://www.linkedin.com/company/bussin-as",
+        "platform": "linkedin.com",
+        "proof_tier": "own_header_footer_exact_name_v1",
+        "company_name": "BUSSIN AS"
+      }
+    },
+    {
+      "orgnr": "935794242",
+      "legal_name": "BUSSIN AS",
+      "kind": "website",
+      "identity": "https://www.bussin.no",
+      "field": "official_website",
+      "value": {
+        "final_url": "https://www.bussin.no",
+        "identity_level": "VERIFIED",
+        "proof_type": "jsonld_vatid",
+        "proof_page_url": "https://www.bussin.no/",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "registry_website",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "registry_contact_matches": {
+          "email_domain": "bussin.no"
+        }
+      }
+    },
+    {
+      "orgnr": "982326125",
+      "legal_name": "ORKDAL BLOMSTER AS",
+      "kind": "social",
+      "identity": "https://www.facebook.com/pages/Orkdal-Blomster/119910848049561",
+      "field": "social_profile.33a3171292450921e319",
+      "value": {
+        "url": "https://www.facebook.com/pages/Orkdal-Blomster/119910848049561",
+        "platform": "facebook.com",
+        "proof_tier": "own_header_footer_exact_name_v1",
+        "company_name": "ORKDAL BLOMSTER AS"
+      }
+    },
+    {
+      "orgnr": "982326125",
+      "legal_name": "ORKDAL BLOMSTER AS",
+      "kind": "website",
+      "identity": "https://www.orkdalblomster.no",
+      "field": "official_website",
+      "value": {
+        "final_url": "https://www.orkdalblomster.no",
+        "identity_level": "VERIFIED",
+        "proof_type": "orgnr_on_page",
+        "proof_page_url": "https://www.orkdalblomster.no/",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "registry_contact_matches": {
+          "phone": "+4772481020"
+        }
+      }
+    },
+    {
+      "orgnr": "984204663",
+      "legal_name": "A TIL Å PROFILERING AS",
+      "kind": "website",
+      "identity": "https://www.atilaa.com",
+      "field": "official_website",
+      "value": {
+        "final_url": "https://www.atilaa.com",
+        "identity_level": "HIGH",
+        "proof_type": "registry_declared_publisher_name",
+        "proof_page_url": "https://www.atilaa.com/",
+        "signals": [
+          "publisher_full_legal_name",
+          "registry_declared_domain"
+        ],
+        "points": 0,
+        "candidate_origin": "registry_website",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publisher_identity": {
+          "tier": "registry_declared_publisher_name",
+          "legal_name": "A TIL Å PROFILERING AS",
+          "publisher_location": "title",
+          "publisher_excerpt": "A til Å Profilering AS",
+          "registry_homepage": "www.atilaa.com",
+          "candidate_url": "https://www.atilaa.com/",
+          "proof_page_url": "https://www.atilaa.com/"
+        },
+        "registry_contact_matches": {
+          "email_domain": "atilaa.com"
+        }
+      }
+    },
+    {
+      "orgnr": "984406622",
+      "legal_name": "TIDEMANN BIL AS",
+      "kind": "website",
+      "identity": "https://tidemannbil.no",
+      "field": "official_website",
+      "value": {
+        "final_url": "https://tidemannbil.no",
+        "identity_level": "HIGH",
+        "proof_type": "registry_declared_publisher_name",
+        "proof_page_url": "https://tidemannbil.no/",
+        "signals": [
+          "publisher_full_legal_name",
+          "registry_declared_domain"
+        ],
+        "points": 0,
+        "candidate_origin": "registry_website",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publisher_identity": {
+          "tier": "registry_declared_publisher_name",
+          "legal_name": "TIDEMANN BIL AS",
+          "publisher_location": "title",
+          "publisher_excerpt": "Tidemann Bil AS – Bensinstasjonen med sjel",
+          "registry_homepage": "www.tidemannbil.no",
+          "candidate_url": "https://www.tidemannbil.no/",
+          "proof_page_url": "https://tidemannbil.no/"
+        }
+      }
+    },
+    {
+      "orgnr": "991126627",
+      "legal_name": "ESPIRA DVERGSNES AS",
+      "kind": "brand",
+      "identity": "ESPIRA DVERGSNES BARNEHAGE",
+      "field": "brand.registered_subunit.85a04ef4e695a48f9f2f",
+      "value": {
+        "name": "ESPIRA DVERGSNES BARNEHAGE",
+        "origin": "registered_subunit",
+        "subunit_orgnr": "991190880"
+      }
+    },
+    {
+      "orgnr": "992104201",
+      "legal_name": "BETTER WINES AS",
+      "kind": "website",
+      "identity": "https://www.betterwines.no",
+      "field": "official_website",
+      "value": {
+        "final_url": "https://www.betterwines.no",
+        "identity_level": "HIGH",
+        "proof_type": "registry_declared_publisher_name",
+        "proof_page_url": "https://www.betterwines.no/",
+        "signals": [
+          "publisher_full_legal_name",
+          "registry_declared_domain"
+        ],
+        "points": 0,
+        "candidate_origin": "registry_website",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publisher_identity": {
+          "tier": "registry_declared_publisher_name",
+          "legal_name": "BETTER WINES AS",
+          "publisher_location": "footer",
+          "publisher_excerpt": "Head Office - Oslo Better Wines AS Ullernchausseen 119, 0284 Oslo post@betterwines.no +47 90 82 30 95 +47 90 82 05 74",
+          "registry_homepage": "www.betterwines.no",
+          "candidate_url": "https://www.betterwines.no/",
+          "proof_page_url": "https://www.betterwines.no/"
+        },
+        "registry_contact_matches": {
+          "email_domain": "betterwines.no"
+        }
+      }
+    }
+  ],
+  "envelopes_sha256": "1255e2db9ea768414de3c9fb46d49b90abd46b16f15a9f94fa130a067148abda",
+  "profiles_sha256": "2386f6d4742c6900dd04d35d3f9e05df06389df30fe6fe37ce9c2598e97cc422"
+}
