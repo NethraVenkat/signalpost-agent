@@ -1,0 +1,174 @@
+{
+  "label": "final",
+  "check": "check_live_run",
+  "checker_clone_head": "d61014eb2229a08f9f3b93d7b6bba5d9c4b4140e",
+  "gates": {
+    "exit_0": true,
+    "check_live_run_exit_0": true,
+    "ordered_terminal_500": true,
+    "five_cited_topics_500": true,
+    "unsupported_0": true,
+    "http_le_9250": true,
+    "wall_le_scaled_time_budget": true,
+    "largest_profile_lt_250000": true,
+    "cost_0": true,
+    "zero_llm_search_calls": true
+  },
+  "all_gates_pass": true,
+  "source_health": {
+    "enhetsregisteret": "reachable",
+    "accounts": "reachable",
+    "nav": "reachable",
+    "gleif": "reachable"
+  },
+  "official_source_outages_counts": {
+    "transient_attempts": 3,
+    "unrecovered_attempts": 3
+  },
+  "input_rows": 500,
+  "terminal_envelopes": 500,
+  "http_requests": 5651,
+  "limits": {
+    "max_requests": 9250,
+    "max_cost_usd": 0.0,
+    "time_budget_seconds": null,
+    "deadline_fraction": 0.85,
+    "request_timeout": 10.0,
+    "host_concurrency": 10,
+    "effective_time_budget_seconds": 10500.0,
+    "scaled_hard_request_cap": 9250,
+    "scaled_hard_time_seconds": 10500.0
+  },
+  "wall_seconds": 2591.081520399981,
+  "runtime_seconds": 2571.375,
+  "deadline_hits": 0,
+  "total_cost_usd": 0.0,
+  "search_queries": 0,
+  "llm_calls": 0,
+  "site": {
+    "state": "available",
+    "companies": 500,
+    "input_records": 500,
+    "pages": 502,
+    "skipped_invalid_identifiers": 0,
+    "total_bytes": 189303258,
+    "largest_profile_data_bytes": 833594,
+    "largest_profile_bytes": 247906
+  },
+  "facts": 67567,
+  "websites": 36,
+  "social_urls": 22,
+  "social_companies": 12,
+  "jobs": 1,
+  "activity_claims": 6342,
+  "families": {
+    "identity": 14906,
+    "subunits": 4575,
+    "roles": 5657,
+    "accounts": 35381,
+    "activity": 6342,
+    "state_aid": 335,
+    "gleif": 86,
+    "research": 6,
+    "website": 231,
+    "inspections": 13,
+    "licences": 34,
+    "hiring": 1
+  },
+  "section_states": {
+    "accounts": {
+      "available": 499,
+      "failed": 1
+    },
+    "activity": {
+      "available": 289,
+      "failed": 211
+    },
+    "gleif": {
+      "not_available": 422,
+      "available": 78
+    },
+    "hiring": {
+      "not_available": 499,
+      "available": 1
+    },
+    "identity": {
+      "available": 500
+    },
+    "inspections": {
+      "not_available": 493,
+      "available": 7
+    },
+    "licences": {
+      "not_available": 486,
+      "available": 14
+    },
+    "procurement": {
+      "not_available": 497,
+      "blocked": 3
+    },
+    "research": {
+      "not_available": 496,
+      "available": 4
+    },
+    "roles": {
+      "available": 498,
+      "not_available": 2
+    },
+    "state_aid": {
+      "not_available": 454,
+      "available": 46
+    },
+    "subunits": {
+      "available": 379,
+      "not_available": 121
+    },
+    "website": {
+      "not_available": 266,
+      "failed": 162,
+      "ambiguous": 31,
+      "blocked": 5,
+      "available": 36
+    }
+  },
+  "verification": {
+    "lines": 500,
+    "schema_valid": true,
+    "published_claims": 67567,
+    "source_blobs_verified": 2129,
+    "synthesis_companies": 500,
+    "synthesis_sentences": 9329,
+    "synthesis_unverified_values": 0,
+    "financial_inputs_verified": 30426,
+    "derived_financial_metrics_verified": 1083,
+    "registry_events_verified": 6342,
+    "filing_year_facts_verified": 4955,
+    "exact_public_items_verified": 86,
+    "exact_official_items_verified": 388,
+    "briefing_companies": 500,
+    "briefing_sentences": 3243,
+    "briefing_short_companies": 0,
+    "briefing_unverified_values": 0,
+    "briefing_topic_coverage": {
+      "activity": 500,
+      "change": 500,
+      "unknown": 500,
+      "financial": 500,
+      "takeaway": 500
+    },
+    "complete_briefing_contracts": 500,
+    "newer_filing_flags": 0,
+    "site_verified": true,
+    "terminal_envelopes": 500,
+    "source_failures_permitted": true,
+    "http_requests": 5651,
+    "wall_seconds": 2589.485,
+    "cost_usd": 0
+  },
+  "artifacts": {
+    "envelopes.jsonl": "34ea6077ef7483af387585c0f3e734faebe037d1b6e16499c149c52bab40ec65",
+    "profiles.jsonl": "62f79bfd25e3091f9bcd3bdb032ce3836710d03aa65acf8758df3646919ac40a",
+    "report.json": "b54742b3002d41320ea31223b84f7f8ad55edd8cc97434b05df001405894272a"
+  },
+  "work_directory": "<REPO>\\.data\\r5\\p3e-clean\\run-final"
+}

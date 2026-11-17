@@ -1,0 +1,1 @@
+{"emitted_envelopes": 100, "invalid_inputs": [], "requests": 913, "runtime_ms": 16398265, "changes": 0, "observation_changes": 0, "deadline_hits": 69, "warnings": ["site generation skipped: not enough time budget left; envelopes, profiles and report are complete"]}

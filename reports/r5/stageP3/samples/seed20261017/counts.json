@@ -1,0 +1,514 @@
+{
+  "baseline": {
+    "counts": {
+      "websites": 7,
+      "declared_homepage_recall": 4,
+      "declared_homepages": 11,
+      "social_companies": 4,
+      "social_claims": 10,
+      "activity_companies": 100,
+      "activity_claims": 1392,
+      "brand_companies": 7,
+      "brand_claims": 9,
+      "role_change_claims": 232,
+      "facts": 13622,
+      "families": {
+        "identity": 2941,
+        "subunits": 851,
+        "roles": 1260,
+        "accounts": 7045,
+        "gleif": 19,
+        "activity": 1392,
+        "state_aid": 51,
+        "website": 48,
+        "licences": 11,
+        "inspections": 4
+      }
+    },
+    "HTTP": 1173,
+    "CLI_runtime_seconds": 922.125,
+    "site": {
+      "state": "available",
+      "companies": 100,
+      "input_records": 100,
+      "pages": 102,
+      "skipped_invalid_identifiers": 0,
+      "total_bytes": 38987369,
+      "largest_profile_data_bytes": 603481,
+      "largest_profile_bytes": 243340
+    }
+  },
+  "official_claims": {
+    "state_aid": 51,
+    "research": 0,
+    "licences": 11,
+    "inspections": 4
+  },
+  "official_companies": {
+    "state_aid": 8,
+    "research": 0,
+    "licences": 3,
+    "inspections": 2
+  },
+  "official_sections": {
+    "state_aid": {
+      "not_available": 92,
+      "available": 8
+    },
+    "research": {
+      "not_available": 100
+    },
+    "licences": {
+      "not_available": 97,
+      "available": 3
+    },
+    "inspections": {
+      "not_available": 98,
+      "available": 2
+    }
+  },
+  "identity_changes": {
+    "added": [],
+    "removed": []
+  },
+  "seed": 20261017,
+  "counts": {
+    "websites": 7,
+    "declared_homepage_recall": 4,
+    "declared_homepages": 11,
+    "social_companies": 4,
+    "social_claims": 10,
+    "activity_companies": 100,
+    "activity_claims": 1392,
+    "brand_companies": 7,
+    "brand_claims": 9,
+    "role_change_claims": 232,
+    "facts": 13622,
+    "families": {
+      "identity": 2941,
+      "subunits": 851,
+      "roles": 1260,
+      "accounts": 7045,
+      "gleif": 19,
+      "activity": 1392,
+      "state_aid": 51,
+      "website": 48,
+      "licences": 11,
+      "inspections": 4
+    }
+  },
+  "HTTP": 1151,
+  "CLI_runtime_seconds": 513.0310000000172,
+  "cost_usd": 0.0,
+  "site": {
+    "state": "available",
+    "companies": 100,
+    "input_records": 100,
+    "pages": 102,
+    "skipped_invalid_identifiers": 0,
+    "total_bytes": 38745749,
+    "largest_profile_data_bytes": 599928,
+    "largest_profile_bytes": 242988
+  },
+  "identity_items": [
+    {
+      "orgnr": "926818317",
+      "legal_name": "SPEDIFY AS",
+      "kind": "brand",
+      "identity": "SPEDIFY AS AVD ASKIM",
+      "field": "brand.registered_subunit.16c6d47403c9547a144c",
+      "value": {
+        "name": "SPEDIFY AS AVD ASKIM",
+        "origin": "registered_subunit",
+        "subunit_orgnr": "926935321"
+      }
+    },
+    {
+      "orgnr": "926818317",
+      "legal_name": "SPEDIFY AS",
+      "kind": "brand",
+      "identity": "SPEDIFY AS AVD RJUKAN",
+      "field": "brand.registered_subunit.5b6083162f53a3964486",
+      "value": {
+        "name": "SPEDIFY AS AVD RJUKAN",
+        "origin": "registered_subunit",
+        "subunit_orgnr": "936603564"
+      }
+    },
+    {
+      "orgnr": "926818317",
+      "legal_name": "SPEDIFY AS",
+      "kind": "brand",
+      "identity": "Spedify",
+      "field": "public_brand",
+      "value": "Spedify"
+    },
+    {
+      "orgnr": "926818317",
+      "legal_name": "SPEDIFY AS",
+      "kind": "social",
+      "identity": "https://www.facebook.com/spedify.no",
+      "field": "social_profile.89b8e862f29ef070d3c3",
+      "value": {
+        "url": "https://www.facebook.com/spedify.no",
+        "platform": "facebook.com",
+        "proof_tier": "own_contact_follow_us_v1",
+        "company_name": "SPEDIFY AS",
+        "owner_declaration": {
+          "span": "<a href=\"https://www.facebook.com/spedify.no\" target=\"_blank\" rel=\"noopener\" aria-label=\"Facebook\" title=\"Facebook\">",
+          "tier": "own_contact_follow_us_v1",
+          "publisher_excerpt": "Spedify Logo_T Kontakt Spedify AS Sagveien 25 1814 Askim Org.nr. 926 818 317 Følg oss Selskapet Om Spedify Kundereferanser Nyheter 3PL-ressurser Lokasjoner Ledige stillinger Tjenester 3PL og fulfillment Markedsplasser og retail Retur og reparasjon Integrasjoner Praktisk Kontakt Tlf. 35 90 15 50 post@spedify.no Personvernerklæring Informasjonskapsler Spedify AS Copyright ©2026. Alle rettigheter forbeholdt."
+        }
+      }
+    },
+    {
+      "orgnr": "926818317",
+      "legal_name": "SPEDIFY AS",
+      "kind": "social",
+      "identity": "https://www.linkedin.com/company/74060067",
+      "field": "social_profile.7d887bf2b7c749db5700",
+      "value": {
+        "url": "https://www.linkedin.com/company/74060067",
+        "platform": "linkedin.com",
+        "proof_tier": "own_header_footer_numeric_linkedin_v1",
+        "company_name": "SPEDIFY AS"
+      }
+    },
+    {
+      "orgnr": "926818317",
+      "legal_name": "SPEDIFY AS",
+      "kind": "website",
+      "identity": "https://spedify.no",
+      "field": "official_website",
+      "value": {
+        "final_url": "https://spedify.no",
+        "identity_level": "VERIFIED",
+        "proof_type": "orgnr_on_page",
+        "proof_page_url": "https://spedify.no/",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": []
+      }
+    },
+    {
+      "orgnr": "927094266",
+      "legal_name": "SPORTLET.NO AS",
+      "kind": "brand",
+      "identity": "Sportlet.no",
+      "field": "public_brand",
+      "value": "Sportlet.no"
+    },
+    {
+      "orgnr": "927094266",
+      "legal_name": "SPORTLET.NO AS",
+      "kind": "website",
+      "identity": "https://www.sportlet.no",
+      "field": "official_website",
+      "value": {
+        "final_url": "https://www.sportlet.no",
+        "identity_level": "VERIFIED",
+        "proof_type": "orgnr_on_page",
+        "proof_page_url": "https://www.sportlet.no/",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "registry_website",
+        "relationship_note": null,
+        "other_orgnrs": []
+      }
+    },
+    {
+      "orgnr": "929603176",
+      "legal_name": "PAC BYGG AS",
+      "kind": "brand",
+      "identity": "PAC BYGG AS AVD FETSUND",
+      "field": "brand.registered_subunit.3f3c9779adc346dbe3f3",
+      "value": {
+        "name": "PAC BYGG AS AVD FETSUND",
+        "origin": "registered_subunit",
+        "subunit_orgnr": "920050670"
+      }
+    },
+    {
+      "orgnr": "934843355",
+      "legal_name": "AS WDM THRANESGT 8",
+      "kind": "brand",
+      "identity": "AS WDM THRANESGT 8 V/H R ADV ODD SEIM-HAUGEN",
+      "field": "brand.registered_subunit.aa0ba7b5c0db507fb62d",
+      "value": {
+        "name": "AS WDM THRANESGT 8 V/H R ADV ODD SEIM-HAUGEN",
+        "origin": "registered_subunit",
+        "subunit_orgnr": "973619632"
+      }
+    },
+    {
+      "orgnr": "964398003",
+      "legal_name": "FOLKSOM AS",
+      "kind": "social",
+      "identity": "https://www.facebook.com/folksomas",
+      "field": "social_profile.c4675545e69e69b81fd9",
+      "value": {
+        "url": "https://www.facebook.com/folksomas",
+        "platform": "facebook.com",
+        "proof_tier": "own_header_footer_exact_name_v1",
+        "company_name": "FOLKSOM AS"
+      }
+    },
+    {
+      "orgnr": "964398003",
+      "legal_name": "FOLKSOM AS",
+      "kind": "social",
+      "identity": "https://www.instagram.com/folksom",
+      "field": "social_profile.2fcb45ef8e059879f6b0",
+      "value": {
+        "url": "https://www.instagram.com/folksom",
+        "platform": "instagram.com",
+        "proof_tier": "own_header_footer_exact_name_v1",
+        "company_name": "FOLKSOM AS"
+      }
+    },
+    {
+      "orgnr": "964398003",
+      "legal_name": "FOLKSOM AS",
+      "kind": "social",
+      "identity": "https://www.linkedin.com/company/2534098",
+      "field": "social_profile.159af1be7a61ebaebbaa",
+      "value": {
+        "url": "https://www.linkedin.com/company/2534098",
+        "platform": "linkedin.com",
+        "proof_tier": "own_header_footer_numeric_linkedin_v1",
+        "company_name": "FOLKSOM AS"
+      }
+    },
+    {
+      "orgnr": "964398003",
+      "legal_name": "FOLKSOM AS",
+      "kind": "website",
+      "identity": "https://folksom.no",
+      "field": "official_website",
+      "value": {
+        "final_url": "https://folksom.no",
+        "identity_level": "VERIFIED",
+        "proof_type": "orgnr_on_page",
+        "proof_page_url": "https://folksom.no/kontakt",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "registry_website",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "registry_contact_matches": {
+          "email_domain": "folksom.no"
+        }
+      }
+    },
+    {
+      "orgnr": "987769386",
+      "legal_name": "INNLANDET REVISJON IKS",
+      "kind": "website",
+      "identity": "https://irev.no",
+      "field": "official_website",
+      "value": {
+        "final_url": "https://irev.no",
+        "identity_level": "VERIFIED",
+        "proof_type": "orgnr_on_page",
+        "proof_page_url": "https://irev.no/",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "registry_website",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "registry_contact_matches": {
+          "email_domain": "irev.no",
+          "phone": "+4761222568"
+        }
+      }
+    },
+    {
+      "orgnr": "991853995",
+      "legal_name": "BIEN SPAREBANK ASA",
+      "kind": "brand",
+      "identity": "Bien Sparebank",
+      "field": "public_brand",
+      "value": "Bien Sparebank"
+    },
+    {
+      "orgnr": "991853995",
+      "legal_name": "BIEN SPAREBANK ASA",
+      "kind": "social",
+      "identity": "http://instagram.com/biensparebank",
+      "field": "social_profile.8d32d02c775ca6133131",
+      "value": {
+        "url": "http://instagram.com/biensparebank",
+        "platform": "instagram.com",
+        "proof_tier": "own_header_footer_exact_name_v1",
+        "company_name": "BIEN SPAREBANK ASA"
+      }
+    },
+    {
+      "orgnr": "991853995",
+      "legal_name": "BIEN SPAREBANK ASA",
+      "kind": "social",
+      "identity": "https://twitter.com/BienSparebank",
+      "field": "social_profile.66dd88d9797be26c167f",
+      "value": {
+        "url": "https://twitter.com/BienSparebank",
+        "platform": "twitter.com",
+        "proof_tier": "own_header_footer_exact_name_v1",
+        "company_name": "BIEN SPAREBANK ASA"
+      }
+    },
+    {
+      "orgnr": "991853995",
+      "legal_name": "BIEN SPAREBANK ASA",
+      "kind": "social",
+      "identity": "https://www.facebook.com/BienSparebank",
+      "field": "social_profile.da5f4141dc679e8758f6",
+      "value": {
+        "url": "https://www.facebook.com/BienSparebank",
+        "platform": "facebook.com",
+        "proof_tier": "own_header_footer_exact_name_v1",
+        "company_name": "BIEN SPAREBANK ASA"
+      }
+    },
+    {
+      "orgnr": "991853995",
+      "legal_name": "BIEN SPAREBANK ASA",
+      "kind": "social",
+      "identity": "https://www.linkedin.com/company/123301",
+      "field": "social_profile.a642d67c76a4508a3fd1",
+      "value": {
+        "url": "https://www.linkedin.com/company/123301",
+        "platform": "linkedin.com",
+        "proof_tier": "own_header_footer_numeric_linkedin_v1",
+        "company_name": "BIEN SPAREBANK ASA"
+      }
+    },
+    {
+      "orgnr": "991853995",
+      "legal_name": "BIEN SPAREBANK ASA",
+      "kind": "website",
+      "identity": "https://www.bien.no",
+      "field": "official_website",
+      "value": {
+        "final_url": "https://www.bien.no",
+        "identity_level": "VERIFIED",
+        "proof_type": "orgnr_on_page",
+        "proof_page_url": "https://www.bien.no/",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "registry_website",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "registry_contact_matches": {
+          "email_domain": "bien.no"
+        }
+      }
+    },
+    {
+      "orgnr": "997995414",
+      "legal_name": "PEAK LANDSCAPES AS",
+      "kind": "brand",
+      "identity": "Peak Landscapes",
+      "field": "public_brand",
+      "value": "Peak Landscapes"
+    },
+    {
+      "orgnr": "997995414",
+      "legal_name": "PEAK LANDSCAPES AS",
+      "kind": "social",
+      "identity": "https://www.instagram.com/peak_landscapes_as",
+      "field": "social_profile.068e48d5e21690ec1714",
+      "value": {
+        "url": "https://www.instagram.com/peak_landscapes_as",
+        "platform": "instagram.com",
+        "proof_tier": "own_header_footer_exact_name_v1",
+        "company_name": "PEAK LANDSCAPES AS"
+      }
+    },
+    {
+      "orgnr": "997995414",
+      "legal_name": "PEAK LANDSCAPES AS",
+      "kind": "website",
+      "identity": "https://www.peaklandscapes.no",
+      "field": "official_website",
+      "value": {
+        "final_url": "https://www.peaklandscapes.no",
+        "identity_level": "HIGH",
+        "proof_type": "publisher_name_registered_place",
+        "proof_page_url": "https://www.peaklandscapes.no/about-us",
+        "signals": [
+          "publisher_owner_receipt"
+        ],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publisher_identity": {
+          "tier": "publisher_name_registered_place",
+          "legal_name": "PEAK LANDSCAPES AS",
+          "publisher_location": "imprint-kontakt",
+          "publisher_excerpt": "Selskapet ble først etablert i Sør-England med spesialisering på skreddersydde private hager. I 2008 flyttet grunnlegger Dave Marshall til Norge, og etter flere år som prosjektleder i anerkjente norske anleggsgartnerfirma, ble Peak Landscapes AS etablert her i 2012.",
+          "candidate_url": "https://peaklandscapes.no/",
+          "proof_page_url": "https://www.peaklandscapes.no/about-us",
+          "proof_token": "PEAK LANDSCAPES AS",
+          "owner_signal": {
+            "kind": "exact_full_legal_name_and_registered_place"
+          },
+          "rarity_table": {
+            "bundle_sha256": "900882536a574656025214e5163174812d4d4234e4922b9e452e86882b530d07",
+            "built_at": "2026-11-13T19:05:51.310268+00:00",
+            "entity_count": 1177860,
+            "sources": [
+              {
+                "kind": "enheter",
+                "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+                "file": "registry.csv",
+                "sha256": "5b0df27c5567a655320b8dfb8975049b76c46ba93d748a8a763f8db7050b7862",
+                "valid_rows": 1177860,
+                "local_file_modified_at": "2026-10-13T06:48:09.113086+00:00"
+              }
+            ],
+            "attribution": "Brønnøysundregistrene / Enhetsregisteret; NLOD 2.0",
+            "licence_url": "https://data.norge.no/nlod/no/2.0"
+          },
+          "place": {
+            "publisher_location": "footer",
+            "publisher_excerpt": "Peak Landscapes AS HJEM TJENESTER PROSJEKTER OM OSS Menu Close HOVEDKONTOR Alunsjøveien 65, 0957 Oslo +47 45 68 54 99 david@peaklandscapes.no SOCIALS Facebook Instagram FORESPØRSLER FÅ DITT TILBUD © 2025 by SGNXT",
+            "postcode": "0957",
+            "street": "Alunsjøveien 65",
+            "city": "OSLO"
+          }
+        }
+      }
+    },
+    {
+      "orgnr": "998340888",
+      "legal_name": "NAPOLITANA AS",
+      "kind": "brand",
+      "identity": "Napolitana Restaurant",
+      "field": "public_brand",
+      "value": "Napolitana Restaurant"
+    },
+    {
+      "orgnr": "998340888",
+      "legal_name": "NAPOLITANA AS",
+      "kind": "website",
+      "identity": "https://napolitana.no",
+      "field": "official_website",
+      "value": {
+        "final_url": "https://napolitana.no",
+        "identity_level": "VERIFIED",
+        "proof_type": "orgnr_on_page",
+        "proof_page_url": "https://napolitana.no/",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": []
+      }
+    }
+  ],
+  "envelopes_sha256": "00f15be95d7cfbf6324ae24be05d8cfd2d58de8732bc89d788d0e5c59e9418bc",
+  "profiles_sha256": "e94a75e61713aa98a87537309184fab68ff5a27a23c3340cbcaf72d1abdf796d"
+}

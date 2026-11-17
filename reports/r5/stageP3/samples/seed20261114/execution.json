@@ -1,0 +1,25 @@
+{
+  "exit_code": 0,
+  "wall_seconds": 501.9220000000205,
+  "argv": [
+    "<REPO>\\.venv\\Scripts\\python.exe",
+    "-m",
+    "signalpost.cli",
+    "run",
+    "--organisations",
+    "<REPO>\\reports\\r5\\release-v4b\\companies100.jsonl",
+    "--bulk",
+    "<REPO>\\reports\\r5\\release-v4b\\registry100.csv",
+    "--output",
+    "<REPO>\\.data\\r5\\stageP3-20261114-final\\envelopes.jsonl",
+    "--profiles-output",
+    "<REPO>\\.data\\r5\\stageP3-20261114-final\\profiles.jsonl",
+    "--report",
+    "<REPO>\\.data\\r5\\stageP3-20261114-final\\report.json",
+    "--run-id",
+    "r5-stageP3-seed20261114-final",
+    "--expected-count",
+    "100"
+  ],
+  "cwd": "<REPO>\\.data\\r5\\stageP3-20261114-final"
+}

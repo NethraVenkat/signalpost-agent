@@ -1,0 +1,706 @@
+{
+  "baseline": {
+    "counts": {
+      "websites": 9,
+      "declared_homepage_recall": 1,
+      "declared_homepages": 11,
+      "social_companies": 4,
+      "social_claims": 7,
+      "activity_companies": 100,
+      "activity_claims": 1243,
+      "brand_companies": 7,
+      "brand_claims": 25,
+      "role_change_claims": 172,
+      "facts": 14142,
+      "families": {
+        "identity": 3020,
+        "subunits": 1163,
+        "roles": 1062,
+        "accounts": 7505,
+        "website": 53,
+        "state_aid": 46,
+        "activity": 1243,
+        "gleif": 20,
+        "research": 1,
+        "hiring": 2,
+        "inspections": 27
+      }
+    },
+    "HTTP": 1109,
+    "CLI_runtime_seconds": 911.0620000000054,
+    "site": {
+      "state": "available",
+      "companies": 100,
+      "input_records": 100,
+      "pages": 102,
+      "skipped_invalid_identifiers": 0,
+      "total_bytes": 39200699,
+      "largest_profile_data_bytes": 1143966,
+      "largest_profile_bytes": 249326
+    }
+  },
+  "official_claims": {
+    "state_aid": 46,
+    "research": 1,
+    "licences": 0,
+    "inspections": 27
+  },
+  "official_companies": {
+    "state_aid": 7,
+    "research": 1,
+    "licences": 0,
+    "inspections": 1
+  },
+  "official_sections": {
+    "state_aid": {
+      "available": 7,
+      "not_available": 93
+    },
+    "research": {
+      "not_available": 99,
+      "available": 1
+    },
+    "licences": {
+      "not_available": 100
+    },
+    "inspections": {
+      "not_available": 99,
+      "available": 1
+    }
+  },
+  "identity_changes": {
+    "added": [],
+    "removed": []
+  },
+  "seed": 20261117,
+  "counts": {
+    "websites": 9,
+    "declared_homepage_recall": 1,
+    "declared_homepages": 11,
+    "social_companies": 4,
+    "social_claims": 7,
+    "activity_companies": 100,
+    "activity_claims": 1244,
+    "brand_companies": 7,
+    "brand_claims": 25,
+    "role_change_claims": 172,
+    "facts": 14143,
+    "families": {
+      "identity": 3020,
+      "subunits": 1163,
+      "roles": 1062,
+      "accounts": 7505,
+      "website": 53,
+      "state_aid": 46,
+      "activity": 1244,
+      "gleif": 20,
+      "research": 1,
+      "inspections": 27,
+      "hiring": 2
+    }
+  },
+  "HTTP": 1091,
+  "CLI_runtime_seconds": 494.85899999999674,
+  "cost_usd": 0.0,
+  "site": {
+    "state": "available",
+    "companies": 100,
+    "input_records": 100,
+    "pages": 102,
+    "skipped_invalid_identifiers": 0,
+    "total_bytes": 39002407,
+    "largest_profile_data_bytes": 1143813,
+    "largest_profile_bytes": 249441
+  },
+  "identity_items": [
+    {
+      "orgnr": "914983169",
+      "legal_name": "GEIR-JONNY AS",
+      "kind": "brand",
+      "identity": "GEIR JONNY NOREKVÅL",
+      "field": "brand.registered_subunit.22c9cfb57859790cdfc0",
+      "value": {
+        "name": "GEIR JONNY NOREKVÅL",
+        "origin": "registered_subunit",
+        "subunit_orgnr": "973763326"
+      }
+    },
+    {
+      "orgnr": "915515940",
+      "legal_name": "LISELAKK AS",
+      "kind": "brand",
+      "identity": "LISELAKK AS BEAUTYBAR AMUNDSPLASS",
+      "field": "brand.registered_subunit.8e93e3dfc394d1efbc04",
+      "value": {
+        "name": "LISELAKK AS BEAUTYBAR AMUNDSPLASS",
+        "origin": "registered_subunit",
+        "subunit_orgnr": "923872558"
+      }
+    },
+    {
+      "orgnr": "915515940",
+      "legal_name": "LISELAKK AS",
+      "kind": "brand",
+      "identity": "LISELAKK AS BEAUTYBAR JEKTA",
+      "field": "brand.registered_subunit.fef54c530ba2954b3247",
+      "value": {
+        "name": "LISELAKK AS BEAUTYBAR JEKTA",
+        "origin": "registered_subunit",
+        "subunit_orgnr": "923872574"
+      }
+    },
+    {
+      "orgnr": "915515940",
+      "legal_name": "LISELAKK AS",
+      "kind": "brand",
+      "identity": "LISELAKK AS BEAUTYBAR PYRAMIDEN",
+      "field": "brand.registered_subunit.c88a750ba67afb61d571",
+      "value": {
+        "name": "LISELAKK AS BEAUTYBAR PYRAMIDEN",
+        "origin": "registered_subunit",
+        "subunit_orgnr": "923872582"
+      }
+    },
+    {
+      "orgnr": "915515940",
+      "legal_name": "LISELAKK AS",
+      "kind": "brand",
+      "identity": "LISELAKK AS HENRIK IBSENS VEG TROMSØ",
+      "field": "brand.registered_subunit.6c843b2590f229a8ff77",
+      "value": {
+        "name": "LISELAKK AS HENRIK IBSENS VEG TROMSØ",
+        "origin": "registered_subunit",
+        "subunit_orgnr": "915590020"
+      }
+    },
+    {
+      "orgnr": "916875657",
+      "legal_name": "KAAPE AS",
+      "kind": "brand",
+      "identity": "KAAPE",
+      "field": "public_brand",
+      "value": "KAAPE"
+    },
+    {
+      "orgnr": "916875657",
+      "legal_name": "KAAPE AS",
+      "kind": "website",
+      "identity": "https://www.kaape.no",
+      "field": "official_website",
+      "value": {
+        "final_url": "https://www.kaape.no",
+        "identity_level": "VERIFIED",
+        "proof_type": "orgnr_on_page",
+        "proof_page_url": "https://www.kaape.no/betingelser",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": []
+      }
+    },
+    {
+      "orgnr": "918638628",
+      "legal_name": "VESTFJORDEN ELEKTRO AS",
+      "kind": "brand",
+      "identity": "Vestfjorden Elektro",
+      "field": "public_brand",
+      "value": "Vestfjorden Elektro"
+    },
+    {
+      "orgnr": "918638628",
+      "legal_name": "VESTFJORDEN ELEKTRO AS",
+      "kind": "social",
+      "identity": "https://www.facebook.com/vestfjordenelektro",
+      "field": "social_profile.d6396e2cd1fce3b0799b",
+      "value": {
+        "url": "https://www.facebook.com/vestfjordenelektro",
+        "platform": "facebook.com",
+        "proof_tier": "own_header_footer_exact_name_v1",
+        "company_name": "VESTFJORDEN ELEKTRO AS"
+      }
+    },
+    {
+      "orgnr": "918638628",
+      "legal_name": "VESTFJORDEN ELEKTRO AS",
+      "kind": "website",
+      "identity": "https://vestfjordenelektro.no",
+      "field": "official_website",
+      "value": {
+        "final_url": "https://vestfjordenelektro.no",
+        "identity_level": "VERIFIED",
+        "proof_type": "orgnr_on_page",
+        "proof_page_url": "https://vestfjordenelektro.no/",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": []
+      }
+    },
+    {
+      "orgnr": "925392731",
+      "legal_name": "MEKAN AS",
+      "kind": "website",
+      "identity": "https://mekan.no",
+      "field": "official_website",
+      "value": {
+        "final_url": "https://mekan.no",
+        "identity_level": "VERIFIED",
+        "proof_type": "orgnr_on_page",
+        "proof_page_url": "https://mekan.no/pages/contact",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": []
+      }
+    },
+    {
+      "orgnr": "926148931",
+      "legal_name": "ATLO AS",
+      "kind": "website",
+      "identity": "https://atlo.no",
+      "field": "official_website",
+      "value": {
+        "final_url": "https://atlo.no",
+        "identity_level": "VERIFIED",
+        "proof_type": "orgnr_on_page",
+        "proof_page_url": "https://atlo.no/",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": []
+      }
+    },
+    {
+      "orgnr": "934608143",
+      "legal_name": "NORWAY MARINE SUPPLY AS",
+      "kind": "brand",
+      "identity": "Maritim Båtutstyr",
+      "field": "public_brand",
+      "value": "Maritim Båtutstyr"
+    },
+    {
+      "orgnr": "934608143",
+      "legal_name": "NORWAY MARINE SUPPLY AS",
+      "kind": "website",
+      "identity": "https://www.maritim.no",
+      "field": "official_website",
+      "value": {
+        "final_url": "https://www.maritim.no",
+        "identity_level": "VERIFIED",
+        "proof_type": "orgnr_on_page",
+        "proof_page_url": "https://www.maritim.no/kjopsbetingelser",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "registry_website",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "registry_contact_matches": {
+          "email_domain": "maritim.no",
+          "phone": "+4737000370"
+        }
+      }
+    },
+    {
+      "orgnr": "936758819",
+      "legal_name": "HELSEFIX AS",
+      "kind": "brand",
+      "identity": "helseFix",
+      "field": "public_brand",
+      "value": "helseFix"
+    },
+    {
+      "orgnr": "936758819",
+      "legal_name": "HELSEFIX AS",
+      "kind": "social",
+      "identity": "https://www.instagram.com/helsefix",
+      "field": "social_profile.f6540052159587fff466",
+      "value": {
+        "url": "https://www.instagram.com/helsefix",
+        "platform": "instagram.com",
+        "proof_tier": "own_header_footer_exact_name_v1",
+        "company_name": "HELSEFIX AS"
+      }
+    },
+    {
+      "orgnr": "936758819",
+      "legal_name": "HELSEFIX AS",
+      "kind": "social",
+      "identity": "https://www.youtube.com/@helseFix",
+      "field": "social_profile.6693866b00b758de7fb7",
+      "value": {
+        "url": "https://www.youtube.com/@helseFix",
+        "platform": "youtube.com",
+        "proof_tier": "own_header_footer_exact_name_v1",
+        "company_name": "HELSEFIX AS"
+      }
+    },
+    {
+      "orgnr": "936758819",
+      "legal_name": "HELSEFIX AS",
+      "kind": "website",
+      "identity": "https://helsefix.no",
+      "field": "official_website",
+      "value": {
+        "final_url": "https://helsefix.no",
+        "identity_level": "VERIFIED",
+        "proof_type": "orgnr_on_page",
+        "proof_page_url": "https://helsefix.no/personvern",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "legal_name_slug",
+        "relationship_note": null,
+        "other_orgnrs": []
+      }
+    },
+    {
+      "orgnr": "948039958",
+      "legal_name": "VALAKER BAKERI OG KONDITORI AS",
+      "kind": "brand",
+      "identity": "VALAKER BAKERI OG KONDITORI AS AVD B B ULSTEINVIK",
+      "field": "brand.registered_subunit.c2a28b47104de87fc098",
+      "value": {
+        "name": "VALAKER BAKERI OG KONDITORI AS AVD B B ULSTEINVIK",
+        "origin": "registered_subunit",
+        "subunit_orgnr": "988666726"
+      }
+    },
+    {
+      "orgnr": "948039958",
+      "legal_name": "VALAKER BAKERI OG KONDITORI AS",
+      "kind": "brand",
+      "identity": "VALAKER BAKERI OG KONDITORI AS AVD BRAUD DIGERNES",
+      "field": "brand.registered_subunit.a7df8b9c43f9445a7c32",
+      "value": {
+        "name": "VALAKER BAKERI OG KONDITORI AS AVD BRAUD DIGERNES",
+        "origin": "registered_subunit",
+        "subunit_orgnr": "925602906"
+      }
+    },
+    {
+      "orgnr": "948039958",
+      "legal_name": "VALAKER BAKERI OG KONDITORI AS",
+      "kind": "brand",
+      "identity": "VALAKER BAKERI OG KONDITORI AS AVD BRAUD GJØSUND",
+      "field": "brand.registered_subunit.64858762bc8b25a990de",
+      "value": {
+        "name": "VALAKER BAKERI OG KONDITORI AS AVD BRAUD GJØSUND",
+        "origin": "registered_subunit",
+        "subunit_orgnr": "931719009"
+      }
+    },
+    {
+      "orgnr": "948039958",
+      "legal_name": "VALAKER BAKERI OG KONDITORI AS",
+      "kind": "brand",
+      "identity": "VALAKER BAKERI OG KONDITORI AS AVD BRAUD MOA",
+      "field": "brand.registered_subunit.e80552cefa0c1fe1df67",
+      "value": {
+        "name": "VALAKER BAKERI OG KONDITORI AS AVD BRAUD MOA",
+        "origin": "registered_subunit",
+        "subunit_orgnr": "987194286"
+      }
+    },
+    {
+      "orgnr": "948039958",
+      "legal_name": "VALAKER BAKERI OG KONDITORI AS",
+      "kind": "brand",
+      "identity": "VALAKER BAKERI OG KONDITORI AS AVD BRAUD MOLDE",
+      "field": "brand.registered_subunit.7de48a5cd80b5a899bbb",
+      "value": {
+        "name": "VALAKER BAKERI OG KONDITORI AS AVD BRAUD MOLDE",
+        "origin": "registered_subunit",
+        "subunit_orgnr": "931718967"
+      }
+    },
+    {
+      "orgnr": "948039958",
+      "legal_name": "VALAKER BAKERI OG KONDITORI AS",
+      "kind": "brand",
+      "identity": "VALAKER BAKERI OG KONDITORI AS AVD FOSNVÅG",
+      "field": "brand.registered_subunit.c6ae3c1b9eac6e6d817b",
+      "value": {
+        "name": "VALAKER BAKERI OG KONDITORI AS AVD FOSNVÅG",
+        "origin": "registered_subunit",
+        "subunit_orgnr": "992232110"
+      }
+    },
+    {
+      "orgnr": "948039958",
+      "legal_name": "VALAKER BAKERI OG KONDITORI AS",
+      "kind": "brand",
+      "identity": "VALAKER BAKERI OG KONDITORI AS AVD MOA SYD",
+      "field": "brand.registered_subunit.3d5ea6a1360dbc6e2196",
+      "value": {
+        "name": "VALAKER BAKERI OG KONDITORI AS AVD MOA SYD",
+        "origin": "registered_subunit",
+        "subunit_orgnr": "990953910"
+      }
+    },
+    {
+      "orgnr": "948039958",
+      "legal_name": "VALAKER BAKERI OG KONDITORI AS",
+      "kind": "brand",
+      "identity": "VALAKER BAKERI OG KONDITORI AS AVD MOA ØST",
+      "field": "brand.registered_subunit.23f4c228eec44478e64d",
+      "value": {
+        "name": "VALAKER BAKERI OG KONDITORI AS AVD MOA ØST",
+        "origin": "registered_subunit",
+        "subunit_orgnr": "925923842"
+      }
+    },
+    {
+      "orgnr": "948039958",
+      "legal_name": "VALAKER BAKERI OG KONDITORI AS",
+      "kind": "brand",
+      "identity": "VALAKER BAKERI OG KONDITORI AS AVD RÅDHUSET",
+      "field": "brand.registered_subunit.7b66a4686b5b454d2b71",
+      "value": {
+        "name": "VALAKER BAKERI OG KONDITORI AS AVD RÅDHUSET",
+        "origin": "registered_subunit",
+        "subunit_orgnr": "990953791"
+      }
+    },
+    {
+      "orgnr": "948039958",
+      "legal_name": "VALAKER BAKERI OG KONDITORI AS",
+      "kind": "brand",
+      "identity": "VALAKER BAKERI OG KONDITORI AS AVD STORMOA NORD",
+      "field": "brand.registered_subunit.ffaefea2ec2546ef24c7",
+      "value": {
+        "name": "VALAKER BAKERI OG KONDITORI AS AVD STORMOA NORD",
+        "origin": "registered_subunit",
+        "subunit_orgnr": "990953872"
+      }
+    },
+    {
+      "orgnr": "948039958",
+      "legal_name": "VALAKER BAKERI OG KONDITORI AS",
+      "kind": "brand",
+      "identity": "VALAKER BAKERI OG KONDITORI AS AVD SØVIK PRODUKSJON",
+      "field": "brand.registered_subunit.6be1689eb767b2bb4e72",
+      "value": {
+        "name": "VALAKER BAKERI OG KONDITORI AS AVD SØVIK PRODUKSJON",
+        "origin": "registered_subunit",
+        "subunit_orgnr": "992232080"
+      }
+    },
+    {
+      "orgnr": "948039958",
+      "legal_name": "VALAKER BAKERI OG KONDITORI AS",
+      "kind": "brand",
+      "identity": "VALAKER BAKERI OG KONDITORI AS AVD ULSTEINVIK",
+      "field": "brand.registered_subunit.a26016aeb36953598d22",
+      "value": {
+        "name": "VALAKER BAKERI OG KONDITORI AS AVD ULSTEINVIK",
+        "origin": "registered_subunit",
+        "subunit_orgnr": "992232749"
+      }
+    },
+    {
+      "orgnr": "948039958",
+      "legal_name": "VALAKER BAKERI OG KONDITORI AS",
+      "kind": "brand",
+      "identity": "VALAKER BAKERI OG KONDITORI AS AVD VESTNES",
+      "field": "brand.registered_subunit.a0a828104b52a1d77eee",
+      "value": {
+        "name": "VALAKER BAKERI OG KONDITORI AS AVD VESTNES",
+        "origin": "registered_subunit",
+        "subunit_orgnr": "990953643"
+      }
+    },
+    {
+      "orgnr": "948039958",
+      "legal_name": "VALAKER BAKERI OG KONDITORI AS",
+      "kind": "brand",
+      "identity": "VALAKER BAKERI OG KONDITORI AS AVD ÅLESUND",
+      "field": "brand.registered_subunit.6b7301371eb0c958166d",
+      "value": {
+        "name": "VALAKER BAKERI OG KONDITORI AS AVD ÅLESUND",
+        "origin": "registered_subunit",
+        "subunit_orgnr": "990953694"
+      }
+    },
+    {
+      "orgnr": "948039958",
+      "legal_name": "VALAKER BAKERI OG KONDITORI AS",
+      "kind": "brand",
+      "identity": "VALAKER BAKERI OG KONDITORI AS BRAUD OSLO",
+      "field": "brand.registered_subunit.51b185a63bf3d52e617d",
+      "value": {
+        "name": "VALAKER BAKERI OG KONDITORI AS BRAUD OSLO",
+        "origin": "registered_subunit",
+        "subunit_orgnr": "934998308"
+      }
+    },
+    {
+      "orgnr": "948039958",
+      "legal_name": "VALAKER BAKERI OG KONDITORI AS",
+      "kind": "brand",
+      "identity": "Valaker Bakeri",
+      "field": "public_brand",
+      "value": "Valaker Bakeri"
+    },
+    {
+      "orgnr": "948039958",
+      "legal_name": "VALAKER BAKERI OG KONDITORI AS",
+      "kind": "social",
+      "identity": "https://www.facebook.com/valakerbakeriogkonditori",
+      "field": "social_profile.82f11043e5714b110a0d",
+      "value": {
+        "url": "https://www.facebook.com/valakerbakeriogkonditori",
+        "platform": "facebook.com",
+        "proof_tier": "own_header_footer_exact_name_v1",
+        "company_name": "VALAKER BAKERI OG KONDITORI AS"
+      }
+    },
+    {
+      "orgnr": "948039958",
+      "legal_name": "VALAKER BAKERI OG KONDITORI AS",
+      "kind": "social",
+      "identity": "https://www.instagram.com/valakerbakeriogkonditori",
+      "field": "social_profile.e1ed3d2fa8f3df94d85a",
+      "value": {
+        "url": "https://www.instagram.com/valakerbakeriogkonditori",
+        "platform": "instagram.com",
+        "proof_tier": "own_header_footer_exact_name_v1",
+        "company_name": "VALAKER BAKERI OG KONDITORI AS"
+      }
+    },
+    {
+      "orgnr": "948039958",
+      "legal_name": "VALAKER BAKERI OG KONDITORI AS",
+      "kind": "website",
+      "identity": "https://www.valakerbakeri.no",
+      "field": "official_website",
+      "value": {
+        "final_url": "https://www.valakerbakeri.no",
+        "identity_level": "VERIFIED",
+        "proof_type": "orgnr_on_page",
+        "proof_page_url": "https://www.valakerbakeri.no/",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "nav_employer_homepage",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "registry_contact_matches": {
+          "phone": "+4770216590",
+          "email_domain": "valaker.as"
+        }
+      }
+    },
+    {
+      "orgnr": "980616622",
+      "legal_name": "BAGGES AS",
+      "kind": "social",
+      "identity": "https://www.facebook.com/BAGGES.AS",
+      "field": "social_profile.01b0c947e647d04cb9dc",
+      "value": {
+        "url": "https://www.facebook.com/BAGGES.AS",
+        "platform": "facebook.com",
+        "proof_tier": "own_header_footer_exact_name_v1",
+        "company_name": "BAGGES AS"
+      }
+    },
+    {
+      "orgnr": "980616622",
+      "legal_name": "BAGGES AS",
+      "kind": "social",
+      "identity": "https://www.linkedin.com/company/bagges-as",
+      "field": "social_profile.fc5086b67e57dc838a1c",
+      "value": {
+        "url": "https://www.linkedin.com/company/bagges-as",
+        "platform": "linkedin.com",
+        "proof_tier": "own_header_footer_exact_name_v1",
+        "company_name": "BAGGES AS"
+      }
+    },
+    {
+      "orgnr": "980616622",
+      "legal_name": "BAGGES AS",
+      "kind": "website",
+      "identity": "https://www.bagges.no",
+      "field": "official_website",
+      "value": {
+        "final_url": "https://www.bagges.no",
+        "identity_level": "HIGH",
+        "proof_type": "publisher_name_rare_contact",
+        "proof_page_url": "https://www.bagges.no/",
+        "signals": [
+          "publisher_full_legal_name",
+          "rare_registry_contact"
+        ],
+        "points": 0,
+        "candidate_origin": "registry_email",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "publisher_identity": {
+          "tier": "publisher_name_rare_contact",
+          "legal_name": "BAGGES AS",
+          "publisher_location": "title",
+          "publisher_excerpt": "BAGGES AS - Ventiler, pakninger og tekniske løsninger",
+          "candidate_url": "https://bagges.no/",
+          "proof_page_url": "https://www.bagges.no/",
+          "contact": {
+            "registry_field": "phone",
+            "registry_value": "64 83 50 00",
+            "kind": "phone",
+            "normalized_value": "64835000",
+            "publisher_location": "footer",
+            "publisher_excerpt": "Kontakt BAGGES AS Industriveien 15, 2020 Skedsmokorset Tlf : 64 83 50 00 Email : post@bagges.no Salgs- og leveringsbetingelser Personvernerklæring Kvalitetspolitikk ESG politikk Bærekraftsrapport Etiske Retningslinjer for Leverandører Å penhetsloven Sosiale medier",
+            "matched_text": " 64 83 50 00",
+            "rarity_count": 2
+          },
+          "rarity_table": {
+            "bundle_sha256": "900882536a574656025214e5163174812d4d4234e4922b9e452e86882b530d07",
+            "built_at": "2026-11-13T19:05:51.310268+00:00",
+            "entity_count": 1177860,
+            "sources": [
+              {
+                "kind": "enheter",
+                "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+                "file": "registry.csv",
+                "sha256": "5b0df27c5567a655320b8dfb8975049b76c46ba93d748a8a763f8db7050b7862",
+                "valid_rows": 1177860,
+                "local_file_modified_at": "2026-10-13T06:48:09.113086+00:00"
+              }
+            ],
+            "attribution": "Brønnøysundregistrene / Enhetsregisteret; NLOD 2.0",
+            "licence_url": "https://data.norge.no/nlod/no/2.0"
+          }
+        },
+        "registry_contact_matches": {
+          "email_domain": "bagges.no",
+          "phone": "+4764835000"
+        }
+      }
+    },
+    {
+      "orgnr": "997584112",
+      "legal_name": "TECNOVAP AS",
+      "kind": "website",
+      "identity": "https://www.tecnovap.no",
+      "field": "official_website",
+      "value": {
+        "final_url": "https://www.tecnovap.no",
+        "identity_level": "VERIFIED",
+        "proof_type": "orgnr_on_page",
+        "proof_page_url": "https://www.tecnovap.no/",
+        "signals": [],
+        "points": 0,
+        "candidate_origin": "registry_email",
+        "relationship_note": null,
+        "other_orgnrs": [],
+        "registry_contact_matches": {
+          "phone": "+4741778888",
+          "email_domain": "tecnovap.no"
+        }
+      }
+    }
+  ],
+  "envelopes_sha256": "fdb89c77dcf46980a894b806add008e4f61543c27a0dcad36e0d54cf42d18560",
+  "profiles_sha256": "98e915e94ef8524dc6006e14a8646c3532f5df002677454a5ba3f33e4714be5c"
+}

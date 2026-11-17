@@ -1,0 +1,31 @@
+{
+  "seed": 20261113,
+  "stage": "P3",
+  "working_directory": "<REPO>\\.data\\r5\\stageP3-20261113-final",
+  "command_argv": [
+    "<REPO>\\.venv\\Scripts\\python.exe",
+    "-m",
+    "signalpost.cli",
+    "run",
+    "--organisations",
+    "<REPO>\\reports\\r5\\release-v4\\companies100.jsonl",
+    "--bulk",
+    "<REPO>\\reports\\r5\\release-v4\\registry100.csv",
+    "--output",
+    "<REPO>\\.data\\r5\\stageP3-20261113-final\\envelopes.jsonl",
+    "--profiles-output",
+    "<REPO>\\.data\\r5\\stageP3-20261113-final\\profiles.jsonl",
+    "--report",
+    "<REPO>\\.data\\r5\\stageP3-20261113-final\\report.json",
+    "--run-id",
+    "r5-stageP3-seed20261113-final",
+    "--expected-count",
+    "100"
+  ],
+  "exact_seven_flags": true,
+  "input_sha256": "34d436c3bec6b5677bd2c8bab11a178192965c828c56722b571d0ba84547903c",
+  "bulk_sha256": "5b92dd3a9015a2f6a8ad9eaf6d5796f779669a382effdb59bbb9260d803dbd90",
+  "source_manifest_sha256": "a1ecc2170d5537c930b6c266472a1d0db1cf77e6ea12bd8ae439454e5c41899e",
+  "parent_commit": "d61014eb2229a08f9f3b93d7b6bba5d9c4b4140e",
+  "comparison": "reports/r5/stageS/seed<seed>/counts.json (Stage S, before P3)"
+}

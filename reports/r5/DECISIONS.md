@@ -763,3 +763,10 @@
 - No real duplicates: 0 evidence records identical apart from id, 12 unreferenced (tiny). `run.synthesis` and `profile.synthesis` (11.1 MB each) are an intentional mirrored contract and stay.
 - Every evidence record must carry its exact request URL (self-contained per-claim contract, `Evidence.source_url` required), so the URL is not replaced by a reference. Instead the update-feed batch is 20 numbers per request (URL ~450 characters) instead of 200: about 45 MB saved at 500 companies for a few dozen extra registry requests (P2 used 10 such requests). No fact, span or evidence record is dropped.
 - The cap is not raised: no organiser document in the repo states an output limit. Expected 500-company output ~225-235 MB, under 268,435,456 B; this margin shrinks with batch size, recorded as a limitation (a 1,000-company union output would still exceed a fixed 256 MiB).
+
+
+## 2026-11-17 - Stage P3e: 500-company measurement and six samples
+
+- One fresh 500-company run, seed 20261119, at d61014e from a clean clone with exactly seven flags: all gates incl. `check_live_run --count 500` pass first time. Wall 2,591 s against the 10,500 s scaled default; 0 deadline hits; 0 placeholders (211.2 MB envelopes); GLEIF, TED and all four Stage S sources finished for every company (TED: 3 robots-blocked). Details: `reports/r5/stageP3/P3e/SUMMARY.md`.
+- Non-overlap fix: P2's sample inputs were never committed (`.gitignore` `*.jsonl`/`*.csv`), so a committed-files-only exclusion overlapped P2 by 2 numbers. That draw was discarded before running; the exclusion now also covers sample files on disk under `reports/`. P2's and P3e's input files are force-added so both draws are reproducible from the repo.
+- Six 100-samples once: all pass at about half the Stage S runtime with the same websites and official claims. Seed 20261117's first attempt froze for ~2.7 h during machine suspend (environment outage), and its single retry passed (`reports/r5/stageP3/samples/SUMMARY.md`).

@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "git",
+    "clone",
+    "--no-hardlinks",
+    "--branch",
+    "revision/r5",
+    "<REPO>",
+    "<REPO>\\.data\\r5\\p3e-clean\\repo"
+  ],
+  "cwd": "<REPO>",
+  "exit_code": 0,
+  "wall_seconds": 6.153688199992757,
+  "completed_at_utc": "2026-11-16T16:47:45.494481+00:00"
+}
