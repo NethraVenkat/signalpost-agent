@@ -40,3 +40,7 @@ scale500/urls.json -text
 
 # Stage S access receipts are raw response bytes hashed in manifest.json.
 stageS/access/* -text
+stageP3/P3e/companies500.jsonl -text
+stageP3/P3e/registry500.csv -text
+scale500/companies500.jsonl -text
+scale500/registry500.csv -text

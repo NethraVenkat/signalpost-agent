@@ -17,7 +17,9 @@ class Config(BaseModel):
     expected_count: int | None = None
     run_id: str = ""
     max_requests: int | None = Field(default=None, ge=0)
-    time_budget_seconds: float | None = Field(default=None, gt=0)  # None: the scaled limit, 35 min per 100 unique inputs
+    time_budget_seconds: float = Field(default=2100, gt=0)
+    # Opt-in only: use the scaled limit (35 min per 100 unique inputs) as the total budget.
+    scaled_time_budget: bool = False
     deadline_fraction: float = Field(default=0.85, gt=0, le=1)
     max_cost_usd: float = Field(default=0, ge=0)
     host_concurrency: int = Field(default=10, ge=1)

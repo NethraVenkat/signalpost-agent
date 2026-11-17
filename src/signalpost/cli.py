@@ -20,6 +20,8 @@ def main():
     for flag in ("bulk", "previous"):
         command.add_argument("--" + flag, type=Path)
     command.add_argument("--state-dir", type=Path, default=Path("state"))
+    command.add_argument('--scaled-time-budget', action='store_true',
+                         help='Opt in to a total time budget of 35 minutes per 100 unique inputs instead of the fixed default (off by default)')
     command.add_argument('--verify-bulk', action='store_true',
                          help='Require an API identity check even on bulk hits; never fall back to CSV on verification failure')
     site_options = command.add_mutually_exclusive_group()
@@ -59,7 +61,7 @@ def main():
     command.add_argument("--website-user-agent", default="SignalpostAgent/1.0 (+https://github.com/NethraVenkat/signalpost-agent)")
     command.add_argument("--expected-count", type=int)
     command.add_argument("--run-id", default="")
-    for flag, kind, default in (("max-requests", int, None), ("time-budget-seconds", float, None),
+    for flag, kind, default in (("max-requests", int, None), ("time-budget-seconds", float, 2100),
                                ("deadline-fraction", float, .85), ("max-cost-usd", float, 0),
                                ("host-concurrency", int, 10), ("workers", int, 64), ("request-timeout", float, 10),
                                ("official-batch-size", int, 1100), ("max-output-mb", float, 256)):

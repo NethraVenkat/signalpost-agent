@@ -770,3 +770,11 @@
 - One fresh 500-company run, seed 20261119, at d61014e from a clean clone with exactly seven flags: all gates incl. `check_live_run --count 500` pass first time. Wall 2,591 s against the 10,500 s scaled default; 0 deadline hits; 0 placeholders (211.2 MB envelopes); GLEIF, TED and all four Stage S sources finished for every company (TED: 3 robots-blocked). Details: `reports/r5/stageP3/P3e/SUMMARY.md`.
 - Non-overlap fix: P2's sample inputs were never committed (`.gitignore` `*.jsonl`/`*.csv`), so a committed-files-only exclusion overlapped P2 by 2 numbers. That draw was discarded before running; the exclusion now also covers sample files on disk under `reports/`. P2's and P3e's input files are force-added so both draws are reproducible from the repo.
 - Six 100-samples once: all pass at about half the Stage S runtime with the same websites and official claims. Seed 20261117's first attempt froze for ~2.7 h during machine suspend (environment outage), and its single retry passed (`reports/r5/stageP3/samples/SUMMARY.md`).
+
+
+## 2026-11-17 - Stage P3f: fixed default time budget restored (scaled budget opt-in)
+
+- Official wording, as quoted by the user from the challenge page: the evaluator runs agents under a "fixed time and resource budget", and "if your agent times out ... that run is not scored". The page states no number and no scaling with company count. P3a's scaled default (10,500 s at 500) let P3e take 2,591 s, which would fail a ~35-minute budget and score nothing.
+- Decision: the default total time is again `--time-budget-seconds 2100`, effective min(2100, 21 s per unique input), i.e. it never grows with batch size; 0.85 crawl fraction unchanged. The scaled limit is available only through the explicit `--scaled-time-budget` flag (off by default). All P3b-P3d throughput, ordering and output-size changes stay.
+- Tests: the original fixed-default assertion (`time_budget_seconds == 2100`) is restored; new tests assert 100 and 500 inputs get the same 2,100 s total, and that the scaled budget applies only with the flag.
+- Also: `-text` gitattributes for the committed 500-company sample inputs, so their recorded SHA-256 survive checkout.

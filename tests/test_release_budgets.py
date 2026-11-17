@@ -5,8 +5,7 @@ from tests.test_registry import config,execute
 
 def test_derived_budget_uses_unique_inputs_and_override(tmp_path):
     cfg=config(tmp_path/'auto',['923609016','923609016','bad'])
-    # Default time is the scaled limit itself (35 min per 100 unique inputs): 2 unique -> 42 s.
-    assert Budget(cfg).cap==37 and cfg.time_budget_seconds is None and Budget(cfg).total_seconds==42
+    assert Budget(cfg).cap==37 and cfg.time_budget_seconds==2100
     assert time_cap(cfg)==840
     report,rows=execute(cfg)
     assert len(rows)==3 and report['limits']['max_requests']==37
@@ -15,8 +14,23 @@ def test_derived_budget_uses_unique_inputs_and_override(tmp_path):
     assert Budget(config(tmp_path/'override',['923609016'],max_requests=7)).cap==7
 
 
-def test_default_time_scales_with_inputs_and_flag_only_lowers(tmp_path):
-    orgs=['923609016','974760673','981405099']
-    assert Budget(config(tmp_path/'a',orgs)).total_seconds==63
-    assert Budget(config(tmp_path/'b',orgs,time_budget_seconds=30)).total_seconds==30
-    assert Budget(config(tmp_path/'c',orgs,time_budget_seconds=9999)).total_seconds==63
+def numbers(n):
+    from signalpost.identity.orgnr import valid
+    out, x = [], 923609016
+    while len(out) < n:
+        if valid(str(x)): out.append(str(x))
+        x += 1
+    return out
+
+
+def test_default_time_budget_does_not_grow_with_batch_size(tmp_path):
+    # P3f: fixed evaluator budget. 100 and 500 inputs get the same 2,100 s total.
+    small = Budget(config(tmp_path/'s',numbers(100)))
+    large = Budget(config(tmp_path/'l',numbers(500)))
+    assert small.total_seconds == large.total_seconds == 2100
+    assert large.deadline - large.start <= 2100 * 0.85 + 1e-6
+
+
+def test_scaled_time_budget_is_explicit_opt_in(tmp_path):
+    assert Budget(config(tmp_path/'o',numbers(500),scaled_time_budget=True)).total_seconds == 10500
+    assert Budget(config(tmp_path/'d',numbers(3))).total_seconds == 63  # small batches stay at 21 s each
