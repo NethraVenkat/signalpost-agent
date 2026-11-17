@@ -1,0 +1,2812 @@
+{
+  "output_sha256": "fee658298fa69f87be5fb1945f7fcddf92409dc4229f21ef759e85f405add812",
+  "counts": {
+    "social:correct": 20,
+    "social:doubtful": 6,
+    "social:wrong": 14,
+    "website:correct": 36,
+    "website:doubtful": 11
+  },
+  "records": [
+    {
+      "organisation_number": "912503259",
+      "company": "OFFICEAID AS",
+      "kind": "social",
+      "url": "https://www.facebook.com/officeaid.no",
+      "proof_tier": "own_contact_follow_us_v1",
+      "identity_level": null,
+      "field": "social_profile.e4820a560cf8fe8bc60a",
+      "claim_id": "0fa17d6bed3550d73a1854fc20d3b8c319239c9779b7dd1d0f42563435be5e19",
+      "automated_verdict": "wrong",
+      "reasons": [
+        "own header/footer/name/numeric-link policy no longer verifies"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://www.officeaid.no/kontakt-oss",
+          "retrieved_at": "2026-11-17T17:35:41.783569Z",
+          "content_sha256": "7ce6fd4317fce8eb1ad50be9f1257ce06c4e837cf243fe28eda6a4f66baf1f80",
+          "locator": "company-link:https://www.facebook.com/officeaid.no",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "<a target=\"_blank\" class=\"facebook\" href=\"https://www.facebook.com/officeaid.no\">"
+        },
+        {
+          "source_url": "https://www.officeaid.no/personvern",
+          "retrieved_at": "2026-11-17T17:35:40.114245Z",
+          "content_sha256": "af0ec3bec00d458e4bc6faec795792ba027a3ed7970f964149a81bcb671a43fd",
+          "locator": "identity-proof:912503259",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "trong>OfficeAid AS, organisasjonsnummer 912503259 er ansvarlig for behandlingen av personopplysninger og kan ved spørsmål kontaktes på post@officeaid."
+        }
+      ]
+    },
+    {
+      "organisation_number": "912503259",
+      "company": "OFFICEAID AS",
+      "kind": "social",
+      "url": "https://www.instagram.com/officeaid.no",
+      "proof_tier": "own_contact_follow_us_v1",
+      "identity_level": null,
+      "field": "social_profile.d5495ce4f3e7100ace11",
+      "claim_id": "44f5c98bdc923db46d8fda3090f3839b79c905ff203484534b5b6c744adca4b4",
+      "automated_verdict": "wrong",
+      "reasons": [
+        "own header/footer/name/numeric-link policy no longer verifies"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://www.officeaid.no/kontakt-oss",
+          "retrieved_at": "2026-11-17T17:35:41.783569Z",
+          "content_sha256": "7ce6fd4317fce8eb1ad50be9f1257ce06c4e837cf243fe28eda6a4f66baf1f80",
+          "locator": "company-link:https://www.instagram.com/officeaid.no",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "<a target=\"_blank\" class=\"instagram\" href=\"https://www.instagram.com/officeaid.no/\">"
+        },
+        {
+          "source_url": "https://www.officeaid.no/personvern",
+          "retrieved_at": "2026-11-17T17:35:40.114245Z",
+          "content_sha256": "af0ec3bec00d458e4bc6faec795792ba027a3ed7970f964149a81bcb671a43fd",
+          "locator": "identity-proof:912503259",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "trong>OfficeAid AS, organisasjonsnummer 912503259 er ansvarlig for behandlingen av personopplysninger og kan ved spørsmål kontaktes på post@officeaid."
+        }
+      ]
+    },
+    {
+      "organisation_number": "916364806",
+      "company": "TT EXPRESS AS",
+      "kind": "social",
+      "url": "https://www.facebook.com/ttexpressas",
+      "proof_tier": "owner_jsonld_sameas_v1",
+      "identity_level": null,
+      "field": "social_profile.7542e61d1ff52387fee4",
+      "claim_id": "5112d36db12f36fd2e1b5ee0afebdb61fa74e6aab9c7150c47a859312f3afe95",
+      "automated_verdict": "wrong",
+      "reasons": [
+        "own header/footer/name/numeric-link policy no longer verifies"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://www.ttexpress.no/",
+          "retrieved_at": "2026-11-17T17:34:46.072576Z",
+          "content_sha256": "9e61edce2a822ed1a26c3244913a2719b70e5ccca16b28c03b74cdd9e901365d",
+          "locator": "company-link:https://www.facebook.com/ttexpressas",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "\\/\\/www.ttexpress.no\\/#\\/schema\\/logo\\/image\\/\"},\"sameAs\":[\"https:\\/\\/www.facebook.com\\/ttexpressas\\/\"]}]}"
+        },
+        {
+          "source_url": "https://www.ttexpress.no/",
+          "retrieved_at": "2026-11-17T17:34:46.072576Z",
+          "content_sha256": "9e61edce2a822ed1a26c3244913a2719b70e5ccca16b28c03b74cdd9e901365d",
+          "locator": "identity-proof:916364806",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "     <small>Organisasjonsnummer</small>\n916364806\n                        \n                    </div>\n\n                </div>\n            </div>\n     "
+        }
+      ]
+    },
+    {
+      "organisation_number": "927525399",
+      "company": "WOODWORKS! CLUSTER",
+      "kind": "social",
+      "url": "https://www.facebook.com/arenaskog",
+      "proof_tier": "owner_jsonld_sameas_v1",
+      "identity_level": null,
+      "field": "social_profile.0bd0c401d7185c63cf8c",
+      "claim_id": "5ef1404be1edf36b201197eb1cbeccb83861f1bb05ec416da3387e5f216fe76a",
+      "automated_verdict": "wrong",
+      "reasons": [
+        "own header/footer/name/numeric-link policy no longer verifies"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://woodworkscluster.no/",
+          "retrieved_at": "2026-11-17T17:31:45.682612Z",
+          "content_sha256": "8e2c2eed3e3549b40dde5c22acd82eaedef946c7e8310918f415d092e369af44",
+          "locator": "company-link:https://www.facebook.com/arenaskog",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "/woodworkscluster.no\\/#\\/schema\\/logo\\/image\\/\"},\"sameAs\":[\"https:\\/\\/www.facebook.com\\/arenaskog\\/?fref=ts\",\"https:\\/\\/linkedin.com\\/company\\/woodworks-cluster\"]}]}"
+        },
+        {
+          "source_url": "https://woodworkscluster.no/",
+          "retrieved_at": "2026-11-17T17:31:45.682612Z",
+          "content_sha256": "8e2c2eed3e3549b40dde5c22acd82eaedef946c7e8310918f415d092e369af44",
+          "locator": "identity-proof:927525399",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "egata 22, 7713 Steinkjer</p>\n<p>Org.nr: 927 525 399</p>\n<p><a title=\"Klikk for å lese personvernerklæringen til denne nettsiden\" href=\"https://woodwor"
+        },
+        {
+          "source_url": "https://woodworkscluster.no/",
+          "retrieved_at": "2026-11-17T17:31:45.682612Z",
+          "content_sha256": "8e2c2eed3e3549b40dde5c22acd82eaedef946c7e8310918f415d092e369af44",
+          "locator": "registry-contact:phone",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a title=\"Ring oss på telefon +47 95 23 90 06\" href=\"tel:+47 95 23 90 06\">"
+        },
+        {
+          "source_url": "https://woodworkscluster.no/",
+          "retrieved_at": "2026-11-17T17:31:45.682612Z",
+          "content_sha256": "8e2c2eed3e3549b40dde5c22acd82eaedef946c7e8310918f415d092e369af44",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a title=\"Send e-post til post@woodworkscluster.no\" href=\"mailto:post@woodworkscluster.no\">"
+        }
+      ]
+    },
+    {
+      "organisation_number": "966261218",
+      "company": "BØMLO FOLKEHØGSKULE STI",
+      "kind": "social",
+      "url": "https://www.facebook.com/bomlofhs",
+      "proof_tier": "own_contact_follow_us_v1",
+      "identity_level": null,
+      "field": "social_profile.da3c563bcb7ae48e6ab7",
+      "claim_id": "87e0b498620dceac07bd1e857e8eeb021dabcc749bf51faae346f7f43560eb0b",
+      "automated_verdict": "wrong",
+      "reasons": [
+        "own header/footer/name/numeric-link policy no longer verifies"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://bomlo.fhs.no/kontakt/",
+          "retrieved_at": "2026-11-17T17:36:19.990163Z",
+          "content_sha256": "96426be74e058c18dcf8de5254f553e3e7a379b26e6d0590238dc9ce77f16ad0",
+          "locator": "company-link:https://www.facebook.com/bomlofhs",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "<a href='https://www.facebook.com/bomlofhs' target='_blank' rel='noopener noreferrer'>"
+        },
+        {
+          "source_url": "https://bomlo.fhs.no/",
+          "retrieved_at": "2026-11-17T17:36:15.671188Z",
+          "content_sha256": "1ce7249d4ac7be72821e4f9a9232fd7fcc9c469132f3fd3ac82497dfb2dad501",
+          "locator": "identity-proof:966261218",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "><!-- wp:paragraph -->\n<p>Velkommen til Bømlo folkehøgskule, helt vest i havgapet. Det perfekte stedet for nære øyeblikk og fantastiske eventyr – her hjemme, og der ute i den store verden.</p>\n<!-- /wp:paragraph --></div>\t\t\t\t</div>\n\t\t\t\t\t</section>\n\t<section id=\"bfhs-linje-grid-container\">\n\t\t\t\t<div c"
+        },
+        {
+          "source_url": "https://bomlo.fhs.no/",
+          "retrieved_at": "2026-11-17T17:36:15.671188Z",
+          "content_sha256": "1ce7249d4ac7be72821e4f9a9232fd7fcc9c469132f3fd3ac82497dfb2dad501",
+          "locator": "registry-contact:phone",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a class=\"footer-phone-nr\" href=\"tel:53425650\">"
+        },
+        {
+          "source_url": "https://bomlo.fhs.no/",
+          "retrieved_at": "2026-11-17T17:36:15.671188Z",
+          "content_sha256": "1ce7249d4ac7be72821e4f9a9232fd7fcc9c469132f3fd3ac82497dfb2dad501",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a href=\"mailto:post@bomlo.fhs.no\">"
+        }
+      ]
+    },
+    {
+      "organisation_number": "966261218",
+      "company": "BØMLO FOLKEHØGSKULE STI",
+      "kind": "social",
+      "url": "https://www.instagram.com/bomlofhs",
+      "proof_tier": "own_contact_follow_us_v1",
+      "identity_level": null,
+      "field": "social_profile.06a9a588a254ad534b67",
+      "claim_id": "8d34c756d05796be0fd931a4cf1a72c6bb2c0ee0513d64d083f8b0331764b127",
+      "automated_verdict": "wrong",
+      "reasons": [
+        "own header/footer/name/numeric-link policy no longer verifies"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://bomlo.fhs.no/kontakt/",
+          "retrieved_at": "2026-11-17T17:36:19.990163Z",
+          "content_sha256": "96426be74e058c18dcf8de5254f553e3e7a379b26e6d0590238dc9ce77f16ad0",
+          "locator": "company-link:https://www.instagram.com/bomlofhs",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "<a href='https://www.instagram.com/bomlofhs/' target='_blank' rel='noopener noreferrer'>"
+        },
+        {
+          "source_url": "https://bomlo.fhs.no/",
+          "retrieved_at": "2026-11-17T17:36:15.671188Z",
+          "content_sha256": "1ce7249d4ac7be72821e4f9a9232fd7fcc9c469132f3fd3ac82497dfb2dad501",
+          "locator": "identity-proof:966261218",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "><!-- wp:paragraph -->\n<p>Velkommen til Bømlo folkehøgskule, helt vest i havgapet. Det perfekte stedet for nære øyeblikk og fantastiske eventyr – her hjemme, og der ute i den store verden.</p>\n<!-- /wp:paragraph --></div>\t\t\t\t</div>\n\t\t\t\t\t</section>\n\t<section id=\"bfhs-linje-grid-container\">\n\t\t\t\t<div c"
+        },
+        {
+          "source_url": "https://bomlo.fhs.no/",
+          "retrieved_at": "2026-11-17T17:36:15.671188Z",
+          "content_sha256": "1ce7249d4ac7be72821e4f9a9232fd7fcc9c469132f3fd3ac82497dfb2dad501",
+          "locator": "registry-contact:phone",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a class=\"footer-phone-nr\" href=\"tel:53425650\">"
+        },
+        {
+          "source_url": "https://bomlo.fhs.no/",
+          "retrieved_at": "2026-11-17T17:36:15.671188Z",
+          "content_sha256": "1ce7249d4ac7be72821e4f9a9232fd7fcc9c469132f3fd3ac82497dfb2dad501",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a href=\"mailto:post@bomlo.fhs.no\">"
+        }
+      ]
+    },
+    {
+      "organisation_number": "966261218",
+      "company": "BØMLO FOLKEHØGSKULE STI",
+      "kind": "social",
+      "url": "https://www.tiktok.com/@bomlofhs",
+      "proof_tier": "own_contact_follow_us_v1",
+      "identity_level": null,
+      "field": "social_profile.39c18321b8e95f7eaa56",
+      "claim_id": "0b6ab605d938254ce3764fa0158d73e1d74be641974b9bd73265278f02901944",
+      "automated_verdict": "wrong",
+      "reasons": [
+        "own header/footer/name/numeric-link policy no longer verifies"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://bomlo.fhs.no/kontakt/",
+          "retrieved_at": "2026-11-17T17:36:19.990163Z",
+          "content_sha256": "96426be74e058c18dcf8de5254f553e3e7a379b26e6d0590238dc9ce77f16ad0",
+          "locator": "company-link:https://www.tiktok.com/@bomlofhs",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "<a href='https://www.tiktok.com/@bomlofhs' target='_blank' rel='noopener noreferrer'>"
+        },
+        {
+          "source_url": "https://bomlo.fhs.no/",
+          "retrieved_at": "2026-11-17T17:36:15.671188Z",
+          "content_sha256": "1ce7249d4ac7be72821e4f9a9232fd7fcc9c469132f3fd3ac82497dfb2dad501",
+          "locator": "identity-proof:966261218",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "><!-- wp:paragraph -->\n<p>Velkommen til Bømlo folkehøgskule, helt vest i havgapet. Det perfekte stedet for nære øyeblikk og fantastiske eventyr – her hjemme, og der ute i den store verden.</p>\n<!-- /wp:paragraph --></div>\t\t\t\t</div>\n\t\t\t\t\t</section>\n\t<section id=\"bfhs-linje-grid-container\">\n\t\t\t\t<div c"
+        },
+        {
+          "source_url": "https://bomlo.fhs.no/",
+          "retrieved_at": "2026-11-17T17:36:15.671188Z",
+          "content_sha256": "1ce7249d4ac7be72821e4f9a9232fd7fcc9c469132f3fd3ac82497dfb2dad501",
+          "locator": "registry-contact:phone",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a class=\"footer-phone-nr\" href=\"tel:53425650\">"
+        },
+        {
+          "source_url": "https://bomlo.fhs.no/",
+          "retrieved_at": "2026-11-17T17:36:15.671188Z",
+          "content_sha256": "1ce7249d4ac7be72821e4f9a9232fd7fcc9c469132f3fd3ac82497dfb2dad501",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a href=\"mailto:post@bomlo.fhs.no\">"
+        }
+      ]
+    },
+    {
+      "organisation_number": "966261218",
+      "company": "BØMLO FOLKEHØGSKULE STI",
+      "kind": "social",
+      "url": "https://www.youtube.com/channel/UCKY6h9lnepk7TGa-pvYSDdw",
+      "proof_tier": "own_contact_follow_us_v1",
+      "identity_level": null,
+      "field": "social_profile.b383ab520f963baf73c3",
+      "claim_id": "c7ebb4053e6da32aaae44109bb243cb885379d353035cb476e87db973289d9a4",
+      "automated_verdict": "wrong",
+      "reasons": [
+        "own header/footer/name/numeric-link policy no longer verifies"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://bomlo.fhs.no/kontakt/",
+          "retrieved_at": "2026-11-17T17:36:19.990163Z",
+          "content_sha256": "96426be74e058c18dcf8de5254f553e3e7a379b26e6d0590238dc9ce77f16ad0",
+          "locator": "company-link:https://www.youtube.com/channel/UCKY6h9lnepk7TGa-pvYSDdw",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "<a href='https://www.youtube.com/channel/UCKY6h9lnepk7TGa-pvYSDdw' target='_blank' rel='noopener noreferrer'>"
+        },
+        {
+          "source_url": "https://bomlo.fhs.no/",
+          "retrieved_at": "2026-11-17T17:36:15.671188Z",
+          "content_sha256": "1ce7249d4ac7be72821e4f9a9232fd7fcc9c469132f3fd3ac82497dfb2dad501",
+          "locator": "identity-proof:966261218",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "><!-- wp:paragraph -->\n<p>Velkommen til Bømlo folkehøgskule, helt vest i havgapet. Det perfekte stedet for nære øyeblikk og fantastiske eventyr – her hjemme, og der ute i den store verden.</p>\n<!-- /wp:paragraph --></div>\t\t\t\t</div>\n\t\t\t\t\t</section>\n\t<section id=\"bfhs-linje-grid-container\">\n\t\t\t\t<div c"
+        },
+        {
+          "source_url": "https://bomlo.fhs.no/",
+          "retrieved_at": "2026-11-17T17:36:15.671188Z",
+          "content_sha256": "1ce7249d4ac7be72821e4f9a9232fd7fcc9c469132f3fd3ac82497dfb2dad501",
+          "locator": "registry-contact:phone",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a class=\"footer-phone-nr\" href=\"tel:53425650\">"
+        },
+        {
+          "source_url": "https://bomlo.fhs.no/",
+          "retrieved_at": "2026-11-17T17:36:15.671188Z",
+          "content_sha256": "1ce7249d4ac7be72821e4f9a9232fd7fcc9c469132f3fd3ac82497dfb2dad501",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a href=\"mailto:post@bomlo.fhs.no\">"
+        }
+      ]
+    },
+    {
+      "organisation_number": "970991786",
+      "company": "VITEC AGRANDO AS",
+      "kind": "social",
+      "url": "https://www.facebook.com/vitec.agrando",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "identity_level": null,
+      "field": "social_profile.c3dd740348bbaf1cc3a8",
+      "claim_id": "d797d6c88610b3583a162c8cfe6739be19b14af93c49dcf7ddce2ac041e6d85a",
+      "automated_verdict": "doubtful",
+      "reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://agrando.no/",
+          "retrieved_at": "2026-11-17T17:35:38.316805Z",
+          "content_sha256": "7efee3d7418e6c3c13a45d6029e6492df42e5fec1430077c2ad35772e162c644",
+          "locator": "company-link:https://www.facebook.com/vitec.agrando",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "<a href=\"https://www.facebook.com/vitec.agrando/\">"
+        },
+        {
+          "source_url": "https://agrando.no/",
+          "retrieved_at": "2026-11-17T17:35:38.316805Z",
+          "content_sha256": "7efee3d7418e6c3c13a45d6029e6492df42e5fec1430077c2ad35772e162c644",
+          "locator": "identity-proof:970991786",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "eckCookie();\n    });\n</script><title>\r\n\tVitec Agrando\r\n</title><meta id=\"MetaRobots\" name=\"robots\" content=\"INDEX, FOLLOW\" /><link href=\"/Portals/_default/skins/polo//skin.css?cdv=932\" rel=\"stylesheet\" /><link href=\"/Portals/_default/skins/polo//custom.css?cdv=932\" rel=\"stylesheet\" /><link href=\"/Po"
+        },
+        {
+          "source_url": "https://agrando.no/",
+          "retrieved_at": "2026-11-17T17:35:38.316805Z",
+          "content_sha256": "7efee3d7418e6c3c13a45d6029e6492df42e5fec1430077c2ad35772e162c644",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a href=\"mailto:laborasupport.no@vitecsoftware.com\">"
+        }
+      ]
+    },
+    {
+      "organisation_number": "985256055",
+      "company": "FRAMEWORKS AS",
+      "kind": "social",
+      "url": "https://www.facebook.com/FrameworksArendal",
+      "proof_tier": "owner_jsonld_sameas_v1",
+      "identity_level": null,
+      "field": "social_profile.797b6282a9683973d0be",
+      "claim_id": "a79a2e0c36cb9371790db90dc24c8b823e4032e305263ff5ab6dde508dd285be",
+      "automated_verdict": "wrong",
+      "reasons": [
+        "own header/footer/name/numeric-link policy no longer verifies"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://frameworks.no/",
+          "retrieved_at": "2026-11-17T17:35:33.256098Z",
+          "content_sha256": "09a6f3b7ec8bab0877adfa3b7d56e15bd2693b782ec14d9e8ccabeb9d90d4cfe",
+          "locator": "company-link:https://www.facebook.com/FrameworksArendal",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "ps:\\/\\/frameworks.no\\/#\\/schema\\/logo\\/image\\/\"},\"sameAs\":[\"https:\\/\\/www.facebook.com\\/FrameworksArendal\",\"https:\\/\\/www.linkedin.com\\/company\\/frameworks-as\",\"http"
+        },
+        {
+          "source_url": "https://frameworks.no/",
+          "retrieved_at": "2026-11-17T17:35:33.256098Z",
+          "content_sha256": "09a6f3b7ec8bab0877adfa3b7d56e15bd2693b782ec14d9e8ccabeb9d90d4cfe",
+          "locator": "identity-proof:985256055",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "den 2012. Organisasjonsnummeret vårt er 985 256 055. Du når oss på telefon <a href=\"tel:+4740400088\">40 40 00 88</a> eller på <a href=\"mailto:simen.wi"
+        },
+        {
+          "source_url": "https://frameworks.no/",
+          "retrieved_at": "2026-11-17T17:35:33.256098Z",
+          "content_sha256": "09a6f3b7ec8bab0877adfa3b7d56e15bd2693b782ec14d9e8ccabeb9d90d4cfe",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a href=\"mailto:sw@frameworks.no\" target=\"_self\" class=\"e-paragraph-link-base e-default-a\">"
+        }
+      ]
+    },
+    {
+      "organisation_number": "985256055",
+      "company": "FRAMEWORKS AS",
+      "kind": "social",
+      "url": "https://www.instagram.com/frameworks.no",
+      "proof_tier": "owner_jsonld_sameas_v1",
+      "identity_level": null,
+      "field": "social_profile.953abee84410a04cef7a",
+      "claim_id": "84ae73402a7f5464bb51b3e9a1402be6d546b8953cf097dfa6663545c5973051",
+      "automated_verdict": "wrong",
+      "reasons": [
+        "own header/footer/name/numeric-link policy no longer verifies"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://frameworks.no/",
+          "retrieved_at": "2026-11-17T17:35:33.256098Z",
+          "content_sha256": "09a6f3b7ec8bab0877adfa3b7d56e15bd2693b782ec14d9e8ccabeb9d90d4cfe",
+          "locator": "company-link:https://www.instagram.com/frameworks.no",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "ndal\",\"https:\\/\\/www.linkedin.com\\/company\\/frameworks-as\",\"https:\\/\\/www.instagram.com\\/frameworks.no\\/\"]}]}"
+        },
+        {
+          "source_url": "https://frameworks.no/",
+          "retrieved_at": "2026-11-17T17:35:33.256098Z",
+          "content_sha256": "09a6f3b7ec8bab0877adfa3b7d56e15bd2693b782ec14d9e8ccabeb9d90d4cfe",
+          "locator": "identity-proof:985256055",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "den 2012. Organisasjonsnummeret vårt er 985 256 055. Du når oss på telefon <a href=\"tel:+4740400088\">40 40 00 88</a> eller på <a href=\"mailto:simen.wi"
+        },
+        {
+          "source_url": "https://frameworks.no/",
+          "retrieved_at": "2026-11-17T17:35:33.256098Z",
+          "content_sha256": "09a6f3b7ec8bab0877adfa3b7d56e15bd2693b782ec14d9e8ccabeb9d90d4cfe",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a href=\"mailto:sw@frameworks.no\" target=\"_self\" class=\"e-paragraph-link-base e-default-a\">"
+        }
+      ]
+    },
+    {
+      "organisation_number": "985256055",
+      "company": "FRAMEWORKS AS",
+      "kind": "social",
+      "url": "https://www.linkedin.com/company/frameworks-as",
+      "proof_tier": "owner_jsonld_sameas_v1",
+      "identity_level": null,
+      "field": "social_profile.48fd2b0c9512fbe4f7a6",
+      "claim_id": "1afc82cf6e0e21f4ca4fba20d2fff78f7c19d5369c0ca3e9e6035d0f66db43a8",
+      "automated_verdict": "wrong",
+      "reasons": [
+        "own header/footer/name/numeric-link policy no longer verifies"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://frameworks.no/",
+          "retrieved_at": "2026-11-17T17:35:33.256098Z",
+          "content_sha256": "09a6f3b7ec8bab0877adfa3b7d56e15bd2693b782ec14d9e8ccabeb9d90d4cfe",
+          "locator": "company-link:https://www.linkedin.com/company/frameworks-as",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": ",\"sameAs\":[\"https:\\/\\/www.facebook.com\\/FrameworksArendal\",\"https:\\/\\/www.linkedin.com\\/company\\/frameworks-as\",\"https:\\/\\/www.instagram.com\\/frameworks.no\\/\"]}]}"
+        },
+        {
+          "source_url": "https://frameworks.no/",
+          "retrieved_at": "2026-11-17T17:35:33.256098Z",
+          "content_sha256": "09a6f3b7ec8bab0877adfa3b7d56e15bd2693b782ec14d9e8ccabeb9d90d4cfe",
+          "locator": "identity-proof:985256055",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "den 2012. Organisasjonsnummeret vårt er 985 256 055. Du når oss på telefon <a href=\"tel:+4740400088\">40 40 00 88</a> eller på <a href=\"mailto:simen.wi"
+        },
+        {
+          "source_url": "https://frameworks.no/",
+          "retrieved_at": "2026-11-17T17:35:33.256098Z",
+          "content_sha256": "09a6f3b7ec8bab0877adfa3b7d56e15bd2693b782ec14d9e8ccabeb9d90d4cfe",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a href=\"mailto:sw@frameworks.no\" target=\"_self\" class=\"e-paragraph-link-base e-default-a\">"
+        }
+      ]
+    },
+    {
+      "organisation_number": "986902651",
+      "company": "TINNHEIA BIL AS",
+      "kind": "social",
+      "url": "https://www.facebook.com/tinnheiabil",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "identity_level": null,
+      "field": "social_profile.61871d655cbf9e64a4c8",
+      "claim_id": "0dce3904f63b6a6ab0086c28f989599216f0e77bf4a3c2d700a213e838283326",
+      "automated_verdict": "doubtful",
+      "reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://tinnheiabil.no/",
+          "retrieved_at": "2026-11-17T17:33:01.405390Z",
+          "content_sha256": "434f6a1a4f56ee47328ac9e3109bdc3e281baf17ff1a1c9f7b1da14e1a353c9c",
+          "locator": "company-link:https://www.facebook.com/tinnheiabil",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "<a href=\"https://www.facebook.com/tinnheiabil/?locale=nb_NO\">"
+        },
+        {
+          "source_url": "https://tinnheiabil.no/",
+          "retrieved_at": "2026-11-17T17:33:01.405390Z",
+          "content_sha256": "434f6a1a4f56ee47328ac9e3109bdc3e281baf17ff1a1c9f7b1da14e1a353c9c",
+          "locator": "identity-proof:986902651",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": " \n    <title>Bilverksted Kristiansand - Tinnheia Bil AS</title>\n<meta name=\"description\" content=\"Bilverksted med EU-kontroll og service på alle bilmerker også elbil og hybrid, AC-service, dekk og dekkhotell, automatgir service. Tinnheia Bil, Kristiansand\" />\n<meta property=\"og:description\" content="
+        }
+      ]
+    },
+    {
+      "organisation_number": "990825076",
+      "company": "PECULIUM AS",
+      "kind": "social",
+      "url": "https://www.instagram.com/peculium_as",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "identity_level": null,
+      "field": "social_profile.2dcb6b7a9fec8b2f0ac0",
+      "claim_id": "224e82d494d2b8c2b0b4a16c39a46b85b6694f23029e87161b9eb90f1fa2454f",
+      "automated_verdict": "doubtful",
+      "reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://peculium.no/",
+          "retrieved_at": "2026-11-17T17:34:37.753058Z",
+          "content_sha256": "371bf928068d9a8b69328cb82205e5a52bc143313abb7f29b6d1bea2530c1a64",
+          "locator": "company-link:https://www.instagram.com/peculium_as",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "<a class=\"text-gray-400 hover:opacity-80 transition-opacity\" target=\"_blank\" rel=\"noreferrer\" href=\"https://www.instagram.com/peculium_as/\">"
+        },
+        {
+          "source_url": "https://peculium.no/kontakt",
+          "retrieved_at": "2026-11-17T17:34:40.683770Z",
+          "content_sha256": "f765c4a15fd2a63af7e7b6e6f049cc83dc296668259afe3b45873f86543c4f84",
+          "locator": "identity-proof:990825076",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": ":1\",\"S:1\")</script><title>Kontakt oss - Peculium AS | Eiendomsforvaltning i Porsgrunn</title><meta name=\"description\" content=\"Ta kontakt med Peculium AS for eiendomsforvaltning og utleie i Porsgrunn. Vi hjelper deg med lokaler, næringsbygg og boligutleie. Ring eller send e-post.\"/><meta name=\"autho"
+        }
+      ]
+    },
+    {
+      "organisation_number": "991323848",
+      "company": "TROLLHEIM AS",
+      "kind": "social",
+      "url": "https://facebook.com/TrollheimAS",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "identity_level": null,
+      "field": "social_profile.bd2edc079fd97ab0af11",
+      "claim_id": "11a4588edf8f10586ffc46ef9b762ff4dc124c6b759e3307e08882a11f9ca96d",
+      "automated_verdict": "doubtful",
+      "reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://trollheim.no/",
+          "retrieved_at": "2026-11-17T17:33:18.184369Z",
+          "content_sha256": "15f2a742f2d0baf7a6ba588677bd54709bdf264771c719f4519a33d081d92e4a",
+          "locator": "company-link:https://facebook.com/TrollheimAS",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "<a class=\"elementor-icon elementor-social-icon elementor-social-icon-facebook-f elementor-repeater-item-4f37a04\" href=\"https://facebook.com/TrollheimAS\" target=\"_blank\">"
+        },
+        {
+          "source_url": "https://trollheim.no/",
+          "retrieved_at": "2026-11-17T17:33:18.184369Z",
+          "content_sha256": "15f2a742f2d0baf7a6ba588677bd54709bdf264771c719f4519a33d081d92e4a",
+          "locator": "identity-proof:991323848",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "9mefvgt6v6z5ncrt7e8vatuv2ns0y\" /><title>Trollheim &#8211; Arbeid og inkludering</title>\n<meta name='robots' content='max-image-preview:large' />\n\n<script>\ndataLayer = [{\"title\":\"Hjem\",\"author\":\"Webmaster\",\"wordcount\":66,\"logged_in\":\"false\",\"page_id\":47,\"post_date\":\"2018-01-25 14:20:00\"}];\n</script>\n"
+        },
+        {
+          "source_url": "https://trollheim.no/",
+          "retrieved_at": "2026-11-17T17:33:18.184369Z",
+          "content_sha256": "15f2a742f2d0baf7a6ba588677bd54709bdf264771c719f4519a33d081d92e4a",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a href=\"mailto:post@trollheim.no\">"
+        },
+        {
+          "source_url": "https://trollheim.no/",
+          "retrieved_at": "2026-11-17T17:33:18.184369Z",
+          "content_sha256": "15f2a742f2d0baf7a6ba588677bd54709bdf264771c719f4519a33d081d92e4a",
+          "locator": "registry-contact:phone",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "=\"color: #000000;\">Trollheim &#8211; Tlf. 71 65 77 77 &#8211; <strong><a href=\"mailto:post@trollheim.no\">post@trollheim.no</a></strong></span><br /><span style=\"color: #000000;\">Trollheim avd. Røtet/Hovedkontor: Industrivegen 63, 6652 Surnadal</span><br /><span style=\"color: #000000;\">Trollheim avd."
+        }
+      ]
+    },
+    {
+      "organisation_number": "991323848",
+      "company": "TROLLHEIM AS",
+      "kind": "social",
+      "url": "https://twitter.com/TrollheimAS",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "identity_level": null,
+      "field": "social_profile.35b2b052c8d353abdf12",
+      "claim_id": "ea32c4045639c4a937d708c87ca9eaadfb63032726244b1238ac00c6dfeef070",
+      "automated_verdict": "doubtful",
+      "reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://trollheim.no/",
+          "retrieved_at": "2026-11-17T17:33:18.184369Z",
+          "content_sha256": "15f2a742f2d0baf7a6ba588677bd54709bdf264771c719f4519a33d081d92e4a",
+          "locator": "company-link:https://twitter.com/TrollheimAS",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "<a class=\"elementor-icon elementor-social-icon elementor-social-icon-twitter elementor-repeater-item-e32e197\" href=\"https://twitter.com/TrollheimAS\" target=\"_blank\">"
+        },
+        {
+          "source_url": "https://trollheim.no/",
+          "retrieved_at": "2026-11-17T17:33:18.184369Z",
+          "content_sha256": "15f2a742f2d0baf7a6ba588677bd54709bdf264771c719f4519a33d081d92e4a",
+          "locator": "identity-proof:991323848",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "9mefvgt6v6z5ncrt7e8vatuv2ns0y\" /><title>Trollheim &#8211; Arbeid og inkludering</title>\n<meta name='robots' content='max-image-preview:large' />\n\n<script>\ndataLayer = [{\"title\":\"Hjem\",\"author\":\"Webmaster\",\"wordcount\":66,\"logged_in\":\"false\",\"page_id\":47,\"post_date\":\"2018-01-25 14:20:00\"}];\n</script>\n"
+        },
+        {
+          "source_url": "https://trollheim.no/",
+          "retrieved_at": "2026-11-17T17:33:18.184369Z",
+          "content_sha256": "15f2a742f2d0baf7a6ba588677bd54709bdf264771c719f4519a33d081d92e4a",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a href=\"mailto:post@trollheim.no\">"
+        },
+        {
+          "source_url": "https://trollheim.no/",
+          "retrieved_at": "2026-11-17T17:33:18.184369Z",
+          "content_sha256": "15f2a742f2d0baf7a6ba588677bd54709bdf264771c719f4519a33d081d92e4a",
+          "locator": "registry-contact:phone",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "=\"color: #000000;\">Trollheim &#8211; Tlf. 71 65 77 77 &#8211; <strong><a href=\"mailto:post@trollheim.no\">post@trollheim.no</a></strong></span><br /><span style=\"color: #000000;\">Trollheim avd. Røtet/Hovedkontor: Industrivegen 63, 6652 Surnadal</span><br /><span style=\"color: #000000;\">Trollheim avd."
+        }
+      ]
+    },
+    {
+      "organisation_number": "991323848",
+      "company": "TROLLHEIM AS",
+      "kind": "social",
+      "url": "https://www.instagram.com/trollheimas",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "identity_level": null,
+      "field": "social_profile.e1befb5db785d0b7dd9f",
+      "claim_id": "100351b94f0421fff4de073512b48a3e5a9e81d42a0d6742ccc4504454094a4b",
+      "automated_verdict": "doubtful",
+      "reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://trollheim.no/",
+          "retrieved_at": "2026-11-17T17:33:18.184369Z",
+          "content_sha256": "15f2a742f2d0baf7a6ba588677bd54709bdf264771c719f4519a33d081d92e4a",
+          "locator": "company-link:https://www.instagram.com/trollheimas",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "<a class=\"elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-34dd5a2\" href=\"https://www.instagram.com/trollheimas/\" target=\"_blank\">"
+        },
+        {
+          "source_url": "https://trollheim.no/",
+          "retrieved_at": "2026-11-17T17:33:18.184369Z",
+          "content_sha256": "15f2a742f2d0baf7a6ba588677bd54709bdf264771c719f4519a33d081d92e4a",
+          "locator": "identity-proof:991323848",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "9mefvgt6v6z5ncrt7e8vatuv2ns0y\" /><title>Trollheim &#8211; Arbeid og inkludering</title>\n<meta name='robots' content='max-image-preview:large' />\n\n<script>\ndataLayer = [{\"title\":\"Hjem\",\"author\":\"Webmaster\",\"wordcount\":66,\"logged_in\":\"false\",\"page_id\":47,\"post_date\":\"2018-01-25 14:20:00\"}];\n</script>\n"
+        },
+        {
+          "source_url": "https://trollheim.no/",
+          "retrieved_at": "2026-11-17T17:33:18.184369Z",
+          "content_sha256": "15f2a742f2d0baf7a6ba588677bd54709bdf264771c719f4519a33d081d92e4a",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a href=\"mailto:post@trollheim.no\">"
+        },
+        {
+          "source_url": "https://trollheim.no/",
+          "retrieved_at": "2026-11-17T17:33:18.184369Z",
+          "content_sha256": "15f2a742f2d0baf7a6ba588677bd54709bdf264771c719f4519a33d081d92e4a",
+          "locator": "registry-contact:phone",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "=\"color: #000000;\">Trollheim &#8211; Tlf. 71 65 77 77 &#8211; <strong><a href=\"mailto:post@trollheim.no\">post@trollheim.no</a></strong></span><br /><span style=\"color: #000000;\">Trollheim avd. Røtet/Hovedkontor: Industrivegen 63, 6652 Surnadal</span><br /><span style=\"color: #000000;\">Trollheim avd."
+        }
+      ]
+    },
+    {
+      "organisation_number": "994479865",
+      "company": "IDENTUM AS",
+      "kind": "social",
+      "url": "https://twitter.com/IAM_Identum",
+      "proof_tier": "own_contact_follow_us_v1",
+      "identity_level": null,
+      "field": "social_profile.3dd1c0da4be551029676",
+      "claim_id": "e0dade64bddb9af8f4075bcd418758a022890e1d2535e7a16bb63b76fe6fe90f",
+      "automated_verdict": "wrong",
+      "reasons": [
+        "own header/footer/name/numeric-link policy no longer verifies"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://www.identum.no/kontakt",
+          "retrieved_at": "2026-11-17T17:32:02.930741Z",
+          "content_sha256": "0a7b75899edc756ec1ed67721be022fda9265762314a53377ed1519905a19a65",
+          "locator": "company-link:https://twitter.com/IAM_Identum",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "<a class=\"default-link nav-list__link \" href=\"https://twitter.com/IAM_Identum\" target=\"_blank\">"
+        },
+        {
+          "source_url": "https://www.identum.no/",
+          "retrieved_at": "2026-11-17T17:32:01.564168Z",
+          "content_sha256": "356223741f48deba792eff2c569e1b2a0b4bdee0c59d567e77912eb72e1301d0",
+          "locator": "identity-proof:994479865",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "\">Organisasjonsnummer</h3>\n        <p>NO994479865 MVA</p>\n      </li>\n    \n    </ul>\n  \n</div>\n</div>\n        \n      </div>\n      <div class=\"footer-i"
+        }
+      ]
+    },
+    {
+      "organisation_number": "994479865",
+      "company": "IDENTUM AS",
+      "kind": "social",
+      "url": "https://www.facebook.com/identum.no",
+      "proof_tier": "own_contact_follow_us_v1",
+      "identity_level": null,
+      "field": "social_profile.ad8947bf2bf1e12aa466",
+      "claim_id": "7c1af5800b7fed50cf6152674d95be079ca6ac35ac3ea1f6d67f383b7e3b7f0c",
+      "automated_verdict": "wrong",
+      "reasons": [
+        "own header/footer/name/numeric-link policy no longer verifies"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://www.identum.no/kontakt",
+          "retrieved_at": "2026-11-17T17:32:02.930741Z",
+          "content_sha256": "0a7b75899edc756ec1ed67721be022fda9265762314a53377ed1519905a19a65",
+          "locator": "company-link:https://www.facebook.com/identum.no",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "<a class=\"default-link nav-list__link \" href=\"https://www.facebook.com/identum.no\" target=\"_blank\">"
+        },
+        {
+          "source_url": "https://www.identum.no/",
+          "retrieved_at": "2026-11-17T17:32:01.564168Z",
+          "content_sha256": "356223741f48deba792eff2c569e1b2a0b4bdee0c59d567e77912eb72e1301d0",
+          "locator": "identity-proof:994479865",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "\">Organisasjonsnummer</h3>\n        <p>NO994479865 MVA</p>\n      </li>\n    \n    </ul>\n  \n</div>\n</div>\n        \n      </div>\n      <div class=\"footer-i"
+        }
+      ]
+    },
+    {
+      "organisation_number": "994479865",
+      "company": "IDENTUM AS",
+      "kind": "social",
+      "url": "https://www.instagram.com/iam_identum",
+      "proof_tier": "own_contact_follow_us_v1",
+      "identity_level": null,
+      "field": "social_profile.76243b34a4bff246f9cd",
+      "claim_id": "9aa51c87668e27c4d90b669885b27bd7d2de7fc99151a986a63fdc1459a7c07d",
+      "automated_verdict": "wrong",
+      "reasons": [
+        "own header/footer/name/numeric-link policy no longer verifies"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://www.identum.no/kontakt",
+          "retrieved_at": "2026-11-17T17:32:02.930741Z",
+          "content_sha256": "0a7b75899edc756ec1ed67721be022fda9265762314a53377ed1519905a19a65",
+          "locator": "company-link:https://www.instagram.com/iam_identum",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "<a class=\"default-link nav-list__link \" href=\"https://www.instagram.com/iam_identum/\" target=\"_blank\">"
+        },
+        {
+          "source_url": "https://www.identum.no/",
+          "retrieved_at": "2026-11-17T17:32:01.564168Z",
+          "content_sha256": "356223741f48deba792eff2c569e1b2a0b4bdee0c59d567e77912eb72e1301d0",
+          "locator": "identity-proof:994479865",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "\">Organisasjonsnummer</h3>\n        <p>NO994479865 MVA</p>\n      </li>\n    \n    </ul>\n  \n</div>\n</div>\n        \n      </div>\n      <div class=\"footer-i"
+        }
+      ]
+    },
+    {
+      "organisation_number": "833242482",
+      "company": "SOLI AUTO AS",
+      "kind": "website",
+      "url": "https://soliauto.no",
+      "proof_tier": "publisher_name_registered_place",
+      "identity_level": "HIGH",
+      "field": "official_website",
+      "claim_id": "36b06d201ff85070a00f722d5634826401e96fb220b627effbf0881679864c94",
+      "automated_verdict": "doubtful",
+      "reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://soliauto.no/",
+          "retrieved_at": "2026-11-17T17:35:06.492568Z",
+          "content_sha256": "f54759e88e0bb834dbc458f137395762dd4322d9c3d3daf43f9a3a773a64a67b",
+          "locator": "identity-proof:833242482",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "roduct/yoast-seo-wordpress/ -->\n\t<title>Soli Auto As - Soli Auto As</title>\n\t<meta name=\"description\" content=\"Soli Auto AS tilbyr salg av bruktbil, innbytte og fleksible finansieringsløsninger i Fredrikstad og omegn. Bilforhandler som tar bilkjøp på alvor.\" />\n\t<link rel=\"canonical\" href=\"https://s"
+        }
+      ]
+    },
+    {
+      "organisation_number": "926765655",
+      "company": "LISTER LASERKLINIKK AS",
+      "kind": "website",
+      "url": "https://listerlaserklinikk.no",
+      "proof_tier": "publisher_name_registered_place",
+      "identity_level": "HIGH",
+      "field": "official_website",
+      "claim_id": "3395777d57fed31eddcbe9640c0027e2a801a64dc9f17a0848d7f703a7a84469",
+      "automated_verdict": "doubtful",
+      "reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://listerlaserklinikk.no/",
+          "retrieved_at": "2026-11-17T17:35:26.420068Z",
+          "content_sha256": "a4ac4880b4b705181acc7d08c503561135f1764efa3a01836a48b9e20c6afcec",
+          "locator": "identity-proof:926765655",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "ant\"><head><meta charset=\"utf-8\"><title>Lister laserklinikk AS</title><meta name=\"robots\" content=\"all\"><meta name=\"generator\" content=\"One.com Web Editor\"><meta http-equiv=\"Cache-Control\" content=\"must-revalidate, max-age=0, public\"><meta http-equiv=\"Expires\" content=\"-1\"><meta name=\"viewport\" cont"
+        }
+      ]
+    },
+    {
+      "organisation_number": "930595764",
+      "company": "WESTNES HOLDING AS",
+      "kind": "website",
+      "url": "https://westnesholding.no",
+      "proof_tier": "orgnr_on_page",
+      "identity_level": "VERIFIED",
+      "field": "official_website",
+      "claim_id": "05bfd0c8ecd17a42bc57d50cc7e302ff37a09dd20ceef594a542fd22e7673058",
+      "automated_verdict": "doubtful",
+      "reasons": [
+        "Group/multi-company site context needs hand review"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://westnesholding.no/",
+          "retrieved_at": "2026-11-17T17:32:49.817413Z",
+          "content_sha256": "89403e39c0c2d07730063ba4c81516bbb9474c864cf4cbaafe1a5c4f81f39c07",
+          "locator": "identity-proof:930595764",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "nes Holding AS</div>\n      <div>Org.nr. 930 595 764</div>\n    </div>\n  </footer>\n</div>\n\n</body>\n</html>\n"
+        }
+      ]
+    },
+    {
+      "organisation_number": "954583996",
+      "company": "HVALSAFARI AS",
+      "kind": "website",
+      "url": "https://whalesafari.no",
+      "proof_tier": "registry_declared_publisher_name",
+      "identity_level": "HIGH",
+      "field": "official_website",
+      "claim_id": "88eb68872157a0172e8f5a4111ed088fb0c548857b8001465b7ec54de3c506b4",
+      "automated_verdict": "doubtful",
+      "reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://whalesafari.no/",
+          "retrieved_at": "2026-11-17T17:34:25.680939Z",
+          "content_sha256": "0ab1bb56e830d625cf901c11cb68cdd6de6f046cd5c92c3bc2a1352f0a0a748f",
+          "locator": "identity-proof:954583996",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "12\">\n                    Whale2Sea AS / Hvalsafari AS <br />\nHamnegata 1C<br />\n8480 Andenes, Norway<br />\nEmail: whale2sea@whalesafari.no<br />\nPhone: +47 76 11 56 00 / 91 67 49 60\n                </div>\n            \n        </div>\n\n        <div class=\"flex flex-col lg:grow lg:px-1/12  lg:flex-row "
+        },
+        {
+          "source_url": "https://whalesafari.no/",
+          "retrieved_at": "2026-11-17T17:34:25.680939Z",
+          "content_sha256": "0ab1bb56e830d625cf901c11cb68cdd6de6f046cd5c92c3bc2a1352f0a0a748f",
+          "locator": "registry-contact:phone",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": ": whale2sea@whalesafari.no<br />\nPhone: +47 76 11 56 00 / 91 67 49 60\n                </div>\n            \n        </div>\n\n        <div class=\"flex flex-col lg:grow lg:px-1/12  lg:flex-row lg:justify-around \">\n            <div class=\"lg:mr-1/6\">\n                <ul class=\"space-y-5 lg:space-y-6 text-"
+        },
+        {
+          "source_url": "https://whalesafari.no/",
+          "retrieved_at": "2026-11-17T17:34:25.680939Z",
+          "content_sha256": "0ab1bb56e830d625cf901c11cb68cdd6de6f046cd5c92c3bc2a1352f0a0a748f",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "br />\n8480 Andenes, Norway<br />\nEmail: whale2sea@whalesafari.no<br />\nPhone: +47 76 11 56 00 / 91 67 49 60\n                </div>\n            \n        </div>\n\n        <div class=\"flex flex-col lg:grow lg:px-1/12  lg:flex-row lg:justify-around \">\n            <div class=\"lg:mr-1/6\">\n                <"
+        }
+      ]
+    },
+    {
+      "organisation_number": "966261218",
+      "company": "BØMLO FOLKEHØGSKULE STI",
+      "kind": "website",
+      "url": "https://bomlo.fhs.no",
+      "proof_tier": "signals",
+      "identity_level": "HIGH",
+      "field": "official_website",
+      "claim_id": "3833f1bf1050bb9c3dff815258d8c8115d345731a97b3201a571d2138812c407",
+      "automated_verdict": "doubtful",
+      "reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://bomlo.fhs.no/",
+          "retrieved_at": "2026-11-17T17:36:15.671188Z",
+          "content_sha256": "1ce7249d4ac7be72821e4f9a9232fd7fcc9c469132f3fd3ac82497dfb2dad501",
+          "locator": "identity-proof:966261218",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "><!-- wp:paragraph -->\n<p>Velkommen til Bømlo folkehøgskule, helt vest i havgapet. Det perfekte stedet for nære øyeblikk og fantastiske eventyr – her hjemme, og der ute i den store verden.</p>\n<!-- /wp:paragraph --></div>\t\t\t\t</div>\n\t\t\t\t\t</section>\n\t<section id=\"bfhs-linje-grid-container\">\n\t\t\t\t<div c"
+        },
+        {
+          "source_url": "https://bomlo.fhs.no/",
+          "retrieved_at": "2026-11-17T17:36:15.671188Z",
+          "content_sha256": "1ce7249d4ac7be72821e4f9a9232fd7fcc9c469132f3fd3ac82497dfb2dad501",
+          "locator": "registry-contact:phone",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a class=\"footer-phone-nr\" href=\"tel:53425650\">"
+        },
+        {
+          "source_url": "https://bomlo.fhs.no/",
+          "retrieved_at": "2026-11-17T17:36:15.671188Z",
+          "content_sha256": "1ce7249d4ac7be72821e4f9a9232fd7fcc9c469132f3fd3ac82497dfb2dad501",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a href=\"mailto:post@bomlo.fhs.no\">"
+        }
+      ]
+    },
+    {
+      "organisation_number": "970991786",
+      "company": "VITEC AGRANDO AS",
+      "kind": "website",
+      "url": "https://agrando.no",
+      "proof_tier": "signals",
+      "identity_level": "HIGH",
+      "field": "official_website",
+      "claim_id": "caff4bc6838f43339cf0df7857f350941d6e7f7b68d767625fa48d7d5b08b47d",
+      "automated_verdict": "doubtful",
+      "reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://agrando.no/",
+          "retrieved_at": "2026-11-17T17:35:38.316805Z",
+          "content_sha256": "7efee3d7418e6c3c13a45d6029e6492df42e5fec1430077c2ad35772e162c644",
+          "locator": "identity-proof:970991786",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "eckCookie();\n    });\n</script><title>\r\n\tVitec Agrando\r\n</title><meta id=\"MetaRobots\" name=\"robots\" content=\"INDEX, FOLLOW\" /><link href=\"/Portals/_default/skins/polo//skin.css?cdv=932\" rel=\"stylesheet\" /><link href=\"/Portals/_default/skins/polo//custom.css?cdv=932\" rel=\"stylesheet\" /><link href=\"/Po"
+        },
+        {
+          "source_url": "https://agrando.no/",
+          "retrieved_at": "2026-11-17T17:35:38.316805Z",
+          "content_sha256": "7efee3d7418e6c3c13a45d6029e6492df42e5fec1430077c2ad35772e162c644",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a href=\"mailto:laborasupport.no@vitecsoftware.com\">"
+        }
+      ]
+    },
+    {
+      "organisation_number": "986902651",
+      "company": "TINNHEIA BIL AS",
+      "kind": "website",
+      "url": "https://tinnheiabil.no",
+      "proof_tier": "publisher_name_registered_place",
+      "identity_level": "HIGH",
+      "field": "official_website",
+      "claim_id": "8d1ffeae9fe384d37a5102084d6463bae0346e60a83a7ebc13c67fa350888139",
+      "automated_verdict": "doubtful",
+      "reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://tinnheiabil.no/",
+          "retrieved_at": "2026-11-17T17:33:01.405390Z",
+          "content_sha256": "434f6a1a4f56ee47328ac9e3109bdc3e281baf17ff1a1c9f7b1da14e1a353c9c",
+          "locator": "identity-proof:986902651",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": " \n    <title>Bilverksted Kristiansand - Tinnheia Bil AS</title>\n<meta name=\"description\" content=\"Bilverksted med EU-kontroll og service på alle bilmerker også elbil og hybrid, AC-service, dekk og dekkhotell, automatgir service. Tinnheia Bil, Kristiansand\" />\n<meta property=\"og:description\" content="
+        }
+      ]
+    },
+    {
+      "organisation_number": "988911879",
+      "company": "ELVEGATA 16 AS",
+      "kind": "website",
+      "url": "https://www.elvegata16.no",
+      "proof_tier": "publisher_name_rare_contact",
+      "identity_level": "HIGH",
+      "field": "official_website",
+      "claim_id": "7e8db747eae42e0c96ed50d37329dffdd0cab4d7f4cfb56f7b4c0e623b665cc1",
+      "automated_verdict": "doubtful",
+      "reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://www.elvegata16.no/kontakt/",
+          "retrieved_at": "2026-11-17T17:33:57.603888Z",
+          "content_sha256": "9e49a1cb80171d5eedc70bf9309b98b589147d383f9626e3da54b4b7e71aa961",
+          "locator": "identity-proof:988911879",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "<span class=\"b-l-text-c logo-text-cell\">Elvegata 16 AS</span>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\r\n\t\t</a>\r\n\t</div>\r\n</div>\n\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t<div id=\"menu-slider\">\n\t\t\t\t\t\t\t<div id=\"menu-block\">\n\t\t\t\t\t\t\t\t<nav id=\"menu\"><div class=\"menu-font menu-wrapper\">\n\t<a href=\"#\" class=\"menu-close\" rel=\"nofollow\" title=\"Cl"
+        }
+      ]
+    },
+    {
+      "organisation_number": "990825076",
+      "company": "PECULIUM AS",
+      "kind": "website",
+      "url": "https://peculium.no",
+      "proof_tier": "publisher_name_registered_place",
+      "identity_level": "HIGH",
+      "field": "official_website",
+      "claim_id": "f2a521804b59bc0b677f71e341fb383a7ff7c92935a1200bbe35d3629daff644",
+      "automated_verdict": "doubtful",
+      "reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://peculium.no/kontakt",
+          "retrieved_at": "2026-11-17T17:34:40.683770Z",
+          "content_sha256": "f765c4a15fd2a63af7e7b6e6f049cc83dc296668259afe3b45873f86543c4f84",
+          "locator": "identity-proof:990825076",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": ":1\",\"S:1\")</script><title>Kontakt oss - Peculium AS | Eiendomsforvaltning i Porsgrunn</title><meta name=\"description\" content=\"Ta kontakt med Peculium AS for eiendomsforvaltning og utleie i Porsgrunn. Vi hjelper deg med lokaler, næringsbygg og boligutleie. Ring eller send e-post.\"/><meta name=\"autho"
+        }
+      ]
+    },
+    {
+      "organisation_number": "991323848",
+      "company": "TROLLHEIM AS",
+      "kind": "website",
+      "url": "https://trollheim.no",
+      "proof_tier": "signals",
+      "identity_level": "HIGH",
+      "field": "official_website",
+      "claim_id": "7cc2defea41987da7f892429f1802ab5415f4d077a801724379ad2801909f7c2",
+      "automated_verdict": "doubtful",
+      "reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://trollheim.no/",
+          "retrieved_at": "2026-11-17T17:33:18.184369Z",
+          "content_sha256": "15f2a742f2d0baf7a6ba588677bd54709bdf264771c719f4519a33d081d92e4a",
+          "locator": "identity-proof:991323848",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "9mefvgt6v6z5ncrt7e8vatuv2ns0y\" /><title>Trollheim &#8211; Arbeid og inkludering</title>\n<meta name='robots' content='max-image-preview:large' />\n\n<script>\ndataLayer = [{\"title\":\"Hjem\",\"author\":\"Webmaster\",\"wordcount\":66,\"logged_in\":\"false\",\"page_id\":47,\"post_date\":\"2018-01-25 14:20:00\"}];\n</script>\n"
+        },
+        {
+          "source_url": "https://trollheim.no/",
+          "retrieved_at": "2026-11-17T17:33:18.184369Z",
+          "content_sha256": "15f2a742f2d0baf7a6ba588677bd54709bdf264771c719f4519a33d081d92e4a",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a href=\"mailto:post@trollheim.no\">"
+        },
+        {
+          "source_url": "https://trollheim.no/",
+          "retrieved_at": "2026-11-17T17:33:18.184369Z",
+          "content_sha256": "15f2a742f2d0baf7a6ba588677bd54709bdf264771c719f4519a33d081d92e4a",
+          "locator": "registry-contact:phone",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "=\"color: #000000;\">Trollheim &#8211; Tlf. 71 65 77 77 &#8211; <strong><a href=\"mailto:post@trollheim.no\">post@trollheim.no</a></strong></span><br /><span style=\"color: #000000;\">Trollheim avd. Røtet/Hovedkontor: Industrivegen 63, 6652 Surnadal</span><br /><span style=\"color: #000000;\">Trollheim avd."
+        }
+      ]
+    },
+    {
+      "organisation_number": "998407257",
+      "company": "GRAVITONIA AS",
+      "kind": "website",
+      "url": "https://www.gravitonia.com",
+      "proof_tier": "registry_declared_live",
+      "identity_level": "HIGH",
+      "field": "official_website",
+      "claim_id": "56609c733b45c5e85b8084db2152725f17c72083ac2c2a205432bad8961f3c7e",
+      "automated_verdict": "doubtful",
+      "reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://www.gravitonia.com/",
+          "retrieved_at": "2026-11-17T17:35:06.784014Z",
+          "content_sha256": "1cef1b2d430c916ae3e8acaa42188c00fc98019dcdc898e801b1225966e20941",
+          "locator": "identity-proof:998407257",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "mayozfLeqJg=\"\n  }\n}</script>\n    <title>Gravitonia</title></head>\n\n<body><div class=\"page\" b-vyzgrxpymy><header><div class=\"container nav-flex\"><a href=\"/\" class=\"brand\" data-enhance-nav=\"false\"><img height=\"32px\" width=\"32px\" src=\"images/gravitonia-logo-32.jpg\" alt=\"Gravitonia Logo\" class=\"logo\">\n "
+        }
+      ]
+    },
+    {
+      "organisation_number": "912766349",
+      "company": "CUBASTOLEN AS",
+      "kind": "social",
+      "url": "https://www.facebook.com/cubastolen",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "identity_level": null,
+      "field": "social_profile.17e728926ae351b98ea8",
+      "claim_id": "c86d251309eaec738e279c934f7fedb809c51f53084ac4b52b74a8c4b4ed10e9",
+      "automated_verdict": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://cubastolen.no/",
+          "retrieved_at": "2026-11-17T17:31:50.465986Z",
+          "content_sha256": "5c5c968dd71032d68f510cbf119082f4f93a6c9b4db2e79970eba9bb6a2214b5",
+          "locator": "company-link:https://www.facebook.com/cubastolen",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "<a target=\"_blank\" rel=\"noopener\" href=\"https://www.facebook.com/cubastolen\" title=\"\">"
+        },
+        {
+          "source_url": "https://cubastolen.no/pages/kjops-og-leveringsvilkar",
+          "retrieved_at": "2026-11-17T17:31:52.985647Z",
+          "content_sha256": "99fb2ea5c23664c225244f75634b910606a8618e58d986dfd3b9b2ce42066300",
+          "locator": "identity-proof:912766349",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "data-start=\"475\" data-end=\"478\">Org.nr: 912 766 349<br data-start=\"497\" data-end=\"500\">Del av Staas AS<br data-start=\"515\" data-end=\"518\">Adresse: Hes"
+        }
+      ]
+    },
+    {
+      "organisation_number": "913112245",
+      "company": "TANKESMIEN AGENDA AS",
+      "kind": "social",
+      "url": "https://www.facebook.com/tankesmienagenda",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "identity_level": null,
+      "field": "social_profile.fee268876401e6d57d85",
+      "claim_id": "e485085f7210858a907e6fbe65cb5aad970d68b96ea430f82c4b32fd8df26822",
+      "automated_verdict": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://www.tankesmienagenda.no/",
+          "retrieved_at": "2026-11-17T17:34:47.625041Z",
+          "content_sha256": "5bfb71cd7b851a28dc49c8c519c995306e494e8eaa208bcddf431f34d0c4fade",
+          "locator": "company-link:https://www.facebook.com/tankesmienagenda",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "<a href=\"https://www.facebook.com/tankesmienagenda\" rel=\"noreferrer\" class=\"group inline-flex items-center gap-x-[0.2em]\">"
+        },
+        {
+          "source_url": "https://www.tankesmienagenda.no/kontakt-oss",
+          "retrieved_at": "2026-11-17T17:34:49.349896Z",
+          "content_sha256": "e76a4989c1695f2f0a3acb958494cd1d35b1702c2e2d8f0d7eab2257c2d0f296",
+          "locator": "identity-proof:913112245",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "mer</h3><p class=\"mb-[0.9em] last:mb-0\">913 112 245</p><p class=\"mb-[0.9em] last:mb-0\">Vi motter faktura som EHF-faktura eller på e-post.</p></div></d"
+        },
+        {
+          "source_url": "https://www.tankesmienagenda.no/kontakt-oss",
+          "retrieved_at": "2026-11-17T17:34:49.349896Z",
+          "content_sha256": "e76a4989c1695f2f0a3acb958494cd1d35b1702c2e2d8f0d7eab2257c2d0f296",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a href=\"mailto:post@tankesmienagenda.no\" rel=\"noreferrer\" class=\"group inline-flex items-center gap-x-[0.2em]\">"
+        }
+      ]
+    },
+    {
+      "organisation_number": "913112245",
+      "company": "TANKESMIEN AGENDA AS",
+      "kind": "social",
+      "url": "https://www.instagram.com/tankesmien_agenda",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "identity_level": null,
+      "field": "social_profile.f019d9007c358d08dd77",
+      "claim_id": "00b5118781795aa0e64b42e02b3c5b954faa55828ff748b04f7e6a2dc76fd560",
+      "automated_verdict": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://www.tankesmienagenda.no/",
+          "retrieved_at": "2026-11-17T17:34:47.625041Z",
+          "content_sha256": "5bfb71cd7b851a28dc49c8c519c995306e494e8eaa208bcddf431f34d0c4fade",
+          "locator": "company-link:https://www.instagram.com/tankesmien_agenda",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "<a href=\"https://www.instagram.com/tankesmien_agenda\" rel=\"noreferrer\" class=\"group inline-flex items-center gap-x-[0.2em]\">"
+        },
+        {
+          "source_url": "https://www.tankesmienagenda.no/kontakt-oss",
+          "retrieved_at": "2026-11-17T17:34:49.349896Z",
+          "content_sha256": "e76a4989c1695f2f0a3acb958494cd1d35b1702c2e2d8f0d7eab2257c2d0f296",
+          "locator": "identity-proof:913112245",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "mer</h3><p class=\"mb-[0.9em] last:mb-0\">913 112 245</p><p class=\"mb-[0.9em] last:mb-0\">Vi motter faktura som EHF-faktura eller på e-post.</p></div></d"
+        },
+        {
+          "source_url": "https://www.tankesmienagenda.no/kontakt-oss",
+          "retrieved_at": "2026-11-17T17:34:49.349896Z",
+          "content_sha256": "e76a4989c1695f2f0a3acb958494cd1d35b1702c2e2d8f0d7eab2257c2d0f296",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a href=\"mailto:post@tankesmienagenda.no\" rel=\"noreferrer\" class=\"group inline-flex items-center gap-x-[0.2em]\">"
+        }
+      ]
+    },
+    {
+      "organisation_number": "913112245",
+      "company": "TANKESMIEN AGENDA AS",
+      "kind": "social",
+      "url": "https://www.linkedin.com/company/tankesmien-agenda",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "identity_level": null,
+      "field": "social_profile.2f8782a661f65eda27e3",
+      "claim_id": "a2c06bae785809750f42e913545f336a3378bdfe71d79c785a4cd144870f3e45",
+      "automated_verdict": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://www.tankesmienagenda.no/",
+          "retrieved_at": "2026-11-17T17:34:47.625041Z",
+          "content_sha256": "5bfb71cd7b851a28dc49c8c519c995306e494e8eaa208bcddf431f34d0c4fade",
+          "locator": "company-link:https://www.linkedin.com/company/tankesmien-agenda",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "<a href=\"https://www.linkedin.com/company/tankesmien-agenda/\" rel=\"noreferrer\" class=\"group inline-flex items-center gap-x-[0.2em]\">"
+        },
+        {
+          "source_url": "https://www.tankesmienagenda.no/kontakt-oss",
+          "retrieved_at": "2026-11-17T17:34:49.349896Z",
+          "content_sha256": "e76a4989c1695f2f0a3acb958494cd1d35b1702c2e2d8f0d7eab2257c2d0f296",
+          "locator": "identity-proof:913112245",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "mer</h3><p class=\"mb-[0.9em] last:mb-0\">913 112 245</p><p class=\"mb-[0.9em] last:mb-0\">Vi motter faktura som EHF-faktura eller på e-post.</p></div></d"
+        },
+        {
+          "source_url": "https://www.tankesmienagenda.no/kontakt-oss",
+          "retrieved_at": "2026-11-17T17:34:49.349896Z",
+          "content_sha256": "e76a4989c1695f2f0a3acb958494cd1d35b1702c2e2d8f0d7eab2257c2d0f296",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a href=\"mailto:post@tankesmienagenda.no\" rel=\"noreferrer\" class=\"group inline-flex items-center gap-x-[0.2em]\">"
+        }
+      ]
+    },
+    {
+      "organisation_number": "913112245",
+      "company": "TANKESMIEN AGENDA AS",
+      "kind": "social",
+      "url": "https://www.tiktok.com/@tankesmien.agenda",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "identity_level": null,
+      "field": "social_profile.34268a6a10bff220e77c",
+      "claim_id": "8411a40b42ea49e695e8d20135109318d9486cc4946830d7a88e3df79ee477ca",
+      "automated_verdict": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://www.tankesmienagenda.no/",
+          "retrieved_at": "2026-11-17T17:34:47.625041Z",
+          "content_sha256": "5bfb71cd7b851a28dc49c8c519c995306e494e8eaa208bcddf431f34d0c4fade",
+          "locator": "company-link:https://www.tiktok.com/@tankesmien.agenda",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "<a href=\"https://www.tiktok.com/@tankesmien.agenda?is_from_webapp=1&amp;sender_device=pc\" rel=\"noreferrer\" class=\"group inline-flex items-center gap-x-[0.2em]\">"
+        },
+        {
+          "source_url": "https://www.tankesmienagenda.no/kontakt-oss",
+          "retrieved_at": "2026-11-17T17:34:49.349896Z",
+          "content_sha256": "e76a4989c1695f2f0a3acb958494cd1d35b1702c2e2d8f0d7eab2257c2d0f296",
+          "locator": "identity-proof:913112245",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "mer</h3><p class=\"mb-[0.9em] last:mb-0\">913 112 245</p><p class=\"mb-[0.9em] last:mb-0\">Vi motter faktura som EHF-faktura eller på e-post.</p></div></d"
+        },
+        {
+          "source_url": "https://www.tankesmienagenda.no/kontakt-oss",
+          "retrieved_at": "2026-11-17T17:34:49.349896Z",
+          "content_sha256": "e76a4989c1695f2f0a3acb958494cd1d35b1702c2e2d8f0d7eab2257c2d0f296",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a href=\"mailto:post@tankesmienagenda.no\" rel=\"noreferrer\" class=\"group inline-flex items-center gap-x-[0.2em]\">"
+        }
+      ]
+    },
+    {
+      "organisation_number": "916667779",
+      "company": "PRESENZA AS",
+      "kind": "social",
+      "url": "https://www.facebook.com/PresenzaAs",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "identity_level": null,
+      "field": "social_profile.c29007da9841cbae6d1a",
+      "claim_id": "303e231383aa0b09500bf12c6908400a88f001898709f96708b142706ed6c05a",
+      "automated_verdict": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://presenza.no/",
+          "retrieved_at": "2026-11-17T17:34:24.393136Z",
+          "content_sha256": "96a5ee7318ff61117673620704ec04cfcea8f6d117e5c1ac76d4a2ef454edcbb",
+          "locator": "company-link:https://www.facebook.com/PresenzaAs",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "<a\n              href='https://www.facebook.com/PresenzaAs'\n              class='icon et_pb_with_border'\n              title='Følg på Facebook'\n               target=\"_blank\">"
+        },
+        {
+          "source_url": "https://presenza.no/",
+          "retrieved_at": "2026-11-17T17:34:24.393136Z",
+          "content_sha256": "96a5ee7318ff61117673620704ec04cfcea8f6d117e5c1ac76d4a2ef454edcbb",
+          "locator": "identity-proof:916667779",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "no</a><br /><strong>Orgnummer:</strong> 916667779MVA</p>\n<p><span style=\"text-decoration: underline;\"><strong><a href=\"https://presenza.no/personverne"
+        }
+      ]
+    },
+    {
+      "organisation_number": "925757616",
+      "company": "BOLIGENTREPRENØREN AS",
+      "kind": "social",
+      "url": "https://www.facebook.com/boligentreprenorenas",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "identity_level": null,
+      "field": "social_profile.8aa1c7c69cfc3d057ebd",
+      "claim_id": "3cf0fa06cb55226d0c8df64349567f494e9299da702e603dfb618f87d844e61a",
+      "automated_verdict": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://www.boligentreprenoren.no/",
+          "retrieved_at": "2026-11-17T17:36:04.873402Z",
+          "content_sha256": "345c5fb614cc14a5408083931a5213dfe51318cd3cf1c0b5071cbadac172d6b4",
+          "locator": "company-link:https://www.facebook.com/boligentreprenorenas",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "<a href=\"https://www.facebook.com/boligentreprenorenas\" rel=\"noopener noreferrer\">"
+        },
+        {
+          "source_url": "https://www.boligentreprenoren.no/",
+          "retrieved_at": "2026-11-17T17:36:04.873402Z",
+          "content_sha256": "345c5fb614cc14a5408083931a5213dfe51318cd3cf1c0b5071cbadac172d6b4",
+          "locator": "identity-proof:925757616",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "content__content\"><div><p>Orgnummer:<br>925 757 616<br><br>Adresse: <br>Gregorius Dagssons gate 227,<br>3712 Skien,<br>Telemark<br><br>Medlem av Nordi"
+        }
+      ]
+    },
+    {
+      "organisation_number": "927525399",
+      "company": "WOODWORKS! CLUSTER",
+      "kind": "social",
+      "url": "https://linkedin.com/company/woodworks-cluster",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "identity_level": null,
+      "field": "social_profile.e54b2bc845753233cd1a",
+      "claim_id": "9648b7d03ca521e30591f8fdd29089066dd8f933ab0111b4616df6ea042a2d86",
+      "automated_verdict": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://woodworkscluster.no/",
+          "retrieved_at": "2026-11-17T17:31:45.682612Z",
+          "content_sha256": "8e2c2eed3e3549b40dde5c22acd82eaedef946c7e8310918f415d092e369af44",
+          "locator": "company-link:https://linkedin.com/company/woodworks-cluster",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "<a href=\"https://linkedin.com/company/woodworks-cluster\" target=\"_blank\" rel=\"noopener nofollow\">"
+        },
+        {
+          "source_url": "https://woodworkscluster.no/",
+          "retrieved_at": "2026-11-17T17:31:45.682612Z",
+          "content_sha256": "8e2c2eed3e3549b40dde5c22acd82eaedef946c7e8310918f415d092e369af44",
+          "locator": "identity-proof:927525399",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "egata 22, 7713 Steinkjer</p>\n<p>Org.nr: 927 525 399</p>\n<p><a title=\"Klikk for å lese personvernerklæringen til denne nettsiden\" href=\"https://woodwor"
+        },
+        {
+          "source_url": "https://woodworkscluster.no/",
+          "retrieved_at": "2026-11-17T17:31:45.682612Z",
+          "content_sha256": "8e2c2eed3e3549b40dde5c22acd82eaedef946c7e8310918f415d092e369af44",
+          "locator": "registry-contact:phone",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a title=\"Ring oss på telefon +47 95 23 90 06\" href=\"tel:+47 95 23 90 06\">"
+        },
+        {
+          "source_url": "https://woodworkscluster.no/",
+          "retrieved_at": "2026-11-17T17:31:45.682612Z",
+          "content_sha256": "8e2c2eed3e3549b40dde5c22acd82eaedef946c7e8310918f415d092e369af44",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a title=\"Send e-post til post@woodworkscluster.no\" href=\"mailto:post@woodworkscluster.no\">"
+        }
+      ]
+    },
+    {
+      "organisation_number": "927525399",
+      "company": "WOODWORKS! CLUSTER",
+      "kind": "social",
+      "url": "https://www.facebook.com/woodworkscluster",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "identity_level": null,
+      "field": "social_profile.61b1963bdf012537d784",
+      "claim_id": "e67715ca5d7b26ffb5f6302070403a3d67a55effacfb92a462cdf8376c5b9f75",
+      "automated_verdict": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://woodworkscluster.no/",
+          "retrieved_at": "2026-11-17T17:31:45.682612Z",
+          "content_sha256": "8e2c2eed3e3549b40dde5c22acd82eaedef946c7e8310918f415d092e369af44",
+          "locator": "company-link:https://www.facebook.com/woodworkscluster",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "<a href=\"https://www.facebook.com/woodworkscluster/\" target=\"_blank\" rel=\"noopener nofollow\">"
+        },
+        {
+          "source_url": "https://woodworkscluster.no/",
+          "retrieved_at": "2026-11-17T17:31:45.682612Z",
+          "content_sha256": "8e2c2eed3e3549b40dde5c22acd82eaedef946c7e8310918f415d092e369af44",
+          "locator": "identity-proof:927525399",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "egata 22, 7713 Steinkjer</p>\n<p>Org.nr: 927 525 399</p>\n<p><a title=\"Klikk for å lese personvernerklæringen til denne nettsiden\" href=\"https://woodwor"
+        },
+        {
+          "source_url": "https://woodworkscluster.no/",
+          "retrieved_at": "2026-11-17T17:31:45.682612Z",
+          "content_sha256": "8e2c2eed3e3549b40dde5c22acd82eaedef946c7e8310918f415d092e369af44",
+          "locator": "registry-contact:phone",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a title=\"Ring oss på telefon +47 95 23 90 06\" href=\"tel:+47 95 23 90 06\">"
+        },
+        {
+          "source_url": "https://woodworkscluster.no/",
+          "retrieved_at": "2026-11-17T17:31:45.682612Z",
+          "content_sha256": "8e2c2eed3e3549b40dde5c22acd82eaedef946c7e8310918f415d092e369af44",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a title=\"Send e-post til post@woodworkscluster.no\" href=\"mailto:post@woodworkscluster.no\">"
+        }
+      ]
+    },
+    {
+      "organisation_number": "929274490",
+      "company": "BAREKNIPS AS",
+      "kind": "social",
+      "url": "https://facebook.com/bareknips",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "identity_level": null,
+      "field": "social_profile.60f9436127a78c8bb7a0",
+      "claim_id": "d696c5a14e8338c7f5ea27c725cb67c82f904877d36a54368a8bedfa5d8e95bf",
+      "automated_verdict": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://www.bareknips.no/",
+          "retrieved_at": "2026-11-17T17:32:54.853696Z",
+          "content_sha256": "3b9fc590fee7e96ebf8f1f953605a0c0668a6745e23e89a0df368824b18ae28f",
+          "locator": "company-link:https://facebook.com/bareknips",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "<a href=\"https://facebook.com/bareknips\" target=\"_blank\" rel=\"noopener\">"
+        },
+        {
+          "source_url": "https://www.bareknips.no/",
+          "retrieved_at": "2026-11-17T17:32:54.853696Z",
+          "content_sha256": "3b9fc590fee7e96ebf8f1f953605a0c0668a6745e23e89a0df368824b18ae28f",
+          "locator": "identity-proof:929274490",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "7<br />9405 Harstad</p>\n<p>Org nr <span>929 274 490</span></p>\n<p>Espen 90 72 92 57<br /><a href=\"mailto:espen@bareknips.no\">espen@bareknips.no</a></p"
+        }
+      ]
+    },
+    {
+      "organisation_number": "929274490",
+      "company": "BAREKNIPS AS",
+      "kind": "social",
+      "url": "https://instagram.com/bareknips",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "identity_level": null,
+      "field": "social_profile.cf2ebb0e8e1bb401c24e",
+      "claim_id": "376ca8feb19cfb2f1d45c4b64be24f10fcee2836fc0352b25a71189564aa9e06",
+      "automated_verdict": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://www.bareknips.no/",
+          "retrieved_at": "2026-11-17T17:32:54.853696Z",
+          "content_sha256": "3b9fc590fee7e96ebf8f1f953605a0c0668a6745e23e89a0df368824b18ae28f",
+          "locator": "company-link:https://instagram.com/bareknips",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "<a href=\"https://instagram.com/bareknips\" target=\"_blank\" rel=\"noopener\">"
+        },
+        {
+          "source_url": "https://www.bareknips.no/",
+          "retrieved_at": "2026-11-17T17:32:54.853696Z",
+          "content_sha256": "3b9fc590fee7e96ebf8f1f953605a0c0668a6745e23e89a0df368824b18ae28f",
+          "locator": "identity-proof:929274490",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "7<br />9405 Harstad</p>\n<p>Org nr <span>929 274 490</span></p>\n<p>Espen 90 72 92 57<br /><a href=\"mailto:espen@bareknips.no\">espen@bareknips.no</a></p"
+        }
+      ]
+    },
+    {
+      "organisation_number": "967484881",
+      "company": "MAJAS BAKERI AS",
+      "kind": "social",
+      "url": "https://www.facebook.com/MajasBakeri",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "identity_level": null,
+      "field": "social_profile.864d4e1817bab4f73dc4",
+      "claim_id": "bf663e4791dc0612cea32bbe2fa0a6f68076022c398acd964b17350fb89aab71",
+      "automated_verdict": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://www.majasbakeri.no/",
+          "retrieved_at": "2026-11-17T17:34:03.005456Z",
+          "content_sha256": "5845372c04bcec3fcc32a73b002a669fe838e861a52664c672b385b10503116e",
+          "locator": "company-link:https://www.facebook.com/MajasBakeri",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "  \" target=\"_blank\" href=\"https://www.facebook.com/MajasBakeri/\">"
+        },
+        {
+          "source_url": "https://www.majasbakeri.no/",
+          "retrieved_at": "2026-11-17T17:34:03.005456Z",
+          "content_sha256": "5845372c04bcec3fcc32a73b002a669fe838e861a52664c672b385b10503116e",
+          "locator": "identity-proof:967484881",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "pace</a> | © Majas Bakeri AS - Org. nr. 967 484 881</p></p></div></div></section></footer><style>/* common style */\n\n@media (min-width: 576px) {\n    ."
+        },
+        {
+          "source_url": "https://www.majasbakeri.no/",
+          "retrieved_at": "2026-11-17T17:34:03.005456Z",
+          "content_sha256": "5845372c04bcec3fcc32a73b002a669fe838e861a52664c672b385b10503116e",
+          "locator": "registry-contact:phone",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a href=\"tel:33 18 27 75\" target=\"_blank\">"
+        },
+        {
+          "source_url": "https://www.majasbakeri.no/",
+          "retrieved_at": "2026-11-17T17:34:03.005456Z",
+          "content_sha256": "5845372c04bcec3fcc32a73b002a669fe838e861a52664c672b385b10503116e",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a href=\"mailto:konditori@majasbakeri.no\" target=\"_blank\">"
+        }
+      ]
+    },
+    {
+      "organisation_number": "970351515",
+      "company": "GRANLY STIFTELSE",
+      "kind": "social",
+      "url": "https://www.facebook.com/granlystiftelse",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "identity_level": null,
+      "field": "social_profile.f736beea60a0863c5a1f",
+      "claim_id": "4fc964a1b2e130634a82dc12d401806bf6718d2f3395ac56ac1d221b1ba617f8",
+      "automated_verdict": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://www.granly-stiftelse.no/",
+          "retrieved_at": "2026-11-17T17:33:51.417774Z",
+          "content_sha256": "d8cbcd495e122ee161d1f0df8ab9aeb971274e8b139c7b7eb082fc6b6b3320c6",
+          "locator": "company-link:https://www.facebook.com/granlystiftelse",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "<a href=\"https://www.facebook.com/granlystiftelse\" >"
+        },
+        {
+          "source_url": "https://www.granly-stiftelse.no/personvernerklaering/",
+          "retrieved_at": "2026-11-17T17:33:55.462009Z",
+          "content_sha256": "14bd9ca90547097dbd93082d7a351e9be24f4bea7f9c4c25cd7a034dbb74d5f1",
+          "locator": "identity-proof:970351515",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "r />\nTelefon: 61 14 36 60<br />\nOrg.nr: 970 351 515</p>\n<p>For spørsmål du måtte ha om vår behandling av dine personopplysninger kan du kontakte dagli"
+        },
+        {
+          "source_url": "https://www.granly-stiftelse.no/personvernerklaering/",
+          "retrieved_at": "2026-11-17T17:33:55.462009Z",
+          "content_sha256": "14bd9ca90547097dbd93082d7a351e9be24f4bea7f9c4c25cd7a034dbb74d5f1",
+          "locator": "registry-contact:phone",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a style=\"color: #000000;\" href=\"tel:+4761143660\">"
+        },
+        {
+          "source_url": "https://www.granly-stiftelse.no/personvernerklaering/",
+          "retrieved_at": "2026-11-17T17:33:55.462009Z",
+          "content_sha256": "14bd9ca90547097dbd93082d7a351e9be24f4bea7f9c4c25cd7a034dbb74d5f1",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a style=\"color: #000000;\" href=\"mailto:granly@granly-stiftelse.no\">"
+        }
+      ]
+    },
+    {
+      "organisation_number": "970351515",
+      "company": "GRANLY STIFTELSE",
+      "kind": "social",
+      "url": "https://www.instagram.com/granlystiftelse",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "identity_level": null,
+      "field": "social_profile.7e81eb1f49c21dc3c6f1",
+      "claim_id": "d3ad3d0e81df7d64ed6a804922d8a8ee42d2c723cc33ab354b55a3381c7eccd4",
+      "automated_verdict": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://www.granly-stiftelse.no/",
+          "retrieved_at": "2026-11-17T17:33:51.417774Z",
+          "content_sha256": "d8cbcd495e122ee161d1f0df8ab9aeb971274e8b139c7b7eb082fc6b6b3320c6",
+          "locator": "company-link:https://www.instagram.com/granlystiftelse",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "<a href=\"https://www.instagram.com/granlystiftelse\" >"
+        },
+        {
+          "source_url": "https://www.granly-stiftelse.no/personvernerklaering/",
+          "retrieved_at": "2026-11-17T17:33:55.462009Z",
+          "content_sha256": "14bd9ca90547097dbd93082d7a351e9be24f4bea7f9c4c25cd7a034dbb74d5f1",
+          "locator": "identity-proof:970351515",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "r />\nTelefon: 61 14 36 60<br />\nOrg.nr: 970 351 515</p>\n<p>For spørsmål du måtte ha om vår behandling av dine personopplysninger kan du kontakte dagli"
+        },
+        {
+          "source_url": "https://www.granly-stiftelse.no/personvernerklaering/",
+          "retrieved_at": "2026-11-17T17:33:55.462009Z",
+          "content_sha256": "14bd9ca90547097dbd93082d7a351e9be24f4bea7f9c4c25cd7a034dbb74d5f1",
+          "locator": "registry-contact:phone",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a style=\"color: #000000;\" href=\"tel:+4761143660\">"
+        },
+        {
+          "source_url": "https://www.granly-stiftelse.no/personvernerklaering/",
+          "retrieved_at": "2026-11-17T17:33:55.462009Z",
+          "content_sha256": "14bd9ca90547097dbd93082d7a351e9be24f4bea7f9c4c25cd7a034dbb74d5f1",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a style=\"color: #000000;\" href=\"mailto:granly@granly-stiftelse.no\">"
+        }
+      ]
+    },
+    {
+      "organisation_number": "975339688",
+      "company": "DIGERNES AS",
+      "kind": "social",
+      "url": "https://www.linkedin.com/company/digernes-as",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "identity_level": null,
+      "field": "social_profile.8c5d1c3da30bf5b9340b",
+      "claim_id": "18f3e81d4d553424560a7bee755e151e989ac6c2c2cfc0ee8ba22c4e766392e5",
+      "automated_verdict": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://www.digernes.no/",
+          "retrieved_at": "2026-11-17T17:35:53.116691Z",
+          "content_sha256": "98dcc5a7f6ca9bc8f41fd6bfb8722bbff749702e24f22246b5cfc01c463eb035",
+          "locator": "company-link:https://www.linkedin.com/company/digernes-as",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "<a href=\"https://www.linkedin.com/company/digernes-as/\" target=\"_blank\">"
+        },
+        {
+          "source_url": "https://www.digernes.no/om-oss/pernsonvernerklaering",
+          "retrieved_at": "2026-11-17T17:35:56.364412Z",
+          "content_sha256": "d8094de54dff4412a40717eaf65997b14a64c5e900e2cfd4c42bbf961c58d888",
+          "locator": "identity-proof:975339688",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "ingsansvar</h3>\n<p>Digernes AS (Org.nr: 975 339 688) er behandlingsansvarlig for personopplysningene vi samler inn og behandler. Dette innebærer at vi"
+        },
+        {
+          "source_url": "https://www.digernes.no/om-oss/pernsonvernerklaering",
+          "retrieved_at": "2026-11-17T17:35:56.364412Z",
+          "content_sha256": "d8094de54dff4412a40717eaf65997b14a64c5e900e2cfd4c42bbf961c58d888",
+          "locator": "registry-contact:phone",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a href=\"tel:4751779898\">"
+        }
+      ]
+    },
+    {
+      "organisation_number": "985256055",
+      "company": "FRAMEWORKS AS",
+      "kind": "social",
+      "url": "https://no.linkedin.com/company/frameworks-as",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "identity_level": null,
+      "field": "social_profile.44e251845bfa1610fce5",
+      "claim_id": "07967b01b3ec68aada88a08787e0e3cf856fbbba89af223339dc0bb5aaa2f64c",
+      "automated_verdict": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://frameworks.no/",
+          "retrieved_at": "2026-11-17T17:35:33.256098Z",
+          "content_sha256": "09a6f3b7ec8bab0877adfa3b7d56e15bd2693b782ec14d9e8ccabeb9d90d4cfe",
+          "locator": "company-link:https://no.linkedin.com/company/frameworks-as",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "<a href=\"https://no.linkedin.com/company/frameworks-as\" target=\"_blank\" class=\"e-paragraph-link-base e-default-a\">"
+        },
+        {
+          "source_url": "https://frameworks.no/",
+          "retrieved_at": "2026-11-17T17:35:33.256098Z",
+          "content_sha256": "09a6f3b7ec8bab0877adfa3b7d56e15bd2693b782ec14d9e8ccabeb9d90d4cfe",
+          "locator": "identity-proof:985256055",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "den 2012. Organisasjonsnummeret vårt er 985 256 055. Du når oss på telefon <a href=\"tel:+4740400088\">40 40 00 88</a> eller på <a href=\"mailto:simen.wi"
+        },
+        {
+          "source_url": "https://frameworks.no/",
+          "retrieved_at": "2026-11-17T17:35:33.256098Z",
+          "content_sha256": "09a6f3b7ec8bab0877adfa3b7d56e15bd2693b782ec14d9e8ccabeb9d90d4cfe",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a href=\"mailto:sw@frameworks.no\" target=\"_self\" class=\"e-paragraph-link-base e-default-a\">"
+        }
+      ]
+    },
+    {
+      "organisation_number": "985256055",
+      "company": "FRAMEWORKS AS",
+      "kind": "social",
+      "url": "https://twitter.com/Frameworks_AS",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "identity_level": null,
+      "field": "social_profile.64ad84e6f0a5bde1b954",
+      "claim_id": "0181fdc17d5ce7464f0a17ecce5d198f4474a131fa9e84acad3b37d3dbd10f05",
+      "automated_verdict": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://frameworks.no/",
+          "retrieved_at": "2026-11-17T17:35:33.256098Z",
+          "content_sha256": "09a6f3b7ec8bab0877adfa3b7d56e15bd2693b782ec14d9e8ccabeb9d90d4cfe",
+          "locator": "company-link:https://twitter.com/Frameworks_AS",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "<a href=\"https://twitter.com/Frameworks_AS\" target=\"_blank\" class=\"e-paragraph-link-base e-default-a\">"
+        },
+        {
+          "source_url": "https://frameworks.no/",
+          "retrieved_at": "2026-11-17T17:35:33.256098Z",
+          "content_sha256": "09a6f3b7ec8bab0877adfa3b7d56e15bd2693b782ec14d9e8ccabeb9d90d4cfe",
+          "locator": "identity-proof:985256055",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "den 2012. Organisasjonsnummeret vårt er 985 256 055. Du når oss på telefon <a href=\"tel:+4740400088\">40 40 00 88</a> eller på <a href=\"mailto:simen.wi"
+        },
+        {
+          "source_url": "https://frameworks.no/",
+          "retrieved_at": "2026-11-17T17:35:33.256098Z",
+          "content_sha256": "09a6f3b7ec8bab0877adfa3b7d56e15bd2693b782ec14d9e8ccabeb9d90d4cfe",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a href=\"mailto:sw@frameworks.no\" target=\"_self\" class=\"e-paragraph-link-base e-default-a\">"
+        }
+      ]
+    },
+    {
+      "organisation_number": "987693444",
+      "company": "ET BYGG AS",
+      "kind": "social",
+      "url": "https://www.facebook.com/etbygg",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "identity_level": null,
+      "field": "social_profile.523e834e430e7e813d3a",
+      "claim_id": "8b8b0a1214bbd897657e5ba72a4ade4c7e39bd86380f67a3b3df24f3b121de63",
+      "automated_verdict": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://etbygg.com/",
+          "retrieved_at": "2026-11-17T17:33:52.591267Z",
+          "content_sha256": "39840b221fae64efea13dfd02ba688fd6a81158f89e66b148c327d77df925c74",
+          "locator": "company-link:https://www.facebook.com/etbygg",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "<a href=\"https://www.facebook.com/etbygg\" target=\"_blank\" rel=\"noopener\">"
+        },
+        {
+          "source_url": "https://etbygg.com/",
+          "retrieved_at": "2026-11-17T17:33:52.591267Z",
+          "content_sha256": "39840b221fae64efea13dfd02ba688fd6a81158f89e66b148c327d77df925c74",
+          "locator": "identity-proof:987693444",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "> ET Bygg AS</span>\n      <span>Org.nr. 987 693 444</span>\n      <span>Medlem av Mesterhus</span>\n      <!-- Vilkaarslenkene skyves bort fra selskapso"
+        }
+      ]
+    },
+    {
+      "organisation_number": "994479865",
+      "company": "IDENTUM AS",
+      "kind": "social",
+      "url": "https://www.linkedin.com/company/identum-as",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "identity_level": null,
+      "field": "social_profile.d9be7fd690e8a689c3a8",
+      "claim_id": "fea91ca8e6b5f1fc795bcc0086b1bee50012b7a6d9a8386a255cb903d5a8625e",
+      "automated_verdict": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://www.identum.no/",
+          "retrieved_at": "2026-11-17T17:32:01.564168Z",
+          "content_sha256": "356223741f48deba792eff2c569e1b2a0b4bdee0c59d567e77912eb72e1301d0",
+          "locator": "company-link:https://www.linkedin.com/company/identum-as",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "<a class=\"default-link nav-list__link \" href=\"https://www.linkedin.com/company/identum-as/\" target=\"_blank\">"
+        },
+        {
+          "source_url": "https://www.identum.no/",
+          "retrieved_at": "2026-11-17T17:32:01.564168Z",
+          "content_sha256": "356223741f48deba792eff2c569e1b2a0b4bdee0c59d567e77912eb72e1301d0",
+          "locator": "identity-proof:994479865",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "\">Organisasjonsnummer</h3>\n        <p>NO994479865 MVA</p>\n      </li>\n    \n    </ul>\n  \n</div>\n</div>\n        \n      </div>\n      <div class=\"footer-i"
+        }
+      ]
+    },
+    {
+      "organisation_number": "994479865",
+      "company": "IDENTUM AS",
+      "kind": "social",
+      "url": "https://www.youtube.com/@identumAS",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "identity_level": null,
+      "field": "social_profile.1f78c177be8980782bef",
+      "claim_id": "47f1eb99494626e497900929a8b9a835d8bdfdd679bb46e7091f97041e7e5050",
+      "automated_verdict": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://www.identum.no/",
+          "retrieved_at": "2026-11-17T17:32:01.564168Z",
+          "content_sha256": "356223741f48deba792eff2c569e1b2a0b4bdee0c59d567e77912eb72e1301d0",
+          "locator": "company-link:https://www.youtube.com/@identumAS",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "<a class=\"default-link nav-list__link \" href=\"https://www.youtube.com/@identumAS\" target=\"_blank\">"
+        },
+        {
+          "source_url": "https://www.identum.no/",
+          "retrieved_at": "2026-11-17T17:32:01.564168Z",
+          "content_sha256": "356223741f48deba792eff2c569e1b2a0b4bdee0c59d567e77912eb72e1301d0",
+          "locator": "identity-proof:994479865",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "\">Organisasjonsnummer</h3>\n        <p>NO994479865 MVA</p>\n      </li>\n    \n    </ul>\n  \n</div>\n</div>\n        \n      </div>\n      <div class=\"footer-i"
+        }
+      ]
+    },
+    {
+      "organisation_number": "820365682",
+      "company": "WELL INTERCEPT AS",
+      "kind": "website",
+      "url": "https://www.wellintercept.no",
+      "proof_tier": "orgnr_on_page",
+      "identity_level": "VERIFIED",
+      "field": "official_website",
+      "claim_id": "8a1f95f606187c40d9ffa62568638544551212a4a541b7a845785c79bf43903a",
+      "automated_verdict": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://www.wellintercept.no/",
+          "retrieved_at": "2026-11-17T17:32:44.016982Z",
+          "content_sha256": "1692bfc22c7ca97af1b79442255f911169bbbf4a0941db87f8c9fa729177a90e",
+          "locator": "identity-proof:820365682",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "en 22<br>\n\n4050 Sola<br>\n<br>\n\nOrg nr.: 820 365 682</h4>\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"elementor-element elementor-element-44ad79c elementor-hidd"
+        }
+      ]
+    },
+    {
+      "organisation_number": "831854812",
+      "company": "COLIFT AS",
+      "kind": "website",
+      "url": "https://colift.no",
+      "proof_tier": "orgnr_on_page",
+      "identity_level": "VERIFIED",
+      "field": "official_website",
+      "claim_id": "610c53d1d1930b3888e84482a777d43c6dad37573d85ad9ce4296a46a016eddb",
+      "automated_verdict": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://colift.no/",
+          "retrieved_at": "2026-11-17T17:34:43.062882Z",
+          "content_sha256": "f28e3f67d1ec5fdbf5103e49e7baa2f7e8c126dd066354ec8651aaf113b15d99",
+          "locator": "identity-proof:831854812",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "s tw:space-y-2 tw:p-0\"><li>© COLIFT AS (831 854 812)</li><li class=\"tw:flex tw:items-center tw:gap-2\"><svg aria-hidden=\"true\" focusable=\"false\" viewBo"
+        }
+      ]
+    },
+    {
+      "organisation_number": "855197812",
+      "company": "ADVOKATFIRMAET ECKHOFF FOSMARK & CO DA",
+      "kind": "website",
+      "url": "https://www.eckfos.no",
+      "proof_tier": "orgnr_on_page",
+      "identity_level": "VERIFIED",
+      "field": "official_website",
+      "claim_id": "8e2b3e5a458ff396d9e54b5929fc38d12a0875034b0e4e12207799c6e535ed57",
+      "automated_verdict": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://www.eckfos.no/",
+          "retrieved_at": "2026-11-17T17:34:58.898269Z",
+          "content_sha256": "e94923689490201511f829838d34aa8412716b714cae2a66f863decdd09eb421",
+          "locator": "identity-proof:855197812",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "n: 23 08 57 20<br />\r\nOrganisasjonsnr.: 855 197 812<br />\r\n<br />\r\nFor spørsmål du måtte ha om vår behandling av personopplysninger kan du kontakte os"
+        },
+        {
+          "source_url": "https://www.eckfos.no/",
+          "retrieved_at": "2026-11-17T17:34:58.898269Z",
+          "content_sha256": "e94923689490201511f829838d34aa8412716b714cae2a66f863decdd09eb421",
+          "locator": "registry-contact:phone",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "\nE-post: post@eckfos.no<br />\r\nTelefon: 23 08 57 20<br />\r\nOrganisasjonsnr.: 855 197 812<br />\r\n<br />\r\nFor spørsmål du måtte ha om vår behandling av personopplysninger kan du kontakte oss.<br />\r\n<br />\r\nVår nettstedsadresse er: https://www.eckfos.no<br />\r\n<br />\r\nAdvokatfirmaet Eckhoff, Fosmark &"
+        },
+        {
+          "source_url": "https://www.eckfos.no/",
+          "retrieved_at": "2026-11-17T17:34:58.898269Z",
+          "content_sha256": "e94923689490201511f829838d34aa8412716b714cae2a66f863decdd09eb421",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": " Solli, 0203 Oslo (post)<br />\r\nE-post: post@eckfos.no<br />\r\nTelefon: 23 08 57 20<br />\r\nOrganisasjonsnr.: 855 197 812<br />\r\n<br />\r\nFor spørsmål du måtte ha om vår behandling av personopplysninger kan du kontakte oss.<br />\r\n<br />\r\nVår nettstedsadresse er: https://www.eckfos.no<br />\r\n<br />\r\nAd"
+        }
+      ]
+    },
+    {
+      "organisation_number": "912503259",
+      "company": "OFFICEAID AS",
+      "kind": "website",
+      "url": "https://www.officeaid.no",
+      "proof_tier": "orgnr_on_page",
+      "identity_level": "VERIFIED",
+      "field": "official_website",
+      "claim_id": "13d78485505f74e434b5168bb0137fea204ab232ac26812e0b5f26482fdcacc2",
+      "automated_verdict": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://www.officeaid.no/personvern",
+          "retrieved_at": "2026-11-17T17:35:40.114245Z",
+          "content_sha256": "af0ec3bec00d458e4bc6faec795792ba027a3ed7970f964149a81bcb671a43fd",
+          "locator": "identity-proof:912503259",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "trong>OfficeAid AS, organisasjonsnummer 912503259 er ansvarlig for behandlingen av personopplysninger og kan ved spørsmål kontaktes på post@officeaid."
+        }
+      ]
+    },
+    {
+      "organisation_number": "912766349",
+      "company": "CUBASTOLEN AS",
+      "kind": "website",
+      "url": "https://cubastolen.no",
+      "proof_tier": "orgnr_on_page",
+      "identity_level": "VERIFIED",
+      "field": "official_website",
+      "claim_id": "914b339cd5090b2fca704cb05e4f0090b4cc85b322f05b1253a7258d97e7a676",
+      "automated_verdict": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://cubastolen.no/pages/kjops-og-leveringsvilkar",
+          "retrieved_at": "2026-11-17T17:31:52.985647Z",
+          "content_sha256": "99fb2ea5c23664c225244f75634b910606a8618e58d986dfd3b9b2ce42066300",
+          "locator": "identity-proof:912766349",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "data-start=\"475\" data-end=\"478\">Org.nr: 912 766 349<br data-start=\"497\" data-end=\"500\">Del av Staas AS<br data-start=\"515\" data-end=\"518\">Adresse: Hes"
+        }
+      ]
+    },
+    {
+      "organisation_number": "913112245",
+      "company": "TANKESMIEN AGENDA AS",
+      "kind": "website",
+      "url": "https://www.tankesmienagenda.no",
+      "proof_tier": "orgnr_on_page",
+      "identity_level": "VERIFIED",
+      "field": "official_website",
+      "claim_id": "fbf4b8f1669331063951e621a56787b46758d6ecd2e8180b635fe7c02af74b71",
+      "automated_verdict": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://www.tankesmienagenda.no/kontakt-oss",
+          "retrieved_at": "2026-11-17T17:34:49.349896Z",
+          "content_sha256": "e76a4989c1695f2f0a3acb958494cd1d35b1702c2e2d8f0d7eab2257c2d0f296",
+          "locator": "identity-proof:913112245",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "mer</h3><p class=\"mb-[0.9em] last:mb-0\">913 112 245</p><p class=\"mb-[0.9em] last:mb-0\">Vi motter faktura som EHF-faktura eller på e-post.</p></div></d"
+        },
+        {
+          "source_url": "https://www.tankesmienagenda.no/kontakt-oss",
+          "retrieved_at": "2026-11-17T17:34:49.349896Z",
+          "content_sha256": "e76a4989c1695f2f0a3acb958494cd1d35b1702c2e2d8f0d7eab2257c2d0f296",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a href=\"mailto:post@tankesmienagenda.no\" rel=\"noreferrer\" class=\"group inline-flex items-center gap-x-[0.2em]\">"
+        }
+      ]
+    },
+    {
+      "organisation_number": "914848962",
+      "company": "TRYKKEBRAKKA AS",
+      "kind": "website",
+      "url": "https://trykkebrakka.no",
+      "proof_tier": "orgnr_on_page",
+      "identity_level": "VERIFIED",
+      "field": "official_website",
+      "claim_id": "7369091e92e6c23157fc4177349b13099d8a68b8b74f46ae9c89d3fdb3cb3f40",
+      "automated_verdict": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://trykkebrakka.no/",
+          "retrieved_at": "2026-11-17T17:36:14.399319Z",
+          "content_sha256": "5d8248beec77dfe8ae0acd675d97d145e0c6fe333c7409e8f64df518e28bad9b",
+          "locator": "identity-proof:914848962",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": " rte\">\n                      <p>Org nr: 914 848 962</p><p>Skoglivegen 23, 3539 Flå</p><p>trykkebrakka@gmail.com</p>\n                    </div></div></"
+        }
+      ]
+    },
+    {
+      "organisation_number": "916364806",
+      "company": "TT EXPRESS AS",
+      "kind": "website",
+      "url": "https://www.ttexpress.no",
+      "proof_tier": "orgnr_on_page",
+      "identity_level": "VERIFIED",
+      "field": "official_website",
+      "claim_id": "132f7ebceb076de6b3927bcbe57ab13a7a50b1a8a018ffb14030f0f1f9cbe3d8",
+      "automated_verdict": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://www.ttexpress.no/",
+          "retrieved_at": "2026-11-17T17:34:46.072576Z",
+          "content_sha256": "9e61edce2a822ed1a26c3244913a2719b70e5ccca16b28c03b74cdd9e901365d",
+          "locator": "identity-proof:916364806",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "     <small>Organisasjonsnummer</small>\n916364806\n                        \n                    </div>\n\n                </div>\n            </div>\n     "
+        }
+      ]
+    },
+    {
+      "organisation_number": "916667779",
+      "company": "PRESENZA AS",
+      "kind": "website",
+      "url": "https://presenza.no",
+      "proof_tier": "orgnr_on_page",
+      "identity_level": "VERIFIED",
+      "field": "official_website",
+      "claim_id": "13f60407afd3c7eeca113a67bc065ff180a61fdf701ed39f1883514181d818ba",
+      "automated_verdict": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://presenza.no/",
+          "retrieved_at": "2026-11-17T17:34:24.393136Z",
+          "content_sha256": "96a5ee7318ff61117673620704ec04cfcea8f6d117e5c1ac76d4a2ef454edcbb",
+          "locator": "identity-proof:916667779",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "no</a><br /><strong>Orgnummer:</strong> 916667779MVA</p>\n<p><span style=\"text-decoration: underline;\"><strong><a href=\"https://presenza.no/personverne"
+        }
+      ]
+    },
+    {
+      "organisation_number": "918307613",
+      "company": "DYBWADSGYNEKOLOGENE DA",
+      "kind": "website",
+      "url": "https://dybwadsgynekologene.no",
+      "proof_tier": "orgnr_on_page",
+      "identity_level": "VERIFIED",
+      "field": "official_website",
+      "claim_id": "4688144d49a45e7dfdac5bb0408b2fed1c49bd94767a9c5b26a12fc2a8c4c724",
+      "automated_verdict": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://dybwadsgynekologene.no/",
+          "retrieved_at": "2026-11-17T17:32:33.475006Z",
+          "content_sha256": "116f6fcf41757ddd74b8c5da2a3ea89ce2010e049e89afc293ed85bd9506294d",
+          "locator": "identity-proof:918307613",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "026 Dybwadsgynekologene</p> <p>Org. nr. 918 307 613</p> </div> </div> </footer> <script>\n            (() => {\n            const getTheme = () =>\n     "
+        },
+        {
+          "source_url": "https://dybwadsgynekologene.no/",
+          "retrieved_at": "2026-11-17T17:32:33.475006Z",
+          "content_sha256": "116f6fcf41757ddd74b8c5da2a3ea89ce2010e049e89afc293ed85bd9506294d",
+          "locator": "registry-contact:phone",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a href=\"tel:22926092\" class=\"underline-offset-4 hover:underline\">"
+        }
+      ]
+    },
+    {
+      "organisation_number": "918978488",
+      "company": "SVOLT AS",
+      "kind": "website",
+      "url": "https://www.svolt.no",
+      "proof_tier": "orgnr_on_page",
+      "identity_level": "VERIFIED",
+      "field": "official_website",
+      "claim_id": "d728b45bd7717ca0b475cfd7aa1d77a589c6f8509b6f2f077d1e5a3fb2c3875e",
+      "automated_verdict": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://www.svolt.no/",
+          "retrieved_at": "2026-11-17T17:36:22.129099Z",
+          "content_sha256": "7f63abdb2df0e4e7caffe5874962f099191ed59a686c446bfca7fe848f9f77d9",
+          "locator": "identity-proof:918978488",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "3 TRONDHEIM</p>\n<p>Organisasjonsnummer: 918 978 488</p>\n</div>\n</div></div></div><div id=\"pgc-14-4-1\"  class=\"panel-grid-cell\" ><div id=\"panel-14-4-1-"
+        }
+      ]
+    },
+    {
+      "organisation_number": "920153577",
+      "company": "ELMERA GROUP ASA",
+      "kind": "website",
+      "url": "https://elmeragroup.no",
+      "proof_tier": "orgnr_on_page",
+      "identity_level": "VERIFIED",
+      "field": "official_website",
+      "claim_id": "faef8fadca57e4a62e48ab98743b8c69874959ad217e0b99976725a4591f58a8",
+      "automated_verdict": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://elmeragroup.no/",
+          "retrieved_at": "2026-11-17T17:36:15.570732Z",
+          "content_sha256": "90152513e946c49b7213093211992d8c36061c4dd0bf098f878e43572e4009e5",
+          "locator": "identity-proof:920153577",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "  <p><strong>Org.nr<br /></strong><span>920 153 577</span></p>\r\n                </div>\r\n                <div class=\"column\">\r\n                    \r\n  "
+        }
+      ]
+    },
+    {
+      "organisation_number": "922157324",
+      "company": "THERESE ENGER AS",
+      "kind": "website",
+      "url": "https://www.thereseenger.no",
+      "proof_tier": "jsonld_vatid",
+      "identity_level": "VERIFIED",
+      "field": "official_website",
+      "claim_id": "edfe9fe770a001bf6ca3ee7ca69ccc2b9a52090e06d334bc96cdf24fc71fa8ff",
+      "automated_verdict": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://www.thereseenger.no/",
+          "retrieved_at": "2026-11-17T17:33:32.047872Z",
+          "content_sha256": "3ab24b5ff427311f2e47e64206d3750a7d49dfe9309873c5da08d8a502d2605d",
+          "locator": "identity-proof:922157324",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "s?cid=16328723874553620968\"],\"vatID\":\"NO922157324MVA\",\"identifier\":{\"@type\":\"PropertyValue\",\"propertyID\":\"Norwegian organisation number\",\"value\":\"9221"
+        }
+      ]
+    },
+    {
+      "organisation_number": "923240942",
+      "company": "ONLYNX AS",
+      "kind": "website",
+      "url": "https://onlynx.no",
+      "proof_tier": "orgnr_on_page",
+      "identity_level": "VERIFIED",
+      "field": "official_website",
+      "claim_id": "79b9bb0741459b5981414c204cd7550e3c109e0583798495066800468b27e01b",
+      "automated_verdict": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://onlynx.no/personvern",
+          "retrieved_at": "2026-11-17T17:35:38.667004Z",
+          "content_sha256": "877fbb1756497483d3d0f165e7dd384fb905d8ecf98d76f9e86de9c57d030456",
+          "locator": "identity-proof:923240942",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "2><p>Onlynx AS<!-- --> (org.nr. <!-- -->923240942<!-- -->), <!-- -->Kristiansand, Agder<!-- -->, er ansvarlig for behandlingen av personopplysninger p"
+        }
+      ]
+    },
+    {
+      "organisation_number": "923833706",
+      "company": "LYSNA AS",
+      "kind": "website",
+      "url": "https://lysna.no",
+      "proof_tier": "orgnr_on_page",
+      "identity_level": "VERIFIED",
+      "field": "official_website",
+      "claim_id": "ebf874bf273d49fa1ceca2f4a28a8ea2435dd75d7b16b80e0467c0b19db05805",
+      "automated_verdict": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://lysna.no/",
+          "retrieved_at": "2026-11-17T17:35:03.108875Z",
+          "content_sha256": "533dd45facca7720480d3ba8f0472472cef379e5d7d85a8ea92aa4cac05cc781",
+          "locator": "identity-proof:923833706",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "br />Org.nr.:</strong><strong> </strong>923 833 706 MVA<strong><br />Bankgiro</strong>:<strong> </strong><span dir=\"ltr\">1506.87.40700</span></p>\n    "
+        },
+        {
+          "source_url": "https://lysna.no/",
+          "retrieved_at": "2026-11-17T17:35:03.108875Z",
+          "content_sha256": "533dd45facca7720480d3ba8f0472472cef379e5d7d85a8ea92aa4cac05cc781",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "strong></p>\n<p><strong>E-post: </strong>support@lysna.no<strong><br />Org.nr.:</strong><strong> </strong>923 833 706 MVA<strong><br />Bankgiro</strong>:<strong> </strong><span dir=\"ltr\">1506.87.40700</span></p>\n                                    </div>\n                                              "
+        }
+      ]
+    },
+    {
+      "organisation_number": "925757616",
+      "company": "BOLIGENTREPRENØREN AS",
+      "kind": "website",
+      "url": "https://www.boligentreprenoren.no",
+      "proof_tier": "orgnr_on_page",
+      "identity_level": "VERIFIED",
+      "field": "official_website",
+      "claim_id": "3b05571a05b59b7e579d69d87aa9cbf68e19cd7558eb9ba2ffbe964fc9f3cfd2",
+      "automated_verdict": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://www.boligentreprenoren.no/",
+          "retrieved_at": "2026-11-17T17:36:04.873402Z",
+          "content_sha256": "345c5fb614cc14a5408083931a5213dfe51318cd3cf1c0b5071cbadac172d6b4",
+          "locator": "identity-proof:925757616",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "content__content\"><div><p>Orgnummer:<br>925 757 616<br><br>Adresse: <br>Gregorius Dagssons gate 227,<br>3712 Skien,<br>Telemark<br><br>Medlem av Nordi"
+        }
+      ]
+    },
+    {
+      "organisation_number": "927525399",
+      "company": "WOODWORKS! CLUSTER",
+      "kind": "website",
+      "url": "https://woodworkscluster.no",
+      "proof_tier": "orgnr_on_page",
+      "identity_level": "VERIFIED",
+      "field": "official_website",
+      "claim_id": "7ba12ebc9aef884b7c3749a320ca95d6af33f761d87af3ca517091eeb2a286df",
+      "automated_verdict": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://woodworkscluster.no/",
+          "retrieved_at": "2026-11-17T17:31:45.682612Z",
+          "content_sha256": "8e2c2eed3e3549b40dde5c22acd82eaedef946c7e8310918f415d092e369af44",
+          "locator": "identity-proof:927525399",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "egata 22, 7713 Steinkjer</p>\n<p>Org.nr: 927 525 399</p>\n<p><a title=\"Klikk for å lese personvernerklæringen til denne nettsiden\" href=\"https://woodwor"
+        },
+        {
+          "source_url": "https://woodworkscluster.no/",
+          "retrieved_at": "2026-11-17T17:31:45.682612Z",
+          "content_sha256": "8e2c2eed3e3549b40dde5c22acd82eaedef946c7e8310918f415d092e369af44",
+          "locator": "registry-contact:phone",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a title=\"Ring oss på telefon +47 95 23 90 06\" href=\"tel:+47 95 23 90 06\">"
+        },
+        {
+          "source_url": "https://woodworkscluster.no/",
+          "retrieved_at": "2026-11-17T17:31:45.682612Z",
+          "content_sha256": "8e2c2eed3e3549b40dde5c22acd82eaedef946c7e8310918f415d092e369af44",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a title=\"Send e-post til post@woodworkscluster.no\" href=\"mailto:post@woodworkscluster.no\">"
+        }
+      ]
+    },
+    {
+      "organisation_number": "929086627",
+      "company": "ÅLESUND BILSALG AS",
+      "kind": "website",
+      "url": "https://alesundbilsalg.no",
+      "proof_tier": "orgnr_on_page",
+      "identity_level": "VERIFIED",
+      "field": "official_website",
+      "claim_id": "89811139c1d9d7a31209cc94eace470a2f1c35f69953b17953b1f3dc9f5275ac",
+      "automated_verdict": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://alesundbilsalg.no/",
+          "retrieved_at": "2026-11-17T17:32:32.577178Z",
+          "content_sha256": "1c8083d15aaefbf91de84cd1627f7ac60c584322ad5438767d2d2492c7240dbf",
+          "locator": "identity-proof:929086627",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "pan>© 2026 Ålesund Bilsalg AS · Org.nr. 929 086 627</span>\n      <span><a href=\"https://alesundbilsalg.no/personvern/\">Personvern og informasjonskapsl"
+        }
+      ]
+    },
+    {
+      "organisation_number": "929274490",
+      "company": "BAREKNIPS AS",
+      "kind": "website",
+      "url": "https://www.bareknips.no",
+      "proof_tier": "orgnr_on_page",
+      "identity_level": "VERIFIED",
+      "field": "official_website",
+      "claim_id": "70bb6ae5f80b463af9c61aaa8679e6b0a6fc15899e5705d98be4e11b31af4338",
+      "automated_verdict": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://www.bareknips.no/",
+          "retrieved_at": "2026-11-17T17:32:54.853696Z",
+          "content_sha256": "3b9fc590fee7e96ebf8f1f953605a0c0668a6745e23e89a0df368824b18ae28f",
+          "locator": "identity-proof:929274490",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "7<br />9405 Harstad</p>\n<p>Org nr <span>929 274 490</span></p>\n<p>Espen 90 72 92 57<br /><a href=\"mailto:espen@bareknips.no\">espen@bareknips.no</a></p"
+        }
+      ]
+    },
+    {
+      "organisation_number": "932166127",
+      "company": "SANDAKER-NIELSEN AS",
+      "kind": "website",
+      "url": "https://www.sandaker-nielsen.no",
+      "proof_tier": "orgnr_on_page",
+      "identity_level": "VERIFIED",
+      "field": "official_website",
+      "claim_id": "2c5584ebbe1effc5e6115aba7431b36d150cb5c8c380fdc2ee36979373875c4d",
+      "automated_verdict": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://www.sandaker-nielsen.no/",
+          "retrieved_at": "2026-11-17T17:35:46.683739Z",
+          "content_sha256": "8fe22f52ca51c524485261abaed766f504f5dcc7a76026951e31b9c51adde465",
+          "locator": "identity-proof:932166127",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "t-block-3\">Sandaker-Nielsen AS |Org.nr. 932 166 127<br/></div></div></div><script src=\"https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7"
+        }
+      ]
+    },
+    {
+      "organisation_number": "933016196",
+      "company": "STEMEK AS",
+      "kind": "website",
+      "url": "https://stemek.no",
+      "proof_tier": "orgnr_on_page",
+      "identity_level": "VERIFIED",
+      "field": "official_website",
+      "claim_id": "f7738b8904865846662a40cb72c4f6d4c136bb527c3287cc431f3fc22d8746dc",
+      "automated_verdict": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://stemek.no/",
+          "retrieved_at": "2026-11-17T17:34:06.789701Z",
+          "content_sha256": "cf714e7da2e34535b5c6fd4362d75d2853248fefefe237465b17341127df94a6",
+          "locator": "identity-proof:933016196",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "\n      <span>© 2026 Stemek AS · Org.nr. 933 016 196</span>\n      <span>Designet av <a href=\"https://mercatur.no\" style=\"color:var(--brand-orange)\">Mer"
+        }
+      ]
+    },
+    {
+      "organisation_number": "935021006",
+      "company": "WIIK UP CALL AS",
+      "kind": "website",
+      "url": "https://www.wiikupcall.com",
+      "proof_tier": "orgnr_on_page",
+      "identity_level": "VERIFIED",
+      "field": "official_website",
+      "claim_id": "8672d79c55cfa3d752eca3f2ce1dedbe952652e7b1ec116983424512c9838ca3",
+      "automated_verdict": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://www.wiikupcall.com/",
+          "retrieved_at": "2026-11-17T17:32:02.060809Z",
+          "content_sha256": "25f88af1d5d30a98dcb8146a6c93e2186860bd547246fcc1a93a510bdf70ae24",
+          "locator": "identity-proof:935021006",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "rong>Wiik Up Call AS</strong> | Org.nr: 935 021 006</p>\n  <p>Meri Wiik • <a href=\"mailto:meri@wiikupcall.com\" style=\"color: #e31d93;\">meri@wiikupcall."
+        }
+      ]
+    },
+    {
+      "organisation_number": "935219442",
+      "company": "EMALIE AS",
+      "kind": "website",
+      "url": "https://emalie.no",
+      "proof_tier": "orgnr_on_page",
+      "identity_level": "VERIFIED",
+      "field": "official_website",
+      "claim_id": "1d1c05134dde55d1105e3fc641cf53532b10f4bebea6e5f287129b0454874c4f",
+      "automated_verdict": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://emalie.no/policies/terms-of-service",
+          "retrieved_at": "2026-11-17T17:32:25.278449Z",
+          "content_sha256": "8cfb6aac0e9c16545cbd11b73ab9c2890867428cde9aad8610d432e128e93c8a",
+          "locator": "identity-proof:935219442",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "gås det avtale mellom selger Emalie AS (935 219 442) og deg som kjøper.</p>\n<p>Bindende kjøpsavtale kan kun inngås med personer over 15 år, og det kan"
+        }
+      ]
+    },
+    {
+      "organisation_number": "967484881",
+      "company": "MAJAS BAKERI AS",
+      "kind": "website",
+      "url": "https://www.majasbakeri.no",
+      "proof_tier": "orgnr_on_page",
+      "identity_level": "VERIFIED",
+      "field": "official_website",
+      "claim_id": "f58e99fc38cdc6f7425a63f463c4b712c93ab71c08908f54e1108104a70e6fae",
+      "automated_verdict": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://www.majasbakeri.no/",
+          "retrieved_at": "2026-11-17T17:34:03.005456Z",
+          "content_sha256": "5845372c04bcec3fcc32a73b002a669fe838e861a52664c672b385b10503116e",
+          "locator": "identity-proof:967484881",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "pace</a> | © Majas Bakeri AS - Org. nr. 967 484 881</p></p></div></div></section></footer><style>/* common style */\n\n@media (min-width: 576px) {\n    ."
+        },
+        {
+          "source_url": "https://www.majasbakeri.no/",
+          "retrieved_at": "2026-11-17T17:34:03.005456Z",
+          "content_sha256": "5845372c04bcec3fcc32a73b002a669fe838e861a52664c672b385b10503116e",
+          "locator": "registry-contact:phone",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a href=\"tel:33 18 27 75\" target=\"_blank\">"
+        },
+        {
+          "source_url": "https://www.majasbakeri.no/",
+          "retrieved_at": "2026-11-17T17:34:03.005456Z",
+          "content_sha256": "5845372c04bcec3fcc32a73b002a669fe838e861a52664c672b385b10503116e",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a href=\"mailto:konditori@majasbakeri.no\" target=\"_blank\">"
+        }
+      ]
+    },
+    {
+      "organisation_number": "970351515",
+      "company": "GRANLY STIFTELSE",
+      "kind": "website",
+      "url": "https://www.granly-stiftelse.no",
+      "proof_tier": "orgnr_on_page",
+      "identity_level": "VERIFIED",
+      "field": "official_website",
+      "claim_id": "d80d3b2619c0758c8ebb54815a76cddb32cd6d69af455557f0bdb41096d09018",
+      "automated_verdict": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://www.granly-stiftelse.no/personvernerklaering/",
+          "retrieved_at": "2026-11-17T17:33:55.462009Z",
+          "content_sha256": "14bd9ca90547097dbd93082d7a351e9be24f4bea7f9c4c25cd7a034dbb74d5f1",
+          "locator": "identity-proof:970351515",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "r />\nTelefon: 61 14 36 60<br />\nOrg.nr: 970 351 515</p>\n<p>For spørsmål du måtte ha om vår behandling av dine personopplysninger kan du kontakte dagli"
+        },
+        {
+          "source_url": "https://www.granly-stiftelse.no/personvernerklaering/",
+          "retrieved_at": "2026-11-17T17:33:55.462009Z",
+          "content_sha256": "14bd9ca90547097dbd93082d7a351e9be24f4bea7f9c4c25cd7a034dbb74d5f1",
+          "locator": "registry-contact:phone",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a style=\"color: #000000;\" href=\"tel:+4761143660\">"
+        },
+        {
+          "source_url": "https://www.granly-stiftelse.no/personvernerklaering/",
+          "retrieved_at": "2026-11-17T17:33:55.462009Z",
+          "content_sha256": "14bd9ca90547097dbd93082d7a351e9be24f4bea7f9c4c25cd7a034dbb74d5f1",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a style=\"color: #000000;\" href=\"mailto:granly@granly-stiftelse.no\">"
+        }
+      ]
+    },
+    {
+      "organisation_number": "975339688",
+      "company": "DIGERNES AS",
+      "kind": "website",
+      "url": "https://www.digernes.no",
+      "proof_tier": "orgnr_on_page",
+      "identity_level": "VERIFIED",
+      "field": "official_website",
+      "claim_id": "45609bb69815fb9422ebade46c4667fca4c9d33aff28f0eadaf7b1a1eccad4ac",
+      "automated_verdict": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://www.digernes.no/om-oss/pernsonvernerklaering",
+          "retrieved_at": "2026-11-17T17:35:56.364412Z",
+          "content_sha256": "d8094de54dff4412a40717eaf65997b14a64c5e900e2cfd4c42bbf961c58d888",
+          "locator": "identity-proof:975339688",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "ingsansvar</h3>\n<p>Digernes AS (Org.nr: 975 339 688) er behandlingsansvarlig for personopplysningene vi samler inn og behandler. Dette innebærer at vi"
+        },
+        {
+          "source_url": "https://www.digernes.no/om-oss/pernsonvernerklaering",
+          "retrieved_at": "2026-11-17T17:35:56.364412Z",
+          "content_sha256": "d8094de54dff4412a40717eaf65997b14a64c5e900e2cfd4c42bbf961c58d888",
+          "locator": "registry-contact:phone",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a href=\"tel:4751779898\">"
+        }
+      ]
+    },
+    {
+      "organisation_number": "983100147",
+      "company": "VASSFARBYGG AS",
+      "kind": "website",
+      "url": "https://vassfarbygg.no",
+      "proof_tier": "orgnr_on_page",
+      "identity_level": "VERIFIED",
+      "field": "official_website",
+      "claim_id": "8cd45f6d3d079bfe3c7664d29da296ef11acabb3dda6de6ffbe57d7b42c7615a",
+      "automated_verdict": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://vassfarbygg.no/",
+          "retrieved_at": "2026-11-17T17:34:17.978957Z",
+          "content_sha256": "888dd9525ed8f48418dc54b682f150d32167dcd7cc93a27c8221a4201ced2bac",
+          "locator": "identity-proof:983100147",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": ";<span id=\"span-426-9\" class=\"ct-span\" >983100147</span></div></div></div><div id=\"div_block-386-9\" class=\"ct-div-block footer-some-content\" ></div><d"
+        }
+      ]
+    },
+    {
+      "organisation_number": "985256055",
+      "company": "FRAMEWORKS AS",
+      "kind": "website",
+      "url": "https://frameworks.no",
+      "proof_tier": "orgnr_on_page",
+      "identity_level": "VERIFIED",
+      "field": "official_website",
+      "claim_id": "f774cecd534e0719a941785d0644c503db366b3564dce39d17fac0ce9dfb9b81",
+      "automated_verdict": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://frameworks.no/",
+          "retrieved_at": "2026-11-17T17:35:33.256098Z",
+          "content_sha256": "09a6f3b7ec8bab0877adfa3b7d56e15bd2693b782ec14d9e8ccabeb9d90d4cfe",
+          "locator": "identity-proof:985256055",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "den 2012. Organisasjonsnummeret vårt er 985 256 055. Du når oss på telefon <a href=\"tel:+4740400088\">40 40 00 88</a> eller på <a href=\"mailto:simen.wi"
+        },
+        {
+          "source_url": "https://frameworks.no/",
+          "retrieved_at": "2026-11-17T17:35:33.256098Z",
+          "content_sha256": "09a6f3b7ec8bab0877adfa3b7d56e15bd2693b782ec14d9e8ccabeb9d90d4cfe",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a href=\"mailto:sw@frameworks.no\" target=\"_self\" class=\"e-paragraph-link-base e-default-a\">"
+        }
+      ]
+    },
+    {
+      "organisation_number": "987693444",
+      "company": "ET BYGG AS",
+      "kind": "website",
+      "url": "https://etbygg.com",
+      "proof_tier": "orgnr_on_page",
+      "identity_level": "VERIFIED",
+      "field": "official_website",
+      "claim_id": "e71d3b49b80c09b1ab689b61c794f2a38f30c71d21fe8fa75155ade6a50e5408",
+      "automated_verdict": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://etbygg.com/",
+          "retrieved_at": "2026-11-17T17:33:52.591267Z",
+          "content_sha256": "39840b221fae64efea13dfd02ba688fd6a81158f89e66b148c327d77df925c74",
+          "locator": "identity-proof:987693444",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "> ET Bygg AS</span>\n      <span>Org.nr. 987 693 444</span>\n      <span>Medlem av Mesterhus</span>\n      <!-- Vilkaarslenkene skyves bort fra selskapso"
+        }
+      ]
+    },
+    {
+      "organisation_number": "987747218",
+      "company": "XRGIA AS",
+      "kind": "website",
+      "url": "https://xrgia.no",
+      "proof_tier": "orgnr_on_page",
+      "identity_level": "VERIFIED",
+      "field": "official_website",
+      "claim_id": "f7ad285b02933f104ea0df6771d83d7bee87af1dd506b59397395219f9c13f4c",
+      "automated_verdict": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://xrgia.no/",
+          "retrieved_at": "2026-11-17T17:34:11.584298Z",
+          "content_sha256": "730a39c7bc29e8b6525186c4546858234ef27f22173d94cb0ea9a2e400f86045",
+          "locator": "identity-proof:987747218",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "845</a><br />\n<strong>Org. nr:</strong> 987 747 218 MVA</p>\n</div>\n\t\t<span class=\"seperator extralight-border\"></span></section></div><div class='flex"
+        },
+        {
+          "source_url": "https://xrgia.no/",
+          "retrieved_at": "2026-11-17T17:34:11.584298Z",
+          "content_sha256": "730a39c7bc29e8b6525186c4546858234ef27f22173d94cb0ea9a2e400f86045",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a href=\"&#x6d;&#x61;&#x69;&#108;&#116;o:&#x74;&#x6f;&#x6d;&#109;&#121;&#64;x&#x72;&#x67;&#x69;&#97;&#46;no\">"
+        }
+      ]
+    },
+    {
+      "organisation_number": "988481580",
+      "company": "REVISORSENTERET MANDAL AS",
+      "kind": "website",
+      "url": "https://revisorsenteretmandal.no",
+      "proof_tier": "orgnr_on_page",
+      "identity_level": "VERIFIED",
+      "field": "official_website",
+      "claim_id": "fc1b87d0011d45a3b176bddd87b819d0b6a14b721d97ef968619dec161ea2832",
+      "automated_verdict": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://revisorsenteretmandal.no/",
+          "retrieved_at": "2026-11-17T17:33:51.233929Z",
+          "content_sha256": "7ad6a77fbf7c22f2d7fbfa95e21fb701a8e74d29ce3474b23dd7461b899965e9",
+          "locator": "identity-proof:988481580",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": " 13h7M8.5 16.5h5\"/></svg> <span>Org.nr. 988 481 580</span> </li> </ul> </div> </div> <div class=\"border-t border-white/10\"> <div class=\"container flex"
+        }
+      ]
+    },
+    {
+      "organisation_number": "990024545",
+      "company": "TORGERSEN BIL AS",
+      "kind": "website",
+      "url": "https://torgersenbil.no",
+      "proof_tier": "jsonld_vatid",
+      "identity_level": "VERIFIED",
+      "field": "official_website",
+      "claim_id": "3299ced956bd7b1a8a288d32387c3700d3291d2f7a61b93756c179431f8b164f",
+      "automated_verdict": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://torgersenbil.no/",
+          "retrieved_at": "2026-11-17T17:35:28.827795Z",
+          "content_sha256": "fdbfc4082666e6babdc917d099212ccce7f54a894d9ee6ab1b19faafe370eecc",
+          "locator": "identity-proof:990024545",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "nized-list__content\" itemprop=\"vatID\">NO990024545 MVA</dd>\n    \n    <dt class=\"hide\">Theme primary color</dt>\n    <dd class=\"hide\" itemprop=\"additiona"
+        }
+      ]
+    },
+    {
+      "organisation_number": "991625216",
+      "company": "SONO NORGE AS",
+      "kind": "website",
+      "url": "https://www.sono.no",
+      "proof_tier": "orgnr_on_page",
+      "identity_level": "VERIFIED",
+      "field": "official_website",
+      "claim_id": "4768c701d58ddfffa935e5979582474ee435fc0ca3516ee9d6e70484e8a1d27c",
+      "automated_verdict": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://www.sono.no/",
+          "retrieved_at": "2026-11-17T17:34:50.045909Z",
+          "content_sha256": "f9b887a7f5a49f51ea6fe0cf108c29eeb360744081d2759bf359961a301093e3",
+          "locator": "identity-proof:991625216",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "en <br>\n                        Org.nr: 991 625 216                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n    "
+        }
+      ]
+    },
+    {
+      "organisation_number": "991979514",
+      "company": "SCANLIFT AS",
+      "kind": "website",
+      "url": "https://scanlift.no",
+      "proof_tier": "orgnr_on_page",
+      "identity_level": "VERIFIED",
+      "field": "official_website",
+      "claim_id": "28f3bebc42e7c38413f1433d6562b3d4d9dcc64b5d323312209ce34193293838",
+      "automated_verdict": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://scanlift.no/",
+          "retrieved_at": "2026-11-17T17:35:07.609903Z",
+          "content_sha256": "a6a57f7a0a3b933465138dc2ac9b6726213efba63cc072329664f37c190b1eba",
+          "locator": "identity-proof:991979514",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "26 © <strong>Scanlift as</strong>\nOrg # 991979514 MVA</div></div></div></div>\n<button\ntype=button id=top-link class=\"back-to-top button icon invert pl"
+        }
+      ]
+    },
+    {
+      "organisation_number": "994479865",
+      "company": "IDENTUM AS",
+      "kind": "website",
+      "url": "https://www.identum.no",
+      "proof_tier": "orgnr_on_page",
+      "identity_level": "VERIFIED",
+      "field": "official_website",
+      "claim_id": "0d70c19f2deadfc0c0ba1d4fe4e9eb03408b29076d653d5ef217f85f9139a6cf",
+      "automated_verdict": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://www.identum.no/",
+          "retrieved_at": "2026-11-17T17:32:01.564168Z",
+          "content_sha256": "356223741f48deba792eff2c569e1b2a0b4bdee0c59d567e77912eb72e1301d0",
+          "locator": "identity-proof:994479865",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "\">Organisasjonsnummer</h3>\n        <p>NO994479865 MVA</p>\n      </li>\n    \n    </ul>\n  \n</div>\n</div>\n        \n      </div>\n      <div class=\"footer-i"
+        }
+      ]
+    },
+    {
+      "organisation_number": "997963148",
+      "company": "VERDI WEB AS",
+      "kind": "website",
+      "url": "https://verdiweb.no",
+      "proof_tier": "jsonld_vatid",
+      "identity_level": "VERIFIED",
+      "field": "official_website",
+      "claim_id": "115f35ce64ae835f590ea9f9373dc6f9911fb18a77a884d9785033033fdd66a7",
+      "automated_verdict": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://verdiweb.no/",
+          "retrieved_at": "2026-11-17T17:35:55.415365Z",
+          "content_sha256": "dc59cb69cb09cdbf5ccfaf53d6ce26d2da0c41854a5c6e3c3a25ee0625d69cdf",
+          "locator": "identity-proof:997963148",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "ray-500 text-sm\">Verdi Web AS &middot; Org.nr. 997 963 148</div></div><div><form id=\"contact-form\" class=\"space-y-5\"><div><label for=\"contact-name\" cl"
+        },
+        {
+          "source_url": "https://verdiweb.no/",
+          "retrieved_at": "2026-11-17T17:35:55.415365Z",
+          "content_sha256": "dc59cb69cb09cdbf5ccfaf53d6ce26d2da0c41854a5c6e3c3a25ee0625d69cdf",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "ikkerhet og langsiktig verdi.\",\"email\":\"post@verdiweb.no\",\"identifier\":{\"@type\":\"PropertyValue\",\"name\":\"Organisasjonsnummer\",\"value\":\"997963148\"},\"address\":{\"@type\":\"PostalAddress\",\"addressCountry\":\"NO\"},\"areaServed\":{\"@type\":\"Country\",\"name\":\"Norway\"},\"knowsLanguage\":[\"nb\",\"en\"],\"serviceType\":[\"Web"
+        }
+      ]
+    }
+  ]
+}

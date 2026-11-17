@@ -1,0 +1,26 @@
+{
+  "argv": [
+    "<REPO>\\.data\\r5\\p3g-clean\\repo\\.venv\\Scripts\\python.exe",
+    "-m",
+    "signalpost.cli",
+    "run",
+    "--organisations",
+    "<REPO>\\reports\\r5\\stageP3\\P3g\\companies500.jsonl",
+    "--bulk",
+    "<REPO>\\reports\\r5\\stageP3\\P3g\\registry500.csv",
+    "--output",
+    "<REPO>\\.data\\r5\\p3g-clean\\run-final\\envelopes.jsonl",
+    "--profiles-output",
+    "<REPO>\\.data\\r5\\p3g-clean\\run-final\\profiles.jsonl",
+    "--report",
+    "<REPO>\\.data\\r5\\p3g-clean\\run-final\\report.json",
+    "--run-id",
+    "r5-p3g-seed20261120-final",
+    "--expected-count",
+    "500"
+  ],
+  "cwd": "<REPO>\\.data\\r5\\p3g-clean\\run-final",
+  "exit_code": 0,
+  "wall_seconds": 1893.5016306000002,
+  "completed_at_utc": "2026-11-17T18:02:46.794405+00:00"
+}

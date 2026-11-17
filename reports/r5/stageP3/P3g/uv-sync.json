@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "uv",
+    "sync",
+    "--frozen"
+  ],
+  "cwd": "<REPO>\\.data\\r5\\p3g-clean\\repo",
+  "exit_code": 0,
+  "wall_seconds": 3.399846000000025,
+  "completed_at_utc": "2026-11-17T17:15:55.364412+00:00"
+}

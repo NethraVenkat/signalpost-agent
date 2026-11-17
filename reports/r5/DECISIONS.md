@@ -778,3 +778,8 @@
 - Decision: the default total time is again `--time-budget-seconds 2100`, effective min(2100, 21 s per unique input), i.e. it never grows with batch size; 0.85 crawl fraction unchanged. The scaled limit is available only through the explicit `--scaled-time-budget` flag (off by default). All P3b-P3d throughput, ordering and output-size changes stay.
 - Tests: the original fixed-default assertion (`time_budget_seconds == 2100`) is restored; new tests assert 100 and 500 inputs get the same 2,100 s total, and that the scaled budget applies only with the flag.
 - Also: `-text` gitattributes for the committed 500-company sample inputs, so their recorded SHA-256 survive checkout.
+
+
+## 2026-11-17 - Stage P3g: 500 at the fixed default
+
+- Seed 20261120, clean clone of aceb24b, seven flags: all gates pass. Wall 1,893.5 s of the fixed 2,100 s (206.5 s margin); crawl stopped at 1,786 s (0.85). 0 placeholders. GLEIF, TED and all Stage S sources finished for all 500 companies. The deadline cut only website pass 2, for 177 companies. Under the same budget P2 had every company cut and GLEIF/TED never started. Details: `reports/r5/stageP3/P3g/SUMMARY.md`.

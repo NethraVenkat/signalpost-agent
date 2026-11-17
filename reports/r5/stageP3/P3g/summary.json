@@ -1,0 +1,168 @@
+{
+  "label": "final",
+  "check": "check_live_run",
+  "checker_clone_head": "aceb24b0b4f798e8ffeb7f7aea2d87ddd5400fac",
+  "gates": {
+    "exit_0": true,
+    "check_live_run_exit_0": true,
+    "ordered_terminal_500": true,
+    "five_cited_topics_500": true,
+    "unsupported_0": true,
+    "http_le_9250": true,
+    "wall_le_scaled_time_budget": true,
+    "largest_profile_lt_250000": true,
+    "cost_0": true,
+    "zero_llm_search_calls": true
+  },
+  "all_gates_pass": true,
+  "source_health": {
+    "enhetsregisteret": "reachable",
+    "accounts": "reachable",
+    "nav": "reachable",
+    "gleif": "reachable"
+  },
+  "official_source_outages_counts": {},
+  "input_rows": 500,
+  "terminal_envelopes": 500,
+  "http_requests": 5267,
+  "limits": {
+    "max_requests": 9250,
+    "max_cost_usd": 0.0,
+    "time_budget_seconds": 2100.0,
+    "deadline_fraction": 0.85,
+    "request_timeout": 10.0,
+    "host_concurrency": 10,
+    "effective_time_budget_seconds": 2100.0,
+    "scaled_hard_request_cap": 9250,
+    "scaled_hard_time_seconds": 10500.0
+  },
+  "wall_seconds": 1893.5016306000002,
+  "runtime_seconds": 1845.813,
+  "deadline_hits": 177,
+  "total_cost_usd": 0.0,
+  "search_queries": 0,
+  "llm_calls": 0,
+  "site": {
+    "state": "available",
+    "companies": 500,
+    "input_records": 500,
+    "pages": 502,
+    "skipped_invalid_identifiers": 0,
+    "total_bytes": 192225800,
+    "largest_profile_data_bytes": 695393,
+    "largest_profile_bytes": 248810
+  },
+  "facts": 69178,
+  "websites": 47,
+  "social_urls": 40,
+  "social_companies": 19,
+  "jobs": 0,
+  "activity_claims": 6449,
+  "families": {
+    "identity": 14977,
+    "subunits": 4615,
+    "roles": 5903,
+    "accounts": 36470,
+    "activity": 6449,
+    "state_aid": 307,
+    "licences": 36,
+    "website": 315,
+    "gleif": 84,
+    "research": 18,
+    "inspections": 4
+  },
+  "section_states": {
+    "accounts": {
+      "available": 500
+    },
+    "activity": {
+      "failed": 215,
+      "available": 285
+    },
+    "gleif": {
+      "not_available": 432,
+      "available": 68
+    },
+    "hiring": {
+      "not_available": 500
+    },
+    "identity": {
+      "available": 500
+    },
+    "inspections": {
+      "not_available": 496,
+      "available": 4
+    },
+    "licences": {
+      "not_available": 489,
+      "available": 11
+    },
+    "procurement": {
+      "not_available": 490,
+      "blocked": 10
+    },
+    "research": {
+      "not_available": 489,
+      "available": 11
+    },
+    "roles": {
+      "available": 499,
+      "not_available": 1
+    },
+    "state_aid": {
+      "not_available": 456,
+      "available": 44
+    },
+    "subunits": {
+      "available": 372,
+      "not_available": 128
+    },
+    "website": {
+      "failed": 163,
+      "not_available": 247,
+      "ambiguous": 37,
+      "blocked": 6,
+      "available": 47
+    }
+  },
+  "verification": {
+    "lines": 500,
+    "schema_valid": true,
+    "published_claims": 69178,
+    "source_blobs_verified": 2143,
+    "synthesis_companies": 500,
+    "synthesis_sentences": 9380,
+    "synthesis_unverified_values": 0,
+    "financial_inputs_verified": 31500,
+    "derived_financial_metrics_verified": 1111,
+    "registry_events_verified": 6449,
+    "filing_year_facts_verified": 4970,
+    "exact_public_items_verified": 84,
+    "exact_official_items_verified": 365,
+    "briefing_companies": 500,
+    "briefing_sentences": 3231,
+    "briefing_short_companies": 0,
+    "briefing_unverified_values": 0,
+    "briefing_topic_coverage": {
+      "activity": 500,
+      "change": 500,
+      "unknown": 500,
+      "financial": 500,
+      "takeaway": 500
+    },
+    "complete_briefing_contracts": 500,
+    "newer_filing_flags": 0,
+    "site_verified": true,
+    "terminal_envelopes": 500,
+    "source_failures_permitted": true,
+    "http_requests": 5267,
+    "wall_seconds": 1891.157,
+    "cost_usd": 0
+  },
+  "artifacts": {
+    "envelopes.jsonl": "fee658298fa69f87be5fb1945f7fcddf92409dc4229f21ef759e85f405add812",
+    "profiles.jsonl": "9b8f4c46e53357c879c2dad6de69f61a5559fba0f6744a69da023f4503aeb6dd",
+    "report.json": "73000c160a01450d043874620cf13794bae9f68f91b4127054a94fdf1ad2d881"
+  },
+  "work_directory": "<REPO>\\.data\\r5\\p3g-clean\\run-final"
+}
