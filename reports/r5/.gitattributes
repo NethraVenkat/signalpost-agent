@@ -46,3 +46,7 @@ scale500/companies500.jsonl -text
 scale500/registry500.csv -text
 stageP3/P3g/companies500.jsonl -text
 stageP3/P3g/registry500.csv -text
+stageP3/P3e/urls.md -text
+stageP3/P3e/urls.json -text
+stageP3/P3g/urls.md -text
+stageP3/P3g/urls.json -text
