@@ -285,7 +285,7 @@ def evidence_panel(claim, records, shared=False):
     return ''.join(parts)
 
 
-def fact(claim, records, filing_list=None):
+def fact(claim, records, filing_list=None, *, source_shortcuts=True):
     local_id = claim['id'][:16]
     available = claim['availability'] == 'available'
     if (available and claim['field'].startswith('accounts.filed_year.') and filing_list
@@ -353,7 +353,7 @@ def fact(claim, records, filing_list=None):
         # Registry-event content already links its bounded publisher event URL.
         # The full shared-batch request URL stays in the expandable receipt;
         # repeating that long URL on every card can exceed the HTML size gate.
-        if primary and not claim['field'].startswith('registry_change.'):
+        if source_shortcuts and primary and not claim['field'].startswith('registry_change.'):
             content += '<span class="fact-source">' + link(primary['source_url'], 'Original source') + '</span>'
     if claim['family'] == 'accounts':
         return f'<tr id="{esc(anchor(claim))}"><th scope="row">{esc(label)} {chip(claim["availability"])}</th><td>{content}</td></tr>'
@@ -462,7 +462,7 @@ def explorer_cells(c, records):
             e.get('content_sha256', '') if e else '', span]
 
 
-def profile(row, title, explorer_rows=EXPLORER_VISIBLE_ROWS, official_inline=OFFICIAL_INLINE):
+def profile(row, title, explorer_rows=EXPLORER_VISIBLE_ROWS, official_inline=OFFICIAL_INLINE, *, source_shortcuts=True):
     claims = row['claims']
     claim_map = {c['id']: c for c in claims}
     records = {e['id']: e for e in row['evidence']}
@@ -584,7 +584,7 @@ def profile(row, title, explorer_rows=EXPLORER_VISIBLE_ROWS, official_inline=OFF
         for i, c in enumerate(items):
             if key == 'locations' and i == 10:
                 body += '<button type="button" aria-expanded="false" aria-controls="more-locations" data-toggle="more-locations">Show remaining workplaces</button><div id="more-locations" hidden>'
-            body += fact(c, records,fields_map.get('accounts.filed_years'))
+            body += fact(c, records, fields_map.get('accounts.filed_years'), source_shortcuts=source_shortcuts)
         if key == 'locations' and len(items) > 10: body += '</div>'
         if key == 'financials' and items: body += '</tbody></table>'
         if details:
@@ -1156,6 +1156,10 @@ def generate_site(input_path, out, title='Signalpost', *, deadline=None):
             check()
             inline//=2
             rendered=profile(row,title,visible,official_inline=inline)
+        if len(rendered.encode('utf8')) >= 250_000:
+            check()
+            # Every publisher URL is already available in its evidence panel.
+            rendered = profile(row, title, visible, official_inline=inline, source_shortcuts=False)
         files['c/' + org + '.html'] = rendered
         data=json.dumps(company_payload(row,visible,official_inline=inline),ensure_ascii=False,sort_keys=True,separators=(',',':'),allow_nan=False)
         data=data.replace('</','<\\/').replace('\u2028','\\u2028').replace('\u2029','\\u2029')

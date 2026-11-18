@@ -109,6 +109,39 @@ def test_site_membership_evidence_citations_and_determinism(tmp_path, shape):
     assert before == {p.relative_to(out): p.read_bytes() for p in out.rglob('*') if p.is_file()}
 
 
+def test_oversize_profile_defers_source_shortcuts_and_keeps_exact_receipts(tmp_path):
+    from signalpost.models.evidence import digest
+    from signalpost.site import profile
+
+    row, _ = envelope(tmp_path / 'run')
+    url = 'https://example.test/contact/' + 'a' * 1400
+    legal_name = next(c for c in row.claims if c.field == 'identity.legal_name')
+    original = next(e for e in row.evidence if e.id == legal_name.evidence_ids[0])
+    receipt = original.model_copy(update={
+        'source_url': url,
+        'id': digest([url, original.content_sha256, original.locator, original.extraction_method]),
+    })
+    row.evidence.append(receipt)
+    contacts = [available(row, f'contact.email.{i}', f'contact{i}@example.test',
+                          family='website', evidence_ids=[receipt.id]) for i in range(155)]
+    inp = source(tmp_path, [row], shape='contract')
+    saved = inp.read_bytes()
+    assert len(profile(json.loads(saved), 'Signalpost', 0, official_inline=0).encode('utf8')) >= 250_000
+
+    out = tmp_path / 'site'
+    assert generate_site(inp, out)['largest_profile_bytes'] < 250_000
+    assert inp.read_bytes() == saved
+    page = (out / f'c/{row.organisation_number}.html').read_text(encoding='utf8')
+    markup = Markup(page)
+    assert url not in markup.links
+    assert all('fact-' + c.id[:16] in markup.ids and 'source-' + c.id[:16] in markup.ids for c in contacts)
+    data = (out / f'c/{row.organisation_number}.data.js').read_text(encoding='utf8')
+    payload = json.loads(data.removeprefix('window.SIGNALPOST_EVIDENCE = ').rstrip(';\n'))
+    entry = next(record for record in payload['records'] if record[1] == receipt.id)
+    fields = dict(zip(payload['source_fields'], payload['sources'][entry[0]]))
+    assert fields['source_url'] == url and fields['content_sha256'] == receipt.content_sha256
+
+
 def test_xss_is_text_and_bad_urls_are_not_links(tmp_path):
     row, _ = envelope(tmp_path / 'run')
     evil = '<script>alert(1)</script> "><img src=x onerror=alert(2)>'

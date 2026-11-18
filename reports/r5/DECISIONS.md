@@ -824,3 +824,10 @@
 - The frozen 2026-11-16 Brønnøysund entity snapshot supplies 475,852 full-name hashes and 2,417 shared declared domains. A visible name without a form suffix requires the two organisations to declare the same domain. That covers the exact saved Trollheim contact page, which prints the subsidiary name without AS.
 - The offline P2/P3g replay retained 40 of 56 URLs and withheld both confirmed wrong URLs. It also withheld 14 other links, including three confirmed correct links under the requested rule. The stricter rule was kept. See stageHC1/REPLAY.md, replay.json and human_reviews.json.
 - Full pytest passed 1,379 tests in 830.04 s, including the HC1 regressions and existing F1 guard tests.
+
+## 2026-11-18 - F1 follow-up for oversized optional profiles
+
+- The post-HC1 evaluator wrote the required outputs within budget. Its optional site failed on organisation 817066542, which rendered at 286,550 bytes after the existing audit-row and official-record trims. The page had 127 supported contact facts, each with a direct source shortcut in addition to the source link in its evidence panel.
+- When the existing trims leave a profile above the 250,000-byte gate, render it with the duplicate source shortcuts deferred to the evidence panels. The fact anchors, publisher links, export values and complete receipts remain available. The renderer checks its site deadline before the additional render.
+- The same saved page rendered offline at 241,286 bytes. All 500 offline HTML profiles and their companion evidence files were present, with a maximum HTML size of 249,406 bytes. The site replay took 53.13 s.
+- Full pytest passed 1,380 tests in 888.37 s, including the regression for duplicate source links on an oversized page.
