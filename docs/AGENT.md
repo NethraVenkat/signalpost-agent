@@ -20,7 +20,7 @@ For each company:
 
 1. Normalize the nine-digit organisation number and verify its mod-11 checksum. Reserve its output before requests. Invalid inputs retain failed envelopes without network access.
 2. Plan identity lookup from the supplied bulk snapshot first, then the official live endpoint if absent. Read roles, subunits and exact-company annual accounts after identity succeeds.
-3. When enabled, generate bounded website candidates from registry website/email and legal-name slugs. Fetch under robots, public-IP, timeout and request policies. Await the shared NAV index only at the hiring step; waiting releases registry worker slots.
+3. Generate bounded website candidates from registry website/email and legal-name slugs. The bundled Common Crawl/OSM website seed index is experimental and disabled by default. Set `SIGNALPOST_WEBSITE_SEEDS=1` to include its nominations. Fetch candidates under robots, public-IP, timeout and request policies. Await the shared NAV index only at the hiring step; waiting releases registry worker slots.
 4. Verify exact company/parent identifiers. Website corroboration can qualify only under the documented identity rules. Link claims to exact stored source bodies, locators and short verbatim spans.
 5. Publish verified values, or an explicit availability state and null. Each source section and company is isolated. A global deadline preserves completed claims and marks incomplete work failed.
 6. Compare supported values with the supplied previous envelopes. Separate company changes from observation failures, retaining non-expired prior supported facts when appropriate.
@@ -34,6 +34,8 @@ The final writer preserves input order and input-record multiplicity, validates 
 See [identity rules](IDENTITY_RESOLUTION.md), [schema](DATA_SCHEMA.md), [refresh semantics](REFRESH.md) and [evaluation](EVAL.md).
 
 ## Bounded recall and public activity
+
+The 100-company W3 paired measurement used the same frozen cohort and seven evaluator flags. Seeds ON published 11 websites from 909 HTTP requests. Seeds OFF published 40 websites from 1,160 requests. Five websites appeared only with seeds enabled, while 34 appeared only with seeds disabled. Seed candidates can use per-company candidate capacity needed by registry/name candidates, so the experimental index remains opt-in pending a better recall/precision result. The saved comparison and hand-check excerpts are in [the W3 report](../reports/r5/stageW/seed_recall.md).
 
 Guessed email/slug domains receive a cached three-second DNS pre-check, with at most eight candidate lookups per company. NXDOMAIN spends no HTTP request; resolver failures leave the company check incomplete. Website candidates retain registry-site, email-domain, then slug order and stop after exact organisation-number proof. Connection-time public-IP checks remain mandatory.
 

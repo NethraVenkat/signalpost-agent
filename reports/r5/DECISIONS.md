@@ -865,3 +865,9 @@
 - Recorded five correct verdicts supplied by Nethra Venkat. The four matching L/X2 claims carry sample and canonical value SHA-256 pins from committed inventories and run receipts. Orkdal’s supplied short Facebook URL retains its own verdict. The company homepage links the archived numeric Facebook page, whose claim is pinned as related evidence.
 - Cumulative deduplicated hand-check totals across T, H, R5/R3, R7, P2/P3g and this addition are 84 reviewed, 70 correct, two wrong, and twelve unsure. The exact saved-item subset contains 83 reviews, 69 of them correct. The historical automated figures retain their original scope.
 - Both review generators reproduced the same ledger and README. Full pytest passed 1,392 tests in 931.95 s.
+
+## 2026-11-18 - W: website seed index off by default
+
+- The paired 100-company W3 rerun used the same frozen cohort and seven evaluator flags. Seeds ON published 11 websites with 909 HTTP requests. Seeds OFF published 40 with 1,160 requests. Five websites were seeds-ON-only, while 34 were seeds-OFF-only.
+- Seed candidates consume the per-company candidate caps and can crowd out registry/name candidates. The five seed-only gains do not justify the measured reduction in total websites, so the bundled Common Crawl/OSM seed index is now experimental and opt-in via `SIGNALPOST_WEBSITE_SEEDS=1`. Runtime and library defaults are OFF.
+- See `reports/r5/stageW/seed_recall.md` for the cohort hashes, verification receipts and all five seed-only website excerpts.

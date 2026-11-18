@@ -22,8 +22,8 @@ def _invoke(monkeypatch, override):
     return observed["config"]
 
 
-def test_website_seeds_default_on_and_can_be_disabled_without_cli_flag(monkeypatch):
-    assert Config(organisations="in", output="out", report="report").website_seed_index is True
-    assert _invoke(monkeypatch, None).website_seed_index is True
+def test_website_seeds_default_off_and_can_be_enabled_without_cli_flag(monkeypatch):
+    assert Config(organisations="in", output="out", report="report").website_seed_index is False
+    assert _invoke(monkeypatch, None).website_seed_index is False
     assert _invoke(monkeypatch, "0").website_seed_index is False
     assert _invoke(monkeypatch, "1").website_seed_index is True
