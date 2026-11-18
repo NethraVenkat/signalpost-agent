@@ -804,3 +804,9 @@
 - The 2,100 s fixed default, 0.85 crawl fraction and scaled opt-in are preserved. Mandatory envelopes, profiles and report are written before optional rendering. Site admission uses a doubled measured allowance and reserves the final report flush. Rendering checks the remaining time as it works and checks the estimated write duration before publishing pages.
 - The P3g crawl cutoff of 1,786.02 s plus twice its 63.59 s required-output duration, a 90 s site allowance and 10 s completion overhead gives 2,013.20 s at 500 companies. The slowdown test models this measured workload. The guard does not interrupt required filesystem writes. A separate test forces a site rendering overrun and checks both ordered outputs and the saved report.
 - Full pytest passed 1,368 tests in 888.55 s.
+
+## 2026-11-18 - F2 final 500-company qualification
+
+- Seed 20261121, clean clone of 1722b89, seven evaluator flags. The sample excludes 2,205 unique numbers from committed and on-disk sample files and has zero overlap. The clone passed all 1,368 tests.
+- The first attempt hit a run-wide OSError loading the frozen Brreg subset and used live fallback. Its outputs and receipts are preserved. After successfully preflighting all 499 snapshot receipt writes, one fresh retry ran from separate state and passed check_live_run --count 500. The attempts were never combined.
+- Retry wall 1,871.92 s, margin 228.08 s, all 500 terminal envelopes, zero placeholders, 5,243 HTTP attempts and $0 provider cost. Only website work recorded deadline errors. GLEIF and all Stage S families finished for all inputs. TED recorded six robots blocks. The run published 41 websites and 28 social URLs. Seven legacy wrong labels were resolved by the current verifier and zero wrong labels remained unresolved. Details in final500/SUMMARY.md and final500/urls.md.

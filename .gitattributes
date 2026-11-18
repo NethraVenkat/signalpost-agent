@@ -41,3 +41,9 @@ reports/r5/precision/*.json -text whitespace=cr-at-eol
 reports/r5/stageH/**/*.json -text whitespace=cr-at-eol
 reports/r5/stageH/**/*.jsonl -text whitespace=cr-at-eol
 reports/r5/stageH/**/*.csv -text whitespace=cr-at-eol
+
+# Preserve F2 input hashes and qualification evidence across platforms.
+reports/r5/final500/*.jsonl -text whitespace=cr-at-eol
+reports/r5/final500/*.csv -text whitespace=cr-at-eol
+reports/r5/final500/urls.md -text
+reports/r5/final500/urls.json -text

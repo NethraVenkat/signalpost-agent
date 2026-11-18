@@ -1,0 +1,1 @@
+{"emitted_envelopes": 500, "invalid_inputs": [], "requests": 1939, "runtime_ms": 592610, "changes": 0, "observation_changes": 0, "deadline_hits": 0, "warnings": ["bulk unavailable: OSError; live fallback"]}

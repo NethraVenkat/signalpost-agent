@@ -63,3 +63,7 @@ scratch/
 
 
 .data/
+
+# Keep the frozen F2 measurement inputs for clean-checkout reproduction.
+!reports/r5/final500/companies500.jsonl
+!reports/r5/final500/registry500.csv

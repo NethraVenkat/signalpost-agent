@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "<REPO>\\.data\\r5\\final500-clean\\repo\\.venv\\Scripts\\python.exe",
+    "reports/r5/stage4_7/run_tests.py",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp",
+    ".data/pytest",
+    "--tb=short"
+  ],
+  "cwd": "<REPO>\\.data\\r5\\final500-clean\\repo",
+  "exit_code": 0,
+  "wall_seconds": 858.3246288000009,
+  "completed_at_utc": "2026-11-18T06:12:16.031498+00:00"
+}

@@ -1,0 +1,2680 @@
+{
+  "run": "retry",
+  "counts": {
+    "doubtful": 17,
+    "correct": 45,
+    "legacy verifier limitation": 7
+  },
+  "records": [
+    {
+      "organisation_number": "920951945",
+      "company": "SKADI ADVENTURES AS",
+      "kind": "social",
+      "url": "https://www.facebook.com/skadiadventuresnorway",
+      "proof_tier": "owner_jsonld_sameas_v1",
+      "candidate_origin": null,
+      "ledger_verdict": "wrong",
+      "category": "legacy verifier limitation",
+      "reasons": [
+        "own header/footer/name/numeric-link policy no longer verifies"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://www.skadi-adventures.no/",
+          "retrieved_at": "2026-11-18T06:25:27.472758Z",
+          "content_sha256": "75fdd0f746213f7424278507ac0a05b075e010b9e7a4509722649286bd7ff144",
+          "locator": "company-link:https://www.facebook.com/skadiadventuresnorway",
+          "claim_span": ".skadi-adventures.no\\/#\\/schema\\/logo\\/image\\/\"},\"sameAs\":[\"https:\\/\\/www.facebook.com\\/skadiadventuresnorway\\/\",\"https:\\/\\/www.instagram.com\\/skadiadventuresnorway\\/\",\"ht"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.748644Z",
+          "content_sha256": "88293edf7bb95f787b02f31ca7c9295e27fb79ae553ac5c2022cfffc25d46f12",
+          "locator": "row:920951945/column:navn",
+          "claim_span": "920951945,SKADI ADVENTURES AS,AS,Aksjeselskap,79.902,Guide- og reiseledervirksomhet,,,,,,,true,,2021-04-12,2021-04-10,,,,,,,,,,,,Midtre Solligården 4A,TROMSDALEN,9020,TROMSØ,5501,Norge,NO,2100,Private aksjeselskaper mv.,2025,2018-06-08,2018-05-02,true,2019-09-01,2019-11-05,,,false,,true,2018-06-08,f"
+        },
+        {
+          "source_url": "https://www.skadi-adventures.no/cookie-and-privacy/",
+          "retrieved_at": "2026-11-18T06:25:29.452186Z",
+          "content_sha256": "ecd64a317e9c5c167638ce21e437e4a14e2bd2a6113239481cff229a2e9b2cb3",
+          "locator": "identity-proof:920951945",
+          "claim_span": "lass=\"rt-inline-bold\">Org. number:</em> 920.951.945<br /> <em class=\"rt-inline-bold\">Phone:</em> + 47 414 70 478<br /> <em class=\"rt-inline-bold\">E-ma"
+        }
+      ]
+    },
+    {
+      "organisation_number": "920951945",
+      "company": "SKADI ADVENTURES AS",
+      "kind": "social",
+      "url": "https://www.instagram.com/skadiadventuresnorway",
+      "proof_tier": "owner_jsonld_sameas_v1",
+      "candidate_origin": null,
+      "ledger_verdict": "wrong",
+      "category": "legacy verifier limitation",
+      "reasons": [
+        "own header/footer/name/numeric-link policy no longer verifies"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://www.skadi-adventures.no/",
+          "retrieved_at": "2026-11-18T06:25:27.472758Z",
+          "content_sha256": "75fdd0f746213f7424278507ac0a05b075e010b9e7a4509722649286bd7ff144",
+          "locator": "company-link:https://www.instagram.com/skadiadventuresnorway",
+          "claim_span": "As\":[\"https:\\/\\/www.facebook.com\\/skadiadventuresnorway\\/\",\"https:\\/\\/www.instagram.com\\/skadiadventuresnorway\\/\",\"https:\\/\\/www.youtube.com\\/channel\\/UCUJWfDc3uOqQ4f-1Qcrf"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.748644Z",
+          "content_sha256": "88293edf7bb95f787b02f31ca7c9295e27fb79ae553ac5c2022cfffc25d46f12",
+          "locator": "row:920951945/column:navn",
+          "claim_span": "920951945,SKADI ADVENTURES AS,AS,Aksjeselskap,79.902,Guide- og reiseledervirksomhet,,,,,,,true,,2021-04-12,2021-04-10,,,,,,,,,,,,Midtre Solligården 4A,TROMSDALEN,9020,TROMSØ,5501,Norge,NO,2100,Private aksjeselskaper mv.,2025,2018-06-08,2018-05-02,true,2019-09-01,2019-11-05,,,false,,true,2018-06-08,f"
+        },
+        {
+          "source_url": "https://www.skadi-adventures.no/cookie-and-privacy/",
+          "retrieved_at": "2026-11-18T06:25:29.452186Z",
+          "content_sha256": "ecd64a317e9c5c167638ce21e437e4a14e2bd2a6113239481cff229a2e9b2cb3",
+          "locator": "identity-proof:920951945",
+          "claim_span": "lass=\"rt-inline-bold\">Org. number:</em> 920.951.945<br /> <em class=\"rt-inline-bold\">Phone:</em> + 47 414 70 478<br /> <em class=\"rt-inline-bold\">E-ma"
+        }
+      ]
+    },
+    {
+      "organisation_number": "920951945",
+      "company": "SKADI ADVENTURES AS",
+      "kind": "social",
+      "url": "https://www.youtube.com/channel/UCUJWfDc3uOqQ4f-1Qcrfxhw",
+      "proof_tier": "owner_jsonld_sameas_v1",
+      "candidate_origin": null,
+      "ledger_verdict": "wrong",
+      "category": "legacy verifier limitation",
+      "reasons": [
+        "own header/footer/name/numeric-link policy no longer verifies"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://www.skadi-adventures.no/",
+          "retrieved_at": "2026-11-18T06:25:27.472758Z",
+          "content_sha256": "75fdd0f746213f7424278507ac0a05b075e010b9e7a4509722649286bd7ff144",
+          "locator": "company-link:https://www.youtube.com/channel/UCUJWfDc3uOqQ4f-1Qcrfxhw",
+          "claim_span": "\\/\",\"https:\\/\\/www.instagram.com\\/skadiadventuresnorway\\/\",\"https:\\/\\/www.youtube.com\\/channel\\/UCUJWfDc3uOqQ4f-1Qcrfxhw\"]}]}"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.748644Z",
+          "content_sha256": "88293edf7bb95f787b02f31ca7c9295e27fb79ae553ac5c2022cfffc25d46f12",
+          "locator": "row:920951945/column:navn",
+          "claim_span": "920951945,SKADI ADVENTURES AS,AS,Aksjeselskap,79.902,Guide- og reiseledervirksomhet,,,,,,,true,,2021-04-12,2021-04-10,,,,,,,,,,,,Midtre Solligården 4A,TROMSDALEN,9020,TROMSØ,5501,Norge,NO,2100,Private aksjeselskaper mv.,2025,2018-06-08,2018-05-02,true,2019-09-01,2019-11-05,,,false,,true,2018-06-08,f"
+        },
+        {
+          "source_url": "https://www.skadi-adventures.no/cookie-and-privacy/",
+          "retrieved_at": "2026-11-18T06:25:29.452186Z",
+          "content_sha256": "ecd64a317e9c5c167638ce21e437e4a14e2bd2a6113239481cff229a2e9b2cb3",
+          "locator": "identity-proof:920951945",
+          "claim_span": "lass=\"rt-inline-bold\">Org. number:</em> 920.951.945<br /> <em class=\"rt-inline-bold\">Phone:</em> + 47 414 70 478<br /> <em class=\"rt-inline-bold\">E-ma"
+        }
+      ]
+    },
+    {
+      "organisation_number": "921860544",
+      "company": "KOMPASS REGNSKAP AS",
+      "kind": "social",
+      "url": "https://www.facebook.com/KompassRegnskap",
+      "proof_tier": "owner_jsonld_sameas_v1",
+      "candidate_origin": null,
+      "ledger_verdict": "wrong",
+      "category": "legacy verifier limitation",
+      "reasons": [
+        "own header/footer/name/numeric-link policy no longer verifies"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://www.kompassregnskap.no/",
+          "retrieved_at": "2026-11-18T06:28:36.888777Z",
+          "content_sha256": "a3a52416e3107bcbd03c25eb171d3640df7064492a6408c962531f341d679702",
+          "locator": "company-link:https://www.facebook.com/KompassRegnskap",
+          "claim_span": "w.kompassregnskap.no\\/#\\/schema\\/logo\\/image\\/\"},\"sameAs\":[\"https:\\/\\/www.facebook.com\\/KompassRegnskap\\/\"]}]}"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.759517Z",
+          "content_sha256": "f64a5e5b892e14d2561936eb8f45b0d94b589b55313457b68f41920df07bb314",
+          "locator": "row:921860544/column:navn",
+          "claim_span": "921860544,KOMPASS REGNSKAP AS,AS,Aksjeselskap,69.202,Regnskapsføring og bokføring,,,,,,,true,,2026-08-12,2026-08-10,www.kompassregnskap.no,post@kompassregnskap.no,,,Postboks 474 Bedriftsenteret,KOLBOTN,1411,NORDRE FOLLO,3207,Norge,NO,Rosenholmveien 25,TROLLÅSEN,1414,NORDRE FOLLO,3207,Norge,NO,2100,P"
+        },
+        {
+          "source_url": "https://www.kompassregnskap.no/",
+          "retrieved_at": "2026-11-18T06:28:36.888777Z",
+          "content_sha256": "a3a52416e3107bcbd03c25eb171d3640df7064492a6408c962531f341d679702",
+          "locator": "identity-proof:921860544",
+          "claim_span": "enheter/921860544\">Organisasjonsnummer  921 860 544</a></span></h4></div>\n\t\t</div> \n\t</div>\n\t</div> \n</div></div><div id=\"fws_6afcf9f05aba4\" data-midn"
+        }
+      ]
+    },
+    {
+      "organisation_number": "925638676",
+      "company": "REPLAN AS",
+      "kind": "social",
+      "url": "https://www.facebook.com/Replanmarketing",
+      "proof_tier": "owner_jsonld_sameas_v1",
+      "candidate_origin": null,
+      "ledger_verdict": "wrong",
+      "category": "legacy verifier limitation",
+      "reasons": [
+        "own header/footer/name/numeric-link policy no longer verifies"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://replan.no/",
+          "retrieved_at": "2026-11-18T06:27:25.388384Z",
+          "content_sha256": "ac73997d762f87a42551f870117d8598422ff14733cb1bb1704b91117b91af93",
+          "locator": "company-link:https://www.facebook.com/Replanmarketing",
+          "claim_span": "on\",\"name\":\"Replan AS\",\"url\":\"https://replan.no\",\"sameAs\":[\"https://www.facebook.com/Replanmarketing\",\"https://www.linkedin.com/company/replan-as\",\"https://www."
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.801184Z",
+          "content_sha256": "1460081b72f522b632de2a2a95f565be283c31051d9c134021f26c5902e69f32",
+          "locator": "row:925638676/column:navn",
+          "claim_span": "925638676,REPLAN AS,AS,Aksjeselskap,73.110,Reklamebyråvirksomhet,,,,,,,true,,2024-07-13,2024-07-10,replan.no,,,,,,,,,,,Øvre Slottsgate 3,OSLO,0157,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2020-09-16,2020-08-31,true,2021-05-01,2021-05-04,,,false,,true,2020-09-16,false,false,,false,,fal"
+        },
+        {
+          "source_url": "https://replan.no/",
+          "retrieved_at": "2026-11-18T06:27:25.388384Z",
+          "content_sha256": "ac73997d762f87a42551f870117d8598422ff14733cb1bb1704b91117b91af93",
+          "locator": "identity-proof:925638676",
+          "claim_span": "ype=\"widget\" data-id=\"771d530c\">Org.nr. 925 638 676</p>\n\t\t\t\t\t<p class=\"Footer_liten e-paragraph-base e-default-p\" data-interaction-id=\"4af4aa9e\" data-"
+        }
+      ]
+    },
+    {
+      "organisation_number": "987100648",
+      "company": "UNIFON AS",
+      "kind": "social",
+      "url": "https://www.facebook.com/Unifon.no",
+      "proof_tier": "owner_jsonld_sameas_v1",
+      "candidate_origin": null,
+      "ledger_verdict": "wrong",
+      "category": "legacy verifier limitation",
+      "reasons": [
+        "own header/footer/name/numeric-link policy no longer verifies"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://unifon.no/",
+          "retrieved_at": "2026-11-18T06:27:22.584319Z",
+          "content_sha256": "ec0affdb78268c8ae3ecfef6ce236732237f5496dba2caef2d1b877c516fbfcf",
+          "locator": "company-link:https://www.facebook.com/Unifon.no",
+          "claim_span": "Served\":\"NO\",\"availableLanguage\":[\"Norwegian\"]}],\"sameAs\":[\"https://www.facebook.com/Unifon.no\",\"https://www.linkedin.com/company/unifon/\"],\"department\":["
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.098840Z",
+          "content_sha256": "ca62c95f1da1db25bd68a7d8e930cbe03d6924b6f52643ab42659e40014bfe4b",
+          "locator": "row:987100648/column:navn",
+          "claim_span": "987100648,UNIFON AS,AS,Aksjeselskap,61.100,\"Kabelbasert, satellittbasert og trådløs telekommunikasjon\",62.900,Andre tjenester tilknyttet informasjonsteknologi,,,,,true,94,2026-11-12,2026-11-10,www.unifon.no,,05015,,,,,,,,,Vestre Strandgate 27,KRISTIANSAND S,4611,KRISTIANSAND,4204,Norge,NO,2100,Priva"
+        },
+        {
+          "source_url": "https://unifon.no/",
+          "retrieved_at": "2026-11-18T06:27:22.584319Z",
+          "content_sha256": "ec0affdb78268c8ae3ecfef6ce236732237f5496dba2caef2d1b877c516fbfcf",
+          "locator": "identity-proof:987100648",
+          "claim_span": ",\"email\":\"support@unifon.no\",\"vatID\":\"NO987100648MVA\",\"identifier\":{\"@type\":\"PropertyValue\",\"propertyID\":\"Organisasjonsnummer\",\"value\":\"987100648\"},\"a"
+        }
+      ]
+    },
+    {
+      "organisation_number": "987100648",
+      "company": "UNIFON AS",
+      "kind": "social",
+      "url": "https://www.linkedin.com/company/unifon",
+      "proof_tier": "owner_jsonld_sameas_v1",
+      "candidate_origin": null,
+      "ledger_verdict": "wrong",
+      "category": "legacy verifier limitation",
+      "reasons": [
+        "own header/footer/name/numeric-link policy no longer verifies"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://unifon.no/",
+          "retrieved_at": "2026-11-18T06:27:22.584319Z",
+          "content_sha256": "ec0affdb78268c8ae3ecfef6ce236732237f5496dba2caef2d1b877c516fbfcf",
+          "locator": "company-link:https://www.linkedin.com/company/unifon",
+          "claim_span": "rwegian\"]}],\"sameAs\":[\"https://www.facebook.com/Unifon.no\",\"https://www.linkedin.com/company/unifon/\"],\"department\":[{\"@id\":\"https://unifon.no/#kontor-kristians"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.098840Z",
+          "content_sha256": "ca62c95f1da1db25bd68a7d8e930cbe03d6924b6f52643ab42659e40014bfe4b",
+          "locator": "row:987100648/column:navn",
+          "claim_span": "987100648,UNIFON AS,AS,Aksjeselskap,61.100,\"Kabelbasert, satellittbasert og trådløs telekommunikasjon\",62.900,Andre tjenester tilknyttet informasjonsteknologi,,,,,true,94,2026-11-12,2026-11-10,www.unifon.no,,05015,,,,,,,,,Vestre Strandgate 27,KRISTIANSAND S,4611,KRISTIANSAND,4204,Norge,NO,2100,Priva"
+        },
+        {
+          "source_url": "https://unifon.no/",
+          "retrieved_at": "2026-11-18T06:27:22.584319Z",
+          "content_sha256": "ec0affdb78268c8ae3ecfef6ce236732237f5496dba2caef2d1b877c516fbfcf",
+          "locator": "identity-proof:987100648",
+          "claim_span": ",\"email\":\"support@unifon.no\",\"vatID\":\"NO987100648MVA\",\"identifier\":{\"@type\":\"PropertyValue\",\"propertyID\":\"Organisasjonsnummer\",\"value\":\"987100648\"},\"a"
+        }
+      ]
+    },
+    {
+      "organisation_number": "995222205",
+      "company": "FRUIT DISTRIBUTION AS",
+      "kind": "social",
+      "url": "http://www.facebook.com/fruitdistribution",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "candidate_origin": null,
+      "ledger_verdict": "doubtful",
+      "category": "doubtful",
+      "reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://fruit.se/",
+          "retrieved_at": "2026-11-18T06:28:06.810581Z",
+          "content_sha256": "fc18a9efc6ee22ee468ea463f4979a328a9f709dacb0cd2a45c9bb72a9e3120b",
+          "locator": "company-link:http://www.facebook.com/fruitdistribution",
+          "claim_span": "<a href=\"http://www.facebook.com/fruitdistribution\" class=\"social facebook\" target=\"_blank\" rel=\"noreferrer\" title=\"Facebook\">"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.163602Z",
+          "content_sha256": "704d136d5f0117b205dab5dcc0e93636af22b92aef12241350626438c4a463de",
+          "locator": "row:995222205/column:navn",
+          "claim_span": "995222205,FRUIT DISTRIBUTION AS,AS,Aksjeselskap,73.110,Reklamebyråvirksomhet,,,,,,,false,,,,www.fruit.se,customer.service@fruit.se,,,\"c/o Fruit Distribution AB\nTredenborgsvägen 16\",SE-29 435 SØLVESBORG,,,,Sverige,SE,\"c/o Value Fredrikstad AS\nKråkerøyveien 9\",KRÅKERØY,1671,FREDRIKSTAD,3107,Norge,NO,2"
+        },
+        {
+          "source_url": "https://fruit.se/",
+          "retrieved_at": "2026-11-18T06:28:06.810581Z",
+          "content_sha256": "fc18a9efc6ee22ee468ea463f4979a328a9f709dacb0cd2a45c9bb72a9e3120b",
+          "locator": "identity-proof:995222205",
+          "claim_span": "arer för reklam &amp; promotion &ndash; Fruit Distribution\n\t</title>\n\n\t\n\t<meta name=\"description\" content=\"Säljer, förädlar &amp; distribuerar internationellt välkända varumärken till profil- &amp; reklammarknad i Norden. Stort lager, snabb leverans, in-house förädling &amp; service utöver det vanli"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.163602Z",
+          "content_sha256": "704d136d5f0117b205dab5dcc0e93636af22b92aef12241350626438c4a463de",
+          "locator": "row:995222205/column:epostadresse",
+          "claim_span": "ap,73.110,Reklamebyråvirksomhet,,,,,,,false,,,,www.fruit.se,customer.service@fruit.se,,,\"c/o Fruit Distribution AB\nTredenborgsvägen 16\",SE-29 435 SØLVESBORG,,,,Sverige,SE,\"c/o Value Fredrikstad AS\nKråkerøyveien 9\",KRÅKERØY,1671,FREDRIKSTAD,3107,Norge,NO,2100,Private aksjeselskaper mv.,2025,2010-02-2"
+        },
+        {
+          "source_url": "https://fruit.se/",
+          "retrieved_at": "2026-11-18T06:28:06.810581Z",
+          "content_sha256": "fc18a9efc6ee22ee468ea463f4979a328a9f709dacb0cd2a45c9bb72a9e3120b",
+          "locator": "registry-contact:email_domain",
+          "claim_span": "<a href=\"mailto:info@fruit.se\">"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.163602Z",
+          "content_sha256": "704d136d5f0117b205dab5dcc0e93636af22b92aef12241350626438c4a463de",
+          "locator": "row:995222205/column:navn",
+          "claim_span": "995222205,FRUIT DISTRIBUTION AS,AS,Aksjeselskap,73.110,Reklamebyråvirksomhet,,,,,,,false,,,,www.fruit.se,customer.service@fruit.se,,,\"c/o Fruit Distribution AB\nTredenborgsvägen 16\",SE-29 435 SØLVESBORG,,,,Sverige,SE,\"c/o Value Fredrikstad AS\nKråkerøyveien 9\",KRÅKERØY,1671,FREDRIKSTAD,3107,Norge,NO,2"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.163602Z",
+          "content_sha256": "704d136d5f0117b205dab5dcc0e93636af22b92aef12241350626438c4a463de",
+          "locator": "row:995222205/column:hjemmeside",
+          "claim_span": "AS,Aksjeselskap,73.110,Reklamebyråvirksomhet,,,,,,,false,,,,www.fruit.se,customer.service@fruit.se,,,\"c/o Fruit Distribution AB\nTredenborgsvägen 16\",SE-29 435 SØLVESBORG,,,,Sverige,SE,\"c/o Value Fredrikstad AS\nKråkerøyveien 9\",KRÅKERØY,1671,FREDRIKSTAD,3107,Norge,NO,2100,Private aksjeselskaper mv.,2"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.163602Z",
+          "content_sha256": "704d136d5f0117b205dab5dcc0e93636af22b92aef12241350626438c4a463de",
+          "locator": "row:995222205/columns:forretningsadresse.*",
+          "claim_span": "AB\nTredenborgsvägen 16\",SE-29 435 SØLVESBORG,,,,Sverige,SE,\"c/o Value Fredrikstad AS\nKråkerøyveien 9\",KRÅKERØY,1671,FREDRIKSTAD,3107,Norge,NO,2100,Private aksjeselskaper mv.,2025,2010-02-25,2010-01-22,true,2010-05-01,2010-05-22,,,false,,true,2010-02-25,false,false,,false,,false,,false,,,,,,,Bokmål,2"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.163602Z",
+          "content_sha256": "704d136d5f0117b205dab5dcc0e93636af22b92aef12241350626438c4a463de",
+          "locator": "row:995222205/column:epostadresse",
+          "claim_span": "ap,73.110,Reklamebyråvirksomhet,,,,,,,false,,,,www.fruit.se,customer.service@fruit.se,,,\"c/o Fruit Distribution AB\nTredenborgsvägen 16\",SE-29 435 SØLVESBORG,,,,Sverige,SE,\"c/o Value Fredrikstad AS\nKråkerøyveien 9\",KRÅKERØY,1671,FREDRIKSTAD,3107,Norge,NO,2100,Private aksjeselskaper mv.,2025,2010-02-2"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.163602Z",
+          "content_sha256": "704d136d5f0117b205dab5dcc0e93636af22b92aef12241350626438c4a463de",
+          "locator": "row:995222205/columns:forretningsadresse.*",
+          "claim_span": "AB\nTredenborgsvägen 16\",SE-29 435 SØLVESBORG,,,,Sverige,SE,\"c/o Value Fredrikstad AS\nKråkerøyveien 9\",KRÅKERØY,1671,FREDRIKSTAD,3107,Norge,NO,2100,Private aksjeselskaper mv.,2025,2010-02-25,2010-01-22,true,2010-05-01,2010-05-22,,,false,,true,2010-02-25,false,false,,false,,false,,false,,,,,,,Bokmål,2"
+        }
+      ]
+    },
+    {
+      "organisation_number": "995222205",
+      "company": "FRUIT DISTRIBUTION AS",
+      "kind": "social",
+      "url": "http://www.instagram.com/fruitdistribution",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "candidate_origin": null,
+      "ledger_verdict": "doubtful",
+      "category": "doubtful",
+      "reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://fruit.se/",
+          "retrieved_at": "2026-11-18T06:28:06.810581Z",
+          "content_sha256": "fc18a9efc6ee22ee468ea463f4979a328a9f709dacb0cd2a45c9bb72a9e3120b",
+          "locator": "company-link:http://www.instagram.com/fruitdistribution",
+          "claim_span": "<a href=\"http://www.instagram.com/fruitdistribution\" class=\"social instagram\" target=\"_blank\" rel=\"noreferrer\" title=\"Instagram\">"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.163602Z",
+          "content_sha256": "704d136d5f0117b205dab5dcc0e93636af22b92aef12241350626438c4a463de",
+          "locator": "row:995222205/column:navn",
+          "claim_span": "995222205,FRUIT DISTRIBUTION AS,AS,Aksjeselskap,73.110,Reklamebyråvirksomhet,,,,,,,false,,,,www.fruit.se,customer.service@fruit.se,,,\"c/o Fruit Distribution AB\nTredenborgsvägen 16\",SE-29 435 SØLVESBORG,,,,Sverige,SE,\"c/o Value Fredrikstad AS\nKråkerøyveien 9\",KRÅKERØY,1671,FREDRIKSTAD,3107,Norge,NO,2"
+        },
+        {
+          "source_url": "https://fruit.se/",
+          "retrieved_at": "2026-11-18T06:28:06.810581Z",
+          "content_sha256": "fc18a9efc6ee22ee468ea463f4979a328a9f709dacb0cd2a45c9bb72a9e3120b",
+          "locator": "identity-proof:995222205",
+          "claim_span": "arer för reklam &amp; promotion &ndash; Fruit Distribution\n\t</title>\n\n\t\n\t<meta name=\"description\" content=\"Säljer, förädlar &amp; distribuerar internationellt välkända varumärken till profil- &amp; reklammarknad i Norden. Stort lager, snabb leverans, in-house förädling &amp; service utöver det vanli"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.163602Z",
+          "content_sha256": "704d136d5f0117b205dab5dcc0e93636af22b92aef12241350626438c4a463de",
+          "locator": "row:995222205/column:epostadresse",
+          "claim_span": "ap,73.110,Reklamebyråvirksomhet,,,,,,,false,,,,www.fruit.se,customer.service@fruit.se,,,\"c/o Fruit Distribution AB\nTredenborgsvägen 16\",SE-29 435 SØLVESBORG,,,,Sverige,SE,\"c/o Value Fredrikstad AS\nKråkerøyveien 9\",KRÅKERØY,1671,FREDRIKSTAD,3107,Norge,NO,2100,Private aksjeselskaper mv.,2025,2010-02-2"
+        },
+        {
+          "source_url": "https://fruit.se/",
+          "retrieved_at": "2026-11-18T06:28:06.810581Z",
+          "content_sha256": "fc18a9efc6ee22ee468ea463f4979a328a9f709dacb0cd2a45c9bb72a9e3120b",
+          "locator": "registry-contact:email_domain",
+          "claim_span": "<a href=\"mailto:info@fruit.se\">"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.163602Z",
+          "content_sha256": "704d136d5f0117b205dab5dcc0e93636af22b92aef12241350626438c4a463de",
+          "locator": "row:995222205/column:navn",
+          "claim_span": "995222205,FRUIT DISTRIBUTION AS,AS,Aksjeselskap,73.110,Reklamebyråvirksomhet,,,,,,,false,,,,www.fruit.se,customer.service@fruit.se,,,\"c/o Fruit Distribution AB\nTredenborgsvägen 16\",SE-29 435 SØLVESBORG,,,,Sverige,SE,\"c/o Value Fredrikstad AS\nKråkerøyveien 9\",KRÅKERØY,1671,FREDRIKSTAD,3107,Norge,NO,2"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.163602Z",
+          "content_sha256": "704d136d5f0117b205dab5dcc0e93636af22b92aef12241350626438c4a463de",
+          "locator": "row:995222205/column:hjemmeside",
+          "claim_span": "AS,Aksjeselskap,73.110,Reklamebyråvirksomhet,,,,,,,false,,,,www.fruit.se,customer.service@fruit.se,,,\"c/o Fruit Distribution AB\nTredenborgsvägen 16\",SE-29 435 SØLVESBORG,,,,Sverige,SE,\"c/o Value Fredrikstad AS\nKråkerøyveien 9\",KRÅKERØY,1671,FREDRIKSTAD,3107,Norge,NO,2100,Private aksjeselskaper mv.,2"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.163602Z",
+          "content_sha256": "704d136d5f0117b205dab5dcc0e93636af22b92aef12241350626438c4a463de",
+          "locator": "row:995222205/columns:forretningsadresse.*",
+          "claim_span": "AB\nTredenborgsvägen 16\",SE-29 435 SØLVESBORG,,,,Sverige,SE,\"c/o Value Fredrikstad AS\nKråkerøyveien 9\",KRÅKERØY,1671,FREDRIKSTAD,3107,Norge,NO,2100,Private aksjeselskaper mv.,2025,2010-02-25,2010-01-22,true,2010-05-01,2010-05-22,,,false,,true,2010-02-25,false,false,,false,,false,,false,,,,,,,Bokmål,2"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.163602Z",
+          "content_sha256": "704d136d5f0117b205dab5dcc0e93636af22b92aef12241350626438c4a463de",
+          "locator": "row:995222205/column:epostadresse",
+          "claim_span": "ap,73.110,Reklamebyråvirksomhet,,,,,,,false,,,,www.fruit.se,customer.service@fruit.se,,,\"c/o Fruit Distribution AB\nTredenborgsvägen 16\",SE-29 435 SØLVESBORG,,,,Sverige,SE,\"c/o Value Fredrikstad AS\nKråkerøyveien 9\",KRÅKERØY,1671,FREDRIKSTAD,3107,Norge,NO,2100,Private aksjeselskaper mv.,2025,2010-02-2"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.163602Z",
+          "content_sha256": "704d136d5f0117b205dab5dcc0e93636af22b92aef12241350626438c4a463de",
+          "locator": "row:995222205/columns:forretningsadresse.*",
+          "claim_span": "AB\nTredenborgsvägen 16\",SE-29 435 SØLVESBORG,,,,Sverige,SE,\"c/o Value Fredrikstad AS\nKråkerøyveien 9\",KRÅKERØY,1671,FREDRIKSTAD,3107,Norge,NO,2100,Private aksjeselskaper mv.,2025,2010-02-25,2010-01-22,true,2010-05-01,2010-05-22,,,false,,true,2010-02-25,false,false,,false,,false,,false,,,,,,,Bokmål,2"
+        }
+      ]
+    },
+    {
+      "organisation_number": "998201144",
+      "company": "FULL BYGG AS",
+      "kind": "social",
+      "url": "https://www.facebook.com/fullbygg",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "candidate_origin": null,
+      "ledger_verdict": "doubtful",
+      "category": "doubtful",
+      "reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://www.fullbygg.no/",
+          "retrieved_at": "2026-11-18T06:27:01.739238Z",
+          "content_sha256": "8a5b27c3bd2335f408086e3ab8edffca88c1b00ec88cd92a4d3f124eba098c51",
+          "locator": "company-link:https://www.facebook.com/fullbygg",
+          "claim_span": "<a data-testid=\"linkElement\" href=\"https://www.facebook.com/fullbygg\" target=\"_blank\" rel=\"noreferrer noopener\" class=\"FvIvPq\" aria-label=\"Facebook\">"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.185317Z",
+          "content_sha256": "a19dce362302b6e1c39a79cf6bf5eeb35809d4ffe31d6ed573dbb231f93dd094",
+          "locator": "row:998201144/column:navn",
+          "claim_span": "998201144,FULL BYGG AS,AS,Aksjeselskap,41.000,Oppføring av bygninger,,,,,,,true,11,2026-11-12,2026-11-10,,fullbygg@gmail.com,,46591970,,,,,,,,Hadelandsveien 629,JEVNAKER,3520,RINGERIKE,3305,Norge,NO,2100,Private aksjeselskaper mv.,2025,2012-04-03,2012-03-22,true,2012-03-01,2012-06-20,,,false,,true,2"
+        },
+        {
+          "source_url": "https://www.fullbygg.no/",
+          "retrieved_at": "2026-11-18T06:27:01.739238Z",
+          "content_sha256": "8a5b27c3bd2335f408086e3ab8edffca88c1b00ec88cd92a4d3f124eba098c51",
+          "locator": "identity-proof:998201144",
+          "claim_span": "a333.chunk.min.css.map*/</style>\n<title>Full Bygg AS - Byggefirma i Hønefoss og Viken</title>\n  <meta name=\"description\" content=\"Full Bygg AS er en Byggefirma i Hønefoss og Viken. Vi tilbyr Nybygg, Tilbygg og påbygg, Rehabilitering, Flislegging og Malearbeid Tjenester.\"/>\n  <link rel=\"canonical\" hr"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.185317Z",
+          "content_sha256": "a19dce362302b6e1c39a79cf6bf5eeb35809d4ffe31d6ed573dbb231f93dd094",
+          "locator": "row:998201144/column:navn",
+          "claim_span": "998201144,FULL BYGG AS,AS,Aksjeselskap,41.000,Oppføring av bygninger,,,,,,,true,11,2026-11-12,2026-11-10,,fullbygg@gmail.com,,46591970,,,,,,,,Hadelandsveien 629,JEVNAKER,3520,RINGERIKE,3305,Norge,NO,2100,Private aksjeselskaper mv.,2025,2012-04-03,2012-03-22,true,2012-03-01,2012-06-20,,,false,,true,2"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.185317Z",
+          "content_sha256": "a19dce362302b6e1c39a79cf6bf5eeb35809d4ffe31d6ed573dbb231f93dd094",
+          "locator": "row:998201144/column:hjemmeside",
+          "claim_span": "reringsdatoantallansatteNAVAaregisteret,hjemmeside,epostadresse,telefon,mobil,postadresse.adresse,postadresse.poststed,postadresse.postnummer,postadresse.kommune,postadresse.kommunenummer,postadresse.land,postadresse.landkode,forretningsadresse.adresse,forretningsadresse.poststed,forretningsadresse."
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.185317Z",
+          "content_sha256": "a19dce362302b6e1c39a79cf6bf5eeb35809d4ffe31d6ed573dbb231f93dd094",
+          "locator": "row:998201144/columns:forretningsadresse.*",
+          "claim_span": ",2026-11-12,2026-11-10,,fullbygg@gmail.com,,46591970,,,,,,,,Hadelandsveien 629,JEVNAKER,3520,RINGERIKE,3305,Norge,NO,2100,Private aksjeselskaper mv.,2025,2012-04-03,2012-03-22,true,2012-03-01,2012-06-20,,,false,,true,2012-04-03,false,false,,false,,false,,false,,,,,,,Bokmål,2024-02-26,\"Byggtjenester "
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.185317Z",
+          "content_sha256": "a19dce362302b6e1c39a79cf6bf5eeb35809d4ffe31d6ed573dbb231f93dd094",
+          "locator": "row:998201144/column:epostadresse",
+          "claim_span": "Oppføring av bygninger,,,,,,,true,11,2026-11-12,2026-11-10,,fullbygg@gmail.com,,46591970,,,,,,,,Hadelandsveien 629,JEVNAKER,3520,RINGERIKE,3305,Norge,NO,2100,Private aksjeselskaper mv.,2025,2012-04-03,2012-03-22,true,2012-03-01,2012-06-20,,,false,,true,2012-04-03,false,false,,false,,false,,false,,,,"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.185317Z",
+          "content_sha256": "a19dce362302b6e1c39a79cf6bf5eeb35809d4ffe31d6ed573dbb231f93dd094",
+          "locator": "row:998201144/column:mobil",
+          "claim_span": "er,,,,,,,true,11,2026-11-12,2026-11-10,,fullbygg@gmail.com,,46591970,,,,,,,,Hadelandsveien 629,JEVNAKER,3520,RINGERIKE,3305,Norge,NO,2100,Private aksjeselskaper mv.,2025,2012-04-03,2012-03-22,true,2012-03-01,2012-06-20,,,false,,true,2012-04-03,false,false,,false,,false,,false,,,,,,,Bokmål,2024-02-26"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.185317Z",
+          "content_sha256": "a19dce362302b6e1c39a79cf6bf5eeb35809d4ffe31d6ed573dbb231f93dd094",
+          "locator": "row:998201144/columns:forretningsadresse.*",
+          "claim_span": ",2026-11-12,2026-11-10,,fullbygg@gmail.com,,46591970,,,,,,,,Hadelandsveien 629,JEVNAKER,3520,RINGERIKE,3305,Norge,NO,2100,Private aksjeselskaper mv.,2025,2012-04-03,2012-03-22,true,2012-03-01,2012-06-20,,,false,,true,2012-04-03,false,false,,false,,false,,false,,,,,,,Bokmål,2024-02-26,\"Byggtjenester "
+        }
+      ]
+    },
+    {
+      "organisation_number": "913336976",
+      "company": "TAVEX GULL OG SØLV AS",
+      "kind": "website",
+      "url": "https://tavex.no",
+      "proof_tier": "registry_declared_publisher_name",
+      "candidate_origin": "registry_website",
+      "ledger_verdict": "doubtful",
+      "category": "doubtful",
+      "reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://tavex.no/",
+          "retrieved_at": "2026-11-18T06:25:57.437385Z",
+          "content_sha256": "a4baad30853947104a7c106cb69a5574a73e7fd36bf2dd00707a6d796dcff85d",
+          "locator": "identity-proof:913336976",
+          "claim_span": "hidden-sm\"><p>Alle rettigheter tilhører Tavex Gull og Sølv AS © 2026</p>\n</div>\n                    </div>\n                </div>\n\n            </div>\n        </div>\n        <footer class=\"footer__disclaimer\"><p>Alle rettigheter tilhører Tavex Gull og Sølv AS © 2026</p>\n</footer>\n        <a href=\"#to"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.680885Z",
+          "content_sha256": "bcab2569207c232e1cbf3ada38b07174bb72a48dcb62d7b5f410c9eb535e9ab1",
+          "locator": "row:913336976/column:epostadresse",
+          "claim_span": "g smykker\",,,,,,,true,24,2026-11-12,2026-11-10,www.tavex.no,ronald.sookael@tavex.no,,407 25 020,,,,,,,,Adolph Tidemands gate 55,LILLESTRØM,2000,LILLESTRØM,3205,Norge,NO,2100,Private aksjeselskaper mv.,2025,2014-03-07,2014-01-22,true,2023-10-08,2023-10-09,,,false,,true,2014-03-07,false,false,,false,,"
+        },
+        {
+          "source_url": "https://tavex.no/",
+          "retrieved_at": "2026-11-18T06:25:57.437385Z",
+          "content_sha256": "a4baad30853947104a7c106cb69a5574a73e7fd36bf2dd00707a6d796dcff85d",
+          "locator": "registry-contact:email_domain",
+          "claim_span": "<a href=\"mailto:tavex@tavex.no\"  class=\"button button--purple-inverse header__actions-button header__actions-button--email\" >"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.680885Z",
+          "content_sha256": "bcab2569207c232e1cbf3ada38b07174bb72a48dcb62d7b5f410c9eb535e9ab1",
+          "locator": "row:913336976/column:navn",
+          "claim_span": "913336976,TAVEX GULL OG SØLV AS,AS,Aksjeselskap,47.770,\"Detaljhandel med ur, klokker og smykker\",,,,,,,true,24,2026-11-12,2026-11-10,www.tavex.no,ronald.sookael@tavex.no,,407 25 020,,,,,,,,Adolph Tidemands gate 55,LILLESTRØM,2000,LILLESTRØM,3205,Norge,NO,2100,Private aksjeselskaper mv.,2025,2014-03-"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.680885Z",
+          "content_sha256": "bcab2569207c232e1cbf3ada38b07174bb72a48dcb62d7b5f410c9eb535e9ab1",
+          "locator": "row:913336976/column:hjemmeside",
+          "claim_span": "ur, klokker og smykker\",,,,,,,true,24,2026-11-12,2026-11-10,www.tavex.no,ronald.sookael@tavex.no,,407 25 020,,,,,,,,Adolph Tidemands gate 55,LILLESTRØM,2000,LILLESTRØM,3205,Norge,NO,2100,Private aksjeselskaper mv.,2025,2014-03-07,2014-01-22,true,2023-10-08,2023-10-09,,,false,,true,2014-03-07,false,f"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.680885Z",
+          "content_sha256": "bcab2569207c232e1cbf3ada38b07174bb72a48dcb62d7b5f410c9eb535e9ab1",
+          "locator": "row:913336976/columns:forretningsadresse.*",
+          "claim_span": "-10,www.tavex.no,ronald.sookael@tavex.no,,407 25 020,,,,,,,,Adolph Tidemands gate 55,LILLESTRØM,2000,LILLESTRØM,3205,Norge,NO,2100,Private aksjeselskaper mv.,2025,2014-03-07,2014-01-22,true,2023-10-08,2023-10-09,,,false,,true,2014-03-07,false,false,,false,,false,,false,,,,,,,Bokmål,2014-01-22,Handel"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.680885Z",
+          "content_sha256": "bcab2569207c232e1cbf3ada38b07174bb72a48dcb62d7b5f410c9eb535e9ab1",
+          "locator": "row:913336976/column:epostadresse",
+          "claim_span": "g smykker\",,,,,,,true,24,2026-11-12,2026-11-10,www.tavex.no,ronald.sookael@tavex.no,,407 25 020,,,,,,,,Adolph Tidemands gate 55,LILLESTRØM,2000,LILLESTRØM,3205,Norge,NO,2100,Private aksjeselskaper mv.,2025,2014-03-07,2014-01-22,true,2023-10-08,2023-10-09,,,false,,true,2014-03-07,false,false,,false,,"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.680885Z",
+          "content_sha256": "bcab2569207c232e1cbf3ada38b07174bb72a48dcb62d7b5f410c9eb535e9ab1",
+          "locator": "row:913336976/column:mobil",
+          "claim_span": "2026-11-12,2026-11-10,www.tavex.no,ronald.sookael@tavex.no,,407 25 020,,,,,,,,Adolph Tidemands gate 55,LILLESTRØM,2000,LILLESTRØM,3205,Norge,NO,2100,Private aksjeselskaper mv.,2025,2014-03-07,2014-01-22,true,2023-10-08,2023-10-09,,,false,,true,2014-03-07,false,false,,false,,false,,false,,,,,,,Bokmål"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.680885Z",
+          "content_sha256": "bcab2569207c232e1cbf3ada38b07174bb72a48dcb62d7b5f410c9eb535e9ab1",
+          "locator": "row:913336976/columns:forretningsadresse.*",
+          "claim_span": "-10,www.tavex.no,ronald.sookael@tavex.no,,407 25 020,,,,,,,,Adolph Tidemands gate 55,LILLESTRØM,2000,LILLESTRØM,3205,Norge,NO,2100,Private aksjeselskaper mv.,2025,2014-03-07,2014-01-22,true,2023-10-08,2023-10-09,,,false,,true,2014-03-07,false,false,,false,,false,,false,,,,,,,Bokmål,2014-01-22,Handel"
+        }
+      ]
+    },
+    {
+      "organisation_number": "916643667",
+      "company": "TWININTEL AS",
+      "kind": "website",
+      "url": "https://twinintel.com",
+      "proof_tier": "registry_declared_live",
+      "candidate_origin": "registry_website",
+      "ledger_verdict": "doubtful",
+      "category": "doubtful",
+      "reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://twinintel.com/",
+          "retrieved_at": "2026-11-18T06:27:58.632710Z",
+          "content_sha256": "20feb1c2a2419e77c7477deb31cd3b91b1898a350dcbae981ee62608083befda",
+          "locator": "identity-proof:916643667",
+          "claim_span": ", Systems Architecture and Consulting — Twinintel</title>\n  <meta name=\"description\" content=\"Twinintel is a technology consulting company providing software development, systems architecture, integration, and technical consulting.\">\n  <meta name=\"robots\" content=\"index, follow\">\n  <link rel=\"canoni"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.703285Z",
+          "content_sha256": "151b5844c9f2fc8fd9d9ee50462a71c6c5d7b9dd6cb666802f2e2916ad2a2ba5",
+          "locator": "row:916643667/column:navn",
+          "claim_span": "916643667,TWININTEL AS,AS,Aksjeselskap,62.200,Konsulentvirksomhet tilknyttet informasjonsteknologi og forvaltning og drift av it-systemer,,,,,,,false,,,,www.twinintel.com,contact@twinintel.com,21 38 09 81,,,,,,,,,Kilenveien 9,LYSAKER,1366,BÆRUM,3201,Norge,NO,2100,Private aksjeselskaper mv.,2025,2016"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.703285Z",
+          "content_sha256": "151b5844c9f2fc8fd9d9ee50462a71c6c5d7b9dd6cb666802f2e2916ad2a2ba5",
+          "locator": "row:916643667/column:hjemmeside",
+          "claim_span": "ologi og forvaltning og drift av it-systemer,,,,,,,false,,,,www.twinintel.com,contact@twinintel.com,21 38 09 81,,,,,,,,,Kilenveien 9,LYSAKER,1366,BÆRUM,3201,Norge,NO,2100,Private aksjeselskaper mv.,2025,2016-04-07,2016-04-01,true,2016-05-01,2016-12-24,,,false,,true,2016-04-07,false,false,,false,,fal"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.703285Z",
+          "content_sha256": "151b5844c9f2fc8fd9d9ee50462a71c6c5d7b9dd6cb666802f2e2916ad2a2ba5",
+          "locator": "row:916643667/columns:forretningsadresse.*",
+          "claim_span": "www.twinintel.com,contact@twinintel.com,21 38 09 81,,,,,,,,,Kilenveien 9,LYSAKER,1366,BÆRUM,3201,Norge,NO,2100,Private aksjeselskaper mv.,2025,2016-04-07,2016-04-01,true,2016-05-01,2016-12-24,,,false,,true,2016-04-07,false,false,,false,,false,,false,,,,,,,Bokmål,2016-04-01,IT Konsulent.,Tilby IT Kon"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.703285Z",
+          "content_sha256": "151b5844c9f2fc8fd9d9ee50462a71c6c5d7b9dd6cb666802f2e2916ad2a2ba5",
+          "locator": "row:916643667/column:epostadresse",
+          "claim_span": "ng og drift av it-systemer,,,,,,,false,,,,www.twinintel.com,contact@twinintel.com,21 38 09 81,,,,,,,,,Kilenveien 9,LYSAKER,1366,BÆRUM,3201,Norge,NO,2100,Private aksjeselskaper mv.,2025,2016-04-07,2016-04-01,true,2016-05-01,2016-12-24,,,false,,true,2016-04-07,false,false,,false,,false,,false,,,,,,,Bo"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.703285Z",
+          "content_sha256": "151b5844c9f2fc8fd9d9ee50462a71c6c5d7b9dd6cb666802f2e2916ad2a2ba5",
+          "locator": "row:916643667/column:telefon",
+          "claim_span": "emer,,,,,,,false,,,,www.twinintel.com,contact@twinintel.com,21 38 09 81,,,,,,,,,Kilenveien 9,LYSAKER,1366,BÆRUM,3201,Norge,NO,2100,Private aksjeselskaper mv.,2025,2016-04-07,2016-04-01,true,2016-05-01,2016-12-24,,,false,,true,2016-04-07,false,false,,false,,false,,false,,,,,,,Bokmål,2016-04-01,IT Kon"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.703285Z",
+          "content_sha256": "151b5844c9f2fc8fd9d9ee50462a71c6c5d7b9dd6cb666802f2e2916ad2a2ba5",
+          "locator": "row:916643667/columns:forretningsadresse.*",
+          "claim_span": "www.twinintel.com,contact@twinintel.com,21 38 09 81,,,,,,,,,Kilenveien 9,LYSAKER,1366,BÆRUM,3201,Norge,NO,2100,Private aksjeselskaper mv.,2025,2016-04-07,2016-04-01,true,2016-05-01,2016-12-24,,,false,,true,2016-04-07,false,false,,false,,false,,false,,,,,,,Bokmål,2016-04-01,IT Konsulent.,Tilby IT Kon"
+        }
+      ]
+    },
+    {
+      "organisation_number": "920647081",
+      "company": "AURORA KOMPETANSE AS",
+      "kind": "website",
+      "url": "https://aurorakompetanse.no",
+      "proof_tier": "publisher_name_registered_place",
+      "candidate_origin": "legal_name_slug",
+      "ledger_verdict": "doubtful",
+      "category": "doubtful",
+      "reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://aurorakompetanse.no/kontakt",
+          "retrieved_at": "2026-11-18T06:26:57.744314Z",
+          "content_sha256": "8cf8a03e0937c7e163a22f1e5ec19bfb03d9c5fd1a2494fc51aef0a6753b1566",
+          "locator": "identity-proof:920647081",
+          "claim_span": "><meta charset=\"utf-8\"><title>Kontakt | Aurora Kompetanse AS</title><meta name=\"robots\" content=\"all\"><meta name=\"generator\" content=\"One.com Web Editor\"><meta http-equiv=\"Cache-Control\" content=\"must-revalidate, max-age=0, public\"><meta http-equiv=\"Expires\" content=\"-1\"><meta name=\"viewport\" conten"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.740838Z",
+          "content_sha256": "7bd0c230effac4edf6250b209a42b055a323651bf9443007299db84016aa6f91",
+          "locator": "row:920647081/column:navn",
+          "claim_span": "920647081,AURORA KOMPETANSE AS,AS,Aksjeselskap,85.597,Annen undervisning ellers,,,,,,,true,,2018-10-15,2018-10-10,,,,,,,,,,,,Apanesveien 9B,ALTA,9512,ALTA,5601,Norge,NO,2100,Private aksjeselskaper mv.,2025,2018-03-26,2018-02-27,true,2019-01-01,2019-02-13,,,false,,true,2018-03-26,false,false,,false,,"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.740838Z",
+          "content_sha256": "7bd0c230effac4edf6250b209a42b055a323651bf9443007299db84016aa6f91",
+          "locator": "row:920647081/column:hjemmeside",
+          "claim_span": "reringsdatoantallansatteNAVAaregisteret,hjemmeside,epostadresse,telefon,mobil,postadresse.adresse,postadresse.poststed,postadresse.postnummer,postadresse.kommune,postadresse.kommunenummer,postadresse.land,postadresse.landkode,forretningsadresse.adresse,forretningsadresse.poststed,forretningsadresse."
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.740838Z",
+          "content_sha256": "7bd0c230effac4edf6250b209a42b055a323651bf9443007299db84016aa6f91",
+          "locator": "row:920647081/columns:forretningsadresse.*",
+          "claim_span": "visning ellers,,,,,,,true,,2018-10-15,2018-10-10,,,,,,,,,,,,Apanesveien 9B,ALTA,9512,ALTA,5601,Norge,NO,2100,Private aksjeselskaper mv.,2025,2018-03-26,2018-02-27,true,2019-01-01,2019-02-13,,,false,,true,2018-03-26,false,false,,false,,false,,false,,,,,,,Bokmål,2018-02-27,\"Kurs, kompetanseutvikling, "
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.740838Z",
+          "content_sha256": "7bd0c230effac4edf6250b209a42b055a323651bf9443007299db84016aa6f91",
+          "locator": "row:920647081/columns:forretningsadresse.*",
+          "claim_span": "visning ellers,,,,,,,true,,2018-10-15,2018-10-10,,,,,,,,,,,,Apanesveien 9B,ALTA,9512,ALTA,5601,Norge,NO,2100,Private aksjeselskaper mv.,2025,2018-03-26,2018-02-27,true,2019-01-01,2019-02-13,,,false,,true,2018-03-26,false,false,,false,,false,,false,,,,,,,Bokmål,2018-02-27,\"Kurs, kompetanseutvikling, "
+        }
+      ]
+    },
+    {
+      "organisation_number": "922820198",
+      "company": "ROALD ØEN AS",
+      "kind": "website",
+      "url": "https://www.roaldoen.no",
+      "proof_tier": "publisher_name_registered_place",
+      "candidate_origin": "legal_name_slug",
+      "ledger_verdict": "doubtful",
+      "category": "doubtful",
+      "reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://www.roaldoen.no/",
+          "retrieved_at": "2026-11-18T06:27:38.505936Z",
+          "content_sha256": "b119e6b34f67e06bf447f585abd08afa027f09c9ca40ee1f5eb6e8a9074aa4c4",
+          "locator": "identity-proof:922820198",
+          "claim_span": "t/javascript\"></script><title>Forside | Roald Øen AS</title><meta name=\"keywords\" content=\"røyrleggjar,sogndal,rørlegger,baderom\"><meta name=\"description\" content=\"rørlegger i Sogndal\"><meta property=\"og:type\" content=\"website\"><meta property=\"og:title\" content=\"Forside | Roald Øen AS\"><meta propert"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.771924Z",
+          "content_sha256": "0e309b89ddb2220cf2c7b6aa1806a43e8c820923e85639ac99044c28b3bf8f6c",
+          "locator": "row:922820198/column:navn",
+          "claim_span": "922820198,ROALD ØEN AS,AS,Aksjeselskap,43.221,Rørleggerarbeid,,,,,,,true,6,2026-09-14,2026-09-10,,,,,,,,,,,,Lunnamyri 12B,SOGNDAL,6856,SOGNDAL,4640,Norge,NO,2100,Private aksjeselskaper mv.,2025,2019-05-28,2019-05-02,true,2019-09-01,2019-10-26,,,false,,true,2019-05-28,false,false,,false,,false,,false"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.771924Z",
+          "content_sha256": "0e309b89ddb2220cf2c7b6aa1806a43e8c820923e85639ac99044c28b3bf8f6c",
+          "locator": "row:922820198/column:hjemmeside",
+          "claim_span": "reringsdatoantallansatteNAVAaregisteret,hjemmeside,epostadresse,telefon,mobil,postadresse.adresse,postadresse.poststed,postadresse.postnummer,postadresse.kommune,postadresse.kommunenummer,postadresse.land,postadresse.landkode,forretningsadresse.adresse,forretningsadresse.poststed,forretningsadresse."
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.771924Z",
+          "content_sha256": "0e309b89ddb2220cf2c7b6aa1806a43e8c820923e85639ac99044c28b3bf8f6c",
+          "locator": "row:922820198/columns:forretningsadresse.*",
+          "claim_span": "rleggerarbeid,,,,,,,true,6,2026-09-14,2026-09-10,,,,,,,,,,,,Lunnamyri 12B,SOGNDAL,6856,SOGNDAL,4640,Norge,NO,2100,Private aksjeselskaper mv.,2025,2019-05-28,2019-05-02,true,2019-09-01,2019-10-26,,,false,,true,2019-05-28,false,false,,false,,false,,false,,,,,,,Nynorsk,2019-09-20,\"Å drive røyrleggarver"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.771924Z",
+          "content_sha256": "0e309b89ddb2220cf2c7b6aa1806a43e8c820923e85639ac99044c28b3bf8f6c",
+          "locator": "row:922820198/columns:forretningsadresse.*",
+          "claim_span": "rleggerarbeid,,,,,,,true,6,2026-09-14,2026-09-10,,,,,,,,,,,,Lunnamyri 12B,SOGNDAL,6856,SOGNDAL,4640,Norge,NO,2100,Private aksjeselskaper mv.,2025,2019-05-28,2019-05-02,true,2019-09-01,2019-10-26,,,false,,true,2019-05-28,false,false,,false,,false,,false,,,,,,,Nynorsk,2019-09-20,\"Å drive røyrleggarver"
+        }
+      ]
+    },
+    {
+      "organisation_number": "928437736",
+      "company": "WEB PARTNER AS",
+      "kind": "website",
+      "url": "https://webpartner.no",
+      "proof_tier": "publisher_name_registered_place",
+      "candidate_origin": "legal_name_slug",
+      "ledger_verdict": "doubtful",
+      "category": "doubtful",
+      "reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://webpartner.no/",
+          "retrieved_at": "2026-11-18T06:25:11.569461Z",
+          "content_sha256": "9a2f71b88ad34a49dda8010a8ad031c315ca7dac6c52b1a5de7c39de992c9854",
+          "locator": "identity-proof:928437736",
+          "claim_span": "-->\n\t<title>Markedsføringsfirma- Home - Web Partner AS</title>\n\t<meta name=\"description\" content=\"Øk synligheten og effektiviser den digitale markedsføringen av bedriften din med vår komplette digitale markedsføring!\" />\n\t<link rel=\"canonical\" href=\"https://webpartner.no/\" />\n\t<meta property=\"og:loc"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.855534Z",
+          "content_sha256": "1a94882005874b89fb4df4568c0de32346f5cc9c2a7a2022e5e3855a8c7fabda",
+          "locator": "row:928437736/column:navn",
+          "claim_span": "928437736,WEB PARTNER AS,AS,Aksjeselskap,62.200,Konsulentvirksomhet tilknyttet informasjonsteknologi og forvaltning og drift av it-systemer,,,,,,,true,,2026-04-13,2026-04-10,,,,,\"c/o Join You AS\nØstre Aker vei 24B\",OSLO,0581,OSLO,0301,Norge,NO,Gamle Ringeriksvei 1,STABEKK,1369,BÆRUM,3201,Norge,NO,21"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.855534Z",
+          "content_sha256": "1a94882005874b89fb4df4568c0de32346f5cc9c2a7a2022e5e3855a8c7fabda",
+          "locator": "row:928437736/column:hjemmeside",
+          "claim_span": "reringsdatoantallansatteNAVAaregisteret,hjemmeside,epostadresse,telefon,mobil,postadresse.adresse,postadresse.poststed,postadresse.postnummer,postadresse.kommune,postadresse.kommunenummer,postadresse.land,postadresse.landkode,forretningsadresse.adresse,forretningsadresse.poststed,forretningsadresse."
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.855534Z",
+          "content_sha256": "1a94882005874b89fb4df4568c0de32346f5cc9c2a7a2022e5e3855a8c7fabda",
+          "locator": "row:928437736/columns:forretningsadresse.*",
+          "claim_span": "oin You AS\nØstre Aker vei 24B\",OSLO,0581,OSLO,0301,Norge,NO,Gamle Ringeriksvei 1,STABEKK,1369,BÆRUM,3201,Norge,NO,2100,Private aksjeselskaper mv.,2025,2022-01-11,2021-11-23,true,2022-01-01,2022-02-01,,,false,,true,2022-01-11,false,false,,false,,false,,false,,,,,,,Bokmål,2023-07-31,\"Internett support"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.855534Z",
+          "content_sha256": "1a94882005874b89fb4df4568c0de32346f5cc9c2a7a2022e5e3855a8c7fabda",
+          "locator": "row:928437736/columns:forretningsadresse.*",
+          "claim_span": "oin You AS\nØstre Aker vei 24B\",OSLO,0581,OSLO,0301,Norge,NO,Gamle Ringeriksvei 1,STABEKK,1369,BÆRUM,3201,Norge,NO,2100,Private aksjeselskaper mv.,2025,2022-01-11,2021-11-23,true,2022-01-01,2022-02-01,,,false,,true,2022-01-11,false,false,,false,,false,,false,,,,,,,Bokmål,2023-07-31,\"Internett support"
+        }
+      ]
+    },
+    {
+      "organisation_number": "928579298",
+      "company": "LONGYEARBYEN GUIDING AS",
+      "kind": "website",
+      "url": "https://www.longyearbyen-guiding.no",
+      "proof_tier": "unique_registry_phone",
+      "candidate_origin": "registry_email",
+      "ledger_verdict": "doubtful",
+      "category": "doubtful",
+      "reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://www.longyearbyen-guiding.no/",
+          "retrieved_at": "2026-11-18T06:27:42.371027Z",
+          "content_sha256": "c19ebfd6bbe54b75dbea02376fef2e8bb4d6dceb61ac89f9ca834acf596ee9ae",
+          "locator": "identity-proof:928579298",
+          "claim_span": "al;\" class=\"wixui-rich-text__text\">Ring +47 940 78 000</span></span></span></span></p></div></div></div></div></div></section><div class=\"comp-lfnxr9ri mu5PoX\" id=\"comp-lfnxr9ri\" aria-disabled=\"false\"><a data-testid=\"linkElement\" href=\"https://www.longyearbyen-guiding.no/våreturer\" target=\"_self\" cl"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.860585Z",
+          "content_sha256": "4c0004bbeb4fd48e5223d1ade3439d35d98588ad0c386a537e5a881982535081",
+          "locator": "row:928579298/column:epostadresse",
+          "claim_span": "t,,,,,,,true,5,2026-01-13,2026-01-10,longyearbyen-guding.no,post@longyearbyen-guiding.no,,940 78 000,,,,,,,,\"c/o Magnus Huseby\nVei 222 3A\",LONGYEARBYEN,9170,SVALBARD,2100,Norge,NO,2100,Private aksjeselskaper mv.,2025,2022-01-24,2021-12-16,false,,,,,false,,true,2022-01-24,false,false,,false,,false,,f"
+        },
+        {
+          "source_url": "https://www.longyearbyen-guiding.no/",
+          "retrieved_at": "2026-11-18T06:27:42.371027Z",
+          "content_sha256": "c19ebfd6bbe54b75dbea02376fef2e8bb4d6dceb61ac89f9ca834acf596ee9ae",
+          "locator": "registry-contact:email_domain",
+          "claim_span": "<a href=\"mailto:post@longyearbyen-guiding.no\" target=\"_self\" class=\"wixui-rich-text__text\">"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.860585Z",
+          "content_sha256": "4c0004bbeb4fd48e5223d1ade3439d35d98588ad0c386a537e5a881982535081",
+          "locator": "row:928579298/column:navn",
+          "claim_span": "928579298,LONGYEARBYEN GUIDING AS,AS,Aksjeselskap,79.902,Guide- og reiseledervirksomhet,,,,,,,true,5,2026-01-13,2026-01-10,longyearbyen-guding.no,post@longyearbyen-guiding.no,,940 78 000,,,,,,,,\"c/o Magnus Huseby\nVei 222 3A\",LONGYEARBYEN,9170,SVALBARD,2100,Norge,NO,2100,Private aksjeselskaper mv.,20"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.860585Z",
+          "content_sha256": "4c0004bbeb4fd48e5223d1ade3439d35d98588ad0c386a537e5a881982535081",
+          "locator": "row:928579298/column:hjemmeside",
+          "claim_span": " og reiseledervirksomhet,,,,,,,true,5,2026-01-13,2026-01-10,longyearbyen-guding.no,post@longyearbyen-guiding.no,,940 78 000,,,,,,,,\"c/o Magnus Huseby\nVei 222 3A\",LONGYEARBYEN,9170,SVALBARD,2100,Norge,NO,2100,Private aksjeselskaper mv.,2025,2022-01-24,2021-12-16,false,,,,,false,,true,2022-01-24,false"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.860585Z",
+          "content_sha256": "4c0004bbeb4fd48e5223d1ade3439d35d98588ad0c386a537e5a881982535081",
+          "locator": "row:928579298/columns:forretningsadresse.*",
+          "claim_span": "-guding.no,post@longyearbyen-guiding.no,,940 78 000,,,,,,,,\"c/o Magnus Huseby\nVei 222 3A\",LONGYEARBYEN,9170,SVALBARD,2100,Norge,NO,2100,Private aksjeselskaper mv.,2025,2022-01-24,2021-12-16,false,,,,,false,,true,2022-01-24,false,false,,false,,false,,false,,,,,,,Bokmål,2021-12-16,\"Guide kunder i og r"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.860585Z",
+          "content_sha256": "4c0004bbeb4fd48e5223d1ade3439d35d98588ad0c386a537e5a881982535081",
+          "locator": "row:928579298/column:epostadresse",
+          "claim_span": "t,,,,,,,true,5,2026-01-13,2026-01-10,longyearbyen-guding.no,post@longyearbyen-guiding.no,,940 78 000,,,,,,,,\"c/o Magnus Huseby\nVei 222 3A\",LONGYEARBYEN,9170,SVALBARD,2100,Norge,NO,2100,Private aksjeselskaper mv.,2025,2022-01-24,2021-12-16,false,,,,,false,,true,2022-01-24,false,false,,false,,false,,f"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.860585Z",
+          "content_sha256": "4c0004bbeb4fd48e5223d1ade3439d35d98588ad0c386a537e5a881982535081",
+          "locator": "row:928579298/column:mobil",
+          "claim_span": "-01-10,longyearbyen-guding.no,post@longyearbyen-guiding.no,,940 78 000,,,,,,,,\"c/o Magnus Huseby\nVei 222 3A\",LONGYEARBYEN,9170,SVALBARD,2100,Norge,NO,2100,Private aksjeselskaper mv.,2025,2022-01-24,2021-12-16,false,,,,,false,,true,2022-01-24,false,false,,false,,false,,false,,,,,,,Bokmål,2021-12-16,\""
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.860585Z",
+          "content_sha256": "4c0004bbeb4fd48e5223d1ade3439d35d98588ad0c386a537e5a881982535081",
+          "locator": "row:928579298/columns:forretningsadresse.*",
+          "claim_span": "-guding.no,post@longyearbyen-guiding.no,,940 78 000,,,,,,,,\"c/o Magnus Huseby\nVei 222 3A\",LONGYEARBYEN,9170,SVALBARD,2100,Norge,NO,2100,Private aksjeselskaper mv.,2025,2022-01-24,2021-12-16,false,,,,,false,,true,2022-01-24,false,false,,false,,false,,false,,,,,,,Bokmål,2021-12-16,\"Guide kunder i og r"
+        }
+      ]
+    },
+    {
+      "organisation_number": "932315475",
+      "company": "RYDING MASKIN AS",
+      "kind": "website",
+      "url": "https://www.rydingmaskin.no",
+      "proof_tier": "publisher_name_rare_contact",
+      "candidate_origin": "registry_email",
+      "ledger_verdict": "doubtful",
+      "category": "doubtful",
+      "reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://www.rydingmaskin.no/",
+          "retrieved_at": "2026-11-18T06:25:31.835214Z",
+          "content_sha256": "1608020f09aee4e608aeef16984ee8290601a663415fdea74fe9d77a7311e50c",
+          "locator": "identity-proof:932315475",
+          "claim_span": "ydingmaskin.no/xmlrpc.php\">\r\n    <title>Ryding Maskin AS &#8211; Solid Kvalitet!</title>\n<meta name='robots' content='max-image-preview:large' />\n<link rel='dns-prefetch' href='//fonts.googleapis.com' />\n<link rel=\"alternate\" type=\"application/rss+xml\" title=\"Ryding Maskin AS &raquo; strøm\" href=\"ht"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.916277Z",
+          "content_sha256": "1a87671126734c83a1f3e72403afcab737729966097e4f4134569dea719dbd9f",
+          "locator": "row:932315475/column:epostadresse",
+          "claim_span": "skap,43.120,Grunnarbeid,,,,,,,true,9,2026-10-12,2026-10-10,,joseph@rydingmaskin.no,,906 42 585,,,,,,,,Preståsvegen 37,NANNESTAD,2030,NANNESTAD,3238,Norge,NO,2100,Private aksjeselskaper mv.,2025,2023-10-30,2023-09-28,true,2023-11-06,2023-11-06,,,false,,true,2023-10-30,false,false,,false,,false,,false"
+        },
+        {
+          "source_url": "https://www.rydingmaskin.no/",
+          "retrieved_at": "2026-11-18T06:25:31.835214Z",
+          "content_sha256": "1608020f09aee4e608aeef16984ee8290601a663415fdea74fe9d77a7311e50c",
+          "locator": "registry-contact:email_domain",
+          "claim_span": "<a class=\"ms-sl\" role=\"button\" data-transition=\"no\" data-style=\"no\" href=\"mailto:post@rydingmaskin.no\" target=\"hidden-iframe\">"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.916277Z",
+          "content_sha256": "1a87671126734c83a1f3e72403afcab737729966097e4f4134569dea719dbd9f",
+          "locator": "row:932315475/column:navn",
+          "claim_span": "932315475,RYDING MASKIN AS,AS,Aksjeselskap,43.120,Grunnarbeid,,,,,,,true,9,2026-10-12,2026-10-10,,joseph@rydingmaskin.no,,906 42 585,,,,,,,,Preståsvegen 37,NANNESTAD,2030,NANNESTAD,3238,Norge,NO,2100,Private aksjeselskaper mv.,2025,2023-10-30,2023-09-28,true,2023-11-06,2023-11-06,,,false,,true,2023-"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.916277Z",
+          "content_sha256": "1a87671126734c83a1f3e72403afcab737729966097e4f4134569dea719dbd9f",
+          "locator": "row:932315475/column:hjemmeside",
+          "claim_span": "reringsdatoantallansatteNAVAaregisteret,hjemmeside,epostadresse,telefon,mobil,postadresse.adresse,postadresse.poststed,postadresse.postnummer,postadresse.kommune,postadresse.kommunenummer,postadresse.land,postadresse.landkode,forretningsadresse.adresse,forretningsadresse.poststed,forretningsadresse."
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.916277Z",
+          "content_sha256": "1a87671126734c83a1f3e72403afcab737729966097e4f4134569dea719dbd9f",
+          "locator": "row:932315475/columns:forretningsadresse.*",
+          "claim_span": "10-12,2026-10-10,,joseph@rydingmaskin.no,,906 42 585,,,,,,,,Preståsvegen 37,NANNESTAD,2030,NANNESTAD,3238,Norge,NO,2100,Private aksjeselskaper mv.,2025,2023-10-30,2023-09-28,true,2023-11-06,2023-11-06,,,false,,true,2023-10-30,false,false,,false,,false,,false,,,,,,,Bokmål,2023-09-28,Maskinentreprenør"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.916277Z",
+          "content_sha256": "1a87671126734c83a1f3e72403afcab737729966097e4f4134569dea719dbd9f",
+          "locator": "row:932315475/column:epostadresse",
+          "claim_span": "skap,43.120,Grunnarbeid,,,,,,,true,9,2026-10-12,2026-10-10,,joseph@rydingmaskin.no,,906 42 585,,,,,,,,Preståsvegen 37,NANNESTAD,2030,NANNESTAD,3238,Norge,NO,2100,Private aksjeselskaper mv.,2025,2023-10-30,2023-09-28,true,2023-11-06,2023-11-06,,,false,,true,2023-10-30,false,false,,false,,false,,false"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.916277Z",
+          "content_sha256": "1a87671126734c83a1f3e72403afcab737729966097e4f4134569dea719dbd9f",
+          "locator": "row:932315475/column:mobil",
+          "claim_span": ",,,,,,true,9,2026-10-12,2026-10-10,,joseph@rydingmaskin.no,,906 42 585,,,,,,,,Preståsvegen 37,NANNESTAD,2030,NANNESTAD,3238,Norge,NO,2100,Private aksjeselskaper mv.,2025,2023-10-30,2023-09-28,true,2023-11-06,2023-11-06,,,false,,true,2023-10-30,false,false,,false,,false,,false,,,,,,,Bokmål,2023-09-28"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.916277Z",
+          "content_sha256": "1a87671126734c83a1f3e72403afcab737729966097e4f4134569dea719dbd9f",
+          "locator": "row:932315475/columns:forretningsadresse.*",
+          "claim_span": "10-12,2026-10-10,,joseph@rydingmaskin.no,,906 42 585,,,,,,,,Preståsvegen 37,NANNESTAD,2030,NANNESTAD,3238,Norge,NO,2100,Private aksjeselskaper mv.,2025,2023-10-30,2023-09-28,true,2023-11-06,2023-11-06,,,false,,true,2023-10-30,false,false,,false,,false,,false,,,,,,,Bokmål,2023-09-28,Maskinentreprenør"
+        }
+      ]
+    },
+    {
+      "organisation_number": "933923681",
+      "company": "UTETJENESTER AS",
+      "kind": "website",
+      "url": "https://utetjenester.no",
+      "proof_tier": "publisher_name_rare_contact",
+      "candidate_origin": "legal_name_slug",
+      "ledger_verdict": "doubtful",
+      "category": "doubtful",
+      "reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://utetjenester.no/",
+          "retrieved_at": "2026-11-18T06:25:15.834632Z",
+          "content_sha256": "7cf6cc99c3d7a5a2c155443a70ee7e6eec17ccebefd3f660b1ed6b926e598db0",
+          "locator": "identity-proof:933923681",
+          "claim_span": "></script><title>Utetjenester i Sørum | Utetjenester AS</title><meta name=\"description\" content=\"Vi utfører graving, transport og vedlikehold av uteområder på Romerike, med hovedtyngden av faste kunder på Sørumsand. Ta kontakt i dag!\"><meta property=\"og:type\" content=\"website\"><meta property=\"og:tit"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.945551Z",
+          "content_sha256": "c72a384791d8585f12b7472c34f9dda1cf424f240c1da023e9c00b14855ffc8a",
+          "locator": "row:933923681/column:navn",
+          "claim_span": "933923681,UTETJENESTER AS,AS,Aksjeselskap,43.120,Grunnarbeid,,,,,,,true,,2026-11-12,2026-11-10,,oleorderud@gmail.com,,482 11 460,,,,,,,,Borgenveien 201,SØRUM,1923,LILLESTRØM,3205,Norge,NO,2100,Private aksjeselskaper mv.,2025,2024-08-15,2024-08-07,true,2024-11-18,2024-11-18,,,false,,true,2024-08-15,f"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.945551Z",
+          "content_sha256": "c72a384791d8585f12b7472c34f9dda1cf424f240c1da023e9c00b14855ffc8a",
+          "locator": "row:933923681/column:hjemmeside",
+          "claim_span": "reringsdatoantallansatteNAVAaregisteret,hjemmeside,epostadresse,telefon,mobil,postadresse.adresse,postadresse.poststed,postadresse.postnummer,postadresse.kommune,postadresse.kommunenummer,postadresse.land,postadresse.landkode,forretningsadresse.adresse,forretningsadresse.poststed,forretningsadresse."
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.945551Z",
+          "content_sha256": "c72a384791d8585f12b7472c34f9dda1cf424f240c1da023e9c00b14855ffc8a",
+          "locator": "row:933923681/columns:forretningsadresse.*",
+          "claim_span": "6-11-12,2026-11-10,,oleorderud@gmail.com,,482 11 460,,,,,,,,Borgenveien 201,SØRUM,1923,LILLESTRØM,3205,Norge,NO,2100,Private aksjeselskaper mv.,2025,2024-08-15,2024-08-07,true,2024-11-18,2024-11-18,,,false,,true,2024-08-15,false,false,,false,,false,,false,,,,,,,Bokmål,2024-08-07,Entreprenør tjeneste"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.945551Z",
+          "content_sha256": "c72a384791d8585f12b7472c34f9dda1cf424f240c1da023e9c00b14855ffc8a",
+          "locator": "row:933923681/column:epostadresse",
+          "claim_span": "lskap,43.120,Grunnarbeid,,,,,,,true,,2026-11-12,2026-11-10,,oleorderud@gmail.com,,482 11 460,,,,,,,,Borgenveien 201,SØRUM,1923,LILLESTRØM,3205,Norge,NO,2100,Private aksjeselskaper mv.,2025,2024-08-15,2024-08-07,true,2024-11-18,2024-11-18,,,false,,true,2024-08-15,false,false,,false,,false,,false,,,,,"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.945551Z",
+          "content_sha256": "c72a384791d8585f12b7472c34f9dda1cf424f240c1da023e9c00b14855ffc8a",
+          "locator": "row:933923681/column:mobil",
+          "claim_span": "id,,,,,,,true,,2026-11-12,2026-11-10,,oleorderud@gmail.com,,482 11 460,,,,,,,,Borgenveien 201,SØRUM,1923,LILLESTRØM,3205,Norge,NO,2100,Private aksjeselskaper mv.,2025,2024-08-15,2024-08-07,true,2024-11-18,2024-11-18,,,false,,true,2024-08-15,false,false,,false,,false,,false,,,,,,,Bokmål,2024-08-07,En"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.945551Z",
+          "content_sha256": "c72a384791d8585f12b7472c34f9dda1cf424f240c1da023e9c00b14855ffc8a",
+          "locator": "row:933923681/columns:forretningsadresse.*",
+          "claim_span": "6-11-12,2026-11-10,,oleorderud@gmail.com,,482 11 460,,,,,,,,Borgenveien 201,SØRUM,1923,LILLESTRØM,3205,Norge,NO,2100,Private aksjeselskaper mv.,2025,2024-08-15,2024-08-07,true,2024-11-18,2024-11-18,,,false,,true,2024-08-15,false,false,,false,,false,,false,,,,,,,Bokmål,2024-08-07,Entreprenør tjeneste"
+        }
+      ]
+    },
+    {
+      "organisation_number": "938024855",
+      "company": "GRUA AUTO AS",
+      "kind": "website",
+      "url": "https://grua-auto.no",
+      "proof_tier": "signals",
+      "candidate_origin": "registry_website",
+      "ledger_verdict": "doubtful",
+      "category": "doubtful",
+      "reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://grua-auto.no/",
+          "retrieved_at": "2026-11-18T06:28:27.553812Z",
+          "content_sha256": "a6fa908922090a82312ac18caab8890a50601c85dfb2ce7189a181eb5e16cadd",
+          "locator": "identity-proof:938024855",
+          "claim_span": "CA3JyGw0hUJppjdQsqxtIF8oCecWkQQ\"><title>Grua Auto</title><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><link rel=\"preconnect\" href=\"https://dgpb.no\"><meta name=\"description\" content=\"Grua Auto AS har hatt en god utvikling siden selskapet ble etablert i 1984. To år på rad har "
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.001960Z",
+          "content_sha256": "d47818f81239213a3421a92c63baf679dd2bee6010d459b38e41c2bcfeca5a90",
+          "locator": "row:938024855/column:telefon",
+          "claim_span": "ogner,,,,,,,true,12,2026-11-12,2026-11-10,www.grua-auto.no,,61 32 49 00,,,,,,,,,Hadelandsvegen 1469,GRUA,2742,LUNNER,3234,Norge,NO,2100,Private aksjeselskaper mv.,2025,1995-02-19,1990-01-02,true,1990-01-01,1995-02-19,,,false,,true,1990-07-11,false,false,,false,,false,,false,,,,,,,Bokmål,2009-07-22,\""
+        },
+        {
+          "source_url": "https://grua-auto.no/",
+          "retrieved_at": "2026-11-18T06:28:27.553812Z",
+          "content_sha256": "a6fa908922090a82312ac18caab8890a50601c85dfb2ce7189a181eb5e16cadd",
+          "locator": "registry-contact:phone",
+          "claim_span": "<a href=\"tel:61324900\">"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.001960Z",
+          "content_sha256": "d47818f81239213a3421a92c63baf679dd2bee6010d459b38e41c2bcfeca5a90",
+          "locator": "row:938024855/column:navn",
+          "claim_span": "938024855,GRUA AUTO AS,AS,Aksjeselskap,47.810,Detaljhandel med motorvogner,,,,,,,true,12,2026-11-12,2026-11-10,www.grua-auto.no,,61 32 49 00,,,,,,,,,Hadelandsvegen 1469,GRUA,2742,LUNNER,3234,Norge,NO,2100,Private aksjeselskaper mv.,2025,1995-02-19,1990-01-02,true,1990-01-01,1995-02-19,,,false,,true,"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.001960Z",
+          "content_sha256": "d47818f81239213a3421a92c63baf679dd2bee6010d459b38e41c2bcfeca5a90",
+          "locator": "row:938024855/column:hjemmeside",
+          "claim_span": "jhandel med motorvogner,,,,,,,true,12,2026-11-12,2026-11-10,www.grua-auto.no,,61 32 49 00,,,,,,,,,Hadelandsvegen 1469,GRUA,2742,LUNNER,3234,Norge,NO,2100,Private aksjeselskaper mv.,2025,1995-02-19,1990-01-02,true,1990-01-01,1995-02-19,,,false,,true,1990-07-11,false,false,,false,,false,,false,,,,,,,B"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.001960Z",
+          "content_sha256": "d47818f81239213a3421a92c63baf679dd2bee6010d459b38e41c2bcfeca5a90",
+          "locator": "row:938024855/columns:forretningsadresse.*",
+          "claim_span": "2026-11-12,2026-11-10,www.grua-auto.no,,61 32 49 00,,,,,,,,,Hadelandsvegen 1469,GRUA,2742,LUNNER,3234,Norge,NO,2100,Private aksjeselskaper mv.,2025,1995-02-19,1990-01-02,true,1990-01-01,1995-02-19,,,false,,true,1990-07-11,false,false,,false,,false,,false,,,,,,,Bokmål,2009-07-22,\"Handels og tjenestey"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.001960Z",
+          "content_sha256": "d47818f81239213a3421a92c63baf679dd2bee6010d459b38e41c2bcfeca5a90",
+          "locator": "row:938024855/column:telefon",
+          "claim_span": "ogner,,,,,,,true,12,2026-11-12,2026-11-10,www.grua-auto.no,,61 32 49 00,,,,,,,,,Hadelandsvegen 1469,GRUA,2742,LUNNER,3234,Norge,NO,2100,Private aksjeselskaper mv.,2025,1995-02-19,1990-01-02,true,1990-01-01,1995-02-19,,,false,,true,1990-07-11,false,false,,false,,false,,false,,,,,,,Bokmål,2009-07-22,\""
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.001960Z",
+          "content_sha256": "d47818f81239213a3421a92c63baf679dd2bee6010d459b38e41c2bcfeca5a90",
+          "locator": "row:938024855/columns:forretningsadresse.*",
+          "claim_span": "2026-11-12,2026-11-10,www.grua-auto.no,,61 32 49 00,,,,,,,,,Hadelandsvegen 1469,GRUA,2742,LUNNER,3234,Norge,NO,2100,Private aksjeselskaper mv.,2025,1995-02-19,1990-01-02,true,1990-01-01,1995-02-19,,,false,,true,1990-07-11,false,false,,false,,false,,false,,,,,,,Bokmål,2009-07-22,\"Handels og tjenestey"
+        }
+      ]
+    },
+    {
+      "organisation_number": "951035475",
+      "company": "BYHAVEN AS",
+      "kind": "website",
+      "url": "https://byhaven.no",
+      "proof_tier": "orgnr_on_page",
+      "candidate_origin": "legal_name_slug",
+      "ledger_verdict": "doubtful",
+      "category": "doubtful",
+      "reasons": [
+        "Other valid Norwegian identifiers in owner text: 821647932",
+        "Group/multi-company site context needs hand review"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://byhaven.no/personvern/",
+          "retrieved_at": "2026-11-18T06:28:32.558144Z",
+          "content_sha256": "bd7d8650ccde9a40c9307d2aa4b5613c34f1ea009adceeda707a38ce4fa37bf3",
+          "locator": "identity-proof:951035475",
+          "claim_span": "\n\n<p class=\"wp-block-paragraph\">Org.nr.&nbsp;951 035 475</p>\n\n\n\n<p class=\"wp-block-paragraph\"><em>Databehandler:</em></p>\n\n\n\n<p class=\"wp-block-paragr"
+        }
+      ]
+    },
+    {
+      "organisation_number": "982257484",
+      "company": "KVALITETSRENHOLD AS",
+      "kind": "website",
+      "url": "https://kvalitetsrenhold.no",
+      "proof_tier": "signals",
+      "candidate_origin": "registry_website",
+      "ledger_verdict": "doubtful",
+      "category": "doubtful",
+      "reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://kvalitetsrenhold.no/",
+          "retrieved_at": "2026-11-18T06:28:34.316967Z",
+          "content_sha256": "7fecc9eb606427ab41fc31b01947a01a0bcca8a80564951a149b9890df66a8a4",
+          "locator": "identity-proof:982257484",
+          "claim_span": "nt.documentElement)</script>\n    <title>kvalitetsrenhold</title>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, minimum-scale=1.0\">\n    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n\n    <!-- CMS code -->\n    \n\n\n        <link rel=\"icon\" href=\"https://"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.065880Z",
+          "content_sha256": "94d7d8fd155d054add57d54186c94a7a20433c6ac0a76e5bf8df5801649e1936",
+          "locator": "row:982257484/column:telefon",
+          "claim_span": "2026-09-10,www.kvalitetsrenhold.no,brit@kvalitetsrenhold.no,73 10 81 73,92699988,,,,,,,,Skillingsvegen 25B,TANEM,7549,TRONDHEIM,5001,Norge,NO,2100,Private aksjeselskaper mv.,2025,2000-08-16,2000-07-01,true,2000-11-01,2001-02-21,,,false,,true,2000-08-16,false,false,,false,,false,,false,,,,,,,Bokmål,2"
+        },
+        {
+          "source_url": "https://kvalitetsrenhold.no/",
+          "retrieved_at": "2026-11-18T06:28:34.316967Z",
+          "content_sha256": "7fecc9eb606427ab41fc31b01947a01a0bcca8a80564951a149b9890df66a8a4",
+          "locator": "registry-contact:phone",
+          "claim_span": "<a href=\"tel:73108173\">"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.065880Z",
+          "content_sha256": "94d7d8fd155d054add57d54186c94a7a20433c6ac0a76e5bf8df5801649e1936",
+          "locator": "row:982257484/column:epostadresse",
+          "claim_span": ",,,,,,,true,6,2026-09-14,2026-09-10,www.kvalitetsrenhold.no,brit@kvalitetsrenhold.no,73 10 81 73,92699988,,,,,,,,Skillingsvegen 25B,TANEM,7549,TRONDHEIM,5001,Norge,NO,2100,Private aksjeselskaper mv.,2025,2000-08-16,2000-07-01,true,2000-11-01,2001-02-21,,,false,,true,2000-08-16,false,false,,false,,fa"
+        },
+        {
+          "source_url": "https://kvalitetsrenhold.no/",
+          "retrieved_at": "2026-11-18T06:28:34.316967Z",
+          "content_sha256": "7fecc9eb606427ab41fc31b01947a01a0bcca8a80564951a149b9890df66a8a4",
+          "locator": "registry-contact:email_domain",
+          "claim_span": "<a href=\"mailto:post@kvalitetsrenhold.no\">"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.065880Z",
+          "content_sha256": "94d7d8fd155d054add57d54186c94a7a20433c6ac0a76e5bf8df5801649e1936",
+          "locator": "row:982257484/column:navn",
+          "claim_span": "982257484,KVALITETSRENHOLD AS,AS,Aksjeselskap,81.210,Rengjøring av bygninger,,,,,,,true,6,2026-09-14,2026-09-10,www.kvalitetsrenhold.no,brit@kvalitetsrenhold.no,73 10 81 73,92699988,,,,,,,,Skillingsvegen 25B,TANEM,7549,TRONDHEIM,5001,Norge,NO,2100,Private aksjeselskaper mv.,2025,2000-08-16,2000-07-0"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.065880Z",
+          "content_sha256": "94d7d8fd155d054add57d54186c94a7a20433c6ac0a76e5bf8df5801649e1936",
+          "locator": "row:982257484/column:hjemmeside",
+          "claim_span": ",Rengjøring av bygninger,,,,,,,true,6,2026-09-14,2026-09-10,www.kvalitetsrenhold.no,brit@kvalitetsrenhold.no,73 10 81 73,92699988,,,,,,,,Skillingsvegen 25B,TANEM,7549,TRONDHEIM,5001,Norge,NO,2100,Private aksjeselskaper mv.,2025,2000-08-16,2000-07-01,true,2000-11-01,2001-02-21,,,false,,true,2000-08-1"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.065880Z",
+          "content_sha256": "94d7d8fd155d054add57d54186c94a7a20433c6ac0a76e5bf8df5801649e1936",
+          "locator": "row:982257484/columns:forretningsadresse.*",
+          "claim_span": "old.no,brit@kvalitetsrenhold.no,73 10 81 73,92699988,,,,,,,,Skillingsvegen 25B,TANEM,7549,TRONDHEIM,5001,Norge,NO,2100,Private aksjeselskaper mv.,2025,2000-08-16,2000-07-01,true,2000-11-01,2001-02-21,,,false,,true,2000-08-16,false,false,,false,,false,,false,,,,,,,Bokmål,2016-06-01,Salg av renholdstj"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.065880Z",
+          "content_sha256": "94d7d8fd155d054add57d54186c94a7a20433c6ac0a76e5bf8df5801649e1936",
+          "locator": "row:982257484/column:epostadresse",
+          "claim_span": ",,,,,,,true,6,2026-09-14,2026-09-10,www.kvalitetsrenhold.no,brit@kvalitetsrenhold.no,73 10 81 73,92699988,,,,,,,,Skillingsvegen 25B,TANEM,7549,TRONDHEIM,5001,Norge,NO,2100,Private aksjeselskaper mv.,2025,2000-08-16,2000-07-01,true,2000-11-01,2001-02-21,,,false,,true,2000-08-16,false,false,,false,,fa"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.065880Z",
+          "content_sha256": "94d7d8fd155d054add57d54186c94a7a20433c6ac0a76e5bf8df5801649e1936",
+          "locator": "row:982257484/column:telefon",
+          "claim_span": "2026-09-10,www.kvalitetsrenhold.no,brit@kvalitetsrenhold.no,73 10 81 73,92699988,,,,,,,,Skillingsvegen 25B,TANEM,7549,TRONDHEIM,5001,Norge,NO,2100,Private aksjeselskaper mv.,2025,2000-08-16,2000-07-01,true,2000-11-01,2001-02-21,,,false,,true,2000-08-16,false,false,,false,,false,,false,,,,,,,Bokmål,2"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.065880Z",
+          "content_sha256": "94d7d8fd155d054add57d54186c94a7a20433c6ac0a76e5bf8df5801649e1936",
+          "locator": "row:982257484/column:mobil",
+          "claim_span": "ww.kvalitetsrenhold.no,brit@kvalitetsrenhold.no,73 10 81 73,92699988,,,,,,,,Skillingsvegen 25B,TANEM,7549,TRONDHEIM,5001,Norge,NO,2100,Private aksjeselskaper mv.,2025,2000-08-16,2000-07-01,true,2000-11-01,2001-02-21,,,false,,true,2000-08-16,false,false,,false,,false,,false,,,,,,,Bokmål,2016-06-01,Sa"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.065880Z",
+          "content_sha256": "94d7d8fd155d054add57d54186c94a7a20433c6ac0a76e5bf8df5801649e1936",
+          "locator": "row:982257484/columns:forretningsadresse.*",
+          "claim_span": "old.no,brit@kvalitetsrenhold.no,73 10 81 73,92699988,,,,,,,,Skillingsvegen 25B,TANEM,7549,TRONDHEIM,5001,Norge,NO,2100,Private aksjeselskaper mv.,2025,2000-08-16,2000-07-01,true,2000-11-01,2001-02-21,,,false,,true,2000-08-16,false,false,,false,,false,,false,,,,,,,Bokmål,2016-06-01,Salg av renholdstj"
+        }
+      ]
+    },
+    {
+      "organisation_number": "982506379",
+      "company": "HOLTE CONSULTING AS",
+      "kind": "website",
+      "url": "https://holteconsulting.no",
+      "proof_tier": "jsonld_vatid",
+      "candidate_origin": "legal_name_slug",
+      "ledger_verdict": "doubtful",
+      "category": "doubtful",
+      "reasons": [
+        "Group/multi-company site context needs hand review"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://holteconsulting.no/",
+          "retrieved_at": "2026-11-18T06:26:50.585764Z",
+          "content_sha256": "1d133bdfac5cc5edba95bec51c98eba7ab138753e9cd1faf436e81f0fe929389",
+          "locator": "identity-proof:982506379",
+          "claim_span": "5, 255, 255, 0.85)\" class=\"framer-text\">982 506 379</p></div></div><div class=\"framer-1dxtk10\"><div class=\"framer-1xm4wji\" data-framer-component-type="
+        }
+      ]
+    },
+    {
+      "organisation_number": "995222205",
+      "company": "FRUIT DISTRIBUTION AS",
+      "kind": "website",
+      "url": "https://fruit.se",
+      "proof_tier": "registry_declared_live",
+      "candidate_origin": "registry_website",
+      "ledger_verdict": "doubtful",
+      "category": "doubtful",
+      "reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://fruit.se/",
+          "retrieved_at": "2026-11-18T06:28:06.810581Z",
+          "content_sha256": "fc18a9efc6ee22ee468ea463f4979a328a9f709dacb0cd2a45c9bb72a9e3120b",
+          "locator": "identity-proof:995222205",
+          "claim_span": "arer för reklam &amp; promotion &ndash; Fruit Distribution\n\t</title>\n\n\t\n\t<meta name=\"description\" content=\"Säljer, förädlar &amp; distribuerar internationellt välkända varumärken till profil- &amp; reklammarknad i Norden. Stort lager, snabb leverans, in-house förädling &amp; service utöver det vanli"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.163602Z",
+          "content_sha256": "704d136d5f0117b205dab5dcc0e93636af22b92aef12241350626438c4a463de",
+          "locator": "row:995222205/column:epostadresse",
+          "claim_span": "ap,73.110,Reklamebyråvirksomhet,,,,,,,false,,,,www.fruit.se,customer.service@fruit.se,,,\"c/o Fruit Distribution AB\nTredenborgsvägen 16\",SE-29 435 SØLVESBORG,,,,Sverige,SE,\"c/o Value Fredrikstad AS\nKråkerøyveien 9\",KRÅKERØY,1671,FREDRIKSTAD,3107,Norge,NO,2100,Private aksjeselskaper mv.,2025,2010-02-2"
+        },
+        {
+          "source_url": "https://fruit.se/",
+          "retrieved_at": "2026-11-18T06:28:06.810581Z",
+          "content_sha256": "fc18a9efc6ee22ee468ea463f4979a328a9f709dacb0cd2a45c9bb72a9e3120b",
+          "locator": "registry-contact:email_domain",
+          "claim_span": "<a href=\"mailto:info@fruit.se\">"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.163602Z",
+          "content_sha256": "704d136d5f0117b205dab5dcc0e93636af22b92aef12241350626438c4a463de",
+          "locator": "row:995222205/column:navn",
+          "claim_span": "995222205,FRUIT DISTRIBUTION AS,AS,Aksjeselskap,73.110,Reklamebyråvirksomhet,,,,,,,false,,,,www.fruit.se,customer.service@fruit.se,,,\"c/o Fruit Distribution AB\nTredenborgsvägen 16\",SE-29 435 SØLVESBORG,,,,Sverige,SE,\"c/o Value Fredrikstad AS\nKråkerøyveien 9\",KRÅKERØY,1671,FREDRIKSTAD,3107,Norge,NO,2"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.163602Z",
+          "content_sha256": "704d136d5f0117b205dab5dcc0e93636af22b92aef12241350626438c4a463de",
+          "locator": "row:995222205/column:hjemmeside",
+          "claim_span": "AS,Aksjeselskap,73.110,Reklamebyråvirksomhet,,,,,,,false,,,,www.fruit.se,customer.service@fruit.se,,,\"c/o Fruit Distribution AB\nTredenborgsvägen 16\",SE-29 435 SØLVESBORG,,,,Sverige,SE,\"c/o Value Fredrikstad AS\nKråkerøyveien 9\",KRÅKERØY,1671,FREDRIKSTAD,3107,Norge,NO,2100,Private aksjeselskaper mv.,2"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.163602Z",
+          "content_sha256": "704d136d5f0117b205dab5dcc0e93636af22b92aef12241350626438c4a463de",
+          "locator": "row:995222205/columns:forretningsadresse.*",
+          "claim_span": "AB\nTredenborgsvägen 16\",SE-29 435 SØLVESBORG,,,,Sverige,SE,\"c/o Value Fredrikstad AS\nKråkerøyveien 9\",KRÅKERØY,1671,FREDRIKSTAD,3107,Norge,NO,2100,Private aksjeselskaper mv.,2025,2010-02-25,2010-01-22,true,2010-05-01,2010-05-22,,,false,,true,2010-02-25,false,false,,false,,false,,false,,,,,,,Bokmål,2"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.163602Z",
+          "content_sha256": "704d136d5f0117b205dab5dcc0e93636af22b92aef12241350626438c4a463de",
+          "locator": "row:995222205/column:epostadresse",
+          "claim_span": "ap,73.110,Reklamebyråvirksomhet,,,,,,,false,,,,www.fruit.se,customer.service@fruit.se,,,\"c/o Fruit Distribution AB\nTredenborgsvägen 16\",SE-29 435 SØLVESBORG,,,,Sverige,SE,\"c/o Value Fredrikstad AS\nKråkerøyveien 9\",KRÅKERØY,1671,FREDRIKSTAD,3107,Norge,NO,2100,Private aksjeselskaper mv.,2025,2010-02-2"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.163602Z",
+          "content_sha256": "704d136d5f0117b205dab5dcc0e93636af22b92aef12241350626438c4a463de",
+          "locator": "row:995222205/columns:forretningsadresse.*",
+          "claim_span": "AB\nTredenborgsvägen 16\",SE-29 435 SØLVESBORG,,,,Sverige,SE,\"c/o Value Fredrikstad AS\nKråkerøyveien 9\",KRÅKERØY,1671,FREDRIKSTAD,3107,Norge,NO,2100,Private aksjeselskaper mv.,2025,2010-02-25,2010-01-22,true,2010-05-01,2010-05-22,,,false,,true,2010-02-25,false,false,,false,,false,,false,,,,,,,Bokmål,2"
+        }
+      ]
+    },
+    {
+      "organisation_number": "998201144",
+      "company": "FULL BYGG AS",
+      "kind": "website",
+      "url": "https://www.fullbygg.no",
+      "proof_tier": "publisher_name_rare_contact",
+      "candidate_origin": "legal_name_slug",
+      "ledger_verdict": "doubtful",
+      "category": "doubtful",
+      "reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://www.fullbygg.no/",
+          "retrieved_at": "2026-11-18T06:27:01.739238Z",
+          "content_sha256": "8a5b27c3bd2335f408086e3ab8edffca88c1b00ec88cd92a4d3f124eba098c51",
+          "locator": "identity-proof:998201144",
+          "claim_span": "a333.chunk.min.css.map*/</style>\n<title>Full Bygg AS - Byggefirma i Hønefoss og Viken</title>\n  <meta name=\"description\" content=\"Full Bygg AS er en Byggefirma i Hønefoss og Viken. Vi tilbyr Nybygg, Tilbygg og påbygg, Rehabilitering, Flislegging og Malearbeid Tjenester.\"/>\n  <link rel=\"canonical\" hr"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.185317Z",
+          "content_sha256": "a19dce362302b6e1c39a79cf6bf5eeb35809d4ffe31d6ed573dbb231f93dd094",
+          "locator": "row:998201144/column:navn",
+          "claim_span": "998201144,FULL BYGG AS,AS,Aksjeselskap,41.000,Oppføring av bygninger,,,,,,,true,11,2026-11-12,2026-11-10,,fullbygg@gmail.com,,46591970,,,,,,,,Hadelandsveien 629,JEVNAKER,3520,RINGERIKE,3305,Norge,NO,2100,Private aksjeselskaper mv.,2025,2012-04-03,2012-03-22,true,2012-03-01,2012-06-20,,,false,,true,2"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.185317Z",
+          "content_sha256": "a19dce362302b6e1c39a79cf6bf5eeb35809d4ffe31d6ed573dbb231f93dd094",
+          "locator": "row:998201144/column:hjemmeside",
+          "claim_span": "reringsdatoantallansatteNAVAaregisteret,hjemmeside,epostadresse,telefon,mobil,postadresse.adresse,postadresse.poststed,postadresse.postnummer,postadresse.kommune,postadresse.kommunenummer,postadresse.land,postadresse.landkode,forretningsadresse.adresse,forretningsadresse.poststed,forretningsadresse."
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.185317Z",
+          "content_sha256": "a19dce362302b6e1c39a79cf6bf5eeb35809d4ffe31d6ed573dbb231f93dd094",
+          "locator": "row:998201144/columns:forretningsadresse.*",
+          "claim_span": ",2026-11-12,2026-11-10,,fullbygg@gmail.com,,46591970,,,,,,,,Hadelandsveien 629,JEVNAKER,3520,RINGERIKE,3305,Norge,NO,2100,Private aksjeselskaper mv.,2025,2012-04-03,2012-03-22,true,2012-03-01,2012-06-20,,,false,,true,2012-04-03,false,false,,false,,false,,false,,,,,,,Bokmål,2024-02-26,\"Byggtjenester "
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.185317Z",
+          "content_sha256": "a19dce362302b6e1c39a79cf6bf5eeb35809d4ffe31d6ed573dbb231f93dd094",
+          "locator": "row:998201144/column:epostadresse",
+          "claim_span": "Oppføring av bygninger,,,,,,,true,11,2026-11-12,2026-11-10,,fullbygg@gmail.com,,46591970,,,,,,,,Hadelandsveien 629,JEVNAKER,3520,RINGERIKE,3305,Norge,NO,2100,Private aksjeselskaper mv.,2025,2012-04-03,2012-03-22,true,2012-03-01,2012-06-20,,,false,,true,2012-04-03,false,false,,false,,false,,false,,,,"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.185317Z",
+          "content_sha256": "a19dce362302b6e1c39a79cf6bf5eeb35809d4ffe31d6ed573dbb231f93dd094",
+          "locator": "row:998201144/column:mobil",
+          "claim_span": "er,,,,,,,true,11,2026-11-12,2026-11-10,,fullbygg@gmail.com,,46591970,,,,,,,,Hadelandsveien 629,JEVNAKER,3520,RINGERIKE,3305,Norge,NO,2100,Private aksjeselskaper mv.,2025,2012-04-03,2012-03-22,true,2012-03-01,2012-06-20,,,false,,true,2012-04-03,false,false,,false,,false,,false,,,,,,,Bokmål,2024-02-26"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.185317Z",
+          "content_sha256": "a19dce362302b6e1c39a79cf6bf5eeb35809d4ffe31d6ed573dbb231f93dd094",
+          "locator": "row:998201144/columns:forretningsadresse.*",
+          "claim_span": ",2026-11-12,2026-11-10,,fullbygg@gmail.com,,46591970,,,,,,,,Hadelandsveien 629,JEVNAKER,3520,RINGERIKE,3305,Norge,NO,2100,Private aksjeselskaper mv.,2025,2012-04-03,2012-03-22,true,2012-03-01,2012-06-20,,,false,,true,2012-04-03,false,false,,false,,false,,false,,,,,,,Bokmål,2024-02-26,\"Byggtjenester "
+        }
+      ]
+    },
+    {
+      "organisation_number": "924755725",
+      "company": "TECH INSIGHTS AS",
+      "kind": "social",
+      "url": "https://linkedin.com/company/tech-insights-as",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "candidate_origin": null,
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://tech-insights.no/",
+          "retrieved_at": "2026-11-18T06:29:04.276199Z",
+          "content_sha256": "e632c8914ebccd2de6ede7668053ac405fec952d23b415c0164c90e13527aab6",
+          "locator": "company-link:https://linkedin.com/company/tech-insights-as",
+          "claim_span": "<a aria-label=\"Go to Linked\" target=\"_blank\" href=\"https://linkedin.com/company/tech-insights-as\">"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.794167Z",
+          "content_sha256": "2a8c97cf79c469feef0d0bf9aab7d75897f9736a3d1f685b7c0d0d63ad88dc40",
+          "locator": "row:924755725/column:navn",
+          "claim_span": "924755725,TECH INSIGHTS AS,AS,Aksjeselskap,46.900,Uspesifisert engroshandel,,,,,,,true,,2026-05-11,2026-05-10,,,,,,,,,,,,\"c/o Felix Breitschädel\nEkornrudveien 38C\",KOLBOTN,1410,NORDRE FOLLO,3207,Norge,NO,2100,Private aksjeselskaper mv.,2025,2020-03-13,2020-02-28,true,2020-11-01,2021-01-30,,,false,,t"
+        },
+        {
+          "source_url": "https://tech-insights.no/",
+          "retrieved_at": "2026-11-18T06:29:04.276199Z",
+          "content_sha256": "e632c8914ebccd2de6ede7668053ac405fec952d23b415c0164c90e13527aab6",
+          "locator": "identity-proof:924755725",
+          "claim_span": "size: 1.1rem; letter-spacing: -0.02em;\">924&nbsp;755&nbsp;725 MVA</span></div><!--[if gte mso 9]>\n \n  \n \n<![endif]-->\n\n\n<!--[if gte mso 9]>\n \n  Normal"
+        }
+      ]
+    },
+    {
+      "organisation_number": "925638676",
+      "company": "REPLAN AS",
+      "kind": "social",
+      "url": "https://www.linkedin.com/company/replan-as",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "candidate_origin": null,
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://replan.no/",
+          "retrieved_at": "2026-11-18T06:27:25.388384Z",
+          "content_sha256": "ac73997d762f87a42551f870117d8598422ff14733cb1bb1704b91117b91af93",
+          "locator": "company-link:https://www.linkedin.com/company/replan-as",
+          "claim_span": "<a href=\"https://www.linkedin.com/company/replan-as\" target=\"_blank\" class=\"Footer_lenke_liten e-button-base e-default-a\" data-interaction-id=\"621a8b37\" data-e-type=\"widget\" data-id=\"621a8b37\">"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.801184Z",
+          "content_sha256": "1460081b72f522b632de2a2a95f565be283c31051d9c134021f26c5902e69f32",
+          "locator": "row:925638676/column:navn",
+          "claim_span": "925638676,REPLAN AS,AS,Aksjeselskap,73.110,Reklamebyråvirksomhet,,,,,,,true,,2024-07-13,2024-07-10,replan.no,,,,,,,,,,,Øvre Slottsgate 3,OSLO,0157,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2020-09-16,2020-08-31,true,2021-05-01,2021-05-04,,,false,,true,2020-09-16,false,false,,false,,fal"
+        },
+        {
+          "source_url": "https://replan.no/",
+          "retrieved_at": "2026-11-18T06:27:25.388384Z",
+          "content_sha256": "ac73997d762f87a42551f870117d8598422ff14733cb1bb1704b91117b91af93",
+          "locator": "identity-proof:925638676",
+          "claim_span": "ype=\"widget\" data-id=\"771d530c\">Org.nr. 925 638 676</p>\n\t\t\t\t\t<p class=\"Footer_liten e-paragraph-base e-default-p\" data-interaction-id=\"4af4aa9e\" data-"
+        }
+      ]
+    },
+    {
+      "organisation_number": "925638676",
+      "company": "REPLAN AS",
+      "kind": "social",
+      "url": "https://www.youtube.com/@ReplanAS",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "candidate_origin": null,
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://replan.no/",
+          "retrieved_at": "2026-11-18T06:27:25.388384Z",
+          "content_sha256": "ac73997d762f87a42551f870117d8598422ff14733cb1bb1704b91117b91af93",
+          "locator": "company-link:https://www.youtube.com/@ReplanAS",
+          "claim_span": "<a href=\"https://www.youtube.com/@ReplanAS\" target=\"_blank\" class=\"Footer_lenke_liten e-button-base e-default-a\" data-interaction-id=\"190c98d\" data-e-type=\"widget\" data-id=\"190c98d\">"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.801184Z",
+          "content_sha256": "1460081b72f522b632de2a2a95f565be283c31051d9c134021f26c5902e69f32",
+          "locator": "row:925638676/column:navn",
+          "claim_span": "925638676,REPLAN AS,AS,Aksjeselskap,73.110,Reklamebyråvirksomhet,,,,,,,true,,2024-07-13,2024-07-10,replan.no,,,,,,,,,,,Øvre Slottsgate 3,OSLO,0157,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2020-09-16,2020-08-31,true,2021-05-01,2021-05-04,,,false,,true,2020-09-16,false,false,,false,,fal"
+        },
+        {
+          "source_url": "https://replan.no/",
+          "retrieved_at": "2026-11-18T06:27:25.388384Z",
+          "content_sha256": "ac73997d762f87a42551f870117d8598422ff14733cb1bb1704b91117b91af93",
+          "locator": "identity-proof:925638676",
+          "claim_span": "ype=\"widget\" data-id=\"771d530c\">Org.nr. 925 638 676</p>\n\t\t\t\t\t<p class=\"Footer_liten e-paragraph-base e-default-p\" data-interaction-id=\"4af4aa9e\" data-"
+        }
+      ]
+    },
+    {
+      "organisation_number": "926467123",
+      "company": "DARLIN' PUBLISHING AS",
+      "kind": "social",
+      "url": "https://www.instagram.com/DARLIN.PUBLISHING",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "candidate_origin": null,
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://www.darlinpublishing.no/",
+          "retrieved_at": "2026-11-18T06:26:28.899107Z",
+          "content_sha256": "5cb105cee685e2d868091b1b85b1c5c12548a5b39ecaaa67f60f0683cda02369",
+          "locator": "company-link:https://www.instagram.com/DARLIN.PUBLISHING",
+          "claim_span": "<a target=\"_blank\" href=\"https://www.instagram.com/DARLIN.PUBLISHING\" title=\"Darlin&#39; Publishing  på Instagram\" tabindex=\"-1\">"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.817141Z",
+          "content_sha256": "fd708269b48ba1ba22ce56869fae9e206e68bdd5d22ba36ebed47c23ca23938d",
+          "locator": "row:926467123/column:navn",
+          "claim_span": "926467123,DARLIN' PUBLISHING AS,AS,Aksjeselskap,58.110,Utgivelse av bøker,,,,,,,false,,,,,,,,,,,,,,,Strandgaten 86,BERGEN,5004,BERGEN,4601,Norge,NO,2100,Private aksjeselskaper mv.,2025,2021-01-27,2020-12-29,false,,,,,false,,true,2021-01-27,false,false,,false,,false,,false,,,,,,,Bokmål,2020-12-29,\"Ut"
+        },
+        {
+          "source_url": "https://www.darlinpublishing.no/pages/kjopsvilkar",
+          "retrieved_at": "2026-11-18T06:26:30.145758Z",
+          "content_sha256": "00076c1576059064f41e28cf9a7ae758c0af679c9ff05f2ce38e76d499c817f5",
+          "locator": "identity-proof:926467123",
+          "claim_span": " data-id=\"917881812\" class=\"org-number\">926 467 123.</em> Informasjon og bilder på nettstedet er eid av selskapet og kan ikke kopieres uten tillatelse"
+        }
+      ]
+    },
+    {
+      "organisation_number": "926645234",
+      "company": "HAVREBARNA AS",
+      "kind": "social",
+      "url": "http://instagram.com/havrebarna",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "candidate_origin": null,
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://havrebarna.no/",
+          "retrieved_at": "2026-11-18T06:27:45.335117Z",
+          "content_sha256": "b069353d0d673a556b8b0f410f324308ba1d487dbbf8033405ac4eeda09cbc76",
+          "locator": "company-link:http://instagram.com/havrebarna",
+          "claim_span": "<a href=\"http://instagram.com/havrebarna\" class=\"list-social__link link\">"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.821143Z",
+          "content_sha256": "e97f8a215d00eadc7c4fe6be05f09dafd123e9ee2fbeeb04537f00dfcbd87dc3",
+          "locator": "row:926645234/column:navn",
+          "claim_span": "926645234,HAVREBARNA AS,AS,Aksjeselskap,58.190,\"Utgivelsesvirksomhet ellers, unntatt utgivelse av programvare\",,,,,,,false,,,,www.havrebarna.no,post@havrebarna.no,,928 10 668,,,,,,,,\"c/o Liv Inger Lundseng\nTiller-ringen 58F\",TILLER,7092,TRONDHEIM,5001,Norge,NO,2100,Private aksjeselskaper mv.,2025,20"
+        },
+        {
+          "source_url": "https://havrebarna.no/",
+          "retrieved_at": "2026-11-18T06:27:45.335117Z",
+          "content_sha256": "b069353d0d673a556b8b0f410f324308ba1d487dbbf8033405ac4eeda09cbc76",
+          "locator": "identity-proof:926645234",
+          "claim_span": "t rte\">\n                      <p>Org.nr 926 645 234<br/>Trondheim, Norge</p><p></p><p></p>\n                    </div></div><div\n                class="
+        }
+      ]
+    },
+    {
+      "organisation_number": "926645234",
+      "company": "HAVREBARNA AS",
+      "kind": "social",
+      "url": "https://facebook.com/havrebarna",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "candidate_origin": null,
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://havrebarna.no/",
+          "retrieved_at": "2026-11-18T06:27:45.335117Z",
+          "content_sha256": "b069353d0d673a556b8b0f410f324308ba1d487dbbf8033405ac4eeda09cbc76",
+          "locator": "company-link:https://facebook.com/havrebarna",
+          "claim_span": "<a href=\"https://facebook.com/havrebarna\" class=\"list-social__link link\">"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.821143Z",
+          "content_sha256": "e97f8a215d00eadc7c4fe6be05f09dafd123e9ee2fbeeb04537f00dfcbd87dc3",
+          "locator": "row:926645234/column:navn",
+          "claim_span": "926645234,HAVREBARNA AS,AS,Aksjeselskap,58.190,\"Utgivelsesvirksomhet ellers, unntatt utgivelse av programvare\",,,,,,,false,,,,www.havrebarna.no,post@havrebarna.no,,928 10 668,,,,,,,,\"c/o Liv Inger Lundseng\nTiller-ringen 58F\",TILLER,7092,TRONDHEIM,5001,Norge,NO,2100,Private aksjeselskaper mv.,2025,20"
+        },
+        {
+          "source_url": "https://havrebarna.no/",
+          "retrieved_at": "2026-11-18T06:27:45.335117Z",
+          "content_sha256": "b069353d0d673a556b8b0f410f324308ba1d487dbbf8033405ac4eeda09cbc76",
+          "locator": "identity-proof:926645234",
+          "claim_span": "t rte\">\n                      <p>Org.nr 926 645 234<br/>Trondheim, Norge</p><p></p><p></p>\n                    </div></div><div\n                class="
+        }
+      ]
+    },
+    {
+      "organisation_number": "927309122",
+      "company": "LANDE FUS BARNEHAGE AS",
+      "kind": "social",
+      "url": "https://www.facebook.com/lande.fus.barnehage",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "candidate_origin": null,
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://fus.no/lande",
+          "retrieved_at": "2026-11-18T06:28:35.027216Z",
+          "content_sha256": "c7a8ac59a2b5bbe68282f9b61e900f7c858cf0001848dad9310264bc0cbaec38",
+          "locator": "company-link:https://www.facebook.com/lande.fus.barnehage",
+          "claim_span": "<a href=\"https://www.facebook.com/lande.fus.barnehage/\" target=\"_blank\" class=\"d-none d-sm-block\">"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.837926Z",
+          "content_sha256": "d14117febe8b90771a2aa3b6d9a52afda11ca59b4da1e31946903b183fdd18bb",
+          "locator": "row:927309122/column:navn",
+          "claim_span": "927309122,LANDE FUS BARNEHAGE AS,AS,Aksjeselskap,85.100,Førskoleundervisning og drift av barnehager,,,,,,,true,20,2026-11-12,2026-11-10,,,,,,,,,,,,Bårdsgjerdevegen 8,ØRSKOG,6240,ÅLESUND,1508,Norge,NO,2100,Private aksjeselskaper mv.,2025,2021-10-04,2019-09-24,false,,,,,false,,true,2021-10-04,false,fa"
+        },
+        {
+          "source_url": "https://fus.no/lande",
+          "retrieved_at": "2026-11-18T06:28:35.027216Z",
+          "content_sha256": "c7a8ac59a2b5bbe68282f9b61e900f7c858cf0001848dad9310264bc0cbaec38",
+          "locator": "identity-proof:927309122",
+          "claim_span": "         \n                  Org. nummer 927309122 <br/><br/>\n\n                  Vi er registrert i ELMA-registeret. Dersom dere ikke har mulighet til "
+        }
+      ]
+    },
+    {
+      "organisation_number": "930069353",
+      "company": "BIELKE&YANG AS",
+      "kind": "social",
+      "url": "https://instagram.com/bielkeyang",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "candidate_origin": null,
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://bielkeyang.com/",
+          "retrieved_at": "2026-11-18T06:26:57.877356Z",
+          "content_sha256": "7b3776e4ce20eeeaf659790f54872e47158fe35842aa065dc43a2d37c13968d4",
+          "locator": "company-link:https://instagram.com/bielkeyang",
+          "claim_span": "<a href=\"https://instagram.com/bielkeyang/\" target=\"_blank\">"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.886252Z",
+          "content_sha256": "48047b447eec291f97d33b7643122835e5ab83f1c26ae2db80bf89b4b38a6fa9",
+          "locator": "row:930069353/column:navn",
+          "claim_span": "930069353,BIELKE&YANG AS,AS,Aksjeselskap,74.120,Grafisk design og visuell kommunikasjonsdesign,,,,,,,true,23,2026-11-12,2026-11-10,,,,,,,,,,,,Thorvald Meyers gate 7,OSLO,0555,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2022-10-21,2022-06-30,true,2023-03-01,2023-03-11,Utleier av bygg elle"
+        },
+        {
+          "source_url": "https://bielkeyang.com/",
+          "retrieved_at": "2026-11-18T06:26:57.877356Z",
+          "content_sha256": "7b3776e4ce20eeeaf659790f54872e47158fe35842aa065dc43a2d37c13968d4",
+          "locator": "identity-proof:930069353",
+          "claim_span": "\",\"telephone\":\"+47 934 94 427\",\"vatID\":\"930069353MVA\",\"legalName\":\"Bielke&Yang AS\",\"knowsAbout\":[\"Merkevarebygging\",\"identitetsdesign\",\"merkevarestrat"
+        }
+      ]
+    },
+    {
+      "organisation_number": "930069353",
+      "company": "BIELKE&YANG AS",
+      "kind": "social",
+      "url": "https://www.linkedin.com/company/bielke-&-yang",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "candidate_origin": null,
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://bielkeyang.com/",
+          "retrieved_at": "2026-11-18T06:26:57.877356Z",
+          "content_sha256": "7b3776e4ce20eeeaf659790f54872e47158fe35842aa065dc43a2d37c13968d4",
+          "locator": "company-link:https://www.linkedin.com/company/bielke-&-yang",
+          "claim_span": "<a href=\"https://www.linkedin.com/company/bielke-&amp;-yang/\" target=\"_blank\">"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.886252Z",
+          "content_sha256": "48047b447eec291f97d33b7643122835e5ab83f1c26ae2db80bf89b4b38a6fa9",
+          "locator": "row:930069353/column:navn",
+          "claim_span": "930069353,BIELKE&YANG AS,AS,Aksjeselskap,74.120,Grafisk design og visuell kommunikasjonsdesign,,,,,,,true,23,2026-11-12,2026-11-10,,,,,,,,,,,,Thorvald Meyers gate 7,OSLO,0555,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2022-10-21,2022-06-30,true,2023-03-01,2023-03-11,Utleier av bygg elle"
+        },
+        {
+          "source_url": "https://bielkeyang.com/",
+          "retrieved_at": "2026-11-18T06:26:57.877356Z",
+          "content_sha256": "7b3776e4ce20eeeaf659790f54872e47158fe35842aa065dc43a2d37c13968d4",
+          "locator": "identity-proof:930069353",
+          "claim_span": "\",\"telephone\":\"+47 934 94 427\",\"vatID\":\"930069353MVA\",\"legalName\":\"Bielke&Yang AS\",\"knowsAbout\":[\"Merkevarebygging\",\"identitetsdesign\",\"merkevarestrat"
+        }
+      ]
+    },
+    {
+      "organisation_number": "935840635",
+      "company": "SAFETYSEC AS",
+      "kind": "social",
+      "url": "https://linkedin.com/company/safetysec",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "candidate_origin": null,
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://www.safetysec.no/",
+          "retrieved_at": "2026-11-18T06:26:44.645795Z",
+          "content_sha256": "9d01d7ebaed9e1215e982013beacb2adeea014c772fd01e0fb0da52a6e0fbc05",
+          "locator": "company-link:https://linkedin.com/company/safetysec",
+          "claim_span": "<a target=\"_blank\" href=\"https://linkedin.com/company/safetysec\">"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.982818Z",
+          "content_sha256": "8065411669bc8044fd471a1719960b5db77681c7c5e48fd538e052a80eec67ba",
+          "locator": "row:935840635/column:navn",
+          "claim_span": "935840635,SAFETYSEC AS,AS,Aksjeselskap,85.597,Annen undervisning ellers,,,,,,,true,,2026-10-13,2026-10-10,,,,,,,,,,,,Balders vei 21A,ASKIM,1811,INDRE ØSTFOLD,3118,Norge,NO,2100,Private aksjeselskaper mv.,2025,2025-07-11,2025-04-07,false,,,,,false,,true,2025-07-11,false,false,,false,,false,,false,,,,"
+        },
+        {
+          "source_url": "https://www.safetysec.no/",
+          "retrieved_at": "2026-11-18T06:26:44.645795Z",
+          "content_sha256": "9d01d7ebaed9e1215e982013beacb2adeea014c772fd01e0fb0da52a6e0fbc05",
+          "locator": "identity-proof:935840635",
+          "claim_span": "\"><strong>Organisasjonsnummer: </strong>935 840 635</p></div>\n\n\n  \n<style id=\"container-styles\">#block-9bce8b33f5eac8a9401d {\n    \n    --stroke-style:"
+        }
+      ]
+    },
+    {
+      "organisation_number": "935840635",
+      "company": "SAFETYSEC AS",
+      "kind": "social",
+      "url": "https://www.linkedin.com/company/safetysec",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "candidate_origin": null,
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://www.safetysec.no/",
+          "retrieved_at": "2026-11-18T06:26:44.645795Z",
+          "content_sha256": "9d01d7ebaed9e1215e982013beacb2adeea014c772fd01e0fb0da52a6e0fbc05",
+          "locator": "company-link:https://www.linkedin.com/company/safetysec",
+          "claim_span": "<a\n        class=\"sqs-block-image-link js-content-mode-element content-fill\"\n        data-sqsp-image-block-link\n        href=\"https://www.linkedin.com/company/safetysec\"\n        target=\"_blank\"\n      >"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.982818Z",
+          "content_sha256": "8065411669bc8044fd471a1719960b5db77681c7c5e48fd538e052a80eec67ba",
+          "locator": "row:935840635/column:navn",
+          "claim_span": "935840635,SAFETYSEC AS,AS,Aksjeselskap,85.597,Annen undervisning ellers,,,,,,,true,,2026-10-13,2026-10-10,,,,,,,,,,,,Balders vei 21A,ASKIM,1811,INDRE ØSTFOLD,3118,Norge,NO,2100,Private aksjeselskaper mv.,2025,2025-07-11,2025-04-07,false,,,,,false,,true,2025-07-11,false,false,,false,,false,,false,,,,"
+        },
+        {
+          "source_url": "https://www.safetysec.no/",
+          "retrieved_at": "2026-11-18T06:26:44.645795Z",
+          "content_sha256": "9d01d7ebaed9e1215e982013beacb2adeea014c772fd01e0fb0da52a6e0fbc05",
+          "locator": "identity-proof:935840635",
+          "claim_span": "\"><strong>Organisasjonsnummer: </strong>935 840 635</p></div>\n\n\n  \n<style id=\"container-styles\">#block-9bce8b33f5eac8a9401d {\n    \n    --stroke-style:"
+        }
+      ]
+    },
+    {
+      "organisation_number": "976081684",
+      "company": "DAHLE BLIKK AS",
+      "kind": "social",
+      "url": "https://www.instagram.com/dahle_blikk",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "candidate_origin": null,
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://dahleblikk.no/",
+          "retrieved_at": "2026-11-18T06:27:06.838883Z",
+          "content_sha256": "6a0494aab3046026d0c012e584d8ed54b08f1aaf90705bea9bc05ace40b9ea96",
+          "locator": "company-link:https://www.instagram.com/dahle_blikk",
+          "claim_span": "<a href=\"https://www.instagram.com/dahle_blikk/?hl=nb\" class=\"social-menu-link\" target=\"_blank\">"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.040369Z",
+          "content_sha256": "4dbd3092c1fdcf48151b55de7cfb17c17128169a7ec8315966a1de4c0f175799",
+          "locator": "row:976081684/column:navn",
+          "claim_span": "976081684,DAHLE BLIKK AS,AS,Aksjeselskap,43.410,Takarbeid,,,,,,,true,13,2026-03-12,2026-03-10,www.dahleblikk.no,post@dahleblikk.no,72 88 51 00,906 41 014,,,,,,,,Løvåsmyra 6,TILLER,7093,TRONDHEIM,5001,Norge,NO,2100,Private aksjeselskaper mv.,2025,1996-02-12,1996-01-20,true,1996-01-01,1996-03-04,,,fal"
+        },
+        {
+          "source_url": "https://dahleblikk.no/",
+          "retrieved_at": "2026-11-18T06:27:06.838883Z",
+          "content_sha256": "6a0494aab3046026d0c012e584d8ed54b08f1aaf90705bea9bc05ace40b9ea96",
+          "locator": "identity-proof:976081684",
+          "claim_span": "mapost@dahleblikk.no</a></span><span>NO 976 081 684 MVA</span><span>Faktura: <a href=\"mailto:dahleblikk@faktura.poweroffice.net\">dahleblikk@faktura.po"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.040369Z",
+          "content_sha256": "4dbd3092c1fdcf48151b55de7cfb17c17128169a7ec8315966a1de4c0f175799",
+          "locator": "row:976081684/column:telefon",
+          "claim_span": ",2026-03-12,2026-03-10,www.dahleblikk.no,post@dahleblikk.no,72 88 51 00,906 41 014,,,,,,,,Løvåsmyra 6,TILLER,7093,TRONDHEIM,5001,Norge,NO,2100,Private aksjeselskaper mv.,2025,1996-02-12,1996-01-20,true,1996-01-01,1996-03-04,,,false,,true,1996-02-17,false,false,,false,,false,,false,,,,,,,Bokmål,2023-"
+        },
+        {
+          "source_url": "https://dahleblikk.no/",
+          "retrieved_at": "2026-11-18T06:27:06.838883Z",
+          "content_sha256": "6a0494aab3046026d0c012e584d8ed54b08f1aaf90705bea9bc05ace40b9ea96",
+          "locator": "registry-contact:phone",
+          "claim_span": "<a href=\"tel:72885100\">"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.040369Z",
+          "content_sha256": "4dbd3092c1fdcf48151b55de7cfb17c17128169a7ec8315966a1de4c0f175799",
+          "locator": "row:976081684/column:epostadresse",
+          "claim_span": "rbeid,,,,,,,true,13,2026-03-12,2026-03-10,www.dahleblikk.no,post@dahleblikk.no,72 88 51 00,906 41 014,,,,,,,,Løvåsmyra 6,TILLER,7093,TRONDHEIM,5001,Norge,NO,2100,Private aksjeselskaper mv.,2025,1996-02-12,1996-01-20,true,1996-01-01,1996-03-04,,,false,,true,1996-02-17,false,false,,false,,false,,false"
+        },
+        {
+          "source_url": "https://dahleblikk.no/",
+          "retrieved_at": "2026-11-18T06:27:06.838883Z",
+          "content_sha256": "6a0494aab3046026d0c012e584d8ed54b08f1aaf90705bea9bc05ace40b9ea96",
+          "locator": "registry-contact:email_domain",
+          "claim_span": "<a href=\"mailto:firmapost@dahleblikk.no\">"
+        }
+      ]
+    },
+    {
+      "organisation_number": "987100648",
+      "company": "UNIFON AS",
+      "kind": "social",
+      "url": "https://www.linkedin.com/company/28943816",
+      "proof_tier": "own_header_footer_numeric_linkedin_v1",
+      "candidate_origin": null,
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://unifon.no/",
+          "retrieved_at": "2026-11-18T06:27:22.584319Z",
+          "content_sha256": "ec0affdb78268c8ae3ecfef6ce236732237f5496dba2caef2d1b877c516fbfcf",
+          "locator": "company-link:https://www.linkedin.com/company/28943816",
+          "claim_span": "<a class=\"vcv-ui-icon-socialicons vcv-ui-icon-socialicons-linkedin\" href=\"https://www.linkedin.com/company/28943816/\" title=\"Linkedin\" target=\"_blank\">"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.098840Z",
+          "content_sha256": "ca62c95f1da1db25bd68a7d8e930cbe03d6924b6f52643ab42659e40014bfe4b",
+          "locator": "row:987100648/column:navn",
+          "claim_span": "987100648,UNIFON AS,AS,Aksjeselskap,61.100,\"Kabelbasert, satellittbasert og trådløs telekommunikasjon\",62.900,Andre tjenester tilknyttet informasjonsteknologi,,,,,true,94,2026-11-12,2026-11-10,www.unifon.no,,05015,,,,,,,,,Vestre Strandgate 27,KRISTIANSAND S,4611,KRISTIANSAND,4204,Norge,NO,2100,Priva"
+        },
+        {
+          "source_url": "https://unifon.no/",
+          "retrieved_at": "2026-11-18T06:27:22.584319Z",
+          "content_sha256": "ec0affdb78268c8ae3ecfef6ce236732237f5496dba2caef2d1b877c516fbfcf",
+          "locator": "identity-proof:987100648",
+          "claim_span": ",\"email\":\"support@unifon.no\",\"vatID\":\"NO987100648MVA\",\"identifier\":{\"@type\":\"PropertyValue\",\"propertyID\":\"Organisasjonsnummer\",\"value\":\"987100648\"},\"a"
+        }
+      ]
+    },
+    {
+      "organisation_number": "990036705",
+      "company": "MARITIM NORGE AS",
+      "kind": "social",
+      "url": "https://www.facebook.com/maritimnorge",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "candidate_origin": null,
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://maritimnorge.no/",
+          "retrieved_at": "2026-11-18T06:26:10.333232Z",
+          "content_sha256": "6053f7bfa1948fe285791fa1193dbb52ce1b2d7ebdfdaa32df3eea67339fc6e2",
+          "locator": "company-link:https://www.facebook.com/maritimnorge",
+          "claim_span": "<a href=\"https://www.facebook.com/maritimnorge/\">"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.133274Z",
+          "content_sha256": "d4528892b7e69a770d1908ab1a749a73f9c1360613b3f6054310ac00efdc4a6d",
+          "locator": "row:990036705/column:navn",
+          "claim_span": "990036705,MARITIM NORGE AS,AS,Aksjeselskap,09.109,Andre tjenester tilknyttet utvinning av råolje og naturgass,,,,,,,false,,,,,,,92641398,,,,,,,,Solavegen 464,VOLL,4354,KLEPP,1120,Norge,NO,2100,Private aksjeselskaper mv.,2025,2006-07-06,2006-06-08,true,2006-11-01,2007-02-21,,,false,,true,2006-07-06,f"
+        },
+        {
+          "source_url": "https://maritimnorge.no/contact/",
+          "retrieved_at": "2026-11-18T06:26:12.471982Z",
+          "content_sha256": "6de5d55a7b0361f1ed26a9fe8bcb9401a78b2601315c694cf0b934847b56cfe3",
+          "locator": "identity-proof:990036705",
+          "claim_span": "<div class=\"\"></div>\n<div class=\"\">VAT: 990.036.705</div>\t\t\t\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div class=\"elementor-column elementor-col"
+        }
+      ]
+    },
+    {
+      "organisation_number": "991374736",
+      "company": "VEST BETONG AS",
+      "kind": "social",
+      "url": "https://www.facebook.com/vestbetong",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "candidate_origin": null,
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://vestbetong.no/",
+          "retrieved_at": "2026-11-18T06:28:01.176202Z",
+          "content_sha256": "8a4c6ad9adbc499612928fc13d516dc5ae2fd667198a1bcd388956f749ec4c78",
+          "locator": "company-link:https://www.facebook.com/vestbetong",
+          "claim_span": "<a\n              href='https://www.facebook.com/vestbetong'\n              class='icon et_pb_with_border'\n              title='Følg på Facebook'\n               target=\"_blank\">"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.143503Z",
+          "content_sha256": "94f1c74285f94b260c43afad735231fab638ab592cb83fd2cacf7cdc4d0cfa1b",
+          "locator": "row:991374736/column:navn",
+          "claim_span": "991374736,VEST BETONG AS,AS,Aksjeselskap,41.000,Oppføring av bygninger,,,,,,,true,55,2026-11-12,2026-11-10,,,90 08 03 33,,,,,,,,,Gamle Forusveien 10A,STAVANGER,4031,STAVANGER,1103,Norge,NO,2100,Private aksjeselskaper mv.,2025,2007-06-19,2007-03-22,true,2007-07-01,2007-08-15,,,false,,true,2007-06-19,"
+        },
+        {
+          "source_url": "https://vestbetong.no/",
+          "retrieved_at": "2026-11-18T06:28:01.176202Z",
+          "content_sha256": "8a4c6ad9adbc499612928fc13d516dc5ae2fd667198a1bcd388956f749ec4c78",
+          "locator": "identity-proof:991374736",
+          "claim_span": "opyright © Vest Betong AS<br />Org. nr. 991 374 736 MVA<br /><a href=\"https://vestbetong.no/personvernerklaering/\">Personvernerklæring</a></p></div>\n\t"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.143503Z",
+          "content_sha256": "94f1c74285f94b260c43afad735231fab638ab592cb83fd2cacf7cdc4d0cfa1b",
+          "locator": "row:991374736/column:telefon",
+          "claim_span": "ppføring av bygninger,,,,,,,true,55,2026-11-12,2026-11-10,,,90 08 03 33,,,,,,,,,Gamle Forusveien 10A,STAVANGER,4031,STAVANGER,1103,Norge,NO,2100,Private aksjeselskaper mv.,2025,2007-06-19,2007-03-22,true,2007-07-01,2007-08-15,,,false,,true,2007-06-19,false,false,,false,,false,,false,,,,,,,Bokmål,202"
+        },
+        {
+          "source_url": "https://vestbetong.no/",
+          "retrieved_at": "2026-11-18T06:28:01.176202Z",
+          "content_sha256": "8a4c6ad9adbc499612928fc13d516dc5ae2fd667198a1bcd388956f749ec4c78",
+          "locator": "registry-contact:phone",
+          "claim_span": "<a href=\"tel:004790080333\">"
+        }
+      ]
+    },
+    {
+      "organisation_number": "991374736",
+      "company": "VEST BETONG AS",
+      "kind": "social",
+      "url": "https://www.linkedin.com/company/vest-betong",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "candidate_origin": null,
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://vestbetong.no/",
+          "retrieved_at": "2026-11-18T06:28:01.176202Z",
+          "content_sha256": "8a4c6ad9adbc499612928fc13d516dc5ae2fd667198a1bcd388956f749ec4c78",
+          "locator": "company-link:https://www.linkedin.com/company/vest-betong",
+          "claim_span": "<a\n              href='https://www.linkedin.com/company/vest-betong/'\n              class='icon et_pb_with_border'\n              title='Følg på LinkedIn'\n               target=\"_blank\">"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.143503Z",
+          "content_sha256": "94f1c74285f94b260c43afad735231fab638ab592cb83fd2cacf7cdc4d0cfa1b",
+          "locator": "row:991374736/column:navn",
+          "claim_span": "991374736,VEST BETONG AS,AS,Aksjeselskap,41.000,Oppføring av bygninger,,,,,,,true,55,2026-11-12,2026-11-10,,,90 08 03 33,,,,,,,,,Gamle Forusveien 10A,STAVANGER,4031,STAVANGER,1103,Norge,NO,2100,Private aksjeselskaper mv.,2025,2007-06-19,2007-03-22,true,2007-07-01,2007-08-15,,,false,,true,2007-06-19,"
+        },
+        {
+          "source_url": "https://vestbetong.no/",
+          "retrieved_at": "2026-11-18T06:28:01.176202Z",
+          "content_sha256": "8a4c6ad9adbc499612928fc13d516dc5ae2fd667198a1bcd388956f749ec4c78",
+          "locator": "identity-proof:991374736",
+          "claim_span": "opyright © Vest Betong AS<br />Org. nr. 991 374 736 MVA<br /><a href=\"https://vestbetong.no/personvernerklaering/\">Personvernerklæring</a></p></div>\n\t"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.143503Z",
+          "content_sha256": "94f1c74285f94b260c43afad735231fab638ab592cb83fd2cacf7cdc4d0cfa1b",
+          "locator": "row:991374736/column:telefon",
+          "claim_span": "ppføring av bygninger,,,,,,,true,55,2026-11-12,2026-11-10,,,90 08 03 33,,,,,,,,,Gamle Forusveien 10A,STAVANGER,4031,STAVANGER,1103,Norge,NO,2100,Private aksjeselskaper mv.,2025,2007-06-19,2007-03-22,true,2007-07-01,2007-08-15,,,false,,true,2007-06-19,false,false,,false,,false,,false,,,,,,,Bokmål,202"
+        },
+        {
+          "source_url": "https://vestbetong.no/",
+          "retrieved_at": "2026-11-18T06:28:01.176202Z",
+          "content_sha256": "8a4c6ad9adbc499612928fc13d516dc5ae2fd667198a1bcd388956f749ec4c78",
+          "locator": "registry-contact:phone",
+          "claim_span": "<a href=\"tel:004790080333\">"
+        }
+      ]
+    },
+    {
+      "organisation_number": "997391497",
+      "company": "TY TANNKLINIKK AS",
+      "kind": "social",
+      "url": "https://www.facebook.com/TYtannklinikk",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "candidate_origin": null,
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://www.tytannklinikk.no/",
+          "retrieved_at": "2026-11-18T06:26:59.726351Z",
+          "content_sha256": "34e8b01fce5712bfd2838190499ed4a11657442a466de297683ba5aeed5ae68c",
+          "locator": "company-link:https://www.facebook.com/TYtannklinikk",
+          "claim_span": "<a href=\"https://www.facebook.com/TYtannklinikk/\" target=\"_blank\" rel=\"noopener\">"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.175061Z",
+          "content_sha256": "bc25a0158ff8177cdc09904c741208f8fbf79d2e5d4320a49042f845ea813755",
+          "locator": "row:997391497/column:navn",
+          "claim_span": "997391497,TY TANNKLINIKK AS,AS,Aksjeselskap,86.230,Tannlegetjenester,,,,,,,true,42,2026-11-12,2026-11-10,,,72 55 92 54,,\"Idungården\ninngang B\nOlav Tryggvasons gate 24\",TRONDHEIM,7011,TRONDHEIM,5001,Norge,NO,Olav Tryggvasons gate 24,TRONDHEIM,7011,TRONDHEIM,5001,Norge,NO,2100,Private aksjeselskaper m"
+        },
+        {
+          "source_url": "https://www.tytannklinikk.no/",
+          "retrieved_at": "2026-11-18T06:26:59.726351Z",
+          "content_sha256": "34e8b01fce5712bfd2838190499ed4a11657442a466de297683ba5aeed5ae68c",
+          "locator": "identity-proof:997391497",
+          "claim_span": "<div class=\"fl-rich-text\">\n\t<p>Org. nr. 997 391 497</p>\n</div>\n\t</div>\n</div>\n<div class=\"fl-module fl-module-icon-group fl-node-6sdq8bvh79rg\" data-no"
+        }
+      ]
+    },
+    {
+      "organisation_number": "997391497",
+      "company": "TY TANNKLINIKK AS",
+      "kind": "social",
+      "url": "https://www.instagram.com/tytannklinikk",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "candidate_origin": null,
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://www.tytannklinikk.no/",
+          "retrieved_at": "2026-11-18T06:26:59.726351Z",
+          "content_sha256": "34e8b01fce5712bfd2838190499ed4a11657442a466de297683ba5aeed5ae68c",
+          "locator": "company-link:https://www.instagram.com/tytannklinikk",
+          "claim_span": "<a href=\"https://www.instagram.com/tytannklinikk/\" target=\"_blank\" rel=\"noopener\">"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.175061Z",
+          "content_sha256": "bc25a0158ff8177cdc09904c741208f8fbf79d2e5d4320a49042f845ea813755",
+          "locator": "row:997391497/column:navn",
+          "claim_span": "997391497,TY TANNKLINIKK AS,AS,Aksjeselskap,86.230,Tannlegetjenester,,,,,,,true,42,2026-11-12,2026-11-10,,,72 55 92 54,,\"Idungården\ninngang B\nOlav Tryggvasons gate 24\",TRONDHEIM,7011,TRONDHEIM,5001,Norge,NO,Olav Tryggvasons gate 24,TRONDHEIM,7011,TRONDHEIM,5001,Norge,NO,2100,Private aksjeselskaper m"
+        },
+        {
+          "source_url": "https://www.tytannklinikk.no/",
+          "retrieved_at": "2026-11-18T06:26:59.726351Z",
+          "content_sha256": "34e8b01fce5712bfd2838190499ed4a11657442a466de297683ba5aeed5ae68c",
+          "locator": "identity-proof:997391497",
+          "claim_span": "<div class=\"fl-rich-text\">\n\t<p>Org. nr. 997 391 497</p>\n</div>\n\t</div>\n</div>\n<div class=\"fl-module fl-module-icon-group fl-node-6sdq8bvh79rg\" data-no"
+        }
+      ]
+    },
+    {
+      "organisation_number": "835095932",
+      "company": "INTERIØRRÅDET AS",
+      "kind": "website",
+      "url": "https://www.xn--interirrdet-48a8v.no",
+      "proof_tier": "orgnr_on_page",
+      "candidate_origin": "legal_name_slug",
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://www.xn--interirrdet-48a8v.no/",
+          "retrieved_at": "2026-11-18T06:28:47.623659Z",
+          "content_sha256": "2f5efdab07ae1a73abaae1cb8befea10ab6fac4076ac986be316ff3362bfa77e",
+          "locator": "identity-proof:835095932",
+          "claim_span": "Interiørrådet AS<br>Oranisasjonsnummer: 835 095 932<br><a href=\"mailto:post@interiorraadet.no?\" target=\"_blank\">post@interiorraadet.no</a></p></div>\n\n"
+        }
+      ]
+    },
+    {
+      "organisation_number": "835706532",
+      "company": "LANGE-BYGGSERVICE AS",
+      "kind": "website",
+      "url": "https://langebyggservice.no",
+      "proof_tier": "orgnr_on_page",
+      "candidate_origin": "legal_name_slug",
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://langebyggservice.no/",
+          "retrieved_at": "2026-11-18T06:26:34.010525Z",
+          "content_sha256": "8f0bba535f78b7f49d8efcad2b26e58a7fbce376ff161f5a51f39f059a72852f",
+          "locator": "identity-proof:835706532",
+          "claim_span": "i\"><label>Organisasjonsnummer</label><p>835 706 532</p></div>\n  </div>\n  <div class=\"social-row\">\n    <a class=\"fb-btn\" href=\"https://www.facebook.com"
+        }
+      ]
+    },
+    {
+      "organisation_number": "912070352",
+      "company": "NETCONNECT NORGE AS",
+      "kind": "website",
+      "url": "https://www.netconas.no",
+      "proof_tier": "orgnr_on_page",
+      "candidate_origin": "registry_website",
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://www.netconas.no/",
+          "retrieved_at": "2026-11-18T06:25:18.497386Z",
+          "content_sha256": "00e5c533a8291d9ee0ac9a9fc9b6184c6184d9a68a3f00ba6c9bdf8f01688d83",
+          "locator": "identity-proof:912070352",
+          "claim_span": "weight: normal;\">Organisasjonsnummer NO 912 070 352</span></p>\n<p class=\"mobile-undersized-upper\"><br></p></div></div></div></div><div class=\"Preview_"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:45.672454Z",
+          "content_sha256": "c8332956519ddcc5e31ae33545df532ca4de026f713fb05ec07f3cc0e872d4e4",
+          "locator": "row:912070352/column:epostadresse",
+          "claim_span": "sjonsarbeid,,,,,,,true,21,2026-09-14,2026-09-10,Netconas.no,info@netconas.no,94 02 31 00,981 07 157,Industriveien 8C,LØRENSKOG,1461,LØRENSKOG,3222,Norge,NO,Ramstadløkka 14A,MYSEN,1850,INDRE ØSTFOLD,3118,Norge,NO,2100,Private aksjeselskaper mv.,2025,2013-07-12,2013-06-01,true,2013-09-01,2013-09-16,,,"
+        },
+        {
+          "source_url": "https://www.netconas.no/",
+          "retrieved_at": "2026-11-18T06:25:18.497386Z",
+          "content_sha256": "00e5c533a8291d9ee0ac9a9fc9b6184c6184d9a68a3f00ba6c9bdf8f01688d83",
+          "locator": "registry-contact:email_domain",
+          "claim_span": "<a class=\"textnormal\" href=\"mailto:info@netconas.no\" style=\"font-size:1px;letter-spacing:1px;line-height:1.2;width:24px\" data-preserve-whitespace=\"true\">"
+        }
+      ]
+    },
+    {
+      "organisation_number": "920951945",
+      "company": "SKADI ADVENTURES AS",
+      "kind": "website",
+      "url": "https://www.skadi-adventures.no",
+      "proof_tier": "orgnr_on_page",
+      "candidate_origin": "legal_name_slug",
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://www.skadi-adventures.no/cookie-and-privacy/",
+          "retrieved_at": "2026-11-18T06:25:29.452186Z",
+          "content_sha256": "ecd64a317e9c5c167638ce21e437e4a14e2bd2a6113239481cff229a2e9b2cb3",
+          "locator": "identity-proof:920951945",
+          "claim_span": "lass=\"rt-inline-bold\">Org. number:</em> 920.951.945<br /> <em class=\"rt-inline-bold\">Phone:</em> + 47 414 70 478<br /> <em class=\"rt-inline-bold\">E-ma"
+        }
+      ]
+    },
+    {
+      "organisation_number": "921715951",
+      "company": "JARLES BIL AS",
+      "kind": "website",
+      "url": "https://jarlesbil.no",
+      "proof_tier": "orgnr_on_page",
+      "candidate_origin": "legal_name_slug",
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://jarlesbil.no/",
+          "retrieved_at": "2026-11-18T06:26:55.544042Z",
+          "content_sha256": "cf7e71231562ff82ed8fc319fe31ebfea208f6f98c9eb1c7f16c2efd76bb7020",
+          "locator": "identity-proof:921715951",
+          "claim_span": "widget\"><p>Jarles Bil AS<br />\nOrg. nr: 921 715 951<br />\nAdresse: Hensmoveien 18, Hønefoss</p>\n<p>Tlf: <a href=\"tel:90508501\">90 50 85 01</a></p>\n<p>"
+        }
+      ]
+    },
+    {
+      "organisation_number": "921860544",
+      "company": "KOMPASS REGNSKAP AS",
+      "kind": "website",
+      "url": "https://www.kompassregnskap.no",
+      "proof_tier": "orgnr_on_page",
+      "candidate_origin": "registry_website",
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://www.kompassregnskap.no/",
+          "retrieved_at": "2026-11-18T06:28:36.888777Z",
+          "content_sha256": "a3a52416e3107bcbd03c25eb171d3640df7064492a6408c962531f341d679702",
+          "locator": "identity-proof:921860544",
+          "claim_span": "enheter/921860544\">Organisasjonsnummer  921 860 544</a></span></h4></div>\n\t\t</div> \n\t</div>\n\t</div> \n</div></div><div id=\"fws_6afcf9f05aba4\" data-midn"
+        }
+      ]
+    },
+    {
+      "organisation_number": "922105006",
+      "company": "DEPLOI AS",
+      "kind": "website",
+      "url": "https://deploi.no",
+      "proof_tier": "orgnr_on_page",
+      "candidate_origin": "registry_website",
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://deploi.no/juridisk/personvernerklaering/",
+          "retrieved_at": "2026-11-18T06:25:22.135565Z",
+          "content_sha256": "cd78a04532642d27361817b10178097ae5ad64a6fe6072b36f5df02c3b4a7afb",
+          "locator": "identity-proof:922105006",
+          "claim_span": "/60\">Deploi AS<!-- -->, Org.nr. <!-- -->922 105 006<!-- -->, <!-- -->Sognsveien 70B<!-- -->, <!-- -->0855<!-- --> <!-- -->Oslo<!-- -->.</p></div></div"
+        }
+      ]
+    },
+    {
+      "organisation_number": "924755725",
+      "company": "TECH INSIGHTS AS",
+      "kind": "website",
+      "url": "https://tech-insights.no",
+      "proof_tier": "orgnr_on_page",
+      "candidate_origin": "legal_name_slug",
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://tech-insights.no/",
+          "retrieved_at": "2026-11-18T06:29:04.276199Z",
+          "content_sha256": "e632c8914ebccd2de6ede7668053ac405fec952d23b415c0164c90e13527aab6",
+          "locator": "identity-proof:924755725",
+          "claim_span": "size: 1.1rem; letter-spacing: -0.02em;\">924&nbsp;755&nbsp;725 MVA</span></div><!--[if gte mso 9]>\n \n  \n \n<![endif]-->\n\n\n<!--[if gte mso 9]>\n \n  Normal"
+        }
+      ]
+    },
+    {
+      "organisation_number": "924781246",
+      "company": "POPLAR AS",
+      "kind": "website",
+      "url": "https://www.poplar.no",
+      "proof_tier": "orgnr_on_page",
+      "candidate_origin": "legal_name_slug",
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://www.poplar.no/hovedside/personvern/",
+          "retrieved_at": "2026-11-18T06:29:15.127435Z",
+          "content_sha256": "27124d67008e844cf7ca3921ae82893dbcf35ead0b84c38462749cccfaf755dc",
+          "locator": "identity-proof:924781246",
+          "claim_span": "kårene”) gjelder for Poplar AS (org.nr. 924 781 246), våre nettsider (poplar.no) og øvrige digitale tjenester som videoer, blogger, e-post, skjema etc"
+        }
+      ]
+    },
+    {
+      "organisation_number": "925638676",
+      "company": "REPLAN AS",
+      "kind": "website",
+      "url": "https://replan.no",
+      "proof_tier": "orgnr_on_page",
+      "candidate_origin": "registry_website",
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://replan.no/",
+          "retrieved_at": "2026-11-18T06:27:25.388384Z",
+          "content_sha256": "ac73997d762f87a42551f870117d8598422ff14733cb1bb1704b91117b91af93",
+          "locator": "identity-proof:925638676",
+          "claim_span": "ype=\"widget\" data-id=\"771d530c\">Org.nr. 925 638 676</p>\n\t\t\t\t\t<p class=\"Footer_liten e-paragraph-base e-default-p\" data-interaction-id=\"4af4aa9e\" data-"
+        }
+      ]
+    },
+    {
+      "organisation_number": "926467123",
+      "company": "DARLIN' PUBLISHING AS",
+      "kind": "website",
+      "url": "https://www.darlinpublishing.no",
+      "proof_tier": "orgnr_on_page",
+      "candidate_origin": "legal_name_slug",
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://www.darlinpublishing.no/pages/kjopsvilkar",
+          "retrieved_at": "2026-11-18T06:26:30.145758Z",
+          "content_sha256": "00076c1576059064f41e28cf9a7ae758c0af679c9ff05f2ce38e76d499c817f5",
+          "locator": "identity-proof:926467123",
+          "claim_span": " data-id=\"917881812\" class=\"org-number\">926 467 123.</em> Informasjon og bilder på nettstedet er eid av selskapet og kan ikke kopieres uten tillatelse"
+        }
+      ]
+    },
+    {
+      "organisation_number": "926645234",
+      "company": "HAVREBARNA AS",
+      "kind": "website",
+      "url": "https://havrebarna.no",
+      "proof_tier": "orgnr_on_page",
+      "candidate_origin": "registry_website",
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://havrebarna.no/",
+          "retrieved_at": "2026-11-18T06:27:45.335117Z",
+          "content_sha256": "b069353d0d673a556b8b0f410f324308ba1d487dbbf8033405ac4eeda09cbc76",
+          "locator": "identity-proof:926645234",
+          "claim_span": "t rte\">\n                      <p>Org.nr 926 645 234<br/>Trondheim, Norge</p><p></p><p></p>\n                    </div></div><div\n                class="
+        }
+      ]
+    },
+    {
+      "organisation_number": "927309122",
+      "company": "LANDE FUS BARNEHAGE AS",
+      "kind": "website",
+      "url": "https://fus.no",
+      "proof_tier": "orgnr_on_page",
+      "candidate_origin": "subunit_registry_website",
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://fus.no/lande",
+          "retrieved_at": "2026-11-18T06:28:35.027216Z",
+          "content_sha256": "c7a8ac59a2b5bbe68282f9b61e900f7c858cf0001848dad9310264bc0cbaec38",
+          "locator": "identity-proof:927309122",
+          "claim_span": "         \n                  Org. nummer 927309122 <br/><br/>\n\n                  Vi er registrert i ELMA-registeret. Dersom dere ikke har mulighet til "
+        }
+      ]
+    },
+    {
+      "organisation_number": "929431278",
+      "company": "GJENKLANG AS",
+      "kind": "website",
+      "url": "https://www.gjenklang.com",
+      "proof_tier": "orgnr_on_page",
+      "candidate_origin": "legal_name_slug",
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://www.gjenklang.com/",
+          "retrieved_at": "2026-11-18T06:29:09.614372Z",
+          "content_sha256": "5daadeca2a2aa2deacf3dd5343c3ce2a00e492c123d77cf10b48a613e328c291",
+          "locator": "identity-proof:929431278",
+          "claim_span": ";\" class=\"wixui-rich-text__text\">Org.nr 929431278</span></span></span></p>\n\n<p class=\"font_10 wixui-rich-text__text\" style=\"font-size:18px; line-heigh"
+        }
+      ]
+    },
+    {
+      "organisation_number": "930069353",
+      "company": "BIELKE&YANG AS",
+      "kind": "website",
+      "url": "https://bielkeyang.com",
+      "proof_tier": "jsonld_vatid",
+      "candidate_origin": "legal_name_slug",
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://bielkeyang.com/",
+          "retrieved_at": "2026-11-18T06:26:57.877356Z",
+          "content_sha256": "7b3776e4ce20eeeaf659790f54872e47158fe35842aa065dc43a2d37c13968d4",
+          "locator": "identity-proof:930069353",
+          "claim_span": "\",\"telephone\":\"+47 934 94 427\",\"vatID\":\"930069353MVA\",\"legalName\":\"Bielke&Yang AS\",\"knowsAbout\":[\"Merkevarebygging\",\"identitetsdesign\",\"merkevarestrat"
+        }
+      ]
+    },
+    {
+      "organisation_number": "933708918",
+      "company": "ASPECTO AS",
+      "kind": "website",
+      "url": "https://www.aspecto.no",
+      "proof_tier": "orgnr_on_page",
+      "candidate_origin": "legal_name_slug",
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://www.aspecto.no/",
+          "retrieved_at": "2026-11-18T06:28:55.570958Z",
+          "content_sha256": "e05bb459a975a3e8e5a46b9c0c70cae27fb7e915af47adaafd5e822f23b66483",
+          "locator": "identity-proof:933708918",
+          "claim_span": " class=\"wixui-rich-text__text\">\nOrg. nr 933 708 918</p>\n\n<p class=\"font_8 wixui-rich-text__text\">MVA Foretaksregisteret</p></div><!--/$--></div><!--/$"
+        }
+      ]
+    },
+    {
+      "organisation_number": "934504127",
+      "company": "HERBA TRADING AS",
+      "kind": "website",
+      "url": "https://herbatrading.no",
+      "proof_tier": "orgnr_on_page",
+      "candidate_origin": "legal_name_slug",
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://herbatrading.no/pages/contact",
+          "retrieved_at": "2026-11-18T06:28:03.424431Z",
+          "content_sha256": "85ceedd12c0061c69f66bccbd26a3ec6b5afec1da9e9d3081d64a15245c530b8",
+          "locator": "identity-proof:934504127",
+          "claim_span": "eue', sans-serif; font-size: 0.875rem;\">934 504 127</span></p>\n<ul></ul>\n  </rte-formatter>\n\n\n\n\n\n\n\n  </div>\n</div>\n\n\n</div><div id=\"shopify-section-te"
+        }
+      ]
+    },
+    {
+      "organisation_number": "935840635",
+      "company": "SAFETYSEC AS",
+      "kind": "website",
+      "url": "https://www.safetysec.no",
+      "proof_tier": "orgnr_on_page",
+      "candidate_origin": "legal_name_slug",
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://www.safetysec.no/",
+          "retrieved_at": "2026-11-18T06:26:44.645795Z",
+          "content_sha256": "9d01d7ebaed9e1215e982013beacb2adeea014c772fd01e0fb0da52a6e0fbc05",
+          "locator": "identity-proof:935840635",
+          "claim_span": "\"><strong>Organisasjonsnummer: </strong>935 840 635</p></div>\n\n\n  \n<style id=\"container-styles\">#block-9bce8b33f5eac8a9401d {\n    \n    --stroke-style:"
+        }
+      ]
+    },
+    {
+      "organisation_number": "976081684",
+      "company": "DAHLE BLIKK AS",
+      "kind": "website",
+      "url": "https://dahleblikk.no",
+      "proof_tier": "orgnr_on_page",
+      "candidate_origin": "registry_website",
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://dahleblikk.no/",
+          "retrieved_at": "2026-11-18T06:27:06.838883Z",
+          "content_sha256": "6a0494aab3046026d0c012e584d8ed54b08f1aaf90705bea9bc05ace40b9ea96",
+          "locator": "identity-proof:976081684",
+          "claim_span": "mapost@dahleblikk.no</a></span><span>NO 976 081 684 MVA</span><span>Faktura: <a href=\"mailto:dahleblikk@faktura.poweroffice.net\">dahleblikk@faktura.po"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.040369Z",
+          "content_sha256": "4dbd3092c1fdcf48151b55de7cfb17c17128169a7ec8315966a1de4c0f175799",
+          "locator": "row:976081684/column:telefon",
+          "claim_span": ",2026-03-12,2026-03-10,www.dahleblikk.no,post@dahleblikk.no,72 88 51 00,906 41 014,,,,,,,,Løvåsmyra 6,TILLER,7093,TRONDHEIM,5001,Norge,NO,2100,Private aksjeselskaper mv.,2025,1996-02-12,1996-01-20,true,1996-01-01,1996-03-04,,,false,,true,1996-02-17,false,false,,false,,false,,false,,,,,,,Bokmål,2023-"
+        },
+        {
+          "source_url": "https://dahleblikk.no/",
+          "retrieved_at": "2026-11-18T06:27:06.838883Z",
+          "content_sha256": "6a0494aab3046026d0c012e584d8ed54b08f1aaf90705bea9bc05ace40b9ea96",
+          "locator": "registry-contact:phone",
+          "claim_span": "<a href=\"tel:72885100\">"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.040369Z",
+          "content_sha256": "4dbd3092c1fdcf48151b55de7cfb17c17128169a7ec8315966a1de4c0f175799",
+          "locator": "row:976081684/column:epostadresse",
+          "claim_span": "rbeid,,,,,,,true,13,2026-03-12,2026-03-10,www.dahleblikk.no,post@dahleblikk.no,72 88 51 00,906 41 014,,,,,,,,Løvåsmyra 6,TILLER,7093,TRONDHEIM,5001,Norge,NO,2100,Private aksjeselskaper mv.,2025,1996-02-12,1996-01-20,true,1996-01-01,1996-03-04,,,false,,true,1996-02-17,false,false,,false,,false,,false"
+        },
+        {
+          "source_url": "https://dahleblikk.no/",
+          "retrieved_at": "2026-11-18T06:27:06.838883Z",
+          "content_sha256": "6a0494aab3046026d0c012e584d8ed54b08f1aaf90705bea9bc05ace40b9ea96",
+          "locator": "registry-contact:email_domain",
+          "claim_span": "<a href=\"mailto:firmapost@dahleblikk.no\">"
+        }
+      ]
+    },
+    {
+      "organisation_number": "979923813",
+      "company": "VALLDAL GRØNT AS",
+      "kind": "website",
+      "url": "https://www.valldal.com",
+      "proof_tier": "orgnr_on_page",
+      "candidate_origin": "subunit_registry_email",
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://www.valldal.com/",
+          "retrieved_at": "2026-11-18T06:25:22.843615Z",
+          "content_sha256": "36859fb3518f2c6a1562a55fb83d693e487fd68801b19a8aedad19e25d61e47e",
+          "locator": "identity-proof:979923813",
+          "claim_span": "gata 42<br />\n6210 Valldal</p>\n<p>Orgnr 979 923 813</p>\n<p><a style=\"color: #65bc7b;\" href=\"https://www.valldal.com/kontakt/\">Kontaktinformasjon</a></"
+        }
+      ]
+    },
+    {
+      "organisation_number": "980438740",
+      "company": "RUNES CONTAINERSERVICE AS",
+      "kind": "website",
+      "url": "https://runescontainerservice.no",
+      "proof_tier": "orgnr_on_page",
+      "candidate_origin": "legal_name_slug",
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://runescontainerservice.no/",
+          "retrieved_at": "2026-11-18T06:26:22.648094Z",
+          "content_sha256": "352ce8f26f6fa3ece193f842a87f6b0fedefe82492defcc9185052fc172d6ac0",
+          "locator": "identity-proof:980438740",
+          "claim_span": "left:38.4px;color:#ffffff;\">\n<p>Org-nr. 980 438 740</p>\n</div></li></ul></div><style type=\"text/css\">.fusion-body .fusion-builder-column-11{width:40% "
+        }
+      ]
+    },
+    {
+      "organisation_number": "987100648",
+      "company": "UNIFON AS",
+      "kind": "website",
+      "url": "https://unifon.no",
+      "proof_tier": "jsonld_vatid",
+      "candidate_origin": "registry_website",
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://unifon.no/",
+          "retrieved_at": "2026-11-18T06:27:22.584319Z",
+          "content_sha256": "ec0affdb78268c8ae3ecfef6ce236732237f5496dba2caef2d1b877c516fbfcf",
+          "locator": "identity-proof:987100648",
+          "claim_span": ",\"email\":\"support@unifon.no\",\"vatID\":\"NO987100648MVA\",\"identifier\":{\"@type\":\"PropertyValue\",\"propertyID\":\"Organisasjonsnummer\",\"value\":\"987100648\"},\"a"
+        }
+      ]
+    },
+    {
+      "organisation_number": "990036705",
+      "company": "MARITIM NORGE AS",
+      "kind": "website",
+      "url": "https://maritimnorge.no",
+      "proof_tier": "orgnr_on_page",
+      "candidate_origin": "legal_name_slug",
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://maritimnorge.no/contact/",
+          "retrieved_at": "2026-11-18T06:26:12.471982Z",
+          "content_sha256": "6de5d55a7b0361f1ed26a9fe8bcb9401a78b2601315c694cf0b934847b56cfe3",
+          "locator": "identity-proof:990036705",
+          "claim_span": "<div class=\"\"></div>\n<div class=\"\">VAT: 990.036.705</div>\t\t\t\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div class=\"elementor-column elementor-col"
+        }
+      ]
+    },
+    {
+      "organisation_number": "991374736",
+      "company": "VEST BETONG AS",
+      "kind": "website",
+      "url": "https://vestbetong.no",
+      "proof_tier": "orgnr_on_page",
+      "candidate_origin": "legal_name_slug",
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://vestbetong.no/",
+          "retrieved_at": "2026-11-18T06:28:01.176202Z",
+          "content_sha256": "8a4c6ad9adbc499612928fc13d516dc5ae2fd667198a1bcd388956f749ec4c78",
+          "locator": "identity-proof:991374736",
+          "claim_span": "opyright © Vest Betong AS<br />Org. nr. 991 374 736 MVA<br /><a href=\"https://vestbetong.no/personvernerklaering/\">Personvernerklæring</a></p></div>\n\t"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.143503Z",
+          "content_sha256": "94f1c74285f94b260c43afad735231fab638ab592cb83fd2cacf7cdc4d0cfa1b",
+          "locator": "row:991374736/column:telefon",
+          "claim_span": "ppføring av bygninger,,,,,,,true,55,2026-11-12,2026-11-10,,,90 08 03 33,,,,,,,,,Gamle Forusveien 10A,STAVANGER,4031,STAVANGER,1103,Norge,NO,2100,Private aksjeselskaper mv.,2025,2007-06-19,2007-03-22,true,2007-07-01,2007-08-15,,,false,,true,2007-06-19,false,false,,false,,false,,false,,,,,,,Bokmål,202"
+        },
+        {
+          "source_url": "https://vestbetong.no/",
+          "retrieved_at": "2026-11-18T06:28:01.176202Z",
+          "content_sha256": "8a4c6ad9adbc499612928fc13d516dc5ae2fd667198a1bcd388956f749ec4c78",
+          "locator": "registry-contact:phone",
+          "claim_span": "<a href=\"tel:004790080333\">"
+        }
+      ]
+    },
+    {
+      "organisation_number": "992437502",
+      "company": "TURLID TRANSPORTSERVICE AS",
+      "kind": "website",
+      "url": "https://www.turlidtransportservice.no",
+      "proof_tier": "orgnr_on_page",
+      "candidate_origin": "registry_website",
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://www.turlidtransportservice.no/",
+          "retrieved_at": "2026-11-18T06:26:19.386266Z",
+          "content_sha256": "eb24024a719a702d69bfbc4fa0c4575e873810f536cb502d62dd3ac1a01baa76",
+          "locator": "identity-proof:992437502",
+          "claim_span": "=\"click\" data-track-action=\"email_link\">992437502@autoinvoice.no</a></p></div> </div> </div> </div> <div id=\"r1305\" class=\"row \"> <a id=\"karriere\" cla"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-18T06:24:46.155353Z",
+          "content_sha256": "c1c84504e542c8132bae3eef113f06034eed45deab92714535e02cc81cb1ac0d",
+          "locator": "row:992437502/column:epostadresse",
+          "claim_span": ",true,9,2026-11-11,2026-11-10,www.Turlidtransportservice.no,post@turlidtransportservice.no,90 70 30 00,975 14 600,,,,,,,,Dalen 51,AURLAND,5745,AURLAND,4641,Norge,NO,2100,Private aksjeselskaper mv.,2025,2008-04-07,2008-01-02,true,2017-01-01,2017-02-22,,,false,,true,2008-04-07,false,false,,false,,fals"
+        },
+        {
+          "source_url": "https://www.turlidtransportservice.no/",
+          "retrieved_at": "2026-11-18T06:26:19.386266Z",
+          "content_sha256": "eb24024a719a702d69bfbc4fa0c4575e873810f536cb502d62dd3ac1a01baa76",
+          "locator": "registry-contact:email_domain",
+          "claim_span": "<a href=\"mailto:annekarin@turlidtransportservice.no\" data-track-event=\"click\" data-track-action=\"email_link\">"
+        }
+      ]
+    },
+    {
+      "organisation_number": "997108396",
+      "company": "PROSJEKTSTØTTE AS",
+      "kind": "website",
+      "url": "https://prosjektstotte.no",
+      "proof_tier": "orgnr_on_page",
+      "candidate_origin": "legal_name_slug",
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://prosjektstotte.no/",
+          "retrieved_at": "2026-11-18T06:28:52.212213Z",
+          "content_sha256": "a2c3c553a41536158c2a223982de9dcde64871cecc84c5f3a9eec74ff8f1541e",
+          "locator": "identity-proof:997108396",
+          "claim_span": "dex.html\"><span>Prosjektstøtte - org nr 997108396</span></ws-global>\n</a>\n<ws-nav-toggle disconnect-when=\"layout-xl\" group-id=\"sidebar-toggle\" on=\"cli"
+        }
+      ]
+    },
+    {
+      "organisation_number": "997391497",
+      "company": "TY TANNKLINIKK AS",
+      "kind": "website",
+      "url": "https://www.tytannklinikk.no",
+      "proof_tier": "orgnr_on_page",
+      "candidate_origin": "legal_name_slug",
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://www.tytannklinikk.no/",
+          "retrieved_at": "2026-11-18T06:26:59.726351Z",
+          "content_sha256": "34e8b01fce5712bfd2838190499ed4a11657442a466de297683ba5aeed5ae68c",
+          "locator": "identity-proof:997391497",
+          "claim_span": "<div class=\"fl-rich-text\">\n\t<p>Org. nr. 997 391 497</p>\n</div>\n\t</div>\n</div>\n<div class=\"fl-module fl-module-icon-group fl-node-6sdq8bvh79rg\" data-no"
+        }
+      ]
+    }
+  ]
+}

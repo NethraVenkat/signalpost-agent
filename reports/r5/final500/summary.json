@@ -1,0 +1,176 @@
+{
+  "label": "final",
+  "check": "check_live_run",
+  "checker_clone_head": "1722b891d7887c73ac7a6b26d73b65bd983cf7f6",
+  "gates": {
+    "exit_0": true,
+    "check_live_run_exit_0": true,
+    "ordered_terminal_500": true,
+    "five_cited_topics_500": true,
+    "unsupported_0": true,
+    "http_le_9250": true,
+    "wall_le_scaled_time_budget": true,
+    "largest_profile_lt_250000": true,
+    "cost_0": true,
+    "zero_llm_search_calls": true,
+    "frozen_registry_snapshot_used": false
+  },
+  "all_gates_pass": false,
+  "source_health": {
+    "enhetsregisteret": "reachable",
+    "accounts": "reachable",
+    "nav": "reachable",
+    "gleif": "reachable"
+  },
+  "official_source_outages_counts": {},
+  "input_rows": 500,
+  "terminal_envelopes": 500,
+  "http_requests": 1939,
+  "limits": {
+    "max_requests": 9250,
+    "max_cost_usd": 0.0,
+    "time_budget_seconds": 2100.0,
+    "deadline_fraction": 0.85,
+    "request_timeout": 10.0,
+    "host_concurrency": 10,
+    "effective_time_budget_seconds": 2100.0,
+    "scaled_hard_request_cap": 9250,
+    "scaled_hard_time_seconds": 10500.0
+  },
+  "wall_seconds": 604.6359873000001,
+  "runtime_seconds": 592.61,
+  "deadline_hits": 0,
+  "total_cost_usd": 0.0,
+  "search_queries": 0,
+  "llm_calls": 0,
+  "site": {
+    "state": "available",
+    "companies": 500,
+    "input_records": 500,
+    "pages": 502,
+    "skipped_invalid_identifiers": 0,
+    "total_bytes": 58671769,
+    "largest_profile_data_bytes": 629565,
+    "largest_profile_bytes": 242210
+  },
+  "facts": 17820,
+  "websites": 11,
+  "social_urls": 3,
+  "social_companies": 3,
+  "jobs": 0,
+  "activity_claims": 1803,
+  "families": {
+    "identity": 4000,
+    "roles": 1461,
+    "accounts": 9201,
+    "activity": 1803,
+    "subunits": 1190,
+    "state_aid": 87,
+    "research": 9,
+    "licences": 14,
+    "website": 54,
+    "inspections": 1
+  },
+  "section_states": {
+    "accounts": {
+      "failed": 372,
+      "available": 128
+    },
+    "activity": {
+      "failed": 428,
+      "available": 72
+    },
+    "gleif": {
+      "failed": 500
+    },
+    "hiring": {
+      "failed": 370,
+      "not_available": 130
+    },
+    "identity": {
+      "failed": 367,
+      "available": 133
+    },
+    "inspections": {
+      "failed": 367,
+      "not_available": 132,
+      "available": 1
+    },
+    "licences": {
+      "failed": 367,
+      "not_available": 129,
+      "available": 4
+    },
+    "procurement": {
+      "failed": 500
+    },
+    "research": {
+      "failed": 367,
+      "not_available": 131,
+      "available": 2
+    },
+    "roles": {
+      "failed": 367,
+      "available": 132,
+      "not_available": 1
+    },
+    "state_aid": {
+      "failed": 367,
+      "not_available": 119,
+      "available": 14
+    },
+    "subunits": {
+      "failed": 370,
+      "not_available": 32,
+      "available": 98
+    },
+    "website": {
+      "failed": 415,
+      "not_available": 65,
+      "blocked": 4,
+      "ambiguous": 5,
+      "available": 11
+    }
+  },
+  "verification": {
+    "lines": 500,
+    "schema_valid": true,
+    "published_claims": 17820,
+    "source_blobs_verified": 570,
+    "synthesis_companies": 500,
+    "synthesis_sentences": 4256,
+    "synthesis_unverified_values": 0,
+    "financial_inputs_verified": 7983,
+    "derived_financial_metrics_verified": 288,
+    "registry_events_verified": 1803,
+    "filing_year_facts_verified": 1218,
+    "exact_public_items_verified": 0,
+    "exact_official_items_verified": 111,
+    "briefing_companies": 500,
+    "briefing_sentences": 2681,
+    "briefing_short_companies": 0,
+    "briefing_unverified_values": 0,
+    "briefing_topic_coverage": {
+      "activity": 500,
+      "change": 500,
+      "unknown": 500,
+      "financial": 500,
+      "takeaway": 500
+    },
+    "complete_briefing_contracts": 500,
+    "newer_filing_flags": 0,
+    "site_verified": true,
+    "terminal_envelopes": 500,
+    "source_failures_permitted": true,
+    "http_requests": 1939,
+    "wall_seconds": 602.75,
+    "cost_usd": 0
+  },
+  "artifacts": {
+    "envelopes.jsonl": "efcfab25c4e554d682dff73bba57c9bdcb2b14c476bf496d3d0b624502de9586",
+    "profiles.jsonl": "291635a6b4ce9d6f15cc7c097b9b383324bcffdb8a762fb1f4ae6eddee36f5d2",
+    "report.json": "77391d501c28c94e3b0bcc7c484d2da2e22097c97d900bf967e2c7660d4d23dc"
+  },
+  "work_directory": "<REPO>\\.data\\r5\\final500-clean\\run-final",
+  "retry_reason": "Run-wide OSError loading the frozen Brreg subset; the run reported live fallback and no bulk snapshot SHA-256."
+}
