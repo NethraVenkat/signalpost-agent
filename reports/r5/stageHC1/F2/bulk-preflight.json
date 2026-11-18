@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "<REPO>\\.data\\r5\\hc1-f2-clean\\checkout\\repo\\.venv\\Scripts\\python.exe",
+    "-c",
+    "\nimport json\nimport sys\nfrom pathlib import Path\nfrom tempfile import TemporaryDirectory\nfrom types import SimpleNamespace\n\nfrom signalpost.io.input_adapter import read\nfrom signalpost.sources import bulk_registry\nfrom signalpost.sources.blobstore import BlobStore\n\nbatch, bulk, scratch = (Path(arg) for arg in sys.argv[1:])\nwanted = set(read(batch).unique)\nwith TemporaryDirectory(prefix='bulk-preflight-', dir=scratch) as state:\n    blobs = BlobStore(Path(state))\n    found, digest = bulk_registry.load(bulk, wanted, blobs, SimpleNamespace(check=lambda: None))\n    assert sum(1 for path in blobs.directory.iterdir() if path.is_file()) == len(found)\nprint(json.dumps({'rows': len(found), 'missing_organisation_numbers': sorted(wanted - found.keys()), 'sha256': digest}))\n",
+    "<REPO>\\reports\\r5\\stageHC1\\F2\\companies500.jsonl",
+    "<REPO>\\reports\\r5\\stageHC1\\F2\\registry500.csv",
+    "<REPO>\\.data\\r5\\hc1-f2-clean"
+  ],
+  "cwd": "<REPO>\\.data\\r5\\hc1-f2-clean\\checkout\\repo",
+  "exit_code": 0,
+  "wall_seconds": 1.0159688999992795,
+  "completed_at_utc": "2026-11-18T07:53:52.338001+00:00"
+}

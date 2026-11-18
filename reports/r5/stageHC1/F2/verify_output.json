@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "<REPO>\\.data\\r5\\hc1-f2-clean\\checkout\\repo\\.venv\\Scripts\\python.exe",
+    "<REPO>\\.data\\r5\\hc1-f2-clean\\checkout\\repo\\scripts\\verify_output.py",
+    "--first",
+    "<REPO>\\.data\\r5\\hc1-f2-clean\\run-final\\envelopes.jsonl",
+    "--state-dir",
+    "<REPO>\\.data\\r5\\hc1-f2-clean\\run-final\\state",
+    "--count",
+    "500",
+    "--organisations",
+    "<REPO>\\reports\\r5\\stageHC1\\F2\\companies500.jsonl",
+    "--report",
+    "<REPO>\\.data\\r5\\hc1-f2-clean\\run-final\\report.json"
+  ],
+  "cwd": "<REPO>\\.data\\r5\\hc1-f2-clean\\checkout\\repo",
+  "exit_code": 0,
+  "wall_seconds": 66.65035649999845,
+  "completed_at_utc": "2026-11-18T08:51:59.589651+00:00"
+}

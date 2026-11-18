@@ -1,0 +1,166 @@
+{
+  "label": "final",
+  "check": "check_live_run",
+  "checker_clone_head": "e18513085cc59b0af46e9c8420a9dd38c544a114",
+  "gates": {
+    "exit_0": true,
+    "check_live_run_exit_0": false,
+    "ordered_terminal_500": true,
+    "five_cited_topics_500": false,
+    "unsupported_0": false,
+    "http_le_9250": true,
+    "wall_le_scaled_time_budget": true,
+    "largest_profile_lt_250000": false,
+    "cost_0": false,
+    "zero_llm_search_calls": true,
+    "frozen_registry_snapshot_used": true,
+    "zero_placeholders": true,
+    "wall_under_2100_seconds": true
+  },
+  "all_gates_pass": false,
+  "source_health": {
+    "enhetsregisteret": "reachable",
+    "accounts": "reachable",
+    "nav": "reachable",
+    "gleif": "reachable"
+  },
+  "official_source_outages_counts": {
+    "transient_attempts": 3,
+    "unrecovered_attempts": 3
+  },
+  "input_rows": 500,
+  "terminal_envelopes": 500,
+  "http_requests": 5115,
+  "limits": {
+    "max_requests": 9250,
+    "max_cost_usd": 0.0,
+    "time_budget_seconds": 2100.0,
+    "deadline_fraction": 0.85,
+    "request_timeout": 10.0,
+    "host_concurrency": 10,
+    "effective_time_budget_seconds": 2100.0,
+    "scaled_hard_request_cap": 9250,
+    "scaled_hard_time_seconds": 10500.0
+  },
+  "wall_seconds": 1978.1487990999995,
+  "runtime_seconds": 1902.25,
+  "deadline_hits": 173,
+  "total_cost_usd": 0.0,
+  "search_queries": 0,
+  "llm_calls": 0,
+  "site": {
+    "state": "failed",
+    "error": "ValueError",
+    "message": "Profile page exceeds 250 KB gate"
+  },
+  "facts": 67942,
+  "websites": 38,
+  "social_urls": 15,
+  "social_companies": 8,
+  "jobs": 6,
+  "activity_claims": 6316,
+  "families": {
+    "identity": 14846,
+    "subunits": 4710,
+    "roles": 5579,
+    "accounts": 35683,
+    "activity": 6316,
+    "gleif": 80,
+    "state_aid": 305,
+    "website": 348,
+    "inspections": 29,
+    "hiring": 6,
+    "research": 15,
+    "licences": 25
+  },
+  "section_states": {
+    "accounts": {
+      "available": 499,
+      "failed": 1
+    },
+    "activity": {
+      "failed": 198,
+      "available": 302
+    },
+    "gleif": {
+      "not_available": 424,
+      "available": 76
+    },
+    "hiring": {
+      "not_available": 495,
+      "available": 5
+    },
+    "identity": {
+      "available": 500
+    },
+    "inspections": {
+      "not_available": 495,
+      "available": 5
+    },
+    "licences": {
+      "not_available": 488,
+      "available": 12
+    },
+    "procurement": {
+      "not_available": 497,
+      "blocked": 3
+    },
+    "research": {
+      "not_available": 494,
+      "available": 6
+    },
+    "roles": {
+      "available": 495,
+      "not_available": 5
+    },
+    "state_aid": {
+      "not_available": 454,
+      "available": 46
+    },
+    "subunits": {
+      "available": 355,
+      "not_available": 145
+    },
+    "website": {
+      "failed": 166,
+      "not_available": 272,
+      "available": 38,
+      "ambiguous": 20,
+      "blocked": 4
+    }
+  },
+  "verification": {
+    "unparsed": true
+  },
+  "artifacts": {
+    "envelopes.jsonl": "14113dfc9af603f706c26193221bebf51a8cc3c5fb2ffc92b845240580fca729",
+    "profiles.jsonl": "f1444bc4348359de6480bdbf7cff16448ecc91511d5ed6556a3f3fd8a8580ad1",
+    "report.json": "bd402fa6944b4f5eef1abbd8abf99544aa8e4181f373f137666ac3f4dda92e21"
+  },
+  "work_directory": "<REPO>\\.data\\r5\\hc1-f2-clean\\run-final",
+  "deadline_companies_by_section": {
+    "accounts": 0,
+    "activity": 0,
+    "gleif": 0,
+    "hiring": 0,
+    "identity": 0,
+    "inspections": 0,
+    "licences": 0,
+    "procurement": 0,
+    "research": 0,
+    "roles": 0,
+    "state_aid": 0,
+    "subunits": 0,
+    "website": 173
+  },
+  "placeholders": 0,
+  "margin_seconds": 121.85120090000055,
+  "adaptive_website_pass2_deadline": 173,
+  "url_inventory_categories": {
+    "doubtful": 15,
+    "correct": 36,
+    "legacy verifier limitation": 2
+  },
+  "required_output_verification": "required_outputs.json",
+  "offline_site_verification": "site_replay.json"
+}

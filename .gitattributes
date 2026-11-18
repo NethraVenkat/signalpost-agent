@@ -47,4 +47,9 @@ reports/r5/final500/*.jsonl -text whitespace=cr-at-eol
 reports/r5/final500/*.csv -text whitespace=cr-at-eol
 reports/r5/final500/urls.md -text
 reports/r5/final500/urls.json -text
+reports/r5/stageHC1/F2/*.jsonl -text whitespace=cr-at-eol
+reports/r5/stageHC1/F2/*.csv -text whitespace=cr-at-eol
+reports/r5/stageHC1/F2/report.json -text whitespace=cr-at-eol
+reports/r5/stageHC1/F2/urls.md -text
+reports/r5/stageHC1/F2/urls.json -text
 tests/fixtures/social_hc1/*.body -text whitespace=cr-at-eol

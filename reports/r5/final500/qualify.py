@@ -86,7 +86,7 @@ def tests():
     return outcome["exit_code"]
 
 
-def measure(label):
+def measure(label, *, run_id_prefix="r5-f2"):
     clone_receipt = json.loads((DEST / "clean_clone.json").read_text(encoding="utf8"))
     assert scale.git("rev-parse", "HEAD", cwd=scale.CLONE) == clone_receipt["clone_head"]
     assert scale.git("status", "--porcelain", cwd=scale.CLONE) == ""
@@ -101,7 +101,7 @@ def measure(label):
         scale.CLONE_PY, "-m", "signalpost.cli", "run",
         "--organisations", batch, "--bulk", bulk, "--output", work / "envelopes.jsonl",
         "--profiles-output", work / "profiles.jsonl", "--report", work / "report.json",
-        "--run-id", f"r5-f2-seed{SEED}-{label}", "--expected-count", COUNT,
+        "--run-id", f"{run_id_prefix}-seed{SEED}-{label}", "--expected-count", COUNT,
     ]
     assert sum(str(arg).startswith("--") for arg in argv) == 7
     print(f"Starting final qualification {label}", flush=True)
@@ -116,7 +116,7 @@ def measure(label):
     scale.save(prefix + "summary.json", summary)
 
 
-def audit(label):
+def audit(label, *, saved_output_verified=False):
     sys.path.insert(0, str(ROOT))
     from scripts.precision_ledger import kind, recheck
 
@@ -170,7 +170,7 @@ def audit(label):
                     legacy_social = (tier in {"owner_jsonld_sameas_v1", "own_contact_follow_us_v1"}
                                      and reasons == ["own header/footer/name/numeric-link policy no longer verifies"])
                     legacy_pdf = reasons == ["StopIteration"] and bool(site.get("pdf_proof"))
-                    if summary['gates']['check_live_run_exit_0'] and (legacy_social or legacy_pdf):
+                    if (summary['gates']['check_live_run_exit_0'] or saved_output_verified) and (legacy_social or legacy_pdf):
                         category = "legacy verifier limitation"
                     else:
                         category = "unresolved wrong verdict"

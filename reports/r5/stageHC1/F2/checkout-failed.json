@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "git",
+    "clone",
+    "--no-hardlinks",
+    "--branch",
+    "revision/r5",
+    "<REPO>",
+    "<REPO>\\.data\\r5\\hc1-f2-clean\\checkout\\repo"
+  ],
+  "cwd": "<REPO>",
+  "exit_code": 128,
+  "wall_seconds": 14.08533769999849,
+  "completed_at_utc": "2026-11-18T07:47:34.316912+00:00"
+}

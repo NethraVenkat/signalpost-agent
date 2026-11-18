@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "<REPO>\\.data\\r5\\hc1-f2-clean\\checkout\\repo\\.venv\\Scripts\\python.exe",
+    "reports/r5/stage4_7/run_tests.py",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp",
+    ".data/pytest",
+    "--tb=short"
+  ],
+  "cwd": "<REPO>\\.data\\r5\\hc1-f2-clean\\checkout\\repo",
+  "exit_code": 0,
+  "wall_seconds": 907.7614264000003,
+  "completed_at_utc": "2026-11-18T08:10:25.554579+00:00"
+}

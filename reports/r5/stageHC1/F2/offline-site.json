@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "<REPO>\\.venv\\Scripts\\python.exe",
+    "-m",
+    "signalpost.cli",
+    "site",
+    "--input",
+    "<REPO>\\.data\\r5\\hc1-f2-clean\\run-final\\envelopes.jsonl",
+    "--out",
+    "<REPO>\\.data\\r5\\hc1-f2-clean\\site-replay-final"
+  ],
+  "cwd": "<REPO>",
+  "exit_code": 0,
+  "wall_seconds": 53.130359700000554,
+  "completed_at_utc": "2026-11-18T08:52:55.886896+00:00"
+}

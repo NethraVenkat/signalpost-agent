@@ -831,3 +831,9 @@
 - When the existing trims leave a profile above the 250,000-byte gate, render it with the duplicate source shortcuts deferred to the evidence panels. The fact anchors, publisher links, export values and complete receipts remain available. The renderer checks its site deadline before the additional render.
 - The same saved page rendered offline at 241,286 bytes. All 500 offline HTML profiles and their companion evidence files were present, with a maximum HTML size of 249,406 bytes. The site replay took 53.13 s.
 - Full pytest passed 1,380 tests in 888.37 s, including the regression for duplicate source links on an oversized page.
+
+## 2026-11-18 - F2 qualification after HC1
+
+- Seed 20261121 drew 500 companies after excluding 4,206 unique numbers from committed and on-disk samples, including the earlier F2 cohort. Overlap was zero. The clean clone of e185130 passed 1,379 tests. The frozen 2026-11-16 Brreg subset supplied 496 rows, and the four live identity lookups returned HTTP 200.
+- The one fresh seven-flag evaluator run took 1,978.15 s and finished with 121.85 s of margin. It produced 500 terminal envelopes and 500 profiles, with zero placeholders. It published 38 websites and 15 social URLs at 5,115 HTTP attempts and $0 provider cost. All 173 deadline hits were in website work.
+- The measured `check_live_run --count 500` failed its optional site gate. The separate saved-output verifier passed all 500 envelopes and verified the original file hashes. The repaired renderer passed the offline site check on those same saved envelopes. The measured report remains byte-exact and the failed checker receipt is retained. See stageHC1/F2/SUMMARY.md for the metrics and stageHC1/F2/urls.md for all 53 URLs, including 15 doubtful labels and two wrong labels attributable to the legacy verifier.
