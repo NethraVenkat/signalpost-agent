@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "<REPO>\\.venv\\Scripts\\python.exe",
+    "reports/r5/stage4_7/run_tests.py",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp",
+    ".data/r5/hc1c-checks/pytest-gate",
+    "--tb=short"
+  ],
+  "cwd": "<REPO>",
+  "exit_code": 0,
+  "wall_seconds": 829.8749165000008,
+  "completed_at_utc": "2026-11-18T10:28:40.903296+00:00"
+}

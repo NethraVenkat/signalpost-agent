@@ -6,7 +6,7 @@ import re
 from urllib.parse import urlsplit, urlunsplit
 from ..budget import SourceFailure
 from ..models.envelope import Error
-from ..models.evidence import digest
+from ..models.evidence import Evidence, digest
 import xml.etree.ElementTree as ET
 from ..sources.extract import Section, Source, add, missing, response_source
 from .candidates import generate, context_from_bulk, legal_name, Candidate, GENERIC, candidate_key
@@ -14,7 +14,10 @@ from .html import Page
 from .policy import domain, normalize_url, SOCIAL, DIRECTORIES, FREE_MAIL
 from .proof import score, phone, extract_entity_cards, find_containing_card, registry_contacts
 from .social import discover, profile_url
-from .owner_social import FOLLOW_US, SAME_AS, SOCIAL_POLICY, former_names, page_profiles, same_as_veto, site_scope, visible_profiles
+from .owner_social import (
+    FOLLOW_US, GROUP_RECEIPT_METHOD, SAME_AS, SOCIAL_POLICY, former_names,
+    group_site_receipt, page_profiles, same_as_veto, site_scope, visible_profiles, website_scope,
+)
 from .fetcher import TRANSIENT
 from .seed_index import SEED_ORIGINS, publisher_has_number
 
@@ -463,7 +466,17 @@ async def fetch(org, envelope, bulk, http, previous=None, *, resume=False, candi
     return await offload(publish_result,org,envelope,http,section,choices,attempts,context,tuple(fetched_html.values()))
 
 
-def extract_contacts_and_social(section, org, web_claim, pages, context=None, envelope=None, owner_pages=(), fetched_html=()):
+def checked_site_pages(own_pages, fetched_html, target_domain):
+    checked = {(r.url, getattr(r, 'sha', None)): (r, page) for r, page in own_pages}
+    for response in fetched_html:
+        key = response.url, response.sha
+        if key not in checked and domain(response.url) == target_domain:
+            checked[key] = response, Page(response.body, response.url)
+    return checked
+
+
+def extract_contacts_and_social(section, org, web_claim, pages, context=None, envelope=None, owner_pages=(),
+                                fetched_html=(), *, site_check=None):
     """
     Extracts contacts and verified social profiles from website pages.
     A fetched page can veto attribution even when it cannot provide positive proof.
@@ -485,16 +498,17 @@ def extract_contacts_and_social(section, org, web_claim, pages, context=None, en
     target_domain = domain(proof_url) if proof_url else (domain(pages[0][0].url) if pages else "")
 
     social_seen, contact_seen = set(), set()
+    unattributed_contacts = set()
     original_pages={(id(r),id(p)) for r,p in pages}
     own_pages = [(r, p) for r, p in [*pages, *owner_pages] if domain(r.url) == target_domain]
-    eligible = {(r.url, getattr(r, 'sha', None)): p for r, p in own_pages}
-    scanned = dict(eligible)
-    for r in fetched_html:
-        if domain(r.url) == target_domain and (r.url, r.sha) not in scanned:
-            scanned[r.url, r.sha] = Page(r.body, r.url)
-    visible = visible_profiles(scanned.values())
+    eligible = {(r.url, getattr(r, 'sha', None)) for r, _ in own_pages}
     name = context.get('name') or ''
-    scope, _, _ = site_scope(web_val, list(scanned.values()), org, name, context.get('former_names', ()))
+    if site_check is None:
+        scanned = checked_site_pages(own_pages, fetched_html, target_domain)
+        scope, _, _ = site_scope(web_val, [p for _, p in scanned.values()], org, name, context.get('former_names', ()))
+    else:
+        scanned, scope = site_check
+    visible = visible_profiles(p for _, p in scanned.values())
     for source_response, source_page in own_pages:
         cards = extract_entity_cards(source_page.raw) if is_group else []
         profiles = page_profiles(source_page, web_val, org, context, visible, bool(scope))
@@ -530,22 +544,19 @@ def extract_contacts_and_social(section, org, web_claim, pages, context=None, en
                 contacts.append(("phone", number, source_page.span_for(match.group(1))[:150]))
         for kind, contact, source_span in contacts:
             if (kind, contact.casefold()) not in contact_seen:
+                field = "contact." + kind + "." + digest(contact.casefold())[:20]
                 if is_group:
                     pos = source_page.raw.find(contact)
-                    if pos >= 0:
-                        c = find_containing_card(cards, pos)
-                        if c:
-                            if c.is_sibling(org, other_orgnrs, subunits) or not c.matches_org(org, context, subunits):
-                                continue
-                        else:
-                            continue
-                    else:
+                    card = find_containing_card(cards, pos) if pos >= 0 else None
+                    if not card or card.is_sibling(org, other_orgnrs, subunits) or not card.matches_org(org, context, subunits):
+                        unattributed_contacts.add(field)
                         continue
-                publish(section, source_response, org, "contact." + kind + "." + digest(contact.casefold())[:20], contact, "contact:" + contact, source_span)
+                publish(section, source_response, org, field, contact, "contact:" + contact, source_span)
+                unattributed_contacts.discard(field)
                 contact_seen.add((kind, contact.casefold()))
     page_receipts = [{'url': url, 'content_sha256': sha, 'eligible': (url, sha) in eligible}
                      for url, sha in scanned if sha]
-    return scope, page_receipts
+    return scope, page_receipts, sorted(unattributed_contacts)
 
 
 def candidate_proof(page,org,context,candidate,leaders):
@@ -616,7 +627,7 @@ def publish_result(org,envelope,http,section,choices,attempts,context,fetched_ht
         return missing("website", "no_localized_proof", state="ambiguous")
     value = {"final_url": root_url, "identity_level": proof.level, "proof_type": proof.proof_type,
              "proof_page_url": response.url, "signals": proof.signals, "points": proof.points,
-             "candidate_origin": candidate.origin, "relationship_note": "group_site" if proof.other_orgnrs else None,
+             "candidate_origin": candidate.origin, "relationship_note": None,
              "other_orgnrs": proof.other_orgnrs}
     if getattr(response,'pdf_receipt',None):value['pdf_proof']=response.pdf_receipt
     if getattr(proof,'publisher_receipt',None):
@@ -624,8 +635,15 @@ def publish_result(org,envelope,http,section,choices,attempts,context,fetched_ht
     proven_units={str(u['orgnr']) for u in context.get('subunits',[]) if u.get('orgnr')}
     if (candidate.subunit_orgnr and matched==candidate.subunit_orgnr) or matched in proven_units:
         value['matched_via_subunit']=matched
-        from .social import shared_group_context
-        if shared_group_context(page):value['relationship_note']='group_site'
+    target_domain = domain(response.url)
+    accepted_domain_pages = [(r, p) for r, p in pages if domain(r.url) == target_domain and not getattr(r, 'pdf_receipt', None)]
+    owner_pages = [(r, p) for r, p in getattr(http, 'owner_social_pages', {}).get(org, ()) if domain(r.url) == target_domain]
+    checked = checked_site_pages([*accepted_domain_pages, *owner_pages], fetched_html, target_domain)
+    scope, group_page, group_match = website_scope(value, [p for _, p in checked.values()], org,
+                                                  context.get('name') or '', context.get('former_names', ()),
+                                                  proof_page=page)
+    if scope == 'website_group_proof' or group_page is not None:
+        value['relationship_note'] = 'group_site'
     contact_matches = registry_contacts(page, context) if not proof.other_orgnrs else {}
     contact_refs = {}
     for kind in contact_matches:
@@ -640,6 +658,16 @@ def publish_result(org,envelope,http,section,choices,attempts,context,fetched_ht
     if getattr(response,'pdf_receipt',None):
         from .legal_pdf import attach
         attach(section,web_claim,response)
+    if group_page is not None:
+        group_locator, group_span = group_site_receipt(group_page, scope, group_match)
+        if group_span:
+            source = next(r for r, p in checked.values() if p is group_page)
+            receipt = Evidence(id=digest([source.url, source.sha, group_locator, GROUP_RECEIPT_METHOD]),
+                               source_url=source.url, source_class='company_owned', retrieved_at=source.retrieved_at,
+                               content_sha256=source.sha, locator=group_locator, claim_span=group_span,
+                               extraction_method=GROUP_RECEIPT_METHOD)
+            section.evidence.append(receipt)
+            web_claim.evidence_ids.append(receipt.id)
     for kind, refs in contact_refs.items():
         contact_value, contact_span = contact_matches[kind]
         if not contact_span or len(contact_span) > 300 or contact_span not in page.raw: continue
@@ -663,13 +691,11 @@ def publish_result(org,envelope,http,section,choices,attempts,context,fetched_ht
         section.evidence.extend(registry_refs)
         section.claims[-1].evidence_ids.extend(e.id for e in registry_refs)
     from .descriptions import extract as descriptions
-    accepted_domain_pages = [(r, p) for r, p in pages if domain(r.url) == domain(response.url) and not getattr(r,'pdf_receipt',None)]
     identity_claim = section.claims[-1]
     descriptions(section, org, identity_claim, accepted_domain_pages)
-    owner_pages = getattr(http,'owner_social_pages',{}).get(org,())
-    social_scope, social_pages = extract_contacts_and_social(
+    social_scope, social_pages, unattributed_contacts = extract_contacts_and_social(
         section, org, identity_claim, accepted_domain_pages, context=context, envelope=envelope,
-        owner_pages=owner_pages, fetched_html=fetched_html)
+        owner_pages=owner_pages, site_check=(checked, scope))
     brand = extract_public_brand(page, context.get("name"))
     if brand:
         span = (page.span_for(brand) or "")[:150]
@@ -680,5 +706,7 @@ def publish_result(org,envelope,http,section,choices,attempts,context,fetched_ht
                                        'social_policy': SOCIAL_POLICY,
                                        'social_scope': social_scope,
                                        'social_pages': social_pages}
+    if unattributed_contacts:
+        envelope.run.refresh['website']['unattributed_contacts'] = unattributed_contacts
     section.errors.append(Error(section='website',code='website_candidates',message=json.dumps(attempts+http.attempts.get(org,[]),ensure_ascii=False)))
     return section

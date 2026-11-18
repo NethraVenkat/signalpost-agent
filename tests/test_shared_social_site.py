@@ -48,7 +48,7 @@ def test_registered_foreign_name_with_legal_form_in_rendered_page():
 
 
 @pytest.mark.parametrize('exact_link', [False, True])
-def test_second_own_page_vetoes_social_without_changing_the_website(tmp_path, monkeypatch, exact_link):
+def test_second_own_page_labels_website_and_requires_exact_social_id(tmp_path, monkeypatch, exact_link):
     url = 'https://www.facebook.com/example'
     schema = ''
     if exact_link:
@@ -71,15 +71,18 @@ def test_second_own_page_vetoes_social_without_changing_the_website(tmp_path, mo
     _, row, requests, cfg = web.execute_web(tmp_path, monkeypatch, response=respond)
     website = next(c for c in row['claims'] if c['field'] == 'official_website')
     assert website['value']['identity_level'] == 'VERIFIED'
-    assert website['value']['relationship_note'] is None
+    assert website['value']['relationship_note'] == 'group_site'
     assert requests.count('https://example.no/kontakt') == 1
     refresh = row['run']['refresh']['website']
     assert refresh['social_scope'] == 'other_orgnr_on_page'
     contact = next(p for p in refresh['social_pages'] if p['url'].endswith('/kontakt'))
     assert not contact['eligible']
+    assert any(e['id'] in website['evidence_ids'] and e['content_sha256'] == contact['content_sha256']
+               and e['locator'] == f'group-site:other_orgnr_on_page:{web.OTHER}' for e in row['evidence'])
     socials = [c for c in row['claims'] if c['field'].startswith('social_profile.')]
     if not exact_link:
         assert not socials
+        assert verify(cfg.output, cfg.state_dir, 1)['briefing_unverified_values'] == 0
         return
     assert len(socials) == 1
     assert socials[0]['value']['proof_tier'] == SAME_AS

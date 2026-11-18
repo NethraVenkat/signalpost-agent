@@ -10,7 +10,7 @@ from dataclasses import dataclass
 from functools import lru_cache
 from pathlib import Path
 
-from .rarity import FORMS
+from .rarity import FILLERS, FORMS
 
 DEFAULT_PATH = Path(__file__).resolve().parents[1] / 'data/social_registry.bin.gz'
 LEGAL_FORMS = FORMS | {'sf', 'kf', 'fkf', 'se', 'borettslag', 'eierseksjonssameie'}
@@ -60,7 +60,7 @@ def load(path=DEFAULT_PATH):
         return RegistryNames(max_words, names, domains)
 
 
-def foreign_name(text, index, own_names):
+def foreign_name(text, index, own_names, *, ignore_filler_prose=False):
     """Find a complete registered name ending in an explicit legal form."""
     text = SLASH_AS.sub('AS', unicodedata.normalize('NFKC', text))
     tokens = list(WORD.finditer(text))
@@ -78,6 +78,11 @@ def foreign_name(text, index, own_names):
             candidate = words[start:end + 1]
             if candidate in own_names:
                 break
+            # A lowercase connective can precede a legal form in prose, as in
+            # “endra organisasjonsform til AS”. It is not a company mention.
+            if (ignore_filler_prose and len(candidate) == 2 and candidate[0] in FILLERS
+                    and tokens[start].group().islower()):
+                continue
             if index.contains(candidate):
                 return text[tokens[start].start():suffix.end()]
     return None

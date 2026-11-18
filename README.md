@@ -237,6 +237,12 @@ Nethra Venkat's independent web hand-check on 2026-11-18 covered all **26 flagge
 
 The revised rules withheld **16 of 56** archived social URLs, including both confirmed wrong links. They retained **11 of 14** human-confirmed correct observations. Accella LinkedIn, OfficeAid Facebook, and Trollheim Twitter lost publication under the exact-organisation rule for shared sites. [Replay and all withheld URLs](reports/r5/stageHC1/REPLAY.md)
 
+### HC1 website hand-check and offline replay
+
+Nethra Venkat’s independent web hand-check on 2026-11-18 covered all **25 flagged P2 and P3g websites**. **23 were correct**, including **3 shared sites**, and **2 were unsure**. The ledger pins the verdicts to the archived claims and preserves the automated labels. [Website verdicts](reports/r5/stageHC1/website_human_reviews.json)
+
+The offline replay retained **all 84 websites** at their original proof tiers and labelled **18** as `group_site`, including Westnes Holding, Trollheim and Whale Safari. Social profiles on labelled sites still require a declaration tied to the exact organisation number. [All relabelled websites](reports/r5/stageHC1/WEBSITE_REPLAY.md)
+
 ### Historical scale measurements
 
 All live checks below used a 2,400-second budget and template synthesis. Coverage describes these samples, not a universal recall estimate.

@@ -11,7 +11,9 @@ EXCLUDE=re.compile(r'founder|grunnlegger|agency|designer|designbyr.|webbyr.|grou
 SAME_AS = 'owner_jsonld_sameas_v1'
 FOLLOW_US = 'own_contact_follow_us_v1'
 SAME_AS_POLICY = 'strict_header_footer_or_exact_owner_declaration_v4'
-SOCIAL_POLICY = 'strict_header_footer_or_exact_owner_declaration_v5'
+SHARED_SITE_POLICY = 'strict_header_footer_or_exact_owner_declaration_v5'
+SOCIAL_POLICY = 'strict_header_footer_or_exact_owner_declaration_v6'
+GROUP_RECEIPT_METHOD = 'signalpost.website_scope.v1'
 STRICT_NAME = 'own_header_footer_exact_name_v1'
 STRICT_NUMERIC = 'own_header_footer_numeric_linkedin_v1'
 
@@ -84,7 +86,7 @@ def former_names(records):
                               and isinstance(record.get('navn'), str) and record['navn'].strip()))
 
 
-def site_scope(site, pages, org, company_name, historical_names=()):
+def site_scope(site, pages, org, company_name, historical_names=(), *, ignore_filler_prose=False):
     """Return the first shared-site signal and the page where it appeared."""
     from .proof import IDENTIFIER_META, orgnrs, owner_identifiers
     from .social_registry import LEGAL_FORMS, foreign_name, legal_words, load, shared_domain_name
@@ -122,11 +124,27 @@ def site_scope(site, pages, org, company_name, historical_names=()):
         if other := sorted(numbers - {org}):
             return 'other_orgnr_on_page', page, other[0]
         for block in blocks:
-            if name := foreign_name(block, index, own_names):
+            if name := foreign_name(block, index, own_names, ignore_filler_prose=ignore_filler_prose):
                 return 'other_registered_name_on_page', page, name
             if stems and (name := shared_domain_name(block, stems, own_stems)):
                 return 'other_registered_entity_on_shared_domain', page, name
     return None, None, None
+
+
+def website_scope(site, pages, org, company_name, historical_names=(), *, proof_page=None):
+    """Derive shared scope without trusting the website's published label."""
+    subunit_group = site.get('matched_via_subunit') and proof_page is not None and shared_group_context(proof_page)
+    proof = {**site, 'relationship_note': 'group_site' if subunit_group else None}
+    return site_scope(proof, pages, org, company_name, historical_names, ignore_filler_prose=True)
+
+
+def group_site_receipt(page, reason, matched):
+    span = page.proof_span(matched) if matched.isdecimal() else page.name_span(matched)
+    if not span and not matched.isdecimal():
+        # A name can span inline elements. The locator identifies the complete
+        # rendered match, which is independently rechecked from the full body.
+        span = page.name_span(matched.split()[0])
+    return f'group-site:{reason}:{matched}', span
 
 
 def page_profiles(page, site, org, context, visible, shared):

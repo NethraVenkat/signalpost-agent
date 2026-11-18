@@ -74,6 +74,8 @@ def apply(envelope, previous, blobs):
     envelope.run.refresh["previous_run_id"] = previous.get("run_id", previous.get("run", {}).get("run_id"))
     envelope.run.refresh["mode"] = "refresh"
     old_sections=previous.get('run',{}).get('sections',old.get('sections',{}))
+    website_review = envelope.run.refresh.get('website', {})
+    unattributed_contacts = set(website_review.get('unattributed_contacts', ()))
     failed = {family for family,state in envelope.run.sections.items() if state not in CHECKED or old_sections.get(family) not in CHECKED}
     for family in failed:
         before=old_sections.get(family); after=envelope.run.sections.get(family)
@@ -86,7 +88,8 @@ def apply(envelope, previous, blobs):
         available = {c.field: c for c in envelope.claims if c.family == family and c.availability == "available"}
         for claim in old_claims.values():
             if claim.family == family and claim.availability == "available":
-                if claim.field.startswith('social_profile.'): continue  # Current strict-link proof is mandatory.
+                if claim.field.startswith('social_profile.') or claim.field in unattributed_contacts:
+                    continue  # Site scope can block a current attribution.
                 if family=='hiring':
                     from ..sources.nav import timestamp
                     from datetime import datetime,timezone
@@ -106,7 +109,7 @@ def apply(envelope, previous, blobs):
         if checked_urls is None or envelope.run.sections.get(scoped_family) not in {'available','not_available'}:continue
         for field, claim in old_claims.items():
             if claim.family != scoped_family or claim.availability != 'available' or field in new_claims or field == 'official_website': continue
-            if field.startswith('social_profile.'): continue
+            if field.startswith('social_profile.') or field in unattributed_contacts: continue
             source_urls = {old_evidence[eid].source_url for eid in claim.evidence_ids if old_evidence[eid].source_class == 'company_owned'}
             if source_urls and not source_urls <= set(checked_urls):
                 carried = claim.model_copy(update={'carried_forward': True})
@@ -134,7 +137,11 @@ def apply(envelope, previous, blobs):
                         'current_state':after.availability if after else 'unchecked_field',
                         'reason':'filing_year_list_not_supported_in_both_runs'})
                 continue
-        social_scope = envelope.run.refresh.get('website', {}).get('social_scope')
+        if before and before.availability == 'available' and after is None and field in unattributed_contacts:
+            envelope.run.refresh['observation_changes'].append({'section':'website','field':field,
+                'previous_state':'available','current_state':'not_published','reason':'contact_site_scope_unresolved'})
+            continue
+        social_scope = website_review.get('social_scope')
         if (field.startswith('social_profile.') and before and isinstance(before.value, dict)
                 and ((social_scope and after is None) or before.value.get('proof_tier')
                      not in {'own_header_footer_exact_name_v1', 'own_header_footer_numeric_linkedin_v1'})):

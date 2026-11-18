@@ -9,8 +9,9 @@ from signalpost.sources.bulk_registry import column
 from signalpost.sources.registry_fields import reported
 from signalpost.web.html import Page
 from signalpost.web.owner_social import (
-    FOLLOW_US, SAME_AS, SAME_AS_POLICY, SOCIAL_POLICY, declared_profiles, former_names,
-    page_profiles, same_as_veto, site_scope, visible_profiles,
+    FOLLOW_US, GROUP_RECEIPT_METHOD, SAME_AS, SAME_AS_POLICY, SHARED_SITE_POLICY, SOCIAL_POLICY,
+    declared_profiles, former_names, group_site_receipt, page_profiles, same_as_veto, site_scope,
+    visible_profiles, website_scope,
 )
 from signalpost.web.policy import domain
 from scripts.verify_publisher_identity import registry_context
@@ -59,16 +60,47 @@ def verified_former_names(org, data, evidence, stored_body, refs):
     return tuple(dict.fromkeys(names))
 
 
+def verify_website_scope(org, site, pages, name, history, evidence, stored_body):
+    value = site['value']
+    receipts = [evidence[ref] for ref in site['evidence_ids']]
+    proof_page = None
+    if value.get('matched_via_subunit'):
+        proof = next((e for e in receipts if e['source_url'] == value['proof_page_url']
+                      and 'identity-proof:' in e['locator']), None)
+        assert proof, 'Missing subunit website proof'
+        text = stored_body(proof['content_sha256'])
+        proof_page = Page(text.encode('utf8'), proof['source_url'], text=text)
+    scope, page, match = website_scope(value, list(pages.values()), org, name, history, proof_page=proof_page)
+    expected_label = 'group_site' if scope == 'website_group_proof' or page is not None else None
+    assert value.get('relationship_note') == expected_label, 'Unsupported social site scope: website relationship note'
+
+    expected_receipts = []
+    if page is not None:
+        locator, span = group_site_receipt(page, scope, match)
+        if span:
+            url, sha = next(key for key, parsed in pages.items() if parsed is page)
+            expected_receipts.append((url, sha, locator, span, 'company_owned', GROUP_RECEIPT_METHOD))
+    actual_receipts = [(e['source_url'], e['content_sha256'], e['locator'], e['claim_span'],
+                        e['source_class'], e['extraction_method']) for e in receipts
+                       if e['locator'].startswith('group-site:') or e['extraction_method'] == GROUP_RECEIPT_METHOD]
+    assert expected_receipts == actual_receipts, 'Unsupported group-site evidence'
+    return scope
+
+
 def verify(org,data,evidence,stored_body,raw_body=None):
     review = (data.get('run') or data).get('refresh', {}).get('website', {})
-    current = review.get('social_policy') == SOCIAL_POLICY
-    check_site = current or review.get('social_policy') == SAME_AS_POLICY
+    policy = review.get('social_policy')
+    group_labels = policy == SOCIAL_POLICY
+    current = policy in {SHARED_SITE_POLICY, SOCIAL_POLICY}
+    check_site = current or policy == SAME_AS_POLICY
     claims = [c for c in data['claims'] if c['field'].startswith('social_profile.')
               and c['availability'] == 'available' and (current or c['value'].get('proof_tier') in TIERS)]
-    if not claims:
+    if not claims and not group_labels:
         return 0
     site = next((c for c in data['claims'] if c['field'] == 'official_website'
                  and c['availability'] == 'available'), None)
+    if not claims and (not site or site.get('carried_forward')):
+        return 0
     assert site, 'Owner social requires a verified/HIGH website'
     context, _ = registry_context(org, data, evidence, stored_body)
     name_refs = {r for c in data['claims'] if c['field'] == 'identity.legal_name'
@@ -79,7 +111,11 @@ def verify(org,data,evidence,stored_body,raw_body=None):
     if current:
         eligible = {(p['url'], p['content_sha256']) for p in review['social_pages'] if p['eligible'] is True}
         scope_names = verified_former_names(org, data, evidence, stored_body, evidence)
-        scope, _, _ = site_scope(site['value'], list(pages.values()), org, context['name'], scope_names)
+        name = context.get('name') or ''
+        if group_labels:
+            scope = verify_website_scope(org, site, pages, name, scope_names, evidence, stored_body)
+        else:
+            scope, _, _ = site_scope(site['value'], list(pages.values()), org, name, scope_names)
         assert scope == review.get('social_scope'), 'Unsupported social site scope'
     for claim in claims:
         value = claim['value']

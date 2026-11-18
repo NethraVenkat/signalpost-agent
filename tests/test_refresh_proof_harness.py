@@ -17,6 +17,8 @@ def test_saved_source_refresh_precision_recall_and_stale_evidence(tmp_path):
     assert not result['idempotent_execution']['coverage_observations']
     assert result['transient']['changes']==0 and result['transient']['carried_claims']>0
     assert result['transient']['prior_receipts_and_times_preserved'] and result['transient']['stale_markers_present']
+    name_observations = result['cases']['name']['execution']['coverage_observations']
+    assert sum(o['reason'] == 'contact_site_scope_unresolved' for o in name_observations) == 2
     for case in CASES:
         c=result['cases'][case]
         assert c['detected'] and c['idempotent_changes']==0 and not c['unexpected_changes']

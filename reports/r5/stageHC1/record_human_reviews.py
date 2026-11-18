@@ -73,7 +73,9 @@ def read(path):
     return json.loads(path.read_text(encoding='utf8'))
 
 
-def samples():
+def samples(kind='social'):
+    included = (lambda field: field == 'official_website') if kind == 'website' else (
+        lambda field: field.startswith('social_profile.'))
     for label, (location, seed) in SAMPLES.items():
         folder = ROOT / 'reports/r5' / location
         inventory = read(folder / 'urls.json')
@@ -89,14 +91,14 @@ def samples():
             'url_inventory': (folder / 'urls.json').relative_to(ROOT).as_posix(),
         }
         with envelopes.open(encoding='utf8') as stream:
-            social_rows = {}
+            rows = {}
             for line in stream:
                 row = json.loads(line)
                 claims = {c['id']: c for c in row['claims']
-                          if c['field'].startswith('social_profile.') and c['availability'] == 'available'}
+                          if included(c['field']) and c['availability'] == 'available'}
                 if claims:
-                    social_rows[row['organisation_number']] = (row, claims)
-        yield label, folder, work, pins, inventory, social_rows
+                    rows[row['organisation_number']] = (row, claims)
+        yield label, folder, work, pins, inventory, rows
 
 
 def main():

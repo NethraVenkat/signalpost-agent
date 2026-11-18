@@ -1,0 +1,58 @@
+{
+  "westnes-subsidiary.body": {
+    "sample": "P3g",
+    "organisation_number": "930595764",
+    "url": "https://westnesholding.no/",
+    "offset": 2880,
+    "content_sha256": "89403e39c0c2d07730063ba4c81516bbb9474c864cf4cbaafe1a5c4f81f39c07",
+    "fixture_sha256": "8f815ec3c3464d7d70c86c591b88a40b64ce957ee2c0c4b0406ecb8b13088c00"
+  },
+  "westnes-orgnr.body": {
+    "sample": "P3g",
+    "organisation_number": "930595764",
+    "url": "https://westnesholding.no/",
+    "offset": 13099,
+    "content_sha256": "89403e39c0c2d07730063ba4c81516bbb9474c864cf4cbaafe1a5c4f81f39c07",
+    "fixture_sha256": "e00e1db3a267ba5b0ac676cba5253f5bd1e0995a91a583f37bd6d4e69c42d26a"
+  },
+  "whalesafari-footer.body": {
+    "sample": "P3g",
+    "organisation_number": "954583996",
+    "url": "https://whalesafari.no/",
+    "offset": 258184,
+    "content_sha256": "0ab1bb56e830d625cf901c11cb68cdd6de6f046cd5c92c3bc2a1352f0a0a748f",
+    "fixture_sha256": "7b92d1921e293b99f08340e39ae367ac9cc76ab61fbf4eeb0fd59309ff0388fc"
+  },
+  "trollheim-title.body": {
+    "sample": "P3g",
+    "organisation_number": "991323848",
+    "url": "https://trollheim.no/",
+    "offset": 247,
+    "content_sha256": "15f2a742f2d0baf7a6ba588677bd54709bdf264771c719f4519a33d081d92e4a",
+    "fixture_sha256": "44fb599bd714f11971d21ab6ea3ef72923820410532a78eff1905631a3556aee"
+  },
+  "bjorns-form.body": {
+    "sample": "P2",
+    "organisation_number": "916094051",
+    "url": "https://www.bjornsbil.no/",
+    "offset": 27279,
+    "content_sha256": "fac518b5c8abf5e121780417329895d2333159a3a35df3cc76ee8d350b7557d6",
+    "fixture_sha256": "c3af5328d172ae73df94d503ba5bafd367eaea0b8f7202206213e97dfd9a2c91"
+  },
+  "../social_hc1/trollheim-kontakt.body": {
+    "sample": "P3g",
+    "organisation_number": "991323848",
+    "url": "https://trollheim.no/kontakt/",
+    "offset": 65392,
+    "content_sha256": "0c08bfb18994f5475cf65a36a9ef4883ac87d7e84385690c938d2bceaa9beaac",
+    "fixture_sha256": "219cd43d89a3e72d1dc35ca9da8a719fb2de7c2ef20828c26d84c3e32d0810c9"
+  },
+  "../social_hc1/trollheim-facebook.body": {
+    "sample": "P3g",
+    "organisation_number": "991323848",
+    "url": "https://trollheim.no/",
+    "offset": 78325,
+    "content_sha256": "15f2a742f2d0baf7a6ba588677bd54709bdf264771c719f4519a33d081d92e4a",
+    "fixture_sha256": "0e2e308fbbe053a5e0fa7cceb0720bd4b6a36eabe773c1877300c9db453c0194"
+  }
+}

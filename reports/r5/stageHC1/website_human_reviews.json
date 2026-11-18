@@ -1,0 +1,1097 @@
+{
+  "reviewer": "Nethra Venkat",
+  "review_date": "2026-11-18",
+  "method": "Independent web hand-check supplied by the reviewer in conversation",
+  "inputs": {
+    "P2": {
+      "seed": 20261118,
+      "input_sha256": "925cf639574fd828de2201f37c48735e5628a2eb4af22602de49f9c62ce7c01d",
+      "envelopes_sha256": "5c3b33bd743890733f288f9ae1a9e864c424cbb2807c837a30f01309639a6ff3",
+      "url_inventory_sha256": "56639f8e09008e8eb58caf9cce2607f9beaacd8b285ee028d532bdc795bf2178",
+      "url_inventory": "reports/r5/scale500/urls.json",
+      "report_sha256": "3342c24510ee5e952c5f34b43ecafed75fad3632dd719edd14c61fe74655833f"
+    },
+    "P3g": {
+      "seed": 20261120,
+      "input_sha256": "8392ab97844f871857104cdaf7b04e150a55c8000fc157b4a93e01b4721fec0f",
+      "envelopes_sha256": "fee658298fa69f87be5fb1945f7fcddf92409dc4229f21ef759e85f405add812",
+      "url_inventory_sha256": "930a1a5e542235c40eec36d510727cfe8cfe271b635bbaea08301f097a56e677",
+      "url_inventory": "reports/r5/stageP3/P3g/urls.json",
+      "report_sha256": "73000c160a01450d043874620cf13794bae9f68f91b4127054a94fdf1ad2d881"
+    }
+  },
+  "counts": {
+    "correct": 23,
+    "wrong": 0,
+    "unsure": 2,
+    "correct_group_site": 3
+  },
+  "reviews": [
+    {
+      "sample": "P2",
+      "seed": 20261118,
+      "sample_sha256": "925cf639574fd828de2201f37c48735e5628a2eb4af22602de49f9c62ce7c01d",
+      "envelopes_sha256": "5c3b33bd743890733f288f9ae1a9e864c424cbb2807c837a30f01309639a6ff3",
+      "organisation_number": "816235502",
+      "company": "INDUSTRISTÅL AS",
+      "kind": "website",
+      "url": "https://www.industristal.no",
+      "field": "official_website",
+      "claim_id": "208b04b03ed412e59e7fd80d625901d94aed0369976cebc6916eb9d8eb607964",
+      "value_sha256": "886e63dadde5ae2f075d799c6d66122755b1a85ba2a4ae471a05939e783c62ce",
+      "verdict": "correct",
+      "human_verified": true,
+      "relationship_note": null,
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-18",
+      "method": "Independent web hand-check supplied by the reviewer in conversation",
+      "automated_verdict": "doubtful",
+      "automated_reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "proof_tier": "signals",
+      "note": "Confirmed by the reviewer.",
+      "receipts": [
+        {
+          "source_url": "https://www.industristal.no/",
+          "retrieved_at": "2026-11-16T08:29:40.208885Z",
+          "content_sha256": "6f60f174ece30cf3f1e6f20fa1821ff88b516230da8ae9895cce60d05d8131ac",
+          "locator": "identity-proof:816235502",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "sition:absolute;inset:0}</style>\n<title>Industristål AS - Stållageret Telemark alt innen stål</title>\n  <meta name=\"description\" content=\"Velkomen til oss. Alt innen for Stål. Vann, plasma, gass, laserskjæring, kantpresse, vals, Rør Bøying. Agentur Waltech og Buktens AB \"/>\n  <link rel=\"canonical\" h"
+        },
+        {
+          "source_url": "https://www.industristal.no/",
+          "retrieved_at": "2026-11-16T08:29:40.208885Z",
+          "content_sha256": "6f60f174ece30cf3f1e6f20fa1821ff88b516230da8ae9895cce60d05d8131ac",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a data-auto-recognition=\"true\" href=\"mailto:post@industristal.no\" class=\"wixui-rich-text__text\">"
+        }
+      ]
+    },
+    {
+      "sample": "P2",
+      "seed": 20261118,
+      "sample_sha256": "925cf639574fd828de2201f37c48735e5628a2eb4af22602de49f9c62ce7c01d",
+      "envelopes_sha256": "5c3b33bd743890733f288f9ae1a9e864c424cbb2807c837a30f01309639a6ff3",
+      "organisation_number": "818003072",
+      "company": "INNOSAFE AS",
+      "kind": "website",
+      "url": "https://www.molliesafe.no",
+      "field": "official_website",
+      "claim_id": "21603b2fafd2f94f4c55969db9491ab029c774860e4fc0c5391c04836165646a",
+      "value_sha256": "808849849e3d67fc1852e7d4dc828a355dab493e95a4209c2622fb486d4c8cc4",
+      "verdict": "correct",
+      "human_verified": true,
+      "relationship_note": null,
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-18",
+      "method": "Independent web hand-check supplied by the reviewer in conversation",
+      "automated_verdict": "doubtful",
+      "automated_reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration",
+        "Exact registry legal/brand spelling not located in saved page text"
+      ],
+      "proof_tier": "registry_declared_live",
+      "note": "Molliesafe AS is a registered operating unit of Innosafe AS. The registry lists the domain.",
+      "receipts": [
+        {
+          "source_url": "https://www.molliesafe.no/",
+          "retrieved_at": "2026-11-16T08:29:59.510641Z",
+          "content_sha256": "6c84e23bb5690c900b870244cf25836515fc67895bc3092810ef89671c4f97ea",
+          "locator": "identity-proof:818003072",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "\t\t\t<p>Verksted og lager Lisbergvegen 9, 2740 Roa</p>\t\t\t\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"elementor-element elementor-element-080bdfe elementor-widget elementor-widget-heading\" data-id=\"080bdfe\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"heading.default\">\n\t\t\t\t<div class=\"e"
+        }
+      ]
+    },
+    {
+      "sample": "P2",
+      "seed": 20261118,
+      "sample_sha256": "925cf639574fd828de2201f37c48735e5628a2eb4af22602de49f9c62ce7c01d",
+      "envelopes_sha256": "5c3b33bd743890733f288f9ae1a9e864c424cbb2807c837a30f01309639a6ff3",
+      "organisation_number": "825179062",
+      "company": "FTF CONSULTING AS",
+      "kind": "website",
+      "url": "https://www.ftfconsulting.no",
+      "field": "official_website",
+      "claim_id": "00c1a8287ad12e7d1fcb3324aceaf18ebacbeda4038a34b22764077c77d18328",
+      "value_sha256": "9b346636f612fdb5a35a551f51feb3bcb422d6057a3609bcf76dae8e14e3aa39",
+      "verdict": "unsure",
+      "human_verified": false,
+      "relationship_note": null,
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-18",
+      "method": "Independent web hand-check supplied by the reviewer in conversation",
+      "automated_verdict": "doubtful",
+      "automated_reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "proof_tier": "registry_declared_publisher_name",
+      "note": "The site did not open for the reviewer. Keep the original automated label.",
+      "receipts": [
+        {
+          "source_url": "https://www.ftfconsulting.no/",
+          "retrieved_at": "2026-11-16T08:34:00.707812Z",
+          "content_sha256": "b4c61a0d47e85bba09949b5418e74ce2ef20009e8f5af7ca65a0dd3fb78099ea",
+          "locator": "identity-proof:825179062",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "-50\"><div class=\"container\">Copyright © FTF Consulting AS 2020</div></footer>\n        <!-- Bootstrap core JS-->\n        <script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js\"></script>\n        <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundl"
+        },
+        {
+          "source_url": "https://www.ftfconsulting.no/",
+          "retrieved_at": "2026-11-16T08:34:00.707812Z",
+          "content_sha256": "b4c61a0d47e85bba09949b5418e74ce2ef20009e8f5af7ca65a0dd3fb78099ea",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a href=\"mailto:post@ftfconsulting.no\">"
+        }
+      ]
+    },
+    {
+      "sample": "P2",
+      "seed": 20261118,
+      "sample_sha256": "925cf639574fd828de2201f37c48735e5628a2eb4af22602de49f9c62ce7c01d",
+      "envelopes_sha256": "5c3b33bd743890733f288f9ae1a9e864c424cbb2807c837a30f01309639a6ff3",
+      "organisation_number": "911719266",
+      "company": "RESTAURANTDRIFT AS",
+      "kind": "website",
+      "url": "https://restaurantdrift.no",
+      "field": "official_website",
+      "claim_id": "8ba08a7a41ebc7de7a6b29f47115c13bfdfd439425f793850ab4b99116c6609c",
+      "value_sha256": "34b508337a98247b88a9e5561513ffdcd0c3e1369b14548c6de6d526dc1fb421",
+      "verdict": "correct",
+      "human_verified": true,
+      "relationship_note": null,
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-18",
+      "method": "Independent web hand-check supplied by the reviewer in conversation",
+      "automated_verdict": "doubtful",
+      "automated_reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "proof_tier": "publisher_name_rare_contact",
+      "note": "Confirmed by the reviewer.",
+      "receipts": [
+        {
+          "source_url": "https://restaurantdrift.no/",
+          "retrieved_at": "2026-11-16T08:19:10.605872Z",
+          "content_sha256": "deb448d3b85ba00a9d1ec9df8138b0070916d92d75f195e4b76dff4ac45bdb93",
+          "locator": "identity-proof:911719266",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "\t</a>\n\t\t\t</div>\n\t\t\t\n<p class=\"mainText\">Restaurantdrift AS har ett fundament fra hotell og restaurantdrift gjennom flere generasjoner innen virksomhet av Kafeer, restauranter, utleie av personell, konsulentbistand, catering, lagerhotell, kjøp/salg og import samt konsulentbistand fra Østen.</p>\n\n<img"
+        }
+      ]
+    },
+    {
+      "sample": "P2",
+      "seed": 20261118,
+      "sample_sha256": "925cf639574fd828de2201f37c48735e5628a2eb4af22602de49f9c62ce7c01d",
+      "envelopes_sha256": "5c3b33bd743890733f288f9ae1a9e864c424cbb2807c837a30f01309639a6ff3",
+      "organisation_number": "916094051",
+      "company": "BJØRNS BIL AS",
+      "kind": "website",
+      "url": "https://www.bjornsbil.no",
+      "field": "official_website",
+      "claim_id": "69903b1825bef7f2f98eddd963751b929bfb2be1e276489f184aaa11a7ad4c1c",
+      "value_sha256": "770bdc097064dea3fc34d5f4f42ecd0b563f1bf041c101725334e9fc33cae574",
+      "verdict": "correct",
+      "human_verified": true,
+      "relationship_note": null,
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-18",
+      "method": "Independent web hand-check supplied by the reviewer in conversation",
+      "automated_verdict": "doubtful",
+      "automated_reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "proof_tier": "signals",
+      "note": "The organisation number is on the contact page.",
+      "receipts": [
+        {
+          "source_url": "https://www.bjornsbil.no/",
+          "retrieved_at": "2026-11-16T08:38:01.687251Z",
+          "content_sha256": "fac518b5c8abf5e121780417329895d2333159a3a35df3cc76ee8d350b7557d6",
+          "locator": "identity-proof:916094051",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "\"https://www.bjornsbil.no/tenester/\">Om Bj&oslash;rns bil</a></li>\n<li id=\"menu-item-13\" class=\"menu-item menu-item-type-taxonomy menu-item-object-category menu-item-13\"><a href=\"https://www.bjornsbil.no/kontakt/\">Kontakt</a></li>\n<li id=\"menu-item-11\" class=\"menu-item menu-item-type-taxonomy menu-i"
+        },
+        {
+          "source_url": "https://www.bjornsbil.no/",
+          "retrieved_at": "2026-11-16T08:38:01.687251Z",
+          "content_sha256": "fac518b5c8abf5e121780417329895d2333159a3a35df3cc76ee8d350b7557d6",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a href=\"mailto:post@bjornsbil.no\">"
+        }
+      ]
+    },
+    {
+      "sample": "P2",
+      "seed": 20261118,
+      "sample_sha256": "925cf639574fd828de2201f37c48735e5628a2eb4af22602de49f9c62ce7c01d",
+      "envelopes_sha256": "5c3b33bd743890733f288f9ae1a9e864c424cbb2807c837a30f01309639a6ff3",
+      "organisation_number": "918811370",
+      "company": "TOTEN FORSIKRING AS",
+      "kind": "website",
+      "url": "https://totenforsikring.no",
+      "field": "official_website",
+      "claim_id": "fdececabb511aff6646a9264bb7462bbc6fedccb4734ce7eb261530b722b1151",
+      "value_sha256": "4205dfe1385b3da4cae3f2eb6ff5356babc0f5c4da862c05e05282d2990b6b63",
+      "verdict": "correct",
+      "human_verified": true,
+      "relationship_note": null,
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-18",
+      "method": "Independent web hand-check supplied by the reviewer in conversation",
+      "automated_verdict": "wrong",
+      "automated_reasons": [
+        "StopIteration"
+      ],
+      "proof_tier": "orgnr_on_page",
+      "note": "Confirmed by the reviewer.",
+      "receipts": [
+        {
+          "source_url": "https://totenforsikring.no/wp-content/uploads/2023/03/Angreskjema-Toten-2.pdf",
+          "retrieved_at": "2026-11-16T08:27:52.570456Z",
+          "content_sha256": "5b3f3b24a0c229693c279133aad7fee2f165360228e082b3e79ddfe73ccf1133",
+          "locator": "pdf:page:1/identity-proof:918811370",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "oten Forsikring AS\nOrganisasjonsnummer \n918811370  \nTelefonnummer Adresse \nJernbanesvingen 6, 2821 Gjøvik 990 13 282 \nE-postadresse \nservice@totenfors"
+        },
+        {
+          "source_url": "https://totenforsikring.no/wp-content/uploads/2023/03/Angreskjema-Toten-2.pdf",
+          "retrieved_at": "2026-11-16T08:27:52.570456Z",
+          "content_sha256": "d0347d389a513abb5c91b1725f03df05e132d2db6638ebc6e8a486efc557bdd6",
+          "locator": "pdf:original",
+          "extraction_method": "signalpost.legal_pdf.v1",
+          "claim_span": "%PDF-"
+        },
+        {
+          "source_url": "https://totenforsikring.no/angrerett/",
+          "retrieved_at": "2026-11-16T08:27:50.423327Z",
+          "content_sha256": "3eb9ede087a662a9022ff0eda91e219189b16fff277aac89518a1c2844c888ab",
+          "locator": "legal-pdf-link:https://totenforsikring.no/wp-content/uploads/2023/03/Angreskjema-Toten-2.pdf",
+          "extraction_method": "signalpost.legal_pdf.v1",
+          "claim_span": "<a id=\"link_text-125-365\" class=\"ct-link-text\" href=\"https://totenforsikring.no/wp-content/uploads/2023/03/Angreskjema-Toten-2.pdf\" target=\"_blank\"  >"
+        }
+      ]
+    },
+    {
+      "sample": "P2",
+      "seed": 20261118,
+      "sample_sha256": "925cf639574fd828de2201f37c48735e5628a2eb4af22602de49f9c62ce7c01d",
+      "envelopes_sha256": "5c3b33bd743890733f288f9ae1a9e864c424cbb2807c837a30f01309639a6ff3",
+      "organisation_number": "922569738",
+      "company": "SNUOM PSYKISK HELSE AS",
+      "kind": "website",
+      "url": "https://www.snuom.no",
+      "field": "official_website",
+      "claim_id": "da26f453403a7d99e447dffb2bb6450b648273624a6fc2e17045d7e23d7498a1",
+      "value_sha256": "a946db1f2be8746fe78936c7d91adbdc33139db13337aa0f71525241d4bcda9a",
+      "verdict": "correct",
+      "human_verified": true,
+      "relationship_note": null,
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-18",
+      "method": "Independent web hand-check supplied by the reviewer in conversation",
+      "automated_verdict": "doubtful",
+      "automated_reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "proof_tier": "signals",
+      "note": "Confirmed by the reviewer.",
+      "receipts": [
+        {
+          "source_url": "https://www.snuom.no/",
+          "retrieved_at": "2026-11-16T08:33:46.896503Z",
+          "content_sha256": "48ffa66134daa87df8d84032e137f3daca0d8f1ba8e064fce523db912a54fd49",
+          "locator": "identity-proof:922569738",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "h2 class=\"font_2 wixui-rich-text__text\">Snuom Psykisk Helse AS er en privat klinikk. Vi samarbeider tett med fastleger, forsikringsselskap og arbeidsgivere, og tilbyr rask oppstart uten henvisning eller ventetid i det offentlige systemet.</h2></div><!--/$--></div><!--/$--></div><!--/$--></div></div>"
+        },
+        {
+          "source_url": "https://www.snuom.no/",
+          "retrieved_at": "2026-11-16T08:33:46.896503Z",
+          "content_sha256": "48ffa66134daa87df8d84032e137f3daca0d8f1ba8e064fce523db912a54fd49",
+          "locator": "registry-contact:phone",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a data-testid=\"linkElement\" href=\"tel:+47 74 38 85 00\" class=\"PoVCDy wixui-button ZhVEJq\" aria-disabled=\"false\" aria-label=\"Ring oss\">"
+        },
+        {
+          "source_url": "https://www.snuom.no/",
+          "retrieved_at": "2026-11-16T08:33:46.896503Z",
+          "content_sha256": "48ffa66134daa87df8d84032e137f3daca0d8f1ba8e064fce523db912a54fd49",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a href=\"mailto:post@snuom.no?subject=Book time\" target=\"_self\" class=\"wixui-rich-text__text\">"
+        }
+      ]
+    },
+    {
+      "sample": "P2",
+      "seed": 20261118,
+      "sample_sha256": "925cf639574fd828de2201f37c48735e5628a2eb4af22602de49f9c62ce7c01d",
+      "envelopes_sha256": "5c3b33bd743890733f288f9ae1a9e864c424cbb2807c837a30f01309639a6ff3",
+      "organisation_number": "925193313",
+      "company": "UNDERVISNINGSMATERIELL AS",
+      "kind": "website",
+      "url": "https://undervisningsmateriell.no",
+      "field": "official_website",
+      "claim_id": "5d499880a442da2b5caf84a2c63570ea4be76d9f83838bfb6e437e45580c510f",
+      "value_sha256": "1ed968feeae1ff98f04a4548c4012973e5f70dffa1dc41755a548b5641af9461",
+      "verdict": "correct",
+      "human_verified": true,
+      "relationship_note": null,
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-18",
+      "method": "Independent web hand-check supplied by the reviewer in conversation",
+      "automated_verdict": "doubtful",
+      "automated_reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "proof_tier": "publisher_name_rare_contact",
+      "note": "Confirmed by the reviewer.",
+      "receipts": [
+        {
+          "source_url": "https://undervisningsmateriell.no/",
+          "retrieved_at": "2026-11-16T08:33:54.790372Z",
+          "content_sha256": "c1b98683e51fabd9462dce24656a44c8773eb7459912aaa892e519c0193c0133",
+          "locator": "identity-proof:925193313",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "set=\"windows-1252\">\n<title>Nettbutikk - Undervisningsmateriell AS</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<meta name=\"generator\" content=\"SmartWeb\">\n<meta name=\"csrf_token\" content=\"MTc5NDgxODAzM2VhZTlkOTk2MjI2YjA0NDJiODAxNDY4YTdhZGQ4OGIyNjgwNzhiMzBJeER6NVdSbHFle"
+        },
+        {
+          "source_url": "https://undervisningsmateriell.no/",
+          "retrieved_at": "2026-11-16T08:33:54.790372Z",
+          "content_sha256": "c1b98683e51fabd9462dce24656a44c8773eb7459912aaa892e519c0193c0133",
+          "locator": "registry-contact:phone",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a href=\"tel:22 70 00 10\">"
+        },
+        {
+          "source_url": "https://undervisningsmateriell.no/",
+          "retrieved_at": "2026-11-16T08:33:54.790372Z",
+          "content_sha256": "c1b98683e51fabd9462dce24656a44c8773eb7459912aaa892e519c0193c0133",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a href=\"mailto:post@undervisningsmateriell.no\">"
+        }
+      ]
+    },
+    {
+      "sample": "P2",
+      "seed": 20261118,
+      "sample_sha256": "925cf639574fd828de2201f37c48735e5628a2eb4af22602de49f9c62ce7c01d",
+      "envelopes_sha256": "5c3b33bd743890733f288f9ae1a9e864c424cbb2807c837a30f01309639a6ff3",
+      "organisation_number": "929455606",
+      "company": "INDUSTRIPLAST AS",
+      "kind": "website",
+      "url": "https://industriplast.no",
+      "field": "official_website",
+      "claim_id": "07691d0f8d4bb82b34a403df55abbd0a03a2e753591d845c270badd77980b38e",
+      "value_sha256": "87202310569273cebf07ac7cd236a8443dfef414a2f1a744909002555d86eb44",
+      "verdict": "correct",
+      "human_verified": true,
+      "relationship_note": null,
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-18",
+      "method": "Independent web hand-check supplied by the reviewer in conversation",
+      "automated_verdict": "doubtful",
+      "automated_reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "proof_tier": "publisher_name_registered_place",
+      "note": "Confirmed by the reviewer.",
+      "receipts": [
+        {
+          "source_url": "https://industriplast.no/",
+          "retrieved_at": "2026-11-16T08:38:27.177436Z",
+          "content_sha256": "ca330b3711e0a6a1509184fc2a740a9c8caa0c731b0ab661aa2e7181729b5e49",
+          "locator": "identity-proof:929455606",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "ment \" >\n\t<h1 class=\"overskriftforside\">Industriplast AS:</h1>\n<h2>Kvalitet &amp; kunnskap siden 1963</h2>\n<h1><span style=\"color: #e38d31;\">Produksjon av</span><br />\n<span style=\"color: #e38d31;\">rør, plastprofiler</span><br />\n<span style=\"color: #e38d31;\">&amp; slanger</span></h1>\n</div>\n\n\n\n\n\t\t<"
+        }
+      ]
+    },
+    {
+      "sample": "P2",
+      "seed": 20261118,
+      "sample_sha256": "925cf639574fd828de2201f37c48735e5628a2eb4af22602de49f9c62ce7c01d",
+      "envelopes_sha256": "5c3b33bd743890733f288f9ae1a9e864c424cbb2807c837a30f01309639a6ff3",
+      "organisation_number": "956510651",
+      "company": "KIRKENG EIENDOM AS",
+      "kind": "website",
+      "url": "https://kirkengeiendom.no",
+      "field": "official_website",
+      "claim_id": "69dd12da68d2d8fa74eda7e5a8fe10803421851dd89f0cac1555a7f8f3c1e00c",
+      "value_sha256": "a52f5f86def5e6510bc873a39776aa55e348630686b888e35d51570e0b948935",
+      "verdict": "unsure",
+      "human_verified": false,
+      "relationship_note": null,
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-18",
+      "method": "Independent web hand-check supplied by the reviewer in conversation",
+      "automated_verdict": "doubtful",
+      "automated_reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "proof_tier": "publisher_name_registered_place",
+      "note": "The site did not open for the reviewer. Keep the original automated label.",
+      "receipts": [
+        {
+          "source_url": "https://kirkengeiendom.no/kontakt-oss/",
+          "retrieved_at": "2026-11-16T08:30:18.995696Z",
+          "content_sha256": "6003c0b6c5f0aa6915eb5429607ce5c48def9d22c4078aecd29e5035a3cbccaa",
+          "locator": "identity-proof:956510651",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "</div>\n\t\n<p style=\"text-align: center;\">Kirkeng Eiendom AS er for tiden fire heltidsansatte med følgende kontaktdetaljer:</p>\n<p style=\"text-align: center;\">Besøksadresse: Nedre Storgate 35, 3015 Drammen</p>\n<p style=\"text-align: center;\">Postboks 413, 3002 Drammen</p>\n\t\t</div>\n\t\t\t</div>\n\n\t\n</div>\n<"
+        }
+      ]
+    },
+    {
+      "sample": "P2",
+      "seed": 20261118,
+      "sample_sha256": "925cf639574fd828de2201f37c48735e5628a2eb4af22602de49f9c62ce7c01d",
+      "envelopes_sha256": "5c3b33bd743890733f288f9ae1a9e864c424cbb2807c837a30f01309639a6ff3",
+      "organisation_number": "989952625",
+      "company": "VARMEPUMPESERVICE AS",
+      "kind": "website",
+      "url": "https://www.varmepumpeservice.no",
+      "field": "official_website",
+      "claim_id": "7882b0d36842423f4c5cdd0b0d2bd9cf3f96306b2a5e98a1561949c899a2ba1e",
+      "value_sha256": "d99d9e94ba572b1da5bfd0ac867c22e104a03fdf775387602586c8768bf5e6bc",
+      "verdict": "correct",
+      "human_verified": true,
+      "relationship_note": null,
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-18",
+      "method": "Independent web hand-check supplied by the reviewer in conversation",
+      "automated_verdict": "doubtful",
+      "automated_reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "proof_tier": "signals",
+      "note": "Confirmed by the reviewer.",
+      "receipts": [
+        {
+          "source_url": "https://www.varmepumpeservice.no/",
+          "retrieved_at": "2026-11-16T08:33:12.404231Z",
+          "content_sha256": "b52e6240266fc1017daf6a45f258c2541ea2e1004b68ea8a07d9cf79182aa83a",
+          "locator": "identity-proof:989952625",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "\n<title>Varmepumper | Bedre inneklima | Varmepumpeservice </title>\n<meta name=\"generator\" content=\"Gurusoft Ecommerce\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"/>\n<meta http-equiv=\"X-UA-Compatible\" conte"
+        },
+        {
+          "source_url": "https://www.varmepumpeservice.no/",
+          "retrieved_at": "2026-11-16T08:33:12.404231Z",
+          "content_sha256": "b52e6240266fc1017daf6a45f258c2541ea2e1004b68ea8a07d9cf79182aa83a",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a href=\"mailto:firmapost@varmepumpeservice.no\">"
+        }
+      ]
+    },
+    {
+      "sample": "P2",
+      "seed": 20261118,
+      "sample_sha256": "925cf639574fd828de2201f37c48735e5628a2eb4af22602de49f9c62ce7c01d",
+      "envelopes_sha256": "5c3b33bd743890733f288f9ae1a9e864c424cbb2807c837a30f01309639a6ff3",
+      "organisation_number": "991380523",
+      "company": "KVERNODDEN AS",
+      "kind": "website",
+      "url": "https://kvernodden.no",
+      "field": "official_website",
+      "claim_id": "e0283e31fdbdd7f89cb44f6a94d69d9fe3ab2ef8f9f2916dd5cf9e9531f3e633",
+      "value_sha256": "6055c98ed08b3a5e5c5ee4e8d22517699ffd5a327dc2f3863f9e424a01eb651f",
+      "verdict": "correct",
+      "human_verified": true,
+      "relationship_note": null,
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-18",
+      "method": "Independent web hand-check supplied by the reviewer in conversation",
+      "automated_verdict": "doubtful",
+      "automated_reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "proof_tier": "registry_declared_publisher_name",
+      "note": "Confirmed by the reviewer.",
+      "receipts": [
+        {
+          "source_url": "https://kvernodden.no/",
+          "retrieved_at": "2026-11-16T08:18:56.952457Z",
+          "content_sha256": "bbf255c4a3720e763afca7514ff2d88dbbb11e44d78ccbcd9075d7f536fbe3fd",
+          "locator": "identity-proof:991380523",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "             <p class=\"u-text u-text-6\">Kvernodden AS<br>Kjeldalsvegen 42<br>3825 LUNDE<br>\n                  <br>\n                </p>\n              </div>\n            </div>\n            <div class=\"u-align-left u-container-align-left u-container-style u-image u-layout-cell u-size-20-lg u-size-20-m"
+        }
+      ]
+    },
+    {
+      "sample": "P2",
+      "seed": 20261118,
+      "sample_sha256": "925cf639574fd828de2201f37c48735e5628a2eb4af22602de49f9c62ce7c01d",
+      "envelopes_sha256": "5c3b33bd743890733f288f9ae1a9e864c424cbb2807c837a30f01309639a6ff3",
+      "organisation_number": "992912952",
+      "company": "DOVRE HANDVERK AS",
+      "kind": "website",
+      "url": "https://www.dovrehandverk.no",
+      "field": "official_website",
+      "claim_id": "cdffa58705dc1064caf67503a81790cef714c7a905faf4438515b4db2a9785a5",
+      "value_sha256": "395de14db8d08d4855350e9ae9632deacbfcab6d3b494b012f80421508c6a576",
+      "verdict": "correct",
+      "human_verified": true,
+      "relationship_note": null,
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-18",
+      "method": "Independent web hand-check supplied by the reviewer in conversation",
+      "automated_verdict": "doubtful",
+      "automated_reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "proof_tier": "registry_declared_live",
+      "note": "Confirmed by the reviewer.",
+      "receipts": [
+        {
+          "source_url": "https://www.dovrehandverk.no/",
+          "retrieved_at": "2026-11-16T08:20:45.305420Z",
+          "content_sha256": "436f6c90b32a19318cfe346446c669a2e7da9ba16a82d074f50dfc8278dc2f19",
+          "locator": "identity-proof:992912952",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "unk.min.css.map*/</style>\n<title>Home | Dovre Handverk</title>\n  <link rel=\"canonical\" href=\"https://www.dovrehandverk.no\"/>\n  <meta property=\"og:title\" content=\"Home | Dovre Handverk\"/>\n  <meta property=\"og:url\" content=\"https://www.dovrehandverk.no\"/>\n  <meta property=\"og:site_name\" content=\"Dovre"
+        }
+      ]
+    },
+    {
+      "sample": "P2",
+      "seed": 20261118,
+      "sample_sha256": "925cf639574fd828de2201f37c48735e5628a2eb4af22602de49f9c62ce7c01d",
+      "envelopes_sha256": "5c3b33bd743890733f288f9ae1a9e864c424cbb2807c837a30f01309639a6ff3",
+      "organisation_number": "996441083",
+      "company": "KVITSØY SJØTJENESTER AS",
+      "kind": "website",
+      "url": "https://www.seaservices.no",
+      "field": "official_website",
+      "claim_id": "2629b5b555b3dc79169bd14f100c0fba7d15b20d9f48a5e0f26b9db7361b13ad",
+      "value_sha256": "3d0ca4a05bd432125b3aa068dfa8f3569a4b7c05a36b2d0a30a73d3be455f906",
+      "verdict": "correct",
+      "human_verified": true,
+      "relationship_note": null,
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-18",
+      "method": "Independent web hand-check supplied by the reviewer in conversation",
+      "automated_verdict": "doubtful",
+      "automated_reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "proof_tier": "signals",
+      "note": "The site shows “©2022 by Kvitsøy Sjøtjenester AS”.",
+      "receipts": [
+        {
+          "source_url": "https://www.seaservices.no/",
+          "retrieved_at": "2026-11-16T08:23:48.352461Z",
+          "content_sha256": "cbdbbffb09321767d5fd712666aecc58628c5272d60a8e9af75d95cac4ec7b0d",
+          "locator": "identity-proof:996441083",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "a333.chunk.min.css.map*/</style>\n<title>Kvitsøy Sjøtjenester – Frakt, transport og miljø</title>\n  <meta name=\"description\" content=\"Kvitsøy Sjøtjenester leverer frakt, transport av rensefisk, personer og varer, miljøovervåking og berging langs kysten. \"/>\n  <link rel=\"canonical\" href=\"https://www.s"
+        },
+        {
+          "source_url": "https://www.seaservices.no/",
+          "retrieved_at": "2026-11-16T08:23:48.352461Z",
+          "content_sha256": "cbdbbffb09321767d5fd712666aecc58628c5272d60a8e9af75d95cac4ec7b0d",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a data-auto-recognition=\"true\" href=\"mailto:post@seaservices.no\" class=\"wixui-rich-text__text\">"
+        }
+      ]
+    },
+    {
+      "sample": "P3g",
+      "seed": 20261120,
+      "sample_sha256": "8392ab97844f871857104cdaf7b04e150a55c8000fc157b4a93e01b4721fec0f",
+      "envelopes_sha256": "fee658298fa69f87be5fb1945f7fcddf92409dc4229f21ef759e85f405add812",
+      "organisation_number": "833242482",
+      "company": "SOLI AUTO AS",
+      "kind": "website",
+      "url": "https://soliauto.no",
+      "field": "official_website",
+      "claim_id": "36b06d201ff85070a00f722d5634826401e96fb220b627effbf0881679864c94",
+      "value_sha256": "d61e96035edea95355412f14d24081ddbb67ff4f49b75cc85d5b22c9d1d4c0f2",
+      "verdict": "correct",
+      "human_verified": true,
+      "relationship_note": null,
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-18",
+      "method": "Independent web hand-check supplied by the reviewer in conversation",
+      "automated_verdict": "doubtful",
+      "automated_reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "proof_tier": "publisher_name_registered_place",
+      "note": "Confirmed by the reviewer.",
+      "receipts": [
+        {
+          "source_url": "https://soliauto.no/",
+          "retrieved_at": "2026-11-17T17:35:06.492568Z",
+          "content_sha256": "f54759e88e0bb834dbc458f137395762dd4322d9c3d3daf43f9a3a773a64a67b",
+          "locator": "identity-proof:833242482",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "roduct/yoast-seo-wordpress/ -->\n\t<title>Soli Auto As - Soli Auto As</title>\n\t<meta name=\"description\" content=\"Soli Auto AS tilbyr salg av bruktbil, innbytte og fleksible finansieringsløsninger i Fredrikstad og omegn. Bilforhandler som tar bilkjøp på alvor.\" />\n\t<link rel=\"canonical\" href=\"https://s"
+        }
+      ]
+    },
+    {
+      "sample": "P3g",
+      "seed": 20261120,
+      "sample_sha256": "8392ab97844f871857104cdaf7b04e150a55c8000fc157b4a93e01b4721fec0f",
+      "envelopes_sha256": "fee658298fa69f87be5fb1945f7fcddf92409dc4229f21ef759e85f405add812",
+      "organisation_number": "926765655",
+      "company": "LISTER LASERKLINIKK AS",
+      "kind": "website",
+      "url": "https://listerlaserklinikk.no",
+      "field": "official_website",
+      "claim_id": "3395777d57fed31eddcbe9640c0027e2a801a64dc9f17a0848d7f703a7a84469",
+      "value_sha256": "8306057b01093887de31acd68f89e863ddb9ad49f9c76c01af4f6cbb3e78b2b4",
+      "verdict": "correct",
+      "human_verified": true,
+      "relationship_note": null,
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-18",
+      "method": "Independent web hand-check supplied by the reviewer in conversation",
+      "automated_verdict": "doubtful",
+      "automated_reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "proof_tier": "publisher_name_registered_place",
+      "note": "Confirmed by the reviewer.",
+      "receipts": [
+        {
+          "source_url": "https://listerlaserklinikk.no/",
+          "retrieved_at": "2026-11-17T17:35:26.420068Z",
+          "content_sha256": "a4ac4880b4b705181acc7d08c503561135f1764efa3a01836a48b9e20c6afcec",
+          "locator": "identity-proof:926765655",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "ant\"><head><meta charset=\"utf-8\"><title>Lister laserklinikk AS</title><meta name=\"robots\" content=\"all\"><meta name=\"generator\" content=\"One.com Web Editor\"><meta http-equiv=\"Cache-Control\" content=\"must-revalidate, max-age=0, public\"><meta http-equiv=\"Expires\" content=\"-1\"><meta name=\"viewport\" cont"
+        }
+      ]
+    },
+    {
+      "sample": "P3g",
+      "seed": 20261120,
+      "sample_sha256": "8392ab97844f871857104cdaf7b04e150a55c8000fc157b4a93e01b4721fec0f",
+      "envelopes_sha256": "fee658298fa69f87be5fb1945f7fcddf92409dc4229f21ef759e85f405add812",
+      "organisation_number": "930595764",
+      "company": "WESTNES HOLDING AS",
+      "kind": "website",
+      "url": "https://westnesholding.no",
+      "field": "official_website",
+      "claim_id": "05bfd0c8ecd17a42bc57d50cc7e302ff37a09dd20ceef594a542fd22e7673058",
+      "value_sha256": "26048b8a44ee20bc2b9f1155726b246c5810a6bbc9bced0685b33424c8680408",
+      "verdict": "correct",
+      "human_verified": true,
+      "relationship_note": "group_site",
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-18",
+      "method": "Independent web hand-check supplied by the reviewer in conversation",
+      "automated_verdict": "doubtful",
+      "automated_reasons": [
+        "Group/multi-company site context needs hand review"
+      ],
+      "proof_tier": "orgnr_on_page",
+      "note": "The footer contains the organisation’s own number. The site also presents subsidiaries.",
+      "receipts": [
+        {
+          "source_url": "https://westnesholding.no/",
+          "retrieved_at": "2026-11-17T17:32:49.817413Z",
+          "content_sha256": "89403e39c0c2d07730063ba4c81516bbb9474c864cf4cbaafe1a5c4f81f39c07",
+          "locator": "identity-proof:930595764",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "nes Holding AS</div>\n      <div>Org.nr. 930 595 764</div>\n    </div>\n  </footer>\n</div>\n\n</body>\n</html>\n"
+        }
+      ]
+    },
+    {
+      "sample": "P3g",
+      "seed": 20261120,
+      "sample_sha256": "8392ab97844f871857104cdaf7b04e150a55c8000fc157b4a93e01b4721fec0f",
+      "envelopes_sha256": "fee658298fa69f87be5fb1945f7fcddf92409dc4229f21ef759e85f405add812",
+      "organisation_number": "954583996",
+      "company": "HVALSAFARI AS",
+      "kind": "website",
+      "url": "https://whalesafari.no",
+      "field": "official_website",
+      "claim_id": "88eb68872157a0172e8f5a4111ed088fb0c548857b8001465b7ec54de3c506b4",
+      "value_sha256": "b264fbb4687fa5857639ebaf6e54ed8cd2e7b5f33cc23204d7767135d595445f",
+      "verdict": "correct",
+      "human_verified": true,
+      "relationship_note": "group_site",
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-18",
+      "method": "Independent web hand-check supplied by the reviewer in conversation",
+      "automated_verdict": "doubtful",
+      "automated_reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "proof_tier": "registry_declared_publisher_name",
+      "note": "The footer names “Whale2Sea AS / Hvalsafari AS”. Both companies are joint data controllers.",
+      "receipts": [
+        {
+          "source_url": "https://whalesafari.no/",
+          "retrieved_at": "2026-11-17T17:34:25.680939Z",
+          "content_sha256": "0ab1bb56e830d625cf901c11cb68cdd6de6f046cd5c92c3bc2a1352f0a0a748f",
+          "locator": "identity-proof:954583996",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "12\">\n                    Whale2Sea AS / Hvalsafari AS <br />\nHamnegata 1C<br />\n8480 Andenes, Norway<br />\nEmail: whale2sea@whalesafari.no<br />\nPhone: +47 76 11 56 00 / 91 67 49 60\n                </div>\n            \n        </div>\n\n        <div class=\"flex flex-col lg:grow lg:px-1/12  lg:flex-row "
+        },
+        {
+          "source_url": "https://whalesafari.no/",
+          "retrieved_at": "2026-11-17T17:34:25.680939Z",
+          "content_sha256": "0ab1bb56e830d625cf901c11cb68cdd6de6f046cd5c92c3bc2a1352f0a0a748f",
+          "locator": "registry-contact:phone",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": ": whale2sea@whalesafari.no<br />\nPhone: +47 76 11 56 00 / 91 67 49 60\n                </div>\n            \n        </div>\n\n        <div class=\"flex flex-col lg:grow lg:px-1/12  lg:flex-row lg:justify-around \">\n            <div class=\"lg:mr-1/6\">\n                <ul class=\"space-y-5 lg:space-y-6 text-"
+        },
+        {
+          "source_url": "https://whalesafari.no/",
+          "retrieved_at": "2026-11-17T17:34:25.680939Z",
+          "content_sha256": "0ab1bb56e830d625cf901c11cb68cdd6de6f046cd5c92c3bc2a1352f0a0a748f",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "br />\n8480 Andenes, Norway<br />\nEmail: whale2sea@whalesafari.no<br />\nPhone: +47 76 11 56 00 / 91 67 49 60\n                </div>\n            \n        </div>\n\n        <div class=\"flex flex-col lg:grow lg:px-1/12  lg:flex-row lg:justify-around \">\n            <div class=\"lg:mr-1/6\">\n                <"
+        }
+      ]
+    },
+    {
+      "sample": "P3g",
+      "seed": 20261120,
+      "sample_sha256": "8392ab97844f871857104cdaf7b04e150a55c8000fc157b4a93e01b4721fec0f",
+      "envelopes_sha256": "fee658298fa69f87be5fb1945f7fcddf92409dc4229f21ef759e85f405add812",
+      "organisation_number": "966261218",
+      "company": "BØMLO FOLKEHØGSKULE STI",
+      "kind": "website",
+      "url": "https://bomlo.fhs.no",
+      "field": "official_website",
+      "claim_id": "3833f1bf1050bb9c3dff815258d8c8115d345731a97b3201a571d2138812c407",
+      "value_sha256": "02c06f0f9a3b6a07d83a10f1aa837c5f2f3305d67fbdd6d67e841618d2e6b512",
+      "verdict": "correct",
+      "human_verified": true,
+      "relationship_note": null,
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-18",
+      "method": "Independent web hand-check supplied by the reviewer in conversation",
+      "automated_verdict": "doubtful",
+      "automated_reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "proof_tier": "signals",
+      "note": "The school has a dedicated subdomain on fhs.no, which is reserved for folk high schools.",
+      "receipts": [
+        {
+          "source_url": "https://bomlo.fhs.no/",
+          "retrieved_at": "2026-11-17T17:36:15.671188Z",
+          "content_sha256": "1ce7249d4ac7be72821e4f9a9232fd7fcc9c469132f3fd3ac82497dfb2dad501",
+          "locator": "identity-proof:966261218",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "><!-- wp:paragraph -->\n<p>Velkommen til Bømlo folkehøgskule, helt vest i havgapet. Det perfekte stedet for nære øyeblikk og fantastiske eventyr – her hjemme, og der ute i den store verden.</p>\n<!-- /wp:paragraph --></div>\t\t\t\t</div>\n\t\t\t\t\t</section>\n\t<section id=\"bfhs-linje-grid-container\">\n\t\t\t\t<div c"
+        },
+        {
+          "source_url": "https://bomlo.fhs.no/",
+          "retrieved_at": "2026-11-17T17:36:15.671188Z",
+          "content_sha256": "1ce7249d4ac7be72821e4f9a9232fd7fcc9c469132f3fd3ac82497dfb2dad501",
+          "locator": "registry-contact:phone",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a class=\"footer-phone-nr\" href=\"tel:53425650\">"
+        },
+        {
+          "source_url": "https://bomlo.fhs.no/",
+          "retrieved_at": "2026-11-17T17:36:15.671188Z",
+          "content_sha256": "1ce7249d4ac7be72821e4f9a9232fd7fcc9c469132f3fd3ac82497dfb2dad501",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a href=\"mailto:post@bomlo.fhs.no\">"
+        }
+      ]
+    },
+    {
+      "sample": "P3g",
+      "seed": 20261120,
+      "sample_sha256": "8392ab97844f871857104cdaf7b04e150a55c8000fc157b4a93e01b4721fec0f",
+      "envelopes_sha256": "fee658298fa69f87be5fb1945f7fcddf92409dc4229f21ef759e85f405add812",
+      "organisation_number": "970991786",
+      "company": "VITEC AGRANDO AS",
+      "kind": "website",
+      "url": "https://agrando.no",
+      "field": "official_website",
+      "claim_id": "caff4bc6838f43339cf0df7857f350941d6e7f7b68d767625fa48d7d5b08b47d",
+      "value_sha256": "e2ba478a598e4b7c7d9502034fd042e76bf646ef341d2dacfb71c5881c1843a8",
+      "verdict": "correct",
+      "human_verified": true,
+      "relationship_note": null,
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-18",
+      "method": "Independent web hand-check supplied by the reviewer in conversation",
+      "automated_verdict": "doubtful",
+      "automated_reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "proof_tier": "signals",
+      "note": "Confirmed by the reviewer.",
+      "receipts": [
+        {
+          "source_url": "https://agrando.no/",
+          "retrieved_at": "2026-11-17T17:35:38.316805Z",
+          "content_sha256": "7efee3d7418e6c3c13a45d6029e6492df42e5fec1430077c2ad35772e162c644",
+          "locator": "identity-proof:970991786",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "eckCookie();\n    });\n</script><title>\r\n\tVitec Agrando\r\n</title><meta id=\"MetaRobots\" name=\"robots\" content=\"INDEX, FOLLOW\" /><link href=\"/Portals/_default/skins/polo//skin.css?cdv=932\" rel=\"stylesheet\" /><link href=\"/Portals/_default/skins/polo//custom.css?cdv=932\" rel=\"stylesheet\" /><link href=\"/Po"
+        },
+        {
+          "source_url": "https://agrando.no/",
+          "retrieved_at": "2026-11-17T17:35:38.316805Z",
+          "content_sha256": "7efee3d7418e6c3c13a45d6029e6492df42e5fec1430077c2ad35772e162c644",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a href=\"mailto:laborasupport.no@vitecsoftware.com\">"
+        }
+      ]
+    },
+    {
+      "sample": "P3g",
+      "seed": 20261120,
+      "sample_sha256": "8392ab97844f871857104cdaf7b04e150a55c8000fc157b4a93e01b4721fec0f",
+      "envelopes_sha256": "fee658298fa69f87be5fb1945f7fcddf92409dc4229f21ef759e85f405add812",
+      "organisation_number": "986902651",
+      "company": "TINNHEIA BIL AS",
+      "kind": "website",
+      "url": "https://tinnheiabil.no",
+      "field": "official_website",
+      "claim_id": "8d1ffeae9fe384d37a5102084d6463bae0346e60a83a7ebc13c67fa350888139",
+      "value_sha256": "f320e059ba964e7529d8af64f54ac2188621ba90463aea9eb1c6a804d94f74aa",
+      "verdict": "correct",
+      "human_verified": true,
+      "relationship_note": null,
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-18",
+      "method": "Independent web hand-check supplied by the reviewer in conversation",
+      "automated_verdict": "doubtful",
+      "automated_reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "proof_tier": "publisher_name_registered_place",
+      "note": "Confirmed by the reviewer.",
+      "receipts": [
+        {
+          "source_url": "https://tinnheiabil.no/",
+          "retrieved_at": "2026-11-17T17:33:01.405390Z",
+          "content_sha256": "434f6a1a4f56ee47328ac9e3109bdc3e281baf17ff1a1c9f7b1da14e1a353c9c",
+          "locator": "identity-proof:986902651",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": " \n    <title>Bilverksted Kristiansand - Tinnheia Bil AS</title>\n<meta name=\"description\" content=\"Bilverksted med EU-kontroll og service på alle bilmerker også elbil og hybrid, AC-service, dekk og dekkhotell, automatgir service. Tinnheia Bil, Kristiansand\" />\n<meta property=\"og:description\" content="
+        }
+      ]
+    },
+    {
+      "sample": "P3g",
+      "seed": 20261120,
+      "sample_sha256": "8392ab97844f871857104cdaf7b04e150a55c8000fc157b4a93e01b4721fec0f",
+      "envelopes_sha256": "fee658298fa69f87be5fb1945f7fcddf92409dc4229f21ef759e85f405add812",
+      "organisation_number": "988911879",
+      "company": "ELVEGATA 16 AS",
+      "kind": "website",
+      "url": "https://www.elvegata16.no",
+      "field": "official_website",
+      "claim_id": "7e8db747eae42e0c96ed50d37329dffdd0cab4d7f4cfb56f7b4c0e623b665cc1",
+      "value_sha256": "df7148d5cfebcbe9c5e3ce23c6010acbd7b4ccda82bdfb539a5fa68cbfb1d053",
+      "verdict": "correct",
+      "human_verified": true,
+      "relationship_note": null,
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-18",
+      "method": "Independent web hand-check supplied by the reviewer in conversation",
+      "automated_verdict": "doubtful",
+      "automated_reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "proof_tier": "publisher_name_rare_contact",
+      "note": "Confirmed by the reviewer.",
+      "receipts": [
+        {
+          "source_url": "https://www.elvegata16.no/kontakt/",
+          "retrieved_at": "2026-11-17T17:33:57.603888Z",
+          "content_sha256": "9e49a1cb80171d5eedc70bf9309b98b589147d383f9626e3da54b4b7e71aa961",
+          "locator": "identity-proof:988911879",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "<span class=\"b-l-text-c logo-text-cell\">Elvegata 16 AS</span>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\r\n\t\t</a>\r\n\t</div>\r\n</div>\n\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t<div id=\"menu-slider\">\n\t\t\t\t\t\t\t<div id=\"menu-block\">\n\t\t\t\t\t\t\t\t<nav id=\"menu\"><div class=\"menu-font menu-wrapper\">\n\t<a href=\"#\" class=\"menu-close\" rel=\"nofollow\" title=\"Cl"
+        }
+      ]
+    },
+    {
+      "sample": "P3g",
+      "seed": 20261120,
+      "sample_sha256": "8392ab97844f871857104cdaf7b04e150a55c8000fc157b4a93e01b4721fec0f",
+      "envelopes_sha256": "fee658298fa69f87be5fb1945f7fcddf92409dc4229f21ef759e85f405add812",
+      "organisation_number": "990825076",
+      "company": "PECULIUM AS",
+      "kind": "website",
+      "url": "https://peculium.no",
+      "field": "official_website",
+      "claim_id": "f2a521804b59bc0b677f71e341fb383a7ff7c92935a1200bbe35d3629daff644",
+      "value_sha256": "6ee90db0bf1f937b953645328f8ecc63c1bad8a360b7d379c566a4e9093ed595",
+      "verdict": "correct",
+      "human_verified": true,
+      "relationship_note": null,
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-18",
+      "method": "Independent web hand-check supplied by the reviewer in conversation",
+      "automated_verdict": "doubtful",
+      "automated_reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "proof_tier": "publisher_name_registered_place",
+      "note": "Confirmed by the reviewer.",
+      "receipts": [
+        {
+          "source_url": "https://peculium.no/kontakt",
+          "retrieved_at": "2026-11-17T17:34:40.683770Z",
+          "content_sha256": "f765c4a15fd2a63af7e7b6e6f049cc83dc296668259afe3b45873f86543c4f84",
+          "locator": "identity-proof:990825076",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": ":1\",\"S:1\")</script><title>Kontakt oss - Peculium AS | Eiendomsforvaltning i Porsgrunn</title><meta name=\"description\" content=\"Ta kontakt med Peculium AS for eiendomsforvaltning og utleie i Porsgrunn. Vi hjelper deg med lokaler, næringsbygg og boligutleie. Ring eller send e-post.\"/><meta name=\"autho"
+        }
+      ]
+    },
+    {
+      "sample": "P3g",
+      "seed": 20261120,
+      "sample_sha256": "8392ab97844f871857104cdaf7b04e150a55c8000fc157b4a93e01b4721fec0f",
+      "envelopes_sha256": "fee658298fa69f87be5fb1945f7fcddf92409dc4229f21ef759e85f405add812",
+      "organisation_number": "991323848",
+      "company": "TROLLHEIM AS",
+      "kind": "website",
+      "url": "https://trollheim.no",
+      "field": "official_website",
+      "claim_id": "7cc2defea41987da7f892429f1802ab5415f4d077a801724379ad2801909f7c2",
+      "value_sha256": "d51d8b0842d6536490937a859bbe64d7004bcfa714490628de351b8f39bdb08b",
+      "verdict": "correct",
+      "human_verified": true,
+      "relationship_note": "group_site",
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-18",
+      "method": "Independent web hand-check supplied by the reviewer in conversation",
+      "automated_verdict": "doubtful",
+      "automated_reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "proof_tier": "signals",
+      "note": "The privacy PDF states “Vårt org. nr. er 991 323 848”. The site also presents subsidiary 924191627.",
+      "receipts": [
+        {
+          "source_url": "https://trollheim.no/",
+          "retrieved_at": "2026-11-17T17:33:18.184369Z",
+          "content_sha256": "15f2a742f2d0baf7a6ba588677bd54709bdf264771c719f4519a33d081d92e4a",
+          "locator": "identity-proof:991323848",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "9mefvgt6v6z5ncrt7e8vatuv2ns0y\" /><title>Trollheim &#8211; Arbeid og inkludering</title>\n<meta name='robots' content='max-image-preview:large' />\n\n<script>\ndataLayer = [{\"title\":\"Hjem\",\"author\":\"Webmaster\",\"wordcount\":66,\"logged_in\":\"false\",\"page_id\":47,\"post_date\":\"2018-01-25 14:20:00\"}];\n</script>\n"
+        },
+        {
+          "source_url": "https://trollheim.no/",
+          "retrieved_at": "2026-11-17T17:33:18.184369Z",
+          "content_sha256": "15f2a742f2d0baf7a6ba588677bd54709bdf264771c719f4519a33d081d92e4a",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a href=\"mailto:post@trollheim.no\">"
+        },
+        {
+          "source_url": "https://trollheim.no/",
+          "retrieved_at": "2026-11-17T17:33:18.184369Z",
+          "content_sha256": "15f2a742f2d0baf7a6ba588677bd54709bdf264771c719f4519a33d081d92e4a",
+          "locator": "registry-contact:phone",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "=\"color: #000000;\">Trollheim &#8211; Tlf. 71 65 77 77 &#8211; <strong><a href=\"mailto:post@trollheim.no\">post@trollheim.no</a></strong></span><br /><span style=\"color: #000000;\">Trollheim avd. Røtet/Hovedkontor: Industrivegen 63, 6652 Surnadal</span><br /><span style=\"color: #000000;\">Trollheim avd."
+        }
+      ]
+    },
+    {
+      "sample": "P3g",
+      "seed": 20261120,
+      "sample_sha256": "8392ab97844f871857104cdaf7b04e150a55c8000fc157b4a93e01b4721fec0f",
+      "envelopes_sha256": "fee658298fa69f87be5fb1945f7fcddf92409dc4229f21ef759e85f405add812",
+      "organisation_number": "998407257",
+      "company": "GRAVITONIA AS",
+      "kind": "website",
+      "url": "https://www.gravitonia.com",
+      "field": "official_website",
+      "claim_id": "56609c733b45c5e85b8084db2152725f17c72083ac2c2a205432bad8961f3c7e",
+      "value_sha256": "a15879437d493bb5ca44cf8054770addd034b19657c540f8f163cf449fef4052",
+      "verdict": "correct",
+      "human_verified": true,
+      "relationship_note": null,
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-18",
+      "method": "Independent web hand-check supplied by the reviewer in conversation",
+      "automated_verdict": "doubtful",
+      "automated_reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "proof_tier": "registry_declared_live",
+      "note": "Confirmed by the reviewer.",
+      "receipts": [
+        {
+          "source_url": "https://www.gravitonia.com/",
+          "retrieved_at": "2026-11-17T17:35:06.784014Z",
+          "content_sha256": "1cef1b2d430c916ae3e8acaa42188c00fc98019dcdc898e801b1225966e20941",
+          "locator": "identity-proof:998407257",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "mayozfLeqJg=\"\n  }\n}</script>\n    <title>Gravitonia</title></head>\n\n<body><div class=\"page\" b-vyzgrxpymy><header><div class=\"container nav-flex\"><a href=\"/\" class=\"brand\" data-enhance-nav=\"false\"><img height=\"32px\" width=\"32px\" src=\"images/gravitonia-logo-32.jpg\" alt=\"Gravitonia Logo\" class=\"logo\">\n "
+        }
+      ]
+    }
+  ]
+}
