@@ -783,3 +783,7 @@
 ## 2026-11-17 - Stage P3g: 500 at the fixed default
 
 - Seed 20261120, clean clone of aceb24b, seven flags: all gates pass. Wall 1,893.5 s of the fixed 2,100 s (206.5 s margin); crawl stopped at 1,786 s (0.85). 0 placeholders. GLEIF, TED and all Stage S sources finished for all 500 companies. The deadline cut only website pass 2, for 177 companies. Under the same budget P2 had every company cut and GLEIF/TED never started. Details: `reports/r5/stageP3/P3g/SUMMARY.md`.
+
+## 2026-11-18 - Stage W0 source access
+
+- Common Crawl query API skipped under its robots rules. The data host explicitly welcomes HTTPS bulk downloads in its robots file. OpenStreetMap website and editing API skipped for automated extraction. Use a bulk extract for the ODbL candidate layer and preserve attribution. Source details in docs/SOURCES.md.
