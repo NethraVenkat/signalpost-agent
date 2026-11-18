@@ -227,9 +227,15 @@ Stage H human hand review (explicit user confirmation, 2026-11-13): all three au
 
 R5/R3 human hand review — **Nethra Venkat, 2026-11-14, independent web verification**: all **11 company websites CORRECT**, covering 13 saved URLs (both VALAKER domains and VESTFJORDEN apex/www). OPTIMAL REGNSKAP’s own name/address/phone/email match the register; it is not a client listing. Tashakori’s orgnr is on its privacy page; VALAKER’s is in the footer, and VESTFJORDEN’s is on page. MASKINKURS, BAGGES, ELEKTROFIL, DICA, A TIL Å PROFILERING, TIDEMANN and KRAABOL are confirmed correct. Optimal, Maskinkurs and Bagges Facebook links are confirmed on their own sites; Bagges LinkedIn links back to bagges.no. [Exact URL-scoped human ledger and receipts](reports/r5/stageR3/LEDGER.md).
 
-Cumulative deduplicated checked items: **162**; **24 human-verified correct**; **0 wrong**. This union covers the original T/H precision ledgers plus R5/R3 website/social receipts, counting an organisation/type/URL, LEI, parent relationship or job UUID once. It does not treat unreviewed items as human-verified, overwrite automated doubtful verdicts, re-audit all later source families, or claim population accuracy. See the ledger for per-type totals, methodology and source limits.
+The historical T/H/R5/R3 union contains **162** deduplicated checked items, with **24 human-verified correct** and **0 wrong** in that union. See the ledger for its per-type totals and methodology.
 
 <!-- End R5/R3 human precision review -->
+
+### HC1 social hand-check and offline replay
+
+Nethra Venkat's independent web hand-check on 2026-11-18 covered all **26 flagged P2 and P3g social URL observations**. Of those, **14 were correct**, **2 were wrong**, and **10 were unsure**. The ledger pins each verdict to the sample and saved claim value. The ten unsure items retain their automated labels. [Human review ledger](reports/r5/stageHC1/human_reviews.json)
+
+The revised rules withheld **16 of 56** archived social URLs, including both confirmed wrong links. They retained **11 of 14** human-confirmed correct observations. Accella LinkedIn, OfficeAid Facebook, and Trollheim Twitter lost publication under the exact-organisation rule for shared sites. [Replay and all withheld URLs](reports/r5/stageHC1/REPLAY.md)
 
 ### Historical scale measurements
 

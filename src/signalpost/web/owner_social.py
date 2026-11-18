@@ -2,7 +2,7 @@
 import json,re
 import unicodedata
 from urllib.parse import unquote,urlsplit,urljoin
-from .social import profile_url as _profile_url,numeric_linkedin,shared_group_context
+from .social import profile_url as _profile_url,discover_strict,numeric_linkedin,shared_group_context
 from .publisher_identity import normalize_name
 from .publisher import _Tree,_Node,_excluded,_text,_CREDIT,extract_publisher
 from .policy import domain
@@ -10,7 +10,10 @@ from .policy import domain
 EXCLUDE=re.compile(r'founder|grunnlegger|agency|designer|designbyr.|webbyr.|group|gruppen|konsern|holding',re.I)
 SAME_AS = 'owner_jsonld_sameas_v1'
 FOLLOW_US = 'own_contact_follow_us_v1'
-SOCIAL_POLICY = 'strict_header_footer_or_exact_owner_declaration_v4'
+SAME_AS_POLICY = 'strict_header_footer_or_exact_owner_declaration_v4'
+SOCIAL_POLICY = 'strict_header_footer_or_exact_owner_declaration_v5'
+STRICT_NAME = 'own_header_footer_exact_name_v1'
+STRICT_NUMERIC = 'own_header_footer_numeric_linkedin_v1'
 
 
 def profile_key(url):
@@ -81,6 +84,65 @@ def former_names(records):
                               and isinstance(record.get('navn'), str) and record['navn'].strip()))
 
 
+def site_scope(site, pages, org, company_name, historical_names=()):
+    """Return the first shared-site signal and the page where it appeared."""
+    from .proof import IDENTIFIER_META, orgnrs, owner_identifiers
+    from .social_registry import LEGAL_FORMS, foreign_name, legal_words, load, shared_domain_name
+
+    if site.get('other_orgnrs') or site.get('relationship_note') == 'group_site':
+        return 'website_group_proof', None, None
+    if not pages:
+        return None, None, None
+    try:
+        index = load()
+    except (OSError, ValueError, KeyError, TypeError, EOFError):
+        return 'registry_name_index_unavailable', None, None
+
+    own_names = {legal_words(name) for name in (company_name, *historical_names) if name}
+    own_stems = {words[:-1] if words[-1] in LEGAL_FORMS else words for words in own_names if words}
+    registrations = index.shared_domains.get(domain(site.get('final_url') or pages[0].url), [])
+    stems = {}
+    if any(number == org for number, _, _ in registrations):
+        for number, size, key in registrations:
+            if number != org:
+                stems.setdefault(size, set()).add(key)
+
+    for page in pages:
+        blocks = list(page.visible_blocks())
+        numbers = {number for block in blocks for number in orgnrs(block)}
+        for key, value in page.meta.items():
+            if key.casefold() in IDENTIFIER_META:
+                numbers.update(orgnrs(value))
+        for body in page.jsonld:
+            try:
+                for value in owner_identifiers(body):
+                    numbers.update(orgnrs(value))
+            except TypeError:
+                continue  # Broken structured type does not override visible identifiers.
+        if other := sorted(numbers - {org}):
+            return 'other_orgnr_on_page', page, other[0]
+        for block in blocks:
+            if name := foreign_name(block, index, own_names):
+                return 'other_registered_name_on_page', page, name
+            if stems and (name := shared_domain_name(block, stems, own_stems)):
+                return 'other_registered_entity_on_shared_domain', page, name
+    return None, None, None
+
+
+def page_profiles(page, site, org, context, visible, shared):
+    name = context.get('name') or ''
+    profiles = {} if shared else {
+        url: {'span': span, 'tier': STRICT_NUMERIC if numeric_linkedin(url) else STRICT_NAME}
+        for url, span in discover_strict(page, name).items()
+    }
+    if name and site.get('identity_level') in {'HIGH', 'VERIFIED'}:
+        for url, receipt in declared_profiles(page, name, org, context, exact_org_only=shared).items():
+            if receipt['tier'] == SAME_AS and same_as_veto(url, visible, name, context.get('former_names', ())):
+                continue
+            profiles.setdefault(url, receipt)
+    return profiles
+
+
 def profile_url(value):
     try:return _profile_url(value)
     except (ValueError,TypeError):return None
@@ -103,9 +165,10 @@ def exact_identifier(value,org):
     return re.sub(r'\D','',value)==org
 
 
-def declared_profiles(page,company_name,org,context=None):
+def declared_profiles(page,company_name,org,context=None,*,exact_org_only=False):
     from .publisher_veto import conflict
-    if shared_group_context(page) or conflict(page,org,{**(context or {}),'name':company_name})[0]:return {}
+    if conflict(page,org,{**(context or {}),'name':company_name})[0]:return {}
+    if not exact_org_only and shared_group_context(page):return {}
     class Tree(_Tree):
         def handle_starttag(self,tag,attrs):
             super().handle_starttag(tag,attrs)
@@ -162,7 +225,7 @@ def declared_profiles(page,company_name,org,context=None):
             if isinstance(vat,str) and re.match(r'\s*[A-Z]{2}',vat,re.I) and not re.match(r'\s*NO\b|\s*NO\d',vat,re.I):continue
             exact_name=bool(company_name) and isinstance(node.get('name'),str) and normalize_name(node['name'])==normalize_name(company_name)
             exact_id=exact_identifier(vat,org) or exact_identifier(identifier,org)
-            if not (exact_name or exact_id):continue
+            if not exact_id and (exact_org_only or not exact_name):continue
             # A different explicit nine-digit registered ID vetoes a name match.
             values=[v.get('value') if isinstance(v,dict) else v for v in (vat,identifier)]
             values=[str(v) if type(v) is int else v for v in values]
@@ -180,7 +243,7 @@ def declared_profiles(page,company_name,org,context=None):
                 if not span or span not in page.raw:continue
                 found.setdefault(url,{'span':span,'tier':SAME_AS,'owner_match':'exact_orgnr' if exact_id else 'exact_legal_name',
                     'owner_name':node.get('name'),'vatID':vat,'identifier':identifier,'sameAs':value})
-    if not re.search(r'kontakt|contact|impressum|imprint',urlsplit(page.url).path,re.I):return found
+    if exact_org_only or not re.search(r'kontakt|contact|impressum|imprint',urlsplit(page.url).path,re.I):return found
     publisher=extract_publisher(page)
     def anchors(node):
         if isinstance(node,str) or _excluded(node):return

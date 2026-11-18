@@ -134,10 +134,13 @@ def apply(envelope, previous, blobs):
                         'current_state':after.availability if after else 'unchecked_field',
                         'reason':'filing_year_list_not_supported_in_both_runs'})
                 continue
-        if field.startswith('social_profile.') and before and isinstance(before.value,dict) and before.value.get('proof_tier') not in {'own_header_footer_exact_name_v1', 'own_header_footer_numeric_linkedin_v1'}:
+        social_scope = envelope.run.refresh.get('website', {}).get('social_scope')
+        if (field.startswith('social_profile.') and before and isinstance(before.value, dict)
+                and ((social_scope and after is None) or before.value.get('proof_tier')
+                     not in {'own_header_footer_exact_name_v1', 'own_header_footer_numeric_linkedin_v1'})):
             envelope.run.refresh['observation_changes'].append({'section':'website','field':field,
                 'previous_state':before.availability,'current_state':after.availability if after else 'not_published',
-                'reason':'social_proof_policy_changed'})
+                'reason':'social_site_scope_unresolved' if social_scope and after is None else 'social_proof_policy_changed'})
             continue
         if family=='hiring' and before and before.availability=='available' and meaning(after) is None:
             hiring=envelope.run.refresh.get('hiring',{})

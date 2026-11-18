@@ -28,7 +28,7 @@ def test_owner_declaration_cannot_survive_missing_or_group_website(tmp_path,monk
     forged=copy.deepcopy(row);forged['claims']=[c for c in forged['claims'] if c['field']!='official_website']
     with pytest.raises(AssertionError,match='requires a verified/HIGH website'):checked(forged,cfg)
     forged=copy.deepcopy(row);next(c for c in forged['claims'] if c['field']=='official_website')['value']['relationship_note']='group_site'
-    with pytest.raises(AssertionError,match='Group social declaration'):checked(forged,cfg)
+    with pytest.raises(AssertionError,match='Unsupported social site scope'):checked(forged,cfg)
 def test_linked_contact_follow_us_is_social_only_and_budgeted(tmp_path,monkeypatch):
     def response(request):
         if request.url.path=='/robots.txt':return httpx.Response(200,text='User-agent: *\nAllow: /')

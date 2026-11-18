@@ -21,6 +21,7 @@ def test_description_append_preserves_identity_for_contacts(monkeypatch):
     def contacts(section, org, claim, pages, **kwargs):
         assert claim is captured[0]
         assert claim.value['relationship_note']=='group_site'
+        return 'website_group_proof', []
     monkeypatch.setattr(descriptions, 'extract', describe)
     monkeypatch.setattr(collector, 'extract_contacts_and_social', contacts)
     monkeypatch.setattr(collector, 'extract_public_brand', lambda *args: None)

@@ -31,7 +31,8 @@ def test_budget_failure_explicit_without_losing_website():
     assert not pages and state['errors']==['website_budget_exhausted'] and len(calls)==1
 def test_foreign_publisher_rejected():
     (pages,state),calls=check('<nav><a href="/kontakt">Kontakt</a></nav>','<footer>OTHER AS Org.nr 995194163</footer>')
-    assert not pages and state['errors']==['social_contact_publisher_conflict']
+    assert len(pages) == 1 and state['state'] == 'blocked'
+    assert state['errors']==['social_contact_publisher_conflict']
 def test_foreign_redirect_rejected():
     (pages,state),calls=check('<nav><a href="/kontakt">Kontakt</a></nav>',final='https://foreign.no/kontakt')
     assert not pages and state['errors']==['social_contact_redirect_refused']

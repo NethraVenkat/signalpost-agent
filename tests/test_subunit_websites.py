@@ -53,7 +53,7 @@ def test_published_subunit_relationship_preserves_claim_identity_and_evidence(mo
     envelope=SimpleNamespace(claims=registry.claims,evidence=registry.evidence,run=SimpleNamespace(refresh={}))
     http=SimpleNamespace(accepted_pages={},attempts={})
     monkeypatch.setattr(descriptions,'extract',lambda *args:None)
-    monkeypatch.setattr(collector,'extract_contacts_and_social',lambda *args,**kwargs:None)
+    monkeypatch.setattr(collector,'extract_contacts_and_social',lambda *args,**kwargs:(None, []))
     monkeypatch.setattr(collector,'extract_public_brand',lambda *args:None)
     result=collector.publish_result(OUR,envelope,http,Section(),
         [(candidate,proof,response,page,[(response,page)])],[],{'name':'Example AS','subunits':[{'orgnr':OTHER}]})

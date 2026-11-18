@@ -817,3 +817,10 @@
 - A visible different account on the same platform vetoes an owner JSON-LD declaration across the checked site pages. Equivalent scheme, platform host and handle spelling do not count as a conflict. JSON-LD-only accounts need a distinctive handle from the exact organisation's current or registry-recorded former name. All site-page digests used by the policy are recorded for the saved-output verifier.
 - The WoodWorks regression uses hash-pinned slices of the saved P3g homepage. Tests also check a conflict on the fetched contact page, current and historical name matching, and reproduction of a saved-output veto.
 - Full pytest passed 1,373 tests in 839.67 s.
+
+## 2026-11-18 - HC1b shared-site social scope
+
+- Site-wide social attribution checks the HTML fetched during website proof and the bounded owner-contact check. Another registered legal name or valid organisation number requires a profile declaration tied to the exact target number. A rejected same-domain page can veto attribution without supplying a positive claim. Website proof, fetch budgets and the previous anti-conflict checks remain in force.
+- The frozen 2026-11-16 Brønnøysund entity snapshot supplies 475,852 full-name hashes and 2,417 shared declared domains. A visible name without a form suffix requires the two organisations to declare the same domain. That covers the exact saved Trollheim contact page, which prints the subsidiary name without AS.
+- The offline P2/P3g replay retained 40 of 56 URLs and withheld both confirmed wrong URLs. It also withheld 14 other links, including three confirmed correct links under the requested rule. The stricter rule was kept. See stageHC1/REPLAY.md, replay.json and human_reviews.json.
+- Full pytest passed 1,379 tests in 830.04 s, including the HC1 regressions and existing F1 guard tests.

@@ -1,0 +1,1730 @@
+{
+  "inputs": {
+    "P2": {
+      "seed": 20261118,
+      "input_sha256": "925cf639574fd828de2201f37c48735e5628a2eb4af22602de49f9c62ce7c01d",
+      "envelopes_sha256": "5c3b33bd743890733f288f9ae1a9e864c424cbb2807c837a30f01309639a6ff3",
+      "url_inventory_sha256": "56639f8e09008e8eb58caf9cce2607f9beaacd8b285ee028d532bdc795bf2178",
+      "url_inventory": "reports/r5/scale500/urls.json"
+    },
+    "P3g": {
+      "seed": 20261120,
+      "input_sha256": "8392ab97844f871857104cdaf7b04e150a55c8000fc157b4a93e01b4721fec0f",
+      "envelopes_sha256": "fee658298fa69f87be5fb1945f7fcddf92409dc4229f21ef759e85f405add812",
+      "url_inventory_sha256": "930a1a5e542235c40eec36d510727cfe8cfe271b635bbaea08301f097a56e677",
+      "url_inventory": "reports/r5/stageP3/P3g/urls.json"
+    }
+  },
+  "samples": {
+    "P2": {
+      "original": 16,
+      "withheld": 6,
+      "retained": 10,
+      "human_correct_retained": 3,
+      "human_correct_withheld": 1
+    },
+    "P3g": {
+      "original": 40,
+      "retained": 30,
+      "withheld": 10,
+      "human_correct_retained": 8,
+      "human_correct_withheld": 2
+    }
+  },
+  "items": [
+    {
+      "sample": "P2",
+      "organisation_number": "827458392",
+      "company": "SMARTE HODER AS",
+      "field": "social_profile.9d3205fbd072d2affacd",
+      "claim_id": "fea8af47fdb6cbbea1e98245305a3c07cc7d4fb2c3d3002266ea7a5efb38158c",
+      "url": "https://www.instagram.com/smartehoderas",
+      "value_sha256": "af695d37445fc569d7c62370e9d75659baf2fd7c8f923ddc9b00e30c04aefa86",
+      "retained": false,
+      "reason": "other_registered_name_on_page",
+      "human_verdict": null,
+      "original_automated_verdict": "correct",
+      "proof_receipts": [
+        {
+          "id": "7707f38e11eced96432225ca5f0f3c0d5e1d025d09706a031c62a654f76547ae",
+          "source_url": "https://www.smarte-hoder.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-16T08:24:30.669891Z",
+          "content_sha256": "aca2eb1b2737edc724ffd709df5cc892b95754e8072479c1bd687a8057b9035e",
+          "claim_span": "<a class=\"\" href=\"https://www.instagram.com/smartehoderas/\" target=\"_blank\" rel=\"noopener\" >",
+          "locator": "company-link:https://www.instagram.com/smartehoderas",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "veto_receipt": {
+        "source_url": "https://www.smarte-hoder.no/",
+        "content_sha256": "aca2eb1b2737edc724ffd709df5cc892b95754e8072479c1bd687a8057b9035e",
+        "matched_text": "Control Cutter AS",
+        "claim_span": "est_name\">Aron Broek, Head of Finance – Control Cutter AS</strong>\n             <span class=\"testimonial-name-divider\"> / </span>             <span class=\"testimonial-company test_company\">Stillingskategori: Group Financial Controller</span>\n          </div>\n        </div>\n  </div>\n\n  \n\t<div id=\"gap"
+      }
+    },
+    {
+      "sample": "P2",
+      "organisation_number": "827458392",
+      "company": "SMARTE HODER AS",
+      "field": "social_profile.8fcba1e58e93c028c3ac",
+      "claim_id": "2e1dad06419a893799f60b402f3b1efa891dff5c837e5582705a3ab69dda3f5b",
+      "url": "https://www.linkedin.com/company/smarte-hoder-as",
+      "value_sha256": "5d3f174baccc0eec1490523b2d8363fd0b4e4ebd55b34cc1235fe138dd729939",
+      "retained": false,
+      "reason": "other_registered_name_on_page",
+      "human_verdict": null,
+      "original_automated_verdict": "correct",
+      "proof_receipts": [
+        {
+          "id": "3b1891ae0a7521ac1f7140427f4444149797f6689b66248ff5511cf398948dae",
+          "source_url": "https://www.smarte-hoder.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-16T08:24:30.669891Z",
+          "content_sha256": "aca2eb1b2737edc724ffd709df5cc892b95754e8072479c1bd687a8057b9035e",
+          "claim_span": "<a class=\"\" href=\"https://www.linkedin.com/company/smarte-hoder-as/?viewAsMember=true\" target=\"_blank\" rel=\"noopener\" >",
+          "locator": "company-link:https://www.linkedin.com/company/smarte-hoder-as",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "veto_receipt": {
+        "source_url": "https://www.smarte-hoder.no/",
+        "content_sha256": "aca2eb1b2737edc724ffd709df5cc892b95754e8072479c1bd687a8057b9035e",
+        "matched_text": "Control Cutter AS",
+        "claim_span": "est_name\">Aron Broek, Head of Finance – Control Cutter AS</strong>\n             <span class=\"testimonial-name-divider\"> / </span>             <span class=\"testimonial-company test_company\">Stillingskategori: Group Financial Controller</span>\n          </div>\n        </div>\n  </div>\n\n  \n\t<div id=\"gap"
+      }
+    },
+    {
+      "sample": "P2",
+      "organisation_number": "919825839",
+      "company": "NORSKE VILLSAUSKINN AS",
+      "field": "social_profile.e7e9879f1846c9671599",
+      "claim_id": "6aacb9a93796f3e9da74970be571f3baaabdf09e2315486ad9f28f639b04b093",
+      "url": "https://www.facebook.com/norskevillsauskinn",
+      "value_sha256": "d83eeee5b1248436893e7faa8ab5560a7b7cf5b5c932aa06a2922da310c5eb76",
+      "retained": true,
+      "reason": null,
+      "human_verdict": null,
+      "original_automated_verdict": "correct",
+      "proof_receipts": [
+        {
+          "id": "0e2cac7aafe530fa3470f96b418a9f1da327b90ef1f866d1cef61e2cd45731db",
+          "source_url": "https://norskevillsauskinn.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-16T08:25:44.491096Z",
+          "content_sha256": "121eca9142683cda700bc90aca6e46d93b5015631ae096d3f70f02a66b6481e4",
+          "claim_span": "<a href=\"https://www.facebook.com/norskevillsauskinn/\" class=\"icon\">",
+          "locator": "company-link:https://www.facebook.com/norskevillsauskinn",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "veto_receipt": null
+    },
+    {
+      "sample": "P2",
+      "organisation_number": "919825839",
+      "company": "NORSKE VILLSAUSKINN AS",
+      "field": "social_profile.0d31ffe1fa65004d9a0b",
+      "claim_id": "9330e86a6f2b44de438d3179a5acdfa3d98a13b5141cfecfd92de7c0ea49d157",
+      "url": "https://www.instagram.com/norskevillsauskinn",
+      "value_sha256": "0727211aa89dca9910003e6cb2bcd648fe2fffea301bb4599d17457faeb5b956",
+      "retained": true,
+      "reason": null,
+      "human_verdict": null,
+      "original_automated_verdict": "correct",
+      "proof_receipts": [
+        {
+          "id": "bf5ab5219bbacade95b171dea8f23a3add7169b103ba4fa1656851966ab93fa6",
+          "source_url": "https://norskevillsauskinn.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-16T08:25:44.491096Z",
+          "content_sha256": "121eca9142683cda700bc90aca6e46d93b5015631ae096d3f70f02a66b6481e4",
+          "claim_span": "<a href=\"https://www.instagram.com/norskevillsauskinn/\" class=\"icon\">",
+          "locator": "company-link:https://www.instagram.com/norskevillsauskinn",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "veto_receipt": null
+    },
+    {
+      "sample": "P2",
+      "organisation_number": "918811370",
+      "company": "TOTEN FORSIKRING AS",
+      "field": "social_profile.7dd5f8ee4c74070e6414",
+      "claim_id": "5b49f43f527d6df8e6f2203792f36e13de8f4c96fb0073effb2759c2f040303e",
+      "url": "https://www.facebook.com/totenforsikring",
+      "value_sha256": "4986cd8f791da422139c51798c7a8af740afeff2e5917010453c15335109a3fb",
+      "retained": true,
+      "reason": null,
+      "human_verdict": "correct",
+      "original_automated_verdict": "wrong",
+      "proof_receipts": [
+        {
+          "id": "466eef8cb8d71420e0257cf88853c164e7064f8ee79683eec30160becccda945",
+          "source_url": "https://totenforsikring.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-16T08:27:39.033094Z",
+          "content_sha256": "6046fb1ff611f2f9555a0765a481f0d009bc337d8246c53c1eb8f7d94249baa5",
+          "claim_span": "<a id=\"link-260-37\" class=\"ct-link\" href=\"https://www.facebook.com/totenforsikring\" target=\"_blank\"  >",
+          "locator": "company-link:https://www.facebook.com/totenforsikring",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "veto_receipt": null
+    },
+    {
+      "sample": "P2",
+      "organisation_number": "932296047",
+      "company": "KURVE REGNSKAP AS",
+      "field": "social_profile.273fe667655dcf944e97",
+      "claim_id": "954ba75b13d9be18aa13aa5c8a4afdda60078398a31009796c984392bf55a54f",
+      "url": "https://www.facebook.com/kurveregnskap",
+      "value_sha256": "b36a6333e1e69efdde17593f407a291f4a87e70258285ff3cdb391eedfe2bb58",
+      "retained": false,
+      "reason": "other_registered_name_on_page",
+      "human_verdict": null,
+      "original_automated_verdict": "correct",
+      "proof_receipts": [
+        {
+          "id": "0d5a60376dea03aa171fb331e91eb8691570b8270af822af04a823fb5c20b721",
+          "source_url": "https://kurveregnskap.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-16T08:30:08.489270Z",
+          "content_sha256": "de08b920895bcc6491ad922ef4accc8b6f05d0d63bf14cfafdc468f488c0ba63",
+          "claim_span": "<a target=\"_blank\" rel=\"noopener\" href=\"https://www.facebook.com/kurveregnskap/\">",
+          "locator": "company-link:https://www.facebook.com/kurveregnskap",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "veto_receipt": {
+        "source_url": "https://kurveregnskap.no/",
+        "content_sha256": "de08b920895bcc6491ad922ef4accc8b6f05d0d63bf14cfafdc468f488c0ba63",
+        "matched_text": "Bratås AS",
+        "claim_span": "ratås</h3>\n        <span>Daglig leder - Bratås AS</span>\n      </div>\n\n      <button class=\"kurve-play\" type=\"button\" aria-label=\"Se kundevideo\">\n        <img decoding=\"async\" src=\"http://kurveregnskap.no/wp-content/uploads/2026/03/play.png\" alt=\"Play\">\n      </button>\n    </div>\n    <!-- KORT SLUTT"
+      }
+    },
+    {
+      "sample": "P2",
+      "organisation_number": "932296047",
+      "company": "KURVE REGNSKAP AS",
+      "field": "social_profile.85df9d7baf8b693db54f",
+      "claim_id": "48411486d2003034ac985dc687aba0f514f766e14a0716c1b3bf79ccd41439bf",
+      "url": "https://instagram.com/kurveregnskap",
+      "value_sha256": "d068b6f8636878a2af770f6f502dfb525f93e7acbe42e99f3bb68f514ce05e83",
+      "retained": false,
+      "reason": "other_registered_name_on_page",
+      "human_verdict": null,
+      "original_automated_verdict": "correct",
+      "proof_receipts": [
+        {
+          "id": "5b9be6afb652148ea6d01f22f69a7d4b1eb6afcab100a7264dc9d70cf130fb71",
+          "source_url": "https://kurveregnskap.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-16T08:30:08.489270Z",
+          "content_sha256": "de08b920895bcc6491ad922ef4accc8b6f05d0d63bf14cfafdc468f488c0ba63",
+          "claim_span": "<a target=\"_blank\" rel=\"noopener\" href=\"https://instagram.com/kurveregnskap\">",
+          "locator": "company-link:https://instagram.com/kurveregnskap",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "veto_receipt": {
+        "source_url": "https://kurveregnskap.no/",
+        "content_sha256": "de08b920895bcc6491ad922ef4accc8b6f05d0d63bf14cfafdc468f488c0ba63",
+        "matched_text": "Bratås AS",
+        "claim_span": "ratås</h3>\n        <span>Daglig leder - Bratås AS</span>\n      </div>\n\n      <button class=\"kurve-play\" type=\"button\" aria-label=\"Se kundevideo\">\n        <img decoding=\"async\" src=\"http://kurveregnskap.no/wp-content/uploads/2026/03/play.png\" alt=\"Play\">\n      </button>\n    </div>\n    <!-- KORT SLUTT"
+      }
+    },
+    {
+      "sample": "P2",
+      "organisation_number": "933831922",
+      "company": "SHIFT SECURITY AS",
+      "field": "social_profile.2111dc15db8b579df7de",
+      "claim_id": "f64603d3a6df6a02b2425a015ffcace3284b3a1ce91fe1918d69d96f522f098d",
+      "url": "https://www.linkedin.com/company/shift-security-as",
+      "value_sha256": "38cda798019220b1f3605244b0e11a78e734657add093dbefda253e97b1a5eb2",
+      "retained": true,
+      "reason": null,
+      "human_verdict": null,
+      "original_automated_verdict": "correct",
+      "proof_receipts": [
+        {
+          "id": "1f2b9bf4d1fa4042cecc1741b8fd08c77a253f7715e95f74a0cddf8fa41c676e",
+          "source_url": "https://shiftsecurity.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-16T08:31:25.833627Z",
+          "content_sha256": "c4dd03f1c5a8f0edc4b41d4342c5284d0beb67d1287770be3313fb8c01ad41bb",
+          "claim_span": "<a href=\"https://www.linkedin.com/company/shift-security-as/\" rel=\"noopener\">",
+          "locator": "company-link:https://www.linkedin.com/company/shift-security-as",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "veto_receipt": null
+    },
+    {
+      "sample": "P2",
+      "organisation_number": "933831922",
+      "company": "SHIFT SECURITY AS",
+      "field": "social_profile.acb72170187a2c62fec4",
+      "claim_id": "38add56a35f266bf44accc61593b9f925889ede6b9655e9609afd70c8e411e28",
+      "url": "http://www.youtube.com/@ShiftSecurityAS",
+      "value_sha256": "aeb16a0261e8d705967b468664e90f933654d1a8fbe4147c370562cb07979100",
+      "retained": true,
+      "reason": null,
+      "human_verdict": "correct",
+      "original_automated_verdict": "wrong",
+      "proof_receipts": [
+        {
+          "id": "7c28d67ac4e8896310b6df8d6650a60211121ce9b68d5c6634b9375eae29a92d",
+          "source_url": "https://shiftsecurity.no/kontakt",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-16T08:31:31.284021Z",
+          "content_sha256": "ee902aa3261d5dbe452217da135bda4e7777aa2ee36611fdea7e63745eb91709",
+          "claim_span": "<a href=\"http://www.youtube.com/@ShiftSecurityAS\" rel=\"noopener\">",
+          "locator": "company-link:http://www.youtube.com/@ShiftSecurityAS",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "veto_receipt": null
+    },
+    {
+      "sample": "P2",
+      "organisation_number": "933831922",
+      "company": "SHIFT SECURITY AS",
+      "field": "social_profile.927af00221be0386117b",
+      "claim_id": "fc4e2a8fe2446cc77ee7e955ab613e08895c4526a5ec7da85f1d7b41fe2dbbff",
+      "url": "https://www.youtube.com/@ShiftSecurityAS",
+      "value_sha256": "fda18853a82181f4cad5ef5cc66bc066bfed8bdbe1d9a28b318e5e57a5ab0499",
+      "retained": true,
+      "reason": null,
+      "human_verdict": "correct",
+      "original_automated_verdict": "wrong",
+      "proof_receipts": [
+        {
+          "id": "c577dcdeff9b1d253cd570b029be40c981e12b5613521ea20147023e15fc9f3d",
+          "source_url": "https://shiftsecurity.no/kontakt",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-16T08:31:31.284021Z",
+          "content_sha256": "ee902aa3261d5dbe452217da135bda4e7777aa2ee36611fdea7e63745eb91709",
+          "claim_span": "<a href=\"https://www.youtube.com/@ShiftSecurityAS\" rel=\"noopener\">",
+          "locator": "company-link:https://www.youtube.com/@ShiftSecurityAS",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "veto_receipt": null
+    },
+    {
+      "sample": "P2",
+      "organisation_number": "931340476",
+      "company": "GINNTECH AS",
+      "field": "social_profile.2333e56bd841ab76756c",
+      "claim_id": "697123729fb44882a708eb684df3b60ad4cd471796959f01b470e64c952c8fbd",
+      "url": "https://www.linkedin.com/company/ginntech",
+      "value_sha256": "b64c9d321447d1ff194c75f68c7d591cdd13f7c9cf705e1738080499325c0179",
+      "retained": true,
+      "reason": null,
+      "human_verdict": null,
+      "original_automated_verdict": "correct",
+      "proof_receipts": [
+        {
+          "id": "73dfd727a80f4edf24e9a83861c812868034639ee69fbd1cc5eee1b46d37270e",
+          "source_url": "https://ginntech.com/nb",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-16T08:33:27.039641Z",
+          "content_sha256": "60131a9f6b70eb88e1abe2f9b17baae58d47a420791b61fcc5b5c155b6d1f860",
+          "claim_span": "<a href='https://www.linkedin.com/company/ginntech' class='icon icon-linkedin' target=\"_blank\" aria-label=\"linkedin\">",
+          "locator": "company-link:https://www.linkedin.com/company/ginntech",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "veto_receipt": null
+    },
+    {
+      "sample": "P2",
+      "organisation_number": "922569738",
+      "company": "SNUOM PSYKISK HELSE AS",
+      "field": "social_profile.ed5e0b0308b9c60f6f4b",
+      "claim_id": "0c316df2cb0b02b4806bbfa90d54385f0275f6fa26ec4984a27ff12c3d0ffd8f",
+      "url": "https://www.instagram.com/snuompsykiskhelse",
+      "value_sha256": "cb0982a4ae2742a2077037677255d5f48cf17031a0f84dbbebdaa520b31f6b2d",
+      "retained": true,
+      "reason": null,
+      "human_verdict": "unsure",
+      "original_automated_verdict": "doubtful",
+      "proof_receipts": [
+        {
+          "id": "1393238cb7630c4bb0ec310536769a10860c8938049113d6f4a451b7a39a23a5",
+          "source_url": "https://www.snuom.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-16T08:33:46.896503Z",
+          "content_sha256": "48ffa66134daa87df8d84032e137f3daca0d8f1ba8e064fce523db912a54fd49",
+          "claim_span": "<a data-testid=\"linkElement\" href=\"https://www.instagram.com/snuompsykiskhelse/\" target=\"_blank\" rel=\"noreferrer noopener\" class=\"FvIvPq\" aria-label=\"Instagram     \">",
+          "locator": "company-link:https://www.instagram.com/snuompsykiskhelse",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "veto_receipt": null
+    },
+    {
+      "sample": "P2",
+      "organisation_number": "987470305",
+      "company": "FLORØ BYGG AS",
+      "field": "social_profile.89a10018f3c8784a0c3d",
+      "claim_id": "e0514efe5645e37285b2b019ec5b8ba643e9bf607b7d5b7b737b1b4128b553eb",
+      "url": "https://www.facebook.com/florobygg",
+      "value_sha256": "69e524d00a225e69f3096ac5c511dcbef5168b9adf9fe87c65543f49c1f37985",
+      "retained": true,
+      "reason": null,
+      "human_verdict": null,
+      "original_automated_verdict": "correct",
+      "proof_receipts": [
+        {
+          "id": "35f1b6125c77d0bc1a447c5a93b615ab02536e3d46b681b8f45a335bcbee0971",
+          "source_url": "https://florobygg.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-16T08:34:32.229499Z",
+          "content_sha256": "ddfc23a5574cc31fbc3b09102496494c79e348031012ff6ab6cb313ef0351d95",
+          "claim_span": "<a  target=\"_blank\" aria-label=\"Link to Facebook\" href='https://www.facebook.com/florobygg/' data-av_icon='' data-av_iconfont='entypo-fontello' title=\"Link to Facebook\" desc=\"Link to Facebook\" title='Link to Facebook'>",
+          "locator": "company-link:https://www.facebook.com/florobygg",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "veto_receipt": null
+    },
+    {
+      "sample": "P2",
+      "organisation_number": "987470305",
+      "company": "FLORØ BYGG AS",
+      "field": "social_profile.3964a11506666fce0f2e",
+      "claim_id": "e4845e35ae63d4193ec7948327b5317744f79f5c58a62561f74cae33dd57d64d",
+      "url": "https://www.instagram.com/florobygg",
+      "value_sha256": "7684f873c128932ce8a86e06dc6f31876f957730e13317a8208bc8fa18b079ec",
+      "retained": true,
+      "reason": null,
+      "human_verdict": null,
+      "original_automated_verdict": "correct",
+      "proof_receipts": [
+        {
+          "id": "63816d8a2bfeef9206a0e7945ef0ec0e2a71964824b026f02f8c16af0c6d7926",
+          "source_url": "https://florobygg.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-16T08:34:32.229499Z",
+          "content_sha256": "ddfc23a5574cc31fbc3b09102496494c79e348031012ff6ab6cb313ef0351d95",
+          "claim_span": "<a  target=\"_blank\" aria-label=\"Link to Instagram\" href='https://www.instagram.com/florobygg/' data-av_icon='' data-av_iconfont='entypo-fontello' title=\"Link to Instagram\" desc=\"Link to Instagram\" title='Link to Instagram'>",
+          "locator": "company-link:https://www.instagram.com/florobygg",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "veto_receipt": null
+    },
+    {
+      "sample": "P2",
+      "organisation_number": "971050756",
+      "company": "ACCELLA SOLUTIONS AS",
+      "field": "social_profile.e869802934dc08d715cc",
+      "claim_id": "c9757474b155207720dee03c71269875c72329e82ce8d9976c3613691c324b4b",
+      "url": "https://www.linkedin.com/company/petroonline-as",
+      "value_sha256": "f785eef8e79d31b3019ff05be2946988fb2830fb82b5433fc2057c75b4a3460e",
+      "retained": false,
+      "reason": "other_registered_name_on_page",
+      "human_verdict": "correct",
+      "original_automated_verdict": "wrong",
+      "proof_receipts": [
+        {
+          "id": "a1d89aa7a8c5b933eb4750d94aa81feaa77ea8d01eff683e8c8bc4fe724eaee9",
+          "source_url": "https://accella.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-16T08:35:41.607895Z",
+          "content_sha256": "29222d28f69806a90fffe46bb802ecb081987fe6a988e695aea32e2331449573",
+          "claim_span": "https:\\/\\/accella.no\\/#\\/schema\\/logo\\/image\\/\"},\"sameAs\":[\"https:\\/\\/www.linkedin.com\\/company\\/petroonline-as\\/\"]}]}",
+          "locator": "company-link:https://www.linkedin.com/company/petroonline-as",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "veto_receipt": {
+        "source_url": "https://accella.no/",
+        "content_sha256": "29222d28f69806a90fffe46bb802ecb081987fe6a988e695aea32e2331449573",
+        "matched_text": "Verdi Media Norge AS",
+        "claim_span": "loped and designed by Julie Solberg and Verdi Media Norge AS</a></p>\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div class=\"elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-211a1ac2\" data-id=\"211a1ac2\" data-element_type=\"column\" data-e-type=\"column\">\n\t\t\t<"
+      }
+    },
+    {
+      "sample": "P2",
+      "organisation_number": "927361426",
+      "company": "L TERRASSE AS",
+      "field": "social_profile.ed515a03828275a08bb1",
+      "claim_id": "1b067cacaf8b3e5e71e63c1da014460ec56206ae1c73b47f7c75cf18fce8b223",
+      "url": "https://www.facebook.com/Lterrasseno-101890795424991",
+      "value_sha256": "29bee07b2f79d1efc409ccbe0194155c04a55eb296a92e4baa59d5db14d1f0db",
+      "retained": false,
+      "reason": "same_as_no_distinctive_name",
+      "human_verdict": "unsure",
+      "original_automated_verdict": "wrong",
+      "proof_receipts": [
+        {
+          "id": "42b23fd8e5809f04a42b0b83695353d83a133e917bf246102e80088eed9be0d7",
+          "source_url": "https://lterrasse.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-16T08:36:57.115731Z",
+          "content_sha256": "fb2f834560b9477a2392e9e0232b3a884f6ab0c4c48309c5869b46881ccd60c1",
+          "claim_span": "e\":\"L Terrasse AS\",\"url\":\"https://lterrasse.no/\",\"sameAs\":[\"https://www.facebook.com/Lterrasseno-101890795424991/\"],\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"nb-NO\",\"@id\":",
+          "locator": "company-link:https://www.facebook.com/Lterrasseno-101890795424991",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "veto_receipt": null
+    },
+    {
+      "sample": "P3g",
+      "organisation_number": "927525399",
+      "company": "WOODWORKS! CLUSTER",
+      "field": "social_profile.61b1963bdf012537d784",
+      "claim_id": "e67715ca5d7b26ffb5f6302070403a3d67a55effacfb92a462cdf8376c5b9f75",
+      "url": "https://www.facebook.com/woodworkscluster",
+      "value_sha256": "1612d36b7365592b0c5b2df820f14756121cdda7ecf46136751d7a83d51ad304",
+      "retained": true,
+      "reason": null,
+      "human_verdict": null,
+      "original_automated_verdict": "correct",
+      "proof_receipts": [
+        {
+          "id": "1f7ce8b7088e1349f1c306c95d06d7b9ba648609247049d1045d677c9498643d",
+          "source_url": "https://woodworkscluster.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-17T17:31:45.682612Z",
+          "content_sha256": "8e2c2eed3e3549b40dde5c22acd82eaedef946c7e8310918f415d092e369af44",
+          "claim_span": "<a href=\"https://www.facebook.com/woodworkscluster/\" target=\"_blank\" rel=\"noopener nofollow\">",
+          "locator": "company-link:https://www.facebook.com/woodworkscluster",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "veto_receipt": null
+    },
+    {
+      "sample": "P3g",
+      "organisation_number": "927525399",
+      "company": "WOODWORKS! CLUSTER",
+      "field": "social_profile.e54b2bc845753233cd1a",
+      "claim_id": "9648b7d03ca521e30591f8fdd29089066dd8f933ab0111b4616df6ea042a2d86",
+      "url": "https://linkedin.com/company/woodworks-cluster",
+      "value_sha256": "f70a3059862c8f39f758b3c2d74a395dc99d7f189b52b1bf257c0318e5ede547",
+      "retained": true,
+      "reason": null,
+      "human_verdict": null,
+      "original_automated_verdict": "correct",
+      "proof_receipts": [
+        {
+          "id": "5ffb38bcbe57132412f747efdfcc1a7e873a1c8126349da76fb1a3d23a6d52d5",
+          "source_url": "https://woodworkscluster.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-17T17:31:45.682612Z",
+          "content_sha256": "8e2c2eed3e3549b40dde5c22acd82eaedef946c7e8310918f415d092e369af44",
+          "claim_span": "<a href=\"https://linkedin.com/company/woodworks-cluster\" target=\"_blank\" rel=\"noopener nofollow\">",
+          "locator": "company-link:https://linkedin.com/company/woodworks-cluster",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "veto_receipt": null
+    },
+    {
+      "sample": "P3g",
+      "organisation_number": "927525399",
+      "company": "WOODWORKS! CLUSTER",
+      "field": "social_profile.0bd0c401d7185c63cf8c",
+      "claim_id": "5ef1404be1edf36b201197eb1cbeccb83861f1bb05ec416da3387e5f216fe76a",
+      "url": "https://www.facebook.com/arenaskog",
+      "value_sha256": "c43945038be372527871ff0045f896c5ef63105c1685d0cb2fa0021d9de88c8d",
+      "retained": false,
+      "reason": "same_as_visible_profile_conflict",
+      "human_verdict": "wrong",
+      "original_automated_verdict": "wrong",
+      "proof_receipts": [
+        {
+          "id": "fe0858612868f06a88dbfcd4177c27dbb5d03b089c82f672a8b18b61a3c1a243",
+          "source_url": "https://woodworkscluster.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-17T17:31:45.682612Z",
+          "content_sha256": "8e2c2eed3e3549b40dde5c22acd82eaedef946c7e8310918f415d092e369af44",
+          "claim_span": "/woodworkscluster.no\\/#\\/schema\\/logo\\/image\\/\"},\"sameAs\":[\"https:\\/\\/www.facebook.com\\/arenaskog\\/?fref=ts\",\"https:\\/\\/linkedin.com\\/company\\/woodworks-cluster\"]}]}",
+          "locator": "company-link:https://www.facebook.com/arenaskog",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "veto_receipt": {
+        "source_url": "https://woodworkscluster.no/",
+        "content_sha256": "8e2c2eed3e3549b40dde5c22acd82eaedef946c7e8310918f415d092e369af44",
+        "matched_text": "https://www.facebook.com/woodworkscluster",
+        "claim_span": "<a href=\"https://www.facebook.com/woodworkscluster/\" target=\"_blank\" rel=\"noopener nofollow\">"
+      }
+    },
+    {
+      "sample": "P3g",
+      "organisation_number": "912766349",
+      "company": "CUBASTOLEN AS",
+      "field": "social_profile.17e728926ae351b98ea8",
+      "claim_id": "c86d251309eaec738e279c934f7fedb809c51f53084ac4b52b74a8c4b4ed10e9",
+      "url": "https://www.facebook.com/cubastolen",
+      "value_sha256": "c678cdcb86f571d017b1da101f1de1313c31d726c6bb96e5ce7333527834b86c",
+      "retained": false,
+      "reason": "other_registered_name_on_page",
+      "human_verdict": null,
+      "original_automated_verdict": "correct",
+      "proof_receipts": [
+        {
+          "id": "e9eb04b3e6b3a5e7852a8772a99d2c1831e1738168d2d3f525ebf207d7e3d1cd",
+          "source_url": "https://cubastolen.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-17T17:31:50.465986Z",
+          "content_sha256": "5c5c968dd71032d68f510cbf119082f4f93a6c9b4db2e79970eba9bb6a2214b5",
+          "claim_span": "<a target=\"_blank\" rel=\"noopener\" href=\"https://www.facebook.com/cubastolen\" title=\"\">",
+          "locator": "company-link:https://www.facebook.com/cubastolen",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "veto_receipt": {
+        "source_url": "https://cubastolen.no/pages/kjops-og-leveringsvilkar",
+        "content_sha256": "99fb2ea5c23664c225244f75634b910606a8618e58d986dfd3b9b2ce42066300",
+        "matched_text": "Staas AS",
+        "claim_span": " Cubastolen ASOrg.nr: 912 766 349Del av Staas ASAdresse: Hesttrøa 48, 7224 MelhusE-post: steinar@cubastolen.noTelefon: 905 65 240 Bestilling Du kan bestille\"><meta property=\"og:site_name\" content=\"Cubastolen\">\n  <meta property=\"og:url\" content=\"https://cubastolen.no/pages/kjops-og-leveringsvilkar\">\n"
+      }
+    },
+    {
+      "sample": "P3g",
+      "organisation_number": "994479865",
+      "company": "IDENTUM AS",
+      "field": "social_profile.d9be7fd690e8a689c3a8",
+      "claim_id": "fea91ca8e6b5f1fc795bcc0086b1bee50012b7a6d9a8386a255cb903d5a8625e",
+      "url": "https://www.linkedin.com/company/identum-as",
+      "value_sha256": "33e985495e118d8083494609160166c7cd14a8361ed609d398238525314ed130",
+      "retained": true,
+      "reason": null,
+      "human_verdict": null,
+      "original_automated_verdict": "correct",
+      "proof_receipts": [
+        {
+          "id": "e1f798aa2bf4ced1010e273f3f41675854c213e2ca082df4dc0805a2dc577760",
+          "source_url": "https://www.identum.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-17T17:32:01.564168Z",
+          "content_sha256": "356223741f48deba792eff2c569e1b2a0b4bdee0c59d567e77912eb72e1301d0",
+          "claim_span": "<a class=\"default-link nav-list__link \" href=\"https://www.linkedin.com/company/identum-as/\" target=\"_blank\">",
+          "locator": "company-link:https://www.linkedin.com/company/identum-as",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "veto_receipt": null
+    },
+    {
+      "sample": "P3g",
+      "organisation_number": "994479865",
+      "company": "IDENTUM AS",
+      "field": "social_profile.1f78c177be8980782bef",
+      "claim_id": "47f1eb99494626e497900929a8b9a835d8bdfdd679bb46e7091f97041e7e5050",
+      "url": "https://www.youtube.com/@identumAS",
+      "value_sha256": "a512997d382aab652834eaec7c809ad156fce913a3031a056a6750942a5ca75e",
+      "retained": true,
+      "reason": null,
+      "human_verdict": null,
+      "original_automated_verdict": "correct",
+      "proof_receipts": [
+        {
+          "id": "50484bb2a5523f297c033bd494ed6f5399b7ffb4408974ac916659573460951d",
+          "source_url": "https://www.identum.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-17T17:32:01.564168Z",
+          "content_sha256": "356223741f48deba792eff2c569e1b2a0b4bdee0c59d567e77912eb72e1301d0",
+          "claim_span": "<a class=\"default-link nav-list__link \" href=\"https://www.youtube.com/@identumAS\" target=\"_blank\">",
+          "locator": "company-link:https://www.youtube.com/@identumAS",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "veto_receipt": null
+    },
+    {
+      "sample": "P3g",
+      "organisation_number": "994479865",
+      "company": "IDENTUM AS",
+      "field": "social_profile.ad8947bf2bf1e12aa466",
+      "claim_id": "7c1af5800b7fed50cf6152674d95be079ca6ac35ac3ea1f6d67f383b7e3b7f0c",
+      "url": "https://www.facebook.com/identum.no",
+      "value_sha256": "2c4c4cf965ea914a198c53542961a3d4673324608bc3c3d1135e0e53631995f9",
+      "retained": true,
+      "reason": null,
+      "human_verdict": "correct",
+      "original_automated_verdict": "wrong",
+      "proof_receipts": [
+        {
+          "id": "09d0ef68ac487513b3a27bab1764062f47b7ac39e2a5c17813df5b33e311b78a",
+          "source_url": "https://www.identum.no/kontakt",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-17T17:32:02.930741Z",
+          "content_sha256": "0a7b75899edc756ec1ed67721be022fda9265762314a53377ed1519905a19a65",
+          "claim_span": "<a class=\"default-link nav-list__link \" href=\"https://www.facebook.com/identum.no\" target=\"_blank\">",
+          "locator": "company-link:https://www.facebook.com/identum.no",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "veto_receipt": null
+    },
+    {
+      "sample": "P3g",
+      "organisation_number": "994479865",
+      "company": "IDENTUM AS",
+      "field": "social_profile.76243b34a4bff246f9cd",
+      "claim_id": "9aa51c87668e27c4d90b669885b27bd7d2de7fc99151a986a63fdc1459a7c07d",
+      "url": "https://www.instagram.com/iam_identum",
+      "value_sha256": "0b6a4cb8475b3fdcb9ca83820879cc12d01b5747919d9b351e6b15b4dce36627",
+      "retained": true,
+      "reason": null,
+      "human_verdict": "unsure",
+      "original_automated_verdict": "wrong",
+      "proof_receipts": [
+        {
+          "id": "e2fd0eaa5d2891ae12f010fc0bf72f34818d42a8e0056fcf1a578431e8e4d2bd",
+          "source_url": "https://www.identum.no/kontakt",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-17T17:32:02.930741Z",
+          "content_sha256": "0a7b75899edc756ec1ed67721be022fda9265762314a53377ed1519905a19a65",
+          "claim_span": "<a class=\"default-link nav-list__link \" href=\"https://www.instagram.com/iam_identum/\" target=\"_blank\">",
+          "locator": "company-link:https://www.instagram.com/iam_identum",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "veto_receipt": null
+    },
+    {
+      "sample": "P3g",
+      "organisation_number": "994479865",
+      "company": "IDENTUM AS",
+      "field": "social_profile.3dd1c0da4be551029676",
+      "claim_id": "e0dade64bddb9af8f4075bcd418758a022890e1d2535e7a16bb63b76fe6fe90f",
+      "url": "https://twitter.com/IAM_Identum",
+      "value_sha256": "c1296bd282f06354e947f520d01470b126fa49c6da28a2000a207c0541ac5fbe",
+      "retained": true,
+      "reason": null,
+      "human_verdict": "correct",
+      "original_automated_verdict": "wrong",
+      "proof_receipts": [
+        {
+          "id": "a942b0d43ee61c95e5488114585636c3670555f488224db1995f994d337b9302",
+          "source_url": "https://www.identum.no/kontakt",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-17T17:32:02.930741Z",
+          "content_sha256": "0a7b75899edc756ec1ed67721be022fda9265762314a53377ed1519905a19a65",
+          "claim_span": "<a class=\"default-link nav-list__link \" href=\"https://twitter.com/IAM_Identum\" target=\"_blank\">",
+          "locator": "company-link:https://twitter.com/IAM_Identum",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "veto_receipt": null
+    },
+    {
+      "sample": "P3g",
+      "organisation_number": "929274490",
+      "company": "BAREKNIPS AS",
+      "field": "social_profile.cf2ebb0e8e1bb401c24e",
+      "claim_id": "376ca8feb19cfb2f1d45c4b64be24f10fcee2836fc0352b25a71189564aa9e06",
+      "url": "https://instagram.com/bareknips",
+      "value_sha256": "e3532cb79fc665a20596e72fa8b922cf4cd825a9510a907a8e038dc93c6abb02",
+      "retained": true,
+      "reason": null,
+      "human_verdict": null,
+      "original_automated_verdict": "correct",
+      "proof_receipts": [
+        {
+          "id": "df02dacf3959478a6c3acc81aafe258ebe3d0df7820f2b6919718554b2552a35",
+          "source_url": "https://www.bareknips.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-17T17:32:54.853696Z",
+          "content_sha256": "3b9fc590fee7e96ebf8f1f953605a0c0668a6745e23e89a0df368824b18ae28f",
+          "claim_span": "<a href=\"https://instagram.com/bareknips\" target=\"_blank\" rel=\"noopener\">",
+          "locator": "company-link:https://instagram.com/bareknips",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "veto_receipt": null
+    },
+    {
+      "sample": "P3g",
+      "organisation_number": "929274490",
+      "company": "BAREKNIPS AS",
+      "field": "social_profile.60f9436127a78c8bb7a0",
+      "claim_id": "d696c5a14e8338c7f5ea27c725cb67c82f904877d36a54368a8bedfa5d8e95bf",
+      "url": "https://facebook.com/bareknips",
+      "value_sha256": "e627f36d180992bbb18bb4d619b497c1c15b0e085abc6e311557286688216d68",
+      "retained": true,
+      "reason": null,
+      "human_verdict": null,
+      "original_automated_verdict": "correct",
+      "proof_receipts": [
+        {
+          "id": "c46c0e2ad6bc48058743faccd8950c2e304dbd656078da4e13f999d59217c5d8",
+          "source_url": "https://www.bareknips.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-17T17:32:54.853696Z",
+          "content_sha256": "3b9fc590fee7e96ebf8f1f953605a0c0668a6745e23e89a0df368824b18ae28f",
+          "claim_span": "<a href=\"https://facebook.com/bareknips\" target=\"_blank\" rel=\"noopener\">",
+          "locator": "company-link:https://facebook.com/bareknips",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "veto_receipt": null
+    },
+    {
+      "sample": "P3g",
+      "organisation_number": "986902651",
+      "company": "TINNHEIA BIL AS",
+      "field": "social_profile.61871d655cbf9e64a4c8",
+      "claim_id": "0dce3904f63b6a6ab0086c28f989599216f0e77bf4a3c2d700a213e838283326",
+      "url": "https://www.facebook.com/tinnheiabil",
+      "value_sha256": "8275667299defbb8fb4450f7654300417e715ff141f477883b8cab4408c8132b",
+      "retained": true,
+      "reason": null,
+      "human_verdict": "correct",
+      "original_automated_verdict": "doubtful",
+      "proof_receipts": [
+        {
+          "id": "3b2227312a46b3b1641c086c59c0530752c54b0bd3773ebc42271489205b78ba",
+          "source_url": "https://tinnheiabil.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-17T17:33:01.405390Z",
+          "content_sha256": "434f6a1a4f56ee47328ac9e3109bdc3e281baf17ff1a1c9f7b1da14e1a353c9c",
+          "claim_span": "<a href=\"https://www.facebook.com/tinnheiabil/?locale=nb_NO\">",
+          "locator": "company-link:https://www.facebook.com/tinnheiabil",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "veto_receipt": null
+    },
+    {
+      "sample": "P3g",
+      "organisation_number": "991323848",
+      "company": "TROLLHEIM AS",
+      "field": "social_profile.bd2edc079fd97ab0af11",
+      "claim_id": "11a4588edf8f10586ffc46ef9b762ff4dc124c6b759e3307e08882a11f9ca96d",
+      "url": "https://facebook.com/TrollheimAS",
+      "value_sha256": "b82ec63685d0ce5d6b5f21419186bf8ce0310efbbcf0ab9d562ba62fcf98a433",
+      "retained": false,
+      "reason": "other_registered_entity_on_shared_domain",
+      "human_verdict": "wrong",
+      "original_automated_verdict": "doubtful",
+      "proof_receipts": [
+        {
+          "id": "b88310b048343cfca9bb8f6230d57e1020a023d621fb82dc519ad6cc8fa776a8",
+          "source_url": "https://trollheim.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-17T17:33:18.184369Z",
+          "content_sha256": "15f2a742f2d0baf7a6ba588677bd54709bdf264771c719f4519a33d081d92e4a",
+          "claim_span": "<a class=\"elementor-icon elementor-social-icon elementor-social-icon-facebook-f elementor-repeater-item-4f37a04\" href=\"https://facebook.com/TrollheimAS\" target=\"_blank\">",
+          "locator": "company-link:https://facebook.com/TrollheimAS",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "veto_receipt": {
+        "source_url": "https://trollheim.no/kontakt/",
+        "content_sha256": "0c08bfb18994f5475cf65a36a9ef4883ac87d7e84385690c938d2bceaa9beaac",
+        "matched_text": "trollheim kurs og kompetanse",
+        "claim_span": "tps://trollheim.no/kurs-og-kompetanse/\">Trollheim Kurs og Kompetanse</a> </strong></li><li><strong><a href=\"https://trollheim.no/trollheim-reklame/\">Trollheim Reklame</a></strong></li><li><strong><a href=\"https://trollheim.no/trollheim-vaskeri/\">Trollheim Vaskeri</a></strong></li><li><a href=\"https:"
+      }
+    },
+    {
+      "sample": "P3g",
+      "organisation_number": "991323848",
+      "company": "TROLLHEIM AS",
+      "field": "social_profile.e1befb5db785d0b7dd9f",
+      "claim_id": "100351b94f0421fff4de073512b48a3e5a9e81d42a0d6742ccc4504454094a4b",
+      "url": "https://www.instagram.com/trollheimas",
+      "value_sha256": "f2f77a5c43ba1b9706f6a6581d22970227d710f3c0d1ec22568e080c3fde874b",
+      "retained": false,
+      "reason": "other_registered_entity_on_shared_domain",
+      "human_verdict": "unsure",
+      "original_automated_verdict": "doubtful",
+      "proof_receipts": [
+        {
+          "id": "23680f710dc5abc52c91e01551efef363b592c1913967bc76014e14ebf0c497f",
+          "source_url": "https://trollheim.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-17T17:33:18.184369Z",
+          "content_sha256": "15f2a742f2d0baf7a6ba588677bd54709bdf264771c719f4519a33d081d92e4a",
+          "claim_span": "<a class=\"elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-34dd5a2\" href=\"https://www.instagram.com/trollheimas/\" target=\"_blank\">",
+          "locator": "company-link:https://www.instagram.com/trollheimas",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "veto_receipt": {
+        "source_url": "https://trollheim.no/kontakt/",
+        "content_sha256": "0c08bfb18994f5475cf65a36a9ef4883ac87d7e84385690c938d2bceaa9beaac",
+        "matched_text": "trollheim kurs og kompetanse",
+        "claim_span": "tps://trollheim.no/kurs-og-kompetanse/\">Trollheim Kurs og Kompetanse</a> </strong></li><li><strong><a href=\"https://trollheim.no/trollheim-reklame/\">Trollheim Reklame</a></strong></li><li><strong><a href=\"https://trollheim.no/trollheim-vaskeri/\">Trollheim Vaskeri</a></strong></li><li><a href=\"https:"
+      }
+    },
+    {
+      "sample": "P3g",
+      "organisation_number": "991323848",
+      "company": "TROLLHEIM AS",
+      "field": "social_profile.35b2b052c8d353abdf12",
+      "claim_id": "ea32c4045639c4a937d708c87ca9eaadfb63032726244b1238ac00c6dfeef070",
+      "url": "https://twitter.com/TrollheimAS",
+      "value_sha256": "1a5d6079cc490af64ea82554b4adc58d6f3510edd2358c966e159b8880851d84",
+      "retained": false,
+      "reason": "other_registered_entity_on_shared_domain",
+      "human_verdict": "correct",
+      "original_automated_verdict": "doubtful",
+      "proof_receipts": [
+        {
+          "id": "641d57d26415e4fb55de3ed16136e7eb50dc56490cc1b44d375f4bb331c46fc0",
+          "source_url": "https://trollheim.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-17T17:33:18.184369Z",
+          "content_sha256": "15f2a742f2d0baf7a6ba588677bd54709bdf264771c719f4519a33d081d92e4a",
+          "claim_span": "<a class=\"elementor-icon elementor-social-icon elementor-social-icon-twitter elementor-repeater-item-e32e197\" href=\"https://twitter.com/TrollheimAS\" target=\"_blank\">",
+          "locator": "company-link:https://twitter.com/TrollheimAS",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "veto_receipt": {
+        "source_url": "https://trollheim.no/kontakt/",
+        "content_sha256": "0c08bfb18994f5475cf65a36a9ef4883ac87d7e84385690c938d2bceaa9beaac",
+        "matched_text": "trollheim kurs og kompetanse",
+        "claim_span": "tps://trollheim.no/kurs-og-kompetanse/\">Trollheim Kurs og Kompetanse</a> </strong></li><li><strong><a href=\"https://trollheim.no/trollheim-reklame/\">Trollheim Reklame</a></strong></li><li><strong><a href=\"https://trollheim.no/trollheim-vaskeri/\">Trollheim Vaskeri</a></strong></li><li><a href=\"https:"
+      }
+    },
+    {
+      "sample": "P3g",
+      "organisation_number": "970351515",
+      "company": "GRANLY STIFTELSE",
+      "field": "social_profile.f736beea60a0863c5a1f",
+      "claim_id": "4fc964a1b2e130634a82dc12d401806bf6718d2f3395ac56ac1d221b1ba617f8",
+      "url": "https://www.facebook.com/granlystiftelse",
+      "value_sha256": "69ce0d7b78e9da33cc2e3aea4af86ad61c704d19e8d0a83190cc672729771933",
+      "retained": true,
+      "reason": null,
+      "human_verdict": null,
+      "original_automated_verdict": "correct",
+      "proof_receipts": [
+        {
+          "id": "42f107264892d4053f95bee4b8e04e6b727a94bf255df3b3a0bb13585c79da18",
+          "source_url": "https://www.granly-stiftelse.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-17T17:33:51.417774Z",
+          "content_sha256": "d8cbcd495e122ee161d1f0df8ab9aeb971274e8b139c7b7eb082fc6b6b3320c6",
+          "claim_span": "<a href=\"https://www.facebook.com/granlystiftelse\" >",
+          "locator": "company-link:https://www.facebook.com/granlystiftelse",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "veto_receipt": null
+    },
+    {
+      "sample": "P3g",
+      "organisation_number": "970351515",
+      "company": "GRANLY STIFTELSE",
+      "field": "social_profile.7e81eb1f49c21dc3c6f1",
+      "claim_id": "d3ad3d0e81df7d64ed6a804922d8a8ee42d2c723cc33ab354b55a3381c7eccd4",
+      "url": "https://www.instagram.com/granlystiftelse",
+      "value_sha256": "9516face58dfb5f8f45606ccd01c799c42691c8849d23dcaa69cdf399575b05d",
+      "retained": true,
+      "reason": null,
+      "human_verdict": null,
+      "original_automated_verdict": "correct",
+      "proof_receipts": [
+        {
+          "id": "21eccc6174c81d4177911772f90d9a9f4231b72390c7cbae18da4832f876d202",
+          "source_url": "https://www.granly-stiftelse.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-17T17:33:51.417774Z",
+          "content_sha256": "d8cbcd495e122ee161d1f0df8ab9aeb971274e8b139c7b7eb082fc6b6b3320c6",
+          "claim_span": "<a href=\"https://www.instagram.com/granlystiftelse\" >",
+          "locator": "company-link:https://www.instagram.com/granlystiftelse",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "veto_receipt": null
+    },
+    {
+      "sample": "P3g",
+      "organisation_number": "987693444",
+      "company": "ET BYGG AS",
+      "field": "social_profile.523e834e430e7e813d3a",
+      "claim_id": "8b8b0a1214bbd897657e5ba72a4ade4c7e39bd86380f67a3b3df24f3b121de63",
+      "url": "https://www.facebook.com/etbygg",
+      "value_sha256": "adba28d3bb9ec8da1b48922cbdf2974ce1b24ae7b77a581a97008c5045119377",
+      "retained": true,
+      "reason": null,
+      "human_verdict": null,
+      "original_automated_verdict": "correct",
+      "proof_receipts": [
+        {
+          "id": "d194327f257b676d68a8783fc635f02cd0e632a6e4544db5c33548cdae18f842",
+          "source_url": "https://etbygg.com/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-17T17:33:52.591267Z",
+          "content_sha256": "39840b221fae64efea13dfd02ba688fd6a81158f89e66b148c327d77df925c74",
+          "claim_span": "<a href=\"https://www.facebook.com/etbygg\" target=\"_blank\" rel=\"noopener\">",
+          "locator": "company-link:https://www.facebook.com/etbygg",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "veto_receipt": null
+    },
+    {
+      "sample": "P3g",
+      "organisation_number": "967484881",
+      "company": "MAJAS BAKERI AS",
+      "field": "social_profile.864d4e1817bab4f73dc4",
+      "claim_id": "bf663e4791dc0612cea32bbe2fa0a6f68076022c398acd964b17350fb89aab71",
+      "url": "https://www.facebook.com/MajasBakeri",
+      "value_sha256": "7aa7afe1395ea382a9a62f8531ef33e3db9a025b19f3db1dd11355d13d10525e",
+      "retained": true,
+      "reason": null,
+      "human_verdict": null,
+      "original_automated_verdict": "correct",
+      "proof_receipts": [
+        {
+          "id": "7abbb704f668ec55b8536502b1ae7e430aa1273eb445060b85923247078f797c",
+          "source_url": "https://www.majasbakeri.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-17T17:34:03.005456Z",
+          "content_sha256": "5845372c04bcec3fcc32a73b002a669fe838e861a52664c672b385b10503116e",
+          "claim_span": "  \" target=\"_blank\" href=\"https://www.facebook.com/MajasBakeri/\">",
+          "locator": "company-link:https://www.facebook.com/MajasBakeri",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "veto_receipt": null
+    },
+    {
+      "sample": "P3g",
+      "organisation_number": "916667779",
+      "company": "PRESENZA AS",
+      "field": "social_profile.c29007da9841cbae6d1a",
+      "claim_id": "303e231383aa0b09500bf12c6908400a88f001898709f96708b142706ed6c05a",
+      "url": "https://www.facebook.com/PresenzaAs",
+      "value_sha256": "cae404ad5f0f9c3ca03c6e34eed444685808f535bc6cc114f5e732d2c83091bb",
+      "retained": true,
+      "reason": null,
+      "human_verdict": null,
+      "original_automated_verdict": "correct",
+      "proof_receipts": [
+        {
+          "id": "19960e741f98dbfa53ae0c41957fb059f331b565bb106a0e175043f578219c31",
+          "source_url": "https://presenza.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-17T17:34:24.393136Z",
+          "content_sha256": "96a5ee7318ff61117673620704ec04cfcea8f6d117e5c1ac76d4a2ef454edcbb",
+          "claim_span": "<a\n              href='https://www.facebook.com/PresenzaAs'\n              class='icon et_pb_with_border'\n              title='Følg på Facebook'\n               target=\"_blank\">",
+          "locator": "company-link:https://www.facebook.com/PresenzaAs",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "veto_receipt": null
+    },
+    {
+      "sample": "P3g",
+      "organisation_number": "990825076",
+      "company": "PECULIUM AS",
+      "field": "social_profile.2dcb6b7a9fec8b2f0ac0",
+      "claim_id": "224e82d494d2b8c2b0b4a16c39a46b85b6694f23029e87161b9eb90f1fa2454f",
+      "url": "https://www.instagram.com/peculium_as",
+      "value_sha256": "7e7fc6d9efa5b40029033e716aba16439132673b26466da457a69a5388dcb4a7",
+      "retained": false,
+      "reason": "other_registered_name_on_page",
+      "human_verdict": "unsure",
+      "original_automated_verdict": "doubtful",
+      "proof_receipts": [
+        {
+          "id": "efdcd85bb3fa5eeb791df6e2d33ab5b0da86a8a38e604c87f20f6bd4b2f66754",
+          "source_url": "https://peculium.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-17T17:34:37.753058Z",
+          "content_sha256": "371bf928068d9a8b69328cb82205e5a52bc143313abb7f29b6d1bea2530c1a64",
+          "claim_span": "<a class=\"text-gray-400 hover:opacity-80 transition-opacity\" target=\"_blank\" rel=\"noreferrer\" href=\"https://www.instagram.com/peculium_as/\">",
+          "locator": "company-link:https://www.instagram.com/peculium_as",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "veto_receipt": {
+        "source_url": "https://peculium.no/",
+        "content_sha256": "371bf928068d9a8b69328cb82205e5a52bc143313abb7f29b6d1bea2530c1a64",
+        "matched_text": "Texicon AS",
+        "claim_span": "tion-opacity\" href=\"https://texicon.no\">Texicon AS</a>.</span><div class=\"flex mt-4 space-x-5 sm:justify-center md:mt-0\"><a class=\"text-gray-400 hover:opacity-80 transition-opacity\" target=\"_blank\" rel=\"noreferrer\" href=\"https://www.facebook.com/credafinans\"><svg class=\"w-4 h-4\" aria-hidden=\"true\" x"
+      }
+    },
+    {
+      "sample": "P3g",
+      "organisation_number": "916364806",
+      "company": "TT EXPRESS AS",
+      "field": "social_profile.7542e61d1ff52387fee4",
+      "claim_id": "5112d36db12f36fd2e1b5ee0afebdb61fa74e6aab9c7150c47a859312f3afe95",
+      "url": "https://www.facebook.com/ttexpressas",
+      "value_sha256": "6630765737e38efa0ac56c6233749b288374e3ebe8abd04c92a4d6c4878b7a02",
+      "retained": false,
+      "reason": "same_as_no_distinctive_name",
+      "human_verdict": "unsure",
+      "original_automated_verdict": "wrong",
+      "proof_receipts": [
+        {
+          "id": "ac8b6045da4c3297e6defa4ac9037a4f6032934ee14be92b5d683ca2bb0c3f35",
+          "source_url": "https://www.ttexpress.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-17T17:34:46.072576Z",
+          "content_sha256": "9e61edce2a822ed1a26c3244913a2719b70e5ccca16b28c03b74cdd9e901365d",
+          "claim_span": "\\/\\/www.ttexpress.no\\/#\\/schema\\/logo\\/image\\/\"},\"sameAs\":[\"https:\\/\\/www.facebook.com\\/ttexpressas\\/\"]}]}",
+          "locator": "company-link:https://www.facebook.com/ttexpressas",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "veto_receipt": null
+    },
+    {
+      "sample": "P3g",
+      "organisation_number": "913112245",
+      "company": "TANKESMIEN AGENDA AS",
+      "field": "social_profile.fee268876401e6d57d85",
+      "claim_id": "e485085f7210858a907e6fbe65cb5aad970d68b96ea430f82c4b32fd8df26822",
+      "url": "https://www.facebook.com/tankesmienagenda",
+      "value_sha256": "0f3a17e01d8a459773836163e4df360633e145aa15c14311bd6e0d6f04dc0304",
+      "retained": true,
+      "reason": null,
+      "human_verdict": null,
+      "original_automated_verdict": "correct",
+      "proof_receipts": [
+        {
+          "id": "7f0be2fe97e68f166099da26f4eaabda551fee2e7755bbf956e4a47bdd58e0fd",
+          "source_url": "https://www.tankesmienagenda.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-17T17:34:47.625041Z",
+          "content_sha256": "5bfb71cd7b851a28dc49c8c519c995306e494e8eaa208bcddf431f34d0c4fade",
+          "claim_span": "<a href=\"https://www.facebook.com/tankesmienagenda\" rel=\"noreferrer\" class=\"group inline-flex items-center gap-x-[0.2em]\">",
+          "locator": "company-link:https://www.facebook.com/tankesmienagenda",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "veto_receipt": null
+    },
+    {
+      "sample": "P3g",
+      "organisation_number": "913112245",
+      "company": "TANKESMIEN AGENDA AS",
+      "field": "social_profile.f019d9007c358d08dd77",
+      "claim_id": "00b5118781795aa0e64b42e02b3c5b954faa55828ff748b04f7e6a2dc76fd560",
+      "url": "https://www.instagram.com/tankesmien_agenda",
+      "value_sha256": "bc35d83dbdc6aa3dcb1d1195d67e7ff91c5e6184f8cef70bbacc6171ad492e43",
+      "retained": true,
+      "reason": null,
+      "human_verdict": null,
+      "original_automated_verdict": "correct",
+      "proof_receipts": [
+        {
+          "id": "4470a5498fdd9affdb5a1bf85e07b288d7c8123835221614715a0b2582e46718",
+          "source_url": "https://www.tankesmienagenda.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-17T17:34:47.625041Z",
+          "content_sha256": "5bfb71cd7b851a28dc49c8c519c995306e494e8eaa208bcddf431f34d0c4fade",
+          "claim_span": "<a href=\"https://www.instagram.com/tankesmien_agenda\" rel=\"noreferrer\" class=\"group inline-flex items-center gap-x-[0.2em]\">",
+          "locator": "company-link:https://www.instagram.com/tankesmien_agenda",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "veto_receipt": null
+    },
+    {
+      "sample": "P3g",
+      "organisation_number": "913112245",
+      "company": "TANKESMIEN AGENDA AS",
+      "field": "social_profile.2f8782a661f65eda27e3",
+      "claim_id": "a2c06bae785809750f42e913545f336a3378bdfe71d79c785a4cd144870f3e45",
+      "url": "https://www.linkedin.com/company/tankesmien-agenda",
+      "value_sha256": "e9a07b269d1842a9fdbcc51a35f244cc494fc40bd8976e176f06d5696182fe0e",
+      "retained": true,
+      "reason": null,
+      "human_verdict": null,
+      "original_automated_verdict": "correct",
+      "proof_receipts": [
+        {
+          "id": "3cfcd98e435d2eb774de3c158caba24d704102aa6cedd9159fdaea5f40900c8a",
+          "source_url": "https://www.tankesmienagenda.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-17T17:34:47.625041Z",
+          "content_sha256": "5bfb71cd7b851a28dc49c8c519c995306e494e8eaa208bcddf431f34d0c4fade",
+          "claim_span": "<a href=\"https://www.linkedin.com/company/tankesmien-agenda/\" rel=\"noreferrer\" class=\"group inline-flex items-center gap-x-[0.2em]\">",
+          "locator": "company-link:https://www.linkedin.com/company/tankesmien-agenda",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "veto_receipt": null
+    },
+    {
+      "sample": "P3g",
+      "organisation_number": "913112245",
+      "company": "TANKESMIEN AGENDA AS",
+      "field": "social_profile.34268a6a10bff220e77c",
+      "claim_id": "8411a40b42ea49e695e8d20135109318d9486cc4946830d7a88e3df79ee477ca",
+      "url": "https://www.tiktok.com/@tankesmien.agenda",
+      "value_sha256": "edaa7d730a27d3cbc5b2f0953e47880667b7605f417db2ec708561fb3a8953e0",
+      "retained": true,
+      "reason": null,
+      "human_verdict": null,
+      "original_automated_verdict": "correct",
+      "proof_receipts": [
+        {
+          "id": "2e2143a46128b03989778a5f03f1d283a95cdcffcf460388c6dc0880fd54b0d4",
+          "source_url": "https://www.tankesmienagenda.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-17T17:34:47.625041Z",
+          "content_sha256": "5bfb71cd7b851a28dc49c8c519c995306e494e8eaa208bcddf431f34d0c4fade",
+          "claim_span": "<a href=\"https://www.tiktok.com/@tankesmien.agenda?is_from_webapp=1&amp;sender_device=pc\" rel=\"noreferrer\" class=\"group inline-flex items-center gap-x-[0.2em]\">",
+          "locator": "company-link:https://www.tiktok.com/@tankesmien.agenda",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "veto_receipt": null
+    },
+    {
+      "sample": "P3g",
+      "organisation_number": "985256055",
+      "company": "FRAMEWORKS AS",
+      "field": "social_profile.44e251845bfa1610fce5",
+      "claim_id": "07967b01b3ec68aada88a08787e0e3cf856fbbba89af223339dc0bb5aaa2f64c",
+      "url": "https://no.linkedin.com/company/frameworks-as",
+      "value_sha256": "00ed79b679df4a5431b0d8a4f7f5a42fba787d613473139d0a08899ebd3046ad",
+      "retained": true,
+      "reason": null,
+      "human_verdict": null,
+      "original_automated_verdict": "correct",
+      "proof_receipts": [
+        {
+          "id": "cfeef2c0addd38dd9b91a0fc3801018c3e42dbedc200bc3c3868528852f21f9d",
+          "source_url": "https://frameworks.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-17T17:35:33.256098Z",
+          "content_sha256": "09a6f3b7ec8bab0877adfa3b7d56e15bd2693b782ec14d9e8ccabeb9d90d4cfe",
+          "claim_span": "<a href=\"https://no.linkedin.com/company/frameworks-as\" target=\"_blank\" class=\"e-paragraph-link-base e-default-a\">",
+          "locator": "company-link:https://no.linkedin.com/company/frameworks-as",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "veto_receipt": null
+    },
+    {
+      "sample": "P3g",
+      "organisation_number": "985256055",
+      "company": "FRAMEWORKS AS",
+      "field": "social_profile.64ad84e6f0a5bde1b954",
+      "claim_id": "0181fdc17d5ce7464f0a17ecce5d198f4474a131fa9e84acad3b37d3dbd10f05",
+      "url": "https://twitter.com/Frameworks_AS",
+      "value_sha256": "855dd12846ce702282d441bb9557ea7e1220f8cc42614e601c33ba8c1568b1f8",
+      "retained": true,
+      "reason": null,
+      "human_verdict": null,
+      "original_automated_verdict": "correct",
+      "proof_receipts": [
+        {
+          "id": "ba1213c9c92ec2f1dab7f05f49daf8ae89b6f267bf08dc001c91944d52ff8273",
+          "source_url": "https://frameworks.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-17T17:35:33.256098Z",
+          "content_sha256": "09a6f3b7ec8bab0877adfa3b7d56e15bd2693b782ec14d9e8ccabeb9d90d4cfe",
+          "claim_span": "<a href=\"https://twitter.com/Frameworks_AS\" target=\"_blank\" class=\"e-paragraph-link-base e-default-a\">",
+          "locator": "company-link:https://twitter.com/Frameworks_AS",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "veto_receipt": null
+    },
+    {
+      "sample": "P3g",
+      "organisation_number": "985256055",
+      "company": "FRAMEWORKS AS",
+      "field": "social_profile.797b6282a9683973d0be",
+      "claim_id": "a79a2e0c36cb9371790db90dc24c8b823e4032e305263ff5ab6dde508dd285be",
+      "url": "https://www.facebook.com/FrameworksArendal",
+      "value_sha256": "aef37703f8e6107469347d35039457ad00f4cbc7f421bf1d9fbd033675864d13",
+      "retained": true,
+      "reason": null,
+      "human_verdict": "correct",
+      "original_automated_verdict": "wrong",
+      "proof_receipts": [
+        {
+          "id": "cc2f6fba5390b3e1456a9309a752d3b4ff8ad4be5835965c25c82432d94146d5",
+          "source_url": "https://frameworks.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-17T17:35:33.256098Z",
+          "content_sha256": "09a6f3b7ec8bab0877adfa3b7d56e15bd2693b782ec14d9e8ccabeb9d90d4cfe",
+          "claim_span": "ps:\\/\\/frameworks.no\\/#\\/schema\\/logo\\/image\\/\"},\"sameAs\":[\"https:\\/\\/www.facebook.com\\/FrameworksArendal\",\"https:\\/\\/www.linkedin.com\\/company\\/frameworks-as\",\"http",
+          "locator": "company-link:https://www.facebook.com/FrameworksArendal",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "veto_receipt": null
+    },
+    {
+      "sample": "P3g",
+      "organisation_number": "985256055",
+      "company": "FRAMEWORKS AS",
+      "field": "social_profile.48fd2b0c9512fbe4f7a6",
+      "claim_id": "1afc82cf6e0e21f4ca4fba20d2fff78f7c19d5369c0ca3e9e6035d0f66db43a8",
+      "url": "https://www.linkedin.com/company/frameworks-as",
+      "value_sha256": "afe7865c733443a034a54251480cb786ec5e4b52990dc9c36b65ca7d26263b87",
+      "retained": true,
+      "reason": null,
+      "human_verdict": "correct",
+      "original_automated_verdict": "wrong",
+      "proof_receipts": [
+        {
+          "id": "635f1131a5a4118fa942484a812aefac57376954f68fc00d93e13a4de5280a68",
+          "source_url": "https://frameworks.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-17T17:35:33.256098Z",
+          "content_sha256": "09a6f3b7ec8bab0877adfa3b7d56e15bd2693b782ec14d9e8ccabeb9d90d4cfe",
+          "claim_span": ",\"sameAs\":[\"https:\\/\\/www.facebook.com\\/FrameworksArendal\",\"https:\\/\\/www.linkedin.com\\/company\\/frameworks-as\",\"https:\\/\\/www.instagram.com\\/frameworks.no\\/\"]}]}",
+          "locator": "company-link:https://www.linkedin.com/company/frameworks-as",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "veto_receipt": null
+    },
+    {
+      "sample": "P3g",
+      "organisation_number": "985256055",
+      "company": "FRAMEWORKS AS",
+      "field": "social_profile.953abee84410a04cef7a",
+      "claim_id": "84ae73402a7f5464bb51b3e9a1402be6d546b8953cf097dfa6663545c5973051",
+      "url": "https://www.instagram.com/frameworks.no",
+      "value_sha256": "75265fb2770e37bcdce3e0a4e54420393d6ea9e2af1bd56377394515b6554a7a",
+      "retained": true,
+      "reason": null,
+      "human_verdict": "unsure",
+      "original_automated_verdict": "wrong",
+      "proof_receipts": [
+        {
+          "id": "9e2b1f6de68029bfc20ef76a8aa70ad419e42532ae734412fd26be293f14487e",
+          "source_url": "https://frameworks.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-17T17:35:33.256098Z",
+          "content_sha256": "09a6f3b7ec8bab0877adfa3b7d56e15bd2693b782ec14d9e8ccabeb9d90d4cfe",
+          "claim_span": "ndal\",\"https:\\/\\/www.linkedin.com\\/company\\/frameworks-as\",\"https:\\/\\/www.instagram.com\\/frameworks.no\\/\"]}]}",
+          "locator": "company-link:https://www.instagram.com/frameworks.no",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "veto_receipt": null
+    },
+    {
+      "sample": "P3g",
+      "organisation_number": "970991786",
+      "company": "VITEC AGRANDO AS",
+      "field": "social_profile.c3dd740348bbaf1cc3a8",
+      "claim_id": "d797d6c88610b3583a162c8cfe6739be19b14af93c49dcf7ddce2ac041e6d85a",
+      "url": "https://www.facebook.com/vitec.agrando",
+      "value_sha256": "4cc32841e811a9083cf39d5e98e89f07caf86ff758ca64c8b4bd6f77af6e426b",
+      "retained": true,
+      "reason": null,
+      "human_verdict": "correct",
+      "original_automated_verdict": "doubtful",
+      "proof_receipts": [
+        {
+          "id": "2da44bac645d09d123876f1a0ca1a94b86cd92c892e318bf2e8661cbba3bba16",
+          "source_url": "https://agrando.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-17T17:35:38.316805Z",
+          "content_sha256": "7efee3d7418e6c3c13a45d6029e6492df42e5fec1430077c2ad35772e162c644",
+          "claim_span": "<a href=\"https://www.facebook.com/vitec.agrando/\">",
+          "locator": "company-link:https://www.facebook.com/vitec.agrando",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "veto_receipt": null
+    },
+    {
+      "sample": "P3g",
+      "organisation_number": "912503259",
+      "company": "OFFICEAID AS",
+      "field": "social_profile.e4820a560cf8fe8bc60a",
+      "claim_id": "0fa17d6bed3550d73a1854fc20d3b8c319239c9779b7dd1d0f42563435be5e19",
+      "url": "https://www.facebook.com/officeaid.no",
+      "value_sha256": "985bb316a9d6ca82b28455952087f77aa789ba9899068c555bc61f04292281d3",
+      "retained": false,
+      "reason": "other_registered_name_on_page",
+      "human_verdict": "correct",
+      "original_automated_verdict": "wrong",
+      "proof_receipts": [
+        {
+          "id": "321fd6beb5cd784a1793d44641426eda6e89c150f1ab8c9afff1bf07bda514d1",
+          "source_url": "https://www.officeaid.no/kontakt-oss",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-17T17:35:41.783569Z",
+          "content_sha256": "7ce6fd4317fce8eb1ad50be9f1257ce06c4e837cf243fe28eda6a4f66baf1f80",
+          "claim_span": "<a target=\"_blank\" class=\"facebook\" href=\"https://www.facebook.com/officeaid.no\">",
+          "locator": "company-link:https://www.facebook.com/officeaid.no",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "veto_receipt": {
+        "source_url": "https://www.officeaid.no/kontakt-oss",
+        "content_sha256": "7ce6fd4317fce8eb1ad50be9f1257ce06c4e837cf243fe28eda6a4f66baf1f80",
+        "matched_text": "Falck Norge AS",
+        "claim_span": "                 <a href=\"/falk\" title=\"Falck Norge AS\"><span>Falck Norge AS</span></a>\r\n                    </div>\r\n                    <div class=\"picture\">\r\n                        <a href=\"/falk\" title=\"Vis produkter i kategori Falck Norge AS\">\r\n                            <img class=\"lazy\" alt="
+      }
+    },
+    {
+      "sample": "P3g",
+      "organisation_number": "912503259",
+      "company": "OFFICEAID AS",
+      "field": "social_profile.d5495ce4f3e7100ace11",
+      "claim_id": "44f5c98bdc923db46d8fda3090f3839b79c905ff203484534b5b6c744adca4b4",
+      "url": "https://www.instagram.com/officeaid.no",
+      "value_sha256": "4e83b3e09fd412b5c17258972abe9f36c16661abb06793ae57dc48c75a181c44",
+      "retained": false,
+      "reason": "other_registered_name_on_page",
+      "human_verdict": "unsure",
+      "original_automated_verdict": "wrong",
+      "proof_receipts": [
+        {
+          "id": "d3573245cec86d62c612842546052b76cb208079635a872f3f092e6e32e97fa4",
+          "source_url": "https://www.officeaid.no/kontakt-oss",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-17T17:35:41.783569Z",
+          "content_sha256": "7ce6fd4317fce8eb1ad50be9f1257ce06c4e837cf243fe28eda6a4f66baf1f80",
+          "claim_span": "<a target=\"_blank\" class=\"instagram\" href=\"https://www.instagram.com/officeaid.no/\">",
+          "locator": "company-link:https://www.instagram.com/officeaid.no",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "veto_receipt": {
+        "source_url": "https://www.officeaid.no/kontakt-oss",
+        "content_sha256": "7ce6fd4317fce8eb1ad50be9f1257ce06c4e837cf243fe28eda6a4f66baf1f80",
+        "matched_text": "Falck Norge AS",
+        "claim_span": "                 <a href=\"/falk\" title=\"Falck Norge AS\"><span>Falck Norge AS</span></a>\r\n                    </div>\r\n                    <div class=\"picture\">\r\n                        <a href=\"/falk\" title=\"Vis produkter i kategori Falck Norge AS\">\r\n                            <img class=\"lazy\" alt="
+      }
+    },
+    {
+      "sample": "P3g",
+      "organisation_number": "975339688",
+      "company": "DIGERNES AS",
+      "field": "social_profile.8c5d1c3da30bf5b9340b",
+      "claim_id": "18f3e81d4d553424560a7bee755e151e989ac6c2c2cfc0ee8ba22c4e766392e5",
+      "url": "https://www.linkedin.com/company/digernes-as",
+      "value_sha256": "42bf4cdd70b455145e09175aff4e53f29edcedf6474a4199e0fac058225fd65e",
+      "retained": false,
+      "reason": "other_registered_name_on_page",
+      "human_verdict": null,
+      "original_automated_verdict": "correct",
+      "proof_receipts": [
+        {
+          "id": "323c275f2069430c9be288e68cd194730949562b3a83bce9bd2024aeaaeff770",
+          "source_url": "https://www.digernes.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-17T17:35:53.116691Z",
+          "content_sha256": "98dcc5a7f6ca9bc8f41fd6bfb8722bbff749702e24f22246b5cfc01c463eb035",
+          "claim_span": "<a href=\"https://www.linkedin.com/company/digernes-as/\" target=\"_blank\">",
+          "locator": "company-link:https://www.linkedin.com/company/digernes-as",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "veto_receipt": {
+        "source_url": "https://www.digernes.no/om-oss/pernsonvernerklaering",
+        "content_sha256": "d8094de54dff4412a40717eaf65997b14a64c5e900e2cfd4c42bbf961c58d888",
+        "matched_text": "Oculos AS",
+        "claim_span": "g direktemarkedsføring</li>\n<li><strong>Oculos AS</strong> — operativ drift og CRM-integrasjoner</li>\n<li><strong>Microsoft Norge AS</strong> — ERP (Microsoft Dynamics 365 Business Central)</li>\n</ul>\n\n</div>\n\n\n    \n<div\n  class=\"blocks-text html-area flow\"\n  id=\"dine_rettigheter\">\n\n    <div class=\""
+      }
+    },
+    {
+      "sample": "P3g",
+      "organisation_number": "925757616",
+      "company": "BOLIGENTREPRENØREN AS",
+      "field": "social_profile.8aa1c7c69cfc3d057ebd",
+      "claim_id": "3cf0fa06cb55226d0c8df64349567f494e9299da702e603dfb618f87d844e61a",
+      "url": "https://www.facebook.com/boligentreprenorenas",
+      "value_sha256": "7cb6fe28f7419158460286a8d49c29c90e015a468ab12fd7cb9c6be678031b4b",
+      "retained": true,
+      "reason": null,
+      "human_verdict": null,
+      "original_automated_verdict": "correct",
+      "proof_receipts": [
+        {
+          "id": "94c679637a4e81269732c8506370173beb136a89b3461520137ca52ccac79085",
+          "source_url": "https://www.boligentreprenoren.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-17T17:36:04.873402Z",
+          "content_sha256": "345c5fb614cc14a5408083931a5213dfe51318cd3cf1c0b5071cbadac172d6b4",
+          "claim_span": "<a href=\"https://www.facebook.com/boligentreprenorenas\" rel=\"noopener noreferrer\">",
+          "locator": "company-link:https://www.facebook.com/boligentreprenorenas",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "veto_receipt": null
+    },
+    {
+      "sample": "P3g",
+      "organisation_number": "966261218",
+      "company": "BØMLO FOLKEHØGSKULE STI",
+      "field": "social_profile.39c18321b8e95f7eaa56",
+      "claim_id": "0b6ab605d938254ce3764fa0158d73e1d74be641974b9bd73265278f02901944",
+      "url": "https://www.tiktok.com/@bomlofhs",
+      "value_sha256": "26bf128d9896da1bb6bbd9b74cd13372b4bbae06c551d49feeb675b9980a2a30",
+      "retained": true,
+      "reason": null,
+      "human_verdict": "unsure",
+      "original_automated_verdict": "wrong",
+      "proof_receipts": [
+        {
+          "id": "1f07b54676f0839834458881080061f8103aad6d54e14ed51fc6819db6080ce6",
+          "source_url": "https://bomlo.fhs.no/kontakt/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-17T17:36:19.990163Z",
+          "content_sha256": "96426be74e058c18dcf8de5254f553e3e7a379b26e6d0590238dc9ce77f16ad0",
+          "claim_span": "<a href='https://www.tiktok.com/@bomlofhs' target='_blank' rel='noopener noreferrer'>",
+          "locator": "company-link:https://www.tiktok.com/@bomlofhs",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "veto_receipt": null
+    },
+    {
+      "sample": "P3g",
+      "organisation_number": "966261218",
+      "company": "BØMLO FOLKEHØGSKULE STI",
+      "field": "social_profile.06a9a588a254ad534b67",
+      "claim_id": "8d34c756d05796be0fd931a4cf1a72c6bb2c0ee0513d64d083f8b0331764b127",
+      "url": "https://www.instagram.com/bomlofhs",
+      "value_sha256": "c98435330a28c4682b99629ec81531626c2c9afaff772d92f4e7ae3cada8bca7",
+      "retained": true,
+      "reason": null,
+      "human_verdict": "unsure",
+      "original_automated_verdict": "wrong",
+      "proof_receipts": [
+        {
+          "id": "a7bf520d75c7ab13bf4233c5b415625a847649c6d568919383169b5a6e8cec3d",
+          "source_url": "https://bomlo.fhs.no/kontakt/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-17T17:36:19.990163Z",
+          "content_sha256": "96426be74e058c18dcf8de5254f553e3e7a379b26e6d0590238dc9ce77f16ad0",
+          "claim_span": "<a href='https://www.instagram.com/bomlofhs/' target='_blank' rel='noopener noreferrer'>",
+          "locator": "company-link:https://www.instagram.com/bomlofhs",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "veto_receipt": null
+    },
+    {
+      "sample": "P3g",
+      "organisation_number": "966261218",
+      "company": "BØMLO FOLKEHØGSKULE STI",
+      "field": "social_profile.da3c563bcb7ae48e6ab7",
+      "claim_id": "87e0b498620dceac07bd1e857e8eeb021dabcc749bf51faae346f7f43560eb0b",
+      "url": "https://www.facebook.com/bomlofhs",
+      "value_sha256": "c2b7bdfb53f3e7773c6b306626cfcc9bb898f9aba61e477ed2df111f37cf117e",
+      "retained": true,
+      "reason": null,
+      "human_verdict": "correct",
+      "original_automated_verdict": "wrong",
+      "proof_receipts": [
+        {
+          "id": "1c69a3c69bbbce6226d8e4e13cdf23f86090947a056b6f9a34fcce81cd4d29aa",
+          "source_url": "https://bomlo.fhs.no/kontakt/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-17T17:36:19.990163Z",
+          "content_sha256": "96426be74e058c18dcf8de5254f553e3e7a379b26e6d0590238dc9ce77f16ad0",
+          "claim_span": "<a href='https://www.facebook.com/bomlofhs' target='_blank' rel='noopener noreferrer'>",
+          "locator": "company-link:https://www.facebook.com/bomlofhs",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "veto_receipt": null
+    },
+    {
+      "sample": "P3g",
+      "organisation_number": "966261218",
+      "company": "BØMLO FOLKEHØGSKULE STI",
+      "field": "social_profile.b383ab520f963baf73c3",
+      "claim_id": "c7ebb4053e6da32aaae44109bb243cb885379d353035cb476e87db973289d9a4",
+      "url": "https://www.youtube.com/channel/UCKY6h9lnepk7TGa-pvYSDdw",
+      "value_sha256": "dbb24bea1a9ee49678550c405964a059f2e2321188db76a0385fef683cfe17e4",
+      "retained": true,
+      "reason": null,
+      "human_verdict": "correct",
+      "original_automated_verdict": "wrong",
+      "proof_receipts": [
+        {
+          "id": "8f5c3116b0ee97f810721d0460922b03301d0ab64af5589d735bad7047a234fc",
+          "source_url": "https://bomlo.fhs.no/kontakt/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-17T17:36:19.990163Z",
+          "content_sha256": "96426be74e058c18dcf8de5254f553e3e7a379b26e6d0590238dc9ce77f16ad0",
+          "claim_span": "<a href='https://www.youtube.com/channel/UCKY6h9lnepk7TGa-pvYSDdw' target='_blank' rel='noopener noreferrer'>",
+          "locator": "company-link:https://www.youtube.com/channel/UCKY6h9lnepk7TGa-pvYSDdw",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "veto_receipt": null
+    }
+  ]
+}

@@ -13,8 +13,8 @@ from .candidates import generate, context_from_bulk, legal_name, Candidate, GENE
 from .html import Page
 from .policy import domain, normalize_url, SOCIAL, DIRECTORIES, FREE_MAIL
 from .proof import score, phone, extract_entity_cards, find_containing_card, registry_contacts
-from .social import discover, discover_strict, profile_url, numeric_linkedin
-from .owner_social import FOLLOW_US, SAME_AS, SOCIAL_POLICY, declared_profiles, former_names, same_as_veto, visible_profiles
+from .social import discover, profile_url
+from .owner_social import FOLLOW_US, SAME_AS, SOCIAL_POLICY, former_names, page_profiles, same_as_veto, site_scope, visible_profiles
 from .fetcher import TRANSIENT
 from .seed_index import SEED_ORIGINS, publisher_has_number
 
@@ -258,6 +258,7 @@ async def fetch(org, envelope, bulk, http, previous=None, *, resume=False, candi
         candidates = [refresh_candidate] + [c for c in candidates if c.url != refresh_candidate.url]
     leaders = [c.value.get("name") for c in envelope.claims if c.family == "roles" and isinstance(c.value, dict) and (c.value.get("role_type") or {}).get("kode") in {"DAGL", "LEDE"} and c.value.get("name")]
     saved = http.discovery_sessions.get(org) if resume else None
+    fetched_html = saved.get('fetched_html', {}) if saved else {}
     proved = saved['proved'] if saved else set()
     successes = saved['successes'] if saved else []
     attempts = saved['attempts'] if saved else []
@@ -305,6 +306,7 @@ async def fetch(org, envelope, bulk, http, previous=None, *, resume=False, candi
             best = (proof, response, page)
             if proof.level == "BLOCKED":
                 raise SourceFailure("block_page")
+            fetched_html[response.url, response.sha] = response
             if (candidate is refresh_candidate and refresh_proof and refresh_proof != response.url
                     and domain(refresh_proof) == candidate.domain and proof.level != 'REJECT'):
                 try:
@@ -313,6 +315,7 @@ async def fetch(org, envelope, bulk, http, previous=None, *, resume=False, candi
                         checked_page = await offload(Page, checked_response.body, checked_response.url)
                         checked_proof = await offload(candidate_proof, checked_page, org, context, candidate, leaders)
                         if checked_proof.level=='BLOCKED':raise SourceFailure('block_page')
+                        fetched_html[checked_response.url, checked_response.sha] = checked_response
                         if checked_proof.level == 'VERIFIED':
                             pages.append((checked_response, checked_page))
                             best = (checked_proof, checked_response, checked_page)
@@ -376,6 +379,8 @@ async def fetch(org, envelope, bulk, http, previous=None, *, resume=False, candi
                     if extra_proof.level == 'BLOCKED':
                         attempts.append({'domain':candidate.domain,'origin':candidate.origin,'reason':'block_page','page':target})
                         raise SourceFailure('block_page')
+                    if not is_pdf_target:
+                        fetched_html[extra.url, extra.sha] = extra
                     pages.append((extra, extra_page))
                     if extra_proof.level == "REJECT":
                         best = (extra_proof, extra, extra_page)
@@ -425,7 +430,8 @@ async def fetch(org, envelope, bulk, http, previous=None, *, resume=False, candi
     http.discovery_sessions[org] = dict(context=context, proved=proved, successes=successes,
         attempts=attempts, blocked=blocked, ambiguous=ambiguous, source_unavailable=source_unavailable,
         registry_failed=registry_failed, fetchable_failures=fetchable_failures, checked=checked,
-        attempted=attempted, vetoed=vetoed, transient_failures=failures, access_errors=list(section.errors))
+        attempted=attempted, vetoed=vetoed, transient_failures=failures, access_errors=list(section.errors),
+        fetched_html=fetched_html)
     envelope.run.refresh['proof_sitemaps']={'attempts':getattr(http,'proof_sitemap_attempts',{}).get(org,[]),
         'scope':'same-site proof-page nomination only; max two sitemap-nominated pages; no news; unchanged cumulative limits'}
     unique = {}
@@ -447,17 +453,20 @@ async def fetch(org, envelope, bulk, http, previous=None, *, resume=False, candi
         section.errors.append(Error(section="website", code="website_candidates", message=json.dumps(attempts+http.attempts.get(org,[]), ensure_ascii=False)))
         return section
     from .owner_social_contact import collect as owner_contact
-    owner_pages,owner_state=await owner_contact(org,choices[0],http,proved,context)
+    checked_owner_pages,owner_state=await owner_contact(org,choices[0],http,proved,context)
+    for r, _ in checked_owner_pages:
+        fetched_html[r.url, r.sha] = r
+    owner_pages = checked_owner_pages if owner_state['state'] == 'available' else []
     http.owner_social_pages=getattr(http,'owner_social_pages',{})
     http.owner_social_pages[org]=owner_pages
     envelope.run.refresh['owner_social']=owner_state
-    return await offload(publish_result,org,envelope,http,section,choices,attempts,context)
+    return await offload(publish_result,org,envelope,http,section,choices,attempts,context,tuple(fetched_html.values()))
 
 
-def extract_contacts_and_social(section, org, web_claim, pages, context=None, envelope=None, owner_pages=()):
+def extract_contacts_and_social(section, org, web_claim, pages, context=None, envelope=None, owner_pages=(), fetched_html=()):
     """
     Extracts contacts and verified social profiles from website pages.
-    Enforces corporate entity card attribution and filters sibling/group accounts on multi-entity group sites.
+    A fetched page can veto attribution even when it cannot provide positive proof.
     """
     context = context or {}
     web_val = web_claim.value if hasattr(web_claim, "value") and isinstance(web_claim.value, dict) else (web_claim if isinstance(web_claim, dict) else {})
@@ -478,20 +487,18 @@ def extract_contacts_and_social(section, org, web_claim, pages, context=None, en
     social_seen, contact_seen = set(), set()
     original_pages={(id(r),id(p)) for r,p in pages}
     own_pages = [(r, p) for r, p in [*pages, *owner_pages] if domain(r.url) == target_domain]
-    visible = visible_profiles(p for _, p in own_pages)
+    eligible = {(r.url, getattr(r, 'sha', None)): p for r, p in own_pages}
+    scanned = dict(eligible)
+    for r in fetched_html:
+        if domain(r.url) == target_domain and (r.url, r.sha) not in scanned:
+            scanned[r.url, r.sha] = Page(r.body, r.url)
+    visible = visible_profiles(scanned.values())
     name = context.get('name') or ''
-    historical = context.get('former_names', ())
+    scope, _, _ = site_scope(web_val, list(scanned.values()), org, name, context.get('former_names', ()))
     for source_response, source_page in own_pages:
         cards = extract_entity_cards(source_page.raw) if is_group else []
-        profiles={url:{'span':span,'tier':'own_header_footer_numeric_linkedin_v1' if numeric_linkedin(url) else 'own_header_footer_exact_name_v1'}
-                  for url,span in discover_strict(source_page,name).items()}
-        if name and not is_group and web_val.get('identity_level') in {'HIGH','VERIFIED'}:
-            for url, receipt in declared_profiles(source_page,name,org,context).items():
-                if receipt['tier'] == SAME_AS and same_as_veto(url, visible, name, historical):
-                    continue
-                profiles.setdefault(url, receipt)
+        profiles = page_profiles(source_page, web_val, org, context, visible, bool(scope))
         for url,receipt in profiles.items():
-            if is_group:continue
             if url not in social_seen:
                 value={'url':url,'platform':domain(url),'proof_tier':receipt['tier'],'company_name':context.get('name')}
                 if receipt['tier'] in {SAME_AS, FOLLOW_US}:value['owner_declaration']=receipt
@@ -536,6 +543,9 @@ def extract_contacts_and_social(section, org, web_claim, pages, context=None, en
                         continue
                 publish(section, source_response, org, "contact." + kind + "." + digest(contact.casefold())[:20], contact, "contact:" + contact, source_span)
                 contact_seen.add((kind, contact.casefold()))
+    page_receipts = [{'url': url, 'content_sha256': sha, 'eligible': (url, sha) in eligible}
+                     for url, sha in scanned if sha]
+    return scope, page_receipts
 
 
 def candidate_proof(page,org,context,candidate,leaders):
@@ -593,7 +603,7 @@ def candidate_proof(page,org,context,candidate,leaders):
     return proof
 
 
-def publish_result(org,envelope,http,section,choices,attempts,context):
+def publish_result(org,envelope,http,section,choices,attempts,context,fetched_html=()):
     candidate, proof, response, page, pages = choices[0]
     p = urlsplit(response.url)
     root_url = urlunsplit((p.scheme, p.netloc, "", "", ""))
@@ -657,16 +667,18 @@ def publish_result(org,envelope,http,section,choices,attempts,context):
     identity_claim = section.claims[-1]
     descriptions(section, org, identity_claim, accepted_domain_pages)
     owner_pages = getattr(http,'owner_social_pages',{}).get(org,())
-    extract_contacts_and_social(section, org, identity_claim, accepted_domain_pages, context=context, envelope=envelope,owner_pages=owner_pages)
+    social_scope, social_pages = extract_contacts_and_social(
+        section, org, identity_claim, accepted_domain_pages, context=context, envelope=envelope,
+        owner_pages=owner_pages, fetched_html=fetched_html)
     brand = extract_public_brand(page, context.get("name"))
     if brand:
         span = (page.span_for(brand) or "")[:150]
         publish(section, response, org, "public_brand", brand, "meta:brand", span)
     section.state = "available"
     http.accepted_pages[org] = accepted_domain_pages
-    social_pages = {(r.url, r.sha) for r, _ in [*accepted_domain_pages, *owner_pages] if domain(r.url) == domain(response.url)}
     envelope.run.refresh['website'] = {'checked_urls': sorted({r.url for r, _ in http.accepted_pages[org]}),
                                        'social_policy': SOCIAL_POLICY,
-                                       'social_pages': [{'url': url, 'content_sha256': sha} for url, sha in sorted(social_pages)]}
+                                       'social_scope': social_scope,
+                                       'social_pages': social_pages}
     section.errors.append(Error(section='website',code='website_candidates',message=json.dumps(attempts+http.attempts.get(org,[]),ensure_ascii=False)))
     return section

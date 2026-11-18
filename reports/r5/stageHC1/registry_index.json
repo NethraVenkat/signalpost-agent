@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "name_count": 475852,
+  "max_words": 24,
+  "shared_domains": 2417,
+  "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+  "snapshot_date": "2026-11-16",
+  "source_sha256": "56922f51839e7ed3f3c9adde50dbcfa375202d7bc5aa998d9572158e228693e1",
+  "attribution": "Brønnøysundregistrene / Enhetsregisteret",
+  "licence_url": "https://data.norge.no/nlod/no/2.0",
+  "bundle_sha256": "75c38edf8caca41028658981e5eccfac025c68d1437cf4a25f36582cc672e7e6",
+  "bytes": 5830013
+}

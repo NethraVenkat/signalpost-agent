@@ -5,6 +5,11 @@ from html.parser import HTMLParser
 from dataclasses import dataclass
 from urllib.parse import urljoin
 
+TEXT_BLOCKS = {
+    'address', 'article', 'aside', 'blockquote', 'br', 'dd', 'div', 'dt', 'footer',
+    'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'header', 'hr', 'li', 'main', 'nav',
+    'p', 'pre', 'section', 'td', 'th',
+}
 
 @dataclass
 class Link:
@@ -34,6 +39,7 @@ class Page(HTMLParser):
         self.url = url
         self.stack = []
         self.visible_parts = []
+        self._block_breaks = []
         self.owner_parts = []
         self.brand_parts = []
         self.title = ""
@@ -60,7 +66,24 @@ class Page(HTMLParser):
         self.visible = " ".join(self.visible_parts)
         self.owner_text = " ".join(self.owner_parts)
 
+    def _break_visible_block(self):
+        index = len(self.visible_parts)
+        if index and (not self._block_breaks or index != self._block_breaks[-1]):
+            self._block_breaks.append(index)
+
+    def visible_blocks(self):
+        """Join inline text without combining separate company labels or rows."""
+        if self.title:
+            yield self.title
+        start = 0
+        for end in (*self._block_breaks, len(self.visible_parts)):
+            if end > start:
+                yield ' '.join(self.visible_parts[start:end])
+                start = end
+
     def handle_starttag(self, tag, attrs):
+        if tag in TEXT_BLOCKS:
+            self._break_visible_block()
         attrs = {key: value or "" for key, value in attrs}
         context = tag in {"header", "footer", "nav"} or attrs.get("role") in {"contentinfo", "banner", "navigation"} or any(word in (attrs.get("id", "") + " " + attrs.get("class", "")).lower() for word in ("footer", "header", "navigation"))
         if tag not in {"meta", "link", "img", "br", "hr", "input", "source", "area", "base", "embed", "wbr"}:
@@ -94,6 +117,8 @@ class Page(HTMLParser):
             self._paragraph={'start':self._line_offsets[line-1]+col,'parts':[]}
 
     def handle_endtag(self, tag):
+        if tag in TEXT_BLOCKS:
+            self._break_visible_block()
         if tag == 'p' and self._paragraph:
             line,col=self.getpos();end=self._line_offsets[line-1]+col+4
             text=''.join(self._paragraph['parts']).strip()

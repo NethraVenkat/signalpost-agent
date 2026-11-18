@@ -30,7 +30,9 @@ async def collect(org,choice,http,proved,context):
         parsed=await offload(Page,extra.body,extra.url)
         blocked=await offload(lambda:conflict(parsed,org,context)[0])
         if blocked:
-            status.update(state='blocked',errors=['social_contact_publisher_conflict']);return [],status
+            # The caller can use this same-domain page for vetoes only.
+            status.update(state='blocked',errors=['social_contact_publisher_conflict'])
+            return [(extra, parsed)], status
         status['state']='available';return [(extra,parsed)],status
     except asyncio.CancelledError:
         if time.monotonic()<getattr(getattr(http,'budget',None),'deadline',float('inf')):raise
