@@ -200,7 +200,7 @@ Refresh correctness (Stage E scope, before GLEIF/TED): 7/7 planted source interv
 | L | 38 | 21 | 15 / 24 | 5456 | 4064.377 |
 | X2 | 40 | 21 | 16 / 26 | 5540 | 3385.844 |
 
-Exact receipts and limits: [X-stage accepted summary](reports/r5/stageX/SUMMARY.md), [all new/removed identity items](reports/r5/stageX/new_items.md). These six-sample runs are fresh live observations, not controlled counterfactual estimates. Human precision totals below remain scoped to their original reviewed ledger.
+These figures come from six fresh live samples. [X-stage accepted summary](reports/r5/stageX/SUMMARY.md) · [All new and removed identity items](reports/r5/stageX/new_items.md)
 
 ## Measured precision
 
@@ -242,6 +242,10 @@ The revised rules withheld **16 of 56** archived social URLs, including both con
 Nethra Venkat’s independent web hand-check on 2026-11-18 covered all **25 flagged P2 and P3g websites**. **23 were correct**, including **3 shared sites**, and **2 were unsure**. The ledger pins the verdicts to the archived claims and preserves the automated labels. [Website verdicts](reports/r5/stageHC1/website_human_reviews.json)
 
 The offline replay retained **all 84 websites** at their original proof tiers and labelled **18** as `group_site`, including Westnes Holding, Trollheim and Whale Safari. Social profiles on labelled sites still require a declaration tied to the exact organisation number. [All relabelled websites](reports/r5/stageHC1/WEBSITE_REPLAY.md)
+
+### Cumulative human precision through L/X2
+
+Nethra Venkat’s 2026-11-18 L/X2 hand-check adds five correct verdicts. The cumulative ledger contains **84 distinct human-reviewed items** with **70 correct**, **2 wrong**, and **12 unsure**. **69 correct** verdicts match exact saved items. Orkdal’s reviewed short Facebook URL is recorded with a reference to the separately pinned numeric claim. [Cumulative human ledger](reports/r5/stageR3/LEDGER.md#cumulative-human-verdicts-through-hc1-lx2) · [L/X2 verdicts and receipts](reports/r5/stageHC1/l_x2_human_reviews.json)
 
 ### Historical scale measurements
 

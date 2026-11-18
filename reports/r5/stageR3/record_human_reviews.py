@@ -86,7 +86,7 @@ def main():
     save(DEST/'human_reviews.json',result)
     lines=['# R5/R3 human precision ledger','',
         'Reviewer: **Nethra Venkat**. Date: **2026-11-14**. Method: **human hand-check with independent web verification**, supplied explicitly in conversation. These are the reviewer’s findings, not a new assistant web fetch. All 11 reviewed company websites are CORRECT; 13 distinct website URLs include both VALAKER domains and VESTFJORDEN hostname variants. Four social profiles are separately human-confirmed. Original automated verdicts, evidence and proof tiers remain unchanged.','',
-        '## Cumulative precision totals','',result['counting_method'],'',
+        '## Historical T/H/R5/R3 precision totals','',result['counting_method'],'',
         '| Type | Items checked | Human-verified correct | Automated correct | Automated doubtful | Wrong |',
         '|---|---:|---:|---:|---:|---:|']
     for kind,c in counts.items():lines.append('| '+kind+' | '+' | '.join(str(c[k]) for k in totals)+' |')
@@ -97,13 +97,18 @@ def main():
         '|---|---|---|---|---|---|---|']
     for r in reviews:lines.append(f"| {r['organisation_number']} | {r['company']} | {r['kind']} | {r['url']} | {r['proof_tier']} | **CORRECT** | {r['note']} |")
     lines+=['','Full saved response excerpts, hashes, retrieval times and registry receipts are retained in [human_reviews.json](human_reviews.json), [R5 URL receipts](../stageR5/new_websites.md) and [R3 URL receipts](new_websites.md). Findings are URL/company-scoped; no other domain or social profile is approved by inference.','']
-    (DEST/'LEDGER.md').write_text(portable_text('\n'.join(lines)),encoding='utf8',newline='\n')
+    ledger=DEST/'LEDGER.md'
+    section='## Cumulative human verdicts through HC1 L/X2'
+    _, marker, addendum=ledger.read_text(encoding='utf8').partition(section) if ledger.exists() else ('','','')
+    if marker:
+        lines.extend(('',marker+addendum.rstrip('\n'),''))
+    ledger.write_text(portable_text('\n'.join(lines)),encoding='utf8',newline='\n')
     readme=ROOT/'README.md';text=readme.read_text(encoding='utf8')
     start='<!-- R5/R3 human precision review -->';end='<!-- End R5/R3 human precision review -->'
     block='\n'.join([start,'',
         'R5/R3 human hand review — **Nethra Venkat, 2026-11-14, independent web verification**: all **11 company websites CORRECT**, covering 13 saved URLs (both VALAKER domains and VESTFJORDEN apex/www). OPTIMAL REGNSKAP’s own name/address/phone/email match the register; it is not a client listing. Tashakori’s orgnr is on its privacy page; VALAKER’s is in the footer, and VESTFJORDEN’s is on page. MASKINKURS, BAGGES, ELEKTROFIL, DICA, A TIL Å PROFILERING, TIDEMANN and KRAABOL are confirmed correct. Optimal, Maskinkurs and Bagges Facebook links are confirmed on their own sites; Bagges LinkedIn links back to bagges.no. [Exact URL-scoped human ledger and receipts](reports/r5/stageR3/LEDGER.md).','',
-        f"Cumulative deduplicated checked items: **{totals['items_checked']}**; **{totals['human_verified_correct']} human-verified correct**; **0 wrong**. This union covers the original T/H precision ledgers plus R5/R3 website/social receipts, counting an organisation/type/URL, LEI, parent relationship or job UUID once. It does not treat unreviewed items as human-verified, overwrite automated doubtful verdicts, re-audit all later source families, or claim population accuracy. See the ledger for per-type totals, methodology and source limits.",'',end,''])
-    if start in text:text=text[:text.index(start)]+block+text[text.index(end)+len(end):].lstrip('\n')
+        f"The historical T/H/R5/R3 union contains **{totals['items_checked']}** deduplicated checked items, with **{totals['human_verified_correct']} human-verified correct** and **{totals['wrong']} wrong** in that union. See the ledger for its per-type totals and methodology.",'',end,''])
+    if start in text:text=text[:text.index(start)]+block+'\n'+text[text.index(end)+len(end):].lstrip('\n')
     else:text=text.replace('### Historical scale measurements',block+'\n### Historical scale measurements',1)
     readme.write_text(portable_text(text),encoding='utf8',newline='\n')
     print(json.dumps({'reviewed_companies':11,'new_human_website_URLs':13,'new_human_social_URLs':4,'cumulative':totals}))

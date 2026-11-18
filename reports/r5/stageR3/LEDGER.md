@@ -2,7 +2,7 @@
 
 Reviewer: **Nethra Venkat**. Date: **2026-11-14**. Method: **human hand-check with independent web verification**, supplied explicitly in conversation. These are the reviewer’s findings, not a new assistant web fetch. All 11 reviewed company websites are CORRECT; 13 distinct website URLs include both VALAKER domains and VESTFJORDEN hostname variants. Four social profiles are separately human-confirmed. Original automated verdicts, evidence and proof tiers remain unchanged.
 
-## Cumulative precision totals
+## Historical T/H/R5/R3 precision totals
 
 Cumulative distinct organisation/type/URL (website/social), LEI, parent relationship or job UUID; same item across stages counted once. Original automated verdicts are not rewritten by a human verdict.
 
@@ -41,3 +41,27 @@ This cumulative union covers the original T/H precision ledgers and R5/R3 websit
 | 997274253 | ELEKTROFIL AS | website | https://www.elektrofil.as | registry_declared_publisher_name | **CORRECT** | Independent web hand-check confirms the company website. |
 
 Full saved response excerpts, hashes, retrieval times and registry receipts are retained in [human_reviews.json](human_reviews.json), [R5 URL receipts](../stageR5/new_websites.md) and [R3 URL receipts](new_websites.md). Findings are URL/company-scoped; no other domain or social profile is approved by inference.
+
+## Cumulative human verdicts through HC1 L/X2
+
+The L/X2 hand-check was supplied by Nethra Venkat on 2026-11-18. The cumulative counts cover human-reviewed items from T, H, R5/R3, R7, P2/P3g and L/X2, deduplicated by organisation and exact URL, LEI or job UUID.
+
+| Type | Correct | Wrong | Unsure |
+|---|---:|---:|---:|
+| website | 45 | 0 | 2 |
+| social | 22 | 2 | 10 |
+| job | 1 | 0 | 0 |
+| LEI | 2 | 0 | 0 |
+| **Total** | **70** | **2** | **12** |
+
+Of the 84 distinct human verdicts, 83 match exact saved items, including 69 correct. Orkdal’s own footer links the archived numeric Facebook page. The reviewer’s short Facebook URL has its own verdict, with the numeric claim pinned as related evidence. [Orkdal Blomster homepage](https://www.orkdalblomster.no/)
+
+| Organisation | Type | Reviewed URL | Verdict |
+|---|---|---|---|
+| 934608143 NORWAY MARINE SUPPLY AS | website | `https://www.maritim.no` | Correct |
+| 926818317 SPEDIFY AS | social | `https://www.facebook.com/spedify.no` | Correct |
+| 982326125 ORKDAL BLOMSTER AS | website | `https://www.orkdalblomster.no` | Correct |
+| 982326125 ORKDAL BLOMSTER AS | social | `https://www.facebook.com/orkdalblomster` | Correct |
+| 926148931 ATLO AS | website | `https://atlo.no` | Correct |
+
+The L/X2 pins use the committed identity inventories, sample settings, and envelope hashes from the recorded counts. [L/X2 verdicts and receipts](../stageHC1/l_x2_human_reviews.json)

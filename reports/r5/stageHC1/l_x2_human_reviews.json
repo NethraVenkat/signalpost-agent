@@ -1,0 +1,444 @@
+{
+  "reviewer": "Nethra Venkat",
+  "review_date": "2026-11-18",
+  "method": "Independent web hand-check supplied by the reviewer in conversation",
+  "inputs": {
+    "L/seed20261117": {
+      "seed": 20261117,
+      "input_sha256": "8bb108bc9414fc4f238e0501c7d46481ea8ba01ea5427b8564a3e3bffe0c1b60",
+      "envelopes_sha256": "461bcf5c9f8d83d2b30db9034f651ac7efe91f6e69b6598bb0eb7f345855c3b6",
+      "identity_inventory": "reports/r5/stageL/L/identity_items.json",
+      "identity_inventory_sha256": "252441bb655c3c585027db922ec7f5de1d67691f9f33baa36fd37b492663cd9d",
+      "settings": "reports/r5/stageL/L/seed20261117/settings.json",
+      "settings_sha256": "fa97ba5940d1b8a5d245db421bc1e26130724127835ec7388b4b661f3f5d1563",
+      "counts": "reports/r5/stageL/L/seed20261117/counts.json",
+      "counts_sha256": "19c38fc821faf71393abd04fc89c654f92b7cfe624b94361879e1b0990d64f23"
+    },
+    "X2/seed20261017": {
+      "seed": 20261017,
+      "input_sha256": "7d59169d3fd274ec576dca84430beac887b4a1cf06697e20ab7e875420673686",
+      "envelopes_sha256": "b795bf02cc3cc1a2dd6b942cb1341bc5e0b0474cab2a90c80db5854793c23823",
+      "identity_inventory": "reports/r5/stageX/X2/identity_items.json",
+      "identity_inventory_sha256": "6a6bf585c52a3f10aef4213ad1bea892d167565d2ee38ed4649bb6e310845201",
+      "settings": "reports/r5/stageX/X2/seed20261017/settings.json",
+      "settings_sha256": "051f8d645fff45863c5a3cab71ed8a743e435192d7b93375880daa047a169052",
+      "counts": "reports/r5/stageX/X2/seed20261017/counts.json",
+      "counts_sha256": "488ae9a7139ecc3f1a6a3f86254bb45b09eee7cc59f5560e416395f959dff71e"
+    },
+    "X2/seed20261115": {
+      "seed": 20261115,
+      "input_sha256": "a6fecd1b2497ef49991c65413796d04f5b1cb8773743486046d0c21bfa05d392",
+      "envelopes_sha256": "7a28cb27535d4e6408922dbc4ee52f56c188c9b600f28553f3e53fe0ee3165a2",
+      "identity_inventory": "reports/r5/stageX/X2/identity_items.json",
+      "identity_inventory_sha256": "6a6bf585c52a3f10aef4213ad1bea892d167565d2ee38ed4649bb6e310845201",
+      "settings": "reports/r5/stageX/X2/seed20261115/settings.json",
+      "settings_sha256": "6a339e5715d8e4f57ce619dea6326ac128764f026756730cf94e29f2f5ee1c54",
+      "counts": "reports/r5/stageX/X2/seed20261115/counts.json",
+      "counts_sha256": "47f7d09fd6477e51914a18b7fc81fe931eb9b64a9673765f329b11f4ccc8dfa4"
+    },
+    "X2/seed20261117": {
+      "seed": 20261117,
+      "input_sha256": "8bb108bc9414fc4f238e0501c7d46481ea8ba01ea5427b8564a3e3bffe0c1b60",
+      "envelopes_sha256": "47a31f7d60d5d0cc5334fe4546392406282bc79766c50524c167810932cc532f",
+      "identity_inventory": "reports/r5/stageX/X2/identity_items.json",
+      "identity_inventory_sha256": "6a6bf585c52a3f10aef4213ad1bea892d167565d2ee38ed4649bb6e310845201",
+      "settings": "reports/r5/stageX/X2/seed20261117/settings.json",
+      "settings_sha256": "b28becd70f0e59ff1b0e8b74d4e9b615b8800dfb1eb707c8df3f946f89a395b4",
+      "counts": "reports/r5/stageX/X2/seed20261117/counts.json",
+      "counts_sha256": "1f680fe27afdc1c55fec655d02e429cbfba33dcc63a6632d066bc6cd968ef1ec"
+    }
+  },
+  "reviews": [
+    {
+      "organisation_number": "934608143",
+      "company": "NORWAY MARINE SUPPLY AS",
+      "kind": "website",
+      "verdict": "correct",
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-18",
+      "method": "Independent web hand-check supplied by the reviewer in conversation",
+      "note": "Purchase terms name Norway Marine Supply AS as seller and list organisation number 934 608 143 and Åsbieveien 11, 4848 Arendal. The register lists www.maritim.no.",
+      "url": "https://www.maritim.no",
+      "sample": "L/seed20261117",
+      "seed": 20261117,
+      "sample_sha256": "8bb108bc9414fc4f238e0501c7d46481ea8ba01ea5427b8564a3e3bffe0c1b60",
+      "envelopes_sha256": "461bcf5c9f8d83d2b30db9034f651ac7efe91f6e69b6598bb0eb7f345855c3b6",
+      "field": "official_website",
+      "value_sha256": "7dd6fdc548c9c8386c15574d92374be61612db86f5606455370cfc0cc9bab48d",
+      "proof_tier": "orgnr_on_page",
+      "automated_verdict": "correct",
+      "receipts": [
+        {
+          "id": "ff4cb904fa257bde79d13f09ab190799068571eb0f7e1e01e94fb0385cd3f7cf",
+          "source_url": "https://www.maritim.no/kjopsbetingelser",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-15T03:05:39.244975Z",
+          "content_sha256": "9d2e566a7383fbb8f3098d383247ab995d14bb90f91c8e81d593150d800c6076",
+          "claim_span": "e\">37 00 03 70</a> Organisasjonsnummer: 934 608 143</span></span></span></p>\n\n<p style=\"margin-bottom:11px\"><br/>\n<span style=\"font-size:11pt\"><span s",
+          "locator": "identity-proof:934608143",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "c73e3a5f225c7de833bf01bce3d548287616a6478b7d1abdb5c222aeed317e52",
+          "source_url": "https://www.maritim.no/kjopsbetingelser",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-15T03:05:39.244975Z",
+          "content_sha256": "9d2e566a7383fbb8f3098d383247ab995d14bb90f91c8e81d593150d800c6076",
+          "claim_span": "<a href=\"mailto:salg@maritim.no\" style=\"color:#467886; text-decoration:underline\">",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "77dca4fccc717d93225199ab1994e632b2a4cc82cd217e970bd6a5ffde678d2d",
+          "source_url": "https://www.maritim.no/kjopsbetingelser",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-15T03:05:39.244975Z",
+          "content_sha256": "9d2e566a7383fbb8f3098d383247ab995d14bb90f91c8e81d593150d800c6076",
+          "claim_span": "<a href=\"tel:+4737000370\" style=\"color:#467886; text-decoration:underline\">",
+          "locator": "registry-contact:phone",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "registry_receipts": [
+        {
+          "id": "e7bc0c1e1fc1e7f37e2ac54633ef0258bda01f6e45e605315ad430cc37e27e4a",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-15T03:01:43.412102Z",
+          "content_sha256": "ef54a79b9064411f1fb9f757ce88b1e6e4cf4614d5f2ea07290fae6b7e990361",
+          "claim_span": "ngsvarer,,,,,,,true,61,2026-09-14,2026-09-10,www.maritim.no,salg@maritim.no,37 00 03 70,,Postboks 777  Stoa,ARENDAL,4808,ARENDAL,4203,Norge,NO,Åsbieveien 11,ARENDAL,4848,ARENDAL,4203,Norge,NO,2100,Private aksjeselskaper mv.,2025,1995-02-19,1984-01-03,true,1984-01-01,1995-02-19,,,false,,true,1989-06-",
+          "locator": "row:934608143/column:epostadresse",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": "registry100.csv:sha256:eb6e3ca98ca658c77edca3a8558a03e3faaaa78c49a8c8baaf194abfc189fbec",
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "162f09e00a389d64ec5ccf3ca223cd92ea6ccf3b93eb6eae264ed90e261230c9",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-15T03:01:43.412102Z",
+          "content_sha256": "ef54a79b9064411f1fb9f757ce88b1e6e4cf4614d5f2ea07290fae6b7e990361",
+          "claim_span": "rue,61,2026-09-14,2026-09-10,www.maritim.no,salg@maritim.no,37 00 03 70,,Postboks 777  Stoa,ARENDAL,4808,ARENDAL,4203,Norge,NO,Åsbieveien 11,ARENDAL,4848,ARENDAL,4203,Norge,NO,2100,Private aksjeselskaper mv.,2025,1995-02-19,1984-01-03,true,1984-01-01,1995-02-19,,,false,,true,1989-06-15,false,false,,",
+          "locator": "row:934608143/column:telefon",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": "registry100.csv:sha256:eb6e3ca98ca658c77edca3a8558a03e3faaaa78c49a8c8baaf194abfc189fbec",
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "exact_saved_claim": true
+    },
+    {
+      "organisation_number": "926818317",
+      "company": "SPEDIFY AS",
+      "kind": "social",
+      "verdict": "correct",
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-18",
+      "method": "Independent web hand-check supplied by the reviewer in conversation",
+      "note": "The company footer lists Spedify AS, Sagveien 25, 1814 Askim and organisation number 926 818 317 next to the “Følg oss” link. The reviewer observed that the profile links back to spedify.no.",
+      "url": "https://www.facebook.com/spedify.no",
+      "sample": "X2/seed20261017",
+      "seed": 20261017,
+      "sample_sha256": "7d59169d3fd274ec576dca84430beac887b4a1cf06697e20ab7e875420673686",
+      "envelopes_sha256": "b795bf02cc3cc1a2dd6b942cb1341bc5e0b0474cab2a90c80db5854793c23823",
+      "field": "social_profile.89b8e862f29ef070d3c3",
+      "value_sha256": "dd0b5d7905b3683042bc9b741860637a0432847860edb19a95a9fb25e49cff80",
+      "proof_tier": "own_contact_follow_us_v1",
+      "automated_verdict": "correct",
+      "receipts": [
+        {
+          "id": "8466d46c28700fd096267897922d30b0153208f9124fb2b9d48be88e8786df0e",
+          "source_url": "https://spedify.no/kontakt-oss",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-15T03:26:37.660443Z",
+          "content_sha256": "811583432144f8a83d8089c1cd8677207f44d2da2018a98429369dad91ef6a88",
+          "claim_span": "<a href=\"https://www.facebook.com/spedify.no\" target=\"_blank\" rel=\"noopener\" aria-label=\"Facebook\" title=\"Facebook\">",
+          "locator": "company-link:https://www.facebook.com/spedify.no",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "4f9e3c2c0100ea4c947342055839969dbeeaeb69303016b3357803eec53cce96",
+          "source_url": "https://spedify.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-15T03:26:35.954191Z",
+          "content_sha256": "52ab413b475db6341975f9892d087395e9ac54286f4b9a571b53edd30a2b25e2",
+          "claim_span": " footer-item\" role=\"none\"><span>Org.nr. 926 818 317</span></li>\n        </ul>\n        <div class=\"footer-social\" aria-label=\"Spedify i sosiale medier\"",
+          "locator": "identity-proof:926818317",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "registry_receipts": [
+        {
+          "id": "845bdfe95e1e0129e44d6a7f282fef53965fa39f3781764b53d8a74931d8c566",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-15T03:25:17.625158Z",
+          "content_sha256": "6a296a4898f7a215fafd9a94433c851034b6ef5af9d8692449ec89b7b210f04e",
+          "claim_span": "926818317,SPEDIFY AS,AS,Aksjeselskap,52.100,Lagring,,,,,,,true,77,2026-09-14,2026-09-10,,,,,,,,,,,,\"c/o AssistCo AS\nSvaddevegen 125\",RJUKAN,3660,TINN,4026,Norge,NO,2100,Private aksjeselskaper mv.,2025,2021-03-23,2021-02-27,true,2024-03-22,2024-04-22,,,false,,true,2021-03-23,false,false,,false,,false",
+          "locator": "row:926818317/column:navn",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": "registry100.csv:sha256:bd244f0fe6ad92bfcadcbce9ba545863c0ca0afa8b9b5b4c5e3425830a63186d",
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "exact_saved_claim": true
+    },
+    {
+      "organisation_number": "982326125",
+      "company": "ORKDAL BLOMSTER AS",
+      "kind": "website",
+      "verdict": "correct",
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-18",
+      "method": "Independent web hand-check supplied by the reviewer in conversation",
+      "note": "The footer lists organisation number 982 326 125, phone 72 48 10 20 and Orkdalsveien 42, Orkanger.",
+      "url": "https://www.orkdalblomster.no",
+      "sample": "X2/seed20261115",
+      "seed": 20261115,
+      "sample_sha256": "a6fecd1b2497ef49991c65413796d04f5b1cb8773743486046d0c21bfa05d392",
+      "envelopes_sha256": "7a28cb27535d4e6408922dbc4ee52f56c188c9b600f28553f3e53fe0ee3165a2",
+      "field": "official_website",
+      "value_sha256": "40e7d56edce9dddc5241fe4280435b798b048457383110916a0a8235f6319b8e",
+      "proof_tier": "orgnr_on_page",
+      "automated_verdict": "correct",
+      "receipts": [
+        {
+          "id": "5a3c5ec0621747a300bc42687e412a84c5260e83b637e3e9049ac8f05f74c685",
+          "source_url": "https://www.orkdalblomster.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-15T03:57:47.587720Z",
+          "content_sha256": "d5db004911971d089447b78319802b132906cd38baeba801aec90e66edb9d666",
+          "claim_span": "300 ORKANGER<br />\r\n\t\t\t\t\t\t\t\t\t\tOrg. nr.: 982 326 125\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t<div class=\"cell small-6\">\r\n\t\t\t\t\t\t\t\t\t\tTlf: <a href=\"tel:72 48 10 20\">72",
+          "locator": "identity-proof:982326125",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        },
+        {
+          "id": "3e568673b427822d29040387c167b92f0515ffe95eb7656551b24bf6134d03a6",
+          "source_url": "https://www.orkdalblomster.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-15T03:57:47.587720Z",
+          "content_sha256": "d5db004911971d089447b78319802b132906cd38baeba801aec90e66edb9d666",
+          "claim_span": "<a href=\"tel:72 48 10 20\">",
+          "locator": "registry-contact:phone",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "registry_receipts": [
+        {
+          "id": "7ff19ed6ce83736b29f45c9bf9a4aaae605a57baaaaf1d26c8c55344612963c9",
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "source_class": "official_registry",
+          "retrieved_at": "2026-11-15T03:54:21.563912Z",
+          "content_sha256": "aebdf32468a7b90cf38da90fcdf3605c230dbdc487a0c7e5160429691adb7a88",
+          "claim_span": " og plantevernmidler\",,,,,,,true,11,2026-06-11,2026-06-10,,,72 48 10 20,,,,,,,,,Orkdalsveien 42,ORKANGER,7300,ORKLAND,5059,Norge,NO,2100,Private aksjeselskaper mv.,2025,2000-08-31,2000-08-22,true,2000-09-01,2000-11-01,,,false,,true,2000-08-31,false,false,,false,,false,,false,,,,,,,Bokmål,2008-05-08,",
+          "locator": "row:982326125/column:telefon",
+          "extraction_method": "signalpost.registry.v1",
+          "source_identifier": "registry100.csv:sha256:bd3598aeae1b5c6b107e61ba1ffdb4d2a92af86edeef91f9b0dbfe65e0d418d3",
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "exact_saved_claim": true
+    },
+    {
+      "organisation_number": "982326125",
+      "company": "ORKDAL BLOMSTER AS",
+      "kind": "social",
+      "verdict": "correct",
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-18",
+      "method": "Independent web hand-check supplied by the reviewer in conversation",
+      "note": "The reviewer confirmed the short Facebook URL and reported that the profile links back to the company site. The archived footer links the numeric Facebook page.",
+      "url": "https://www.facebook.com/orkdalblomster",
+      "exact_saved_claim": false,
+      "related_saved_claim": {
+        "url": "https://www.facebook.com/pages/Orkdal-Blomster/119910848049561",
+        "sample": "X2/seed20261115",
+        "seed": 20261115,
+        "sample_sha256": "a6fecd1b2497ef49991c65413796d04f5b1cb8773743486046d0c21bfa05d392",
+        "envelopes_sha256": "7a28cb27535d4e6408922dbc4ee52f56c188c9b600f28553f3e53fe0ee3165a2",
+        "field": "social_profile.33a3171292450921e319",
+        "value_sha256": "f447358963e9cb90aa730a02eb85320f02d0850259626d622a7bde16cb92bb5c",
+        "proof_tier": "own_header_footer_exact_name_v1",
+        "automated_verdict": "correct",
+        "receipts": [
+          {
+            "id": "49acf798663007dd3dee8272e1b28ddce7b713f4ab126f7f9fafe43308995591",
+            "source_url": "https://www.orkdalblomster.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-15T03:57:47.587720Z",
+            "content_sha256": "d5db004911971d089447b78319802b132906cd38baeba801aec90e66edb9d666",
+            "claim_span": "<a target=\"_blank\" href=\"https://www.facebook.com/pages/Orkdal-Blomster/119910848049561\">",
+            "locator": "company-link:https://www.facebook.com/pages/Orkdal-Blomster/119910848049561",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "5a3c5ec0621747a300bc42687e412a84c5260e83b637e3e9049ac8f05f74c685",
+            "source_url": "https://www.orkdalblomster.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-15T03:57:47.587720Z",
+            "content_sha256": "d5db004911971d089447b78319802b132906cd38baeba801aec90e66edb9d666",
+            "claim_span": "300 ORKANGER<br />\r\n\t\t\t\t\t\t\t\t\t\tOrg. nr.: 982 326 125\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t<div class=\"cell small-6\">\r\n\t\t\t\t\t\t\t\t\t\tTlf: <a href=\"tel:72 48 10 20\">72",
+            "locator": "identity-proof:982326125",
+            "extraction_method": "signalpost.website.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "3e568673b427822d29040387c167b92f0515ffe95eb7656551b24bf6134d03a6",
+            "source_url": "https://www.orkdalblomster.no/",
+            "source_class": "company_owned",
+            "retrieved_at": "2026-11-15T03:57:47.587720Z",
+            "content_sha256": "d5db004911971d089447b78319802b132906cd38baeba801aec90e66edb9d666",
+            "claim_span": "<a href=\"tel:72 48 10 20\">",
+            "locator": "registry-contact:phone",
+            "extraction_method": "signalpost.registry_contact.v1",
+            "source_identifier": null,
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ],
+        "registry_receipts": [
+          {
+            "id": "299ee6422070a5a9e51593ae2a21370bc18049ff675ec524adc48ae231460b8f",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-15T03:54:21.563912Z",
+            "content_sha256": "aebdf32468a7b90cf38da90fcdf3605c230dbdc487a0c7e5160429691adb7a88",
+            "claim_span": "982326125,ORKDAL BLOMSTER AS,AS,Aksjeselskap,47.761,\"Detaljhandel med blomster, planter, gjødsel og plantevernmidler\",,,,,,,true,11,2026-06-11,2026-06-10,,,72 48 10 20,,,,,,,,,Orkdalsveien 42,ORKANGER,7300,ORKLAND,5059,Norge,NO,2100,Private aksjeselskaper mv.,2025,2000-08-31,2000-08-22,true,2000-09-",
+            "locator": "row:982326125/column:navn",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:bd3598aeae1b5c6b107e61ba1ffdb4d2a92af86edeef91f9b0dbfe65e0d418d3",
+            "effective_at": null,
+            "reporting_period": null
+          },
+          {
+            "id": "7ff19ed6ce83736b29f45c9bf9a4aaae605a57baaaaf1d26c8c55344612963c9",
+            "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+            "source_class": "official_registry",
+            "retrieved_at": "2026-11-15T03:54:21.563912Z",
+            "content_sha256": "aebdf32468a7b90cf38da90fcdf3605c230dbdc487a0c7e5160429691adb7a88",
+            "claim_span": " og plantevernmidler\",,,,,,,true,11,2026-06-11,2026-06-10,,,72 48 10 20,,,,,,,,,Orkdalsveien 42,ORKANGER,7300,ORKLAND,5059,Norge,NO,2100,Private aksjeselskaper mv.,2025,2000-08-31,2000-08-22,true,2000-09-01,2000-11-01,,,false,,true,2000-08-31,false,false,,false,,false,,false,,,,,,,Bokmål,2008-05-08,",
+            "locator": "row:982326125/column:telefon",
+            "extraction_method": "signalpost.registry.v1",
+            "source_identifier": "registry100.csv:sha256:bd3598aeae1b5c6b107e61ba1ffdb4d2a92af86edeef91f9b0dbfe65e0d418d3",
+            "effective_at": null,
+            "reporting_period": null
+          }
+        ]
+      },
+      "attribution_source": "https://www.orkdalblomster.no/",
+      "url_match_note": "The company homepage links the numeric page. Equivalence to the short URL is unresolved."
+    },
+    {
+      "organisation_number": "926148931",
+      "company": "ATLO AS",
+      "kind": "website",
+      "verdict": "correct",
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-18",
+      "method": "Independent web hand-check supplied by the reviewer in conversation",
+      "note": "The site lists Atlo AS, organisation number 926 148 931 and Strandgaten 6, 5013 Bergen.",
+      "url": "https://atlo.no",
+      "sample": "X2/seed20261117",
+      "seed": 20261117,
+      "sample_sha256": "8bb108bc9414fc4f238e0501c7d46481ea8ba01ea5427b8564a3e3bffe0c1b60",
+      "envelopes_sha256": "47a31f7d60d5d0cc5334fe4546392406282bc79766c50524c167810932cc532f",
+      "field": "official_website",
+      "value_sha256": "3063ee13d20bd994129aa7fb7b5e3f587dfc6790338b453b6bdd30ff3edbf8d1",
+      "proof_tier": "orgnr_on_page",
+      "automated_verdict": "correct",
+      "receipts": [
+        {
+          "id": "612fc39ca881825e8a566a6f09469f84b2bf45997c3d2e237db52b33014a5181",
+          "source_url": "https://atlo.no/",
+          "source_class": "company_owned",
+          "retrieved_at": "2026-11-15T04:14:41.789943Z",
+          "content_sha256": "02c3b44e2be6555ec8f5fd3936734b0b603776ac205b6c8ece0f336366140efd",
+          "claim_span": "217-126\" class=\"ct-text-block\" >Org.nr: 926 148 931</div></div><div id=\"div_block-208-126\" class=\"ct-div-block\" ><div id=\"text_block-219-126\" class=\"c",
+          "locator": "identity-proof:926148931",
+          "extraction_method": "signalpost.website.v1",
+          "source_identifier": null,
+          "effective_at": null,
+          "reporting_period": null
+        }
+      ],
+      "registry_receipts": [],
+      "exact_saved_claim": true
+    }
+  ],
+  "review_counts": {
+    "correct": 5,
+    "exact_saved_claims": 4
+  },
+  "cumulative": {
+    "by_kind": {
+      "website": {
+        "correct": 45,
+        "wrong": 0,
+        "unsure": 2
+      },
+      "social": {
+        "correct": 22,
+        "wrong": 2,
+        "unsure": 10
+      },
+      "job": {
+        "correct": 1,
+        "wrong": 0,
+        "unsure": 0
+      },
+      "LEI": {
+        "correct": 2,
+        "wrong": 0,
+        "unsure": 0
+      }
+    },
+    "totals": {
+      "correct": 70,
+      "wrong": 2,
+      "unsure": 12
+    },
+    "exact_saved_items": {
+      "correct": 69,
+      "wrong": 2,
+      "unsure": 12
+    }
+  },
+  "prior_ledgers": [
+    "reports/r5/precision/ledger.json",
+    "reports/r5/stageH/precision/ledger.json",
+    "reports/r5/stageR3/human_reviews.json",
+    "reports/r5/stageR7/human_reviews.json",
+    "reports/r5/stageHC1/human_reviews.json",
+    "reports/r5/stageHC1/website_human_reviews.json"
+  ]
+}

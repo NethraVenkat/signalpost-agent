@@ -859,3 +859,9 @@
 - One fresh run on seed 20261117 passed `check_live_run --count 100`. Wall time was 337.16 s versus 475.28 s in Stage W on the same cohort. Website pass 2 stopped at 310 s after 22 HTTP attempts, compared with 112 previously. All 100 envelopes and profiles were present with zero placeholders. All nine website URLs and exact-ID claim identities matched the baseline. The 37 deadline hits were all in website work.
 - The largest of the 100 runtime profile HTML files was 248,461 bytes. The run made 1,009 HTTP attempts at $0. See stageFX/SUMMARY.md for the complete comparison. The 500-company margin remains unmeasured pending W3 and the seed hand-check. Check for at least 20 GB of free space before launching a 500-company run and preserve the evidence blobs.
 - Full pytest passed 1,392 tests in 940.75 s.
+
+## 2026-11-18 - HC1 L/X2 human precision addendum
+
+- Recorded five correct verdicts supplied by Nethra Venkat. The four matching L/X2 claims carry sample and canonical value SHA-256 pins from committed inventories and run receipts. Orkdal’s supplied short Facebook URL retains its own verdict. The company homepage links the archived numeric Facebook page, whose claim is pinned as related evidence.
+- Cumulative deduplicated hand-check totals across T, H, R5/R3, R7, P2/P3g and this addition are 84 reviewed, 70 correct, two wrong, and twelve unsure. The exact saved-item subset contains 83 reviews, 69 of them correct. The historical automated figures retain their original scope.
+- Both review generators reproduced the same ledger and README. Full pytest passed 1,392 tests in 931.95 s.
