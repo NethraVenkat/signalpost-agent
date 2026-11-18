@@ -102,10 +102,10 @@ class WebsiteHttp:
                         raise SourceFailure('dns_unavailable')
                     self.dns_counts[org] = self.dns_counts.get(org, 0) + 1
                     self.dns_nominations.add(nomination)
-                self.budget.check()
+                self.budget.check_website()
                 self.dns_lookups += 1
                 try:
-                    ips = await asyncio.wait_for(self.resolve(host, 443, org), timeout=min(3, max(.001, self.budget.deadline-time.monotonic())))
+                    ips = await asyncio.wait_for(self.resolve(host, 443, org), timeout=min(3, max(.001, self.budget.website_deadline-time.monotonic())))
                     self.dns_cache[host] = policy.check_ips(ips)
                 except (TimeoutError, OSError):
                     self.dns_cache[host] = 'dns_unavailable'
@@ -130,7 +130,7 @@ class WebsiteHttp:
                 async with gate.start_lock:
                     while (delay := gate.next_start - time.monotonic()) > 0:
                         await asyncio.sleep(delay)
-                    self.budget.check()
+                    self.budget.check_website()
                     gate.next_start = time.monotonic() + self.config.website_politeness_seconds
                 company_cap = self.company_cap(org)
                 if self.counts.get(org, 0) >= company_cap:
@@ -142,7 +142,7 @@ class WebsiteHttp:
                 response = None
                 chunks = []
                 try:
-                    remaining = self.budget.deadline - time.monotonic()
+                    remaining = self.budget.website_deadline - time.monotonic()
                     seconds=min(REQUEST_SECONDS.get(),max(.001,remaining))
                     event['timeout_seconds']=seconds
                     async with asyncio.timeout(seconds):

@@ -846,3 +846,9 @@
 - A contact that remains visible but lacks target-company attribution is tracked as a refresh observation. The saved registry-name change case checks that this produces zero false business-removal events.
 - The offline replay retained all 37 P2 and 47 P3g websites and added eight and ten group labels respectively, including Westnes Holding, Trollheim and Whale Safari. See stageHC1/WEBSITE_REPLAY.md for all 18 labels and their source pages.
 - Full pytest passed 1,384 tests in 827.61 s. All 15 saved F2 social claims also passed their original v5 verification.
+
+## 2026-11-18 - FX1 website pass-2 time margin
+
+- The last F2 crawl ended at 1,786.56 s and the process exited at 1,978.15 s. Set the website-only pass-2 cutoff to 1,550 s at 500 companies under the fixed default. The elapsed target scales from 310 s at 100 companies and caps at 1,550 s. Smaller runs and custom or scaled budgets retain the original deadline.
+- The last run spent about 192 s after the crawl. Reserving 250 s for finalisation gives a 1,800 s completion target and 300 s margin when other crawl work has finished. The 0.85 global crawl fraction, exact-ID deadlines, mandatory writes, and request caps are preserved. A timed test cancels a stalled pass-2 operation while an exact-ID task continues and the run writes its output.
+- Full pytest passed 1,389 tests in 886.07 s.

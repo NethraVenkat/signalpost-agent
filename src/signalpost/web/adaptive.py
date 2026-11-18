@@ -1,4 +1,5 @@
 """Spend only unused cumulative website allowance on ranked, untried nominations."""
+import asyncio
 import heapq
 import json
 import time
@@ -91,7 +92,9 @@ async def run(envelopes, http, index, bulk, previous, update, refresh_activity):
     are reset. A per-company slice is a cumulative ceiling, not a new allowance.
     """
     began=time.monotonic(); budget=http.budget
-    start=len(budget.events); pass1_websites=sum(exact(e) for e in envelopes.values())
+    pass1_websites=sum(exact(e) for e in envelopes.values())
+    cutoff = min(budget.deadline, budget.pass2_cutoff)
+    stop = None
     records={}; heap=[]; queued=set()
     for org,envelope in sorted(envelopes.items()):
         record=records[org]={'state':'already_verified' if exact(envelope) else 'no_pending_candidates',
@@ -100,6 +103,9 @@ async def run(envelopes, http, index, bulk, previous, update, refresh_activity):
         session=http.discovery_sessions.get(org)
         if not session:
             record['state']='pass1_not_prepared'; continue
+        if time.monotonic() >= cutoff:
+            stop = record['state'] = 'deadline'
+            continue
         context=dict(session['context'])
         context['nav_homepages']=nav_homepages(envelope,index,http.blobs)
         retry_candidates=[]
@@ -117,20 +123,17 @@ async def run(envelopes, http, index, bulk, previous, update, refresh_activity):
             heapq.heappush(heap,(-1000 if retry_reason=='legal_pages' else -priority(candidate)-int(bool(retry_reason))*10,org,candidate.url,candidate,retry_reason))
         if record['candidates']:record['state']='queued'
     budget.phase='pass2'
-    stop=None
     try:
-        while heap:
+        while heap and not stop:
             _,org,_,candidate,retry_reason=heapq.heappop(heap)
             envelope=envelopes[org];record=records[org]
             if exact(envelope):continue
             if candidate.domain in http.discovery_sessions[org]['vetoed']:continue
-            try:budget.check()
+            try:budget.check_website()
             except SourceFailure:stop='deadline'
             if len(budget.events)>=budget.cap:stop='budget_exhausted'
             if stop:
                 record['state']=stop
-                for _,other,_,_,_ in heap:
-                    if not exact(envelopes[other]):records[other]['state']=stop
                 break
             if http.config.adaptive_extra_budget and org not in http.pass2_allowances:
                 grant={'http':min(5,max(0,budget.cap-len(budget.events))),'dns':4}
@@ -152,30 +155,45 @@ async def run(envelopes, http, index, bulk, previous, update, refresh_activity):
                 retry={'url':candidate.url,'origin':candidate.origin,'pass1_reason':retry_reason,'cache_action':cache_action}
                 record['retry_outcomes'].append(retry)
             record['attempts']+=1
-            legal_request_delta=None
+            timeout = asyncio.timeout(max(0, budget.website_deadline - time.monotonic()))
+            discovery_end = None
             try:
-                section=await collector.fetch(org,envelope,bulk.get(org),http,previous.get(org),
-                                              resume=True,candidates_override=[candidate],**({'legal_resume':True} if legal_resume else {}))
-                if legal_resume:legal_request_delta=sum(e.get('section')=='website' and e['organisation_number']==org for e in budget.events[before:])
-                update(envelope,'website',section)
-                record['state']='verified' if exact(envelope) else 'checked_no_gain'
-                if exact(envelope):
-                    record['websites_gained']=1
-                    if http.config.public_activity:await refresh_activity(org,envelope)
-                    if http.config.hiring:
-                        from . import careers
-                        section=await careers.fetch(org,envelope,http,http.accepted_pages.get(org,[]))
-                        update(envelope,'hiring',careers.merge(envelope,section))
+                async with timeout:
+                    section=await collector.fetch(org,envelope,bulk.get(org),http,previous.get(org),
+                                                  resume=True,candidates_override=[candidate],**({'legal_resume':True} if legal_resume else {}))
+                    discovery_end = len(budget.events)
+                    update(envelope,'website',section)
+                    record['state']='verified' if exact(envelope) else 'checked_no_gain'
+                    if exact(envelope):
+                        record['websites_gained']=1
+                        if http.config.public_activity:await refresh_activity(org,envelope)
+                        if http.config.hiring:
+                            from . import careers
+                            section=await careers.fetch(org,envelope,http,http.accepted_pages.get(org,[]))
+                            update(envelope,'hiring',careers.merge(envelope,section))
             except SourceFailure as exc:
                 record['state']=exc.code
-            record['requests']+=len(budget.events)-before
+            except TimeoutError:
+                if not timeout.expired():
+                    raise
+            if timeout.expired() or time.monotonic() >= cutoff:
+                stop = 'deadline'
+                if not exact(envelope):
+                    record['state'] = stop
+            requests = sum(e.get('pass') == 'pass2' for e in budget.events[before:])
+            record['requests'] += requests
             if legal_resume:
-                record['legal_requests']+=legal_request_delta if legal_request_delta is not None else sum(e.get('section')=='website' and e['organisation_number']==org for e in budget.events[before:])
+                record['legal_requests'] += sum(e.get('pass') == 'pass2' and e.get('section') == 'website'
+                                                for e in budget.events[before:discovery_end])
                 if exact(envelope):record['legal_websites_gained']=1
             if retry is not None:
                 failure=http.discovery_sessions[org].get('transient_failures',{}).get(candidate_key(candidate))
                 outcome='verified' if exact(envelope) else failure['reason'] if failure else envelope.run.sections.get('website')
-                retry.update(outcome=outcome,requests=len(budget.events)-before)
+                retry.update(outcome='deadline' if record['state'] == 'deadline' else outcome, requests=requests)
+        if stop:
+            for _, org, _, _, _ in heap:
+                if not exact(envelopes[org]):
+                    records[org]['state'] = stop
         for org,record in records.items():
             if record['state'] in {'deadline','budget_exhausted','website_budget_exhausted','dns_budget_exhausted'}:
                 envelope=envelopes[org]
@@ -184,17 +202,21 @@ async def run(envelopes, http, index, bulk, previous, update, refresh_activity):
                 # Planning a wider pass does not rewrite pass 1's completed
                 # checked scope. An attempted check still records its own
                 # failure through collector.fetch/update above.
+        finished = time.monotonic()
         return {'state':'completed' if not stop else 'cut_off','stop_reason':stop,
-            'pass1':{'requests':start,'website_requests':sum(e.get('section')=='website' for e in budget.events[:start]),
+            'pass1':{'requests':0,'website_requests':0,
                      'verified_websites':pass1_websites,'websites_gained':pass1_websites},
-            'pass2':{'requests':len(budget.events)-start,
-                     'website_requests':sum(e.get('section')=='website' for e in budget.events[start:]),
+            'pass2':{'requests':sum(r['requests'] for r in records.values()),
+                     'website_requests':sum(e.get('pass')=='pass2' and e.get('section')=='website' for e in budget.events),
                      'websites_gained':sum(exact(e) for e in envelopes.values())-pass1_websites,
-                     'runtime_seconds':round(time.monotonic()-began,3),
+                     'runtime_seconds':round(finished-began,3),
+                     'started_seconds':round(began-budget.start,3),
+                     'finished_seconds':round(finished-budget.start,3),
+                     'cutoff_seconds':round(cutoff-budget.start,3),
                      'states':dict(Counter(r['state'] for r in records.values())),
                      'retry_attempts':sum(t['cache_action']=='retried' for r in records.values() for t in r['retry_outcomes']),
                      'retry_outcomes':dict(Counter(t['outcome'] for r in records.values() for t in r['retry_outcomes'])),
                      'legal_priority':{'resumes':sum(r['legal_page_resumes'] for r in records.values()),'requests':sum(r['legal_requests'] for r in records.values()),'websites_gained':sum(r['legal_websites_gained'] for r in records.values())},
                      'per_company':records},
-            'policy':'Pass 1 8/13 HTTP and 8 DNS; pass 2 up to +5 HTTP/+4 DNS from remaining global budget; no counter reset; unchanged proof/robots/politeness; unvisited legal pages on unproved fetched sites precede new guesses'}
+            'policy':'Pass 1 8/13 HTTP and 8 DNS; pass 2 up to +5 HTTP/+4 DNS from remaining global budget within a website-only cutoff; no counter reset; unchanged proof/robots/politeness; unvisited legal pages on unproved fetched sites precede new guesses'}
     finally:budget.phase='pass1'

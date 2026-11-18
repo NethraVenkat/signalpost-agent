@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "<REPO>\\.venv\\Scripts\\python.exe",
+    "reports/r5/stage4_7/run_tests.py",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp",
+    ".data/r5/stageFX/pytest-fx1",
+    "--tb=short"
+  ],
+  "cwd": "<REPO>",
+  "exit_code": 0,
+  "wall_seconds": 887.4148271000013,
+  "completed_at_utc": "2026-11-18T10:46:45.704438+00:00"
+}

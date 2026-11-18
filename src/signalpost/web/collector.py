@@ -360,7 +360,7 @@ async def fetch(org, envelope, bulk, http, previous=None, *, resume=False, candi
                             attempts.append({'domain':candidate.domain,'page':target,'reason':'pdf_redirect_unproven'});continue
                         from .legal_pdf import prove as prove_pdf
                         try:
-                            remaining=max(.001,http.budget.deadline-__import__('time').monotonic())
+                            remaining=max(.001,http.budget.website_deadline-__import__('time').monotonic())
                             result=await asyncio.wait_for(offload(prove_pdf,extra,org,context,candidate,leaders,http.legal_pdf_links[org][target]),timeout=min(5,remaining))
                         except (SourceFailure,TimeoutError) as exc:
                             if getattr(exc,'code',None)=='pdf_publisher_conflict':

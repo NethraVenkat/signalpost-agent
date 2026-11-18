@@ -1,5 +1,6 @@
 import asyncio
 import json
+import time
 from datetime import datetime, timedelta, timezone
 import httpx
 import pytest
@@ -147,6 +148,50 @@ def test_pass2_keeps_original_deadline_and_emits_cutoff_state(tmp_path,monkeypat
     assert report['adaptive_websites']['pass2']['requests']==0
     assert any(e['code']=='deadline' for e in row['errors'])
     assert not any('good.no' in url for url in calls)
+
+
+def test_optional_pass2_cuts_inflight_website_work_and_leaves_exact_id_running(tmp_path, monkeypatch):
+    from signalpost.sources import exact_public
+
+    original_run = adaptive.run
+    original_fetch = collector.fetch
+    started = asyncio.Event()
+    cancelled = asyncio.Event()
+    exact_progress = []
+
+    async def timed(envelopes, http, *args):
+        http.budget.pass2_cutoff = time.monotonic() + 0.4
+        return await original_run(envelopes, http, *args)
+
+    async def hold_website(*args, **kwargs):
+        if not kwargs.get('resume'):
+            return await original_fetch(*args, **kwargs)
+        started.set()
+        try:
+            await asyncio.sleep(3)
+        finally:
+            cancelled.set()
+
+    async def finish_exact(envelopes, client, config, budget, blobs, update):
+        await started.wait()
+        exact_progress.append((budget.phase, budget.website_deadline == budget.deadline))
+        await cancelled.wait()
+        event = budget.reserve('https://api.gleif.org/api/v1/lei-records', 'api.gleif.org', OUR)
+        event.update(section='gleif', status=404)
+        exact_progress.append((event['pass'], time.monotonic() >= budget.pass2_cutoff))
+
+    monkeypatch.setattr(adaptive, 'run', timed)
+    monkeypatch.setattr(collector, 'fetch', hold_website)
+    monkeypatch.setattr(exact_public, 'enrich', finish_exact)
+    report, row, _, cfg = exercise(tmp_path, monkeypatch)
+
+    assert exact_progress == [('pass1', True), ('pass1', True)]
+    assert cfg.report.is_file() and cfg.output.is_file() and report['emitted_envelopes'] == 1
+    assert report['adaptive_websites']['stop_reason'] == 'deadline'
+    pass2 = report['adaptive_websites']['pass2']
+    assert pass2['per_company'][OUR]['state'] == 'deadline' and pass2['runtime_seconds'] < 3
+    assert pass2['requests'] == 0 and report['adaptive_websites']['pass1']['requests'] == report['requests']
+    assert any(e['section'] == 'website' and e['code'] == 'deadline' for e in row['errors'])
 
 
 def test_pass2_cannot_raise_dns_nomination_ceiling():

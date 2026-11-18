@@ -624,6 +624,9 @@ async def _run(config, client=None,synthesis_provider=None):
                             scaled_hard_request_cap=budget.hard_request_cap,
                             scaled_hard_time_seconds=budget.hard_seconds)
     report['enrichment']={name:getattr(config,name) for name in ('websites','hiring','public_activity')}
+    if pass1 := adaptive_metrics.get('pass1'):
+        requests = [e for e in budget.events if e.get('pass') == 'pass1']
+        pass1.update(requests=len(requests), website_requests=sum(e.get('section') == 'website' for e in requests))
     report['adaptive_websites']=adaptive_metrics
     from .sources.official_resilience import summary as outage_summary
     report['official_source_outages']=outage_summary(budget.events,source_health)

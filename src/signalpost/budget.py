@@ -1,6 +1,7 @@
 import time
 import math
 from collections import Counter
+from contextvars import ContextVar
 
 
 class SourceFailure(Exception):
@@ -25,6 +26,10 @@ MIN_WORK_FRACTION = 0.25
 MAX_RESERVE_FRACTION = 0.6
 HTTP_PER_100 = 1850
 SECONDS_PER_100 = 35 * 60
+PASS2_MARGIN_SECONDS = 300
+# The latest F2 spent about 192 seconds after the crawl, including the site
+# attempt. Allow 250 seconds for the required outputs and optional site.
+PASS2_FINALISATION_SECONDS = 250
 
 
 def finalisation_estimates(companies, site):
@@ -67,10 +72,31 @@ class Budget:
         crawl_seconds = max(0.0, min(total - reserve, total * config.deadline_fraction))
         self.deadline = self.start + crawl_seconds
         self.crawl_limit = self.deadline  # No later phase may extend this deadline.
+        self.pass2_cutoff = self.deadline
+        if companies >= 100 and config.time_budget_seconds == SECONDS_PER_100 and not getattr(config, 'scaled_time_budget', False):
+            window = SECONDS_PER_100 - PASS2_MARGIN_SECONDS - PASS2_FINALISATION_SECONDS
+            self.pass2_cutoff = min(self.deadline, self.start + window * min(companies / 500, 1))
         self.cap = min(config.max_requests, self.hard_request_cap) if config.max_requests is not None else self.hard_request_cap
         self.events = []
         self.by_host = Counter()
-        self.phase = 'pass1'
+        # Exact-ID work can continue while the website scheduler is in pass 2.
+        self._phase = ContextVar('signalpost_request_pass', default='pass1')
+
+    @property
+    def phase(self):
+        return self._phase.get()
+
+    @phase.setter
+    def phase(self, value):
+        self._phase.set(value)
+
+    @property
+    def website_deadline(self):
+        return min(self.deadline, self.pass2_cutoff) if self.phase == 'pass2' else self.deadline
+
+    def check_website(self):
+        if time.monotonic() >= self.website_deadline:
+            raise SourceFailure('deadline')
 
     def seconds_left(self):
         return self.start + self.total_seconds - time.monotonic()
