@@ -50,7 +50,7 @@ def p3_directory(seed):
     return P3 / ("trials/seed20261117-retry" if seed == 20261117 else f"seed{seed}")
 
 
-def measure(seed, retry):
+def measure(seed, retry, *, run_id_prefix='r5-stageW'):
     settings = read(p3_directory(seed) / "settings.json")
     command = settings["command_argv"]
     batch, bulk = (
@@ -67,7 +67,7 @@ def measure(seed, retry):
         "--organisations", str(batch), "--bulk", str(bulk),
         "--output", str(work / "envelopes.jsonl"),
         "--profiles-output", str(work / "profiles.jsonl"),
-        "--report", str(work / "report.json"), "--run-id", "r5-stageW-" + label,
+        "--report", str(work / "report.json"), "--run-id", run_id_prefix + "-" + label,
         "--expected-count", "100",
     ]
     assert sum(arg.startswith("--") for arg in argv) == 7

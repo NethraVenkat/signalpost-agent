@@ -2,6 +2,7 @@ import json
 from pathlib import Path
 import httpx
 import pytest
+import respx
 from scripts.check_live_run import check
 from scripts.verify_output import verify
 from tests.test_registry import config,execute,handler
@@ -24,11 +25,16 @@ def test_live_gate_accepts_honest_source_failure_but_keeps_all_proof_checks(tmp_
     with pytest.raises(AssertionError):verify(cfg.output,cfg.state_dir,2,cfg.organisations,cfg.report,require_clean=True)
 
 
-@pytest.mark.parametrize('mutation',['missing_site','missing_profile','order','schema','unsupported_value','bad_blob'])
+@pytest.mark.parametrize('mutation',['missing_site','missing_profile','oversized_profile','size_report','order','schema','unsupported_value','bad_blob'])
 def test_live_gate_rejects_broken_artifacts(tmp_path,mutation):
     cfg,rows=fixture(tmp_path)
     if mutation=='missing_site':(cfg.site_dir/'index.html').unlink()
     elif mutation=='missing_profile':(cfg.site_dir/'c/923609016.html').unlink()
+    elif mutation=='oversized_profile':(cfg.site_dir/'c/923609016.html').write_bytes(b' ' * 250_000)
+    elif mutation=='size_report':
+        report=json.loads(cfg.report.read_text(encoding='utf8'))
+        report['site']['largest_profile_bytes']-=1
+        cfg.report.write_text(json.dumps(report),encoding='utf8')
     elif mutation=='order':
         cfg.output.write_text(''.join(json.dumps(r)+'\n' for r in reversed(rows)),encoding='utf8')
     elif mutation=='schema':
@@ -81,3 +87,65 @@ def test_large_profile_defers_only_duplicate_explorer_rows_under_same_gate(tmp_p
         assert shown+len(payload['explorer_rows'])==len(row['claims'])
         assert all(site.anchor(c) in page for c in row['claims'])
         assert len(payload['facts'])==sum(bool(c['evidence_ids']) or c['availability']=='available' for c in row['claims'])
+
+
+def test_seven_flag_run_keeps_oversized_company_profile_under_html_cap(tmp_path, monkeypatch):
+    from signalpost import cli, site
+    from signalpost.web import policy
+    from tests.test_websites import OTHER, OUR, html
+
+    route = '/' + 'contact-' * 180
+    source_url = 'https://example.no' + route
+    addresses = [f'office{i}@example.no' for i in range(155)]
+    contacts = ''.join(f'<p><a href="mailto:{address}">{address}</a></p>' for address in addresses)
+    body = html('Org.nr ' + OUR, contacts)
+    batch = tmp_path / 'companies.jsonl'
+    bulk = tmp_path / 'registry.csv'
+    batch.write_text(''.join(json.dumps({'organisation_number': org}) + '\n' for org in (OUR, OTHER)),
+                     encoding='utf8')
+    bulk.write_text(f'organisasjonsnummer,navn,hjemmeside\n{OUR},EXAMPLE AS,{source_url}\n'
+                    f'{OTHER},OTHER AS,https://other.no/\n', encoding='utf8')
+    monkeypatch.chdir(tmp_path)
+    monkeypatch.setattr('sys.argv', ['signalpost', 'run', '--organisations', str(batch), '--bulk', str(bulk),
+                                    '--output', 'envelopes.jsonl', '--profiles-output', 'profiles.jsonl',
+                                    '--report', 'report.json', '--run-id', 'oversized-profile', '--expected-count', '2'])
+
+    async def resolve_public(host, port=443):
+        return ['93.184.216.34']
+
+    monkeypatch.setattr(policy, 'resolve_public', resolve_public)
+
+    def serve(request):
+        if request.method == 'HEAD':
+            return httpx.Response(200)
+        if request.url.host == 'data.brreg.no' and any(org in str(request.url) for org in (OUR, OTHER)):
+            return handler()(request)
+        if request.url.host in {'example.no', 'other.no'}:
+            if request.url.path == '/robots.txt':
+                return httpx.Response(200, text='User-agent: *\nAllow: /')
+            if request.url.host == 'example.no' and request.url.path == route:
+                return httpx.Response(200, text=body)
+            if request.url.host == 'other.no' and request.url.path == '/':
+                return httpx.Response(200, text=html('Org.nr ' + OTHER, title='Other AS'))
+        if request.url.path == '/robots.txt':
+            return httpx.Response(200, text='User-agent: *\nDisallow: /')
+        return httpx.Response(404)
+
+    with respx.mock(assert_all_called=False) as router:
+        router.route().mock(side_effect=serve)
+        assert cli.main() == 0
+
+    report = json.loads(Path('report.json').read_text(encoding='utf8'))
+    row = json.loads(Path('envelopes.jsonl').read_text(encoding='utf8').split('\n')[0])
+    with Path('profiles.jsonl').open(encoding='utf8') as profiles:
+        assert [json.loads(line)['organisation_number'] for line in profiles] == [OUR, OTHER]
+    # This response needs the same fallback as the oversized 500-run page.
+    assert len(site.profile(row, 'Signalpost', 0, official_inline=0).encode('utf8')) >= 250_000
+    assert report['site']['state'] == 'available'
+    expected_size = Path(f'site/c/{OUR}.html').stat().st_size
+    assert report['site']['largest_profile_bytes'] == expected_size < 250_000
+    checked = check('envelopes.jsonl', batch, 'state', 'report.json', 'site', 2)
+    assert checked['site_verified'] and checked['largest_profile_bytes'] == expected_size
+    payload = Path(f'site/c/{OUR}.data.js').read_text(encoding='utf8')
+    assert all(address in payload for address in addresses)
+    assert source_url in payload

@@ -429,6 +429,7 @@ def page(title, body, prefix='', kind='profile', company_data=None):
 # Keep room for additional cited source-status records under the unchanged
 # 250 KB HTML gate. Remaining rows still load from the full local data file.
 EXPLORER_VISIBLE_ROWS = 48
+PROFILE_HTML_LIMIT = 250_000
 
 
 # Official-record families can list dozens of dated records for one company.
@@ -1147,16 +1148,16 @@ def generate_site(input_path, out, title='Signalpost', *, deadline=None):
         # Audit rows repeat facts already present above. Defer only those
         # duplicates to the existing local Show remaining loader, preserving
         # every fact, anchor and receipt under the unchanged HTML size gate.
-        while len(rendered.encode('utf8'))>=250_000 and visible:
+        while len(rendered.encode('utf8')) >= PROFILE_HTML_LIMIT and visible:
             check()
             visible//=2
             rendered=profile(row,title,visible)
         # Then defer older official records too (their facts stay in the data file).
-        while len(rendered.encode('utf8'))>=250_000 and inline:
+        while len(rendered.encode('utf8')) >= PROFILE_HTML_LIMIT and inline:
             check()
             inline//=2
             rendered=profile(row,title,visible,official_inline=inline)
-        if len(rendered.encode('utf8')) >= 250_000:
+        if len(rendered.encode('utf8')) >= PROFILE_HTML_LIMIT:
             check()
             # Every publisher URL is already available in its evidence panel.
             rendered = profile(row, title, visible, official_inline=inline, source_shortcuts=False)
@@ -1170,7 +1171,7 @@ def generate_site(input_path, out, title='Signalpost', *, deadline=None):
     for filename, content in files.items():
         check()
         sizes[filename] = len(content.encode('utf8'))
-    if any(size >= 250_000 for path, size in sizes.items() if path.startswith('c/') and path.endswith('.html')):
+    if any(size >= PROFILE_HTML_LIMIT for path, size in sizes.items() if path.startswith('c/') and path.endswith('.html')):
         raise ValueError('Profile page exceeds 250 KB gate')
     # Budget for file creation overhead and a conservative 5 MB/s write rate.
     # At this point every page is rendered and the write sizes are known.

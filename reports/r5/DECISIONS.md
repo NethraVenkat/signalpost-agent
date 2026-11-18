@@ -852,3 +852,10 @@
 - The last F2 crawl ended at 1,786.56 s and the process exited at 1,978.15 s. Set the website-only pass-2 cutoff to 1,550 s at 500 companies under the fixed default. The elapsed target scales from 310 s at 100 companies and caps at 1,550 s. Smaller runs and custom or scaled budgets retain the original deadline.
 - The last run spent about 192 s after the crawl. Reserving 250 s for finalisation gives a 1,800 s completion target and 300 s margin when other crawl work has finished. The 0.85 global crawl fraction, exact-ID deadlines, mandatory writes, and request caps are preserved. A timed test cancels a stalled pass-2 operation while an exact-ID task continues and the run writes its output.
 - Full pytest passed 1,389 tests in 886.07 s.
+
+## 2026-11-18 - FX2 runtime profile size gate and 100-company measurement
+
+- The seven-flag CLI regression serves an oversized company from mocked publisher and registry responses. It exercises the runtime site writer and verifies the published HTML cap and exact source data. The live checker now measures each generated HTML file and checks that the report agrees.
+- One fresh run on seed 20261117 passed `check_live_run --count 100`. Wall time was 337.16 s versus 475.28 s in Stage W on the same cohort. Website pass 2 stopped at 310 s after 22 HTTP attempts, compared with 112 previously. All 100 envelopes and profiles were present with zero placeholders. All nine website URLs and exact-ID claim identities matched the baseline. The 37 deadline hits were all in website work.
+- The largest of the 100 runtime profile HTML files was 248,461 bytes. The run made 1,009 HTTP attempts at $0. See stageFX/SUMMARY.md for the complete comparison. The 500-company margin remains unmeasured pending W3 and the seed hand-check. Check for at least 20 GB of free space before launching a 500-company run and preserve the evidence blobs.
+- Full pytest passed 1,392 tests in 940.75 s.

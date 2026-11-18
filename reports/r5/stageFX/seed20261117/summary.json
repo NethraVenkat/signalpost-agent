@@ -1,0 +1,182 @@
+{
+  "seed": 20261117,
+  "inputs": {
+    "input_sha256": "8bb108bc9414fc4f238e0501c7d46481ea8ba01ea5427b8564a3e3bffe0c1b60",
+    "bulk_sha256": "eb6e3ca98ca658c77edca3a8558a03e3faaaa78c49a8c8baaf194abfc189fbec"
+  },
+  "wall_seconds": 337.1560000000027,
+  "baseline_wall_seconds": 475.28099999999904,
+  "http_requests": 1009,
+  "baseline_http_requests": 1078,
+  "envelopes": 100,
+  "profiles": 100,
+  "placeholders": 0,
+  "largest_profile_bytes": 248461,
+  "baseline_largest_profile_bytes": 249441,
+  "baseline_report_sha256": "7b19825562b5671674feeeb4c59e0929f3597efaa31f37c86561f90af649ff0b",
+  "total_cost_usd": 0.0,
+  "website_claims_available": 9,
+  "baseline_website_claims_available": 9,
+  "exact_id_sources": {
+    "gleif": {
+      "states": {
+        "not_available": 86,
+        "available": 14
+      },
+      "published_claims": 20,
+      "baseline_states": {
+        "not_available": 86,
+        "available": 14
+      },
+      "baseline_published_claims": 20
+    },
+    "procurement": {
+      "states": {
+        "not_available": 99,
+        "failed": 1
+      },
+      "published_claims": 0,
+      "baseline_states": {
+        "not_available": 99,
+        "failed": 1
+      },
+      "baseline_published_claims": 0
+    },
+    "state_aid": {
+      "states": {
+        "available": 7,
+        "not_available": 93
+      },
+      "published_claims": 46,
+      "baseline_states": {
+        "available": 7,
+        "not_available": 93
+      },
+      "baseline_published_claims": 46
+    },
+    "research": {
+      "states": {
+        "not_available": 99,
+        "available": 1
+      },
+      "published_claims": 1,
+      "baseline_states": {
+        "not_available": 99,
+        "available": 1
+      },
+      "baseline_published_claims": 1
+    },
+    "licences": {
+      "states": {
+        "not_available": 100
+      },
+      "published_claims": 0,
+      "baseline_states": {
+        "not_available": 100
+      },
+      "baseline_published_claims": 0
+    },
+    "inspections": {
+      "states": {
+        "not_available": 99,
+        "available": 1
+      },
+      "published_claims": 27,
+      "baseline_states": {
+        "not_available": 99,
+        "available": 1
+      },
+      "baseline_published_claims": 27
+    }
+  },
+  "deadline_companies_by_section": {
+    "website": 37
+  },
+  "baseline_deadline_companies_by_section": {},
+  "pass2": {
+    "started_seconds": 267.188,
+    "finished_seconds": 310.0,
+    "cutoff_seconds": 310.0,
+    "runtime_seconds": 42.812,
+    "website_requests": 22,
+    "websites_gained": 0,
+    "states": {
+      "deadline": 37,
+      "no_pending_candidates": 52,
+      "checked_no_gain": 3,
+      "already_verified": 8
+    }
+  },
+  "last_pass2_request_started_seconds": 309.26600000000326,
+  "baseline_pass2": {
+    "runtime_seconds": 190.125,
+    "website_requests": 112,
+    "websites_gained": 0,
+    "states": {
+      "dns_budget_exhausted": 7,
+      "no_pending_candidates": 54,
+      "website_budget_exhausted": 12,
+      "checked_no_gain": 19,
+      "already_verified": 8
+    }
+  },
+  "projected_500": {
+    "cutoff_seconds": 1550,
+    "finalisation_allowance_seconds": 250,
+    "completion_target_seconds": 1800,
+    "margin_target_seconds": 300
+  },
+  "source_health": [
+    {
+      "source": "enhetsregisteret",
+      "url": "https://data.brreg.no/enhetsregisteret/api/enheter?size=1",
+      "method": "HEAD",
+      "state": "reachable",
+      "attempts": 1,
+      "note": "Reachability only; 404/405 is reachable, not evidence of usable company data",
+      "status": 200
+    },
+    {
+      "source": "accounts",
+      "url": "https://data.brreg.no/regnskapsregisteret/regnskap",
+      "method": "HEAD",
+      "state": "reachable",
+      "attempts": 1,
+      "note": "Reachability only; 404/405 is reachable, not evidence of usable company data",
+      "status": 404
+    },
+    {
+      "source": "nav",
+      "url": "https://pam-stilling-feed.nav.no/api/publicToken",
+      "method": "HEAD",
+      "state": "reachable",
+      "attempts": 1,
+      "note": "Reachability only; 404/405 is reachable, not evidence of usable company data",
+      "status": 200
+    },
+    {
+      "source": "gleif",
+      "url": "https://api.gleif.org/robots.txt",
+      "method": "HEAD",
+      "state": "reachable",
+      "attempts": 1,
+      "note": "Reachability only; 404/405 is reachable, not evidence of usable company data",
+      "status": 200
+    }
+  ],
+  "gates": {
+    "live_checker_passed": true,
+    "fixed_budget": true,
+    "frozen_subset_used": true,
+    "required_outputs": true,
+    "pass2_within_cutoff": true,
+    "exact_id_no_deadlines": true,
+    "profile_html_cap": true,
+    "cost_zero": true
+  },
+  "artifacts": {
+    "envelopes.jsonl": "b0b9289428a40688c08fc472fbe4809c330f55d89478a274e20b854fdbd80f5d",
+    "profiles.jsonl": "aa69a8efd21b14ab175d6e6894f91e2321ac4c46ab61313406169543cd0d0e66",
+    "report.json": "9e2fcb49837863ce3feb7b1b468d344110c7b875021c2f4fc01741385838bbc7"
+  }
+}

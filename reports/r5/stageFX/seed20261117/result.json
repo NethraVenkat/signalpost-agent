@@ -1,0 +1,44 @@
+{
+  "verification": {
+    "lines": 100,
+    "schema_valid": true,
+    "published_claims": 14136,
+    "source_blobs_verified": 467,
+    "synthesis_companies": 100,
+    "synthesis_sentences": 1848,
+    "synthesis_unverified_values": 0,
+    "financial_inputs_verified": 6438,
+    "derived_financial_metrics_verified": 221,
+    "registry_events_verified": 1245,
+    "filing_year_facts_verified": 1067,
+    "exact_public_items_verified": 20,
+    "exact_official_items_verified": 74,
+    "briefing_companies": 100,
+    "briefing_sentences": 634,
+    "briefing_short_companies": 0,
+    "briefing_unverified_values": 0,
+    "briefing_topic_coverage": {
+      "activity": 100,
+      "change": 100,
+      "unknown": 100,
+      "financial": 100,
+      "takeaway": 100
+    },
+    "complete_briefing_contracts": 100,
+    "newer_filing_flags": 0,
+    "site_verified": true,
+    "terminal_envelopes": 100,
+    "source_failures_permitted": true,
+    "http_requests": 1009,
+    "wall_seconds": 335.953,
+    "cost_usd": 0,
+    "largest_profile_bytes": 248461
+  },
+  "indexed_input_companies": 0,
+  "envelopes_sha256": "b0b9289428a40688c08fc472fbe4809c330f55d89478a274e20b854fdbd80f5d",
+  "profiles_sha256": "aa69a8efd21b14ab175d6e6894f91e2321ac4c46ab61313406169543cd0d0e66",
+  "seed_bundles": {
+    "commoncrawl.json.gz": "7759155386e8c63bbfba8826c6298441fea2776bf55d652d08c58782a6f24e2e",
+    "openstreetmap.json.gz": "ba6ea8503e08ff57a3539167eb25603699e92ca61fd66624a39aeff3e5b675c1"
+  }
+}

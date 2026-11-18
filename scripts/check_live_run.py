@@ -9,6 +9,7 @@ if str(ROOT) not in sys.path:sys.path.insert(0,str(ROOT))
 from scripts.verify_output import verify,load
 from signalpost.io.input_adapter import read
 from signalpost.budget import HTTP_PER_100,SECONDS_PER_100
+from signalpost.site import PROFILE_HTML_LIMIT
 
 
 def check(output,organisations,state,report_path,site,count):
@@ -26,7 +27,11 @@ def check(output,organisations,state,report_path,site,count):
     assert report['site']['state']=='available','Site was not generated'
     assert report['site']['companies']==len(inputs.unique),'Site membership count differs'
     assert (site/'index.html').is_file() and (site/'compare.html').is_file(),'Missing site entry pages'
-    assert {p.stem for p in (site/'c').glob('*.html')}==set(inputs.unique),'Missing/extra company site pages'
+    profiles = {path.stem: path.stat().st_size for path in (site/'c').glob('*.html')}
+    assert profiles.keys() == set(inputs.unique), 'Missing/extra company site pages'
+    largest = max(profiles.values(), default=0)
+    assert largest < PROFILE_HTML_LIMIT, 'Profile HTML exceeds the 250,000-byte cap'
+    assert report['site']['largest_profile_bytes'] == largest, 'Largest profile size differs from run report'
     for row in rows:
         assert row['run']['terminal_status'] in {'completed','failed'},'Nonterminal envelope'
         data=row if 'claims' in row else row['profile']
@@ -34,7 +39,8 @@ def check(output,organisations,state,report_path,site,count):
     assert result['complete_briefing_contracts']==count,'Incomplete cited briefing topics'
     assert result['synthesis_unverified_values']==result['briefing_unverified_values']==0
     result.update(site_verified=True,terminal_envelopes=count,source_failures_permitted=True,
-        http_requests=report['requests'],wall_seconds=report['completion']['wall_seconds'],cost_usd=0)
+        http_requests=report['requests'],wall_seconds=report['completion']['wall_seconds'],cost_usd=0,
+        largest_profile_bytes=largest)
     return result
 
 
