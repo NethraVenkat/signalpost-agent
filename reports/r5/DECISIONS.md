@@ -787,3 +787,9 @@
 ## 2026-11-18 - Stage W0 source access
 
 - Common Crawl query API skipped under its robots rules. The data host explicitly welcomes HTTPS bulk downloads in its robots file. OpenStreetMap website and editing API skipped for automated extraction. Use a bulk extract for the ODbL candidate layer and preserve attribution. Source details in docs/SOURCES.md.
+
+## 2026-11-18 - Stage W1 candidate index build
+
+- The Common Crawl build used the October 2026 CC-MAIN-2026-43 bulk objects. It downloaded one range at a time, spaced starts at least one second apart, and checkpointed completed index blocks and page records in SQLite. The frozen partial build read 119 index blocks and checked 949 captures, with 4,033 discovered captures still pending. It retained 126 organisation/domain pairs in 8,641 bytes after labelled mod-11, directory, credit and multi-organisation filters.
+- The ODbL bundle uses the 2026-11-01 Geofabrik Norway extract. The download resumed once and matched the published MD5. Extract SHA-256 is recorded in the bundle. The compiled Osmium key filters finished the local scan in 23.69 s after whole-file Python callbacks exceeded a short slice. The OSM bundle retains 1,753 organisation/domain pairs in 18,592 bytes, with attribution and licence. The bundles are separate and contain nominations only.
+- The final isolated W1 checkout passed 1,363 tests in 1,042.24 s. The compiled filter was also exercised against the checksum-verified Norway extract. Both final gzip bundles passed mod-11, domain, per-domain multiplicity and provenance checks.

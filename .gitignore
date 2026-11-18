@@ -21,6 +21,8 @@ blobs/
 !src/signalpost/data/nav_index.json.gz
 !src/signalpost/data/research_projects.json.gz
 !src/signalpost/data/food_inspections.json.gz
+!src/signalpost/data/website_seeds/commoncrawl.json.gz
+!src/signalpost/data/website_seeds/openstreetmap.json.gz
 *.pdf
 !tests/fixtures/**/*.jsonl
 !tests/fixtures/**/*.csv
