@@ -1,6 +1,7 @@
 import argparse
 import asyncio
 import json
+import os
 import sys
 from pathlib import Path
 from .config import Config
@@ -77,6 +78,9 @@ def main():
         if not no_site and args['site_dir'] is None:
             args['site_dir'] = args['output'].parent / 'site'
         config = Config(**args)
+        seed_override = os.environ.get('SIGNALPOST_WEBSITE_SEEDS')
+        if seed_override is not None:
+            config.website_seed_index = seed_override.strip().lower() not in {'0', 'false', 'off', 'no'}
         resolved = [p.resolve() for p in (config.output, config.report, config.profiles_output) if p]
         temporary = [p.with_name(p.name+'.tmp').resolve() for p in (config.output,config.profiles_output) if p]
         protected = [p.resolve() for p in (config.organisations, config.bulk, config.previous) if p]

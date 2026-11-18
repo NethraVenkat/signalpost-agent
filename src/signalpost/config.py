@@ -29,6 +29,7 @@ class Config(BaseModel):
     official_batch_size: int = Field(default=1100, ge=1)
     max_output_mb: float = Field(default=256, gt=0)
     websites: bool = True
+    website_seed_index: bool = True
     gleif: bool = True
     procurement: bool = True
     state_aid: bool = True  # Stage S2 Støtteregisteret exact-beneficiary awards

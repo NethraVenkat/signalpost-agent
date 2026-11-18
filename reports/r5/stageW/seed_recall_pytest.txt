@@ -1,0 +1,4 @@
+﻿Full test suite: PASS
+Command: .venv/Scripts/python.exe -m pytest -q -p no:cacheprovider --tb=short --basetemp .data/r5/pytest-w3
+Result: 1393 passed in 971.94s (0:16:11)
+The default pytest basetemp under AppData/Local/Temp is inaccessible in this managed workspace; the suite was rerun with a fresh basetemp under .data.
