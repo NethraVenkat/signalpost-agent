@@ -90,15 +90,26 @@ def generate(context, limit=8):
     email = str(context.get("email") or "")
     if "@" in email:
         add(email.rsplit("@", 1)[1], "registry_email")
+    seeds = context.get("website_seeds", ())
+
+    def add_subunit_contacts():
+        for unit in context.get('subunits', []):
+            add(unit.get('website'), 'subunit_registry_website', unit['orgnr'])
+            email = str(unit.get('email') or '')
+            if '@' in email:
+                add(email.rsplit('@', 1)[1], 'subunit_registry_email', unit['orgnr'])
+
+    if seeds:
+        add_subunit_contacts()
+        for root, origin in seeds:
+            add(root, origin)
     name_slugs = legal_name_slugs(legal_name(context.get('name')))
     # Preserve the measured first-pass priority: strongest exact-name spellings
     # precede branch/provider contacts, which can consume the entire allowance.
     for slug in sorted(name_slugs, key=lambda value: not value.endswith('.no'))[:2]:
         add(slug, 'legal_name_slug')
-    for unit in context.get('subunits',[]):
-        add(unit.get('website'),'subunit_registry_website',unit['orgnr'])
-        email=str(unit.get('email') or '')
-        if '@' in email:add(email.rsplit('@',1)[1],'subunit_registry_email',unit['orgnr'])
+    if not seeds:
+        add_subunit_contacts()
     for item in context.get('nav_homepages', []):
         add(item['url'], 'nav_employer_homepage', item.get('subunit_orgnr'))
     # Brands/aliases nominate only. They never modify the legal identity used

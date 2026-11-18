@@ -15,6 +15,7 @@ from .fetcher import STRONG
 
 ORIGIN_SCORE = {'registry_website':100, 'registry_email':95,
     'subunit_registry_website':90, 'subunit_registry_email':88,
+    'seed_commoncrawl':87, 'seed_openstreetmap':86,
     'nav_employer_homepage':85, 'legal_name_slug':70, 'brand_variant':60,
     'registry_subunit_name':50}
 

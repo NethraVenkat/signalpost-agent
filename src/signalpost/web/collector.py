@@ -15,6 +15,7 @@ from .policy import domain, normalize_url, SOCIAL, DIRECTORIES, FREE_MAIL
 from .proof import score, phone, extract_entity_cards, find_containing_card, registry_contacts
 from .social import discover, discover_strict, profile_url, numeric_linkedin
 from .fetcher import TRANSIENT
+from .seed_index import SEED_ORIGINS, publisher_has_number
 
 
 def extract_sitemap_domains(xml_body, legal_nm, brand_nm):
@@ -249,6 +250,8 @@ async def fetch(org, envelope, bulk, http, previous=None, *, resume=False, candi
         add(section, registry_source, org, "website", "registry_social." + digest(social)[:20],
             {"url": social, "platform": domain(social), "verification": "registry_asserted"}, registry_locator)
     context['nav_homepages'] = list(nav_homepages)
+    if candidates_override is None:
+        context['website_seeds'] = getattr(http, 'website_seeds', {}).get(org, ())
     candidates = list(candidates_override) if candidates_override is not None else generate(context)
     refresh_candidate, refresh_proof = previous_nomination(previous, context, units)
     if refresh_candidate:
@@ -330,6 +333,8 @@ async def fetch(org, envelope, bulk, http, previous=None, *, resume=False, candi
                     seen.add(target)
                     try:
                         is_pdf_target=target in http.legal_pdf_links.get(org,{})
+                        if is_pdf_target and candidate.origin in SEED_ORIGINS:
+                            continue
                         extra = await http.get(target, org, candidate.domain, proved,**({'pdf':True} if is_pdf_target else {}))
                     except SourceFailure as exc:
                         if exc.code in {'block_page','http_blocked','robots','robots_unavailable'}:raise
@@ -529,6 +534,13 @@ def extract_contacts_and_social(section, org, web_claim, pages, context=None, en
 def candidate_proof(page,org,context,candidate,leaders):
     context = {**context, 'publisher_company_orgnr': org, 'candidate_url': candidate.url}
     proof=score(page,org,context,candidate.origin,leaders)
+    if candidate.origin in SEED_ORIGINS:
+        from .proof import Proof
+        if proof.level in {'BLOCKED', 'REJECT'}:
+            return proof
+        if proof.level == 'VERIFIED' and proof.token == org and publisher_has_number(page, org):
+            return proof
+        return Proof('LOW', reason='seed_live_publisher_number_missing')
     # A guessed parent candidate may actually be its proven registered branch.
     # Only an exact number in R1 publisher context authorizes this fallback;
     # each branch is rescored with every existing conflict/proof rule intact.

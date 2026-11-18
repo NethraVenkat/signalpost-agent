@@ -460,6 +460,9 @@ async def _run(config, client=None,synthesis_provider=None):
         else:source_health.append({'state':'disabled','reason':'Config.official_source_health=False'})
         http = Http(active_client, config, budget, blobs)
         website_http = WebsiteHttp(active_client, config, budget, blobs, dns_metrics=dns_metrics)
+        if config.websites:
+            from .web.seed_index import load as load_website_seeds
+            website_http.website_seeds = await offload(load_website_seeds)
         from .web.search import Search
         website_http.search=Search(active_client,config,budget)
         search_metrics.update(website_http.search.metrics)

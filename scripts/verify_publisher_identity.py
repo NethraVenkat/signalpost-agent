@@ -7,6 +7,7 @@ from urllib.parse import urlsplit, urlunsplit
 from signalpost.web.html import Page
 from signalpost.web.publisher_identity import DECLARED, RARE, REDIRECT, declared_receipt, rare_receipt,redirect_receipt
 from signalpost.web.publisher_veto import conflict
+from signalpost.web.seed_index import SEED_ORIGINS, publisher_has_number
 
 
 def registry_context(org,data,evidence,stored_body,allow_carried=False):
@@ -61,6 +62,29 @@ def verify(org,data,evidence,stored_body):
         if claim['field']!='official_website' or claim['availability']!='available':continue
         value=claim['value']
         tier=value.get('proof_type')
+        if value.get('candidate_origin') in SEED_ORIGINS:
+            from signalpost.web.proof import score
+
+            context, _ = registry_context(org, data, evidence, stored_body,
+                                          allow_carried=bool(claim.get('carried_forward')))
+            assert value['identity_level'] == 'VERIFIED' and not value.get('matched_via_subunit')
+            verified = False
+            for ref in claim['evidence_ids']:
+                receipt = evidence[ref]
+                if (receipt['source_class'] != 'company_owned'
+                        or receipt['source_url'] != value['proof_page_url']
+                        or receipt['locator'] != 'identity-proof:' + org):
+                    continue
+                text = stored_body(receipt['content_sha256'])
+                page = Page(text.encode('utf8'), receipt['source_url'], text=text)
+                parts = urlsplit(page.url)
+                assert value['final_url'] == urlunsplit((parts.scheme, parts.netloc, '', '', ''))
+                result = score(page, org, context, value['candidate_origin'], [])
+                verified |= (publisher_has_number(page, org) and result.level == 'VERIFIED'
+                             and result.token == org and result.proof_type == tier)
+            assert verified, 'Seed website lacks live exact publisher evidence'
+            total += 1
+            continue
         if tier not in {DECLARED,RARE,REDIRECT}|RULES.keys():continue
         context,refs=registry_context(org,data,evidence,stored_body,allow_carried=bool(claim.get('carried_forward')))
         assert refs<=set(claim['evidence_ids']),'Missing registry proof dependencies'
