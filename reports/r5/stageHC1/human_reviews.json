@@ -1,0 +1,1368 @@
+{
+  "reviewer": "Nethra Venkat",
+  "review_date": "2026-11-18",
+  "method": "Independent web hand-check supplied by the reviewer in conversation",
+  "inputs": {
+    "P2": {
+      "seed": 20261118,
+      "input_sha256": "925cf639574fd828de2201f37c48735e5628a2eb4af22602de49f9c62ce7c01d",
+      "envelopes_sha256": "5c3b33bd743890733f288f9ae1a9e864c424cbb2807c837a30f01309639a6ff3",
+      "url_inventory_sha256": "56639f8e09008e8eb58caf9cce2607f9beaacd8b285ee028d532bdc795bf2178",
+      "url_inventory": "reports/r5/scale500/urls.json"
+    },
+    "P3g": {
+      "seed": 20261120,
+      "input_sha256": "8392ab97844f871857104cdaf7b04e150a55c8000fc157b4a93e01b4721fec0f",
+      "envelopes_sha256": "fee658298fa69f87be5fb1945f7fcddf92409dc4229f21ef759e85f405add812",
+      "url_inventory_sha256": "930a1a5e542235c40eec36d510727cfe8cfe271b635bbaea08301f097a56e677",
+      "url_inventory": "reports/r5/stageP3/P3g/urls.json"
+    }
+  },
+  "counts": {
+    "correct": 14,
+    "wrong": 2,
+    "unsure": 10
+  },
+  "reviews": [
+    {
+      "sample": "P2",
+      "seed": 20261118,
+      "sample_sha256": "925cf639574fd828de2201f37c48735e5628a2eb4af22602de49f9c62ce7c01d",
+      "envelopes_sha256": "5c3b33bd743890733f288f9ae1a9e864c424cbb2807c837a30f01309639a6ff3",
+      "organisation_number": "918811370",
+      "company": "TOTEN FORSIKRING AS",
+      "kind": "social",
+      "url": "https://www.facebook.com/totenforsikring",
+      "field": "social_profile.7dd5f8ee4c74070e6414",
+      "claim_id": "5b49f43f527d6df8e6f2203792f36e13de8f4c96fb0073effb2759c2f040303e",
+      "value_sha256": "4986cd8f791da422139c51798c7a8af740afeff2e5917010453c15335109a3fb",
+      "verdict": "correct",
+      "human_verified": true,
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-18",
+      "method": "Independent web hand-check supplied by the reviewer in conversation",
+      "automated_verdict": "wrong",
+      "automated_reasons": [
+        "StopIteration"
+      ],
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "note": "Confirmed by the reviewer.",
+      "review_source_urls": [],
+      "receipts": [
+        {
+          "source_url": "https://totenforsikring.no/",
+          "retrieved_at": "2026-11-16T08:27:39.033094Z",
+          "content_sha256": "6046fb1ff611f2f9555a0765a481f0d009bc337d8246c53c1eb8f7d94249baa5",
+          "locator": "company-link:https://www.facebook.com/totenforsikring",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "<a id=\"link-260-37\" class=\"ct-link\" href=\"https://www.facebook.com/totenforsikring\" target=\"_blank\"  >"
+        },
+        {
+          "source_url": "https://totenforsikring.no/wp-content/uploads/2023/03/Angreskjema-Toten-2.pdf",
+          "retrieved_at": "2026-11-16T08:27:52.570456Z",
+          "content_sha256": "5b3f3b24a0c229693c279133aad7fee2f165360228e082b3e79ddfe73ccf1133",
+          "locator": "pdf:page:1/identity-proof:918811370",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "oten Forsikring AS\nOrganisasjonsnummer \n918811370  \nTelefonnummer Adresse \nJernbanesvingen 6, 2821 Gjøvik 990 13 282 \nE-postadresse \nservice@totenfors"
+        },
+        {
+          "source_url": "https://totenforsikring.no/wp-content/uploads/2023/03/Angreskjema-Toten-2.pdf",
+          "retrieved_at": "2026-11-16T08:27:52.570456Z",
+          "content_sha256": "d0347d389a513abb5c91b1725f03df05e132d2db6638ebc6e8a486efc557bdd6",
+          "locator": "pdf:original",
+          "extraction_method": "signalpost.legal_pdf.v1",
+          "claim_span": "%PDF-"
+        },
+        {
+          "source_url": "https://totenforsikring.no/angrerett/",
+          "retrieved_at": "2026-11-16T08:27:50.423327Z",
+          "content_sha256": "3eb9ede087a662a9022ff0eda91e219189b16fff277aac89518a1c2844c888ab",
+          "locator": "legal-pdf-link:https://totenforsikring.no/wp-content/uploads/2023/03/Angreskjema-Toten-2.pdf",
+          "extraction_method": "signalpost.legal_pdf.v1",
+          "claim_span": "<a id=\"link_text-125-365\" class=\"ct-link-text\" href=\"https://totenforsikring.no/wp-content/uploads/2023/03/Angreskjema-Toten-2.pdf\" target=\"_blank\"  >"
+        }
+      ]
+    },
+    {
+      "sample": "P2",
+      "seed": 20261118,
+      "sample_sha256": "925cf639574fd828de2201f37c48735e5628a2eb4af22602de49f9c62ce7c01d",
+      "envelopes_sha256": "5c3b33bd743890733f288f9ae1a9e864c424cbb2807c837a30f01309639a6ff3",
+      "organisation_number": "922569738",
+      "company": "SNUOM PSYKISK HELSE AS",
+      "kind": "social",
+      "url": "https://www.instagram.com/snuompsykiskhelse",
+      "field": "social_profile.ed5e0b0308b9c60f6f4b",
+      "claim_id": "0c316df2cb0b02b4806bbfa90d54385f0275f6fa26ec4984a27ff12c3d0ffd8f",
+      "value_sha256": "cb0982a4ae2742a2077037677255d5f48cf17031a0f84dbbebdaa520b31f6b2d",
+      "verdict": "unsure",
+      "human_verified": false,
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-18",
+      "method": "Independent web hand-check supplied by the reviewer in conversation",
+      "automated_verdict": "doubtful",
+      "automated_reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "note": "No definitive human verdict. Keep the original automated label.",
+      "review_source_urls": [],
+      "receipts": [
+        {
+          "source_url": "https://www.snuom.no/",
+          "retrieved_at": "2026-11-16T08:33:46.896503Z",
+          "content_sha256": "48ffa66134daa87df8d84032e137f3daca0d8f1ba8e064fce523db912a54fd49",
+          "locator": "company-link:https://www.instagram.com/snuompsykiskhelse",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "<a data-testid=\"linkElement\" href=\"https://www.instagram.com/snuompsykiskhelse/\" target=\"_blank\" rel=\"noreferrer noopener\" class=\"FvIvPq\" aria-label=\"Instagram     \">"
+        },
+        {
+          "source_url": "https://www.snuom.no/",
+          "retrieved_at": "2026-11-16T08:33:46.896503Z",
+          "content_sha256": "48ffa66134daa87df8d84032e137f3daca0d8f1ba8e064fce523db912a54fd49",
+          "locator": "identity-proof:922569738",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "h2 class=\"font_2 wixui-rich-text__text\">Snuom Psykisk Helse AS er en privat klinikk. Vi samarbeider tett med fastleger, forsikringsselskap og arbeidsgivere, og tilbyr rask oppstart uten henvisning eller ventetid i det offentlige systemet.</h2></div><!--/$--></div><!--/$--></div><!--/$--></div></div>"
+        },
+        {
+          "source_url": "https://www.snuom.no/",
+          "retrieved_at": "2026-11-16T08:33:46.896503Z",
+          "content_sha256": "48ffa66134daa87df8d84032e137f3daca0d8f1ba8e064fce523db912a54fd49",
+          "locator": "registry-contact:phone",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a data-testid=\"linkElement\" href=\"tel:+47 74 38 85 00\" class=\"PoVCDy wixui-button ZhVEJq\" aria-disabled=\"false\" aria-label=\"Ring oss\">"
+        },
+        {
+          "source_url": "https://www.snuom.no/",
+          "retrieved_at": "2026-11-16T08:33:46.896503Z",
+          "content_sha256": "48ffa66134daa87df8d84032e137f3daca0d8f1ba8e064fce523db912a54fd49",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a href=\"mailto:post@snuom.no?subject=Book time\" target=\"_self\" class=\"wixui-rich-text__text\">"
+        }
+      ]
+    },
+    {
+      "sample": "P2",
+      "seed": 20261118,
+      "sample_sha256": "925cf639574fd828de2201f37c48735e5628a2eb4af22602de49f9c62ce7c01d",
+      "envelopes_sha256": "5c3b33bd743890733f288f9ae1a9e864c424cbb2807c837a30f01309639a6ff3",
+      "organisation_number": "927361426",
+      "company": "L TERRASSE AS",
+      "kind": "social",
+      "url": "https://www.facebook.com/Lterrasseno-101890795424991",
+      "field": "social_profile.ed515a03828275a08bb1",
+      "claim_id": "1b067cacaf8b3e5e71e63c1da014460ec56206ae1c73b47f7c75cf18fce8b223",
+      "value_sha256": "29bee07b2f79d1efc409ccbe0194155c04a55eb296a92e4baa59d5db14d1f0db",
+      "verdict": "unsure",
+      "human_verified": false,
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-18",
+      "method": "Independent web hand-check supplied by the reviewer in conversation",
+      "automated_verdict": "wrong",
+      "automated_reasons": [
+        "own header/footer/name/numeric-link policy no longer verifies"
+      ],
+      "proof_tier": "owner_jsonld_sameas_v1",
+      "note": "No definitive human verdict. Keep the original automated label.",
+      "review_source_urls": [],
+      "receipts": [
+        {
+          "source_url": "https://lterrasse.no/",
+          "retrieved_at": "2026-11-16T08:36:57.115731Z",
+          "content_sha256": "fb2f834560b9477a2392e9e0232b3a884f6ab0c4c48309c5869b46881ccd60c1",
+          "locator": "company-link:https://www.facebook.com/Lterrasseno-101890795424991",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "e\":\"L Terrasse AS\",\"url\":\"https://lterrasse.no/\",\"sameAs\":[\"https://www.facebook.com/Lterrasseno-101890795424991/\"],\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"nb-NO\",\"@id\":"
+        },
+        {
+          "source_url": "https://lterrasse.no/",
+          "retrieved_at": "2026-11-16T08:36:57.115731Z",
+          "content_sha256": "fb2f834560b9477a2392e9e0232b3a884f6ab0c4c48309c5869b46881ccd60c1",
+          "locator": "identity-proof:927361426",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "gen 10<br />\n7900 RØRVIK<br />\nOrg. nr. 927 361 426</p>\n</div>\n\t\t</div>\t\t\t\t</div>\r\n\t\t\t\r\n\t\t\t\t\t</div>\r\n\t</div>\r\n</footer>\r\n\t\t\r\n\t\t\r\n<div id=\"bottom\" clas"
+        }
+      ]
+    },
+    {
+      "sample": "P2",
+      "seed": 20261118,
+      "sample_sha256": "925cf639574fd828de2201f37c48735e5628a2eb4af22602de49f9c62ce7c01d",
+      "envelopes_sha256": "5c3b33bd743890733f288f9ae1a9e864c424cbb2807c837a30f01309639a6ff3",
+      "organisation_number": "933831922",
+      "company": "SHIFT SECURITY AS",
+      "kind": "social",
+      "url": "http://www.youtube.com/@ShiftSecurityAS",
+      "field": "social_profile.acb72170187a2c62fec4",
+      "claim_id": "38add56a35f266bf44accc61593b9f925889ede6b9655e9609afd70c8e411e28",
+      "value_sha256": "aeb16a0261e8d705967b468664e90f933654d1a8fbe4147c370562cb07979100",
+      "verdict": "correct",
+      "human_verified": true,
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-18",
+      "method": "Independent web hand-check supplied by the reviewer in conversation",
+      "automated_verdict": "wrong",
+      "automated_reasons": [
+        "own header/footer/name/numeric-link policy no longer verifies"
+      ],
+      "proof_tier": "own_contact_follow_us_v1",
+      "note": "Confirmed by the reviewer.",
+      "review_source_urls": [],
+      "receipts": [
+        {
+          "source_url": "https://shiftsecurity.no/kontakt",
+          "retrieved_at": "2026-11-16T08:31:31.284021Z",
+          "content_sha256": "ee902aa3261d5dbe452217da135bda4e7777aa2ee36611fdea7e63745eb91709",
+          "locator": "company-link:http://www.youtube.com/@ShiftSecurityAS",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "<a href=\"http://www.youtube.com/@ShiftSecurityAS\" rel=\"noopener\">"
+        },
+        {
+          "source_url": "https://shiftsecurity.no/personvernerklaring",
+          "retrieved_at": "2026-11-16T08:31:28.536856Z",
+          "content_sha256": "fe56c5e23d3778e10d3c0b193e242a2799f3a57b8262808e022be4fb2822ab72",
+          "locator": "identity-proof:933831922",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "ift Security AS<br>Organisasjonsnummer: 933 831 922<br>E-post: <a href=\"mailto:post@shiftsecurity.no\" rel=\"noopener\">post@shiftsecurity.no</a></span><"
+        }
+      ]
+    },
+    {
+      "sample": "P2",
+      "seed": 20261118,
+      "sample_sha256": "925cf639574fd828de2201f37c48735e5628a2eb4af22602de49f9c62ce7c01d",
+      "envelopes_sha256": "5c3b33bd743890733f288f9ae1a9e864c424cbb2807c837a30f01309639a6ff3",
+      "organisation_number": "933831922",
+      "company": "SHIFT SECURITY AS",
+      "kind": "social",
+      "url": "https://www.youtube.com/@ShiftSecurityAS",
+      "field": "social_profile.927af00221be0386117b",
+      "claim_id": "fc4e2a8fe2446cc77ee7e955ab613e08895c4526a5ec7da85f1d7b41fe2dbbff",
+      "value_sha256": "fda18853a82181f4cad5ef5cc66bc066bfed8bdbe1d9a28b318e5e57a5ab0499",
+      "verdict": "correct",
+      "human_verified": true,
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-18",
+      "method": "Independent web hand-check supplied by the reviewer in conversation",
+      "automated_verdict": "wrong",
+      "automated_reasons": [
+        "own header/footer/name/numeric-link policy no longer verifies"
+      ],
+      "proof_tier": "own_contact_follow_us_v1",
+      "note": "Confirmed by the reviewer.",
+      "review_source_urls": [],
+      "receipts": [
+        {
+          "source_url": "https://shiftsecurity.no/kontakt",
+          "retrieved_at": "2026-11-16T08:31:31.284021Z",
+          "content_sha256": "ee902aa3261d5dbe452217da135bda4e7777aa2ee36611fdea7e63745eb91709",
+          "locator": "company-link:https://www.youtube.com/@ShiftSecurityAS",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "<a href=\"https://www.youtube.com/@ShiftSecurityAS\" rel=\"noopener\">"
+        },
+        {
+          "source_url": "https://shiftsecurity.no/personvernerklaring",
+          "retrieved_at": "2026-11-16T08:31:28.536856Z",
+          "content_sha256": "fe56c5e23d3778e10d3c0b193e242a2799f3a57b8262808e022be4fb2822ab72",
+          "locator": "identity-proof:933831922",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "ift Security AS<br>Organisasjonsnummer: 933 831 922<br>E-post: <a href=\"mailto:post@shiftsecurity.no\" rel=\"noopener\">post@shiftsecurity.no</a></span><"
+        }
+      ]
+    },
+    {
+      "sample": "P2",
+      "seed": 20261118,
+      "sample_sha256": "925cf639574fd828de2201f37c48735e5628a2eb4af22602de49f9c62ce7c01d",
+      "envelopes_sha256": "5c3b33bd743890733f288f9ae1a9e864c424cbb2807c837a30f01309639a6ff3",
+      "organisation_number": "971050756",
+      "company": "ACCELLA SOLUTIONS AS",
+      "kind": "social",
+      "url": "https://www.linkedin.com/company/petroonline-as",
+      "field": "social_profile.e869802934dc08d715cc",
+      "claim_id": "c9757474b155207720dee03c71269875c72329e82ce8d9976c3613691c324b4b",
+      "value_sha256": "f785eef8e79d31b3019ff05be2946988fb2830fb82b5433fc2057c75b4a3460e",
+      "verdict": "correct",
+      "human_verified": true,
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-18",
+      "method": "Independent web hand-check supplied by the reviewer in conversation",
+      "automated_verdict": "wrong",
+      "automated_reasons": [
+        "own header/footer/name/numeric-link policy no longer verifies"
+      ],
+      "proof_tier": "owner_jsonld_sameas_v1",
+      "note": "PETRO ONLINE AS is a Brønnøysund-recorded former name of this exact organisation.",
+      "review_source_urls": [
+        "https://virksomhet.brreg.no/nb/oppslag/enheter/971050756"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://accella.no/",
+          "retrieved_at": "2026-11-16T08:35:41.607895Z",
+          "content_sha256": "29222d28f69806a90fffe46bb802ecb081987fe6a988e695aea32e2331449573",
+          "locator": "company-link:https://www.linkedin.com/company/petroonline-as",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "https:\\/\\/accella.no\\/#\\/schema\\/logo\\/image\\/\"},\"sameAs\":[\"https:\\/\\/www.linkedin.com\\/company\\/petroonline-as\\/\"]}]}"
+        },
+        {
+          "source_url": "https://accella.no/",
+          "retrieved_at": "2026-11-16T08:35:41.607895Z",
+          "content_sha256": "29222d28f69806a90fffe46bb802ecb081987fe6a988e695aea32e2331449573",
+          "locator": "identity-proof:971050756",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "ass=\"elementor-icon-list-text\">Org.nr.: 971.050.756</span>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div class=\"ele"
+        },
+        {
+          "source_url": "https://accella.no/",
+          "retrieved_at": "2026-11-16T08:35:41.607895Z",
+          "content_sha256": "29222d28f69806a90fffe46bb802ecb081987fe6a988e695aea32e2331449573",
+          "locator": "registry-contact:phone",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a href=\"tel:+4723060340\">"
+        }
+      ]
+    },
+    {
+      "sample": "P3g",
+      "seed": 20261120,
+      "sample_sha256": "8392ab97844f871857104cdaf7b04e150a55c8000fc157b4a93e01b4721fec0f",
+      "envelopes_sha256": "fee658298fa69f87be5fb1945f7fcddf92409dc4229f21ef759e85f405add812",
+      "organisation_number": "912503259",
+      "company": "OFFICEAID AS",
+      "kind": "social",
+      "url": "https://www.facebook.com/officeaid.no",
+      "field": "social_profile.e4820a560cf8fe8bc60a",
+      "claim_id": "0fa17d6bed3550d73a1854fc20d3b8c319239c9779b7dd1d0f42563435be5e19",
+      "value_sha256": "985bb316a9d6ca82b28455952087f77aa789ba9899068c555bc61f04292281d3",
+      "verdict": "correct",
+      "human_verified": true,
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-18",
+      "method": "Independent web hand-check supplied by the reviewer in conversation",
+      "automated_verdict": "wrong",
+      "automated_reasons": [
+        "own header/footer/name/numeric-link policy no longer verifies"
+      ],
+      "proof_tier": "own_contact_follow_us_v1",
+      "note": "Confirmed by the reviewer.",
+      "review_source_urls": [],
+      "receipts": [
+        {
+          "source_url": "https://www.officeaid.no/kontakt-oss",
+          "retrieved_at": "2026-11-17T17:35:41.783569Z",
+          "content_sha256": "7ce6fd4317fce8eb1ad50be9f1257ce06c4e837cf243fe28eda6a4f66baf1f80",
+          "locator": "company-link:https://www.facebook.com/officeaid.no",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "<a target=\"_blank\" class=\"facebook\" href=\"https://www.facebook.com/officeaid.no\">"
+        },
+        {
+          "source_url": "https://www.officeaid.no/personvern",
+          "retrieved_at": "2026-11-17T17:35:40.114245Z",
+          "content_sha256": "af0ec3bec00d458e4bc6faec795792ba027a3ed7970f964149a81bcb671a43fd",
+          "locator": "identity-proof:912503259",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "trong>OfficeAid AS, organisasjonsnummer 912503259 er ansvarlig for behandlingen av personopplysninger og kan ved spørsmål kontaktes på post@officeaid."
+        }
+      ]
+    },
+    {
+      "sample": "P3g",
+      "seed": 20261120,
+      "sample_sha256": "8392ab97844f871857104cdaf7b04e150a55c8000fc157b4a93e01b4721fec0f",
+      "envelopes_sha256": "fee658298fa69f87be5fb1945f7fcddf92409dc4229f21ef759e85f405add812",
+      "organisation_number": "912503259",
+      "company": "OFFICEAID AS",
+      "kind": "social",
+      "url": "https://www.instagram.com/officeaid.no",
+      "field": "social_profile.d5495ce4f3e7100ace11",
+      "claim_id": "44f5c98bdc923db46d8fda3090f3839b79c905ff203484534b5b6c744adca4b4",
+      "value_sha256": "4e83b3e09fd412b5c17258972abe9f36c16661abb06793ae57dc48c75a181c44",
+      "verdict": "unsure",
+      "human_verified": false,
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-18",
+      "method": "Independent web hand-check supplied by the reviewer in conversation",
+      "automated_verdict": "wrong",
+      "automated_reasons": [
+        "own header/footer/name/numeric-link policy no longer verifies"
+      ],
+      "proof_tier": "own_contact_follow_us_v1",
+      "note": "No definitive human verdict. Keep the original automated label.",
+      "review_source_urls": [],
+      "receipts": [
+        {
+          "source_url": "https://www.officeaid.no/kontakt-oss",
+          "retrieved_at": "2026-11-17T17:35:41.783569Z",
+          "content_sha256": "7ce6fd4317fce8eb1ad50be9f1257ce06c4e837cf243fe28eda6a4f66baf1f80",
+          "locator": "company-link:https://www.instagram.com/officeaid.no",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "<a target=\"_blank\" class=\"instagram\" href=\"https://www.instagram.com/officeaid.no/\">"
+        },
+        {
+          "source_url": "https://www.officeaid.no/personvern",
+          "retrieved_at": "2026-11-17T17:35:40.114245Z",
+          "content_sha256": "af0ec3bec00d458e4bc6faec795792ba027a3ed7970f964149a81bcb671a43fd",
+          "locator": "identity-proof:912503259",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "trong>OfficeAid AS, organisasjonsnummer 912503259 er ansvarlig for behandlingen av personopplysninger og kan ved spørsmål kontaktes på post@officeaid."
+        }
+      ]
+    },
+    {
+      "sample": "P3g",
+      "seed": 20261120,
+      "sample_sha256": "8392ab97844f871857104cdaf7b04e150a55c8000fc157b4a93e01b4721fec0f",
+      "envelopes_sha256": "fee658298fa69f87be5fb1945f7fcddf92409dc4229f21ef759e85f405add812",
+      "organisation_number": "916364806",
+      "company": "TT EXPRESS AS",
+      "kind": "social",
+      "url": "https://www.facebook.com/ttexpressas",
+      "field": "social_profile.7542e61d1ff52387fee4",
+      "claim_id": "5112d36db12f36fd2e1b5ee0afebdb61fa74e6aab9c7150c47a859312f3afe95",
+      "value_sha256": "6630765737e38efa0ac56c6233749b288374e3ebe8abd04c92a4d6c4878b7a02",
+      "verdict": "unsure",
+      "human_verified": false,
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-18",
+      "method": "Independent web hand-check supplied by the reviewer in conversation",
+      "automated_verdict": "wrong",
+      "automated_reasons": [
+        "own header/footer/name/numeric-link policy no longer verifies"
+      ],
+      "proof_tier": "owner_jsonld_sameas_v1",
+      "note": "No definitive human verdict. Keep the original automated label.",
+      "review_source_urls": [],
+      "receipts": [
+        {
+          "source_url": "https://www.ttexpress.no/",
+          "retrieved_at": "2026-11-17T17:34:46.072576Z",
+          "content_sha256": "9e61edce2a822ed1a26c3244913a2719b70e5ccca16b28c03b74cdd9e901365d",
+          "locator": "company-link:https://www.facebook.com/ttexpressas",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "\\/\\/www.ttexpress.no\\/#\\/schema\\/logo\\/image\\/\"},\"sameAs\":[\"https:\\/\\/www.facebook.com\\/ttexpressas\\/\"]}]}"
+        },
+        {
+          "source_url": "https://www.ttexpress.no/",
+          "retrieved_at": "2026-11-17T17:34:46.072576Z",
+          "content_sha256": "9e61edce2a822ed1a26c3244913a2719b70e5ccca16b28c03b74cdd9e901365d",
+          "locator": "identity-proof:916364806",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "     <small>Organisasjonsnummer</small>\n916364806\n                        \n                    </div>\n\n                </div>\n            </div>\n     "
+        }
+      ]
+    },
+    {
+      "sample": "P3g",
+      "seed": 20261120,
+      "sample_sha256": "8392ab97844f871857104cdaf7b04e150a55c8000fc157b4a93e01b4721fec0f",
+      "envelopes_sha256": "fee658298fa69f87be5fb1945f7fcddf92409dc4229f21ef759e85f405add812",
+      "organisation_number": "927525399",
+      "company": "WOODWORKS! CLUSTER",
+      "kind": "social",
+      "url": "https://www.facebook.com/arenaskog",
+      "field": "social_profile.0bd0c401d7185c63cf8c",
+      "claim_id": "5ef1404be1edf36b201197eb1cbeccb83861f1bb05ec416da3387e5f216fe76a",
+      "value_sha256": "c43945038be372527871ff0045f896c5ef63105c1685d0cb2fa0021d9de88c8d",
+      "verdict": "wrong",
+      "human_verified": true,
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-18",
+      "method": "Independent web hand-check supplied by the reviewer in conversation",
+      "automated_verdict": "wrong",
+      "automated_reasons": [
+        "own header/footer/name/numeric-link policy no longer verifies"
+      ],
+      "proof_tier": "owner_jsonld_sameas_v1",
+      "note": "The profile belongs to the Swedish Arena Skog project. WoodWorks visibly links facebook.com/woodworkscluster.",
+      "review_source_urls": [
+        "https://arenaskog.se/om-oss/",
+        "https://woodworkscluster.no/"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://woodworkscluster.no/",
+          "retrieved_at": "2026-11-17T17:31:45.682612Z",
+          "content_sha256": "8e2c2eed3e3549b40dde5c22acd82eaedef946c7e8310918f415d092e369af44",
+          "locator": "company-link:https://www.facebook.com/arenaskog",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "/woodworkscluster.no\\/#\\/schema\\/logo\\/image\\/\"},\"sameAs\":[\"https:\\/\\/www.facebook.com\\/arenaskog\\/?fref=ts\",\"https:\\/\\/linkedin.com\\/company\\/woodworks-cluster\"]}]}"
+        },
+        {
+          "source_url": "https://woodworkscluster.no/",
+          "retrieved_at": "2026-11-17T17:31:45.682612Z",
+          "content_sha256": "8e2c2eed3e3549b40dde5c22acd82eaedef946c7e8310918f415d092e369af44",
+          "locator": "identity-proof:927525399",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "egata 22, 7713 Steinkjer</p>\n<p>Org.nr: 927 525 399</p>\n<p><a title=\"Klikk for å lese personvernerklæringen til denne nettsiden\" href=\"https://woodwor"
+        },
+        {
+          "source_url": "https://woodworkscluster.no/",
+          "retrieved_at": "2026-11-17T17:31:45.682612Z",
+          "content_sha256": "8e2c2eed3e3549b40dde5c22acd82eaedef946c7e8310918f415d092e369af44",
+          "locator": "registry-contact:phone",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a title=\"Ring oss på telefon +47 95 23 90 06\" href=\"tel:+47 95 23 90 06\">"
+        },
+        {
+          "source_url": "https://woodworkscluster.no/",
+          "retrieved_at": "2026-11-17T17:31:45.682612Z",
+          "content_sha256": "8e2c2eed3e3549b40dde5c22acd82eaedef946c7e8310918f415d092e369af44",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a title=\"Send e-post til post@woodworkscluster.no\" href=\"mailto:post@woodworkscluster.no\">"
+        }
+      ]
+    },
+    {
+      "sample": "P3g",
+      "seed": 20261120,
+      "sample_sha256": "8392ab97844f871857104cdaf7b04e150a55c8000fc157b4a93e01b4721fec0f",
+      "envelopes_sha256": "fee658298fa69f87be5fb1945f7fcddf92409dc4229f21ef759e85f405add812",
+      "organisation_number": "966261218",
+      "company": "BØMLO FOLKEHØGSKULE STI",
+      "kind": "social",
+      "url": "https://www.facebook.com/bomlofhs",
+      "field": "social_profile.da3c563bcb7ae48e6ab7",
+      "claim_id": "87e0b498620dceac07bd1e857e8eeb021dabcc749bf51faae346f7f43560eb0b",
+      "value_sha256": "c2b7bdfb53f3e7773c6b306626cfcc9bb898f9aba61e477ed2df111f37cf117e",
+      "verdict": "correct",
+      "human_verified": true,
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-18",
+      "method": "Independent web hand-check supplied by the reviewer in conversation",
+      "automated_verdict": "wrong",
+      "automated_reasons": [
+        "own header/footer/name/numeric-link policy no longer verifies"
+      ],
+      "proof_tier": "own_contact_follow_us_v1",
+      "note": "Confirmed by the reviewer.",
+      "review_source_urls": [],
+      "receipts": [
+        {
+          "source_url": "https://bomlo.fhs.no/kontakt/",
+          "retrieved_at": "2026-11-17T17:36:19.990163Z",
+          "content_sha256": "96426be74e058c18dcf8de5254f553e3e7a379b26e6d0590238dc9ce77f16ad0",
+          "locator": "company-link:https://www.facebook.com/bomlofhs",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "<a href='https://www.facebook.com/bomlofhs' target='_blank' rel='noopener noreferrer'>"
+        },
+        {
+          "source_url": "https://bomlo.fhs.no/",
+          "retrieved_at": "2026-11-17T17:36:15.671188Z",
+          "content_sha256": "1ce7249d4ac7be72821e4f9a9232fd7fcc9c469132f3fd3ac82497dfb2dad501",
+          "locator": "identity-proof:966261218",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "><!-- wp:paragraph -->\n<p>Velkommen til Bømlo folkehøgskule, helt vest i havgapet. Det perfekte stedet for nære øyeblikk og fantastiske eventyr – her hjemme, og der ute i den store verden.</p>\n<!-- /wp:paragraph --></div>\t\t\t\t</div>\n\t\t\t\t\t</section>\n\t<section id=\"bfhs-linje-grid-container\">\n\t\t\t\t<div c"
+        },
+        {
+          "source_url": "https://bomlo.fhs.no/",
+          "retrieved_at": "2026-11-17T17:36:15.671188Z",
+          "content_sha256": "1ce7249d4ac7be72821e4f9a9232fd7fcc9c469132f3fd3ac82497dfb2dad501",
+          "locator": "registry-contact:phone",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a class=\"footer-phone-nr\" href=\"tel:53425650\">"
+        },
+        {
+          "source_url": "https://bomlo.fhs.no/",
+          "retrieved_at": "2026-11-17T17:36:15.671188Z",
+          "content_sha256": "1ce7249d4ac7be72821e4f9a9232fd7fcc9c469132f3fd3ac82497dfb2dad501",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a href=\"mailto:post@bomlo.fhs.no\">"
+        }
+      ]
+    },
+    {
+      "sample": "P3g",
+      "seed": 20261120,
+      "sample_sha256": "8392ab97844f871857104cdaf7b04e150a55c8000fc157b4a93e01b4721fec0f",
+      "envelopes_sha256": "fee658298fa69f87be5fb1945f7fcddf92409dc4229f21ef759e85f405add812",
+      "organisation_number": "966261218",
+      "company": "BØMLO FOLKEHØGSKULE STI",
+      "kind": "social",
+      "url": "https://www.instagram.com/bomlofhs",
+      "field": "social_profile.06a9a588a254ad534b67",
+      "claim_id": "8d34c756d05796be0fd931a4cf1a72c6bb2c0ee0513d64d083f8b0331764b127",
+      "value_sha256": "c98435330a28c4682b99629ec81531626c2c9afaff772d92f4e7ae3cada8bca7",
+      "verdict": "unsure",
+      "human_verified": false,
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-18",
+      "method": "Independent web hand-check supplied by the reviewer in conversation",
+      "automated_verdict": "wrong",
+      "automated_reasons": [
+        "own header/footer/name/numeric-link policy no longer verifies"
+      ],
+      "proof_tier": "own_contact_follow_us_v1",
+      "note": "No definitive human verdict. Keep the original automated label.",
+      "review_source_urls": [],
+      "receipts": [
+        {
+          "source_url": "https://bomlo.fhs.no/kontakt/",
+          "retrieved_at": "2026-11-17T17:36:19.990163Z",
+          "content_sha256": "96426be74e058c18dcf8de5254f553e3e7a379b26e6d0590238dc9ce77f16ad0",
+          "locator": "company-link:https://www.instagram.com/bomlofhs",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "<a href='https://www.instagram.com/bomlofhs/' target='_blank' rel='noopener noreferrer'>"
+        },
+        {
+          "source_url": "https://bomlo.fhs.no/",
+          "retrieved_at": "2026-11-17T17:36:15.671188Z",
+          "content_sha256": "1ce7249d4ac7be72821e4f9a9232fd7fcc9c469132f3fd3ac82497dfb2dad501",
+          "locator": "identity-proof:966261218",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "><!-- wp:paragraph -->\n<p>Velkommen til Bømlo folkehøgskule, helt vest i havgapet. Det perfekte stedet for nære øyeblikk og fantastiske eventyr – her hjemme, og der ute i den store verden.</p>\n<!-- /wp:paragraph --></div>\t\t\t\t</div>\n\t\t\t\t\t</section>\n\t<section id=\"bfhs-linje-grid-container\">\n\t\t\t\t<div c"
+        },
+        {
+          "source_url": "https://bomlo.fhs.no/",
+          "retrieved_at": "2026-11-17T17:36:15.671188Z",
+          "content_sha256": "1ce7249d4ac7be72821e4f9a9232fd7fcc9c469132f3fd3ac82497dfb2dad501",
+          "locator": "registry-contact:phone",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a class=\"footer-phone-nr\" href=\"tel:53425650\">"
+        },
+        {
+          "source_url": "https://bomlo.fhs.no/",
+          "retrieved_at": "2026-11-17T17:36:15.671188Z",
+          "content_sha256": "1ce7249d4ac7be72821e4f9a9232fd7fcc9c469132f3fd3ac82497dfb2dad501",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a href=\"mailto:post@bomlo.fhs.no\">"
+        }
+      ]
+    },
+    {
+      "sample": "P3g",
+      "seed": 20261120,
+      "sample_sha256": "8392ab97844f871857104cdaf7b04e150a55c8000fc157b4a93e01b4721fec0f",
+      "envelopes_sha256": "fee658298fa69f87be5fb1945f7fcddf92409dc4229f21ef759e85f405add812",
+      "organisation_number": "966261218",
+      "company": "BØMLO FOLKEHØGSKULE STI",
+      "kind": "social",
+      "url": "https://www.tiktok.com/@bomlofhs",
+      "field": "social_profile.39c18321b8e95f7eaa56",
+      "claim_id": "0b6ab605d938254ce3764fa0158d73e1d74be641974b9bd73265278f02901944",
+      "value_sha256": "26bf128d9896da1bb6bbd9b74cd13372b4bbae06c551d49feeb675b9980a2a30",
+      "verdict": "unsure",
+      "human_verified": false,
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-18",
+      "method": "Independent web hand-check supplied by the reviewer in conversation",
+      "automated_verdict": "wrong",
+      "automated_reasons": [
+        "own header/footer/name/numeric-link policy no longer verifies"
+      ],
+      "proof_tier": "own_contact_follow_us_v1",
+      "note": "No definitive human verdict. Keep the original automated label.",
+      "review_source_urls": [],
+      "receipts": [
+        {
+          "source_url": "https://bomlo.fhs.no/kontakt/",
+          "retrieved_at": "2026-11-17T17:36:19.990163Z",
+          "content_sha256": "96426be74e058c18dcf8de5254f553e3e7a379b26e6d0590238dc9ce77f16ad0",
+          "locator": "company-link:https://www.tiktok.com/@bomlofhs",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "<a href='https://www.tiktok.com/@bomlofhs' target='_blank' rel='noopener noreferrer'>"
+        },
+        {
+          "source_url": "https://bomlo.fhs.no/",
+          "retrieved_at": "2026-11-17T17:36:15.671188Z",
+          "content_sha256": "1ce7249d4ac7be72821e4f9a9232fd7fcc9c469132f3fd3ac82497dfb2dad501",
+          "locator": "identity-proof:966261218",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "><!-- wp:paragraph -->\n<p>Velkommen til Bømlo folkehøgskule, helt vest i havgapet. Det perfekte stedet for nære øyeblikk og fantastiske eventyr – her hjemme, og der ute i den store verden.</p>\n<!-- /wp:paragraph --></div>\t\t\t\t</div>\n\t\t\t\t\t</section>\n\t<section id=\"bfhs-linje-grid-container\">\n\t\t\t\t<div c"
+        },
+        {
+          "source_url": "https://bomlo.fhs.no/",
+          "retrieved_at": "2026-11-17T17:36:15.671188Z",
+          "content_sha256": "1ce7249d4ac7be72821e4f9a9232fd7fcc9c469132f3fd3ac82497dfb2dad501",
+          "locator": "registry-contact:phone",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a class=\"footer-phone-nr\" href=\"tel:53425650\">"
+        },
+        {
+          "source_url": "https://bomlo.fhs.no/",
+          "retrieved_at": "2026-11-17T17:36:15.671188Z",
+          "content_sha256": "1ce7249d4ac7be72821e4f9a9232fd7fcc9c469132f3fd3ac82497dfb2dad501",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a href=\"mailto:post@bomlo.fhs.no\">"
+        }
+      ]
+    },
+    {
+      "sample": "P3g",
+      "seed": 20261120,
+      "sample_sha256": "8392ab97844f871857104cdaf7b04e150a55c8000fc157b4a93e01b4721fec0f",
+      "envelopes_sha256": "fee658298fa69f87be5fb1945f7fcddf92409dc4229f21ef759e85f405add812",
+      "organisation_number": "966261218",
+      "company": "BØMLO FOLKEHØGSKULE STI",
+      "kind": "social",
+      "url": "https://www.youtube.com/channel/UCKY6h9lnepk7TGa-pvYSDdw",
+      "field": "social_profile.b383ab520f963baf73c3",
+      "claim_id": "c7ebb4053e6da32aaae44109bb243cb885379d353035cb476e87db973289d9a4",
+      "value_sha256": "dbb24bea1a9ee49678550c405964a059f2e2321188db76a0385fef683cfe17e4",
+      "verdict": "correct",
+      "human_verified": true,
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-18",
+      "method": "Independent web hand-check supplied by the reviewer in conversation",
+      "automated_verdict": "wrong",
+      "automated_reasons": [
+        "own header/footer/name/numeric-link policy no longer verifies"
+      ],
+      "proof_tier": "own_contact_follow_us_v1",
+      "note": "Confirmed by the reviewer.",
+      "review_source_urls": [],
+      "receipts": [
+        {
+          "source_url": "https://bomlo.fhs.no/kontakt/",
+          "retrieved_at": "2026-11-17T17:36:19.990163Z",
+          "content_sha256": "96426be74e058c18dcf8de5254f553e3e7a379b26e6d0590238dc9ce77f16ad0",
+          "locator": "company-link:https://www.youtube.com/channel/UCKY6h9lnepk7TGa-pvYSDdw",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "<a href='https://www.youtube.com/channel/UCKY6h9lnepk7TGa-pvYSDdw' target='_blank' rel='noopener noreferrer'>"
+        },
+        {
+          "source_url": "https://bomlo.fhs.no/",
+          "retrieved_at": "2026-11-17T17:36:15.671188Z",
+          "content_sha256": "1ce7249d4ac7be72821e4f9a9232fd7fcc9c469132f3fd3ac82497dfb2dad501",
+          "locator": "identity-proof:966261218",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "><!-- wp:paragraph -->\n<p>Velkommen til Bømlo folkehøgskule, helt vest i havgapet. Det perfekte stedet for nære øyeblikk og fantastiske eventyr – her hjemme, og der ute i den store verden.</p>\n<!-- /wp:paragraph --></div>\t\t\t\t</div>\n\t\t\t\t\t</section>\n\t<section id=\"bfhs-linje-grid-container\">\n\t\t\t\t<div c"
+        },
+        {
+          "source_url": "https://bomlo.fhs.no/",
+          "retrieved_at": "2026-11-17T17:36:15.671188Z",
+          "content_sha256": "1ce7249d4ac7be72821e4f9a9232fd7fcc9c469132f3fd3ac82497dfb2dad501",
+          "locator": "registry-contact:phone",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a class=\"footer-phone-nr\" href=\"tel:53425650\">"
+        },
+        {
+          "source_url": "https://bomlo.fhs.no/",
+          "retrieved_at": "2026-11-17T17:36:15.671188Z",
+          "content_sha256": "1ce7249d4ac7be72821e4f9a9232fd7fcc9c469132f3fd3ac82497dfb2dad501",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a href=\"mailto:post@bomlo.fhs.no\">"
+        }
+      ]
+    },
+    {
+      "sample": "P3g",
+      "seed": 20261120,
+      "sample_sha256": "8392ab97844f871857104cdaf7b04e150a55c8000fc157b4a93e01b4721fec0f",
+      "envelopes_sha256": "fee658298fa69f87be5fb1945f7fcddf92409dc4229f21ef759e85f405add812",
+      "organisation_number": "970991786",
+      "company": "VITEC AGRANDO AS",
+      "kind": "social",
+      "url": "https://www.facebook.com/vitec.agrando",
+      "field": "social_profile.c3dd740348bbaf1cc3a8",
+      "claim_id": "d797d6c88610b3583a162c8cfe6739be19b14af93c49dcf7ddce2ac041e6d85a",
+      "value_sha256": "4cc32841e811a9083cf39d5e98e89f07caf86ff758ca64c8b4bd6f77af6e426b",
+      "verdict": "correct",
+      "human_verified": true,
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-18",
+      "method": "Independent web hand-check supplied by the reviewer in conversation",
+      "automated_verdict": "doubtful",
+      "automated_reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "note": "Confirmed by the reviewer.",
+      "review_source_urls": [],
+      "receipts": [
+        {
+          "source_url": "https://agrando.no/",
+          "retrieved_at": "2026-11-17T17:35:38.316805Z",
+          "content_sha256": "7efee3d7418e6c3c13a45d6029e6492df42e5fec1430077c2ad35772e162c644",
+          "locator": "company-link:https://www.facebook.com/vitec.agrando",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "<a href=\"https://www.facebook.com/vitec.agrando/\">"
+        },
+        {
+          "source_url": "https://agrando.no/",
+          "retrieved_at": "2026-11-17T17:35:38.316805Z",
+          "content_sha256": "7efee3d7418e6c3c13a45d6029e6492df42e5fec1430077c2ad35772e162c644",
+          "locator": "identity-proof:970991786",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "eckCookie();\n    });\n</script><title>\r\n\tVitec Agrando\r\n</title><meta id=\"MetaRobots\" name=\"robots\" content=\"INDEX, FOLLOW\" /><link href=\"/Portals/_default/skins/polo//skin.css?cdv=932\" rel=\"stylesheet\" /><link href=\"/Portals/_default/skins/polo//custom.css?cdv=932\" rel=\"stylesheet\" /><link href=\"/Po"
+        },
+        {
+          "source_url": "https://agrando.no/",
+          "retrieved_at": "2026-11-17T17:35:38.316805Z",
+          "content_sha256": "7efee3d7418e6c3c13a45d6029e6492df42e5fec1430077c2ad35772e162c644",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a href=\"mailto:laborasupport.no@vitecsoftware.com\">"
+        }
+      ]
+    },
+    {
+      "sample": "P3g",
+      "seed": 20261120,
+      "sample_sha256": "8392ab97844f871857104cdaf7b04e150a55c8000fc157b4a93e01b4721fec0f",
+      "envelopes_sha256": "fee658298fa69f87be5fb1945f7fcddf92409dc4229f21ef759e85f405add812",
+      "organisation_number": "985256055",
+      "company": "FRAMEWORKS AS",
+      "kind": "social",
+      "url": "https://www.facebook.com/FrameworksArendal",
+      "field": "social_profile.797b6282a9683973d0be",
+      "claim_id": "a79a2e0c36cb9371790db90dc24c8b823e4032e305263ff5ab6dde508dd285be",
+      "value_sha256": "aef37703f8e6107469347d35039457ad00f4cbc7f421bf1d9fbd033675864d13",
+      "verdict": "correct",
+      "human_verified": true,
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-18",
+      "method": "Independent web hand-check supplied by the reviewer in conversation",
+      "automated_verdict": "wrong",
+      "automated_reasons": [
+        "own header/footer/name/numeric-link policy no longer verifies"
+      ],
+      "proof_tier": "owner_jsonld_sameas_v1",
+      "note": "Confirmed by the reviewer.",
+      "review_source_urls": [],
+      "receipts": [
+        {
+          "source_url": "https://frameworks.no/",
+          "retrieved_at": "2026-11-17T17:35:33.256098Z",
+          "content_sha256": "09a6f3b7ec8bab0877adfa3b7d56e15bd2693b782ec14d9e8ccabeb9d90d4cfe",
+          "locator": "company-link:https://www.facebook.com/FrameworksArendal",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "ps:\\/\\/frameworks.no\\/#\\/schema\\/logo\\/image\\/\"},\"sameAs\":[\"https:\\/\\/www.facebook.com\\/FrameworksArendal\",\"https:\\/\\/www.linkedin.com\\/company\\/frameworks-as\",\"http"
+        },
+        {
+          "source_url": "https://frameworks.no/",
+          "retrieved_at": "2026-11-17T17:35:33.256098Z",
+          "content_sha256": "09a6f3b7ec8bab0877adfa3b7d56e15bd2693b782ec14d9e8ccabeb9d90d4cfe",
+          "locator": "identity-proof:985256055",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "den 2012. Organisasjonsnummeret vårt er 985 256 055. Du når oss på telefon <a href=\"tel:+4740400088\">40 40 00 88</a> eller på <a href=\"mailto:simen.wi"
+        },
+        {
+          "source_url": "https://frameworks.no/",
+          "retrieved_at": "2026-11-17T17:35:33.256098Z",
+          "content_sha256": "09a6f3b7ec8bab0877adfa3b7d56e15bd2693b782ec14d9e8ccabeb9d90d4cfe",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a href=\"mailto:sw@frameworks.no\" target=\"_self\" class=\"e-paragraph-link-base e-default-a\">"
+        }
+      ]
+    },
+    {
+      "sample": "P3g",
+      "seed": 20261120,
+      "sample_sha256": "8392ab97844f871857104cdaf7b04e150a55c8000fc157b4a93e01b4721fec0f",
+      "envelopes_sha256": "fee658298fa69f87be5fb1945f7fcddf92409dc4229f21ef759e85f405add812",
+      "organisation_number": "985256055",
+      "company": "FRAMEWORKS AS",
+      "kind": "social",
+      "url": "https://www.instagram.com/frameworks.no",
+      "field": "social_profile.953abee84410a04cef7a",
+      "claim_id": "84ae73402a7f5464bb51b3e9a1402be6d546b8953cf097dfa6663545c5973051",
+      "value_sha256": "75265fb2770e37bcdce3e0a4e54420393d6ea9e2af1bd56377394515b6554a7a",
+      "verdict": "unsure",
+      "human_verified": false,
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-18",
+      "method": "Independent web hand-check supplied by the reviewer in conversation",
+      "automated_verdict": "wrong",
+      "automated_reasons": [
+        "own header/footer/name/numeric-link policy no longer verifies"
+      ],
+      "proof_tier": "owner_jsonld_sameas_v1",
+      "note": "No definitive human verdict. Keep the original automated label.",
+      "review_source_urls": [],
+      "receipts": [
+        {
+          "source_url": "https://frameworks.no/",
+          "retrieved_at": "2026-11-17T17:35:33.256098Z",
+          "content_sha256": "09a6f3b7ec8bab0877adfa3b7d56e15bd2693b782ec14d9e8ccabeb9d90d4cfe",
+          "locator": "company-link:https://www.instagram.com/frameworks.no",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "ndal\",\"https:\\/\\/www.linkedin.com\\/company\\/frameworks-as\",\"https:\\/\\/www.instagram.com\\/frameworks.no\\/\"]}]}"
+        },
+        {
+          "source_url": "https://frameworks.no/",
+          "retrieved_at": "2026-11-17T17:35:33.256098Z",
+          "content_sha256": "09a6f3b7ec8bab0877adfa3b7d56e15bd2693b782ec14d9e8ccabeb9d90d4cfe",
+          "locator": "identity-proof:985256055",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "den 2012. Organisasjonsnummeret vårt er 985 256 055. Du når oss på telefon <a href=\"tel:+4740400088\">40 40 00 88</a> eller på <a href=\"mailto:simen.wi"
+        },
+        {
+          "source_url": "https://frameworks.no/",
+          "retrieved_at": "2026-11-17T17:35:33.256098Z",
+          "content_sha256": "09a6f3b7ec8bab0877adfa3b7d56e15bd2693b782ec14d9e8ccabeb9d90d4cfe",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a href=\"mailto:sw@frameworks.no\" target=\"_self\" class=\"e-paragraph-link-base e-default-a\">"
+        }
+      ]
+    },
+    {
+      "sample": "P3g",
+      "seed": 20261120,
+      "sample_sha256": "8392ab97844f871857104cdaf7b04e150a55c8000fc157b4a93e01b4721fec0f",
+      "envelopes_sha256": "fee658298fa69f87be5fb1945f7fcddf92409dc4229f21ef759e85f405add812",
+      "organisation_number": "985256055",
+      "company": "FRAMEWORKS AS",
+      "kind": "social",
+      "url": "https://www.linkedin.com/company/frameworks-as",
+      "field": "social_profile.48fd2b0c9512fbe4f7a6",
+      "claim_id": "1afc82cf6e0e21f4ca4fba20d2fff78f7c19d5369c0ca3e9e6035d0f66db43a8",
+      "value_sha256": "afe7865c733443a034a54251480cb786ec5e4b52990dc9c36b65ca7d26263b87",
+      "verdict": "correct",
+      "human_verified": true,
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-18",
+      "method": "Independent web hand-check supplied by the reviewer in conversation",
+      "automated_verdict": "wrong",
+      "automated_reasons": [
+        "own header/footer/name/numeric-link policy no longer verifies"
+      ],
+      "proof_tier": "owner_jsonld_sameas_v1",
+      "note": "Confirmed by the reviewer.",
+      "review_source_urls": [],
+      "receipts": [
+        {
+          "source_url": "https://frameworks.no/",
+          "retrieved_at": "2026-11-17T17:35:33.256098Z",
+          "content_sha256": "09a6f3b7ec8bab0877adfa3b7d56e15bd2693b782ec14d9e8ccabeb9d90d4cfe",
+          "locator": "company-link:https://www.linkedin.com/company/frameworks-as",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": ",\"sameAs\":[\"https:\\/\\/www.facebook.com\\/FrameworksArendal\",\"https:\\/\\/www.linkedin.com\\/company\\/frameworks-as\",\"https:\\/\\/www.instagram.com\\/frameworks.no\\/\"]}]}"
+        },
+        {
+          "source_url": "https://frameworks.no/",
+          "retrieved_at": "2026-11-17T17:35:33.256098Z",
+          "content_sha256": "09a6f3b7ec8bab0877adfa3b7d56e15bd2693b782ec14d9e8ccabeb9d90d4cfe",
+          "locator": "identity-proof:985256055",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "den 2012. Organisasjonsnummeret vårt er 985 256 055. Du når oss på telefon <a href=\"tel:+4740400088\">40 40 00 88</a> eller på <a href=\"mailto:simen.wi"
+        },
+        {
+          "source_url": "https://frameworks.no/",
+          "retrieved_at": "2026-11-17T17:35:33.256098Z",
+          "content_sha256": "09a6f3b7ec8bab0877adfa3b7d56e15bd2693b782ec14d9e8ccabeb9d90d4cfe",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a href=\"mailto:sw@frameworks.no\" target=\"_self\" class=\"e-paragraph-link-base e-default-a\">"
+        }
+      ]
+    },
+    {
+      "sample": "P3g",
+      "seed": 20261120,
+      "sample_sha256": "8392ab97844f871857104cdaf7b04e150a55c8000fc157b4a93e01b4721fec0f",
+      "envelopes_sha256": "fee658298fa69f87be5fb1945f7fcddf92409dc4229f21ef759e85f405add812",
+      "organisation_number": "986902651",
+      "company": "TINNHEIA BIL AS",
+      "kind": "social",
+      "url": "https://www.facebook.com/tinnheiabil",
+      "field": "social_profile.61871d655cbf9e64a4c8",
+      "claim_id": "0dce3904f63b6a6ab0086c28f989599216f0e77bf4a3c2d700a213e838283326",
+      "value_sha256": "8275667299defbb8fb4450f7654300417e715ff141f477883b8cab4408c8132b",
+      "verdict": "correct",
+      "human_verified": true,
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-18",
+      "method": "Independent web hand-check supplied by the reviewer in conversation",
+      "automated_verdict": "doubtful",
+      "automated_reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "note": "Confirmed by the reviewer.",
+      "review_source_urls": [],
+      "receipts": [
+        {
+          "source_url": "https://tinnheiabil.no/",
+          "retrieved_at": "2026-11-17T17:33:01.405390Z",
+          "content_sha256": "434f6a1a4f56ee47328ac9e3109bdc3e281baf17ff1a1c9f7b1da14e1a353c9c",
+          "locator": "company-link:https://www.facebook.com/tinnheiabil",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "<a href=\"https://www.facebook.com/tinnheiabil/?locale=nb_NO\">"
+        },
+        {
+          "source_url": "https://tinnheiabil.no/",
+          "retrieved_at": "2026-11-17T17:33:01.405390Z",
+          "content_sha256": "434f6a1a4f56ee47328ac9e3109bdc3e281baf17ff1a1c9f7b1da14e1a353c9c",
+          "locator": "identity-proof:986902651",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": " \n    <title>Bilverksted Kristiansand - Tinnheia Bil AS</title>\n<meta name=\"description\" content=\"Bilverksted med EU-kontroll og service på alle bilmerker også elbil og hybrid, AC-service, dekk og dekkhotell, automatgir service. Tinnheia Bil, Kristiansand\" />\n<meta property=\"og:description\" content="
+        }
+      ]
+    },
+    {
+      "sample": "P3g",
+      "seed": 20261120,
+      "sample_sha256": "8392ab97844f871857104cdaf7b04e150a55c8000fc157b4a93e01b4721fec0f",
+      "envelopes_sha256": "fee658298fa69f87be5fb1945f7fcddf92409dc4229f21ef759e85f405add812",
+      "organisation_number": "990825076",
+      "company": "PECULIUM AS",
+      "kind": "social",
+      "url": "https://www.instagram.com/peculium_as",
+      "field": "social_profile.2dcb6b7a9fec8b2f0ac0",
+      "claim_id": "224e82d494d2b8c2b0b4a16c39a46b85b6694f23029e87161b9eb90f1fa2454f",
+      "value_sha256": "7e7fc6d9efa5b40029033e716aba16439132673b26466da457a69a5388dcb4a7",
+      "verdict": "unsure",
+      "human_verified": false,
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-18",
+      "method": "Independent web hand-check supplied by the reviewer in conversation",
+      "automated_verdict": "doubtful",
+      "automated_reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "note": "No definitive human verdict. Keep the original automated label.",
+      "review_source_urls": [],
+      "receipts": [
+        {
+          "source_url": "https://peculium.no/",
+          "retrieved_at": "2026-11-17T17:34:37.753058Z",
+          "content_sha256": "371bf928068d9a8b69328cb82205e5a52bc143313abb7f29b6d1bea2530c1a64",
+          "locator": "company-link:https://www.instagram.com/peculium_as",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "<a class=\"text-gray-400 hover:opacity-80 transition-opacity\" target=\"_blank\" rel=\"noreferrer\" href=\"https://www.instagram.com/peculium_as/\">"
+        },
+        {
+          "source_url": "https://peculium.no/kontakt",
+          "retrieved_at": "2026-11-17T17:34:40.683770Z",
+          "content_sha256": "f765c4a15fd2a63af7e7b6e6f049cc83dc296668259afe3b45873f86543c4f84",
+          "locator": "identity-proof:990825076",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": ":1\",\"S:1\")</script><title>Kontakt oss - Peculium AS | Eiendomsforvaltning i Porsgrunn</title><meta name=\"description\" content=\"Ta kontakt med Peculium AS for eiendomsforvaltning og utleie i Porsgrunn. Vi hjelper deg med lokaler, næringsbygg og boligutleie. Ring eller send e-post.\"/><meta name=\"autho"
+        }
+      ]
+    },
+    {
+      "sample": "P3g",
+      "seed": 20261120,
+      "sample_sha256": "8392ab97844f871857104cdaf7b04e150a55c8000fc157b4a93e01b4721fec0f",
+      "envelopes_sha256": "fee658298fa69f87be5fb1945f7fcddf92409dc4229f21ef759e85f405add812",
+      "organisation_number": "991323848",
+      "company": "TROLLHEIM AS",
+      "kind": "social",
+      "url": "https://facebook.com/TrollheimAS",
+      "field": "social_profile.bd2edc079fd97ab0af11",
+      "claim_id": "11a4588edf8f10586ffc46ef9b762ff4dc124c6b759e3307e08882a11f9ca96d",
+      "value_sha256": "b82ec63685d0ce5d6b5f21419186bf8ce0310efbbcf0ab9d562ba62fcf98a433",
+      "verdict": "wrong",
+      "human_verified": true,
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-18",
+      "method": "Independent web hand-check supplied by the reviewer in conversation",
+      "automated_verdict": "doubtful",
+      "automated_reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "note": "The profile belongs to Trollheim Kurs og Kompetanse AS (924191627), which shares trollheim.no.",
+      "review_source_urls": [
+        "https://virksomhet.brreg.no/nb/oppslag/enheter/924191627",
+        "https://trollheim.no/kontakt/"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://trollheim.no/",
+          "retrieved_at": "2026-11-17T17:33:18.184369Z",
+          "content_sha256": "15f2a742f2d0baf7a6ba588677bd54709bdf264771c719f4519a33d081d92e4a",
+          "locator": "company-link:https://facebook.com/TrollheimAS",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "<a class=\"elementor-icon elementor-social-icon elementor-social-icon-facebook-f elementor-repeater-item-4f37a04\" href=\"https://facebook.com/TrollheimAS\" target=\"_blank\">"
+        },
+        {
+          "source_url": "https://trollheim.no/",
+          "retrieved_at": "2026-11-17T17:33:18.184369Z",
+          "content_sha256": "15f2a742f2d0baf7a6ba588677bd54709bdf264771c719f4519a33d081d92e4a",
+          "locator": "identity-proof:991323848",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "9mefvgt6v6z5ncrt7e8vatuv2ns0y\" /><title>Trollheim &#8211; Arbeid og inkludering</title>\n<meta name='robots' content='max-image-preview:large' />\n\n<script>\ndataLayer = [{\"title\":\"Hjem\",\"author\":\"Webmaster\",\"wordcount\":66,\"logged_in\":\"false\",\"page_id\":47,\"post_date\":\"2018-01-25 14:20:00\"}];\n</script>\n"
+        },
+        {
+          "source_url": "https://trollheim.no/",
+          "retrieved_at": "2026-11-17T17:33:18.184369Z",
+          "content_sha256": "15f2a742f2d0baf7a6ba588677bd54709bdf264771c719f4519a33d081d92e4a",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a href=\"mailto:post@trollheim.no\">"
+        },
+        {
+          "source_url": "https://trollheim.no/",
+          "retrieved_at": "2026-11-17T17:33:18.184369Z",
+          "content_sha256": "15f2a742f2d0baf7a6ba588677bd54709bdf264771c719f4519a33d081d92e4a",
+          "locator": "registry-contact:phone",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "=\"color: #000000;\">Trollheim &#8211; Tlf. 71 65 77 77 &#8211; <strong><a href=\"mailto:post@trollheim.no\">post@trollheim.no</a></strong></span><br /><span style=\"color: #000000;\">Trollheim avd. Røtet/Hovedkontor: Industrivegen 63, 6652 Surnadal</span><br /><span style=\"color: #000000;\">Trollheim avd."
+        }
+      ]
+    },
+    {
+      "sample": "P3g",
+      "seed": 20261120,
+      "sample_sha256": "8392ab97844f871857104cdaf7b04e150a55c8000fc157b4a93e01b4721fec0f",
+      "envelopes_sha256": "fee658298fa69f87be5fb1945f7fcddf92409dc4229f21ef759e85f405add812",
+      "organisation_number": "991323848",
+      "company": "TROLLHEIM AS",
+      "kind": "social",
+      "url": "https://twitter.com/TrollheimAS",
+      "field": "social_profile.35b2b052c8d353abdf12",
+      "claim_id": "ea32c4045639c4a937d708c87ca9eaadfb63032726244b1238ac00c6dfeef070",
+      "value_sha256": "1a5d6079cc490af64ea82554b4adc58d6f3510edd2358c966e159b8880851d84",
+      "verdict": "correct",
+      "human_verified": true,
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-18",
+      "method": "Independent web hand-check supplied by the reviewer in conversation",
+      "automated_verdict": "doubtful",
+      "automated_reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "note": "Confirmed by the reviewer.",
+      "review_source_urls": [],
+      "receipts": [
+        {
+          "source_url": "https://trollheim.no/",
+          "retrieved_at": "2026-11-17T17:33:18.184369Z",
+          "content_sha256": "15f2a742f2d0baf7a6ba588677bd54709bdf264771c719f4519a33d081d92e4a",
+          "locator": "company-link:https://twitter.com/TrollheimAS",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "<a class=\"elementor-icon elementor-social-icon elementor-social-icon-twitter elementor-repeater-item-e32e197\" href=\"https://twitter.com/TrollheimAS\" target=\"_blank\">"
+        },
+        {
+          "source_url": "https://trollheim.no/",
+          "retrieved_at": "2026-11-17T17:33:18.184369Z",
+          "content_sha256": "15f2a742f2d0baf7a6ba588677bd54709bdf264771c719f4519a33d081d92e4a",
+          "locator": "identity-proof:991323848",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "9mefvgt6v6z5ncrt7e8vatuv2ns0y\" /><title>Trollheim &#8211; Arbeid og inkludering</title>\n<meta name='robots' content='max-image-preview:large' />\n\n<script>\ndataLayer = [{\"title\":\"Hjem\",\"author\":\"Webmaster\",\"wordcount\":66,\"logged_in\":\"false\",\"page_id\":47,\"post_date\":\"2018-01-25 14:20:00\"}];\n</script>\n"
+        },
+        {
+          "source_url": "https://trollheim.no/",
+          "retrieved_at": "2026-11-17T17:33:18.184369Z",
+          "content_sha256": "15f2a742f2d0baf7a6ba588677bd54709bdf264771c719f4519a33d081d92e4a",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a href=\"mailto:post@trollheim.no\">"
+        },
+        {
+          "source_url": "https://trollheim.no/",
+          "retrieved_at": "2026-11-17T17:33:18.184369Z",
+          "content_sha256": "15f2a742f2d0baf7a6ba588677bd54709bdf264771c719f4519a33d081d92e4a",
+          "locator": "registry-contact:phone",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "=\"color: #000000;\">Trollheim &#8211; Tlf. 71 65 77 77 &#8211; <strong><a href=\"mailto:post@trollheim.no\">post@trollheim.no</a></strong></span><br /><span style=\"color: #000000;\">Trollheim avd. Røtet/Hovedkontor: Industrivegen 63, 6652 Surnadal</span><br /><span style=\"color: #000000;\">Trollheim avd."
+        }
+      ]
+    },
+    {
+      "sample": "P3g",
+      "seed": 20261120,
+      "sample_sha256": "8392ab97844f871857104cdaf7b04e150a55c8000fc157b4a93e01b4721fec0f",
+      "envelopes_sha256": "fee658298fa69f87be5fb1945f7fcddf92409dc4229f21ef759e85f405add812",
+      "organisation_number": "991323848",
+      "company": "TROLLHEIM AS",
+      "kind": "social",
+      "url": "https://www.instagram.com/trollheimas",
+      "field": "social_profile.e1befb5db785d0b7dd9f",
+      "claim_id": "100351b94f0421fff4de073512b48a3e5a9e81d42a0d6742ccc4504454094a4b",
+      "value_sha256": "f2f77a5c43ba1b9706f6a6581d22970227d710f3c0d1ec22568e080c3fde874b",
+      "verdict": "unsure",
+      "human_verified": false,
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-18",
+      "method": "Independent web hand-check supplied by the reviewer in conversation",
+      "automated_verdict": "doubtful",
+      "automated_reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "note": "No definitive human verdict. Keep the original automated label.",
+      "review_source_urls": [],
+      "receipts": [
+        {
+          "source_url": "https://trollheim.no/",
+          "retrieved_at": "2026-11-17T17:33:18.184369Z",
+          "content_sha256": "15f2a742f2d0baf7a6ba588677bd54709bdf264771c719f4519a33d081d92e4a",
+          "locator": "company-link:https://www.instagram.com/trollheimas",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "<a class=\"elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-34dd5a2\" href=\"https://www.instagram.com/trollheimas/\" target=\"_blank\">"
+        },
+        {
+          "source_url": "https://trollheim.no/",
+          "retrieved_at": "2026-11-17T17:33:18.184369Z",
+          "content_sha256": "15f2a742f2d0baf7a6ba588677bd54709bdf264771c719f4519a33d081d92e4a",
+          "locator": "identity-proof:991323848",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "9mefvgt6v6z5ncrt7e8vatuv2ns0y\" /><title>Trollheim &#8211; Arbeid og inkludering</title>\n<meta name='robots' content='max-image-preview:large' />\n\n<script>\ndataLayer = [{\"title\":\"Hjem\",\"author\":\"Webmaster\",\"wordcount\":66,\"logged_in\":\"false\",\"page_id\":47,\"post_date\":\"2018-01-25 14:20:00\"}];\n</script>\n"
+        },
+        {
+          "source_url": "https://trollheim.no/",
+          "retrieved_at": "2026-11-17T17:33:18.184369Z",
+          "content_sha256": "15f2a742f2d0baf7a6ba588677bd54709bdf264771c719f4519a33d081d92e4a",
+          "locator": "registry-contact:email_domain",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "<a href=\"mailto:post@trollheim.no\">"
+        },
+        {
+          "source_url": "https://trollheim.no/",
+          "retrieved_at": "2026-11-17T17:33:18.184369Z",
+          "content_sha256": "15f2a742f2d0baf7a6ba588677bd54709bdf264771c719f4519a33d081d92e4a",
+          "locator": "registry-contact:phone",
+          "extraction_method": "signalpost.registry_contact.v1",
+          "claim_span": "=\"color: #000000;\">Trollheim &#8211; Tlf. 71 65 77 77 &#8211; <strong><a href=\"mailto:post@trollheim.no\">post@trollheim.no</a></strong></span><br /><span style=\"color: #000000;\">Trollheim avd. Røtet/Hovedkontor: Industrivegen 63, 6652 Surnadal</span><br /><span style=\"color: #000000;\">Trollheim avd."
+        }
+      ]
+    },
+    {
+      "sample": "P3g",
+      "seed": 20261120,
+      "sample_sha256": "8392ab97844f871857104cdaf7b04e150a55c8000fc157b4a93e01b4721fec0f",
+      "envelopes_sha256": "fee658298fa69f87be5fb1945f7fcddf92409dc4229f21ef759e85f405add812",
+      "organisation_number": "994479865",
+      "company": "IDENTUM AS",
+      "kind": "social",
+      "url": "https://twitter.com/IAM_Identum",
+      "field": "social_profile.3dd1c0da4be551029676",
+      "claim_id": "e0dade64bddb9af8f4075bcd418758a022890e1d2535e7a16bb63b76fe6fe90f",
+      "value_sha256": "c1296bd282f06354e947f520d01470b126fa49c6da28a2000a207c0541ac5fbe",
+      "verdict": "correct",
+      "human_verified": true,
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-18",
+      "method": "Independent web hand-check supplied by the reviewer in conversation",
+      "automated_verdict": "wrong",
+      "automated_reasons": [
+        "own header/footer/name/numeric-link policy no longer verifies"
+      ],
+      "proof_tier": "own_contact_follow_us_v1",
+      "note": "Confirmed by the reviewer.",
+      "review_source_urls": [],
+      "receipts": [
+        {
+          "source_url": "https://www.identum.no/kontakt",
+          "retrieved_at": "2026-11-17T17:32:02.930741Z",
+          "content_sha256": "0a7b75899edc756ec1ed67721be022fda9265762314a53377ed1519905a19a65",
+          "locator": "company-link:https://twitter.com/IAM_Identum",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "<a class=\"default-link nav-list__link \" href=\"https://twitter.com/IAM_Identum\" target=\"_blank\">"
+        },
+        {
+          "source_url": "https://www.identum.no/",
+          "retrieved_at": "2026-11-17T17:32:01.564168Z",
+          "content_sha256": "356223741f48deba792eff2c569e1b2a0b4bdee0c59d567e77912eb72e1301d0",
+          "locator": "identity-proof:994479865",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "\">Organisasjonsnummer</h3>\n        <p>NO994479865 MVA</p>\n      </li>\n    \n    </ul>\n  \n</div>\n</div>\n        \n      </div>\n      <div class=\"footer-i"
+        }
+      ]
+    },
+    {
+      "sample": "P3g",
+      "seed": 20261120,
+      "sample_sha256": "8392ab97844f871857104cdaf7b04e150a55c8000fc157b4a93e01b4721fec0f",
+      "envelopes_sha256": "fee658298fa69f87be5fb1945f7fcddf92409dc4229f21ef759e85f405add812",
+      "organisation_number": "994479865",
+      "company": "IDENTUM AS",
+      "kind": "social",
+      "url": "https://www.facebook.com/identum.no",
+      "field": "social_profile.ad8947bf2bf1e12aa466",
+      "claim_id": "7c1af5800b7fed50cf6152674d95be079ca6ac35ac3ea1f6d67f383b7e3b7f0c",
+      "value_sha256": "2c4c4cf965ea914a198c53542961a3d4673324608bc3c3d1135e0e53631995f9",
+      "verdict": "correct",
+      "human_verified": true,
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-18",
+      "method": "Independent web hand-check supplied by the reviewer in conversation",
+      "automated_verdict": "wrong",
+      "automated_reasons": [
+        "own header/footer/name/numeric-link policy no longer verifies"
+      ],
+      "proof_tier": "own_contact_follow_us_v1",
+      "note": "Confirmed by the reviewer.",
+      "review_source_urls": [],
+      "receipts": [
+        {
+          "source_url": "https://www.identum.no/kontakt",
+          "retrieved_at": "2026-11-17T17:32:02.930741Z",
+          "content_sha256": "0a7b75899edc756ec1ed67721be022fda9265762314a53377ed1519905a19a65",
+          "locator": "company-link:https://www.facebook.com/identum.no",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "<a class=\"default-link nav-list__link \" href=\"https://www.facebook.com/identum.no\" target=\"_blank\">"
+        },
+        {
+          "source_url": "https://www.identum.no/",
+          "retrieved_at": "2026-11-17T17:32:01.564168Z",
+          "content_sha256": "356223741f48deba792eff2c569e1b2a0b4bdee0c59d567e77912eb72e1301d0",
+          "locator": "identity-proof:994479865",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "\">Organisasjonsnummer</h3>\n        <p>NO994479865 MVA</p>\n      </li>\n    \n    </ul>\n  \n</div>\n</div>\n        \n      </div>\n      <div class=\"footer-i"
+        }
+      ]
+    },
+    {
+      "sample": "P3g",
+      "seed": 20261120,
+      "sample_sha256": "8392ab97844f871857104cdaf7b04e150a55c8000fc157b4a93e01b4721fec0f",
+      "envelopes_sha256": "fee658298fa69f87be5fb1945f7fcddf92409dc4229f21ef759e85f405add812",
+      "organisation_number": "994479865",
+      "company": "IDENTUM AS",
+      "kind": "social",
+      "url": "https://www.instagram.com/iam_identum",
+      "field": "social_profile.76243b34a4bff246f9cd",
+      "claim_id": "9aa51c87668e27c4d90b669885b27bd7d2de7fc99151a986a63fdc1459a7c07d",
+      "value_sha256": "0b6a4cb8475b3fdcb9ca83820879cc12d01b5747919d9b351e6b15b4dce36627",
+      "verdict": "unsure",
+      "human_verified": false,
+      "reviewer": "Nethra Venkat",
+      "review_date": "2026-11-18",
+      "method": "Independent web hand-check supplied by the reviewer in conversation",
+      "automated_verdict": "wrong",
+      "automated_reasons": [
+        "own header/footer/name/numeric-link policy no longer verifies"
+      ],
+      "proof_tier": "own_contact_follow_us_v1",
+      "note": "No definitive human verdict. Keep the original automated label.",
+      "review_source_urls": [],
+      "receipts": [
+        {
+          "source_url": "https://www.identum.no/kontakt",
+          "retrieved_at": "2026-11-17T17:32:02.930741Z",
+          "content_sha256": "0a7b75899edc756ec1ed67721be022fda9265762314a53377ed1519905a19a65",
+          "locator": "company-link:https://www.instagram.com/iam_identum",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "<a class=\"default-link nav-list__link \" href=\"https://www.instagram.com/iam_identum/\" target=\"_blank\">"
+        },
+        {
+          "source_url": "https://www.identum.no/",
+          "retrieved_at": "2026-11-17T17:32:01.564168Z",
+          "content_sha256": "356223741f48deba792eff2c569e1b2a0b4bdee0c59d567e77912eb72e1301d0",
+          "locator": "identity-proof:994479865",
+          "extraction_method": "signalpost.website.v1",
+          "claim_span": "\">Organisasjonsnummer</h3>\n        <p>NO994479865 MVA</p>\n      </li>\n    \n    </ul>\n  \n</div>\n</div>\n        \n      </div>\n      <div class=\"footer-i"
+        }
+      ]
+    }
+  ]
+}

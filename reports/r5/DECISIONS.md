@@ -810,3 +810,10 @@
 - Seed 20261121, clean clone of 1722b89, seven evaluator flags. The sample excludes 2,205 unique numbers from committed and on-disk sample files and has zero overlap. The clone passed all 1,368 tests.
 - The first attempt hit a run-wide OSError loading the frozen Brreg subset and used live fallback. Its outputs and receipts are preserved. After successfully preflighting all 499 snapshot receipt writes, one fresh retry ran from separate state and passed check_live_run --count 500. The attempts were never combined.
 - Retry wall 1,871.92 s, margin 228.08 s, all 500 terminal envelopes, zero placeholders, 5,243 HTTP attempts and $0 provider cost. Only website work recorded deadline errors. GLEIF and all Stage S families finished for all inputs. TED recorded six robots blocks. The run published 41 websites and 28 social URLs. Seven legacy wrong labels were resolved by the current verifier and zero wrong labels remained unresolved. Details in final500/SUMMARY.md and final500/urls.md.
+
+## 2026-11-18 - HC1a JSON-LD social conflict and name guard
+
+- Recorded all 26 flagged P2/P3g social observations using Nethra Venkat's supplied independent hand-check. Fourteen are correct, two wrong and ten unsure. The ledger pins the original sample, envelope and canonical claim value SHA-256 and preserves every automated label.
+- A visible different account on the same platform vetoes an owner JSON-LD declaration across the checked site pages. Equivalent scheme, platform host and handle spelling do not count as a conflict. JSON-LD-only accounts need a distinctive handle from the exact organisation's current or registry-recorded former name. All site-page digests used by the policy are recorded for the saved-output verifier.
+- The WoodWorks regression uses hash-pinned slices of the saved P3g homepage. Tests also check a conflict on the fetched contact page, current and historical name matching, and reproduction of a saved-output veto.
+- Full pytest passed 1,373 tests in 839.67 s.

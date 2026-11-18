@@ -14,6 +14,7 @@ class Link:
     owned_context: bool
     header_footer_context: bool = False
     visible_context: bool = True
+    rendered: bool = True
 
 
 def decode_html(body: bytes) -> str:
@@ -83,7 +84,9 @@ class Page(HTMLParser):
             own = any(x[1] for x in self.stack) and not any(x[0] == 'article' or x[2] or x[4] for x in self.stack)
             strict = any(x[3] for x in self.stack) and not any(x[0] in {'article','script','template'} or x[2] or x[4] for x in self.stack)
             visible=not any(x[0] in {'article','script','template','noscript'} or x[2] or x[4] for x in self.stack)
-            self._anchor = Link(urljoin(self.url, attrs.get("href", "")), "", span, own, strict, visible)
+            rendered = not any(x[0] in {'head', 'script', 'style', 'template', 'noscript'} or x[2]
+                               for x in self.stack)
+            self._anchor = Link(urljoin(self.url, attrs.get("href", "")), "", span, own, strict, visible, rendered)
         if tag == "script" and attrs.get("type", "").lower() == "application/ld+json":
             self._script = ""
         if tag == 'p' and not any(x[2] for x in self.stack):

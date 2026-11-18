@@ -14,6 +14,7 @@ from .html import Page
 from .policy import domain, normalize_url, SOCIAL, DIRECTORIES, FREE_MAIL
 from .proof import score, phone, extract_entity_cards, find_containing_card, registry_contacts
 from .social import discover, discover_strict, profile_url, numeric_linkedin
+from .owner_social import FOLLOW_US, SAME_AS, SOCIAL_POLICY, declared_profiles, former_names, same_as_veto, visible_profiles
 from .fetcher import TRANSIENT
 from .seed_index import SEED_ORIGINS, publisher_has_number
 
@@ -233,10 +234,9 @@ async def fetch(org, envelope, bulk, http, previous=None, *, resume=False, candi
         if unit in units and field in {'registered_website','registered_email'}:
             units[unit]['website' if field=='registered_website' else 'email']=c.value
     context['subunits']=[{'orgnr':unit,**data} for unit,data in units.items()]
-    context['former_names']=list(dict.fromkeys(record['navn'] for c in envelope.claims
+    context['former_names']=former_names(record for c in envelope.claims
         if c.field=='identity.historical_names' and c.availability=='available' and not c.carried_forward
-        and isinstance(c.value,list) for record in c.value
-        if isinstance(record,dict) and isinstance(record.get('navn'),str) and record['navn'].strip()))
+        and isinstance(c.value,list) for record in c.value)
     if previous:
         old = previous if 'claims' in previous else previous.get('profile', {})
         context['brands'] = [c['value'] for c in old.get('claims', []) if c.get('field') == 'public_brand'
@@ -477,22 +477,29 @@ def extract_contacts_and_social(section, org, web_claim, pages, context=None, en
 
     social_seen, contact_seen = set(), set()
     original_pages={(id(r),id(p)) for r,p in pages}
-    for source_response, source_page in list(pages)+list(owner_pages):
-        if domain(source_response.url) != target_domain:
-            continue
+    own_pages = [(r, p) for r, p in [*pages, *owner_pages] if domain(r.url) == target_domain]
+    visible = visible_profiles(p for _, p in own_pages)
+    name = context.get('name') or ''
+    historical = context.get('former_names', ())
+    for source_response, source_page in own_pages:
         cards = extract_entity_cards(source_page.raw) if is_group else []
-        from .owner_social import declared_profiles
         profiles={url:{'span':span,'tier':'own_header_footer_numeric_linkedin_v1' if numeric_linkedin(url) else 'own_header_footer_exact_name_v1'}
-                  for url,span in discover_strict(source_page,context.get('name')).items()}
-        if context.get('name') and not is_group and web_val.get('identity_level') in {'HIGH','VERIFIED'}:
-            for url,receipt in declared_profiles(source_page,context.get('name'),org,context).items():profiles.setdefault(url,receipt)
+                  for url,span in discover_strict(source_page,name).items()}
+        if name and not is_group and web_val.get('identity_level') in {'HIGH','VERIFIED'}:
+            for url, receipt in declared_profiles(source_page,name,org,context).items():
+                if receipt['tier'] == SAME_AS and same_as_veto(url, visible, name, historical):
+                    continue
+                profiles.setdefault(url, receipt)
         for url,receipt in profiles.items():
             if is_group:continue
             if url not in social_seen:
                 value={'url':url,'platform':domain(url),'proof_tier':receipt['tier'],'company_name':context.get('name')}
-                if receipt['tier'] in {'owner_jsonld_sameas_v1','own_contact_follow_us_v1'}:value['owner_declaration']=receipt
+                if receipt['tier'] in {SAME_AS, FOLLOW_US}:value['owner_declaration']=receipt
                 publish(section,source_response,org,'social_profile.'+digest(url)[:20],value,'company-link:'+url,receipt['span'])
                 refs={eid for c in envelope.claims if c.field=='identity.legal_name' and c.availability=='available' for eid in c.evidence_ids} if envelope else set()
+                if envelope and receipt['tier'] == SAME_AS and same_as_veto(url, visible, name):
+                    refs.update(eid for c in envelope.claims if c.field == 'identity.historical_names'
+                                and c.availability == 'available' and not c.carried_forward for eid in c.evidence_ids)
                 section.evidence.extend(e for e in envelope.evidence if e.id in refs) if envelope else None
                 section.claims[-1].evidence_ids.extend(sorted(refs))
                 section.claims[-1].evidence_ids.extend(web_claim.evidence_ids)
@@ -649,14 +656,17 @@ def publish_result(org,envelope,http,section,choices,attempts,context):
     accepted_domain_pages = [(r, p) for r, p in pages if domain(r.url) == domain(response.url) and not getattr(r,'pdf_receipt',None)]
     identity_claim = section.claims[-1]
     descriptions(section, org, identity_claim, accepted_domain_pages)
-    extract_contacts_and_social(section, org, identity_claim, accepted_domain_pages, context=context, envelope=envelope,owner_pages=getattr(http,'owner_social_pages',{}).get(org,()))
+    owner_pages = getattr(http,'owner_social_pages',{}).get(org,())
+    extract_contacts_and_social(section, org, identity_claim, accepted_domain_pages, context=context, envelope=envelope,owner_pages=owner_pages)
     brand = extract_public_brand(page, context.get("name"))
     if brand:
         span = (page.span_for(brand) or "")[:150]
         publish(section, response, org, "public_brand", brand, "meta:brand", span)
     section.state = "available"
     http.accepted_pages[org] = accepted_domain_pages
+    social_pages = {(r.url, r.sha) for r, _ in [*accepted_domain_pages, *owner_pages] if domain(r.url) == domain(response.url)}
     envelope.run.refresh['website'] = {'checked_urls': sorted({r.url for r, _ in http.accepted_pages[org]}),
-                                       'social_policy':'strict_header_footer_or_exact_owner_declaration_v3'}
+                                       'social_policy': SOCIAL_POLICY,
+                                       'social_pages': [{'url': url, 'content_sha256': sha} for url, sha in sorted(social_pages)]}
     section.errors.append(Error(section='website',code='website_candidates',message=json.dumps(attempts+http.attempts.get(org,[]),ensure_ascii=False)))
     return section

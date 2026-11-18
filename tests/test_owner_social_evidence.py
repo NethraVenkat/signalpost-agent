@@ -11,7 +11,8 @@ def checked(row,cfg):
     return verify_social(OUR,row,evidence,lambda sha:decode_body((cfg.state_dir/'blobs'/sha).read_bytes()))
 def test_exact_owner_jsonld_full_evidence_and_independent_replay(tmp_path,monkeypatch):
     node={'@type':'Organization','name':'Public Store Brand','vatID':'NO'+OUR+'MVA','sameAs':[URL]}
-    body=html(extra='<script type="application/ld+json">'+json.dumps(node)+'</script>')
+    body=html(extra='<script type="application/ld+json">'+json.dumps(node)+'</script>'
+                    '<main><a href="'+URL+'">Facebook</a></main>')
     report,row,requests,cfg=execute_web(tmp_path,monkeypatch,body=body)
     claim=new_claim(row)
     assert claim['value']['proof_tier']=='owner_jsonld_sameas_v1' and checked(row,cfg)==1
@@ -21,7 +22,9 @@ def test_exact_owner_jsonld_full_evidence_and_independent_replay(tmp_path,monkey
     with pytest.raises(AssertionError,match='Unsupported owner social declaration'):checked(forged,cfg)
 def test_owner_declaration_cannot_survive_missing_or_group_website(tmp_path,monkeypatch):
     node={'@type':'Organization','identifier':OUR,'sameAs':URL}
-    _,row,_,cfg=execute_web(tmp_path,monkeypatch,body=html(extra='<script type="application/ld+json">'+json.dumps(node)+'</script>'))
+    _,row,_,cfg=execute_web(tmp_path,monkeypatch,body=html(extra=
+        '<script type="application/ld+json">'+json.dumps(node)+'</script>'
+        '<main><a href="'+URL+'">Facebook</a></main>'))
     forged=copy.deepcopy(row);forged['claims']=[c for c in forged['claims'] if c['field']!='official_website']
     with pytest.raises(AssertionError,match='requires a verified/HIGH website'):checked(forged,cfg)
     forged=copy.deepcopy(row);next(c for c in forged['claims'] if c['field']=='official_website')['value']['relationship_note']='group_site'

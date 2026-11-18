@@ -444,7 +444,8 @@ def verify(first, state_dir, count, organisations=None, report=None, require_cle
         from scripts.verify_legal_pdf import verify as verify_pdf
         verify_pdf(row['organisation_number'],data,evidence,stored_body,lambda sha:(state_dir/'blobs'/sha).read_bytes())
         from scripts.verify_owner_social import verify as verify_owner_social
-        verify_owner_social(row['organisation_number'],data,evidence,stored_body)
+        verify_owner_social(row['organisation_number'],data,evidence,stored_body,
+                            lambda sha: (state_dir/'blobs'/sha).read_bytes())
         filing_year_facts+=verify_filing_years(row,data,evidence,stored_body)
     result = {"lines": len(rows), "schema_valid": True, "published_claims": published, "source_blobs_verified": len(seen)}
     result.update(synthesis_companies=synthesis_companies,synthesis_sentences=synthesis_sentences,synthesis_unverified_values=0)

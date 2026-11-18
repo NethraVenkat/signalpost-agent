@@ -1,12 +1,84 @@
 """Owner declarations supplement existing strict social links on proven sites."""
 import json,re
-from urllib.parse import urlsplit,urljoin
+import unicodedata
+from urllib.parse import unquote,urlsplit,urljoin
 from .social import profile_url as _profile_url,numeric_linkedin,shared_group_context
 from .publisher_identity import normalize_name
 from .publisher import _Tree,_Node,_excluded,_text,_CREDIT,extract_publisher
 from .policy import domain
 
 EXCLUDE=re.compile(r'founder|grunnlegger|agency|designer|designbyr.|webbyr.|group|gruppen|konsern|holding',re.I)
+SAME_AS = 'owner_jsonld_sameas_v1'
+FOLLOW_US = 'own_contact_follow_us_v1'
+SOCIAL_POLICY = 'strict_header_footer_or_exact_owner_declaration_v4'
+
+
+def profile_key(url):
+    """Compare profile identities without changing the URL that was published."""
+    platform = domain(url)
+    if platform == 'twitter.com':
+        platform = 'x.com'
+    path = unquote(urlsplit(url).path).strip('/')
+    if platform == 'facebook.com' and re.fullmatch(r'pages/[^/]+/\d+', path, re.I):
+        path = path.rsplit('/', 1)[1]
+    if platform == 'youtube.com' and path.lower().startswith('channel/'):
+        return platform, 'channel/' + path.split('/', 1)[1]
+    return platform, path.casefold()
+
+
+def visible_profiles(pages):
+    visible = {}
+    for page in pages:
+        for link in page.links:
+            if link.rendered and (url := profile_url(link.href)):
+                platform, key = profile_key(url)
+                visible.setdefault(platform, set()).add(key)
+    return visible
+
+
+def _handle_tokens(value):
+    text = re.sub(r'(?<=[a-z])(?=[A-Z])', ' ', value)
+    text = text.casefold().replace('ø', 'o').replace('æ', 'ae')
+    folded = ''.join(c for c in unicodedata.normalize('NFKD', text) if not unicodedata.combining(c))
+    return re.findall(r'[a-z0-9]+', folded)
+
+
+def _distinctive_handle(url, names):
+    from .candidates import GENERIC
+    from .rarity import FILLERS, FORMS
+
+    path = unquote(urlsplit(url).path).strip('/').split('/')
+    if domain(url) == 'youtube.com' and path[0].casefold() == 'channel':
+        return False  # The opaque YouTube channel ID is not a name-bearing slug.
+    handle = path[1] if len(path) > 1 else path[0]
+    parts = _handle_tokens(handle)
+    compact = ''.join(parts)
+    generic = GENERIC | FILLERS | FORMS | {'cluster', 'express', 'group', 'gruppen',
+                                          'konsern', 'norge', 'norway', 'terrasse'}
+    for name in names:
+        tokens = [token for token in _handle_tokens(name) if token not in FORMS]
+        distinctive = {token for token in tokens if len(token) >= 4 and token.isalpha() and token not in generic}
+        if distinctive & set(parts):
+            return True
+        if distinctive and compact.startswith(stem := ''.join(tokens)):
+            if re.fullmatch(r'(?:as|asa|no)?\d*', compact[len(stem):]):
+                return True
+    return False
+
+
+def same_as_veto(url, visible, company_name, former_names=()):
+    platform, key = profile_key(url)
+    linked = visible.get(platform, set())
+    if linked - {key}:
+        return 'same_as_visible_profile_conflict'
+    if key not in linked and not _distinctive_handle(url, (company_name, *former_names)):
+        return 'same_as_no_distinctive_name'
+    return None
+
+
+def former_names(records):
+    return tuple(dict.fromkeys(record['navn'] for record in records if isinstance(record, dict)
+                              and isinstance(record.get('navn'), str) and record['navn'].strip()))
 
 
 def profile_url(value):
@@ -106,7 +178,7 @@ def declared_profiles(page,company_name,org,context=None):
                 start=raw.index(token);span=raw[max(0,start-60):start+len(token)+60]
                 if len(span)>300:span=token[:300]
                 if not span or span not in page.raw:continue
-                found.setdefault(url,{'span':span,'tier':'owner_jsonld_sameas_v1','owner_match':'exact_orgnr' if exact_id else 'exact_legal_name',
+                found.setdefault(url,{'span':span,'tier':SAME_AS,'owner_match':'exact_orgnr' if exact_id else 'exact_legal_name',
                     'owner_name':node.get('name'),'vatID':vat,'identifier':identifier,'sameAs':value})
     if not re.search(r'kontakt|contact|impressum|imprint',urlsplit(page.url).path,re.I):return found
     publisher=extract_publisher(page)
@@ -129,7 +201,7 @@ def declared_profiles(page,company_name,org,context=None):
                 if not url or numeric_linkedin(url) or EXCLUDE.search(_text(anchor)):continue
                 span=getattr(anchor,'raw_tag','')
                 if span and len(span)<=300 and span in page.raw:
-                    found.setdefault(url,{'span':span,'tier':'own_contact_follow_us_v1','publisher_excerpt':text})
+                    found.setdefault(url,{'span':span,'tier':FOLLOW_US,'publisher_excerpt':text})
         for child in node.children:
             if isinstance(child,_Node):walk(child)
     walk(tree.root)
