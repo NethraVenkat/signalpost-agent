@@ -693,25 +693,37 @@ async def _run(config, client=None,synthesis_provider=None):
             await offload(write_report,config.report,report)
         except OSError as exc:
             report["warnings"].append(f"report write failed: {type(exc).__name__}")
+    report_write_began = time.monotonic()
     await save_report()
     if config.site_dir is not None:
-        site_estimate = budget.site_estimate
-        if budget.seconds_left() < site_estimate:
+        from .site import SiteDeadline, generate_site
+
+        # Reserve the completion snapshot and final report flush before admitting
+        # optional work. Include twice the observed mandatory report write.
+        completion_reserve = min(5.0, budget.total_seconds * 0.05)
+        completion_reserve += 2 * (time.monotonic() - report_write_began)
+        site_deadline = budget.start + budget.total_seconds - completion_reserve
+        report['finalisation']['completion_reserve_seconds'] = round(completion_reserve, 2)
+        from .budget import SLOW_SITE_SECONDS_PER_COMPANY
+        site_estimate = max(budget.site_estimate, SLOW_SITE_SECONDS_PER_COMPANY * budget.companies)
+        report['finalisation']['site_estimate_seconds'] = round(site_estimate, 2)
+        try:
+            if site_deadline - time.monotonic() < site_estimate:
+                raise SiteDeadline
+            if any(p.resolve().is_relative_to(config.site_dir.resolve()) for p in
+                   (config.output, config.report, config.profiles_output, config.organisations, config.bulk, config.previous) if p):
+                raise ValueError('Site directory overlaps a run input or output')
+            site_began = time.monotonic()
+            site = await offload(generate_site, config.output, config.site_dir, deadline=site_deadline)
+            report['site'] = {'state': 'available', **site}
+            report['finalisation']['site_seconds'] = round(time.monotonic() - site_began, 2)
+        except SiteDeadline:
             report['site'] = {'state': 'skipped', 'reason': 'time_budget', 'seconds_left': round(budget.seconds_left(), 2),
                               'estimated_seconds': round(site_estimate, 2)}
-            report['warnings'].append('site generation skipped: not enough time budget left; envelopes, profiles and report are complete')
-        else:
-            try:
-                from .site import generate_site
-                if any(p.resolve().is_relative_to(config.site_dir.resolve()) for p in
-                       (config.output, config.report, config.profiles_output, config.organisations, config.bulk, config.previous) if p):
-                    raise ValueError('Site directory overlaps a run input or output')
-                site_began = time.monotonic()
-                report['site'] = {'state': 'available', **await offload(generate_site,config.output,config.site_dir)}
-                report['finalisation']['site_seconds'] = round(time.monotonic() - site_began, 2)
-            except Exception as exc:
-                report['site'] = {'state': 'failed', 'error': type(exc).__name__, 'message': str(exc)}
-                report['warnings'].append('site generation failed: ' + type(exc).__name__)
+            report['warnings'].append('site generation skipped because the remaining time budget was insufficient')
+        except Exception as exc:
+            report['site'] = {'state': 'failed', 'error': type(exc).__name__, 'message': str(exc)}
+            report['warnings'].append('site generation failed: ' + type(exc).__name__)
         await save_report()
     progress.stage_update("Output & Site Publishing", "completed")
     progress.log_event("Pipeline complete")

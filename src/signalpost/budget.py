@@ -15,6 +15,9 @@ class SourceFailure(Exception):
 FINALISE_SECONDS_PER_COMPANY = 0.03
 # Static site generation, which is optional and skipped when it cannot fit.
 SITE_SECONDS_PER_COMPANY = 0.05
+# After the required outputs exist, allow for twice P3g's observed
+# 38.91-second site build at 500 companies.
+SLOW_SITE_SECONDS_PER_COMPANY = 0.18
 MIN_RESERVE_FRACTION = 0.10
 # Keep at least this share of the budget for crawling before dropping the site reserve.
 MIN_WORK_FRACTION = 0.25

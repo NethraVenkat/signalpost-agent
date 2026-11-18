@@ -4,6 +4,7 @@ import json
 import re
 from datetime import datetime
 from pathlib import Path
+from time import monotonic
 from urllib.parse import urlsplit
 
 from .models.shapes import validate
@@ -1101,26 +1102,45 @@ def compare_page(title):
     return page('Compare · ' + title, body, kind='compare')
 
 
-def generate_site(input_path, out, title='Signalpost'):
+class SiteDeadline(Exception):
+    """The optional site cannot finish within its allotted time."""
+
+
+def generate_site(input_path, out, title='Signalpost', *, deadline=None):
+    def check():
+        if deadline is not None and monotonic() >= deadline:
+            raise SiteDeadline
+
     input_path, out = Path(input_path), Path(out)
     if input_path.resolve().is_relative_to(out.resolve()):
         raise ValueError('Site directory must not contain its source envelopes')
-    input_rows = [normalize(json.loads(line)) for line in input_path.read_text(encoding='utf-8-sig').split('\n') if line.strip()]
     unique={}
-    for row in input_rows:
-        org=row['organisation_number']
-        if org in unique and unique[org]!=row:raise ValueError('Conflicting duplicate company envelopes')
-        unique[org]=row
+    input_records = 0
+    with input_path.open(encoding='utf-8-sig') as stream:
+        for line in stream:
+            check()
+            if not line.strip():
+                continue
+            row = normalize(json.loads(line))
+            org = row['organisation_number']
+            if org in unique and unique[org] != row:
+                raise ValueError('Conflicting duplicate company envelopes')
+            unique[org] = row
+            input_records += 1
     # A malformed identifier must not abort the whole site, and never becomes a filename.
     # Its terminal envelope stays in the JSON output; the site lists it in a batch notice.
     skipped=[r['organisation_number'] for r in unique.values() if not re.fullmatch(r'\d{9}', r['organisation_number'])]
     rows=[r for r in unique.values() if re.fullmatch(r'\d{9}', r['organisation_number'])]
-    records = [index_record(r) for r in rows]
+    records = []
+    for row in rows:
+        check()
+        records.append(index_record(row))
     payload = json.dumps(records, ensure_ascii=False, sort_keys=True, separators=(',', ':'), allow_nan=False)
     js_payload = payload.replace('</', '<\\/').replace('\u2028', '\\u2028').replace('\u2029', '\\u2029')
     files = {'index.html': index_page(records, title, skipped), 'compare.html': compare_page(title),
              'data/index.json': payload + '\n', 'data/index.js': 'window.SIGNALPOST_INDEX = ' + js_payload + ';\n'}
     for row in rows:
+        check()
         org=row['organisation_number']
         visible=EXPLORER_VISIBLE_ROWS; inline=OFFICIAL_INLINE
         rendered=profile(row,title,visible)
@@ -1128,10 +1148,12 @@ def generate_site(input_path, out, title='Signalpost'):
         # duplicates to the existing local Show remaining loader, preserving
         # every fact, anchor and receipt under the unchanged HTML size gate.
         while len(rendered.encode('utf8'))>=250_000 and visible:
+            check()
             visible//=2
             rendered=profile(row,title,visible)
         # Then defer older official records too (their facts stay in the data file).
         while len(rendered.encode('utf8'))>=250_000 and inline:
+            check()
             inline//=2
             rendered=profile(row,title,visible,official_inline=inline)
         files['c/' + org + '.html'] = rendered
@@ -1139,14 +1161,22 @@ def generate_site(input_path, out, title='Signalpost'):
         data=data.replace('</','<\\/').replace('\u2028','\\u2028').replace('\u2029','\\u2029')
         files['c/'+org+'.data.js']='window.SIGNALPOST_EVIDENCE = '+data+';\n'
     for filename in ('site.css', 'site.js'): files['assets/' + filename] = (ASSETS / filename).read_text(encoding='utf8')
-    # Render everything before writes: template errors cannot leave half a new site.
-    if any(len(content.encode('utf8')) >= 250_000 for path, content in files.items() if path.startswith('c/') and path.endswith('.html')):
+    # Settle size and time gates before publishing any page.
+    sizes = {}
+    for filename, content in files.items():
+        check()
+        sizes[filename] = len(content.encode('utf8'))
+    if any(size >= 250_000 for path, size in sizes.items() if path.startswith('c/') and path.endswith('.html')):
         raise ValueError('Profile page exceeds 250 KB gate')
+    # Budget for file creation overhead and a conservative 5 MB/s write rate.
+    # At this point every page is rendered and the write sizes are known.
+    write_reserve = 0.015 * len(files) + sum(sizes.values()) / 5_000_000
+    if deadline is not None and monotonic() + write_reserve >= deadline:
+        raise SiteDeadline
     for filename, content in files.items():
         target = out / filename
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(content, encoding='utf8', newline='\n')
-    sizes = {filename: len(content.encode('utf8')) for filename, content in files.items()}
-    return {'companies': len(rows), 'input_records':len(input_rows), 'pages': len(rows) + 2, 'skipped_invalid_identifiers': len(skipped), 'total_bytes': sum(sizes.values()),
+    return {'companies': len(rows), 'input_records':input_records, 'pages': len(rows) + 2, 'skipped_invalid_identifiers': len(skipped), 'total_bytes': sum(sizes.values()),
             'largest_profile_data_bytes':max((size for path,size in sizes.items() if path.endswith('.data.js')),default=0),
             'largest_profile_bytes': max((size for path, size in sizes.items() if path.startswith('c/') and path.endswith('.html')), default=0)}

@@ -4,7 +4,7 @@ from types import SimpleNamespace
 
 import pytest
 
-from signalpost.budget import Budget, FINALISE_SECONDS_PER_COMPANY, SITE_SECONDS_PER_COMPANY
+from signalpost.budget import Budget, FINALISE_SECONDS_PER_COMPANY, SITE_SECONDS_PER_COMPANY, SLOW_SITE_SECONDS_PER_COMPANY
 from signalpost.sources.blobstore import BlobStore
 from tests.test_registry import config, execute, numbers
 
@@ -70,3 +70,42 @@ def test_blob_reads_come_from_memory_after_a_write(tmp_path):
     (store.directory / sha).unlink()  # A re-read from disk would now fail.
     assert store.read(sha) == b'hello'
     assert store.read('0' * 64) is None
+
+
+def test_fixed_500_budget_covers_twice_the_measured_finalisation(tmp_path):
+    cfg = config(tmp_path, numbers(500), site_dir=tmp_path / 'site')
+    budget = Budget(cfg)
+    assert budget.total_seconds == 2100
+    assert crawl_seconds(budget) == pytest.approx(1785)
+    # P3g's measured cutoff includes crawl cancellation. Double mandatory and
+    # optional finalisation, and allow ten seconds for completion/CLI overhead.
+    site_estimate = SLOW_SITE_SECONDS_PER_COMPANY * budget.companies
+    assert site_estimate >= 2 * 38.91
+    assert 1786.02 + 2 * 63.59 + site_estimate + 10 < budget.total_seconds
+
+
+def test_site_that_runs_out_of_time_keeps_all_required_outputs(tmp_path, monkeypatch):
+    from signalpost import site
+
+    orgs = numbers(2)
+    cfg = config(tmp_path, orgs, time_budget_seconds=60,
+                 profiles_output=tmp_path / 'profiles.jsonl', site_dir=tmp_path / 'site')
+    original = site.profile
+    rendered = []
+
+    def overrun(row, *args, **kwargs):
+        rendered.append(row['organisation_number'])
+        html = original(row, *args, **kwargs)
+        monkeypatch.setattr(site, 'monotonic', lambda: float('inf'))
+        return html
+
+    monkeypatch.setattr(site, 'profile', overrun)
+    report, rows = execute(cfg)
+    assert len(rendered) == 1
+    assert report['site']['state'] == 'skipped' and report['site']['reason'] == 'time_budget'
+    assert not (cfg.site_dir / 'index.html').exists()
+    assert [row['organisation_number'] for row in rows] == orgs
+    profiles = [json.loads(line) for line in cfg.profiles_output.read_text(encoding='utf8').splitlines()]
+    assert [row['organisation_number'] for row in profiles] == orgs
+    saved = json.loads(cfg.report.read_text(encoding='utf8'))
+    assert saved['emitted_envelopes'] == len(orgs) and saved['site']['state'] == 'skipped'

@@ -798,3 +798,9 @@
 
 - Load the bundled candidate maps once per process. Main and subunit registry contacts have priority, and seeds use the existing request and DNS budgets. A seed can publish only after its exact company number appears in live R1 publisher context and existing identity and conflict checks pass. The saved-output verifier replays this requirement.
 - Full pytest with both bundles passed 1,366 tests. All six fresh seven-flag runs passed the live verifier with zero provider cost. There were 45 websites in both sets, three URL additions and three removals. No frozen input matched the seed index, so the cohort comparison measures regression only. The additions came from existing routes. Bellas Burrito used the registered homepage and matching live publisher brand and email domain, Lillehammer Spa used the full publisher name and registered address, and California Invest used the exact number at the non-www URL. See stageW/new_websites.md for excerpts and measurements.
+
+## 2026-11-18 - F1 bounded finalization
+
+- The 2,100 s fixed default, 0.85 crawl fraction and scaled opt-in are preserved. Mandatory envelopes, profiles and report are written before optional rendering. Site admission uses a doubled measured allowance and reserves the final report flush. Rendering checks the remaining time as it works and checks the estimated write duration before publishing pages.
+- The P3g crawl cutoff of 1,786.02 s plus twice its 63.59 s required-output duration, a 90 s site allowance and 10 s completion overhead gives 2,013.20 s at 500 companies. The slowdown test models this measured workload. The guard does not interrupt required filesystem writes. A separate test forces a site rendering overrun and checks both ordered outputs and the saved report.
+- Full pytest passed 1,368 tests in 888.55 s.
