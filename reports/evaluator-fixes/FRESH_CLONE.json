@@ -1,0 +1,14 @@
+{
+  "commit": "46e8dd408501c129a611149443c65e1f2dc6925c",
+  "python": "3.13.16",
+  "clone_method": "local file transport, depth 1",
+  "clone_seconds": 26.6665133,
+  "install_seconds": 2.1694132,
+  "replay_passed": true,
+  "data_directory_present": false,
+  "state_directory_present": false,
+  "tracked_file_bytes": 440837795,
+  "git_file_bytes": 109850998,
+  "official_source_replay_claims": 314,
+  "official_source_blobs": 9
+}

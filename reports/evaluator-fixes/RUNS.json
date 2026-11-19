@@ -1,0 +1,558 @@
+[
+  {
+    "label": "After 1\u20132: documented command",
+    "exit_code": 0,
+    "process_wall_seconds": 674.9682436000003,
+    "emitted_envelopes": 100,
+    "deadline_hits": 96,
+    "requests": 985,
+    "run_status": "partial",
+    "successful_http_responses": 759,
+    "available_claims": 13566,
+    "counts_by_state": {
+      "complete": 100
+    },
+    "unrecognized_arguments": [],
+    "warnings": [],
+    "startup_identity_check": {
+      "state": "not_applicable",
+      "host": "data.brreg.no",
+      "sample_size": 0,
+      "initial": [],
+      "retries": [],
+      "wait_seconds": 0,
+      "reason": "Fewer than 25 live identity lookups required"
+    },
+    "completion": {
+      "wall_seconds": 673.797,
+      "within_requested_time_budget": true,
+      "within_effective_time_budget": true,
+      "note": "Includes preparation, crawl, mandatory outputs and site; final report flush adds filesystem latency."
+    }
+  },
+  {
+    "label": "After 1\u20132: minimum flags",
+    "exit_code": 0,
+    "process_wall_seconds": 362.0569412999903,
+    "emitted_envelopes": 100,
+    "deadline_hits": 44,
+    "requests": 1158,
+    "run_status": "partial",
+    "successful_http_responses": 922,
+    "available_claims": 13641,
+    "counts_by_state": {
+      "complete": 100
+    },
+    "unrecognized_arguments": [],
+    "warnings": [],
+    "startup_identity_check": {
+      "state": "continue",
+      "host": "data.brreg.no",
+      "sample_size": 25,
+      "initial": [
+        {
+          "organisation_number": "932525070",
+          "state": "reachable",
+          "status": 200
+        },
+        {
+          "organisation_number": "988963259",
+          "state": "reachable",
+          "status": 200
+        },
+        {
+          "organisation_number": "915188389",
+          "state": "reachable",
+          "status": 200
+        },
+        {
+          "organisation_number": "934485718",
+          "state": "reachable",
+          "status": 200
+        },
+        {
+          "organisation_number": "829577372",
+          "state": "reachable",
+          "status": 200
+        },
+        {
+          "organisation_number": "936035523",
+          "state": "reachable",
+          "status": 200
+        },
+        {
+          "organisation_number": "925181536",
+          "state": "reachable",
+          "status": 200
+        },
+        {
+          "organisation_number": "919263601",
+          "state": "reachable",
+          "status": 200
+        },
+        {
+          "organisation_number": "936349676",
+          "state": "reachable",
+          "status": 200
+        },
+        {
+          "organisation_number": "935962196",
+          "state": "reachable",
+          "status": 200
+        },
+        {
+          "organisation_number": "997095987",
+          "state": "reachable",
+          "status": 200
+        },
+        {
+          "organisation_number": "950310499",
+          "state": "reachable",
+          "status": 200
+        },
+        {
+          "organisation_number": "948639416",
+          "state": "reachable",
+          "status": 200
+        },
+        {
+          "organisation_number": "927439794",
+          "state": "reachable",
+          "status": 200
+        },
+        {
+          "organisation_number": "918843183",
+          "state": "reachable",
+          "status": 200
+        },
+        {
+          "organisation_number": "975514412",
+          "state": "reachable",
+          "status": 200
+        },
+        {
+          "organisation_number": "934216385",
+          "state": "reachable",
+          "status": 200
+        },
+        {
+          "organisation_number": "935647142",
+          "state": "reachable",
+          "status": 200
+        },
+        {
+          "organisation_number": "946595845",
+          "state": "reachable",
+          "status": 200
+        },
+        {
+          "organisation_number": "930621927",
+          "state": "reachable",
+          "status": 200
+        },
+        {
+          "organisation_number": "956409071",
+          "state": "reachable",
+          "status": 200
+        },
+        {
+          "organisation_number": "912579433",
+          "state": "reachable",
+          "status": 200
+        },
+        {
+          "organisation_number": "918982523",
+          "state": "reachable",
+          "status": 200
+        },
+        {
+          "organisation_number": "919414944",
+          "state": "reachable",
+          "status": 200
+        },
+        {
+          "organisation_number": "991835423",
+          "state": "reachable",
+          "status": 200
+        }
+      ],
+      "retries": [],
+      "wait_seconds": 0
+    },
+    "completion": {
+      "wall_seconds": 360.89,
+      "within_requested_time_budget": true,
+      "within_effective_time_budget": true,
+      "note": "Includes preparation, crawl, mandatory outputs and site; final report flush adds filesystem latency."
+    }
+  },
+  {
+    "label": "After 1\u20132: three invented flags",
+    "exit_code": 0,
+    "process_wall_seconds": 363.2635158000048,
+    "emitted_envelopes": 100,
+    "deadline_hits": 45,
+    "requests": 1156,
+    "run_status": "partial",
+    "successful_http_responses": 927,
+    "available_claims": 13641,
+    "counts_by_state": {
+      "complete": 100
+    },
+    "unrecognized_arguments": [
+      "--invented-one",
+      "--invented-two",
+      "--invented-three"
+    ],
+    "warnings": [
+      "Ignoring unrecognised arguments: --invented-one --invented-two --invented-three"
+    ],
+    "startup_identity_check": {
+      "state": "continue",
+      "host": "data.brreg.no",
+      "sample_size": 25,
+      "initial": [
+        {
+          "organisation_number": "932525070",
+          "state": "reachable",
+          "status": 200
+        },
+        {
+          "organisation_number": "935962196",
+          "state": "reachable",
+          "status": 200
+        },
+        {
+          "organisation_number": "919263601",
+          "state": "reachable",
+          "status": 200
+        },
+        {
+          "organisation_number": "925181536",
+          "state": "reachable",
+          "status": 200
+        },
+        {
+          "organisation_number": "936349676",
+          "state": "reachable",
+          "status": 200
+        },
+        {
+          "organisation_number": "915188389",
+          "state": "reachable",
+          "status": 200
+        },
+        {
+          "organisation_number": "934485718",
+          "state": "reachable",
+          "status": 200
+        },
+        {
+          "organisation_number": "936035523",
+          "state": "reachable",
+          "status": 200
+        },
+        {
+          "organisation_number": "988963259",
+          "state": "reachable",
+          "status": 200
+        },
+        {
+          "organisation_number": "829577372",
+          "state": "reachable",
+          "status": 200
+        },
+        {
+          "organisation_number": "997095987",
+          "state": "reachable",
+          "status": 200
+        },
+        {
+          "organisation_number": "950310499",
+          "state": "reachable",
+          "status": 200
+        },
+        {
+          "organisation_number": "948639416",
+          "state": "reachable",
+          "status": 200
+        },
+        {
+          "organisation_number": "927439794",
+          "state": "reachable",
+          "status": 200
+        },
+        {
+          "organisation_number": "975514412",
+          "state": "reachable",
+          "status": 200
+        },
+        {
+          "organisation_number": "918843183",
+          "state": "reachable",
+          "status": 200
+        },
+        {
+          "organisation_number": "934216385",
+          "state": "reachable",
+          "status": 200
+        },
+        {
+          "organisation_number": "935647142",
+          "state": "reachable",
+          "status": 200
+        },
+        {
+          "organisation_number": "930621927",
+          "state": "reachable",
+          "status": 200
+        },
+        {
+          "organisation_number": "946595845",
+          "state": "reachable",
+          "status": 200
+        },
+        {
+          "organisation_number": "956409071",
+          "state": "reachable",
+          "status": 200
+        },
+        {
+          "organisation_number": "912579433",
+          "state": "reachable",
+          "status": 200
+        },
+        {
+          "organisation_number": "918982523",
+          "state": "reachable",
+          "status": 200
+        },
+        {
+          "organisation_number": "991835423",
+          "state": "reachable",
+          "status": 200
+        },
+        {
+          "organisation_number": "919414944",
+          "state": "reachable",
+          "status": 200
+        }
+      ],
+      "retries": [],
+      "wait_seconds": 0
+    },
+    "completion": {
+      "wall_seconds": 362.14,
+      "within_requested_time_budget": true,
+      "within_effective_time_budget": true,
+      "note": "Includes preparation, crawl, mandatory outputs and site; final report flush adds filesystem latency."
+    }
+  },
+  {
+    "label": "After 1\u20132: external network blocked",
+    "exit_code": 1,
+    "process_wall_seconds": 18.13000619999366,
+    "emitted_envelopes": 100,
+    "deadline_hits": 0,
+    "requests": 28,
+    "run_status": "aborted",
+    "successful_http_responses": 0,
+    "available_claims": 0,
+    "counts_by_state": {
+      "source_error": 100
+    },
+    "unrecognized_arguments": [],
+    "warnings": [
+      "Aborted: data.brreg.no is unreachable after 25 live identity failures, a 15-second pause and three failed recovery checks",
+      "No successful live HTTP response; any available claims come from saved input or bundled snapshots"
+    ],
+    "startup_identity_check": {
+      "state": "aborted",
+      "host": "data.brreg.no",
+      "sample_size": 25,
+      "initial": [
+        {
+          "organisation_number": "925181536",
+          "state": "network_error",
+          "reason": "dns_error"
+        },
+        {
+          "organisation_number": "829577372",
+          "state": "network_error",
+          "reason": "dns_error"
+        },
+        {
+          "organisation_number": "932525070",
+          "state": "network_error",
+          "reason": "dns_error"
+        },
+        {
+          "organisation_number": "919263601",
+          "state": "network_error",
+          "reason": "dns_error"
+        },
+        {
+          "organisation_number": "988963259",
+          "state": "network_error",
+          "reason": "dns_error"
+        },
+        {
+          "organisation_number": "915188389",
+          "state": "network_error",
+          "reason": "dns_error"
+        },
+        {
+          "organisation_number": "934485718",
+          "state": "network_error",
+          "reason": "dns_error"
+        },
+        {
+          "organisation_number": "936035523",
+          "state": "network_error",
+          "reason": "dns_error"
+        },
+        {
+          "organisation_number": "936349676",
+          "state": "network_error",
+          "reason": "dns_error"
+        },
+        {
+          "organisation_number": "935962196",
+          "state": "network_error",
+          "reason": "dns_error"
+        },
+        {
+          "organisation_number": "997095987",
+          "state": "network_error",
+          "reason": "dns_error"
+        },
+        {
+          "organisation_number": "950310499",
+          "state": "network_error",
+          "reason": "dns_error"
+        },
+        {
+          "organisation_number": "948639416",
+          "state": "network_error",
+          "reason": "dns_error"
+        },
+        {
+          "organisation_number": "927439794",
+          "state": "network_error",
+          "reason": "dns_error"
+        },
+        {
+          "organisation_number": "975514412",
+          "state": "network_error",
+          "reason": "dns_error"
+        },
+        {
+          "organisation_number": "918843183",
+          "state": "network_error",
+          "reason": "dns_error"
+        },
+        {
+          "organisation_number": "934216385",
+          "state": "network_error",
+          "reason": "dns_error"
+        },
+        {
+          "organisation_number": "935647142",
+          "state": "network_error",
+          "reason": "dns_error"
+        },
+        {
+          "organisation_number": "930621927",
+          "state": "network_error",
+          "reason": "dns_error"
+        },
+        {
+          "organisation_number": "946595845",
+          "state": "network_error",
+          "reason": "dns_error"
+        },
+        {
+          "organisation_number": "956409071",
+          "state": "network_error",
+          "reason": "dns_error"
+        },
+        {
+          "organisation_number": "912579433",
+          "state": "network_error",
+          "reason": "dns_error"
+        },
+        {
+          "organisation_number": "918982523",
+          "state": "network_error",
+          "reason": "dns_error"
+        },
+        {
+          "organisation_number": "991835423",
+          "state": "network_error",
+          "reason": "dns_error"
+        },
+        {
+          "organisation_number": "919414944",
+          "state": "network_error",
+          "reason": "dns_error"
+        }
+      ],
+      "retries": [
+        {
+          "organisation_number": "925181536",
+          "state": "network_error",
+          "reason": "dns_error"
+        },
+        {
+          "organisation_number": "829577372",
+          "state": "network_error",
+          "reason": "dns_error"
+        },
+        {
+          "organisation_number": "932525070",
+          "state": "network_error",
+          "reason": "dns_error"
+        }
+      ],
+      "wait_seconds": 15.0,
+      "reason": "First 25 live identity lookups and all three recovery checks failed with network errors"
+    },
+    "completion": {
+      "wall_seconds": 17.422,
+      "within_requested_time_budget": true,
+      "within_effective_time_budget": true,
+      "note": "Includes preparation, crawl, mandatory outputs and site; final report flush adds filesystem latency."
+    }
+  },
+  {
+    "label": "After 3\u20134: documented command",
+    "exit_code": 0,
+    "process_wall_seconds": 537.834534900001,
+    "emitted_envelopes": 100,
+    "deadline_hits": 0,
+    "requests": 1075,
+    "run_status": "partial",
+    "successful_http_responses": 770,
+    "available_claims": 13567,
+    "counts_by_state": {
+      "complete": 100
+    },
+    "unrecognized_arguments": [],
+    "warnings": [],
+    "startup_identity_check": {
+      "state": "not_applicable",
+      "host": "data.brreg.no",
+      "sample_size": 0,
+      "initial": [],
+      "retries": [],
+      "wait_seconds": 0,
+      "reason": "Fewer than 25 live identity lookups required"
+    },
+    "completion": {
+      "wall_seconds": 536.687,
+      "within_requested_time_budget": true,
+      "within_effective_time_budget": true,
+      "note": "Includes preparation, crawl, mandatory outputs and site; final report flush adds filesystem latency."
+    }
+  }
+]

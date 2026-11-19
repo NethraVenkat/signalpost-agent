@@ -1,4 +1,6 @@
-# Rules, Compliance, and Architecture Audit
+# Historical Rules, Compliance, and Architecture Audit
+
+Configuration descriptions are updated where noted. PASS labels and measurements belong to the dated baseline below; current instructions and verification are in [SUBMISSION](../SUBMISSION.md) and [evaluator fixes](../reports/evaluator-fixes/SUMMARY.md).
 
 **Project**: Signalpost  
 **Baseline Commit**: `f019620` (`feat(ui): dashboard filters comparison and timelines`)  
@@ -76,7 +78,7 @@ This compliance audit evaluates Signalpost against the official Builderr competi
 ### Category F: Resource Limits & Cost Accounting
 | ID | Requirement | Exact Source / Contract | Implementation Evidence | Status |
 |---|---|---|---|:---:|
-| F-1 | **Deterministic Budget Watchdog**: Respect `--time-budget-seconds` (default 2,400s) with 0.85 deadline fraction (2,040s cutoff). Cancel gracefully without corruption. | Resource Contract (`docs/EVAL.md`) | [`src/signalpost/watchdog.py`](../src/signalpost/watchdog.py); [`src/signalpost/budget.py`](../src/signalpost/budget.py); verified in `tests/test_release_budgets.py`. | **PASS** |
+| F-1 | **Deterministic Budget Watchdog**: Respect `--time-budget-seconds` (current default 2,100s) with 0.85 deadline fraction (at most 1,785s of source work). Cancel gracefully without corruption. | Resource Contract (`docs/EVAL.md`) | [`src/signalpost/watchdog.py`](../src/signalpost/watchdog.py); [`src/signalpost/budget.py`](../src/signalpost/budget.py); verified in `tests/test_release_budgets.py`. | **PASS** |
 | F-2 | **Request Accounting**: Reserve requests before dispatch; retries count toward caps. Default cap: $20 \times \text{unique companies}$. | Resource Contract | [`src/signalpost/budget.py`](../src/signalpost/budget.py); verified in `tests/test_resource_limits.py`. | **PASS** |
 | F-3 | **Zero-Cost Template Mode**: Template synthesis costs $0 in third-party API fees. No live LLM keys enabled by default. | Cost Rule (`docs/SOURCES.md`) | [`src/signalpost/synthesis/template.py`](../src/signalpost/synthesis/template.py); report emits `third_party_cost_usd: 0.0`. | **PASS** |
 

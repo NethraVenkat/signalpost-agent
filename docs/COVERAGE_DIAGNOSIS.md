@@ -41,7 +41,7 @@ Although their destination evidence pages are genuine live website responses ver
 Out of 1,000 evaluated companies, 953 companies (95.3%) have no published official website. Analysis of recorded error states reveals:
 - **`website_candidates` (999 occurrences)**: Companies where generated candidate domains failed verification.
 - **`website_source_unavailable` (282 occurrences)**: Remote hosts timed out, connection failed, or returned HTTP 5xx.
-- **`website_budget_exhausted` (166 occurrences)**: Per-company request cap (default 6 requests) or global request limit reached before verification was finalized.
+- **`website_budget_exhausted` (166 occurrences)**: Per-company request cap (configured cumulative website request ceiling) or global request limit reached before verification was finalized.
 - **`robots` / `robots_unavailable` (45 occurrences)**: Domain disallowed crawling in `robots.txt` or robots endpoint timed out/failed.
 - **`block_page` (19 occurrences)**: Cloudflare/human challenge/interstitial detected and refused.
 - **`http_blocked` (6 occurrences)**: Explicit HTTP 401/403/429 response.

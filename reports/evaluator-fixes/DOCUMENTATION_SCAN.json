@@ -1,0 +1,97 @@
+{
+  "current_defaults_verified": true,
+  "markdown_files_scanned": 236,
+  "time_budget_seconds": 2100,
+  "website_cutoff_default_100_plus": 1700,
+  "http_per_100": 1850,
+  "nav_ads": 9511,
+  "nav_employers": 6012,
+  "nav_compressed_bytes": 439336,
+  "historical_mentions_retained": [
+    {
+      "path": "reports/final-feature-evaluation.md",
+      "line": 63,
+      "scope": "historical report",
+      "pattern": "9,015|403,768|nav-20261014T042640"
+    },
+    {
+      "path": "reports/r5/OVERNIGHT_SUMMARY.md",
+      "line": 18,
+      "scope": "historical report",
+      "pattern": "default[^.\\n]{0,80}2,400"
+    },
+    {
+      "path": "reports/r5/final500c/DIAGNOSIS.md",
+      "line": 9,
+      "scope": "historical report",
+      "pattern": "310 seconds|1,550 seconds"
+    },
+    {
+      "path": "reports/r5/final500c/trials/disk-full/DIAGNOSIS.md",
+      "line": 9,
+      "scope": "historical report",
+      "pattern": "310 seconds|1,550 seconds"
+    },
+    {
+      "path": "reports/release-1000.md",
+      "line": 9,
+      "scope": "historical report",
+      "pattern": "default[^.\\n]{0,80}2,400"
+    },
+    {
+      "path": "reports/release-1000.md",
+      "line": 32,
+      "scope": "historical report",
+      "pattern": "9,015|403,768|nav-20261014T042640"
+    },
+    {
+      "path": "reports/remediation-release.md",
+      "line": 43,
+      "scope": "historical report",
+      "pattern": "9,015|403,768|nav-20261014T042640"
+    },
+    {
+      "path": "reports/revision-improvements.md",
+      "line": 54,
+      "scope": "historical report",
+      "pattern": "9,015|403,768|nav-20261014T042640"
+    },
+    {
+      "path": "reports/smoke-100.md",
+      "line": 9,
+      "scope": "historical report",
+      "pattern": "default[^.\\n]{0,80}2,400"
+    },
+    {
+      "path": "reports/smoke-100.md",
+      "line": 32,
+      "scope": "historical report",
+      "pattern": "9,015|403,768|nav-20261014T042640"
+    },
+    {
+      "path": "reports/subunit-websites-300.md",
+      "line": 9,
+      "scope": "historical report",
+      "pattern": "9,015|403,768|nav-20261014T042640"
+    },
+    {
+      "path": "reports/w2b-cold300.md",
+      "line": 7,
+      "scope": "historical report",
+      "pattern": "9,015|403,768|nav-20261014T042640"
+    },
+    {
+      "path": "reports/w2b-cold300.md",
+      "line": 8,
+      "scope": "historical report",
+      "pattern": "9,015|403,768|nav-20261014T042640"
+    },
+    {
+      "path": "reports/w2b-cold300.md",
+      "line": 23,
+      "scope": "historical report",
+      "pattern": "9,015|403,768|nav-20261014T042640"
+    }
+  ],
+  "policy": "Correct current instructions; retain dated measurements as historical rather than falsifying their old settings."
+}

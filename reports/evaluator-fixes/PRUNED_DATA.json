@@ -1,8 +1,8 @@
 {
   "base_commit": "372d4cab17e786479cb27663a463079d71b25f68",
   "tracked_bytes_before": 1610661415,
-  "removed_bytes": 1176953493,
-  "removed_files": 211,
+  "removed_bytes": 1176765747,
+  "removed_files": 210,
   "policy": "Only generated JSON >=100KB without explicit Markdown links, fullpath prose citations, nearby report filename citations or explicit test references. Preserve all cohort inputs, source bodies, images, logs, human reviews, licences, manifests and readable reports. Git history is retained.",
   "files": [
     {
@@ -1254,12 +1254,6 @@
       "git_blob": "38d88a0a4ae2141eed9a92bb916cb98901b47ee9"
     },
     {
-      "path": "reports/r3b/retry/audit-bodies/27e6c762a2273dec1dc40896bf1e736c9cc8bded59deac9fcfccf95cbde49879.json",
-      "bytes": 187746,
-      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
-      "git_blob": "cb1695f0d0b3a207a1bcdf9c50721316cce158b4"
-    },
-    {
       "path": "reports/r5/stageR6/R6/trials/rejected_R6d/REJECTION.json",
       "bytes": 187301,
       "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
@@ -1272,6 +1266,14 @@
       "git_blob": "470af6a2c66d4fb531a54b41582600bc90e6b60d"
     }
   ],
-  "tracked_bytes_after_removal": 433707922,
-  "new_broken_markdown_links": []
+  "tracked_bytes_after_removal": 433895668,
+  "new_broken_markdown_links": [],
+  "restored_source_bodies": [
+    {
+      "path": "reports/r3b/retry/audit-bodies/27e6c762a2273dec1dc40896bf1e736c9cc8bded59deac9fcfccf95cbde49879.json",
+      "bytes": 187746,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "cb1695f0d0b3a207a1bcdf9c50721316cce158b4"
+    }
+  ]
 }

@@ -1,6 +1,6 @@
 # R5 fixed 100-company baseline
 
-This directory freezes the comparison cohort and current-code measurement for revision R5. Application code and tests are unchanged. Source commit: `7eb9bba21d4225d0008d22c112d0d5a0abe9a38e`.
+This directory freezes the historical comparison cohort and measurement for revision R5. Application code and tests were unchanged at capture. Original source label: `7eb9bba21d4225d0008d22c112d0d5a0abe9a38e`. See [history rewrite notes](../../../HISTORY_MAPPING.md); this label is not asserted to resolve to the current revised code.
 
 ## Inputs and commands
 

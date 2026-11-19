@@ -362,6 +362,8 @@ def test_cli_defaults_equal_config_defaults(monkeypatch):
     monkeypatch.setattr(sys, "argv", ["signalpost", "run", "--organisations", "a", "--output", "b", "--report", "c"])
     cli.main()
     defaults = Config.model_fields
-    differing = {k: (v, defaults[k].default) for k, v in seen.items()
-                 if k in defaults and not defaults[k].is_required() and defaults[k].default is not None and v is not None and v != defaults[k].default}
+    expected = {k: field.get_default(call_default_factory=True)
+                for k, field in defaults.items() if not field.is_required()}
+    differing = {k: (v, expected[k]) for k, v in seen.items()
+                 if k in expected and expected[k] is not None and v is not None and v != expected[k]}
     assert not differing, differing

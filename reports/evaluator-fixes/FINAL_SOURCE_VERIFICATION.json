@@ -1,0 +1,23 @@
+{
+  "exit_code": 0,
+  "scope": "after34-documented live run; original source bodies retained locally, not all included in clone-only replay",
+  "lines": 100,
+  "schema_valid": true,
+  "published_claims": 13567,
+  "source_blobs_verified": 421,
+  "synthesis_companies": 100,
+  "synthesis_sentences": 1820,
+  "synthesis_unverified_values": 0,
+  "financial_inputs_verified": 6116,
+  "derived_financial_metrics_verified": 203,
+  "registry_events_verified": 1390,
+  "filing_year_facts_verified": 929,
+  "exact_public_items_verified": 19,
+  "exact_official_items_verified": 15,
+  "briefing_companies": 100,
+  "briefing_sentences": 630,
+  "briefing_short_companies": 0,
+  "briefing_unverified_values": 0,
+  "complete_briefing_contracts": 100,
+  "newer_filing_flags": 0
+}

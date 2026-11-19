@@ -1,5 +1,7 @@
 # Final500c: successful authorized rerun
 
+Historical measurement before the evaluator fixes. The original `2ac8a6b` label maps to the surviving pre-fix code reference described in [HISTORY_MAPPING.md](../../../HISTORY_MAPPING.md). This is not a measurement of the revised agent; original full source bodies remain outside the clone.
+
 One fresh 500-company rerun used a clean shallow clone of `2ac8a6b0efa1a80c8afdd37323253e786a85e6ff`, exactly seven
 evaluator flags, seed 20261123 and the identical frozen, disjoint sample from the
 disk-full attempt. State was fresh. Clone setup ran only `uv sync --frozen` and an
