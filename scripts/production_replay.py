@@ -377,6 +377,7 @@ async def run_production_replay(
         # This legacy replay manifest predates GLEIF/TED. New exact-ID sources
         # have their own isolated transport/receipt tests, never live fallback.
         gleif=False, procurement=False, state_aid=False, research=False, licences=False, inspections=False,  # archived replays predate Stage S sources
+        corporate_registry=False,  # Archived manifests predate authority/group APIs; dedicated saved-real-response runner tests cover the default.
         official_source_health=False,  # Archived GET-only manifests predate startup probes; separate resilience tests cover them.
         organisations=input_path,
         output=output_envelopes,

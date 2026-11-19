@@ -298,7 +298,7 @@ The seed index is off by default. Runtime enablement does not change the bundled
 
 HC1b uses an offline index derived from the 2026-11-16 Brønnøysund Enhetsregisteret entity CSV under NLOD 2.0. The index contains short hashes of complete legal names with recognised form suffixes, plus name-stem hashes and organisation numbers for shared declared homepage domains. A full visible registered name or a different valid organisation number can trigger the shared-site social rule. A visible stem without its suffix requires both entities to declare that same domain in the snapshot. On a shared site, a supported company-owned JSON-LD node must explicitly tie the sameAs URL to the exact target organisation number. This index is used for social attribution only. [Snapshot and bundle hashes](../reports/r5/stageHC1/registry_index.json) · [Brønnøysund CSV](https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv) · [NLOD 2.0](https://data.norge.no/nlod/no/2.0)
 
-## G1: signature and prokura access gate (2026-11-19)
+## Historical G1: signature and prokura access gate (2026-11-19)
 
 Brreg documents [public, unauthenticated authority lookups](https://data.brreg.no/fullmakt/docs/index.html) at `https://data.brreg.no/fullmakt/enheter/{orgnr}/{signatur|prokura}`, separate from the authenticated national-ID service. Its [access page](https://www.brreg.no/bruke-data-fra-bronnoysundregistrene/data-om-signatur-og-prokura-for-virksomheter/) explicitly links the open-data variant; the [dataset licence statement](https://www.brreg.no/bruke-data-fra-bronnoysundregistrene/datasett-og-api/) specifies NLOD.
 
@@ -310,6 +310,14 @@ The existing exact-orgnr [Regnskapsregisteret endpoint](https://data.brreg.no/re
 
 The [official group-tree endpoint](https://data.brreg.no/enhetsregisteret/api/dokumentasjon/no/), `/enhetsregisteret/api/konsernstruktur/{orgnr}`, remains disabled while canonical origin robots cannot be fetched after retries. No shareholder register, group ownership percentage or parent link is inferred from account metadata. [Implementation and saved-response provenance](../reports/r5/gaps/G2.md).
 
-## G1 retry (2026-11-20)
+## Historical G1 retry (2026-11-20)
 
 The canonical robots request was retried against `ac88ab0` in and outside the restricted network sandbox. Both three-attempt checks failed before HTTP headers; Windows curl independently reported a reset. Signature, prokura and the documented exact-orgnr group-tree endpoint remain pending this access prerequisite. No company lookup, fabricated response fixture or new claim. [Receipts](../reports/r5/gaps/g1-retry/SUMMARY.md).
+
+## Brreg signature, prokura and group hierarchy (2026-11-20)
+
+Enabled as documented official registry APIs under the same policy as enheter/roller, through the existing `sources.http.Http` client. [Fullmakt documentation](https://data.brreg.no/fullmakt/docs/index.html) section 8.2 specifies unauthenticated `https://data.brreg.no/fullmakt/enheter/{orgnr}/{signatur|prokura}`; [Enhetsregisteret documentation](https://data.brreg.no/enhetsregisteret/api/dokumentasjon/no/index.html) specifies `https://data.brreg.no/enhetsregisteret/api/konsernstruktur/{orgnr}`. Publisher: Bronnoysundregistrene; [NLOD licence statement](https://www.brreg.no/bruke-data-fra-bronnoysundregistrene/datasett-og-api/); no publisher endorsement. Earlier G1 robots-gate notes are historical and superseded by this policy.
+
+The website-crawler robots gate does not apply to these official API calls, just as it does not gate existing enheter/roller calls. Same registry allowlist, host semaphore, timeout, counted request cap, retries (5/20 seconds with Retry-After), fixed 2,100-second budget and $0 cost; no new CLI flags. Corporate sections default on. The library setting `corporate_registry=False` isolates legacy source fixtures; the documented seven-flag command enables the sections by default.
+
+Signature/prokura require exact `enhet.organisasjonsnummer`, matching request URL and successful routine status. Registered rule text is published separately from explicitly labelled publisher possible signing combinations; combinations retain registered free-text restrictions and status. Names/roles are copied, birth dates and national IDs are excluded. Group publication requires the requested orgnr in the hierarchy and consistent explicit parent pointers, publishes direct parent/subsidiary edges with both exact org numbers, names, registered basis and date, and does not infer ownership percentages or indirect subsidiaries. Every value replays from original hashed response bytes with URL, timestamp and JSON pointer. No tree traversal fetches related companies. [Probe receipts and implementation verification](../reports/r5/gaps/g1-api/SUMMARY.md). Real-response fixtures retain public business data with personal date/identifier values redacted; manifest distinguishes original-response and fixture hashes.

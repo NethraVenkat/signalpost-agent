@@ -1,0 +1,97 @@
+{
+  "baseline": "ac88ab0",
+  "policy": "documented official API; existing registry Http client; no crawler robots gate",
+  "responses": [
+    {
+      "org": "923609016",
+      "kind": "signatur",
+      "url": "https://data.brreg.no/fullmakt/enheter/923609016/signatur",
+      "status": 200,
+      "sha": "fc144006c70b021384086b2b00a767139a2e1174f1663da2d3d2a0703db1e28d",
+      "retrieved_at": "2026-11-19T18:46:21.980984Z",
+      "fixture": "923609016-signatur.json.gz",
+      "fixture_body_sha256": "fc144006c70b021384086b2b00a767139a2e1174f1663da2d3d2a0703db1e28d"
+    },
+    {
+      "org": "923609016",
+      "kind": "prokura",
+      "url": "https://data.brreg.no/fullmakt/enheter/923609016/prokura",
+      "status": 200,
+      "sha": "60138e55b5a4356355179435602b3a2ccfdfcb6a64b1f085f7b2a4731810e1a1",
+      "retrieved_at": "2026-11-19T18:46:23.250351Z",
+      "fixture": "923609016-prokura.json.gz",
+      "fixture_body_sha256": "60138e55b5a4356355179435602b3a2ccfdfcb6a64b1f085f7b2a4731810e1a1"
+    },
+    {
+      "org": "923609016",
+      "kind": "group",
+      "url": "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/923609016",
+      "status": 200,
+      "sha": "153516c41820d98ff0c0ec22805f27242bf1e6b7a892af46c34f20bbea1f4811",
+      "retrieved_at": "2026-11-19T18:46:24.665532Z",
+      "fixture": "923609016-group.json.gz",
+      "fixture_body_sha256": "153516c41820d98ff0c0ec22805f27242bf1e6b7a892af46c34f20bbea1f4811"
+    },
+    {
+      "org": "984851006",
+      "kind": "signatur",
+      "url": "https://data.brreg.no/fullmakt/enheter/984851006/signatur",
+      "status": 200,
+      "sha": "7d52f4c7ff3398c839e618eb527c52e5ff80fa8e022121dc0097d4a42aa1f26a",
+      "retrieved_at": "2026-11-19T18:46:25.939559Z",
+      "fixture": "984851006-signatur.json.gz",
+      "fixture_body_sha256": "5a083e925da5817e803394720748ef9d99ece57d815a2612ac8f2ff666af0f0f"
+    },
+    {
+      "org": "984851006",
+      "kind": "prokura",
+      "url": "https://data.brreg.no/fullmakt/enheter/984851006/prokura",
+      "status": 200,
+      "sha": "82ffaf8d946622f3b06e6bb801364bd1eb39f367d7ec61ff2505bbde83beffb3",
+      "retrieved_at": "2026-11-19T18:46:27.218616Z",
+      "fixture": "984851006-prokura.json.gz",
+      "fixture_body_sha256": "2a8422816793f62b3146c920c1b8717169a25a59dbf3bd11e4fe642573239583"
+    },
+    {
+      "org": "984851006",
+      "kind": "group",
+      "url": "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/984851006",
+      "status": 200,
+      "sha": "38d7bd1de878a3d59c395877763c0cb64ba822d35a046ddd1bdc4b150855d21a",
+      "retrieved_at": "2026-11-19T18:46:28.516295Z",
+      "fixture": "984851006-group.json.gz",
+      "fixture_body_sha256": "38d7bd1de878a3d59c395877763c0cb64ba822d35a046ddd1bdc4b150855d21a"
+    },
+    {
+      "org": "914778271",
+      "kind": "signatur",
+      "url": "https://data.brreg.no/fullmakt/enheter/914778271/signatur",
+      "status": 200,
+      "sha": "39d5134dd51a1fe9f4334cc41d30c01731526449e6b7496ba552adcc559c2263",
+      "retrieved_at": "2026-11-19T18:46:29.784641Z",
+      "fixture": "914778271-signatur.json.gz",
+      "fixture_body_sha256": "d547285f746828bce8e5a5b009b8bd78e934eceb0e3b29c8d41359333b93f8f3"
+    },
+    {
+      "org": "914778271",
+      "kind": "prokura",
+      "url": "https://data.brreg.no/fullmakt/enheter/914778271/prokura",
+      "status": 200,
+      "sha": "aee1fd8094410ff6835cae7544596e9d2832f00adf15e61b02750a7e6e6296da",
+      "retrieved_at": "2026-11-19T18:46:31.067101Z",
+      "fixture": "914778271-prokura.json.gz",
+      "fixture_body_sha256": "855a321ac364423c95ef38d09c1c14f0ae031a98c5033c1186679f86b12625bb"
+    },
+    {
+      "org": "914778271",
+      "kind": "group",
+      "url": "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/914778271",
+      "status": 200,
+      "sha": "e08386389b90c4f7619c262865775d674b2c113abda9f868fd8b67120776eae5",
+      "retrieved_at": "2026-11-19T18:46:32.405894Z",
+      "fixture": "914778271-group.json.gz",
+      "fixture_body_sha256": "e08386389b90c4f7619c262865775d674b2c113abda9f868fd8b67120776eae5"
+    }
+  ],
+  "fixture_redaction": "Saved real responses; birth-date/personal identifier field values redacted before committing. JSON whitespace canonicalized; raw response SHA remains separately recorded. Rules, company IDs, names and relationship data unchanged."
+}

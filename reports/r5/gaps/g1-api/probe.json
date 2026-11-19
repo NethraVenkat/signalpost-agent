@@ -1,0 +1,188 @@
+{
+  "baseline": "ac88ab0",
+  "policy": "documented official API; existing registry Http client; no crawler robots gate",
+  "responses": [
+    {
+      "org": "923609016",
+      "kind": "signatur",
+      "url": "https://data.brreg.no/fullmakt/enheter/923609016/signatur",
+      "status": 200,
+      "sha": "fc144006c70b021384086b2b00a767139a2e1174f1663da2d3d2a0703db1e28d",
+      "retrieved_at": "2026-11-19T18:46:21.980984Z"
+    },
+    {
+      "org": "923609016",
+      "kind": "prokura",
+      "url": "https://data.brreg.no/fullmakt/enheter/923609016/prokura",
+      "status": 200,
+      "sha": "60138e55b5a4356355179435602b3a2ccfdfcb6a64b1f085f7b2a4731810e1a1",
+      "retrieved_at": "2026-11-19T18:46:23.250351Z"
+    },
+    {
+      "org": "923609016",
+      "kind": "group",
+      "url": "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/923609016",
+      "status": 200,
+      "sha": "153516c41820d98ff0c0ec22805f27242bf1e6b7a892af46c34f20bbea1f4811",
+      "retrieved_at": "2026-11-19T18:46:24.665532Z"
+    },
+    {
+      "org": "984851006",
+      "kind": "signatur",
+      "url": "https://data.brreg.no/fullmakt/enheter/984851006/signatur",
+      "status": 200,
+      "sha": "7d52f4c7ff3398c839e618eb527c52e5ff80fa8e022121dc0097d4a42aa1f26a",
+      "retrieved_at": "2026-11-19T18:46:25.939559Z"
+    },
+    {
+      "org": "984851006",
+      "kind": "prokura",
+      "url": "https://data.brreg.no/fullmakt/enheter/984851006/prokura",
+      "status": 200,
+      "sha": "82ffaf8d946622f3b06e6bb801364bd1eb39f367d7ec61ff2505bbde83beffb3",
+      "retrieved_at": "2026-11-19T18:46:27.218616Z"
+    },
+    {
+      "org": "984851006",
+      "kind": "group",
+      "url": "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/984851006",
+      "status": 200,
+      "sha": "38d7bd1de878a3d59c395877763c0cb64ba822d35a046ddd1bdc4b150855d21a",
+      "retrieved_at": "2026-11-19T18:46:28.516295Z"
+    },
+    {
+      "org": "914778271",
+      "kind": "signatur",
+      "url": "https://data.brreg.no/fullmakt/enheter/914778271/signatur",
+      "status": 200,
+      "sha": "39d5134dd51a1fe9f4334cc41d30c01731526449e6b7496ba552adcc559c2263",
+      "retrieved_at": "2026-11-19T18:46:29.784641Z"
+    },
+    {
+      "org": "914778271",
+      "kind": "prokura",
+      "url": "https://data.brreg.no/fullmakt/enheter/914778271/prokura",
+      "status": 200,
+      "sha": "aee1fd8094410ff6835cae7544596e9d2832f00adf15e61b02750a7e6e6296da",
+      "retrieved_at": "2026-11-19T18:46:31.067101Z"
+    },
+    {
+      "org": "914778271",
+      "kind": "group",
+      "url": "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/914778271",
+      "status": 200,
+      "sha": "e08386389b90c4f7619c262865775d674b2c113abda9f868fd8b67120776eae5",
+      "retrieved_at": "2026-11-19T18:46:32.405894Z"
+    }
+  ],
+  "events": [
+    {
+      "url": "https://data.brreg.no/fullmakt/enheter/923609016/signatur",
+      "host": "data.brreg.no",
+      "organisation_number": "923609016",
+      "attempt_started": 0.062000000005355105,
+      "status": 200,
+      "error": null,
+      "pass": "pass1",
+      "official_retry_attempt": 0,
+      "content_sha256": "fc144006c70b021384086b2b00a767139a2e1174f1663da2d3d2a0703db1e28d",
+      "runtime_ms": 1094
+    },
+    {
+      "url": "https://data.brreg.no/fullmakt/enheter/923609016/prokura",
+      "host": "data.brreg.no",
+      "organisation_number": "923609016",
+      "attempt_started": 2.1559999999881256,
+      "status": 200,
+      "error": null,
+      "pass": "pass1",
+      "official_retry_attempt": 0,
+      "content_sha256": "60138e55b5a4356355179435602b3a2ccfdfcb6a64b1f085f7b2a4731810e1a1",
+      "runtime_ms": 265
+    },
+    {
+      "url": "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/923609016",
+      "host": "data.brreg.no",
+      "organisation_number": "923609016",
+      "attempt_started": 3.4210000000020955,
+      "status": 200,
+      "error": null,
+      "pass": "pass1",
+      "official_retry_attempt": 0,
+      "content_sha256": "153516c41820d98ff0c0ec22805f27242bf1e6b7a892af46c34f20bbea1f4811",
+      "runtime_ms": 407
+    },
+    {
+      "url": "https://data.brreg.no/fullmakt/enheter/984851006/signatur",
+      "host": "data.brreg.no",
+      "organisation_number": "984851006",
+      "attempt_started": 4.842999999993481,
+      "status": 200,
+      "error": null,
+      "pass": "pass1",
+      "official_retry_attempt": 0,
+      "content_sha256": "7d52f4c7ff3398c839e618eb527c52e5ff80fa8e022121dc0097d4a42aa1f26a",
+      "runtime_ms": 266
+    },
+    {
+      "url": "https://data.brreg.no/fullmakt/enheter/984851006/prokura",
+      "host": "data.brreg.no",
+      "organisation_number": "984851006",
+      "attempt_started": 6.125,
+      "status": 200,
+      "error": null,
+      "pass": "pass1",
+      "official_retry_attempt": 0,
+      "content_sha256": "82ffaf8d946622f3b06e6bb801364bd1eb39f367d7ec61ff2505bbde83beffb3",
+      "runtime_ms": 265
+    },
+    {
+      "url": "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/984851006",
+      "host": "data.brreg.no",
+      "organisation_number": "984851006",
+      "attempt_started": 7.39000000001397,
+      "status": 200,
+      "error": null,
+      "pass": "pass1",
+      "official_retry_attempt": 0,
+      "content_sha256": "38d7bd1de878a3d59c395877763c0cb64ba822d35a046ddd1bdc4b150855d21a",
+      "runtime_ms": 297
+    },
+    {
+      "url": "https://data.brreg.no/fullmakt/enheter/914778271/signatur",
+      "host": "data.brreg.no",
+      "organisation_number": "914778271",
+      "attempt_started": 8.687000000005355,
+      "status": 200,
+      "error": null,
+      "pass": "pass1",
+      "official_retry_attempt": 0,
+      "content_sha256": "39d5134dd51a1fe9f4334cc41d30c01731526449e6b7496ba552adcc559c2263",
+      "runtime_ms": 266
+    },
+    {
+      "url": "https://data.brreg.no/fullmakt/enheter/914778271/prokura",
+      "host": "data.brreg.no",
+      "organisation_number": "914778271",
+      "attempt_started": 9.953000000008615,
+      "status": 200,
+      "error": null,
+      "pass": "pass1",
+      "official_retry_attempt": 0,
+      "content_sha256": "aee1fd8094410ff6835cae7544596e9d2832f00adf15e61b02750a7e6e6296da",
+      "runtime_ms": 281
+    },
+    {
+      "url": "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/914778271",
+      "host": "data.brreg.no",
+      "organisation_number": "914778271",
+      "attempt_started": 11.23399999999674,
+      "status": 200,
+      "error": null,
+      "pass": "pass1",
+      "official_retry_attempt": 0,
+      "content_sha256": "e08386389b90c4f7619c262865775d674b2c113abda9f868fd8b67120776eae5",
+      "runtime_ms": 344
+    }
+  ]
+}

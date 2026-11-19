@@ -20,3 +20,5 @@ Planned three-number probe: `923609016`, `984851006`, `914778271`; all nine comp
 Fail-closed after retries remains unchanged. Implementation and the subsequent standard-100 comparison are blocked at the access prerequisite. No live 100 or 500 run was performed. No new count or size improvement is claimed against `ac88ab0`. Full pytest was not rerun for this documentation-only attempt; the baseline fix has 1,444 passing tests. A fresh privacy guard checks these receipts before commit. No tags or push.
 
 [Normal-network preflight](preflight.json) | [Sandbox preflight](preflight-sandbox.json) | [Native client](native-preflight.json) | [Reproducible Python probe](preflight.py).
+
+Subsequent policy correction: these official API endpoints follow the existing registry client policy, not the website-crawler robots gate. The failure receipts above remain accurate; their API-gating conclusion is superseded. [Current API implementation](../g1-api/SUMMARY.md).

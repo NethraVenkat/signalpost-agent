@@ -311,6 +311,10 @@ def fact(claim, records, filing_list=None, *, source_shortcuts=True):
     if claim['family'] in {'roles', 'subunits', 'hiring'} and not claim['field'].startswith('subunits.detail.') and isinstance(claim['value'], dict):
         v = claim['value']
         label = v.get('title') or v.get('name') or {'roles': 'Registered role', 'subunits': 'Registered workplace', 'hiring': 'Job advertisement'}[claim['family']]
+    if claim['family'] in {'signature', 'prokura'}:
+        label = ('Signature authority' if claim['family'] == 'signature' else 'Prokura authority') + (' - registered rule' if claim['field'].endswith('.rule') else ' - publisher possible combination')
+    if claim['family'] == 'group':
+        label = 'Registered direct group ' + str((claim.get('value') or {}).get('relationship', 'relationship'))
     if claim['field'].startswith('website_description.'):
         label = "Company's own description"
     if claim['field'].startswith('procurement.award.'):
@@ -447,7 +451,7 @@ WORKPLACE_INLINE = 10
 def official_overflow(claims, inline=OFFICIAL_INLINE):
     from .sources.exact_official import FAMILIES as OFFICIAL_FAMILIES
     out = set()
-    for family in OFFICIAL_FAMILIES:
+    for family in (*OFFICIAL_FAMILIES, 'signature', 'prokura', 'group'):
         items = [c for c in claims if c['family'] == family and c['availability'] == 'available']
         items.sort(key=lambda c: str((c['value'] or {}).get('date', '')) if isinstance(c['value'], dict) else '', reverse=True)
         out.update(c['id'] for c in items[inline:])

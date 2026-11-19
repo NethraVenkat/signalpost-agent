@@ -29,6 +29,7 @@ class Config(BaseModel):
     official_source_health: bool = True
     official_batch_size: int = Field(default=1100, ge=1)
     max_output_mb: float = Field(default=256, gt=0)
+    corporate_registry: bool = True  # documented Brreg authority/group API sections
     websites: bool = True
     website_seed_index: bool = False
     gleif: bool = True

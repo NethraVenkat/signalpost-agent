@@ -17,7 +17,7 @@ from .models.envelope import Envelope, Run, Operations, Module, Error, Profile, 
 from .models.claim import Claim
 from .models.evidence import utc_now, digest
 from .models.states import reference_state
-from .sources import brreg_enhet, brreg_roller, brreg_underenheter, regnskap, bulk_registry
+from .sources import brreg_corporate, brreg_enhet, brreg_roller, brreg_underenheter, regnskap, bulk_registry
 from .sources.extract import Section, missing
 from .sources.blobstore import BlobStore
 from .sources.http import Http
@@ -110,7 +110,7 @@ def finalize(envelope, old, blobs, budget, began, verify_identity=False):
     events = [e for e in budget.events if e["organisation_number"] == envelope.organisation_number]
     envelope.operations.requests = len(events)
     for family, module in envelope.modules.items():
-        hints = {"identity": "/api/enheter/", "roles": "/roller", "subunits": "/underenheter?", "accounts": "/regnskapsregisteret/"}
+        hints = {"identity": "/api/enheter/", "roles": "/roller", "subunits": "/underenheter?", "accounts": "/regnskapsregisteret/", "signature": "/signatur", "prokura": "/prokura", "group": "/konsernstruktur/"}
         matching = [e for e in events if e.get('section')==family] if family in {'gleif','procurement',*OFFICIAL_FAMILIES} else [] if family in {'hiring','activity'} else [e for e in events if e.get("section") == "website"] if family == "website" else [e for e in events if hints[family] in e["url"] and (family != "identity" or not e["url"].endswith("/roller"))]
         module.retry_count = max(0, len(matching) - len({e["url"] for e in matching}))
     envelope.profile = CompactProfile(organisation_number=envelope.organisation_number,
@@ -188,7 +188,7 @@ async def _run(config, client=None,synthesis_provider=None):
         # warning, never falsely claim the supplied batch was processed.
         inputs = Inputs([], [], [], 0)
         warnings.append(f"input unreadable: {type(exc).__name__}")
-    families = FAMILIES + (("website",) if config.websites else ()) + (('hiring',) if config.hiring else ()) + (('activity',) if config.public_activity or config.registry_changes else ()) + (('gleif',) if config.gleif else ()) + (('procurement',) if config.procurement else ()) + tuple(official_families(config))
+    families = FAMILIES + (brreg_corporate.FAMILIES if config.corporate_registry else ()) + (("website",) if config.websites else ()) + (('hiring',) if config.hiring else ()) + (('activity',) if config.public_activity or config.registry_changes else ()) + (('gleif',) if config.gleif else ()) + (('procurement',) if config.procurement else ()) + tuple(official_families(config))
     envelopes = {org: placeholder(org, config.run_id, started, families) for org in inputs.unique}
     for org in inputs.invalid:
         for family in families:
@@ -414,6 +414,9 @@ async def _run(config, client=None,synthesis_provider=None):
                     from .web.activity import fetch as fetch_activity
                     await isolate(envelope, 'activity', lambda: fetch_activity(org, envelope, website_http, website_http.accepted_pages.get(org, [])))
             await accounts_task
+            async with semaphore:
+                for family in brreg_corporate.FAMILIES if config.corporate_registry else ():
+                    await isolate(envelope, family, lambda family=family: brreg_corporate.fetch(org, family, http))
             registry_families_done.add(org)
             if valid_orgs <= registry_families_done and 'registry_complete_seconds' not in timing_markers:
                 timing_markers['registry_complete_seconds'] = time.monotonic() - budget.start
