@@ -316,6 +316,8 @@ def merge(envelope, section, website_enabled):
     evidence = [e for e in envelope.evidence if any(e.id in c.evidence_ids for c in claims)]
     old_state = envelope.run.sections.get('activity')
     errors = [e for e in envelope.errors if e.section == 'activity'] if website_enabled else []
-    state = 'failed' if section.state == 'failed' or (website_enabled and old_state in {'failed', 'blocked', 'ambiguous'}) else 'available' if claims or section.claims else 'not_available'
+    # A completed official timeline remains available when optional website
+    # discovery fails. Keep its diagnostic errors without hiding verified facts.
+    state = 'failed' if section.state == 'failed' else 'available' if claims or section.claims else 'failed' if website_enabled and old_state in {'failed', 'blocked', 'ambiguous'} else 'not_available'
     return Section(state=state, claims=claims + section.claims, evidence=evidence + section.evidence,
                    errors=errors + section.errors)

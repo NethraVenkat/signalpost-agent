@@ -46,6 +46,21 @@ def extract(e):
     return rc.extract(e, response({'event': e}), '/event', ORG, 'enheter')
 
 
+@pytest.mark.parametrize('website_state', ['failed', 'blocked', 'ambiguous'])
+def test_available_registry_timeline_survives_incomplete_website(website_state):
+    from signalpost.sources.extract import missing
+    env = envelope()
+    update(env, 'activity', missing('activity', 'website_check_incomplete', state=website_state))
+    official = extract(event())
+    merged = rc.merge(env, official, True)
+    assert merged.state == 'available'
+    assert merged.claims == official.claims
+    assert merged.evidence == official.evidence
+    assert [e.code for e in merged.errors] == ['website_check_incomplete']
+    # Failed official acquisition still cannot claim complete coverage.
+    assert rc.merge(env, missing('activity', 'timeout'), True).state == 'failed'
+
+
 @pytest.mark.parametrize('path', ['/navn', '/kapital/belop', '/forretningsadresse/adresse/0', '/postadresse', '/postadresse/postnummer'])
 def test_named_fields_have_exact_values_and_publication_evidence(path):
     e = event(endringer=[{'op': 'replace', 'path': path, 'value': 0}])

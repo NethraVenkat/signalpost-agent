@@ -218,7 +218,7 @@ def test_new_pass2_website_activity_cannot_drop_existing_registry_activity(tmp_p
     report,row,_,cfg=exercise(tmp_path,monkeypatch,public_activity=True,registry=True)
     assert report['adaptive_websites']['pass2']['websites_gained']==1
     assert any(c['field'].startswith('registry_change.') and c['availability']=='available' for c in row['claims'])
-    assert row['run']['sections']['activity']=='failed'  # No HTTP allowance remains for public activity.
+    assert row['run']['sections']['activity']=='available'  # The verified registry timeline remains available.
     assert any(e['section']=='activity' and e['code']=='website_budget_exhausted' for e in row['errors'])
     assert verify(cfg.output,cfg.state_dir,1,cfg.organisations,cfg.report)['synthesis_unverified_values']==0
 

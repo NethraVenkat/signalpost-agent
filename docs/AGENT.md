@@ -35,6 +35,8 @@ See [identity rules](IDENTITY_RESOLUTION.md), [schema](DATA_SCHEMA.md), [refresh
 
 ## Bounded recall and public activity
 
+A completed, evidence-backed registry activity timeline remains available when optional website activity cannot be checked. Website section states and activity error diagnostics retain that incomplete check. A failed registry activity acquisition still marks the combined activity section failed.
+
 The 100-company W3 paired measurement used the same frozen cohort and seven evaluator flags. Seeds ON published 11 websites from 909 HTTP requests. Seeds OFF published 40 websites from 1,160 requests. Five websites appeared only with seeds enabled, while 34 appeared only with seeds disabled. Seed candidates can use per-company candidate capacity needed by registry/name candidates, so the experimental index remains opt-in pending a better recall/precision result. The saved comparison and hand-check excerpts are in [the W3 report](../reports/r5/stageW/seed_recall.md).
 
 Guessed email/slug domains receive a cached three-second DNS pre-check, with at most eight candidate lookups per company. NXDOMAIN spends no HTTP request; resolver failures leave the company check incomplete. Website candidates retain registry-site, email-domain, then slug order and stop after exact organisation-number proof. Connection-time public-IP checks remain mandatory.

@@ -26,7 +26,7 @@ MIN_WORK_FRACTION = 0.25
 MAX_RESERVE_FRACTION = 0.6
 HTTP_PER_100 = 1850
 SECONDS_PER_100 = 35 * 60
-PASS2_MARGIN_SECONDS = 300
+PASS2_MARGIN_SECONDS = 150
 # The latest F2 spent about 192 seconds after the crawl, including the site
 # attempt. Allow 250 seconds for the required outputs and optional site.
 PASS2_FINALISATION_SECONDS = 250
