@@ -1,0 +1,13 @@
+{
+  "organisation_number": "968360302",
+  "source_code_commit": "f740933",
+  "source_envelopes_sha256": "5615bd48c53ad163514c59e97cff83c13abf42989a48d64f020daa7923e92574",
+  "original_rendered_html_bytes": 262692,
+  "claims": 826,
+  "evidence": 1330,
+  "workplaces": 42,
+  "claims_sha256": "94048694c7ee5527a299ecad7b2dff49e65e9ce4b5e6ef5dc6fcae7fc2023c74",
+  "fixture_sha256": "2921414f510b5e9b808088cb1c183f09b457b1b13c1b8a0ee7ec5bd94c2f7e84",
+  "birth_date_values_masked": 21,
+  "scope": "Rendering-only real saved company fixture. Person birth-date values in evidence spans replaced with equal-length X strings; all claims, evidence IDs, hashes, URLs and locators retained. Masked spans are not used as original-source verification."
+}

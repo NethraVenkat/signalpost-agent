@@ -240,7 +240,8 @@
     const article = element('article', null, 'fact');
     article.id = 'fact-' + fact.id;
     const groupPeriod = fact.reporting_period?.account_type === 'KONSERN' ? fact.reporting_period : null;
-    const factLabel = groupPeriod ? 'Consolidated group ' + fact.field.split('.').at(-1).replaceAll('_', ' ') : fact.field;
+    const factLabel = groupPeriod ? 'Consolidated group ' + fact.field.split('.').at(-1).replaceAll('_', ' ') :
+      fact.field.startsWith('subunits.unit.') ? 'Registered workplace: ' + (fact.value?.name || fact.value?.organisation_number || fact.field.split('.').at(-1)) : fact.field;
     article.append(element('h3', factLabel), stateChip(fact.availability));
     if(groupPeriod) article.append(element('p',
       'Accounting period: ' + groupPeriod.period_start + ' to ' + groupPeriod.period_end +

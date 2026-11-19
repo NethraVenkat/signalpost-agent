@@ -3,12 +3,15 @@ import asyncio
 import heapq
 import json
 import time
+import traceback
 from collections import Counter
 from datetime import datetime, timezone
 from urllib.parse import urlsplit
 
 from ..budget import SourceFailure
 from ..models.envelope import Error
+from ..portable_paths import portable_text
+from ..sources.extract import missing
 from . import collector
 from .candidates import generate, candidate_key
 from .policy import normalize_url
@@ -85,6 +88,18 @@ def dns_room(http, org, candidate):
             or http.dns_counts.get(org,0)<(http.dns_limit(org) if hasattr(http,'dns_limit') else 8))
 
 
+def company_io_failure(envelope, record, exc, update, family, phase, url=None):
+    """An OS/network/storage failure closes this company's pass, not the batch."""
+    code = 'adaptive_os_error'
+    message = portable_text(str(exc))[:1000]
+    record['state'] = 'failed'
+    record['error'] = {'code': code, 'type': type(exc).__name__, 'section': family,
+                       'phase': phase, 'url': url, 'message': message,
+                       'errno': exc.errno, 'winerror': getattr(exc, 'winerror', None),
+                       'traceback': portable_text(''.join(traceback.format_exception(type(exc), exc, exc.__traceback__)))[-6000:]}
+    update(envelope, family, missing(family, code, f'Adaptive {phase} failed: {message}'))
+
+
 async def run(envelopes, http, index, bulk, previous, update, refresh_activity):
     """Pass 1 finishes globally before this deterministic priority queue starts.
 
@@ -107,7 +122,11 @@ async def run(envelopes, http, index, bulk, previous, update, refresh_activity):
             stop = record['state'] = 'deadline'
             continue
         context=dict(session['context'])
-        context['nav_homepages']=nav_homepages(envelope,index,http.blobs)
+        try:
+            context['nav_homepages']=nav_homepages(envelope,index,http.blobs)
+        except OSError as exc:
+            company_io_failure(envelope, record, exc, update, 'website', 'nomination')
+            continue
         retry_candidates=[]
         if http.config.adaptive_extra_budget:
             retry_candidates=[(item['candidate'],item['reason']) for item in session.get('transient_failures',{}).values()
@@ -127,6 +146,7 @@ async def run(envelopes, http, index, bulk, previous, update, refresh_activity):
         while heap and not stop:
             _,org,_,candidate,retry_reason=heapq.heappop(heap)
             envelope=envelopes[org];record=records[org]
+            if 'error' in record:continue
             if exact(envelope):continue
             if candidate.domain in http.discovery_sessions[org]['vetoed']:continue
             try:budget.check_website()
@@ -157,6 +177,7 @@ async def run(envelopes, http, index, bulk, previous, update, refresh_activity):
             record['attempts']+=1
             timeout = asyncio.timeout(max(0, budget.website_deadline - time.monotonic()))
             discovery_end = None
+            error_family, error_phase = 'website', 'discovery'
             try:
                 async with timeout:
                     section=await collector.fetch(org,envelope,bulk.get(org),http,previous.get(org),
@@ -166,19 +187,28 @@ async def run(envelopes, http, index, bulk, previous, update, refresh_activity):
                     record['state']='verified' if exact(envelope) else 'checked_no_gain'
                     if exact(envelope):
                         record['websites_gained']=1
-                        if http.config.public_activity:await refresh_activity(org,envelope)
+                        if http.config.public_activity:
+                            error_family, error_phase = 'activity', 'public_activity'
+                            await refresh_activity(org,envelope)
                         if http.config.hiring:
+                            error_family, error_phase = 'hiring', 'careers'
                             from . import careers
                             section=await careers.fetch(org,envelope,http,http.accepted_pages.get(org,[]))
                             update(envelope,'hiring',careers.merge(envelope,section))
             except SourceFailure as exc:
                 record['state']=exc.code
-            except TimeoutError:
+            except TimeoutError as exc:
                 if not timeout.expired():
-                    raise
+                    company_io_failure(envelope, record, exc, update, error_family, error_phase, candidate.url)
+            except OSError as exc:
+                company_io_failure(envelope, record, exc, update, error_family, error_phase, candidate.url)
+                # Preserve an otherwise unfinished request receipt as a failure.
+                for event in budget.events[before:]:
+                    if event.get('organisation_number') == org and event.get('error') is None and 'runtime_ms' not in event:
+                        event['error'] = type(exc).__name__
             if timeout.expired() or time.monotonic() >= cutoff:
                 stop = 'deadline'
-                if not exact(envelope):
+                if not exact(envelope) and 'error' not in record:
                     record['state'] = stop
             requests = sum(e.get('pass') == 'pass2' for e in budget.events[before:])
             record['requests'] += requests
@@ -192,7 +222,7 @@ async def run(envelopes, http, index, bulk, previous, update, refresh_activity):
                 retry.update(outcome='deadline' if record['state'] == 'deadline' else outcome, requests=requests)
         if stop:
             for _, org, _, _, _ in heap:
-                if not exact(envelopes[org]):
+                if not exact(envelopes[org]) and 'error' not in records[org]:
                     records[org]['state'] = stop
         for org,record in records.items():
             if record['state'] in {'deadline','budget_exhausted','website_budget_exhausted','dns_budget_exhausted'}:
@@ -203,7 +233,9 @@ async def run(envelopes, http, index, bulk, previous, update, refresh_activity):
                 # checked scope. An attempted check still records its own
                 # failure through collector.fetch/update above.
         finished = time.monotonic()
-        return {'state':'completed' if not stop else 'cut_off','stop_reason':stop,
+        company_errors = sum('error' in r for r in records.values())
+        return {'state':('completed_with_errors' if company_errors else 'completed') if not stop else 'cut_off','stop_reason':stop,
+            'company_errors': company_errors,
             'pass1':{'requests':0,'website_requests':0,
                      'verified_websites':pass1_websites,'websites_gained':pass1_websites},
             'pass2':{'requests':sum(r['requests'] for r in records.values()),

@@ -564,6 +564,8 @@ async def _run(config, client=None,synthesis_provider=None):
                         update(envelope,'activity',registry_changes.merge(envelope,formal,True))
                 try:
                     adaptive_metrics.update(await adaptive_run(envelopes,website_http,nav_index,bulk,prior,update,refresh_activity))
+                    if adaptive_metrics.get('company_errors'):
+                        warnings.append(f"Adaptive website pass isolated {adaptive_metrics['company_errors']} company I/O failures; see per-company errors")
                 except Exception as exc:
                     # Optional scheduling must not prevent mandatory terminal output.
                     adaptive_metrics.update(state='failed',error=type(exc).__name__,

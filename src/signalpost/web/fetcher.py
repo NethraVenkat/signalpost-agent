@@ -8,6 +8,7 @@ from urllib.robotparser import RobotFileParser
 import httpx
 from ..budget import SourceFailure
 from ..models.evidence import utc_now
+from ..portable_paths import portable_text
 from ..sources.http import Response
 from . import policy
 
@@ -194,6 +195,11 @@ class WebsiteHttp:
                 except (httpx.NetworkError, httpx.ProtocolError) as exc:
                     event["error"] = type(exc).__name__
                     raise SourceFailure("website_connect_error") from exc
+                except OSError as exc:
+                    event['error'] = type(exc).__name__
+                    event['os_error'] = {'phase': 'response', 'errno': exc.errno,
+                        'winerror': getattr(exc, 'winerror', None), 'message': portable_text(str(exc))[:1000]}
+                    raise
                 except asyncio.CancelledError:
                     event["error"] = "deadline"
                     raise
@@ -201,10 +207,17 @@ class WebsiteHttp:
                     # Completion-based spacing is conservative and avoids starts
                     # being less than one second apart due to transport overhead.
                     gate.next_start = max(gate.next_start, time.monotonic() + self.config.website_politeness_seconds)
-                    if chunks and "content_sha256" not in event:
-                        event["content_sha256"] = await offload(self.blobs.put,b"".join(chunks)[:2 * 1024 * 1024])
-                        event["truncated"] = True
-                    event["runtime_ms"] = round((time.monotonic() - began) * 1000)
+                    try:
+                        if chunks and "content_sha256" not in event:
+                            event["content_sha256"] = await offload(self.blobs.put,b"".join(chunks)[:2 * 1024 * 1024])
+                            event["truncated"] = True
+                    except OSError as exc:
+                        event['error'] = type(exc).__name__
+                        event['os_error'] = {'phase': 'receipt_storage', 'errno': exc.errno,
+                            'winerror': getattr(exc, 'winerror', None), 'message': portable_text(str(exc))[:1000]}
+                        raise
+                    finally:
+                        event["runtime_ms"] = round((time.monotonic() - began) * 1000)
 
     async def ensure_robots(self, url, org, domains):
         p = urlsplit(url)

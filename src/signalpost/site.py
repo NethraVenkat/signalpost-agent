@@ -441,6 +441,7 @@ PROFILE_HTML_LIMIT = 250_000
 # receipt in the local data file and render through the details loader, so the
 # unchanged 250 KB HTML gate never drops a fact.
 OFFICIAL_INLINE = 8
+WORKPLACE_INLINE = 10
 
 
 def official_overflow(claims, inline=OFFICIAL_INLINE):
@@ -453,6 +454,13 @@ def official_overflow(claims, inline=OFFICIAL_INLINE):
     consolidated = [c for c in claims if c['field'].startswith('accounts.consolidated.')]
     consolidated.sort(key=lambda c: ((c.get('reporting_period') or {}).get('period_end', ''), c['field']), reverse=True)
     out.update(c['id'] for c in consolidated[inline:])
+    return out
+
+
+def deferred_claims(claims, official_inline=OFFICIAL_INLINE, workplace_inline=WORKPLACE_INLINE):
+    out = official_overflow(claims, official_inline)
+    workplaces = [c for c in claims if c['field'].startswith('subunits.unit.')]
+    out.update(c['id'] for c in workplaces[workplace_inline:])
     return out
 
 
@@ -470,7 +478,7 @@ def explorer_cells(c, records):
             e.get('content_sha256', '') if e else '', span]
 
 
-def profile(row, title, explorer_rows=EXPLORER_VISIBLE_ROWS, official_inline=OFFICIAL_INLINE, *, source_shortcuts=True):
+def profile(row, title, explorer_rows=EXPLORER_VISIBLE_ROWS, official_inline=OFFICIAL_INLINE, *, source_shortcuts=True, workplace_inline=WORKPLACE_INLINE):
     claims = row['claims']
     claim_map = {c['id']: c for c in claims}
     records = {e['id']: e for e in row['evidence']}
@@ -533,7 +541,7 @@ def profile(row, title, explorer_rows=EXPLORER_VISIBLE_ROWS, official_inline=OFF
         body += '</details>'
     from .sources.exact_official import SITE_GROUP as OFFICIAL_GROUP
     buckets = {key: [] for key, _, _ in GROUPS}
-    overflow = official_overflow(claims, official_inline)
+    overflow = deferred_claims(claims, official_inline, workplace_inline)
     for c in claims:
         f = c['field']; family = c['family']
         key = ('what-it-does' if f.startswith('website_description.') else
@@ -591,13 +599,12 @@ def profile(row, title, explorer_rows=EXPLORER_VISIBLE_ROWS, official_inline=OFF
         if key == 'financials' and items:
             body += '<table class="financial-table"><caption>Reported financial facts</caption><thead><tr><th scope="col">Metric</th><th scope="col">Value and evidence</th></tr></thead><tbody>'
         for i, c in enumerate(items):
-            if key == 'locations' and i == 10:
-                body += '<button type="button" aria-expanded="false" aria-controls="more-locations" data-toggle="more-locations">Show remaining workplaces</button><div id="more-locations" hidden>'
             body += fact(c, records, fields_map.get('accounts.filed_years'), source_shortcuts=source_shortcuts)
-        if key == 'locations' and len(items) > 10: body += '</div>'
         if key == 'financials' and items: body += '</tbody></table>'
         if details:
-            body += '<details><summary>'+('Earlier official records' if all(c['id'] in overflow for c in details) else 'Additional official attributes')+' ('+str(len(details))+')</summary><div data-registry-details="'+esc(key)+'"></div></details>'
+            detail_label = ('Additional workplaces and registry attributes' if key == 'locations' else
+                            'Earlier official records' if all(c['id'] in overflow for c in details) else 'Additional official attributes')
+            body += '<details><summary>'+detail_label+' ('+str(len(details))+')</summary><div data-registry-details="'+esc(key)+'"></div></details>'
         body += '</section>'
         if key in {'online', 'financials', 'people', 'locations', 'activity'}:
             body += '</section>'
@@ -799,7 +806,7 @@ def profile(row, title, explorer_rows=EXPLORER_VISIBLE_ROWS, official_inline=OFF
     return page(str(name) + ' · ' + title, body, '../', company_data=org+'.data.js')
 
 
-def company_payload(row,explorer_rows=EXPLORER_VISIBLE_ROWS,official_inline=OFFICIAL_INLINE):
+def company_payload(row,explorer_rows=EXPLORER_VISIBLE_ROWS,official_inline=OFFICIAL_INLINE, *, workplace_inline=WORKPLACE_INLINE):
     evidence={e['id']:e for e in row['evidence']}
     referenced=set()
     facts=[]
@@ -836,10 +843,10 @@ def company_payload(row,explorer_rows=EXPLORER_VISIBLE_ROWS,official_inline=OFFI
             source_lookup[key]=len(sources);sources.append(shared)
         records.append([source_lookup[key]]+[e.get(k) for k in evidence_fields])
     from .sources.exact_official import SITE_GROUP as OFFICIAL_GROUP
-    overflow = official_overflow(row['claims'], official_inline)
+    overflow = deferred_claims(row['claims'], official_inline, workplace_inline)
     details=[{'id':c['id'][:16],'field':c['field'],'value':c['value'],'availability':c['availability'],
               'reporting_period': c.get('reporting_period'),
-              'group':'financials' if c['family']=='accounts' else OFFICIAL_GROUP[c['family']] if c['id'] in overflow else 'people' if c['family']=='roles' else 'locations'}
+              'group':'financials' if c['family']=='accounts' else 'locations' if c['family']=='subunits' else OFFICIAL_GROUP[c['family']] if c['id'] in overflow else 'people' if c['family']=='roles' else 'locations'}
              for c in row['claims'] if c['field'].startswith(('roles.detail.','subunits.detail.')) or c['id'] in overflow]
     name = next((c['value'] for c in row['claims'] if c['field'] == 'identity.legal_name' and c['availability'] == 'available'), row['organisation_number'])
     all_records = {e['id']: e for e in row['evidence']}
@@ -1157,7 +1164,7 @@ def generate_site(input_path, out, title='Signalpost', *, deadline=None):
     for row in rows:
         check()
         org=row['organisation_number']
-        visible=EXPLORER_VISIBLE_ROWS; inline=OFFICIAL_INLINE
+        visible=EXPLORER_VISIBLE_ROWS; inline=OFFICIAL_INLINE; workplaces=WORKPLACE_INLINE
         rendered=profile(row,title,visible)
         # Audit rows repeat facts already present above. Defer only those
         # duplicates to the existing local Show remaining loader, preserving
@@ -1171,12 +1178,16 @@ def generate_site(input_path, out, title='Signalpost', *, deadline=None):
             check()
             inline//=2
             rendered=profile(row,title,visible,official_inline=inline)
+        while len(rendered.encode('utf8')) >= PROFILE_HTML_LIMIT and workplaces:
+            check()
+            workplaces//=2
+            rendered=profile(row,title,visible,official_inline=inline,workplace_inline=workplaces)
         if len(rendered.encode('utf8')) >= PROFILE_HTML_LIMIT:
             check()
             # Every publisher URL is already available in its evidence panel.
-            rendered = profile(row, title, visible, official_inline=inline, source_shortcuts=False)
+            rendered = profile(row, title, visible, official_inline=inline, source_shortcuts=False,workplace_inline=workplaces)
         files['c/' + org + '.html'] = rendered
-        data=json.dumps(company_payload(row,visible,official_inline=inline),ensure_ascii=False,sort_keys=True,separators=(',',':'),allow_nan=False)
+        data=json.dumps(company_payload(row,visible,official_inline=inline,workplace_inline=workplaces),ensure_ascii=False,sort_keys=True,separators=(',',':'),allow_nan=False)
         data=data.replace('</','<\\/').replace('\u2028','\\u2028').replace('\u2029','\\u2029')
         files['c/'+org+'.data.js']='window.SIGNALPOST_EVIDENCE = '+data+';\n'
     for filename in ('site.css', 'site.js'): files['assets/' + filename] = (ASSETS / filename).read_text(encoding='utf8')

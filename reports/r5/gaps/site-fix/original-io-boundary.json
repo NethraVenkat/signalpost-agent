@@ -1,0 +1,30 @@
+{
+  "original_run_commit": "f740933",
+  "recorded_exception": "OSError",
+  "last_completed_pass2_request": {
+    "url": "https://goldencolombia.org/salgsbetingelser",
+    "host": "goldencolombia.org",
+    "organisation_number": "890136532",
+    "attempt_started": 1365.334836199996,
+    "status": 404,
+    "error": null,
+    "pass": "pass2",
+    "section": "website",
+    "timeout_seconds": 8,
+    "content_sha256": "a55b4d9932fb773fbd94f4a0c47df3292a3b4199be02635e367e6084df98b299",
+    "runtime_ms": 3268
+  },
+  "last_incomplete_pass2_request": {
+    "url": "https://goldencolombia.org/kjopsbetingelser",
+    "host": "goldencolombia.org",
+    "organisation_number": "890136532",
+    "attempt_started": 1369.6138611999922,
+    "status": 404,
+    "error": null,
+    "pass": "pass2",
+    "section": "website",
+    "timeout_seconds": 8
+  },
+  "original_errno_and_traceback_recorded": false,
+  "diagnosis": "An OSError escaped company processing because adaptive.run caught SourceFailure and timeout expiry, but not OSError. The incomplete response has no blob hash or runtime_ms; receipt persistence/finalization is a matching code path and is now covered by an injected storage-failure test. The original low-level OS reason cannot be recovered from the retained log."
+}
