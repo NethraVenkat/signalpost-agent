@@ -1,0 +1,44 @@
+{
+  "seed": 20261017,
+  "wall_seconds": 351.6266214999923,
+  "activity": {
+    "available": 100
+  },
+  "websites": 8,
+  "verification": {
+    "lines": 100,
+    "schema_valid": true,
+    "published_claims": 13618,
+    "source_blobs_verified": 429,
+    "synthesis_companies": 100,
+    "synthesis_sentences": 1840,
+    "synthesis_unverified_values": 0,
+    "financial_inputs_verified": 6116,
+    "derived_financial_metrics_verified": 203,
+    "registry_events_verified": 1390,
+    "filing_year_facts_verified": 929,
+    "exact_public_items_verified": 19,
+    "exact_official_items_verified": 66,
+    "briefing_companies": 100,
+    "briefing_sentences": 650,
+    "briefing_short_companies": 0,
+    "briefing_unverified_values": 0,
+    "briefing_topic_coverage": {
+      "activity": 100,
+      "change": 100,
+      "unknown": 100,
+      "financial": 100,
+      "takeaway": 100
+    },
+    "complete_briefing_contracts": 100,
+    "newer_filing_flags": 0,
+    "site_verified": true,
+    "terminal_envelopes": 100,
+    "source_failures_permitted": true,
+    "http_requests": 1043,
+    "wall_seconds": 350.594,
+    "cost_usd": 0,
+    "largest_profile_bytes": 242988
+  },
+  "cost_usd": 0.0
+}

@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "<REPO>\\.venv\\Scripts\\python.exe",
+    "<REPO>\\scripts\\check_live_run.py",
+    "--output",
+    "<REPO>\\.data\\r5\\final500c-smoke100\\envelopes.jsonl",
+    "--organisations",
+    "<REPO>\\reports\\r5\\baseline\\companies.jsonl",
+    "--state",
+    "<REPO>\\.data\\r5\\final500c-smoke100\\state",
+    "--report",
+    "<REPO>\\.data\\r5\\final500c-smoke100\\report.json",
+    "--site",
+    "<REPO>\\.data\\r5\\final500c-smoke100\\site",
+    "--count",
+    "100"
+  ],
+  "cwd": "<REPO>",
+  "exit_code": 0,
+  "wall_seconds": 3.4078747000021394,
+  "completed_at_utc": "2026-11-19T07:41:11.261911+00:00"
+}

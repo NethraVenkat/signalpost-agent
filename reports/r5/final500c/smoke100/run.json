@@ -1,0 +1,26 @@
+{
+  "argv": [
+    "<REPO>\\.venv\\Scripts\\python.exe",
+    "-m",
+    "signalpost.cli",
+    "run",
+    "--organisations",
+    "<REPO>\\reports\\r5\\baseline\\companies.jsonl",
+    "--bulk",
+    "<REPO>\\reports\\r5\\baseline\\registry100.csv",
+    "--output",
+    "<REPO>\\.data\\r5\\final500c-smoke100\\envelopes.jsonl",
+    "--profiles-output",
+    "<REPO>\\.data\\r5\\final500c-smoke100\\profiles.jsonl",
+    "--report",
+    "<REPO>\\.data\\r5\\final500c-smoke100\\report.json",
+    "--run-id",
+    "r5-final500c-seed20261017",
+    "--expected-count",
+    "100"
+  ],
+  "cwd": "<REPO>\\.data\\r5\\final500c-smoke100",
+  "exit_code": 0,
+  "wall_seconds": 1786.1679041000025,
+  "completed_at_utc": "2026-11-19T07:41:07.851699+00:00"
+}

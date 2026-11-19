@@ -5,7 +5,8 @@
 - All 500 official registry timelines were available with no registry activity errors.
 - Roles: 381 available, 119 no matching item; no failures. Stage S did not cause these activity errors.
 - All 71 registry/role update requests returned HTTP 200, at approximately 1,243–1,282 seconds into the crawl.
-- Failed envelopes were finalized from 1,550 seconds; individual activity-error timestamps are not stored.
+- All 220 failed activity modules were timestamped at 1,281.524–1,281.659 seconds, immediately after the shared registry/role merge.
+- Terminal envelopes completed at approximately 1,550 seconds; first-error timestamps are not stored separately.
 - Website work had 202 deadline-hit companies; incomplete website discovery propagated into the combined activity status.
 - Cause: a code bug in status merging, not registry deadline, 429, 5xx or timeout failure.
 - The separate website-budget and connection diagnostics remain explicit; supported registry evidence must stay available.

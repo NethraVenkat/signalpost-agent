@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "<REPO>\\.venv\\Scripts\\python.exe",
+    "-m",
+    "pytest",
+    "tests/test_no_home_paths.py",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp",
+    ".data/pytest-final500c-privacy"
+  ],
+  "cwd": "<REPO>",
+  "exit_code": 0,
+  "wall_seconds": 83.45810800000618,
+  "completed_at_utc": "2026-11-19T08:16:31.632500+00:00"
+}

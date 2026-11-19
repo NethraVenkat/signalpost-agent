@@ -1,0 +1,23 @@
+Traceback (most recent call last):
+  File "<REPO>\.data\r5\final500c-clean\repo\scripts\check_live_run.py", line 54, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "<REPO>\.data\r5\final500c-clean\repo\scripts\check_live_run.py", line 51, in main
+    a=p.parse_args();print(json.dumps(check(a.output,a.organisations,a.state,a.report,a.site,a.count)))
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<REPO>\.data\r5\final500c-clean\repo\scripts\check_live_run.py", line 17, in check
+    result=verify(output,state,count,organisations,report_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<REPO>\.data\r5\final500c-clean\repo\scripts\verify_output.py", line 392, in verify
+    rows = load(first)
+           ^^^^^^^^^^^
+  File "<REPO>\.data\r5\final500c-clean\repo\scripts\verify_output.py", line 380, in load
+    rows = [json.loads(line) for line in path.read_text(encoding="utf-8-sig").split("\n") if line.strip()]
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<HOME>\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\pathlib.py", line 1027, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<HOME>\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '<REPO>\\.data\\r5\\final500c-clean\\run-final\\envelopes.jsonl'

@@ -1,0 +1,145 @@
+{
+  "status": "failed",
+  "failure": "disk_full",
+  "all_gates_pass": false,
+  "tested_source_commit": "7b2b476732161cf1b1ee9454f3fa948f532fc256",
+  "seed": 20261123,
+  "count": 500,
+  "exact_seven_flags": true,
+  "fixed_budget_seconds": 2100,
+  "wall_seconds": null,
+  "wall_seconds_estimate": 1374.38946890831,
+  "timing_basis": "filesystem timestamps, approximate; stopwatch receipt unavailable",
+  "qualification_margin_seconds": null,
+  "budget_remaining_at_abort_estimate": 725.6105310916901,
+  "activity_available": null,
+  "activity_failed": null,
+  "websites": null,
+  "social_urls": null,
+  "placeholders": null,
+  "largest_profile_bytes": null,
+  "unsupported_values": null,
+  "published_terminal_envelopes": 0,
+  "missing_outputs": [
+    "report.json",
+    "envelopes.jsonl",
+    "profiles.jsonl"
+  ],
+  "provider_cost_usd": 0,
+  "cost_basis": "provider disabled; completed metering report unavailable",
+  "checker_exit_code": 1,
+  "saved_blob_files": 3636,
+  "saved_blob_bytes": 70076623,
+  "full_pytest": {
+    "passed": 1396,
+    "exit_code": 0,
+    "basetemp": ".data/pytest-final500c-green",
+    "command": ".venv/Scripts/python.exe reports/r5/stage4_7/run_tests.py -q -p no:cacheprovider --basetemp .data/pytest-final500c-green --tb=short"
+  },
+  "network_enabled_smoke": {
+    "seed": 20261017,
+    "wall_seconds": 351.6266214999923,
+    "activity": {
+      "available": 100
+    },
+    "websites": 8,
+    "verification": {
+      "lines": 100,
+      "schema_valid": true,
+      "published_claims": 13618,
+      "source_blobs_verified": 429,
+      "synthesis_companies": 100,
+      "synthesis_sentences": 1840,
+      "synthesis_unverified_values": 0,
+      "financial_inputs_verified": 6116,
+      "derived_financial_metrics_verified": 203,
+      "registry_events_verified": 1390,
+      "filing_year_facts_verified": 929,
+      "exact_public_items_verified": 19,
+      "exact_official_items_verified": 66,
+      "briefing_companies": 100,
+      "briefing_sentences": 650,
+      "briefing_short_companies": 0,
+      "briefing_unverified_values": 0,
+      "briefing_topic_coverage": {
+        "activity": 100,
+        "change": 100,
+        "unknown": 100,
+        "financial": 100,
+        "takeaway": 100
+      },
+      "complete_briefing_contracts": 100,
+      "newer_filing_flags": 0,
+      "site_verified": true,
+      "terminal_envelopes": 100,
+      "source_failures_permitted": true,
+      "http_requests": 1043,
+      "wall_seconds": 350.594,
+      "cost_usd": 0,
+      "largest_profile_bytes": 242988
+    },
+    "cost_usd": 0.0
+  },
+  "sandbox_blocked_smoke_attempt": {
+    "seed": 20261017,
+    "wall_seconds": 1786.1679041000025,
+    "activity": {
+      "failed": 100
+    },
+    "websites": 0,
+    "verification": {
+      "lines": 100,
+      "schema_valid": true,
+      "published_claims": 2941,
+      "source_blobs_verified": 100,
+      "synthesis_companies": 100,
+      "synthesis_sentences": 1080,
+      "synthesis_unverified_values": 0,
+      "financial_inputs_verified": 0,
+      "derived_financial_metrics_verified": 0,
+      "registry_events_verified": 0,
+      "filing_year_facts_verified": 0,
+      "exact_public_items_verified": 0,
+      "exact_official_items_verified": 0,
+      "briefing_companies": 100,
+      "briefing_sentences": 500,
+      "briefing_short_companies": 0,
+      "briefing_unverified_values": 0,
+      "briefing_topic_coverage": {
+        "activity": 100,
+        "change": 100,
+        "unknown": 100,
+        "financial": 100,
+        "takeaway": 100
+      },
+      "complete_briefing_contracts": 100,
+      "newer_filing_flags": 0,
+      "site_verified": true,
+      "terminal_envelopes": 100,
+      "source_failures_permitted": true,
+      "http_requests": 859,
+      "wall_seconds": 1785.125,
+      "cost_usd": 0,
+      "largest_profile_bytes": 77152
+    },
+    "cost_usd": 0.0
+  },
+  "attempt_counts": {
+    "100_total": 2,
+    "100_network_enabled": 1,
+    "500_total": 1
+  },
+  "requested_single_attempt_policy_met": false,
+  "cleanup": "Only task-created pytest temporary directories removed; live source blobs and logs preserved",
+  "privacy_guard": {
+    "exit_code": 0,
+    "passed_tests": 5
+  },
+  "gates": {
+    "full_pytest_green": true,
+    "privacy_guard_green": true,
+    "smoke100_checker_passed": true,
+    "final500_checker_passed": false,
+    "final500_outputs_published": false
+  }
+}

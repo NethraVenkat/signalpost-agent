@@ -8,9 +8,22 @@ Run with Python 3.12+ after `uv sync --frozen`, using the seven evaluator flags 
 uv run signalpost run --organisations companies500.jsonl --bulk registry500.csv --output envelopes.jsonl --profiles-output profiles.jsonl --report report.json --run-id signalpost-final --expected-count 500
 ```
 
-The final qualification used a clean clone of `b341b80`, fresh state and seed 20261122, disjoint from 4,706 numbers in prior committed and on-disk samples. The 2026-11-16 snapshot supplied 499 identity rows and live lookup supplied the remaining row. The current saved-output checker passed all 500 companies. [Final qualification and receipts](reports/r5/final500b/SUMMARY.md)
+The latest final500c attempt from clean clone `7b2b476` failed when the disk filled before terminal outputs were published. It is **not a successful 500-company qualification**. The previous successful final500b numbers remain below. [Latest attempt and retained evidence](reports/r5/final500c/SUMMARY.md)
 
-| Metric | Final 500 | Six earlier 100-company samples combined |
+| Latest verification | Standard 100, network enabled | Final500c, one attempt |
+|---|---:|---:|
+| Activity available / failed | 100 / 0 | unavailable |
+| Websites | 8 | unavailable |
+| Wall seconds | 351.63 | approximately 1374.39, aborted |
+| Unsupported synthesis / briefing | 0 / 0 | unavailable |
+| Terminal envelopes published | 100 | 0 |
+| Full pytest | 1,396 passed | same source commit |
+
+The 100-company result required an environment-mandated network retry after a sandbox-blocked attempt; both are retained. Final500c used seed 20261123, fresh state and exactly seven flags. Its checker failed for missing terminal output. No second 500 run was started.
+
+The previous successful final500b qualification used a clean clone of `b341b80`, fresh state and seed 20261122, disjoint from 4,706 numbers in prior committed and on-disk samples. The 2026-11-16 snapshot supplied 499 identity rows and live lookup supplied the remaining row. The current saved-output checker passed all 500 companies. [Final qualification and receipts](reports/r5/final500b/SUMMARY.md)
+
+| Metric | Previous successful final500b | Six earlier 100-company samples combined |
 |---|---:|---:|
 | Company inputs | 500 | 600 |
 | Websites | 33 | 45 |
@@ -22,7 +35,7 @@ The final qualification used a clean clone of `b341b80`, fresh state and seed 20
 
 The six samples are the historical Stage W measurements for seeds 20261017 and 20261113–20261117. Their totals describe those saved runs, which preceded the final runtime changes. They are separate from the final 500-company qualification. [Six-sample measurements](reports/r5/stageW/new_websites.md)
 
-| Final 500 qualification gate | Result |
+| Previous final500b qualification gate | Result |
 |---|---:|
 | Wall time / fixed budget | 1,649.67 / 2,100 seconds |
 | Remaining margin | 450.33 seconds |
