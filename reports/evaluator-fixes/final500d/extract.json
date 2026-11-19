@@ -1,0 +1,15 @@
+{
+  "exit_code": 0,
+  "wall_seconds": 25.235000000000582,
+  "argv": [
+    "<REPO>\\.data\\evaluator-fixes-final500d\\repo\\.venv\\Scripts\\python.exe",
+    "<REPO>\\.data\\evaluator-fixes-final500d\\repo\\scripts\\extract_bulk.py",
+    "--bulk",
+    "<REPO>\\.data\\r5\\inputs\\brreg-enheter-20261116\\enheter_2026-11-16T04-25-21.340365166.csv.gz",
+    "--batch",
+    "<REPO>\\reports\\evaluator-fixes\\final500d\\companies500.jsonl",
+    "--output",
+    "<REPO>\\reports\\evaluator-fixes\\final500d\\registry500.csv"
+  ],
+  "cwd": "<REPO>\\.data\\evaluator-fixes-final500d\\repo"
+}

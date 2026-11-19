@@ -1,0 +1,47 @@
+[
+  {
+    "url": "https://stottetiltak-registerinfo-api.app.brreg.no/robots.txt",
+    "host": "stottetiltak-registerinfo-api.app.brreg.no",
+    "organisation_number": "812195972",
+    "attempt_started": 20.95781540000462,
+    "status": null,
+    "error": "ReadError",
+    "pass": "pass1",
+    "section": "state_aid",
+    "runtime_ms": 1662,
+    "official_transient": true,
+    "official_retry_attempt": 0,
+    "official_retry_backoff_seconds": 5.0,
+    "official_retry_state": "retrying"
+  },
+  {
+    "url": "https://stottetiltak-registerinfo-api.app.brreg.no/robots.txt",
+    "host": "stottetiltak-registerinfo-api.app.brreg.no",
+    "organisation_number": "812195972",
+    "attempt_started": 27.62014500000805,
+    "status": null,
+    "error": "ReadError",
+    "pass": "pass1",
+    "section": "state_aid",
+    "runtime_ms": 1736,
+    "official_transient": true,
+    "official_retry_attempt": 1,
+    "official_retry_backoff_seconds": 20.0,
+    "official_retry_state": "retrying"
+  },
+  {
+    "url": "https://stottetiltak-registerinfo-api.app.brreg.no/robots.txt",
+    "host": "stottetiltak-registerinfo-api.app.brreg.no",
+    "organisation_number": "812195972",
+    "attempt_started": 49.36444180000399,
+    "status": null,
+    "error": "ReadError",
+    "pass": "pass1",
+    "section": "state_aid",
+    "runtime_ms": 1045,
+    "official_transient": true,
+    "official_retry_attempt": 2,
+    "robots_failure": "public_connect",
+    "robots_decision": "blocked: robots.txt could not be fetched"
+  }
+]

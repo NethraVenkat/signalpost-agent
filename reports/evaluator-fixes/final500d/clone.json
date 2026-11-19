@@ -1,0 +1,17 @@
+{
+  "exit_code": 0,
+  "wall_seconds": 32.84399999999732,
+  "argv": [
+    "git",
+    "clone",
+    "--no-local",
+    "--depth",
+    "1",
+    "--single-branch",
+    "--branch",
+    "revision/r5",
+    "<REPO>",
+    "<REPO>\\.data\\evaluator-fixes-final500d\\repo"
+  ],
+  "cwd": "<REPO>"
+}

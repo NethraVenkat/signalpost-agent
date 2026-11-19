@@ -1,6 +1,6 @@
 # Signalpost for judges
 
-Revised entry checks and their scope: [evaluator-fix verification](reports/evaluator-fixes/SUMMARY.md). The 500-company tables below are historical measurements of the pre-fix entry.
+Revised entry checks and their scope: [evaluator-fix verification](reports/evaluator-fixes/SUMMARY.md). The latest final500d results below measure the revised runtime; final500c and earlier tables remain historical measurements.
 
 Current run instructions: [SUBMISSION.md](SUBMISSION.md). Envelope requirements: [OUTPUT_CONTRACT.md](OUTPUT_CONTRACT.md). Historical reports cite earlier commit IDs; [revision references](HISTORY_MAPPING.md) map them to current commits.
 
@@ -11,6 +11,29 @@ Run with Python 3.12+ after `uv sync --frozen`, using the seven evaluator flags 
 ```sh
 uv run signalpost run --organisations companies500.jsonl --bulk registry500.csv --output envelopes.jsonl --profiles-output profiles.jsonl --report report.json --run-id signalpost-final --expected-count 500
 ```
+
+Latest revised-runtime check: **final500d**, clean clone `3de9edd`, seed 20261124, 500 fresh inputs disjoint from 5,706 prior numbers, exactly seven flags, no clone pytest. `check_live_run --count 500` passed. [Current 500-company report](reports/evaluator-fixes/final500d/SUMMARY.md).
+
+| Metric | Final500d |
+|---|---:|
+| Process wall time / fixed budget | 1,840.81 / 2,100 seconds |
+| Margin under budget | 259.19 seconds |
+| Deadline hits (website pass 2) | 215 |
+| Activity available / failed | 500 / 0 |
+| Websites / social URLs | 30 / 9 |
+| Terminal envelopes / profiles / placeholders | 500 / 500 / 0 |
+| Largest HTML profile | 240,192 bytes |
+| Run status / CLI exit / checker exit | partial / 0 / 0 |
+| Available claims | 68,586 |
+| State-aid claims / data requests | 0 / 0 |
+| Stage S claims: research / licences / inspections | 4 / 16 / 12 |
+| Stage S claims total (including state aid) | 32 |
+| Unsupported synthesis / briefing values | 0 / 0 |
+| HTTP attempts | 4,517 |
+| Provider cost | $0 |
+| Minimum sampled free disk | 23.36 GiB |
+
+**Remaining limits:** 215 website deadline hits; pass 2 gained zero websites before the 1,700-second cutoff. State aid stayed blocked after three failed robots attempts, with zero data requests. The run is `partial`; passing the output checker does not mean complete source coverage or an official score.
 
 The historical final500c rerun, before the evaluator fixes, used a clean clone of `2ac8a6b`, fresh state, seed 20261123 and the same frozen sample disjoint from 5,206 prior numbers. The saved-output checker passed all 500 companies. Clone setup ran `uv sync --frozen` and an import check; no clone pytest. [Final qualification and receipts](reports/r5/final500c/SUMMARY.md)
 

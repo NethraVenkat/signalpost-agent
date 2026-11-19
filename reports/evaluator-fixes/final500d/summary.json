@@ -1,0 +1,136 @@
+{
+  "head": "3de9edd7fe6fa9ddebc50bf11b8fdfe8dae9f105",
+  "seed": 20261124,
+  "wall_seconds": 1840.8129999999946,
+  "margin_seconds": 259.18700000000536,
+  "deadline_hits": 215,
+  "section_states": {
+    "accounts": {
+      "available": 499,
+      "failed": 1
+    },
+    "activity": {
+      "available": 500
+    },
+    "gleif": {
+      "not_available": 440,
+      "available": 60
+    },
+    "hiring": {
+      "not_available": 499,
+      "available": 1
+    },
+    "identity": {
+      "available": 500
+    },
+    "inspections": {
+      "not_available": 492,
+      "available": 8
+    },
+    "licences": {
+      "not_available": 493,
+      "available": 7
+    },
+    "procurement": {
+      "not_available": 494,
+      "failed": 6
+    },
+    "research": {
+      "not_available": 497,
+      "available": 3
+    },
+    "roles": {
+      "available": 495,
+      "not_available": 5
+    },
+    "state_aid": {
+      "blocked": 500
+    },
+    "subunits": {
+      "available": 373,
+      "not_available": 127
+    },
+    "website": {
+      "not_available": 283,
+      "failed": 149,
+      "available": 30,
+      "ambiguous": 37,
+      "blocked": 1
+    }
+  },
+  "available_claims": 68586,
+  "websites": 30,
+  "social_urls": 9,
+  "placeholders": 0,
+  "unfinished_sections": 0,
+  "terminal_envelopes": 500,
+  "largest_profile_bytes": 240192,
+  "check_live_run_exit_code": 0,
+  "run_status": "partial",
+  "cost_usd": 0.0,
+  "http_requests": 4517,
+  "families": {
+    "identity": 14896,
+    "subunits": 5041,
+    "roles": 5742,
+    "accounts": 35927,
+    "activity": 6711,
+    "inspections": 12,
+    "gleif": 64,
+    "website": 172,
+    "licences": 16,
+    "research": 4,
+    "hiring": 1
+  },
+  "stage_s_claims": {
+    "state_aid": 0,
+    "research": 4,
+    "licences": 16,
+    "inspections": 12
+  },
+  "state_aid_data_requests": 0,
+  "verification": {
+    "lines": 500,
+    "schema_valid": true,
+    "published_claims": 68586,
+    "source_blobs_verified": 2056,
+    "synthesis_companies": 500,
+    "synthesis_sentences": 9211,
+    "synthesis_unverified_values": 0,
+    "financial_inputs_verified": 31049,
+    "derived_financial_metrics_verified": 1107,
+    "registry_events_verified": 6711,
+    "filing_year_facts_verified": 4878,
+    "exact_public_items_verified": 64,
+    "exact_official_items_verified": 32,
+    "briefing_companies": 500,
+    "briefing_sentences": 3082,
+    "briefing_short_companies": 0,
+    "briefing_unverified_values": 0,
+    "briefing_topic_coverage": {
+      "activity": 500,
+      "change": 500,
+      "unknown": 500,
+      "financial": 500,
+      "takeaway": 500
+    },
+    "complete_briefing_contracts": 500,
+    "newer_filing_flags": 0,
+    "site_verified": true,
+    "terminal_envelopes": 500,
+    "source_failures_permitted": true,
+    "http_requests": 4517,
+    "wall_seconds": 1833.879,
+    "cost_usd": 0,
+    "largest_profile_bytes": 240192
+  },
+  "artifact_sha256": {
+    "envelopes.jsonl": "7c4ae1a896f49c08e24129175368194818cadec99946a88a01dcfaf641c7f929",
+    "profiles.jsonl": "304b0688f297cad3aa63d18a6b2cbf2d5bf578cf1838c323446a572a1d8e00ae",
+    "report.json": "a472ef6f353af15b323b15871a2d94dda5b7791e4c116046af09c88982e1378d"
+  },
+  "local_source_state": "<REPO>\\.data\\evaluator-fixes-final500d\\run\\state",
+  "pytest_in_clone": false,
+  "stage_s_total_claims": 32,
+  "all_gates_pass": true
+}

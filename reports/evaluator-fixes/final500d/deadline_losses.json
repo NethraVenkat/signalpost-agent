@@ -1,0 +1,3252 @@
+{
+  "deadline_hits": 215,
+  "pass2": {
+    "requests": 105,
+    "website_requests": 105,
+    "websites_gained": 0,
+    "runtime_seconds": 325.893,
+    "started_seconds": 1374.168,
+    "finished_seconds": 1700.061,
+    "cutoff_seconds": 1700.0,
+    "states": {
+      "no_pending_candidates": 260,
+      "deadline": 215,
+      "checked_no_gain": 8,
+      "already_verified": 17
+    },
+    "retry_attempts": 0,
+    "retry_outcomes": {},
+    "legal_priority": {
+      "resumes": 22,
+      "requests": 105,
+      "websites_gained": 0
+    }
+  },
+  "companies": {
+    "814584712": {
+      "state": "deadline",
+      "candidates": 5,
+      "attempts": 1,
+      "requests": 5,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 1,
+      "legal_requests": 5,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 5,
+        "dns": 4
+      }
+    },
+    "816547172": {
+      "state": "deadline",
+      "candidates": 3,
+      "attempts": 1,
+      "requests": 5,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 1,
+      "legal_requests": 5,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 5,
+        "dns": 4
+      }
+    },
+    "819498822": {
+      "state": "deadline",
+      "candidates": 5,
+      "attempts": 1,
+      "requests": 5,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 1,
+      "legal_requests": 5,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 5,
+        "dns": 4
+      }
+    },
+    "828273612": {
+      "state": "deadline",
+      "candidates": 4,
+      "attempts": 1,
+      "requests": 5,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 1,
+      "legal_requests": 5,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 5,
+        "dns": 4
+      }
+    },
+    "834624362": {
+      "state": "deadline",
+      "candidates": 2,
+      "attempts": 1,
+      "requests": 5,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 1,
+      "legal_requests": 5,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 5,
+        "dns": 4
+      }
+    },
+    "882820912": {
+      "state": "deadline",
+      "candidates": 6,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "891501722": {
+      "state": "deadline",
+      "candidates": 4,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "894605782": {
+      "state": "deadline",
+      "candidates": 2,
+      "attempts": 1,
+      "requests": 5,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 1,
+      "legal_requests": 5,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 5,
+        "dns": 4
+      }
+    },
+    "911850737": {
+      "state": "deadline",
+      "candidates": 3,
+      "attempts": 1,
+      "requests": 5,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 1,
+      "legal_requests": 5,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 5,
+        "dns": 4
+      }
+    },
+    "911903067": {
+      "state": "deadline",
+      "candidates": 2,
+      "attempts": 1,
+      "requests": 5,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 1,
+      "legal_requests": 5,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 5,
+        "dns": 4
+      }
+    },
+    "912855198": {
+      "state": "deadline",
+      "candidates": 12,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "912871770": {
+      "state": "deadline",
+      "candidates": 5,
+      "attempts": 1,
+      "requests": 5,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 1,
+      "legal_requests": 5,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 5,
+        "dns": 4
+      }
+    },
+    "913428722": {
+      "state": "deadline",
+      "candidates": 5,
+      "attempts": 1,
+      "requests": 5,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 1,
+      "legal_requests": 5,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 5,
+        "dns": 4
+      }
+    },
+    "915436056": {
+      "state": "deadline",
+      "candidates": 5,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "916247389": {
+      "state": "deadline",
+      "candidates": 24,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "916259425": {
+      "state": "deadline",
+      "candidates": 2,
+      "attempts": 1,
+      "requests": 5,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 1,
+      "legal_requests": 5,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 5,
+        "dns": 4
+      }
+    },
+    "916474695": {
+      "state": "deadline",
+      "candidates": 4,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "916691351": {
+      "state": "deadline",
+      "candidates": 2,
+      "attempts": 1,
+      "requests": 5,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 1,
+      "legal_requests": 5,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 5,
+        "dns": 4
+      }
+    },
+    "917198780": {
+      "state": "deadline",
+      "candidates": 6,
+      "attempts": 1,
+      "requests": 5,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 1,
+      "legal_requests": 5,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 5,
+        "dns": 4
+      }
+    },
+    "917384169": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 1,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 1,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 5,
+        "dns": 4
+      }
+    },
+    "917410410": {
+      "state": "deadline",
+      "candidates": 2,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "918051368": {
+      "state": "deadline",
+      "candidates": 2,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "918148965": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "918745688": {
+      "state": "deadline",
+      "candidates": 2,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "918807993": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "919213566": {
+      "state": "deadline",
+      "candidates": 9,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "920151965": {
+      "state": "deadline",
+      "candidates": 8,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "920261124": {
+      "state": "deadline",
+      "candidates": 5,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "920377068": {
+      "state": "deadline",
+      "candidates": 30,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "920511198": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "920653286": {
+      "state": "deadline",
+      "candidates": 2,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "920989055": {
+      "state": "deadline",
+      "candidates": 12,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "921041012": {
+      "state": "deadline",
+      "candidates": 4,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "921074697": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "921143443": {
+      "state": "deadline",
+      "candidates": 4,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "921440588": {
+      "state": "deadline",
+      "candidates": 14,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "921541228": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "921601212": {
+      "state": "deadline",
+      "candidates": 3,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "922295654": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "922435383": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "922876479": {
+      "state": "deadline",
+      "candidates": 12,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "923149619": {
+      "state": "deadline",
+      "candidates": 4,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "923316167": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "923671781": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "924392428": {
+      "state": "deadline",
+      "candidates": 4,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "924488557": {
+      "state": "deadline",
+      "candidates": 12,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "924575832": {
+      "state": "deadline",
+      "candidates": 4,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "924722509": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "924777184": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "924861231": {
+      "state": "deadline",
+      "candidates": 3,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "924887915": {
+      "state": "deadline",
+      "candidates": 8,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "924966262": {
+      "state": "deadline",
+      "candidates": 2,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "924985046": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "925017795": {
+      "state": "deadline",
+      "candidates": 4,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "925348805": {
+      "state": "deadline",
+      "candidates": 4,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "925360694": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "925373095": {
+      "state": "deadline",
+      "candidates": 4,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "925511021": {
+      "state": "deadline",
+      "candidates": 2,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "925545902": {
+      "state": "deadline",
+      "candidates": 2,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "925560650": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "925785539": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "926044362": {
+      "state": "deadline",
+      "candidates": 3,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "926202154": {
+      "state": "deadline",
+      "candidates": 3,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "926684221": {
+      "state": "deadline",
+      "candidates": 2,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "927303647": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "927425688": {
+      "state": "deadline",
+      "candidates": 2,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "927533715": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "927879166": {
+      "state": "deadline",
+      "candidates": 4,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "928013413": {
+      "state": "deadline",
+      "candidates": 2,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "928042057": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "928050661": {
+      "state": "deadline",
+      "candidates": 3,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "928127621": {
+      "state": "deadline",
+      "candidates": 5,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "928143805": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "928232514": {
+      "state": "deadline",
+      "candidates": 3,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "928462242": {
+      "state": "deadline",
+      "candidates": 2,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "928522229": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "928616819": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "928651002": {
+      "state": "deadline",
+      "candidates": 4,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "928695689": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "928822885": {
+      "state": "deadline",
+      "candidates": 5,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "929209613": {
+      "state": "deadline",
+      "candidates": 8,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "929210840": {
+      "state": "deadline",
+      "candidates": 9,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "929304810": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "929435028": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "929812786": {
+      "state": "deadline",
+      "candidates": 4,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "929975065": {
+      "state": "deadline",
+      "candidates": 3,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "930373354": {
+      "state": "deadline",
+      "candidates": 2,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "930381985": {
+      "state": "deadline",
+      "candidates": 3,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "930476854": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "930626449": {
+      "state": "deadline",
+      "candidates": 4,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "930927287": {
+      "state": "deadline",
+      "candidates": 5,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "931024302": {
+      "state": "deadline",
+      "candidates": 5,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "931147676": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "931260979": {
+      "state": "deadline",
+      "candidates": 9,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "931713604": {
+      "state": "deadline",
+      "candidates": 3,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "931799592": {
+      "state": "deadline",
+      "candidates": 6,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "932040840": {
+      "state": "deadline",
+      "candidates": 2,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "932408309": {
+      "state": "deadline",
+      "candidates": 2,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "932484838": {
+      "state": "deadline",
+      "candidates": 6,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "932594226": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "932750392": {
+      "state": "deadline",
+      "candidates": 2,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "932818876": {
+      "state": "deadline",
+      "candidates": 4,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "932992892": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "933725138": {
+      "state": "deadline",
+      "candidates": 5,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "933771296": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "933851699": {
+      "state": "deadline",
+      "candidates": 4,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "933872467": {
+      "state": "deadline",
+      "candidates": 4,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "933898261": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "933950212": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "933994708": {
+      "state": "deadline",
+      "candidates": 3,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "934012704": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "934230884": {
+      "state": "deadline",
+      "candidates": 12,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "934466896": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "934552385": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "934630505": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "934646568": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "934668944": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "934758625": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "934776046": {
+      "state": "deadline",
+      "candidates": 3,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "934857577": {
+      "state": "deadline",
+      "candidates": 4,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "934903439": {
+      "state": "deadline",
+      "candidates": 2,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "934937309": {
+      "state": "deadline",
+      "candidates": 2,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "935204526": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "935233607": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "935271118": {
+      "state": "deadline",
+      "candidates": 4,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "935487021": {
+      "state": "deadline",
+      "candidates": 2,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "935512360": {
+      "state": "deadline",
+      "candidates": 4,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "935836794": {
+      "state": "deadline",
+      "candidates": 4,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "935920000": {
+      "state": "deadline",
+      "candidates": 4,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "935991269": {
+      "state": "deadline",
+      "candidates": 2,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "936076203": {
+      "state": "deadline",
+      "candidates": 12,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "936539807": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "936577938": {
+      "state": "deadline",
+      "candidates": 5,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "936606725": {
+      "state": "deadline",
+      "candidates": 2,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "945002832": {
+      "state": "deadline",
+      "candidates": 2,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "948584026": {
+      "state": "deadline",
+      "candidates": 4,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "948641208": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "950312254": {
+      "state": "deadline",
+      "candidates": 12,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "952662902": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "953130750": {
+      "state": "deadline",
+      "candidates": 17,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "957683983": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "960992482": {
+      "state": "deadline",
+      "candidates": 13,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "962208134": {
+      "state": "deadline",
+      "candidates": 4,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "964940991": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "965437150": {
+      "state": "deadline",
+      "candidates": 3,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "966210184": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "967626406": {
+      "state": "deadline",
+      "candidates": 4,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "970997768": {
+      "state": "deadline",
+      "candidates": 9,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "971337613": {
+      "state": "deadline",
+      "candidates": 4,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "971573023": {
+      "state": "deadline",
+      "candidates": 5,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "974984865": {
+      "state": "deadline",
+      "candidates": 5,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "976564367": {
+      "state": "deadline",
+      "candidates": 3,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "979206380": {
+      "state": "deadline",
+      "candidates": 3,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "979280254": {
+      "state": "deadline",
+      "candidates": 6,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "979350791": {
+      "state": "deadline",
+      "candidates": 3,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "979715358": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "979861052": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "980126331": {
+      "state": "deadline",
+      "candidates": 2,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "980947424": {
+      "state": "deadline",
+      "candidates": 2,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "981398696": {
+      "state": "deadline",
+      "candidates": 5,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "982680077": {
+      "state": "deadline",
+      "candidates": 6,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "984537794": {
+      "state": "deadline",
+      "candidates": 4,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "985478430": {
+      "state": "deadline",
+      "candidates": 8,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "986058796": {
+      "state": "deadline",
+      "candidates": 2,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "986741593": {
+      "state": "deadline",
+      "candidates": 5,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "987458941": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "987575034": {
+      "state": "deadline",
+      "candidates": 8,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "987812168": {
+      "state": "deadline",
+      "candidates": 8,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "987910534": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "988445975": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "988869317": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "988904430": {
+      "state": "deadline",
+      "candidates": 2,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "988960926": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "989190121": {
+      "state": "deadline",
+      "candidates": 5,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "989221132": {
+      "state": "deadline",
+      "candidates": 2,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "989232274": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "989265660": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "989269712": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "989519506": {
+      "state": "deadline",
+      "candidates": 3,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "989705814": {
+      "state": "deadline",
+      "candidates": 2,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "989714228": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "990046808": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "990440212": {
+      "state": "deadline",
+      "candidates": 5,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "990568987": {
+      "state": "deadline",
+      "candidates": 6,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "990787212": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "991639578": {
+      "state": "deadline",
+      "candidates": 6,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "991742689": {
+      "state": "deadline",
+      "candidates": 9,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "992208163": {
+      "state": "deadline",
+      "candidates": 5,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "992233672": {
+      "state": "deadline",
+      "candidates": 4,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "992533862": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "993293377": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "993301353": {
+      "state": "deadline",
+      "candidates": 5,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "993928348": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "994334603": {
+      "state": "deadline",
+      "candidates": 5,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "994340360": {
+      "state": "deadline",
+      "candidates": 3,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "994503707": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "994910558": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "995203936": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "995518325": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "995693062": {
+      "state": "deadline",
+      "candidates": 4,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "996328929": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "996420949": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "996520188": {
+      "state": "deadline",
+      "candidates": 4,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "996552861": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "996711870": {
+      "state": "deadline",
+      "candidates": 3,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "996761126": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "997229789": {
+      "state": "deadline",
+      "candidates": 4,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "997817982": {
+      "state": "deadline",
+      "candidates": 4,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "997898397": {
+      "state": "deadline",
+      "candidates": 2,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "998333784": {
+      "state": "deadline",
+      "candidates": 9,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "998346304": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "998546087": {
+      "state": "deadline",
+      "candidates": 4,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "998560489": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "999324614": {
+      "state": "deadline",
+      "candidates": 1,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    },
+    "999326706": {
+      "state": "deadline",
+      "candidates": 12,
+      "attempts": 0,
+      "requests": 0,
+      "websites_gained": 0,
+      "retry_outcomes": [],
+      "legal_page_resumes": 0,
+      "legal_requests": 0,
+      "legal_websites_gained": 0,
+      "extra_allowance": {
+        "http": 0,
+        "dns": 0
+      }
+    }
+  }
+}

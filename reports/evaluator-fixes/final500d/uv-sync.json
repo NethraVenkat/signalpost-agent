@@ -1,0 +1,10 @@
+{
+  "exit_code": 0,
+  "wall_seconds": 3.625,
+  "argv": [
+    "uv",
+    "sync",
+    "--frozen"
+  ],
+  "cwd": "<REPO>\\.data\\evaluator-fixes-final500d\\repo"
+}

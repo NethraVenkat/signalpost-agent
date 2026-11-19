@@ -1,0 +1,27 @@
+{
+  "exit_code": 0,
+  "wall_seconds": 1840.8129999999946,
+  "argv": [
+    "<REPO>\\.data\\evaluator-fixes-final500d\\repo\\.venv\\Scripts\\python.exe",
+    "-m",
+    "signalpost.cli",
+    "run",
+    "--organisations",
+    "<REPO>\\reports\\evaluator-fixes\\final500d\\companies500.jsonl",
+    "--bulk",
+    "<REPO>\\reports\\evaluator-fixes\\final500d\\registry500.csv",
+    "--output",
+    "<REPO>\\.data\\evaluator-fixes-final500d\\run\\envelopes.jsonl",
+    "--profiles-output",
+    "<REPO>\\.data\\evaluator-fixes-final500d\\run\\profiles.jsonl",
+    "--report",
+    "<REPO>\\.data\\evaluator-fixes-final500d\\run\\report.json",
+    "--run-id",
+    "evaluator-fixes-final500d-seed20261124",
+    "--expected-count",
+    "500"
+  ],
+  "cwd": "<REPO>\\.data\\evaluator-fixes-final500d\\run",
+  "run_count": 1,
+  "automatic_retry": false
+}

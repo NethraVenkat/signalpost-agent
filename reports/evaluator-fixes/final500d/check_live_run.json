@@ -1,0 +1,21 @@
+{
+  "exit_code": 0,
+  "wall_seconds": 136.15599999998813,
+  "argv": [
+    "<REPO>\\.data\\evaluator-fixes-final500d\\repo\\.venv\\Scripts\\python.exe",
+    "<REPO>\\.data\\evaluator-fixes-final500d\\repo\\scripts\\check_live_run.py",
+    "--output",
+    "<REPO>\\.data\\evaluator-fixes-final500d\\run\\envelopes.jsonl",
+    "--organisations",
+    "<REPO>\\reports\\evaluator-fixes\\final500d\\companies500.jsonl",
+    "--state",
+    "<REPO>\\.data\\evaluator-fixes-final500d\\run\\state",
+    "--report",
+    "<REPO>\\.data\\evaluator-fixes-final500d\\run\\report.json",
+    "--site",
+    "<REPO>\\.data\\evaluator-fixes-final500d\\run\\site",
+    "--count",
+    "500"
+  ],
+  "cwd": "<REPO>\\.data\\evaluator-fixes-final500d\\repo"
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "url": "https://data.brreg.no/enhetsregisteret/api/enheter?size=1",
+    "status": 200,
+    "reachable": true,
+    "seconds": 1.139999999999418
+  },
+  {
+    "url": "https://data.brreg.no/regnskapsregisteret/regnskap",
+    "status": 404,
+    "reachable": true,
+    "seconds": 0.9850000000005821
+  },
+  {
+    "url": "https://pam-stilling-feed.nav.no/api/publicToken",
+    "status": 200,
+    "reachable": true,
+    "seconds": 1.7189999999973224
+  }
+]

@@ -47,3 +47,28 @@ uv run python scripts/verify_output.py --first out/envelopes.jsonl --organisatio
 This verifier does not fetch the network. An independently completed official run, organiser score and at least 95% checked claim precision are required to establish qualification; local smoke tests do not establish those results.
 
 For a check that needs only the clone, run `uv run python scripts/replay_committed_evidence.py`. The [committed evidence description](reports/evaluator-fixes/EVIDENCE.md) states which counts and original-source checks this bounded fixture reproduces and which historical measurements remain unverified.
+
+## Latest 500-company verification
+
+One clean-clone run of `3de9edd`, seed 20261124, exactly seven flags and fresh state. `check_live_run --count 500` passed; no pytest ran in the clone. These are observed results, including remaining recall losses and source refusals. [Full receipts and limits](reports/evaluator-fixes/final500d/SUMMARY.md).
+
+| Metric | Final500d |
+|---|---:|
+| Process wall time / fixed budget | 1,840.81 / 2,100 seconds |
+| Margin under budget | 259.19 seconds |
+| Deadline hits (website pass 2) | 215 |
+| Activity available / failed | 500 / 0 |
+| Websites / social URLs | 30 / 9 |
+| Terminal envelopes / profiles / placeholders | 500 / 500 / 0 |
+| Largest HTML profile | 240,192 bytes |
+| Run status / CLI exit / checker exit | partial / 0 / 0 |
+| Available claims | 68,586 |
+| State-aid claims / data requests | 0 / 0 |
+| Stage S claims: research / licences / inspections | 4 / 16 / 12 |
+| Stage S claims total (including state aid) | 32 |
+| Unsupported synthesis / briefing values | 0 / 0 |
+| HTTP attempts | 4,517 |
+| Provider cost | $0 |
+| Minimum sampled free disk | 23.36 GiB |
+
+The 215 deadline hits remain unfinished website work. St?tteregisteret robots failed all three attempts, so state aid stayed blocked. The passing output contract is separate from source completeness and an official score.

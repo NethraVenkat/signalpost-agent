@@ -2,11 +2,13 @@
 
 Local work on the revised entry; no push or deployment. Runtime fixes and the bounded replay bundle are committed in `46e8dd408501c129a611149443c65e1f2dc6925c`. The later documentation/receipt commit records the final state. No official score or qualification is claimed.
 
+Subsequent single scale check: [final500d](final500d/SUMMARY.md), seed 20261124, passed the 500-company output checker in 1,840.81 seconds, with 215 website deadline hits and `partial` status. The zero-deadline result below applies only to the earlier 100-company run.
+
 | Fix | Result |
 |---|---|
 | 1. Unknown flags | `parse_known_args`, stderr warning, report argument inventory; real CLI tests pass |
 | 2. Honest failure / outage guard | Failed/blocked companies are not complete; 25 failed live identity lookups, 15-second pause, three recovery checks; confirmed outage exits 1 and preserves membership |
-| 3. Website deadlines | Removed the N/500 multiplier from the fixed-budget website window; [company-level diagnosis](DEADLINE_LOSSES.md); fresh live check has zero deadline hits |
+| 3. Website deadlines | Removed the N/500 multiplier from the fixed-budget website window; [company-level diagnosis](DEADLINE_LOSSES.md); fresh 100-company check has zero deadline hits; later final500d has 215 |
 | 4. Robots | Unreachable robots blocks the origin; reset/timeout/cache tests pass; fresh live run made zero Støtteregisteret data requests |
 | 5. Judge instructions | Root [SUBMISSION](../../SUBMISSION.md) and [OUTPUT_CONTRACT](../../OUTPUT_CONTRACT.md) added |
 | 6. Size | Final cleanup removes 210 generated JSON files / 1,176,765,747 bytes; [manifest](PRUNED_DATA.json), [size receipts](SIZE.md); one original source body restored during final review |
