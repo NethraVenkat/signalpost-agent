@@ -1,0 +1,10 @@
+{
+  "threshold_bytes": 3221225472,
+  "interval_seconds": 2,
+  "initial_free_bytes": 23407407104,
+  "minimum_free_bytes": 21565427712,
+  "stopped_for_low_space": false,
+  "interrupt": "Python SIGINT; asyncio cancellation and client cleanup",
+  "final_free_bytes": 21574107136,
+  "wall_seconds": 1873.4060000000027
+}

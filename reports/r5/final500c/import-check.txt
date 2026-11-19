@@ -1,0 +1,1 @@
+{"module": "<REPO>\\.data\\r5\\final500c-rerun-clean\\repo\\src\\signalpost\\__init__.py", "prefix": "<REPO>\\.data\\r5\\final500c-rerun-clean\\repo\\.venv", "executable": "<REPO>\\.data\\r5\\final500c-rerun-clean\\repo\\.venv\\Scripts\\python.exe"}

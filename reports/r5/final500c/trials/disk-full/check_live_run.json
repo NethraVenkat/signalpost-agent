@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "<REPO>\\.data\\r5\\final500c-clean\\repo\\.venv\\Scripts\\python.exe",
+    "<REPO>\\.data\\r5\\final500c-clean\\repo\\scripts\\check_live_run.py",
+    "--output",
+    "<REPO>\\.data\\r5\\final500c-clean\\run-final\\envelopes.jsonl",
+    "--organisations",
+    "<REPO>\\reports\\r5\\final500c\\companies500.jsonl",
+    "--state",
+    "<REPO>\\.data\\r5\\final500c-clean\\run-final\\state",
+    "--report",
+    "<REPO>\\.data\\r5\\final500c-clean\\run-final\\report.json",
+    "--site",
+    "<REPO>\\.data\\r5\\final500c-clean\\run-final\\site",
+    "--count",
+    "500"
+  ],
+  "cwd": "<REPO>\\.data\\r5\\final500c-clean\\repo",
+  "exit_code": 1,
+  "wall_seconds": 0.8098545999964699,
+  "completed_at_utc": "2026-11-19T08:14:51.299275+00:00"
+}

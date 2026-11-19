@@ -1,0 +1,1810 @@
+{
+  "run": "final",
+  "counts": {
+    "doubtful": 18,
+    "correct": 13,
+    "legacy verifier limitation": 3
+  },
+  "records": [
+    {
+      "organisation_number": "965809090",
+      "company": "USTEKVEIKJA ENERGI AS",
+      "kind": "social",
+      "url": "https://www.instagram.com/ustekveikja_energi",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "candidate_origin": null,
+      "ledger_verdict": "wrong",
+      "category": "legacy verifier limitation",
+      "reasons": [
+        "StopIteration"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://www.ustekveikja.no/",
+          "retrieved_at": "2026-11-19T08:34:54.620974Z",
+          "content_sha256": "8c40b56c2d8b74eccda18b7189362ffe7f40ebb5e51afbbacacf9e004bfb83ea",
+          "locator": "company-link:https://www.instagram.com/ustekveikja_energi",
+          "claim_span": "<a href=\"https://www.instagram.com/ustekveikja_energi/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"body--small\">"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.267921Z",
+          "content_sha256": "d4d0cfa5e755dd6a2206af30e9d0732f1d01f99af77a90e620d5c0f264a9d9a7",
+          "locator": "row:965809090/column:navn",
+          "claim_span": "965809090,USTEKVEIKJA ENERGI AS,AS,Aksjeselskap,35.150,Handel med elektrisitet,,,,,,,true,13,2026-11-12,2026-11-10,www.ustekveikja.no,okonomi@ustekveikja.no,32 08 70 00,,,,,,,,,Geilovegen 68,GEILO,3580,HOL,3330,Norge,NO,1520,Kommunalt eide aksjeselskaper mv.,2025,1995-03-12,1992-12-18,true,1993-01-0"
+        },
+        {
+          "source_url": "https://www.ustekveikja.no/siteassets/dokumenter/skjemaer/vilkar-varmepumper-ustekveikja---v2024.03.01.pdf",
+          "retrieved_at": "2026-11-19T08:35:00.420775Z",
+          "content_sha256": "a71e4c926f0ea18f8bdc3e800ec254ae221ac1c188c9a9d726ab36a5a6bd3b68",
+          "locator": "pdf:page:2/identity-proof:965809090",
+          "claim_span": " AS, Geilovegen 68, 3580 Geilo, Org.nr. 965 809 090, Sentralbord: 32 08 70 00 \nE-post: post@ustekveikja.no - www.ustekveikja.no \n  \nOppdatert: 01.03.2"
+        },
+        {
+          "source_url": "https://www.ustekveikja.no/siteassets/dokumenter/skjemaer/vilkar-varmepumper-ustekveikja---v2024.03.01.pdf",
+          "retrieved_at": "2026-11-19T08:35:00.420775Z",
+          "content_sha256": "ad8651aa06b69686d8692ac7a510596cfcdbaaabbaaaf673dbf58059d8308625",
+          "locator": "pdf:original",
+          "claim_span": "%PDF-"
+        },
+        {
+          "source_url": "https://www.ustekveikja.no/kundeservice/vilkar-og-angrerett/",
+          "retrieved_at": "2026-11-19T08:34:56.183063Z",
+          "content_sha256": "a55f93428398e36dbb519b7e3246327c5b98e0b73b126e0e41ffae9ea1497071",
+          "locator": "legal-pdf-link:https://www.ustekveikja.no/siteassets/dokumenter/skjemaer/vilkar-varmepumper-ustekveikja---v2024.03.01.pdf",
+          "claim_span": "<a title=\"G&aring; til vilk&aring;r varmepumper\" href=\"/siteassets/dokumenter/skjemaer/vilkar-varmepumper-ustekveikja---v2024.03.01.pdf\">"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.267921Z",
+          "content_sha256": "d4d0cfa5e755dd6a2206af30e9d0732f1d01f99af77a90e620d5c0f264a9d9a7",
+          "locator": "row:965809090/column:epostadresse",
+          "claim_span": "itet,,,,,,,true,13,2026-11-12,2026-11-10,www.ustekveikja.no,okonomi@ustekveikja.no,32 08 70 00,,,,,,,,,Geilovegen 68,GEILO,3580,HOL,3330,Norge,NO,1520,Kommunalt eide aksjeselskaper mv.,2025,1995-03-12,1992-12-18,true,1993-01-01,1995-03-12,Utleier av bygg eller anlegg,2021-03-04,false,,true,1993-01-2"
+        },
+        {
+          "source_url": "https://www.ustekveikja.no/siteassets/dokumenter/skjemaer/vilkar-varmepumper-ustekveikja---v2024.03.01.pdf",
+          "retrieved_at": "2026-11-19T08:35:00.420775Z",
+          "content_sha256": "a71e4c926f0ea18f8bdc3e800ec254ae221ac1c188c9a9d726ab36a5a6bd3b68",
+          "locator": "registry-contact:email_domain",
+          "claim_span": " 090, Sentralbord: 32 08 70 00 \nE-post: post@ustekveikja.no - www.ustekveikja.no \n  \nOppdatert: 01.03.2024 \n </footer></body></html>"
+        }
+      ]
+    },
+    {
+      "organisation_number": "965809090",
+      "company": "USTEKVEIKJA ENERGI AS",
+      "kind": "social",
+      "url": "https://www.linkedin.com/company/ustekveikja-energi-as",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "candidate_origin": null,
+      "ledger_verdict": "wrong",
+      "category": "legacy verifier limitation",
+      "reasons": [
+        "StopIteration"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://www.ustekveikja.no/",
+          "retrieved_at": "2026-11-19T08:34:54.620974Z",
+          "content_sha256": "8c40b56c2d8b74eccda18b7189362ffe7f40ebb5e51afbbacacf9e004bfb83ea",
+          "locator": "company-link:https://www.linkedin.com/company/ustekveikja-energi-as",
+          "claim_span": "<a href=\"https://www.linkedin.com/company/ustekveikja-energi-as/?originalSubdomain=no\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"body--small\">"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.267921Z",
+          "content_sha256": "d4d0cfa5e755dd6a2206af30e9d0732f1d01f99af77a90e620d5c0f264a9d9a7",
+          "locator": "row:965809090/column:navn",
+          "claim_span": "965809090,USTEKVEIKJA ENERGI AS,AS,Aksjeselskap,35.150,Handel med elektrisitet,,,,,,,true,13,2026-11-12,2026-11-10,www.ustekveikja.no,okonomi@ustekveikja.no,32 08 70 00,,,,,,,,,Geilovegen 68,GEILO,3580,HOL,3330,Norge,NO,1520,Kommunalt eide aksjeselskaper mv.,2025,1995-03-12,1992-12-18,true,1993-01-0"
+        },
+        {
+          "source_url": "https://www.ustekveikja.no/siteassets/dokumenter/skjemaer/vilkar-varmepumper-ustekveikja---v2024.03.01.pdf",
+          "retrieved_at": "2026-11-19T08:35:00.420775Z",
+          "content_sha256": "a71e4c926f0ea18f8bdc3e800ec254ae221ac1c188c9a9d726ab36a5a6bd3b68",
+          "locator": "pdf:page:2/identity-proof:965809090",
+          "claim_span": " AS, Geilovegen 68, 3580 Geilo, Org.nr. 965 809 090, Sentralbord: 32 08 70 00 \nE-post: post@ustekveikja.no - www.ustekveikja.no \n  \nOppdatert: 01.03.2"
+        },
+        {
+          "source_url": "https://www.ustekveikja.no/siteassets/dokumenter/skjemaer/vilkar-varmepumper-ustekveikja---v2024.03.01.pdf",
+          "retrieved_at": "2026-11-19T08:35:00.420775Z",
+          "content_sha256": "ad8651aa06b69686d8692ac7a510596cfcdbaaabbaaaf673dbf58059d8308625",
+          "locator": "pdf:original",
+          "claim_span": "%PDF-"
+        },
+        {
+          "source_url": "https://www.ustekveikja.no/kundeservice/vilkar-og-angrerett/",
+          "retrieved_at": "2026-11-19T08:34:56.183063Z",
+          "content_sha256": "a55f93428398e36dbb519b7e3246327c5b98e0b73b126e0e41ffae9ea1497071",
+          "locator": "legal-pdf-link:https://www.ustekveikja.no/siteassets/dokumenter/skjemaer/vilkar-varmepumper-ustekveikja---v2024.03.01.pdf",
+          "claim_span": "<a title=\"G&aring; til vilk&aring;r varmepumper\" href=\"/siteassets/dokumenter/skjemaer/vilkar-varmepumper-ustekveikja---v2024.03.01.pdf\">"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.267921Z",
+          "content_sha256": "d4d0cfa5e755dd6a2206af30e9d0732f1d01f99af77a90e620d5c0f264a9d9a7",
+          "locator": "row:965809090/column:epostadresse",
+          "claim_span": "itet,,,,,,,true,13,2026-11-12,2026-11-10,www.ustekveikja.no,okonomi@ustekveikja.no,32 08 70 00,,,,,,,,,Geilovegen 68,GEILO,3580,HOL,3330,Norge,NO,1520,Kommunalt eide aksjeselskaper mv.,2025,1995-03-12,1992-12-18,true,1993-01-01,1995-03-12,Utleier av bygg eller anlegg,2021-03-04,false,,true,1993-01-2"
+        },
+        {
+          "source_url": "https://www.ustekveikja.no/siteassets/dokumenter/skjemaer/vilkar-varmepumper-ustekveikja---v2024.03.01.pdf",
+          "retrieved_at": "2026-11-19T08:35:00.420775Z",
+          "content_sha256": "a71e4c926f0ea18f8bdc3e800ec254ae221ac1c188c9a9d726ab36a5a6bd3b68",
+          "locator": "registry-contact:email_domain",
+          "claim_span": " 090, Sentralbord: 32 08 70 00 \nE-post: post@ustekveikja.no - www.ustekveikja.no \n  \nOppdatert: 01.03.2024 \n </footer></body></html>"
+        }
+      ]
+    },
+    {
+      "organisation_number": "965809090",
+      "company": "USTEKVEIKJA ENERGI AS",
+      "kind": "website",
+      "url": "https://www.ustekveikja.no",
+      "proof_tier": "orgnr_on_page",
+      "candidate_origin": "registry_website",
+      "ledger_verdict": "wrong",
+      "category": "legacy verifier limitation",
+      "reasons": [
+        "StopIteration"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://www.ustekveikja.no/siteassets/dokumenter/skjemaer/vilkar-varmepumper-ustekveikja---v2024.03.01.pdf",
+          "retrieved_at": "2026-11-19T08:35:00.420775Z",
+          "content_sha256": "a71e4c926f0ea18f8bdc3e800ec254ae221ac1c188c9a9d726ab36a5a6bd3b68",
+          "locator": "pdf:page:2/identity-proof:965809090",
+          "claim_span": " AS, Geilovegen 68, 3580 Geilo, Org.nr. 965 809 090, Sentralbord: 32 08 70 00 \nE-post: post@ustekveikja.no - www.ustekveikja.no \n  \nOppdatert: 01.03.2"
+        },
+        {
+          "source_url": "https://www.ustekveikja.no/siteassets/dokumenter/skjemaer/vilkar-varmepumper-ustekveikja---v2024.03.01.pdf",
+          "retrieved_at": "2026-11-19T08:35:00.420775Z",
+          "content_sha256": "ad8651aa06b69686d8692ac7a510596cfcdbaaabbaaaf673dbf58059d8308625",
+          "locator": "pdf:original",
+          "claim_span": "%PDF-"
+        },
+        {
+          "source_url": "https://www.ustekveikja.no/kundeservice/vilkar-og-angrerett/",
+          "retrieved_at": "2026-11-19T08:34:56.183063Z",
+          "content_sha256": "a55f93428398e36dbb519b7e3246327c5b98e0b73b126e0e41ffae9ea1497071",
+          "locator": "legal-pdf-link:https://www.ustekveikja.no/siteassets/dokumenter/skjemaer/vilkar-varmepumper-ustekveikja---v2024.03.01.pdf",
+          "claim_span": "<a title=\"G&aring; til vilk&aring;r varmepumper\" href=\"/siteassets/dokumenter/skjemaer/vilkar-varmepumper-ustekveikja---v2024.03.01.pdf\">"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.267921Z",
+          "content_sha256": "d4d0cfa5e755dd6a2206af30e9d0732f1d01f99af77a90e620d5c0f264a9d9a7",
+          "locator": "row:965809090/column:epostadresse",
+          "claim_span": "itet,,,,,,,true,13,2026-11-12,2026-11-10,www.ustekveikja.no,okonomi@ustekveikja.no,32 08 70 00,,,,,,,,,Geilovegen 68,GEILO,3580,HOL,3330,Norge,NO,1520,Kommunalt eide aksjeselskaper mv.,2025,1995-03-12,1992-12-18,true,1993-01-01,1995-03-12,Utleier av bygg eller anlegg,2021-03-04,false,,true,1993-01-2"
+        },
+        {
+          "source_url": "https://www.ustekveikja.no/siteassets/dokumenter/skjemaer/vilkar-varmepumper-ustekveikja---v2024.03.01.pdf",
+          "retrieved_at": "2026-11-19T08:35:00.420775Z",
+          "content_sha256": "a71e4c926f0ea18f8bdc3e800ec254ae221ac1c188c9a9d726ab36a5a6bd3b68",
+          "locator": "registry-contact:email_domain",
+          "claim_span": " 090, Sentralbord: 32 08 70 00 \nE-post: post@ustekveikja.no - www.ustekveikja.no \n  \nOppdatert: 01.03.2024 \n </footer></body></html>"
+        }
+      ]
+    },
+    {
+      "organisation_number": "985464138",
+      "company": "MØRE MARITIME AS",
+      "kind": "social",
+      "url": "https://www.facebook.com/moremaritime",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "candidate_origin": null,
+      "ledger_verdict": "doubtful",
+      "category": "doubtful",
+      "reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://moremaritime.no/",
+          "retrieved_at": "2026-11-19T08:33:57.176132Z",
+          "content_sha256": "e07663b09cf4f6f863721c823af036ff0f413d85c774800246b3fee9dca50350",
+          "locator": "company-link:https://www.facebook.com/moremaritime",
+          "claim_span": "<a href=\"https://www.facebook.com/moremaritime/\" class=\"icon\">"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.302324Z",
+          "content_sha256": "91bc56bf9fc1f4e410db2fb0b686c847aa6072b2ae1383682ca242e2435a0679",
+          "locator": "row:985464138/column:navn",
+          "claim_span": "985464138,MØRE MARITIME AS,AS,Aksjeselskap,71.129,Annen teknisk konsulentvirksomhet,,,,,,,true,9,2026-11-12,2026-11-10,www.moremaritime.no,post@moremaritime.no,71 58 82 00,92232750,,,,,,,,Dalegata 137,KRISTIANSUND N,6518,KRISTIANSUND,1505,Norge,NO,2100,Private aksjeselskaper mv.,2025,2003-03-10,2003"
+        },
+        {
+          "source_url": "https://moremaritime.no/",
+          "retrieved_at": "2026-11-19T08:33:57.176132Z",
+          "content_sha256": "e07663b09cf4f6f863721c823af036ff0f413d85c774800246b3fee9dca50350",
+          "locator": "identity-proof:985464138",
+          "claim_span": "yoast-seo-wordpress/ -->\n\t<title>Hjem - Møre Maritime</title>\n\t<meta name=\"description\" content=\"Skipteknisk konsulentselskap som designer fremtidens havbruksfartøy.\" />\n\t<link rel=\"canonical\" href=\"https://moremaritime.no/\" />\n\t<meta property=\"og:locale\" content=\"nb_NO\" />\n\t<meta property=\"og:type\""
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.302324Z",
+          "content_sha256": "91bc56bf9fc1f4e410db2fb0b686c847aa6072b2ae1383682ca242e2435a0679",
+          "locator": "row:985464138/column:navn",
+          "claim_span": "985464138,MØRE MARITIME AS,AS,Aksjeselskap,71.129,Annen teknisk konsulentvirksomhet,,,,,,,true,9,2026-11-12,2026-11-10,www.moremaritime.no,post@moremaritime.no,71 58 82 00,92232750,,,,,,,,Dalegata 137,KRISTIANSUND N,6518,KRISTIANSUND,1505,Norge,NO,2100,Private aksjeselskaper mv.,2025,2003-03-10,2003"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.302324Z",
+          "content_sha256": "91bc56bf9fc1f4e410db2fb0b686c847aa6072b2ae1383682ca242e2435a0679",
+          "locator": "row:985464138/column:hjemmeside",
+          "claim_span": "nisk konsulentvirksomhet,,,,,,,true,9,2026-11-12,2026-11-10,www.moremaritime.no,post@moremaritime.no,71 58 82 00,92232750,,,,,,,,Dalegata 137,KRISTIANSUND N,6518,KRISTIANSUND,1505,Norge,NO,2100,Private aksjeselskaper mv.,2025,2003-03-10,2003-02-28,true,2003-03-01,2003-04-26,Utleier av bygg eller anl"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.302324Z",
+          "content_sha256": "91bc56bf9fc1f4e410db2fb0b686c847aa6072b2ae1383682ca242e2435a0679",
+          "locator": "row:985464138/columns:forretningsadresse.*",
+          "claim_span": "aritime.no,post@moremaritime.no,71 58 82 00,92232750,,,,,,,,Dalegata 137,KRISTIANSUND N,6518,KRISTIANSUND,1505,Norge,NO,2100,Private aksjeselskaper mv.,2025,2003-03-10,2003-02-28,true,2003-03-01,2003-04-26,Utleier av bygg eller anlegg,2021-03-06,false,,true,2003-03-10,false,false,,false,,false,,fals"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.302324Z",
+          "content_sha256": "91bc56bf9fc1f4e410db2fb0b686c847aa6072b2ae1383682ca242e2435a0679",
+          "locator": "row:985464138/column:epostadresse",
+          "claim_span": "mhet,,,,,,,true,9,2026-11-12,2026-11-10,www.moremaritime.no,post@moremaritime.no,71 58 82 00,92232750,,,,,,,,Dalegata 137,KRISTIANSUND N,6518,KRISTIANSUND,1505,Norge,NO,2100,Private aksjeselskaper mv.,2025,2003-03-10,2003-02-28,true,2003-03-01,2003-04-26,Utleier av bygg eller anlegg,2021-03-06,false"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.302324Z",
+          "content_sha256": "91bc56bf9fc1f4e410db2fb0b686c847aa6072b2ae1383682ca242e2435a0679",
+          "locator": "row:985464138/column:telefon",
+          "claim_span": "6-11-12,2026-11-10,www.moremaritime.no,post@moremaritime.no,71 58 82 00,92232750,,,,,,,,Dalegata 137,KRISTIANSUND N,6518,KRISTIANSUND,1505,Norge,NO,2100,Private aksjeselskaper mv.,2025,2003-03-10,2003-02-28,true,2003-03-01,2003-04-26,Utleier av bygg eller anlegg,2021-03-06,false,,true,2003-03-10,fal"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.302324Z",
+          "content_sha256": "91bc56bf9fc1f4e410db2fb0b686c847aa6072b2ae1383682ca242e2435a0679",
+          "locator": "row:985464138/column:mobil",
+          "claim_span": "-11-10,www.moremaritime.no,post@moremaritime.no,71 58 82 00,92232750,,,,,,,,Dalegata 137,KRISTIANSUND N,6518,KRISTIANSUND,1505,Norge,NO,2100,Private aksjeselskaper mv.,2025,2003-03-10,2003-02-28,true,2003-03-01,2003-04-26,Utleier av bygg eller anlegg,2021-03-06,false,,true,2003-03-10,false,false,,fa"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.302324Z",
+          "content_sha256": "91bc56bf9fc1f4e410db2fb0b686c847aa6072b2ae1383682ca242e2435a0679",
+          "locator": "row:985464138/columns:forretningsadresse.*",
+          "claim_span": "aritime.no,post@moremaritime.no,71 58 82 00,92232750,,,,,,,,Dalegata 137,KRISTIANSUND N,6518,KRISTIANSUND,1505,Norge,NO,2100,Private aksjeselskaper mv.,2025,2003-03-10,2003-02-28,true,2003-03-01,2003-04-26,Utleier av bygg eller anlegg,2021-03-06,false,,true,2003-03-10,false,false,,false,,false,,fals"
+        }
+      ]
+    },
+    {
+      "organisation_number": "833810162",
+      "company": "VISIOPROFIL AS",
+      "kind": "website",
+      "url": "https://home.visioprofil.no",
+      "proof_tier": "publisher_name_registered_place",
+      "candidate_origin": "legal_name_slug",
+      "ledger_verdict": "doubtful",
+      "category": "doubtful",
+      "reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://home.visioprofil.no/kontakt-visioprofil",
+          "retrieved_at": "2026-11-19T08:37:08.054235Z",
+          "content_sha256": "350669cef9a7ca9c112c4b57e8706060888d64211c775d6db936f397539cd7c8",
+          "locator": "identity-proof:833810162",
+          "claim_span": "=\"color: rgb(255, 255, 255)\" dir=\"auto\">Visioprofil AS<br>Selma Ellefsensvei 10<br>0581 Oslo</p><p class=\"body\" style=\"color: rgb(255, 255, 255); margin-bottom: 34px\" dir=\"auto\"></p><p class=\"body\" style=\"color: rgb(255, 255, 255)\" dir=\"auto\"></p></div><!----><!----><!----><!----><!----><!----><!---"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.019481Z",
+          "content_sha256": "7b2b0fc32aaf0c119e66d8f701d796a9cd8d28c80b4362aa3c2908734f044f24",
+          "locator": "row:833810162/column:navn",
+          "claim_span": "833810162,VISIOPROFIL AS,AS,Aksjeselskap,18.120,Trykking ellers,,,,,,,true,,2025-05-12,2025-05-12,,,,,,,,,,,,Selma Ellefsens vei 10,OSLO,0581,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2024-08-09,2024-07-30,true,2024-08-18,2024-08-21,,,false,,true,2024-08-09,false,false,,false,,false,,f"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.019481Z",
+          "content_sha256": "7b2b0fc32aaf0c119e66d8f701d796a9cd8d28c80b4362aa3c2908734f044f24",
+          "locator": "row:833810162/column:hjemmeside",
+          "claim_span": "reringsdatoantallansatteNAVAaregisteret,hjemmeside,epostadresse,telefon,mobil,postadresse.adresse,postadresse.poststed,postadresse.postnummer,postadresse.kommune,postadresse.kommunenummer,postadresse.land,postadresse.landkode,forretningsadresse.adresse,forretningsadresse.poststed,forretningsadresse."
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.019481Z",
+          "content_sha256": "7b2b0fc32aaf0c119e66d8f701d796a9cd8d28c80b4362aa3c2908734f044f24",
+          "locator": "row:833810162/columns:forretningsadresse.*",
+          "claim_span": "rykking ellers,,,,,,,true,,2025-05-12,2025-05-12,,,,,,,,,,,,Selma Ellefsens vei 10,OSLO,0581,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2024-08-09,2024-07-30,true,2024-08-18,2024-08-21,,,false,,true,2024-08-09,false,false,,false,,false,,false,,,,,,,Bokmål,2024-07-30,\"Selge og levere rek"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.019481Z",
+          "content_sha256": "7b2b0fc32aaf0c119e66d8f701d796a9cd8d28c80b4362aa3c2908734f044f24",
+          "locator": "row:833810162/columns:forretningsadresse.*",
+          "claim_span": "rykking ellers,,,,,,,true,,2025-05-12,2025-05-12,,,,,,,,,,,,Selma Ellefsens vei 10,OSLO,0581,OSLO,0301,Norge,NO,2100,Private aksjeselskaper mv.,2025,2024-08-09,2024-07-30,true,2024-08-18,2024-08-21,,,false,,true,2024-08-09,false,false,,false,,false,,false,,,,,,,Bokmål,2024-07-30,\"Selge og levere rek"
+        }
+      ]
+    },
+    {
+      "organisation_number": "836219562",
+      "company": "AXCELERO AS",
+      "kind": "website",
+      "url": "https://axcelero.com",
+      "proof_tier": "publisher_name_registered_place",
+      "candidate_origin": "legal_name_slug",
+      "ledger_verdict": "doubtful",
+      "category": "doubtful",
+      "reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://axcelero.com/",
+          "retrieved_at": "2026-11-19T08:32:54.752038Z",
+          "content_sha256": "fdb4454319efb2aaec2aeb3c9f8afab029948db92a103c68d2dadee0618c40ec",
+          "locator": "identity-proof:836219562",
+          "claim_span": "t-gray-400 mb-4\">© <!-- -->2026<!-- --> Axcelero AS. <!-- -->All rights reserved.</p><div class=\"flex flex-wrap justify-center gap-6 text-gray-400 text-sm\"><a class=\"hover:text-[#FF6B35] transition-colors\" href=\"/privacy-policy\">Privacy Policy</a><a class=\"hover:text-[#FF6B35] transition-colors\" hre"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.021564Z",
+          "content_sha256": "7d97555e157ad53f7ac5c1601ae3c67d9ff7fe4cb37f94b4e976b357f0ce6b2b",
+          "locator": "row:836219562/column:navn",
+          "claim_span": "836219562,AXCELERO AS,AS,Aksjeselskap,62.200,Konsulentvirksomhet tilknyttet informasjonsteknologi og forvaltning og drift av it-systemer,,,,,,,false,,,,,,,,,,,,,,,Hulderveien 20,SILSAND,9303,SENJA,5530,Norge,NO,2100,Private aksjeselskaper mv.,2025,2025-11-10,2025-08-11,true,2025-12-17,2025-12-17,,,f"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.021564Z",
+          "content_sha256": "7d97555e157ad53f7ac5c1601ae3c67d9ff7fe4cb37f94b4e976b357f0ce6b2b",
+          "locator": "row:836219562/column:hjemmeside",
+          "claim_span": "reringsdatoantallansatteNAVAaregisteret,hjemmeside,epostadresse,telefon,mobil,postadresse.adresse,postadresse.poststed,postadresse.postnummer,postadresse.kommune,postadresse.kommunenummer,postadresse.land,postadresse.landkode,forretningsadresse.adresse,forretningsadresse.poststed,forretningsadresse."
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.021564Z",
+          "content_sha256": "7d97555e157ad53f7ac5c1601ae3c67d9ff7fe4cb37f94b4e976b357f0ce6b2b",
+          "locator": "row:836219562/columns:forretningsadresse.*",
+          "claim_span": "rvaltning og drift av it-systemer,,,,,,,false,,,,,,,,,,,,,,,Hulderveien 20,SILSAND,9303,SENJA,5530,Norge,NO,2100,Private aksjeselskaper mv.,2025,2025-11-10,2025-08-11,true,2025-12-17,2025-12-17,,,false,,true,2025-11-10,false,false,,false,,false,,false,,,,,,,Bokmål,2025-08-11,Å levere AI-tjenester ti"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.021564Z",
+          "content_sha256": "7d97555e157ad53f7ac5c1601ae3c67d9ff7fe4cb37f94b4e976b357f0ce6b2b",
+          "locator": "row:836219562/columns:forretningsadresse.*",
+          "claim_span": "rvaltning og drift av it-systemer,,,,,,,false,,,,,,,,,,,,,,,Hulderveien 20,SILSAND,9303,SENJA,5530,Norge,NO,2100,Private aksjeselskaper mv.,2025,2025-11-10,2025-08-11,true,2025-12-17,2025-12-17,,,false,,true,2025-11-10,false,false,,false,,false,,false,,,,,,,Bokmål,2025-08-11,Å levere AI-tjenester ti"
+        }
+      ]
+    },
+    {
+      "organisation_number": "871487472",
+      "company": "HAMNA FRILUFTSBARNEHAGE SA",
+      "kind": "website",
+      "url": "https://hamnafriluftsbarnehage.no",
+      "proof_tier": "signals",
+      "candidate_origin": "registry_website",
+      "ledger_verdict": "doubtful",
+      "category": "doubtful",
+      "reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://hamnafriluftsbarnehage.no/",
+          "retrieved_at": "2026-11-19T08:32:52.741716Z",
+          "content_sha256": "08bb6506a1663e6bdf10a09b17568b96e16b6aa0075f39dea91332050ac55633",
+          "locator": "identity-proof:871487472",
+          "claim_span": "lesheet\" type=\"text/css\" />\r\n    <title>Hamna Friluftsbarnehage SA</title>\r\n    <script src=\"/Scripts/jquery-1.8.3.min.js\" type=\"text/javascript\"></script>\r\n    <script src=\"/Scripts/jquery.unobtrusive-ajax.min.js\" type=\"text/javascript\"></script>\r\n    <script src=\"/Scripts/modernizr-1.7.min.js\" typ"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.025562Z",
+          "content_sha256": "b3f96b7a34905d9bc8e169c9f157c743774e8e076a9b3fa38318d930aefc8078",
+          "locator": "row:871487472/column:epostadresse",
+          "claim_span": ",,,,true,20,2026-11-12,2026-11-10,hamnafriluftsbarnehage.no,vanja.engstad@hamnafriluftsbarnehage.no,77 67 26 60,474 85 070,,,,,,,,Otervegen 35,TROMSØ,9017,TROMSØ,5501,Norge,NO,2100,Private aksjeselskaper mv.,2025,1995-02-20,1995-02-20,false,,,,,false,,true,2012-10-24,false,false,,false,,false,,false"
+        },
+        {
+          "source_url": "https://hamnafriluftsbarnehage.no/",
+          "retrieved_at": "2026-11-19T08:32:52.741716Z",
+          "content_sha256": "08bb6506a1663e6bdf10a09b17568b96e16b6aa0075f39dea91332050ac55633",
+          "locator": "registry-contact:email_domain",
+          "claim_span": "<a href=\"mailto:vanja.engstad@hamnafriluftsbarnehage.no\">"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.025562Z",
+          "content_sha256": "b3f96b7a34905d9bc8e169c9f157c743774e8e076a9b3fa38318d930aefc8078",
+          "locator": "row:871487472/column:navn",
+          "claim_span": "871487472,HAMNA FRILUFTSBARNEHAGE SA,SA,Samvirkeforetak,85.100,Førskoleundervisning og drift av barnehager,,,,,,,true,20,2026-11-12,2026-11-10,hamnafriluftsbarnehage.no,vanja.engstad@hamnafriluftsbarnehage.no,77 67 26 60,474 85 070,,,,,,,,Otervegen 35,TROMSØ,9017,TROMSØ,5501,Norge,NO,2100,Private ak"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.025562Z",
+          "content_sha256": "b3f96b7a34905d9bc8e169c9f157c743774e8e076a9b3fa38318d930aefc8078",
+          "locator": "row:871487472/column:hjemmeside",
+          "claim_span": " og drift av barnehager,,,,,,,true,20,2026-11-12,2026-11-10,hamnafriluftsbarnehage.no,vanja.engstad@hamnafriluftsbarnehage.no,77 67 26 60,474 85 070,,,,,,,,Otervegen 35,TROMSØ,9017,TROMSØ,5501,Norge,NO,2100,Private aksjeselskaper mv.,2025,1995-02-20,1995-02-20,false,,,,,false,,true,2012-10-24,false,"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.025562Z",
+          "content_sha256": "b3f96b7a34905d9bc8e169c9f157c743774e8e076a9b3fa38318d930aefc8078",
+          "locator": "row:871487472/columns:forretningsadresse.*",
+          "claim_span": "tad@hamnafriluftsbarnehage.no,77 67 26 60,474 85 070,,,,,,,,Otervegen 35,TROMSØ,9017,TROMSØ,5501,Norge,NO,2100,Private aksjeselskaper mv.,2025,1995-02-20,1995-02-20,false,,,,,false,,true,2012-10-24,false,false,,false,,false,,false,,,,,,,Bokmål,2017-06-08,\"Eie og drive barnehage til det beste for med"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.025562Z",
+          "content_sha256": "b3f96b7a34905d9bc8e169c9f157c743774e8e076a9b3fa38318d930aefc8078",
+          "locator": "row:871487472/column:epostadresse",
+          "claim_span": ",,,,true,20,2026-11-12,2026-11-10,hamnafriluftsbarnehage.no,vanja.engstad@hamnafriluftsbarnehage.no,77 67 26 60,474 85 070,,,,,,,,Otervegen 35,TROMSØ,9017,TROMSØ,5501,Norge,NO,2100,Private aksjeselskaper mv.,2025,1995-02-20,1995-02-20,false,,,,,false,,true,2012-10-24,false,false,,false,,false,,false"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.025562Z",
+          "content_sha256": "b3f96b7a34905d9bc8e169c9f157c743774e8e076a9b3fa38318d930aefc8078",
+          "locator": "row:871487472/column:telefon",
+          "claim_span": "riluftsbarnehage.no,vanja.engstad@hamnafriluftsbarnehage.no,77 67 26 60,474 85 070,,,,,,,,Otervegen 35,TROMSØ,9017,TROMSØ,5501,Norge,NO,2100,Private aksjeselskaper mv.,2025,1995-02-20,1995-02-20,false,,,,,false,,true,2012-10-24,false,false,,false,,false,,false,,,,,,,Bokmål,2017-06-08,\"Eie og drive b"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.025562Z",
+          "content_sha256": "b3f96b7a34905d9bc8e169c9f157c743774e8e076a9b3fa38318d930aefc8078",
+          "locator": "row:871487472/column:mobil",
+          "claim_span": "hage.no,vanja.engstad@hamnafriluftsbarnehage.no,77 67 26 60,474 85 070,,,,,,,,Otervegen 35,TROMSØ,9017,TROMSØ,5501,Norge,NO,2100,Private aksjeselskaper mv.,2025,1995-02-20,1995-02-20,false,,,,,false,,true,2012-10-24,false,false,,false,,false,,false,,,,,,,Bokmål,2017-06-08,\"Eie og drive barnehage til"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.025562Z",
+          "content_sha256": "b3f96b7a34905d9bc8e169c9f157c743774e8e076a9b3fa38318d930aefc8078",
+          "locator": "row:871487472/columns:forretningsadresse.*",
+          "claim_span": "tad@hamnafriluftsbarnehage.no,77 67 26 60,474 85 070,,,,,,,,Otervegen 35,TROMSØ,9017,TROMSØ,5501,Norge,NO,2100,Private aksjeselskaper mv.,2025,1995-02-20,1995-02-20,false,,,,,false,,true,2012-10-24,false,false,,false,,false,,false,,,,,,,Bokmål,2017-06-08,\"Eie og drive barnehage til det beste for med"
+        }
+      ]
+    },
+    {
+      "organisation_number": "912891690",
+      "company": "AMP ISOLERING AS",
+      "kind": "website",
+      "url": "https://isolering.no",
+      "proof_tier": "registry_declared_live",
+      "candidate_origin": "registry_website",
+      "ledger_verdict": "doubtful",
+      "category": "doubtful",
+      "reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration",
+        "Group/multi-company site context needs hand review"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://isolering.no/",
+          "retrieved_at": "2026-11-19T08:35:19.025750Z",
+          "content_sha256": "96b7ef517dbc58c6a37d82ab7db2a1b75d566e2daff1490d0ba1b235bbc4a277",
+          "locator": "identity-proof:912891690",
+          "claim_span": "isolering av loft, vegg &amp; kjeller - AMP Isolering</title><link rel=\"preload\" as=\"image\"  fetchpriority=\"high\" href=\"https://isolering.no/wp-content/uploads/2026/01/AMP-Isolering_gul-hvit_w-1200px.webp\" imagesrcset=\"data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20"
+        },
+        {
+          "source_url": "https://isolering.no/",
+          "retrieved_at": "2026-11-19T08:35:19.025750Z",
+          "content_sha256": "96b7ef517dbc58c6a37d82ab7db2a1b75d566e2daff1490d0ba1b235bbc4a277",
+          "locator": "group-site:other_registered_name_on_page:Trysilhus AS",
+          "claim_span": "ht:var(--awb-typography1-line-height);\">Trysilhus AS</h3></div><div class=\"fusion-text fusion-text-6 fusion-text-no-margin\" style=\"--awb-text-color:var(--awb-color7);--awb-margin-bottom:0px;\"><p>AMP Isolering samarbeider med <a href=\"https://www.trysilhus.no/\" target=\"_blank\" rel=\"noopener noreferre"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.035756Z",
+          "content_sha256": "17dcc9045483ee66be69572fef55feb6bbf2076a39465ea7abcb639e4090f37e",
+          "locator": "row:912891690/column:epostadresse",
+          "claim_span": "ateriale,,,,,,,true,,2026-11-12,2026-11-10,www.isolering.no,mbp@isolering.no,,467 48 077,,,,,,,,Brastadveien 60,REISTAD,3425,LIER,3312,Norge,NO,2100,Private aksjeselskaper mv.,2025,2013-12-17,2013-10-23,true,2014-01-01,2014-03-12,,,false,,true,2013-12-17,false,false,,false,,false,,false,,,,,,,Bokmål"
+        },
+        {
+          "source_url": "https://isolering.no/",
+          "retrieved_at": "2026-11-19T08:35:19.025750Z",
+          "content_sha256": "96b7ef517dbc58c6a37d82ab7db2a1b75d566e2daff1490d0ba1b235bbc4a277",
+          "locator": "registry-contact:email_domain",
+          "claim_span": "<a href=\"mailto:amp@isolering.no\">"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.035756Z",
+          "content_sha256": "17dcc9045483ee66be69572fef55feb6bbf2076a39465ea7abcb639e4090f37e",
+          "locator": "row:912891690/column:navn",
+          "claim_span": "912891690,AMP ISOLERING AS,AS,Aksjeselskap,43.230,Installasjon av isoleringsmateriale,,,,,,,true,,2026-11-12,2026-11-10,www.isolering.no,mbp@isolering.no,,467 48 077,,,,,,,,Brastadveien 60,REISTAD,3425,LIER,3312,Norge,NO,2100,Private aksjeselskaper mv.,2025,2013-12-17,2013-10-23,true,2014-01-01,2014"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.035756Z",
+          "content_sha256": "17dcc9045483ee66be69572fef55feb6bbf2076a39465ea7abcb639e4090f37e",
+          "locator": "row:912891690/column:hjemmeside",
+          "claim_span": "on av isoleringsmateriale,,,,,,,true,,2026-11-12,2026-11-10,www.isolering.no,mbp@isolering.no,,467 48 077,,,,,,,,Brastadveien 60,REISTAD,3425,LIER,3312,Norge,NO,2100,Private aksjeselskaper mv.,2025,2013-12-17,2013-10-23,true,2014-01-01,2014-03-12,,,false,,true,2013-12-17,false,false,,false,,false,,f"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.035756Z",
+          "content_sha256": "17dcc9045483ee66be69572fef55feb6bbf2076a39465ea7abcb639e4090f37e",
+          "locator": "row:912891690/columns:forretningsadresse.*",
+          "claim_span": "-11-10,www.isolering.no,mbp@isolering.no,,467 48 077,,,,,,,,Brastadveien 60,REISTAD,3425,LIER,3312,Norge,NO,2100,Private aksjeselskaper mv.,2025,2013-12-17,2013-10-23,true,2014-01-01,2014-03-12,,,false,,true,2013-12-17,false,false,,false,,false,,false,,,,,,,Bokmål,2025-08-08,\"Isolering av bygninger,"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.035756Z",
+          "content_sha256": "17dcc9045483ee66be69572fef55feb6bbf2076a39465ea7abcb639e4090f37e",
+          "locator": "row:912891690/column:epostadresse",
+          "claim_span": "ateriale,,,,,,,true,,2026-11-12,2026-11-10,www.isolering.no,mbp@isolering.no,,467 48 077,,,,,,,,Brastadveien 60,REISTAD,3425,LIER,3312,Norge,NO,2100,Private aksjeselskaper mv.,2025,2013-12-17,2013-10-23,true,2014-01-01,2014-03-12,,,false,,true,2013-12-17,false,false,,false,,false,,false,,,,,,,Bokmål"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.035756Z",
+          "content_sha256": "17dcc9045483ee66be69572fef55feb6bbf2076a39465ea7abcb639e4090f37e",
+          "locator": "row:912891690/column:mobil",
+          "claim_span": "e,,2026-11-12,2026-11-10,www.isolering.no,mbp@isolering.no,,467 48 077,,,,,,,,Brastadveien 60,REISTAD,3425,LIER,3312,Norge,NO,2100,Private aksjeselskaper mv.,2025,2013-12-17,2013-10-23,true,2014-01-01,2014-03-12,,,false,,true,2013-12-17,false,false,,false,,false,,false,,,,,,,Bokmål,2025-08-08,\"Isole"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.035756Z",
+          "content_sha256": "17dcc9045483ee66be69572fef55feb6bbf2076a39465ea7abcb639e4090f37e",
+          "locator": "row:912891690/columns:forretningsadresse.*",
+          "claim_span": "-11-10,www.isolering.no,mbp@isolering.no,,467 48 077,,,,,,,,Brastadveien 60,REISTAD,3425,LIER,3312,Norge,NO,2100,Private aksjeselskaper mv.,2025,2013-12-17,2013-10-23,true,2014-01-01,2014-03-12,,,false,,true,2013-12-17,false,false,,false,,false,,false,,,,,,,Bokmål,2025-08-08,\"Isolering av bygninger,"
+        }
+      ]
+    },
+    {
+      "organisation_number": "914726441",
+      "company": "KINONOR AS",
+      "kind": "website",
+      "url": "https://www.kinonor.no",
+      "proof_tier": "registry_declared_live",
+      "candidate_origin": "registry_website",
+      "ledger_verdict": "doubtful",
+      "category": "doubtful",
+      "reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://www.kinonor.no/",
+          "retrieved_at": "2026-11-19T08:36:01.732222Z",
+          "content_sha256": "8fba0701b26d94c055d4d22ecde15d4a223a163628f94d1c9c0fd4b655ae7605",
+          "locator": "identity-proof:914726441",
+          "claim_span": "idth, initial-scale=1.0\" />\n\n    <title>Kinonor</title>\n\n    <link rel=\"stylesheet\" type=\"text/css\"\n        href=\"//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,600,700,800,300,400|Open+Sans+Condensed:300,300italic,700\" />\n    <link rel=\"stylesheet\" typ"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.056492Z",
+          "content_sha256": "2c683d90b651294cb516037096520ff926379795fb007dc0776dd43cb2a23ba2",
+          "locator": "row:914726441/column:navn",
+          "claim_span": "914726441,KINONOR AS,AS,Aksjeselskap,59.140,Filmfremvisning,,,,,,,false,,,,www.kinonor.no,arild@trondheimkino.no,,917 84 801,,,,,,,,Prinsens gate 2B,TRONDHEIM,7012,TRONDHEIM,5001,Norge,NO,1520,Kommunalt eide aksjeselskaper mv.,2025,2015-02-10,2014-09-18,true,2015-03-01,2017-02-09,,,false,,true,2015-"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.056492Z",
+          "content_sha256": "2c683d90b651294cb516037096520ff926379795fb007dc0776dd43cb2a23ba2",
+          "locator": "row:914726441/column:hjemmeside",
+          "claim_span": "OR AS,AS,Aksjeselskap,59.140,Filmfremvisning,,,,,,,false,,,,www.kinonor.no,arild@trondheimkino.no,,917 84 801,,,,,,,,Prinsens gate 2B,TRONDHEIM,7012,TRONDHEIM,5001,Norge,NO,1520,Kommunalt eide aksjeselskaper mv.,2025,2015-02-10,2014-09-18,true,2015-03-01,2017-02-09,,,false,,true,2015-02-10,false,fal"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.056492Z",
+          "content_sha256": "2c683d90b651294cb516037096520ff926379795fb007dc0776dd43cb2a23ba2",
+          "locator": "row:914726441/columns:forretningsadresse.*",
+          "claim_span": ",,,www.kinonor.no,arild@trondheimkino.no,,917 84 801,,,,,,,,Prinsens gate 2B,TRONDHEIM,7012,TRONDHEIM,5001,Norge,NO,1520,Kommunalt eide aksjeselskaper mv.,2025,2015-02-10,2014-09-18,true,2015-03-01,2017-02-09,,,false,,true,2015-02-10,false,false,,false,,false,,false,,,,,,,Bokmål,2021-05-19,\"Tilby og"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.056492Z",
+          "content_sha256": "2c683d90b651294cb516037096520ff926379795fb007dc0776dd43cb2a23ba2",
+          "locator": "row:914726441/column:epostadresse",
+          "claim_span": "elskap,59.140,Filmfremvisning,,,,,,,false,,,,www.kinonor.no,arild@trondheimkino.no,,917 84 801,,,,,,,,Prinsens gate 2B,TRONDHEIM,7012,TRONDHEIM,5001,Norge,NO,1520,Kommunalt eide aksjeselskaper mv.,2025,2015-02-10,2014-09-18,true,2015-03-01,2017-02-09,,,false,,true,2015-02-10,false,false,,false,,fals"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.056492Z",
+          "content_sha256": "2c683d90b651294cb516037096520ff926379795fb007dc0776dd43cb2a23ba2",
+          "locator": "row:914726441/column:mobil",
+          "claim_span": "sning,,,,,,,false,,,,www.kinonor.no,arild@trondheimkino.no,,917 84 801,,,,,,,,Prinsens gate 2B,TRONDHEIM,7012,TRONDHEIM,5001,Norge,NO,1520,Kommunalt eide aksjeselskaper mv.,2025,2015-02-10,2014-09-18,true,2015-03-01,2017-02-09,,,false,,true,2015-02-10,false,false,,false,,false,,false,,,,,,,Bokmål,20"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.056492Z",
+          "content_sha256": "2c683d90b651294cb516037096520ff926379795fb007dc0776dd43cb2a23ba2",
+          "locator": "row:914726441/columns:forretningsadresse.*",
+          "claim_span": ",,,www.kinonor.no,arild@trondheimkino.no,,917 84 801,,,,,,,,Prinsens gate 2B,TRONDHEIM,7012,TRONDHEIM,5001,Norge,NO,1520,Kommunalt eide aksjeselskaper mv.,2025,2015-02-10,2014-09-18,true,2015-03-01,2017-02-09,,,false,,true,2015-02-10,false,false,,false,,false,,false,,,,,,,Bokmål,2021-05-19,\"Tilby og"
+        }
+      ]
+    },
+    {
+      "organisation_number": "927931192",
+      "company": "W INITIATIVE STI",
+      "kind": "website",
+      "url": "https://www.w-initiative.com",
+      "proof_tier": "registry_declared_live",
+      "candidate_origin": "registry_website",
+      "ledger_verdict": "doubtful",
+      "category": "doubtful",
+      "reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://www.w-initiative.com/",
+          "retrieved_at": "2026-11-19T08:35:58.370224Z",
+          "content_sha256": "27ac1c07da4c02bfdb0de8d1fd5a1b61671b870e7e0871daa515ab0cf3f94ec0",
+          "locator": "identity-proof:927931192",
+          "claim_span": "dth\"/><meta charSet=\"utf-8\"/><title>The W Initiative - W Initiative</title><meta name=\"robots\" content=\"index,follow\"/><meta name=\"googlebot\" content=\"index,follow\"/><meta name=\"description\" content=\"W Initiative er en humanitær stiftelse som skal bidra til økt livskvalitet for barn og unge.\n\nDette "
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.158292Z",
+          "content_sha256": "029f251ec7e1a43228479450e2de1759372731f13cd47197c256c21a63dd84d6",
+          "locator": "row:927931192/column:epostadresse",
+          "claim_span": "ige og allmennyttige formål,,,,,,,false,,,,w-initiative.com,contact@w-initiative.com,,934 27 131,\"Postboks 3003\nRema 1000 Ladetorget\",TRONDHEIM,7441,TRONDHEIM,5001,Norge,NO,\"c/o Gustav Magnar Witzøe\nKverva 101\",KVERVA,7266,FRØYA,5014,Norge,NO,7000,Ideelle organisasjoner,2025,2021-10-25,2021-09-30,fa"
+        },
+        {
+          "source_url": "https://www.w-initiative.com/",
+          "retrieved_at": "2026-11-19T08:35:58.370224Z",
+          "content_sha256": "27ac1c07da4c02bfdb0de8d1fd5a1b61671b870e7e0871daa515ab0cf3f94ec0",
+          "locator": "registry-contact:email_domain",
+          "claim_span": "<a href=\"mailto:contact@w-initiative.com\">"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.158292Z",
+          "content_sha256": "029f251ec7e1a43228479450e2de1759372731f13cd47197c256c21a63dd84d6",
+          "locator": "row:927931192/column:navn",
+          "claim_span": "927931192,W INITIATIVE STI,STI,Stiftelse,94.991,Aktiviteter i fond/legat som støtter veldedige og allmennyttige formål,,,,,,,false,,,,w-initiative.com,contact@w-initiative.com,,934 27 131,\"Postboks 3003\nRema 1000 Ladetorget\",TRONDHEIM,7441,TRONDHEIM,5001,Norge,NO,\"c/o Gustav Magnar Witzøe\nKverva 101"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.158292Z",
+          "content_sha256": "029f251ec7e1a43228479450e2de1759372731f13cd47197c256c21a63dd84d6",
+          "locator": "row:927931192/column:hjemmeside",
+          "claim_span": "om støtter veldedige og allmennyttige formål,,,,,,,false,,,,w-initiative.com,contact@w-initiative.com,,934 27 131,\"Postboks 3003\nRema 1000 Ladetorget\",TRONDHEIM,7441,TRONDHEIM,5001,Norge,NO,\"c/o Gustav Magnar Witzøe\nKverva 101\",KVERVA,7266,FRØYA,5014,Norge,NO,7000,Ideelle organisasjoner,2025,2021-10"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.158292Z",
+          "content_sha256": "029f251ec7e1a43228479450e2de1759372731f13cd47197c256c21a63dd84d6",
+          "locator": "row:927931192/columns:forretningsadresse.*",
+          "claim_span": "ma 1000 Ladetorget\",TRONDHEIM,7441,TRONDHEIM,5001,Norge,NO,\"c/o Gustav Magnar Witzøe\nKverva 101\",KVERVA,7266,FRØYA,5014,Norge,NO,7000,Ideelle organisasjoner,2025,2021-10-25,2021-09-30,false,,,,,false,,false,,true,false,,false,,false,,false,,,,,,,Bokmål,,,\"Stiftelsen har som formål å støtte humanitær"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.158292Z",
+          "content_sha256": "029f251ec7e1a43228479450e2de1759372731f13cd47197c256c21a63dd84d6",
+          "locator": "row:927931192/column:epostadresse",
+          "claim_span": "ige og allmennyttige formål,,,,,,,false,,,,w-initiative.com,contact@w-initiative.com,,934 27 131,\"Postboks 3003\nRema 1000 Ladetorget\",TRONDHEIM,7441,TRONDHEIM,5001,Norge,NO,\"c/o Gustav Magnar Witzøe\nKverva 101\",KVERVA,7266,FRØYA,5014,Norge,NO,7000,Ideelle organisasjoner,2025,2021-10-25,2021-09-30,fa"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.158292Z",
+          "content_sha256": "029f251ec7e1a43228479450e2de1759372731f13cd47197c256c21a63dd84d6",
+          "locator": "row:927931192/column:mobil",
+          "claim_span": "l,,,,,,,false,,,,w-initiative.com,contact@w-initiative.com,,934 27 131,\"Postboks 3003\nRema 1000 Ladetorget\",TRONDHEIM,7441,TRONDHEIM,5001,Norge,NO,\"c/o Gustav Magnar Witzøe\nKverva 101\",KVERVA,7266,FRØYA,5014,Norge,NO,7000,Ideelle organisasjoner,2025,2021-10-25,2021-09-30,false,,,,,false,,false,,true"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.158292Z",
+          "content_sha256": "029f251ec7e1a43228479450e2de1759372731f13cd47197c256c21a63dd84d6",
+          "locator": "row:927931192/columns:forretningsadresse.*",
+          "claim_span": "ma 1000 Ladetorget\",TRONDHEIM,7441,TRONDHEIM,5001,Norge,NO,\"c/o Gustav Magnar Witzøe\nKverva 101\",KVERVA,7266,FRØYA,5014,Norge,NO,7000,Ideelle organisasjoner,2025,2021-10-25,2021-09-30,false,,,,,false,,false,,true,false,,false,,false,,false,,,,,,,Bokmål,,,\"Stiftelsen har som formål å støtte humanitær"
+        }
+      ]
+    },
+    {
+      "organisation_number": "930730688",
+      "company": "VEGGPRINT AS",
+      "kind": "website",
+      "url": "https://www.veggprint.no",
+      "proof_tier": "orgnr_on_page",
+      "candidate_origin": "legal_name_slug",
+      "ledger_verdict": "doubtful",
+      "category": "doubtful",
+      "reasons": [
+        "Group/multi-company site context needs hand review"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://www.veggprint.no/",
+          "retrieved_at": "2026-11-19T08:35:10.476494Z",
+          "content_sha256": "c5180f042daa1dc4036ab13684914ebe5ce9c40f0d2ff0b9ad2c521abd7842dd",
+          "locator": "identity-proof:930730688",
+          "claim_span": "ien 2, 1555 Son<br/>‍</strong><br/>Org. 930 730 688</span></p><div class=\"social-wrap\"><a href=\"https://www.linkedin.com/company/veggprint-as/\" target"
+        },
+        {
+          "source_url": "https://www.veggprint.no/",
+          "retrieved_at": "2026-11-19T08:35:10.476494Z",
+          "content_sha256": "c5180f042daa1dc4036ab13684914ebe5ce9c40f0d2ff0b9ad2c521abd7842dd",
+          "locator": "group-site:other_registered_name_on_page:Print AS",
+          "claim_span": "ct\" crossorigin=\"anonymous\"/><title>Veggprint AS - Hvor vegger blir kunst</title><meta content=\"Oppdag hvordan Veggprint med WallPen-teknologi kan forvandle dine vegger til levende kunst. Vi tilbyr skreddersydde løsninger for alle typer rom og overflater.\" name=\"description\"/><meta content=\"Veggprin"
+        }
+      ]
+    },
+    {
+      "organisation_number": "933127052",
+      "company": "FLEX2FUTURE AS",
+      "kind": "website",
+      "url": "https://flex2future.com",
+      "proof_tier": "publisher_name_registered_place",
+      "candidate_origin": "legal_name_slug",
+      "ledger_verdict": "doubtful",
+      "category": "doubtful",
+      "reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://flex2future.com/about",
+          "retrieved_at": "2026-11-19T08:35:27.931977Z",
+          "content_sha256": "ca1ea849b797aaf9fae9273fe07c70d1797799be122b5767b58deb40715d22db",
+          "locator": "identity-proof:933127052",
+          "claim_span": "Rosenberg, along with partners, founded Flex2future AS to bring Flex2power technology to the global market. In May 2024, all project assets were transferred from Worley Rosenberg to Flex2future AS.</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</li>\n\t\t\n\t\t\n\t\t\n\t</ul>\n</div"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.219111Z",
+          "content_sha256": "b784dcc76e5f3d9cfa10c1297544e5cba5c24f60a0a012adbb1c449bc67e01f2",
+          "locator": "row:933127052/column:navn",
+          "claim_span": "933127052,FLEX2FUTURE AS,AS,Aksjeselskap,46.640,Engroshandel med maskiner og utstyr ellers,,,,,,,true,,2025-06-12,2025-06-10,,,,,,,,,,,,Tangen 7,RANDABERG,4072,RANDABERG,1127,Norge,NO,2100,Private aksjeselskaper mv.,2025,2024-03-06,2024-02-26,true,2024-12-31,2025-01-21,,,false,,true,2024-03-06,false"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.219111Z",
+          "content_sha256": "b784dcc76e5f3d9cfa10c1297544e5cba5c24f60a0a012adbb1c449bc67e01f2",
+          "locator": "row:933127052/column:hjemmeside",
+          "claim_span": "reringsdatoantallansatteNAVAaregisteret,hjemmeside,epostadresse,telefon,mobil,postadresse.adresse,postadresse.poststed,postadresse.postnummer,postadresse.kommune,postadresse.kommunenummer,postadresse.land,postadresse.landkode,forretningsadresse.adresse,forretningsadresse.poststed,forretningsadresse."
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.219111Z",
+          "content_sha256": "b784dcc76e5f3d9cfa10c1297544e5cba5c24f60a0a012adbb1c449bc67e01f2",
+          "locator": "row:933127052/columns:forretningsadresse.*",
+          "claim_span": " utstyr ellers,,,,,,,true,,2025-06-12,2025-06-10,,,,,,,,,,,,Tangen 7,RANDABERG,4072,RANDABERG,1127,Norge,NO,2100,Private aksjeselskaper mv.,2025,2024-03-06,2024-02-26,true,2024-12-31,2025-01-21,,,false,,true,2024-03-06,false,false,,false,,false,,false,,,,,,,Bokmål,2026-06-11,\"Utvikle og kommersialis"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.219111Z",
+          "content_sha256": "b784dcc76e5f3d9cfa10c1297544e5cba5c24f60a0a012adbb1c449bc67e01f2",
+          "locator": "row:933127052/columns:forretningsadresse.*",
+          "claim_span": " utstyr ellers,,,,,,,true,,2025-06-12,2025-06-10,,,,,,,,,,,,Tangen 7,RANDABERG,4072,RANDABERG,1127,Norge,NO,2100,Private aksjeselskaper mv.,2025,2024-03-06,2024-02-26,true,2024-12-31,2025-01-21,,,false,,true,2024-03-06,false,false,,false,,false,,false,,,,,,,Bokmål,2026-06-11,\"Utvikle og kommersialis"
+        }
+      ]
+    },
+    {
+      "organisation_number": "935105455",
+      "company": "DELIC GROUP AS",
+      "kind": "website",
+      "url": "https://delicgroup.no",
+      "proof_tier": "orgnr_on_page",
+      "candidate_origin": "legal_name_slug",
+      "ledger_verdict": "doubtful",
+      "category": "doubtful",
+      "reasons": [
+        "Group/multi-company site context needs hand review"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://delicgroup.no/",
+          "retrieved_at": "2026-11-19T08:33:27.060571Z",
+          "content_sha256": "48a547fa417c3b7ca68e7e4aa526e4e8aae2efc59161991712f975002082053d",
+          "locator": "identity-proof:935105455",
+          "claim_span": "rong>Delic Group AS</strong> · Org. nr. 935 105 455 · Tjødnavegen 14, 5354 Straume, Norway</p>\n    <p><a href='/support'>Support</a> · <a href='/priva"
+        }
+      ]
+    },
+    {
+      "organisation_number": "967236411",
+      "company": "MARKHUS FLEXMODUL AS",
+      "kind": "website",
+      "url": "https://www.flexmodul.no",
+      "proof_tier": "registry_declared_publisher_name",
+      "candidate_origin": "registry_website",
+      "ledger_verdict": "doubtful",
+      "category": "doubtful",
+      "reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration",
+        "Group/multi-company site context needs hand review"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://www.flexmodul.no/",
+          "retrieved_at": "2026-11-19T08:35:57.317425Z",
+          "content_sha256": "88728c5ab716ca465fcb7f93cb056edec034780190840e93116a777ef640c158",
+          "locator": "identity-proof:967236411",
+          "claim_span": "ml4/loose.dtd\">\r\n<html>\r\n<head>\r\n<title>Markhus Flexmodul AS</title>\r\n<meta content=\"text/html; charset=iso-8859-1\" http-equiv=\"Content-Type\">\r\n<meta name=\"author\" content=\"Petrus Bojanowski\">\r\n<meta name=\"description\" content=\"Markhus Flexmodul AS is the producer and supplier of an adaptable system"
+        },
+        {
+          "source_url": "https://www.flexmodul.no/about_us.html",
+          "retrieved_at": "2026-11-19T08:36:00.350709Z",
+          "content_sha256": "e928f45608429c522f0a6987ffdf8975c5cf1b4e703d42af1403716757857e26",
+          "locator": "group-site:other_registered_name_on_page:Markhus Holding AS",
+          "claim_span": "s=\"set01\" href=\"http://www.markhus.no/\">Markhus Holding AS</a>. \r\nWe have established a presence in the Asian market through our <a class=\"set01\" href=\"http://www.flexmodule.com.sg/\">Flexmodule Asia Pte Ltd</a> in Singapore. \r\n</p>\r\n<br><br>\r\n<p>\r\n<div class=\"align2\"><img class=\"nobord\" src=\"img/com"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.267921Z",
+          "content_sha256": "848e3199451d01a778dd2cc32b91d9488d55223bfef2be7665535d1e9d211452",
+          "locator": "row:967236411/column:navn",
+          "claim_span": "967236411,MARKHUS FLEXMODUL AS,AS,Aksjeselskap,71.129,Annen teknisk konsulentvirksomhet,,,,,,,true,,2022-01-12,2022-01-10,www.flexmodul.no,post@flexmodul.no,37 25 67 60,,Industriveien 14,GRIMSTAD,4879,GRIMSTAD,4202,Norge,NO,\"Østerhus\nIndustriveien 14\",GRIMSTAD,4879,GRIMSTAD,4202,Norge,NO,2100,Privat"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.267921Z",
+          "content_sha256": "848e3199451d01a778dd2cc32b91d9488d55223bfef2be7665535d1e9d211452",
+          "locator": "row:967236411/column:hjemmeside",
+          "claim_span": "knisk konsulentvirksomhet,,,,,,,true,,2022-01-12,2022-01-10,www.flexmodul.no,post@flexmodul.no,37 25 67 60,,Industriveien 14,GRIMSTAD,4879,GRIMSTAD,4202,Norge,NO,\"Østerhus\nIndustriveien 14\",GRIMSTAD,4879,GRIMSTAD,4202,Norge,NO,2100,Private aksjeselskaper mv.,2025,1995-02-20,1993-06-30,true,1994-05-0"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.267921Z",
+          "content_sha256": "848e3199451d01a778dd2cc32b91d9488d55223bfef2be7665535d1e9d211452",
+          "locator": "row:967236411/columns:forretningsadresse.*",
+          "claim_span": " 60,,Industriveien 14,GRIMSTAD,4879,GRIMSTAD,4202,Norge,NO,\"Østerhus\nIndustriveien 14\",GRIMSTAD,4879,GRIMSTAD,4202,Norge,NO,2100,Private aksjeselskaper mv.,2025,1995-02-20,1993-06-30,true,1994-05-01,1995-02-20,,,false,,true,1993-10-20,false,false,,false,,false,,false,,,,,,,Bokmål,2023-01-09,\"Utvikle"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.267921Z",
+          "content_sha256": "848e3199451d01a778dd2cc32b91d9488d55223bfef2be7665535d1e9d211452",
+          "locator": "row:967236411/column:epostadresse",
+          "claim_span": "rksomhet,,,,,,,true,,2022-01-12,2022-01-10,www.flexmodul.no,post@flexmodul.no,37 25 67 60,,Industriveien 14,GRIMSTAD,4879,GRIMSTAD,4202,Norge,NO,\"Østerhus\nIndustriveien 14\",GRIMSTAD,4879,GRIMSTAD,4202,Norge,NO,2100,Private aksjeselskaper mv.,2025,1995-02-20,1993-06-30,true,1994-05-01,1995-02-20,,,fa"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.267921Z",
+          "content_sha256": "848e3199451d01a778dd2cc32b91d9488d55223bfef2be7665535d1e9d211452",
+          "locator": "row:967236411/column:telefon",
+          "claim_span": "e,,2022-01-12,2022-01-10,www.flexmodul.no,post@flexmodul.no,37 25 67 60,,Industriveien 14,GRIMSTAD,4879,GRIMSTAD,4202,Norge,NO,\"Østerhus\nIndustriveien 14\",GRIMSTAD,4879,GRIMSTAD,4202,Norge,NO,2100,Private aksjeselskaper mv.,2025,1995-02-20,1993-06-30,true,1994-05-01,1995-02-20,,,false,,true,1993-10-"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.267921Z",
+          "content_sha256": "848e3199451d01a778dd2cc32b91d9488d55223bfef2be7665535d1e9d211452",
+          "locator": "row:967236411/columns:forretningsadresse.*",
+          "claim_span": " 60,,Industriveien 14,GRIMSTAD,4879,GRIMSTAD,4202,Norge,NO,\"Østerhus\nIndustriveien 14\",GRIMSTAD,4879,GRIMSTAD,4202,Norge,NO,2100,Private aksjeselskaper mv.,2025,1995-02-20,1993-06-30,true,1994-05-01,1995-02-20,,,false,,true,1993-10-20,false,false,,false,,false,,false,,,,,,,Bokmål,2023-01-09,\"Utvikle"
+        }
+      ]
+    },
+    {
+      "organisation_number": "970403558",
+      "company": "ADDERA SA",
+      "kind": "website",
+      "url": "https://addera.no",
+      "proof_tier": "publisher_name_rare_contact",
+      "candidate_origin": "registry_email",
+      "ledger_verdict": "doubtful",
+      "category": "doubtful",
+      "reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://addera.no/",
+          "retrieved_at": "2026-11-19T08:35:56.665465Z",
+          "content_sha256": "4cb3abb2f90422d0af3a25a624b71e1fc609ab53d6f57da55e71915b96107e82",
+          "locator": "identity-proof:970403558",
+          "claim_span": "-cell wf-1-4\"><div class=\"widget-title\">ADDERA SA</div>\t\t\t<div class=\"textwidget\"><p>Frakkagjerdvegen 121<br />\n5563 Førresfjorden</p>\n<p>Telefon: 52 75 40 10<br />\nE-post: <span style=\"text-decoration: underline;\"><a href=\"mailto:post@addera.no\">post@addera.no</a></span></p>\n</div>\n</section><secti"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.267921Z",
+          "content_sha256": "c08461e79766b83dee615095f6dc3839dca066f095a7041557d79c6a3ea90bfa",
+          "locator": "row:970403558/column:epostadresse",
+          "claim_span": "apsføring og bokføring,,,,,,,true,11,2026-10-13,2026-10-10,,post@addera.no,52 75 40 10,,,,,,,,,Frakkagjerdvegen 121,FØRRESFJORDEN,5563,TYSVÆR,1146,Norge,NO,2100,Private aksjeselskaper mv.,2025,1995-02-20,1971-03-03,true,1987-09-01,1995-02-20,,,false,,true,2004-03-23,false,false,,false,,false,,false,"
+        },
+        {
+          "source_url": "https://addera.no/",
+          "retrieved_at": "2026-11-19T08:35:56.665465Z",
+          "content_sha256": "4cb3abb2f90422d0af3a25a624b71e1fc609ab53d6f57da55e71915b96107e82",
+          "locator": "registry-contact:email_domain",
+          "claim_span": "<a href=\"mailto:post@addera.no\">"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.267921Z",
+          "content_sha256": "c08461e79766b83dee615095f6dc3839dca066f095a7041557d79c6a3ea90bfa",
+          "locator": "row:970403558/column:telefon",
+          "claim_span": "kføring,,,,,,,true,11,2026-10-13,2026-10-10,,post@addera.no,52 75 40 10,,,,,,,,,Frakkagjerdvegen 121,FØRRESFJORDEN,5563,TYSVÆR,1146,Norge,NO,2100,Private aksjeselskaper mv.,2025,1995-02-20,1971-03-03,true,1987-09-01,1995-02-20,,,false,,true,2004-03-23,false,false,,false,,false,,false,,,,,,,Nynorsk,2"
+        },
+        {
+          "source_url": "https://addera.no/",
+          "retrieved_at": "2026-11-19T08:35:56.665465Z",
+          "content_sha256": "4cb3abb2f90422d0af3a25a624b71e1fc609ab53d6f57da55e71915b96107e82",
+          "locator": "registry-contact:phone",
+          "claim_span": "r />\n5563 Førresfjorden</p>\n<p>Telefon: 52 75 40 10<br />\nE-post: <span style=\"text-decoration: underline;\"><a href=\"mailto:post@addera.no\">post@addera.no</a></span></p>\n</div>\n</section><section id=\"text-6\" class=\"widget widget_text wf-cell wf-1-4\">\t\t\t<div class=\"textwidget\"></div>\n</section><secti"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.267921Z",
+          "content_sha256": "c08461e79766b83dee615095f6dc3839dca066f095a7041557d79c6a3ea90bfa",
+          "locator": "row:970403558/column:navn",
+          "claim_span": "970403558,ADDERA SA,SA,Samvirkeforetak,69.202,Regnskapsføring og bokføring,,,,,,,true,11,2026-10-13,2026-10-10,,post@addera.no,52 75 40 10,,,,,,,,,Frakkagjerdvegen 121,FØRRESFJORDEN,5563,TYSVÆR,1146,Norge,NO,2100,Private aksjeselskaper mv.,2025,1995-02-20,1971-03-03,true,1987-09-01,1995-02-20,,,fals"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.267921Z",
+          "content_sha256": "c08461e79766b83dee615095f6dc3839dca066f095a7041557d79c6a3ea90bfa",
+          "locator": "row:970403558/column:hjemmeside",
+          "claim_span": "reringsdatoantallansatteNAVAaregisteret,hjemmeside,epostadresse,telefon,mobil,postadresse.adresse,postadresse.poststed,postadresse.postnummer,postadresse.kommune,postadresse.kommunenummer,postadresse.land,postadresse.landkode,forretningsadresse.adresse,forretningsadresse.poststed,forretningsadresse."
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.267921Z",
+          "content_sha256": "c08461e79766b83dee615095f6dc3839dca066f095a7041557d79c6a3ea90bfa",
+          "locator": "row:970403558/columns:forretningsadresse.*",
+          "claim_span": "1,2026-10-13,2026-10-10,,post@addera.no,52 75 40 10,,,,,,,,,Frakkagjerdvegen 121,FØRRESFJORDEN,5563,TYSVÆR,1146,Norge,NO,2100,Private aksjeselskaper mv.,2025,1995-02-20,1971-03-03,true,1987-09-01,1995-02-20,,,false,,true,2004-03-23,false,false,,false,,false,,false,,,,,,,Nynorsk,2019-10-02,\"a. Føremå"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.267921Z",
+          "content_sha256": "c08461e79766b83dee615095f6dc3839dca066f095a7041557d79c6a3ea90bfa",
+          "locator": "row:970403558/column:epostadresse",
+          "claim_span": "apsføring og bokføring,,,,,,,true,11,2026-10-13,2026-10-10,,post@addera.no,52 75 40 10,,,,,,,,,Frakkagjerdvegen 121,FØRRESFJORDEN,5563,TYSVÆR,1146,Norge,NO,2100,Private aksjeselskaper mv.,2025,1995-02-20,1971-03-03,true,1987-09-01,1995-02-20,,,false,,true,2004-03-23,false,false,,false,,false,,false,"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.267921Z",
+          "content_sha256": "c08461e79766b83dee615095f6dc3839dca066f095a7041557d79c6a3ea90bfa",
+          "locator": "row:970403558/column:telefon",
+          "claim_span": "kføring,,,,,,,true,11,2026-10-13,2026-10-10,,post@addera.no,52 75 40 10,,,,,,,,,Frakkagjerdvegen 121,FØRRESFJORDEN,5563,TYSVÆR,1146,Norge,NO,2100,Private aksjeselskaper mv.,2025,1995-02-20,1971-03-03,true,1987-09-01,1995-02-20,,,false,,true,2004-03-23,false,false,,false,,false,,false,,,,,,,Nynorsk,2"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.267921Z",
+          "content_sha256": "c08461e79766b83dee615095f6dc3839dca066f095a7041557d79c6a3ea90bfa",
+          "locator": "row:970403558/columns:forretningsadresse.*",
+          "claim_span": "1,2026-10-13,2026-10-10,,post@addera.no,52 75 40 10,,,,,,,,,Frakkagjerdvegen 121,FØRRESFJORDEN,5563,TYSVÆR,1146,Norge,NO,2100,Private aksjeselskaper mv.,2025,1995-02-20,1971-03-03,true,1987-09-01,1995-02-20,,,false,,true,2004-03-23,false,false,,false,,false,,false,,,,,,,Nynorsk,2019-10-02,\"a. Føremå"
+        }
+      ]
+    },
+    {
+      "organisation_number": "971276223",
+      "company": "NORDIC BLACK THEATRE STI",
+      "kind": "website",
+      "url": "https://www.nordicblacktheatre.no",
+      "proof_tier": "registry_declared_live",
+      "candidate_origin": "registry_website",
+      "ledger_verdict": "doubtful",
+      "category": "doubtful",
+      "reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration",
+        "Group/multi-company site context needs hand review"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://www.nordicblacktheatre.no/",
+          "retrieved_at": "2026-11-19T08:37:27.816869Z",
+          "content_sha256": "c7772b1bebdd66d1be35bb14d4ca61510c52da5196804ab221f24bfc13bc9bc7",
+          "locator": "identity-proof:971276223",
+          "claim_span": "e=\"next-size-adjust\" content=\"\"/><title>Nordic Black Theatre</title><meta name=\"description\" content=\"Nordic Black Theatre er en selveid teaterstiftelse etablert i 1992.\"/><meta name=\"google\" content=\"notranslate=false\"/><meta property=\"og:title\" content=\"Nordic Black Theatre\"/><meta property=\"og:de"
+        },
+        {
+          "source_url": "https://www.nordicblacktheatre.no/info",
+          "retrieved_at": "2026-11-19T08:37:29.091043Z",
+          "content_sha256": "8ccdecc9c17a6d3e15463ff42e7addcf235fc4fd8e3b64abc1976c7ce2486243",
+          "locator": "group-site:other_registered_entity_on_shared_domain:hollendergata 8",
+          "claim_span": "ght:400;font-size:1rem;line-height:1.5\">Hollendergata 8 \n0190 Oslo</span></div><div><strong class=\"text-text-primary block mb-3\" style=\"font-family:var(--font-barlow), ui-sans-serif, system-ui, sans-serif;font-weight:600;font-size:1rem\">Kontakt</strong><div class=\"space-y-2\"><div><a href=\"tel:+47 22"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.278316Z",
+          "content_sha256": "dcbfde82de25ff9c5a8cb6c746cbeb8fc0e5fded2a7ab889b5d62dd97ea7f4b8",
+          "locator": "row:971276223/column:navn",
+          "claim_span": "971276223,NORDIC BLACK THEATRE STI,STI,Stiftelse,90.202,Utøvende kunstnerisk virksomhet og underholdningsvirksomhet innenfor scenekunst,,,,,,,true,52,2026-11-12,2026-11-10,www.nordicblacktheatre.no,jarl@nordicblacktheatre.no,,98 80 18 84,,,,,,,,\"c/o Cafeteatret\nHollendergata 8\",OSLO,0190,OSLO,0301,N"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.278316Z",
+          "content_sha256": "dcbfde82de25ff9c5a8cb6c746cbeb8fc0e5fded2a7ab889b5d62dd97ea7f4b8",
+          "locator": "row:971276223/column:hjemmeside",
+          "claim_span": "het innenfor scenekunst,,,,,,,true,52,2026-11-12,2026-11-10,www.nordicblacktheatre.no,jarl@nordicblacktheatre.no,,98 80 18 84,,,,,,,,\"c/o Cafeteatret\nHollendergata 8\",OSLO,0190,OSLO,0301,Norge,NO,7000,Ideelle organisasjoner,2025,1995-02-20,1992-02-28,true,2003-01-01,2001-07-30,,,true,2025-04-08,fals"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.278316Z",
+          "content_sha256": "dcbfde82de25ff9c5a8cb6c746cbeb8fc0e5fded2a7ab889b5d62dd97ea7f4b8",
+          "locator": "row:971276223/columns:forretningsadresse.*",
+          "claim_span": "ktheatre.no,jarl@nordicblacktheatre.no,,98 80 18 84,,,,,,,,\"c/o Cafeteatret\nHollendergata 8\",OSLO,0190,OSLO,0301,Norge,NO,7000,Ideelle organisasjoner,2025,1995-02-20,1992-02-28,true,2003-01-01,2001-07-30,,,true,2025-04-08,false,,true,false,,false,,false,,false,,,,,,,Bokmål,,,Teaterproduksjon og teat"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.278316Z",
+          "content_sha256": "dcbfde82de25ff9c5a8cb6c746cbeb8fc0e5fded2a7ab889b5d62dd97ea7f4b8",
+          "locator": "row:971276223/column:epostadresse",
+          "claim_span": ",,,,true,52,2026-11-12,2026-11-10,www.nordicblacktheatre.no,jarl@nordicblacktheatre.no,,98 80 18 84,,,,,,,,\"c/o Cafeteatret\nHollendergata 8\",OSLO,0190,OSLO,0301,Norge,NO,7000,Ideelle organisasjoner,2025,1995-02-20,1992-02-28,true,2003-01-01,2001-07-30,,,true,2025-04-08,false,,true,false,,false,,fals"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.278316Z",
+          "content_sha256": "dcbfde82de25ff9c5a8cb6c746cbeb8fc0e5fded2a7ab889b5d62dd97ea7f4b8",
+          "locator": "row:971276223/column:mobil",
+          "claim_span": "11-10,www.nordicblacktheatre.no,jarl@nordicblacktheatre.no,,98 80 18 84,,,,,,,,\"c/o Cafeteatret\nHollendergata 8\",OSLO,0190,OSLO,0301,Norge,NO,7000,Ideelle organisasjoner,2025,1995-02-20,1992-02-28,true,2003-01-01,2001-07-30,,,true,2025-04-08,false,,true,false,,false,,false,,false,,,,,,,Bokmål,,,Teat"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.278316Z",
+          "content_sha256": "dcbfde82de25ff9c5a8cb6c746cbeb8fc0e5fded2a7ab889b5d62dd97ea7f4b8",
+          "locator": "row:971276223/columns:forretningsadresse.*",
+          "claim_span": "ktheatre.no,jarl@nordicblacktheatre.no,,98 80 18 84,,,,,,,,\"c/o Cafeteatret\nHollendergata 8\",OSLO,0190,OSLO,0301,Norge,NO,7000,Ideelle organisasjoner,2025,1995-02-20,1992-02-28,true,2003-01-01,2001-07-30,,,true,2025-04-08,false,,true,false,,false,,false,,false,,,,,,,Bokmål,,,Teaterproduksjon og teat"
+        }
+      ]
+    },
+    {
+      "organisation_number": "985464138",
+      "company": "MØRE MARITIME AS",
+      "kind": "website",
+      "url": "https://moremaritime.no",
+      "proof_tier": "registry_declared_live",
+      "candidate_origin": "registry_website",
+      "ledger_verdict": "doubtful",
+      "category": "doubtful",
+      "reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://moremaritime.no/",
+          "retrieved_at": "2026-11-19T08:33:57.176132Z",
+          "content_sha256": "e07663b09cf4f6f863721c823af036ff0f413d85c774800246b3fee9dca50350",
+          "locator": "identity-proof:985464138",
+          "claim_span": "yoast-seo-wordpress/ -->\n\t<title>Hjem - Møre Maritime</title>\n\t<meta name=\"description\" content=\"Skipteknisk konsulentselskap som designer fremtidens havbruksfartøy.\" />\n\t<link rel=\"canonical\" href=\"https://moremaritime.no/\" />\n\t<meta property=\"og:locale\" content=\"nb_NO\" />\n\t<meta property=\"og:type\""
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.302324Z",
+          "content_sha256": "91bc56bf9fc1f4e410db2fb0b686c847aa6072b2ae1383682ca242e2435a0679",
+          "locator": "row:985464138/column:navn",
+          "claim_span": "985464138,MØRE MARITIME AS,AS,Aksjeselskap,71.129,Annen teknisk konsulentvirksomhet,,,,,,,true,9,2026-11-12,2026-11-10,www.moremaritime.no,post@moremaritime.no,71 58 82 00,92232750,,,,,,,,Dalegata 137,KRISTIANSUND N,6518,KRISTIANSUND,1505,Norge,NO,2100,Private aksjeselskaper mv.,2025,2003-03-10,2003"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.302324Z",
+          "content_sha256": "91bc56bf9fc1f4e410db2fb0b686c847aa6072b2ae1383682ca242e2435a0679",
+          "locator": "row:985464138/column:hjemmeside",
+          "claim_span": "nisk konsulentvirksomhet,,,,,,,true,9,2026-11-12,2026-11-10,www.moremaritime.no,post@moremaritime.no,71 58 82 00,92232750,,,,,,,,Dalegata 137,KRISTIANSUND N,6518,KRISTIANSUND,1505,Norge,NO,2100,Private aksjeselskaper mv.,2025,2003-03-10,2003-02-28,true,2003-03-01,2003-04-26,Utleier av bygg eller anl"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.302324Z",
+          "content_sha256": "91bc56bf9fc1f4e410db2fb0b686c847aa6072b2ae1383682ca242e2435a0679",
+          "locator": "row:985464138/columns:forretningsadresse.*",
+          "claim_span": "aritime.no,post@moremaritime.no,71 58 82 00,92232750,,,,,,,,Dalegata 137,KRISTIANSUND N,6518,KRISTIANSUND,1505,Norge,NO,2100,Private aksjeselskaper mv.,2025,2003-03-10,2003-02-28,true,2003-03-01,2003-04-26,Utleier av bygg eller anlegg,2021-03-06,false,,true,2003-03-10,false,false,,false,,false,,fals"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.302324Z",
+          "content_sha256": "91bc56bf9fc1f4e410db2fb0b686c847aa6072b2ae1383682ca242e2435a0679",
+          "locator": "row:985464138/column:epostadresse",
+          "claim_span": "mhet,,,,,,,true,9,2026-11-12,2026-11-10,www.moremaritime.no,post@moremaritime.no,71 58 82 00,92232750,,,,,,,,Dalegata 137,KRISTIANSUND N,6518,KRISTIANSUND,1505,Norge,NO,2100,Private aksjeselskaper mv.,2025,2003-03-10,2003-02-28,true,2003-03-01,2003-04-26,Utleier av bygg eller anlegg,2021-03-06,false"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.302324Z",
+          "content_sha256": "91bc56bf9fc1f4e410db2fb0b686c847aa6072b2ae1383682ca242e2435a0679",
+          "locator": "row:985464138/column:telefon",
+          "claim_span": "6-11-12,2026-11-10,www.moremaritime.no,post@moremaritime.no,71 58 82 00,92232750,,,,,,,,Dalegata 137,KRISTIANSUND N,6518,KRISTIANSUND,1505,Norge,NO,2100,Private aksjeselskaper mv.,2025,2003-03-10,2003-02-28,true,2003-03-01,2003-04-26,Utleier av bygg eller anlegg,2021-03-06,false,,true,2003-03-10,fal"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.302324Z",
+          "content_sha256": "91bc56bf9fc1f4e410db2fb0b686c847aa6072b2ae1383682ca242e2435a0679",
+          "locator": "row:985464138/column:mobil",
+          "claim_span": "-11-10,www.moremaritime.no,post@moremaritime.no,71 58 82 00,92232750,,,,,,,,Dalegata 137,KRISTIANSUND N,6518,KRISTIANSUND,1505,Norge,NO,2100,Private aksjeselskaper mv.,2025,2003-03-10,2003-02-28,true,2003-03-01,2003-04-26,Utleier av bygg eller anlegg,2021-03-06,false,,true,2003-03-10,false,false,,fa"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.302324Z",
+          "content_sha256": "91bc56bf9fc1f4e410db2fb0b686c847aa6072b2ae1383682ca242e2435a0679",
+          "locator": "row:985464138/columns:forretningsadresse.*",
+          "claim_span": "aritime.no,post@moremaritime.no,71 58 82 00,92232750,,,,,,,,Dalegata 137,KRISTIANSUND N,6518,KRISTIANSUND,1505,Norge,NO,2100,Private aksjeselskaper mv.,2025,2003-03-10,2003-02-28,true,2003-03-01,2003-04-26,Utleier av bygg eller anlegg,2021-03-06,false,,true,2003-03-10,false,false,,false,,false,,fals"
+        }
+      ]
+    },
+    {
+      "organisation_number": "985632197",
+      "company": "KJERNSBEKK AS",
+      "kind": "website",
+      "url": "https://kjernsbekk.no",
+      "proof_tier": "orgnr_on_page",
+      "candidate_origin": "legal_name_slug",
+      "ledger_verdict": "doubtful",
+      "category": "doubtful",
+      "reasons": [
+        "Group/multi-company site context needs hand review"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://kjernsbekk.no/",
+          "retrieved_at": "2026-11-19T08:35:01.850314Z",
+          "content_sha256": "43601335cf1d5e62d4f1e940beb4a5e55cef61dc2ca81521d391c34650ad9f69",
+          "locator": "identity-proof:985632197",
+          "claim_span": "widget-container\">\n\t\t\t\t\t\t\t\t\t<p>Org nr.: 985 632 197</p>\t\t\t\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div class=\"elementor-column elementor-col-3"
+        },
+        {
+          "source_url": "https://kjernsbekk.no/",
+          "retrieved_at": "2026-11-19T08:35:01.850314Z",
+          "content_sha256": "43601335cf1d5e62d4f1e940beb4a5e55cef61dc2ca81521d391c34650ad9f69",
+          "locator": "group-site:other_registered_name_on_page:Verdi Media Norge AS",
+          "claim_span": "Kjernsbekk AS - Utviklet og designet av Verdi Media Norge AS</a></div>\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div class=\"elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-664af67a\" data-id=\"664af67a\" data-element_type=\"column\" data-e-type=\"column\">\n\t\t"
+        }
+      ]
+    },
+    {
+      "organisation_number": "985997349",
+      "company": "VEKO AS",
+      "kind": "website",
+      "url": "https://veko.no",
+      "proof_tier": "registry_declared_live",
+      "candidate_origin": "registry_website",
+      "ledger_verdict": "doubtful",
+      "category": "doubtful",
+      "reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://veko.no/",
+          "retrieved_at": "2026-11-19T08:33:57.264703Z",
+          "content_sha256": "96a9f87f7d411b0e0e14af528e711197cf4744c2a1aed77517b76948c41f8bfa",
+          "locator": "identity-proof:985997349",
+          "claim_span": "https://rankmath.com/ -->\n<title>Hjem - Veko</title>\n<meta name=\"description\" content=\"Gjennom en energianalyse vil man identifisere de største energityvene og vurdere tiltak og deres lønnsomhet.\"/>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:l"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.302324Z",
+          "content_sha256": "d6ac88751ccf3f22c67a772430ff437645995555dec098e8f5652b1786386c15",
+          "locator": "row:985997349/column:epostadresse",
+          "claim_span": "sjonsarbeid,,,,,,,true,25,2026-05-12,2026-05-10,www.veko.no,post@veko.no,,98852777,,,,,,,,Gulliveien 6,BARKÅKER,3157,TØNSBERG,3905,Norge,NO,2100,Private aksjeselskaper mv.,2025,2003-09-16,2003-07-09,true,2003-07-01,2003-11-04,,,false,,true,2003-09-16,false,false,,false,,false,,false,,,,,,,Bokmål,201"
+        },
+        {
+          "source_url": "https://veko.no/",
+          "retrieved_at": "2026-11-19T08:33:57.264703Z",
+          "content_sha256": "96a9f87f7d411b0e0e14af528e711197cf4744c2a1aed77517b76948c41f8bfa",
+          "locator": "registry-contact:email_domain",
+          "claim_span": "<a href=\"mailto:post@veko.no\">"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.302324Z",
+          "content_sha256": "d6ac88751ccf3f22c67a772430ff437645995555dec098e8f5652b1786386c15",
+          "locator": "row:985997349/column:navn",
+          "claim_span": "985997349,VEKO AS,AS,Aksjeselskap,43.223,Ventilasjonsarbeid,,,,,,,true,25,2026-05-12,2026-05-10,www.veko.no,post@veko.no,,98852777,,,,,,,,Gulliveien 6,BARKÅKER,3157,TØNSBERG,3905,Norge,NO,2100,Private aksjeselskaper mv.,2025,2003-09-16,2003-07-09,true,2003-07-01,2003-11-04,,,false,,true,2003-09-16,f"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.302324Z",
+          "content_sha256": "d6ac88751ccf3f22c67a772430ff437645995555dec098e8f5652b1786386c15",
+          "locator": "row:985997349/column:hjemmeside",
+          "claim_span": ".223,Ventilasjonsarbeid,,,,,,,true,25,2026-05-12,2026-05-10,www.veko.no,post@veko.no,,98852777,,,,,,,,Gulliveien 6,BARKÅKER,3157,TØNSBERG,3905,Norge,NO,2100,Private aksjeselskaper mv.,2025,2003-09-16,2003-07-09,true,2003-07-01,2003-11-04,,,false,,true,2003-09-16,false,false,,false,,false,,false,,,,,"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.302324Z",
+          "content_sha256": "d6ac88751ccf3f22c67a772430ff437645995555dec098e8f5652b1786386c15",
+          "locator": "row:985997349/columns:forretningsadresse.*",
+          "claim_span": "-05-12,2026-05-10,www.veko.no,post@veko.no,,98852777,,,,,,,,Gulliveien 6,BARKÅKER,3157,TØNSBERG,3905,Norge,NO,2100,Private aksjeselskaper mv.,2025,2003-09-16,2003-07-09,true,2003-07-01,2003-11-04,,,false,,true,2003-09-16,false,false,,false,,false,,false,,,,,,,Bokmål,2019-03-01,\"Salg/markedsføring/in"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.302324Z",
+          "content_sha256": "d6ac88751ccf3f22c67a772430ff437645995555dec098e8f5652b1786386c15",
+          "locator": "row:985997349/column:epostadresse",
+          "claim_span": "sjonsarbeid,,,,,,,true,25,2026-05-12,2026-05-10,www.veko.no,post@veko.no,,98852777,,,,,,,,Gulliveien 6,BARKÅKER,3157,TØNSBERG,3905,Norge,NO,2100,Private aksjeselskaper mv.,2025,2003-09-16,2003-07-09,true,2003-07-01,2003-11-04,,,false,,true,2003-09-16,false,false,,false,,false,,false,,,,,,,Bokmål,201"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.302324Z",
+          "content_sha256": "d6ac88751ccf3f22c67a772430ff437645995555dec098e8f5652b1786386c15",
+          "locator": "row:985997349/column:mobil",
+          "claim_span": ",,,,true,25,2026-05-12,2026-05-10,www.veko.no,post@veko.no,,98852777,,,,,,,,Gulliveien 6,BARKÅKER,3157,TØNSBERG,3905,Norge,NO,2100,Private aksjeselskaper mv.,2025,2003-09-16,2003-07-09,true,2003-07-01,2003-11-04,,,false,,true,2003-09-16,false,false,,false,,false,,false,,,,,,,Bokmål,2019-03-01,\"Salg/"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.302324Z",
+          "content_sha256": "d6ac88751ccf3f22c67a772430ff437645995555dec098e8f5652b1786386c15",
+          "locator": "row:985997349/columns:forretningsadresse.*",
+          "claim_span": "-05-12,2026-05-10,www.veko.no,post@veko.no,,98852777,,,,,,,,Gulliveien 6,BARKÅKER,3157,TØNSBERG,3905,Norge,NO,2100,Private aksjeselskaper mv.,2025,2003-09-16,2003-07-09,true,2003-07-01,2003-11-04,,,false,,true,2003-09-16,false,false,,false,,false,,false,,,,,,,Bokmål,2019-03-01,\"Salg/markedsføring/in"
+        }
+      ]
+    },
+    {
+      "organisation_number": "989247689",
+      "company": "FLO CONSULTING AS",
+      "kind": "website",
+      "url": "https://www.floconsulting.no",
+      "proof_tier": "registry_declared_publisher_name",
+      "candidate_origin": "registry_website",
+      "ledger_verdict": "doubtful",
+      "category": "doubtful",
+      "reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration",
+        "Group/multi-company site context needs hand review"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://www.floconsulting.no/",
+          "retrieved_at": "2026-11-19T08:35:20.002945Z",
+          "content_sha256": "c1f18c044b071fca64a13be805ff9aa636863ed2e2151aa2f166735915f04317",
+          "locator": "identity-proof:989247689",
+          "claim_span": "roduct/yoast-seo-wordpress/ -->\n\t<title>Flo Consulting AS</title>\n\t<meta name=\"description\" content=\"Flo Consulting AS er et selskap som leverer spesialkompetanse på SAP-teknologi. Vi leverer konsulenttjenester innenfor områder som: SAP Infrastruktur og Arkitektur\" />\n\t<link rel=\"canonical\" href=\"ht"
+        },
+        {
+          "source_url": "https://www.floconsulting.no/",
+          "retrieved_at": "2026-11-19T08:35:20.002945Z",
+          "content_sha256": "c1f18c044b071fca64a13be805ff9aa636863ed2e2151aa2f166735915f04317",
+          "locator": "group-site:other_registered_name_on_page:Nordic Hosting AS",
+          "claim_span": "ting.com/\" target=\"_blank\" class=\"nobr\">Nordic Hosting AS</a>.</span></span>\t\t</div><!-- .site-info -->\n\t</footer><!-- #colophon -->\n</div>\n\n\t<div id=\"toTop\" class=\"btn btn-info \">\r\n\t\t<i class=\"glyphicon glyphicon-chevron-up\"></i>\r\n\t</div>\r\n\r\n\r\n<script type=\"speculationrules\">\n{\"prefetch\":[{\"source\""
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.341651Z",
+          "content_sha256": "625dd847239c6379a94a245395708e85ff2c31ed48080b5deb9870619b2ddd52",
+          "locator": "row:989247689/column:navn",
+          "claim_span": "989247689,FLO CONSULTING AS,AS,Aksjeselskap,62.200,Konsulentvirksomhet tilknyttet informasjonsteknologi og forvaltning og drift av it-systemer,,,,,,,true,,2009-04-25,2009-03-16,floconsulting.no,,55 16 08 27,95184013,,,,,,,,Torgny Segerstedts vei 177,FYLLINGSDALEN,5143,BERGEN,4601,Norge,NO,2100,Priva"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.341651Z",
+          "content_sha256": "625dd847239c6379a94a245395708e85ff2c31ed48080b5deb9870619b2ddd52",
+          "locator": "row:989247689/column:hjemmeside",
+          "claim_span": "g og drift av it-systemer,,,,,,,true,,2009-04-25,2009-03-16,floconsulting.no,,55 16 08 27,95184013,,,,,,,,Torgny Segerstedts vei 177,FYLLINGSDALEN,5143,BERGEN,4601,Norge,NO,2100,Private aksjeselskaper mv.,2025,2006-01-25,2005-12-20,true,2005-11-01,2006-05-13,,,false,,true,2006-01-25,false,false,,fal"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.341651Z",
+          "content_sha256": "625dd847239c6379a94a245395708e85ff2c31ed48080b5deb9870619b2ddd52",
+          "locator": "row:989247689/columns:forretningsadresse.*",
+          "claim_span": "25,2009-03-16,floconsulting.no,,55 16 08 27,95184013,,,,,,,,Torgny Segerstedts vei 177,FYLLINGSDALEN,5143,BERGEN,4601,Norge,NO,2100,Private aksjeselskaper mv.,2025,2006-01-25,2005-12-20,true,2005-11-01,2006-05-13,,,false,,true,2006-01-25,false,false,,false,,false,,false,,,,,,,Bokmål,2005-12-20,Salg "
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.341651Z",
+          "content_sha256": "625dd847239c6379a94a245395708e85ff2c31ed48080b5deb9870619b2ddd52",
+          "locator": "row:989247689/column:telefon",
+          "claim_span": "ystemer,,,,,,,true,,2009-04-25,2009-03-16,floconsulting.no,,55 16 08 27,95184013,,,,,,,,Torgny Segerstedts vei 177,FYLLINGSDALEN,5143,BERGEN,4601,Norge,NO,2100,Private aksjeselskaper mv.,2025,2006-01-25,2005-12-20,true,2005-11-01,2006-05-13,,,false,,true,2006-01-25,false,false,,false,,false,,false,,"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.341651Z",
+          "content_sha256": "625dd847239c6379a94a245395708e85ff2c31ed48080b5deb9870619b2ddd52",
+          "locator": "row:989247689/column:mobil",
+          "claim_span": ",,true,,2009-04-25,2009-03-16,floconsulting.no,,55 16 08 27,95184013,,,,,,,,Torgny Segerstedts vei 177,FYLLINGSDALEN,5143,BERGEN,4601,Norge,NO,2100,Private aksjeselskaper mv.,2025,2006-01-25,2005-12-20,true,2005-11-01,2006-05-13,,,false,,true,2006-01-25,false,false,,false,,false,,false,,,,,,,Bokmål,"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.341651Z",
+          "content_sha256": "625dd847239c6379a94a245395708e85ff2c31ed48080b5deb9870619b2ddd52",
+          "locator": "row:989247689/columns:forretningsadresse.*",
+          "claim_span": "25,2009-03-16,floconsulting.no,,55 16 08 27,95184013,,,,,,,,Torgny Segerstedts vei 177,FYLLINGSDALEN,5143,BERGEN,4601,Norge,NO,2100,Private aksjeselskaper mv.,2025,2006-01-25,2005-12-20,true,2005-11-01,2006-05-13,,,false,,true,2006-01-25,false,false,,false,,false,,false,,,,,,,Bokmål,2005-12-20,Salg "
+        }
+      ]
+    },
+    {
+      "organisation_number": "998054443",
+      "company": "OS MARINESERVICE AS",
+      "kind": "website",
+      "url": "https://www.osmarineservice.no",
+      "proof_tier": "signals",
+      "candidate_origin": "registry_website",
+      "ledger_verdict": "doubtful",
+      "category": "doubtful",
+      "reasons": [
+        "No exact target orgnr in saved owner/proof context; published signal-only tier requires hand review",
+        "Published identity tier is below exact-number VERIFIED",
+        "Saved page proof needs review: corroboration",
+        "Group/multi-company site context needs hand review"
+      ],
+      "receipts": [
+        {
+          "source_url": "https://www.osmarineservice.no/",
+          "retrieved_at": "2026-11-19T08:37:28.736140Z",
+          "content_sha256": "ffe069d179ab30fc066f1e37dbf8d00348612e0d367efecb94cca968179f0bcc",
+          "locator": "identity-proof:998054443",
+          "claim_span": "wordpress/ -->\n\t<title>Båtverksted Os | Os Marineservice AS | Båtservice Hordaland</title>\n\t<meta name=\"description\" content=\"Båtverksted som tar imot alle typer båter for båtvedlikehold, båtreparasjon, service av yrkesfartøy overhaling av båtmotor, båtvask samt bunnsmøring og reparasjon av hydrauli"
+        },
+        {
+          "source_url": "https://www.osmarineservice.no/",
+          "retrieved_at": "2026-11-19T08:37:28.736140Z",
+          "content_sha256": "ffe069d179ab30fc066f1e37dbf8d00348612e0d367efecb94cca968179f0bcc",
+          "locator": "group-site:other_registered_name_on_page:Verdi Media Norge AS",
+          "claim_span": "ineservice AS - Utviklet og designet av Verdi Media Norge AS</a></div>\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t</div>\n\t\t\t\t<div class=\"elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-67ffdcc2\" data-id=\"67ffdcc2\" data-element_type=\"column\" data-e-type=\"column\">\n\t\t"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.390560Z",
+          "content_sha256": "b1c9cc5c02a5d4bc018ec468d870ed3fe49ce847fabca826ec3aa62e2dfdd12e",
+          "locator": "row:998054443/column:telefon",
+          "claim_span": "2026-11-10,www.osmarineservice.no,morten@osmarineservice.no,56 30 97 97,974 99 413,,,,,,,,Røtingavegen 5,LEPSØY,5216,BJØRNAFJORDEN,4624,Norge,NO,2100,Private aksjeselskaper mv.,2025,2012-03-05,2012-02-07,true,2012-07-01,2012-10-17,,,false,,true,2012-03-05,false,false,,false,,false,,false,,,,,,,Bokmå"
+        },
+        {
+          "source_url": "https://www.osmarineservice.no/",
+          "retrieved_at": "2026-11-19T08:37:28.736140Z",
+          "content_sha256": "ffe069d179ab30fc066f1e37dbf8d00348612e0d367efecb94cca968179f0bcc",
+          "locator": "registry-contact:phone",
+          "claim_span": "<a href=\"tel:004756309797\">"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.390560Z",
+          "content_sha256": "b1c9cc5c02a5d4bc018ec468d870ed3fe49ce847fabca826ec3aa62e2dfdd12e",
+          "locator": "row:998054443/column:epostadresse",
+          "claim_span": ",,,,,,,true,14,2026-11-12,2026-11-10,www.osmarineservice.no,morten@osmarineservice.no,56 30 97 97,974 99 413,,,,,,,,Røtingavegen 5,LEPSØY,5216,BJØRNAFJORDEN,4624,Norge,NO,2100,Private aksjeselskaper mv.,2025,2012-03-05,2012-02-07,true,2012-07-01,2012-10-17,,,false,,true,2012-03-05,false,false,,false"
+        },
+        {
+          "source_url": "https://www.osmarineservice.no/",
+          "retrieved_at": "2026-11-19T08:37:28.736140Z",
+          "content_sha256": "ffe069d179ab30fc066f1e37dbf8d00348612e0d367efecb94cca968179f0bcc",
+          "locator": "registry-contact:email_domain",
+          "claim_span": "<a href=\"mailto:post@osmarineservice.no\">"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.390560Z",
+          "content_sha256": "b1c9cc5c02a5d4bc018ec468d870ed3fe49ce847fabca826ec3aa62e2dfdd12e",
+          "locator": "row:998054443/column:navn",
+          "claim_span": "998054443,OS MARINESERVICE AS,AS,Aksjeselskap,33.150,Reparasjon og vedlikehold av sivile skip og båter,,,,,,,true,14,2026-11-12,2026-11-10,www.osmarineservice.no,morten@osmarineservice.no,56 30 97 97,974 99 413,,,,,,,,Røtingavegen 5,LEPSØY,5216,BJØRNAFJORDEN,4624,Norge,NO,2100,Private aksjeselskaper"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.390560Z",
+          "content_sha256": "b1c9cc5c02a5d4bc018ec468d870ed3fe49ce847fabca826ec3aa62e2dfdd12e",
+          "locator": "row:998054443/column:hjemmeside",
+          "claim_span": "av sivile skip og båter,,,,,,,true,14,2026-11-12,2026-11-10,www.osmarineservice.no,morten@osmarineservice.no,56 30 97 97,974 99 413,,,,,,,,Røtingavegen 5,LEPSØY,5216,BJØRNAFJORDEN,4624,Norge,NO,2100,Private aksjeselskaper mv.,2025,2012-03-05,2012-02-07,true,2012-07-01,2012-10-17,,,false,,true,2012-0"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.390560Z",
+          "content_sha256": "b1c9cc5c02a5d4bc018ec468d870ed3fe49ce847fabca826ec3aa62e2dfdd12e",
+          "locator": "row:998054443/columns:forretningsadresse.*",
+          "claim_span": ".no,morten@osmarineservice.no,56 30 97 97,974 99 413,,,,,,,,Røtingavegen 5,LEPSØY,5216,BJØRNAFJORDEN,4624,Norge,NO,2100,Private aksjeselskaper mv.,2025,2012-03-05,2012-02-07,true,2012-07-01,2012-10-17,,,false,,true,2012-03-05,false,false,,false,,false,,false,,,,,,,Bokmål,2018-11-09,\"Reparasjon og ve"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.390560Z",
+          "content_sha256": "b1c9cc5c02a5d4bc018ec468d870ed3fe49ce847fabca826ec3aa62e2dfdd12e",
+          "locator": "row:998054443/column:epostadresse",
+          "claim_span": ",,,,,,,true,14,2026-11-12,2026-11-10,www.osmarineservice.no,morten@osmarineservice.no,56 30 97 97,974 99 413,,,,,,,,Røtingavegen 5,LEPSØY,5216,BJØRNAFJORDEN,4624,Norge,NO,2100,Private aksjeselskaper mv.,2025,2012-03-05,2012-02-07,true,2012-07-01,2012-10-17,,,false,,true,2012-03-05,false,false,,false"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.390560Z",
+          "content_sha256": "b1c9cc5c02a5d4bc018ec468d870ed3fe49ce847fabca826ec3aa62e2dfdd12e",
+          "locator": "row:998054443/column:telefon",
+          "claim_span": "2026-11-10,www.osmarineservice.no,morten@osmarineservice.no,56 30 97 97,974 99 413,,,,,,,,Røtingavegen 5,LEPSØY,5216,BJØRNAFJORDEN,4624,Norge,NO,2100,Private aksjeselskaper mv.,2025,2012-03-05,2012-02-07,true,2012-07-01,2012-10-17,,,false,,true,2012-03-05,false,false,,false,,false,,false,,,,,,,Bokmå"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.390560Z",
+          "content_sha256": "b1c9cc5c02a5d4bc018ec468d870ed3fe49ce847fabca826ec3aa62e2dfdd12e",
+          "locator": "row:998054443/column:mobil",
+          "claim_span": "ww.osmarineservice.no,morten@osmarineservice.no,56 30 97 97,974 99 413,,,,,,,,Røtingavegen 5,LEPSØY,5216,BJØRNAFJORDEN,4624,Norge,NO,2100,Private aksjeselskaper mv.,2025,2012-03-05,2012-02-07,true,2012-07-01,2012-10-17,,,false,,true,2012-03-05,false,false,,false,,false,,false,,,,,,,Bokmål,2018-11-09"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.390560Z",
+          "content_sha256": "b1c9cc5c02a5d4bc018ec468d870ed3fe49ce847fabca826ec3aa62e2dfdd12e",
+          "locator": "row:998054443/columns:forretningsadresse.*",
+          "claim_span": ".no,morten@osmarineservice.no,56 30 97 97,974 99 413,,,,,,,,Røtingavegen 5,LEPSØY,5216,BJØRNAFJORDEN,4624,Norge,NO,2100,Private aksjeselskaper mv.,2025,2012-03-05,2012-02-07,true,2012-07-01,2012-10-17,,,false,,true,2012-03-05,false,false,,false,,false,,false,,,,,,,Bokmål,2018-11-09,\"Reparasjon og ve"
+        }
+      ]
+    },
+    {
+      "organisation_number": "915062601",
+      "company": "FUNDERUD ANTIRUST AS",
+      "kind": "social",
+      "url": "https://www.facebook.com/FunderudAntirust",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "candidate_origin": null,
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://antirust.no/",
+          "retrieved_at": "2026-11-19T08:35:53.551911Z",
+          "content_sha256": "3232b18adc5ee15516f0141908cd2f46cc3a81f585e21ebdb030c9b769a1c5c5",
+          "locator": "company-link:https://www.facebook.com/FunderudAntirust",
+          "claim_span": "<a target=\"_blank\" href=\"https://www.facebook.com/FunderudAntirust\" aria-label=\"facebook\" class=\"w-image-h\">"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.058491Z",
+          "content_sha256": "2dd75eebbc5b127abccf28884b6c06f668ad365b470189362671af78bf8e141d",
+          "locator": "row:915062601/column:navn",
+          "claim_span": "915062601,FUNDERUD ANTIRUST AS,AS,Aksjeselskap,95.310,Reparasjon og vedlikehold av motorvogner,,,,,,,true,12,2026-11-12,2026-11-10,www.antirust.no,funderud@antirust.no,69 89 89 89,,,,,,,,,Finnestadveien 335,EIDSBERG,1880,INDRE ØSTFOLD,3118,Norge,NO,2100,Private aksjeselskaper mv.,2025,2015-03-04,201"
+        },
+        {
+          "source_url": "https://antirust.no/kontakt-oss/",
+          "retrieved_at": "2026-11-19T08:36:00.648850Z",
+          "content_sha256": "fe21d30f33d583627d781b70f2e35d3e9817e4332e40a13c985c92453b0ba424",
+          "locator": "identity-proof:915062601",
+          "claim_span": "r-og-kj%C3%B8ret%C3%B8y/IF4SYTL0CUX\">NO 915 062 601 MVA</a></p></div></div></div></div><div class=\"w-hwrapper valign_top wrap stack_on_mobiles align_n"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.058491Z",
+          "content_sha256": "2dd75eebbc5b127abccf28884b6c06f668ad365b470189362671af78bf8e141d",
+          "locator": "row:915062601/column:telefon",
+          "claim_span": ",2026-11-12,2026-11-10,www.antirust.no,funderud@antirust.no,69 89 89 89,,,,,,,,,Finnestadveien 335,EIDSBERG,1880,INDRE ØSTFOLD,3118,Norge,NO,2100,Private aksjeselskaper mv.,2025,2015-03-04,2015-01-01,true,2015-01-01,2015-03-24,,,false,,true,2015-03-04,false,false,,false,,false,,false,,,,,,,Bokmål,20"
+        },
+        {
+          "source_url": "https://antirust.no/kontakt-oss/",
+          "retrieved_at": "2026-11-19T08:36:00.648850Z",
+          "content_sha256": "fe21d30f33d583627d781b70f2e35d3e9817e4332e40a13c985c92453b0ba424",
+          "locator": "registry-contact:phone",
+          "claim_span": "<a class=\"w-btn us-btn-style_1 hidden_for_mobiles ush_btn_3 btn_style_one phone_btn\" href=\"tel:69 89 89 89\">"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.058491Z",
+          "content_sha256": "2dd75eebbc5b127abccf28884b6c06f668ad365b470189362671af78bf8e141d",
+          "locator": "row:915062601/column:epostadresse",
+          "claim_span": "rvogner,,,,,,,true,12,2026-11-12,2026-11-10,www.antirust.no,funderud@antirust.no,69 89 89 89,,,,,,,,,Finnestadveien 335,EIDSBERG,1880,INDRE ØSTFOLD,3118,Norge,NO,2100,Private aksjeselskaper mv.,2025,2015-03-04,2015-01-01,true,2015-01-01,2015-03-24,,,false,,true,2015-03-04,false,false,,false,,false,,"
+        },
+        {
+          "source_url": "https://antirust.no/kontakt-oss/",
+          "retrieved_at": "2026-11-19T08:36:00.648850Z",
+          "content_sha256": "fe21d30f33d583627d781b70f2e35d3e9817e4332e40a13c985c92453b0ba424",
+          "locator": "registry-contact:email_domain",
+          "claim_span": "<a href=\"mailto:funderud@antirust.no\" class=\"w-text-h\">"
+        }
+      ]
+    },
+    {
+      "organisation_number": "915062601",
+      "company": "FUNDERUD ANTIRUST AS",
+      "kind": "social",
+      "url": "https://www.instagram.com/funderud_antirust_as",
+      "proof_tier": "own_header_footer_exact_name_v1",
+      "candidate_origin": null,
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://antirust.no/",
+          "retrieved_at": "2026-11-19T08:35:53.551911Z",
+          "content_sha256": "3232b18adc5ee15516f0141908cd2f46cc3a81f585e21ebdb030c9b769a1c5c5",
+          "locator": "company-link:https://www.instagram.com/funderud_antirust_as",
+          "claim_span": "<a target=\"_blank\" href=\"https://www.instagram.com/funderud_antirust_as/\" aria-label=\"instagram\" class=\"w-image-h\">"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.058491Z",
+          "content_sha256": "2dd75eebbc5b127abccf28884b6c06f668ad365b470189362671af78bf8e141d",
+          "locator": "row:915062601/column:navn",
+          "claim_span": "915062601,FUNDERUD ANTIRUST AS,AS,Aksjeselskap,95.310,Reparasjon og vedlikehold av motorvogner,,,,,,,true,12,2026-11-12,2026-11-10,www.antirust.no,funderud@antirust.no,69 89 89 89,,,,,,,,,Finnestadveien 335,EIDSBERG,1880,INDRE ØSTFOLD,3118,Norge,NO,2100,Private aksjeselskaper mv.,2025,2015-03-04,201"
+        },
+        {
+          "source_url": "https://antirust.no/kontakt-oss/",
+          "retrieved_at": "2026-11-19T08:36:00.648850Z",
+          "content_sha256": "fe21d30f33d583627d781b70f2e35d3e9817e4332e40a13c985c92453b0ba424",
+          "locator": "identity-proof:915062601",
+          "claim_span": "r-og-kj%C3%B8ret%C3%B8y/IF4SYTL0CUX\">NO 915 062 601 MVA</a></p></div></div></div></div><div class=\"w-hwrapper valign_top wrap stack_on_mobiles align_n"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.058491Z",
+          "content_sha256": "2dd75eebbc5b127abccf28884b6c06f668ad365b470189362671af78bf8e141d",
+          "locator": "row:915062601/column:telefon",
+          "claim_span": ",2026-11-12,2026-11-10,www.antirust.no,funderud@antirust.no,69 89 89 89,,,,,,,,,Finnestadveien 335,EIDSBERG,1880,INDRE ØSTFOLD,3118,Norge,NO,2100,Private aksjeselskaper mv.,2025,2015-03-04,2015-01-01,true,2015-01-01,2015-03-24,,,false,,true,2015-03-04,false,false,,false,,false,,false,,,,,,,Bokmål,20"
+        },
+        {
+          "source_url": "https://antirust.no/kontakt-oss/",
+          "retrieved_at": "2026-11-19T08:36:00.648850Z",
+          "content_sha256": "fe21d30f33d583627d781b70f2e35d3e9817e4332e40a13c985c92453b0ba424",
+          "locator": "registry-contact:phone",
+          "claim_span": "<a class=\"w-btn us-btn-style_1 hidden_for_mobiles ush_btn_3 btn_style_one phone_btn\" href=\"tel:69 89 89 89\">"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.058491Z",
+          "content_sha256": "2dd75eebbc5b127abccf28884b6c06f668ad365b470189362671af78bf8e141d",
+          "locator": "row:915062601/column:epostadresse",
+          "claim_span": "rvogner,,,,,,,true,12,2026-11-12,2026-11-10,www.antirust.no,funderud@antirust.no,69 89 89 89,,,,,,,,,Finnestadveien 335,EIDSBERG,1880,INDRE ØSTFOLD,3118,Norge,NO,2100,Private aksjeselskaper mv.,2025,2015-03-04,2015-01-01,true,2015-01-01,2015-03-24,,,false,,true,2015-03-04,false,false,,false,,false,,"
+        },
+        {
+          "source_url": "https://antirust.no/kontakt-oss/",
+          "retrieved_at": "2026-11-19T08:36:00.648850Z",
+          "content_sha256": "fe21d30f33d583627d781b70f2e35d3e9817e4332e40a13c985c92453b0ba424",
+          "locator": "registry-contact:email_domain",
+          "claim_span": "<a href=\"mailto:funderud@antirust.no\" class=\"w-text-h\">"
+        }
+      ]
+    },
+    {
+      "organisation_number": "884388732",
+      "company": "BLENDER AS",
+      "kind": "website",
+      "url": "https://blender.no",
+      "proof_tier": "orgnr_on_page",
+      "candidate_origin": "legal_name_slug",
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://blender.no/kontakt.html",
+          "retrieved_at": "2026-11-19T08:36:39.950578Z",
+          "content_sha256": "f16942f8d21a3dd19dc4868dd8c4db3476459a212c898ae5b1397529599b893e",
+          "locator": "identity-proof:884388732",
+          "claim_span": "trong>Blender AS</strong><br/>\n\t\t\tOrgnr 884 388 732</p>\n\t\t  <p class=\"col6 left\"><strong>Sentralbord:</strong><br>\n\t\t\t  T: +47 67 55 55 55</p>\n\t\t  <p "
+        }
+      ]
+    },
+    {
+      "organisation_number": "912462048",
+      "company": "VEDELD AS",
+      "kind": "website",
+      "url": "https://vedeld.no",
+      "proof_tier": "orgnr_on_page",
+      "candidate_origin": "legal_name_slug",
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://vedeld.no/",
+          "retrieved_at": "2026-11-19T08:34:36.650937Z",
+          "content_sha256": "f2a2b128829cf682e6ab197ab832061ed1e7ea77a625b79d375745433fbf426e",
+          "locator": "identity-proof:912462048",
+          "claim_span": "en 10, 1366 Lysaker, Norway<br />Org no 912 462 048 VAT</p></div>\n\t\t\t</div><div class=\"et_pb_module et_pb_text et_pb_text_1_tb_footer  et_pb_text_alig"
+        }
+      ]
+    },
+    {
+      "organisation_number": "915062601",
+      "company": "FUNDERUD ANTIRUST AS",
+      "kind": "website",
+      "url": "https://antirust.no",
+      "proof_tier": "orgnr_on_page",
+      "candidate_origin": "registry_website",
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://antirust.no/kontakt-oss/",
+          "retrieved_at": "2026-11-19T08:36:00.648850Z",
+          "content_sha256": "fe21d30f33d583627d781b70f2e35d3e9817e4332e40a13c985c92453b0ba424",
+          "locator": "identity-proof:915062601",
+          "claim_span": "r-og-kj%C3%B8ret%C3%B8y/IF4SYTL0CUX\">NO 915 062 601 MVA</a></p></div></div></div></div><div class=\"w-hwrapper valign_top wrap stack_on_mobiles align_n"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.058491Z",
+          "content_sha256": "2dd75eebbc5b127abccf28884b6c06f668ad365b470189362671af78bf8e141d",
+          "locator": "row:915062601/column:telefon",
+          "claim_span": ",2026-11-12,2026-11-10,www.antirust.no,funderud@antirust.no,69 89 89 89,,,,,,,,,Finnestadveien 335,EIDSBERG,1880,INDRE ØSTFOLD,3118,Norge,NO,2100,Private aksjeselskaper mv.,2025,2015-03-04,2015-01-01,true,2015-01-01,2015-03-24,,,false,,true,2015-03-04,false,false,,false,,false,,false,,,,,,,Bokmål,20"
+        },
+        {
+          "source_url": "https://antirust.no/kontakt-oss/",
+          "retrieved_at": "2026-11-19T08:36:00.648850Z",
+          "content_sha256": "fe21d30f33d583627d781b70f2e35d3e9817e4332e40a13c985c92453b0ba424",
+          "locator": "registry-contact:phone",
+          "claim_span": "<a class=\"w-btn us-btn-style_1 hidden_for_mobiles ush_btn_3 btn_style_one phone_btn\" href=\"tel:69 89 89 89\">"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.058491Z",
+          "content_sha256": "2dd75eebbc5b127abccf28884b6c06f668ad365b470189362671af78bf8e141d",
+          "locator": "row:915062601/column:epostadresse",
+          "claim_span": "rvogner,,,,,,,true,12,2026-11-12,2026-11-10,www.antirust.no,funderud@antirust.no,69 89 89 89,,,,,,,,,Finnestadveien 335,EIDSBERG,1880,INDRE ØSTFOLD,3118,Norge,NO,2100,Private aksjeselskaper mv.,2025,2015-03-04,2015-01-01,true,2015-01-01,2015-03-24,,,false,,true,2015-03-04,false,false,,false,,false,,"
+        },
+        {
+          "source_url": "https://antirust.no/kontakt-oss/",
+          "retrieved_at": "2026-11-19T08:36:00.648850Z",
+          "content_sha256": "fe21d30f33d583627d781b70f2e35d3e9817e4332e40a13c985c92453b0ba424",
+          "locator": "registry-contact:email_domain",
+          "claim_span": "<a href=\"mailto:funderud@antirust.no\" class=\"w-text-h\">"
+        }
+      ]
+    },
+    {
+      "organisation_number": "922853061",
+      "company": "CENTRUM SMOKE SHOP AS",
+      "kind": "website",
+      "url": "https://www.centrumsmokeshop.no",
+      "proof_tier": "orgnr_on_page",
+      "candidate_origin": "legal_name_slug",
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://www.centrumsmokeshop.no/",
+          "retrieved_at": "2026-11-19T08:35:13.897908Z",
+          "content_sha256": "1189193e9963d2aadd44a8eaf34bf5f4df313b53514f41f7bfea998c117e8931",
+          "locator": "identity-proof:922853061",
+          "claim_span": " small\"></div>\n\t\t<p>Organisasjonsnummer 922853061</p>\n\t\t</div>\n\t\t\n\t\t<div id=\"block_widget-6\" class=\"col pb-0 widget block_widget\">\n\t\t<span class=\"widg"
+        }
+      ]
+    },
+    {
+      "organisation_number": "925135380",
+      "company": "EXAKT VVS AS",
+      "kind": "website",
+      "url": "https://www.exaktvvs.no",
+      "proof_tier": "orgnr_on_page",
+      "candidate_origin": "legal_name_slug",
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://www.exaktvvs.no/",
+          "retrieved_at": "2026-11-19T08:36:22.443312Z",
+          "content_sha256": "8198df4211c45c65ffa4a748cfa33db184322f537d5ce70dca1cfb9b2a8a5037",
+          "locator": "identity-proof:925135380",
+          "claim_span": "        <p>&copy; 2024 EXAKT VVS AS | Org.nr 925 135 380</p>\n          <p><a href=\"#\">Personvern</a> | <a href=\"#\">Cookies</a></p>\n        </div>\n    "
+        }
+      ]
+    },
+    {
+      "organisation_number": "930714771",
+      "company": "ERLI BYGG AS",
+      "kind": "website",
+      "url": "https://erlibygg.no",
+      "proof_tier": "orgnr_on_page",
+      "candidate_origin": "legal_name_slug",
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://erlibygg.no/kontakt-oss",
+          "retrieved_at": "2026-11-19T08:35:16.528851Z",
+          "content_sha256": "6b30815930a0343e5148dec04fdcbb3e568a2b316fc3bedb64c1b48828cc57e9",
+          "locator": "identity-proof:930714771",
+          "claim_span": "<span class=\"label  clicktocall__label\">930 714 771</span>\n        \n    </a>\n\n</div>\n</div>\n    </section>\n             \n</div>\n</div>\n               "
+        }
+      ]
+    },
+    {
+      "organisation_number": "932823454",
+      "company": "LYNGØY MOTORSPORT AS",
+      "kind": "website",
+      "url": "https://www.lyngoymotorsport.no",
+      "proof_tier": "orgnr_on_page",
+      "candidate_origin": "legal_name_slug",
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://www.lyngoymotorsport.no/",
+          "retrieved_at": "2026-11-19T08:35:03.042240Z",
+          "content_sha256": "0696454c65a52c01ccce48981779c8edb4b0352bb17e295837f8c8ae317c6fc3",
+          "locator": "identity-proof:932823454",
+          "claim_span": " class=\"wixui-rich-text__text\">\nOrg.nr. 932 823 454<br class=\"wixui-rich-text__text\">\nLyng&oslash;y Motorsport AS</span></span></p></div><!--/$--><!--"
+        }
+      ]
+    },
+    {
+      "organisation_number": "933746623",
+      "company": "AQUACONSULT AS",
+      "kind": "website",
+      "url": "https://www.aquaconsult.no",
+      "proof_tier": "orgnr_on_page",
+      "candidate_origin": "legal_name_slug",
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://www.aquaconsult.no/",
+          "retrieved_at": "2026-11-19T08:36:12.586390Z",
+          "content_sha256": "7c65ede86a7f0f3701dc2261a61312e0c46cb6a865c0e272add80425051e1efb",
+          "locator": "identity-proof:933746623",
+          "claim_span": "gen 15, 0680 Oslo </div><div>Org.nr. NO 933 746 623</div><div>Tlf.: 952 83 813</div><div>tm@aquaconsult.no</div></div><div class=\"w-full mx-auto flex "
+        }
+      ]
+    },
+    {
+      "organisation_number": "935015758",
+      "company": "LUVIRA AS",
+      "kind": "website",
+      "url": "https://luvira.no",
+      "proof_tier": "jsonld_vatid",
+      "candidate_origin": "legal_name_slug",
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://luvira.no/",
+          "retrieved_at": "2026-11-19T08:35:58.682109Z",
+          "content_sha256": "e97a4886428ff8fe82480e1fd11b291c4e156d4099c88be408681ba980b5e2e6",
+          "locator": "identity-proof:935015758",
+          "claim_span": ">\n      <div>© 2026 Luvira AS · Org.nr. 935 015 758</div><div class=\"lv-pay\">\n        <span class=\"lv-pay-icon\">Vipps</span>\n        <span class=\"lv-p"
+        }
+      ]
+    },
+    {
+      "organisation_number": "936794459",
+      "company": "GREILEIE AS",
+      "kind": "website",
+      "url": "https://www.greileie.no",
+      "proof_tier": "orgnr_on_page",
+      "candidate_origin": "legal_name_slug",
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://www.greileie.no/",
+          "retrieved_at": "2026-11-19T08:35:59.114768Z",
+          "content_sha256": "dba2d7a44a93c59d9ab79ec5840472cf89ee2f6d64bdc58d52e90ea36cedcecb",
+          "locator": "identity-proof:936794459",
+          "claim_span": "n>Greileie AS</span>\n      <span>Org.nr 936 794 459</span>\n      <span>Oslo</span>\n    </div>\n  </div>\n</footer>\n\n<script type=\"application/ld+json\">\n"
+        }
+      ]
+    },
+    {
+      "organisation_number": "980383571",
+      "company": "AVERDI KARASJOK AS",
+      "kind": "website",
+      "url": "https://www.averdi.no",
+      "proof_tier": "orgnr_on_page",
+      "candidate_origin": "registry_website",
+      "ledger_verdict": "correct",
+      "category": "correct",
+      "reasons": [],
+      "receipts": [
+        {
+          "source_url": "https://www.averdi.no/",
+          "retrieved_at": "2026-11-19T08:35:07.067454Z",
+          "content_sha256": "f757e5de0b6598d20faee065840399c4ecbd91a8bbce2f2652afdbd20b5cc163",
+          "locator": "identity-proof:980383571",
+          "claim_span": "class=\"wixui-rich-text__text\">Org.nr. NO980383571</a></span></span></p></div><!--/$--><!--$--><div id=\"comp-jvm5rcvs\" class=\"comp-jvm5rcvs w4DepW\"><ul"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.294485Z",
+          "content_sha256": "8f07017f7a51e44fc53a8f15ba958cb7ec0c5da3d973574ff829ba15c0cc2d61",
+          "locator": "row:980383571/column:epostadresse",
+          "claim_span": " bokføring,,,,,,,true,7,2026-09-14,2026-09-10,www.averdi.no,karasjok@averdi.no,78 46 61 16,,Postboks 6,KARASJOK,9735,KARASJOK,5610,Norge,NO,Juhána Rásttoš geaidnu 2,KARASJOK,9730,KARASJOK,5610,Norge,NO,2100,Private aksjeselskaper mv.,2025,1999-01-15,1998-12-11,true,2001-01-01,2001-09-20,,,false,,tru"
+        },
+        {
+          "source_url": "https://www.averdi.no/",
+          "retrieved_at": "2026-11-19T08:35:07.067454Z",
+          "content_sha256": "f757e5de0b6598d20faee065840399c4ecbd91a8bbce2f2652afdbd20b5cc163",
+          "locator": "registry-contact:email_domain",
+          "claim_span": "<a data-testid=\"linkElement\" href=\"mailto:post@averdi.no?subject=Kundehenvendelse\" target=\"_self\" class=\"twJknM wixui-button ZhVEJq\" aria-disabled=\"false\" aria-label=\"Kontakt oss\">"
+        },
+        {
+          "source_url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+          "retrieved_at": "2026-11-19T08:32:10.294485Z",
+          "content_sha256": "8f07017f7a51e44fc53a8f15ba958cb7ec0c5da3d973574ff829ba15c0cc2d61",
+          "locator": "row:980383571/column:telefon",
+          "claim_span": "ue,7,2026-09-14,2026-09-10,www.averdi.no,karasjok@averdi.no,78 46 61 16,,Postboks 6,KARASJOK,9735,KARASJOK,5610,Norge,NO,Juhána Rásttoš geaidnu 2,KARASJOK,9730,KARASJOK,5610,Norge,NO,2100,Private aksjeselskaper mv.,2025,1999-01-15,1998-12-11,true,2001-01-01,2001-09-20,,,false,,true,1999-01-15,false,"
+        },
+        {
+          "source_url": "https://www.averdi.no/",
+          "retrieved_at": "2026-11-19T08:35:07.067454Z",
+          "content_sha256": "f757e5de0b6598d20faee065840399c4ecbd91a8bbce2f2652afdbd20b5cc163",
+          "locator": "registry-contact:phone",
+          "claim_span": "<a href=\"tel:+4778466116\" class=\"wixui-rich-text__text\">"
+        }
+      ]
+    }
+  ]
+}

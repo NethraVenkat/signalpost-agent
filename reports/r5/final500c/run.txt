@@ -1,1 +1,1 @@
-signalpost could not produce output: OSError: [Errno 28] No space left on device
+{"emitted_envelopes": 500, "invalid_inputs": [], "requests": 5201, "runtime_ms": 1802125, "changes": 0, "observation_changes": 0, "deadline_hits": 204, "warnings": []}

@@ -1,0 +1,1 @@
+These receipts describe the earlier disk-full attempt. The user subsequently deleted old clone checkouts, including its repo directory, while retaining all run outputs and source blobs. The authorized rerun used the same frozen sample in a fresh clone and fresh state.

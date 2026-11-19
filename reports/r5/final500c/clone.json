@@ -2,14 +2,17 @@
   "argv": [
     "git",
     "clone",
-    "--no-hardlinks",
+    "--no-local",
+    "--depth",
+    "1",
+    "--single-branch",
     "--branch",
     "revision/r5",
     "<REPO>",
-    "<REPO>\\.data\\r5\\final500c-clean\\repo"
+    "<REPO>\\.data\\r5\\final500c-rerun-clean\\repo"
   ],
   "cwd": "<REPO>",
   "exit_code": 0,
-  "wall_seconds": 9.208480200002668,
-  "completed_at_utc": "2026-11-19T07:46:52.289922+00:00"
+  "wall_seconds": 59.729788600001484,
+  "completed_at_utc": "2026-11-19T08:31:07.969088+00:00"
 }

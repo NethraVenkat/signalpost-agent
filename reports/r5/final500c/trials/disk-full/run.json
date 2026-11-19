@@ -1,0 +1,31 @@
+{
+  "argv": [
+    "<REPO>\\.data\\r5\\final500c-clean\\repo\\.venv\\Scripts\\python.exe",
+    "-m",
+    "signalpost.cli",
+    "run",
+    "--organisations",
+    "<REPO>\\reports\\r5\\final500c\\companies500.jsonl",
+    "--bulk",
+    "<REPO>\\reports\\r5\\final500c\\registry500.csv",
+    "--output",
+    "<REPO>\\.data\\r5\\final500c-clean\\run-final\\envelopes.jsonl",
+    "--profiles-output",
+    "<REPO>\\.data\\r5\\final500c-clean\\run-final\\profiles.jsonl",
+    "--report",
+    "<REPO>\\.data\\r5\\final500c-clean\\run-final\\report.json",
+    "--run-id",
+    "r5-final500c-seed20261123-final",
+    "--expected-count",
+    "500"
+  ],
+  "cwd": "<REPO>\\.data\\r5\\final500c-clean\\run-final",
+  "exit_code": 1,
+  "wall_seconds": null,
+  "wall_seconds_estimate": 1374.38946890831,
+  "timing_basis": "run.txt creation and final-write timestamps; stopwatch receipt could not be saved",
+  "started_at_utc": "2026-11-19T07:48:12.990990+00:00",
+  "ended_at_utc": "2026-11-19T08:11:07.380459+00:00",
+  "failure": "disk_full",
+  "receipt_reconstructed": true
+}

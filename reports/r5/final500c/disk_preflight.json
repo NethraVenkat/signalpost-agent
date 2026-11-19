@@ -1,0 +1,23 @@
+{
+  "measured_at_utc": "2026-11-19T08:30:08.064414+00:00",
+  "free_bytes": 24728670208,
+  "failed_run": {
+    "files": 3640,
+    "bytes": 70079383
+  },
+  "blocked_100": {
+    "files": 311,
+    "bytes": 27926297
+  },
+  "successful_100": {
+    "files": 966,
+    "bytes": 143595054
+  },
+  "uv_cache": {
+    "files": 1308,
+    "bytes": 21434738
+  },
+  "historical_limitation": "No per-directory historical allocation series. Prior pytest-temp cleanup recovered about 10.3 GB; deleted clone sizes cannot be measured.",
+  "pytest_in_clone": false,
+  "abort_below_free_bytes": 3221225472
+}

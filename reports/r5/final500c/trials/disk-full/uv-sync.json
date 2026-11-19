@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "uv",
+    "sync",
+    "--frozen"
+  ],
+  "cwd": "<REPO>\\.data\\r5\\final500c-clean\\repo",
+  "exit_code": 0,
+  "wall_seconds": 5.230281700001797,
+  "completed_at_utc": "2026-11-19T07:46:57.659985+00:00"
+}

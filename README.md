@@ -8,46 +8,33 @@ Run with Python 3.12+ after `uv sync --frozen`, using the seven evaluator flags 
 uv run signalpost run --organisations companies500.jsonl --bulk registry500.csv --output envelopes.jsonl --profiles-output profiles.jsonl --report report.json --run-id signalpost-final --expected-count 500
 ```
 
-The latest final500c attempt from clean clone `7b2b476` failed when the disk filled before terminal outputs were published. It is **not a successful 500-company qualification**. The previous successful final500b numbers remain below. [Latest attempt and retained evidence](reports/r5/final500c/SUMMARY.md)
+The successful final500c rerun used a clean clone of `2ac8a6b`, fresh state, seed 20261123 and the same frozen sample disjoint from 5,206 prior numbers. The saved-output checker passed all 500 companies. Clone setup ran `uv sync --frozen` and an import check; no clone pytest. [Final qualification and receipts](reports/r5/final500c/SUMMARY.md)
 
-| Latest verification | Standard 100, network enabled | Final500c, one attempt |
-|---|---:|---:|
-| Activity available / failed | 100 / 0 | unavailable |
-| Websites | 8 | unavailable |
-| Wall seconds | 351.63 | approximately 1374.39, aborted |
-| Unsupported synthesis / briefing | 0 / 0 | unavailable |
-| Terminal envelopes published | 100 | 0 |
-| Full pytest | 1,396 passed | same source commit |
-
-The 100-company result required an environment-mandated network retry after a sandbox-blocked attempt; both are retained. Final500c used seed 20261123, fresh state and exactly seven flags. Its checker failed for missing terminal output. No second 500 run was started.
-
-The previous successful final500b qualification used a clean clone of `b341b80`, fresh state and seed 20261122, disjoint from 4,706 numbers in prior committed and on-disk samples. The 2026-11-16 snapshot supplied 499 identity rows and live lookup supplied the remaining row. The current saved-output checker passed all 500 companies. [Final qualification and receipts](reports/r5/final500b/SUMMARY.md)
-
-| Metric | Previous successful final500b | Six earlier 100-company samples combined |
+| Metric | Final500c | Six earlier 100-company samples combined |
 |---|---:|---:|
 | Company inputs | 500 | 600 |
-| Websites | 33 | 45 |
+| Websites | 29 | 45 |
 | Social URLs | 5 | 28 |
-| Available claims | 68,530 | 82,563 |
-| HTTP attempts | 5,158 | 6,549 |
-| Unsupported synthesis / briefing values | 0 / 0 | 0 / 0 |
+| Activity available / failed | 500 / 0 | — |
+| Available claims | 70,350 | 82,563 |
+| HTTP attempts | 5,201 | 6,549 |
+| Unsupported synthesis / briefing | 0 / 0 | 0 / 0 |
 | Provider cost | $0 | $0 |
 
-The six samples are the historical Stage W measurements for seeds 20261017 and 20261113–20261117. Their totals describe those saved runs, which preceded the final runtime changes. They are separate from the final 500-company qualification. [Six-sample measurements](reports/r5/stageW/new_websites.md)
-
-| Previous final500b qualification gate | Result |
+| Final500c qualification gate | Result |
 |---|---:|
-| Wall time / fixed budget | 1,649.67 / 2,100 seconds |
-| Remaining margin | 450.33 seconds |
+| Wall time / fixed budget | 1,875.24 / 2,100 seconds |
+| Remaining margin | 224.76 seconds |
 | Terminal envelopes / profiles / placeholders | 500 / 500 / 0 |
 | Complete cited briefing contracts | 500 |
-| Largest HTML profile | 245,912 bytes |
-| Deadline hits | 202, all website work |
-| Full offline test suite | 1,393 passed |
+| Largest HTML profile | 248,788 bytes |
+| Minimum sampled free disk space | 20.08 GiB |
+| Existing main-checkout full pytest | 1,396 passed |
+| Final privacy guard | 5 passed |
 
-GLEIF returned supported records for 58 companies. TED retained seven explicit access blocks and 493 no-match states. Stage S produced state-aid records for 42 companies, research records for seven, licence records for three and Smilefjes records for eight. All these sections completed without deadline failures. Accounts failed for one company, hiring for one, and source failures remain visible in the reports and profiles. The full test suite ran concurrently with the measured qualification.
+The original disk-full attempt and its evidence are retained in the [failure archive](reports/r5/final500c/trials/disk-full/SUMMARY.md). This one rerun was explicitly authorized after disk cleanup. A 3 GiB free-space guard remained active throughout. The earlier standard-seed 100 check returned 100 activity available / 0 failed, 8 websites and zero unsupported values in 351.63 seconds; its sandbox-blocked preliminary attempt is retained. The six historical samples remain separate from this qualification. [Six-sample measurements](reports/r5/stageW/new_websites.md)
 
-The identity firewall requires exact organization identifiers or documented website corroboration, checks publisher context and conflicts, and revalidates each published claim against saved source bytes. Social JSON-LD conflicts and shared-company attribution receive additional guards. Human review by Nethra Venkat covered 84 items, with 70 correct, two wrong social links fixed by HC1a/HC1b, and 12 unsure. The verified runs reported zero unsupported synthesis and briefing values. The final URL inventory retains 18 doubtful labels from the older ledger tool separately from the current validator's successful checks. [Human review ledger](reports/r5/stageR3/LEDGER.md#cumulative-human-verdicts-through-hc1-lx2) · [Final URL audit](reports/r5/final500b/urls.md)
+The identity firewall requires exact organization identifiers or documented website corroboration, checks publisher context and conflicts, and revalidates each published claim against saved source bytes. Social JSON-LD conflicts and shared-company attribution receive additional guards. Human review by Nethra Venkat covered 84 items, with 70 correct, two wrong social links fixed by HC1a/HC1b, and 12 unsure. The verified runs reported zero unsupported synthesis and briefing values. The final URL inventory retains automated ledger labels separately from the current saved-proof checks. [Human review ledger](reports/r5/stageR3/LEDGER.md#cumulative-human-verdicts-through-hc1-lx2) · [Final URL audit](reports/r5/final500c/urls.md)
 
 Sources include Brønnøysundregistrene under NLOD 2.0, NAV job advertisements, GLEIF legal-entity records, TED procurement, Støtteregisteret, Research Council/SkatteFUNN projects, Finanstilsynet registrations and Mattilsynet Smilefjes inspections. Registry, state-aid, research and licence datasets use the documented NLOD terms, GLEIF data uses CC0, and Smilefjes uses CC BY 4.0. NAV, TED and company content retain their documented source terms and rights. Automated Wikidata and DiBK routes are skipped under their robots rules. [Source access, attribution and licences](docs/SOURCES.md)
 

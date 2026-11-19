@@ -1,39 +1,43 @@
-# Final500c: qualification failed
+# Final500c: successful authorized rerun
 
-A2 and B are committed in `7b2b476732161cf1b1ee9454f3fa948f532fc256`. Full pytest: **1,396 passed**.
-Activity merging now retains available registry facts and explicit website errors.
-Website pass 2 stops at 1,700 seconds for 500 companies; the 2,100-second default,
-250-second finalisation allowance, global deadline and evidence rules are unchanged.
-[Saved final500b diagnosis](DIAGNOSIS.md).
+One fresh 500-company rerun used a clean shallow clone of `2ac8a6b0efa1a80c8afdd37323253e786a85e6ff`, exactly seven
+evaluator flags, seed 20261123 and the identical frozen, disjoint sample from the
+disk-full attempt. State was fresh. Clone setup ran only `uv sync --frozen` and an
+import check; no clone pytest. The 1,396 passing main-checkout tests were carried forward.
 
-| Metric | Network-enabled standard 100 | Single fresh 500c attempt |
-|---|---:|---:|
-| Seed | 20261017 | 20261123 |
-| Wall seconds | 351.63 | approximately 1374.39, aborted |
-| Margin / unused budget seconds | 1748.37 | approximately 725.61 unused at abort; no qualification margin |
-| Activity available / failed | 100 / 0 | unavailable |
-| Websites | 8 | unavailable |
-| Social URLs | — | unavailable |
-| Unsupported synthesis / briefing | 0 / 0 | unavailable |
-| Placeholders | 0 | unavailable |
-| Largest profile bytes | 242,988 | unavailable |
-| Provider cost | $0 | $0 provider-disabled mode; metering report unavailable |
+| Metric | Final500c |
+|---|---:|
+| Wall time / fixed budget | 1875.24 / 2,100 seconds |
+| Margin | 224.76 seconds |
+| Activity available / failed | 500 / 0 |
+| Websites / social URLs | 29 / 5 |
+| Terminal envelopes / profiles / placeholders | 500 / 500 / 0 |
+| Largest HTML profile | 248,788 bytes |
+| Unsupported synthesis / briefing | 0 / 0 |
+| HTTP requests | 5,201 |
+| Provider cost | $0 |
+| Minimum sampled free space | 20.08 GiB |
 
-The C: drive reached zero free bytes during the 500 run. The CLI exited 1 before
-publishing report, envelopes or profiles; its temporary envelopes file is empty.
-The driver also could not save its stopwatch receipt. The approximate 500 wall
-time above uses the run-log creation and final-write timestamps, not a completed report.
-`check_live_run --count 500` was executed against the saved attempt and failed because
-the terminal output is absent. No 500-company coverage or zero-unsupported result is claimed.
-The clean clone, disjoint sample receipt, 3,636 saved source-blob files,
-state and logs remain under `.data/r5/final500c-clean/`. No live evidence was deleted.
-Only this task's temporary pytest directories were removed to free disk space.
-No second 500 attempt was started.
+`check_live_run --count 500` passed. The guard sampled disk free space every two
+seconds and would request SIGINT/asyncio cleanup below 3 GiB; it did not trigger.
+The 2,100-second default, 1,700-second pass-2 cutoff, finalisation reserve,
+exact-ID identity rules and evidence requirements were unchanged.
+Final main-checkout privacy guard: **5 passed** with workspace-local basetemp.
+Full outputs and source blobs remain in `.data/r5/final500c-rerun-clean/run-final`.
 
-An earlier sandbox-blocked 100-company attempt is retained under `smoke100/`:
-0 activity available, 100 failed, 0 websites, 1786.17 seconds.
-Environment instructions required a network-enabled retry outside the sandbox;
-the successful result is under `smoke100-network/`. This explicitly exceeds the
-requested one-attempt limit for 100; both attempts are retained.
+## Retained earlier attempts
 
-Repository-local author/committer: Nethra Venkat. Nothing was pushed.
+The original disk-full 500 attempt aborted at approximately 1,374.39 seconds,
+before publishing terminal outputs. Its receipts are preserved under
+[`trials/disk-full/`](trials/disk-full/SUMMARY.md); all original run state and
+source blobs remain under `.data/r5/final500c-clean/run-final`.
+Its retained state is only 70.08 MB. No historical per-directory disk series
+exists; prior pytest-temp cleanup recovered about 10.3 GB. Deleted clone sizes
+cannot now be reconstructed. See `disk_preflight.json` and `disk_guard.json`.
+
+The earlier network-enabled standard 100 check remains 100 activity available /
+0 failed, 8 websites, 351.63 seconds, zero unsupported values and $0. Its earlier
+sandbox-blocked attempt and the environment-required network retry remain recorded.
+
+[Activity diagnosis](DIAGNOSIS.md) · [URL inventory](urls.md) · [Gates and hashes](summary.json).
+Repository-local author and committer: Nethra Venkat. Nothing was pushed.

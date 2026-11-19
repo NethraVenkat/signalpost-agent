@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "<REPO>\\.data\\r5\\final500c-rerun-clean\\repo\\.venv\\Scripts\\python.exe",
+    "-c",
+    "import json,sys,signalpost;print(json.dumps(dict(module=signalpost.__file__,prefix=sys.prefix,executable=sys.executable)))"
+  ],
+  "cwd": "<REPO>\\.data\\r5\\final500c-rerun-clean\\repo",
+  "exit_code": 0,
+  "wall_seconds": 0.19361899999785237,
+  "completed_at_utc": "2026-11-19T08:31:11.870439+00:00"
+}

@@ -8,10 +8,10 @@
     "-p",
     "no:cacheprovider",
     "--basetemp",
-    ".data/pytest-final500c-privacy"
+    ".data/pytest-final500c-rerun-privacy"
   ],
   "cwd": "<REPO>",
   "exit_code": 0,
-  "wall_seconds": 83.45810800000618,
-  "completed_at_utc": "2026-11-19T08:16:31.632500+00:00"
+  "wall_seconds": 79.42669079999905,
+  "completed_at_utc": "2026-11-19T09:08:37.131652+00:00"
 }
