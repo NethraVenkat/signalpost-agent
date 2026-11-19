@@ -368,9 +368,15 @@ def audit_accounts_claim(org: str, claim: dict, ev: dict, body: str) -> tuple[st
     if record_org and record_org != org:
         return "INCORRECT", f"Accounts filing orgnr {record_org} != subject org {org}", record_org
 
-    # Verify exact-company account type (SELSKAP), reject consolidated
+    # Consolidated statements have a separate, explicit filing-scoped namespace.
     acc_type = record.get("regnskapstype")
-    if acc_type and acc_type != "SELSKAP":
+    consolidated = fld.startswith('accounts.consolidated.')
+    if consolidated:
+        if (record_org != org or acc_type != 'KONSERN' or rep.get('account_type') != 'KONSERN'
+                or rep.get('filing_id') != record.get('id')
+                or not fld.startswith(f"accounts.consolidated.{(record.get('regnskapsperiode') or {}).get('tilDato')}.{record.get('id')}.")):
+            return 'INCORRECT', 'Consolidated filing scope or identity mismatch', acc_type
+    elif acc_type and acc_type != "SELSKAP":
         return "INCORRECT", f"Consolidated account type {acc_type} published; only exact entity SELSKAP permitted", acc_type
 
     # Verify reporting period and boundaries

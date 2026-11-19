@@ -876,3 +876,8 @@
 
 - The official public Fullmakttjenesten lookup is documented at `https://data.brreg.no/fullmakt/docs/index.html`; its org-keyed routes are `/fullmakt/enheter/{orgnr}/signatur` and `/fullmakt/enheter/{orgnr}/prokura`. Only the open-data variant is in scope. No competitor code or data was used.
 - Canonical origin robots failed with connection resets on all three attempts (5/20-second backoff). Documentation availability is not an allow decision. No company lookup was sent; G1 remains blocked pending robots availability, with no fabricated real-response fixture. See [G1 access receipt](gaps/G1.md). No tags or push.
+
+## 2026-11-19 - G2: separately scoped consolidated accounts
+
+- Publish only exact-owner `KONSERN` statements already returned by the ordinary approved accounts request. Require filing ID and valid period, retain currency and source pointers, and isolate group values under `accounts.consolidated.*`. No additional HTTP calls, identity widening or group-derived entity ratios. Profiles explicitly label the group scope.
+- Six focused tests pass using our unchanged saved official baseline response; both auditors detect scope/filing tampering. Group-tree API access remains pending because canonical origin robots are unavailable; no parent/owner links are inferred. [Details](gaps/G2.md).

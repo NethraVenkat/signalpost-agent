@@ -1,0 +1,34 @@
+{
+  "kind": "offline replay of our saved baseline responses; not a live run",
+  "companies": 4,
+  "claims": 180,
+  "by_company": {
+    "956409071": {
+      "claims": 27,
+      "filing_ids": [
+        5416285
+      ]
+    },
+    "991835423": {
+      "claims": 53,
+      "filing_ids": [
+        6290461,
+        7105229
+      ]
+    },
+    "964398003": {
+      "claims": 73,
+      "filing_ids": [
+        5312333,
+        6279715,
+        7092039
+      ]
+    },
+    "989214209": {
+      "claims": 27,
+      "filing_ids": [
+        5389285
+      ]
+    }
+  }
+}

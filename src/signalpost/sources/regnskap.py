@@ -75,6 +75,7 @@ def extract(org,response,blobs):
         add(section, response_source(response), org, "accounts", "accounts.latest", None, "/")
         return finish(section)
     if any(not isinstance(row,dict) for row in data): raise SourceFailure('malformed_accounts')
+    emit_consolidated(org, response, blobs, section, data)
     indexed = [(index, row) for index, row in enumerate(data) if row.get("regnskapstype") == "SELSKAP"]
     if not indexed:
         add(section, response_source(response), org, "accounts", "accounts.latest", None, "/")
@@ -110,11 +111,51 @@ def extract(org,response,blobs):
     return finish(section)
 
 
+def emit_consolidated(org, response, blobs, section, data):
+    """Statements already in the ordinary response; no additional lookup.
+
+    A group filing is never an entity statement or a shareholder-register claim.
+    Filing ID and period keep distinct group filings separate and auditable.
+    """
+    seen = set()
+    for index, record in enumerate(data):
+        if record.get('regnskapstype') != 'KONSERN':
+            continue
+        owner = record.get('virksomhet') or {}
+        period = record.get('regnskapsperiode') or {}
+        filing = record.get('id')
+        try:
+            start = date.fromisoformat(period['fraDato'])
+            end = date.fromisoformat(period['tilDato'])
+            valid = (str(owner.get('organisasjonsnummer')) == org and start <= end
+                     and isinstance(filing, int) and not isinstance(filing, bool) and filing > 0)
+        except (KeyError, TypeError, ValueError, AttributeError):
+            valid = False
+        if not valid:
+            section.errors.append(Error(section='accounts', code='consolidated_unverifiable',
+                                        message='Group statement lacks exact owner, filing ID or valid period; withheld'))
+            continue
+        if filing in seen:
+            continue
+        before_claims, before_evidence = len(section.claims), len(section.evidence)
+        try:
+            emit_record(org, response, blobs, section, index, record,
+                        f'accounts.consolidated.{end.isoformat()}.{filing}.')
+            seen.add(filing)
+        except SourceFailure:
+            del section.claims[before_claims:]
+            del section.evidence[before_evidence:]
+            section.errors.append(Error(section='accounts', code='consolidated_malformed',
+                                        message='Malformed group statement withheld; entity statements retained'))
+
+
 def emit_record(org,response,blobs,section,index,record,prefix):
     period = record.get("regnskapsperiode") or {}
     end = period.get("tilDato")
     reporting = {"fiscal_year": str(end)[:4] if end else None, "period_start": period.get("fraDato"), "period_end": end,
                  "currency": record.get("valuta"), "unit": record.get("enhet"), "account_type": record.get("regnskapstype")}
+    if prefix.startswith('accounts.consolidated.'):
+        reporting['filing_id'] = record['id']
     reported_identity=dict(reporting)
     for name, path in PATHS.items():
         value = get(record, path)

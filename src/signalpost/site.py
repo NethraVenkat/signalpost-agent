@@ -298,6 +298,8 @@ def fact(claim, records, filing_list=None, *, source_shortcuts=True):
     label = claim['field'].replace('identity.', '').replace('accounts.', '').replace('_', ' ')
     if claim['field'].startswith('accounts.history.'):
         label='Prior-period '+claim['field'].rsplit('.',1)[-1].replace('_',' ')
+    if claim['field'].startswith('accounts.consolidated.'):
+        label='Consolidated group '+claim['field'].rsplit('.',1)[-1].replace('_',' ')
     if claim['field']=='accounts.filed_years':label='Filed accounting years (copies available)'
     elif claim['field'].startswith('accounts.filed_year.'):
         label='Available annual-accounts copy: '+claim['field'].rsplit('.',1)[-1]
@@ -344,6 +346,8 @@ def fact(claim, records, filing_list=None, *, source_shortcuts=True):
         if period.get('fiscal_year'): parts.append(f"Fiscal year: {period['fiscal_year']}")
         if period.get('period_start') and period.get('period_end'): parts.append(f"Accounting period: {period['period_start']} to {period['period_end']}")
         parts.append(f"Currency: {period.get('currency') or 'Unknown'}")
+        if period.get('account_type') == 'KONSERN':
+            parts.append(f"Consolidated group accounts; filing ID: {period.get('filing_id')}")
         parts.append(f"Unit: {period['unit']}" if period.get('unit') else 'Unit: unknown (not declared by source)')
         content += '<p class="financial-meta muted">' + esc(' · '.join(parts)) + '</p>'
     panel = bool(claim.get('evidence_ids') or available)
@@ -446,6 +450,9 @@ def official_overflow(claims, inline=OFFICIAL_INLINE):
         items = [c for c in claims if c['family'] == family and c['availability'] == 'available']
         items.sort(key=lambda c: str((c['value'] or {}).get('date', '')) if isinstance(c['value'], dict) else '', reverse=True)
         out.update(c['id'] for c in items[inline:])
+    consolidated = [c for c in claims if c['field'].startswith('accounts.consolidated.')]
+    consolidated.sort(key=lambda c: ((c.get('reporting_period') or {}).get('period_end', ''), c['field']), reverse=True)
+    out.update(c['id'] for c in consolidated[inline:])
     return out
 
 
@@ -571,8 +578,9 @@ def profile(row, title, explorer_rows=EXPLORER_VISIBLE_ROWS, official_inline=OFF
                 financial=next((s for s in overview if s.get('topic')=='financial'),None)
                 if financial: body += '<div class="financial-context">'+sentence_html(financial,claim_map,change_ids,observation_ids)+'</div>'
             else:body += '<p>Reported values from Regnskapsregisteret; no figures or growth ratios are calculated.</p>'
-            years = sorted({(c.get('reporting_period') or {}).get('fiscal_year') for c in items if (c.get('reporting_period') or {}).get('fiscal_year')}, reverse=True)
-            currencies = sorted({(c.get('reporting_period') or {}).get('currency') for c in items if (c.get('reporting_period') or {}).get('currency')})
+            entity_items = [c for c in items if (c.get('reporting_period') or {}).get('account_type') != 'KONSERN']
+            years = sorted({(c.get('reporting_period') or {}).get('fiscal_year') for c in entity_items if (c.get('reporting_period') or {}).get('fiscal_year')}, reverse=True)
+            currencies = sorted({(c.get('reporting_period') or {}).get('currency') for c in entity_items if (c.get('reporting_period') or {}).get('currency')})
             curr_str = ", ".join(currencies) if currencies else "Unknown currency"
             if len(years) > 1:
                 body += f'<div class="financial-trend-banner"><p><strong>Reported periods:</strong> {len(years)} fiscal years ({", ".join(str(y) for y in years)}). Reporting currency: {esc(curr_str)}. Comparability must be checked before interpreting direction.</p></div>'
@@ -617,7 +625,8 @@ def profile(row, title, explorer_rows=EXPLORER_VISIBLE_ROWS, official_inline=OFF
 
     seen_fiscal_years = set()
     for c in claims:
-        if c['family'] == 'accounts' and c['availability'] == 'available' and c.get('reporting_period'):
+        if (c['family'] == 'accounts' and c['availability'] == 'available' and c.get('reporting_period')
+                and c['reporting_period'].get('account_type') != 'KONSERN'):
             period = c['reporting_period']
             f_year = period.get('fiscal_year')
             p_end = period.get('period_end') or (f'{f_year}-12-31' if f_year else None)
@@ -829,7 +838,8 @@ def company_payload(row,explorer_rows=EXPLORER_VISIBLE_ROWS,official_inline=OFFI
     from .sources.exact_official import SITE_GROUP as OFFICIAL_GROUP
     overflow = official_overflow(row['claims'], official_inline)
     details=[{'id':c['id'][:16],'field':c['field'],'value':c['value'],'availability':c['availability'],
-              'group':OFFICIAL_GROUP[c['family']] if c['id'] in overflow else 'people' if c['family']=='roles' else 'locations'}
+              'reporting_period': c.get('reporting_period'),
+              'group':'financials' if c['family']=='accounts' else OFFICIAL_GROUP[c['family']] if c['id'] in overflow else 'people' if c['family']=='roles' else 'locations'}
              for c in row['claims'] if c['field'].startswith(('roles.detail.','subunits.detail.')) or c['id'] in overflow]
     name = next((c['value'] for c in row['claims'] if c['field'] == 'identity.legal_name' and c['availability'] == 'available'), row['organisation_number'])
     all_records = {e['id']: e for e in row['evidence']}
@@ -845,6 +855,10 @@ def index_record(row):
     available = [c for c in row['claims'] if c['availability'] == 'available']
     fields = {c['field']: c for c in available}
     def get(field): return fields.get(field, {}).get('value')
+    entity_financial = next((fields[name] for name in ('accounts.revenue', 'accounts.net_result') if name in fields),
+                            next((c for c in available if c['family']=='accounts' and c.get('reporting_period')
+                                  and not c['field'].startswith(('accounts.consolidated.', 'accounts.history.'))), {}))
+    entity_period = entity_financial.get('reporting_period') or {}
     industry = next((c for c in available if c['field'].startswith('identity.nace')), None)
     iv = industry['value'] if industry else {}
     website = get('official_website')
@@ -903,9 +917,9 @@ def index_record(row):
               'municipality': get('identity.municipality'), 'nace': iv.get('kode'), 'industry_en': english_title(iv) if iv else None,
               'industry_no': iv.get('beskrivelse'), 'employees': emp, 'size_band': size_band,
               'revenue': get('accounts.revenue'),
-              'annual_result': get('accounts.net_result'), 'fiscal_year': next(((c.get('reporting_period') or {}).get('fiscal_year') for c in available if c['family'] == 'accounts' and (c.get('reporting_period') or {}).get('fiscal_year')), None),
-              'currency': next(((c.get('reporting_period') or {}).get('currency') for c in available if c['family'] == 'accounts' and (c.get('reporting_period') or {}).get('currency')), None) if (get('accounts.revenue') is not None or get('accounts.net_result') is not None) else None,
-              'unit': next(((c.get('reporting_period') or {}).get('unit') for c in available if c['family'] == 'accounts' and (c.get('reporting_period') or {}).get('unit')), None) if (get('accounts.revenue') is not None or get('accounts.net_result') is not None) else None,
+              'annual_result': get('accounts.net_result'), 'fiscal_year': entity_period.get('fiscal_year'),
+              'currency': entity_period.get('currency') if get('accounts.revenue') is not None or get('accounts.net_result') is not None else None,
+              'unit': entity_period.get('unit') if get('accounts.revenue') is not None or get('accounts.net_result') is not None else None,
               'founding_date': str(founding_date) if founding_date else None,
               'ceo': ceo['value'].get('name') if ceo else None, 'chair': chair['value'].get('name') if chair else None,
               'auditor': auditor['value'].get('name') if auditor else None,

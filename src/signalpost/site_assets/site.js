@@ -239,7 +239,13 @@
     if(!root) continue;
     const article = element('article', null, 'fact');
     article.id = 'fact-' + fact.id;
-    article.append(element('h3', fact.field), stateChip(fact.availability));
+    const groupPeriod = fact.reporting_period?.account_type === 'KONSERN' ? fact.reporting_period : null;
+    const factLabel = groupPeriod ? 'Consolidated group ' + fact.field.split('.').at(-1).replaceAll('_', ' ') : fact.field;
+    article.append(element('h3', factLabel), stateChip(fact.availability));
+    if(groupPeriod) article.append(element('p',
+      'Accounting period: ' + groupPeriod.period_start + ' to ' + groupPeriod.period_end +
+      '; currency: ' + (groupPeriod.currency || 'unknown') + '; unit: ' + (groupPeriod.unit || 'unknown') +
+      '; filing ID: ' + groupPeriod.filing_id, 'financial-meta muted'));
     article.append(element('pre', fact.value == null ? 'Unknown' : JSON.stringify(fact.value, null, 2)));
     const button = element('button', 'Source');
     button.type = 'button';

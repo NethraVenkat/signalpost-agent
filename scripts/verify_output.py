@@ -222,10 +222,15 @@ def verify_financial_sources(row, data, evidence, stored_body):
         assert not isinstance(value,bool) and value==c['value'], 'Financial value differs from source JSON pointer'
         record=document[int(parts[0])]
         assert str(record['virksomhet']['organisasjonsnummer'])==row['organisation_number'], 'Financial source has wrong entity'
-        assert record['regnskapstype']=='SELSKAP', 'Consolidated values presented as entity figures'
+        consolidated = c['field'].startswith('accounts.consolidated.')
+        expected_type = 'KONSERN' if consolidated else 'SELSKAP'
+        assert record['regnskapstype']==expected_type, 'Consolidated values presented as entity figures'
         p=c['reporting_period'];dates=record['regnskapsperiode']
         assert p['period_start']==dates.get('fraDato') and p['period_end']==dates.get('tilDato'), 'Financial period differs from source'
-        assert p['fiscal_year']==str(dates.get('tilDato'))[:4] and p['account_type']=='SELSKAP'
+        assert p['fiscal_year']==str(dates.get('tilDato'))[:4] and p['account_type']==expected_type
+        if consolidated:
+            assert p['filing_id']==record['id'] and c['field'].startswith(
+                f"accounts.consolidated.{dates['tilDato']}.{record['id']}.")
         assert p['currency']==record.get('valuta'), 'Financial currency differs from source'
         assert p.get('unit')==record.get('enhet'), 'Unsupported financial unit'
         checked+=1
