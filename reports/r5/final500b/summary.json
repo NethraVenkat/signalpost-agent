@@ -1,0 +1,223 @@
+{
+  "label": "final",
+  "check": "check_live_run",
+  "checker_clone_head": "b341b8019acfcd20cb6f66c170661c99388b472b",
+  "gates": {
+    "exit_0": true,
+    "check_live_run_exit_0": true,
+    "ordered_terminal_500": true,
+    "five_cited_topics_500": true,
+    "unsupported_0": true,
+    "http_le_9250": true,
+    "wall_le_scaled_time_budget": true,
+    "largest_profile_lt_250000": true,
+    "cost_0": true,
+    "zero_llm_search_calls": true,
+    "frozen_registry_snapshot_used": true,
+    "zero_placeholders": true,
+    "wall_under_2100_seconds": true
+  },
+  "all_gates_pass": true,
+  "source_health": {
+    "enhetsregisteret": "reachable",
+    "accounts": "reachable",
+    "nav": "reachable",
+    "gleif": "reachable"
+  },
+  "official_source_outages_counts": {
+    "transient_attempts": 3,
+    "unrecovered_attempts": 3
+  },
+  "input_rows": 500,
+  "terminal_envelopes": 500,
+  "http_requests": 5158,
+  "limits": {
+    "max_requests": 9250,
+    "max_cost_usd": 0.0,
+    "time_budget_seconds": 2100.0,
+    "deadline_fraction": 0.85,
+    "request_timeout": 10.0,
+    "host_concurrency": 10,
+    "effective_time_budget_seconds": 2100.0,
+    "scaled_hard_request_cap": 9250,
+    "scaled_hard_time_seconds": 10500.0
+  },
+  "wall_seconds": 1649.6733736000024,
+  "runtime_seconds": 1615.578,
+  "deadline_hits": 202,
+  "total_cost_usd": 0.0,
+  "search_queries": 0,
+  "llm_calls": 0,
+  "site": {
+    "state": "available",
+    "companies": 500,
+    "input_records": 500,
+    "pages": 502,
+    "skipped_invalid_identifiers": 0,
+    "total_bytes": 192241048,
+    "largest_profile_data_bytes": 1417034,
+    "largest_profile_bytes": 245912
+  },
+  "facts": 68530,
+  "websites": 33,
+  "social_urls": 5,
+  "social_companies": 4,
+  "jobs": 4,
+  "activity_claims": 6710,
+  "families": {
+    "identity": 14951,
+    "subunits": 4967,
+    "roles": 5658,
+    "accounts": 35681,
+    "activity": 6710,
+    "state_aid": 296,
+    "gleif": 64,
+    "inspections": 20,
+    "licences": 3,
+    "website": 169,
+    "hiring": 4,
+    "research": 7
+  },
+  "section_states": {
+    "accounts": {
+      "available": 499,
+      "failed": 1
+    },
+    "activity": {
+      "available": 280,
+      "failed": 220
+    },
+    "gleif": {
+      "not_available": 442,
+      "available": 58
+    },
+    "hiring": {
+      "not_available": 496,
+      "available": 3,
+      "failed": 1
+    },
+    "identity": {
+      "available": 500
+    },
+    "inspections": {
+      "not_available": 492,
+      "available": 8
+    },
+    "licences": {
+      "not_available": 497,
+      "available": 3
+    },
+    "procurement": {
+      "not_available": 493,
+      "blocked": 7
+    },
+    "research": {
+      "not_available": 493,
+      "available": 7
+    },
+    "roles": {
+      "available": 499,
+      "not_available": 1
+    },
+    "state_aid": {
+      "not_available": 458,
+      "available": 42
+    },
+    "subunits": {
+      "available": 374,
+      "not_available": 126
+    },
+    "website": {
+      "not_available": 257,
+      "failed": 169,
+      "ambiguous": 39,
+      "available": 33,
+      "blocked": 2
+    }
+  },
+  "verification": {
+    "lines": 500,
+    "schema_valid": true,
+    "published_claims": 68530,
+    "source_blobs_verified": 2112,
+    "synthesis_companies": 500,
+    "synthesis_sentences": 9254,
+    "synthesis_unverified_values": 0,
+    "financial_inputs_verified": 30821,
+    "derived_financial_metrics_verified": 1075,
+    "registry_events_verified": 6710,
+    "filing_year_facts_verified": 4860,
+    "exact_public_items_verified": 64,
+    "exact_official_items_verified": 326,
+    "briefing_companies": 500,
+    "briefing_sentences": 3190,
+    "briefing_short_companies": 0,
+    "briefing_unverified_values": 0,
+    "briefing_topic_coverage": {
+      "activity": 500,
+      "change": 500,
+      "unknown": 500,
+      "financial": 500,
+      "takeaway": 500
+    },
+    "complete_briefing_contracts": 500,
+    "newer_filing_flags": 0,
+    "site_verified": true,
+    "terminal_envelopes": 500,
+    "source_failures_permitted": true,
+    "http_requests": 5158,
+    "wall_seconds": 1644.735,
+    "cost_usd": 0,
+    "largest_profile_bytes": 245912
+  },
+  "artifacts": {
+    "envelopes.jsonl": "341abc00819145aa6d988adab78ad1b38658014c52a3166780eba5bdd82a5a91",
+    "profiles.jsonl": "306e01704ab626f87b7dcc68999fbec785ac0551b3290c9fe5be273d835ebdd2",
+    "report.json": "d3c5a8a7dcdd2bf9ec69c3ff5c5de988e197f16982802e268bc616646ef2b740"
+  },
+  "work_directory": "<REPO>\\.data\\r5\\final500b-clean\\run-final",
+  "deadline_companies_by_section": {
+    "accounts": 0,
+    "activity": 0,
+    "gleif": 0,
+    "hiring": 0,
+    "identity": 0,
+    "inspections": 0,
+    "licences": 0,
+    "procurement": 0,
+    "research": 0,
+    "roles": 0,
+    "state_aid": 0,
+    "subunits": 0,
+    "website": 202
+  },
+  "placeholders": 0,
+  "margin_seconds": 450.3266263999976,
+  "adaptive_website_pass2_deadline": 202,
+  "url_inventory_categories": {
+    "correct": 20,
+    "doubtful": 18
+  },
+  "six_100_sample_totals": {
+    "inputs": 600,
+    "websites": 45,
+    "social_urls": 28,
+    "available_claims": 82563,
+    "http_requests": 6549,
+    "unsupported_values": 0
+  },
+  "preflight": {
+    "free_disk_bytes": 14619582464,
+    "minimum_free_bytes": 10000000000,
+    "data_bytes": 17677459792,
+    "brreg_http": 200,
+    "company_http": 200,
+    "dns_resolved": true
+  },
+  "seed": 20261122,
+  "pytest": {
+    "passed": 1393,
+    "seconds": 946.86,
+    "ran_concurrently_with_qualification": true
+  }
+}
