@@ -2,7 +2,7 @@
 
 Revised entry checks and their scope: [evaluator-fix verification](reports/evaluator-fixes/SUMMARY.md). The 500-company tables below are historical measurements of the pre-fix entry.
 
-Current run instructions: [SUBMISSION.md](SUBMISSION.md). Envelope requirements: [OUTPUT_CONTRACT.md](OUTPUT_CONTRACT.md). Historical commit labels were affected by a privacy rewrite; [revision mapping and verification limits](HISTORY_MAPPING.md) explain the surviving references.
+Current run instructions: [SUBMISSION.md](SUBMISSION.md). Envelope requirements: [OUTPUT_CONTRACT.md](OUTPUT_CONTRACT.md). Historical reports cite earlier commit IDs; [revision references](HISTORY_MAPPING.md) map them to current commits.
 
 Signalpost researches Norwegian companies from organization numbers and produces evidence-backed company profiles. It combines registry identity, accounts, roles, hiring, public activity and exact-company official records. Each published value carries a source, retrieval time, content hash and supporting excerpt or locator. It writes ordered research envelopes, scorer-compatible profiles and a searchable offline site with cited briefings and explicit source failures.
 
