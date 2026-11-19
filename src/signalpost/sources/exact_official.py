@@ -36,8 +36,8 @@ STOTTE_PAGE_SIZE = 100
 STOTTE_MAX_PAGES = 5
 HOSTS = {STOTTE_HOST, 'api.finanstilsynet.no'}
 SECTION_BY_HOST = {STOTTE_HOST: 'state_aid', 'api.finanstilsynet.no': 'licences'}
-# One attempt suffices for this historically resetting robots origin.
-# PublicHttp now fails closed; the hint never authorizes fetching its data.
+# Legacy constructor hint; PublicHttp now retries robots on every origin.
+# This never authorizes data access while robots remains unreachable.
 ROBOTS_UNSERVED = {STOTTE_HOST}
 POLITENESS_SECONDS = 1  # per host, between request completion and next start
 REFUSALS = {'public_robots_blocked', 'public_robots_unavailable', 'public_http_401', 'public_http_403', 'public_http_429'}

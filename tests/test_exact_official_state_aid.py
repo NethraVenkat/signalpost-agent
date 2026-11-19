@@ -161,8 +161,46 @@ def test_robots_reset_always_blocks_and_caches_the_refusal(unserved, failure, mo
                 assert error.value.code == 'public_robots_unavailable'
             assert http.robots[eo.STOTTE_HOST] is False
             assert all(path == '/robots.txt' for _, path, _ in calls)
-            assert len(calls) == (1 if unserved else 3)
+            assert len(calls) == 3
             assert budget.events[-1]['robots_decision'].startswith('blocked')
+    asyncio.run(run())
+
+
+@pytest.mark.parametrize('robots_status', [200, 204, 404, 403])
+def test_robots_reset_then_success_or_4xx_allows_data(robots_status, monkeypatch):
+    import hashlib
+    import httpx
+    from signalpost.sources.exact_public import PublicHttp
+    from tests.test_official_resilience import FakeBudget
+    import signalpost.sources.official_resilience as retry
+
+    async def no_sleep(_):
+        return None
+    monkeypatch.setattr(retry.asyncio, 'sleep', no_sleep)
+    calls = []
+
+    def handler(request):
+        calls.append(request.url.path)
+        if request.url.path == '/robots.txt':
+            if calls.count('/robots.txt') == 1 and robots_status == 200:
+                raise httpx.ConnectError('connection reset')
+            return httpx.Response(robots_status, content=b'User-agent: *\nAllow: /\n')
+        return httpx.Response(200, content=b'{}')
+
+    class Blobs:
+        def put(self, raw):
+            return hashlib.sha256(raw).hexdigest()
+
+    async def run():
+        async with httpx.AsyncClient(transport=httpx.MockTransport(handler)) as client:
+            budget = FakeBudget()
+            http = PublicHttp(client, SimpleNamespace(request_timeout=1, website_user_agent='SignalpostTest'),
+                              budget, Blobs(), hosts=eo.HOSTS, robots_unserved=eo.HOSTS, politeness=0)
+            assert (await http.request(eo.stotte_url(1), ORG, eo.stotte_payload(ORG))).status == 200
+            assert calls[-1] != '/robots.txt'
+            assert calls.count('/robots.txt') == (2 if robots_status == 200 else 1)
+            if robots_status == 200:
+                assert budget.events[0]['official_retry_backoff_seconds'] == 5
     asyncio.run(run())
 
 
