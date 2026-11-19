@@ -4,7 +4,7 @@ Repository history was rewritten after some reports were written, so older repor
 
 | Earlier ID cited in reports | Current commit |
 |---|---|
-| 7eb9bba | c2bd7ff (main) |
-| b10e531 | 0598bfb (tag v1.4.0) |
+| 7eb9bba | c2bd7ff |
+| b10e531 | 0598bfb |
 | 2ac8a6b | d9e672a |
-| 06ebe1e | 372d4ca (tag v1.5.0) |
+| 06ebe1e | 372d4ca |
