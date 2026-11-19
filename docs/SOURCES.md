@@ -293,3 +293,9 @@ The seed index is off by default. Runtime enablement does not change the bundled
 ## HC1 social registry checks
 
 HC1b uses an offline index derived from the 2026-11-16 Brønnøysund Enhetsregisteret entity CSV under NLOD 2.0. The index contains short hashes of complete legal names with recognised form suffixes, plus name-stem hashes and organisation numbers for shared declared homepage domains. A full visible registered name or a different valid organisation number can trigger the shared-site social rule. A visible stem without its suffix requires both entities to declare that same domain in the snapshot. On a shared site, a supported company-owned JSON-LD node must explicitly tie the sameAs URL to the exact target organisation number. This index is used for social attribution only. [Snapshot and bundle hashes](../reports/r5/stageHC1/registry_index.json) · [Brønnøysund CSV](https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv) · [NLOD 2.0](https://data.norge.no/nlod/no/2.0)
+
+## G1: signature and prokura access gate (2026-11-19)
+
+Brreg documents [public, unauthenticated authority lookups](https://data.brreg.no/fullmakt/docs/index.html) at `https://data.brreg.no/fullmakt/enheter/{orgnr}/{signatur|prokura}`, separate from the authenticated national-ID service. Its [access page](https://www.brreg.no/bruke-data-fra-bronnoysundregistrene/data-om-signatur-og-prokura-for-virksomheter/) explicitly links the open-data variant; the [dataset licence statement](https://www.brreg.no/bruke-data-fra-bronnoysundregistrene/datasett-og-api/) specifies NLOD.
+
+**Not enabled:** `https://data.brreg.no/robots.txt` failed with connection resets after two retries. Fail closed for new lookups; an unreachable robots file is not a finding that the API is permanently disallowed. No authority claim, person identifier, birth date or fixture was invented. [Access decision and receipt](../reports/r5/gaps/G1.md).

@@ -871,3 +871,8 @@
 - The paired 100-company W3 rerun used the same frozen cohort and seven evaluator flags. Seeds ON published 11 websites with 909 HTTP requests. Seeds OFF published 40 with 1,160 requests. Five websites were seeds-ON-only, while 34 were seeds-OFF-only.
 - Seed candidates consume the per-company candidate caps and can crowd out registry/name candidates. The five seed-only gains do not justify the measured reduction in total websites, so the bundled Common Crawl/OSM seed index is now experimental and opt-in via `SIGNALPOST_WEBSITE_SEEDS=1`. Runtime and library defaults are OFF.
 - See `reports/r5/stageW/seed_recall.md` for the cohort hashes, verification receipts and all five seed-only website excerpts.
+
+## 2026-11-19 - G1 authority lookup access gate
+
+- The official public Fullmakttjenesten lookup is documented at `https://data.brreg.no/fullmakt/docs/index.html`; its org-keyed routes are `/fullmakt/enheter/{orgnr}/signatur` and `/fullmakt/enheter/{orgnr}/prokura`. Only the open-data variant is in scope. No competitor code or data was used.
+- Canonical origin robots failed with connection resets on all three attempts (5/20-second backoff). Documentation availability is not an allow decision. No company lookup was sent; G1 remains blocked pending robots availability, with no fabricated real-response fixture. See [G1 access receipt](gaps/G1.md). No tags or push.
