@@ -880,4 +880,11 @@
 ## 2026-11-19 - G2: separately scoped consolidated accounts
 
 - Publish only exact-owner `KONSERN` statements already returned by the ordinary approved accounts request. Require filing ID and valid period, retain currency and source pointers, and isolate group values under `accounts.consolidated.*`. No additional HTTP calls, identity widening or group-derived entity ratios. Profiles explicitly label the group scope.
-- Six focused tests pass using our unchanged saved official baseline response; both auditors detect scope/filing tampering. Group-tree API access remains pending because canonical origin robots are unavailable; no parent/owner links are inferred. [Details](gaps/G2.md).
+- Saved-response and display tests pass using our unchanged saved official baseline response; both auditors detect scope/filing tampering. Group-tree API access remains pending because canonical origin robots are unavailable; no parent/owner links are inferred. [Details](gaps/G2.md).
+
+## 2026-11-19 - G3: own official state-aid bulk extract
+
+- Restore state aid from our own fresh download of Brreg's publisher-advertised, NLOD-licensed CSV. Keep exact registered recipients, registered awards and the rolling three-year window; preserve currency, separate specified recipients, and exclude birth dates and recipient names. No competitor code/data used.
+- Bundle the non-personal extract with source URL, retrieval time, original CSV hash, row numbers and exact columns. Runtime evidence stores each exact extract record; the checker requires bundle membership for the exact orgnr and re-derives the claim. No API or bulk HTTP call is made during a run; the separate resetting API remains fail closed. [Provenance, licence, rebuild and saved-response tests](gaps/G3.md).
+
+- Final combined full pytest: 1,438 passed in 1,014.72 seconds, including the complete G2 safeguards and G3 real-response tests.

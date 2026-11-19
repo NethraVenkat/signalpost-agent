@@ -1,0 +1,13 @@
+{
+  "source_url": "https://stotte.brreg.no/nb/oppslag/stoettetildeling/totalbestand/csv",
+  "sha256": "1742308dfbc97e7b68e1d46bed91eda7c2400092ecf0b16e554b242707db5a55",
+  "bytes": 341060138,
+  "wall_seconds": 668.4219999999914,
+  "extraction": "Verbatim fixed non-personal CSV columns; source row numbers retained; no competitor data",
+  "source_rows": [
+    1,
+    1718,
+    348081
+  ],
+  "retrieved_at": "2026-11-19T15:51:59.277685Z"
+}

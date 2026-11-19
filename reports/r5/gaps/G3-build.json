@@ -1,0 +1,33 @@
+{
+  "source": {
+    "bytes": 341060138,
+    "columns": [
+      "Støttetiltaksnummer",
+      "Status",
+      "Støttetiltakstype",
+      "Organisasjonsnummer støttemottaker",
+      "Organisasjonsnummer spesifisert støttemottaker",
+      "Organisasjonsnummer støttegiver",
+      "Navn støttegiver",
+      "Tildelingsdato",
+      "Tildelt beløp",
+      "Tildelt beløp valuta",
+      "Beløpsintervall fra beløp",
+      "Beløpsintervall til beløp",
+      "Beløpsintervall valuta",
+      "Tilknyttet støtteordning",
+      "Støtteinstrument"
+    ],
+    "key": "brreg_state_aid_csv",
+    "licence": "NLOD 2.0; Brønnøysundregistrene",
+    "retrieved_at": "2026-11-19T15:51:59.2776852Z",
+    "rows_kept": 339417,
+    "rows_total": 374217,
+    "sha256": "1742308dfbc97e7b68e1d46bed91eda7c2400092ecf0b16e554b242707db5a55",
+    "source_url": "https://stotte.brreg.no/nb/oppslag/stoettetildeling/totalbestand/csv"
+  },
+  "companies": 51200,
+  "records": 339417,
+  "bytes": 6982418,
+  "sha256": "158ba118817017640911187bd031c258b6f213cf2565ce0363e562cc709f51d0"
+}

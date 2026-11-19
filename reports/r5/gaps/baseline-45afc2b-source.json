@@ -1,0 +1,34 @@
+{
+  "baseline_commit": "45afc2b",
+  "ordered_standard_cohort_matches": true,
+  "envelopes_sha256": "46df28af1457eaf15011733ec2584f5bdd80cf6b7ae924578494896d477da711",
+  "input_sha256": "7d59169d3fd274ec576dca84430beac887b4a1cf06697e20ab7e875420673686",
+  "available_claims": 13567,
+  "run_status": "partial",
+  "deadline_hits": 0,
+  "execution": {
+    "exit_code": 0,
+    "wall_seconds": 552.3566022999876,
+    "command": [
+      "<REPO>\\.venv\\Scripts\\python.exe",
+      "-m",
+      "signalpost.cli",
+      "run",
+      "--organisations",
+      "<REPO>\\reports\\competitors\\companies100.jsonl",
+      "--bulk",
+      "<REPO>\\reports\\r5\\baseline\\registry100.csv",
+      "--output",
+      "<REPO>\\out\\competitors-v16\\ours\\envelopes.jsonl",
+      "--profiles-output",
+      "<REPO>\\out\\competitors-v16\\ours\\profiles.jsonl",
+      "--report",
+      "<REPO>\\out\\competitors-v16\\ours\\report.json",
+      "--run-id",
+      "competitor-v16-standard-20261017",
+      "--expected-count",
+      "100"
+    ],
+    "cwd": "<REPO>\\out\\competitors-v16\\ours"
+  }
+}

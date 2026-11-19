@@ -116,7 +116,7 @@ def bundled_match(eo,bundle_path,derive,claim,receipt,body,org,row):
     derived=derive(record,org,datetime.fromisoformat(completed.replace('Z','+00:00')))
     if not derived:return False
     value,_=derived
-    record_id=value.get('project_id') or value.get('inspection_id')
+    record_id=value.get('project_id') or value.get('inspection_id') or value.get('award_id')
     return value==claim['value'] and claim['field'].endswith('.'+record['source']+'.'+str(record_id))
 
 
@@ -163,6 +163,10 @@ def verify_exact_official(row,data,evidence,stored_body):
             body=stored_body(receipt['content_sha256'])
             at=datetime.fromisoformat(receipt['retrieved_at'].replace('Z','+00:00'))
             if claim['field'].startswith('state_aid.award.'):
+                from signalpost.sources import state_aid_bulk
+                if receipt['source_url']==state_aid_bulk.URL:
+                    matched |= bundled_match(eo,state_aid_bulk.BUNDLE,state_aid_bulk.derive,claim,receipt,body,org,row)
+                    continue
                 assert receipt['source_url'].startswith(eo.STOTTE+'?'),'Wrong state-aid endpoint'
                 items=json.loads(body)['stoettetildeling']
                 index=int(receipt['locator'].split('/')[2])

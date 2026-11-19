@@ -1,0 +1,65 @@
+[
+  {
+    "source": "brreg_state_aid_csv",
+    "row": 1,
+    "fields": {
+      "Støttetiltaksnummer": "1000375662",
+      "Status": "Registrert",
+      "Støttetiltakstype": "Støttetildeling med statsstøtte",
+      "Organisasjonsnummer støttemottaker": "989649604",
+      "Organisasjonsnummer spesifisert støttemottaker": "972345954",
+      "Organisasjonsnummer støttegiver": "974761076",
+      "Navn støttegiver": "SKATTEETATEN",
+      "Tildelingsdato": "31.12.2025",
+      "Tildelt beløp": "1406546,00",
+      "Tildelt beløp valuta": "NOK",
+      "Beløpsintervall fra beløp": "",
+      "Beløpsintervall til beløp": "",
+      "Beløpsintervall valuta": "",
+      "Tilknyttet støtteordning": "1000000420",
+      "Støtteinstrument": "Skatte- eller avgiftsfritak"
+    }
+  },
+  {
+    "source": "brreg_state_aid_csv",
+    "row": 1718,
+    "fields": {
+      "Støttetiltaksnummer": "1000373926",
+      "Status": "Registrert",
+      "Støttetiltakstype": "Støttetildeling med statsstøtte",
+      "Organisasjonsnummer støttemottaker": "912702847",
+      "Organisasjonsnummer spesifisert støttemottaker": "",
+      "Organisasjonsnummer støttegiver": "974761076",
+      "Navn støttegiver": "SKATTEETATEN",
+      "Tildelingsdato": "05.10.2026",
+      "Tildelt beløp": "10089,37",
+      "Tildelt beløp valuta": "NOK",
+      "Beløpsintervall fra beløp": "",
+      "Beløpsintervall til beløp": "",
+      "Beløpsintervall valuta": "",
+      "Tilknyttet støtteordning": "1000029830",
+      "Støtteinstrument": "Skatte- eller avgiftsfritak"
+    }
+  },
+  {
+    "source": "brreg_state_aid_csv",
+    "row": 348081,
+    "fields": {
+      "Støttetiltaksnummer": "1000027097",
+      "Status": "Registrert",
+      "Støttetiltakstype": "Støttetildeling med statsstøtte",
+      "Organisasjonsnummer støttemottaker": "918653996",
+      "Organisasjonsnummer spesifisert støttemottaker": "",
+      "Organisasjonsnummer støttegiver": "974761076",
+      "Navn støttegiver": "SKATTEETATEN",
+      "Tildelingsdato": "31.12.2023",
+      "Tildelt beløp": "",
+      "Tildelt beløp valuta": "",
+      "Beløpsintervall fra beløp": "1,00",
+      "Beløpsintervall til beløp": "499999,00",
+      "Beløpsintervall valuta": "EUR",
+      "Tilknyttet støtteordning": "1000000420",
+      "Støtteinstrument": "Skatte- eller avgiftsfritak"
+    }
+  }
+]

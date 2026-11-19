@@ -1,0 +1,12 @@
+{
+  "robots_url": "https://stotte.brreg.no/robots.txt",
+  "redirect_status": 307,
+  "redirect_target": "https://stotte.brreg.no/robots.txt/oppslag/stoettetildeling",
+  "final_status": 200,
+  "final_content_type": "text/html; charset=utf-8",
+  "body_sha256": "0be4943efb124da6bcfa78d6673817cf5179dbf6e77c4b8c83c2425cc4da18f0",
+  "parsed_groups": 0,
+  "can_fetch_bulk_csv": true,
+  "licensed_bulk_route": true,
+  "api_origin_unchanged_fail_closed": true
+}

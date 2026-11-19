@@ -22,6 +22,7 @@ from datetime import date, datetime, timezone
 from ..budget import SourceFailure
 from ..workers import offload
 from .extract import Section, add, missing, response_source
+from . import state_aid_bulk
 
 METHOD = 'signalpost.exact_official.v1'
 FAMILIES = ('state_aid', 'research', 'licences', 'inspections')
@@ -180,7 +181,8 @@ async def state_aid(org, http, now):
 FETCHERS = {'state_aid': lambda org, http, now: state_aid(org, http, now),
             'licences': lambda org, http, now: licences(org, http, now)}
 # Local bundled snapshots: no network, evidence body = the exact bundled record.
-LOCAL = {'research': lambda org, now, blobs, envelope: record_section('research', 'research.project.', load_bundle(RESEARCH_BUNDLE), org,
+LOCAL = {'state_aid': lambda org, now, blobs, envelope: state_aid_bulk.section(org, now, blobs),
+         'research': lambda org, now, blobs, envelope: record_section('research', 'research.project.', load_bundle(RESEARCH_BUNDLE), org,
                                                                       now, research_value, blobs, 'official_research', 'project_id'),
          'inspections': lambda org, now, blobs, envelope: inspections_section(org, envelope, now, blobs)}
 
@@ -558,7 +560,8 @@ def briefing_sentences(envelope):
     for claim in awards:
         v = claim.value
         amount = (f"{number(v['amount'])} {v['currency']}" if 'amount' in v else
-                  f"{number(v['amount_range']['from'])}–{number(v['amount_range']['to'])} (registered range)" if 'amount_range' in v else
-                  'amount not registered')
+                  f"{number(v['amount_range']['from'])}–{number(v['amount_range']['to'])} " +
+                  (v['currency'] + ' ' if v.get('currency') else '') + '(registered range)' if 'amount_range' in v else
+                  'amount unavailable')
         result.append(Sentence(text=f"State aid award: {amount} from {v['granting_authority']}; {v['date']}.", claim_ids=[claim.id]))
     return result
