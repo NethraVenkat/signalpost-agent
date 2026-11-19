@@ -2,7 +2,9 @@
 
 Baseline `45afc2b`, documentation follow-up `528e05a`; measured application `f740933`.
 
-**The full 500-company gate failed.** The CLI exited 0 and its source verification passed, but no HTML site was published because one reconstructed profile exceeds 250,000 bytes. Adaptive website pass 2 also raised `OSError`; its cause and per-company loss details were not recorded. Zero deadline hits do not establish complete website work or a performance improvement.
+**The original full 500-company gate failed; the same saved outputs now pass the full offline check after repair at `567eafe`.** The CLI exited 0 and its source verification passed, but no HTML site was published because one reconstructed profile exceeds 250,000 bytes. Adaptive website pass 2 also raised `OSError`; its cause and per-company loss details were not recorded. Zero deadline hits do not establish complete website work or a performance improvement.
+
+The network-blocked rebuild took 45.09 s, produced 500 company pages with a 249,270-byte maximum, and passed `check_live_run --count 500` (exit 0, 122.66 s). All original output hashes and published facts/evidence are unchanged. No new live run. [Repair and receipts](site-fix/SUMMARY.md).
 
 ## Changes and access limits
 
@@ -25,12 +27,12 @@ Baseline `45afc2b`, documentation follow-up `528e05a`; measured application `f74
 |---|---:|---:|
 | Process wall / fixed budget, seconds | 558.28 / 2,100 | 1516.75 / 2,100 |
 | Margin, seconds | 1541.72 | 583.25 |
-| CLI exit / full checker exit | 0 / 0 | 0 / 1 |
+| CLI exit / full checker exit | 0 / 0 | 0 / 0 (offline repair; originally 1) |
 | Run status | partial | partial |
 | Deadline hits | 0 | 0 |
 | JSON envelopes / JSON profiles / placeholders | 100 / 100 / 0 | 500 / 500 / 0 |
-| Published HTML profiles | 100 | 0 |
-| Largest HTML profile | 242,559 bytes | 262,692 bytes, offline reconstruction; not published |
+| Published HTML profiles | 100 | 500 (offline rebuild) |
+| Largest HTML profile | 242,559 bytes | 249,270 bytes (offline rebuild) |
 | Unsupported synthesis / briefing values (saved-source check) | 0 / 0 | 0 / 0 |
 | Provider cost | $0 | $0 |
 
@@ -38,8 +40,8 @@ The same ordered standard seed-20261017 cohort had 13,567 available claims at `4
 
 The single clean-clone 500 run used seed **20261125**, 500 inputs disjoint from 6,207 preserved prior input numbers, exactly seven flags and `--expected-count 500`. Setup and run checked for at least 15 GiB; the 3 GiB guard sampled a minimum of 17.11 GiB and did not trigger. One input missing from the bulk subset was retained and resolved by the normal live identity path; no replacement draw. [Setup and original checker failure](final500/SUMMARY.md).
 
-The oversized organisation is **968360302**, with 42 workplace claims, zero consolidated claims and one state-aid claim. Its 262,692-byte reconstruction remains oversized with explorer rows and inline official facts both at zero and source shortcuts disabled. The application was not changed after measurement and the live cohort was not rerun.
+The oversized organisation is **968360302**, with 42 workplace claims, zero consolidated claims and one state-aid claim. Its original 262,692-byte reconstruction was oversized with explorer rows and inline official facts both at zero and source shortcuts disabled. The subsequent repair at `567eafe` reduces it to 219,666 bytes, retaining all 42 workplaces in local data. The live cohort was not rerun.
 
-The separate offline saved-source check passed all 500 envelopes: 70,078 available claims, 2,277 original source blobs, 31,716 financial inputs, 225 exact-official claims, and zero unsupported synthesis/briefing values. This does not turn the failed site gate into a pass. [Source-only check](final500/source-only-verification.json).
+The separate offline saved-source check passed all 500 envelopes: 70,078 available claims, 2,277 original source blobs, 31,716 financial inputs, 225 exact-official claims, and zero unsupported synthesis/briefing values. That source-only check did not repair the site; the later offline rebuild and full check did. [Source-only check](final500/source-only-verification.json).
 
 The committed 686,790-byte evidence packet reproduces both field-count inventories and all **772 new consolidated/state-aid claims**, with 265 original evidence bodies. It replayed offline against the clean clone without local run directories or pytest. Legacy values, timings and historical sampling-universe bytes are outside that packet's source-replay scope. [Reproduction instructions](EVIDENCE.md).

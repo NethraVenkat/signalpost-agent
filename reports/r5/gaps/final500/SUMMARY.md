@@ -1,6 +1,6 @@
 # Single fresh 500-company verification
 
-**FAILED full gate: HTML site was not published.** No second live run was made.
+**Original live full gate FAILED: HTML site was not published.** The same saved outputs subsequently passed a network-blocked offline rebuild/full check at `567eafe`: 500 company pages, maximum 249,270 bytes, checker exit 0. [Repair receipts](../site-fix/SUMMARY.md). This table preserves the original measurement. No second live run was made.
 
 Application commit: `f740933af530a9756f07c236a79bceae069eb862`; seed `20261125`.
 Fresh clean clone, frozen installation, exactly seven CLI flags, expected count 500; no pytest in clone. Excluded 6,207 prior input numbers; overlap 0. Source universe contains 411,160 rows; eligible population 406,510. The bulk subset held 499 rows; `933762394` was retained for normal live lookup.

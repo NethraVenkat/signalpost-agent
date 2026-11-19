@@ -1,0 +1,30 @@
+{
+  "code_commit": "567eafe8a3f815740d5465f19e5217b27c5fd087",
+  "source_run_commit": "f740933",
+  "source_sha256": {
+    "envelopes.jsonl": "5615bd48c53ad163514c59e97cff83c13abf42989a48d64f020daa7923e92574",
+    "profiles.jsonl": "64df03138a50fa4e8a42137a553258a54afcc9afee14b1dae9d556a9d50c0aa1",
+    "report.json": "14458704a9247a3c9bf7d7ca7caed437558300d9f49f254c61390ff23066f0f3"
+  },
+  "wall_seconds": 45.094000000011874,
+  "site": {
+    "companies": 500,
+    "input_records": 500,
+    "pages": 502,
+    "skipped_invalid_identifiers": 0,
+    "total_bytes": 193769689,
+    "largest_profile_data_bytes": 1539272,
+    "largest_profile_bytes": 249270
+  },
+  "network_blocked": true,
+  "research_rerun": false,
+  "original_site": {
+    "state": "failed",
+    "error": "ValueError",
+    "message": "Profile page exceeds 250 KB gate"
+  },
+  "historical_adaptive_warning": [
+    "adaptive website pass failed: OSError",
+    "site generation failed: ValueError"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "exit_code": 0,
+  "wall_seconds": 122.65700000000652,
+  "argv": [
+    "<REPO>\\.venv\\Scripts\\python.exe",
+    "<REPO>\\scripts\\check_live_run.py",
+    "--output",
+    "<REPO>\\.data\\r5-gaps-final500\\run\\envelopes.jsonl",
+    "--organisations",
+    "<REPO>\\reports\\r5\\gaps\\final500\\companies500.jsonl",
+    "--state",
+    "<REPO>\\.data\\r5-gaps-final500\\run\\state",
+    "--report",
+    "<REPO>\\out\\r5-site-fixes\\offline500\\report.json",
+    "--site",
+    "<REPO>\\out\\r5-site-fixes\\offline500\\site",
+    "--count",
+    "500"
+  ],
+  "network_blocked": true,
+  "research_rerun": false
+}

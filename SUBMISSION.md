@@ -50,9 +50,9 @@ For a check that needs only the clone, run `uv run python scripts/replay_committ
 
 ## Latest gap verification and limits
 
-Latest gap check: application `f740933`, standard seed-20261017 cohort and one fresh clean-clone 500-company run with seed 20261125. Both commands used exactly seven flags and fresh state. **The 100-company full check passed; the 500-company full check failed because no HTML site was published.** No live rerun or clone pytest. [Gap reports and original failure receipts](reports/r5/gaps/SUMMARY.md).
+Latest gap check: application `f740933`, standard seed-20261017 cohort and one fresh clean-clone 500-company run with seed 20261125. Both commands used exactly seven flags and fresh state. **The 100-company full check passed. The original 500-company site gate failed; rebuilding the same saved outputs offline at `567eafe` now passes `check_live_run --count 500` (exit 0).** No new live run or clone pytest. The offline rebuild took 45.09 s; the checker took 122.66 s, separately from the original live wall time. [Gap reports and original failure receipts](reports/r5/gaps/SUMMARY.md).
 
-| Metric | Standard 100 | Fresh 500 |
+| Metric | Standard 100 | Saved fresh 500 + offline site repair |
 |---|---:|---:|
 | Process wall / fixed budget | 558.28 / 2,100 s | 1,516.75 / 2,100 s |
 | Margin under budget | 1,541.72 s | 583.25 s |
@@ -63,9 +63,9 @@ Latest gap check: application `f740933`, standard seed-20261017 cohort and one f
 | Consolidated accounts: companies / claims | 4 / 180 | 5 / 336 |
 | State aid: companies / claims | 8 / 51 | 33 / 205 |
 | All available claims | 13,799 | 70,078 |
-| Published HTML profiles | 100 | 0 |
-| Largest HTML profile | 242,559 bytes | 262,692 bytes, offline reconstruction; not published |
-| Run status / CLI exit / full checker exit | partial / 0 / 0 | partial / 0 / 1 |
+| Published HTML profiles | 100 | 500 (offline rebuild) |
+| Largest HTML profile | 242,559 bytes | 249,270 bytes (offline rebuild) |
+| Run status / CLI exit / full checker exit | partial / 0 / 0 | partial / 0 / 0 (offline; originally 1) |
 | Source-check unsupported synthesis / briefing values | 0 / 0 | 0 / 0 |
 | Activity available / failed | 100 / 0 | 500 / 0 |
 | Websites / social URLs | 8 / 7 | 36 / 24 |
@@ -75,8 +75,8 @@ Latest gap check: application `f740933`, standard seed-20261017 cohort and one f
 | HTTP attempts | 1,041 | 4,426 |
 | Provider cost | $0 | $0 |
 
-**Remaining limits:** signature/prokura and Brreg group-tree API enablement remain pending the canonical robots access gate. The fresh 500 run recorded adaptive website pass-2 `OSError` after 61 requests; the cause and detailed loss telemetry are unavailable. One reconstructed profile (`968360302`) still exceeded the 250,000-byte gate after all existing fallbacks, so the site was not published and `check_live_run --count 500` failed. Zero deadline hits and the shorter wall time do not establish complete recall or a speed improvement. Minimum sampled free disk was 17.11 GiB; the 3 GiB stop guard did not trigger.
+**Remaining limits:** signature/prokura and Brreg group-tree API enablement remain pending the canonical robots access gate. The fresh 500 run recorded adaptive website pass-2 `OSError` after 61 requests; the cause and detailed loss telemetry are unavailable. The original site failed the size gate. At `567eafe`, workplace overflow moves to company-local data; the same saved 500 outputs pass the full offline check with all facts/evidence retained. Profile `968360302` is 219,666 bytes. Company-local OSError handling and diagnostics are tested; the historical pass was not rerun. Zero deadline hits and the shorter wall time do not establish complete recall or a speed improvement. Minimum sampled free disk was 17.11 GiB; the 3 GiB stop guard did not trigger.
 
-The standard 100 cohort had 13,567 available claims at baseline `45afc2b`; the new total is 13,799. [Per-type comparison](reports/r5/gaps/standard100/SUMMARY.md). All 772 new consolidated/state-aid claims and both field-count inventories replay from the [committed bounded evidence packet](reports/r5/gaps/EVIDENCE.md), without network or local run directories. The separate saved-source check passed; it does not make the failed 500-company site gate pass.
+The standard 100 cohort had 13,567 available claims at baseline `45afc2b`; the new total is 13,799. [Per-type comparison](reports/r5/gaps/standard100/SUMMARY.md). All 772 new consolidated/state-aid claims and both field-count inventories replay from the [committed bounded evidence packet](reports/r5/gaps/EVIDENCE.md), without network or local run directories. The subsequent network-blocked site rebuild and full check passed on unchanged original outputs. [Repair, integrity and checker receipts](reports/r5/gaps/site-fix/SUMMARY.md).
 
 The earlier [final500d measurement](reports/evaluator-fixes/final500d/SUMMARY.md), using `3de9edd` and seed 20261124, remains historical evidence.

@@ -1,0 +1,18 @@
+{
+  "companies": 500,
+  "facts": 77610,
+  "available_claims": 70078,
+  "evidence_records": 117159,
+  "workplace_claims": 453,
+  "deferred_workplace_claims": 44,
+  "target": {
+    "organisation_number": "968360302",
+    "html_bytes": 219666,
+    "workplaces": 42,
+    "deferred_workplaces": 42,
+    "facts": 820,
+    "evidence_records": 1330
+  },
+  "all_fact_values_and_evidence_preserved": true,
+  "network_blocked": true
+}
