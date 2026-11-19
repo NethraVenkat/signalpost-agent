@@ -1,0 +1,1277 @@
+{
+  "base_commit": "372d4cab17e786479cb27663a463079d71b25f68",
+  "tracked_bytes_before": 1610661415,
+  "removed_bytes": 1176953493,
+  "removed_files": 211,
+  "policy": "Only generated JSON >=100KB without explicit Markdown links, fullpath prose citations, nearby report filename citations or explicit test references. Preserve all cohort inputs, source bodies, images, logs, human reviews, licences, manifests and readable reports. Git history is retained.",
+  "files": [
+    {
+      "path": "reports/r5/stageP3/P3g/report.json",
+      "bytes": 32462292,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "a45e591da89e5ae2535bd0628a114cf3ec2b7576"
+    },
+    {
+      "path": "reports/r5/final500/trials/retry/report.json",
+      "bytes": 32120037,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "9632327c7422e8d4e2f4a0a4896aca995cece23f"
+    },
+    {
+      "path": "reports/r5/stageR5/trials/pre_split_credit_fix/trials.json",
+      "bytes": 13949318,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "e66f54baa3eccfc33bec839a7583a1e75394a6d3"
+    },
+    {
+      "path": "reports/r5/stageP3/samples/trials/seed20261117-retry/report.json",
+      "bytes": 6683366,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "7171e49766bf3023f30f2cdd7b76fb1a425837af"
+    },
+    {
+      "path": "reports/r5/stageFX/seed20261117/report.json",
+      "bytes": 6648666,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "b54f86d970a342f03d825e33f8f89a5fd67df3e0"
+    },
+    {
+      "path": "reports/r5/stageP3/samples/seed20261113/report.json",
+      "bytes": 6619856,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "5544e75e5750bc904c6c227e9f6251f9bd28bac2"
+    },
+    {
+      "path": "reports/r5/stageP0rb/seed20261117/report.json",
+      "bytes": 6556345,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "f157abfbff98afbf9153c2019dd341276e06e1a4"
+    },
+    {
+      "path": "reports/r5/stageL/L/seed20261117/report.json",
+      "bytes": 6530773,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "397d0f9a3e075ec360c469b2d3f97202640513dc"
+    },
+    {
+      "path": "reports/r5/stageL/L/trials/seed20261117-live-read-timeout/report.json",
+      "bytes": 6530637,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "70fba5dbb7468acaf36e0d2e6e9e205d87a5402c"
+    },
+    {
+      "path": "reports/r5/stageX/X2/seed20261117/report.json",
+      "bytes": 6527684,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "c8cc42a396f3459d75118b92e8b4202223c5921b"
+    },
+    {
+      "path": "reports/r5/stageP3/samples/seed20261116/report.json",
+      "bytes": 6508809,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "e9469ece7b6a4f50e9c979f812535fa106527561"
+    },
+    {
+      "path": "reports/r5/stageS/seed20261117/report.json",
+      "bytes": 6501571,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "3a9ebe02ead6781f04e8bd694d6f275b80d7a1ae"
+    },
+    {
+      "path": "reports/r5/stageP0rb/seed20261113/report.json",
+      "bytes": 6491724,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "ec68db5a8b2542307064f0ce0c73f6fe3810f706"
+    },
+    {
+      "path": "reports/r5/stageR7/R7/seed20261117/report.json",
+      "bytes": 6480373,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "906d8904f37c1e7297bdefa6a0f8c5b4eb9f9abd"
+    },
+    {
+      "path": "reports/r5/stageR7/R7/trials/source_protocol_seed20261117/report.json",
+      "bytes": 6477718,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "3c358101473cf4e15eab5d21fd59b84012e15d8a"
+    },
+    {
+      "path": "reports/r5/stageX/X2/seed20261113/report.json",
+      "bytes": 6474444,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "7624e712dcf165aaddc8a95e2dcef44b19a00792"
+    },
+    {
+      "path": "reports/r5/stageL/L/seed20261113/report.json",
+      "bytes": 6460842,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "8bc6e232129b19b5ff86b01850b5e5ab2b8400e4"
+    },
+    {
+      "path": "reports/r5/stageR6/R6/seed20261117/report.json",
+      "bytes": 6452154,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "78e2bdd8f1202eeda6f7b2b82e604481324a2f15"
+    },
+    {
+      "path": "reports/r5/stageS/seed20261113/report.json",
+      "bytes": 6442616,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "061e4bd0b3a5e325b628ba76ae1c3347c88c1751"
+    },
+    {
+      "path": "reports/r5/stageX/X4/seed20261117/report.json",
+      "bytes": 6438286,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "6e8469c4e06b189bccf2fd53dd53d3a701c15812"
+    },
+    {
+      "path": "reports/r5/stageP3/samples/seed20261017/report.json",
+      "bytes": 6437997,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "c2f8d0a688a2e86787f8ac9fa88b498679d96a0b"
+    },
+    {
+      "path": "reports/r5/stageX/X1/seed20261117/report.json",
+      "bytes": 6437718,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "0715b10b3b7a6c09777f4c8f43286988c1a14f1c"
+    },
+    {
+      "path": "reports/r5/stageR5/seed20261117/report.json",
+      "bytes": 6435773,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "8e2a6f9ba6170758f635b1026aee7ae278953283"
+    },
+    {
+      "path": "reports/r5/stageR7/R7/trials/rejected_R7e/seed20261113/report.json",
+      "bytes": 6433415,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "55f3222be02bfbe5493a3944843702405758ad9a"
+    },
+    {
+      "path": "reports/r5/stageH/seed20261117/report.json",
+      "bytes": 6432614,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "3c3d07ed993da25f415230e0810eb6b285b9560f"
+    },
+    {
+      "path": "reports/r5/stageR3/seed20261117/report.json",
+      "bytes": 6431159,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "5047fb44f5e5d0fa407d724d2f4e6698db5d7e66"
+    },
+    {
+      "path": "reports/r5/stageP3/samples/seed20261114/report.json",
+      "bytes": 6430008,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "ad233bfdef0807f93ba9acb4ecd6422a875e0aca"
+    },
+    {
+      "path": "reports/r5/stageR7/R7/seed20261113/report.json",
+      "bytes": 6425521,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "eded3f3f2d9b8fae799abf9c4cdd8ec0e901b969"
+    },
+    {
+      "path": "reports/r5/stageW/seed20261117/report.json",
+      "bytes": 6425198,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "6ce668316e41a42bd62202bf87ac0f0fb5a42238"
+    },
+    {
+      "path": "reports/r5/stageW/trials/overbroad_header/seed20261117/report.json",
+      "bytes": 6424546,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "4fef91e2af4272818c2c13363b3effe18f294c48"
+    },
+    {
+      "path": "reports/r5/stageP3/samples/seed20261115/report.json",
+      "bytes": 6412375,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "9d6128cd07d942499b5d2745525b616e2bb1eec9"
+    },
+    {
+      "path": "reports/r5/stageR6/R6/trials/rejected_R6a/seed20261113/report.json",
+      "bytes": 6395471,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "d5e3b28d84ceb5f7ef9c24cc9dfc0e9286334f62"
+    },
+    {
+      "path": "reports/r5/stageR6/R6/seed20261113/report.json",
+      "bytes": 6394833,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "b96ae5c3da2d58ded7f9d1f4ef3e78a60c531674"
+    },
+    {
+      "path": "reports/r5/stageP0rb/seed20261116/report.json",
+      "bytes": 6386653,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "6e852854914c7cbe70f54a92f26631bdb302d810"
+    },
+    {
+      "path": "reports/r5/stageX/X4/seed20261113/report.json",
+      "bytes": 6383726,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "759c3985acb97e8ec804ad79ae4de31c8d8b2d64"
+    },
+    {
+      "path": "reports/r5/stageR5/seed20261113/report.json",
+      "bytes": 6383725,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "803da4aba1cf201f491da2e8b07d8c87ee56cfec"
+    },
+    {
+      "path": "reports/r5/stageX/X5/seed20261113/report.json",
+      "bytes": 6382260,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "f9f8638352cf18594ee1416ab930e682bf2be2eb"
+    },
+    {
+      "path": "reports/r5/stageT/daily/report.json",
+      "bytes": 6381485,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "84b5eb4ee27f3c6c95a5189a2daa03f27a6860a0"
+    },
+    {
+      "path": "reports/r5/stageR3/seed20261113/report.json",
+      "bytes": 6379903,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "df6cf34581a62b1ff1bfd0d5974546d0bbadf253"
+    },
+    {
+      "path": "reports/r5/stageR5/trials/pre_split_credit_fix/seed20261113/report.json",
+      "bytes": 6379835,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "a45a4adec2539c83d93db7f7a3f8cad88eac89f6"
+    },
+    {
+      "path": "reports/r5/stageR5/trials/pre_localization_fix/seed20261113/report.json",
+      "bytes": 6379587,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "2b44b5dab1d93e8f975f9993082233c78afb431e"
+    },
+    {
+      "path": "reports/r5/stageW/trials/copyright_wrapper/seed20261113/report.json",
+      "bytes": 6378905,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "011d332726267b8f81bfccf17b5134f61218347c"
+    },
+    {
+      "path": "reports/r5/stageW/seed20261113/report.json",
+      "bytes": 6375399,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "a3b6aaa0b730d9dcfebe5d4c177803b84a762942"
+    },
+    {
+      "path": "reports/r5/stageW/trials/overbroad_header/seed20261113/report.json",
+      "bytes": 6373139,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "bdb525a987ce67ca895a87790754677157ca8d0d"
+    },
+    {
+      "path": "reports/r5/stageC2/daily/report.json",
+      "bytes": 6372765,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "3ded0b0bc8260228fd717e77b60e7651840a3058"
+    },
+    {
+      "path": "reports/r5/stageR6/R6/trials/rejected_R6d/seed20261113/report.json",
+      "bytes": 6371349,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "ebd972a5a5e87bdbf43465f32e62a01a031d1408"
+    },
+    {
+      "path": "reports/r5/stageW/trials/short_contact_wrapper/seed20261113/report.json",
+      "bytes": 6371059,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "a26d55b91339cbcb879ccbe808e5982630854168"
+    },
+    {
+      "path": "reports/r5/stageX/X1/seed20261113/report.json",
+      "bytes": 6368920,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "540337a2fd4bb5adbf32784d422d0f176011cd71"
+    },
+    {
+      "path": "reports/r5/stageE/trials/pre_timezone_fix/daily/report.json",
+      "bytes": 6367849,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "19773a629d7e012f238269cb358ee1a85536d5b4"
+    },
+    {
+      "path": "reports/r5/stageE/daily/report.json",
+      "bytes": 6367740,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "4119f955a3c97ea8468a18da74df4a30855e0d04"
+    },
+    {
+      "path": "reports/r5/stageC/trials/pre_transport/daily/report.json",
+      "bytes": 6363741,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "da9fb63aadd1a2493f27a3dce3e7d3fae1690353"
+    },
+    {
+      "path": "reports/r5/stageC/trials/passive_jsd_false_block/daily/report.json",
+      "bytes": 6363268,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "9218059ff8a1e4a281eb7f4a391e6f3625e95585"
+    },
+    {
+      "path": "reports/r5/stageF1/daily/report.json",
+      "bytes": 6362464,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "17e3813df3aab83b732c732621c13a33ee855a8f"
+    },
+    {
+      "path": "reports/r5/stageC/daily/report.json",
+      "bytes": 6362397,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "3f5ee1b2175c309a5c5526dbba80fc8cb5e6bfe3"
+    },
+    {
+      "path": "reports/r5/stageI/daily/report.json",
+      "bytes": 6360879,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "a0edce1a18ab8642df75e513d5afc10f3c08c308"
+    },
+    {
+      "path": "reports/r5/stageX/X2/seed20261116/report.json",
+      "bytes": 6354512,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "deaf583ec4294fb5f9134dcc226617ec89972635"
+    },
+    {
+      "path": "reports/r5/stageL/L/seed20261116/report.json",
+      "bytes": 6353272,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "55a15ff5d3ebfe36bf03641d75e3788ee1297eab"
+    },
+    {
+      "path": "reports/r5/stageC/trials/dns_outage/daily/report.json",
+      "bytes": 6339269,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "88019e874e9c2a0a68323a3e7e50334877e93fc3"
+    },
+    {
+      "path": "reports/r5/stageS/seed20261116/report.json",
+      "bytes": 6337002,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "70792fe38d1e66d79901313e3d971c89ced4d2c7"
+    },
+    {
+      "path": "reports/r5/stageP0rb/seed20261017/report.json",
+      "bytes": 6314516,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "37fac3f50b3fc1bbec170bb0daab1cf430b3475e"
+    },
+    {
+      "path": "reports/r5/stageP0rb/seed20261114/report.json",
+      "bytes": 6304382,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "18e9a26a52e96b3e58444fbeea89eba8abc04e0f"
+    },
+    {
+      "path": "reports/r5/stageR7/R7/seed20261116/report.json",
+      "bytes": 6298371,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "c6813b93ec53a78785f44f73fb67be7b7aa5a8fb"
+    },
+    {
+      "path": "reports/r5/stageP0rb/seed20261115/report.json",
+      "bytes": 6285552,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "4724800f0d04afe452e864c0d1bc45048a658b49"
+    },
+    {
+      "path": "reports/r5/stageX/X2/seed20261017/report.json",
+      "bytes": 6274357,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "b3487e499da5fccf58e1b4dd3c99c7b8be0347f0"
+    },
+    {
+      "path": "reports/r5/stageL/L/seed20261017/report.json",
+      "bytes": 6268251,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "88686a1a59b253b41cfc92ac5526743ab6fb6a5f"
+    },
+    {
+      "path": "reports/r5/stageX/X2/seed20261114/report.json",
+      "bytes": 6267978,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "3969db9627b4a75bb246e958545c0291aa0798b8"
+    },
+    {
+      "path": "reports/r5/stageL/L/seed20261114/report.json",
+      "bytes": 6264900,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "149106c628bb7be0bb02a4d661f9b2792f26933e"
+    },
+    {
+      "path": "reports/r5/stageS/seed20261017/report.json",
+      "bytes": 6264886,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "eb6fd6961d0da3b5099bf24469067dc4507438d0"
+    },
+    {
+      "path": "reports/r5/stageR6/R6/seed20261116/report.json",
+      "bytes": 6259572,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "25c1b930718b05c4985b1f7f0609170c61b63eb4"
+    },
+    {
+      "path": "reports/r5/stageL/L/trials/seed20261115-live-connect/report.json",
+      "bytes": 6259548,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "74d4ad3d48ad1df275828e561536f5b468ae02f5"
+    },
+    {
+      "path": "reports/r5/stageX/X2/seed20261115/report.json",
+      "bytes": 6257962,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "0591c94f86f5dddbd707996ee4ce9e83f691f498"
+    },
+    {
+      "path": "reports/r5/stageS/seed20261114/report.json",
+      "bytes": 6252602,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "4543914e93861f7ab2341a5a3d6ef399084bfd80"
+    },
+    {
+      "path": "reports/r5/stageX/X4/seed20261116/report.json",
+      "bytes": 6247682,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "98b8fc1fa3efe112875c9f49bdd7c383b0a1c6e7"
+    },
+    {
+      "path": "reports/r5/stageL/L/seed20261115/report.json",
+      "bytes": 6246242,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "83e6eb3f0258e788f37752745c33df3dd996650e"
+    },
+    {
+      "path": "reports/r5/stageX/X1/seed20261116/report.json",
+      "bytes": 6245822,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "0e3892b6888ac12400d3ca1f8588d560af1d714e"
+    },
+    {
+      "path": "reports/r5/stageS/seed20261115/report.json",
+      "bytes": 6242581,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "f16bdab43a8273933de6f2e1853adfddfdf0a60d"
+    },
+    {
+      "path": "reports/r5/stageR5/seed20261116/report.json",
+      "bytes": 6242219,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "507baf2c31accfee865e91234edc52af56105859"
+    },
+    {
+      "path": "reports/r5/stageR3/seed20261116/report.json",
+      "bytes": 6240498,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "f2a2215baf09044542b2a3664ea121d4aa544be4"
+    },
+    {
+      "path": "reports/r5/stageH/seed20261116/report.json",
+      "bytes": 6239397,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "1daec106a0932f3c4bb7f0dd8a58bbd47c8f994b"
+    },
+    {
+      "path": "reports/r5/stageI/trials/burst/daily/report.json",
+      "bytes": 6236821,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "57bd143a4a811644592424b1e4ef45f1ee5bb13a"
+    },
+    {
+      "path": "reports/r5/stageW/seed20261116/report.json",
+      "bytes": 6236281,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "c2039eee5dd0198ec077544027142b8a09cac974"
+    },
+    {
+      "path": "reports/r5/stageW/trials/overbroad_header/seed20261116/report.json",
+      "bytes": 6233938,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "4d12d10f3c21f67829a9811f3e7654ba91a973c1"
+    },
+    {
+      "path": "reports/r5/stageR7/R7/trials/rejected_R7e/seed20261017/report.json",
+      "bytes": 6226005,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "b341fc35baa53f4d943dad006356a33e91fefe35"
+    },
+    {
+      "path": "reports/r5/stageR7/R7/seed20261017/report.json",
+      "bytes": 6221848,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "4424932ef67d3c97ce3569d8a260a276e3c3d712"
+    },
+    {
+      "path": "reports/r5/stageR7/R7/seed20261114/report.json",
+      "bytes": 6206783,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "e6fcadebd21ba60e1f42e4eaa0330bdb024f3d5f"
+    },
+    {
+      "path": "reports/r5/stageR7/R7/seed20261115/report.json",
+      "bytes": 6202199,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "458e9464e99ff2b3e6e7026be1d04dd2494bb742"
+    },
+    {
+      "path": "reports/r5/stageR6/R6/trials/rejected_R6a/seed20261114/report.json",
+      "bytes": 6179469,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "6fdaa125ee2f3413340d7308d7b39b2e8f630333"
+    },
+    {
+      "path": "reports/r5/stageR6/R6/seed20261114/report.json",
+      "bytes": 6177908,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "60ba5e267297072ad5a942f76e0ec5ce04845f08"
+    },
+    {
+      "path": "reports/r5/stageX/X4/seed20261114/report.json",
+      "bytes": 6176488,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "a2ccbe046278e4c7908fb53dfa3465240e1383e3"
+    },
+    {
+      "path": "reports/r5/stageX/X1/seed20261114/report.json",
+      "bytes": 6174462,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "e7209030021914b5b2efb39d3a6176ffe78a2e7d"
+    },
+    {
+      "path": "reports/r5/stageX/X5/seed20261114/report.json",
+      "bytes": 6174439,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "d68cd5bb2428e819ef5087bc4dc0cb6bc09dced3"
+    },
+    {
+      "path": "reports/r5/stageR6/R6/trials/rejected_R6a/seed20261115/report.json",
+      "bytes": 6169312,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "8efa723ab0d9dafe4bab991407fb0a14ab577db1"
+    },
+    {
+      "path": "reports/r5/stageR5/trials/pre_localization_fix/seed20261114/report.json",
+      "bytes": 6167252,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "98226926daf0d7f222632b7c5c2c7cced04864cd"
+    },
+    {
+      "path": "reports/r5/stageR5/trials/pre_split_credit_fix/seed20261114/report.json",
+      "bytes": 6167252,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "98226926daf0d7f222632b7c5c2c7cced04864cd"
+    },
+    {
+      "path": "reports/r5/stageT/mock/report.json",
+      "bytes": 6166526,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "86321b3970c754e223e1d61b24211518f274ba2a"
+    },
+    {
+      "path": "reports/r5/stageR6/R6/trials/rejected_R6a/seed20261017/report.json",
+      "bytes": 6166503,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "c96fd9cf79dca3e2467744206c95665a701a883e"
+    },
+    {
+      "path": "reports/r5/stageR3/seed20261114/report.json",
+      "bytes": 6166392,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "188de9018f2c29a7900d1b5143aa18439480594e"
+    },
+    {
+      "path": "reports/r5/stageR5/seed20261114/report.json",
+      "bytes": 6165695,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "5dae19d1009a6374b2e431070410a16afddbdf84"
+    },
+    {
+      "path": "reports/r5/stageR6/R6/seed20261115/report.json",
+      "bytes": 6164722,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "9d53d6c3337b0201aba8d5cc31fe95e7788d082e"
+    },
+    {
+      "path": "reports/r5/stageW/trials/short_contact_wrapper/seed20261114/report.json",
+      "bytes": 6163940,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "688f64e7c5fee0a32a5ee3e7634464db3f1b1cf1"
+    },
+    {
+      "path": "reports/r5/stageR6/R6/trials/rejected_R6d/seed20261017/report.json",
+      "bytes": 6162461,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "82cdb90aea1dd76f675fc730513ffff03bb94b74"
+    },
+    {
+      "path": "reports/r5/stageR6/R6/seed20261017/report.json",
+      "bytes": 6162444,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "9f8e68edfe1e22b13db5e5dfddd8b22196aa7941"
+    },
+    {
+      "path": "reports/r5/stageW/trials/copyright_wrapper/seed20261114/report.json",
+      "bytes": 6162390,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "a03e4c71a94253a2696a16acb02a887c17af3528"
+    },
+    {
+      "path": "reports/r5/stageW/trials/overbroad_header/seed20261114/report.json",
+      "bytes": 6162032,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "b4df0b2ca16d0d5da4bb7aedb68f1c189a6a53ff"
+    },
+    {
+      "path": "reports/r5/stageW/seed20261114/report.json",
+      "bytes": 6161019,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "151fdfdfdf3785f53447317d7b1c3a6809034d21"
+    },
+    {
+      "path": "reports/r5/stageX/X1/seed20261115/report.json",
+      "bytes": 6161008,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "65762c6fafa34dd30e4a4c20720a5b1f99683fc2"
+    },
+    {
+      "path": "reports/r5/stageX/X4/seed20261017/report.json",
+      "bytes": 6159851,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "a6a80f57c6064cf5b67b3123764ff355c249e17d"
+    },
+    {
+      "path": "reports/r5/stageR5/seed20261115/report.json",
+      "bytes": 6159678,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "96ea66e7904acbb9a276a5e4090cf348b80457c8"
+    },
+    {
+      "path": "reports/r5/stageX/X5/seed20261017/report.json",
+      "bytes": 6158724,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "dcf363e4ce3db563c0ee9a791f15c753213d1757"
+    },
+    {
+      "path": "reports/r5/stageX/X5/trials/20261017-unattended/receipts/report.json",
+      "bytes": 6158724,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "dcf363e4ce3db563c0ee9a791f15c753213d1757"
+    },
+    {
+      "path": "reports/r5/stageR5/trials/pre_localization_fix/seed20261115/report.json",
+      "bytes": 6157264,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "c0a75b19f5af88cfed41c769ebc951f6a524a283"
+    },
+    {
+      "path": "reports/r5/stageX/X1/seed20261017/report.json",
+      "bytes": 6157068,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "42a25eaa52600a0d258d9ea768213e18a2a42ed8"
+    },
+    {
+      "path": "reports/r5/stageR3/seed20261115/report.json",
+      "bytes": 6156895,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "81eb333816c7b72fc6281d02bd4e415122e7aff8"
+    },
+    {
+      "path": "reports/r5/stageX/X4/seed20261115/report.json",
+      "bytes": 6156176,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "a9edf6378857c5755cf151a5251fb782a580249e"
+    },
+    {
+      "path": "reports/r5/stageR5/trials/pre_split_credit_fix/seed20261017/report.json",
+      "bytes": 6154495,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "19033b43085abd78fb90b575d7fce510c54f8c9c"
+    },
+    {
+      "path": "reports/r5/stageR3/seed20261017/report.json",
+      "bytes": 6154145,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "45f14856865f672c180ec56fe722aa82b3b923cc"
+    },
+    {
+      "path": "reports/r5/stageR5/trials/pre_localization_fix/seed20261017/report.json",
+      "bytes": 6154059,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "3b573bd28a213c3ee2007ffa43a9e448edc3bdc4"
+    },
+    {
+      "path": "reports/r5/stageR5/trials/pre_contact_gate/seed20261017/report.json",
+      "bytes": 6153787,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "ab18a353a2d65f6552fa0a06912773f1cd15cd11"
+    },
+    {
+      "path": "reports/r5/stageW/trials/copyright_wrapper/seed20261115/report.json",
+      "bytes": 6152782,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "63e4ac573e2b9f6e50fe45c35b6d222b45c2a484"
+    },
+    {
+      "path": "reports/r5/stageH/seed20261115/report.json",
+      "bytes": 6152692,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "74446d1a71e1f32f6dbf526f649de3876e00f489"
+    },
+    {
+      "path": "reports/r5/stageR5/seed20261017/report.json",
+      "bytes": 6152338,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "cc4db5033f61b54b777d7386e1b1c68d0a77cae5"
+    },
+    {
+      "path": "reports/r5/stageW/trials/overbroad_header/seed20261115/report.json",
+      "bytes": 6152263,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "4ec588843fff6c4325fd445ea7f32b441a387b16"
+    },
+    {
+      "path": "reports/r5/stageT/trials/discovery_trial/report.json",
+      "bytes": 6151642,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "3b1db1a206aa2a021da6732400712182e3c49256"
+    },
+    {
+      "path": "reports/r5/stageW/trials/short_contact_wrapper/seed20261115/report.json",
+      "bytes": 6151354,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "1889ab3d8d874f1f7c11aba1cd4b2efd5abfa40d"
+    },
+    {
+      "path": "reports/r5/stageW/seed20261115/report.json",
+      "bytes": 6151192,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "d5742e30c34391cf1ebcfe79d8e749d806cbf7a3"
+    },
+    {
+      "path": "reports/r5/stageT/frozen/report.json",
+      "bytes": 6151074,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "a7d0c65b680ab3887cb330da779ae12284a5ff4b"
+    },
+    {
+      "path": "reports/r5/stageW/trials/copyright_wrapper/seed20261017/report.json",
+      "bytes": 6150678,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "aabf14f60a140ed18ba47e1de83d375505892aa7"
+    },
+    {
+      "path": "reports/r5/stageW/seed20261017/report.json",
+      "bytes": 6149715,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "a3c43347eae18c8d843783bfdf6f7f5e513474c0"
+    },
+    {
+      "path": "reports/r5/release-v4b/daily-report.json",
+      "bytes": 6149595,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "df8706073a3b8ee3db28e163bfbf26745880bd24"
+    },
+    {
+      "path": "reports/r5/stageC2/mock/report.json",
+      "bytes": 6149408,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "1b08060dea6708e10f286872fdfeb01d21a3d161"
+    },
+    {
+      "path": "reports/r5/stageW/trials/short_contact_wrapper/seed20261017/report.json",
+      "bytes": 6148845,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "183f902f14d03e84968bbb5656f3f533f9c46db5"
+    },
+    {
+      "path": "reports/r5/stageE/mock/report.json",
+      "bytes": 6148591,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "4575516a2433ad1731aa03ffe595fe9561832734"
+    },
+    {
+      "path": "reports/r5/stageW/trials/overbroad_header/seed20261017/report.json",
+      "bytes": 6148385,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "e15c400532c41a08d4326a913d0aa19f8fe8a8ea"
+    },
+    {
+      "path": "reports/r5/stageE/trials/pre_timezone_fix/mock/report.json",
+      "bytes": 6148264,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "b3043290712c22a500fefb9be4baabd32f735869"
+    },
+    {
+      "path": "reports/r5/stageE/trials/pre_timezone_fix/frozen/report.json",
+      "bytes": 6137033,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "e235ff08a0310c4c7c5e901d79b1e48702d75061"
+    },
+    {
+      "path": "reports/r5/stageC2/frozen/report.json",
+      "bytes": 6136910,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "ec68e2f15d84435239d32f0d7785185fda57f4ac"
+    },
+    {
+      "path": "reports/r5/stageF1/frozen/report.json",
+      "bytes": 6136606,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "c46615beeb542b88331a91360e902bc8186a7c17"
+    },
+    {
+      "path": "reports/r5/stageE/frozen/report.json",
+      "bytes": 6136512,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "0c81337827217985a4dc3c21cf2a11f80f1d165b"
+    },
+    {
+      "path": "reports/r5/stageC/frozen/report.json",
+      "bytes": 6136238,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "a7088b4453f68434df42f40f117e14f78141a2e7"
+    },
+    {
+      "path": "reports/r5/stageI/trials/paced_site_failure/frozen/report.json",
+      "bytes": 6136073,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "fe5a290baec9d4d97eee791aeb2ab5e7957e40d4"
+    },
+    {
+      "path": "reports/r5/stageC/trials/html_only_transport/frozen/report.json",
+      "bytes": 6135738,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "a7ce7545c6887a669f59300d19cb8e377061c966"
+    },
+    {
+      "path": "reports/r5/stageI/trials/pre_legacy_unit/frozen/report.json",
+      "bytes": 6134815,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "15481d2ece6a8467837839bf1dac3219a571c9fa"
+    },
+    {
+      "path": "reports/r5/stageC/trials/pre_transport/frozen/report.json",
+      "bytes": 6134170,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "43c9bdaa173b7c432bdae8566760c8735938dad4"
+    },
+    {
+      "path": "reports/r5/stageE/trials/pre_timezone_fix/live_refresh/report.json",
+      "bytes": 6134039,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "ca98f64e5b63aefd3381381f8516b20a31d33b07"
+    },
+    {
+      "path": "reports/r5/stageE/live_refresh/report.json",
+      "bytes": 6133975,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "c1cc7134ade93d2b045c1623a6be5dc26bee35e2"
+    },
+    {
+      "path": "reports/r5/stageI/frozen/report.json",
+      "bytes": 6133743,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "29cf40e5cb52e6c8e7e309dcc8b2ae25b162bc3a"
+    },
+    {
+      "path": "reports/r5/stageC/trials/passive_jsd_false_block/frozen/report.json",
+      "bytes": 6131372,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "fd6eb8ab7b536be2d2a6dad5784822a014d7927c"
+    },
+    {
+      "path": "reports/r5/stageI/trials/burst/frozen/report.json",
+      "bytes": 5946953,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "fc4cf0e021bade04df3b3e54128930d6d21e8922"
+    },
+    {
+      "path": "reports/r5/stageB/daily/report.json",
+      "bytes": 5708337,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "7acbbaf3d7cb48afe91a1d410edadf15470c9c98"
+    },
+    {
+      "path": "reports/r5/stageB/daily/site_trial/report.json",
+      "bytes": 5706489,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "26e9c4dcf2e1c467c59f789441ee49426b4a4bc0"
+    },
+    {
+      "path": "reports/r5/stageB/daily/mobile_trial/report.json",
+      "bytes": 5702533,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "d30e0de3705f22e9acb7f1feac435986123dd3b4"
+    },
+    {
+      "path": "reports/r5/stageB/daily/pre_refresh_dedup_trial/report.json",
+      "bytes": 5702533,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "d30e0de3705f22e9acb7f1feac435986123dd3b4"
+    },
+    {
+      "path": "reports/r5/release-v4/daily-report.json",
+      "bytes": 5669076,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "dc1c1f45d593f5ec89b90353b32a41131cbaf0ba"
+    },
+    {
+      "path": "reports/r5/stageB/frozen/report.json",
+      "bytes": 5548887,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "ad564c1edbe8a88b8baa7cb868c497be9e41f900"
+    },
+    {
+      "path": "reports/r5/stageB/frozen/mobile_trial/report.json",
+      "bytes": 5548304,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "f89d0f53cc25ebb1c0c640df8b9d0201671dd3c4"
+    },
+    {
+      "path": "reports/r5/stageB/frozen/pre_refresh_dedup_trial/report.json",
+      "bytes": 5548304,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "f89d0f53cc25ebb1c0c640df8b9d0201671dd3c4"
+    },
+    {
+      "path": "reports/r5/stageB/frozen/site_trial/report.json",
+      "bytes": 5545569,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "bc6650447aac7f82a3b5ca95263e05ae41f96e58"
+    },
+    {
+      "path": "reports/r5/stageA2/daily/report.json",
+      "bytes": 5430453,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "d3309d519e69e0367ba5959be84de75bc5eb65b8"
+    },
+    {
+      "path": "reports/r5/stageD/daily/report.json",
+      "bytes": 5400127,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "f219056706aef74d1db7b83f960181be179eac3b"
+    },
+    {
+      "path": "reports/r5/stageC/trials/dns_outage/frozen/report.json",
+      "bytes": 5385797,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "63310c729646a2314071c6b8d9aa4f1a2af0fc91"
+    },
+    {
+      "path": "reports/r5/stageA2/frozen/report.json",
+      "bytes": 5285425,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "f598b3296cda370640915dc8649faf4290fc31df"
+    },
+    {
+      "path": "reports/r5/stageR6/R6/trials/before_R6e_rollback/seed20261017/report.json",
+      "bytes": 5275366,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "0d9f046778dbfd49797065321a4e52b3c0b93b15"
+    },
+    {
+      "path": "reports/r5/stageD/frozen/report.json",
+      "bytes": 5254314,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "651691ef61f2d4ef775107d281b9452fcc175de8"
+    },
+    {
+      "path": "reports/r5/stageR6/R6/trials/source_outage_seed20261017/report.json",
+      "bytes": 5166801,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "b23f6293c147c4b422cade14b1541083c156ffbc"
+    },
+    {
+      "path": "reports/r5/stage4_7/stepcaps/report.json",
+      "bytes": 4578706,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "a7393ac982837dda2b0b3ad3b7b9b6dc319bad5f"
+    },
+    {
+      "path": "reports/r5/stage4_7/stepsocial/report.json",
+      "bytes": 4573391,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "2c126b5d1b878bd8afffc477dfd92dbd16e49137"
+    },
+    {
+      "path": "reports/r5/stage4_7/stepreuse/report.json",
+      "bytes": 4570631,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "c2ad3735ea9d03b399211ff5b7b94feeb6d2b360"
+    },
+    {
+      "path": "reports/r5/stage4_7/steporder/report.json",
+      "bytes": 4554208,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "9e2d37a645df40501e932df169d31dd424255668"
+    },
+    {
+      "path": "reports/r5/stage4/step4_2/report.json",
+      "bytes": 4553002,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "2683cf36cd1abfecce6b3cedb114688ef9b6de76"
+    },
+    {
+      "path": "reports/r5/stage4_7/stepbudget/report.json",
+      "bytes": 4551778,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "859496815c40740858caf845c871a1e941f8bf52"
+    },
+    {
+      "path": "reports/r5/stage4/step4_4/report.json",
+      "bytes": 4551074,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "0c6ee12a22c44022086f4970410b969467d49c4c"
+    },
+    {
+      "path": "reports/r5/stage4/step4_6/report.json",
+      "bytes": 4550436,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "f53fbdbdebd4ea6c2c17479fc04a7686dab4bde4"
+    },
+    {
+      "path": "reports/r5/stage4/step4_3/report.json",
+      "bytes": 4550341,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "3a8822bd4f44041d17ae6de1b6f1016a916989ed"
+    },
+    {
+      "path": "reports/r5/stage4/step4_5/report.json",
+      "bytes": 4549828,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "e19243db3d81c5c2f25766e8028005a753adf285"
+    },
+    {
+      "path": "reports/r5/stage4/step4_1/report.json",
+      "bytes": 4459256,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "af2b55c9d92ae1ffb9143ae5ac1b4514de860c0e"
+    },
+    {
+      "path": "reports/r5/stageX/X5/trials/reverted_stage/seed20261115/report.json",
+      "bytes": 4278640,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "76eb97298632fec1663f280cd58cdab0d859027d"
+    },
+    {
+      "path": "reports/r5/stageX/X1/trials/source_outage/seed20261114/counts.json",
+      "bytes": 3482970,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "5c7612bd39be5395a81760cbb8c4d6a270bdf416"
+    },
+    {
+      "path": "reports/r5/stageW/nav_parent_direct_progress.json",
+      "bytes": 3020332,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "3d36e4d255f103a7a6202fe54eb020e14f21fbb5"
+    },
+    {
+      "path": "reports/r5/stageW/nav_parent_before_tombstone_handling.json",
+      "bytes": 3019779,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "a96e70d620bc53b2aa9a69368bb04a48328b44da"
+    },
+    {
+      "path": "reports/r5/stageW/nav_parent_initial_join.json",
+      "bytes": 3018025,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "d966ef4ec82474edc55a364ef68fe4380db2f3f5"
+    },
+    {
+      "path": "reports/r5/stageW/nav_parent_progress.json",
+      "bytes": 3016548,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "978fa5ebc01601c9a8ce53984fa4bfb0a7a47c3b"
+    },
+    {
+      "path": "reports/r5/stageW/seed_recall_on/report.json",
+      "bytes": 2513135,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "9aba783dbb21fbcc7efab58fe3a87873dc9d532d"
+    },
+    {
+      "path": "reports/r5/stageW/seed_recall_off/report.json",
+      "bytes": 2450099,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "156807e405e5a900e2a303e438ab142119eb2622"
+    },
+    {
+      "path": "reports/r5/stageR7/R7/identity_items.json",
+      "bytes": 2292622,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "189478f31836c3e563e6afc5a7913f715efacec4"
+    },
+    {
+      "path": "reports/r5/stageX/X1/trials/source_outage/seed20261114/report.json",
+      "bytes": 2040107,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "c490fb4750180c497622d54adecb838b8167a4fd"
+    },
+    {
+      "path": "reports/r5/stageX/X5/trials/20261017-unattended-retry/receipts/report.json",
+      "bytes": 2013196,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "2c4dd97f1558ec06e21f5553ea0ef7059497f1ac"
+    },
+    {
+      "path": "reports/r5/stageX/X5/trials/unattended_retry_exhausted/seed20261017/report.json",
+      "bytes": 2013196,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "2c4dd97f1558ec06e21f5553ea0ef7059497f1ac"
+    },
+    {
+      "path": "reports/r5/stageR7/R7/seed20261017/counts.json",
+      "bytes": 1756965,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "4835605196d75c2f236458b8069aab3226d4c98e"
+    },
+    {
+      "path": "reports/r5/stageR7/R7/trials/rejected_R7e/seed20261017/counts.json",
+      "bytes": 1756480,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "3be8c6cbf7b3af2f451fbb98ed680f5274d650e4"
+    },
+    {
+      "path": "reports/r5/stageP0rb/smoke20/report.json",
+      "bytes": 1426554,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "1155291076af9260688a5f64d244848b76a4e649"
+    },
+    {
+      "path": "reports/r5/ci-fix/sitefix/report.json",
+      "bytes": 1394277,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "bcfccc7053a6f4130f0e7e4363a885b1ba224c11"
+    },
+    {
+      "path": "reports/r5/stageH/trials/ci-site-regression/current-pre-fix-report.json",
+      "bytes": 1393920,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "6b4567b4b465c077ec9344a76efcf97162ffc30e"
+    },
+    {
+      "path": "reports/r5/stageH/trials/ci-site-regression/old-1e93023-report.json",
+      "bytes": 1388298,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "53e610e2947a2102ad2075c485e7d40bc46ccaae"
+    },
+    {
+      "path": "reports/r5/stageR7/R7/trials/rejected_R7e/seed20261113/counts.json",
+      "bytes": 887946,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "660d7a067b32ab0ef10452f5e92e26bf76b49ee6"
+    },
+    {
+      "path": "reports/r5/stageX/X4/seed20261114/counts.json",
+      "bytes": 769949,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "2d13dc03ae8274f8cb7680068eb8505fa6449145"
+    },
+    {
+      "path": "reports/r5/stageR6/R6/trials/rejected_R6d/seed20261017/counts.json",
+      "bytes": 732747,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "64d12e84a152d5499f099d5747a545c4ed06364e"
+    },
+    {
+      "path": "reports/r5/stageC/trials/passive_jsd_false_block/diagnosis_after.json",
+      "bytes": 593896,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "509bcabae8ff1d50ab9fcba7374e1e2fb026f887"
+    },
+    {
+      "path": "reports/r5/stageR7/R7/seed20261116/counts.json",
+      "bytes": 579090,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "10a9ce7bc056d865a72ea214781ba14b04bf49e0"
+    },
+    {
+      "path": "reports/r5/stageR6/R6/trials/rejected_R6a/seed20261114/counts.json",
+      "bytes": 538208,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "a341d91d297930a3aebc91d5af0eb79c91f7d1de"
+    },
+    {
+      "path": "reports/r5/stageR5/declared_gap.json",
+      "bytes": 537840,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "3f33d7b2af47ad44dd055117b4dfab4f131f495b"
+    },
+    {
+      "path": "reports/r5/release-v4/edge-report.json",
+      "bytes": 483835,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "5466b760cb93b56fe6e2f790922af95a1185a7ce"
+    },
+    {
+      "path": "reports/r5/release-v4b/edge-report.json",
+      "bytes": 445315,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "2f1a81bff2b472a18e96f3ef57d0c8f7781f133c"
+    },
+    {
+      "path": "reports/r5/release-v4b/trials/new_cohort_edge/edge-report.json",
+      "bytes": 435983,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "9ad7c2bd15f095b8ed8cd85c1e96ee0cf9cc6a21"
+    },
+    {
+      "path": "reports/r5/stageW/seed_recall_summary.json",
+      "bytes": 403519,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "2fa338947d059f718493eb79947b351b23d8ffc5"
+    },
+    {
+      "path": "reports/r5/stageW/seed_recall_draw.json",
+      "bytes": 390117,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "cba1d2e818e0066a82ac59d5a5ef6899c00c7117"
+    },
+    {
+      "path": "reports/r5/stageR6/R6/trials/rejected_R6a/REJECTION.json",
+      "bytes": 268260,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "8cf89080afe11d5d523ac03695b5854785e7fb29"
+    },
+    {
+      "path": "reports/r5/final500c/clean_clone.json",
+      "bytes": 236757,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "3c6a2f6fc5f7d97871f1e72b14f2b0d26ab0f187"
+    },
+    {
+      "path": "reports/r5/final500c/trials/disk-full/clean_clone.json",
+      "bytes": 236659,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "38d88a0a4ae2141eed9a92bb916cb98901b47ee9"
+    },
+    {
+      "path": "reports/r3b/retry/audit-bodies/27e6c762a2273dec1dc40896bf1e736c9cc8bded59deac9fcfccf95cbde49879.json",
+      "bytes": 187746,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "cb1695f0d0b3a207a1bcdf9c50721316cce158b4"
+    },
+    {
+      "path": "reports/r5/stageR6/R6/trials/rejected_R6d/REJECTION.json",
+      "bytes": 187301,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "7d1eb602bd290d49d28341bbe369d0eea539e51d"
+    },
+    {
+      "path": "reports/r5/stageX/X4/seed20261113/counts.json",
+      "bytes": 180206,
+      "reason": "No explicit Markdown link, full-path prose citation, nearby report filename citation, or explicit test reference found",
+      "git_blob": "470af6a2c66d4fb531a54b41582600bc90e6b60d"
+    }
+  ],
+  "tracked_bytes_after_removal": 433707922,
+  "new_broken_markdown_links": []
+}

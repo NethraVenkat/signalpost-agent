@@ -36,13 +36,11 @@ STOTTE_PAGE_SIZE = 100
 STOTTE_MAX_PAGES = 5
 HOSTS = {STOTTE_HOST, 'api.finanstilsynet.no'}
 SECTION_BY_HOST = {STOTTE_HOST: 'state_aid', 'api.finanstilsynet.no': 'licences'}
-# The Støtteregisteret API host resets connections on /robots.txt instead of
-# serving a file (receipts in reports/r5/stageS/access). That is recorded as
-# "no robots file served", the same as 404 — never as an allow-list override
-# for a host that does serve rules.
+# One attempt suffices for this historically resetting robots origin.
+# PublicHttp now fails closed; the hint never authorizes fetching its data.
 ROBOTS_UNSERVED = {STOTTE_HOST}
 POLITENESS_SECONDS = 1  # per host, between request completion and next start
-REFUSALS = {'public_robots_blocked', 'public_http_401', 'public_http_403', 'public_http_429'}
+REFUSALS = {'public_robots_blocked', 'public_robots_unavailable', 'public_http_401', 'public_http_403', 'public_http_429'}
 WINDOW_YEARS = 3
 # Only a registered award record counts. Other/unknown statuses abstain.
 AWARD_STATUSES = {'stoettetiltaksstatus.registrert'}

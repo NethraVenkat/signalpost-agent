@@ -102,8 +102,11 @@ def finalize(envelope, old, blobs, budget, began, verify_identity=False):
     envelope.run.completed_at = envelope.completed_at
     envelope.run.legal_identity = {c.field.removeprefix("identity."): c.value for c in envelope.claims if c.family == "identity"}
     failures = any(s == "failed" for s in envelope.run.sections.values())
-    envelope.state = "submission_error" if any(m.state == "submission_error" for m in envelope.modules.values()) else "complete"
-    envelope.run.terminal_status = "failed" if all(s == "failed" for s in envelope.run.sections.values()) else "completed"
+    all_failed = all(s in {'failed', 'blocked', 'ambiguous'} for s in envelope.run.sections.values())
+    failed_state = 'blocked' if all(s == 'blocked' for s in envelope.run.sections.values()) else 'failed'
+    envelope.state = ("submission_error" if any(m.state == "submission_error" for m in envelope.modules.values())
+                      else reference_state(failed_state, envelope.errors) if all_failed else "complete")
+    envelope.run.terminal_status = "failed" if all_failed else "completed"
     events = [e for e in budget.events if e["organisation_number"] == envelope.organisation_number]
     envelope.operations.requests = len(events)
     for family, module in envelope.modules.items():
@@ -176,7 +179,8 @@ async def _run(config, client=None,synthesis_provider=None):
     if not config.run_id:
         config.run_id = uuid.uuid4().hex
     started = utc_now()
-    warnings = []
+    warnings = (['Ignoring unrecognised arguments: ' + ' '.join(config.unrecognized_arguments)]
+                if config.unrecognized_arguments else [])
     try:
         inputs = read(config.organisations)
     except Exception as exc:
@@ -451,14 +455,33 @@ async def _run(config, client=None,synthesis_provider=None):
             envelope.operations.runtime_ms = round((time.monotonic() - begin) * 1000)
             is_success = not all(s == 'failed' for s in envelope.run.sections.values())
             progress.company_completed(org, success=is_success)
+    startup_identity = {'state': 'not_applicable', 'reason': 'No live identity startup check required'}
     async def execute(active_client, nav_client=None):
+        nonlocal startup_identity
         if storage_error is not None:return
+        http = Http(active_client, config, budget, blobs)
+        if config.official_source_health:
+            from .sources.identity_startup import check as check_identity_startup
+            live_orgs = [org for org in inputs.unique if valid(org) and (org not in bulk or config.verify_bulk)]
+            startup_identity, identities = await check_identity_startup(live_orgs, http)
+            for org, section in identities.items():
+                update(envelopes[org], 'identity', section)
+            if startup_identity['state'] == 'aborted':
+                warnings.append('Aborted: data.brreg.no is unreachable after 25 live identity failures, a 15-second pause and three failed recovery checks')
+                for org in valid_orgs:
+                    for family in families:
+                        update(envelopes[org], family, missing(family, 'startup_identity_outage', 'Unreachable identity host: data.brreg.no'))
+                    progress.company_started(org)
+                    progress.company_completed(org, success=False)
+                return
         from .sources.official_resilience import health_check
         if config.official_source_health and valid_orgs:
             source_health.extend(await health_check(active_client,config,budget))
         elif not valid_orgs:source_health.append({'state':'not_applicable','reason':'No valid company identifiers'})
         else:source_health.append({'state':'disabled','reason':'Config.official_source_health=False'})
-        http = Http(active_client, config, budget, blobs)
+        if any(item['state'] == 'reachable' for item in startup_identity.get('initial', []) + startup_identity.get('retries', [])):
+            # A real identity GET outweighs a failed generic HEAD probe.
+            budget.source_outages.pop('https://data.brreg.no/enhetsregisteret/', None)
         website_http = WebsiteHttp(active_client, config, budget, blobs, dns_metrics=dns_metrics)
         if config.websites and config.website_seed_index:
             from .web.seed_index import load as load_website_seeds
@@ -618,6 +641,20 @@ async def _run(config, client=None,synthesis_provider=None):
     result = [envelopes[org] for org in order]
     size, output_limited, minimum_exceeded = await offload(write,config.output,result,config.envelope_shape,blobs,config.max_output_mb)
     report = await offload(build,result,inputs,budget,config,warnings,time.monotonic() - budget.start)
+    report['unrecognized_arguments'] = config.unrecognized_arguments
+    report['startup_identity_check'] = startup_identity
+    failed_companies = sum(e.run.terminal_status == 'failed' for e in result)
+    incomplete = any(s in {'failed', 'blocked', 'ambiguous'} for e in result for s in e.run.sections.values())
+    report['run_status'] = ('aborted' if startup_identity['state'] == 'aborted' else
+                            'failed' if result and failed_companies == len(result) else
+                            'partial' if incomplete else 'completed')
+    if report['run_status'] == 'failed':
+        report['warnings'].append('Run failed: every input has failed source sections; no company was completed')
+    report['successful_http_responses'] = sum(isinstance(e.get('status'), int) and 200 <= e['status'] < 300
+                                              for e in budget.events)
+    report['available_claims'] = sum(c.availability == 'available' for e in result for c in e.claims)
+    if budget.events and not report['successful_http_responses']:
+        report['warnings'].append('No successful live HTTP response; any available claims come from saved input or bundled snapshots')
     report['limits']['max_requests']=budget.cap
     report['request_budget_basis']='1850 per 100 unique normalized inputs; explicit overrides only lower the ceiling'
     report['limits'].update(effective_time_budget_seconds=budget.total_seconds,
@@ -729,7 +766,7 @@ async def _run(config, client=None,synthesis_provider=None):
             report['warnings'].append('site generation failed: ' + type(exc).__name__)
         await save_report()
     progress.stage_update("Output & Site Publishing", "completed")
-    progress.log_event("Pipeline complete")
+    progress.log_event('Pipeline ended: ' + report['run_status'])
     progress.set_cost(total)
     await progress.stop(budget)
     elapsed = time.monotonic() - budget.start

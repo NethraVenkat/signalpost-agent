@@ -75,7 +75,10 @@ class Budget:
         self.pass2_cutoff = self.deadline
         if companies >= 100 and config.time_budget_seconds == SECONDS_PER_100 and not getattr(config, 'scaled_time_budget', False):
             window = SECONDS_PER_100 - PASS2_MARGIN_SECONDS - PASS2_FINALISATION_SECONDS
-            self.pass2_cutoff = min(self.deadline, self.start + window * min(companies / 500, 1))
+            # The total default is fixed at 2,100 s for both 100 and 500 inputs.
+            # Scaling this window down to 340 s at 100 discarded queued proof
+            # checks while most of the actual budget was still available.
+            self.pass2_cutoff = min(self.deadline, self.start + window)
         self.cap = min(config.max_requests, self.hard_request_cap) if config.max_requests is not None else self.hard_request_cap
         self.events = []
         self.by_host = Counter()

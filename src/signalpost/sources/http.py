@@ -49,10 +49,9 @@ class Http:
             try:return await self._get(url,org)
             finally:self.year_next=max(self.year_next,self.year_clock()+FILING_YEAR_INTERVAL)
 
-    async def _get(self,url,org):
+    async def _get(self,url,org,attempts=3):
         host = allow(url)
         check_source(self.budget,url)
-        attempts = 3
         for attempt in range(attempts):
             self.budget.check()
             response = None

@@ -67,7 +67,8 @@ def main():
                                ("host-concurrency", int, 10), ("workers", int, 64), ("request-timeout", float, 10),
                                ("official-batch-size", int, 1100), ("max-output-mb", float, 256)):
         command.add_argument("--" + flag, type=kind, default=default)
-    args = vars(parser.parse_args())
+    parsed, unrecognised = parser.parse_known_args()
+    args = vars(parsed)
     action = args.pop("command")
     try:
         if action == 'site':
@@ -77,7 +78,9 @@ def main():
         no_site = args.pop('no_site')
         if not no_site and args['site_dir'] is None:
             args['site_dir'] = args['output'].parent / 'site'
-        config = Config(**args)
+        if unrecognised:
+            print('signalpost warning: ignoring unrecognised arguments: ' + ' '.join(unrecognised), file=sys.stderr)
+        config = Config(**args, unrecognized_arguments=unrecognised)
         seed_override = os.environ.get('SIGNALPOST_WEBSITE_SEEDS')
         if seed_override is not None:
             config.website_seed_index = seed_override.strip().lower() not in {'0', 'false', 'off', 'no'}
@@ -89,6 +92,9 @@ def main():
             raise ValueError("Output/report must not overwrite each other or input sources")
         report = asyncio.run(run(config))
         print(json.dumps({k: report[k] for k in ("emitted_envelopes", "invalid_inputs", "requests", "runtime_ms", "changes",'observation_changes', "deadline_hits", "warnings")}, ensure_ascii=False))
+        if report.get('run_status') in {'failed', 'aborted'}:
+            print('signalpost run ' + report['run_status'] + ': ' + '; '.join(report['warnings']), file=sys.stderr)
+            return 1
         return 0
     except Exception as exc:
         print(f"signalpost could not produce output: {type(exc).__name__}: {exc}", file=sys.stderr)

@@ -40,8 +40,7 @@ class PublicHttp:
     def __init__(self,client,config,budget,blobs,hosts=None,sections=None,robots_unserved=(),politeness=None):
         self.client,self.config,self.budget,self.blobs=client,config,budget,blobs
         self.hosts=set(hosts or HOSTS);self.sections=dict(sections or {})
-        # Hosts that serve no robots.txt at all (connection reset on that path):
-        # treated like 404 (no rules), with the reason kept on the request log.
+        # Legacy hint only bounds retries; unreachable robots always blocks.
         self.robots_unserved=set(robots_unserved);self.politeness=politeness
         self.robots={};self.robots_failures={};self.last={};self.delays={};self.locks={h:asyncio.Lock() for h in self.hosts}
 
@@ -109,13 +108,14 @@ class PublicHttp:
                 # A host known to serve no robots file gets one attempt, no retry loop.
                 r=await (self._raw(robots,org) if host in self.robots_unserved else self.raw(robots,org))
             except SourceFailure as exc:
-                if host not in self.robots_unserved or exc.code!='public_connect':raise
                 event=getattr(exc,'request_event',None)
-                if event is not None:event['robots_unserved']='connection reset on /robots.txt; treated as no rules (like 404)'
-                self.robots[host]=None
-                r=None
-            if r is None:pass
-            elif r.status in {404,410}:self.robots[host]=None
+                if event is not None:
+                    event['robots_failure']=exc.code
+                    event['robots_decision']='blocked: robots.txt could not be fetched'
+                self.robots[host]=False
+                self.robots_failures[host]='public_robots_unavailable'
+                raise SourceFailure('public_robots_unavailable', 'robots.txt unavailable: '+exc.code) from exc
+            if r.status in {404,410}:self.robots[host]=None
             elif r.status==200:
                 parser=RobotFileParser();parser.parse(r.body.decode('utf8',errors='replace').splitlines());self.robots[host]=parser
                 self.delays[host]=parser.crawl_delay(self.config.website_user_agent) or parser.crawl_delay('*') or 0

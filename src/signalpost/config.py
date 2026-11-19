@@ -16,6 +16,7 @@ class Config(BaseModel):
     emit_duplicates: bool = True
     expected_count: int | None = None
     run_id: str = ""
+    unrecognized_arguments: list[str] = Field(default_factory=list)
     max_requests: int | None = Field(default=None, ge=0)
     time_budget_seconds: float = Field(default=2100, gt=0)
     # Opt-in only: use the scaled limit (35 min per 100 unique inputs) as the total budget.

@@ -1,0 +1,56 @@
+{
+  "network_required": false,
+  "saved_output_counts": {
+    "envelopes": 100,
+    "available_claims": 13566,
+    "available_by_family": {
+      "accounts": 7001,
+      "activity": 1390,
+      "gleif": 19,
+      "identity": 2941,
+      "inspections": 4,
+      "licences": 11,
+      "roles": 1260,
+      "state_aid": 51,
+      "subunits": 851,
+      "website": 38
+    },
+    "websites": 6,
+    "social_urls": 7
+  },
+  "official_source_replay": {
+    "lines": 3,
+    "schema_valid": true,
+    "published_claims": 314,
+    "source_blobs_verified": 9,
+    "synthesis_companies": 3,
+    "synthesis_sentences": 43,
+    "synthesis_unverified_values": 0,
+    "financial_inputs_verified": 194,
+    "derived_financial_metrics_verified": 6,
+    "registry_events_verified": 0,
+    "filing_year_facts_verified": 28,
+    "exact_public_items_verified": 0,
+    "exact_official_items_verified": 0,
+    "briefing_companies": 3,
+    "briefing_sentences": 15,
+    "briefing_short_companies": 0,
+    "briefing_unverified_values": 0,
+    "briefing_topic_coverage": {
+      "activity": 3,
+      "change": 3,
+      "unknown": 3,
+      "financial": 3,
+      "takeaway": 3
+    },
+    "complete_briefing_contracts": 3,
+    "newer_filing_flags": 0
+  },
+  "saved_request_counts": {
+    "http_attempts": 985,
+    "deadline_hits": 96,
+    "run_status": "partial"
+  },
+  "scope": "All saved-output membership/counts; exact original-source replay for three identity/accounts extracts only. Other source bodies and historical final500c runs are not bundled.",
+  "bundle_sha256": "3a1ea042a360e69051aa5080e87558b487ffe37234d43149162b3b6c75880272"
+}

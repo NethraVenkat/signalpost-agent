@@ -87,7 +87,7 @@ def test_fixed_500_budget_covers_twice_the_measured_finalisation(tmp_path):
     assert 1786.02 + 2 * 63.59 + site_estimate + 10 < budget.total_seconds
 
 
-@pytest.mark.parametrize(('companies', 'cutoff'), [(100, 340), (500, 1700), (750, 1700)])
+@pytest.mark.parametrize(('companies', 'cutoff'), [(100, 1700), (500, 1700), (750, 1700)])
 def test_default_website_pass2_reserves_time_without_moving_global_deadline(tmp_path, companies, cutoff):
     budget = budget_for(tmp_path, companies, 2100)
     assert budget.total_seconds == 2100

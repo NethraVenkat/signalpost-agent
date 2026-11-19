@@ -120,57 +120,50 @@ def test_pagination_limit_is_explicit():
     assert any(e.code == 'state_aid_pagination_limit' for e in section.errors)
 
 
-def robots_reset_client(search_body):
+def robots_reset_client(search_body, failure='ConnectError'):
     import httpx
     calls = []
 
     def handler(request):
         calls.append((request.method, request.url.path, request.headers.get('accept')))
         if request.url.path == '/robots.txt':
-            raise httpx.ConnectError('connection reset by peer')
+            raise getattr(httpx, failure)('robots transport unavailable')
         return httpx.Response(200, content=search_body)
     return httpx.AsyncClient(transport=httpx.MockTransport(handler)), calls
 
 
 @pytest.mark.parametrize('unserved', [True, False])
-def test_robots_reset_is_no_rules_only_for_the_known_unserved_host(unserved):
+@pytest.mark.parametrize('failure', ['ConnectError', 'ReadTimeout'])
+def test_robots_reset_always_blocks_and_caches_the_refusal(unserved, failure, monkeypatch):
     import hashlib
     from signalpost.budget import SourceFailure
     from signalpost.sources.exact_public import PublicHttp
     from tests.test_official_resilience import FakeBudget
-    body = json.dumps({'stoettetildeling': [AWARD]}).encode()
+    import signalpost.sources.official_resilience as retry
+
+    async def no_sleep(_):
+        return None
+    monkeypatch.setattr(retry.asyncio, 'sleep', no_sleep)
 
     class Blobs:
         def put(self, raw):
             return hashlib.sha256(raw).hexdigest()
 
     async def run():
-        client, calls = robots_reset_client(body)
+        client, calls = robots_reset_client(b'{}', failure)
         async with client:
-            http = PublicHttp(client, SimpleNamespace(request_timeout=1, website_user_agent='SignalpostTest'), FakeBudget(), Blobs(),
+            budget = FakeBudget()
+            http = PublicHttp(client, SimpleNamespace(request_timeout=1, website_user_agent='SignalpostTest'), budget, Blobs(),
                               hosts=eo.HOSTS, sections=eo.SECTION_BY_HOST, robots_unserved=eo.HOSTS if unserved else (), politeness=0)
-            if unserved:
-                section = await eo.state_aid(ORG, http, NOW)
-                assert [c.field for c in section.claims] == ['state_aid.award.1000374345']
-                # One robots attempt only, then the exact-recipient POST with a JSON Accept header.
-                assert calls == [('GET', '/robots.txt', '*/*'), ('POST', '/api/v1/soek/stoettetildeling', 'application/json')]
-                assert http.robots[eo.STOTTE_HOST] is None
-            else:
-                with pytest.raises(SourceFailure):
+            for _ in range(2):
+                with pytest.raises(SourceFailure) as error:
                     await http.request(eo.stotte_url(1), ORG, eo.stotte_payload(ORG))
-                assert all(path == '/robots.txt' for _, path, _ in calls)  # never reached the data endpoint
-    if not unserved:
-        import signalpost.sources.official_resilience as retry
-
-        async def no_sleep(_):
-            return None
-        retry.asyncio.sleep, original = no_sleep, retry.asyncio.sleep
-        try:
-            asyncio.run(run())
-        finally:
-            retry.asyncio.sleep = original
-    else:
-        asyncio.run(run())
+                assert error.value.code == 'public_robots_unavailable'
+            assert http.robots[eo.STOTTE_HOST] is False
+            assert all(path == '/robots.txt' for _, path, _ in calls)
+            assert len(calls) == (1 if unserved else 3)
+            assert budget.events[-1]['robots_decision'].startswith('blocked')
+    asyncio.run(run())
 
 
 def test_briefing_sentence_states_exact_amount_without_scientific_notation():
