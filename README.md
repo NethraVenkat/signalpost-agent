@@ -1,3 +1,47 @@
+# Signalpost for judges
+
+Signalpost researches Norwegian companies from organization numbers and produces evidence-backed company profiles. It combines registry identity, accounts, roles, hiring, public activity and exact-company official records. Each published value carries a source, retrieval time, content hash and supporting excerpt or locator. It writes ordered research envelopes, scorer-compatible profiles and a searchable offline site with cited briefings and explicit source failures.
+
+Run with Python 3.12+ after `uv sync --frozen`, using the seven evaluator flags below. Set the expected count to the input membership.
+
+```sh
+uv run signalpost run --organisations companies500.jsonl --bulk registry500.csv --output envelopes.jsonl --profiles-output profiles.jsonl --report report.json --run-id signalpost-final --expected-count 500
+```
+
+The final qualification used a clean clone of `b341b80`, fresh state and seed 20261122, disjoint from 4,706 numbers in prior committed and on-disk samples. The 2026-11-16 snapshot supplied 499 identity rows and live lookup supplied the remaining row. The current saved-output checker passed all 500 companies. [Final qualification and receipts](reports/r5/final500b/SUMMARY.md)
+
+| Metric | Final 500 | Six earlier 100-company samples combined |
+|---|---:|---:|
+| Company inputs | 500 | 600 |
+| Websites | 33 | 45 |
+| Social URLs | 5 | 28 |
+| Available claims | 68,530 | 82,563 |
+| HTTP attempts | 5,158 | 6,549 |
+| Unsupported synthesis / briefing values | 0 / 0 | 0 / 0 |
+| Provider cost | $0 | $0 |
+
+The six samples are the historical Stage W measurements for seeds 20261017 and 20261113–20261117. Their totals describe those saved runs, which preceded the final runtime changes. They are separate from the final 500-company qualification. [Six-sample measurements](reports/r5/stageW/new_websites.md)
+
+| Final 500 qualification gate | Result |
+|---|---:|
+| Wall time / fixed budget | 1,649.67 / 2,100 seconds |
+| Remaining margin | 450.33 seconds |
+| Terminal envelopes / profiles / placeholders | 500 / 500 / 0 |
+| Complete cited briefing contracts | 500 |
+| Largest HTML profile | 245,912 bytes |
+| Deadline hits | 202, all website work |
+| Full offline test suite | 1,393 passed |
+
+GLEIF returned supported records for 58 companies. TED retained seven explicit access blocks and 493 no-match states. Stage S produced state-aid records for 42 companies, research records for seven, licence records for three and Smilefjes records for eight. All these sections completed without deadline failures. Accounts failed for one company, hiring for one, and source failures remain visible in the reports and profiles. The full test suite ran concurrently with the measured qualification.
+
+The identity firewall requires exact organization identifiers or documented website corroboration, checks publisher context and conflicts, and revalidates each published claim against saved source bytes. Social JSON-LD conflicts and shared-company attribution receive additional guards. Human review by Nethra Venkat covered 84 items, with 70 correct, two wrong social links fixed by HC1a/HC1b, and 12 unsure. The verified runs reported zero unsupported synthesis and briefing values. The final URL inventory retains 18 doubtful labels from the older ledger tool separately from the current validator's successful checks. [Human review ledger](reports/r5/stageR3/LEDGER.md#cumulative-human-verdicts-through-hc1-lx2) · [Final URL audit](reports/r5/final500b/urls.md)
+
+Sources include Brønnøysundregistrene under NLOD 2.0, NAV job advertisements, GLEIF legal-entity records, TED procurement, Støtteregisteret, Research Council/SkatteFUNN projects, Finanstilsynet registrations and Mattilsynet Smilefjes inspections. Registry, state-aid, research and licence datasets use the documented NLOD terms, GLEIF data uses CC0, and Smilefjes uses CC BY 4.0. NAV, TED and company content retain their documented source terms and rights. Automated Wikidata and DiBK routes are skipped under their robots rules. [Source access, attribution and licences](docs/SOURCES.md)
+
+Runs have a fixed 2,100-second default budget. Website pass 2 stops early to reserve finalization time, so unfinished candidates retain explicit states. The website seed index is off by default and remains experimental opt-in. Social links on shared or group sites are withheld unless explicitly tied to the exact organization number. These limits affect coverage, and the reviewed subset does not estimate precision across all Norwegian companies.
+
+---
+
 # Signalpost
 
 Signalpost researches Norwegian companies from official registries and bounded company-owned sources, verifies identity, and publishes evidence-linked facts, cited summaries and searchable offline profiles. Missing or incomplete information remains explicit. Deterministic template synthesis works without API keys and costs $0 in provider fees; no live model adapter is shipped.
