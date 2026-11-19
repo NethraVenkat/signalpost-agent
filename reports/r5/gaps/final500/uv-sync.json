@@ -1,0 +1,10 @@
+{
+  "exit_code": 0,
+  "wall_seconds": 7.796999999991385,
+  "argv": [
+    "uv",
+    "sync",
+    "--frozen"
+  ],
+  "cwd": "<REPO>\\.data\\r5-gaps-final500\\repo"
+}

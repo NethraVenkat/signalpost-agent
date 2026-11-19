@@ -1,0 +1,1 @@
+{"module": "<REPO>\\.data\\r5-gaps-final500\\repo\\src\\signalpost\\__init__.py", "prefix": "<REPO>\\.data\\r5-gaps-final500\\repo\\.venv", "python": "3.13.16 (main, Oct 14 2026, 01:05:56) [MSC v.1944 64 bit (AMD64)]"}

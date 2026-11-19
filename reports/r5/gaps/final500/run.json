@@ -1,0 +1,27 @@
+{
+  "exit_code": 0,
+  "wall_seconds": 1516.75,
+  "argv": [
+    "<REPO>\\.data\\r5-gaps-final500\\repo\\.venv\\Scripts\\python.exe",
+    "-m",
+    "signalpost.cli",
+    "run",
+    "--organisations",
+    "<REPO>\\reports\\r5\\gaps\\final500\\companies500.jsonl",
+    "--bulk",
+    "<REPO>\\reports\\r5\\gaps\\final500\\registry500.csv",
+    "--output",
+    "<REPO>\\.data\\r5-gaps-final500\\run\\envelopes.jsonl",
+    "--profiles-output",
+    "<REPO>\\.data\\r5-gaps-final500\\run\\profiles.jsonl",
+    "--report",
+    "<REPO>\\.data\\r5-gaps-final500\\run\\report.json",
+    "--run-id",
+    "r5-gaps-final500-seed20261125",
+    "--expected-count",
+    "500"
+  ],
+  "cwd": "<REPO>\\.data\\r5-gaps-final500\\run",
+  "run_count": 1,
+  "automatic_retry": false
+}

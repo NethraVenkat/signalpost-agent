@@ -875,7 +875,7 @@
 ## 2026-11-19 - G1 authority lookup access gate
 
 - The official public Fullmakttjenesten lookup is documented at `https://data.brreg.no/fullmakt/docs/index.html`; its org-keyed routes are `/fullmakt/enheter/{orgnr}/signatur` and `/fullmakt/enheter/{orgnr}/prokura`. Only the open-data variant is in scope. No competitor code or data was used.
-- Canonical origin robots failed with connection resets on all three attempts (5/20-second backoff). Documentation availability is not an allow decision. No company lookup was sent; G1 remains blocked pending robots availability, with no fabricated real-response fixture. See [G1 access receipt](gaps/G1.md). No tags or push.
+- Canonical origin robots failed with connection resets on all three attempts (5/20-second backoff). Documentation availability is not an allow decision. The local probe sent no company lookup; G1 remains blocked pending robots availability, with no fabricated real-response fixture. See [G1 access receipt](gaps/G1.md). No tags or push.
 
 ## 2026-11-19 - G2: separately scoped consolidated accounts
 
@@ -888,3 +888,10 @@
 - Bundle the non-personal extract with source URL, retrieval time, original CSV hash, row numbers and exact columns. Runtime evidence stores each exact extract record; the checker requires bundle membership for the exact orgnr and re-derives the claim. No API or bulk HTTP call is made during a run; the separate resetting API remains fail closed. [Provenance, licence, rebuild and saved-response tests](gaps/G3.md).
 
 - Final combined full pytest: 1,438 passed in 1,014.72 seconds, including the complete G2 safeguards and G3 real-response tests.
+
+## 2026-11-19 - Gap verification: one 100 run and one fresh 500 run
+
+- Application `f740933`: the standard 100 cohort passed its full check in 558.28 s with zero deadline hits, 4/180 consolidated companies/claims and 8/51 state-aid companies/claims. Available claims rose from baseline `45afc2b` 13,567 to 13,799; new gap claims account for 231 of the 232-claim difference.
+- The one clean-clone 500 run (seed 20261125, 6,207 exclusions, no overlap, seven flags, no clone pytest) exited 0 in 1,516.75 s, with 583.25 s margin, zero deadline hits and placeholders, and partial status. It published 70,078 available JSON claims: 5/336 consolidated and 33/205 state-aid companies/claims, 225 Stage S claims, $0.
+- Full 500 gate **failed**: adaptive website pass 2 recorded OSError; site generation hit the HTML size gate. Offline reconstruction identified `968360302`, 262,692 bytes, after all fallbacks. No site was published; the original checker exit is 1. The separate source-only check passed with zero unsupported synthesis/briefing values. No application fix or second live run was made after this failure.
+- Committed bounded evidence replays all 772 new gap claims and both count inventories against the clean clone, with no network or local run directories. G1 and group-tree requests remain pending the robots access gate. [Receipts, failure details and reproduction limits](gaps/SUMMARY.md). No tags or push.

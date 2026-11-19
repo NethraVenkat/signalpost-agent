@@ -1,0 +1,8 @@
+{
+  "stage": "summary postprocessing after the first checker result was saved",
+  "error": "KeyError: per_company",
+  "reason": "Adaptive website pass failed before detailed pass-2 metrics were populated",
+  "application_rerun": false,
+  "checker_rerun": false,
+  "resolution": "Allow absent pass-2 detail and preserve the first checker result"
+}

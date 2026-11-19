@@ -1,0 +1,11 @@
+{
+  "deadline_hits": 0,
+  "pass2": {
+    "requests": 61
+  },
+  "companies": {},
+  "per_company_detail_available": false,
+  "adaptive_pass_warnings": [
+    "adaptive website pass failed: OSError"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "exit_code": 0,
+  "wall_seconds": 22.625,
+  "argv": [
+    "<REPO>\\.data\\r5-gaps-final500\\repo\\.venv\\Scripts\\python.exe",
+    "<REPO>\\.data\\r5-gaps-final500\\repo\\scripts\\extract_bulk.py",
+    "--bulk",
+    "<REPO>\\.data\\r5\\inputs\\brreg-enheter-20261116\\enheter_2026-11-16T04-25-21.340365166.csv.gz",
+    "--batch",
+    "<REPO>\\reports\\r5\\gaps\\final500\\companies500.jsonl",
+    "--output",
+    "<REPO>\\reports\\r5\\gaps\\final500\\registry500.csv"
+  ],
+  "cwd": "<REPO>\\.data\\r5-gaps-final500\\repo"
+}

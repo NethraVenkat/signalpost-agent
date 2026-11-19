@@ -1,0 +1,29 @@
+{
+  "exit_code": 0,
+  "wall_seconds": 558.2810000000172,
+  "argv": [
+    "<REPO>\\.venv\\Scripts\\python.exe",
+    "-m",
+    "signalpost.cli",
+    "run",
+    "--organisations",
+    "<REPO>\\reports\\r5\\baseline\\companies.jsonl",
+    "--bulk",
+    "<REPO>\\reports\\r5\\baseline\\registry100.csv",
+    "--output",
+    "<REPO>\\out\\r5-gaps\\standard100\\envelopes.jsonl",
+    "--profiles-output",
+    "<REPO>\\out\\r5-gaps\\standard100\\profiles.jsonl",
+    "--report",
+    "<REPO>\\out\\r5-gaps\\standard100\\report.json",
+    "--run-id",
+    "r5-gaps-standard100",
+    "--expected-count",
+    "100"
+  ],
+  "run_count": 1,
+  "minimum_free_bytes": 12032000000,
+  "stopped_for_low_space": false,
+  "code_commit": "f740933af530a9756f07c236a79bceae069eb862",
+  "input_sha256": "7d59169d3fd274ec576dca84430beac887b4a1cf06697e20ab7e875420673686"
+}

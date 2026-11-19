@@ -1,0 +1,17 @@
+{
+  "exit_code": 0,
+  "wall_seconds": 1.8439999999827705,
+  "argv": [
+    "<REPO>\\.data\\r5-gaps-final500\\repo\\.venv\\Scripts\\python.exe",
+    "<REPO>\\reports\\r5\\gaps\\evidence.py",
+    "replay",
+    "--bundle",
+    "<REPO>\\reports\\r5\\gaps\\evidence.json.gz"
+  ],
+  "clone_head": "f740933af530a9756f07c236a79bceae069eb862",
+  "clone_clean": true,
+  "local_run_directories_in_clone": false,
+  "pytest_in_clone": false,
+  "network_blocked_by_audit_hook": true,
+  "scope": "Helper and packet passed as explicit input files; installed application and source verifiers came from the clean clone."
+}

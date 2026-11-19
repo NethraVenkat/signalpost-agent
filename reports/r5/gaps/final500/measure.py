@@ -161,9 +161,13 @@ def run():
 def finish():
     execution=json.loads((DEST/'run.json').read_text(encoding='utf8'))
     assert execution['exit_code']==0
-    check_text=command('check_live_run',[PY,CLONE/'scripts/check_live_run.py',
-       '--output',WORK/'envelopes.jsonl','--organisations',DEST/'companies500.jsonl','--state',WORK/'state',
-       '--report',WORK/'report.json','--site',WORK/'site','--count','500'],CLONE,required=False)
+    if (DEST/'check_live_run.json').exists():
+        # Preserve the first checker result; reporting failure is not a retry.
+        check_text=(DEST/'check_live_run.txt').read_text(encoding='utf8')
+    else:
+        check_text=command('check_live_run',[PY,CLONE/'scripts/check_live_run.py',
+           '--output',WORK/'envelopes.jsonl','--organisations',DEST/'companies500.jsonl','--state',WORK/'state',
+           '--report',WORK/'report.json','--site',WORK/'site','--count','500'],CLONE,required=False)
     check_exit=json.loads((DEST/'check_live_run.json').read_text(encoding='utf8'))['exit_code']
     checked=json.loads(check_text.strip().splitlines()[-1]) if check_exit==0 else {'failed':True}
     report=json.loads((WORK/'report.json').read_text(encoding='utf8'))
@@ -181,7 +185,8 @@ def finish():
         websites=sum(c['field']=='official_website' for c in claims),social_urls=sum(c['field'].startswith('social_profile.') for c in claims),
         placeholders=placeholders,unfinished_sections=unfinished,terminal_envelopes=len(rows),
         largest_profile_bytes=report['site'].get('largest_profile_bytes'),check_live_run_exit_code=check_exit,
-        run_status=report['run_status'],cost_usd=report['total_cost_usd'],http_requests=report['requests'],
+        run_status=report['run_status'],site=report['site'],warnings=report['warnings'],
+        cost_usd=report['total_cost_usd'],http_requests=report['requests'],
         families=families,stage_s_claims={f:families.get(f,0) for f in ('state_aid','research','licences','inspections')},
         state_aid_data_requests=sum('stottetiltak-registerinfo-api.app.brreg.no/api/' in e['url'] for e in report['request_log']),
         verification=checked,artifact_sha256={n:sha(WORK/n) for n in ('envelopes.jsonl','profiles.jsonl','report.json')},
@@ -193,7 +198,9 @@ def finish():
     pass2=report['adaptive_websites']['pass2']
     save('deadline_losses.json',dict(deadline_hits=report['deadline_hits'],
         pass2={k:v for k,v in pass2.items() if k!='per_company'},
-        companies={org:value for org,value in pass2['per_company'].items() if value['state']=='deadline'}))
+        per_company_detail_available='per_company' in pass2,
+        adaptive_pass_warnings=[w for w in report['warnings'] if w.startswith('adaptive website pass failed')],
+        companies={org:value for org,value in pass2.get('per_company',{}).items() if value['state']=='deadline'}))
     save('summary.json',summary)
     print(json.dumps(summary),flush=True)
 

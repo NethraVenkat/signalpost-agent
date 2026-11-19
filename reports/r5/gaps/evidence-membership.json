@@ -1,0 +1,8 @@
+{
+  "standard100_order_matches": true,
+  "final500_order_matches": true,
+  "final500_prior_sample_overlap": 0,
+  "prior_exclusion_numbers": 6207,
+  "new_claims_supported": 772,
+  "source_bodies": 265
+}

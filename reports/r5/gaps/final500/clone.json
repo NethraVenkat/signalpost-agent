@@ -1,0 +1,17 @@
+{
+  "exit_code": 0,
+  "wall_seconds": 25.265999999974156,
+  "argv": [
+    "git",
+    "clone",
+    "--no-local",
+    "--depth",
+    "1",
+    "--single-branch",
+    "--branch",
+    "revision/r5",
+    "<REPO>",
+    "<REPO>\\.data\\r5-gaps-final500\\repo"
+  ],
+  "cwd": "<REPO>"
+}

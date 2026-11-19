@@ -1,0 +1,10 @@
+{
+  "exit_code": 0,
+  "wall_seconds": 0.26600000000325963,
+  "argv": [
+    "<REPO>\\.data\\r5-gaps-final500\\repo\\.venv\\Scripts\\python.exe",
+    "-c",
+    "import sys,json,signalpost;print(json.dumps(dict(module=signalpost.__file__,prefix=sys.prefix,python=sys.version)))"
+  ],
+  "cwd": "<REPO>\\.data\\r5-gaps-final500\\repo"
+}

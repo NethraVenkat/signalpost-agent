@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "<REPO>\.data\r5-gaps-final500\repo\scripts\check_live_run.py", line 54, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "<REPO>\.data\r5-gaps-final500\repo\scripts\check_live_run.py", line 51, in main
+    a=p.parse_args();print(json.dumps(check(a.output,a.organisations,a.state,a.report,a.site,a.count)))
+                                      ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<REPO>\.data\r5-gaps-final500\repo\scripts\check_live_run.py", line 27, in check
+    assert report['site']['state']=='available','Site was not generated'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Site was not generated

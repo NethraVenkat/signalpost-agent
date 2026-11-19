@@ -1,0 +1,64 @@
+{
+  "network_required": false,
+  "source_bodies_verified": 265,
+  "runs": {
+    "final500": {
+      "envelopes": 500,
+      "counts": {
+        "all_available": {
+          "companies_covered": 500,
+          "claims": 70078
+        },
+        "signature_prokura": {
+          "companies_covered": 0,
+          "claims": 0
+        },
+        "group_relationships": {
+          "companies_covered": 0,
+          "claims": 0
+        },
+        "consolidated_accounts": {
+          "companies_covered": 5,
+          "claims": 336
+        },
+        "state_aid": {
+          "companies_covered": 33,
+          "claims": 205
+        }
+      },
+      "consolidated_claims_verified": 336,
+      "state_aid_claims_verified": 205,
+      "unsupported_new_claims": 0
+    },
+    "standard100": {
+      "envelopes": 100,
+      "counts": {
+        "all_available": {
+          "companies_covered": 100,
+          "claims": 13799
+        },
+        "signature_prokura": {
+          "companies_covered": 0,
+          "claims": 0
+        },
+        "group_relationships": {
+          "companies_covered": 0,
+          "claims": 0
+        },
+        "consolidated_accounts": {
+          "companies_covered": 4,
+          "claims": 180
+        },
+        "state_aid": {
+          "companies_covered": 8,
+          "claims": 51
+        }
+      },
+      "consolidated_claims_verified": 180,
+      "state_aid_claims_verified": 51,
+      "unsupported_new_claims": 0
+    }
+  },
+  "scope": "All available-field counts; full source replay for consolidated and state-aid claims only. Legacy values, timings, precision and historical sampling-universe bytes are not reverified.",
+  "sha256": "7449c9dcbb4d2e915b3d2c960e7a7ed90baeafeb349d1903d66657458c4c7918"
+}

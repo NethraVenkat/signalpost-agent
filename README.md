@@ -1,6 +1,6 @@
 # Signalpost for judges
 
-Revised entry checks and their scope: [evaluator-fix verification](reports/evaluator-fixes/SUMMARY.md). The latest final500d results below measure the revised runtime; final500c and earlier tables remain historical measurements.
+Latest gap results and limits: [gap verification](reports/r5/gaps/SUMMARY.md). The fresh 500-company full check failed its HTML site gate; the earlier [evaluator-fix verification](reports/evaluator-fixes/SUMMARY.md) and final500c/final500d measurements remain historical evidence.
 
 Current run instructions: [SUBMISSION.md](SUBMISSION.md). Envelope requirements: [OUTPUT_CONTRACT.md](OUTPUT_CONTRACT.md). Historical reports cite earlier commit IDs; [revision references](HISTORY_MAPPING.md) map them to current commits.
 
@@ -12,28 +12,37 @@ Run with Python 3.12+ after `uv sync --frozen`, using the seven evaluator flags 
 uv run signalpost run --organisations companies500.jsonl --bulk registry500.csv --output envelopes.jsonl --profiles-output profiles.jsonl --report report.json --run-id signalpost-final --expected-count 500
 ```
 
-Latest revised-runtime check: **final500d**, clean clone `3de9edd`, seed 20261124, 500 fresh inputs disjoint from 5,706 prior numbers, exactly seven flags, no clone pytest. `check_live_run --count 500` passed. [Current 500-company report](reports/evaluator-fixes/final500d/SUMMARY.md).
+Latest gap check: application `f740933`, standard seed-20261017 cohort and one fresh clean-clone 500-company run with seed 20261125. Both commands used exactly seven flags and fresh state. **The 100-company full check passed; the 500-company full check failed because no HTML site was published.** No live rerun or clone pytest. [Gap reports and original failure receipts](reports/r5/gaps/SUMMARY.md).
 
-| Metric | Final500d |
-|---|---:|
-| Process wall time / fixed budget | 1,840.81 / 2,100 seconds |
-| Margin under budget | 259.19 seconds |
-| Deadline hits (website pass 2) | 215 |
-| Activity available / failed | 500 / 0 |
-| Websites / social URLs | 30 / 9 |
-| Terminal envelopes / profiles / placeholders | 500 / 500 / 0 |
-| Largest HTML profile | 240,192 bytes |
-| Run status / CLI exit / checker exit | partial / 0 / 0 |
-| Available claims | 68,586 |
-| State-aid claims / data requests | 0 / 0 |
-| Stage S claims: research / licences / inspections | 4 / 16 / 12 |
-| Stage S claims total (including state aid) | 32 |
-| Unsupported synthesis / briefing values | 0 / 0 |
-| HTTP attempts | 4,517 |
-| Provider cost | $0 |
-| Minimum sampled free disk | 23.36 GiB |
+| Metric | Standard 100 | Fresh 500 |
+|---|---:|---:|
+| Process wall / fixed budget | 558.28 / 2,100 s | 1,516.75 / 2,100 s |
+| Margin under budget | 1,541.72 s | 583.25 s |
+| Deadline hits | 0 | 0 |
+| JSON envelopes / JSON profiles / placeholders | 100 / 100 / 0 | 500 / 500 / 0 |
+| Signature/prokura: companies / claims | 0 / 0 | 0 / 0 |
+| Brreg group relationships: companies / claims | 0 / 0 | 0 / 0 |
+| Consolidated accounts: companies / claims | 4 / 180 | 5 / 336 |
+| State aid: companies / claims | 8 / 51 | 33 / 205 |
+| All available claims | 13,799 | 70,078 |
+| Published HTML profiles | 100 | 0 |
+| Largest HTML profile | 242,559 bytes | 262,692 bytes, offline reconstruction; not published |
+| Run status / CLI exit / full checker exit | partial / 0 / 0 | partial / 0 / 1 |
+| Source-check unsupported synthesis / briefing values | 0 / 0 | 0 / 0 |
+| Activity available / failed | 100 / 0 | 500 / 0 |
+| Websites / social URLs | 8 / 7 | 36 / 24 |
+| Stage S claims: state aid / research / licences / inspections | 51 / 0 / 11 / 4 | 205 / 10 / 9 / 1 |
+| Stage S claims total | 66 | 225 |
+| State-aid data HTTP requests | 0 (dated bulk extract) | 0 (dated bulk extract) |
+| HTTP attempts | 1,041 | 4,426 |
+| Provider cost | $0 | $0 |
 
-**Remaining limits:** 215 website deadline hits; pass 2 gained zero websites before the 1,700-second cutoff. State aid stayed blocked after three failed robots attempts, with zero data requests. The run is `partial`; passing the output checker does not mean complete source coverage or an official score.
+**Remaining limits:** signature/prokura and Brreg group-tree API enablement remain pending the canonical robots access gate. The fresh 500 run recorded adaptive website pass-2 `OSError` after 61 requests; the cause and detailed loss telemetry are unavailable. One reconstructed profile (`968360302`) still exceeded the 250,000-byte gate after all existing fallbacks, so the site was not published and `check_live_run --count 500` failed. Zero deadline hits and the shorter wall time do not establish complete recall or a speed improvement. Minimum sampled free disk was 17.11 GiB; the 3 GiB stop guard did not trigger.
+
+The standard 100 cohort had 13,567 available claims at baseline `45afc2b`; the new total is 13,799. [Per-type comparison](reports/r5/gaps/standard100/SUMMARY.md). All 772 new consolidated/state-aid claims and both field-count inventories replay from the [committed bounded evidence packet](reports/r5/gaps/EVIDENCE.md), without network or local run directories. The separate saved-source check passed; it does not make the failed 500-company site gate pass.
+
+The earlier [final500d measurement](reports/evaluator-fixes/final500d/SUMMARY.md), using `3de9edd` and seed 20261124, remains historical evidence.
+
 
 The historical final500c rerun, before the evaluator fixes, used a clean clone of `2ac8a6b`, fresh state, seed 20261123 and the same frozen sample disjoint from 5,206 prior numbers. The saved-output checker passed all 500 companies. Clone setup ran `uv sync --frozen` and an import check; no clone pytest. [Final qualification and receipts](reports/r5/final500c/SUMMARY.md)
 

@@ -1,0 +1,15 @@
+{
+  "exit_code": 0,
+  "wall_seconds": 66.875,
+  "argv": [
+    "<REPO>\\.data\\r5-gaps-final500\\repo\\.venv\\Scripts\\python.exe",
+    "-c",
+    "import sys,json\nfrom pathlib import Path\ndef no_network(event,args):\n if event in {'socket.connect','socket.getaddrinfo','socket.gethostbyname','socket.sendto'}:raise RuntimeError('Saved-source verification must not use network')\nsys.addaudithook(no_network)\nfrom scripts.verify_output import verify\nprint(json.dumps(verify(Path(sys.argv[1]),Path(sys.argv[2]),500,Path(sys.argv[3]),Path(sys.argv[4]))))\n",
+    "<REPO>\\.data\\r5-gaps-final500\\run\\envelopes.jsonl",
+    "<REPO>\\.data\\r5-gaps-final500\\run\\state",
+    "<REPO>\\reports\\r5\\gaps\\final500\\companies500.jsonl",
+    "<REPO>\\.data\\r5-gaps-final500\\run\\report.json"
+  ],
+  "network_blocked": true,
+  "research_rerun": false
+}
