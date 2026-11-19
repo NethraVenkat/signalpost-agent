@@ -309,3 +309,7 @@ Brreg documents [public, unauthenticated authority lookups](https://data.brreg.n
 The existing exact-orgnr [Regnskapsregisteret endpoint](https://data.brreg.no/regnskapsregisteret/regnskap/v3/api-docs), `https://data.brreg.no/regnskapsregisteret/regnskap/{orgnr}`, returns separately typed `SELSKAP` and `KONSERN` filings. The new extractor publishes the latter with exact filing owner, filing ID, period, currency and full original-response evidence, separately from entity figures. No additional lookup is sent. Licence: [NLOD, Bronnoysundregistrene](https://www.brreg.no/bruke-data-fra-bronnoysundregistrene/datasett-og-api/); this is not publisher endorsement.
 
 The [official group-tree endpoint](https://data.brreg.no/enhetsregisteret/api/dokumentasjon/no/), `/enhetsregisteret/api/konsernstruktur/{orgnr}`, remains disabled while canonical origin robots cannot be fetched after retries. No shareholder register, group ownership percentage or parent link is inferred from account metadata. [Implementation and saved-response provenance](../reports/r5/gaps/G2.md).
+
+## G1 retry (2026-11-20)
+
+The canonical robots request was retried against `ac88ab0` in and outside the restricted network sandbox. Both three-attempt checks failed before HTTP headers; Windows curl independently reported a reset. Signature, prokura and the documented exact-orgnr group-tree endpoint remain pending this access prerequisite. No company lookup, fabricated response fixture or new claim. [Receipts](../reports/r5/gaps/g1-retry/SUMMARY.md).

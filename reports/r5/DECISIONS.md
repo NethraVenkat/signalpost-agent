@@ -900,3 +900,7 @@
 
 - Fix `567eafe`: defer workplace overflow to the company-local data loader and isolate adaptive OSError per company, retaining explicit diagnostics and prior proven facts. Full pytest: 1,444 passed; privacy guard: 5 passed. Historical errno was not retained, so no underlying OS cause is claimed.
 - Rebuilt only the same saved 500 outputs with network blocked: full checker exit 0, 500 pages, largest 249,270 bytes; target 968360302 is 219,666 bytes. Original envelope/profile/report hashes unchanged, all published facts and referenced evidence retained. Original partial status, warning and live timings remain historical. No new live run, tags or push. [Receipts](gaps/site-fix/SUMMARY.md).
+
+## 2026-11-20 - G1 access retry
+
+- Reconfirmed first-party fullmakt and konsernstruktur documentation. Canonical robots returned no HTTP status/content after retries on normal network; independent Windows curl also reset. Keep fail-closed; send no company requests and infer no allow rule from ordinary same-host API access. No implementation or standard-100 comparison is claimed. [Receipts](gaps/g1-retry/SUMMARY.md).

@@ -1,0 +1,10 @@
+{
+  "client": "Windows curl (independent TLS stack)",
+  "url": "https://data.brreg.no/robots.txt",
+  "exit_code": 56,
+  "http_status": null,
+  "stderr": "curl: (56) Recv failure: Connection was reset\n",
+  "content": null,
+  "content_sha256": null,
+  "company_data_requests": 0
+}
