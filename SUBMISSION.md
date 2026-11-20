@@ -1,5 +1,11 @@
 # Signalpost: evaluator instructions
 
+Overnight review: precision packet `35a547e` reproduces the seeded 200-claim audit from committed data alone. **50 correct / 0 incorrect / 150 unverifiable** under the strict literal-span test; nominal Wilson 95% lower bound **19.51%**. This is a direct-verbatim certification result, **not** an estimate that only 25% of business facts are true. Composite metadata, numeric/date formatting and short excerpts cause abstentions even when full-source semantic verification passed. [Methods and per-type results](reports/r5/precision-sample/SUMMARY.md); [website/social/brand human checklist](reports/r5/precision-sample/HUMAN_REVIEW.md), human review pending.
+
+**Final500e was not run.** Initial setup and the single fresh setup retry failed the disk prerequisite: roughly 11.01 GB free on retry, below the requested 15 GB (the helper enforces 15 GiB). No sample was drawn with seed 20261126, no final500 clone was created, and no live or offline final500e qualification was claimed. Timing, coverage, largest profile and unsupported-value figures are **not measured**. Provider cost: **$0**. Original historical evidence was retained. [Failure/retry receipts at `129ce84`](reports/r5/final500e/SUMMARY.md). Earlier 100/500 measurements below remain separate historical results.
+
+P3 verification: **1,464 pytest tests passed in 980.90 seconds** and **5 privacy checks passed** in the main checkout; [verification receipts](reports/r5/overnight/SUMMARY.md). No pytest ran in a final500 clone; none was created.
+
 Use the exact revised commit hash supplied with this submission. Install in a fresh checkout with Python 3.12+ and uv:
 
 ```sh
