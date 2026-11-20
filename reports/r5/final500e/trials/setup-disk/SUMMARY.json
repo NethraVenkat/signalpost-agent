@@ -1,0 +1,7 @@
+{
+  "stage": "setup before clone or live run",
+  "failure": "Free disk below 15 GiB threshold",
+  "live_run_started": false,
+  "retry_limit": 1,
+  "remediation": "Inspect and remove only our disposable test scratch, preserving all measured run evidence"
+}

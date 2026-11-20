@@ -1,0 +1,12 @@
+{
+  "scope": "P1 proof-only sparse fresh clone; not a P2 final500 clone",
+  "commit": "35a547e857b95b5f3c504845f476e21b48ae5659",
+  "exit_code": 0,
+  "results_identical": true,
+  "network_disabled": true,
+  "run_directories_present": false,
+  "third_party_dependencies_required": false,
+  "pytest_in_clone": false,
+  "git_status_after_replay": " M reports/r5/precision-sample/results.json\n M reports/r5/precision-sample/results.jsonl\n",
+  "git_content_diff_after_replay": ""
+}

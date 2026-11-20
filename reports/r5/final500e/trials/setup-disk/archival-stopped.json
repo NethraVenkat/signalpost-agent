@@ -1,0 +1,6 @@
+{
+  "reason": "Existing historical files already carry NTFS compression. Logical-size inventory overstates reclaimable space; do not remove unique evidence or unrelated user data to force the threshold. Slow archival stopped before any verified archive or original-directory removal.",
+  "original_directories_removed": 0,
+  "all_original_historical_run_directories_retained": true,
+  "free_bytes": 11010641920
+}

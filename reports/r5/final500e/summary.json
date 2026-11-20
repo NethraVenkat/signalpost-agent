@@ -1,0 +1,18 @@
+{
+  "status": "blocked_before_live_run",
+  "reason": "Free disk below required threshold on initial setup and the single fresh setup retry",
+  "setup_attempts": 2,
+  "live_runs": 0,
+  "seed_requested": 20261126,
+  "sampling_performed": false,
+  "clone_created": false,
+  "network_preflight_performed": false,
+  "pytest_in_final500_clone": false,
+  "free_bytes_on_retry": 11009769472,
+  "minimum_required_bytes": 16106127360,
+  "stop_below_bytes": 3221225472,
+  "run_metrics": null,
+  "provider_cost_usd": 0,
+  "original_historical_run_directories_removed": 0,
+  "next_step": "Continue P3 as instructed; do not fabricate P2 qualification numbers"
+}
