@@ -1,0 +1,389 @@
+{
+  "valid_live_confirmation": false,
+  "regression_verdict": "Observed same-cohort section losses: accounts, activity, gleif, group, hiring, identity, inspections, licences, procurement, prokura, research, roles, signature, state_aid, status_events, subunits, website. Live confirmation is INVALID because all run HTTP requests failed; code regression is unproven.",
+  "table": [
+    {
+      "section": "accounts",
+      "state": "available",
+      "final500e": 497,
+      "S6": 0,
+      "delta": -497
+    },
+    {
+      "section": "accounts",
+      "state": "failed",
+      "final500e": 3,
+      "S6": 500,
+      "delta": 497
+    },
+    {
+      "section": "accounts",
+      "state": "not_available",
+      "final500e": 0,
+      "S6": 0,
+      "delta": 0
+    },
+    {
+      "section": "activity",
+      "state": "available",
+      "final500e": 500,
+      "S6": 0,
+      "delta": -500
+    },
+    {
+      "section": "activity",
+      "state": "failed",
+      "final500e": 0,
+      "S6": 500,
+      "delta": 500
+    },
+    {
+      "section": "activity",
+      "state": "not_available",
+      "final500e": 0,
+      "S6": 0,
+      "delta": 0
+    },
+    {
+      "section": "gleif",
+      "state": "available",
+      "final500e": 64,
+      "S6": 0,
+      "delta": -64
+    },
+    {
+      "section": "gleif",
+      "state": "failed",
+      "final500e": 0,
+      "S6": 500,
+      "delta": 500
+    },
+    {
+      "section": "gleif",
+      "state": "not_available",
+      "final500e": 436,
+      "S6": 0,
+      "delta": -436
+    },
+    {
+      "section": "group",
+      "state": "available",
+      "final500e": 35,
+      "S6": 0,
+      "delta": -35
+    },
+    {
+      "section": "group",
+      "state": "failed",
+      "final500e": 0,
+      "S6": 500,
+      "delta": 500
+    },
+    {
+      "section": "group",
+      "state": "not_available",
+      "final500e": 465,
+      "S6": 0,
+      "delta": -465
+    },
+    {
+      "section": "hiring",
+      "state": "available",
+      "final500e": 0,
+      "S6": 0,
+      "delta": 0
+    },
+    {
+      "section": "hiring",
+      "state": "failed",
+      "final500e": 0,
+      "S6": 500,
+      "delta": 500
+    },
+    {
+      "section": "hiring",
+      "state": "not_available",
+      "final500e": 500,
+      "S6": 0,
+      "delta": -500
+    },
+    {
+      "section": "identity",
+      "state": "available",
+      "final500e": 500,
+      "S6": 499,
+      "delta": -1
+    },
+    {
+      "section": "identity",
+      "state": "failed",
+      "final500e": 0,
+      "S6": 1,
+      "delta": 1
+    },
+    {
+      "section": "identity",
+      "state": "not_available",
+      "final500e": 0,
+      "S6": 0,
+      "delta": 0
+    },
+    {
+      "section": "inspections",
+      "state": "available",
+      "final500e": 7,
+      "S6": 0,
+      "delta": -7
+    },
+    {
+      "section": "inspections",
+      "state": "failed",
+      "final500e": 0,
+      "S6": 1,
+      "delta": 1
+    },
+    {
+      "section": "inspections",
+      "state": "not_available",
+      "final500e": 493,
+      "S6": 499,
+      "delta": 6
+    },
+    {
+      "section": "licences",
+      "state": "available",
+      "final500e": 10,
+      "S6": 0,
+      "delta": -10
+    },
+    {
+      "section": "licences",
+      "state": "failed",
+      "final500e": 0,
+      "S6": 1,
+      "delta": 1
+    },
+    {
+      "section": "licences",
+      "state": "not_available",
+      "final500e": 490,
+      "S6": 0,
+      "delta": -490
+    },
+    {
+      "section": "licences",
+      "state": "blocked",
+      "final500e": 0,
+      "S6": 499,
+      "delta": 499
+    },
+    {
+      "section": "procurement",
+      "state": "available",
+      "final500e": 0,
+      "S6": 0,
+      "delta": 0
+    },
+    {
+      "section": "procurement",
+      "state": "failed",
+      "final500e": 5,
+      "S6": 500,
+      "delta": 495
+    },
+    {
+      "section": "procurement",
+      "state": "not_available",
+      "final500e": 495,
+      "S6": 0,
+      "delta": -495
+    },
+    {
+      "section": "prokura",
+      "state": "available",
+      "final500e": 111,
+      "S6": 0,
+      "delta": -111
+    },
+    {
+      "section": "prokura",
+      "state": "failed",
+      "final500e": 0,
+      "S6": 500,
+      "delta": 500
+    },
+    {
+      "section": "prokura",
+      "state": "not_available",
+      "final500e": 389,
+      "S6": 0,
+      "delta": -389
+    },
+    {
+      "section": "research",
+      "state": "available",
+      "final500e": 5,
+      "S6": 5,
+      "delta": 0
+    },
+    {
+      "section": "research",
+      "state": "failed",
+      "final500e": 0,
+      "S6": 1,
+      "delta": 1
+    },
+    {
+      "section": "research",
+      "state": "not_available",
+      "final500e": 495,
+      "S6": 494,
+      "delta": -1
+    },
+    {
+      "section": "roles",
+      "state": "available",
+      "final500e": 498,
+      "S6": 0,
+      "delta": -498
+    },
+    {
+      "section": "roles",
+      "state": "failed",
+      "final500e": 0,
+      "S6": 500,
+      "delta": 500
+    },
+    {
+      "section": "roles",
+      "state": "not_available",
+      "final500e": 2,
+      "S6": 0,
+      "delta": -2
+    },
+    {
+      "section": "signature",
+      "state": "available",
+      "final500e": 488,
+      "S6": 0,
+      "delta": -488
+    },
+    {
+      "section": "signature",
+      "state": "failed",
+      "final500e": 0,
+      "S6": 500,
+      "delta": 500
+    },
+    {
+      "section": "signature",
+      "state": "not_available",
+      "final500e": 12,
+      "S6": 0,
+      "delta": -12
+    },
+    {
+      "section": "state_aid",
+      "state": "available",
+      "final500e": 55,
+      "S6": 55,
+      "delta": 0
+    },
+    {
+      "section": "state_aid",
+      "state": "failed",
+      "final500e": 0,
+      "S6": 1,
+      "delta": 1
+    },
+    {
+      "section": "state_aid",
+      "state": "not_available",
+      "final500e": 445,
+      "S6": 444,
+      "delta": -1
+    },
+    {
+      "section": "status_events",
+      "state": "available",
+      "final500e": 0,
+      "S6": 0,
+      "delta": 0
+    },
+    {
+      "section": "status_events",
+      "state": "failed",
+      "final500e": 0,
+      "S6": 500,
+      "delta": 500
+    },
+    {
+      "section": "status_events",
+      "state": "not_available",
+      "final500e": 0,
+      "S6": 0,
+      "delta": 0
+    },
+    {
+      "section": "subunits",
+      "state": "available",
+      "final500e": 401,
+      "S6": 0,
+      "delta": -401
+    },
+    {
+      "section": "subunits",
+      "state": "failed",
+      "final500e": 0,
+      "S6": 500,
+      "delta": 500
+    },
+    {
+      "section": "subunits",
+      "state": "not_available",
+      "final500e": 99,
+      "S6": 0,
+      "delta": -99
+    },
+    {
+      "section": "website",
+      "state": "available",
+      "final500e": 39,
+      "S6": 0,
+      "delta": -39
+    },
+    {
+      "section": "website",
+      "state": "failed",
+      "final500e": 180,
+      "S6": 310,
+      "delta": 130
+    },
+    {
+      "section": "website",
+      "state": "not_available",
+      "final500e": 252,
+      "S6": 190,
+      "delta": -62
+    },
+    {
+      "section": "website",
+      "state": "ambiguous",
+      "final500e": 27,
+      "S6": 0,
+      "delta": -27
+    },
+    {
+      "section": "website",
+      "state": "blocked",
+      "final500e": 2,
+      "S6": 0,
+      "delta": -2
+    }
+  ],
+  "request_errors": {
+    "ConnectError": 5217,
+    "TimeoutError": 3,
+    "dns_timeout": 1
+  }
+}
