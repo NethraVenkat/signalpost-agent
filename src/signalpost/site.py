@@ -511,6 +511,9 @@ def profile(row, title, explorer_rows=EXPLORER_VISIBLE_ROWS, official_inline=OFF
     from .synthesis.brief import select
     from .sources.exact_official import FAMILIES as OFFICIAL_FAMILIES
     overview = select(synthesis, claims, limit=10 if any(c['family'] in {'gleif','procurement',*OFFICIAL_FAMILIES} and c['availability']=='available' for c in claims) else 6)
+    from .synthesis.timeline import for_row as dated_timeline
+    if dated_timeline(row):
+        body += '<section class="dated-timeline"><h2>Dated records</h2><details><summary>Show dated records</summary><ol data-dated-timeline></ol></details></section>'
     body += '<section class="summary"><h2>Cited summary</h2>'
     body += ''.join(sentence_html(s, claim_map, change_ids, observation_ids) for s in overview)
     remaining = [s for s in sentences if s not in overview]
@@ -858,6 +861,9 @@ def company_payload(row,explorer_rows=EXPLORER_VISIBLE_ROWS,official_inline=OFFI
     payload = {'orgnr': row['organisation_number'], 'name': name,
                'source_fields':source_fields,'sources':sources,'evidence_fields':evidence_fields,
                'records':records,'facts':facts,'registry_details':details}
+    from .synthesis.timeline import for_row as dated_timeline
+    timeline=dated_timeline(row)
+    if timeline:payload['timeline']=timeline
     if len(row['claims']) > explorer_rows:
         payload['explorer_rows'] = [(*explorer_cells(c, all_records), anchor(c)) for c in row['claims'][explorer_rows:]]
     return payload

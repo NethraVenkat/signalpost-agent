@@ -219,6 +219,8 @@ def sentence_error(sentence,envelope):
 
 
 def validate_synthesis(synthesis,envelope):
+    from .timeline import build as dated_timeline
+    synthesis.sections.timeline=dated_timeline(envelope.claims,envelope.evidence)
     rejected=[]
     for section in SECTIONS:
         sentences=getattr(synthesis.sections,section);valid=[]

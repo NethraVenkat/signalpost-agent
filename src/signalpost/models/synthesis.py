@@ -40,7 +40,17 @@ class Unknown(Model):
     text: str | None = None
 
 
+class TimelineEntry(Model):
+    date: str
+    precision: Literal['year','day','timestamp']
+    text: str
+    claim_ids: list[str]
+    evidence_ids: list[str]
+    source_field: str
+
+
 class Sections(Model):
+    timeline: list[TimelineEntry] = Field(default_factory=list)
     what_it_does: list[Sentence] = Field(default_factory=list)
     scale: list[Sentence] = Field(default_factory=list)
     leadership: list[Sentence] = Field(default_factory=list)

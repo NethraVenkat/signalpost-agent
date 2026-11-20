@@ -233,6 +233,28 @@
     }
   });
 
+  // Dated synthesis lives entirely in the already-loaded company-local data.
+  const timelineRoot = document.querySelector('[data-dated-timeline]');
+  let timelineIndex = 0;
+  if(timelineRoot) for(const entry of localData.timeline || []) {
+    const entryIndex = timelineIndex++;
+    const row = element('li');
+    row.append(element('time', entry.date + ' (' + entry.precision + ')'),
+      element('span', ' ' + entry.text + ' '));
+    for(const cid of entry.claim_ids) {
+      const link = element('a', 'Source claim');
+      link.href = '#fact-' + cid.slice(0,16);
+      row.append(link);
+      const button = element('button', 'Evidence');
+      button.type = 'button'; button.dataset.toggle = 'source-' + cid.slice(0,16);
+      button.setAttribute('aria-expanded','false'); row.append(button);
+      const panel = element('div'); panel.id = 'source-' + cid.slice(0,16) + '-timeline-' + entryIndex;
+      button.dataset.toggle = panel.id; panel.dataset.source = cid.slice(0,16);
+      panel.hidden = true; row.append(panel);
+    }
+    timelineRoot.append(row);
+  }
+
   // Additional official metadata
   for(const fact of localData.registry_details || []) {
     const root = document.querySelector('[data-registry-details="'+fact.group+'"]');

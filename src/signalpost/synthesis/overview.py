@@ -154,6 +154,8 @@ def required(envelope):
 
 
 def install(synthesis,envelope):
+    from .timeline import build as dated_timeline
+    synthesis.sections.timeline=dated_timeline(envelope.claims,envelope.evidence)
     synthesis.contract_version='r5-S'
     synthesis.observations=observations(envelope)
     synthesis.financial_metrics,synthesis.financial_year_check,_=analyze(envelope)

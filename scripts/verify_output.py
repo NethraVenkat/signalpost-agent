@@ -421,6 +421,8 @@ def verify(first, state_dir, count, organisations=None, report=None, require_cle
     exact_public=0
     exact_official=0
     for row in rows:
+        from signalpost.synthesis.timeline import verify as verify_timeline
+        verify_timeline(row)
         companies,sentences=verify_synthesis(row)
         synthesis_companies+=companies;synthesis_sentences+=sentences
         data = row if "claims" in row else row["profile"]
