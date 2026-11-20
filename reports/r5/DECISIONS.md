@@ -958,3 +958,10 @@
 - Set an effective 235,000-byte page budget with a 240,000-byte regression guard, retaining the existing 250,000-byte hard cap. Excess duplicate Explorer rows and older official/workplace rows remain in the existing local company payload, as do original URLs and full evidence; no claim is discarded.
 - Offline rebuild of the saved 500-company output: previous top five `916329717` 249,428; `981400224` 245,960; `974529106` 245,640; `920203450` 245,201; `964389020` 244,577 bytes. New top five `964389020` 234,853; `981400224` 234,653; `991095500` 233,610; `985335699` 233,202; `913939964` 232,929 bytes. All 500 pages at or below 235,000; offline claim/value/evidence parity verified, 0 added network requests, claims or evidence. [Receipt](dated-timeline/measurement.json).
 - Full pytest: 1,506 passed in 988.89 seconds; privacy checks: 17 passed in 6.77 seconds. The site regression test verifies every generated fixture page stays below 240,000 bytes and that deferred claim/evidence payloads retain parity. [Test receipts](dated-timeline/headroom-pytest.txt).
+
+## Register access review
+
+- `w2.brreg.no/robots.txt` returns `User-agent: *` and `Disallow: /kunngjoring/`; bankruptcy and announcement pages are not crawled.
+- DataNorge classifies Konkursregisteret as Non-public access.
+- Brreg's free daily/weekly announcement subscription delivers email links. Its separate XML feed requires a signed agreement, registered subscription and SFTP account; the fee depends on selected announcement types.
+- The XML subscription route is documented but was not used and is out of scope for this run.
