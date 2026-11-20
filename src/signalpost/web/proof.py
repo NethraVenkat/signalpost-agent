@@ -327,15 +327,8 @@ def score(page, org, context, origin, leaders):
     municipality = legal_name(context.get("municipality"))
     if municipality and municipality in text:
         signals.append("municipality"); points += 1
-    # Tightened precision policy: name/source/municipality alone cannot establish
-    # ownership. Guessed slug/email domains require an exact orgnr.
-    # A subsidiary name in a group navigation/list is insufficient. Signal-only
-    # publication also requires the page's own title/site name to identify it.
-    branding = legal_name(page.title + " " + page.meta.get("og:site_name", ""))
-    own_brand = bool(name and re.search(r"(?<!\w)" + re.escape(name) + r"(?!\w)", branding))
-    high = points >= 5 and "legal_name" in signals and own_brand and len(signals) >= 2 and bool(set(signals) & {"address", "phone", "leader"}) and origin == "registry_website"
-    if high:
-        return Proof('HIGH','signals',signals,points,reason='corroboration',token=name)
+    # Heuristic scores are useful for diagnostics. A published HIGH result
+    # needs one of the reconstructible publisher receipts below.
     from .publisher_identity import declared_receipt, DECLARED
     if receipt := declared_receipt(page, org, context):
         return Proof('HIGH', DECLARED, ['publisher_full_legal_name','registry_declared_domain'],
@@ -376,4 +369,4 @@ def score(page, org, context, origin, leaders):
         # their shared phone alone was insufficient. Require two signal types.
         if len(declared)>=2:
             return Proof('REGISTRY_DECLARED','registry_declared_live',declared,2*len(declared),reason='registry_and_live_corroboration',token=proof_token)
-    return Proof("HIGH" if high else "MEDIUM" if points >= 3 else "LOW", "signals", signals, points, reason="corroboration", token=name)
+    return Proof("MEDIUM" if points >= 3 else "LOW", "signals", signals, points, reason="corroboration", token=name)

@@ -178,7 +178,9 @@ def test_optional_pass2_cuts_inflight_website_work_and_leaves_exact_id_running(t
         await cancelled.wait()
         event = budget.reserve('https://api.gleif.org/api/v1/lei-records', 'api.gleif.org', OUR)
         event.update(section='gleif', status=404)
-        exact_progress.append((event['pass'], time.monotonic() >= budget.pass2_cutoff))
+        # asyncio may dispatch a timer early within the loop clock resolution.
+        # The cancellation handshake establishes the order of these events.
+        exact_progress.append((event['pass'], budget.website_deadline == budget.deadline))
 
     monkeypatch.setattr(adaptive, 'run', timed)
     monkeypatch.setattr(collector, 'fetch', hold_website)

@@ -225,12 +225,14 @@ def test_dns_pin_and_public_suffix(monkeypatch):
     assert asyncio.run(backend.connect_tcp("example.no", 443)) == "stream"
 
 
-def test_high_needs_registry_and_strong_signal():
-    page = Page(html("Example gate 1, 0001 OSLO").encode(), "https://example.no/")
+def test_high_requires_reconstructible_registry_and_publisher_proof():
+    url = "https://example.no/"
+    page = Page(html("Example gate 1, 0001 OSLO", title="Example AS").encode(), url)
     ctx = {"name": "Example AS", "street": ["Example gate 1"], "municipality": "OSLO"}
-    assert score(page, OUR, ctx, "registry_website", []).level == "HIGH"
     assert score(page, OUR, ctx, "legal_name_slug", []).level != "HIGH"
-    assert score(Page(html("OSLO").encode(), "https://example.no/"), OUR, ctx, "registry_website", []).level != "HIGH"
+    assert score(page, OUR, ctx, "registry_website", []).level != "HIGH"
+    proof = score(page, OUR, {**ctx, "website": url, "candidate_url": url}, "registry_website", [])
+    assert proof.level == "HIGH" and proof.publisher_receipt
 
 
 def test_body_cap_and_company_cap(tmp_path, monkeypatch):

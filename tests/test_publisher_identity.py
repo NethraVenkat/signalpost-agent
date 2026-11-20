@@ -1,3 +1,7 @@
+import hashlib
+from pathlib import Path
+from types import SimpleNamespace
+
 import pytest
 from signalpost.web.candidates import Candidate
 from signalpost.web.collector import candidate_proof
@@ -6,6 +10,57 @@ from signalpost.web.publisher_identity import declared_receipt, name_fragment, D
 
 ORG = '923609016'
 FILL = 'Ordinary information about business services. ' * 12
+
+
+@pytest.mark.parametrize(('org', 'digest', 'publisher', 'context', 'tier'), [
+    ('989087126', '1f664cdb8c82a8e231b8ed1f941e14d802a621426a82db6d917ab7012a2e022c',
+     '<title>Forside - Areto Revisjon AS Statsautorisert Revisor</title>\n'
+     '<span class="elementor-icon-list-text">post@aretorevisjon.no</span>',
+     {'name': 'ARETO REVISJON AS', 'website': 'www.aretorevisjon.no', 'email': 'post@aretorevisjon.no',
+      'street': 'Gravdalsveien 4', 'postcode': '5165', 'city': 'Laksevåg'}, DECLARED),
+    ('975978729', '38bb4139565f130ad1f19909dcf7512f17619ac992d45935048859e946192643',
+     '<title>Kistefos møbler - Kjøkken og kvalitetsmøbler - Kistefos Møbler</title>\n'
+     '<link rel="canonical" href="https://kistefosmobler.no/" />',
+     {'name': 'KISTEFOS MØBLER AS', 'website': 'www.kistefosmobler.no', 'email': 'post@kistefosmobler.no',
+      'street': 'Rosteinvegen 6', 'postcode': '2870', 'city': 'Dokka', 'phone': '61 11 29 30'},
+     'registry_declared_live'),
+])
+def test_saved_legacy_sites_publish_reconstructible_owner_receipts(org, digest, publisher, context, tier):
+    from signalpost.runner import placeholder
+    from signalpost.sources.extract import Section
+    from signalpost.sources.http import Response
+    from signalpost.web.collector import publish_result
+    from signalpost.web.policy import domain, normalize_url
+
+    archived = Path(__file__).resolve().parents[1] / 'out/r5-gap-trial-live/state/blobs' / digest
+    if archived.is_file():
+        body = archived.read_bytes()
+        assert hashlib.sha256(body).hexdigest() == digest
+        assert all(line.encode() in body for line in publisher.splitlines())
+    else:
+        # Recreate only the public receipt excerpts for a clean checkout.
+        body = f'<html>{publisher}<main>{FILL}</main></html>'.encode()
+    nominated = normalize_url(context['website'])
+    url = nominated if org == '989087126' else 'https://kistefosmobler.no/'
+    original = Page(body, url)
+    candidate = Candidate(nominated, domain(nominated), 'registry_website')
+    proof = candidate_proof(original, org, context, candidate, [])
+    assert proof.level == 'HIGH' and proof.proof_type == tier
+
+    now = '2026-11-20T00:00:00Z'
+    response = Response(body, 200, url, now, hashlib.sha256(body).hexdigest())
+    envelope = placeholder(org, 'publisher-receipt', now, ('website',))
+    http = SimpleNamespace(accepted_pages={}, attempts={})
+    section = publish_result(org, envelope, http, Section(),
+                             [(candidate, proof, response, original, [(response, original)])], [], context)
+    website = next(c for c in section.claims if c.field == 'official_website')
+    assert website.value['publisher_identity']['proof_page_url'] == url
+    assert website.value['final_url'] == url.rstrip('/')
+    if org == '989087126':
+        contact = next(c for c in section.claims if c.field.startswith('contact.email.'))
+        assert contact.value == context['email']
+        evidence = next(e for e in section.evidence if e.id in contact.evidence_ids)
+        assert contact.value in evidence.claim_span and evidence.claim_span in original.raw
 
 
 def page(markup, url='https://example.no/'):
