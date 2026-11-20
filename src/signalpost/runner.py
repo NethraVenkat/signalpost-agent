@@ -111,7 +111,7 @@ def finalize(envelope, old, blobs, budget, began, verify_identity=False):
     envelope.operations.requests = len(events)
     for family, module in envelope.modules.items():
         hints = {"identity": "/api/enheter/", "roles": "/roller", "subunits": "/underenheter?", "accounts": "/regnskapsregisteret/", "signature": "/signatur", "prokura": "/prokura", "group": "/konsernstruktur/"}
-        matching = [e for e in events if e.get('section')==family] if family in {'gleif','procurement',*OFFICIAL_FAMILIES} else [] if family in {'hiring','activity'} else [e for e in events if e.get("section") == "website"] if family == "website" else [e for e in events if hints[family] in e["url"] and (family != "identity" or not e["url"].endswith("/roller"))]
+        matching = [e for e in events if e.get('section')==family] if family in {'gleif','procurement','status_events',*OFFICIAL_FAMILIES} else [] if family in {'hiring','activity'} else [e for e in events if e.get("section") == "website"] if family == "website" else [e for e in events if hints[family] in e["url"] and (family != "identity" or not e["url"].endswith("/roller"))]
         module.retry_count = max(0, len(matching) - len({e["url"] for e in matching}))
     envelope.profile = CompactProfile(organisation_number=envelope.organisation_number,
                                       values={c.field: c.value for c in envelope.claims},
@@ -188,7 +188,7 @@ async def _run(config, client=None,synthesis_provider=None):
         # warning, never falsely claim the supplied batch was processed.
         inputs = Inputs([], [], [], 0)
         warnings.append(f"input unreadable: {type(exc).__name__}")
-    families = FAMILIES + (brreg_corporate.FAMILIES if config.corporate_registry else ()) + (("website",) if config.websites else ()) + (('hiring',) if config.hiring else ()) + (('activity',) if config.public_activity or config.registry_changes else ()) + (('gleif',) if config.gleif else ()) + (('procurement',) if config.procurement else ()) + tuple(official_families(config))
+    families = FAMILIES + (brreg_corporate.FAMILIES if config.corporate_registry else ()) + (("website",) if config.websites else ()) + (('hiring',) if config.hiring else ()) + (('activity',) if config.public_activity or config.registry_changes else ()) + (('status_events',) if config.registry_changes else ()) + (('gleif',) if config.gleif else ()) + (('procurement',) if config.procurement else ()) + tuple(official_families(config))
     envelopes = {org: placeholder(org, config.run_id, started, families) for org in inputs.unique}
     for org in inputs.invalid:
         for family in families:
@@ -538,12 +538,17 @@ async def _run(config, client=None,synthesis_provider=None):
                             if envelopes[org].run.sections.get('identity') == 'available'}
                 async def registry_activity():
                     sections = await registry_changes.fetch_batch(eligible, http, blobs, started)
+                    from .sources import status_events
+                    status_cache = {}
                     for org, section in sections.items():
+                        status = await offload(status_events.from_activity, org, section, blobs, status_cache)
+                        update(envelopes[org], 'status_events', status)
                         update(envelopes[org], 'activity', registry_changes.merge(envelopes[org], section, config.public_activity))
                 task = asyncio.create_task(registry_activity())
                 unfinished, _ = await finish_before_deadline([task], budget, CANCEL_GRACE_SECONDS)
                 if unfinished or task.cancelled() or (task.done() and task.exception() is not None):
                     for org in eligible:
+                        update(envelopes[org], 'status_events', missing('status_events', 'status_event_upstream_incomplete'))
                         update(envelopes[org], 'activity', registry_changes.merge(
                             envelopes[org], missing('activity', 'registry_change_incomplete'), config.public_activity))
             if config.websites and config.adaptive_websites:

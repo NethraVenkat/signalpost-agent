@@ -27,7 +27,7 @@ from . import state_aid_bulk
 METHOD = 'signalpost.exact_official.v1'
 FAMILIES = ('state_aid', 'research', 'licences', 'inspections')
 # Site grouping and labels for each family.
-SITE_GROUP = {'signature': 'people', 'prokura': 'people', 'group': 'what-it-does', 'state_aid': 'activity', 'research': 'activity', 'licences': 'what-it-does', 'inspections': 'activity'}
+SITE_GROUP = {'status_events': 'activity','signature': 'people', 'prokura': 'people', 'group': 'what-it-does', 'state_aid': 'activity', 'research': 'activity', 'licences': 'what-it-does', 'inspections': 'activity'}
 LABELS = {'state_aid.award.': 'State aid award', 'research.project.': 'Research or innovation project',
           'licences.': 'Finanstilsynet licence/registration',
           'inspections.inspection.': 'Food safety inspection (Mattilsynet)'}

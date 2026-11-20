@@ -8,14 +8,14 @@ def newly_supported_field(field):
     from ..sources.registry_fields import EXTRA,GROUPS,ADDITIONAL
     from ..sources.regnskap import PATHS
     legacy={'revenue','operating_result','result_before_tax','net_result','equity','total_assets','total_liabilities'}
-    return (field.startswith(('signature.', 'prokura.', 'group.', 'roles.detail.','subunits.detail.','identity.location.','accounts.history.','accounts.filed_year')) or
+    return (field.startswith(('status_events.', 'signature.', 'prokura.', 'group.', 'roles.detail.','subunits.detail.','identity.location.','accounts.history.','accounts.filed_year')) or
             field in {'identity.'+k for k in (*EXTRA,*GROUPS,*ADDITIONAL,'founding_date','vat_registration_date')} or
             field in {'accounts.'+k for k in PATHS.keys()-legacy})
 
 
 def meaning(claim):
     if claim is None or claim.availability!='available': return None
-    if claim.field.startswith('registry_change.') and isinstance(claim.value,dict):
+    if claim.field.startswith(('registry_change.', 'status_events.')) and isinstance(claim.value,dict):
         # Publisher timezone/precision presentation is not a changed event.
         # Preserve original source text/evidence; normalize only comparison.
         from datetime import datetime,timezone

@@ -1,0 +1,161 @@
+{
+  "scope": "Saved real final500e header/status-field projections only; original hashes/locators retained for provenance, fixture is not a byte-identical publisher response",
+  "items": [
+    {
+      "event": {
+        "organisasjonsnummer": "934344057",
+        "oppdateringsid": 25451190,
+        "dato": "2026-11-11T23:21:07.434Z",
+        "endringstype": "Endring",
+        "endringer": []
+      },
+      "original_source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=933887448%2C933903516%2C934224396%2C934224965%2C934231562%2C934344057%2C934353854%2C934399196%2C934438388%2C934557417%2C934583523%2C934669789%2C934750993%2C934825403%2C934967577%2C934988582%2C935075378%2C935082935%2C935104637%2C935107865&dato=2023-11-20T01%3A26%3A40.420Z&updatedBefore=2026-11-20T01%3A26%3A40.420Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+      "original_response_sha256": "4f1c17133ac13359810b5516b5e719ed2bb6c0a04ded9663307a8ff7a3356365",
+      "retrieved_at": "2026-11-20T01:47:32.890077Z",
+      "original_locator": "/_embedded/oppdaterteEnheter/168"
+    },
+    {
+      "event": {
+        "organisasjonsnummer": "934344057",
+        "oppdateringsid": 25323951,
+        "dato": "2026-10-12T22:31:38.614Z",
+        "endringstype": "Endring",
+        "endringer": []
+      },
+      "original_source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=933887448%2C933903516%2C934224396%2C934224965%2C934231562%2C934344057%2C934353854%2C934399196%2C934438388%2C934557417%2C934583523%2C934669789%2C934750993%2C934825403%2C934967577%2C934988582%2C935075378%2C935082935%2C935104637%2C935107865&dato=2023-11-20T01%3A26%3A40.420Z&updatedBefore=2026-11-20T01%3A26%3A40.420Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+      "original_response_sha256": "4f1c17133ac13359810b5516b5e719ed2bb6c0a04ded9663307a8ff7a3356365",
+      "retrieved_at": "2026-11-20T01:47:32.890077Z",
+      "original_locator": "/_embedded/oppdaterteEnheter/165"
+    },
+    {
+      "event": {
+        "organisasjonsnummer": "934344057",
+        "oppdateringsid": 25007419,
+        "dato": "2026-08-03T18:08:27.601Z",
+        "endringstype": "Endring",
+        "endringer": []
+      },
+      "original_source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=933887448%2C933903516%2C934224396%2C934224965%2C934231562%2C934344057%2C934353854%2C934399196%2C934438388%2C934557417%2C934583523%2C934669789%2C934750993%2C934825403%2C934967577%2C934988582%2C935075378%2C935082935%2C935104637%2C935107865&dato=2023-11-20T01%3A26%3A40.420Z&updatedBefore=2026-11-20T01%3A26%3A40.420Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+      "original_response_sha256": "4f1c17133ac13359810b5516b5e719ed2bb6c0a04ded9663307a8ff7a3356365",
+      "retrieved_at": "2026-11-20T01:47:32.890077Z",
+      "original_locator": "/_embedded/oppdaterteEnheter/159"
+    },
+    {
+      "event": {
+        "organisasjonsnummer": "934344057",
+        "oppdateringsid": 24843014,
+        "dato": "2026-07-14T22:05:42.536Z",
+        "endringstype": "Endring",
+        "endringer": []
+      },
+      "original_source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=933887448%2C933903516%2C934224396%2C934224965%2C934231562%2C934344057%2C934353854%2C934399196%2C934438388%2C934557417%2C934583523%2C934669789%2C934750993%2C934825403%2C934967577%2C934988582%2C935075378%2C935082935%2C935104637%2C935107865&dato=2023-11-20T01%3A26%3A40.420Z&updatedBefore=2026-11-20T01%3A26%3A40.420Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+      "original_response_sha256": "4f1c17133ac13359810b5516b5e719ed2bb6c0a04ded9663307a8ff7a3356365",
+      "retrieved_at": "2026-11-20T01:47:32.890077Z",
+      "original_locator": "/_embedded/oppdaterteEnheter/151"
+    },
+    {
+      "event": {
+        "organisasjonsnummer": "934344057",
+        "oppdateringsid": 24591592,
+        "dato": "2026-06-11T22:07:40.750Z",
+        "endringstype": "Endring",
+        "endringer": []
+      },
+      "original_source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=933887448%2C933903516%2C934224396%2C934224965%2C934231562%2C934344057%2C934353854%2C934399196%2C934438388%2C934557417%2C934583523%2C934669789%2C934750993%2C934825403%2C934967577%2C934988582%2C935075378%2C935082935%2C935104637%2C935107865&dato=2023-11-20T01%3A26%3A40.420Z&updatedBefore=2026-11-20T01%3A26%3A40.420Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+      "original_response_sha256": "4f1c17133ac13359810b5516b5e719ed2bb6c0a04ded9663307a8ff7a3356365",
+      "retrieved_at": "2026-11-20T01:47:32.890077Z",
+      "original_locator": "/_embedded/oppdaterteEnheter/140"
+    },
+    {
+      "event": {
+        "organisasjonsnummer": "934344057",
+        "oppdateringsid": 24123800,
+        "dato": "2026-04-13T22:08:49.579Z",
+        "endringstype": "Endring",
+        "endringer": []
+      },
+      "original_source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=933887448%2C933903516%2C934224396%2C934224965%2C934231562%2C934344057%2C934353854%2C934399196%2C934438388%2C934557417%2C934583523%2C934669789%2C934750993%2C934825403%2C934967577%2C934988582%2C935075378%2C935082935%2C935104637%2C935107865&dato=2023-11-20T01%3A26%3A40.420Z&updatedBefore=2026-11-20T01%3A26%3A40.420Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+      "original_response_sha256": "4f1c17133ac13359810b5516b5e719ed2bb6c0a04ded9663307a8ff7a3356365",
+      "retrieved_at": "2026-11-20T01:47:32.890077Z",
+      "original_locator": "/_embedded/oppdaterteEnheter/127"
+    },
+    {
+      "event": {
+        "organisasjonsnummer": "934344057",
+        "oppdateringsid": 23983822,
+        "dato": "2026-03-11T23:25:49.161Z",
+        "endringstype": "Endring",
+        "endringer": []
+      },
+      "original_source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=933887448%2C933903516%2C934224396%2C934224965%2C934231562%2C934344057%2C934353854%2C934399196%2C934438388%2C934557417%2C934583523%2C934669789%2C934750993%2C934825403%2C934967577%2C934988582%2C935075378%2C935082935%2C935104637%2C935107865&dato=2023-11-20T01%3A26%3A40.420Z&updatedBefore=2026-11-20T01%3A26%3A40.420Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+      "original_response_sha256": "4f1c17133ac13359810b5516b5e719ed2bb6c0a04ded9663307a8ff7a3356365",
+      "retrieved_at": "2026-11-20T01:47:32.890077Z",
+      "original_locator": "/_embedded/oppdaterteEnheter/125"
+    },
+    {
+      "event": {
+        "organisasjonsnummer": "934344057",
+        "oppdateringsid": 23604256,
+        "dato": "2026-01-12T23:47:52.826Z",
+        "endringstype": "Endring",
+        "endringer": []
+      },
+      "original_source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=933887448%2C933903516%2C934224396%2C934224965%2C934231562%2C934344057%2C934353854%2C934399196%2C934438388%2C934557417%2C934583523%2C934669789%2C934750993%2C934825403%2C934967577%2C934988582%2C935075378%2C935082935%2C935104637%2C935107865&dato=2023-11-20T01%3A26%3A40.420Z&updatedBefore=2026-11-20T01%3A26%3A40.420Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+      "original_response_sha256": "4f1c17133ac13359810b5516b5e719ed2bb6c0a04ded9663307a8ff7a3356365",
+      "retrieved_at": "2026-11-20T01:47:32.890077Z",
+      "original_locator": "/_embedded/oppdaterteEnheter/117"
+    },
+    {
+      "event": {
+        "organisasjonsnummer": "934344057",
+        "oppdateringsid": 22938577,
+        "dato": "2025-11-13T10:20:06.252Z",
+        "endringstype": "Ukjent",
+        "endringer": []
+      },
+      "original_source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=933887448%2C933903516%2C934224396%2C934224965%2C934231562%2C934344057%2C934353854%2C934399196%2C934438388%2C934557417%2C934583523%2C934669789%2C934750993%2C934825403%2C934967577%2C934988582%2C935075378%2C935082935%2C935104637%2C935107865&dato=2023-11-20T01%3A26%3A40.420Z&updatedBefore=2026-11-20T01%3A26%3A40.420Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+      "original_response_sha256": "4f1c17133ac13359810b5516b5e719ed2bb6c0a04ded9663307a8ff7a3356365",
+      "retrieved_at": "2026-11-20T01:47:32.890077Z",
+      "original_locator": "/_embedded/oppdaterteEnheter/100"
+    },
+    {
+      "event": {
+        "organisasjonsnummer": "934344057",
+        "oppdateringsid": 22033085,
+        "dato": "2025-09-13T15:16:44.580Z",
+        "endringstype": "Endring",
+        "endringer": []
+      },
+      "original_source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=933887448%2C933903516%2C934224396%2C934224965%2C934231562%2C934344057%2C934353854%2C934399196%2C934438388%2C934557417%2C934583523%2C934669789%2C934750993%2C934825403%2C934967577%2C934988582%2C935075378%2C935082935%2C935104637%2C935107865&dato=2023-11-20T01%3A26%3A40.420Z&updatedBefore=2026-11-20T01%3A26%3A40.420Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+      "original_response_sha256": "4f1c17133ac13359810b5516b5e719ed2bb6c0a04ded9663307a8ff7a3356365",
+      "retrieved_at": "2026-11-20T01:47:32.890077Z",
+      "original_locator": "/_embedded/oppdaterteEnheter/83"
+    },
+    {
+      "event": {
+        "organisasjonsnummer": "934344057",
+        "oppdateringsid": 21865492,
+        "dato": "2025-07-24T18:05:58.697Z",
+        "endringstype": "Endring",
+        "endringer": []
+      },
+      "original_source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=933887448%2C933903516%2C934224396%2C934224965%2C934231562%2C934344057%2C934353854%2C934399196%2C934438388%2C934557417%2C934583523%2C934669789%2C934750993%2C934825403%2C934967577%2C934988582%2C935075378%2C935082935%2C935104637%2C935107865&dato=2023-11-20T01%3A26%3A40.420Z&updatedBefore=2026-11-20T01%3A26%3A40.420Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+      "original_response_sha256": "4f1c17133ac13359810b5516b5e719ed2bb6c0a04ded9663307a8ff7a3356365",
+      "retrieved_at": "2026-11-20T01:47:32.890077Z",
+      "original_locator": "/_embedded/oppdaterteEnheter/75"
+    },
+    {
+      "event": {
+        "organisasjonsnummer": "934344057",
+        "oppdateringsid": 21565019,
+        "dato": "2025-06-11T22:15:14.042Z",
+        "endringstype": "Endring",
+        "endringer": []
+      },
+      "original_source_url": "https://data.brreg.no/enhetsregisteret/api/oppdateringer/enheter?organisasjonsnummer=933887448%2C933903516%2C934224396%2C934224965%2C934231562%2C934344057%2C934353854%2C934399196%2C934438388%2C934557417%2C934583523%2C934669789%2C934750993%2C934825403%2C934967577%2C934988582%2C935075378%2C935082935%2C935104637%2C935107865&dato=2023-11-20T01%3A26%3A40.420Z&updatedBefore=2026-11-20T01%3A26%3A40.420Z&includeChanges=true&size=1000&sort=id%2CASC&page=0",
+      "original_response_sha256": "4f1c17133ac13359810b5516b5e719ed2bb6c0a04ded9663307a8ff7a3356365",
+      "retrieved_at": "2026-11-20T01:47:32.890077Z",
+      "original_locator": "/_embedded/oppdaterteEnheter/65"
+    }
+  ]
+}

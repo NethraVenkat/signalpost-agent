@@ -446,6 +446,8 @@ def verify(first, state_dir, count, organisations=None, report=None, require_cle
         verify_careers(row,data,evidence,stored_body)
         exact_public+=verify_exact_public(row,data,evidence,stored_body)
         exact_official+=verify_exact_official(row,data,evidence,stored_body)
+        from signalpost.sources.status_events import verify as verify_status_events
+        verify_status_events(row['organisation_number'],data,evidence,stored_body)
         from signalpost.sources.brreg_corporate import verify as verify_corporate
         verify_corporate(row['organisation_number'],data,evidence,stored_body)
         from signalpost.public_names import verify as verify_public_names

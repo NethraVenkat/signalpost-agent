@@ -1,0 +1,54 @@
+........................................................................ [  4%]
+........................................................................ [  9%]
+........................................................................ [ 14%]
+........................................................................ [ 19%]
+........................................................................ [ 24%]
+........................................................................ [ 29%]
+........................................................................ [ 33%]
+........................................................................ [ 38%]
+........................................................................ [ 43%]
+........................................................................ [ 48%]
+........................................................................ [ 53%]
+........................................................................ [ 58%]
+........................................................................ [ 62%]
+........................................................................ [ 67%]
+........................................................................ [ 72%]
+........................................................................ [ 77%]
+...................F.................................................... [ 82%]
+........................................................................ [ 87%]
+........................................................................ [ 91%]
+........................................................................ [ 96%]
+.................................................                        [100%]
+================================== FAILURES ===================================
+_ test_refresh_equivalent_publisher_timestamp_has_zero_events_with_exact_receipts _
+
+tmp_path = WindowsPath('<REPO>/out/status-events-full-tests/test_refresh_equivalent_publis0')
+
+    def test_refresh_equivalent_publisher_timestamp_has_zero_events_with_exact_receipts(tmp_path):
+        import httpx
+        from tests.test_registry import config,execute,handler
+        from tests.test_registry_changes import event
+        from scripts.verify_output import verify
+        def source(date):
+            def dispatch(request):
+                if '/oppdateringer/' in request.url.path:
+                    sub=request.url.path.endswith('/underenheter')
+                    records=[] if sub else [event(dato=date)]
+                    return httpx.Response(200,json={'page':{'number':0,'size':1000,'totalElements':len(records),'totalPages':1 if records else 0},
+                        '_embedded':{'oppdaterteUnderenheter' if sub else 'oppdaterteEnheter':records}})
+                return handler()(request)
+            return dispatch
+        first=config(tmp_path/'first',['923609016'],registry_changes=True)
+        _,before=execute(first,source('2025-06-12T00:15:38.309+02:00'))
+        second=config(tmp_path/'second',['923609016'],registry_changes=True,previous=first.output)
+        report,after=execute(second,source('2025-06-11T22:15:38.309000Z'))
+        a=next(c for c in before[0]['claims'] if c['field'].startswith('registry_change.'))
+        b=next(c for c in after[0]['claims'] if c['field'].startswith('registry_change.'))
+        assert a['value']['date']!=b['value']['date'] and a['evidence_ids']!=b['evidence_ids']
+>       assert report['changes']==report['observation_changes']==0
+E       assert 0 == 1
+
+tests\test_refresh_proof_harness.py:87: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_refresh_proof_harness.py::test_refresh_equivalent_publisher_timestamp_has_zero_events_with_exact_receipts
+1 failed, 1488 passed in 917.57s (0:15:17)
