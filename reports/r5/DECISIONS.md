@@ -965,3 +965,4 @@
 - DataNorge classifies Konkursregisteret as Non-public access.
 - Brreg's free daily/weekly announcement subscription delivers email links. Its separate XML feed requires a signed agreement, registered subscription and SFTP account; the fee depends on selected announcement types.
 - The XML subscription route is documented but was not used and is out of scope for this run.
+- Official Aquaculture Register preflight passed with robots HTTP 404; the exact-orgnr count-only probe matched 0 of the 500 cohort companies, so it was not integrated.

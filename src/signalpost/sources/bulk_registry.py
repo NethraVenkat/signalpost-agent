@@ -88,6 +88,11 @@ def load(path: Path, wanted: set[str], blobs, budget):
 
 def extract(org, row, source):
     section = Section()
+    number, actual_number = column(row, 'organisasjonsnummer')
+    if str(number) != org:
+        raise SourceFailure('wrong_company', 'Bulk registry identity differs from requested orgnr')
+    add(section, source, org, 'identity', 'identity.organisation_number', org,
+        f'row:{org}/column:{actual_number}')
     for name, col in [('founding_date', 'stiftelsesdato'), ('vat_registration_date', 'registreringsdatoMerverdiavgiftsregisteret')]:
         value, actual = column(row, col)
         if value:

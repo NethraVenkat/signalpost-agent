@@ -72,7 +72,9 @@ def test_large_profile_defers_only_duplicate_explorer_rows_under_same_gate(tmp_p
     # table. Vary only that existing table's initial row count.
     def large(row,title,explorer_rows=site.EXPLORER_VISIBLE_ROWS,**kwargs):
         rendered=original(row,title,explorer_rows,**kwargs)
-        return rendered+' '*(210000)+(' '*(explorer_rows*600))
+        # Leave room for the explicit registry identity claim now rendered in
+        # each envelope while still forcing the same progressive overflow path.
+        return rendered+' '*(209000)+(' '*(explorer_rows*600))
     monkeypatch.setattr(site,'profile',large)
     before=cfg.output.read_bytes()
     metrics=site.generate_site(cfg.output,tmp_path/'deferred')

@@ -1,0 +1,68 @@
+{
+  "scope": "Offline claims derived from saved exact-orgnr Enhetsregisteret subunit responses",
+  "companies": 500,
+  "companies_with_new_identity_claim": 500,
+  "companies_with_new_parent_claim": 401,
+  "new_identity_claims": 500,
+  "new_parent_claims": 424,
+  "new_claims": 924,
+  "median_new_claims_all_companies": 2.0,
+  "median_new_claims_affected_companies": 2.0,
+  "additional_http_requests": 0,
+  "network_disabled": true,
+  "saved_response_blobs_checked": 1000,
+  "before_top_five": [
+    {
+      "orgnr": "964389020",
+      "bytes": 234853
+    },
+    {
+      "orgnr": "981400224",
+      "bytes": 234653
+    },
+    {
+      "orgnr": "991095500",
+      "bytes": 233610
+    },
+    {
+      "orgnr": "985335699",
+      "bytes": 233202
+    },
+    {
+      "orgnr": "913939964",
+      "bytes": 232929
+    }
+  ],
+  "after_top_five": [
+    {
+      "orgnr": "981400224",
+      "bytes": 234179
+    },
+    {
+      "orgnr": "991095500",
+      "bytes": 234172
+    },
+    {
+      "orgnr": "964389020",
+      "bytes": 233893
+    },
+    {
+      "orgnr": "985335699",
+      "bytes": 233764
+    },
+    {
+      "orgnr": "913939964",
+      "bytes": 233491
+    }
+  ],
+  "largest_profile_bytes": 234179,
+  "site": {
+    "companies": 500,
+    "input_records": 500,
+    "pages": 502,
+    "skipped_invalid_identifiers": 0,
+    "total_bytes": 216887894,
+    "largest_profile_data_bytes": 1095209,
+    "largest_profile_bytes": 234179
+  }
+}

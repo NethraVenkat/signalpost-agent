@@ -34,7 +34,8 @@ def extract_page(org,response,section,page):
         if error:return error
         items=data.get('_embedded',{}).get('underenheter',[])
         for item in items:
-            if str(item.get('overordnetEnhet'))!=org:raise SourceFailure('wrong_company','Subunit parent differs from requested company')
+            if not isinstance(item.get('overordnetEnhet'),str) or item.get('overordnetEnhet')!=org:
+                raise SourceFailure('wrong_company','Subunit parent differs from requested company')
         normalized = [{"organisation_number": item.get("organisasjonsnummer"), "name": item.get("navn"),
                        "address": item.get("beliggenhetsadresse") or item.get("postadresse"),
                        "nace": item.get("naeringskode1"),
@@ -55,6 +56,13 @@ def extract_page(org,response,section,page):
                          kind, raw.get(field), f'/_embedded/underenheter/{index}/{field}', unit=key)
             publish_additional(section, response_source(response), org, 'subunits', f'subunits.detail.{key}.',
                                raw, SUBUNIT_ADDITIONAL, f'/_embedded/underenheter/{index}')
+            # The parent link is part of the exact subunit record. Keep it as a
+            # separate scalar claim instead of relying only on the search query
+            # or an embedded navigation URL to imply the relationship.
+            add(section, response_source(response), org, 'subunits',
+                f'subunits.detail.{key}.parent_organisation_number', raw['overordnetEnhet'],
+                f'/_embedded/underenheter/{index}/overordnetEnhet',
+                method='signalpost.registry_fields.v2')
             for name,field in DETAILS.items():
                 actual=next((k for k in raw if k.casefold()==field.casefold()),field)
                 value=raw.get(actual)

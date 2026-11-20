@@ -21,6 +21,9 @@ def test_reported_false_zero_and_absent_identity_fields(tmp_path):
     assert claims['identity.registered_capital'].value=={'belop':0,'valuta':'NOK'}
     assert 'identity.articles_date' not in claims
     assert next(e for e in s.evidence if e.id in claims['identity.registered_in_vat'].evidence_ids).locator=='/registrertIMvaRegisteret'
+    number=claims['identity.organisation_number']
+    assert number.value==ORG and number.evidence_ids
+    assert next(e for e in s.evidence if e.id in number.evidence_ids).locator=='/organisasjonsnummer'
 
 
 def test_subunit_and_role_details_preserve_core_records_and_locators(tmp_path):

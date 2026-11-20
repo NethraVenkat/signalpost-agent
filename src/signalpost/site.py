@@ -1211,7 +1211,7 @@ def generate_site(input_path, out, title='Signalpost', *, deadline=None):
         sizes[filename] = len(content.encode('utf8'))
     profile_sizes = [size for path, size in sizes.items() if path.startswith('c/') and path.endswith('.html')]
     if any(size > PROFILE_HTML_BUDGET for size in profile_sizes):
-        raise ValueError('Profile page exceeds the 235 KB target')
+        raise ValueError(f'Profile page exceeds the 235 KB target: largest is {max(profile_sizes)} bytes')
     if any(size > PROFILE_HTML_REGRESSION_LIMIT for size in profile_sizes):
         raise ValueError('Profile page exceeds the 240 KB regression limit')
     if any(size >= PROFILE_HTML_LIMIT for size in profile_sizes):

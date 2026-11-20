@@ -21,6 +21,7 @@ def extract(org, data, source):
     if str(data.get("organisasjonsnummer")) != org:
         raise SourceFailure("wrong_company", "Registry identity differs from requested orgnr")
     section = Section()
+    add(section, source, org, 'identity', 'identity.organisation_number', org, '/organisasjonsnummer')
     for field, key in [('founding_date', 'stiftelsesdato'), ('vat_registration_date', 'registreringsdatoMerverdiavgiftsregisteret')]:
         if data.get(key):
             add(section, source, org, 'identity', 'identity.' + field, data[key], '/' + key, effective=data[key])

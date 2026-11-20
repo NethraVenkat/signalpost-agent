@@ -6,6 +6,7 @@ from signalpost.sources import brreg_enhet, brreg_underenheter, bulk_registry
 from signalpost.sources.extract import Section, Source
 from signalpost.sources.registry_fields import ADDITIONAL, SUBUNIT_ADDITIONAL
 from signalpost.models.evidence import utc_now
+from signalpost.budget import SourceFailure
 from signalpost.site import fact
 from tests.test_registry_coverage import response
 from tests.test_nav import ORG, SUB
@@ -86,6 +87,30 @@ def test_csv_fields_match_json_and_preserve_leading_zero(tmp_path, name, spec):
     assert claim.availability == 'available' and claim.evidence_ids
 
 
+def test_organisation_number_is_a_claim_with_exact_csv_evidence(tmp_path):
+    import hashlib
+    row={'organisasjonsnummer':ORG,'navn':'Example AS'}
+    body=json.dumps(row).encode()
+    source=Source('https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv',body,
+        hashlib.sha256(body).hexdigest(),utc_now())
+    section=bulk_registry.extract(ORG,row,source)
+    claim=next(c for c in section.claims if c.field=='identity.organisation_number')
+    evidence=next(e for e in section.evidence if e.id in claim.evidence_ids)
+    assert claim.value==ORG
+    assert evidence.locator==f'row:{ORG}/column:organisasjonsnummer'
+    assert ORG in evidence.claim_span
+
+
+def test_wrong_csv_organisation_number_is_rejected(tmp_path):
+    import hashlib
+    row={'organisasjonsnummer':SUB,'navn':'Example AS'}
+    body=json.dumps(row).encode()
+    source=Source('https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv',body,
+        hashlib.sha256(body).hexdigest(),utc_now())
+    with pytest.raises(SourceFailure):
+        bulk_registry.extract(ORG,row,source)
+
+
 def test_subunit_addresses_are_distinct_and_no_nace_fallback(tmp_path):
     section = extract(tmp_path, 'subunits', {'beliggenhetsadresse': {'poststed': 'Physical'},
         'postadresse': {'poststed': 'Postal'}, 'naeringskode1': VALUES['naeringskode1'],
@@ -106,3 +131,37 @@ def test_refresh_new_fields_are_observations():
 def test_employee_zero_requires_reported_count_not_false_flag(tmp_path, reported, expected):
     section = extract(tmp_path, 'identity', {'antallAnsatte': 0, 'harRegistrertAntallAnsatte': reported})
     assert next(c for c in section.claims if c.field=='identity.employees').value == expected
+
+
+def test_subunit_parent_orgnr_is_its_own_exact_evidenced_claim(tmp_path):
+    r,_=response(tmp_path,{'_embedded':{'underenheter':[{'organisasjonsnummer':SUB,
+        'navn':'Example unit','overordnetEnhet':ORG}]}})
+    s=Section();brreg_underenheter.extract_page(ORG,r,s,0)
+    claim=next(c for c in s.claims if c.field==f'subunits.detail.{SUB}.parent_organisation_number')
+    assert claim.value==ORG and claim.availability=='available'
+    evidence=next(e for e in s.evidence if e.id in claim.evidence_ids)
+    assert evidence.locator=='/_embedded/underenheter/0/overordnetEnhet'
+    assert evidence.claim_span and ORG in evidence.claim_span
+    assert evidence.source_url==r.url and evidence.content_sha256==r.sha
+    assert evidence.retrieved_at.endswith('Z')
+
+
+@pytest.mark.parametrize('parent',[None,SUB])
+def test_subunit_parent_orgnr_missing_or_mismatched_abstains(tmp_path,parent):
+    r,_=response(tmp_path,{'_embedded':{'underenheter':[{'organisasjonsnummer':SUB,
+        'navn':'Example unit','overordnetEnhet':parent}]}})
+    s=Section()
+    with pytest.raises(SourceFailure):
+        brreg_underenheter.extract_page(ORG,r,s,0)
+    assert not any(c.field.endswith('.parent_organisation_number') for c in s.claims)
+
+
+def test_undocumented_sector_code_is_kept_raw_without_inferred_meaning(tmp_path):
+    r,_=response(tmp_path,{'organisasjonsnummer':ORG,'navn':'Example AS',
+        'institusjonellSektorkode':{'kode':'X999'}})
+    s=brreg_enhet.extract_response(ORG,r)
+    claim=next(c for c in s.claims if c.field=='identity.institutional_sector')
+    assert claim.value=={'kode':'X999'}
+    evidence=next(e for e in s.evidence if e.id in claim.evidence_ids)
+    assert 'X999' in evidence.claim_span
+    assert 'beskrivelse' not in claim.value
