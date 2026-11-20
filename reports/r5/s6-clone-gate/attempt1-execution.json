@@ -1,0 +1,30 @@
+{
+  "argv": [
+    "<REPO>\\.data\\r5-s6-clone-gate\\repo\\.venv\\Scripts\\python.exe",
+    "-m",
+    "signalpost.cli",
+    "run",
+    "--organisations",
+    "<REPO>\\reports\\r5\\s6-clone-gate\\companies500.jsonl",
+    "--bulk",
+    "<REPO>\\reports\\r5\\s6-clone-gate\\registry500.csv",
+    "--output",
+    "<REPO>\\.data\\r5-s6-clone-gate\\run\\envelopes.jsonl",
+    "--profiles-output",
+    "<REPO>\\.data\\r5-s6-clone-gate\\run\\profiles.jsonl",
+    "--report",
+    "<REPO>\\.data\\r5-s6-clone-gate\\run\\report.json",
+    "--run-id",
+    "r5-s6-clone-gate-20261126-s6b",
+    "--expected-count",
+    "500"
+  ],
+  "exit_code": 0,
+  "process_wall_seconds": 1902.8439999999828,
+  "margin_seconds": 197.15600000001723,
+  "stopped": null,
+  "fresh_state": true,
+  "flags": 7,
+  "code_commit": "81858364b02d5c1fa3e9ded456d071a4d7587352",
+  "work": "<REPO>\\.data\\r5-s6-clone-gate\\run"
+}

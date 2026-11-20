@@ -1,0 +1,6 @@
+{
+  "url": "https://spedify.no/robots.txt",
+  "status": 200,
+  "content": "User-agent: *\nDisallow: /_hcms/preview/\nDisallow: /hs/manage-preferences/\nDisallow: /hs/preferences-center/\nDisallow: /*?*hs_preview=*\nDisallow: /*?*hsCacheBuster=*\n\nSitemap: https://spedify.no/sitemap.xml\n\n",
+  "sha256": "a7fffabdcf6181b57aeb79a7278b3e4606de0278bf48d85125ad26d9294ccd2e"
+}
