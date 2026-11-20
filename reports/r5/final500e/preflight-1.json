@@ -1,0 +1,26 @@
+{
+  "attempt": 1,
+  "exit_code": 0,
+  "observations": [
+    {
+      "url": "https://data.brreg.no/enhetsregisteret/api/enheter/923609016",
+      "status": 200,
+      "bytes": 3050,
+      "sha256": "212cff575a4a0f19ac0d44d9748674d484867c722fb88ac6f5d6a99cd3a8f7aa"
+    },
+    {
+      "url": "https://pam-stilling-feed.nav.no/api/publicToken",
+      "status": 200,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "url": "https://spedify.no/robots.txt",
+      "status": 200,
+      "bytes": 207,
+      "sha256": "a7fffabdcf6181b57aeb79a7278b3e4606de0278bf48d85125ad26d9294ccd2e"
+    }
+  ],
+  "stderr": "",
+  "execution_scope": "normal network / production safe transport"
+}

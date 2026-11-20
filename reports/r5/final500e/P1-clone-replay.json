@@ -1,0 +1,179 @@
+{
+  "exit_code": 0,
+  "results": {
+    "seed": 2026112601,
+    "sampled": 200,
+    "correct": 200,
+    "incorrect": 0,
+    "unverifiable": 0,
+    "wilson_95_lower": 0.9811546736227333,
+    "per_type": {
+      "brand": {
+        "sampled": 9,
+        "correct": 9,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wilson_95_lower": 0.700854951580456
+      },
+      "consolidated_accounts": {
+        "sampled": 7,
+        "correct": 7,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wilson_95_lower": 0.6456695649333126
+      },
+      "entity_accounts": {
+        "sampled": 42,
+        "correct": 42,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wilson_95_lower": 0.916201209134296
+      },
+      "filing_years": {
+        "sampled": 16,
+        "correct": 16,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wilson_95_lower": 0.8063923194655636
+      },
+      "group_parent": {
+        "sampled": 1,
+        "correct": 1,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wilson_95_lower": 0.20654931437723742
+      },
+      "group_subsidiary": {
+        "sampled": 4,
+        "correct": 4,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wilson_95_lower": 0.5101091635454027
+      },
+      "identity": {
+        "sampled": 29,
+        "correct": 29,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wilson_95_lower": 0.8830302015002593
+      },
+      "inspections": {
+        "sampled": 1,
+        "correct": 1,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wilson_95_lower": 0.20654931437723742
+      },
+      "lei": {
+        "sampled": 2,
+        "correct": 2,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wilson_95_lower": 0.3423802275066531
+      },
+      "licences": {
+        "sampled": 1,
+        "correct": 1,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wilson_95_lower": 0.20654931437723742
+      },
+      "locations_subunits": {
+        "sampled": 15,
+        "correct": 15,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wilson_95_lower": 0.7961166989641514
+      },
+      "people_roles": {
+        "sampled": 19,
+        "correct": 19,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wilson_95_lower": 0.8318207759473837
+      },
+      "prokura_combination": {
+        "sampled": 1,
+        "correct": 1,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wilson_95_lower": 0.20654931437723742
+      },
+      "prokura_rule": {
+        "sampled": 1,
+        "correct": 1,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wilson_95_lower": 0.20654931437723742
+      },
+      "public_activity": {
+        "sampled": 20,
+        "correct": 20,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wilson_95_lower": 0.8388748419471806
+      },
+      "registry_website": {
+        "sampled": 1,
+        "correct": 1,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wilson_95_lower": 0.20654931437723742
+      },
+      "signature_combination": {
+        "sampled": 8,
+        "correct": 8,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wilson_95_lower": 0.6755924351161198
+      },
+      "signature_rule": {
+        "sampled": 4,
+        "correct": 4,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wilson_95_lower": 0.5101091635454027
+      },
+      "social": {
+        "sampled": 7,
+        "correct": 7,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wilson_95_lower": 0.6456695649333126
+      },
+      "state_aid": {
+        "sampled": 3,
+        "correct": 3,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wilson_95_lower": 0.4385029682449545
+      },
+      "website": {
+        "sampled": 7,
+        "correct": 7,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wilson_95_lower": 0.6456695649333126
+      },
+      "website_contact": {
+        "sampled": 1,
+        "correct": 1,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wilson_95_lower": 0.20654931437723742
+      },
+      "website_description": {
+        "sampled": 1,
+        "correct": 1,
+        "incorrect": 0,
+        "unverifiable": 0,
+        "wilson_95_lower": 0.20654931437723742
+      }
+    },
+    "network_disabled": true,
+    "interpretation": "Claim-specific original response hashes and verbatim spans plus production source replay. Structured values and display formatting use the same source validators as check_live_run; auxiliary identity CSVs are not value evidence. Unverifiable counts as not verified in the nominal Wilson bound. Disproportionate stratification means pooled Wilson describes this sample, not a population guarantee."
+  },
+  "network_disabled": true,
+  "local_run_directories_present": false,
+  "pytest_in_clone": false
+}

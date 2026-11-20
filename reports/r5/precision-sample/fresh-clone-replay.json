@@ -1,5 +1,14 @@
 {
-  "status": "withdrawn_previous_audit",
-  "historical_receipt": "trials/withdrawn-audit/fresh-clone-replay.json",
-  "current_checker_replay": "Pending fresh final500 clone"
+  "status": "passed_corrected_audit",
+  "commit": "40813fecdfc6536579d456a1622f260c3bf6044c",
+  "exit_code": 0,
+  "results": {
+    "correct": 200,
+    "incorrect": 0,
+    "unverifiable": 0
+  },
+  "network_disabled": true,
+  "pytest_in_clone": false,
+  "receipt": "../final500e/P1-clone-replay.json",
+  "historical_withdrawn_receipt": "trials/withdrawn-audit/fresh-clone-replay.json"
 }

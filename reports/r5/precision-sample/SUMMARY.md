@@ -49,3 +49,5 @@ Install runtime dependencies with `uv sync --frozen --no-dev`, then run `uv run 
 The packet retains original public response bytes so original hashes remain reproducible, including public business-role source fields; no credentials or local home paths. Attribution/licences remain in [SOURCES](../../../docs/SOURCES.md). [Frozen sample](sample.jsonl) | [Per-item results](results.jsonl) | [Aggregate/per-type results](results.json) | [Manifest](manifest.json).
 
 Regression/privacy gate: **12 passed in 10.73 seconds** (7 own-source ordering/tampering cases and 5 privacy checks). [Receipt](correction-tests.txt). Full pytest follows the final500 run, as requested.
+
+The clean final500 clone at `40813fe` independently reproduced the corrected 200/0/0 audit with network disabled, no local run directories and no pytest: [receipt](../final500e/P1-clone-replay.json). Full main-checkout pytest passed **1,471 tests in 976.77 seconds** after the 500 run.
