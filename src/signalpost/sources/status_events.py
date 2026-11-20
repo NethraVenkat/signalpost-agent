@@ -119,12 +119,12 @@ async def live_preflight(http,org):
  from .exact_public import PublicHttp
  probe=PublicHttp(http.client,http.config,http.budget,http.blobs,hosts={'data.brreg.no'},
                   sections={'data.brreg.no':FAMILY})
- from urllib.robotparser import RobotFileParser
+ from ..web.robots import RobotsPolicy
  try:response=await probe.raw('https://data.brreg.no/robots.txt',org)
  except SourceFailure as exc:raise SourceFailure('status_robots_unavailable') from exc
  # This counted, bounded robots exchange is also the network preflight.
  if 200<=response.status<300:
-  parser=RobotFileParser();parser.parse(response.body.decode('utf8',errors='replace').splitlines())
+  parser=RobotsPolicy.from_bytes(response.body)
   if not parser.can_fetch(http.config.website_user_agent,ENDPOINT):raise SourceFailure('status_robots_blocked')
   probe.robots['data.brreg.no']=parser
   probe.delays['data.brreg.no']=parser.crawl_delay(http.config.website_user_agent) or parser.crawl_delay('*') or 0

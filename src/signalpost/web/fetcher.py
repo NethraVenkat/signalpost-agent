@@ -4,13 +4,13 @@ from contextvars import ContextVar
 import time
 from dataclasses import dataclass, replace
 from urllib.parse import urlsplit, urljoin, urlunsplit
-from urllib.robotparser import RobotFileParser
 import httpx
 from ..budget import SourceFailure
 from ..models.evidence import utc_now
 from ..portable_paths import portable_text
 from ..sources.http import Response
 from . import policy
+from .robots import RobotsPolicy
 
 TRANSIENT = {'website_timeout', 'website_connect_error', 'website_http_5xx',
              'dns_timeout', 'dns_error', 'dns_unavailable'}
@@ -226,11 +226,10 @@ class WebsiteHttp:
         async with lock:
             if origin not in self.robots:
                 response = await self.raw(origin + "/robots.txt", org, domains)
-                parser = RobotFileParser(origin + "/robots.txt")
                 if response.status in (404, 410):
-                    parser.parse([])
+                    parser = RobotsPolicy(())
                 elif response.status == 200:
-                    await offload(parser.parse,response.body.decode("utf8",errors="replace").splitlines())
+                    parser = await offload(RobotsPolicy.from_bytes, response.body)
                 else:
                     if response.status >= 500:
                         raise SourceFailure('website_http_5xx')

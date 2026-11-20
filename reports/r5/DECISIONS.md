@@ -966,3 +966,11 @@
 - Brreg's free daily/weekly announcement subscription delivers email links. Its separate XML feed requires a signed agreement, registered subscription and SFTP account; the fee depends on selected announcement types.
 - The XML subscription route is documented but was not used and is out of scope for this run.
 - Official Aquaculture Register preflight passed with robots HTTP 404; the exact-orgnr count-only probe matched 0 of the 500 cohort companies, so it was not integrated.
+
+## Excluded routes for the coverage work
+
+- Brreg's legacy `w2.brreg.no/kunngjoring/` announcement paths are disallowed by robots.txt.
+- The DiBK `sgregister` API path is disallowed by robots.txt; an independently licensed and permitted distribution would need its own review.
+- Brave, Serper, Google Custom Search, Google Places, Tavily and TinyFish are outside the default seven-flag run because they require commercial access or credentials.
+- LLM generation and LLM judging are outside claim publication. Use exact-entity source records and extractive receipts.
+- GDELT, Bing RSS and Google News are excluded because syndicated and name-matched articles raise wrong-company attribution risk.

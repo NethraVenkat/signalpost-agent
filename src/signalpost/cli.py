@@ -95,6 +95,9 @@ def main():
         if report.get('run_status') in {'failed', 'aborted'}:
             print('signalpost run ' + report['run_status'] + ': ' + '; '.join(report['warnings']), file=sys.stderr)
             return 1
+        if report.get('successful_http_responses') == 0:
+            print('signalpost run failed the live connectivity check: zero successful HTTP responses', file=sys.stderr)
+            return 1
         return 0
     except Exception as exc:
         print(f"signalpost could not produce output: {type(exc).__name__}: {exc}", file=sys.stderr)

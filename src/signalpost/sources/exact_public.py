@@ -8,13 +8,13 @@ import re
 import time
 from datetime import date, datetime, timezone
 from urllib.parse import urlencode, urlsplit
-from urllib.robotparser import RobotFileParser
 from xml.etree import ElementTree as ET
 
 import httpx
 from ..budget import SourceFailure
 from ..models.evidence import utc_now, digest
 from ..workers import offload
+from ..web.robots import RobotsPolicy
 from .extract import Section, add, missing, response_source
 from .http import Response
 from .official_resilience import check_source,DNS_FAILURES,pause,retry_after
@@ -118,7 +118,7 @@ class PublicHttp:
                 raise SourceFailure('public_robots_unavailable', 'robots.txt unavailable: '+exc.code) from exc
             if 400<=r.status<500:self.robots[host]=None
             elif 200<=r.status<300:
-                parser=RobotFileParser();parser.parse(r.body.decode('utf8',errors='replace').splitlines());self.robots[host]=parser
+                parser=await offload(RobotsPolicy.from_bytes,r.body);self.robots[host]=parser
                 self.delays[host]=parser.crawl_delay(self.config.website_user_agent) or parser.crawl_delay('*') or 0
             else:
                 self.robots[host]=False

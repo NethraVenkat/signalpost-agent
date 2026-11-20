@@ -22,7 +22,7 @@ Every evidence record contains `id`, `source_url`, `source_class`, `retrieved_at
 
 `run.terminal_status` is `completed` or `failed`. Completion means processing reached a terminal result; section failures remain explicit. If every section failed, was blocked or remained ambiguous, the terminal status is `failed` and reference `state` cannot be `complete`. Invalid identifiers use `submission_error`. Other reference states are `complete`, `not_applicable`, `not_found`, `blocked_policy`, `blocked_robots`, `source_error` and `budget_exhausted`.
 
-The batch report separately exposes `run_status` (`completed`, `partial`, `failed`, `aborted`), `successful_http_responses`, `available_claims`, `counts_by_state`, warnings and budget limits. Failed/aborted batches exit non-zero. A report must not treat well-formed empty failure envelopes as successfully researched companies.
+The batch report separately exposes `run_status` (`completed`, `partial`, `failed`, `aborted`), `successful_http_responses`, `available_claims`, `counts_by_state`, warnings and budget limits. Failed and aborted batches exit nonzero. The `run` command also exits nonzero when the batch records zero successful HTTP responses, while preserving the report and any evidence-backed offline results. A partial batch with successful HTTP responses can exit zero. Inspect the section outcomes to assess coverage.
 
 Validation: `src/signalpost/models/shapes.py` checks schemas and evidence references. `scripts/verify_output.py` checks ordered membership, saved-body hashes, exact excerpts, company attribution, financial arithmetic and cited synthesis without network access.
 
