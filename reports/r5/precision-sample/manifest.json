@@ -1,0 +1,46 @@
+{
+  "seed": 2026112601,
+  "code_commit": "4ca3443",
+  "source_envelopes_sha256": "3c7a410c9459cafa79e1c3a22b20c31db4384d3df2096b22311c7dea78dccc3b",
+  "population_claims": 14165,
+  "sample_claims": 200,
+  "allocation": {
+    "identity": 29,
+    "locations_subunits": 15,
+    "people_roles": 19,
+    "entity_accounts": 42,
+    "filing_years": 16,
+    "lei": 2,
+    "signature_rule": 4,
+    "signature_combination": 8,
+    "prokura_rule": 1,
+    "prokura_combination": 1,
+    "public_activity": 20,
+    "group_parent": 1,
+    "group_subsidiary": 4,
+    "state_aid": 3,
+    "registry_website": 1,
+    "consolidated_accounts": 7,
+    "website": 7,
+    "website_description": 1,
+    "social": 7,
+    "website_contact": 1,
+    "brand": 9,
+    "licences": 1,
+    "inspections": 1
+  },
+  "weights": "sqrt(type population), minimum one per available type; census of website/social/brand; divisor allocation for remainder",
+  "empty_types": [
+    "procurement",
+    "research",
+    "hiring/jobs",
+    "website people/contacts beyond published contacts",
+    "ticker/ISIN"
+  ],
+  "files_sha256": {
+    "population.json.gz": "c1e7a317cb09d61b0ac289ab56aa50659bb6c1aca2aa137f175f1e878030ae6d",
+    "proof.json.gz": "7348ee520accd5d7f573eb7fe74cb3bdbf6b2ab0cb40bc4725be7b3ab6a1db86",
+    "sample.jsonl": "ba8b2f94ac97e0dfcf4b490241e561f1950c66506fc1be5bd8c4b7b5de9019a6"
+  },
+  "proof_scope": "Original saved response bytes needed for hashes, including public business-role source records; no local filesystem receipts or credentials. No redaction or normalization of proof bodies. Public source birth-date fields can occur in original role/authority receipts; they are not sampled claim values."
+}

@@ -71,3 +71,9 @@ scratch/
 !reports/r5/final500/registry500.csv
 !reports/r5/stageHC1/F2/companies500.jsonl
 !reports/r5/stageHC1/F2/registry500.csv
+
+# Committed bounded precision proof and immutable sample.
+!reports/r5/precision-sample/population.json.gz
+!reports/r5/precision-sample/proof.json.gz
+!reports/r5/precision-sample/sample.jsonl
+!reports/r5/precision-sample/results.jsonl

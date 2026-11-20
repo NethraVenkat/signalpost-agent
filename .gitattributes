@@ -60,3 +60,5 @@ tests/fixtures/website_hc1/*.body -text whitespace=cr-at-eol
 reports/r5/gaps/final500/companies500.jsonl -text whitespace=cr-at-eol
 reports/r5/gaps/final500/registry500.csv -text whitespace=cr-at-eol
 reports/r5/gaps/prior-sample-exclusions.json -text whitespace=cr-at-eol
+
+reports/r5/precision-sample/sample.jsonl -text whitespace=cr-at-eol

@@ -1,0 +1,173 @@
+{
+  "seed": 2026112601,
+  "sampled": 200,
+  "correct": 50,
+  "incorrect": 0,
+  "unverifiable": 150,
+  "wilson_95_lower": 0.195081680068175,
+  "per_type": {
+    "brand": {
+      "sampled": 9,
+      "correct": 5,
+      "incorrect": 0,
+      "unverifiable": 4,
+      "wilson_95_lower": 0.26665129349549305
+    },
+    "consolidated_accounts": {
+      "sampled": 7,
+      "correct": 0,
+      "incorrect": 0,
+      "unverifiable": 7,
+      "wilson_95_lower": 3.584186086443356e-17
+    },
+    "entity_accounts": {
+      "sampled": 42,
+      "correct": 0,
+      "incorrect": 0,
+      "unverifiable": 42,
+      "wilson_95_lower": 0.0
+    },
+    "filing_years": {
+      "sampled": 16,
+      "correct": 0,
+      "incorrect": 0,
+      "unverifiable": 16,
+      "wilson_95_lower": 0.0
+    },
+    "group_parent": {
+      "sampled": 1,
+      "correct": 0,
+      "incorrect": 0,
+      "unverifiable": 1,
+      "wilson_95_lower": 0.0
+    },
+    "group_subsidiary": {
+      "sampled": 4,
+      "correct": 0,
+      "incorrect": 0,
+      "unverifiable": 4,
+      "wilson_95_lower": 0.0
+    },
+    "identity": {
+      "sampled": 29,
+      "correct": 27,
+      "incorrect": 0,
+      "unverifiable": 2,
+      "wilson_95_lower": 0.7803541984972431
+    },
+    "inspections": {
+      "sampled": 1,
+      "correct": 0,
+      "incorrect": 0,
+      "unverifiable": 1,
+      "wilson_95_lower": 0.0
+    },
+    "lei": {
+      "sampled": 2,
+      "correct": 2,
+      "incorrect": 0,
+      "unverifiable": 0,
+      "wilson_95_lower": 0.3423802275066531
+    },
+    "licences": {
+      "sampled": 1,
+      "correct": 0,
+      "incorrect": 0,
+      "unverifiable": 1,
+      "wilson_95_lower": 0.0
+    },
+    "locations_subunits": {
+      "sampled": 15,
+      "correct": 0,
+      "incorrect": 0,
+      "unverifiable": 15,
+      "wilson_95_lower": 0.0
+    },
+    "people_roles": {
+      "sampled": 19,
+      "correct": 10,
+      "incorrect": 0,
+      "unverifiable": 9,
+      "wilson_95_lower": 0.31707809245113167
+    },
+    "prokura_combination": {
+      "sampled": 1,
+      "correct": 0,
+      "incorrect": 0,
+      "unverifiable": 1,
+      "wilson_95_lower": 0.0
+    },
+    "prokura_rule": {
+      "sampled": 1,
+      "correct": 1,
+      "incorrect": 0,
+      "unverifiable": 0,
+      "wilson_95_lower": 0.20654931437723742
+    },
+    "public_activity": {
+      "sampled": 20,
+      "correct": 0,
+      "incorrect": 0,
+      "unverifiable": 20,
+      "wilson_95_lower": 0.0
+    },
+    "registry_website": {
+      "sampled": 1,
+      "correct": 1,
+      "incorrect": 0,
+      "unverifiable": 0,
+      "wilson_95_lower": 0.20654931437723742
+    },
+    "signature_combination": {
+      "sampled": 8,
+      "correct": 0,
+      "incorrect": 0,
+      "unverifiable": 8,
+      "wilson_95_lower": 0.0
+    },
+    "signature_rule": {
+      "sampled": 4,
+      "correct": 4,
+      "incorrect": 0,
+      "unverifiable": 0,
+      "wilson_95_lower": 0.5101091635454027
+    },
+    "social": {
+      "sampled": 7,
+      "correct": 0,
+      "incorrect": 0,
+      "unverifiable": 7,
+      "wilson_95_lower": 3.584186086443356e-17
+    },
+    "state_aid": {
+      "sampled": 3,
+      "correct": 0,
+      "incorrect": 0,
+      "unverifiable": 3,
+      "wilson_95_lower": 4.8683609171202235e-17
+    },
+    "website": {
+      "sampled": 7,
+      "correct": 0,
+      "incorrect": 0,
+      "unverifiable": 7,
+      "wilson_95_lower": 3.584186086443356e-17
+    },
+    "website_contact": {
+      "sampled": 1,
+      "correct": 0,
+      "incorrect": 0,
+      "unverifiable": 1,
+      "wilson_95_lower": 0.0
+    },
+    "website_description": {
+      "sampled": 1,
+      "correct": 0,
+      "incorrect": 0,
+      "unverifiable": 1,
+      "wilson_95_lower": 0.0
+    }
+  },
+  "network_disabled": true,
+  "interpretation": "Strict literal-span certification, not a factual-error estimate. Unverifiable counts as not verified in the nominal Wilson bound. Disproportionate stratification/census means pooled Wilson is descriptive of this sample, not a population-confidence guarantee."
+}
