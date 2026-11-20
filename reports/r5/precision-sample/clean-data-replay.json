@@ -1,7 +1,5 @@
 {
-  "exit_code": 0,
-  "network_disabled": true,
-  "local_run_directories_present": false,
-  "third_party_dependencies": false,
-  "results_byte_identical": true
+  "status": "withdrawn_previous_audit",
+  "historical_receipt": "trials/withdrawn-audit/clean-data-replay.json",
+  "current_checker_replay": "Pending fresh final500 clone"
 }

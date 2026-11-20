@@ -77,3 +77,8 @@ scratch/
 !reports/r5/precision-sample/proof.json.gz
 !reports/r5/precision-sample/sample.jsonl
 !reports/r5/precision-sample/results.jsonl
+
+!reports/r5/precision-sample/trials/withdrawn-audit/results.jsonl
+
+!reports/r5/final500e/companies500.jsonl
+!reports/r5/final500e/registry500.csv

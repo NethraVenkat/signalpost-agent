@@ -40,7 +40,7 @@ asyncio.run(main())'''
 
 def run_once(attempt):
  work=BASE/('run' if attempt==0 else 'run-retry');assert not work.exists();work.mkdir()
- assert shutil.disk_usage(ROOT).free>=15*GIB,'Less than 15 GiB immediately before live run'
+ assert shutil.disk_usage(ROOT).free>=10_000_000_000,'Less than 10 GB immediately before live run'
  args=[str(PY),'-m','signalpost.cli','run','--organisations',str(DEST/'companies500.jsonl'),'--bulk',str(DEST/'registry500.csv'),'--output',str(work/'envelopes.jsonl'),'--profiles-output',str(work/'profiles.jsonl'),'--report',str(work/'report.json'),'--run-id','r5-final500e' + ('-retry' if attempt else ''),'--expected-count','500']
  assert sum(x.startswith('--') for x in args)==7
  started=time.monotonic();samples=[];stopped=None

@@ -42,8 +42,8 @@ def extract_numbers(obj):
 def setup():
  assert not BASE.exists(),'Fresh clean clone only; preserve any existing attempt'
  before=shutil.disk_usage(ROOT).free
- save('initial-disk.json',{'free_bytes':before,'minimum_required_bytes':15*GIB,'stop_below_bytes':3*GIB})
- assert before>=15*GIB,'Free disk below 15 GiB'
+ save('initial-disk.json',{'free_bytes':before,'minimum_required_bytes':10_000_000_000,'stop_below_bytes':3*GIB})
+ assert before>=10_000_000_000,'Free disk below 10 GB'
  excluded=set();sources={}
  ledger=ROOT/'reports/r5/gaps/prior-sample-exclusions.json'
  frozen=json.loads(ledger.read_text(encoding='utf8'));excluded.update(frozen['organisation_numbers'])
@@ -94,7 +94,7 @@ def setup():
  save('sampling.json',{'seed':SEED,'universe_rows':rows,'eligible':len(eligible),'excluded':len(excluded),'overlap':0,'inputs_sha256':sha(inputs),'bulk_sha256':sha(DEST/'registry500.csv'),'bulk_rows':len(found),'live_identity_fallback_numbers':sorted(wanted-found),'universe_sha256':sha(UNIVERSE),'universe_content_sha256':content.hexdigest(),'registry_snapshot_sha256':snapshot})
  BASE.mkdir()
  head=command(['git','rev-parse','HEAD'],ROOT).strip()
- command(['git','clone','--no-hardlinks','--no-tags','--single-branch','--branch','revision/r5',ROOT,CLONE],ROOT)
+ command(['git','clone','--config','core.autocrlf=false','--no-hardlinks','--no-tags','--single-branch','--branch','revision/r5',ROOT,CLONE],ROOT)
  command(['git','config','user.name','Nethra Venkat'],CLONE);command(['git','config','user.email','nethravenkat510@gmail.com'],CLONE)
  assert command(['git','rev-parse','HEAD'],CLONE).strip()==head
  assert not command(['git','status','--porcelain'],CLONE).strip()
@@ -106,9 +106,9 @@ def setup():
  save('P1-clone-replay.json',{'exit_code':0,'results':json.loads(proof),'network_disabled':True,'local_run_directories_present':False,'pytest_in_clone':False})
  assert not command(['git','status','--porcelain'],CLONE).strip(),'Clone changed after P1 replay'
  after=shutil.disk_usage(ROOT).free
- metadata={'head':head,'clone_clean':True,'pytest_in_clone':False,'installation':meta,'free_before_bytes':before,'free_after_setup_bytes':after,'minimum_required_bytes':15*GIB,'source_tree_sha256':{str(p.relative_to(CLONE)):sha(p) for p in (CLONE/'src/signalpost').rglob('*.py')}}
+ metadata={'head':head,'clone_clean':True,'pytest_in_clone':False,'installation':meta,'free_before_bytes':before,'free_after_setup_bytes':after,'minimum_required_bytes':10_000_000_000,'source_tree_sha256':{str(p.relative_to(CLONE)):sha(p) for p in (CLONE/'src/signalpost').rglob('*.py')}}
  save('clean-clone.json',metadata)
- assert after>=15*GIB,'Free disk below 15 GiB after setup'
+ assert after>=10_000_000_000,'Free disk below 10 GB after setup'
  print(json.dumps({'head':head,'free_after':after,'excluded':len(excluded),'sample':500,'bulk':len(found),'P1_clone_replay':'passed'}),flush=True)
 
 if __name__=='__main__':setup()

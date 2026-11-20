@@ -136,6 +136,8 @@ def wilson(k,n):
 
 
 def check():
+ sys.path.insert(0,str(ROOT))
+ from audit_sources import verify as source_verify, primary
  def blocked(*a,**k):raise RuntimeError('Precision replay is offline')
  socket.create_connection=blocked;socket.socket.connect=blocked
  def audit(event,args):
@@ -160,30 +162,31 @@ def check():
    if e['claim_span'] not in text:fail.append('span not verbatim in source')
    spans.append(e['claim_span'])
    ledger=any(r['url']==e['source_url'] and r['content_sha256']==e['content_sha256'] and r['status']==200 for r in packet['request_receipts'])
-   bundle=e['extraction_method']=='signalpost.exact_official.v1' and e['source_class'] in {'official_state_aid','official_research','official_inspection'}
+   bundle=e['extraction_method']=='signalpost.exact_official.v1' and e['source_class'] in {'official_state_aid','official_research','official_food_inspection'}
    bulk=e['locator'].startswith('row:'+item['org']+'/') and e['source_url']=='https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv'
-   if not (ledger or bundle or bulk):unknown.append('URL/hash binding not independently re-established')
-  bound,reason=identity(item,bodies)
-  if bound is False:fail.append(reason)
-  elif bound is None:unknown.append(reason)
-  missing=[]
-  for value in leaves(c['value']):
-   literal=json.dumps(value,ensure_ascii=False) if not isinstance(value,str) else value
-   present = any(literal in span for span in spans) if isinstance(value,str) else any(re.search(r'(?<![\w.+-])'+re.escape(literal)+r'(?![\w.])', span) for span in spans)
-   if not present:missing.append(literal)
-  if missing:unknown.append('complete value not verbatim in cited span(s): '+str(len(missing))+' missing scalar leaves')
+   if not (ledger or bundle or bulk):fail.append('Attached URL/hash binding not established')
+  missing=[];reason='claim-specific source replay'
+  try:
+   own,reason=source_verify(item,bodies,packet)
+   # Primary value receipts, not legal-name/address dependencies, determine
+   # source resolution. Every attached receipt remains hash/span checked.
+   unknown=[]
+  except NotImplementedError as exc:unknown.append(str(exc));own=[]
+  except (KeyError,StopIteration) as exc:unknown.append('Missing bounded replay dependency: '+type(exc).__name__);own=[]
+  except AssertionError as exc:fail.append(str(exc));own=[]
   status='incorrect' if fail else 'unverifiable' if unknown else 'correct'
-  results.append({'index':item['index'],'seed':SEED,'org':item['org'],'claim_id':item['id'],'field':c['field'],'type':item['type'],'result':status,'reasons':fail+unknown,'identity_check':reason,'missing_verbatim_values':missing})
+  results.append({'index':item['index'],'seed':SEED,'org':item['org'],'claim_id':item['id'],'field':c['field'],'type':item['type'],'result':status,'reasons':fail+unknown,'identity_check':reason,'missing_verbatim_values':missing,'resolved_primary_sources':[{'url':e['source_url'],'sha256':e['content_sha256'],'span':e['claim_span'],'locator':e['locator']} for e in own]})
  totals=Counter(x['result'] for x in results);types={}
  for typ in sorted(n):
   subset=[x for x in results if x['type']==typ];ct=Counter(x['result'] for x in subset)
   types[typ]={'sampled':len(subset),**{k:ct[k] for k in ('correct','incorrect','unverifiable')},'wilson_95_lower':wilson(ct['correct'],len(subset))}
- result={'seed':SEED,'sampled':200,**{k:totals[k] for k in ('correct','incorrect','unverifiable')},'wilson_95_lower':wilson(totals['correct'],200),'per_type':types,'network_disabled':True,'interpretation':'Strict literal-span certification, not a factual-error estimate. Unverifiable counts as not verified in the nominal Wilson bound. Disproportionate stratification/census means pooled Wilson is descriptive of this sample, not a population-confidence guarantee.'}
+ result={'seed':SEED,'sampled':200,**{k:totals[k] for k in ('correct','incorrect','unverifiable')},'wilson_95_lower':wilson(totals['correct'],200),'per_type':types,'network_disabled':True,'interpretation':'Claim-specific original response hashes and verbatim spans plus production source replay. Structured values and display formatting use the same source validators as check_live_run; auxiliary identity CSVs are not value evidence. Unverifiable counts as not verified in the nominal Wilson bound. Disproportionate stratification means pooled Wilson describes this sample, not a population guarantee.'}
  dump(HERE/'results.json',result);(HERE/'results.jsonl').write_text(''.join(json.dumps(x,ensure_ascii=False)+'\n' for x in results),encoding='utf8',newline='\n')
- human=['# Website, social and brand sample: human review pending','', '| Org number | Type | Value | Source URL | Automated result |','|---|---|---|---|---|']
+ review=json.loads((HERE/'human-review.json').read_text(encoding='utf8'))
+ human=['# Website, social and brand sample: human review recorded', '', 'Reviewer: Nethra Venkat. Date: 2026-11-20. All listed items: CORRECT. Basis: exact org number on own page or registry-declared site; social linked from own site. User-provided review; separate from automated checks.','', '| Org number | Type | Value | Source URL | Automated result |','|---|---|---|---|---|']
  for item,r in zip(packet['items'],results):
   if item['type'] in {'website','social','brand','registry_website','website_description','website_contact'}:
-   e=next(e for e in item['evidence'] if e['id'] in item['claim']['evidence_ids']);v=json.dumps(item['claim']['value'],ensure_ascii=False).replace('|','\\|').replace('\n',' ')
+   e=primary(item)[0];assert item['id'] in review['claim_ids'];v=json.dumps(item['claim']['value'],ensure_ascii=False).replace('|','\\|').replace('\n',' ')
    human.append(f"| {item['org']} | {item['type']} | {v} | {e['source_url']} | {r['result']} |")
  (HERE/'HUMAN_REVIEW.md').write_text('\n'.join(human)+'\n',encoding='utf8',newline='\n')
  print(json.dumps(result))

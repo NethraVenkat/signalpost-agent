@@ -924,3 +924,9 @@
 - Follow the overnight instruction to continue P3 after the failed resource prerequisite. README/SUBMISSION disclose the strict precision limitations and blocked final500e. Full pytest and privacy checks run in the main checkout; no pytest in a final500 clone (none was created). No tags or push.
 
 - Final P3 full gate: **1,464 passed in 980.90 s**, main checkout; P1 clone replay results byte-identical. Final privacy gate recorded separately. No qualification metrics are claimed for disk-blocked P2. [Overnight receipts](overnight/SUMMARY.md).
+
+## 2026-11-20 - Correct claim-owned precision evidence and human review
+
+- Withdraw the earlier P1 aggregate and its Wilson bound. Resolve each sampled claim's own source receipts by evidence IDs, field, method and locator; use Brreg CSV dependencies only for registry identity, never as website/social/brand value evidence. Check original URL/hash ledger and verbatim source spans, then re-derive structured/formatted facts through production validators shared with check_live_run. No sample ID, value, seed, population or original proof-body hash changed.
+- Corrected same-200 result: 200 correct, 0 incorrect, 0 unverifiable; nominal Wilson 95% lower bound 98.12%, descriptive of the selected stratified sample. Regression cases verify first-CSV ordering cannot win and altered own URL/body/span/social values fail. Human verdict supplied by Nethra Venkat on 2026-11-20: all 26 listed items CORRECT, exact orgnr on own page or registry-declared site and social linked from own site. Keep human verdict separate from automation.
+- Revised user disk authorization: start final500e only at >=10,000,000,000 bytes, retain the existing 3 GiB stop guard. No tags or push. Earlier 15 GiB setup failures remain historical evidence.
