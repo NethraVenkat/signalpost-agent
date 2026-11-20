@@ -1,0 +1,18 @@
+{
+  "seed": 2026112705,
+  "universe_rows": 411160,
+  "eligible": 405437,
+  "excluded": 7308,
+  "overlap": 0,
+  "inputs_sha256": "f428b5435d52ea832035fb0140dff1f25e5f4b02e6a736a58e70ba44ab784991",
+  "bulk_sha256": "9f5930eb0f4d0313f2caa7e56ddd66d86948215f348e4deb7c5925b8053d76ac",
+  "bulk_rows": 497,
+  "live_identity_fallback_numbers": [
+    "927932539",
+    "929633792",
+    "935706521"
+  ],
+  "universe_sha256": "1c89710e5b01f8617e86d09fbdff4a52f2f8dbbba297e74f7164b5984f5a0384",
+  "universe_content_sha256": "b82d6a3e7231d1759a958c282bc4366b80ec2fab8095053d8ed7fa9cd01bc838",
+  "registry_snapshot_sha256": "56922f51839e7ed3f3c9adde50dbcfa375202d7bc5aa998d9572158e228693e1"
+}

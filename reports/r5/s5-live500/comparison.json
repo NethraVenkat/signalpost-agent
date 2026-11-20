@@ -1,0 +1,256 @@
+{
+  "baseline": "final500e",
+  "different_disjoint_cohorts": true,
+  "stage_counts": {
+    "S1_status_events": {
+      "claims": 3919,
+      "companies": 500
+    },
+    "S4_identity_numbers": {
+      "claims": 500,
+      "companies": 500
+    },
+    "S4_subunit_parent_links": {
+      "claims": 451,
+      "companies": 378
+    },
+    "S2_timeline": {
+      "entries": 12890,
+      "companies": 500,
+      "median_entries": 25.0
+    }
+  },
+  "companies_with_errors": 500,
+  "error_code_counts": {
+    "invalid_registry_field": 542,
+    "state_aid_none_in_bundled_snapshot": 459,
+    "research_none_in_bundled_snapshot": 493,
+    "inspections_none_in_bundled_snapshot": 497,
+    "website_candidates": 500,
+    "authority_rule_unavailable": 372,
+    "not_available": 482,
+    "no_verified_website": 271,
+    "website_source_unavailable": 81,
+    "website_check_incomplete": 192,
+    "website_budget_exhausted": 141,
+    "authority_lookup_unavailable": 50,
+    "deadline": 136,
+    "robots": 19,
+    "public_http_406": 107,
+    "robots_unavailable": 8,
+    "source_error": 3,
+    "http_blocked": 2,
+    "public_http_202": 462
+  },
+  "coverage_regressions": [
+    {
+      "section": "group",
+      "baseline_available": 35,
+      "current_available": 27,
+      "baseline_failed": 0,
+      "current_failed": 0
+    },
+    {
+      "section": "inspections",
+      "baseline_available": 7,
+      "current_available": 3,
+      "baseline_failed": 0,
+      "current_failed": 0
+    },
+    {
+      "section": "licences",
+      "baseline_available": 10,
+      "current_available": 7,
+      "baseline_failed": 0,
+      "current_failed": 0
+    },
+    {
+      "section": "procurement",
+      "baseline_available": 0,
+      "current_available": 0,
+      "baseline_failed": 5,
+      "current_failed": 10
+    },
+    {
+      "section": "prokura",
+      "baseline_available": 111,
+      "current_available": 99,
+      "baseline_failed": 0,
+      "current_failed": 0
+    },
+    {
+      "section": "roles",
+      "baseline_available": 498,
+      "current_available": 497,
+      "baseline_failed": 0,
+      "current_failed": 0
+    },
+    {
+      "section": "signature",
+      "baseline_available": 488,
+      "current_available": 473,
+      "baseline_failed": 0,
+      "current_failed": 0
+    },
+    {
+      "section": "state_aid",
+      "baseline_available": 55,
+      "current_available": 41,
+      "baseline_failed": 0,
+      "current_failed": 0
+    },
+    {
+      "section": "subunits",
+      "baseline_available": 401,
+      "current_available": 378,
+      "baseline_failed": 0,
+      "current_failed": 0
+    },
+    {
+      "section": "website",
+      "baseline_available": 39,
+      "current_available": 37,
+      "baseline_failed": 180,
+      "current_failed": 168
+    }
+  ],
+  "stop_before_implementation_changes": true,
+  "baseline_claims": 71812,
+  "current_claims": 76213,
+  "section_states": {
+    "accounts": {
+      "available": 497,
+      "failed": 3
+    },
+    "activity": {
+      "available": 500
+    },
+    "gleif": {
+      "available": 78,
+      "not_available": 422
+    },
+    "group": {
+      "available": 27,
+      "not_available": 473
+    },
+    "hiring": {
+      "available": 4,
+      "not_available": 496
+    },
+    "identity": {
+      "available": 500
+    },
+    "inspections": {
+      "available": 3,
+      "not_available": 497
+    },
+    "licences": {
+      "available": 7,
+      "not_available": 493
+    },
+    "procurement": {
+      "failed": 10,
+      "not_available": 490
+    },
+    "prokura": {
+      "available": 99,
+      "not_available": 401
+    },
+    "research": {
+      "available": 7,
+      "not_available": 493
+    },
+    "roles": {
+      "available": 497,
+      "not_available": 3
+    },
+    "signature": {
+      "available": 473,
+      "not_available": 27
+    },
+    "state_aid": {
+      "available": 41,
+      "not_available": 459
+    },
+    "status_events": {
+      "available": 500
+    },
+    "subunits": {
+      "available": 378,
+      "not_available": 122
+    },
+    "website": {
+      "ambiguous": 20,
+      "available": 37,
+      "blocked": 3,
+      "failed": 168,
+      "not_available": 272
+    }
+  },
+  "baseline_section_states": {
+    "accounts": {
+      "available": 497,
+      "failed": 3
+    },
+    "activity": {
+      "available": 500
+    },
+    "gleif": {
+      "available": 64,
+      "not_available": 436
+    },
+    "group": {
+      "available": 35,
+      "not_available": 465
+    },
+    "hiring": {
+      "not_available": 500
+    },
+    "identity": {
+      "available": 500
+    },
+    "inspections": {
+      "available": 7,
+      "not_available": 493
+    },
+    "licences": {
+      "available": 10,
+      "not_available": 490
+    },
+    "procurement": {
+      "failed": 5,
+      "not_available": 495
+    },
+    "prokura": {
+      "available": 111,
+      "not_available": 389
+    },
+    "research": {
+      "available": 5,
+      "not_available": 495
+    },
+    "roles": {
+      "available": 498,
+      "not_available": 2
+    },
+    "signature": {
+      "available": 488,
+      "not_available": 12
+    },
+    "state_aid": {
+      "available": 55,
+      "not_available": 445
+    },
+    "subunits": {
+      "available": 401,
+      "not_available": 99
+    },
+    "website": {
+      "ambiguous": 27,
+      "available": 39,
+      "blocked": 2,
+      "failed": 180,
+      "not_available": 252
+    }
+  }
+}

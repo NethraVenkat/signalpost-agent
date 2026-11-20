@@ -1,0 +1,38 @@
+{
+  "checked_at": "2026-11-20T07:02:28.373927+00:00",
+  "observations": [
+    {
+      "url": "https://data.brreg.no/enhetsregisteret/api/enheter/923609016",
+      "status": 200,
+      "bytes": 3050,
+      "sha256": "212cff575a4a0f19ac0d44d9748674d484867c722fb88ac6f5d6a99cd3a8f7aa",
+      "content": null
+    },
+    {
+      "url": "https://data.brreg.no/robots.txt",
+      "error": "ReadError",
+      "message": ""
+    },
+    {
+      "url": "https://spedify.no/robots.txt",
+      "status": 200,
+      "bytes": 207,
+      "sha256": "a7fffabdcf6181b57aeb79a7278b3e4606de0278bf48d85125ad26d9294ccd2e",
+      "content": "User-agent: *\nDisallow: /_hcms/preview/\nDisallow: /hs/manage-preferences/\nDisallow: /hs/preferences-center/\nDisallow: /*?*hs_preview=*\nDisallow: /*?*hsCacheBuster=*\n\nSitemap: https://spedify.no/sitemap.xml\n\n"
+    }
+  ],
+  "registry_robots_retries": [
+    {
+      "attempt": 1,
+      "error": "RemoteProtocolError"
+    },
+    {
+      "attempt": 2,
+      "error": "RemoteProtocolError"
+    },
+    {
+      "attempt": 3,
+      "error": "RemoteProtocolError"
+    }
+  ]
+}
