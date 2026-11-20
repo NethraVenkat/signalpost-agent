@@ -48,6 +48,7 @@ class Config(BaseModel):
     registry_changes: bool = True
     website_request_cap: int = Field(default=8, ge=0, le=8)
     website_total_request_cap: int = Field(default=13, ge=0, le=13)
+    website_company_time_seconds: float = Field(default=45, gt=0)
     website_politeness_seconds: float = Field(default=1, ge=1)
     website_user_agent: str = "SignalpostAgent/1.0 (+https://github.com/NethraVenkat/signalpost-agent)"
     hiring: bool = True

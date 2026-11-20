@@ -24,6 +24,7 @@ from .sources.http import Http
 from .refresh.diff import apply
 from .watchdog import finish_before_deadline
 from .web.fetcher import WebsiteHttp
+from .web.measurement import WebsiteMeasurement
 from .web import collector
 from .web.policy import safe_transport
 from .sources import nav
@@ -266,6 +267,7 @@ async def _run(config, client=None,synthesis_provider=None):
     # companies would reach it at once. Measured: 64 at once saturates a typical
     # link (timeouts 1.6% -> 11%); WEBSITE_COMPANIES keeps it bounded.
     website_semaphore = asyncio.Semaphore(min(config.workers, WEBSITE_COMPANIES))
+    website_measurement = WebsiteMeasurement(config.website_company_time_seconds)
     # Set once every valid company has identity and subunits: exact-ID sources need nothing more.
     subunits_ready = asyncio.Event()
     nav_index=nav.Index()
@@ -402,14 +404,16 @@ async def _run(config, client=None,synthesis_provider=None):
             # per 2.1 s for the whole batch). Run them beside website work instead of
             # making every website check queue behind that pacing; same host limits.
             accounts_task = asyncio.create_task(isolate(envelope, "accounts", lambda: regnskap.fetch(org, http)))
-            async with website_semaphore:
+            async with website_measurement.company_slot(org, website_semaphore):
                 if config.websites:
-                    from .web.adaptive import nav_homepages
-                    nominations = await offload(nav_homepages,envelope,nav_index,blobs) if config.adaptive_websites else []
-                    if config.adaptive_websites:
-                        await isolate(envelope, "website", lambda: collector.fetch(org, envelope, bulk.get(org), website_http, prior.get(org),nav_homepages=nominations))
-                    else:
-                        await isolate(envelope, "website", lambda: collector.fetch(org, envelope, bulk.get(org), website_http, prior.get(org)))
+                    async def discover_website():
+                        kwargs = {}
+                        if config.adaptive_websites:
+                            from .web.adaptive import nav_homepages
+                            kwargs['nav_homepages'] = await offload(nav_homepages, envelope, nav_index, blobs)
+                        return await collector.fetch(org, envelope, bulk.get(org), website_http, prior.get(org), **kwargs)
+                    await isolate(envelope, "website",
+                                  lambda: website_measurement.collect(org, 'pass1', discover_website))
                 if config.public_activity:
                     from .web.activity import fetch as fetch_activity
                     await isolate(envelope, 'activity', lambda: fetch_activity(org, envelope, website_http, website_http.accepted_pages.get(org, [])))
@@ -486,6 +490,7 @@ async def _run(config, client=None,synthesis_provider=None):
             # A real identity GET outweighs a failed generic HEAD probe.
             budget.source_outages.pop('https://data.brreg.no/enhetsregisteret/', None)
         website_http = WebsiteHttp(active_client, config, budget, blobs, dns_metrics=dns_metrics)
+        website_http.measurement = website_measurement
         if config.websites and config.website_seed_index:
             from .web.seed_index import load as load_website_seeds
             website_http.website_seeds = await offload(load_website_seeds)
@@ -675,6 +680,8 @@ async def _run(config, client=None,synthesis_provider=None):
         requests = [e for e in budget.events if e.get('pass') == 'pass1']
         pass1.update(requests=len(requests), website_requests=sum(e.get('section') == 'website' for e in requests))
     report['adaptive_websites']=adaptive_metrics
+    if config.websites:
+        report['website_measurement'] = website_measurement.report(inputs.unique)
     from .sources.official_resilience import summary as outage_summary
     report['official_source_outages']=outage_summary(budget.events,source_health)
     report['measured_request_projection']={'baseline':'1000-company retained-features run',

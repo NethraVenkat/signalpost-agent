@@ -11,6 +11,7 @@ from ..portable_paths import portable_text
 from ..sources.http import Response
 from . import policy
 from .robots import RobotsPolicy
+from .measurement import count_request, count_request_timeout, phase, timed_slot
 
 TRANSIENT = {'website_timeout', 'website_connect_error', 'website_http_5xx',
              'dns_timeout', 'dns_error', 'dns_unavailable'}
@@ -88,14 +89,15 @@ class WebsiteHttp:
             self.dns_metrics['dns_lookups'] = self.dns_metrics.get('dns_lookups', 0) + 1
             by_org = self.dns_metrics.setdefault('dns_by_company', {})
             by_org[org] = by_org.get(org, 0) + 1
-        return await (self.resolver or policy.resolve_public)(host, port)
+        async with phase('dns'):
+            return await (self.resolver or policy.resolve_public)(host, port)
 
     async def precheck(self, candidate, org):
         if candidate.origin == 'registry_website' or not self.config.dns_precheck:
             return
         host = urlsplit(candidate.url).hostname
         lock = self.dns_locks.setdefault(host, asyncio.Lock())
-        async with lock:
+        async with timed_slot(lock, 'dns_cache'):
             if host not in self.dns_cache:
                 nomination = (org, host.removeprefix('www.'))
                 if nomination not in self.dns_nominations:
@@ -127,10 +129,11 @@ class WebsiteHttp:
             policy.check_ips(await self.resolve(parts.hostname, parts.port or (443 if parts.scheme == "https" else 80), org))
             root = policy.domain(url)
             gate = self.gates.setdefault(root, DomainGate(asyncio.Semaphore(2), asyncio.Lock()))
-            async with gate.semaphore:
-                async with gate.start_lock:
-                    while (delay := gate.next_start - time.monotonic()) > 0:
-                        await asyncio.sleep(delay)
+            async with timed_slot(gate.semaphore, 'host_slot'):
+                async with timed_slot(gate.start_lock, 'host_start_slot'):
+                    async with phase('host_pacing'):
+                        while (delay := gate.next_start - time.monotonic()) > 0:
+                            await asyncio.sleep(delay)
                     self.budget.check_website()
                     gate.next_start = time.monotonic() + self.config.website_politeness_seconds
                 company_cap = self.company_cap(org)
@@ -138,15 +141,17 @@ class WebsiteHttp:
                     raise SourceFailure("website_budget_exhausted")
                 event = self.budget.reserve(url, parts.hostname, org)
                 event["section"] = "website"
+                count_request()
                 self.counts[org] = self.counts.get(org, 0) + 1
                 began = time.monotonic()
                 response = None
                 chunks = []
+                request_phase = 'robots_response' if parts.path == '/robots.txt' else 'http_response'
                 try:
                     remaining = self.budget.website_deadline - time.monotonic()
                     seconds=min(REQUEST_SECONDS.get(),max(.001,remaining))
                     event['timeout_seconds']=seconds
-                    async with asyncio.timeout(seconds):
+                    async with asyncio.timeout(seconds), phase(request_phase):
                         async with self.client.stream("GET", url, headers={"User-Agent": self.config.website_user_agent, "Accept": "application/pdf" if pdf else "application/xml,text/xml,application/rss+xml,application/atom+xml" if xml else "text/html,application/xhtml+xml,text/plain"}, timeout=seconds, follow_redirects=False) as stream:
                             chunks = []
                             size = 0
@@ -190,6 +195,7 @@ class WebsiteHttp:
                                 raise SourceFailure("content_type", content_type)
                             return response
                 except (TimeoutError, httpx.TimeoutException) as exc:
+                    count_request_timeout(request_phase)
                     event["error"] = type(exc).__name__
                     raise SourceFailure("website_timeout") from exc
                 except (httpx.NetworkError, httpx.ProtocolError) as exc:
@@ -223,7 +229,7 @@ class WebsiteHttp:
         p = urlsplit(url)
         origin = urlunsplit((p.scheme, p.netloc, "", "", ""))
         lock = self.robot_locks.setdefault(origin, asyncio.Lock())
-        async with lock:
+        async with timed_slot(lock, 'robots_cache'):
             if origin not in self.robots:
                 response = await self.raw(origin + "/robots.txt", org, domains)
                 if response.status in (404, 410):
@@ -247,7 +253,7 @@ class WebsiteHttp:
         # can follow only already permitted domains; content is not extracted
         # until the final authority's policy has also been checked.
         key = (url, xml, tuple(sorted(domains)),registry_redirect,pdf)
-        async with self.page_locks.setdefault(key, asyncio.Lock()):
+        async with timed_slot(self.page_locks.setdefault(key, asyncio.Lock()), 'page_cache'):
             if key not in self.page_cache:
                 try:
                     self.page_cache[key] = await self.raw(url, org, domains, xml, obey_robots=True,registry_redirect=registry_redirect,pdf=pdf)
@@ -273,7 +279,7 @@ class WebsiteHttp:
         policy.validate_url(candidate.url, {candidate.domain, *proven})
         parts = urlsplit(candidate.url)
         key = (parts.hostname.removeprefix('www.'), parts.path or '/', candidate.domain, tuple(sorted(proven)))
-        async with self.candidate_locks.setdefault(key, asyncio.Lock()):
+        async with timed_slot(self.candidate_locks.setdefault(key, asyncio.Lock()), 'candidate_cache'):
             if key in self.candidate_results:
                 result = self.candidate_results[key]
                 note = {'domain': candidate.domain, 'origin': candidate.origin, 'reused_candidate': True}

@@ -16,6 +16,7 @@ from . import collector
 from .candidates import generate, candidate_key
 from .policy import normalize_url
 from .fetcher import STRONG
+from .measurement import CAP
 
 ORIGIN_SCORE = {'registry_website':100, 'registry_email':95,
     'subunit_registry_website':90, 'subunit_registry_email':88,
@@ -107,6 +108,7 @@ async def run(envelopes, http, index, bulk, previous, update, refresh_activity):
     are reset. A per-company slice is a cumulative ceiling, not a new allowance.
     """
     began=time.monotonic(); budget=http.budget
+    measurement = getattr(http, 'measurement', None)
     pass1_websites=sum(exact(e) for e in envelopes.values())
     cutoff = min(budget.deadline, budget.pass2_cutoff)
     stop = None
@@ -148,6 +150,9 @@ async def run(envelopes, http, index, bulk, previous, update, refresh_activity):
             envelope=envelopes[org];record=records[org]
             if 'error' in record:continue
             if exact(envelope):continue
+            if measurement is not None and org in measurement.capped:
+                record['state'] = CAP
+                continue
             if candidate.domain in http.discovery_sessions[org]['vetoed']:continue
             try:budget.check_website()
             except SourceFailure:stop='deadline'
@@ -180,8 +185,14 @@ async def run(envelopes, http, index, bulk, previous, update, refresh_activity):
             error_family, error_phase = 'website', 'discovery'
             try:
                 async with timeout:
-                    section=await collector.fetch(org,envelope,bulk.get(org),http,previous.get(org),
-                                                  resume=True,candidates_override=[candidate],**({'legal_resume':True} if legal_resume else {}))
+                    async def discover_website():
+                        return await collector.fetch(
+                            org, envelope, bulk.get(org), http, previous.get(org),
+                            resume=True, candidates_override=[candidate],
+                            **({'legal_resume': True} if legal_resume else {}),
+                        )
+                    section = (await measurement.collect(org, 'pass2', discover_website)
+                               if measurement is not None else await discover_website())
                     discovery_end = len(budget.events)
                     update(envelope,'website',section)
                     record['state']='verified' if exact(envelope) else 'checked_no_gain'
@@ -225,9 +236,11 @@ async def run(envelopes, http, index, bulk, previous, update, refresh_activity):
                 if not exact(envelopes[org]) and 'error' not in records[org]:
                     records[org]['state'] = stop
         for org,record in records.items():
-            if record['state'] in {'deadline','budget_exhausted','website_budget_exhausted','dns_budget_exhausted'}:
-                envelope=envelopes[org]
-                envelope.errors.append(Error(section='website',code=record['state'],
+            envelope = envelopes[org]
+            state = record['state']
+            if (state in {'deadline','budget_exhausted','website_budget_exhausted','dns_budget_exhausted',CAP}
+                    and not any(e.section == 'website' and e.code == state for e in envelope.errors)):
+                envelope.errors.append(Error(section='website',code=state,
                     message='Adaptive pass left nominations unchecked at the cumulative safety limit'))
                 # Planning a wider pass does not rewrite pass 1's completed
                 # checked scope. An attempted check still records its own
