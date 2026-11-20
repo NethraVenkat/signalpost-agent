@@ -509,17 +509,61 @@
     34
   ],
   "total_entries": 13415,
-  "projection_seconds": 2.377819100016495,
-  "offline_render_seconds": 22.616262900002766,
+  "projection_seconds": 2.3656953000172507,
+  "offline_render_seconds": 25.158544600009918,
   "site": {
     "companies": 500,
     "input_records": 500,
     "pages": 502,
     "skipped_invalid_identifiers": 0,
-    "total_bytes": 215646154,
-    "largest_profile_data_bytes": 1080081,
-    "largest_profile_bytes": 249428
+    "total_bytes": 215537684,
+    "largest_profile_data_bytes": 1084920,
+    "largest_profile_bytes": 234853
   },
+  "before_top5": [
+    {
+      "orgnr": "916329717",
+      "bytes": 249428
+    },
+    {
+      "orgnr": "981400224",
+      "bytes": 245960
+    },
+    {
+      "orgnr": "974529106",
+      "bytes": 245640
+    },
+    {
+      "orgnr": "920203450",
+      "bytes": 245201
+    },
+    {
+      "orgnr": "964389020",
+      "bytes": 244577
+    }
+  ],
+  "after_top5": [
+    {
+      "orgnr": "964389020",
+      "bytes": 234853
+    },
+    {
+      "orgnr": "981400224",
+      "bytes": 234653
+    },
+    {
+      "orgnr": "991095500",
+      "bytes": 233610
+    },
+    {
+      "orgnr": "985335699",
+      "bytes": 233202
+    },
+    {
+      "orgnr": "913939964",
+      "bytes": 232929
+    }
+  ],
   "additional_http_requests": 0,
   "additional_claims": 0,
   "additional_evidence": 0,

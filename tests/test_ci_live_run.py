@@ -70,13 +70,15 @@ def test_large_profile_defers_only_duplicate_explorer_rows_under_same_gate(tmp_p
     original=site.profile
     # Model a large fact body just under the gate without its duplicate audit
     # table. Vary only that existing table's initial row count.
-    def large(row,title,explorer_rows=site.EXPLORER_VISIBLE_ROWS):
-        rendered=original(row,title,explorer_rows)
+    def large(row,title,explorer_rows=site.EXPLORER_VISIBLE_ROWS,**kwargs):
+        rendered=original(row,title,explorer_rows,**kwargs)
         return rendered+' '*(210000)+(' '*(explorer_rows*600))
     monkeypatch.setattr(site,'profile',large)
     before=cfg.output.read_bytes()
     metrics=site.generate_site(cfg.output,tmp_path/'deferred')
-    assert metrics['largest_profile_bytes']<250000
+    assert metrics['largest_profile_bytes']<=site.PROFILE_HTML_BUDGET
+    assert metrics['largest_profile_bytes']<site.PROFILE_HTML_REGRESSION_LIMIT
+    assert all(p.stat().st_size<site.PROFILE_HTML_REGRESSION_LIMIT for p in (tmp_path/'deferred/c').glob('*.html'))
     assert cfg.output.read_bytes()==before
     for row in rows:
         org=row['organisation_number'];page=(tmp_path/'deferred/c'/f'{org}.html').read_text(encoding='utf8')
@@ -87,6 +89,11 @@ def test_large_profile_defers_only_duplicate_explorer_rows_under_same_gate(tmp_p
         assert shown+len(payload['explorer_rows'])==len(row['claims'])
         assert all(site.anchor(c) in page for c in row['claims'])
         assert len(payload['facts'])==sum(bool(c['evidence_ids']) or c['availability']=='available' for c in row['claims'])
+        expected={c['id'][:16]:c for c in row['claims'] if c['evidence_ids'] or c['availability']=='available'}
+        actual={fact['id']:fact for fact in payload['facts']}
+        assert actual.keys()==expected.keys()
+        assert all(actual[cid]['value']==c.get('value') and actual[cid]['evidence_ids']==c.get('evidence_ids',[]) for cid,c in expected.items())
+        assert {record[1] for record in payload['records']}=={eid for c in expected.values() for eid in c.get('evidence_ids',[])}
 
 
 def test_seven_flag_run_keeps_oversized_company_profile_under_html_cap(tmp_path, monkeypatch):
@@ -143,7 +150,8 @@ def test_seven_flag_run_keeps_oversized_company_profile_under_html_cap(tmp_path,
     assert len(site.profile(row, 'Signalpost', 0, official_inline=0).encode('utf8')) >= 250_000
     assert report['site']['state'] == 'available'
     expected_size = Path(f'site/c/{OUR}.html').stat().st_size
-    assert report['site']['largest_profile_bytes'] == expected_size < 250_000
+    assert report['site']['largest_profile_bytes'] == expected_size <= site.PROFILE_HTML_BUDGET
+    assert expected_size < site.PROFILE_HTML_REGRESSION_LIMIT
     checked = check('envelopes.jsonl', batch, 'state', 'report.json', 'site', 2)
     assert checked['site_verified'] and checked['largest_profile_bytes'] == expected_size
     payload = Path(f'site/c/{OUR}.data.js').read_text(encoding='utf8')
