@@ -1,6 +1,8 @@
 # Gap implementation and verification
 
-Baseline `45afc2b`, documentation follow-up `528e05a`; measured application `f740933`.
+Latest official API follow-up: `4ca3443`, signature/prokura and direct group relationships implemented through the existing registry client. Standard-100 full checker passed: 95/291 signature companies/claims (registered text 72/72), 10/20 prokura (registered text 8/8), 9/60 group, 14,165 total available claims versus 13,799 retained by `ac88ab0`; zero unsupported values, deadlines and placeholders; largest HTML 247,950 bytes; $0. No new 500 run. [Policy and complete comparison](g1-api/SUMMARY.md).
+
+The original gap measurements below used baseline `45afc2b`, documentation follow-up `528e05a`, and application `f740933`; their historical counts and failures remain separate.
 
 **The original full 500-company gate failed; the same saved outputs now pass the full offline check after repair at `567eafe`.** The CLI exited 0 and its source verification passed, but no HTML site was published because one reconstructed profile exceeds 250,000 bytes. Adaptive website pass 2 also raised `OSError`; its cause and per-company loss details were not recorded. Zero deadline hits do not establish complete website work or a performance improvement.
 

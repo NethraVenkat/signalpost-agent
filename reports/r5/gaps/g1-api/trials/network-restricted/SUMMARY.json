@@ -1,0 +1,23 @@
+{
+  "reason": "Production safe transport received ConnectError for every live HTTP request in the restricted network environment; not a live-recall qualification",
+  "successful_http_responses": 0,
+  "request_count": 1038,
+  "warnings": [
+    "No successful live HTTP response; any available claims come from saved input or bundled snapshots"
+  ],
+  "original_outputs": "<REPO>/out/g1-api-standard100",
+  "preserved_receipts": [
+    "standard100-check-execution.json",
+    "standard100-check.json",
+    "standard100-counts.json",
+    "standard100-execution.json",
+    "standard100-check.txt",
+    "standard100-run.txt"
+  ],
+  "normal_network_production_transport_preflight": {
+    "url": "https://data.brreg.no/fullmakt/enheter/984851006/signatur",
+    "status": 200,
+    "bytes": 3688,
+    "scope": "reachability only; original three-org fixtures remain separate"
+  }
+}

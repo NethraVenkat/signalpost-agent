@@ -1,0 +1,67 @@
+{
+  "accounts": {
+    "baseline_claims": 7225,
+    "current_claims": 7225,
+    "delta": 0
+  },
+  "activity": {
+    "baseline_claims": 1390,
+    "current_claims": 1390,
+    "delta": 0
+  },
+  "gleif": {
+    "baseline_claims": 19,
+    "current_claims": 19,
+    "delta": 0
+  },
+  "group": {
+    "baseline_claims": 0,
+    "current_claims": 60,
+    "delta": 60
+  },
+  "identity": {
+    "baseline_claims": 2941,
+    "current_claims": 2941,
+    "delta": 0
+  },
+  "inspections": {
+    "baseline_claims": 4,
+    "current_claims": 4,
+    "delta": 0
+  },
+  "licences": {
+    "baseline_claims": 11,
+    "current_claims": 11,
+    "delta": 0
+  },
+  "prokura": {
+    "baseline_claims": 0,
+    "current_claims": 20,
+    "delta": 20
+  },
+  "roles": {
+    "baseline_claims": 1260,
+    "current_claims": 1260,
+    "delta": 0
+  },
+  "signature": {
+    "baseline_claims": 0,
+    "current_claims": 291,
+    "delta": 291
+  },
+  "state_aid": {
+    "baseline_claims": 51,
+    "current_claims": 51,
+    "delta": 0
+  },
+  "subunits": {
+    "baseline_claims": 851,
+    "current_claims": 851,
+    "delta": 0
+  },
+  "website": {
+    "baseline_claims": 47,
+    "current_claims": 42,
+    "delta": -5
+  }
+}

@@ -10,7 +10,7 @@ from signalpost.portable_paths import portable_text
 
 ROOT=Path(__file__).resolve().parents[4]
 DEST=Path(__file__).resolve().parent
-WORK=ROOT/'out/g1-api-standard100'
+WORK=ROOT/'out/g1-api-standard100-normal-network'
 PYTHON=ROOT/'.venv/Scripts/python.exe'
 INPUT=ROOT/'reports/r5/baseline/companies.jsonl'
 BULK=ROOT/'reports/r5/baseline/registry100.csv'
@@ -62,7 +62,7 @@ def main():
         code_exit=process.wait()
     wall=time.monotonic()-began
     (DEST/'standard100-run.txt').write_text(portable_text((WORK/'run-raw.txt').read_text(encoding='utf8',errors='replace')),encoding='utf8',newline='\n')
-    save('standard100-execution.json',{'code_commit':code,'baseline_commit':'ac88ab0','argv':args,'exit_code':code_exit,'wall_seconds':wall,'margin_seconds':2100-wall,'minimum_free_bytes':minimum,'stopped':stopped,'flags':7,'fresh_state':True,'input_sha256':sha(INPUT),'bulk_sha256':sha(BULK),'baseline_saved_envelopes_sha256':sha(BASELINE),'baseline_scope':'Original standard-100 measurement at f740933 retained by ac88ab0; ac88ab0 fixes only site overflow and adaptive I/O isolation; no newly measured baseline live run.'})
+    save('standard100-execution.json',{'code_commit':code,'baseline_commit':'ac88ab0','argv':args,'exit_code':code_exit,'wall_seconds':wall,'margin_seconds':2100-wall,'minimum_free_bytes':minimum,'stopped':stopped,'flags':7,'fresh_state':True,'execution_scope':'normal network outside restricted sandbox','prior_attempt':'trials/network-restricted/SUMMARY.json','input_sha256':sha(INPUT),'bulk_sha256':sha(BULK),'baseline_saved_envelopes_sha256':sha(BASELINE),'baseline_scope':'Original standard-100 measurement at f740933 retained by ac88ab0; ac88ab0 fixes only site overflow and adaptive I/O isolation; no newly measured baseline live run.'})
     assert code_exit==0 and not stopped, 'Live run did not complete normally'
     check=[str(PYTHON),str(ROOT/'scripts/check_live_run.py'),'--output',str(WORK/'envelopes.jsonl'),'--organisations',str(INPUT),'--state',str(WORK/'state'),'--report',str(WORK/'report.json'),'--site',str(WORK/'site'),'--count','100']
     began=time.monotonic();checked=subprocess.run(check,cwd=ROOT,env=env,capture_output=True,text=True,encoding='utf8')
