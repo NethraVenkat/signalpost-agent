@@ -18,7 +18,6 @@ from .owner_social import (
     FOLLOW_US, GROUP_RECEIPT_METHOD, SAME_AS, SOCIAL_POLICY, former_names,
     group_site_receipt, page_profiles, same_as_veto, site_scope, visible_profiles, website_scope,
 )
-from .fetcher import TRANSIENT
 from .seed_index import SEED_ORIGINS, publisher_has_number
 
 
@@ -172,12 +171,10 @@ def proof_page_targets(page, base_url, limit=FOLLOWUP_PAGES):
     return targets[:limit]
 
 
-async def ordered_proof_targets(org,http,page,seen,legal_only=False):
+async def ordered_proof_targets(org,http,page,seen):
     """Real own links, then bounded sitemap nominations, then legacy guesses."""
     linked=[url for url in proof_page_targets(page,page.url,limit=100)
             if url in {normalize_url(link) for link in followup_links(page)} and domain(url)==domain(page.url)]
-    from .legal_pages import legal_links,is_legal
-    if legal_only:linked=[url for url in linked if url in legal_links(page)]
     yielded=set()
     async def queued_pdfs():
         for pdf_url in list(getattr(http,'legal_pdf_links',{}).get(org,{})):
@@ -194,12 +191,7 @@ async def ordered_proof_targets(org,http,page,seen,legal_only=False):
         for url in await discover(org,http,page.url,seen):
             yielded.add(url);yield url
             async for pdf_url in queued_pdfs():yield pdf_url
-    fixed=proof_page_targets(page,page.url)
-    if legal_only:
-        base=urlsplit(page.url)
-        fixed=[url for url in getattr(http,'proof_sitemap_targets',{}).get(org,set()) if is_legal(url)]
-        fixed += [urlunsplit((base.scheme,base.netloc,path,'','')) for path in LEGAL_PROOF_PATHS]
-    for url in fixed:
+    for url in proof_page_targets(page,page.url):
         if url not in yielded:
             yielded.add(url);yield url
             async for pdf_url in queued_pdfs():yield pdf_url
@@ -227,7 +219,7 @@ def previous_nomination(previous, context, units):
     return Candidate(url, domain(url), value['candidate_origin'], branch), proof_url
 
 
-async def fetch(org, envelope, bulk, http, previous=None, *, resume=False, candidates_override=None, nav_homepages=(), legal_resume=False):
+async def fetch(org, envelope, bulk, http, previous=None, *, nav_homepages=()):
     context, registry_source, registry_locator = await offload(registry_context,envelope,bulk,http.blobs)
     units={c.value['organisation_number']:{'name': c.value.get('name')} for c in envelope.claims
            if c.field.startswith('subunits.unit.') and c.availability=='available' and isinstance(c.value,dict)}
@@ -244,8 +236,6 @@ async def fetch(org, envelope, bulk, http, previous=None, *, resume=False, candi
         old = previous if 'claims' in previous else previous.get('profile', {})
         context['brands'] = [c['value'] for c in old.get('claims', []) if c.get('field') == 'public_brand'
                              and c.get('availability') == 'available' and isinstance(c.get('value'), str)]
-    http.legal_resumable=getattr(http,'legal_resumable',{})
-    http.legal_resumable.setdefault(org,{})
     http.proof_checked_urls=getattr(http,'proof_checked_urls',{})
     http.proof_checked_urls.setdefault(org,set())
     section = Section(state="not_available")
@@ -253,40 +243,32 @@ async def fetch(org, envelope, bulk, http, previous=None, *, resume=False, candi
         add(section, registry_source, org, "website", "registry_social." + digest(social)[:20],
             {"url": social, "platform": domain(social), "verification": "registry_asserted"}, registry_locator)
     context['nav_homepages'] = list(nav_homepages)
-    if candidates_override is None:
-        context['website_seeds'] = getattr(http, 'website_seeds', {}).get(org, ())
-    candidates = list(candidates_override) if candidates_override is not None else generate(context)
+    context['website_seeds'] = getattr(http, 'website_seeds', {}).get(org, ())
+    candidates = generate(context)
     refresh_candidate, refresh_proof = previous_nomination(previous, context, units)
     if refresh_candidate:
         candidates = [refresh_candidate] + [c for c in candidates if c.url != refresh_candidate.url]
     leaders = [c.value.get("name") for c in envelope.claims if c.family == "roles" and isinstance(c.value, dict) and (c.value.get("role_type") or {}).get("kode") in {"DAGL", "LEDE"} and c.value.get("name")]
-    saved = http.discovery_sessions.get(org) if resume else None
-    fetched_html = saved.get('fetched_html', {}) if saved else {}
-    proved = saved['proved'] if saved else set()
-    successes = saved['successes'] if saved else []
-    attempts = saved['attempts'] if saved else []
-    blocked = saved['blocked'] if saved else False
-    ambiguous = saved['ambiguous'] if saved else False
+    fetched_html = {}
+    proved = set()
+    successes = []
+    attempts = []
+    blocked = ambiguous = source_unavailable = registry_failed = False
     budget_hit = None
-    source_unavailable = saved['source_unavailable'] if saved else False
-    registry_failed = saved['registry_failed'] if saved else False
-    fetchable_failures = saved['fetchable_failures'] if saved else set()
-    checked = saved['checked'] if saved else set()
-    attempted = saved['attempted'] if saved else set()
-    vetoed = saved['vetoed'] if saved else set()
-    failures = saved.get('transient_failures',{}) if saved else {}
-    if saved:section.errors.extend(saved['access_errors'])
+    fetchable_failures = set()
+    checked = set()
+    attempted = set()
+    vetoed = set()
     async def nominations():
         for candidate in candidates:yield candidate
         search=getattr(http,'search',None)
-        if not resume and not successes and search:
+        if not successes and search:
             existing={c.domain for c in candidates}
             for candidate in await search.nominate(org,context,http):
                 if candidate.domain not in existing:yield candidate
     async for candidate in nominations():
         key = candidate_key(candidate)
-        can_resume=legal_resume and key in http.legal_resumable[org]
-        if (key in attempted and not can_resume) or candidate.domain in vetoed:continue
+        if key in attempted or candidate.domain in vetoed:continue
         attempted.add(key)
         pages = []
         best = None
@@ -297,14 +279,11 @@ async def fetch(org, envelope, bulk, http, previous=None, *, resume=False, candi
             if not 200 <= response.status < 300:
                 if response.status >= 500:
                     source_unavailable = True
-                    failures[key]={'candidate':candidate,'reason':'website_http_5xx'}
                 attempts.append({"domain": candidate.domain, "level": "LOW", "reason": f"http_{response.status}"})
                 continue
             page = await offload(Page,response.body,response.url)
             checked.add(candidate.domain)
             proof = await offload(candidate_proof,page,org,context,candidate,leaders)
-            if proof.level not in {'REJECT','BLOCKED','VERIFIED'}:
-                http.legal_resumable[org][key]=candidate
             pages.append((response, page))
             best = (proof, response, page)
             if proof.level == "BLOCKED":
@@ -325,7 +304,6 @@ async def fetch(org, envelope, bulk, http, previous=None, *, resume=False, candi
                             proof, response, page = best
                 except SourceFailure as exc:
                     if exc.code in {'block_page','http_blocked','robots','robots_unavailable'}:raise
-                    if exc.code in TRANSIENT:failures[key]={'candidate':candidate,'reason':exc.code}
                     attempts.append({'domain': candidate.domain, 'origin': candidate.origin,
                                      'reason': exc.code, 'page': refresh_proof})
             if proof.level not in {"VERIFIED", "REJECT"}:
@@ -333,7 +311,7 @@ async def fetch(org, envelope, bulk, http, previous=None, *, resume=False, candi
                 from .legal_pages import pdf_receipts
                 http.legal_pdf_links=getattr(http,'legal_pdf_links',{})
                 http.legal_pdf_links.setdefault(org,{}).update(pdf_receipts(response,page))
-                async for target in ordered_proof_targets(org,http,page,seen,legal_only=legal_resume):
+                async for target in ordered_proof_targets(org,http,page,seen):
                     if not target or target in seen or domain(target) != domain(response.url):
                         continue
                     seen.add(target)
@@ -344,7 +322,6 @@ async def fetch(org, envelope, bulk, http, previous=None, *, resume=False, candi
                         extra = await http.get(target, org, candidate.domain, proved,**({'pdf':True} if is_pdf_target else {}))
                     except SourceFailure as exc:
                         if exc.code in {'block_page','http_blocked','robots','robots_unavailable'}:raise
-                        if exc.code in TRANSIENT:failures[key]={'candidate':candidate,'reason':exc.code}
                         attempts.append({"domain": candidate.domain, "level": "LOW", "reason": exc.code, "page": target})
                         if exc.code in {"website_budget_exhausted", "budget_exhausted", "deadline"}:
                             budget_hit = exc.code
@@ -353,7 +330,6 @@ async def fetch(org, envelope, bulk, http, previous=None, *, resume=False, candi
                     http.proof_checked_urls[org].add(target)
                     if extra.status != 200:
                         if extra.status in {401,403,429}:raise SourceFailure('http_blocked')
-                        if extra.status>=500:failures[key]={'candidate':candidate,'reason':'website_http_5xx'}
                         continue
                     if is_pdf_target:
                         if extra.url!=target:
@@ -401,8 +377,7 @@ async def fetch(org, envelope, bulk, http, previous=None, *, resume=False, candi
                         break
             proof, response, page = best
             if proof.level in {'REJECT','BLOCKED'}:
-                vetoed.add(candidate.domain);failures.pop(key,None)
-                http.legal_resumable[org].pop(key,None)
+                vetoed.add(candidate.domain)
             attempts.append({"domain": candidate.domain, "level": proof.level, "points": proof.points, "signals": proof.signals, "origin": candidate.origin, "reason": proof.reason})
             if candidate is refresh_candidate and proof.level != 'VERIFIED':
                 continue  # Previous metadata nominates; only fresh exact proof publishes.
@@ -416,7 +391,6 @@ async def fetch(org, envelope, bulk, http, previous=None, *, resume=False, candi
             elif proof.level in {"MEDIUM", 'REGISTRY_DECLARED'}:
                 ambiguous = True
         except SourceFailure as exc:
-            if exc.code in TRANSIENT:failures[key]={'candidate':candidate,'reason':exc.code}
             if exc.code in {'robots','robots_unavailable','http_blocked','block_page','ssrf','url_refused'}:vetoed.add(candidate.domain)
             if exc.code in {'website_timeout','website_connect_error','website_http_5xx','dns_timeout','dns_error','dns_unavailable'}:
                 source_unavailable = True
@@ -428,13 +402,7 @@ async def fetch(org, envelope, bulk, http, previous=None, *, resume=False, candi
                 section.errors.append(Error(section="website", code=exc.code, message=f"{candidate.domain}: access refused"))
             if exc.code in {"website_budget_exhausted", "budget_exhausted", "deadline"}:
                 budget_hit = exc.code
-                attempted.discard(key)  # Not a completed candidate check.
                 break
-    http.discovery_sessions[org] = dict(context=context, proved=proved, successes=successes,
-        attempts=attempts, blocked=blocked, ambiguous=ambiguous, source_unavailable=source_unavailable,
-        registry_failed=registry_failed, fetchable_failures=fetchable_failures, checked=checked,
-        attempted=attempted, vetoed=vetoed, transient_failures=failures, access_errors=list(section.errors),
-        fetched_html=fetched_html)
     envelope.run.refresh['proof_sitemaps']={'attempts':getattr(http,'proof_sitemap_attempts',{}).get(org,[]),
         'scope':'same-site proof-page nomination only; max two sitemap-nominated pages; no news; unchanged cumulative limits'}
     unique = {}

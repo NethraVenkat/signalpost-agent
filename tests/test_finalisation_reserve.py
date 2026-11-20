@@ -5,7 +5,7 @@ from types import SimpleNamespace
 import pytest
 
 from signalpost.budget import (
-    Budget, FINALISE_SECONDS_PER_COMPANY, PASS2_FINALISATION_SECONDS, PASS2_MARGIN_SECONDS,
+    Budget, FINALISE_SECONDS_PER_COMPANY, WEBSITE_FINALISATION_SECONDS, WEBSITE_MARGIN_SECONDS,
     SITE_SECONDS_PER_COMPANY, SLOW_SITE_SECONDS_PER_COMPANY,
 )
 from signalpost.sources.blobstore import BlobStore
@@ -88,23 +88,20 @@ def test_fixed_500_budget_covers_twice_the_measured_finalisation(tmp_path):
 
 
 @pytest.mark.parametrize(('companies', 'cutoff'), [(100, 1700), (500, 1700), (750, 1700)])
-def test_default_website_pass2_reserves_time_without_moving_global_deadline(tmp_path, companies, cutoff):
+def test_website_cutoff_reserves_time_without_moving_global_deadline(tmp_path, companies, cutoff):
     budget = budget_for(tmp_path, companies, 2100)
     assert budget.total_seconds == 2100
     assert crawl_seconds(budget) == pytest.approx(1785)
-    assert budget.website_deadline == budget.deadline
-    budget.phase = 'pass2'
     assert budget.website_deadline - budget.start == pytest.approx(cutoff)
-    assert cutoff + PASS2_FINALISATION_SECONDS <= budget.total_seconds - PASS2_MARGIN_SECONDS
+    assert cutoff + WEBSITE_FINALISATION_SECONDS <= budget.total_seconds - WEBSITE_MARGIN_SECONDS
     assert crawl_seconds(budget) == pytest.approx(1785)
 
 
-def test_pass2_uses_original_deadline_for_small_custom_and_scaled_runs(tmp_path):
+def test_website_uses_original_deadline_for_small_custom_and_scaled_runs(tmp_path):
     small = budget_for(tmp_path / 'small', 20, 2100)
     custom = budget_for(tmp_path / 'custom', 100, 600)
     scaled = Budget(config(tmp_path / 'scaled', numbers(500), scaled_time_budget=True))
     for budget in (small, custom, scaled):
-        budget.phase = 'pass2'
         assert budget.website_deadline == budget.deadline
     assert scaled.total_seconds == 10_500
 

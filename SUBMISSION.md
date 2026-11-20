@@ -28,7 +28,7 @@ uv run signalpost run --organisations batch.jsonl --output out/envelopes.jsonl -
 
 No credentials, `.env` file, model service or separately downloaded bulk dataset are required. Default provider cost is USD 0, excluding compute, storage and network. Bundled discovery datasets and their source terms are declared in [SOURCES](docs/SOURCES.md). Optional paid-search support requires explicit environment configuration and is not required by these commands.
 
-The default total budget is fixed at 2,100 seconds. HTTP attempts are capped at floor(1,850 × unique normalized input records / 100); overrides can only lower that cap. Website pass 2 ends by 1,700 seconds for default batches of 100 or more, inside the original crawl deadline, retaining finalisation time. Existing per-company limits, robots checks and domain pacing apply throughout.
+The default total budget is fixed at 2,100 seconds. HTTP attempts are capped at floor(1,850 × unique normalized input records / 100); overrides can only lower that cap. Website collection ends by 1,700 seconds for default batches of 100 or more, inside the original crawl deadline, retaining finalisation time. Existing per-company limits, robots checks and domain pacing apply throughout.
 
 Outputs:
 

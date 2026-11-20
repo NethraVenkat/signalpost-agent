@@ -1,7 +1,6 @@
 import time
 import math
 from collections import Counter
-from contextvars import ContextVar
 
 
 class SourceFailure(Exception):
@@ -26,10 +25,10 @@ MIN_WORK_FRACTION = 0.25
 MAX_RESERVE_FRACTION = 0.6
 HTTP_PER_100 = 1850
 SECONDS_PER_100 = 35 * 60
-PASS2_MARGIN_SECONDS = 150
+WEBSITE_MARGIN_SECONDS = 150
 # The latest F2 spent about 192 seconds after the crawl, including the site
 # attempt. Allow 250 seconds for the required outputs and optional site.
-PASS2_FINALISATION_SECONDS = 250
+WEBSITE_FINALISATION_SECONDS = 250
 
 
 def finalisation_estimates(companies, site):
@@ -72,30 +71,16 @@ class Budget:
         crawl_seconds = max(0.0, min(total - reserve, total * config.deadline_fraction))
         self.deadline = self.start + crawl_seconds
         self.crawl_limit = self.deadline  # No later phase may extend this deadline.
-        self.pass2_cutoff = self.deadline
+        self.website_deadline = self.deadline
         if companies >= 100 and config.time_budget_seconds == SECONDS_PER_100 and not getattr(config, 'scaled_time_budget', False):
-            window = SECONDS_PER_100 - PASS2_MARGIN_SECONDS - PASS2_FINALISATION_SECONDS
+            window = SECONDS_PER_100 - WEBSITE_MARGIN_SECONDS - WEBSITE_FINALISATION_SECONDS
             # The total default is fixed at 2,100 s for both 100 and 500 inputs.
             # Scaling this window down to 340 s at 100 discarded queued proof
             # checks while most of the actual budget was still available.
-            self.pass2_cutoff = min(self.deadline, self.start + window)
+            self.website_deadline = min(self.deadline, self.start + window)
         self.cap = min(config.max_requests, self.hard_request_cap) if config.max_requests is not None else self.hard_request_cap
         self.events = []
         self.by_host = Counter()
-        # Exact-ID work can continue while the website scheduler is in pass 2.
-        self._phase = ContextVar('signalpost_request_pass', default='pass1')
-
-    @property
-    def phase(self):
-        return self._phase.get()
-
-    @phase.setter
-    def phase(self, value):
-        self._phase.set(value)
-
-    @property
-    def website_deadline(self):
-        return min(self.deadline, self.pass2_cutoff) if self.phase == 'pass2' else self.deadline
 
     def check_website(self):
         if time.monotonic() >= self.website_deadline:
@@ -113,7 +98,7 @@ class Budget:
         if len(self.events) >= self.cap:
             raise SourceFailure("budget_exhausted")
         event = {"url": url, "host": host, "organisation_number": org, "attempt_started": time.monotonic() - self.start, "status": None, "error": None}
-        event['pass'] = self.phase
+        event['pass'] = 'pass1'
         self.events.append(event)
         self.by_host[host] += 1
         return event

@@ -974,3 +974,19 @@
 - Brave, Serper, Google Custom Search, Google Places, Tavily and TinyFish are outside the default seven-flag run because they require commercial access or credentials.
 - LLM generation and LLM judging are outside claim publication. Use exact-entity source records and extractive receipts.
 - GDELT, Bing RSS and Google News are excluded because syndicated and name-matched articles raise wrong-company attribution risk.
+
+
+## Single-pass website discovery
+
+Retire the second website pass. It yielded zero newly verified websites in all four saved live runs.
+
+| Run | Pass 2 elapsed seconds | Website HTTP requests | Newly verified websites |
+|---|---:|---:|---:|
+| S5 | 465.578 | 208 | 0 |
+| S6 | 431.828 | 217 | 0 |
+| Stage 2 | 382.234 | 205 | 0 |
+| Priority trial | 282.078 | 181 | 0 |
+
+The website proof URL and SHA-256 for every published site in those runs first appear in pass 1. This covers all 38 Stage 2 sites. The publisher-receipt correction independently withdraws one of those 38 under the stricter proof policy. The single-pass comparison therefore uses 37 available website claims and 31 with `VERIFIED` status as its corrected offline reference. The archived Stage 2 pass consumed 382.234 seconds of elapsed scheduler time. Live end-to-end time is measured separately.
+
+Keep the 16 company slots, two in-flight requests per domain, 45-second company cap, 1,700-second website cutoff, 2,100-second process budget and finalisation reserve. Exact-ID work keeps its existing global deadline. Candidate ordering and ownership vetoes remain in force. [S5](s5-live500/SUMMARY.md) · [S6](s6-clone-gate/SUMMARY.md) · [Stage 2](coverage-gaps/STAGE2.md) · [Publisher receipt replay](coverage-gaps/PUBLISHER-RECEIPTS.md)

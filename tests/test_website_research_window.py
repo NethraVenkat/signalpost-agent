@@ -10,11 +10,10 @@ def test_queued_proof_after_old_cutoff_can_use_remaining_budget(tmp_path, monkey
     monkeypatch.setattr(meter.time, 'monotonic', lambda: now[0])
     budget = Budget(config(tmp_path, numbers(100)))
     original_deadline, original_cap = budget.deadline, budget.cap
-    budget.phase = 'pass2'
-    now[0] += 600  # A slow pass 1; the old 340-second cutoff lost all remaining proof walks.
+    now[0] += 600  # The old 340-second cutoff discarded these proof checks.
     budget.check_website()
     event = budget.reserve('https://proof.example.no/privacy', 'proof.example.no', '923609016')
-    assert event['pass'] == 'pass2'
+    assert event['pass'] == 'pass1'
     assert budget.deadline == original_deadline
     assert budget.cap == original_cap == 1850
     now[0] = budget.start + 1700

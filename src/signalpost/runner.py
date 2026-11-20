@@ -26,6 +26,7 @@ from .watchdog import finish_before_deadline
 from .web.fetcher import WebsiteHttp
 from .web.measurement import WebsiteMeasurement
 from .web import collector
+from .web.candidates import nav_homepages
 from .web.policy import safe_transport
 from .sources import nav
 from .synthesis.service import Service as SynthesisService
@@ -408,12 +409,22 @@ async def _run(config, client=None,synthesis_provider=None):
                 if config.websites:
                     async def discover_website():
                         kwargs = {}
-                        if config.adaptive_websites:
-                            from .web.adaptive import nav_homepages
+                        budget.check_website()
+                        if config.website_nav_candidates:
                             kwargs['nav_homepages'] = await offload(nav_homepages, envelope, nav_index, blobs)
                         return await collector.fetch(org, envelope, bulk.get(org), website_http, prior.get(org), **kwargs)
-                    await isolate(envelope, "website",
-                                  lambda: website_measurement.collect(org, 'pass1', discover_website))
+
+                    async def bounded_website():
+                        timeout = asyncio.timeout(max(0, budget.website_deadline - time.monotonic()))
+                        try:
+                            async with timeout:
+                                return await website_measurement.collect(org, 'pass1', discover_website)
+                        except TimeoutError as exc:
+                            if not timeout.expired():
+                                raise
+                            raise SourceFailure('deadline') from exc
+
+                    await isolate(envelope, 'website', bounded_website)
                 if config.public_activity:
                     from .web.activity import fetch as fetch_activity
                     await isolate(envelope, 'activity', lambda: fetch_activity(org, envelope, website_http, website_http.accepted_pages.get(org, [])))
@@ -490,7 +501,6 @@ async def _run(config, client=None,synthesis_provider=None):
             # A real identity GET outweighs a failed generic HEAD probe.
             budget.source_outages.pop('https://data.brreg.no/enhetsregisteret/', None)
         website_http = WebsiteHttp(active_client, config, budget, blobs, dns_metrics=dns_metrics)
-        website_http.measurement = website_measurement
         if config.websites and config.website_seed_index:
             from .web.seed_index import load as load_website_seeds
             website_http.website_seeds = await offload(load_website_seeds)
@@ -556,35 +566,6 @@ async def _run(config, client=None,synthesis_provider=None):
                         update(envelopes[org], 'status_events', missing('status_events', 'status_event_upstream_incomplete'))
                         update(envelopes[org], 'activity', registry_changes.merge(
                             envelopes[org], missing('activity', 'registry_change_incomplete'), config.public_activity))
-            if config.websites and config.adaptive_websites:
-                from .web.adaptive import run as adaptive_run
-                async def refresh_activity(org,envelope):
-                    from .web.activity import fetch as fetch_activity
-                    from .web.adaptive import discard_stale_activity
-                    from .sources import registry_changes
-                    discard_stale_activity(envelope)
-                    registry_claims=[c for c in envelope.claims if c.family=='activity' and c.field.startswith('registry_change.')]
-                    registry_state=envelope.run.refresh.get('registry_activity',{})
-                    registry_errors=[e for e in envelope.errors if e.section=='activity' and e.code in registry_state.get('errors',[])]
-                    formal=Section(state=registry_state.get('state','not_available'),claims=registry_claims,
-                                   evidence=list(envelope.evidence),errors=registry_errors)
-                    await isolate(envelope,'activity',lambda:fetch_activity(org,envelope,website_http,website_http.accepted_pages.get(org,[])))
-                    if config.registry_changes:
-                        # A failed public check makes update() preserve existing
-                        # supported facts, including these registry events.
-                        present={c.field for c in envelope.claims if c.family=='activity'}
-                        formal.claims=[c for c in formal.claims if c.field not in present]
-                        update(envelope,'activity',registry_changes.merge(envelope,formal,True))
-                try:
-                    adaptive_metrics.update(await adaptive_run(envelopes,website_http,nav_index,bulk,prior,update,refresh_activity))
-                    if adaptive_metrics.get('company_errors'):
-                        warnings.append(f"Adaptive website pass isolated {adaptive_metrics['company_errors']} company I/O failures; see per-company errors")
-                except Exception as exc:
-                    # Optional scheduling must not prevent mandatory terminal output.
-                    adaptive_metrics.update(state='failed',error=type(exc).__name__,
-                        pass1={'requests':sum(e.get('pass')=='pass1' for e in budget.events)},
-                        pass2={'requests':sum(e.get('pass')=='pass2' for e in budget.events)})
-                    warnings.append('adaptive website pass failed: '+type(exc).__name__)
             task=enrich_task
             await finish_before_deadline([task],budget,CANCEL_GRACE_SECONDS)
             if task.done() and not task.cancelled() and task.exception() is not None:
@@ -613,8 +594,6 @@ async def _run(config, client=None,synthesis_provider=None):
                 elif not nav_task.cancelled():
                     nav_task.exception()  # Retrieved; failures are already recorded on the index.
     dns_metrics = {'dns_lookups': 0}
-    adaptive_metrics = ({'state':'pending'} if config.websites and config.adaptive_websites else
-                        {'state':'disabled','reason':'Website discovery or adaptive scheduling was disabled'})
     search_metrics={'status':'not configured','queries':0,'estimated_usd':0.}
     source_health=[]
     if client is None:
@@ -676,10 +655,6 @@ async def _run(config, client=None,synthesis_provider=None):
                             scaled_hard_request_cap=budget.hard_request_cap,
                             scaled_hard_time_seconds=budget.hard_seconds)
     report['enrichment']={name:getattr(config,name) for name in ('websites','hiring','public_activity')}
-    if pass1 := adaptive_metrics.get('pass1'):
-        requests = [e for e in budget.events if e.get('pass') == 'pass1']
-        pass1.update(requests=len(requests), website_requests=sum(e.get('section') == 'website' for e in requests))
-    report['adaptive_websites']=adaptive_metrics
     if config.websites:
         report['website_measurement'] = website_measurement.report(inputs.unique)
     from .sources.official_resilience import summary as outage_summary

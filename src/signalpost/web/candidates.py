@@ -1,4 +1,6 @@
+import json
 import re
+from datetime import datetime, timezone
 from functools import lru_cache
 from dataclasses import dataclass
 from urllib.parse import urlsplit
@@ -134,6 +136,40 @@ def generate(context, limit=8):
         for slug in legal_name_slugs(legal_name(former)):
             add(slug, 'former_registered_name')
     return output[:min(32, limit)]
+
+
+
+def nav_homepages(envelope, index, blobs):
+    """Saved live detail employer.homepage nominates only; cache/header names do not."""
+    from ..sources.nav import timestamp
+    scope={envelope.organisation_number} | {c.value['organisation_number'] for c in envelope.claims
+        if c.field.startswith('subunits.unit.') and c.availability=='available'
+        and isinstance(c.value,dict) and c.value.get('organisation_number')}
+    result={}; now=datetime.now(timezone.utc)
+    for owner in sorted(scope):
+        for ad in index.ads.get(owner,[]):
+            try:
+                if ad.value['uuid'] in index.closed: continue
+                body=blobs.read(ad.sha)
+                entry=json.loads(body) if body else {}
+                if not isinstance(entry,dict):continue
+                raw=entry.get('ad_content') or {}
+                if not isinstance(raw,dict):continue
+                employer=raw.get('employer') or {}
+                if not isinstance(employer,dict):continue
+                if (entry.get('status')!='ACTIVE' or entry.get('uuid')!=ad.value['uuid']
+                        or raw.get('uuid')!=ad.value['uuid']
+                        or str(employer.get('orgnr'))!=owner
+                        or ad.value.get('employer_orgnr')!=owner): continue
+                if not timestamp(raw.get('expires')) or timestamp(raw['expires'])<=now: continue
+                if not timestamp(raw.get('published')) or timestamp(raw['published'])>now: continue
+                homepage=employer.get('homepage')
+                if not isinstance(homepage,str): continue
+                url=normalize_url(homepage)
+                if url: result[url]={'url':url, 'subunit_orgnr':owner if owner!=envelope.organisation_number else None,
+                    'source_url':ad.url, 'content_sha256':ad.sha, 'locator':'/ad_content/employer/homepage'}
+            except (KeyError,TypeError,ValueError): continue
+    return [result[key] for key in sorted(result)]
 
 
 def extract_sitemap_domains(target, legal_name_str="", brand_name="", timeout=5):

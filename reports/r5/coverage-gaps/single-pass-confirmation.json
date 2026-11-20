@@ -1,0 +1,441 @@
+{
+  "execution": {
+    "run_id": "r5-single-pass-20261126",
+    "seed": 20261126,
+    "flag_count": 7,
+    "exit_code": 0,
+    "process_wall_seconds": 1489.86,
+    "margin_seconds": 610.14,
+    "minimum_free_bytes": 16172826624,
+    "stop_reason": null
+  },
+  "preflight": [
+    {
+      "url": "https://spedify.no/robots.txt",
+      "status": 200
+    },
+    {
+      "url": "https://data.brreg.no/enhetsregisteret/api/enheter/923609016",
+      "status": 200
+    },
+    {
+      "url": "https://api.gleif.org/api/v1/lei-records?page[size]=1",
+      "status": 200
+    }
+  ],
+  "run_status": "partial",
+  "successful_http_responses": 4002,
+  "site": {
+    "state": "available",
+    "companies": 500,
+    "input_records": 500,
+    "pages": 502,
+    "skipped_invalid_identifiers": 0,
+    "total_bytes": 216134785,
+    "largest_profile_data_bytes": 1094254,
+    "largest_profile_bytes": 234983
+  },
+  "deadlines": 0,
+  "check": {
+    "lines": 500,
+    "schema_valid": true,
+    "published_claims": 76873,
+    "source_blobs_verified": 3122,
+    "synthesis_companies": 500,
+    "synthesis_sentences": 9427,
+    "synthesis_unverified_values": 0,
+    "financial_inputs_verified": 31436,
+    "derived_financial_metrics_verified": 1128,
+    "registry_events_verified": 6845,
+    "filing_year_facts_verified": 5087,
+    "exact_public_items_verified": 68,
+    "exact_official_items_verified": 426,
+    "briefing_companies": 500,
+    "briefing_sentences": 3227,
+    "briefing_short_companies": 0,
+    "briefing_unverified_values": 0,
+    "briefing_topic_coverage": {
+      "activity": 500,
+      "change": 500,
+      "unknown": 500,
+      "financial": 500,
+      "takeaway": 500
+    },
+    "complete_briefing_contracts": 500,
+    "newer_filing_flags": 0,
+    "site_verified": true,
+    "terminal_envelopes": 500,
+    "source_failures_permitted": true,
+    "http_requests": 5350,
+    "wall_seconds": 1486.235,
+    "cost_usd": 0,
+    "largest_profile_bytes": 234983
+  },
+  "website_http": 1683,
+  "comparison_reference": "Stage 2 with publisher receipt correction, rebuilt offline",
+  "corrected_reference": {
+    "rows": 500,
+    "claims": {
+      "identity": 15606,
+      "subunits": 5458,
+      "roles": 5819,
+      "accounts": 36523,
+      "website": 217,
+      "inspections": 14,
+      "signature": 1457,
+      "prokura": 224,
+      "status_events": 4156,
+      "activity": 6845,
+      "group": 67,
+      "gleif": 68,
+      "state_aid": 379,
+      "research": 33,
+      "licences": 22
+    },
+    "sections": {
+      "identity": {
+        "available": 500
+      },
+      "roles": {
+        "available": 498,
+        "not_available": 2
+      },
+      "subunits": {
+        "available": 401,
+        "not_available": 99
+      },
+      "accounts": {
+        "available": 497,
+        "failed": 3
+      },
+      "signature": {
+        "available": 488,
+        "not_available": 12
+      },
+      "prokura": {
+        "available": 111,
+        "not_available": 389
+      },
+      "group": {
+        "not_available": 465,
+        "available": 35
+      },
+      "website": {
+        "available": 37,
+        "failed": 179,
+        "not_available": 255,
+        "ambiguous": 28,
+        "blocked": 1
+      },
+      "hiring": {
+        "not_available": 500
+      },
+      "activity": {
+        "available": 500
+      },
+      "status_events": {
+        "available": 500
+      },
+      "gleif": {
+        "not_available": 436,
+        "available": 64
+      },
+      "procurement": {
+        "not_available": 495,
+        "failed": 5
+      },
+      "state_aid": {
+        "not_available": 445,
+        "available": 55
+      },
+      "research": {
+        "not_available": 495,
+        "available": 5
+      },
+      "licences": {
+        "not_available": 490,
+        "available": 10
+      },
+      "inspections": {
+        "available": 7,
+        "not_available": 493
+      }
+    },
+    "sites": [
+      "834291142",
+      "835068072",
+      "911821834",
+      "912062279",
+      "912490025",
+      "918407081",
+      "923710930",
+      "924359609",
+      "924415681",
+      "924568747",
+      "925272647",
+      "925383058",
+      "926570897",
+      "927927500",
+      "928031632",
+      "928698025",
+      "932435888",
+      "932519216",
+      "932744651",
+      "932842645",
+      "934344057",
+      "935075378",
+      "935261260",
+      "935787122",
+      "936166512",
+      "936196772",
+      "937902174",
+      "937917376",
+      "975978729",
+      "981400224",
+      "983190553",
+      "989087126",
+      "990770557",
+      "991498311",
+      "993235458",
+      "994268090",
+      "994961926"
+    ],
+    "verified": [
+      "834291142",
+      "835068072",
+      "912062279",
+      "912490025",
+      "923710930",
+      "924359609",
+      "924415681",
+      "924568747",
+      "925272647",
+      "925383058",
+      "926570897",
+      "927927500",
+      "928031632",
+      "928698025",
+      "932435888",
+      "932519216",
+      "932744651",
+      "932842645",
+      "934344057",
+      "935075378",
+      "935261260",
+      "935787122",
+      "936166512",
+      "936196772",
+      "937902174",
+      "937917376",
+      "983190553",
+      "990770557",
+      "991498311",
+      "993235458",
+      "994268090"
+    ],
+    "placeholders": 0
+  },
+  "current": {
+    "rows": 500,
+    "claims": {
+      "identity": 15606,
+      "subunits": 5458,
+      "roles": 5819,
+      "inspections": 14,
+      "website": 224,
+      "accounts": 36523,
+      "signature": 1457,
+      "prokura": 224,
+      "status_events": 4156,
+      "activity": 6845,
+      "group": 67,
+      "gleif": 68,
+      "state_aid": 379,
+      "research": 33
+    },
+    "sections": {
+      "identity": {
+        "available": 500
+      },
+      "roles": {
+        "available": 498,
+        "not_available": 2
+      },
+      "subunits": {
+        "available": 401,
+        "not_available": 99
+      },
+      "accounts": {
+        "available": 497,
+        "failed": 3
+      },
+      "signature": {
+        "available": 488,
+        "not_available": 12
+      },
+      "prokura": {
+        "available": 111,
+        "not_available": 389
+      },
+      "group": {
+        "not_available": 465,
+        "available": 35
+      },
+      "website": {
+        "available": 37,
+        "failed": 205,
+        "not_available": 232,
+        "ambiguous": 25,
+        "blocked": 1
+      },
+      "hiring": {
+        "not_available": 500
+      },
+      "activity": {
+        "available": 500
+      },
+      "status_events": {
+        "available": 500
+      },
+      "gleif": {
+        "not_available": 436,
+        "available": 64
+      },
+      "procurement": {
+        "not_available": 495,
+        "failed": 5
+      },
+      "state_aid": {
+        "not_available": 445,
+        "available": 55
+      },
+      "research": {
+        "not_available": 495,
+        "available": 5
+      },
+      "licences": {
+        "blocked": 500
+      },
+      "inspections": {
+        "available": 7,
+        "not_available": 493
+      }
+    },
+    "sites": [
+      "834291142",
+      "835068072",
+      "911821834",
+      "912490025",
+      "918407081",
+      "923710930",
+      "924359609",
+      "924415681",
+      "924568747",
+      "925272647",
+      "926570897",
+      "927733714",
+      "928031632",
+      "928698025",
+      "932435888",
+      "932519216",
+      "932744651",
+      "932842645",
+      "934344057",
+      "935075378",
+      "935261260",
+      "935787122",
+      "936196772",
+      "937902174",
+      "937917376",
+      "975978729",
+      "981400224",
+      "983190553",
+      "989087126",
+      "990770557",
+      "991095500",
+      "991498311",
+      "992934980",
+      "993235458",
+      "994268090",
+      "994961926",
+      "999582214"
+    ],
+    "verified": [
+      "834291142",
+      "835068072",
+      "912490025",
+      "923710930",
+      "924359609",
+      "924415681",
+      "924568747",
+      "925272647",
+      "926570897",
+      "927733714",
+      "928031632",
+      "928698025",
+      "932435888",
+      "932519216",
+      "932744651",
+      "932842645",
+      "934344057",
+      "935075378",
+      "935261260",
+      "935787122",
+      "936196772",
+      "937902174",
+      "937917376",
+      "983190553",
+      "990770557",
+      "991498311",
+      "992934980",
+      "993235458",
+      "994268090"
+    ],
+    "placeholders": 0
+  },
+  "seconds_reclaimed_vs_stage2": 362.608,
+  "group_queue_wait_seconds": {
+    "median": 110.851,
+    "p95": 255.64,
+    "max": 267.578
+  },
+  "cap_hits": 5,
+  "sites_gained": [
+    "927733714",
+    "991095500",
+    "992934980",
+    "999582214"
+  ],
+  "sites_lost": [
+    "912062279",
+    "925383058",
+    "927927500",
+    "936166512"
+  ],
+  "precision": {
+    "seed": 202611200628,
+    "strata": {
+      "accounts": 15,
+      "activity": 15,
+      "gleif": 14,
+      "group": 14,
+      "identity": 14,
+      "inspections": 14,
+      "prokura": 14,
+      "research": 14,
+      "roles": 14,
+      "signature": 15,
+      "state_aid": 15,
+      "status_events": 14,
+      "subunits": 14,
+      "website": 14
+    },
+    "counts": {
+      "SUPPORTED": 200,
+      "CONTRADICTED": 0,
+      "BLOB MISSING OR HASH MISMATCH": 0
+    },
+    "wilson95_lower": 0.9811546736227345
+  },
+  "precision_rejections": []
+}

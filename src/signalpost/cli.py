@@ -35,10 +35,6 @@ def main():
     command.add_argument('--websites', action=argparse.BooleanOptionalAction, default=True,
                          help='Discover verified websites by default; --no-websites disables discovery')
     command.add_argument('--no-dns-precheck', dest='dns_precheck', action='store_false')
-    command.add_argument('--adaptive-websites', action=argparse.BooleanOptionalAction, default=True,
-                         help='Use remaining cumulative allowance for a ranked second website pass')
-    command.add_argument('--adaptive-extra-budget', action=argparse.BooleanOptionalAction, default=True,
-                         help='Allow bounded pass-2 extensions and one transient strong-candidate retry')
     command.add_argument('--no-website-stop-after-verified', dest='website_stop_after_verified', action='store_false')
     command.add_argument('--no-nav-rank-candidates', dest='nav_rank_candidates', action='store_false')
     command.add_argument('--public-activity', action=argparse.BooleanOptionalAction, default=True)

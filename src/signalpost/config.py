@@ -38,8 +38,7 @@ class Config(BaseModel):
     research: bool = True  # Stage S3 bundled RCN/SkatteFUNN exact-owner projects
     licences: bool = True  # Stage S4 Finanstilsynet exact-orgnr licences/registrations
     inspections: bool = True  # Stage S5 bundled Mattilsynet smilefjes inspections
-    adaptive_websites: bool = True
-    adaptive_extra_budget: bool = True
+    website_nav_candidates: bool = True
     dns_precheck: bool = True
     registry_declared: bool = False
     website_stop_after_verified: bool = True

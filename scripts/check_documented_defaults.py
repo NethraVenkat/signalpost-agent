@@ -7,7 +7,7 @@ import re
 import subprocess
 
 from signalpost.config import Config
-from signalpost.budget import HTTP_PER_100, PASS2_MARGIN_SECONDS, PASS2_FINALISATION_SECONDS
+from signalpost.budget import HTTP_PER_100, WEBSITE_MARGIN_SECONDS, WEBSITE_FINALISATION_SECONDS
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -21,7 +21,7 @@ def check():
     metadata = json.loads(gzip.decompress(nav.read_bytes()))
     current_index = sources.split('### Declared NAV official-feed index', 1)[1].split('\n\n', 2)[1]
     seconds = Config.model_fields['time_budget_seconds'].default
-    cutoff = seconds - PASS2_MARGIN_SECONDS - PASS2_FINALISATION_SECONDS
+    cutoff = seconds - WEBSITE_MARGIN_SECONDS - WEBSITE_FINALISATION_SECONDS
     assert f'The default time budget is {seconds:,}' in readme
     assert f'{seconds:,} seconds' in submission
     assert 'The default time budget is 2,400' not in readme
@@ -30,7 +30,7 @@ def check():
     for value in (metadata['index_version'], metadata['built_at'], f"{metadata['ads_count']:,}",
                   f"{metadata['employer_count']:,}", f'{nav.stat().st_size:,}'):
         assert value in current_index, 'Stale current NAV index declaration: ' + value
-    assert 'pypdf' in readme and 'pass-1 defaults' in readme
+    assert 'pypdf' in readme and 'has one pass' in readme
     assert '--nav-concurrency 4' in (ROOT / 'docs/AGENT.md').read_text(encoding='utf8')
     names = subprocess.check_output(['git', '-C', str(ROOT), 'ls-files', '-z', '--cached', '--others',
                                      '--exclude-standard', '--', '*.md']).decode().split('\0')
