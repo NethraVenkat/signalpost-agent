@@ -1,3 +1,7 @@
+# Historical record
+
+This document describes a historical build. Seed nomination and commercial search functionality have been removed and are non-operational. Current source policy is in SOURCES.md.
+
 # Historical Rules, Compliance, and Architecture Audit
 
 Configuration descriptions are updated where noted. PASS labels and measurements belong to the dated baseline below; current instructions and verification are in [SUBMISSION](../SUBMISSION.md) and [evaluator fixes](../reports/evaluator-fixes/SUMMARY.md).

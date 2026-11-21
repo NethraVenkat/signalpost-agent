@@ -18,7 +18,6 @@ from .owner_social import (
     FOLLOW_US, GROUP_RECEIPT_METHOD, SAME_AS, SOCIAL_POLICY, former_names,
     group_site_receipt, page_profiles, same_as_veto, site_scope, visible_profiles, website_scope,
 )
-from .seed_index import SEED_ORIGINS, publisher_has_number
 
 
 def extract_sitemap_domains(xml_body, legal_nm, brand_nm):
@@ -243,7 +242,6 @@ async def fetch(org, envelope, bulk, http, previous=None, *, nav_homepages=()):
         add(section, registry_source, org, "website", "registry_social." + digest(social)[:20],
             {"url": social, "platform": domain(social), "verification": "registry_asserted"}, registry_locator)
     context['nav_homepages'] = list(nav_homepages)
-    context['website_seeds'] = getattr(http, 'website_seeds', {}).get(org, ())
     candidates = generate(context)
     refresh_candidate, refresh_proof = previous_nomination(previous, context, units)
     if refresh_candidate:
@@ -259,14 +257,7 @@ async def fetch(org, envelope, bulk, http, previous=None, *, nav_homepages=()):
     checked = set()
     attempted = set()
     vetoed = set()
-    async def nominations():
-        for candidate in candidates:yield candidate
-        search=getattr(http,'search',None)
-        if not successes and search:
-            existing={c.domain for c in candidates}
-            for candidate in await search.nominate(org,context,http):
-                if candidate.domain not in existing:yield candidate
-    async for candidate in nominations():
+    for candidate in candidates:
         key = candidate_key(candidate)
         if key in attempted or candidate.domain in vetoed:continue
         attempted.add(key)
@@ -317,8 +308,6 @@ async def fetch(org, envelope, bulk, http, previous=None, *, nav_homepages=()):
                     seen.add(target)
                     try:
                         is_pdf_target=target in http.legal_pdf_links.get(org,{})
-                        if is_pdf_target and candidate.origin in SEED_ORIGINS:
-                            continue
                         extra = await http.get(target, org, candidate.domain, proved,**({'pdf':True} if is_pdf_target else {}))
                     except SourceFailure as exc:
                         if exc.code in {'block_page','http_blocked','robots','robots_unavailable'}:raise
@@ -530,13 +519,6 @@ def extract_contacts_and_social(section, org, web_claim, pages, context=None, en
 def candidate_proof(page,org,context,candidate,leaders):
     context = {**context, 'publisher_company_orgnr': org, 'candidate_url': candidate.url}
     proof=score(page,org,context,candidate.origin,leaders)
-    if candidate.origin in SEED_ORIGINS:
-        from .proof import Proof
-        if proof.level in {'BLOCKED', 'REJECT'}:
-            return proof
-        if proof.level == 'VERIFIED' and proof.token == org and publisher_has_number(page, org):
-            return proof
-        return Proof('LOW', reason='seed_live_publisher_number_missing')
     # A guessed parent candidate may actually be its proven registered branch.
     # Only an exact number in R1 publisher context authorizes this fallback;
     # each branch is rescored with every existing conflict/proof rule intact.

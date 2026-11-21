@@ -1,6 +1,5 @@
 import pytest
-from signalpost.web.candidates import extract_sitemap_domains, Candidates
-from signalpost.web.search import brave_search_mock
+from signalpost.web.candidates import extract_sitemap_domains
 
 SAMPLE_SITEMAP = """<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -40,39 +39,8 @@ def test_sitemap_extraction(monkeypatch):
     assert len(fetched_domains) <= 3
 
 
-def test_brave_search_mock():
-    company = "Acme Solutions AS"
-    brand = "Acme"
-    orgnr = "912345678"
-
-    results = brave_search_mock(company, brand=brand, orgnr=orgnr, limit=5)
-    assert len(results) > 0
-    assert len(results) <= 5
-
-    for res in results:
-        assert "domain" in res
-        assert "title" in res
-        assert "snippet" in res
-        assert "score" in res
-        # Verify identity scoring threshold >= 60 pts
-        assert res["score"] >= 60
-        # Generic directory proff.no and unrelated news should be excluded
-        assert res["domain"] not in ("proff.no", "dagensnyheter.no")
 
 
-def test_candidates_add_company_scope():
-    context = {
-        "name": "Acme Solutions AS",
-        "brand": "Acme",
-        "orgnr": "912345678",
-        "website": "https://acmesolutions.no"
-    }
-    candidates, report = Candidates.add_company_scope(context)
-    assert len(candidates) > 0
-    assert "sitemap_domains" in report
-    assert "brave_domains" in report
-    assert "total_new" in report
-    assert any(c.origin == "search_brave" for c in candidates)
 
 
 def test_activity_xml_fallbacks_and_malformed():

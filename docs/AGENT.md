@@ -53,7 +53,6 @@ With public activity enabled, accepted websites can supply dated news through li
 - **Detail concurrency tuning**: NAV detail concurrency supports up to 12 workers ; the current default is `--nav-concurrency 4`. A historical eight-worker tuning trial recorded 196.1s versus 57.77s; those are sample measurements, not current runtime guarantees.
 
 ### Part B: Brave Search Integration & Strict Scoring
-- **External web discovery**: Integrated Brave Search API (`api.search.brave.com`) candidate queries with query limits and cost tracking; results still require permitted-source fetching and company proof.
 - **Mock provider**: Available only through explicit test/experimental configuration. With no search key, normal production search is disabled; mock results are not enabled automatically.
 - **Identity proof**: Search results nominate domains only. Current publisher-conflict checks and exact-number or documented legal-name/contact corroboration govern publication; an old numeric candidate score is not company proof.
 

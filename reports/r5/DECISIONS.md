@@ -999,3 +999,8 @@ The two documented Finanstilsynet registry GET routes use the same explicit offi
 Audit flags are literal per-period source facts, extracted from existing stored accounts bodies. Both flags must be boolean and consistent across duplicate period records. Two affirmative flags are conservatively withheld. No interpretation that a period was audited is derived from a false flag.
 
 The five website pilots remain deferred. The independent comparison estimated gains of 0?3 companies for roughly 3?8 hours for the substantive pilots, with no demonstrated gain from syntax changes. Common Crawl also requires a rights review. Exact-number proof covered 5.8% of our cohort against 4.4% in the independently reviewed public entry. The headline website gap includes a different proof bar and different cohorts, and provides no measured justification for weakening our rules.
+
+
+## Final source cleanup
+
+Common Crawl and OSM seed nomination tooling and bundled indexes were removed. The Common Crawl request paths conflicted with robots restrictions. The optional commercial search adapter was removed because it conflicted with the source policy. Neither component was used in the evaluated run. Supported evidence and source-validation standards are preserved. Historical reports and offline receipt validation remain available.

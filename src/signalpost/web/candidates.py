@@ -92,7 +92,6 @@ def generate(context, limit=8):
     email = str(context.get("email") or "")
     if "@" in email:
         add(email.rsplit("@", 1)[1], "registry_email")
-    seeds = context.get("website_seeds", ())
 
     def add_subunit_contacts():
         for unit in context.get('subunits', []):
@@ -101,17 +100,12 @@ def generate(context, limit=8):
             if '@' in email:
                 add(email.rsplit('@', 1)[1], 'subunit_registry_email', unit['orgnr'])
 
-    if seeds:
-        add_subunit_contacts()
-        for root, origin in seeds:
-            add(root, origin)
     name_slugs = legal_name_slugs(legal_name(context.get('name')))
     # Preserve the measured first-pass priority: strongest exact-name spellings
     # precede branch/provider contacts, which can consume the entire allowance.
     for slug in sorted(name_slugs, key=lambda value: not value.endswith('.no'))[:2]:
         add(slug, 'legal_name_slug')
-    if not seeds:
-        add_subunit_contacts()
+    add_subunit_contacts()
     for item in context.get('nav_homepages', []):
         add(item['url'], 'nav_employer_homepage', item.get('subunit_orgnr'))
     # Brands/aliases nominate only. They never modify the legal identity used
@@ -226,39 +220,3 @@ def extract_sitemap_domains(target, legal_name_str="", brand_name="", timeout=5)
             if len(discovered) >= 3:
                 break
     return discovered
-
-
-class Candidates:
-    @staticmethod
-    def add_company_scope(context, existing_candidates=None, timeout=5):
-        from .search import brave_search_mock
-        base = list(existing_candidates if existing_candidates is not None else generate(context))
-        seen = {c.domain for c in base}
-        sitemap_domains = []
-        brave_domains = []
-        legal_nm = context.get('name') or ''
-        brand_nm = context.get('brand') or ''
-        orgnr = context.get('orgnr') or ''
-
-        for c in list(base):
-            if c.origin in ('registry_website', 'subunit_registry_website'):
-                for d in extract_sitemap_domains(c.domain, legal_name_str=legal_nm, brand_name=brand_nm, timeout=timeout):
-                    if d not in seen:
-                        seen.add(d)
-                        sitemap_domains.append(d)
-                        base.append(Candidate(f"https://{d}", d, 'sitemap_discovery'))
-
-        for item in brave_search_mock(legal_nm, brand=brand_nm, orgnr=orgnr, limit=5):
-            d = item.get('domain')
-            if d and d not in seen:
-                seen.add(d)
-                brave_domains.append(d)
-                base.append(Candidate(item.get('url', f"https://{d}"), d, 'search_brave'))
-
-        report = {
-            'sitemap_domains': len(sitemap_domains),
-            'brave_domains': len(brave_domains),
-            'total_new': len(sitemap_domains) + len(brave_domains)
-        }
-        return base, report
-

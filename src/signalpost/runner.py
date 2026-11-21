@@ -501,13 +501,6 @@ async def _run(config, client=None,synthesis_provider=None):
             # A real identity GET outweighs a failed generic HEAD probe.
             budget.source_outages.pop('https://data.brreg.no/enhetsregisteret/', None)
         website_http = WebsiteHttp(active_client, config, budget, blobs, dns_metrics=dns_metrics)
-        if config.websites and config.website_seed_index:
-            from .web.seed_index import load as load_website_seeds
-            website_http.website_seeds = await offload(load_website_seeds)
-        from .web.search import Search
-        website_http.search=Search(active_client,config,budget)
-        search_metrics.update(website_http.search.metrics)
-        website_http.search.metrics=search_metrics
         # CSV omissions must not queue behind optional NAV startup or hundreds
         # of subunit requests. Use the same live identity extractor and budget.
         urgent = []

@@ -1,3 +1,7 @@
+# Historical record
+
+This document describes a historical build. Seed nomination and commercial search functionality have been removed and are non-operational. Current source policy is in SOURCES.md.
+
 # Signalpost UI Verification and Architecture Documentation
 
 This document describes the design, implementation, and reproducible verification procedures for the Signalpost user interface.

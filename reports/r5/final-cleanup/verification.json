@@ -1,0 +1,21 @@
+{
+  "starting_commit": "5310d69",
+  "branch": "revision/r5",
+  "suite_passed": 1468,
+  "suite_failed_after_correction": 0,
+  "privacy_targeted_passed": 27,
+  "profile_gate_passed": true,
+  "robots_denied": 9,
+  "robots_total": 9,
+  "cli_exits": {
+    "total_outage": 1,
+    "partial_success": 0,
+    "recovered": 0,
+    "fully_successful": 0
+  },
+  "live_run": "skipped",
+  "free_bytes": 14729625600,
+  "minimum_free_bytes": 15000000000,
+  "competing_project_processes_observed": 2,
+  "committed": false
+}

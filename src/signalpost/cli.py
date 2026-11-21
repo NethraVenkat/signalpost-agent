@@ -1,7 +1,6 @@
 import argparse
 import asyncio
 import json
-import os
 import sys
 from pathlib import Path
 from .config import Config
@@ -47,9 +46,6 @@ def main():
     command.add_argument('--nav-index-path',type=Path)
     command.add_argument('--nav-index-max-age-days',type=float,default=21)
     command.add_argument('--allow-system-sleep',dest='prevent_system_sleep',action='store_false',default=True)
-    command.add_argument('--search-max-queries',type=int)
-    command.add_argument('--search-max-cost-usd',type=float,default=5.)
-    command.add_argument('--search-unit-price-usd',type=float,default=.005)
     command.add_argument('--synthesis',choices=('auto','template','llm'),default='template')
     command.add_argument('--llm-max-calls',type=int,default=100)
     command.add_argument('--llm-max-cost-usd',type=float,default=.50)
@@ -77,9 +73,6 @@ def main():
         if unrecognised:
             print('signalpost warning: ignoring unrecognised arguments: ' + ' '.join(unrecognised), file=sys.stderr)
         config = Config(**args, unrecognized_arguments=unrecognised)
-        seed_override = os.environ.get('SIGNALPOST_WEBSITE_SEEDS')
-        if seed_override is not None:
-            config.website_seed_index = seed_override.strip().lower() not in {'0', 'false', 'off', 'no'}
         resolved = [p.resolve() for p in (config.output, config.report, config.profiles_output) if p]
         temporary = [p.with_name(p.name+'.tmp').resolve() for p in (config.output,config.profiles_output) if p]
         protected = [p.resolve() for p in (config.organisations, config.bulk, config.previous) if p]

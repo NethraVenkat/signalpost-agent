@@ -1,3 +1,7 @@
+# Historical record
+
+This document describes a historical build. Seed nomination and commercial search functionality have been removed and are non-operational. Current source policy is in SOURCES.md.
+
 # Measured Coverage Gaps and Improvement Plan
 
 **Project**: Signalpost  

@@ -39,7 +39,7 @@ def test_minimum_flags_and_unknown_flags_produce_real_envelopes(tmp_path, monkey
     assert bool('ignoring unrecognised arguments' in capsys.readouterr().err) == bool(extra)
 
 
-@pytest.mark.parametrize('scenario,exit_code', [('total', 1), ('accounts', 0), ('recovers', 0)])
+@pytest.mark.parametrize('scenario,exit_code', [('total', 1), ('accounts', 0), ('recovers', 0), ('success', 0)])
 def test_live_connectivity_exit_handles_bulk_anchored_runs(tmp_path, monkeypatch, capsys, scenario, exit_code):
     org = '923609016'
     batch = tmp_path / 'batch.txt'
@@ -54,7 +54,7 @@ def test_live_connectivity_exit_handles_bulk_anchored_runs(tmp_path, monkeypatch
         path = request.url.path
         calls[path] += 1
         if scenario == 'total' or (path == '/regnskapsregisteret/regnskap/' + org
-                and (scenario == 'accounts' or calls[path] == 1)):
+                and (scenario == 'accounts' or (scenario == 'recovers' and calls[path] == 1))):
             raise httpx.ConnectError('fixture outage', request=request)
         return normal(request)
 
@@ -86,6 +86,6 @@ def test_live_connectivity_exit_handles_bulk_anchored_runs(tmp_path, monkeypatch
         assert info['run_status'] == 'partial'
         assert row['run']['sections']['accounts'] == 'failed'
     else:
-        assert calls['/regnskapsregisteret/regnskap/' + org] == 2
+        assert calls['/regnskapsregisteret/regnskap/' + org] == (2 if scenario == 'recovers' else 1)
         assert row['run']['sections']['accounts'] == 'not_available'
     assert ('zero successful HTTP responses' in capsys.readouterr().err) == (scenario == 'total')

@@ -133,7 +133,7 @@ and the claim that supplies the period of the figures.
 
 No language model is called. Template synthesis costs $0 per run, per 100 companies and per configured 1,100-company batch; this excludes compute/storage/network costs and optional configured search. The model provider interface is tested with a fake provider only. No live model adapter or model host is enabled. Reserved model provider/model/key environment names contain no values in `.env.example`; setting a model key alone does not enable a call.
 
-Optional Brave Web Search only nominates website candidates and never supplies published evidence. The starter kit's read-only `scripts/run_brave_discovery.py` uses `BRAVE_SEARCH_API_KEY`; the implementation accepts the same variable and `SIGNALPOST_SEARCH_PROVIDER=brave`. Own implementation, no connector code copied. Official [authentication](https://api-dashboard.search.brave.com/documentation/guides/authentication) uses `X-Subscription-Token`; [Web Search reference](https://api-dashboard.search.brave.com/api-reference/web/search/get) specifies the endpoint and result count. [Published pricing](https://brave.com/search/api/), checked 14 October 2026, is $5 per 1,000 Web Search requests. Configured estimate: $0.005 times billable query attempts, including retries, no assumed free credits; **verify before use/submission**. Costs/calls are capped and reported. Results remain in memory, no search bodies are stored as evidence. No development key supplied, so the live search gate is skipped; mock providers cover proof acceptance/rejection, domain filtering, caps, error fallback and costs.
+Commercial search adapters have been removed. No credentialed search discovery is supported.
 
 An injected provider receives claim identifiers/labels and at most two bounded untrusted description quotes. It can only order approved English frames with placeholders; exact values are substituted locally and validated. One call/company, 15 seconds, 2,000 input tokens, 500 output tokens, global call/cost caps and cache prevent unbounded work. Both the dedicated model cap and global cost cap apply. Synthetic offline price entries must be replaced with verified rates before enabling an adapter. Invalid output/errors/caps use template fallback. The cache contains accepted placeholder JSON or sanitized fallback reasons, never credentials.
 
@@ -280,21 +280,6 @@ The dataset "Smilefjestilsyn på serveringssteder" is **CC BY 4.0** per data.nor
 ### S6 Brreg signatur/prokura — skipped (not in the open API)
 
 The open Enhetsregisteret role-group code list (`https://data.brreg.no/enhetsregisteret/api/roller/rollegruppetyper`, receipt `brreg_rollegruppetyper`) has 21 types and no SIGN/PROK group. The saved `/roller` responses for all 100 frozen-baseline companies contain only those types, and every returned group is already published. Signature and prokura are served only through Brreg's authorised API (Maskinporten), which this project does not use. Nothing is invented from the role groups that are present.
-
-## Stage W candidate seed sources (checked 2026-11-18)
-
-- Common Crawl grants limited service access under its [Terms of Use](https://commoncrawl.org/terms-of-use). Third-party rights still apply to archived page content. The [CDXJ documentation](https://commoncrawl.org/cdxj-index) describes free bulk index downloads and the query API. The [index host robots file](https://index.commoncrawl.org/robots.txt) disallows the query paths, with exceptions for metadata and landing pages. The [data host robots file](https://data.commoncrawl.org/robots.txt) disallows crawling and explicitly welcomes HTTPS data downloads. Stage W skips the query API. Bulk download is the documented route for consuming index and archive data.
-- OpenStreetMap data is available under the [ODbL](https://opendatacommons.org/licenses/odbl/1-0/). Distribute any derived candidate database under ODbL with attribution to © OpenStreetMap contributors and a link to the [copyright page](https://www.openstreetmap.org/copyright). The [main website robots file](https://www.openstreetmap.org/robots.txt) disallows API and feature pages and directs bulk users to downloads. The [OSMF Terms of Use](https://osmfoundation.org/wiki/Terms_of_Use) prohibit abusive access and apply ODbL to OSM data. The [OSMF API policy](https://operations.osmfoundation.org/policies/api/) reserves the editing API for editing. The [Geofabrik Norway extract](https://download.geofabrik.de/europe/norway.html) is a bulk download suitable for local filtering of ref:NO:orgnr and website tags. The Geofabrik robots URL redirected to /robots.txt/, which returned HTTP 404. Any candidate database derived from it should be distributed separately with its licence and attribution.
-
-## Shipped OpenStreetMap candidate database
-
-`src/signalpost/data/website_seeds/openstreetmap.json.gz` is bundled with this entry (18,592 compressed bytes). It contains paired `ref:NO:orgnr` and website tags derived from the Geofabrik Norway OpenStreetMap extract.
-
-**Attribution: © OpenStreetMap contributors. Licence: Open Database License (ODbL) 1.0, including attribution and share-alike requirements for distributed derived databases.** This candidate database is distributed under ODbL 1.0, separately from the repository's MIT-licensed code. Its source and licence are also declared in the [adjacent data README](../src/signalpost/data/website_seeds/README.md).
-
-[OpenStreetMap copyright and attribution](https://www.openstreetmap.org/copyright) · [ODbL 1.0](https://opendatacommons.org/licenses/odbl/1-0/) · [Geofabrik Norway extract](https://download.geofabrik.de/europe/norway.html).
-
-The seed index is off by default. Runtime enablement does not change the bundled database's licence or attribution. Candidate URLs require fresh website proof before publication; an OSM tag is not company-ownership evidence.
 
 ## HC1 social registry checks
 

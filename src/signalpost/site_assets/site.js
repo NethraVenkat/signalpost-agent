@@ -497,7 +497,7 @@
       // Provenance categories breakdown
       if(provBox) {
         provBox.replaceChildren();
-        const provCounts = { registry_website: 0, legal_name_slug: 0, search_brave: 0, registry_email: 0, other: 0 };
+        const provCounts = { registry_website: 0, legal_name_slug: 0, registry_email: 0, other: 0 };
         for(const r of selected) {
           if(r.website) {
             const org = r.website_origin;
@@ -509,7 +509,6 @@
         const provLabels = {
           registry_website: 'Official Registry Declared (Enhetsregisteret)',
           legal_name_slug: 'Derived Domain from Legal Name',
-          search_brave: 'Corroborated External Search (Brave API/Mock)',
           registry_email: 'Registry Contact Email Domain',
           other: 'Other Corroborated Source'
         };

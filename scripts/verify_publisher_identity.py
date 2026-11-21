@@ -7,7 +7,16 @@ from urllib.parse import urlsplit, urlunsplit
 from signalpost.web.html import Page
 from signalpost.web.publisher_identity import DECLARED, RARE, REDIRECT, declared_receipt, rare_receipt,redirect_receipt
 from signalpost.web.publisher_veto import conflict
-from signalpost.web.seed_index import SEED_ORIGINS, publisher_has_number
+# Historical receipts remain replayable after nomination tooling removal.
+SEED_ORIGINS = {'seed_commoncrawl', 'seed_openstreetmap'}
+
+def publisher_has_number(page, organisation_number):
+    from signalpost.web.proof import orgnrs
+    from signalpost.web.publisher import extract_publisher
+
+    fragments = extract_publisher(page).fragments
+    return any(organisation_number in orgnrs(fragment.text) for fragment in fragments)
+
 
 
 def registry_context(org,data,evidence,stored_body,allow_carried=False):
