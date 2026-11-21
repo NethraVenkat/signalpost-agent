@@ -2,8 +2,11 @@
 import asyncio
 import copy
 import json
+import time
 from datetime import datetime, timezone
+from types import SimpleNamespace
 
+import httpx
 import pytest
 
 from signalpost.sources import exact_official as eo
@@ -91,3 +94,58 @@ def test_verifier_rejects_forged_licence():
     claims[0]['value']['role'] = 'licensed' if claims[0]['value']['role'] == 'agent' else 'agent'
     with pytest.raises(AssertionError):
         verify_exact_official(row, {'claims': claims}, evidence, lambda sha: body)
+
+
+def test_documented_licence_routes_ignore_robots_outage_and_respect_pacing(tmp_path, monkeypatch):
+    monkeypatch.setattr(eo, "POLITENESS_SECONDS", 1)
+    from signalpost.sources.blobstore import BlobStore
+    from tests.test_official_resilience import FakeBudget
+
+    calls = []
+
+    def handler(request):
+        calls.append((request.url.path, time.monotonic()))
+        if request.url.path == '/robots.txt':
+            raise httpx.ConnectTimeout('robots unavailable')
+        if request.url.path.endswith('/search'):
+            return httpx.Response(200, json={'total': 1, 'legalEntities': [hit()]})
+        return httpx.Response(200, json={'legalEntities': [ENTITY]})
+
+    cfg = SimpleNamespace(licences=True, request_timeout=1, website_user_agent='SignalpostTest')
+    budget = FakeBudget()
+    envelope = SimpleNamespace(run=SimpleNamespace(sections={'identity': 'available'}))
+    results = []
+
+    async def run():
+        async with httpx.AsyncClient(transport=httpx.MockTransport(handler)) as client:
+            await eo.enrich({ORG: envelope}, client, cfg, budget, BlobStore(tmp_path),
+                            lambda _, family, section: results.append((family, section)))
+
+    asyncio.run(run())
+    assert [path for path, _ in calls] == [eo.FT_PATH + '/search', eo.FT_PATH]
+    assert calls[1][1] - calls[0][1] >= 1
+    assert all(e['access_policy'] == 'documented_official_api' for e in budget.events)
+    assert results[0][0] == 'licences' and len(results[0][1].claims) == 2
+
+
+def test_licence_client_rejects_report_route_and_stops_after_429(tmp_path):
+    from signalpost.budget import SourceFailure
+    from signalpost.sources.blobstore import BlobStore
+    from signalpost.sources.exact_public import PublicHttp
+    from tests.test_official_resilience import FakeBudget
+
+    cfg = SimpleNamespace(request_timeout=1, website_user_agent='SignalpostTest')
+    budget = FakeBudget()
+
+    async def run():
+        async with httpx.AsyncClient(transport=httpx.MockTransport(lambda _: httpx.Response(429))) as client:
+            http = PublicHttp(client, cfg, budget, BlobStore(tmp_path), hosts={eo.FT_HOST},
+                              documented_api_paths={eo.FT_HOST: {eo.FT_PATH + '/search'}})
+            with pytest.raises(SourceFailure, match='public_url_refused'):
+                await http.request(f'https://{eo.FT_HOST}/registry/v2/report/json', ORG)
+            for _ in range(2):
+                with pytest.raises(SourceFailure, match='public_http_429'):
+                    await http.request(eo.ft_search_url(ORG), ORG)
+
+    asyncio.run(run())
+    assert len(budget.events) == 1

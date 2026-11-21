@@ -195,7 +195,8 @@ async def enrich(envelopes, client, config, budget, blobs, update):
     from .exact_public import PublicHttp
     eligible = sorted(o for o, e in envelopes.items() if e.run.sections.get('identity') == 'available')
     http = PublicHttp(client, config, budget, blobs, hosts=HOSTS, sections=SECTION_BY_HOST,
-                      robots_unserved=ROBOTS_UNSERVED, politeness=POLITENESS_SECONDS)
+                      robots_unserved=ROBOTS_UNSERVED, politeness=POLITENESS_SECONDS,
+                      documented_api_paths={FT_HOST: {FT_PATH, FT_PATH + '/search'}})
     now = datetime.now(timezone.utc)
     live = []
     for family in enabled_families(config):
@@ -351,15 +352,16 @@ def record_section(family, field_prefix, bundle, org, now, derive, blobs, source
 
 # --- S4 Finanstilsynet registry (live exact-orgnr lookup) ---
 FT_HOST = 'api.finanstilsynet.no'
-FT = 'https://' + FT_HOST + '/registry/v2'
+FT_PATH = '/registry/v2/legal-entities'
+FT = 'https://' + FT_HOST + FT_PATH
 
 
 def ft_search_url(org):
-    return f'{FT}/legal-entities/search?query={org}&entityType=Company&pageSize=50&page=1'
+    return f'{FT}/search?query={org}&entityType=Company&pageSize=50&page=1'
 
 
 def ft_entity_url(entity_id):
-    return f'{FT}/legal-entities?ids={entity_id}'
+    return f'{FT}?ids={entity_id}'
 
 
 def ft_date(value):

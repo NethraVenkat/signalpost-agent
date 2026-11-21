@@ -161,7 +161,7 @@ def test_robots_reset_always_blocks_and_caches_the_refusal(unserved, failure, mo
                 assert error.value.code == 'public_robots_unavailable'
             assert http.robots[eo.STOTTE_HOST] is False
             assert all(path == '/robots.txt' for _, path, _ in calls)
-            assert len(calls) == 3
+            assert len(calls) == 5
             assert budget.events[-1]['robots_decision'].startswith('blocked')
     asyncio.run(run())
 

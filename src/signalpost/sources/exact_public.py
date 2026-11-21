@@ -17,7 +17,7 @@ from ..workers import offload
 from ..web.robots import RobotsPolicy
 from .extract import Section, add, missing, response_source
 from .http import Response
-from .official_resilience import check_source,DNS_FAILURES,pause,retry_after
+from .official_resilience import BACKOFF, OFFICIAL, OFFICIAL_ROBOTS_BACKOFF, check_source, DNS_FAILURES, pause, retry_after
 
 GLEIF='https://api.gleif.org/api/v1/'
 TED='https://api.ted.europa.eu/v3/notices/search'
@@ -37,19 +37,25 @@ def variants(org):return [org,org[:3]+' '+org[3:6]+' '+org[6:]]
 
 
 class PublicHttp:
-    def __init__(self,client,config,budget,blobs,hosts=None,sections=None,robots_unserved=(),politeness=None):
+    def __init__(self,client,config,budget,blobs,hosts=None,sections=None,robots_unserved=(),politeness=None,
+                 documented_api_paths=None):
         self.client,self.config,self.budget,self.blobs=client,config,budget,blobs
         self.hosts=set(hosts or HOSTS);self.sections=dict(sections or {})
         # Retained constructor compatibility; every origin gets bounded retries.
         self.robots_unserved=set(robots_unserved);self.politeness=politeness
+        self.documented_api_paths = documented_api_paths or {}
+        self.refusals = {}
         self.robots={};self.robots_failures={};self.last={};self.delays={};self.locks={h:asyncio.Lock() for h in self.hosts}
+        self.robots_locks = {host: asyncio.Lock() for host in self.hosts}
 
     def section(self,host):
         return self.sections.get(host) or ('gleif' if host=='api.gleif.org' else 'procurement')
 
     async def raw(self,url,org,payload=None,headers=None):
         check_source(self.budget,url)
-        for attempt in range(3):
+        p = urlsplit(url)
+        backoff = OFFICIAL_ROBOTS_BACKOFF if p.path == '/robots.txt' and p.hostname in OFFICIAL else BACKOFF
+        for attempt in range(len(backoff) + 1):
             event=None;minimum=0.0
             try:
                 response=await self._raw(url,org,payload,headers)
@@ -58,20 +64,24 @@ class PublicHttp:
                 if response.status<500:return response
                 event['official_transient']=True
                 minimum=response.retry_after_seconds
-                if attempt==2:return response
+                if attempt == len(backoff):return response
             except SourceFailure as exc:
                 event=getattr(exc,'request_event',None)
                 if exc.code not in DNS_FAILURES|{'public_timeout','public_connect'} or event is None:raise
                 event.update(official_transient=True,official_retry_attempt=attempt)
-                if attempt==2:raise
-            await pause(self.budget,event,attempt,minimum=minimum)
+                if attempt == len(backoff):raise
+            await pause(self.budget,event,attempt,minimum=minimum,backoff=backoff)
 
     async def _raw(self,url,org,payload=None,headers=None):
         p=urlsplit(url)
         if p.scheme!='https' or p.hostname not in self.hosts or p.port not in (None,443) or p.username or p.password:
             raise SourceFailure('public_url_refused')
         host=p.hostname
+        paths = self.documented_api_paths.get(host)
+        if paths is not None and (p.path not in paths or payload is not None):
+            raise SourceFailure('public_url_refused')
         async with self.locks[host]:
+            if host in self.refusals:raise SourceFailure(self.refusals[host])
             politeness=POLITENESS_SECONDS if self.politeness is None else self.politeness
             delay=max(0,self.last.get(host,0)+max(politeness,self.delays.get(host,0))-time.monotonic())
             if time.monotonic()+delay>=self.budget.deadline:raise SourceFailure('deadline')
@@ -84,6 +94,10 @@ class PublicHttp:
                 r=await self.client.request('POST' if payload is not None else 'GET',url,json=payload,timeout=timeout,
                     follow_redirects=False,headers={**(headers or {}),'User-Agent':self.config.website_user_agent})
                 event['status']=r.status_code
+                if p.path != '/robots.txt' and r.status_code in {401,403,429}:
+                    self.refusals[host] = 'public_http_' + str(r.status_code)
+                if paths is not None:
+                    event['access_policy'] = 'documented_official_api'
                 sha=await offload(self.blobs.put,r.content);event['content_sha256']=sha
                 if len(r.content)>8_000_000:raise SourceFailure('public_body_limit')
                 response=Response(r.content,r.status_code,url,utc_now(),sha)
@@ -100,36 +114,40 @@ class PublicHttp:
                 self.last[host]=time.monotonic();event['runtime_ms']=round((time.monotonic()-began)*1000)
 
     async def request(self,url,org,payload=None,headers=None):
-        host=urlsplit(url).hostname
+        p = urlsplit(url)
+        host = p.hostname
         if host not in self.hosts:raise SourceFailure('public_url_refused')
-        if host not in self.robots:
-            try:
-                robots='https://'+host+'/robots.txt'
-                # Initial attempt plus at most two 5/20-second transient retries.
-                # raw() shares the original budget, host lock and politeness gate.
-                r=await self.raw(robots,org)
-            except SourceFailure as exc:
-                event=getattr(exc,'request_event',None)
-                if event is not None:
-                    event['robots_failure']=exc.code
-                    event['robots_decision']='blocked: robots.txt could not be fetched'
-                self.robots[host]=False
-                self.robots_failures[host]='public_robots_unavailable'
-                raise SourceFailure('public_robots_unavailable', 'robots.txt unavailable: '+exc.code) from exc
-            if 400<=r.status<500:self.robots[host]=None
-            elif 200<=r.status<300:
-                parser=await offload(RobotsPolicy.from_bytes,r.body);self.robots[host]=parser
-                self.delays[host]=parser.crawl_delay(self.config.website_user_agent) or parser.crawl_delay('*') or 0
-            else:
-                self.robots[host]=False
-                if r.status>=500:self.robots_failures[host]="public_robots_unavailable_http"+str(r.status)
-        parser=self.robots[host]
-        if parser is False or (parser is not None and not parser.can_fetch(self.config.website_user_agent,url)):
-            raise SourceFailure(self.robots_failures.get(host,'public_robots_blocked'))
+        if host not in self.documented_api_paths:
+            async with self.robots_locks[host]:
+                if host not in self.robots:
+                    await self.fetch_robots(host, org)
+            parser=self.robots[host]
+            if parser is False or (parser is not None and not parser.can_fetch(self.config.website_user_agent,url)):
+                raise SourceFailure(self.robots_failures.get(host,'public_robots_blocked'))
         r=await self.raw(url,org,payload,headers)
-        if r.status in {401,403,429}:self.robots[host]=False  # No further calls to a refused/rate-limited host this run.
         if r.status!=200:raise SourceFailure('public_http_'+str(r.status))
         return r
+
+    async def fetch_robots(self, host, org):
+        try:
+            robots='https://'+host+'/robots.txt'
+            # raw() shares the original budget, host lock and politeness gate.
+            r=await self.raw(robots,org)
+        except SourceFailure as exc:
+            event=getattr(exc,'request_event',None)
+            if event is not None:
+                event['robots_failure']=exc.code
+                event['robots_decision']='blocked: robots.txt could not be fetched'
+            self.robots[host]=False
+            self.robots_failures[host]='public_robots_unavailable'
+            raise SourceFailure('public_robots_unavailable', 'robots.txt unavailable: '+exc.code) from exc
+        if 400<=r.status<500:self.robots[host]=None
+        elif 200<=r.status<300:
+            parser=await offload(RobotsPolicy.from_bytes,r.body);self.robots[host]=parser
+            self.delays[host]=parser.crawl_delay(self.config.website_user_agent) or parser.crawl_delay('*') or 0
+        else:
+            self.robots[host]=False
+            if r.status>=500:self.robots_failures[host]="public_robots_unavailable_http"+str(r.status)
 
 
 def json_claim(section,response,org,family,field,value,paths):

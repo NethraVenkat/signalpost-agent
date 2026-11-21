@@ -75,7 +75,7 @@ def test_saved_projection_reuses_blobs_no_http_and_marks_upstream_failure(tmp_pa
  assert missing.state=='failed' and not missing.claims
 
 
-@pytest.mark.parametrize('statuses,allow',[(['reset',200],True),(['reset']*3,False),([404],True),([503]*3,False),([200],False)])
+@pytest.mark.parametrize('statuses,allow',[(['reset',200],True),(['reset']*5,False),([404],True),([503]*5,False),([200],False)])
 def test_direct_live_preflight_robots_rfc9309_and_outage_abort(tmp_path,monkeypatch,statuses,allow):
  from signalpost.sources import exact_public
  async def no_wait(*a,**k):pass

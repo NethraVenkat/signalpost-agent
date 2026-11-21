@@ -2,6 +2,7 @@ from ..workers import offload
 from ..budget import SourceFailure
 import asyncio
 import math
+from collections import defaultdict
 from datetime import date
 from ..models.envelope import Error
 from ..models.claim import Claim
@@ -10,6 +11,11 @@ from .extract import Section, add, finish, decode, response_source, get
 from . import accounts_years
 
 URL = "https://data.brreg.no/regnskapsregisteret/regnskap/"
+AUDIT_METHOD = 'signalpost.accounts.audit_flags.v1'
+AUDIT_FIELDS = {
+    'unaudited_statement_flag': 'ikkeRevidertAarsregnskap',
+    'audit_opt_out_flag': 'fravalgRevisjon',
+}
 PATHS = {
     "revenue": ("resultatregnskapResultat", "driftsresultat", "driftsinntekter", "sumDriftsinntekter"),
     "operating_result": ("resultatregnskapResultat", "driftsresultat", "driftsresultat"),
@@ -75,7 +81,8 @@ def extract(org,response,blobs):
         add(section, response_source(response), org, "accounts", "accounts.latest", None, "/")
         return finish(section)
     if any(not isinstance(row,dict) for row in data): raise SourceFailure('malformed_accounts')
-    emit_consolidated(org, response, blobs, section, data)
+    audits = audit_periods(data, org)
+    emit_consolidated(org, response, blobs, section, data, audits)
     indexed = [(index, row) for index, row in enumerate(data) if row.get("regnskapstype") == "SELSKAP"]
     if not indexed:
         add(section, response_source(response), org, "accounts", "accounts.latest", None, "/")
@@ -87,7 +94,7 @@ def extract(org,response,blobs):
     reported_org = entity.get("organisasjonsnummer") if isinstance(entity, dict) else None
     if str(reported_org) != org:
         raise SourceFailure("wrong_company", "Accounts do not explicitly match the requested orgnr")
-    emit_record(org,response,blobs,section,index,record,'accounts.')
+    emit_record(org,response,blobs,section,index,record,'accounts.',audits)
     try: latest_end=date.fromisoformat(record['regnskapsperiode']['tilDato'])
     except (KeyError,TypeError,ValueError): latest_end=None
     seen={latest_end}
@@ -103,7 +110,7 @@ def extract(org,response,blobs):
             continue
         before_claims,before_evidence=len(section.claims),len(section.evidence)
         try:
-            emit_record(org,response,blobs,section,old_index,old,'accounts.history.'+old_end.isoformat()+'.')
+            emit_record(org,response,blobs,section,old_index,old,'accounts.history.'+old_end.isoformat()+'.',audits)
             seen.add(old_end)
         except SourceFailure:
             del section.claims[before_claims:]; del section.evidence[before_evidence:]
@@ -111,7 +118,37 @@ def extract(org,response,blobs):
     return finish(section)
 
 
-def emit_consolidated(org, response, blobs, section, data):
+def audit_periods(records, org):
+    """Select explicit flags for unambiguous, exact-owner periods by scope."""
+    by_period = defaultdict(list)
+    for index, record in enumerate(records):
+        owner = record.get('virksomhet') or {}
+        scope = record.get('regnskapstype')
+        if not isinstance(owner, dict) or str(owner.get('organisasjonsnummer')) != org or scope not in {'SELSKAP', 'KONSERN'}:
+            continue
+        try:
+            period = record['regnskapsperiode']
+            start, end = (date.fromisoformat(period[key]) for key in ('fraDato', 'tilDato'))
+        except (KeyError, TypeError, ValueError):
+            continue
+        if start > end:
+            continue
+        flags = tuple(get(record, ('revisjon', key)) for key in AUDIT_FIELDS.values())
+        by_period[scope, start, end].append((index, flags))
+    accepted = {}
+    for entries in by_period.values():
+        flags = entries[0][1]
+        # Keep original flags. Two affirmative statuses or inconsistent copies
+        # are ambiguous. There is no positive audited flag in the schema.
+        if flags == (True, True) or any(type(flag) is not bool for _, pair in entries for flag in pair):
+            continue
+        if all(pair == flags for _, pair in entries):
+            for index, _ in entries:
+                accepted[index] = dict(zip(AUDIT_FIELDS, flags))
+    return accepted
+
+
+def emit_consolidated(org, response, blobs, section, data, audits):
     """Statements already in the ordinary response; no additional lookup.
 
     A group filing is never an entity statement or a shareholder-register claim.
@@ -140,7 +177,7 @@ def emit_consolidated(org, response, blobs, section, data):
         before_claims, before_evidence = len(section.claims), len(section.evidence)
         try:
             emit_record(org, response, blobs, section, index, record,
-                        f'accounts.consolidated.{end.isoformat()}.{filing}.')
+                        f'accounts.consolidated.{end.isoformat()}.{filing}.', audits)
             seen.add(filing)
         except SourceFailure:
             del section.claims[before_claims:]
@@ -149,7 +186,7 @@ def emit_consolidated(org, response, blobs, section, data):
                                         message='Malformed group statement withheld; entity statements retained'))
 
 
-def emit_record(org,response,blobs,section,index,record,prefix):
+def emit_record(org,response,blobs,section,index,record,prefix,audits):
     period = record.get("regnskapsperiode") or {}
     end = period.get("tilDato")
     reporting = {"fiscal_year": str(end)[:4] if end else None, "period_start": period.get("fraDato"), "period_end": end,
@@ -167,3 +204,7 @@ def emit_record(org,response,blobs,section,index,record,prefix):
             f"/{index}/" + "/".join(path), reporting=reporting, effective=end,id_reporting=reported_identity)
         if reporting["unit"] is None:
             section.claims[-1].reasons["unit"] = "unit_or_scale_not_declared_by_source; no inference applied"
+    for name, value in audits.get(index, {}).items():
+        add(section, response_source(response), org, 'accounts', prefix + name, value,
+            f'/{index}/revisjon/{AUDIT_FIELDS[name]}', reporting=reporting, effective=end,
+            method=AUDIT_METHOD)

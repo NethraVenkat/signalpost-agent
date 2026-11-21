@@ -407,6 +407,17 @@ def audit_accounts_claim(org: str, claim: dict, ev: dict, body: str) -> tuple[st
     if claim_unit and str(claim_unit).lower() not in ("whole", "nok", "1", "units", "standard"):
         return "INCORRECT", f"Unit mismatch: claimed unit '{claim_unit}' but Regnskapsregisteret filings are in whole units", "whole"
 
+    from signalpost.sources.regnskap import AUDIT_FIELDS, audit_periods
+    audit_name = fld.rsplit('.', 1)[-1]
+    if audit_name in AUDIT_FIELDS:
+        flags = audit_periods(data, org).get(rec_idx, {})
+        expected_locator = f'/{rec_idx}/revisjon/{AUDIT_FIELDS[audit_name]}'
+        if (loc != expected_locator or type(val) is not bool
+                or type(raw_val) is not bool or audit_name not in flags
+                or val is not raw_val or val is not flags[audit_name]):
+            return 'INCORRECT', 'Audit flag or period eligibility mismatch', raw_val
+        return 'CORRECT', 'Exact documented boolean flag in eligible period', raw_val
+
     # Check for fabricated zero
     if raw_val is None:
         if val == 0 or val == 0.0 or val == "0":

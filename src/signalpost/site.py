@@ -464,8 +464,11 @@ def official_overflow(claims, inline=OFFICIAL_INLINE):
 
 
 def deferred_claims(claims, official_inline=OFFICIAL_INLINE, workplace_inline=WORKPLACE_INLINE):
+    from .sources.regnskap import AUDIT_FIELDS
+
     out = official_overflow(claims, official_inline)
     out.update(c['id'] for c in claims if c['family'] == 'status_events')
+    out.update(c['id'] for c in claims if c['family'] == 'accounts' and c['field'].rsplit('.', 1)[-1] in AUDIT_FIELDS)
     workplaces = [c for c in claims if c['field'].startswith('subunits.unit.')]
     out.update(c['id'] for c in workplaces[workplace_inline:])
     return out

@@ -40,6 +40,71 @@ def test_year_list_wrong_endpoint_withheld(tmp_path):
     blobs=BlobStore(tmp_path)
     with pytest.raises(SourceFailure,match='differs'):accounts_years.extract(ORG,response(['2025'],blobs,accounts_years.YEARS.format(org='993578843')))
 
+
+def test_explicit_audit_flags_replay_with_own_period_and_receipts(tmp_path):
+    from scripts.verify_output import verify_financial_sources
+    from signalpost.site import deferred_claims
+
+    base = response_factory()(httpx.Request('GET', regnskap.URL + ORG)).json()[0]
+    rows = [{**base, 'regnskapsperiode': {'fraDato': f'{year}-01-01', 'tilDato': f'{year}-12-31'},
+             'revisjon': {'ikkeRevidertAarsregnskap': unaudited, 'fravalgRevisjon': opt_out}}
+            for year, unaudited, opt_out in [(2025, False, True), (2024, True, False)]]
+    rows.extend([{**rows[0], 'regnskapstype': 'KONSERN', 'id': 342},
+                 {**rows[1], 'revisjon': {'fravalgRevisjon': False}},
+                 {**base, 'regnskapsperiode': {'fraDato': '2023-01-01', 'tilDato': '2023-12-31'},
+                  'revisjon': {'ikkeRevidertAarsregnskap': True, 'fravalgRevisjon': True}}])
+    blobs = BlobStore(tmp_path)
+    r = response(rows, blobs, regnskap.URL + ORG)
+    section = regnskap.extract(ORG, r, blobs)
+    evidence = {item.id: item.model_dump() for item in section.evidence}
+    claims = [c.model_dump() for c in section.claims if c.field.rsplit('.', 1)[-1] in regnskap.AUDIT_FIELDS]
+    assert {c['reporting_period']['period_end'] for c in claims} == {'2025-12-31'}
+    assert {c['reporting_period']['account_type'] for c in claims} == {'SELSKAP', 'KONSERN'}
+    assert len(claims) == 4
+    assert deferred_claims(claims) == {c['id'] for c in claims}
+    for claim in claims:
+        item = evidence[claim['evidence_ids'][0]]
+        assert item['locator'] == ('/2' if claim['reporting_period']['account_type'] == 'KONSERN' else '/0') + '/revisjon/' + regnskap.AUDIT_FIELDS[claim['field'].rsplit('.', 1)[-1]]
+        assert item['source_url'] == r.url and item['content_sha256'] == r.sha
+        assert item['retrieved_at'].endswith('Z') and item['extraction_method'] == regnskap.AUDIT_METHOD
+        assert item['claim_span'] in r.body.decode() and json.dumps(claim['value']) in item['claim_span']
+    row = {'organisation_number': ORG, 'run': {'synthesis': {'contract_version': 'r5-S'}}}
+    assert verify_financial_sources(row, {'claims': claims}, evidence, lambda sha: blobs.read(sha).decode())[0] == 4
+    claims[0]['value'] = not claims[0]['value']
+    with pytest.raises(AssertionError):
+        verify_financial_sources(row, {'claims': claims}, evidence, lambda sha: blobs.read(sha).decode())
+
+
+@pytest.mark.parametrize('bad_flags', [None, {'fravalgRevisjon': None},
+                         {'fravalgRevisjon': False, 'ikkeRevidertAarsregnskap': True}])
+def test_absent_null_or_conflicting_audit_copy_withholds_period(bad_flags):
+    record = {'virksomhet': {'organisasjonsnummer': ORG}, 'regnskapstype': 'SELSKAP',
+              'regnskapsperiode': {'fraDato': '2025-01-01', 'tilDato': '2025-12-31'},
+              'revisjon': {'fravalgRevisjon': True, 'ikkeRevidertAarsregnskap': False}}
+    assert regnskap.audit_periods([record, {**record, 'revisjon': bad_flags}], ORG) == {}
+
+
+def test_accounts_audit_flags_use_existing_two_requests_only(tmp_path):
+    calls = []
+    blobs = BlobStore(tmp_path)
+    base = response_factory()(httpx.Request('GET', regnskap.URL + ORG)).json()[0]
+    base['revisjon'] = {'fravalgRevisjon': True, 'ikkeRevidertAarsregnskap': False}
+
+    class RecordedHttp:
+        async def get(self, url, org):
+            calls.append(url)
+            assert org == ORG
+            if url == regnskap.URL + ORG:
+                return response([base], blobs, url)
+            assert url == accounts_years.YEARS.format(org=ORG)
+            return response(['2025'], blobs, url)
+
+    http = RecordedHttp()
+    http.blobs = blobs
+    section = asyncio.run(regnskap.fetch(ORG, http))
+    assert calls == [regnskap.URL + ORG, accounts_years.YEARS.format(org=ORG)]
+    assert {c.field for c in section.claims} >= {'accounts.audit_opt_out_flag', 'accounts.unaudited_statement_flag'}
+
 def test_all_returned_history_has_independent_periods_and_no_unit_inference(tmp_path):
     base=response_factory()(httpx.Request('GET',regnskap.URL+ORG)).json()[0]
     rows=[]

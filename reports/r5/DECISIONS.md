@@ -990,3 +990,12 @@ Retire the second website pass. It yielded zero newly verified websites in all f
 The website proof URL and SHA-256 for every published site in those runs first appear in pass 1. This covers all 38 Stage 2 sites. The publisher-receipt correction independently withdraws one of those 38 under the stricter proof policy. The single-pass comparison therefore uses 37 available website claims and 31 with `VERIFIED` status as its corrected offline reference. The archived Stage 2 pass consumed 382.234 seconds of elapsed scheduler time. Live end-to-end time is measured separately.
 
 Keep the 16 company slots, two in-flight requests per domain, 45-second company cap, 1,700-second website cutoff, 2,100-second process budget and finalisation reserve. Exact-ID work keeps its existing global deadline. Candidate ordering and ownership vetoes remain in force. [S5](s5-live500/SUMMARY.md) · [S6](s6-clone-gate/SUMMARY.md) · [Stage 2](coverage-gaps/STAGE2.md) · [Publisher receipt replay](coverage-gaps/PUBLISHER-RECEIPTS.md)
+
+
+## Registry API consistency and audit flags
+
+The two documented Finanstilsynet registry GET routes use the same explicit official-API access policy as Brreg, supported by the publisher's NLOD 2.0 licence and stated rate limits. The client permits only those routes, serialises requests and spaces them by at least one second. Crawled hosts retain fail-closed robots handling. Official API robots probes elsewhere receive five total attempts with 5, 20, 40 and 60 second backoffs, bounded by the existing deadline and host politeness.
+
+Audit flags are literal per-period source facts, extracted from existing stored accounts bodies. Both flags must be boolean and consistent across duplicate period records. Two affirmative flags are conservatively withheld. No interpretation that a period was audited is derived from a false flag.
+
+The five website pilots remain deferred. The independent comparison estimated gains of 0?3 companies for roughly 3?8 hours for the substantive pilots, with no demonstrated gain from syntax changes. Common Crawl also requires a rights review. Exact-number proof covered 5.8% of our cohort against 4.4% in the independently reviewed public entry. The headline website gap includes a different proof bar and different cohorts, and provides no measured justification for weakening our rules.

@@ -1,0 +1,147 @@
+{
+  "execution": {
+    "run_id": "r5-licence-audit-20261126",
+    "seed": 20261126,
+    "flag_count": 7,
+    "exit_code": 0,
+    "process_wall_seconds": 1627.015,
+    "margin_seconds": 472.985,
+    "minimum_free_bytes": 8817459200,
+    "stop_reason": null
+  },
+  "run_status": "partial",
+  "available_claims": 79601,
+  "site": {
+    "state": "available",
+    "companies": 500,
+    "input_records": 500,
+    "pages": 502,
+    "skipped_invalid_identifiers": 0,
+    "total_bytes": 221696197,
+    "largest_profile_data_bytes": 1115712,
+    "largest_profile_bytes": 234793
+  },
+  "deadline_hits": 0,
+  "total_cost_usd": 0.0,
+  "sections": {
+    "identity": {
+      "available": 500
+    },
+    "roles": {
+      "available": 498,
+      "not_available": 2
+    },
+    "subunits": {
+      "available": 401,
+      "not_available": 99
+    },
+    "accounts": {
+      "available": 497,
+      "failed": 3
+    },
+    "signature": {
+      "available": 484,
+      "not_available": 12,
+      "failed": 4
+    },
+    "prokura": {
+      "available": 111,
+      "not_available": 386,
+      "failed": 3
+    },
+    "group": {
+      "not_available": 463,
+      "available": 35,
+      "failed": 2
+    },
+    "website": {
+      "available": 41,
+      "failed": 182,
+      "not_available": 250,
+      "ambiguous": 25,
+      "blocked": 2
+    },
+    "hiring": {
+      "not_available": 500
+    },
+    "activity": {
+      "available": 500
+    },
+    "status_events": {
+      "available": 500
+    },
+    "gleif": {
+      "not_available": 436,
+      "available": 64
+    },
+    "procurement": {
+      "not_available": 495,
+      "failed": 5
+    },
+    "state_aid": {
+      "not_available": 445,
+      "available": 55
+    },
+    "research": {
+      "not_available": 495,
+      "available": 5
+    },
+    "licences": {
+      "not_available": 490,
+      "available": 10
+    },
+    "inspections": {
+      "available": 7,
+      "not_available": 493
+    }
+  },
+  "error_codes": {
+    "invalid_registry_field": 548,
+    "state_aid_none_in_bundled_snapshot": 445,
+    "research_none_in_bundled_snapshot": 495,
+    "website_candidates": 500,
+    "not_available": 469,
+    "inspections_none_in_bundled_snapshot": 493,
+    "website_budget_exhausted": 170,
+    "authority_rule_unavailable": 368,
+    "website_check_incomplete": 209,
+    "no_verified_website": 250,
+    "robots_unavailable": 4,
+    "website_source_unavailable": 61,
+    "robots": 14,
+    "public_http_202": 10,
+    "authority_lookup_unavailable": 26,
+    "source_error": 3,
+    "content_type": 1,
+    "block_page": 1,
+    "filing_years_no_such_domain": 5,
+    "no_such_domain": 9
+  },
+  "verified_websites": 33,
+  "precision": {
+    "seed": 202611200628,
+    "strata": {
+      "accounts": 14,
+      "activity": 14,
+      "gleif": 13,
+      "group": 13,
+      "identity": 13,
+      "inspections": 14,
+      "licences": 13,
+      "prokura": 13,
+      "research": 14,
+      "roles": 13,
+      "signature": 14,
+      "state_aid": 13,
+      "status_events": 13,
+      "subunits": 13,
+      "website": 13
+    },
+    "counts": {
+      "SUPPORTED": 200,
+      "CONTRADICTED": 0,
+      "BLOB MISSING OR HASH MISMATCH": 0
+    },
+    "wilson95_lower": 0.9811546736227345
+  }
+}

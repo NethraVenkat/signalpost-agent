@@ -208,6 +208,7 @@ def verify_filing_years(row,data,evidence,stored_body):
 
 
 def verify_financial_sources(row, data, evidence, stored_body):
+    from signalpost.sources.regnskap import AUDIT_FIELDS, AUDIT_METHOD, URL, audit_periods
     raw=(row.get('run',{}).get('synthesis') or data.get('synthesis') or {})
     if raw.get('contract_version')!='r5-S': return 0,0
     claims={c['id']:c for c in data['claims']}
@@ -217,13 +218,23 @@ def verify_financial_sources(row, data, evidence, stored_body):
         source=next((evidence[eid] for eid in c['evidence_ids'] if
                      evidence[eid]['source_url'].startswith('https://data.brreg.no/regnskapsregisteret/regnskap/')
                      and evidence[eid]['locator'].startswith('/')),None)
+        audit = AUDIT_FIELDS.get(c['field'].rsplit('.', 1)[-1])
+        if audit:
+            assert source and source['source_url'] == URL + row['organisation_number']
+            assert source['extraction_method'] == AUDIT_METHOD and len(c['evidence_ids']) == 1
         if source is None: continue  # Synthetic unit-test sources are checked by their own receipts.
         sha=source['content_sha256']
         if sha not in documents: documents[sha]=json.loads(stored_body(sha))
         document=documents[sha];parts=source['locator'].strip('/').split('/')
         value=document
         for part in parts:value=value[int(part)] if isinstance(value,list) else value[part.replace('~1','/').replace('~0','~')]
-        assert not isinstance(value,bool) and value==c['value'], 'Financial value differs from source JSON pointer'
+        if audit:
+            assert parts[1:] == ['revisjon', audit] and type(value) is type(c['value']) is bool
+            flags = audit_periods(document, row['organisation_number']).get(int(parts[0]), {})
+            assert flags.get(c['field'].rsplit('.', 1)[-1]) is value, 'Inconsistent accounting audit flags'
+        else:
+            assert not isinstance(value,bool), 'Financial numeric source is boolean'
+        assert value==c['value'], 'Financial value differs from source JSON pointer'
         record=document[int(parts[0])]
         assert str(record['virksomhet']['organisasjonsnummer'])==row['organisation_number'], 'Financial source has wrong entity'
         consolidated = c['field'].startswith('accounts.consolidated.')
