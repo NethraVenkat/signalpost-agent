@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "run_id": "r5-cleanup-final-20261126",
+  "status": "running",
+  "start_time": "2026-11-21T10:40:43.430849Z",
+  "heartbeat": "2026-11-21T10:59:08.667096Z",
+  "elapsed_seconds": 1105.23,
+  "companies": {
+    "total": 500,
+    "queued": 0,
+    "in_flight": 63,
+    "successful": 437,
+    "failed": 0
+  },
+  "stages": [
+    {
+      "name": "Registry & Subunits",
+      "state": "running"
+    },
+    {
+      "name": "Website Verification",
+      "state": "queued"
+    },
+    {
+      "name": "NAV Hiring Matching",
+      "state": "queued"
+    },
+    {
+      "name": "Cited Synthesis",
+      "state": "queued"
+    },
+    {
+      "name": "Output & Site Publishing",
+      "state": "queued"
+    }
+  ],
+  "requests": {
+    "measured": 5672,
+    "limit": 9250,
+    "estimated_cost_usd": 0.0
+  },
+  "activity_log": [
+    {
+      "timestamp": 0.0,
+      "message": "Pipeline started with 500 input rows, 500 unique companies"
+    }
+  ],
+  "input_rows": 500,
+  "duplicate_inputs": 0
+}
